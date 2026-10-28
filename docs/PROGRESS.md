@@ -9,7 +9,7 @@ Gate A: Chris can sign up, subscribe in test mode and log in as each role on sta
 | Item | Status | Notes |
 | --- | --- | --- |
 | Repository, CI and Docker Compose set up; tests run on every push | Done | GitHub Actions: ruff, migrations on PostgreSQL, pytest (SQLite and PostgreSQL), web build, pip and npm audits, Trivy scans. Push to a GitHub repo to activate. |
-| Staging server live with TLS, nightly backups and error tracking | **Blocked on Chris** | Needs a Swiss VPS account (Infomaniak or Exoscale), DNS for `staging.tutor.swisssciencetutors.ch` and a go-ahead on error tracking. Compose stack, Caddy TLS, backup container and Sentry-compatible hook are ready; runbook in `docs/runbooks/deploy-staging.md`. |
+| Staging server live with TLS, nightly backups and error tracking | Deployed 28 Oct 2026, **TLS waits on DNS** | Infomaniak VPS `sst-tutor-staging` (83.228.196.57): Docker stack running (Caddy, API, worker, PostgreSQL, Redis, backup), migrations applied, plans and admin seeded. Caddy is requesting the certificate and will succeed once the `A`/`AAAA` records for `staging.tutor.swisssciencetutors.ch` exist. Backups run nightly but stay on the server until backup storage is ordered (`BACKUP_REMOTE`). Error tracking is wired (`SENTRY_DSN`) but off until Chris picks GlitchTip or Sentry EU. |
 | Parent and student sign-up, login and password reset; 2FA for tutors and admin | Done | Email verification, Argon2id, server-side sessions, CSRF, rate limits, single-use 30-minute reset tokens, student username or invite-link login, TOTP mandatory for staff and optional for parents, admin 2FA reset. |
 | Stripe test mode: Checkout, webhooks and Customer Portal end to end | Done in code, **needs Chris's test keys** to exercise against Stripe | Checkout (7-day trial, quantity = students), portal, signed webhooks stored and processed by the worker, nightly reconciliation, access rules, payment-failed grace period, add-on credits. Bootstrap script creates prices by lookup key. Tested with a mocked Stripe. |
 | Brand applied; interface text in English, German and French | Done, **brand source files pending** | Palette and fonts taken from the live site (Lexend, Rethink Sans, green `#84b796`); fonts self-hosted; logos copied from the site. PWA icons are placeholders until Chris supplies the originals. |
@@ -24,11 +24,13 @@ Also delivered: admin area (overview, families, free-access grants, staff invite
 
 ### Waiting on Chris before gate A can be ticked
 
-1. Create the Swiss VPS and DNS record, or give the go-ahead and credentials for the agent to do it.
-2. Stripe test-mode keys (`sk_test_...`) for `.env` on staging; enable TWINT and cards in the dashboard.
-3. Choose the transactional email provider (Swiss or EU) and provide SMTP credentials, or approve Infomaniak SMTP.
-4. Brand source files (logo SVG, exact colour and font specification), if different from the live site.
+1. DNS: `A` record `staging.tutor.swisssciencetutors.ch` → `83.228.196.57` and `AAAA` → `2001:1600:13:101::12dd`. Caddy then issues the certificate within minutes.
+2. Stripe test-mode keys (`sk_test_...`) into `/opt/sst-tutor/.env` on staging, webhook endpoint created in the dashboard, TWINT and cards enabled; then run the bootstrap script (see `docs/runbooks/stripe-test-mode.md`).
+3. Choose the transactional email provider (Swiss or EU) and provide SMTP credentials, or approve Infomaniak SMTP. Until then staging writes emails to the worker's outbox volume.
+4. Order Infomaniak Swiss Backup (or another Swiss bucket) and set `BACKUP_REMOTE` so nightly backups leave the server.
 5. Decide on error tracking: self-hosted GlitchTip on the staging host (no third party) or Sentry EU.
+6. Brand source files (logo SVG, exact colour and font specification), if different from the live site.
+7. Create the GitHub repository and push, so CI runs and deploys can go through tags instead of tar upload.
 
 ## Phase 1: Closed beta
 
