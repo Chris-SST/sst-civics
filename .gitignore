@@ -1,0 +1,33 @@
+# Secrets and local state
+.env
+.env.*
+!.env.example
+var/
+*.db
+*.sqlite
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Node
+web/node_modules/
+web/dist/
+web/dev-dist/
+web/.vite/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Infra
+infra/caddy_data/
+infra/backups/

@@ -1,0 +1,114 @@
+# Staging and production stack. Run from the repository root:
+#   docker compose -f infra/docker-compose.yml --env-file .env up -d --build
+services:
+  caddy:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      DOMAIN: ${DOMAIN}
+      ACME_EMAIL: ${ACME_EMAIL}
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - api
+
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+    restart: unless-stopped
+    env_file: ../.env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://sst:${POSTGRES_PASSWORD}@postgres:5432/sst
+      REDIS_URL: redis://redis:6379/0
+      JOBS_INLINE: "false"
+    volumes:
+      - outbox:/srv/var/outbox
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    expose:
+      - "8000"
+
+  worker:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+    restart: unless-stopped
+    command: ["arq", "worker.main.WorkerSettings"]
+    env_file: ../.env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://sst:${POSTGRES_PASSWORD}@postgres:5432/sst
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - outbox:/srv/var/outbox
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  migrate:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+    command: ["sh", "-c", "alembic upgrade head && python -m scripts.seed"]
+    env_file: ../.env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://sst:${POSTGRES_PASSWORD}@postgres:5432/sst
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+    profiles: ["ops"]
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: sst
+      POSTGRES_USER: sst
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sst -d sst"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "128mb", "--maxmemory-policy", "noeviction"]
+
+  backup:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      BACKUP_PASSPHRASE: ${BACKUP_PASSPHRASE:-}
+      BACKUP_REMOTE: ${BACKUP_REMOTE:-}
+    volumes:
+      - ./backup.sh:/backup.sh:ro
+      - backups:/backups
+    entrypoint: ["sh", "-c", "apk add --no-cache gnupg rclone >/dev/null && while true; do sh /backup.sh; sleep 86400; done"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  pg_data:
+  caddy_data:
+  caddy_config:
+  backups:
+  outbox:

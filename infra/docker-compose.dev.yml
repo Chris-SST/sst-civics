@@ -1,0 +1,28 @@
+# Local development services only: PostgreSQL, Redis and Mailpit (catches outgoing email
+# at http://localhost:8025). Run the API and web dev server on the host.
+#   docker compose -f infra/docker-compose.dev.yml up -d
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: sst
+      POSTGRES_USER: sst
+      POSTGRES_PASSWORD: sst
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_dev:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+
+volumes:
+  pg_dev:
