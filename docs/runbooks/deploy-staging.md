@@ -102,6 +102,8 @@ docker compose -f infra/docker-compose.yml --env-file .env up -d --remove-orphan
 
 From CI: set repository secrets `STAGING_HOST` (`83.228.196.57`), `STAGING_USER` (`ubuntu`), `STAGING_SSH_KEY` and the variable `STAGING_DEPLOY_ENABLED=true`. Pushing a tag `v0.x.y` then runs the same commands over SSH.
 
+Why `--profile ops` on the build: the `migrate` service only exists in that profile, and a plain `build` skips it, so `run --rm migrate` would reuse an old image and silently apply no new migrations. Check with `docker compose ... exec postgres psql -U sst -d sst -c "select * from alembic_version"` after every deploy.
+
 ## 7. Checks after every deploy
 
 - `/api/health` returns 200; the certificate is valid.
