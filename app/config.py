@@ -5,7 +5,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import Field
+from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -81,6 +81,14 @@ class Settings(BaseSettings):
     screening_api_key: str = ""
     tutorcruncher_api_key: str = ""
     tutorcruncher_sso_key: str = ""
+
+    @field_validator("tutor_model", "fast_model", "tutor_effort", mode="before")
+    @classmethod
+    def _empty_means_default(cls, v: object, info) -> object:
+        """`TUTOR_MODEL=` in a .env file must not override the default with an empty name."""
+        if isinstance(v, str) and not v.strip():
+            return cls.model_fields[info.field_name].default
+        return v
 
     @property
     def cookies_secure(self) -> bool:

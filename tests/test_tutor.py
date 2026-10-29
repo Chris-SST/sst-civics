@@ -386,3 +386,15 @@ async def test_admin_ai_usage_report(api, api2, api3, fake):
     assert data["calls"] == 2 and data["cost_chf"] > 0 and data["student_messages"] == 1
     assert {p["purpose"] for p in data["by_purpose"]} == {"gatekeeper", "tutor_reply"}
     assert data["top_students"][0]["first_name"] == "Lina"
+
+
+def test_empty_model_setting_falls_back_to_default(monkeypatch):
+    from app.config import Settings
+
+    monkeypatch.setenv("TUTOR_MODEL", "")
+    monkeypatch.setenv("FAST_MODEL", "   ")
+    monkeypatch.setenv("TUTOR_EFFORT", "")
+    s = Settings(_env_file=None)
+    assert s.tutor_model == "claude-sonnet-5-5"
+    assert s.fast_model == "claude-haiku-5-5"
+    assert s.tutor_effort == "medium"

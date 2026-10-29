@@ -118,3 +118,15 @@ docker compose -f infra/docker-compose.yml --env-file .env logs -f api worker ca
 ```
 
 Logs never contain message content or personal data beyond the email domain of a recipient.
+
+## Switching the AI tutor on
+
+Add `ANTHROPIC_API_KEY=sk-ant-...` to `/opt/sst-tutor/.env` and restart `api` and `worker`
+(`docker compose -f infra/docker-compose.yml --env-file .env up -d api worker`). Leave
+`TUTOR_MODEL` and `FAST_MODEL` out of the file, or set them to real model IDs; an empty value
+is treated as the default since 29 October 2026, but older `.env` files copied from the first
+template contained empty lines that produced `400 Bad Request` on every call. Check with:
+
+```bash
+docker compose -f infra/docker-compose.yml --env-file .env logs --since 10m api | grep "AI call"
+```

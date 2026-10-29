@@ -100,7 +100,15 @@ class AnthropicProvider:
         if isinstance(exc, a.APIConnectionError):
             return LLMError("connection")
         if isinstance(exc, a.APIStatusError):
-            return LLMError("api", f"status {exc.status_code}")
+            # The provider's error message describes the request shape (model name, parameter),
+            # never the conversation, so it is safe to log.
+            reason = ""
+            body = getattr(exc, "body", None)
+            if isinstance(body, dict):
+                err = body.get("error")
+                if isinstance(err, dict):
+                    reason = str(err.get("message", ""))[:200]
+            return LLMError("api", f"status {exc.status_code} {reason}".strip())
         return LLMError("api", exc.__class__.__name__)
 
     async def stream(
