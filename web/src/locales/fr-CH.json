@@ -52,7 +52,14 @@
     "no_stripe_customer": "Il n'y a pas encore de compte de facturation. Commencez d'abord une formule.",
     "csrf_failed": "Votre session a expiré. Veuillez recharger la page.",
     "cannot_deactivate_self": "Vous ne pouvez pas désactiver votre propre compte.",
-    "not_invitable": "Ce compte ne peut pas être réinvité."
+    "not_invitable": "Ce compte ne peut pas être réinvité.",
+    "impersonation_disabled": "La vue en tant qu'autre utilisateur est désactivée en production.",
+    "cannot_impersonate": "Ce compte ne peut pas être affiché de cette manière.",
+    "not_impersonating": "Vous ne consultez pas l'application en tant qu'autre utilisateur."
+  },
+  "impersonation": {
+    "banner": "Vue en tant que {{name}} ({{role}}). Vous êtes connecté comme admin {{admin}}.",
+    "back": "Retour à l'admin"
   },
   "landing": {
     "title": "{{name}}",
@@ -278,6 +285,7 @@
     "plansIntro": "Les prix sont dans Stripe. Vous définissez ici les limites d'usage raisonnable par formule.",
     "monthlyLimit": "Messages par mois",
     "dailyLimit": "Messages par jour",
-    "active": "En vente"
+    "active": "En vente",
+    "viewAs": "Voir en tant que"
   }
 }

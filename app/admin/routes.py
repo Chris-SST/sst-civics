@@ -4,16 +4,17 @@ import uuid
 from datetime import datetime
 from typing import Any, Literal
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Response, status
 from pydantic import BaseModel, EmailStr, Field
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth import one_time
-from app.auth.sessions import destroy_all_sessions
+from app.auth.sessions import create_session, destroy_all_sessions, set_session_cookie
 from app.billing.access import compute_access
+from app.config import get_settings
 from app.db import get_db
-from app.deps import require_admin
+from app.deps import AuthContext, current_auth, require_admin
 from app.email.messages import app_link
 from app.jobs import send_email_job
 from app.models import (
@@ -402,3 +403,28 @@ async def audit_log(db: AsyncSession = Depends(get_db)) -> list[dict[str, Any]]:
         }
         for a in rows
     ]
+
+
+@router.post("/impersonate/{user_id}")
+async def impersonate(
+    user_id: str,
+    response: Response,
+    ctx: AuthContext = Depends(current_auth),
+    db: AsyncSession = Depends(get_db),
+) -> dict[str, str]:
+    """Open the app as another user. Staging and development only; always logged."""
+    admin = ctx.user
+    if admin.role != ROLE_ADMIN:
+        raise HTTPException(status.HTTP_403_FORBIDDEN, "forbidden")
+    if not get_settings().impersonation_enabled:
+        raise HTTPException(status.HTTP_403_FORBIDDEN, "impersonation_disabled")
+    target = await db.get(User, _parse_uuid(user_id))
+    if target is None or not target.is_active or target.role == ROLE_ADMIN:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "cannot_impersonate")
+    # The admin's own session is removed so one browser holds one identity at a time.
+    await db.delete(ctx.session)
+    token = await create_session(db, target, mfa_pending=False, impersonator_id=admin.id)
+    await _audit(db, admin, "user.impersonate", "user", str(target.id), {"role": target.role})
+    await db.commit()
+    set_session_cookie(response, token, target)
+    return {"status": "impersonating", "role": target.role}

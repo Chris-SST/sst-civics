@@ -52,7 +52,14 @@
     "no_stripe_customer": "Es gibt noch kein Abrechnungskonto. Starten Sie zuerst einen Plan.",
     "csrf_failed": "Ihre Sitzung ist abgelaufen. Bitte laden Sie die Seite neu.",
     "cannot_deactivate_self": "Sie können Ihr eigenes Konto nicht deaktivieren.",
-    "not_invitable": "Dieses Konto kann nicht erneut eingeladen werden."
+    "not_invitable": "Dieses Konto kann nicht erneut eingeladen werden.",
+    "impersonation_disabled": "Die Ansicht als andere Person ist in der Produktion abgeschaltet.",
+    "cannot_impersonate": "Dieses Konto kann nicht als Ansicht geöffnet werden.",
+    "not_impersonating": "Sie sehen die App gerade nicht als andere Person."
+  },
+  "impersonation": {
+    "banner": "Ansicht als {{name}} ({{role}}). Sie sind als Admin {{admin}} angemeldet.",
+    "back": "Zurück zum Admin"
   },
   "landing": {
     "title": "{{name}}",
@@ -278,6 +285,7 @@
     "plansIntro": "Preise liegen in Stripe. Hier legen Sie die Fair-Use-Limits pro Plan fest.",
     "monthlyLimit": "Nachrichten pro Monat",
     "dailyLimit": "Nachrichten pro Tag",
-    "active": "Im Verkauf"
+    "active": "Im Verkauf",
+    "viewAs": "Ansicht als"
   }
 }

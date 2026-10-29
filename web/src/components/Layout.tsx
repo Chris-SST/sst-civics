@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
+import { post } from "../api";
 import { homeFor, useAuth } from "../auth";
 import { LANGUAGES } from "../i18n";
 
@@ -8,12 +9,18 @@ const SITE = "https://swisssciencetutors.ch";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const { t, i18n } = useTranslation();
-  const { me, config, logout } = useAuth();
+  const { me, config, logout, refresh } = useAuth();
   const navigate = useNavigate();
 
   async function onLogout() {
     await logout();
     navigate("/login");
+  }
+
+  async function stopImpersonation() {
+    await post("/api/auth/stop-impersonation");
+    await refresh();
+    navigate("/admin");
   }
 
   return (
@@ -65,6 +72,20 @@ export default function Layout({ children }: { children: ReactNode }) {
 
       {config?.env && config.env !== "production" && (
         <div className="env-banner">{t("env.banner", { env: config.env })}</div>
+      )}
+      {me?.session.impersonated_by && (
+        <div className="impersonation-banner">
+          <span>
+            {t("impersonation.banner", {
+              name: me.user.first_name || me.user.email || me.user.username,
+              role: t(`roles.${me.user.role}`),
+              admin: me.session.impersonated_by,
+            })}
+          </span>
+          <button className="btn btn-sm btn-secondary" onClick={() => void stopImpersonation()}>
+            {t("impersonation.back")}
+          </button>
+        </div>
       )}
 
       <main className="container main">{children}</main>

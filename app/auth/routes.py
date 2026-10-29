@@ -41,6 +41,7 @@ from app.models import (
     TOKEN_STAFF_INVITE,
     TOKEN_STUDENT_INVITE,
     TOKEN_VERIFY_EMAIL,
+    AuditLog,
     Family,
     User,
 )
@@ -294,4 +295,33 @@ async def totp_verify(
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_code")
     ctx.session.mfa_pending = False
     await db.commit()
+    return {"status": "ok"}
+
+
+@router.post("/stop-impersonation")
+async def stop_impersonation(
+    response: Response,
+    ctx: AuthContext = Depends(auth_any_state),
+    db: AsyncSession = Depends(get_db),
+) -> dict[str, str]:
+    """Return from an admin "view as" session to the admin's own account."""
+    admin_id = ctx.session.impersonator_user_id
+    if not admin_id:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "not_impersonating")
+    admin = await db.get(User, admin_id)
+    if admin is None or not admin.is_active:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "not_impersonating")
+    await db.delete(ctx.session)
+    db.add(
+        AuditLog(
+            actor_user_id=admin.id,
+            action="user.impersonate.stop",
+            target_type="user",
+            target_id=str(ctx.user.id),
+        )
+    )
+    # The admin passed 2FA before impersonating, so the restored session is complete.
+    token = await create_session(db, admin, mfa_pending=False)
+    await db.commit()
+    set_session_cookie(response, token, admin)
     return {"status": "ok"}

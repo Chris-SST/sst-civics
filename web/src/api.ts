@@ -87,7 +87,7 @@ export interface FamilyOut {
 
 export interface Me {
   user: UserOut;
-  session: { mfa_pending: boolean; mfa_setup_required: boolean };
+  session: { mfa_pending: boolean; mfa_setup_required: boolean; impersonated_by: string | null };
   family: FamilyOut | null;
   csrf_token: string;
 }

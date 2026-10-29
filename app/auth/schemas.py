@@ -74,6 +74,7 @@ class FamilyOut(BaseModel):
 class SessionOut(BaseModel):
     mfa_pending: bool
     mfa_setup_required: bool
+    impersonated_by: str | None = None
 
 
 class MeOut(BaseModel):

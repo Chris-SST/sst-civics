@@ -63,11 +63,18 @@ async def build_me(
     user = ctx.user
     family = await db.get(Family, user.family_id) if user.family_id else None
     csrf = ensure_csrf_cookie(response, request.cookies.get(get_settings().csrf_cookie_name))
+    impersonated_by = None
+    if ctx.session.impersonator_user_id:
+        admin = await db.get(User, ctx.session.impersonator_user_id)
+        impersonated_by = (admin.first_name or admin.email) if admin else "admin"
     return MeOut(
         user=user_out(user),
         session=SessionOut(
             mfa_pending=ctx.session.mfa_pending,
-            mfa_setup_required=user.is_staff and not user.totp_enabled,
+            mfa_setup_required=user.is_staff
+            and not user.totp_enabled
+            and not ctx.session.impersonator_user_id,
+            impersonated_by=impersonated_by,
         ),
         family=await family_out(db, family),
         csrf_token=csrf,

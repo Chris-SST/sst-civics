@@ -50,7 +50,7 @@ async def current_auth(ctx: AuthContext = Depends(auth_any_state)) -> AuthContex
     """Fully authenticated: password plus second factor where required."""
     if ctx.session.mfa_pending:
         raise HTTPException(status.HTTP_403_FORBIDDEN, "mfa_required")
-    if ctx.user.is_staff and not ctx.user.totp_enabled:
+    if ctx.user.is_staff and not ctx.user.totp_enabled and not ctx.session.impersonator_user_id:
         raise HTTPException(status.HTTP_403_FORBIDDEN, "mfa_setup_required")
     return ctx
 

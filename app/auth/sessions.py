@@ -20,13 +20,20 @@ def session_ttl(user: User) -> timedelta:
     return timedelta(hours=hours)
 
 
-async def create_session(db: AsyncSession, user: User, *, mfa_pending: bool) -> str:
+IMPERSONATION_TTL = timedelta(hours=2)
+
+
+async def create_session(
+    db: AsyncSession, user: User, *, mfa_pending: bool, impersonator_id=None
+) -> str:
     token = new_token()
+    ttl = IMPERSONATION_TTL if impersonator_id else session_ttl(user)
     row = Session(
         id=hash_token(token),
         user_id=user.id,
-        expires_at=utcnow() + session_ttl(user),
+        expires_at=utcnow() + ttl,
         mfa_pending=mfa_pending,
+        impersonator_user_id=impersonator_id,
     )
     db.add(row)
     await db.flush()
@@ -44,8 +51,9 @@ async def load_session(db: AsyncSession, token: str | None) -> Session | None:
         await db.delete(row)
         await db.commit()
         return None
-    # Rolling expiry, written at most once an hour to limit writes.
-    if now - row.last_seen_at > timedelta(hours=1):
+    # Rolling expiry, written at most once an hour to limit writes. Impersonation
+    # sessions keep their fixed two-hour life.
+    if row.impersonator_user_id is None and now - row.last_seen_at > timedelta(hours=1):
         row.last_seen_at = now
         user = await db.get(User, row.user_id)
         if user is not None:

@@ -14,11 +14,11 @@ Gate A: Chris can sign up, subscribe in test mode and log in as each role on sta
 | Stripe test mode: Checkout, webhooks and Customer Portal end to end | Keys on staging since 29 Oct 2026, prices created; **Checkout walk-through by Chris pending** | Checkout (7-day trial, quantity = students), portal, signed webhooks stored and processed by the worker, nightly reconciliation, access rules, payment-failed grace period, add-on credits. Bootstrap script creates prices by lookup key. Tested with a mocked Stripe. |
 | Brand applied; interface text in English, German and French | Done, **brand source files pending** | Palette and fonts taken from the live site (Lexend, Rethink Sans, green `#84b796`); fonts self-hosted; logos copied from the site. PWA icons are placeholders until Chris supplies the originals. |
 
-Also delivered: admin area (overview, families, free-access grants, staff invites, plan limits, audit log), tutor and student placeholder pages, installable PWA, README, runbooks and the demo script (`docs/DEMO_PHASE0.md`).
+Also delivered: admin area (overview, families, free-access grants, staff invites, plan limits, audit log, staging-only "View as" to open any parent, student or tutor view without logging out), tutor and student placeholder pages, installable PWA, README, runbooks and the demo script (`docs/DEMO_PHASE0.md`).
 
 ### Verification
 
-- 28 backend tests pass (`pytest -q`); ruff clean; `npm run build` clean.
+- 32 backend tests pass (`pytest -q`); ruff clean; `npm run build` clean.
 - Alembic migration applies and reverts on SQLite; CI does the same on PostgreSQL.
 - Manual smoke test: migrate, seed admin, serve built front end from the API, sign up in French, confirmation email written to the outbox, security headers present.
 

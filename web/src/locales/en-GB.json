@@ -52,7 +52,14 @@
     "no_stripe_customer": "There is no billing account yet. Start a plan first.",
     "csrf_failed": "Your session expired. Please reload the page.",
     "cannot_deactivate_self": "You cannot deactivate your own account.",
-    "not_invitable": "This account cannot be re-invited."
+    "not_invitable": "This account cannot be re-invited.",
+    "impersonation_disabled": "Viewing as another user is switched off in production.",
+    "cannot_impersonate": "This account cannot be viewed as.",
+    "not_impersonating": "You are not viewing as another user."
+  },
+  "impersonation": {
+    "banner": "Viewing as {{name}} ({{role}}). You are signed in as admin {{admin}}.",
+    "back": "Back to admin"
   },
   "landing": {
     "title": "{{name}}",
@@ -278,6 +285,7 @@
     "plansIntro": "Prices live in Stripe. Here you set the fair-use message limits per plan.",
     "monthlyLimit": "Messages per month",
     "dailyLimit": "Messages per day",
-    "active": "On sale"
+    "active": "On sale",
+    "viewAs": "View as"
   }
 }

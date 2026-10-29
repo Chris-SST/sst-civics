@@ -13,14 +13,7 @@ Prerequisites, each a one-off:
 - DNS `A` record `staging.tutor` → `83.228.196.57` and `AAAA` → `2001:1600:13:101::12dd` on `swisssciencetutors.ch`. Caddy fetches the TLS certificate automatically within a few minutes of the record resolving.
 - Stripe test keys in `/opt/sst-tutor/.env` on the server (`STRIPE_SECRET_KEY=sk_test_...`), the webhook endpoint created in the Stripe Dashboard pointing at `https://staging.tutor.swisssciencetutors.ch/api/billing/webhook`, and its `whsec_...` in `STRIPE_WEBHOOK_SECRET`. Then `docker compose -f infra/docker-compose.yml --env-file .env up -d api worker` and `docker compose ... exec api python -m scripts.stripe_bootstrap`.
 
-Until an email provider is chosen, staging writes outgoing emails to files instead of sending them. To read a verification or invite link:
-
-```bash
-ssh ubuntu@83.228.196.57
-cd /opt/sst-tutor
-docker compose -f infra/docker-compose.yml --env-file .env exec worker sh -c 'ls -t var/outbox | head -3'
-docker compose -f infra/docker-compose.yml --env-file .env exec worker sh -c 'cat var/outbox/<newest file>' | grep -o 'https://[^ ]*'
-```
+Staging sends real email through Google Workspace (as tutor@swisssciencetutors.ch), so verification and invite links arrive in the inbox you used.
 
 The admin account for the demo was created with the seed script; the email and the one-time password are in `/opt/sst-tutor/.env.admin` on the server (delete that file after the first login).
 
@@ -28,11 +21,15 @@ The admin account for the demo was created with the seed script; the email and t
 
 Follow "Run it locally in 10 minutes" in [README.md](../README.md). Emails appear as `.eml` files in `var/outbox/`; open them in any mail client or text editor and copy the link. Open http://localhost:8000.
 
+## Switching roles without logging out (staging only)
+
+Once you are in as admin, Admin → Families → Open a family shows a **View as** button next to each parent and student, and Admin → Tutors and admins shows one next to each tutor. A blue banner marks the borrowed view; **Back to admin** returns you. Every switch is logged, and the server refuses the feature in production. You still need to create the parent account once through the real sign-up below, because that is what gate A tests.
+
 ## 2. Parent: sign up, verify, add students
 
 1. Open the app. Switch the language menu (top right) to Deutsch, then Français, then back to English: all text changes, including the plan cards.
 2. **Create account** → "a parent or legal guardian", an email you can read, a password of 10+ characters, tick both boxes. Submit.
-3. Fetch the confirmation email (outbox or inbox) and open the link: "Your email address is confirmed".
+3. Open the confirmation email and follow the link: "Your email address is confirmed".
 4. Try logging in **before** confirming on a second account if you like: the app refuses with "Please confirm your email address first" and offers to resend.
 5. **Log in** as the parent. You land on *Your family*. Status shows "No plan".
 6. **Add a student**: first name only, year of birth, IB Diploma, tick IB Maths AA HL and IB Physics SL, login method "username and password". Save. The card shows the username.
@@ -85,7 +82,7 @@ Needs the Stripe test keys; without them the plan cards show "Payments are not c
 ## 8. What the tests cover
 
 ```bash
-pytest -q            # 28 tests: sign-up and verification, login and rate limits, reset flow, students,
+pytest -q            # 32 tests: sign-up and verification, login and rate limits, reset flow, students,
                      # staff 2FA, Stripe checkout params, webhook signature and idempotency,
                      # subscription lifecycle and access rules, add-on credits, admin free access, CSRF
 cd web && npm run build

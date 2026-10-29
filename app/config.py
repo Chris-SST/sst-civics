@@ -79,6 +79,11 @@ class Settings(BaseSettings):
         return self.app_env not in ("dev", "test")
 
     @property
+    def impersonation_enabled(self) -> bool:
+        """Admin "view as" is a staging and development aid only."""
+        return self.app_env in ("dev", "test", "staging")
+
+    @property
     def is_sqlite(self) -> bool:
         return self.database_url.startswith("sqlite")
 

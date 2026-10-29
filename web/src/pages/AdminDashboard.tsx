@@ -1,9 +1,27 @@
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import { get, patch, post } from "../api";
+import { homeFor, useAuth } from "../auth";
 import ErrorText from "../components/ErrorText";
 import { formatDate } from "../i18n";
+
+/** Staging and development only: open the app as another user. The server refuses it in production. */
+function useViewAs(setError: (e: unknown) => void) {
+  const { refresh, config } = useAuth();
+  const navigate = useNavigate();
+  const enabled = !!config && config.env !== "production";
+  async function viewAs(userId: string) {
+    try {
+      const out = await post<{ role: string }>(`/api/admin/impersonate/${userId}`);
+      await refresh();
+      navigate(homeFor(out.role));
+    } catch (e) {
+      setError(e);
+    }
+  }
+  return { enabled, viewAs };
+}
 
 export default function AdminDashboard() {
   const { t } = useTranslation();
@@ -123,6 +141,7 @@ function Families() {
   const [until, setUntil] = useState("");
   const [reason, setReason] = useState("SST lesson family");
   const [error, setError] = useState<unknown>(null);
+  const { enabled: viewAsEnabled, viewAs } = useViewAs(setError);
 
   const load = useCallback(async () => {
     setRows(await get<FamilyRow[]>(`/api/admin/families?q=${encodeURIComponent(q)}`));
@@ -207,9 +226,14 @@ function Families() {
           <h3>{t("admin.members")}</h3>
           <ul className="small">
             {detail.users.map((u) => (
-              <li key={u.id}>
+              <li key={u.id} style={{ marginBottom: 6 }}>
                 {t(`roles.${u.role}`)}: {u.first_name || u.email || u.username} {u.email && `· ${u.email}`} {u.username && `· ${u.username}`}
-                {!u.is_active && ` · ${t("admin.inactive")}`}
+                {!u.is_active && ` · ${t("admin.inactive")}`}{" "}
+                {viewAsEnabled && u.is_active && (
+                  <button className="btn btn-sm btn-secondary" onClick={() => void viewAs(u.id)}>
+                    {t("admin.viewAs")}
+                  </button>
+                )}
               </li>
             ))}
           </ul>
@@ -260,6 +284,7 @@ function Staff() {
   const [courses, setCourses] = useState("");
   const [error, setError] = useState<unknown>(null);
   const [ok, setOk] = useState("");
+  const { enabled: viewAsEnabled, viewAs } = useViewAs(setError);
 
   const load = useCallback(async () => setRows(await get<StaffRow[]>("/api/admin/users")), []);
   useEffect(() => {
@@ -331,6 +356,11 @@ function Staff() {
                 <td className="small">{u.tagged_courses.join(", ")}</td>
                 <td>
                   <div className="actions">
+                    {viewAsEnabled && u.is_active && u.role === "tutor" && (
+                      <button className="btn btn-sm btn-secondary" onClick={() => void viewAs(u.id)}>
+                        {t("admin.viewAs")}
+                      </button>
+                    )}
                     {u.invite_pending && (
                       <button className="btn btn-sm btn-secondary" onClick={() => void action(u.id, "resend-invite")}>
                         {t("admin.resendInvite")}

@@ -120,8 +120,12 @@ class Session(Base):
     expires_at: Mapped[datetime] = mapped_column(TZDateTime)
     last_seen_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
     mfa_pending: Mapped[bool] = mapped_column(Boolean, default=False)
+    # Set when an admin is viewing the app as this user (never in production).
+    impersonator_user_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
 
-    user: Mapped[User] = relationship()
+    user: Mapped[User] = relationship(foreign_keys=[user_id])
 
 
 class OneTimeToken(Base):
