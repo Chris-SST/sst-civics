@@ -126,10 +126,10 @@ async def test_streamed_reply_is_stored_counted_and_costed(api, api2, fake):
     # Prompt layering: base + course cached, student context last, no personal data.
     stream_call = next(c for c in fake.calls if c.kind == "stream")
     assert stream_call.model == get_settings().tutor_model
-    assert len(stream_call.system) == 3
-    assert stream_call.system[1].get("cache_control") == {"type": "ephemeral"}
-    assert "Exponents and logarithms" in stream_call.system[2]["text"]
-    assert "Higher Level" in stream_call.system[2]["text"]
+    assert len(stream_call.system) == 4
+    assert stream_call.system[2].get("cache_control") == {"type": "ephemeral"}
+    assert "Exponents and logarithms" in stream_call.system[3]["text"]
+    assert "Higher Level" in stream_call.system[3]["text"]
     joined = json.dumps(stream_call.system) + json.dumps(stream_call.messages)
     assert "Lina" not in joined and "lina" not in joined and "example.ch" not in joined
     assert stream_call.messages[-1] == {"role": "user", "content": "How do I solve 2^x = 10?"}
@@ -145,7 +145,7 @@ async def test_streamed_reply_is_stored_counted_and_costed(api, api2, fake):
         assert purposes == ["gatekeeper", "tutor_reply"]
         reply = next(c for c in calls if c.purpose == "tutor_reply")
         assert reply.cost_usd > 0 and reply.cost_chf == pytest.approx(reply.cost_usd * 0.8)
-        assert reply.prompt_version.startswith("base@v1+courses/ib_maths_aa@v1")
+        assert reply.prompt_version.startswith("base@v1+figures@v1+courses/ib_maths_aa@v1")
         assert reply.cache_read_tokens == 1000
 
     r = await api2.get(f"/api/tutor/conversations/{conv_id}")
@@ -201,7 +201,7 @@ async def test_wellbeing_flags_conversation_and_alerts_admin(api, api2, api3, fa
     assert ("notice", {"kind": "wellbeing"}) in events
     assert any(e == "message" and "147" in d["content"] for e, d in events)
     stream_call = next(c for c in fake.calls if c.kind == "stream")
-    assert "wellbeing concern (self_harm)" in stream_call.system[2]["text"]
+    assert "wellbeing concern (self_harm)" in stream_call.system[3]["text"]
     assert memory_outbox.messages, "safeguarding lead must be emailed"
     alert = memory_outbox.messages[-1]
     assert alert.to == "admin@sst-example.ch"
@@ -371,7 +371,7 @@ async def test_running_summary_folds_older_turns(api, api2, fake, monkeypatch):
     r = await api2.post(f"/api/tutor/conversations/{conv_id}/messages", json={"content": "Next"})
     assert r.status_code == 200
     stream_call = [c for c in fake.calls if c.kind == "stream"][-1]
-    assert "log laws" in stream_call.system[2]["text"]
+    assert "log laws" in stream_call.system[3]["text"]
     assert len(stream_call.messages) <= 3
 
 

@@ -331,3 +331,159 @@ class CostAlert(Base):
     period: Mapped[str] = mapped_column(String(7))  # YYYY-MM
     amount_chf: Mapped[float] = mapped_column(Float)
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+
+
+# --- Phase 1: question bank, attempts, mastery -----------------------------------------
+
+Q_DRAFT = "draft"
+Q_AUTO_VERIFIED = "auto_verified"
+Q_NEEDS_REVIEW = "needs_review"
+Q_APPROVED = "approved"
+Q_RETIRED = "retired"
+QUESTION_STATUSES = (Q_DRAFT, Q_AUTO_VERIFIED, Q_NEEDS_REVIEW, Q_APPROVED, Q_RETIRED)
+
+QTYPE_MCQ = "mcq"
+QTYPE_NUMERIC = "numeric"
+QTYPE_SHORT = "short"  # an expression or short exact answer
+QTYPE_STRUCTURED = "structured"  # marked against a mark scheme
+QUESTION_TYPES = (QTYPE_MCQ, QTYPE_NUMERIC, QTYPE_SHORT, QTYPE_STRUCTURED)
+
+ATTEMPT_DIAGNOSTIC = "diagnostic"
+ATTEMPT_PRACTICE = "practice"
+ATTEMPT_CHECK = "check"  # check questions at the end of a tutor session
+
+
+class GenerationBatch(Base):
+    """One request to generate questions, either through the provider's Batch API or
+    directly in the worker."""
+
+    __tablename__ = "generation_batches"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    provider_batch_id: Mapped[str | None] = mapped_column(String(80), index=True)
+    mode: Mapped[str] = mapped_column(String(10), default="batch")  # batch | direct
+    module_key: Mapped[str] = mapped_column(String(40), index=True)
+    level: Mapped[str] = mapped_column(String(4), default="both")  # sl | hl | both
+    topic_codes: Mapped[list[str]] = mapped_column(JSON)
+    difficulties: Mapped[list[int]] = mapped_column(JSON)
+    per_request: Mapped[int] = mapped_column(Integer, default=5)
+    language: Mapped[str] = mapped_column(String(5), default="en")
+    status: Mapped[str] = mapped_column(String(16), default="submitted")
+    requests: Mapped[int] = mapped_column(Integer, default=0)
+    questions_created: Mapped[int] = mapped_column(Integer, default=0)
+    error: Mapped[str | None] = mapped_column(Text)
+    requested_by: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("users.id"))
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    ended_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+
+
+class Question(Base):
+    __tablename__ = "questions"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    module_key: Mapped[str] = mapped_column(String(40), index=True)
+    level: Mapped[str] = mapped_column(String(4), default="both")  # sl | hl | both
+    topic_code: Mapped[str] = mapped_column(String(20), index=True)
+    difficulty: Mapped[int] = mapped_column(Integer, default=3)  # 1 to 5
+    qtype: Mapped[str] = mapped_column(String(12), default=QTYPE_SHORT)
+    calculator_allowed: Mapped[bool] = mapped_column(Boolean, default=True)
+    language: Mapped[str] = mapped_column(String(5), default="en")
+    question_text: Mapped[str] = mapped_column(Text)
+    options: Mapped[list[dict[str, str]] | None] = mapped_column(JSON)  # mcq: [{key, text}]
+    answer: Mapped[str] = mapped_column(Text)
+    unit: Mapped[str | None] = mapped_column(String(40))
+    tolerance: Mapped[float | None] = mapped_column(Float)  # relative, numeric questions
+    worked_solution: Mapped[str] = mapped_column(Text, default="")
+    mark_scheme: Mapped[str | None] = mapped_column(Text)
+    marks: Mapped[int] = mapped_column(Integer, default=1)
+    status: Mapped[str] = mapped_column(String(16), default=Q_DRAFT, index=True)
+    spot_check: Mapped[bool] = mapped_column(Boolean, default=False)
+    source: Mapped[str] = mapped_column(String(16), default="generated")
+    prompt_version: Mapped[str] = mapped_column(String(80), default="")
+    check_results: Mapped[dict[str, Any] | None] = mapped_column(JSON)
+    solve_answer: Mapped[str | None] = mapped_column(Text)
+    batch_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("generation_batches.id", ondelete="SET NULL")
+    )
+    reviewer_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("users.id"))
+    reviewed_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    review_note: Mapped[str | None] = mapped_column(Text)
+    review_minutes: Mapped[int] = mapped_column(Integer, default=0)
+    report_count: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, onupdate=utcnow)
+
+
+class QuestionReport(Base):
+    __tablename__ = "question_reports"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    question_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("questions.id", ondelete="CASCADE"), index=True
+    )
+    student_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("users.id", ondelete="SET NULL")
+    )
+    comment: Mapped[str | None] = mapped_column(String(1000))
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    resolved_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+
+
+class Attempt(Base):
+    """A student's answer to a question, in a diagnostic, in practice, or as a check at
+    the end of a tutor session."""
+
+    __tablename__ = "attempts"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    student_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    question_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("questions.id", ondelete="CASCADE"), index=True
+    )
+    course_key: Mapped[str] = mapped_column(String(40))
+    topic_code: Mapped[str] = mapped_column(String(20))
+    mode: Mapped[str] = mapped_column(String(12), default=ATTEMPT_PRACTICE)
+    answer_text: Mapped[str] = mapped_column(Text, default="")
+    score: Mapped[float] = mapped_column(Float, default=0.0)  # 0 to 1
+    correct: Mapped[bool] = mapped_column(Boolean, default=False)
+    feedback: Mapped[str | None] = mapped_column(Text)  # AI marking comment
+    ai_marked: Mapped[bool] = mapped_column(Boolean, default=False)
+    conversation_id: Mapped[uuid.UUID | None] = mapped_column(Uuid, index=True)
+    diagnostic_id: Mapped[uuid.UUID | None] = mapped_column(Uuid, index=True)
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, index=True)
+
+
+class TopicMastery(Base):
+    __tablename__ = "topic_mastery"
+    __table_args__ = (
+        UniqueConstraint("student_id", "course_key", "topic_code", name="uq_mastery"),
+    )
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    student_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    course_key: Mapped[str] = mapped_column(String(40))
+    topic_code: Mapped[str] = mapped_column(String(20))
+    rating: Mapped[float] = mapped_column(Float, default=1000.0)
+    attempts: Mapped[int] = mapped_column(Integer, default=0)
+    correct: Mapped[int] = mapped_column(Integer, default=0)
+    last_attempt_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    next_review_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+
+
+class DiagnosticRun(Base):
+    __tablename__ = "diagnostic_runs"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    student_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    course_key: Mapped[str] = mapped_column(String(40))
+    status: Mapped[str] = mapped_column(String(16), default="in_progress")
+    question_ids: Mapped[list[str]] = mapped_column(JSON)
+    position: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    completed_at: Mapped[datetime | None] = mapped_column(TZDateTime)

@@ -12,7 +12,8 @@ from app.billing import stripe_client
 from app.billing.events import apply_subscription, handle_event
 from app.db import SessionLocal, utcnow
 from app.email import backend, messages
-from app.models import Family, StripeEvent
+from app.models import Family, GenerationBatch, StripeEvent
+from app.questions import pipeline
 
 log = logging.getLogger(__name__)
 
@@ -75,3 +76,56 @@ async def purge_sessions(ctx: dict[str, Any]) -> int:
         n = await purge_expired_sessions(db)
         await db.commit()
     return n
+
+
+async def generate_questions_direct(ctx: dict[str, Any], batch_id: str) -> int:
+    """Direct-mode generation: one provider call per topic and difficulty, with checks."""
+    import uuid
+
+    async with SessionLocal() as db:
+        batch = await db.get(GenerationBatch, uuid.UUID(batch_id))
+        if batch is None or batch.status != "submitted":
+            return 0
+        batch.status = "running"
+        await db.commit()
+        try:
+            n = await pipeline.generate_direct(db, batch)
+        except Exception as exc:  # noqa: BLE001
+            await db.rollback()
+            batch = await db.get(GenerationBatch, uuid.UUID(batch_id))
+            if batch is not None:
+                batch.status = "failed"
+                batch.error = f"{exc.__class__.__name__}: {exc}"[:2000]
+                await db.commit()
+            log.exception("Direct generation failed for batch %s", batch_id)
+            return 0
+    log.info("Generated %d questions for batch %s", n, batch_id)
+    return n
+
+
+async def poll_generation_batches(ctx: dict[str, Any]) -> int:
+    """Every 10 minutes: fetch results of provider batches that have ended."""
+    processed = 0
+    async with SessionLocal() as db:
+        batches = (
+            (
+                await db.execute(
+                    select(GenerationBatch).where(
+                        GenerationBatch.mode == "batch",
+                        GenerationBatch.status == "submitted",
+                        GenerationBatch.provider_batch_id.is_not(None),
+                    )
+                )
+            )
+            .scalars()
+            .all()
+        )
+        for batch in batches:
+            try:
+                n = await pipeline.process_batch(db, batch)
+                if n or batch.status == "processed":
+                    processed += 1
+            except Exception as exc:  # noqa: BLE001
+                await db.rollback()
+                log.warning("Polling batch %s failed: %s", batch.id, exc.__class__.__name__)
+    return processed

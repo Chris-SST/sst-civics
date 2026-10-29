@@ -46,6 +46,10 @@ Started 29 October 2026. Build order in D-028.
 | Gate A carry-over: remove "is an AI, not a person" wording everywhere | Done 29 Oct 2026 | Footer, student home and student invite email, all three languages (D-025) |
 | Gate A carry-over: positioning proposal for copy and plan names | Proposal written 29 Oct 2026 | `docs/POSITIONING_PROPOSAL.md`; Chris to pick a naming scheme, then the display names change |
 | Chat tutor for IB Maths AA, IB Maths AI and IB Physics, streaming, KaTeX | **Built 29 Oct 2026**, on staging; needs `ANTHROPIC_API_KEY` on the server to go live | `app/llm/` (provider wrapper, prompt loader, pricing, service), `prompts/base/v1.md`, three course modules with topic lists, `app/tutoring/` (topic-first sessions, SSE streaming, gatekeeper, three-strikes rule, running summary), student chat page with KaTeX, first-use notice. Course modules are drafts for SST tutor review. |
+| Question bank pipeline (generate, solve, checks, review queue) | In progress since 29 Oct 2026 (D-037) | Reviewed offline by SST tutors; staging serves auto-verified questions (D-039) |
+| Diagnostic, mastery scores, "work on this next" home page | Not started | D-038, D-040 |
+| Gap-led tutor sessions with check questions | Not started | |
+| Figures by name, drawn in the browser | Not started | |
 | Photo upload with HEIC conversion, EXIF removal and abuse-material screening | Blocked on D-031 | Needs Chris's yes to storage and screening providers |
 | Message limits, cost logging and cost alerts | Built 29 Oct 2026 | Per-plan daily and monthly caps (Swiss time), 80% notice, `llm_calls` log with tokens, USD/CHF cost, latency and prompt version; one alert email per student (CHF 8) and per monthly budget (CHF 300) per month; Admin → AI usage. |
 | TutorCruncher link: automatic free access, email sign-in links | Not started | Needs `TUTORCRUNCHER_API_KEY` |

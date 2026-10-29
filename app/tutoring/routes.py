@@ -45,8 +45,11 @@ from app.models import (
     Family,
     Message,
     SafetyFlag,
+    TopicMastery,
     User,
 )
+from app.questions import bank
+from app.questions.mastery import mastery_percent
 from app.tutoring.limits import UsageInfo, usage_for
 
 log = logging.getLogger(__name__)
@@ -524,6 +527,16 @@ async def _reply_stream(
             yield _sse("notice", {"kind": "wellbeing"})
         await db.commit()
 
+        topic_mastery = (
+            await db.execute(
+                select(TopicMastery).where(
+                    TopicMastery.student_id == student.id,
+                    TopicMastery.course_key == conv.course_key,
+                    TopicMastery.topic_code == conv.topic_code,
+                )
+            )
+        ).scalar_one_or_none()
+        misses = await bank.recent_misses(db, student.id, conv.course_key, conv.topic_code)
         ctx = service.TutorContext(
             course_key=conv.course_key,
             language=locale,
@@ -531,6 +544,8 @@ async def _reply_stream(
             topic_name=conv.topic_name,
             summary=conv.summary,
             note=note,
+            mastery=mastery_percent(topic_mastery.rating) if topic_mastery else None,
+            misses=misses or None,
         )
         history = await _history(db, conv)
         version = service.prompt_version(conv.course_key)

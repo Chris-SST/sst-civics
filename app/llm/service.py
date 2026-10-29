@@ -67,6 +67,8 @@ class TutorContext:
     topic_name: str
     summary: str | None = None
     note: str | None = None  # borderline or wellbeing steer for this turn
+    mastery: int | None = None  # 0 to 100 on this topic, if the student has been tested
+    misses: list[dict[str, str]] | None = None  # recent wrong answers on this topic
 
 
 # --- Prompt assembly -----------------------------------------------------------------
@@ -87,7 +89,8 @@ def prompt_version(course_key: str) -> str:
     base = prompts.load("base")
     module = prompts.course_module_key(course_key)
     course = prompts.load(f"courses/{module}")
-    return f"{base.label}+{course.label}"
+    figures = prompts.load("figures")
+    return f"{base.label}+{figures.label}+{course.label}"
 
 
 def build_system(ctx: TutorContext) -> list[dict[str, Any]]:
@@ -104,10 +107,26 @@ def build_system(ctx: TutorContext) -> list[dict[str, Any]]:
     ]
     if ctx.summary:
         lines.append("- Summary of the earlier part of this conversation: " + ctx.summary)
+    if ctx.mastery is not None:
+        band = "weak" if ctx.mastery < 40 else "developing" if ctx.mastery < 70 else "strong"
+        lines.append(f"- Mastery on this topic from practice questions: {ctx.mastery}/100 ({band})")
+    if ctx.misses:
+        lines.append(
+            "- Recent practice questions the student got wrong on this topic. Start by finding "
+            "out what went wrong with the first one, then teach the idea behind it; do not "
+            "simply give the correct answer:"
+        )
+        for i, m in enumerate(ctx.misses, 1):
+            lines.append(
+                f"  {i}. Question: {m['question']}\n     Student's answer: {m['student_answer']}"
+                f"\n     Correct answer: {m['correct_answer']}"
+            )
     if ctx.note:
         lines.append("- Note for this turn: " + ctx.note)
+    figures = prompts.load("figures")
     return [
         {"type": "text", "text": base.text},
+        {"type": "text", "text": figures.text},
         {"type": "text", "text": course.text, "cache_control": {"type": "ephemeral"}},
         {"type": "text", "text": "\n".join(lines)},
     ]

@@ -75,6 +75,10 @@ class Settings(BaseSettings):
     ai_student_alert_chf: float = 8
     safeguarding_email: str = ""  # empty: every admin account is notified
     max_student_message_chars: int = 2000
+    serve_unreviewed_questions: bool = False  # staging/dev: also serve auto_verified
+    question_spot_check_first: int = 50
+    question_spot_check_rate: float = 0.10
+    diagnostic_questions_per_topic: int = 2
     conversation_window_turns: int = 20
 
     # Other providers (later phases)
@@ -89,6 +93,10 @@ class Settings(BaseSettings):
         if isinstance(v, str) and not v.strip():
             return cls.model_fields[info.field_name].default
         return v
+
+    @property
+    def unreviewed_questions_allowed(self) -> bool:
+        return self.serve_unreviewed_questions and self.app_env != "production"
 
     @property
     def cookies_secure(self) -> bool:

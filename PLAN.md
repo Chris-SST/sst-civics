@@ -544,9 +544,13 @@ Each phase ends at a gate Chris signs off, and nothing is sold to the public bef
 
 **Phase 1: Closed beta, free for existing SST students** (gate B: evaluations pass, beta issues resolved, lawyer and security reviews done)
 
-- [ ] Chat tutor for IB Maths AA, IB Maths AI and IB Physics, with streaming and KaTeX.
+- [x] Chat tutor for IB Maths AA, IB Maths AI and IB Physics, with streaming and KaTeX. (29 October 2026)
+- [ ] Question bank pipeline for the launch courses (generate, independent solve, automatic checks, tutor review queue), pulled forward from Phase 2 on 29 October 2026 at Chris's request. Reviewed offline by SST tutors; staging may serve auto-verified questions, production only approved ones.
+- [ ] Diagnostic per course on first use, a mastery score per topic, and a student home page built around "work on this next" instead of an empty chat box.
+- [ ] Tutor sessions that start from a gap (the missed questions as context) and end with check questions that update mastery.
+- [ ] Figures the tutor can request by name (function graphs, number lines, triangles, vectors, free-body diagrams, charts), drawn in the browser in the brand style.
 - [ ] Photo upload with HEIC conversion, EXIF removal and abuse-material screening.
-- [ ] Message limits, cost logging and cost alerts.
+- [x] Message limits, cost logging and cost alerts. (29 October 2026)
 - [ ] Sign-in linked to TutorCruncher: automatic free access for active SST families, email sign-in links, and the TutorCruncher button once its token security is confirmed.
 - [ ] Ask a tutor: queue, tutor dashboard, 24-hour timer and notifications.
 - [ ] Safeguarding screen, alerts to the safeguarding lead and a written procedure.
@@ -557,7 +561,7 @@ Each phase ends at a gate Chris signs off, and nothing is sold to the public bef
 **Phase 2: Public launch** (gate C: each new course has about 200 approved questions and passing evaluations; AI cost per active student at or below the CHF 4 assumed in the pricing model)
 
 - [ ] Stripe live: AI-only, hybrid, Ask a tutor and exam sprint on sale, by card and TWINT.
-- [ ] Question bank pipeline and practice mode for the launch courses.
+- [ ] Practice mode: spaced repetition, mixed-topic sets and the timer (the question bank itself moved to Phase 1).
 - [ ] Parent dashboard and weekly summaries.
 - [ ] IB Chemistry and Biology, IGCSE and A Level courses.
 - [ ] IB core coaching (process only) and the exam sprint.

@@ -46,6 +46,25 @@ class LLMError(Exception):
         self.detail = detail
 
 
+@dataclass
+class BatchRequest:
+    custom_id: str
+    system: list[dict[str, Any]] | str
+    messages: list[dict[str, Any]]
+    schema: dict[str, Any] | None
+    max_tokens: int
+    effort: str
+
+
+@dataclass
+class BatchResult:
+    custom_id: str
+    status: str  # succeeded | errored | canceled | expired
+    text: str | None
+    usage: Usage | None
+    model: str
+
+
 class Provider(Protocol):
     available: bool
 
@@ -71,6 +90,14 @@ class Provider(Protocol):
         effort: str,
         timeout: float,
     ) -> tuple[dict[str, Any], Completion]: ...
+
+    async def batch_create(self, *, model: str, requests: list[BatchRequest]) -> str: ...
+
+    async def batch_status(self, batch_id: str) -> str:
+        """in_progress | ended | canceling"""
+        ...
+
+    async def batch_results(self, batch_id: str) -> list[BatchResult]: ...
 
 
 def _usage_from(usage: Any, fallback_model: str) -> Usage:
@@ -187,6 +214,54 @@ class AnthropicProvider:
             raise LLMError("api", "invalid json") from exc
         return data, completion
 
+    async def batch_create(self, *, model: str, requests: list[BatchRequest]) -> str:
+        def params(r: BatchRequest) -> dict[str, Any]:
+            p: dict[str, Any] = {
+                "model": model,
+                "max_tokens": r.max_tokens,
+                "system": r.system,
+                "messages": r.messages,
+                "output_config": {"effort": r.effort},
+            }
+            if r.schema is not None:
+                p["output_config"]["format"] = {"type": "json_schema", "schema": r.schema}
+            return p
+
+        try:
+            batch = await self._client.messages.batches.create(
+                requests=[{"custom_id": r.custom_id, "params": params(r)} for r in requests]
+            )
+        except Exception as exc:  # noqa: BLE001
+            err = self._translate(exc)
+            log.warning("Batch create failed: %s %s", err.code, err.detail)
+            raise err from exc
+        return batch.id
+
+    async def batch_status(self, batch_id: str) -> str:
+        try:
+            batch = await self._client.messages.batches.retrieve(batch_id)
+        except Exception as exc:  # noqa: BLE001
+            raise self._translate(exc) from exc
+        return batch.processing_status
+
+    async def batch_results(self, batch_id: str) -> list[BatchResult]:
+        out: list[BatchResult] = []
+        try:
+            async for item in await self._client.messages.batches.results(batch_id):
+                kind = item.result.type
+                text = None
+                usage = None
+                model = ""
+                if kind == "succeeded":
+                    msg = item.result.message
+                    text = next((b.text for b in msg.content if b.type == "text"), "")
+                    usage = _usage_from(msg.usage, msg.model)
+                    model = msg.model
+                out.append(BatchResult(item.custom_id, kind, text, usage, model))
+        except Exception as exc:  # noqa: BLE001
+            raise self._translate(exc) from exc
+        return out
+
 
 class DisabledProvider:
     available = False
@@ -196,6 +271,15 @@ class DisabledProvider:
         yield  # pragma: no cover
 
     async def structured(self, **kwargs: Any) -> tuple[dict[str, Any], Completion]:
+        raise LLMUnavailable()
+
+    async def batch_create(self, **kwargs: Any) -> str:
+        raise LLMUnavailable()
+
+    async def batch_status(self, batch_id: str) -> str:
+        raise LLMUnavailable()
+
+    async def batch_results(self, batch_id: str) -> list[BatchResult]:
         raise LLMUnavailable()
 
 
@@ -220,6 +304,9 @@ class FakeProvider:
     default_classification: dict[str, Any] = field(
         default_factory=lambda: {"label": "on_topic", "wellbeing": "none", "coursework": False}
     )
+    # Batch API: custom_id -> JSON-serialisable result (or Exception); batches end at once.
+    batch_answers: dict[str, Any] = field(default_factory=dict)
+    batches: dict[str, list[BatchRequest]] = field(default_factory=dict)
 
     async def stream(
         self,
@@ -280,6 +367,42 @@ DEMO_REPLY = (
     "If \\(2^x = 10\\), taking logs of both sides gives\n\n"
     "\\[ x = \\log_2 10 = \\frac{\\ln 10}{\\ln 2} \\]\n\n"
     "What do you get to three significant figures?"
+)
+
+
+def _fake_batch_methods():
+    async def batch_create(self, *, model: str, requests: list[BatchRequest]) -> str:
+        batch_id = f"fake_batch_{len(self.batches) + 1}"
+        self.batches[batch_id] = list(requests)
+        self.calls.append(FakeCall("batch", model, None, [{"n": len(requests)}]))
+        return batch_id
+
+    async def batch_status(self, batch_id: str) -> str:
+        return "ended" if batch_id in self.batches else "in_progress"
+
+    async def batch_results(self, batch_id: str) -> list[BatchResult]:
+        out = []
+        for r in self.batches.get(batch_id, []):
+            answer = self.batch_answers.get(r.custom_id)
+            if answer is None:
+                out.append(BatchResult(r.custom_id, "errored", None, None, "fake"))
+            else:
+                out.append(
+                    BatchResult(
+                        r.custom_id,
+                        "succeeded",
+                        json.dumps(answer),
+                        Usage(input_tokens=3000, output_tokens=1500),
+                        "fake-batch-model",
+                    )
+                )
+        return out
+
+    return batch_create, batch_status, batch_results
+
+
+FakeProvider.batch_create, FakeProvider.batch_status, FakeProvider.batch_results = (
+    _fake_batch_methods()
 )
 
 _provider: Provider | None = None
