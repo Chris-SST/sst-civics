@@ -44,3 +44,20 @@ built, on staging or locally. Takes about 10 minutes.
   review in `prompts/courses/`).
 - Anything that feels like too much text on screen (the one-time notice is the only AI
   disclosure left).
+
+## Question bank and diagnostic
+
+1. Admin → Question bank → Generate: pick a course, topics ("all" is fine), difficulties 2 and
+   4, three questions per request, mode "batch". A batch of 20 topics costs a few francs and
+   arrives within an hour; "Check now" fetches results early. "direct" mode runs immediately
+   and is handy for one topic.
+2. Each question is solved independently and checked; the review queue shows the doubtful ones
+   and the spot checks. Approve, fix or retire a few. Note the minutes field: review time is
+   logged for pay.
+3. As a student (View as works), the home page now leads with "Find your gaps". Take the
+   diagnostic: about two questions per topic, auto-marked, solution available after each.
+   The results screen ranks topics; "Ask the tutor" on the weakest topic starts a session in
+   which the tutor already knows which questions were missed.
+4. In a session, "Check what you learnt" serves up to three questions on the topic and updates
+   the mastery score. Mastery bars on the home page move accordingly.
+5. Report a problem on any question twice: it disappears from the bank until a tutor looks.

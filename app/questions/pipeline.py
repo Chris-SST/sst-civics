@@ -183,11 +183,17 @@ def build_generation_request(
 # --- Submitting generation -------------------------------------------------------------------
 
 
+def custom_id(batch_id: uuid.UUID, topic: str, difficulty: int) -> str:
+    """Provider custom ids allow only [a-zA-Z0-9_-], at most 64 characters."""
+    safe_topic = "".join(ch if ch.isalnum() or ch in "_-" else "-" for ch in topic)
+    return f"{batch_id.hex}_{safe_topic}_{int(difficulty)}"[:64]
+
+
 def _plan_requests(batch: GenerationBatch) -> list[tuple[str, str, int]]:
     out = []
     for topic in batch.topic_codes:
         for d in batch.difficulties:
-            out.append((f"{batch.id}:{topic}:{d}", topic, int(d)))
+            out.append((custom_id(batch.id, topic, int(d)), topic, int(d)))
     return out
 
 

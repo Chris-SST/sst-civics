@@ -117,3 +117,18 @@ Models and behaviour are configured with `TUTOR_MODEL`, `FAST_MODEL`, `TUTOR_EFF
 `AI_STUDENT_ALERT_CHF` and `SAFEGUARDING_EMAIL`. Prompts live in `prompts/` (see its README).
 Every call is logged in `llm_calls` and summarised under Admin → AI usage; flagged
 conversations appear under Admin → Safeguarding.
+
+## Question bank
+
+Admin → Question bank generates questions per course, topic and difficulty, either through
+the provider's Batch API (half price, results within about an hour, fetched by the worker every
+ten minutes) or directly. Every generated question is solved independently by the model and
+checked automatically (answer agreement, multiple-choice validity, rounding-consistent
+tolerances, near duplicates) before it becomes `auto_verified`; anything doubtful becomes
+`needs_review`. Tutors review questions for their tagged courses under Tutor → Question review
+and can approve with edits, send back or retire. Production serves only approved questions;
+set `SERVE_UNREVIEWED_QUESTIONS=true` on staging to serve auto-verified ones as well (D-039).
+
+Students take a short diagnostic per course, get a mastery score per topic, practise at an
+adapted difficulty, and can check what they learnt at the end of a tutor session. Structured
+answers are marked by the model against the mark scheme and labelled "AI-marked".

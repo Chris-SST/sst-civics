@@ -23,7 +23,7 @@ from app.models import (
     TopicMastery,
     User,
 )
-from app.questions import checks, mastery
+from app.questions import checks, mastery, pipeline
 from tests.conftest import Api, admin_logged_in, create_staff, login, parent_logged_in
 
 STUDENT = {
@@ -230,8 +230,9 @@ async def test_batch_generation_is_polled_and_processed(api3, fake):
     batch = r.json()
     assert batch["status"] == "submitted" and batch["requests"] == 4
     # Provider results arrive: one per custom id; solves all agree
-    for cid in [f"{batch['id']}:{t}:{d}" for t in ("PH-A.1", "PH-A.2") for d in (2, 4)]:
-        topic, d = cid.split(":")[1], cid.split(":")[2]
+    for topic, d in [(t, str(d)) for t in ("PH-A.1", "PH-A.2") for d in (2, 4)]:
+        cid = pipeline.custom_id(uuid.UUID(batch["id"]), topic, int(d))
+        assert len(cid) <= 64 and all(c.isalnum() or c in "_-" for c in cid)
         text = {
             "2": f"A stone falls for {d} s from rest; find the distance fallen ({topic}).",
             "4": f"A car brakes from 30 m/s to rest in {d} s; find the deceleration ({topic}).",
