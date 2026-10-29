@@ -398,3 +398,56 @@ def test_empty_model_setting_falls_back_to_default(monkeypatch):
     assert s.tutor_model == "claude-sonnet-5-5"
     assert s.fast_model == "claude-haiku-5-5"
     assert s.tutor_effort == "medium"
+
+
+async def test_tutor_context_carries_recent_mistakes_and_mastery(api, api2, fake):
+    from app.models import Attempt, Question, TopicMastery, User
+
+    await student_logged_in(api, api2)
+    async with SessionLocal() as db:
+        student = (await db.execute(select(User).where(User.username == "lina"))).scalars().one()
+        q = Question(
+            module_key="ib_maths_aa",
+            level="both",
+            topic_code="AA-1.2",
+            difficulty=3,
+            qtype="short",
+            language="en",
+            question_text="Solve 2^x = 10, giving x to three significant figures.",
+            answer="3.32",
+            worked_solution="Take logs.",
+            status="auto_verified",
+        )
+        db.add(q)
+        await db.flush()
+        db.add(
+            Attempt(
+                student_id=student.id,
+                question_id=q.id,
+                course_key="ib_maths_aa_hl",
+                topic_code="AA-1.2",
+                mode="diagnostic",
+                answer_text="5",
+                score=0.0,
+                correct=False,
+            )
+        )
+        db.add(
+            TopicMastery(
+                student_id=student.id,
+                course_key="ib_maths_aa_hl",
+                topic_code="AA-1.2",
+                rating=950.0,
+                attempts=2,
+                correct=0,
+            )
+        )
+        await db.commit()
+    conv_id = await start_conversation(api2)
+    r = await api2.post(f"/api/tutor/conversations/{conv_id}/messages", json={"content": "Help"})
+    assert r.status_code == 200
+    stream_call = [c for c in fake.calls if c.kind == "stream"][-1]
+    context = stream_call.system[3]["text"]
+    assert "Mastery on this topic" in context and "(weak)" in context
+    assert "Solve 2^x = 10" in context and "Student's answer: 5" in context
+    assert "Lina" not in context
