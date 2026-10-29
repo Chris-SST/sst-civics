@@ -26,7 +26,7 @@ Also delivered: admin area (overview, families, free-access grants, staff invite
 
 1. DNS: `A` record done. `AAAA` → `2001:1600:13:101::12dd` was filled in at Swizzonic and waits for Chris to confirm the save (optional; IPv4 is enough for the site to work).
 2. Stripe: keys and prices done. Run demo section 3 (trial Checkout with the test card) and confirm the webhook arrives as "processed" in Admin → Overview.
-3. Email: Google Workspace SMTP relay configured on 29 Oct 2026 and staging switched to it. Remaining: add the DKIM and DMARC TXT records at Swizzonic and press "Start authentication" in the Admin console.
+3. Email: Google Workspace SMTP relay configured on 29 Oct 2026, staging switched to it and a real email delivered. DKIM (`google._domainkey`) and DMARC (`_dmarc`, `p=none`) records are live at Swizzonic. Remaining: press "Start authentication" in the Admin console (Gmail → Authenticate email), then tighten DMARC to `p=quarantine` after a few weeks of clean reports.
 4. Order Infomaniak Swiss Backup (or another Swiss bucket) and set `BACKUP_REMOTE` so nightly backups leave the server.
 5. Decide on error tracking: self-hosted GlitchTip on the staging host (no third party) or Sentry EU.
 6. Brand source files (logo SVG, exact colour and font specification), if different from the live site.
