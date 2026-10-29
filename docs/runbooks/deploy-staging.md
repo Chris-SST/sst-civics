@@ -62,7 +62,7 @@ BACKUP_REMOTE=                         # rclone remote, see backups-and-restore.
 ## 4. First start
 
 ```bash
-docker compose -f infra/docker-compose.yml --env-file .env build
+docker compose -f infra/docker-compose.yml --env-file .env --profile ops build
 docker compose -f infra/docker-compose.yml --env-file .env --profile ops run --rm migrate
 docker compose -f infra/docker-compose.yml --env-file .env up -d
 docker compose -f infra/docker-compose.yml --env-file .env ps
@@ -95,7 +95,7 @@ Manual:
 
 ```bash
 cd /opt/sst-tutor && git pull --tags && git checkout <tag>
-docker compose -f infra/docker-compose.yml --env-file .env build
+docker compose -f infra/docker-compose.yml --env-file .env --profile ops build
 docker compose -f infra/docker-compose.yml --env-file .env --profile ops run --rm migrate
 docker compose -f infra/docker-compose.yml --env-file .env up -d --remove-orphans
 ```

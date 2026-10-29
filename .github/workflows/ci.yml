@@ -122,6 +122,6 @@ jobs:
           mkdir -p ~/.ssh && echo "$KEY" > ~/.ssh/id_ed25519 && chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H "$HOST" >> ~/.ssh/known_hosts
           ssh "$USER@$HOST" "cd /opt/sst-tutor && git fetch --tags && git checkout $REF && \
-            docker compose -f infra/docker-compose.yml --env-file .env build && \
+            docker compose -f infra/docker-compose.yml --env-file .env --profile ops build && \
             docker compose -f infra/docker-compose.yml --env-file .env --profile ops run --rm migrate && \
             docker compose -f infra/docker-compose.yml --env-file .env up -d --remove-orphans"
