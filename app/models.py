@@ -7,7 +7,17 @@ import uuid
 from datetime import datetime
 from typing import Any
 
-from sqlalchemy import JSON, Boolean, ForeignKey, Integer, String, Text, Uuid
+from sqlalchemy import (
+    JSON,
+    Boolean,
+    Float,
+    ForeignKey,
+    Integer,
+    String,
+    Text,
+    UniqueConstraint,
+    Uuid,
+)
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db import Base, TZDateTime, utcnow
@@ -95,6 +105,9 @@ class User(TimestampMixin, Base):
     # Tutor profile (Phase 1 fills this in)
     tagged_courses: Mapped[list[str] | None] = mapped_column(JSON)
     available: Mapped[bool] = mapped_column(Boolean, default=True)
+
+    # One-time notice shown the first time a student opens the tutor (D-025)
+    tutor_notice_seen_at: Mapped[datetime | None] = mapped_column(TZDateTime)
 
     family: Mapped[Family | None] = relationship(back_populates="users")
 
@@ -194,4 +207,127 @@ class AuditLog(Base):
     target_type: Mapped[str | None] = mapped_column(String(32))
     target_id: Mapped[str | None] = mapped_column(String(64))
     meta: Mapped[dict[str, Any] | None] = mapped_column(JSON)
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+
+
+# --- Phase 1: tutor conversations, AI call log, safeguarding ---------------------------
+
+CONVERSATION_ACTIVE = "active"
+CONVERSATION_ENDED = "ended"
+
+MESSAGE_USER = "user"
+MESSAGE_ASSISTANT = "assistant"
+MESSAGE_NOTICE = "notice"  # fixed server replies (off topic, limits), never sent to the model
+
+FLAG_OPEN = "open"
+FLAG_REVIEWED = "reviewed"
+FLAG_DISMISSED = "dismissed"
+
+
+class Conversation(Base):
+    """One tutoring session, always started from a course and topic."""
+
+    __tablename__ = "conversations"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    student_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    course_key: Mapped[str] = mapped_column(String(40))
+    topic_code: Mapped[str] = mapped_column(String(20))
+    topic_name: Mapped[str] = mapped_column(String(120))
+    language: Mapped[str] = mapped_column(String(5), default="en")
+    title: Mapped[str] = mapped_column(String(160), default="")
+    status: Mapped[str] = mapped_column(String(16), default=CONVERSATION_ACTIVE)
+    summary: Mapped[str | None] = mapped_column(Text)
+    summary_upto_seq: Mapped[int] = mapped_column(Integer, default=0)
+    next_seq: Mapped[int] = mapped_column(Integer, default=1)
+    off_topic_streak: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    last_activity_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+
+    messages: Mapped[list[Message]] = relationship(
+        back_populates="conversation", order_by="Message.seq"
+    )
+
+
+class Message(Base):
+    """A turn in a conversation. Content lives only here, never in logs."""
+
+    __tablename__ = "messages"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    conversation_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("conversations.id", ondelete="CASCADE"), index=True
+    )
+    student_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    seq: Mapped[int] = mapped_column(Integer)
+    role: Mapped[str] = mapped_column(String(16))
+    content: Mapped[str] = mapped_column(Text)
+    gate_label: Mapped[str | None] = mapped_column(String(20))
+    counted: Mapped[bool] = mapped_column(Boolean, default=False)
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, index=True)
+
+    conversation: Mapped[Conversation] = relationship(back_populates="messages")
+
+
+class LlmCall(Base):
+    """One call to the AI provider: tokens, cost and latency. No content."""
+
+    __tablename__ = "llm_calls"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    student_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("users.id", ondelete="SET NULL"), index=True
+    )
+    conversation_id: Mapped[uuid.UUID | None] = mapped_column(Uuid, index=True)
+    purpose: Mapped[str] = mapped_column(String(32))  # tutor_reply | gatekeeper | summary
+    model: Mapped[str] = mapped_column(String(64))
+    prompt_version: Mapped[str] = mapped_column(String(64), default="")
+    status: Mapped[str] = mapped_column(String(16), default="ok")  # ok | refusal | error
+    input_tokens: Mapped[int] = mapped_column(Integer, default=0)
+    cache_read_tokens: Mapped[int] = mapped_column(Integer, default=0)
+    cache_write_tokens: Mapped[int] = mapped_column(Integer, default=0)
+    output_tokens: Mapped[int] = mapped_column(Integer, default=0)
+    cost_usd: Mapped[float] = mapped_column(Float, default=0.0)
+    cost_chf: Mapped[float] = mapped_column(Float, default=0.0)
+    latency_ms: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, index=True)
+
+
+class SafetyFlag(Base):
+    """A conversation flagged for the safeguarding lead. Admin only."""
+
+    __tablename__ = "safety_flags"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    student_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    conversation_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("conversations.id", ondelete="CASCADE"), index=True
+    )
+    message_id: Mapped[uuid.UUID | None] = mapped_column(Uuid)
+    kind: Mapped[str] = mapped_column(String(32))  # wellbeing | override | abuse_material
+    detail: Mapped[str | None] = mapped_column(String(64))  # self_harm, abuse, sexual, ...
+    status: Mapped[str] = mapped_column(String(16), default=FLAG_OPEN)
+    notes: Mapped[str | None] = mapped_column(Text)
+    reviewed_by: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("users.id"))
+    reviewed_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, index=True)
+
+
+class CostAlert(Base):
+    """One alert email per threshold, scope and month."""
+
+    __tablename__ = "cost_alerts"
+    __table_args__ = (UniqueConstraint("kind", "scope", "period", name="uq_cost_alert"),)
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    kind: Mapped[str] = mapped_column(String(16))  # student | budget
+    scope: Mapped[str] = mapped_column(String(64))  # student id or "all"
+    period: Mapped[str] = mapped_column(String(7))  # YYYY-MM
+    amount_chf: Mapped[float] = mapped_column(Float)
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)

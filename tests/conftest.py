@@ -114,6 +114,12 @@ async def api2() -> AsyncIterator[Api]:
         yield Api(c)
 
 
+@pytest.fixture
+async def api3() -> AsyncIterator[Api]:
+    async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as c:
+        yield Api(c)
+
+
 def last_email_link() -> str:
     assert memory_outbox.messages, "no email was sent"
     text = memory_outbox.messages[-1].text

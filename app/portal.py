@@ -1,5 +1,5 @@
-"""Student and tutor home endpoints. Phase 0 placeholders; the tutor chat, practice and
-Ask-a-tutor queue arrive in Phase 1."""
+"""Student and tutor home endpoints. The chat tutor lives in app/tutoring; practice and
+the Ask-a-tutor queue arrive later in Phase 1."""
 
 from __future__ import annotations
 
@@ -12,6 +12,7 @@ from app.billing.access import compute_access
 from app.config import get_settings
 from app.db import get_db
 from app.deps import require_roles, require_staff
+from app.llm.client import get_provider
 from app.models import ROLE_ADULT, ROLE_STUDENT, Family, User
 
 router = APIRouter(prefix="/api", tags=["portal"])
@@ -31,7 +32,7 @@ async def student_home(
         "access": compute_access(family),
         "plan_key": family.plan_key if family else None,
         "tutor_name": settings.tutor_name,
-        "tutor_available": False,  # Phase 1
+        "tutor_available": get_provider().available,
     }
 
 

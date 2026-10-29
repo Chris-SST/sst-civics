@@ -105,3 +105,15 @@ All variables are documented in [.env.example](.env.example). Secrets are never 
 - Every AI call goes through `app/llm/` (Phase 1). Prompts live as versioned files in `prompts/`, never in code.
 - Names, emails and other identifiers never leave the server; logs carry no message content.
 - No AI attribution anywhere in code, docs, interface text or commit messages.
+
+## The chat tutor (Phase 1)
+
+Set `ANTHROPIC_API_KEY` in `.env` and the tutor switches on; without it the student page says
+the tutor is not connected. For local development without a key, set `LLM_FAKE=true` (dev and
+test only) to get canned replies that exercise the whole interface, including maths rendering.
+
+Models and behaviour are configured with `TUTOR_MODEL`, `FAST_MODEL`, `TUTOR_EFFORT`,
+`TUTOR_NAME` and `DISCLOSE_MODEL_PROVIDER`; cost alerts with `AI_MONTHLY_BUDGET_CHF`,
+`AI_STUDENT_ALERT_CHF` and `SAFEGUARDING_EMAIL`. Prompts live in `prompts/` (see its README).
+Every call is logged in `llm_calls` and summarised under Admin → AI usage; flagged
+conversations appear under Admin → Safeguarding.

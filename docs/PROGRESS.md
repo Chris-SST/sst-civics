@@ -1,6 +1,6 @@
 # Progress
 
-Updated 28 October 2026.
+Updated 29 October 2026.
 
 ## Phase 0: Foundations (gate A)
 
@@ -32,9 +32,34 @@ Also delivered: admin area (overview, families, free-access grants, staff invite
 6. Brand source files (logo SVG, exact colour and font specification), if different from the live site.
 7. Create the GitHub repository and push, so CI runs and deploys can go through tags instead of tar upload.
 
-## Phase 1: Closed beta
+### Gate A: passed on 29 October 2026
 
-Not started. See PLAN.md for the checklist. First Phase 1 items to tackle: `app/llm/` module with cost logging, `prompts/` base instructions and IB Maths AA module, streaming chat endpoint, gatekeeper and safeguarding screen.
+Chris reviewed staging and signed off "OK for a start" with three carry-overs, tracked below as Phase 1 items: phone layout, removal of the AI labels (D-025), positioning of the marketing copy and plan names (D-026). Items 4 to 7 above (backup storage, error tracking, brand files, GitHub repository) stay open and are not blocking.
+
+## Phase 1: Closed beta (gate B)
+
+Started 29 October 2026. Build order in D-028.
+
+| Item | Status | Notes |
+| --- | --- | --- |
+| Gate A carry-over: phone layout clean-up on every page | Done 29 Oct 2026 | Header, forms, plan cards, admin tables (stack into cards on phones), 44px touch targets; checked at 390px and 360px |
+| Gate A carry-over: remove "is an AI, not a person" wording everywhere | Done 29 Oct 2026 | Footer, student home and student invite email, all three languages (D-025) |
+| Gate A carry-over: positioning proposal for copy and plan names | Proposal written 29 Oct 2026 | `docs/POSITIONING_PROPOSAL.md`; Chris to pick a naming scheme, then the display names change |
+| Chat tutor for IB Maths AA, IB Maths AI and IB Physics, streaming, KaTeX | **Built 29 Oct 2026**, on staging; needs `ANTHROPIC_API_KEY` on the server to go live | `app/llm/` (provider wrapper, prompt loader, pricing, service), `prompts/base/v1.md`, three course modules with topic lists, `app/tutoring/` (topic-first sessions, SSE streaming, gatekeeper, three-strikes rule, running summary), student chat page with KaTeX, first-use notice. Course modules are drafts for SST tutor review. |
+| Photo upload with HEIC conversion, EXIF removal and abuse-material screening | Blocked on D-031 | Needs Chris's yes to storage and screening providers |
+| Message limits, cost logging and cost alerts | Built 29 Oct 2026 | Per-plan daily and monthly caps (Swiss time), 80% notice, `llm_calls` log with tokens, USD/CHF cost, latency and prompt version; one alert email per student (CHF 8) and per monthly budget (CHF 300) per month; Admin → AI usage. |
+| TutorCruncher link: automatic free access, email sign-in links | Not started | Needs `TUTORCRUNCHER_API_KEY` |
+| Ask a tutor: queue, tutor dashboard, 24-hour timer, notifications | Not started | |
+| Safeguarding screen, alerts to the lead, written procedure | Screen and alerts built 29 Oct 2026; **written procedure pending** | Fast-model screen on every message (self-harm, abuse, sexual, bullying, danger); wellbeing replies show 147; flag plus email to the safeguarding lead with no content; Admin → Safeguarding queue with audited transcript view. Harassment and override attempts are flagged too. |
+| Evaluation suite, about 200 cases per launch course | Not started | |
+| Terms, privacy notice and AI-safety page on the main site | Not started | Lawyer review before gate B |
+| Four weeks of beta use by SST students | Not started | |
+
+Also carried from Phase 0: encrypt TOTP secrets at rest (D-013), self-service data export and deletion (D-019), Playwright end-to-end tests (D-021), production read-only support view (D-024).
+
+Verification on 29 October 2026: 45 backend tests pass, ruff clean, `npm run build` clean, migration 0003 applies and reverts on SQLite.
+
+Needed from Chris for Phase 1: `ANTHROPIC_API_KEY` in `/opt/sst-tutor/.env` on the server; the naming scheme from the positioning proposal; decisions in D-030 and D-031; TutorCruncher API key.
 
 ## Phase 2 and 3
 

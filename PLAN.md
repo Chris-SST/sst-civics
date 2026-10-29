@@ -301,8 +301,8 @@ Layers 1 and 2 use [prompt caching](https://platform.claude.com/docs/en/build-wi
 **Persona and disclosure**
 
 - Name from config `TUTOR_NAME`, default "SST Virtual Tutor".
-- The interface labels the tutor as AI on every chat screen, and it always confirms it is an AI when asked. The provider requires this disclosure for products used by minors.
-- It never claims to be a person, a named SST tutor or a teacher at the student's school.
+- The tutor never claims to be a person, a named SST tutor or a teacher at the student's school, and it confirms it is an AI when asked.
+- No permanent "AI" label on screens (Chris, 29 October 2026). The provider requires that users of a product for minors are told they are talking to an AI; this is met once, with one short line the first time a student opens the tutor, and in the terms and the AI-safety page, not with notices on every page.
 - `DISCLOSE_MODEL_PROVIDER`, default `true`: asked which AI it is, the tutor says it runs on a model from Anthropic. When `false`, it says it cannot share details of the underlying technology. Either way it never denies or misstates the model it runs on.
 
 **Limits and cost control**
@@ -623,7 +623,7 @@ Build one phase at a time, in the order of Build phases, and stop for Chris's si
 
 Each decision has a default so building can start; tick it off once Chris confirms or changes it before the phase shown.
 
-- [ ] Tutor name and disclosure setting. Default: "SST Virtual Tutor", allowed to say it runs on a model from Anthropic. Before phase 1.
+- [x] Tutor name and disclosure setting. Default: "SST Virtual Tutor", allowed to say it runs on a model from Anthropic. Decided 29 October 2026: no permanent AI label; one-time notice at first use (see Persona and disclosure).
 - [ ] App address. Default: `tutor.swisssciencetutors.ch`. Phase 0.
 - [ ] Hosting provider: Infomaniak or Exoscale, both Swiss. Phase 0.
 - [ ] Transactional email provider with a Swiss or EU region. Phase 0.

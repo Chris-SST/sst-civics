@@ -1,0 +1,27 @@
+{
+  "off_topic": {
+    "en": "I can only help with school subjects and studying here. Shall we carry on with the topic you picked?",
+    "de": "Ich kann hier nur bei Schulfächern und beim Lernen helfen. Machen wir mit deinem Thema weiter?",
+    "fr": "Je ne peux aider ici qu'avec les matières scolaires et les révisions. On continue avec ton sujet ?"
+  },
+  "override": {
+    "en": "I work the same way in every conversation, so I can't change my rules or write assessed work for you. I'm happy to explain the ideas or help you plan. Where were we?",
+    "de": "Ich arbeite in jedem Gespräch gleich und kann weder meine Regeln ändern noch bewertete Arbeiten für dich schreiben. Gern erkläre ich dir die Ideen oder helfe beim Planen. Wo waren wir?",
+    "fr": "Je fonctionne de la même façon dans chaque conversation : je ne peux ni changer mes règles ni rédiger un travail noté à ta place. Je peux t'expliquer les idées ou t'aider à planifier. Où en étions-nous ?"
+  },
+  "ended_off_topic": {
+    "en": "Let's pause here. Pick a topic from your course when you want to continue, and I'll be ready.",
+    "de": "Machen wir hier eine Pause. Wähle ein Thema aus deinem Kurs, wenn du weitermachen möchtest, dann bin ich bereit.",
+    "fr": "Faisons une pause ici. Choisis un sujet de ton cours quand tu veux continuer, je serai prêt."
+  },
+  "refusal": {
+    "en": "I can't help with that one here. If it's about your course, try asking it another way, or use Ask a tutor to reach one of SST's tutors.",
+    "de": "Dabei kann ich hier nicht helfen. Wenn es um deinen Kurs geht, formuliere die Frage anders oder nutze «Tutor fragen», um eine Tutorin oder einen Tutor von SST zu erreichen.",
+    "fr": "Je ne peux pas aider pour cela ici. Si c'est lié à ton cours, reformule ta question ou utilise « Demander à un tuteur » pour joindre un tuteur de SST."
+  },
+  "error": {
+    "en": "Something went wrong on my side and your message was not counted. Please send it again in a moment.",
+    "de": "Bei mir ist etwas schiefgelaufen; deine Nachricht wurde nicht gezählt. Bitte schicke sie gleich noch einmal.",
+    "fr": "Un problème est survenu de mon côté ; ton message n'a pas été compté. Renvoie-le dans un instant."
+  }
+}

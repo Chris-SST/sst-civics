@@ -16,7 +16,7 @@ function readCookie(name: string): string | null {
   return m ? decodeURIComponent(m[1]) : null;
 }
 
-async function ensureCsrf(): Promise<string> {
+export async function ensureCsrf(): Promise<string> {
   const existing = readCookie("sst_csrf");
   if (existing) return existing;
   const r = await fetch("/api/auth/csrf", { credentials: "same-origin" });

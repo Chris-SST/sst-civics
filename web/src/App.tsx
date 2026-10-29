@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { RequireRole } from "./auth";
 import Layout from "./components/Layout";
@@ -12,13 +13,15 @@ import TwoFactor from "./pages/TwoFactor";
 import ParentDashboard from "./pages/ParentDashboard";
 import BillingReturn from "./pages/BillingReturn";
 import StudentHome from "./pages/StudentHome";
+const StudentChat = lazy(() => import("./pages/StudentChat"));
 import TutorDashboard from "./pages/TutorDashboard";
-import AdminDashboard from "./pages/AdminDashboard";
+const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
     <Layout>
+      <Suspense fallback={<p className="muted">…</p>}>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
@@ -54,6 +57,14 @@ export default function App() {
           }
         />
         <Route
+          path="/student/chat/:id"
+          element={
+            <RequireRole roles={["student", "adult"]}>
+              <StudentChat />
+            </RequireRole>
+          }
+        />
+        <Route
           path="/tutor"
           element={
             <RequireRole roles={["tutor", "admin"]}>
@@ -71,6 +82,7 @@ export default function App() {
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </Suspense>
     </Layout>
   );
 }

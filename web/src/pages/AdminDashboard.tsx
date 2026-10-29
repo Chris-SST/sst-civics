@@ -5,6 +5,7 @@ import { get, patch, post } from "../api";
 import { homeFor, useAuth } from "../auth";
 import ErrorText from "../components/ErrorText";
 import { formatDate } from "../i18n";
+import { AiUsage, SafetyFlags } from "./AdminTutor";
 
 /** Staging and development only: open the app as another user. The server refuses it in production. */
 function useViewAs(setError: (e: unknown) => void) {
@@ -35,12 +36,16 @@ export default function AdminDashboard() {
         <NavLink to="/admin/families">{t("admin.families")}</NavLink>
         <NavLink to="/admin/staff">{t("admin.staff")}</NavLink>
         <NavLink to="/admin/plans">{t("admin.plans")}</NavLink>
+        <NavLink to="/admin/safety">{t("admin.safety")}</NavLink>
+        <NavLink to="/admin/usage">{t("admin.usage")}</NavLink>
       </nav>
       <Routes>
         <Route index element={<Overview />} />
         <Route path="families" element={<Families />} />
         <Route path="staff" element={<Staff />} />
         <Route path="plans" element={<Plans />} />
+        <Route path="safety" element={<SafetyFlags />} />
+        <Route path="usage" element={<AiUsage />} />
       </Routes>
     </>
   );
@@ -90,16 +95,22 @@ function Overview() {
         <h2>{t("admin.stripeEvents")}</h2>
         {data.recent_stripe_events.length === 0 && <p className="muted">{t("admin.noEvents")}</p>}
         <div className="table-wrap">
-          <table className="table">
+          <table className="table table-stack">
             <tbody>
               {data.recent_stripe_events.map((e) => (
                 <tr key={e.id}>
-                  <td>{e.type}</td>
-                  <td className="small">{formatDate(e.received_at)}</td>
-                  <td className="small">{e.processed_at ? t("admin.processed") : t("admin.pending")}</td>
-                  <td className="small" style={{ color: "var(--red)" }}>
-                    {e.error}
+                  <td data-label={t("admin.eventType")}>{e.type}</td>
+                  <td className="small" data-label={t("admin.received")}>
+                    {formatDate(e.received_at)}
                   </td>
+                  <td className="small" data-label={t("parent.status")}>
+                    {e.processed_at ? t("admin.processed") : t("admin.pending")}
+                  </td>
+                  {e.error && (
+                    <td className="small" data-label={t("admin.error")} style={{ color: "var(--red)" }}>
+                      {e.error}
+                    </td>
+                  )}
                 </tr>
               ))}
             </tbody>
@@ -177,7 +188,7 @@ function Families() {
         <input placeholder={t("admin.searchEmail")} value={q} onChange={(e) => setQ(e.target.value)} />
       </div>
       <div className="table-wrap card">
-        <table className="table">
+        <table className="table table-stack">
           <thead>
             <tr>
               <th>{t("fields.email")}</th>
@@ -191,16 +202,16 @@ function Families() {
           <tbody>
             {rows.map((r) => (
               <tr key={r.id}>
-                <td>
+                <td data-label={t("fields.email")}>
                   {r.payer_email} {!r.payer_verified && <span className="hint">({t("admin.unverified")})</span>}
                 </td>
-                <td>{r.plan_key ? t(`plans.${r.plan_key}.name`) : "–"}</td>
-                <td>{t(`subStatus.${r.subscription_status ?? "none"}`)}</td>
-                <td>
+                <td data-label={t("parent.plan")}>{r.plan_key ? t(`plans.${r.plan_key}.name`) : "–"}</td>
+                <td data-label={t("parent.status")}>{t(`subStatus.${r.subscription_status ?? "none"}`)}</td>
+                <td data-label={t("admin.access")}>
                   <span className={`status status-${r.access}`}>{t(`access.${r.access}`)}</span>
                 </td>
-                <td>{r.student_count}</td>
-                <td>
+                <td data-label={t("parent.students")}>{r.student_count}</td>
+                <td className="table-actions">
                   <button className="btn btn-sm btn-secondary" onClick={() => void open(r.id)}>
                     {t("common.open")}
                   </button>
@@ -335,7 +346,7 @@ function Staff() {
       <ErrorText error={error} />
       {ok && <div className="alert alert-ok">{ok}</div>}
       <div className="table-wrap card">
-        <table className="table">
+        <table className="table table-stack">
           <thead>
             <tr>
               <th>{t("fields.firstName")}</th>
@@ -349,12 +360,16 @@ function Staff() {
           <tbody>
             {rows.map((u) => (
               <tr key={u.id} style={{ opacity: u.is_active ? 1 : 0.5 }}>
-                <td>{u.first_name}</td>
-                <td>{u.email}</td>
-                <td>{t(`roles.${u.role}`)}</td>
-                <td>{u.invite_pending ? t("admin.invitePending") : u.totp_enabled ? t("common.yes") : t("common.no")}</td>
-                <td className="small">{u.tagged_courses.join(", ")}</td>
-                <td>
+                <td data-label={t("fields.firstName")}>{u.first_name}</td>
+                <td data-label={t("fields.email")}>{u.email}</td>
+                <td data-label={t("admin.role")}>{t(`roles.${u.role}`)}</td>
+                <td data-label="2FA">
+                  {u.invite_pending ? t("admin.invitePending") : u.totp_enabled ? t("common.yes") : t("common.no")}
+                </td>
+                <td className="small" data-label={t("tutor.courses")}>
+                  {u.tagged_courses.join(", ")}
+                </td>
+                <td className="table-actions">
                   <div className="actions">
                     {viewAsEnabled && u.is_active && u.role === "tutor" && (
                       <button className="btn btn-sm btn-secondary" onClick={() => void viewAs(u.id)}>
@@ -460,7 +475,7 @@ function Plans() {
       <ErrorText error={error} />
       <p className="small">{t("admin.plansIntro")}</p>
       <div className="table-wrap">
-        <table className="table">
+        <table className="table table-stack">
           <thead>
             <tr>
               <th>{t("parent.plan")}</th>
@@ -473,39 +488,44 @@ function Plans() {
           <tbody>
             {rows.map((p) => (
               <tr key={p.key}>
-                <td>
+                <td data-label={t("parent.plan")}>
                   {t(`plans.${p.key}.name`)} <span className="hint">({p.key})</span>
                 </td>
-                <td>
+                <td data-label={t("admin.monthlyLimit")}>
                   {p.kind === "subscription" ? (
                     <input
                       type="number"
                       min={0}
                       value={p.monthly_message_limit ?? 0}
                       onChange={(e) => update(p.key, "monthly_message_limit", Number(e.target.value))}
-                      style={{ width: 90 }}
                     />
                   ) : (
                     "–"
                   )}
                 </td>
-                <td>
+                <td data-label={t("admin.dailyLimit")}>
                   {p.kind === "subscription" ? (
                     <input
                       type="number"
                       min={0}
                       value={p.daily_message_limit ?? 0}
                       onChange={(e) => update(p.key, "daily_message_limit", Number(e.target.value))}
-                      style={{ width: 90 }}
                     />
                   ) : (
                     "–"
                   )}
                 </td>
-                <td>
-                  <input type="checkbox" checked={p.is_active} onChange={(e) => update(p.key, "is_active", e.target.checked)} />
+                <td data-label={t("admin.active")}>
+                  <label className="check">
+                    <input
+                      type="checkbox"
+                      checked={p.is_active}
+                      onChange={(e) => update(p.key, "is_active", e.target.checked)}
+                    />
+                    <span className="visually-hidden">{t("admin.active")}</span>
+                  </label>
                 </td>
-                <td>
+                <td className="table-actions">
                   <button className="btn btn-sm btn-secondary" onClick={() => void save(p)}>
                     {t("common.save")}
                   </button>

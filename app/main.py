@@ -16,6 +16,8 @@ from app.billing.routes import router as billing_router
 from app.config import get_settings
 from app.family.routes import router as family_router
 from app.portal import router as portal_router
+from app.tutoring.admin_routes import router as admin_tutor_router
+from app.tutoring.routes import router as tutor_router
 
 UNSAFE_METHODS = {"POST", "PUT", "PATCH", "DELETE"}
 CSRF_EXEMPT_PATHS = {"/api/billing/webhook"}
@@ -86,6 +88,8 @@ def create_app() -> FastAPI:
     app.include_router(family_router)
     app.include_router(admin_router)
     app.include_router(portal_router)
+    app.include_router(tutor_router)
+    app.include_router(admin_tutor_router)
 
     @app.get("/api/health", include_in_schema=False)
     async def health() -> dict[str, str]:

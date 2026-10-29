@@ -58,14 +58,24 @@ class Settings(BaseSettings):
     s3_access_key: str = ""
     s3_secret_key: str = ""
 
-    # AI (Phase 1). No AI calls are made in Phase 0.
+    # AI tutor. Every call goes through app/llm; an empty key disables the tutor.
     anthropic_api_key: str = ""
-    tutor_model: str = ""
-    fast_model: str = ""
+    llm_fake: bool = False  # dev and test only: canned replies, no provider call
+    tutor_model: str = "claude-sonnet-5-5"
+    fast_model: str = "claude-haiku-5-5"
+    tutor_effort: Literal["low", "medium", "high"] = "medium"
+    tutor_max_output_tokens: int = 1500
+    tutor_timeout_seconds: float = 90
+    fast_timeout_seconds: float = 6
     tutor_name: str = "SST Virtual Tutor"
     disclose_model_provider: bool = True
-    ai_monthly_budget_chf: float = 0
+    prompts_dir: str = "prompts"
+    usd_chf_rate: float = 0.80  # for cost logging only; update occasionally
+    ai_monthly_budget_chf: float = 300
     ai_student_alert_chf: float = 8
+    safeguarding_email: str = ""  # empty: every admin account is notified
+    max_student_message_chars: int = 2000
+    conversation_window_turns: int = 20
 
     # Other providers (later phases)
     screening_api_key: str = ""

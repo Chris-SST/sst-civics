@@ -47,7 +47,16 @@ def test_compute_access_matrix():
 
 
 def test_all_email_messages_render_in_every_language():
-    params = {"link": "https://x", "first_name": "A", "role": "tutor"}
+    params = {
+        "link": "https://x",
+        "first_name": "A",
+        "role": "tutor",
+        "scope": "student",
+        "reason": "self_harm",
+        "amount": "1.00",
+        "threshold": "8.00",
+        "period": "2026-10",
+    }
     for kind in messages.TEXTS:
         for locale in ("en", "de", "fr", "it"):
             m = messages.build(kind, locale, "a@b.ch", **params)

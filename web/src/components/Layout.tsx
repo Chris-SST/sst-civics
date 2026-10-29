@@ -49,7 +49,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             {me ? (
               <>
                 <span className="who">
-                  {me.user.first_name || me.user.email || me.user.username}
+                  <span className="who-name">{me.user.first_name || me.user.email || me.user.username}</span>
                   <span className="role-pill">{t(`roles.${me.user.role}`)}</span>
                 </span>
                 <button className="btn btn-ghost" onClick={() => void onLogout()}>
@@ -92,7 +92,6 @@ export default function Layout({ children }: { children: ReactNode }) {
 
       <footer className="footer">
         <div className="container footer-inner">
-          <p className="ai-notice">{t("footer.aiNotice")}</p>
           <ul className="footer-links">
             <li>
               <a href={`${SITE}/`}>{t("footer.home")}</a>

@@ -63,20 +63,18 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
         "en": (
             "Your SST Virtual Tutor login",
             "Hi {first_name},\n\nYour parent has set up an SST Virtual Tutor account for you. "
-            "Open this link within 7 days to choose your password:\n\n{link}\n\n"
-            "The tutor is an AI. Use it only as your school allows.",
+            "Open this link within 7 days to choose your password:\n\n{link}",
         ),
         "de": (
             "Dein Login für den SST Virtual Tutor",
             "Hallo {first_name},\n\nDeine Eltern haben ein Konto beim SST Virtual Tutor für dich "
             "eingerichtet. Öffne diesen Link innerhalb von 7 Tagen, um dein Passwort zu wählen:\n\n"
-            "{link}\n\nDer Tutor ist eine KI. Nutze ihn nur so, wie es deine Schule erlaubt.",
+            "{link}",
         ),
         "fr": (
             "Ton accès au SST Virtual Tutor",
             "Salut {first_name},\n\nTes parents ont créé un compte SST Virtual Tutor pour toi. "
-            "Ouvre ce lien dans les 7 jours pour choisir ton mot de passe :\n\n{link}\n\n"
-            "Le tuteur est une IA. Utilise-le uniquement comme ton école l'autorise.",
+            "Ouvre ce lien dans les 7 jours pour choisir ton mot de passe :\n\n{link}",
         ),
     },
     "staff_invite": {
@@ -121,6 +119,50 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
             "Pour modifier ou annuler, ouvrez Facturation dans l'application :\n\n{link}",
         ),
     },
+    "cost_alert": {
+        "en": (
+            "AI cost alert ({period})",
+            "Hello,\n\nAn AI spending threshold was crossed this month ({period}).\n\n"
+            "Scope: {scope}\nSpent so far: CHF {amount}\nThreshold: CHF {threshold}\n\n"
+            "The breakdown is in the admin area:\n\n{link}\n\nYou get one email per threshold "
+            "and month.",
+        ),
+        "de": (
+            "Hinweis zu KI-Kosten ({period})",
+            "Guten Tag,\n\nIn diesem Monat ({period}) wurde eine Kostenschwelle für KI-Aufrufe "
+            "überschritten.\n\nBereich: {scope}\nBisher ausgegeben: CHF {amount}\n"
+            "Schwelle: CHF {threshold}\n\nDie Aufschlüsselung finden Sie im Admin-Bereich:\n\n"
+            "{link}\n\nSie erhalten eine E-Mail pro Schwelle und Monat.",
+        ),
+        "fr": (
+            "Alerte de coûts IA ({period})",
+            "Bonjour,\n\nUn seuil de dépenses IA a été dépassé ce mois-ci ({period}).\n\n"
+            "Périmètre : {scope}\nDépensé à ce jour : CHF {amount}\nSeuil : CHF {threshold}\n\n"
+            "Le détail se trouve dans l'espace admin :\n\n{link}\n\nVous recevez un e-mail par "
+            "seuil et par mois.",
+        ),
+    },
+    "safeguarding_alert": {
+        "en": (
+            "Safeguarding: a conversation needs review",
+            "Hello,\n\nThe tutor flagged a student conversation for review ({reason}). "
+            "The student was shown the 147 helpline.\n\nPlease review it within one working "
+            "day:\n\n{link}\n\nThis email contains no message content.",
+        ),
+        "de": (
+            "Kinderschutz: ein Gespräch muss geprüft werden",
+            "Guten Tag,\n\nDer Tutor hat ein Schülergespräch zur Prüfung markiert ({reason}). "
+            "Der Schülerin oder dem Schüler wurde die Nummer 147 angezeigt.\n\nBitte prüfen "
+            "Sie es innerhalb eines Arbeitstags:\n\n{link}\n\n"
+            "Diese E-Mail enthält keine Nachrichteninhalte.",
+        ),
+        "fr": (
+            "Protection : une conversation doit être examinée",
+            "Bonjour,\n\nLe tuteur a signalé une conversation d'élève pour examen ({reason}). "
+            "Le numéro 147 a été affiché à l'élève.\n\nMerci de l'examiner sous un jour "
+            "ouvrable :\n\n{link}\n\nCet e-mail ne contient aucun contenu de message.",
+        ),
+    },
     "payment_failed": {
         "en": (
             "We could not take your payment",
@@ -146,7 +188,7 @@ def build(kind: str, locale: str, to: str, **params: str) -> OutgoingEmail:
     locale = locale if locale in ("en", "de", "fr") else "en"
     subject, body = TEXTS[kind][locale]
     text = body.format(**params) + SIGNATURE[locale]
-    return OutgoingEmail(to=to, subject=subject, text=text)
+    return OutgoingEmail(to=to, subject=subject.format(**params), text=text)
 
 
 def app_link(path: str) -> str:
