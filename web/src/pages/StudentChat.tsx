@@ -3,7 +3,9 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ApiError, ensureCsrf, get, post } from "../api";
 import ErrorText from "../components/ErrorText";
+import QuestionCard from "../components/QuestionCard";
 import RichText from "../components/RichText";
+import type { AttemptOut, QuestionPublic } from "../practice";
 
 interface Msg {
   id: string;
@@ -36,6 +38,13 @@ interface Usage {
 
 type Notice = "off_topic" | "override" | "wellbeing" | "ended" | "refusal";
 
+interface CheckOut {
+  conversation_id: string;
+  course_key: string;
+  topic_code: string;
+  questions: QuestionPublic[];
+}
+
 const MAX_CHARS = 2000;
 
 export default function StudentChat() {
@@ -49,6 +58,11 @@ export default function StudentChat() {
   const [error, setError] = useState<unknown>(null);
   const [notice, setNotice] = useState<Notice | null>(null);
   const [usage, setUsage] = useState<Usage | null>(null);
+  const [check, setCheck] = useState<CheckOut | null>(null);
+  const [checkBusy, setCheckBusy] = useState(false);
+  const [checkError, setCheckError] = useState<unknown>(null);
+  const [checkMastery, setCheckMastery] = useState<number | null>(null);
+  const checkRef = useRef<HTMLElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -184,6 +198,20 @@ export default function StudentChat() {
     }
   }
 
+  async function loadCheck() {
+    if (!conv) return;
+    setCheckBusy(true);
+    setCheckError(null);
+    try {
+      setCheck(await get<CheckOut>(`/api/practice/check?conversation_id=${conv.id}`));
+      setTimeout(() => checkRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
+    } catch (e) {
+      setCheckError(e);
+    } finally {
+      setCheckBusy(false);
+    }
+  }
+
   function onKey(e: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -208,9 +236,19 @@ export default function StudentChat() {
           <p className="small muted">{conv.course_name}</p>
         </div>
         {!ended && (
-          <button type="button" className="btn btn-ghost btn-sm" onClick={endSession}>
-            {t("chat.end")}
-          </button>
+          <div className="chat-head-actions">
+            <button
+              type="button"
+              className="btn btn-secondary btn-sm"
+              disabled={checkBusy || busy}
+              onClick={() => void loadCheck()}
+            >
+              {checkBusy ? t("common.working") : t("chat.check")}
+            </button>
+            <button type="button" className="btn btn-ghost btn-sm" onClick={endSession}>
+              {t("chat.end")}
+            </button>
+          </div>
         )}
       </header>
 
@@ -272,6 +310,43 @@ export default function StudentChat() {
             </button>
           </div>
         </form>
+      )}
+
+      {checkError ? <ErrorText error={checkError} /> : null}
+      {check && (
+        <section className="check-panel" ref={checkRef} aria-label={t("chat.checkTitle")}>
+          <div className="check-head">
+            <h2>{t("chat.checkTitle")}</h2>
+            <button type="button" className="btn btn-ghost btn-sm" onClick={() => setCheck(null)}>
+              {t("common.close")}
+            </button>
+          </div>
+          {check.questions.length === 0 ? (
+            <p className="alert alert-info">{t("chat.checkEmpty")}</p>
+          ) : (
+            <>
+              <p className="small muted">{t("chat.checkIntro")}</p>
+              {check.questions.map((q) => (
+                <QuestionCard
+                  key={q.id}
+                  question={q}
+                  submit={(answer) =>
+                    post<AttemptOut>("/api/practice/attempts", {
+                      question_id: q.id,
+                      answer,
+                      mode: "check",
+                      conversation_id: conv.id,
+                    })
+                  }
+                  onResult={(r) => setCheckMastery(r.mastery.mastery)}
+                />
+              ))}
+              {checkMastery !== null && (
+                <p className="alert alert-ok">{t("chat.masteryNow", { topic: conv.topic_name, value: checkMastery })}</p>
+              )}
+            </>
+          )}
+        </section>
       )}
     </div>
   );

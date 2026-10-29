@@ -309,6 +309,7 @@ async def test_diagnostic_flow_updates_mastery_and_suggests_next(api, api2, fake
     data = r.json()
     assert data["overall"] is None and data["diagnostic"] is None
     assert data["questions_available"] == 9
+    assert data["diagnostic_total_estimate"] == 6
     assert {t["topic_code"] for t in data["next"]} == {"AA-1.1", "AA-1.2", "AA-2.1"}
 
     r = await api2.post("/api/practice/diagnostic/start", json={"course_key": "ib_maths_aa_hl"})
@@ -341,6 +342,8 @@ async def test_diagnostic_flow_updates_mastery_and_suggests_next(api, api2, fake
         final = res
     assert run["status"] == "done"
     assert final["diagnostic"]["summary"]
+    r = await api2.get(f"/api/practice/diagnostic/{run['id']}")
+    assert r.status_code == 200 and r.json()["status"] == "done" and r.json()["summary"]
     weakest = final["diagnostic"]["next"][0]
     async with SessionLocal() as db:
         rows = (await db.execute(select(TopicMastery))).scalars().all()

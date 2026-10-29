@@ -33,11 +33,18 @@ def servable_statuses() -> tuple[str, ...]:
     return (Q_APPROVED,)
 
 
-def question_public(q: Question, *, reveal: bool = False) -> dict[str, Any]:
+def topic_name(module_key: str, topic_code: str, locale: str = "en") -> str:
+    info = prompts.course_info(module_key)
+    topic = info.topic(topic_code) if info else None
+    return topic.display(locale) if topic else topic_code
+
+
+def question_public(q: Question, *, reveal: bool = False, locale: str = "en") -> dict[str, Any]:
     out: dict[str, Any] = {
         "id": str(q.id),
         "module_key": q.module_key,
         "topic_code": q.topic_code,
+        "topic_name": topic_name(q.module_key, q.topic_code, locale),
         "difficulty": q.difficulty,
         "qtype": q.qtype,
         "calculator_allowed": q.calculator_allowed,

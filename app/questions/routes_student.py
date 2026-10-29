@@ -11,6 +11,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.billing.access import FULL, compute_access
+from app.config import get_settings
 from app.db import get_db, utcnow
 from app.deps import require_roles
 from app.llm import prompts
@@ -63,14 +64,18 @@ def _own_course(user: User, course_key: str) -> None:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_course")
 
 
-def _diagnostic_out(run: DiagnosticRun, q: Question | None) -> dict[str, Any]:
+def run_locale(q: Question, user: User) -> str:
+    return user.locale
+
+
+def _diagnostic_out(run: DiagnosticRun, q: Question | None, locale: str = "en") -> dict[str, Any]:
     return {
         "id": str(run.id),
         "course_key": run.course_key,
         "status": run.status,
         "position": run.position,
         "total": len(run.question_ids),
-        "question": bank.question_public(q) if q else None,
+        "question": bank.question_public(q, locale=locale) if q else None,
     }
 
 
@@ -83,11 +88,13 @@ async def overview(
     run = await bank.latest_diagnostic(db, user.id, course_key)
     tested = [t for t in topics if t["mastery"] is not None]
     overall = int(round(sum(t["mastery"] for t in tested) / len(tested))) if tested else None
+    per_topic = get_settings().diagnostic_questions_per_topic
     return {
         "course_key": course_key,
         "topics": topics,
         "overall": overall,
         "questions_available": sum(t["questions_available"] for t in topics),
+        "diagnostic_total_estimate": sum(min(per_topic, t["questions_available"]) for t in topics),
         "diagnostic": None if run is None else {"id": str(run.id), "status": run.status},
         "next": bank.suggest_next(topics),
     }
@@ -102,11 +109,11 @@ async def start_diagnostic(
     existing = await bank.latest_diagnostic(db, user.id, body.course_key)
     if existing and existing.status == "in_progress":
         q = await bank.diagnostic_current(db, existing)
-        return _diagnostic_out(existing, q)
+        return _diagnostic_out(existing, q, user.locale)
     run = await bank.build_diagnostic(db, user, body.course_key)
     await db.commit()
     q = await bank.diagnostic_current(db, run)
-    return _diagnostic_out(run, q)
+    return _diagnostic_out(run, q, user.locale)
 
 
 @router.get("/diagnostic/{run_id}")
@@ -116,7 +123,12 @@ async def get_diagnostic(
     run = await db.get(DiagnosticRun, run_id)
     if run is None or run.student_id != user.id:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
-    return _diagnostic_out(run, await bank.diagnostic_current(db, run))
+    out = _diagnostic_out(run, await bank.diagnostic_current(db, run), user.locale)
+    if run.status in ("done", "skipped"):
+        topics = await bank.mastery_overview(db, user, run.course_key)
+        out["summary"] = topics
+        out["next"] = bank.suggest_next(topics)
+    return out
 
 
 @router.post("/diagnostic/{run_id}/skip")
@@ -145,7 +157,7 @@ async def next_question(
     qs = await bank.next_question(db, user, course_key, topic_code)
     if not qs:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "no_questions")
-    return bank.question_public(qs[0])
+    return bank.question_public(qs[0], locale=user.locale)
 
 
 @router.get("/check")
@@ -164,7 +176,7 @@ async def check_questions(
         "conversation_id": str(conv.id),
         "course_key": conv.course_key,
         "topic_code": conv.topic_code,
-        "questions": [bank.question_public(q) for q in qs],
+        "questions": [bank.question_public(q, locale=user.locale) for q in qs],
     }
 
 
@@ -224,6 +236,16 @@ async def submit_attempt(
         "feedback": attempt.feedback,
         "ai_marked": attempt.ai_marked,
         "answer": q.answer,
+        "answer_text": next(
+            (
+                o.get("text")
+                for o in (q.options or [])
+                if str(o.get("key", "")).upper() == q.answer.strip().upper()
+            ),
+            None,
+        )
+        if q.qtype == "mcq"
+        else None,
         "worked_solution": q.worked_solution,
     }
     m = await mastery.get_or_create(db, user.id, course_key, q.topic_code)
@@ -241,7 +263,9 @@ async def submit_attempt(
                 "next": bank.suggest_next(topics),
             }
         else:
-            out["diagnostic"] = _diagnostic_out(run, await bank.diagnostic_current(db, run))
+            out["diagnostic"] = _diagnostic_out(
+                run, await bank.diagnostic_current(db, run), user.locale
+            )
     await db.commit()
     return out
 

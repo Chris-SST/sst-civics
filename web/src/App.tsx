@@ -14,6 +14,8 @@ import ParentDashboard from "./pages/ParentDashboard";
 import BillingReturn from "./pages/BillingReturn";
 import StudentHome from "./pages/StudentHome";
 const StudentChat = lazy(() => import("./pages/StudentChat"));
+const StudentDiagnostic = lazy(() => import("./pages/StudentDiagnostic"));
+const StudentPractice = lazy(() => import("./pages/StudentPractice"));
 import TutorDashboard from "./pages/TutorDashboard";
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 import NotFound from "./pages/NotFound";
@@ -65,7 +67,23 @@ export default function App() {
           }
         />
         <Route
-          path="/tutor"
+          path="/student/diagnostic/:id"
+          element={
+            <RequireRole roles={["student", "adult"]}>
+              <StudentDiagnostic />
+            </RequireRole>
+          }
+        />
+        <Route
+          path="/student/practice"
+          element={
+            <RequireRole roles={["student", "adult"]}>
+              <StudentPractice />
+            </RequireRole>
+          }
+        />
+        <Route
+          path="/tutor/*"
           element={
             <RequireRole roles={["tutor", "admin"]}>
               <TutorDashboard />

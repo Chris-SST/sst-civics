@@ -6,6 +6,7 @@ import { homeFor, useAuth } from "../auth";
 import ErrorText from "../components/ErrorText";
 import { formatDate } from "../i18n";
 import { AiUsage, SafetyFlags } from "./AdminTutor";
+import AdminQuestions from "./AdminQuestions";
 
 /** Staging and development only: open the app as another user. The server refuses it in production. */
 function useViewAs(setError: (e: unknown) => void) {
@@ -38,6 +39,7 @@ export default function AdminDashboard() {
         <NavLink to="/admin/plans">{t("admin.plans")}</NavLink>
         <NavLink to="/admin/safety">{t("admin.safety")}</NavLink>
         <NavLink to="/admin/usage">{t("admin.usage")}</NavLink>
+        <NavLink to="/admin/questions">{t("qbank.tab")}</NavLink>
       </nav>
       <Routes>
         <Route index element={<Overview />} />
@@ -46,6 +48,7 @@ export default function AdminDashboard() {
         <Route path="plans" element={<Plans />} />
         <Route path="safety" element={<SafetyFlags />} />
         <Route path="usage" element={<AiUsage />} />
+        <Route path="questions/*" element={<AdminQuestions />} />
       </Routes>
     </>
   );
