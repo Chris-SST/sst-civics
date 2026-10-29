@@ -73,11 +73,17 @@ class CourseInfo:
 
 
 def prompts_root() -> Path:
-    root = Path(get_settings().prompts_dir)
-    if not root.is_absolute():
-        # Resolve against the repository root (the parent of the `app` package).
-        root = Path(__file__).resolve().parents[2] / root
-    return root
+    """Absolute `PROMPTS_DIR` wins. A relative one is tried against the working directory
+    (the containers run from /srv, where the Dockerfile copies prompts/), then against the
+    repository root next to the `app` package (local development, tests)."""
+    configured = Path(get_settings().prompts_dir)
+    if configured.is_absolute():
+        return configured
+    candidates = [Path.cwd() / configured, Path(__file__).resolve().parents[2] / configured]
+    for c in candidates:
+        if c.is_dir():
+            return c
+    return candidates[-1]
 
 
 def _latest(directory: Path, suffix: str) -> Path | None:

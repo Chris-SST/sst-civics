@@ -348,8 +348,11 @@ async def process_batch(db: AsyncSession, batch: GenerationBatch) -> int:
             data = json.loads(res.text)
         except json.JSONDecodeError:
             errors += 1
+            first_error = first_error or "invalid JSON in result"
             continue
         created += await _store_generated(db, batch, data, topic, d, version)
+        batch.questions_created = created
+        await db.commit()
     batch.questions_created = created
     batch.status = "processed"
     batch.ended_at = utcnow()

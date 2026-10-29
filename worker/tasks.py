@@ -121,11 +121,14 @@ async def poll_generation_batches(ctx: dict[str, Any]) -> int:
             .all()
         )
         for batch in batches:
+            batch_id = batch.id
             try:
                 n = await pipeline.process_batch(db, batch)
                 if n or batch.status == "processed":
                     processed += 1
             except Exception as exc:  # noqa: BLE001
                 await db.rollback()
-                log.warning("Polling batch %s failed: %s", batch.id, exc.__class__.__name__)
+                log.warning(
+                    "Polling batch %s failed: %s: %s", batch_id, exc.__class__.__name__, exc
+                )
     return processed
