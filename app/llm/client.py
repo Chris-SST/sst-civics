@@ -63,6 +63,7 @@ class BatchResult:
     text: str | None
     usage: Usage | None
     model: str
+    error: str | None = None
 
 
 class Provider(Protocol):
@@ -252,12 +253,19 @@ class AnthropicProvider:
                 text = None
                 usage = None
                 model = ""
+                error = None
                 if kind == "succeeded":
                     msg = item.result.message
                     text = next((b.text for b in msg.content if b.type == "text"), "")
                     usage = _usage_from(msg.usage, msg.model)
                     model = msg.model
-                out.append(BatchResult(item.custom_id, kind, text, usage, model))
+                elif kind == "errored":
+                    err = getattr(item.result, "error", None)
+                    inner = getattr(err, "error", None)
+                    error = str(getattr(inner, "message", None) or getattr(err, "type", "error"))[
+                        :300
+                    ]
+                out.append(BatchResult(item.custom_id, kind, text, usage, model, error))
         except Exception as exc:  # noqa: BLE001
             raise self._translate(exc) from exc
         return out

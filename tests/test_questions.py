@@ -436,3 +436,12 @@ async def test_production_serves_only_approved(api, api2, fake, monkeypatch):
     assert r.status_code == 404
     r = await api2.get("/api/practice/overview?course_key=ib_maths_aa_hl")
     assert r.json()["questions_available"] == 0
+
+
+def test_structured_output_schemas_avoid_unsupported_keywords():
+    """The provider rejects minimum/maximum on numbers in output schemas (seen on staging)."""
+    import json as _json
+
+    for schema in (pipeline.GEN_SCHEMA, pipeline.SOLVE_SCHEMA, pipeline.MARK_SCHEMA):
+        text = _json.dumps(schema)
+        assert "minimum" not in text and "maximum" not in text

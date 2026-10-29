@@ -51,7 +51,7 @@ QUESTION_ITEM_SCHEMA: dict[str, Any] = {
     "properties": {
         "topic_code": {"type": "string"},
         "qtype": {"type": "string", "enum": list(QUESTION_TYPES)},
-        "difficulty": {"type": "integer", "minimum": 1, "maximum": 5},
+        "difficulty": {"type": "integer"},
         "calculator_allowed": {"type": "boolean"},
         "question_text": {"type": "string"},
         "options": {
@@ -68,7 +68,7 @@ QUESTION_ITEM_SCHEMA: dict[str, Any] = {
         "tolerance": {"type": "number"},
         "worked_solution": {"type": "string"},
         "mark_scheme": {"type": "string"},
-        "marks": {"type": "integer", "minimum": 1, "maximum": 12},
+        "marks": {"type": "integer"},
     },
     "required": [
         "topic_code",
@@ -105,7 +105,7 @@ SOLVE_SCHEMA: dict[str, Any] = {
 MARK_SCHEMA: dict[str, Any] = {
     "type": "object",
     "properties": {
-        "score": {"type": "number", "minimum": 0, "maximum": 1},
+        "score": {"type": "number"},
         "feedback": {"type": "string"},
         "correct": {"type": "boolean"},
     },
@@ -326,10 +326,12 @@ async def process_batch(db: AsyncSession, batch: GenerationBatch) -> int:
     plan = {cid: (topic, d) for cid, topic, d in _plan_requests(batch)}
     created = 0
     errors = 0
+    first_error: str | None = None
     for res in results:
         topic, d = plan.get(res.custom_id, (None, None))
         if res.status != "succeeded" or not res.text or topic is None:
             errors += 1
+            first_error = first_error or res.error or res.status
             continue
         await service.record_call(
             db,
@@ -352,7 +354,7 @@ async def process_batch(db: AsyncSession, batch: GenerationBatch) -> int:
     batch.status = "processed"
     batch.ended_at = utcnow()
     if errors:
-        batch.error = f"{errors} request(s) failed"
+        batch.error = f"{errors} request(s) failed: {first_error}"
     await db.commit()
     return created
 
@@ -410,7 +412,7 @@ def _question_from_item(
         tolerance=tolerance if qtype in (QTYPE_NUMERIC, QTYPE_SHORT) else None,
         worked_solution=str(item.get("worked_solution", "")).strip(),
         mark_scheme=(str(item.get("mark_scheme") or "").strip() or None),
-        marks=int(item.get("marks") or 1),
+        marks=max(1, min(12, int(item.get("marks") or 1))),
         status=Q_DRAFT,
         source="generated",
         prompt_version=version,
