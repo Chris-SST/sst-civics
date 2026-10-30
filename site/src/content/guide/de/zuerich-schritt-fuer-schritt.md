@@ -1,11 +1,13 @@
 ---
 title: "Einbürgerung im Kanton Zürich: Schritt für Schritt"
-description: "Wohnsitzfristen, Gesuch bei der Gemeinde, Unterlagen, Tests, Gespräch und Genehmigungen von Kanton und Bund bei der ordentlichen Einbürgerung in Zürich."
+description: "Wohnsitzfristen, Gesuch beim Gemeindeamt, Unterlagen, Tests, Gespräch und Genehmigungen von Kanton und Bund bei der ordentlichen Einbürgerung in Zürich."
 lang: de
 slug: zuerich-schritt-fuer-schritt
 lastChecked: 2026-10-30
 updated: 2026-10-30
 sources:
+  - title: "Kantonale Bürgerrechtsverordnung (KBüV, LS 141.11)"
+    url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
   - title: "Kanton Zürich: Ordentliche Einbürgerung"
     url: https://www.zh.ch/de/migration-integration/einbuergerung/ordentliche-einbuergerung.html
   - title: "Kanton Zürich: Einbürgerung (Übersicht, Selbsttest, Kontakt)"
@@ -24,7 +26,7 @@ cta: free-questions
 
 ## Bevor Sie anfangen
 
-Im Kanton Zürich stellen Sie das Gesuch bei Ihrer **Wohngemeinde**. Das **Gemeindeamt** des Kantons führt das Verfahren. Der Kanton bietet auf seiner Seite einen kostenlosen, unverbindlichen Selbsttest an, der anzeigt, ob Sie die Voraussetzungen voraussichtlich erfüllen. Das Ergebnis ist nicht verbindlich.
+Im Kanton Zürich reichen Sie das Gesuch online beim **Gemeindeamt** des Kantons ein, das das Verfahren führt. Ihre **Wohngemeinde** prüft danach Ihre Integration und erteilt das Gemeindebürgerrecht. Der Kanton bietet auf seiner Seite einen kostenlosen, unverbindlichen Selbsttest an, der anzeigt, ob Sie die Voraussetzungen voraussichtlich erfüllen. Das Ergebnis ist nicht verbindlich.
 
 ## Wohnsitz in Gemeinde und Kanton
 
@@ -47,14 +49,7 @@ Der Kanton beschreibt fünf Schritte:
 
 ## Unterlagen
 
-Der Kanton nennt auf seiner Seite diese Unterlagen:
-
-- Auszug aus dem Schweizerischen Zivilstandsregister, bei der Einreichung höchstens sechs Monate alt
-- gültige C-Bewilligung
-- die Checkliste Gesuchsunterlagen (PDF auf der Seite des Kantons)
-- die Erklärung über die Teilnahme am sozialen und kulturellen Leben (PDF auf der Seite des Kantons)
-
-Je nach Gemeinde kommen weitere Belege dazu, zum Beispiel zu Sprache, Steuern oder Betreibungen. Lesen Sie die Checkliste Ihrer Gemeinde genau.
+Für jede Person im Gesuch legen Sie zwei Dokumente bei: ein Dokument des Zivilstandsamtes (höchstens 6 Monate alt) und einen Nachweis über die aktuelle Arbeit oder Ausbildung (höchstens 3 Monate alt). Den Deutschnachweis und den Nachweis der Grundkenntnisse legen Sie bei, wenn Sie sie schon haben. Betreibungsregister, Strafregister und Angaben zur Sozialhilfe holen die Behörden selbst ein, und die Gemeinden dürfen keine eigenen Voraussetzungen festlegen. Die vollständige Liste, wo Sie jedes Dokument bekommen, was es kostet und wie alt es sein darf: [Unterlagen](/de/unterlagen/).
 
 ## Sprache und Grundkenntnisse
 

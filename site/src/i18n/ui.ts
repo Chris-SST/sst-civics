@@ -103,6 +103,7 @@ const en: Ui = {
   cards: {
     overview: { title: "Overview", text: "Federal requirements, the order of steps and how long it takes." },
     zurich: { title: "Zurich, step by step", text: "Residence rules, documents, fees, timeline and where to apply." },
+    documents: { title: "Documents", text: "What to provide, where to get it and how old it may be." },
     test: { title: "The knowledge test", text: "Format, topics and how to prepare." },
     language: { title: "Language certificates", text: "Which ones count, which levels, prices and where to take them." },
     fees: { title: "Fees", text: "Federal, cantonal and typical communal fees." },
@@ -222,6 +223,7 @@ const de: Ui = {
   cards: {
     overview: { title: "Überblick", text: "Bundesvoraussetzungen, Reihenfolge der Schritte und Dauer." },
     zurich: { title: "Zürich, Schritt für Schritt", text: "Aufenthalt, Unterlagen, Gebühren, Zeitplan und Anmeldung." },
+    documents: { title: "Unterlagen", text: "Was Sie einreichen, wo Sie es bekommen und wie alt es sein darf." },
     test: { title: "Der Wissenstest", text: "Aufbau, Themen und Vorbereitung." },
     language: { title: "Sprachnachweise", text: "Welche zählen, welche Niveaus, Preise und Prüfungsorte." },
     fees: { title: "Gebühren", text: "Gebühren von Bund, Kanton und Gemeinde im Überblick." },

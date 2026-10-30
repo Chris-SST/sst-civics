@@ -1,11 +1,13 @@
 ---
 title: "Naturalisation in the Canton of Zurich, Step by Step"
-description: "Residence periods, applying at your commune, documents, tests, the commune interview, and the cantonal and federal approvals in Zurich."
+description: "Residence periods, applying online to the canton, documents, tests, the commune interview, and the cantonal and federal approvals in Zurich."
 lang: en
 slug: zurich-step-by-step
 lastChecked: 2026-10-30
 updated: 2026-10-30
 sources:
+  - title: "Cantonal Citizenship Ordinance (KBüV, LS 141.11; German)"
+    url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
   - title: "Canton of Zurich: Ordinary naturalisation (German)"
     url: https://www.zh.ch/de/migration-integration/einbuergerung/ordentliche-einbuergerung.html
   - title: "Canton of Zurich: Naturalisation (overview, self-check, contact; German)"
@@ -24,7 +26,7 @@ cta: free-questions
 
 ## Before you start
 
-In the canton of Zurich you apply at your **commune of residence**. The canton's **Gemeindeamt** (office for communes) runs the procedure. The canton offers a free, non-binding self-check on its website that shows whether you are likely to meet the requirements. The result is not binding.
+In the canton of Zurich you file the application online with the canton's **Gemeindeamt** (office for communes), which runs the procedure. Your **commune of residence** then checks your integration and grants communal citizenship. The canton offers a free, non-binding self-check on its website that shows whether you are likely to meet the requirements. The result is not binding.
 
 ## Residence in commune and canton
 
@@ -47,14 +49,7 @@ The canton describes five steps:
 
 ## Documents
 
-The canton lists these documents on its page:
-
-- an extract from the Swiss civil status register, no more than six months old when you apply
-- a valid C permit
-- the checklist of application documents (PDF on the canton's page)
-- the declaration on taking part in social and cultural life (PDF on the canton's page)
-
-Your commune may ask for more, for example on language, taxes or debt collection. Read your commune's checklist carefully.
+Everyone in the application attaches two documents: a civil status document (at most 6 months old) and proof of current work or education (at most 3 months old). Proof of German and basic knowledge comes on top if you already have it. The authorities fetch the debt collection register, criminal record and welfare information themselves, and communes may not add requirements of their own. The full list, where to get each document, costs and how old it may be: [Documents](/en/documents/).
 
 ## Language and basic knowledge
 

@@ -27,6 +27,7 @@ export const LOCALE_NAMES = {
 export const SLUGS = {
   overview: { de: "ueberblick", fr: "apercu", it: "panoramica", pt: "visao-geral", es: "resumen", sq: "pergjithesim", tr: "genel-bakis", other: "overview" },
   zurich: { de: "zuerich-schritt-fuer-schritt", other: "zurich-step-by-step" },
+  documents: { de: "unterlagen", other: "documents" },
   test: { de: "grundkenntnistest", fr: "test-de-connaissances", it: "test-di-conoscenze", pt: "teste-de-conhecimentos", es: "prueba-de-conocimientos", sq: "testi-i-njohurive", tr: "bilgi-testi", other: "knowledge-test" },
   language: { de: "sprachzertifikate", other: "language-certificates" },
   fees: { de: "gebuehren", other: "fees" },
@@ -39,7 +40,7 @@ export const SLUGS = {
 export const STATIC_KEYS = ["calculator", "faq", "free"];
 
 /** Card order on the home page. */
-export const HOME_KEYS = ["overview", "zurich", "test", "language", "fees", "calculator", "free", "faq"];
+export const HOME_KEYS = ["overview", "zurich", "documents", "test", "language", "fees", "calculator", "free", "faq"];
 
 export function slugFor(key, lang) {
   const row = SLUGS[key];

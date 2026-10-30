@@ -226,8 +226,9 @@ a.card:hover { background: var(--surface-tint); }
 .notice a { font-weight: 800; }
 .guide-col { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; }
 .cv-article img, .cv-article table { max-width: 100%; }
-.cv-article table { border-collapse: collapse; }
-.cv-article th, .cv-article td { border: 1px solid var(--border-strong); padding: 8px 12px; text-align: start; }
+.cv-article table { border-collapse: collapse; display: block; overflow-x: auto; margin: 0 0 var(--space-4); }
+.cv-article th, .cv-article td { border: 1px solid var(--border-strong); padding: 8px 12px; text-align: start; vertical-align: top; min-width: 9em; }
+.cv-article thead th { background: var(--surface-tint); font-weight: 800; }
 .cv-article h3 { margin: 28px 0 6px; }
 .cv-article ol { padding-inline-start: 24px; margin: 0 0 16px; }
 .cv-article li { margin-bottom: 4px; }
