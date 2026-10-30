@@ -18,6 +18,9 @@ dist/
 
 # Node
 web/node_modules/
+site/node_modules/
+site/.astro/
+site-releases/
 web/dist/
 web/dev-dist/
 web/.vite/
@@ -31,3 +34,4 @@ Thumbs.db
 # Infra
 infra/caddy_data/
 infra/backups/
+site/dist/

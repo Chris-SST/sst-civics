@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import { ui } from "../i18n/ui";
+const de = ui("de");
+const en = ui("en");
+---
+<Base lang="de" title={`${de.notFound.title} / ${en.notFound.title}`} description={de.notFound.text} alternates={[]} path="/404/" noindex>
+  <div class="page stack">
+    <section lang="de"><h1>{de.notFound.title}</h1><p>{de.notFound.text}</p><p><a href="/de/">{de.notFound.back}</a></p></section>
+    <section lang="en"><h2>{en.notFound.title}</h2><p>{en.notFound.text}</p><p><a href="/en/">{en.notFound.back}</a></p></section>
+  </div>
+</Base>

@@ -1,0 +1,15 @@
+---
+// Speech-bubble mark plus the brand name as text. Reproduces web/src/components/Wordmark.tsx.
+import { BRAND_NAME } from "../brand";
+interface Props { small?: boolean }
+const { small = false } = Astro.props;
+---
+<span class:list={["wordmark", { "wordmark-sm": small }]}>
+  <span class="wordmark-mark" aria-hidden="true">
+    <svg width="24" height="20" viewBox="0 0 24 20" focusable="false">
+      <path d="M2 3h14a4 4 0 0 1 0 8H8l-4 4V3z" fill="var(--on-accent)" />
+      <circle cx="19" cy="14" r="4" fill="var(--primary)" />
+    </svg>
+  </span>
+  <span class="wordmark-name">{BRAND_NAME}</span>
+</span>

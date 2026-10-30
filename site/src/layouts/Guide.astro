@@ -1,0 +1,29 @@
+---
+// A guide page: article with table of contents, then sources, then the route into the app.
+import Base from "./Base.astro";
+import ArticleLayout from "../components/ArticleLayout.astro";
+import SourcesBlock from "../components/SourcesBlock.astro";
+import GuideCta from "../components/GuideCta.astro";
+
+interface Props {
+  lang: string;
+  title: string;
+  description: string;
+  alternates: { lang: string; path: string }[];
+  path: string;
+  headings: { depth: number; slug: string; text: string }[];
+  lastChecked: Date;
+  sources: { title: string; url: string }[];
+  cta?: "free-questions" | "mock" | "pass";
+}
+const { lang, title, description, alternates, path, headings, lastChecked, sources, cta } = Astro.props;
+---
+<Base lang={lang} title={title} description={description} alternates={alternates} path={path}>
+  <ArticleLayout lang={lang} title={title} headings={headings} lastChecked={lastChecked}>
+    <slot />
+    <Fragment slot="after">
+      <SourcesBlock lang={lang} sources={sources} lastChecked={lastChecked} />
+      <GuideCta lang={lang} variant={cta} />
+    </Fragment>
+  </ArticleLayout>
+</Base>

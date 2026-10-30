@@ -1,0 +1,93 @@
+---
+// Page shell: head (meta, canonical, hreflang, Open Graph), header with wordmark and language
+// switcher, main slot, independence footer.
+import "../styles/global.css";
+import { pathFor } from "../i18n/pages.mjs";
+import { ui, usesFallback } from "../i18n/ui";
+import { BRAND_NAME } from "../brand";
+import Wordmark from "../components/Wordmark.astro";
+import LanguageSwitcher from "../components/LanguageSwitcher.astro";
+import IndependenceFooter from "../components/IndependenceFooter.astro";
+
+interface Props {
+  lang: string;
+  title: string;
+  description: string;
+  /** Languages this page exists in, with their paths. */
+  alternates: { lang: string; path: string }[];
+  /** This page's own path (canonical). */
+  path: string;
+  noindex?: boolean;
+}
+const { lang, title, description, alternates, path, noindex = false } = Astro.props;
+const t = ui(lang);
+const site = (Astro.site ?? new URL("https://civics-staging.swisssciencetutors.ch")).toString().replace(/\/$/, "");
+const abs = (p: string) => site + p;
+const fullTitle = title.includes(BRAND_NAME) ? title : `${title} | ${BRAND_NAME}`;
+const xdefault = alternates.find((a) => a.lang === "de") ?? alternates[0];
+const ogLocale: Record<string, string> = { de: "de_CH", en: "en_GB", fr: "fr_CH", it: "it_CH", pt: "pt_PT", es: "es_ES", sq: "sq_AL", tr: "tr_TR" };
+const icon =
+  "data:image/svg+xml," +
+  encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#ffd23f"/><path d="M6 8h14a4 4 0 0 1 0 8H12l-4 4V8z" fill="#1b1740"/><circle cx="23" cy="21" r="4" fill="#5b4bdb"/></svg>',
+  );
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#5b4bdb" />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={abs(path)} />
+    {alternates.length > 1 && alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={abs(a.path)} />)}
+    {alternates.length > 1 && xdefault && <link rel="alternate" hreflang="x-default" href={abs(xdefault.path)} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={BRAND_NAME} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={abs(path)} />
+    <meta property="og:locale" content={ogLocale[lang] ?? "en_GB"} />
+    {alternates.filter((a) => a.lang !== lang).map((a) => <meta property="og:locale:alternate" content={ogLocale[a.lang] ?? "en_GB"} />)}
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href={icon} />
+    <link rel="preload" href="/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin />
+    {/*
+      Analytics (cookie-free, self-hosted Umami, D-056). Switched on when the Umami container
+      exists at stats.<domain>: uncomment, set the website id, and add the stats host to
+      script-src and connect-src in the CSP of infra/Caddyfile. Do not add it before then.
+      <script defer src="https://stats.civics-staging.swisssciencetutors.ch/script.js" data-website-id="REPLACE-ME"></script>
+    */}
+  </head>
+  <body>
+    <a class="skip" href="#main">{t.skip}</a>
+    <div class="shell">
+      <header class="topbar">
+        <div class="container topbar-inner">
+          <a href={pathFor(lang, "home")} aria-label={`${BRAND_NAME}: ${t.homeLabel}`} style="text-decoration:none"><Wordmark /></a>
+          <div class="topnav">
+            <a href={pathFor(lang, "free")}>{t.navFree}</a>
+            <a href={pathFor(lang, "faq")}>{t.navFaq}</a>
+            <LanguageSwitcher lang={lang} alternates={alternates} />
+          </div>
+        </div>
+      </header>
+      <main id="main" class="main container">
+        {usesFallback(lang) && (
+          <p class="notice" role="note">
+            {t.fallbackNote}
+            {" "}
+            {alternates.filter((a) => a.lang === "de" || a.lang === "en").map((a, i) => (
+              <>{i > 0 && " · "}<a href={a.path} hreflang={a.lang} lang={a.lang}>{a.lang === "de" ? "Auf Deutsch lesen" : "Read in English"}</a></>
+            ))}
+          </p>
+        )}
+        <slot />
+      </main>
+      <IndependenceFooter lang={lang} />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  label: string;
+  steps: { title: string; text: string; state?: "done" | "next"; chip?: string }[];
+}
+const { label, steps } = Astro.props;
+---
+<ol class="cv-process" aria-label={label}>
+  {steps.map((s, i) => (
+    <li data-state={s.state}>
+      <span class="cv-process__n" aria-hidden="true">{i + 1}</span>
+      <div>
+        <h3>{s.title}</h3>
+        <p>{s.text}</p>
+        {s.chip && <span class="cv-chip">{s.chip}</span>}
+      </div>
+    </li>
+  ))}
+</ol>

@@ -1,0 +1,16 @@
+---
+// Card at the end of every guide page: the route into the app.
+import { APP_URL } from "astro:env/server";
+import { ui } from "../i18n/ui";
+interface Props { lang: string; variant?: "free-questions" | "mock" | "pass" }
+const { lang, variant = "free-questions" } = Astro.props;
+const copy = ui(lang).cta[variant];
+const href = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
+---
+<aside class="cv-cta" aria-labelledby="cta-h">
+  <div>
+    <h2 id="cta-h">{copy.heading}</h2>
+    <p>{copy.text}</p>
+  </div>
+  <a href={href} class="cv-btn cv-btn--primary">{copy.button}</a>
+</aside>

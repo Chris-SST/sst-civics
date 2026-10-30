@@ -1,0 +1,18 @@
+---
+import { ui } from "../i18n/ui";
+import { isoDate, longDate } from "../i18n/fmt";
+interface Props { lang: string; sources: { title: string; url: string }[]; lastChecked: Date }
+const { lang, sources, lastChecked } = Astro.props;
+const t = ui(lang);
+---
+<aside class="cv-sources" aria-labelledby="src-h">
+  <h2 id="src-h">{t.sourcesHeading}</h2>
+  <p class="cv-checked">{t.lastChecked}: <time datetime={isoDate(lastChecked)}>{longDate(lastChecked, lang === "de" ? "de" : "en")}</time>. {t.reviewed}</p>
+  {sources.length > 0 && (
+    <ul>
+      {sources.map((s) => (
+        <li><a href={s.url} rel="noopener">{s.title}</a></li>
+      ))}
+    </ul>
+  )}
+</aside>

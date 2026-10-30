@@ -1,0 +1,11 @@
+---
+// Independence notice in the page language; the strings are copies of the app's footer.independence.
+import { INDEPENDENCE } from "../i18n/ui";
+import { BRAND_NAME } from "../brand";
+interface Props { lang: string }
+const { lang } = Astro.props;
+---
+<footer class="cv-footer footer-wrap">
+  <p lang={lang}>{INDEPENDENCE[lang] ?? INDEPENDENCE.en}</p>
+  <p class="muted" style="margin-top:8px">{BRAND_NAME}</p>
+</footer>

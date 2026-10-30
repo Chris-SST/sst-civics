@@ -1,0 +1,143 @@
+---
+// One route file for every page: home, guide pages from the content collection, and template
+// pages (calculator, FAQ, free practice) for languages that have no guide file for them.
+// URLs are /<lang>/ and /<lang>/<slug>/ for all eight languages.
+import { getCollection, render } from "astro:content";
+import { APP_URL } from "astro:env/server";
+import {
+  LOCALES, HOME_KEYS, STATIC_KEYS, buildIndex, alternatesFor, resolveHref, keyFor, slugFor, pathFor,
+} from "../i18n/pages.mjs";
+import { ui } from "../i18n/ui";
+import { plainText } from "../i18n/fmt";
+import Base from "../layouts/Base.astro";
+import Guide from "../layouts/Guide.astro";
+import GuideCta from "../components/GuideCta.astro";
+import ResidenceCalculator from "../components/ResidenceCalculator.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+
+export async function getStaticPaths() {
+  const guide = await getCollection("guide", (e) => !e.data.draft);
+  const paths: { params: { path: string }; props: Record<string, unknown> }[] = [];
+
+  for (const lang of LOCALES) paths.push({ params: { path: lang }, props: { kind: "home", lang, key: "home" } });
+
+  const haveGuide = new Set<string>();
+  for (const entry of guide) {
+    const { lang, slug } = entry.data;
+    const key = keyFor(lang, slug);
+    haveGuide.add(`${lang}/${key}`);
+    paths.push({ params: { path: `${lang}/${slug}` }, props: { kind: "guide", lang, key, id: entry.id } });
+  }
+  for (const lang of LOCALES) {
+    for (const key of STATIC_KEYS) {
+      if (haveGuide.has(`${lang}/${key}`)) continue;
+      paths.push({ params: { path: `${lang}/${slugFor(key, lang)}` }, props: { kind: key, lang, key } });
+    }
+  }
+  return paths;
+}
+
+const { kind, lang, key, id } = Astro.props as { kind: string; lang: string; key: string; id?: string };
+const t = ui(lang);
+
+const guideAll = await getCollection("guide", (e) => !e.data.draft);
+const index = buildIndex(guideAll.map((e) => ({ lang: e.data.lang, slug: e.data.slug })));
+const alternates = alternatesFor(index, key);
+const path = pathFor(lang, key);
+
+const entry = id ? guideAll.find((e) => e.id === id) : undefined;
+const rendered = entry ? await render(entry) : undefined;
+
+// FAQ items: this language, else English, else German.
+let faqItems: { question: string; text: string; Content: any }[] = [];
+if (kind === "faq") {
+  const all = await getCollection("faq");
+  for (const l of [lang, "en", "de"]) {
+    const rows = all.filter((e) => e.data.lang === l).sort((a, b) => a.data.order - b.data.order);
+    if (rows.length) {
+      faqItems = await Promise.all(
+        rows.map(async (r) => ({ question: r.data.question, text: plainText(r.body ?? ""), Content: (await render(r)).Content })),
+      );
+      break;
+    }
+  }
+}
+const appHref = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
+---
+{kind === "home" && (
+  <Base lang={lang} title={t.home.title} description={t.home.description} alternates={alternates} path={path}>
+    <section class="hero">
+      <h1>{t.home.h1}</h1>
+      <p>{t.home.lead}</p>
+    </section>
+    <h2>{t.home.cardsHeading}</h2>
+    <ul class="cards">
+      {HOME_KEYS.map((k) => {
+        const href = resolveHref(index, k, lang);
+        const c = t.cards[k];
+        return (
+          <li>
+            {href ? (
+              <a class="card" href={href}><h3>{c.title}</h3><p>{c.text}</p></a>
+            ) : (
+              <div class="card" aria-disabled="true"><h3>{c.title}</h3><p>{c.text}</p><span class="chip">{t.home.soon}</span></div>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+    <GuideCta lang={lang} />
+  </Base>
+)}
+
+{kind === "guide" && entry && rendered && (
+  <Guide
+    lang={lang}
+    title={entry.data.title}
+    description={entry.data.description}
+    alternates={alternates}
+    path={path}
+    headings={rendered.headings}
+    lastChecked={entry.data.lastChecked}
+    sources={entry.data.sources}
+    cta={entry.data.cta}
+  >
+    <rendered.Content />
+    {key === "calculator" && <div style="margin-top:32px"><ResidenceCalculator lang={lang} /></div>}
+  </Guide>
+)}
+
+{kind === "calculator" && (
+  <Base lang={lang} title={t.calcPage.title} description={t.calcPage.description} alternates={alternates} path={path}>
+    <div class="page stack">
+      <h1>{t.calcPage.h1}</h1>
+      <ResidenceCalculator lang={lang} />
+      <section><h2>{t.calc.ruleTitle}</h2><p>{t.calc.ruleText}</p></section>
+      <GuideCta lang={lang} />
+    </div>
+  </Base>
+)}
+
+{kind === "faq" && (
+  <Base lang={lang} title={t.faqPage.title} description={t.faqPage.description} alternates={alternates} path={path}>
+    <div class="page stack">
+      <h1>{t.faqPage.h1}</h1>
+      {faqItems.length > 0 ? <FaqAccordion items={faqItems} lang={lang === "de" ? "de" : "en"} /> : <p>{t.faqPage.empty}</p>}
+      <p><a href={resolveHref(index, "overview", lang) ?? pathFor(lang, "home")}>{t.faqPage.more}</a></p>
+      <GuideCta lang={lang} />
+    </div>
+  </Base>
+)}
+
+{kind === "free" && (
+  <Base lang={lang} title={t.free.title} description={t.free.description} alternates={alternates} path={path}>
+    <div class="page stack">
+      <h1>{t.free.h1}</h1>
+      <p>{t.free.lead}</p>
+      <ul>{t.free.points.map((p) => <li>{p}</li>)}</ul>
+      <section><h2>{t.free.how}</h2><p>{t.free.howText}</p><p><a class="cv-btn cv-btn--primary" href={appHref}>{t.free.button}</a></p></section>
+      <p class="muted">{t.free.mockNote}</p>
+      <GuideCta lang={lang} />
+    </div>
+  </Base>
+)}

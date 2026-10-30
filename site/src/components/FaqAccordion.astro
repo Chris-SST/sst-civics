@@ -1,0 +1,25 @@
+---
+// Native <details> accordion plus FAQPage JSON-LD. `text` is the plain-text answer for the markup.
+interface Item { question: string; text: string; Content: any }
+interface Props { items: Item[]; lang: string }
+const { items, lang } = Astro.props;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  inLanguage: lang,
+  mainEntity: items.map((i) => ({
+    "@type": "Question",
+    name: i.question,
+    acceptedAnswer: { "@type": "Answer", text: i.text },
+  })),
+};
+---
+<div class="cv-faq">
+  {items.map((i, n) => (
+    <details open={n === 0}>
+      <summary>{i.question}</summary>
+      <div><i.Content /></div>
+    </details>
+  ))}
+</div>
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, "\u003c")}></script>

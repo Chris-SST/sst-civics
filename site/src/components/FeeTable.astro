@@ -1,0 +1,33 @@
+---
+// Amounts are numbers in CHF; shown with the Swiss apostrophe as thousands separator.
+import { chf } from "../i18n/fmt";
+interface Props {
+  caption: string;
+  note?: string;
+  headers: { item: string; paidTo: string; amount: string };
+  rows: { item: string; paidTo: string; amount: number }[];
+  totalLabel?: string;
+}
+const { caption, note, headers, rows, totalLabel } = Astro.props;
+const total = rows.reduce((sum, r) => sum + r.amount, 0);
+---
+<div class="cv-tablewrap" tabindex="0" role="region" aria-label={caption}>
+  <table class="cv-fees">
+    <caption>{caption}{note && <small>{note}</small>}</caption>
+    <thead>
+      <tr>
+        <th scope="col">{headers.item}</th>
+        <th scope="col">{headers.paidTo}</th>
+        <th scope="col" class="num">{headers.amount}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((r) => (
+        <tr><th scope="row">{r.item}</th><td>{r.paidTo}</td><td class="num">{chf(r.amount)}</td></tr>
+      ))}
+    </tbody>
+    {totalLabel && (
+      <tfoot><tr><th scope="row" colspan="2">{totalLabel}</th><td class="num">{chf(total)}</td></tr></tfoot>
+    )}
+  </table>
+</div>

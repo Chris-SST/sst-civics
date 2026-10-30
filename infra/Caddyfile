@@ -1,5 +1,8 @@
 # Internal web server for the civics stack. Plain HTTP on port 80, reachable only over the
 # Docker networks; TLS and HSTS are handled by the shared edge Caddy (see edge-snippet.Caddyfile).
+# Two hosts: the guide site (static files from /srv/site/current, D-056) and, as the catch-all
+# ":80" block, the app host (SPA plus /api). The edge passes the original Host header through.
+# This file is copied into the image at build: rebuild the web service after any change.
 {
 	auto_https off
 
@@ -15,6 +18,49 @@
 	}
 }
 
+# Guide site (D-056): static Astro build, released by scripts/deploy_site.sh into
+# /opt/civics/site-releases/releases/<sha>/ with a relative symlink "current" (mounted read-only
+# at /srv/site). GO-LIVE: edit this host list to the brand domain (apex and www) and change
+# the same list in infra/edge-snippet.Caddyfile. Staging today:
+http://civics-staging.swisssciencetutors.ch {
+	root * /srv/site/current
+	encode zstd gzip
+
+	header {
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy strict-origin-when-cross-origin
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		# Same policy as the app, without Stripe. When Umami is switched on, add the stats host
+		# to script-src and connect-src.
+		Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+		-Server
+	}
+
+	# Hashed build files and fonts never change under the same name; pages revalidate.
+	@immutable path /_astro/* /fonts/*
+	header @immutable Cache-Control "public, max-age=31536000, immutable"
+	@pages not path /_astro/* /fonts/*
+	header @pages Cache-Control "public, max-age=300, must-revalidate"
+
+	try_files {path} {path}/index.html
+	file_server
+
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+
+	log {
+		output stdout
+		format json
+	}
+}
+
+# GO-LIVE: add "http://www.<brand domain> { redir https://<brand domain>{uri} permanent }" here
+# and www.<brand domain> to the edge host list.
+
+# App host (and any other host): the React app and /api.
 :80 {
 	encode zstd gzip
 

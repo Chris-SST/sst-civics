@@ -1,0 +1,16 @@
+export const LOCALES: string[];
+export const DEFAULT_LOCALE: string;
+export const COPY_LOCALES: string[];
+export const LOCALE_NAMES: Record<string, string>;
+export const SLUGS: Record<string, Record<string, string>>;
+export const STATIC_KEYS: string[];
+export const HOME_KEYS: string[];
+export function slugFor(key: string, lang: string): string;
+export function keyFor(lang: string, slug: string): string;
+export function pathFor(lang: string, key: string): string;
+export function parsePath(pathname: string): { lang: string; key: string } | null;
+export function scanGuide(root: string): { lang: string; slug: string }[];
+export type PageIndex = Map<string, Set<string>>;
+export function buildIndex(pages: { lang: string; slug: string }[]): PageIndex;
+export function alternatesFor(index: PageIndex, key: string): { lang: string; path: string }[];
+export function resolveHref(index: PageIndex, key: string, lang: string): string | null;

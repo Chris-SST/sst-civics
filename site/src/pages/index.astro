@@ -1,0 +1,29 @@
+---
+// "/" is a small page that sends visitors to /de/ (meta refresh plus a visible link, no script).
+// hreflang x-default points at /de/ as well.
+import "../styles/global.css";
+import { LOCALES, LOCALE_NAMES, pathFor } from "../i18n/pages.mjs";
+import { BRAND_NAME } from "../brand";
+const site = (Astro.site ?? new URL("https://civics-staging.swisssciencetutors.ch")).toString().replace(/\/$/, "");
+---
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{BRAND_NAME}</title>
+    <meta name="description" content="Einbürgerung in der Schweiz: Ratgeber und Gratis-Übungsfragen. Naturalisation in Switzerland: guides and free practice questions." />
+    <meta http-equiv="refresh" content="0; url=/de/" />
+    <link rel="canonical" href={`${site}/de/`} />
+    {LOCALES.map((l) => <link rel="alternate" hreflang={l} href={site + pathFor(l, "home")} />)}
+    <link rel="alternate" hreflang="x-default" href={`${site}/de/`} />
+  </head>
+  <body>
+    <main class="container main">
+      <p><a href="/de/">Weiter zur deutschen Seite</a> · <a href="/en/">Continue in English</a></p>
+      <p>
+        {LOCALES.map((l, i) => (<>{i > 0 && " · "}<a href={pathFor(l, "home")} lang={l} hreflang={l}>{LOCALE_NAMES[l]}</a></>))}
+      </p>
+    </main>
+  </body>
+</html>

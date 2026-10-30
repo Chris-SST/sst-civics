@@ -1,0 +1,160 @@
+---
+// The one client-side island. Vanilla script, no framework, no network call, no storage.
+//
+// The rule (federal citizenship law, residence requirement): 10 years of residence in total,
+// 3 of them in the 5 years before applying. Time lived in Switzerland between the 8th and the
+// 18th birthday counts double. The doubling cannot replace actual residence: at least 6 years
+// must be real years lived here. This tool counts actual years (overlapping periods merged, so
+// nothing is counted twice by mistake) and the extra years for ages 8 to 18, then compares
+// "actual + extra" with 10 and "actual" with 6. It does not check the 3-in-5 rule or the
+// cantonal and communal minimum periods; the page says so. Result is an estimate, not advice.
+import { ui } from "../i18n/ui";
+interface Props { lang: string }
+const { lang } = Astro.props;
+const t = ui(lang).calc;
+const strings = JSON.stringify({ ...t, lang });
+---
+<form class="cv-calc" aria-labelledby="calc-h" novalidate data-strings={strings}>
+  <h2 id="calc-h">{t.title}</h2>
+  <p>{t.intro}</p>
+
+  <label class="cv-field">{t.dobLabel}
+    <input type="date" name="dob" autocomplete="off" />
+    <small>{t.dobHint}</small>
+  </label>
+
+  <fieldset>
+    <legend>{t.periodsLegend}</legend>
+    <div class="periods" data-periods></div>
+    <div><button type="button" class="cv-btn cv-btn--secondary cv-btn--small" data-add>{t.addPeriod}</button></div>
+  </fieldset>
+
+  <div><button type="submit" class="cv-btn cv-btn--secondary">{t.submit}</button></div>
+
+  <div class="cv-calc__out" role="status" aria-live="polite" data-out>{t.idle}</div>
+
+  <p class="cv-privacy">{t.privacy}</p>
+  <p class="cv-privacy">{t.disclaimer}</p>
+</form>
+
+<script>
+  type Strings = Record<string, string>;
+  const DAY = 86400000;
+
+  const form = document.querySelector<HTMLFormElement>("form.cv-calc");
+  if (form) {
+    const s: Strings = JSON.parse(form.dataset.strings || "{}");
+    const periods = form.querySelector<HTMLElement>("[data-periods]")!;
+    const out = form.querySelector<HTMLElement>("[data-out]")!;
+    const dob = form.elements.namedItem("dob") as HTMLInputElement;
+    const nf = new Intl.NumberFormat(s.lang === "de" ? "de-CH" : "en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 1 });
+    let seq = 0;
+
+    const addRow = () => {
+      const n = ++seq;
+      const row = document.createElement("div");
+      row.className = "cv-period";
+      row.innerHTML =
+        `<label class="cv-field">${s.from}<input type="date" data-from /></label>` +
+        `<label class="cv-field">${s.to}<input type="date" data-to /><small>${s.toHint}</small></label>` +
+        `<button type="button" class="cv-btn cv-btn--quiet cv-btn--small" data-remove aria-label="${s.removePeriod} ${n}">${s.removePeriod}</button>`;
+      periods.appendChild(row);
+    };
+    addRow();
+
+    form.querySelector("[data-add]")!.addEventListener("click", addRow);
+    periods.addEventListener("click", (e) => {
+      const btn = (e.target as HTMLElement).closest("[data-remove]");
+      if (!btn) return;
+      btn.closest(".cv-period")!.remove();
+      if (!periods.children.length) addRow();
+    });
+
+    // Day number (UTC) of a yyyy-mm-dd string, or NaN.
+    const dayOf = (v: string): number => {
+      const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v);
+      return m ? Date.UTC(+m[1], +m[2] - 1, +m[3]) / DAY : NaN;
+    };
+    const plusYears = (d: number, y: number): number => {
+      const dt = new Date(d * DAY);
+      return Date.UTC(dt.getUTCFullYear() + y, dt.getUTCMonth(), dt.getUTCDate()) / DAY;
+    };
+    const fail = (msg: string, el?: HTMLElement) => {
+      out.setAttribute("data-error", "");
+      out.textContent = msg;
+      if (el) {
+        el.setAttribute("aria-invalid", "true");
+        el.focus();
+      }
+    };
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      out.removeAttribute("data-error");
+      form.querySelectorAll("[aria-invalid]").forEach((el) => el.removeAttribute("aria-invalid"));
+
+      const born = dayOf(dob.value);
+      if (Number.isNaN(born)) return fail(s.errDob, dob);
+
+      const today = Math.floor(Date.now() / DAY);
+      const spans: [number, number][] = []; // [start, end) in day numbers
+      for (const row of Array.from(periods.children)) {
+        const from = row.querySelector<HTMLInputElement>("[data-from]")!;
+        const to = row.querySelector<HTMLInputElement>("[data-to]")!;
+        if (!from.value && !to.value) continue; // an untouched row is ignored
+        const a = dayOf(from.value);
+        const b = to.value ? dayOf(to.value) : today;
+        if (Number.isNaN(a)) return fail(s.errPeriod, from);
+        if (Number.isNaN(b) || b < a) return fail(s.errPeriod, to);
+        spans.push([a, b + 1]); // both end days count
+      }
+      if (!spans.length) {
+        const first = periods.querySelector<HTMLInputElement>("[data-from]");
+        return fail(s.errNone, first ?? undefined);
+      }
+
+      // Merge overlapping periods so a day is never counted twice by mistake.
+      spans.sort((x, y) => x[0] - y[0]);
+      const merged: [number, number][] = [];
+      for (const sp of spans) {
+        const last = merged[merged.length - 1];
+        if (last && sp[0] <= last[1]) last[1] = Math.max(last[1], sp[1]);
+        else merged.push([sp[0], sp[1]]);
+      }
+
+      // Days lived here, and the part of them between the 8th and the 18th birthday.
+      const winStart = plusYears(born, 8);
+      const winEnd = plusYears(born, 18);
+      let actual = 0;
+      let young = 0;
+      for (const [a, b] of merged) {
+        actual += b - a;
+        young += Math.max(0, Math.min(b, winEnd) - Math.max(a, winStart));
+      }
+      const yrs = (days: number) => days / 365.25;
+      const counted = actual + young; // ages 8 to 18 count twice: once in `actual`, once more here
+
+      out.innerHTML = "";
+      const line = (label: string, days: number, strong = false) => {
+        const p = document.createElement("p");
+        const v = document.createElement(strong ? "strong" : "span");
+        v.textContent = `${nf.format(yrs(days))} ${s.years}`;
+        p.append(`${label}: `, v);
+        out.appendChild(p);
+      };
+      line(s.resActual, actual);
+      line(s.resDouble, young);
+      line(s.resCounted, counted, true);
+      const note = (text: string) => {
+        const p = document.createElement("p");
+        p.textContent = text;
+        out.appendChild(p);
+      };
+      note(s.resRule);
+      // The rule needs 10 counted years AND at least 6 actual years.
+      if (yrs(actual) < 6) note(s.resShort);
+      else if (yrs(counted) >= 10) note(s.resOk);
+      note(s.resNote);
+    });
+  }
+</script>

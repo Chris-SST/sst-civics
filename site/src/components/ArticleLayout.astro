@@ -1,0 +1,34 @@
+---
+// 68ch measure with a sticky table of contents built from the h2 headings (no script).
+import { ui } from "../i18n/ui";
+import { isoDate, longDate } from "../i18n/fmt";
+interface Props {
+  lang: string;
+  title: string;
+  headings: { depth: number; slug: string; text: string }[];
+  lastChecked?: Date;
+}
+const { lang, title, headings, lastChecked } = Astro.props;
+const t = ui(lang);
+const toc = headings.filter((h) => h.depth === 2);
+---
+<div class="cv-article-wrap">
+  {toc.length > 0 && (
+    <nav class="cv-toc" aria-label={t.toc}>
+      <h2>{t.toc}</h2>
+      <ol>
+        {toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
+      </ol>
+    </nav>
+  )}
+  <div class="guide-col" style={toc.length === 0 ? "grid-column:1 / -1" : undefined}>
+    <article class="cv-article">
+      <h1>{title}</h1>
+      {lastChecked && (
+        <p class="cv-meta">{t.lastChecked}: <time datetime={isoDate(lastChecked)}>{longDate(lastChecked, lang === "de" ? "de" : "en")}</time></p>
+      )}
+      <slot />
+    </article>
+    <slot name="after" />
+  </div>
+</div>

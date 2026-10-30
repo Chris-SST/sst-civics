@@ -1,0 +1,22 @@
+---
+// Links to the same page in the other languages where it exists, to that language's home otherwise.
+import { LOCALES, LOCALE_NAMES, pathFor } from "../i18n/pages.mjs";
+import { ui } from "../i18n/ui";
+interface Props { lang: string; alternates: { lang: string; path: string }[] }
+const { lang, alternates } = Astro.props;
+const t = ui(lang);
+const byLang = new Map(alternates.map((a) => [a.lang, a.path]));
+---
+<nav aria-label={t.langLabel}>
+  <div class="cv-lang">
+    {LOCALES.map((l) => (
+      <a
+        href={byLang.get(l) ?? pathFor(l, "home")}
+        lang={l}
+        hreflang={l}
+        title={LOCALE_NAMES[l]}
+        aria-current={l === lang ? "true" : undefined}
+      >{l.toUpperCase()}</a>
+    ))}
+  </div>
+</nav>
