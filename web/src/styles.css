@@ -797,11 +797,6 @@ code.secret {
 .bubble-streaming .dots {
   letter-spacing: 2px;
 }
-.bubble .katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 4px 0;
-}
 .bubble pre {
   overflow-x: auto;
 }
@@ -1072,16 +1067,6 @@ button.topic-row:hover {
   border: 1px solid var(--line);
   color: var(--charcoal);
 }
-.tag-calc {
-  background: #eef5fb;
-  border-color: #bcd8ef;
-  color: #24506f;
-}
-.tag-nocalc {
-  background: #fbf4e6;
-  border-color: var(--gold);
-  color: #7b5f22;
-}
 .dots-difficulty {
   display: inline-flex;
   gap: 3px;
@@ -1100,13 +1085,6 @@ button.topic-row:hover {
 .question-text {
   color: var(--ink);
   font-size: 1.05rem;
-}
-.question-text .katex-display,
-.solution .katex-display,
-.preview-box .katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 4px 0;
 }
 .question-form {
   margin-top: 10px;
@@ -1157,19 +1135,6 @@ button.topic-row:hover {
   background: #fbeeec;
   outline-color: var(--red);
 }
-.answer-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.answer-row input {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-.unit {
-  color: var(--ink);
-  white-space: nowrap;
-}
 .result {
   margin-top: 14px;
   padding: 14px 16px;
@@ -1193,12 +1158,10 @@ button.topic-row:hover {
 .result-bad h3 {
   color: #7b5f22;
 }
-.result-answer,
-.result-feedback {
+.result-answer {
   margin-bottom: 10px;
 }
-.result-answer p,
-.result-feedback p {
+.result-answer p {
   margin: 0;
 }
 .solution {
@@ -1236,32 +1199,6 @@ button.topic-row:hover {
   gap: 8px;
   flex-wrap: wrap;
   justify-content: flex-end;
-}
-
-/* Figures drawn from the tutor's figure blocks */
-.figure {
-  margin: 10px 0;
-  padding: 8px;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  max-width: 540px;
-}
-.figure svg {
-  width: 100%;
-  height: auto;
-  max-width: 520px;
-  display: block;
-  margin: 0 auto;
-}
-.figure-failed,
-.figure-pending {
-  color: #8a8a8a;
-  text-align: center;
-  padding: 14px;
-}
-.figure-failed {
-  border-style: dashed;
 }
 
 /* Review queue and panel */

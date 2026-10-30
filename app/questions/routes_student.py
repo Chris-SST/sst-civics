@@ -265,8 +265,6 @@ async def submit_attempt(
         "attempt_id": str(attempt.id),
         "correct": attempt.correct,
         "score": attempt.score,
-        "feedback": attempt.feedback,
-        "ai_marked": attempt.ai_marked,
         "answer": q.answer,
         "answer_text": next(
             (

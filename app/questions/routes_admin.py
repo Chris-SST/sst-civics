@@ -20,7 +20,6 @@ from app.models import (
     Q_NEEDS_REVIEW,
     Q_RETIRED,
     QUESTION_STATUSES,
-    QUESTION_TYPES,
     AuditLog,
     GenerationBatch,
     Question,
@@ -48,15 +47,9 @@ class QuestionEdits(BaseModel):
     question_text: str | None = None
     options: list[dict[str, str]] | None = None
     answer: str | None = None
-    unit: str | None = None
-    tolerance: float | None = None
     worked_solution: str | None = None
-    mark_scheme: str | None = None
-    marks: int | None = Field(default=None, ge=1, le=12)
     difficulty: int | None = Field(default=None, ge=1, le=5)
     topic_code: str | None = None
-    qtype: str | None = None
-    calculator_allowed: bool | None = None
     level: Literal["sl", "hl", "both"] | None = None
 
 
@@ -85,16 +78,11 @@ def _question_full(q: Question) -> dict[str, Any]:
         "topic_code": q.topic_code,
         "difficulty": q.difficulty,
         "qtype": q.qtype,
-        "calculator_allowed": q.calculator_allowed,
         "language": q.language,
         "question_text": q.question_text,
         "options": q.options,
         "answer": q.answer,
-        "unit": q.unit,
-        "tolerance": q.tolerance,
         "worked_solution": q.worked_solution,
-        "mark_scheme": q.mark_scheme,
-        "marks": q.marks,
         "status": q.status,
         "spot_check": q.spot_check,
         "source": q.source,
@@ -177,8 +165,6 @@ async def review_question(
     _check_module(user, q.module_key)
     if body.edits:
         for field_name, value in body.edits.model_dump(exclude_none=True).items():
-            if field_name == "qtype" and value not in QUESTION_TYPES:
-                raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_qtype")
             setattr(q, field_name, value)
     q.status = {"approve": Q_APPROVED, "retire": Q_RETIRED, "needs_review": Q_NEEDS_REVIEW}[
         body.action

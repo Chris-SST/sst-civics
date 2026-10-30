@@ -116,89 +116,34 @@ export default function QuestionCard({ question: q, submit, onResult, headline, 
     }
   }
 
-  const structured = q.qtype === "structured";
-  const percent = result ? Math.round(result.score * 100) : 0;
-  const markingUnavailable = !!result && structured && !result.ai_marked;
-
   return (
     <article className="card question-card">
       <header className="question-meta">
-        <span className={`tag ${q.calculator_allowed ? "tag-calc" : "tag-nocalc"}`}>
-          {q.calculator_allowed ? t("question.calculator") : t("question.noCalculator")}
-        </span>
         <DifficultyDots level={q.difficulty} />
-        <span className="small muted">{t("question.marks", { count: q.marks })}</span>
         {!q.reviewed && <span className="small muted">{t("question.unreviewed")}</span>}
       </header>
 
       <RichText className="question-text" text={q.question_text} />
 
       <form onSubmit={(e) => void onSubmit(e)} className="question-form">
-        {q.qtype === "mcq" && (
-          <div className="mcq" role="radiogroup" aria-label={t("question.yourAnswer")}>
-            {(q.options ?? []).map((o) => (
-              <button
-                type="button"
-                key={o.key}
-                role="radio"
-                aria-checked={answer === o.key}
-                className={`mcq-option${answer === o.key ? " selected" : ""}${
-                  result ? (o.key.trim().toLowerCase() === result.answer.trim().toLowerCase() ? " is-correct" : answer === o.key ? " is-wrong" : "") : ""
-                }`}
-                onClick={() => !result && setAnswer(o.key)}
-                disabled={!!result}
-              >
-                <b>{o.key}</b>
-                <RichText text={o.text} />
-              </button>
-            ))}
-          </div>
-        )}
-        {q.qtype === "numeric" && (
-          <label className="field">
-            <span>{t("question.yourAnswer")}</span>
-            <div className="answer-row">
-              <input
-                type="text"
-                inputMode="decimal"
-                autoComplete="off"
-                value={answer}
-                onChange={(e) => setAnswer(e.target.value)}
-                disabled={!!result}
-                placeholder="0.0"
-              />
-              {q.unit && <span className="unit">{q.unit}</span>}
-            </div>
-            <span className="hint">{t("question.numericHint")}</span>
-          </label>
-        )}
-        {q.qtype === "short" && (
-          <label className="field">
-            <span>{t("question.yourAnswer")}</span>
-            <input
-              type="text"
-              autoComplete="off"
-              autoCapitalize="off"
-              spellCheck={false}
-              value={answer}
-              onChange={(e) => setAnswer(e.target.value)}
+        <div className="mcq" role="radiogroup" aria-label={t("question.yourAnswer")}>
+          {(q.options ?? []).map((o) => (
+            <button
+              type="button"
+              key={o.key}
+              role="radio"
+              aria-checked={answer === o.key}
+              className={`mcq-option${answer === o.key ? " selected" : ""}${
+                result ? (o.key.trim().toLowerCase() === result.answer.trim().toLowerCase() ? " is-correct" : answer === o.key ? " is-wrong" : "") : ""
+              }`}
+              onClick={() => !result && setAnswer(o.key)}
               disabled={!!result}
-            />
-            <span className="hint">{t("question.shortHint")}</span>
-          </label>
-        )}
-        {structured && (
-          <label className="field">
-            <span>{t("question.yourAnswer")}</span>
-            <textarea
-              rows={5}
-              value={answer}
-              onChange={(e) => setAnswer(e.target.value.slice(0, 4000))}
-              disabled={!!result}
-            />
-            <span className="hint">{t("question.structuredNote")}</span>
-          </label>
-        )}
+            >
+              <b>{o.key}</b>
+              <RichText text={o.text} />
+            </button>
+          ))}
+        </div>
         {!result && (
           <div className="actions">
             <button className="btn btn-primary" disabled={busy || !answer.trim()}>
@@ -212,21 +157,11 @@ export default function QuestionCard({ question: q, submit, onResult, headline, 
       {result && (
         <section className={`result ${result.correct ? "result-ok" : "result-bad"}`} aria-live="polite">
           <h3>
-            {markingUnavailable
-              ? t("question.markingUnavailable")
-              : structured
-                ? t("question.score", { percent })
-                : heading || (result.correct ? t("question.correct") : t("question.incorrect"))}
+            {heading || (result.correct ? t("question.correct") : t("question.incorrect"))}
           </h3>
-          {result.feedback && (
-            <div className="result-feedback">
-              <b className="small">{t("question.feedback")}</b>
-              <RichText text={result.feedback} />
-            </div>
-          )}
           <div className="result-answer">
             <b className="small">{t("question.answerLabel")}</b>
-            <RichText text={q.qtype === "numeric" && q.unit ? `${result.answer} ${q.unit}` : result.answer} />
+            <RichText text={result.answer_text ? `${result.answer}. ${result.answer_text}` : result.answer} />
           </div>
           {result.worked_solution && (
             <>

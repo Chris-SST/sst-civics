@@ -39,20 +39,18 @@ def _serve_unreviewed(monkeypatch):
     monkeypatch.setattr(get_settings(), "serve_unreviewed_questions", True)
 
 
-def gen_item(topic="AA-1.2", qtype="short", answer="9", difficulty=3, text=None, **kw):
+OPTIONS = [{"key": k, "text": f"Option {k}"} for k in "ABCD"]
+
+
+def gen_item(topic="AA-1.2", answer="B", difficulty=3, text=None, **kw):
     item = {
         "topic_code": topic,
-        "qtype": qtype,
         "difficulty": difficulty,
-        "calculator_allowed": False,
-        "question_text": text or f"Solve something about {topic} number {uuid.uuid4().hex[:6]}.",
-        "options": [],
+        "question_text": text
+        or f"Which option is right about {topic} number {uuid.uuid4().hex[:6]}?",
+        "options": OPTIONS,
         "answer": answer,
-        "unit": "",
-        "tolerance": 0.01,
-        "worked_solution": "Work it out step by step.",
-        "mark_scheme": "",
-        "marks": 1,
+        "worked_solution": "Option B is right because of the rule; the others are not.",
     }
     item.update(kw)
     return item
@@ -75,11 +73,12 @@ async def seed_questions(
                         level="both",
                         topic_code=topic,
                         difficulty=2 + (i % 3),
-                        qtype="short",
+                        qtype="mcq",
                         language="en",
-                        question_text=f"Question {i} on {topic}: what is 3 + {i}?",
-                        answer=str(3 + i),
-                        worked_solution="Add them.",
+                        question_text=f"Question {i} on {topic}: which option is right?",
+                        options=OPTIONS,
+                        answer="ABCD"[i % 4],
+                        worked_solution="The first option states the rule.",
                         status=status,
                         prompt_version="seed",
                     )
@@ -90,32 +89,33 @@ async def seed_questions(
 # --- Pure checks -------------------------------------------------------------------------------
 
 
-def test_answer_checks_cover_numbers_expressions_and_mcq():
-    assert checks.check_answer("numeric", "0.5", "0.500", 0.01).correct
-    assert checks.check_answer("numeric", "0,5", "0.5", 0.01).correct  # Swiss decimal comma
-    assert checks.check_answer("numeric", "5.77 x 10^3", "5771", 0.01).correct
-    assert not checks.check_answer("numeric", "0.6", "0.5", 0.01).correct
-    assert checks.check_answer("short", "2x+3", "3 + 2x", None).correct
-    assert checks.check_answer("short", "\\frac{1}{2}", "0.5", None).correct
-    assert checks.check_answer("short", "x = -1 or x = 2", "x = 2 or x = -1", None).correct
-    assert not checks.check_answer("short", "2x+4", "2x+3", None).correct
-    assert checks.check_answer("short", "k = 9", "9", None).correct
-    assert checks.check_answer("mcq", "b", "B", None).correct
-    assert not checks.check_answer("mcq", "A", "B", None).correct
-    assert not checks.check_answer("short", "", "9", None).correct
+def test_answer_checks_cover_multiple_choice():
+    assert checks.check_answer("b", "B").correct
+    assert checks.check_answer(" B. Option B", "B").correct
+    assert not checks.check_answer("A", "B").correct
+    assert not checks.check_answer("", "B").correct
+    assert not checks.check_answer("999", "B").correct
 
 
-def test_duplicate_and_tolerance_checks():
+def test_options_valid_needs_four_distinct_options_containing_the_answer():
+    assert checks.options_valid(OPTIONS, "B")
+    assert checks.options_valid(OPTIONS, "c")
+    assert not checks.options_valid(OPTIONS, "E")
+    assert not checks.options_valid(OPTIONS[:3], "B")
+    assert not checks.options_valid([*OPTIONS[:3], {"key": "A", "text": "again"}], "B")
+    assert not checks.options_valid(None, "B")
+
+
+def test_duplicate_checks():
     dup, best = checks.is_near_duplicate(
-        "Find the gradient of the line through (1, 2) and (3, 8).",
-        ["Find the gradient of the line through (1, 2) and (3, 8) and its intercept."],
+        "Which body elects the Federal Council in Switzerland?",
+        ["Which body elects the Federal Council in Switzerland every four years?"],
     )
     assert dup and best > 0.6
-    assert not checks.is_near_duplicate("Integrate x e^{2x}", ["Solve 2^x = 10"])[0]
-    assert checks.rounds_consistently("0.500", 0.01)
-    assert not checks.rounds_consistently(
-        "5771", 0.00001
-    )  # tighter than half a unit in the last place
+    assert not checks.is_near_duplicate(
+        "How many cantons does Switzerland have?", ["Which body elects the Federal Council?"]
+    )[0]
+    assert checks.similarity("", "anything") == 0.0
 
 
 def test_mastery_rating_moves_and_maps_to_percent():
@@ -131,24 +131,14 @@ def test_mastery_rating_moves_and_maps_to_percent():
 
 async def test_direct_generation_runs_checks_and_sets_status(api, api2, api3, fake):
     await admin_logged_in(api3)
-    good = gen_item(answer="9", text="Find k so that x^2 - 6x + k has one real root.")
-    wrong_solution = gen_item(answer="7", text="Find the value of 3 + 4 squared minus something.")
-    mcq = gen_item(
-        qtype="mcq",
-        answer="B",
-        text="Which equals log_3 81 - log_3 9?",
-        options=[
-            {"key": "A", "text": "log_3 72"},
-            {"key": "B", "text": "2"},
-            {"key": "C", "text": "9"},
-            {"key": "D", "text": "log_3 90"},
-        ],
-    )
+    good = gen_item(answer="B", text="Which body elects the Federal Council?")
+    wrong_solution = gen_item(answer="C", text="Who may launch a popular initiative?")
+    good2 = gen_item(answer="D", text="How many cantons does Switzerland have?")
     fake.classifications = [
-        {"questions": [good, wrong_solution, mcq]},  # generation
-        {**GOOD_SOLVE, "final_answer": "k = 9"},  # solve good -> matches
-        {**GOOD_SOLVE, "final_answer": "49"},  # solve wrong_solution -> differs
-        {**GOOD_SOLVE, "final_answer": "B"},  # solve mcq -> matches
+        {"questions": [good, wrong_solution, good2]},  # generation
+        {**GOOD_SOLVE, "final_answer": "B"},  # solve good -> matches
+        {**GOOD_SOLVE, "final_answer": "A"},  # solve wrong_solution -> differs
+        {**GOOD_SOLVE, "final_answer": "D"},  # solve good2 -> matches
     ]
     r = await api3.post(
         "/api/review/generate",
@@ -168,11 +158,11 @@ async def test_direct_generation_runs_checks_and_sets_status(api, api2, api3, fa
         assert batch.status == "processed" and batch.questions_created == 3
         qs = (await db.execute(select(Question).order_by(Question.created_at))).scalars().all()
         by_text = {q.question_text[:10]: q for q in qs}
-        assert by_text["Find k so "].status == Q_AUTO_VERIFIED
-        assert by_text["Find k so "].spot_check is True  # first 50 per course are spot-checked
-        assert by_text["Find the v"].status == Q_NEEDS_REVIEW
-        assert "answers_differ" in by_text["Find the v"].check_results["issues"]
-        assert by_text["Which equa"].status == Q_AUTO_VERIFIED
+        assert by_text["Which body"].status == Q_AUTO_VERIFIED
+        assert by_text["Which body"].spot_check is True  # first 50 per course are spot-checked
+        assert by_text["Who may la"].status == Q_NEEDS_REVIEW
+        assert "answers_differ" in by_text["Who may la"].check_results["issues"]
+        assert by_text["How many c"].status == Q_AUTO_VERIFIED
         calls = (await db.execute(select(LlmCall.purpose))).scalars().all()
         assert sorted(calls) == [
             "question_gen",
@@ -183,6 +173,7 @@ async def test_direct_generation_runs_checks_and_sets_status(api, api2, api3, fa
     # Generation prompts carry the course module and examples, nothing personal
     gen_call = next(c for c in fake.calls if c.kind == "structured")
     assert "Style examples" in gen_call.messages[0]["content"]
+    assert "multiple-choice" in gen_call.messages[0]["content"]
     assert "topic code AA-1.2" in gen_call.messages[0]["content"]
 
     # Review queue shows the two that need a look (needs_review + spot check)
@@ -190,6 +181,31 @@ async def test_direct_generation_runs_checks_and_sets_status(api, api2, api3, fa
     assert r.status_code == 200 and len(r.json()) == 3
     r = await api3.get("/api/review/stats")
     assert r.json()["modules"][0]["by_status"] == {"auto_verified": 2, "needs_review": 1}
+
+
+async def test_pipeline_rejects_correct_option_missing_from_the_four(api3, fake):
+    await admin_logged_in(api3)
+    bad = gen_item(answer="E", text="Which level of government runs the army?")
+    fake.classifications = [
+        {"questions": [bad]},
+        {**GOOD_SOLVE, "final_answer": "E"},  # even a solver that agrees cannot save it
+    ]
+    r = await api3.post(
+        "/api/review/generate",
+        json={
+            "module_key": "ib_maths_aa",
+            "level": "both",
+            "topic_codes": ["AA-1.2"],
+            "difficulties": [3],
+            "per_request": 1,
+            "mode": "direct",
+        },
+    )
+    assert r.status_code == 202, r.text
+    async with SessionLocal() as db:
+        q = (await db.execute(select(Question))).scalars().one()
+        assert q.status == Q_NEEDS_REVIEW and q.spot_check is False
+        assert "mcq_options_invalid" in q.check_results["issues"]
 
 
 async def test_batch_generation_is_polled_and_processed(api3, fake):
@@ -216,10 +232,8 @@ async def test_batch_generation_is_polled_and_processed(api3, fake):
             "2": f"A stone falls for {d} s from rest; find the distance fallen ({topic}).",
             "4": f"A car brakes from 30 m/s to rest in {d} s; find the deceleration ({topic}).",
         }[d] + (" Take g as 9.81." if topic == "PH-A.1" else " Ignore air resistance entirely.")
-        fake.batch_answers[cid] = {
-            "questions": [gen_item(topic=topic, qtype="numeric", answer="24", unit="m", text=text)]
-        }
-    fake.classifications = [{**GOOD_SOLVE, "final_answer": "24"}] * 4
+        fake.batch_answers[cid] = {"questions": [gen_item(topic=topic, answer="B", text=text)]}
+    fake.classifications = [{**GOOD_SOLVE, "final_answer": "B"}] * 4
     r = await api3.post(f"/api/review/batches/{batch['id']}/poll")
     assert r.status_code == 200, r.text
     assert r.json()["status"] == "processed" and r.json()["questions_created"] == 4
@@ -230,7 +244,7 @@ async def test_batch_generation_is_polled_and_processed(api3, fake):
             .all()
         )
         assert len(qs) == 4
-        assert all(q.tolerance >= 0.02 for q in qs)  # widened: "24" is given to 2 s.f.
+        assert all(q.qtype == "mcq" and len(q.options) == 4 for q in qs)
 
 
 async def test_admin_reviews_every_module(api, api2, fake):
@@ -391,46 +405,20 @@ async def test_practice_round_never_repeats_while_alternatives_exist(api, api2, 
     assert r.status_code == 404 and r.json()["detail"] == "no_questions"
 
 
-async def test_structured_answers_are_ai_marked(api, api2, fake):
-    async with SessionLocal() as db:
-        db.add(
-            Question(
-                module_key="ib_maths_aa",
-                level="hl",
-                topic_code="AA-5.2",
-                difficulty=4,
-                qtype="structured",
-                language="en",
-                question_text="Integrate x e^{2x} and hence find an area.",
-                answer="(x/2)e^{2x} - (1/4)e^{2x} + C; (e^2+1)/4",
-                worked_solution="By parts.",
-                mark_scheme="M1 parts; A1 v; M1 apply; A1 result; M1 limits; A1 area",
-                marks=6,
-                status=Q_APPROVED,
-            )
-        )
-        await db.commit()
-        qid = (await db.execute(select(Question.id))).scalar_one()
+async def test_attempt_is_marked_by_option_key_without_any_ai_call(api, api2, fake):
+    await seed_questions(n_per_topic=1, topics=("AA-1.2",))
     await learner_in(api2)
-    fake.classifications = [
-        {"score": 0.5, "feedback": "Good method, the constant was lost.", "correct": False}
-    ]
+    async with SessionLocal() as db:
+        stored = (await db.execute(select(Question))).scalars().one()
     r = await api2.post(
         "/api/practice/attempts",
-        json={
-            "question_id": str(qid),
-            "answer": "I used parts and got x e^{2x}/2",
-            "mode": "practice",
-        },
+        json={"question_id": str(stored.id), "answer": stored.answer.lower(), "mode": "practice"},
     )
     assert r.status_code == 200, r.text
-    assert (
-        r.json()["ai_marked"] is True and r.json()["score"] == 0.5 and r.json()["correct"] is False
-    )
-    assert "constant" in r.json()["feedback"]
-    mark_call = [c for c in fake.calls if c.kind == "structured"][-1]
-    assert "<answer>" in mark_call.messages[0]["content"]
-    assert "Lina" not in mark_call.messages[0]["content"]
+    body = r.json()
+    assert body["correct"] is True and body["score"] == 1.0
+    assert body["answer_text"] == "Option A" and "feedback" not in body and "ai_marked" not in body
+    assert fake.calls == []
 
 
 async def test_production_serves_only_approved(api, api2, fake, monkeypatch):
@@ -443,10 +431,17 @@ async def test_production_serves_only_approved(api, api2, fake, monkeypatch):
     assert r.json()["questions_available"] == 0
 
 
+def test_question_item_schema_is_multiple_choice_only():
+    props = pipeline.QUESTION_ITEM_SCHEMA["properties"]
+    for gone in ("qtype", "unit", "tolerance", "mark_scheme", "marks", "calculator_allowed"):
+        assert gone not in props
+    assert "options" in props and "options" in pipeline.QUESTION_ITEM_SCHEMA["required"]
+
+
 def test_structured_output_schemas_avoid_unsupported_keywords():
     """The provider rejects minimum/maximum on numbers in output schemas (seen on staging)."""
     import json as _json
 
-    for schema in (pipeline.GEN_SCHEMA, pipeline.SOLVE_SCHEMA, pipeline.MARK_SCHEMA):
+    for schema in (pipeline.GEN_SCHEMA, pipeline.SOLVE_SCHEMA):
         text = _json.dumps(schema)
         assert "minimum" not in text and "maximum" not in text

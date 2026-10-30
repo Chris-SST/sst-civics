@@ -89,8 +89,7 @@ def prompt_version(course_key: str) -> str:
     base = prompts.load("base")
     module = prompts.course_module_key(course_key)
     course = prompts.load(f"courses/{module}")
-    figures = prompts.load("figures")
-    return f"{base.label}+{figures.label}+{course.label}"
+    return f"{base.label}+{course.label}"
 
 
 def build_system(ctx: TutorContext) -> list[dict[str, Any]]:
@@ -123,10 +122,8 @@ def build_system(ctx: TutorContext) -> list[dict[str, Any]]:
             )
     if ctx.note:
         lines.append("- Note for this turn: " + ctx.note)
-    figures = prompts.load("figures")
     return [
         {"type": "text", "text": base.text},
-        {"type": "text", "text": figures.text},
         {"type": "text", "text": course.text, "cache_control": {"type": "ephemeral"}},
         {"type": "text", "text": "\n".join(lines)},
     ]

@@ -8,7 +8,7 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 - [x] New repository from a copy of the SST app at tag `v0.1.0-citizen-base` (D-001); source docs moved to `docs/source-app/`.
 - [ ] CI and tests pass after the removals (tests pass locally; CI needs the GitHub repository).
   - [x] 0.2 Remove family, parent/student/tutor roles, under-18 rules, safeguarding queue; collapse to Learner and Admin (D-018 to D-025). 61 tests.
-  - [ ] 0.3 Remove maths rendering and checks (KaTeX, figures, sympy, LaTeX prompts).
+  - [x] 0.3 Remove maths rendering and checks (KaTeX, figures, sympy, LaTeX prompts, mark-scheme marking); multiple choice is the only question kind; prompts bumped to v2. 64 tests.
   - [x] 0.4 New initial migration (D-005).
 - [ ] Learner and admin accounts with email sign-in links (0.5, 0.6).
 - [ ] Stripe one-off payments working in test mode, with entitlements per canton (0.7).
@@ -18,7 +18,7 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 
 ## Next
 
-Tasks 0.2, 0.4 and 0.9 are done (30 October 2026). Next: 0.3 maths removal, then 0.5 sign-in, 0.7 payments. Known leftovers: German learner screens use "du", old SST copy on the Landing page, main JS chunk over 500 kB.
+Tasks 0.2, 0.3, 0.4 and 0.9 are done (30 October 2026). Next: 0.5 sign-in, then 0.7 payments. The IB course modules under prompts/courses still hold maths examples; they go with the question model in Phase 1. Known leftovers: German learner screens use "du", old SST copy on the Landing page, main JS chunk over 500 kB.
 
 ## Waiting on Chris
 

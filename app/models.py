@@ -312,10 +312,7 @@ Q_RETIRED = "retired"
 QUESTION_STATUSES = (Q_DRAFT, Q_AUTO_VERIFIED, Q_NEEDS_REVIEW, Q_APPROVED, Q_RETIRED)
 
 QTYPE_MCQ = "mcq"
-QTYPE_NUMERIC = "numeric"
-QTYPE_SHORT = "short"  # an expression or short exact answer
-QTYPE_STRUCTURED = "structured"  # marked against a mark scheme
-QUESTION_TYPES = (QTYPE_MCQ, QTYPE_NUMERIC, QTYPE_SHORT, QTYPE_STRUCTURED)
+QUESTION_TYPES = (QTYPE_MCQ,)  # multiple choice with four options is the only kind
 
 ATTEMPT_DIAGNOSTIC = "diagnostic"
 ATTEMPT_PRACTICE = "practice"
@@ -354,17 +351,14 @@ class Question(Base):
     level: Mapped[str] = mapped_column(String(4), default="both")  # sl | hl | both
     topic_code: Mapped[str] = mapped_column(String(20), index=True)
     difficulty: Mapped[int] = mapped_column(Integer, default=3)  # 1 to 5
-    qtype: Mapped[str] = mapped_column(String(12), default=QTYPE_SHORT)
-    calculator_allowed: Mapped[bool] = mapped_column(Boolean, default=True)
+    qtype: Mapped[str] = mapped_column(String(12), default=QTYPE_MCQ)
     language: Mapped[str] = mapped_column(String(5), default="en")
     question_text: Mapped[str] = mapped_column(Text)
-    options: Mapped[list[dict[str, str]] | None] = mapped_column(JSON)  # mcq: [{key, text}]
+    options: Mapped[list[dict[str, str]] | None] = mapped_column(
+        JSON
+    )  # [{key, text}], four entries
     answer: Mapped[str] = mapped_column(Text)
-    unit: Mapped[str | None] = mapped_column(String(40))
-    tolerance: Mapped[float | None] = mapped_column(Float)  # relative, numeric questions
     worked_solution: Mapped[str] = mapped_column(Text, default="")
-    mark_scheme: Mapped[str | None] = mapped_column(Text)
-    marks: Mapped[int] = mapped_column(Integer, default=1)
     status: Mapped[str] = mapped_column(String(16), default=Q_DRAFT, index=True)
     spot_check: Mapped[bool] = mapped_column(Boolean, default=False)
     source: Mapped[str] = mapped_column(String(16), default="generated")
@@ -415,8 +409,6 @@ class Attempt(Base):
     answer_text: Mapped[str] = mapped_column(Text, default="")
     score: Mapped[float] = mapped_column(Float, default=0.0)  # 0 to 1
     correct: Mapped[bool] = mapped_column(Boolean, default=False)
-    feedback: Mapped[str | None] = mapped_column(Text)  # AI marking comment
-    ai_marked: Mapped[bool] = mapped_column(Boolean, default=False)
     conversation_id: Mapped[uuid.UUID | None] = mapped_column(Uuid, index=True)
     diagnostic_id: Mapped[uuid.UUID | None] = mapped_column(Uuid, index=True)
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, index=True)

@@ -19,22 +19,16 @@ export interface QuestionFull {
   level: "sl" | "hl" | "both";
   topic_code: string;
   difficulty: number;
-  qtype: string;
-  calculator_allowed: boolean;
   language: string;
   question_text: string;
   options: { key: string; text: string }[] | null;
   answer: string;
-  unit: string | null;
-  tolerance: number | null;
   worked_solution: string;
-  mark_scheme: string | null;
-  marks: number;
   status: string;
   spot_check: boolean;
   source: string;
   prompt_version: string;
-  check_results: { issues?: string[]; answer_similarity?: number; max_similarity?: number } | null;
+  check_results: { issues?: string[]; max_similarity?: number } | null;
   solve_answer: string | null;
   review_note: string | null;
   reviewed_at: string | null;
@@ -201,7 +195,6 @@ export default function QuestionReview({ initialQuestionId }: { initialQuestionI
                   <th>{t("review.question")}</th>
                   <th>{t("review.topic")}</th>
                   <th>{t("review.difficulty")}</th>
-                  <th>{t("review.type")}</th>
                   <th>{t("review.statusLabel")}</th>
                   <th>{t("review.issuesLabel")}</th>
                   <th></th>
@@ -218,9 +211,6 @@ export default function QuestionReview({ initialQuestionId }: { initialQuestionI
                     </td>
                     <td data-label={t("review.difficulty")}>
                       <DifficultyDots level={r.difficulty} />
-                    </td>
-                    <td data-label={t("review.type")} className="small">
-                      {t(`review.qtype.${r.qtype}`, { defaultValue: r.qtype })}
                     </td>
                     <td data-label={t("review.statusLabel")}>
                       <span className={`status status-${r.status}`}>{t(`review.status.${r.status}`, { defaultValue: r.status })}</span>
@@ -250,16 +240,10 @@ interface Edits {
   question_text: string;
   options: string;
   answer: string;
-  unit: string;
-  tolerance: string;
   worked_solution: string;
-  mark_scheme: string;
-  marks: number;
   difficulty: number;
   topic_code: string;
   level: "sl" | "hl" | "both";
-  qtype: string;
-  calculator_allowed: boolean;
 }
 
 function fromQuestion(q: QuestionFull): Edits {
@@ -267,16 +251,10 @@ function fromQuestion(q: QuestionFull): Edits {
     question_text: q.question_text,
     options: (q.options ?? []).map((o) => `${o.key}) ${o.text}`).join("\n"),
     answer: q.answer,
-    unit: q.unit ?? "",
-    tolerance: q.tolerance === null ? "" : String(q.tolerance),
     worked_solution: q.worked_solution,
-    mark_scheme: q.mark_scheme ?? "",
-    marks: q.marks,
     difficulty: q.difficulty,
     topic_code: q.topic_code,
     level: q.level,
-    qtype: q.qtype,
-    calculator_allowed: q.calculator_allowed,
   };
 }
 
@@ -298,17 +276,10 @@ function diff(q: QuestionFull, e: Edits): Record<string, unknown> | null {
   const opts = parseOptions(e.options);
   if (JSON.stringify(opts) !== JSON.stringify(q.options ?? []) && (opts.length || q.options)) out.options = opts;
   if (e.answer !== q.answer) out.answer = e.answer;
-  if (e.unit !== (q.unit ?? "")) out.unit = e.unit;
-  const tol = e.tolerance.trim() === "" ? null : Number(e.tolerance.replace(",", "."));
-  if (tol !== null && Number.isFinite(tol) && tol !== q.tolerance) out.tolerance = tol;
   if (e.worked_solution !== q.worked_solution) out.worked_solution = e.worked_solution;
-  if (e.mark_scheme !== (q.mark_scheme ?? "")) out.mark_scheme = e.mark_scheme;
-  if (e.marks !== q.marks) out.marks = e.marks;
   if (e.difficulty !== q.difficulty) out.difficulty = e.difficulty;
   if (e.topic_code !== q.topic_code) out.topic_code = e.topic_code;
   if (e.level !== q.level) out.level = e.level;
-  if (e.qtype !== q.qtype) out.qtype = e.qtype;
-  if (e.calculator_allowed !== q.calculator_allowed) out.calculator_allowed = e.calculator_allowed;
   return Object.keys(out).length ? out : null;
 }
 
@@ -364,7 +335,7 @@ function ReviewPanel({
         <div>
           <h2>{t("review.panelTitle")}</h2>
           <p className="small muted">
-            {mod?.name ?? q.module_key} · {q.topic_code} · {q.level.toUpperCase()} · {t(`review.qtype.${q.qtype}`, { defaultValue: q.qtype })} ·{" "}
+            {mod?.name ?? q.module_key} · {q.topic_code} · {q.level.toUpperCase()} ·{" "}
             <span className={`status status-${q.status}`}>{t(`review.status.${q.status}`, { defaultValue: q.status })}</span>
           </p>
         </div>
@@ -377,32 +348,18 @@ function ReviewPanel({
         <div>
           <h3>{t("review.question")}</h3>
           <RichText className="preview-box" text={edits.question_text} />
-          {q.qtype === "mcq" && (
-            <ul className="options-list">
-              {parseOptions(edits.options).map((o) => (
-                <li key={o.key}>
-                  <b>{o.key}</b> <RichText text={o.text} />
-                </li>
-              ))}
-            </ul>
-          )}
+          <ul className="options-list">
+            {parseOptions(edits.options).map((o) => (
+              <li key={o.key}>
+                <b>{o.key}</b> <RichText text={o.text} />
+              </li>
+            ))}
+          </ul>
           <p>
-            <b className="small">{t("review.answer")}:</b> <RichText text={edits.answer + (edits.unit ? ` ${edits.unit}` : "")} />
-            {edits.tolerance && (
-              <span className="small muted">
-                {" "}
-                ({t("review.tolerance")}: {edits.tolerance})
-              </span>
-            )}
+            <b className="small">{t("review.answer")}:</b> <RichText text={edits.answer} />
           </p>
           <h3>{t("review.workedSolution")}</h3>
           <RichText className="preview-box" text={edits.worked_solution || "–"} />
-          {(q.qtype === "structured" || edits.mark_scheme) && (
-            <>
-              <h3>{t("review.markScheme")}</h3>
-              <RichText className="preview-box" text={edits.mark_scheme || "–"} />
-            </>
-          )}
         </div>
         <div>
           <h3>{t("review.checks")}</h3>
@@ -417,12 +374,6 @@ function ReviewPanel({
             <dd>
               <RichText text={q.answer} />
             </dd>
-            {typeof checks.answer_similarity === "number" && (
-              <>
-                <dt>{t("review.answerSimilarity")}</dt>
-                <dd>{Math.round(checks.answer_similarity * 100)}%</dd>
-              </>
-            )}
             <dt>{t("review.similarity")}</dt>
             <dd>{typeof checks.max_similarity === "number" ? `${Math.round(checks.max_similarity * 100)}%` : "–"}</dd>
             <dt>{t("review.source")}</dt>
@@ -448,37 +399,14 @@ function ReviewPanel({
         <div className="form edit-form">
           {field(t("review.question"), <textarea rows={4} value={edits.question_text} onChange={(e) => set("question_text", e.target.value)} />)}
           {field(
-            t("review.qtypeLabel"),
-            <select value={edits.qtype} onChange={(e) => set("qtype", e.target.value)}>
-              {["mcq", "numeric", "short", "structured"].map((k) => (
-                <option key={k} value={k}>
-                  {t(`review.qtype.${k}`)}
-                </option>
-              ))}
-            </select>,
+            t("review.options"),
+            <>
+              <textarea rows={4} value={edits.options} onChange={(e) => set("options", e.target.value)} />
+              <span className="hint">{t("review.optionsHint")}</span>
+            </>,
           )}
-          {edits.qtype === "mcq" &&
-            field(
-              t("review.options"),
-              <>
-                <textarea rows={4} value={edits.options} onChange={(e) => set("options", e.target.value)} />
-                <span className="hint">{t("review.optionsHint")}</span>
-              </>,
-            )}
           <div className="grid-2">
             {field(t("review.answer"), <input value={edits.answer} onChange={(e) => set("answer", e.target.value)} />)}
-            {field(t("review.unit"), <input value={edits.unit} onChange={(e) => set("unit", e.target.value)} />)}
-            {field(
-              t("review.tolerance"),
-              <>
-                <input inputMode="decimal" value={edits.tolerance} onChange={(e) => set("tolerance", e.target.value)} />
-                <span className="hint">{t("review.toleranceHint")}</span>
-              </>,
-            )}
-            {field(
-              t("review.marks"),
-              <input type="number" min={1} max={12} value={edits.marks} onChange={(e) => set("marks", Number(e.target.value))} />,
-            )}
             {field(
               t("review.difficulty"),
               <select value={edits.difficulty} onChange={(e) => set("difficulty", Number(e.target.value))}>
@@ -513,13 +441,8 @@ function ReviewPanel({
                 ))}
               </select>,
             )}
-            <label className="check">
-              <input type="checkbox" checked={edits.calculator_allowed} onChange={(e) => set("calculator_allowed", e.target.checked)} />
-              <span>{t("question.calculator")}</span>
-            </label>
           </div>
           {field(t("review.workedSolution"), <textarea rows={6} value={edits.worked_solution} onChange={(e) => set("worked_solution", e.target.value)} />)}
-          {field(t("review.markScheme"), <textarea rows={4} value={edits.mark_scheme} onChange={(e) => set("mark_scheme", e.target.value)} />)}
         </div>
       )}
 

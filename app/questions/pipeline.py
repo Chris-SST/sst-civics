@@ -5,7 +5,7 @@ generate (Batch API or direct) -> draft -> independent solve -> automatic checks
 -> tutor approves, fixes or retires.
 
 Every provider call goes through app/llm and is logged. No student data is involved here
-except in `mark_structured`, which receives an internal student ID for the cost log only."""
+and none is sent."""
 
 from __future__ import annotations
 
@@ -29,10 +29,6 @@ from app.models import (
     Q_DRAFT,
     Q_NEEDS_REVIEW,
     QTYPE_MCQ,
-    QTYPE_NUMERIC,
-    QTYPE_SHORT,
-    QTYPE_STRUCTURED,
-    QUESTION_TYPES,
     GenerationBatch,
     Question,
 )
@@ -42,17 +38,12 @@ log = logging.getLogger(__name__)
 
 PURPOSE_GEN = "question_gen"
 PURPOSE_SOLVE = "question_solve"
-PURPOSE_MARK = "question_mark"
-
-TYPE_MIX = (QTYPE_MCQ, QTYPE_NUMERIC, QTYPE_SHORT, QTYPE_STRUCTURED, QTYPE_SHORT)
 
 QUESTION_ITEM_SCHEMA: dict[str, Any] = {
     "type": "object",
     "properties": {
         "topic_code": {"type": "string"},
-        "qtype": {"type": "string", "enum": list(QUESTION_TYPES)},
         "difficulty": {"type": "integer"},
-        "calculator_allowed": {"type": "boolean"},
         "question_text": {"type": "string"},
         "options": {
             "type": "array",
@@ -64,25 +55,15 @@ QUESTION_ITEM_SCHEMA: dict[str, Any] = {
             },
         },
         "answer": {"type": "string"},
-        "unit": {"type": "string"},
-        "tolerance": {"type": "number"},
         "worked_solution": {"type": "string"},
-        "mark_scheme": {"type": "string"},
-        "marks": {"type": "integer"},
     },
     "required": [
         "topic_code",
-        "qtype",
         "difficulty",
-        "calculator_allowed",
         "question_text",
         "options",
         "answer",
-        "unit",
-        "tolerance",
         "worked_solution",
-        "mark_scheme",
-        "marks",
     ],
     "additionalProperties": False,
 }
@@ -102,17 +83,6 @@ SOLVE_SCHEMA: dict[str, Any] = {
     "required": ["final_answer", "confidence", "issue"],
     "additionalProperties": False,
 }
-MARK_SCHEMA: dict[str, Any] = {
-    "type": "object",
-    "properties": {
-        "score": {"type": "number"},
-        "feedback": {"type": "string"},
-        "correct": {"type": "boolean"},
-    },
-    "required": ["score", "feedback", "correct"],
-    "additionalProperties": False,
-}
-
 LANGUAGE_NAMES = {"en": "English (British spelling)", "de": "German", "fr": "French"}
 
 
@@ -154,7 +124,6 @@ def build_generation_request(
     info = prompts.course_info(module_key)
     topic = info.topic(topic_code) if info else None
     topic_name = topic.display("en") if topic else topic_code
-    types = ", ".join(TYPE_MIX[i % len(TYPE_MIX)] for i in range(count))
     system = [
         {"type": "text", "text": course_text},
         {"type": "text", "text": gen.text, "cache_control": {"type": "ephemeral"}},
@@ -166,7 +135,7 @@ def build_generation_request(
         f"Topic: {topic_name} (topic code {topic_code})\n"
         f"Difficulty: {difficulty}\n"
         f"Language: {LANGUAGE_NAMES.get(language, 'English (British spelling)')}\n"
-        f"Write {count} questions with these types in order: {types}.\n"
+        f"Write {count} multiple-choice questions.\n"
         f'Use topic_code "{topic_code}" and difficulty {difficulty} for every question.\n'
         + (f"\nStyle examples (do not copy them):\n\n{examples}" if examples else "")
     )
@@ -387,35 +356,22 @@ def _question_from_item(
 ) -> Question | None:
     text = str(item.get("question_text", "")).strip()
     answer = str(item.get("answer", "")).strip()
-    qtype = item.get("qtype") if item.get("qtype") in QUESTION_TYPES else QTYPE_SHORT
     if not text or not answer:
         return None
     options = item.get("options") or None
-    if qtype == QTYPE_MCQ and (not options or len(options) < 2):
+    if not options or len(options) < 2:
         return None
-    tolerance = item.get("tolerance")
-    try:
-        tolerance = float(tolerance) if tolerance is not None else None
-    except (TypeError, ValueError):
-        tolerance = None
-    if qtype == QTYPE_NUMERIC and (tolerance is None or tolerance <= 0 or tolerance > 0.5):
-        tolerance = 0.01
     return Question(
         module_key=batch.module_key,
         level=batch.level,
         topic_code=topic,
         difficulty=difficulty,
-        qtype=qtype,
-        calculator_allowed=bool(item.get("calculator_allowed", True)),
+        qtype=QTYPE_MCQ,
         language=batch.language,
         question_text=text,
-        options=options if qtype == QTYPE_MCQ else None,
+        options=options,
         answer=answer,
-        unit=(str(item.get("unit") or "").strip() or None),
-        tolerance=tolerance if qtype in (QTYPE_NUMERIC, QTYPE_SHORT) else None,
         worked_solution=str(item.get("worked_solution", "")).strip(),
-        mark_scheme=(str(item.get("mark_scheme") or "").strip() or None),
-        marks=max(1, min(12, int(item.get("marks") or 1))),
         status=Q_DRAFT,
         source="generated",
         prompt_version=version,
@@ -428,10 +384,8 @@ def _question_from_item(
 
 def _question_for_solver(q: Question) -> str:
     parts = [q.question_text]
-    if q.qtype == QTYPE_MCQ and q.options:
+    if q.options:
         parts.append("\n".join(f"{o['key']}. {o['text']}" for o in q.options))
-    if q.qtype == QTYPE_NUMERIC and q.unit:
-        parts.append(f"Give the answer in {q.unit}.")
     return "\n\n".join(parts)
 
 
@@ -447,8 +401,7 @@ async def independent_solve(db: AsyncSession, q: Question) -> dict[str, Any] | N
             messages=[
                 {
                     "role": "user",
-                    "content": f"Question type: {q.qtype}. Calculator allowed: "
-                    f"{'yes' if q.calculator_allowed else 'no'}.\n\n{_question_for_solver(q)}",
+                    "content": _question_for_solver(q),
                 }
             ],
             schema=SOLVE_SCHEMA,
@@ -531,34 +484,16 @@ async def run_checks(db: AsyncSession, q: Question) -> None:
         results["solve_issue"] = solved.get("issue") or ""
         if solved.get("confidence") == "low":
             issues.append("solver_low_confidence")
-        if q.qtype == QTYPE_STRUCTURED:
-            # Compare final results loosely: the solver lists them separated by semicolons.
-            sim = checks.similarity(q.solve_answer, q.answer)
-            results["answer_similarity"] = round(sim, 2)
-            if sim < 0.3:
-                issues.append("answers_differ")
-        else:
-            outcome = checks.check_answer(q.qtype, q.solve_answer, q.answer, q.tolerance)
-            results["answer_match"] = outcome.correct
-            results["answer_method"] = outcome.method
-            if not outcome.correct:
-                issues.append("answers_differ")
+        outcome = checks.check_answer(q.solve_answer, q.answer)
+        results["answer_match"] = outcome.correct
+        results["answer_method"] = outcome.method
+        if not outcome.correct:
+            issues.append("answers_differ")
 
-    if q.qtype == QTYPE_NUMERIC and not checks.rounds_consistently(q.answer, q.tolerance):
-        # Widen the tolerance to half a unit in the answer's last significant figure, so a
-        # student who rounds correctly is never marked wrong.
-        needed = checks.required_tolerance(q.answer)
-        if needed is not None:
-            results["tolerance_widened_from"] = q.tolerance
-            q.tolerance = round(max(q.tolerance or 0.0, needed), 6)
-    if q.qtype == QTYPE_MCQ:
-        keys = [o.get("key", "").strip().upper()[:1] for o in (q.options or [])]
-        if len(set(keys)) != len(keys) or q.answer.strip().upper()[:1] not in keys:
-            issues.append("mcq_options_invalid")
+    if not checks.options_valid(q.options, q.answer):
+        issues.append("mcq_options_invalid")
     if not q.worked_solution:
         issues.append("no_solution")
-    if q.qtype == QTYPE_STRUCTURED and not q.mark_scheme:
-        issues.append("no_mark_scheme")
 
     dup, best = await _duplicate_check(db, q)
     results["max_similarity"] = round(best, 2)
@@ -575,55 +510,3 @@ async def run_checks(db: AsyncSession, q: Question) -> None:
         q.status = Q_AUTO_VERIFIED
         q.spot_check = await _spot_check_due(db, q.module_key)
     await db.flush()
-
-
-# --- Marking structured answers -----------------------------------------------------------------
-
-
-async def mark_structured(
-    db: AsyncSession, q: Question, answer_text: str, user_id: uuid.UUID
-) -> tuple[float, str, bool]:
-    settings = get_settings()
-    mark = prompts.load("questions/mark")
-    course_text, course_label = _course_text(q.module_key)
-    body = (
-        f"Question ({q.marks} marks):\n{q.question_text}\n\nMark scheme:\n{q.mark_scheme or ''}\n\n"
-        f"Model answer:\n{q.answer}\n\n<answer>\n{answer_text}\n</answer>"
-    )
-    started = time.monotonic()
-    try:
-        data, completion = await get_provider().structured(
-            model=settings.tutor_model,
-            system=course_text + "\n\n" + mark.text,
-            messages=[{"role": "user", "content": body}],
-            schema=MARK_SCHEMA,
-            max_tokens=1200,
-            effort="medium",
-            timeout=90,
-        )
-    except LLMError:
-        await service.record_call(
-            db,
-            user_id=user_id,
-            conversation_id=None,
-            purpose=PURPOSE_MARK,
-            model=settings.tutor_model,
-            prompt_version=f"{mark.label}+{course_label}",
-            status="error",
-            usage=None,
-            latency_ms=int((time.monotonic() - started) * 1000),
-        )
-        raise
-    await service.record_call(
-        db,
-        user_id=user_id,
-        conversation_id=None,
-        purpose=PURPOSE_MARK,
-        model=completion.model,
-        prompt_version=f"{mark.label}+{course_label}",
-        status="ok",
-        usage=completion.usage,
-        latency_ms=int((time.monotonic() - started) * 1000),
-    )
-    score = max(0.0, min(1.0, float(data.get("score", 0))))
-    return score, str(data.get("feedback", "")), bool(data.get("correct", score >= 0.7))

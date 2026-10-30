@@ -371,10 +371,11 @@ class FakeProvider:
 
 
 DEMO_REPLY = (
-    "Good start. Remember the log law \\(\\log_a(xy) = \\log_a x + \\log_a y\\).\n\n"
-    "If \\(2^x = 10\\), taking logs of both sides gives\n\n"
-    "\\[ x = \\log_2 10 = \\frac{\\ln 10}{\\ln 2} \\]\n\n"
-    "What do you get to three significant figures?"
+    "Good start. Switzerland is a federal state made up of 26 cantons, and each canton has "
+    "its own constitution, parliament and government.\n\n"
+    "The federal level deals with matters such as foreign policy, the army and the currency, "
+    "while the cantons keep many other responsibilities.\n\n"
+    "Can you say in your own words why this is called a federal system?"
 )
 
 

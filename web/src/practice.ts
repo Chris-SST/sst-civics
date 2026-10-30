@@ -1,18 +1,13 @@
 /** Shapes returned by the practice API (/api/practice). */
 
-export type QType = "mcq" | "numeric" | "short" | "structured";
-
 export interface QuestionPublic {
   id: string;
   module_key?: string;
   topic_code: string;
   difficulty: number;
-  qtype: QType;
-  calculator_allowed: boolean;
+  qtype: "mcq";
   question_text: string;
   options: { key: string; text: string }[] | null;
-  unit: string | null;
-  marks: number;
   reviewed: boolean;
 }
 
@@ -69,9 +64,8 @@ export interface AttemptOut {
   attempt_id: string;
   correct: boolean;
   score: number;
-  feedback: string | null;
-  ai_marked: boolean;
   answer: string;
+  answer_text: string | null;
   worked_solution: string;
   mastery: MasteryOut;
   diagnostic?: DiagnosticOut;

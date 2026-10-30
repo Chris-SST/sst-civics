@@ -12,19 +12,16 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.config import get_settings
 from app.db import utcnow
 from app.llm import prompts
-from app.llm.client import LLMError
 from app.models import (
     Q_APPROVED,
     Q_AUTO_VERIFIED,
-    QTYPE_MCQ,
-    QTYPE_STRUCTURED,
     Attempt,
     DiagnosticRun,
     Question,
     TopicMastery,
     User,
 )
-from app.questions import checks, mastery, pipeline
+from app.questions import checks, mastery
 
 
 def servable_statuses() -> tuple[str, ...]:
@@ -47,11 +44,8 @@ def question_public(q: Question, *, reveal: bool = False, locale: str = "en") ->
         "topic_name": topic_name(q.module_key, q.topic_code, locale),
         "difficulty": q.difficulty,
         "qtype": q.qtype,
-        "calculator_allowed": q.calculator_allowed,
         "question_text": q.question_text,
-        "options": q.options if q.qtype == QTYPE_MCQ else None,
-        "unit": q.unit,
-        "marks": q.marks,
+        "options": q.options,
         "reviewed": q.status == Q_APPROVED,
     }
     if reveal:
@@ -229,40 +223,8 @@ async def submit_attempt(
     conversation_id: uuid.UUID | None = None,
     diagnostic_id: uuid.UUID | None = None,
 ) -> Attempt:
-    ai_marked = False
-    feedback: str | None = None
-    if question.qtype == QTYPE_STRUCTURED:
-        try:
-            score, feedback, correct = await pipeline.mark_structured(
-                db, question, answer_text, student.id
-            )
-            ai_marked = True
-        except LLMError:
-            # Marking unavailable: record the attempt without a score so it is not counted
-            # against the student. The solution is shown and mastery is left unchanged.
-            score, correct, feedback = 0.0, False, None
-            attempt = Attempt(
-                user_id=student.id,
-                question_id=question.id,
-                course_key=course_key,
-                topic_code=question.topic_code,
-                mode=mode,
-                answer_text=answer_text,
-                score=0.0,
-                correct=False,
-                feedback=None,
-                ai_marked=False,
-                conversation_id=conversation_id,
-                diagnostic_id=diagnostic_id,
-            )
-            db.add(attempt)
-            await db.flush()
-            return attempt
-    else:
-        outcome = checks.check_answer(
-            question.qtype, answer_text, question.answer, question.tolerance
-        )
-        score, correct = (1.0 if outcome.correct else 0.0), outcome.correct
+    outcome = checks.check_answer(answer_text, question.answer)
+    score, correct = (1.0 if outcome.correct else 0.0), outcome.correct
     attempt = Attempt(
         user_id=student.id,
         question_id=question.id,
@@ -272,8 +234,6 @@ async def submit_attempt(
         answer_text=answer_text,
         score=score,
         correct=correct,
-        feedback=feedback,
-        ai_marked=ai_marked,
         conversation_id=conversation_id,
         diagnostic_id=diagnostic_id,
     )
