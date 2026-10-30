@@ -8,7 +8,7 @@
   },
   "roles": {
     "admin": "Administrador",
-    "learner": "Estudiante"
+    "learner": "Usuario"
   },
   "env": {
     "banner": "Entorno {{env}}: modo de prueba, sin pagos reales"
@@ -25,16 +25,12 @@
     "no": "No"
   },
   "footer": {
-    "home": "Swiss Science Tutors",
-    "consultation": "Reserve una consulta gratuita",
-    "lessons": "Clases con un tutor",
     "faq": "Preguntas frecuentes",
     "contact": "Contacto",
-    "about": "Quiénes somos",
     "terms": "Condiciones de uso",
     "privacy": "Aviso de privacidad",
     "aiSafety": "IA y seguridad",
-    "trademark": "IB e International Baccalaureate son marcas de la International Baccalaureate Organization. Swiss Science Tutors no está afiliada a IB, Cambridge, Pearson Edexcel, AQA ni OCR, ni cuenta con su respaldo."
+    "independence": "Servicio independiente, sin vinculación con ninguna autoridad federal, cantonal ni municipal. Información general, no asesoramiento jurídico."
   },
   "errors": {
     "unknown_error": "Algo ha salido mal. Inténtelo de nuevo.",
@@ -107,11 +103,10 @@
   },
   "landing": {
     "title": "{{name}}",
-    "lead": "Prepárese para el examen de conocimientos para la naturalización: entienda cada pregunta en su idioma y practique después en alemán.",
+    "lead": "Prepárese para el examen de conocimientos para la naturalización. Entienda cada pregunta en su idioma y practique después en alemán. Pruebe primero preguntas de ejemplo gratuitas y luego desbloquee todo con un Civics Pass.",
     "cta": "Empiece una prueba gratuita de 7 días",
     "plansTitle": "Planes",
-    "trialNote": "Precios en CHF.",
-    "learnMore": "Más información en swisssciencetutors.ch"
+    "trialNote": "Precios en CHF."
   },
   "signup": {
     "title": "Cree su cuenta",
@@ -202,7 +197,7 @@
     "noCourses": "Aún no ha elegido cursos",
     "tutorOffline": "El tutor todavía no está conectado en este entorno.",
     "noticeTitle": "Antes de empezar con {{name}}",
-    "noticeBody": "Su tutor aquí se basa en IA, con los tutores humanos de Swiss Science Tutors detrás. Explica y orienta, pero nunca escribe trabajos que usted deba entregar. Utilícelo según lo que permita su centro de estudios.",
+    "noticeBody": "Las explicaciones de aquí las redacta un asistente de IA y pueden contener errores. Utilícelas para entender una pregunta y compruebe lo importante con la información de su cantón.",
     "noticeOk": "Entendido",
     "topic": "Tema",
     "chooseTopic": "Elija un tema",
@@ -213,7 +208,7 @@
     "usageToday": "Hoy: {{used}} de {{limit}}",
     "usageMonth": "Este mes: {{used}} de {{limit}}",
     "nearLimit": "Está cerca del límite de mensajes de este mes.",
-    "integrity": "El tutor explica y orienta; nunca escribe trabajos evaluables como IA, EE o ensayos TOK.",
+    "integrity": "El tutor explica y orienta; no ofrece asesoramiento jurídico.",
     "overall": "Dominio general",
     "testedOf": "{{tested}} de {{total}} temas evaluados",
     "notTested": "Aún sin evaluar",
@@ -241,7 +236,7 @@
     "ended": "Esta sesión ha terminado.",
     "newSession": "Iniciar una nueva",
     "helplineTitle": "Alguien con quien hablar, ahora mismo",
-    "helplineBody": "Pro Juventute: llame o envíe un SMS al 147, gratuito y confidencial, las 24 horas del día. En caso de emergencia llame al 144 (ambulancia) o al 117 (policía). También ayuda hablar con un adulto de confianza.",
+    "helplineBody": "La Mano Tendida (línea de ayuda suiza): llame al 143, gratuito y confidencial, las 24 horas. En una emergencia llame al 144 (ambulancia) o al 117 (policía). También ayuda hablar con una persona de confianza.",
     "nearLimit": "{{used}} de {{limit}} mensajes utilizados este mes.",
     "dailyLimit": "Ha alcanzado el límite de mensajes de hoy. El tutor vuelve mañana.",
     "monthlyLimit": "Ha alcanzado el límite de mensajes de este mes.",
@@ -254,7 +249,7 @@
   "usage": {
     "intro": "Llamadas de IA desde {{date}}. Los costes usan precios de lista convertidos a CHF; prevalece la factura del proveedor.",
     "cost": "Coste",
-    "messages": "Mensajes de estudiantes",
+    "messages": "Mensajes de usuarios",
     "calls": "Llamadas",
     "perMessage": "Coste por mensaje",
     "cacheRate": "Tasa de aciertos de caché",
@@ -269,7 +264,7 @@
     },
     "topLearners": "Mayor coste este mes",
     "noLearners": "Aún no hay uso.",
-    "learner": "Estudiante"
+    "learner": "Usuario"
   },
   "access": {
     "full": "Activo",
@@ -300,8 +295,8 @@
     "viewAs": "Ver como",
     "usage": "Uso de IA",
     "staffIntro": "Las cuentas de administrador se crean con el script de inicialización en el servidor. Todos los administradores usan la autenticación de dos factores.",
-    "learners": "Estudiantes",
-    "noLearners": "No se han encontrado estudiantes.",
+    "learners": "Usuarios",
+    "noLearners": "No se han encontrado usuarios.",
     "activeEntitlements": "Accesos activos",
     "lastLogin": "Último acceso",
     "plan": "Plan",
@@ -395,7 +390,7 @@
     "backOnTrack": "¡De vuelta al buen camino!",
     "tricky": "Una pregunta difícil. Lea la solución y pruebe con la siguiente.",
     "difficulty": "Dificultad {{level}} de 5",
-    "unreviewed": "aún no revisada por un tutor",
+    "unreviewed": "aún no revisada",
     "yourAnswer": "Su respuesta",
     "submit": "Comprobar respuesta",
     "correct": "Correcto",
@@ -406,7 +401,7 @@
     "report": "Informar de un problema",
     "reportHint": "¿Qué está mal? (opcional)",
     "reportSend": "Enviar informe",
-    "reported": "Gracias. Un tutor revisará esta pregunta."
+    "reported": "Gracias. Revisaremos esta pregunta."
   },
   "figure": {
     "failed": "No se ha podido dibujar la figura",
@@ -437,7 +432,7 @@
     "spotCheck": "Comprobación por muestreo",
     "reports_one": "{{count}} informe",
     "reports_other": "{{count}} informes",
-    "reportsLabel": "Informes de estudiantes",
+    "reportsLabel": "Informes de usuarios",
     "panelTitle": "Revisar pregunta",
     "options": "Opciones",
     "optionsHint": "Una por línea, p. ej. A) 2x+1",
@@ -475,7 +470,7 @@
       "mcq_options_invalid": "Opciones no válidas",
       "no_solution": "Sin solución desarrollada",
       "near_duplicate": "Casi duplicada",
-      "student_reports": "Informes de estudiantes"
+      "student_reports": "Informes de usuarios"
     }
   },
   "qbank": {

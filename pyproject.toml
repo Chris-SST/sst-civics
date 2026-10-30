@@ -1,7 +1,7 @@
 [project]
-name = "sst-virtual-tutor"
+name = "civics-trainer"
 version = "0.1.0"
-description = "SST Virtual Tutor: API and background worker"
+description = "Citizenship test trainer: API and background worker"
 requires-python = ">=3.12"
 dependencies = [
   "fastapi>=0.115",

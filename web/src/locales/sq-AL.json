@@ -8,7 +8,7 @@
   },
   "roles": {
     "admin": "Administrator",
-    "learner": "Nxënës"
+    "learner": "Përdorues"
   },
   "env": {
     "banner": "Mjedisi {{env}}: mënyrë testimi, pa pagesa reale"
@@ -25,16 +25,12 @@
     "no": "Jo"
   },
   "footer": {
-    "home": "Swiss Science Tutors",
-    "consultation": "Rezervoni një konsultë falas",
-    "lessons": "Mësime me një tutor",
     "faq": "Pyetje të shpeshta",
     "contact": "Kontakt",
-    "about": "Rreth nesh",
     "terms": "Kushtet e përdorimit",
     "privacy": "Njoftimi i privatësisë",
     "aiSafety": "IA dhe siguria",
-    "trademark": "IB dhe International Baccalaureate janë marka tregtare të International Baccalaureate Organization. Swiss Science Tutors nuk është e lidhur me IB, Cambridge, Pearson Edexcel, AQA ose OCR dhe nuk mbështetet prej tyre."
+    "independence": "Shërbim i pavarur, pa lidhje me asnjë autoritet federal, kantonal apo komunal. Informacion i përgjithshëm, jo këshillim juridik."
   },
   "errors": {
     "unknown_error": "Diçka shkoi keq. Ju lutemi provoni përsëri.",
@@ -103,15 +99,14 @@
   },
   "impersonation": {
     "banner": "Po shihni si {{name}} ({{role}}). Keni hyrë si administratori {{admin}}.",
-    "back": "Kthehu te administrimi"
+    "back": "Ktheheni te administrimi"
   },
   "landing": {
     "title": "{{name}}",
-    "lead": "Përgatituni për testin e njohurive për shtetësinë: kuptoni çdo pyetje në gjuhën tuaj, pastaj ushtrohuni në gjermanisht.",
+    "lead": "Përgatituni për testin e njohurive për shtetësinë. Kuptoni çdo pyetje në gjuhën tuaj, pastaj ushtrohuni në gjermanisht. Provoni fillimisht pyetje shembull falas, pastaj zhbllokoni gjithçka me një Civics Pass.",
     "cta": "Filloni provën falas 7-ditore",
     "plansTitle": "Planet",
-    "trialNote": "Çmimet në CHF.",
-    "learnMore": "Mësoni më shumë në swisssciencetutors.ch"
+    "trialNote": "Çmimet në CHF."
   },
   "signup": {
     "title": "Krijoni llogarinë tuaj",
@@ -144,7 +139,7 @@
     "ok": "Adresa juaj e emailit u konfirmua. Tani mund të hyni.",
     "retryHint": "Hyni dhe kërkoni një lidhje të re konfirmimi nëse e juaja ka skaduar.",
     "signedIn": "Adresa juaj e emailit u konfirmua dhe keni hyrë në llogari.",
-    "continue": "Vazhdo"
+    "continue": "Vazhdoni"
   },
   "login": {
     "title": "Hyni",
@@ -184,7 +179,7 @@
     "verifyIntro": "Hapni aplikacionin tuaj të vërtetimit dhe vendosni kodin aktual 6-shifror.",
     "code": "Kodi 6-shifror",
     "enable": "Aktivizo",
-    "confirm": "Vazhdo"
+    "confirm": "Vazhdoni"
   },
   "notFound": {
     "title": "Kjo faqe nuk ekziston"
@@ -202,7 +197,7 @@
     "noCourses": "Nuk keni zgjedhur ende kurse",
     "tutorOffline": "Tutori nuk është lidhur ende në këtë mjedis.",
     "noticeTitle": "Para se të filloni me {{name}}",
-    "noticeBody": "Tutori juaj këtu bazohet te IA, me tutorët njerëzorë të Swiss Science Tutors prapa tij. Ai shpjegon dhe ndihmon, por nuk shkruan kurrë punë që duhet t'i dorëzoni. Përdoreni ashtu siç e lejon shkolla juaj.",
+    "noticeBody": "Shpjegimet këtu shkruhen nga një asistent IA dhe mund të përmbajnë gabime. Përdoreni për të kuptuar një pyetje dhe kontrolloni çdo gjë të rëndësishme me informacionin e kantonit tuaj.",
     "noticeOk": "E kuptova",
     "topic": "Tema",
     "chooseTopic": "Zgjidhni një temë",
@@ -213,7 +208,7 @@
     "usageToday": "Sot: {{used}} nga {{limit}}",
     "usageMonth": "Këtë muaj: {{used}} nga {{limit}}",
     "nearLimit": "Jeni afër kufirit të mesazheve për këtë muaj.",
-    "integrity": "Tutori shpjegon dhe ndihmon; ai nuk shkruan kurrë punë të vlerësuara si IA, EE ose ese TOK.",
+    "integrity": "Tutori shpjegon dhe ndihmon; nuk jep këshillim juridik.",
     "overall": "Zotërimi i përgjithshëm",
     "testedOf": "{{tested}} nga {{total}} tema të testuara",
     "notTested": "Ende i patestuar",
@@ -223,8 +218,8 @@
     "askTutor": "Pyesni tutorin",
     "diagTitle": "Gjeni boshllëqet tuaja",
     "diagBody": "Një kontroll i shkurtër me rreth {{count}} pyetje tregon nga të filloni.",
-    "diagStart": "Fillo",
-    "diagContinue": "Vazhdo",
+    "diagStart": "Filloni",
+    "diagContinue": "Vazhdoni",
     "diagSkip": "Kapërce tani",
     "showTopics": "Shfaq të gjitha {{count}} temat",
     "hideTopics": "Fshih temat",
@@ -241,7 +236,7 @@
     "ended": "Ky sesion ka përfunduar.",
     "newSession": "Nisni një të ri",
     "helplineTitle": "Dikush me të cilin të flisni, tani",
-    "helplineBody": "Pro Juventute: telefononi ose dërgoni SMS në 147, falas dhe konfidencial, 24 orë në ditë. Në rast urgjence telefononi 144 (ambulanca) ose 117 (policia). Ndihmon edhe t'i tregoni një të rrituri që i besoni.",
+    "helplineBody": "Dargebotene Hand (linja e ndihmës zvicerane): telefononi 143, falas dhe konfidencial, 24 orë në ditë. Në rast urgjence telefononi 144 (ambulanca) ose 117 (policia). Ndihmon edhe t'i flisni një personi që i besoni.",
     "nearLimit": "{{used}} nga {{limit}} mesazhe të përdorura këtë muaj.",
     "dailyLimit": "Keni arritur kufirin e mesazheve për sot. Tutori kthehet nesër.",
     "monthlyLimit": "Keni arritur kufirin e mesazheve për këtë muaj.",
@@ -254,7 +249,7 @@
   "usage": {
     "intro": "Thirrje IA që nga {{date}}. Kostot përdorin çmimet e listës të konvertuara në CHF; fatura e ofruesit është përcaktuese.",
     "cost": "Kosto",
-    "messages": "Mesazhet e nxënësve",
+    "messages": "Mesazhet e përdoruesve",
     "calls": "Thirrje",
     "perMessage": "Kosto për mesazh",
     "cacheRate": "Përqindja e goditjeve në cache",
@@ -269,7 +264,7 @@
     },
     "topLearners": "Kostoja më e lartë këtë muaj",
     "noLearners": "Nuk ka ende përdorim.",
-    "learner": "Nxënës"
+    "learner": "Përdorues"
   },
   "access": {
     "full": "Aktiv",
@@ -297,11 +292,11 @@
     "monthlyLimit": "Mesazhe në muaj",
     "dailyLimit": "Mesazhe në ditë",
     "active": "Në shitje",
-    "viewAs": "Shiko si",
+    "viewAs": "Shikoni si",
     "usage": "Përdorimi i IA-së",
     "staffIntro": "Llogaritë e administratorëve krijohen me skriptin e inicializimit në server. Çdo administrator përdor vërtetimin me dy faktorë.",
-    "learners": "Nxënës",
-    "noLearners": "Nuk u gjet asnjë nxënës.",
+    "learners": "Përdorues",
+    "noLearners": "Nuk u gjet asnjë përdorues.",
     "activeEntitlements": "Qasje aktive",
     "lastLogin": "Hyrja e fundit",
     "plan": "Plani",
@@ -352,7 +347,7 @@
     "weakest": "Tema më e dobët: {{topic}}",
     "alreadyDone": "Ky kontroll ka përfunduar.",
     "empty": "Nuk ka ende pyetje për këtë kontroll.",
-    "backHome": "Kthehu te kreu"
+    "backHome": "Ktheheni te kreu"
   },
   "practice": {
     "progress": "Pyetja {{n}} nga {{total}}",
@@ -375,7 +370,7 @@
     "nextQuestion": "Pyetja tjetër",
     "noQuestions": "Nuk ka ende pyetje praktike për këtë temë.",
     "askInstead": "Pyesni më mirë tutorin",
-    "back": "Kthehu te kreu"
+    "back": "Ktheheni te kreu"
   },
   "question": {
     "praise": [
@@ -395,7 +390,7 @@
     "backOnTrack": "Përsëri në rrugë të mbarë!",
     "tricky": "Një pyetje e ndërlikuar. Lexoni zgjidhjen, pastaj provoni të tjetrën.",
     "difficulty": "Vështirësia {{level}} nga 5",
-    "unreviewed": "ende e pakontrolluar nga një tutor",
+    "unreviewed": "ende e pakontrolluar",
     "yourAnswer": "Përgjigjja juaj",
     "submit": "Kontrollo përgjigjen",
     "correct": "Saktë",
@@ -406,7 +401,7 @@
     "report": "Raportoni një problem",
     "reportHint": "Çfarë nuk shkon? (opsionale)",
     "reportSend": "Dërgo raportin",
-    "reported": "Faleminderit. Një tutor do ta shqyrtojë këtë pyetje."
+    "reported": "Faleminderit. Do ta shqyrtojmë këtë pyetje."
   },
   "figure": {
     "failed": "Figura nuk u vizatua dot",
@@ -437,7 +432,7 @@
     "spotCheck": "Kontroll i rastësishëm",
     "reports_one": "{{count}} raport",
     "reports_other": "{{count}} raporte",
-    "reportsLabel": "Raportet e nxënësve",
+    "reportsLabel": "Raportet e përdoruesve",
     "panelTitle": "Shqyrto pyetjen",
     "options": "Opsionet",
     "optionsHint": "Një për rresht, p.sh. A) 2x+1",
@@ -475,7 +470,7 @@
       "mcq_options_invalid": "Opsione të pavlefshme",
       "no_solution": "Pa zgjidhje të hollësishme",
       "near_duplicate": "Pothuajse dublikatë",
-      "student_reports": "Raportet e nxënësve"
+      "student_reports": "Raportet e përdoruesve"
     }
   },
   "qbank": {

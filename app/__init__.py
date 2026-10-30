@@ -1,1 +1,1 @@
-"""SST Virtual Tutor API."""
+"""Civics Trainer API."""

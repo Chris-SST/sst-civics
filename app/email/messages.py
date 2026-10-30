@@ -9,29 +9,29 @@ from app.config import get_settings
 from app.email.backend import OutgoingEmail
 
 SIGNATURE = {
-    "en": "\n\nSwiss Science Tutors\nhttps://swisssciencetutors.ch",
-    "de": "\n\nSwiss Science Tutors\nhttps://swisssciencetutors.ch",
-    "fr": "\n\nSwiss Science Tutors\nhttps://swisssciencetutors.ch",
+    "en": "\n\nCivics Trainer",
+    "de": "\n\nCivics Trainer",
+    "fr": "\n\nCivics Trainer",
 }
 
 TEXTS: dict[str, dict[str, tuple[str, str]]] = {
     "verify_email": {
         "en": (
             "Confirm your email address",
-            "Hello,\n\nThanks for creating an SST Virtual Tutor account. "
+            "Hello,\n\nThanks for creating a Civics Trainer account. "
             "Please confirm your email address by opening this link within 24 hours:\n\n"
             "{link}\n\nIf you did not create an account, you can ignore this email.",
         ),
         "de": (
             "Bestätigen Sie Ihre E-Mail-Adresse",
-            "Guten Tag,\n\nVielen Dank, dass Sie ein Konto beim SST Virtual Tutor erstellt haben. "
+            "Guten Tag,\n\nVielen Dank, dass Sie ein Konto bei Civics Trainer erstellt haben. "
             "Bitte bestätigen Sie Ihre E-Mail-Adresse innerhalb von 24 Stunden über diesen "
             "Link:\n\n{link}\n\n"
             "Falls Sie kein Konto erstellt haben, können Sie diese E-Mail ignorieren.",
         ),
         "fr": (
             "Confirmez votre adresse e-mail",
-            "Bonjour,\n\nMerci d'avoir créé un compte SST Virtual Tutor. "
+            "Bonjour,\n\nMerci d'avoir créé un compte Civics Trainer. "
             "Veuillez confirmer votre adresse e-mail en ouvrant ce lien dans les 24 heures :\n\n"
             "{link}\n\nSi vous n'avez pas créé de compte, vous pouvez ignorer cet e-mail.",
         ),
@@ -39,14 +39,14 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
     "reset_password": {
         "en": (
             "Reset your password",
-            "Hello,\n\nSomeone asked to reset the password for this SST Virtual Tutor account. "
+            "Hello,\n\nSomeone asked to reset the password for this Civics Trainer account. "
             "Open this link within 30 minutes to choose a new password:\n\n{link}\n\n"
             "If this was not you, you can ignore this email and your password stays the same.",
         ),
         "de": (
             "Passwort zurücksetzen",
             "Guten Tag,\n\nJemand hat das Zurücksetzen des Passworts für dieses "
-            "SST-Virtual-Tutor-Konto angefordert. Öffnen Sie diesen Link innerhalb von 30 Minuten, "
+            "Civics-Trainer-Konto angefordert. Öffnen Sie diesen Link innerhalb von 30 Minuten, "
             "um ein neues Passwort zu wählen:\n\n{link}\n\n"
             "Falls Sie das nicht waren, ignorieren Sie diese E-Mail; Ihr Passwort bleibt "
             "unverändert.",
@@ -54,7 +54,7 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
         "fr": (
             "Réinitialiser votre mot de passe",
             "Bonjour,\n\nQuelqu'un a demandé la réinitialisation du mot de passe de ce compte "
-            "SST Virtual Tutor. Ouvrez ce lien dans les 30 minutes pour choisir un nouveau "
+            "Civics Trainer. Ouvrez ce lien dans les 30 minutes pour choisir un nouveau "
             "mot de passe :\n\n{link}\n\n"
             "Si ce n'était pas vous, ignorez cet e-mail ; votre mot de passe reste inchangé.",
         ),
@@ -85,7 +85,7 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
         "en": (
             "Your account is being deleted",
             "Hello,\n\nAs you asked, we are deleting your account and your learning data: "
-            "progress, answers, tutor conversations and question reports.\n\n"
+            "progress, answers, conversations with the AI assistant and question reports.\n\n"
             "Billing records of payments you made are kept for as long as the law requires, "
             "without your email address.\n\n"
             "If you did not ask for this, please reply to this email at once.",
@@ -93,7 +93,7 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
         "de": (
             "Ihr Konto wird gelöscht",
             "Guten Tag,\n\nWie von Ihnen gewünscht, löschen wir Ihr Konto und Ihre Lerndaten: "
-            "Fortschritt, Antworten, Tutor-Gespräche und Fragemeldungen.\n\n"
+            "Fortschritt, Antworten, Gespräche mit dem KI-Assistenten und Fragemeldungen.\n\n"
             "Buchhaltungsbelege zu Ihren Zahlungen bewahren wir so lange auf, wie es das Gesetz "
             "verlangt, ohne Ihre E-Mail-Adresse.\n\n"
             "Falls Sie dies nicht veranlasst haben, antworten Sie bitte umgehend auf diese "
@@ -102,7 +102,7 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
         "fr": (
             "Votre compte est en cours de suppression",
             "Bonjour,\n\nComme vous l'avez demandé, nous supprimons votre compte et vos données "
-            "d'apprentissage : progression, réponses, conversations avec le tuteur et "
+            "d'apprentissage : progression, réponses, conversations avec l'assistant IA et "
             "signalements de questions.\n\n"
             "Les pièces comptables de vos paiements sont conservées aussi longtemps que la loi "
             "l'exige, sans votre adresse e-mail.\n\n"

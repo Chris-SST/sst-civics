@@ -12,7 +12,7 @@ export default function Landing() {
   return (
     <>
       <section className="hero">
-        <h1>{t("landing.title", { name: config?.tutor_name ?? "SST Virtual Tutor" })}</h1>
+        <h1>{t("landing.title", { name: config?.tutor_name ?? "Civics Trainer" })}</h1>
         <p>{t("landing.lead")}</p>
         <div className="actions" style={{ justifyContent: "center" }}>
           <Link className="btn btn-primary" to="/signup">

@@ -1,4 +1,4 @@
-/** Fetch wrapper for the SST API. Same-origin cookies carry the session; the CSRF
+/** Fetch wrapper for the API. Same-origin cookies carry the session; the CSRF
  * cookie is echoed in a header on state-changing requests. */
 
 export class ApiError extends Error {

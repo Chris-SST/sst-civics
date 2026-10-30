@@ -25,16 +25,12 @@
     "no": "No"
   },
   "footer": {
-    "home": "Swiss Science Tutors",
-    "consultation": "Book a free consultation",
-    "lessons": "Lessons with a tutor",
     "faq": "FAQ",
     "contact": "Contact",
-    "about": "About us",
     "terms": "Terms of use",
     "privacy": "Privacy notice",
     "aiSafety": "AI and safety",
-    "trademark": "IB and International Baccalaureate are trademarks of the International Baccalaureate Organization. Swiss Science Tutors is not affiliated with or endorsed by the IB, Cambridge, Pearson Edexcel, AQA or OCR."
+    "independence": "Independent service, not connected to any federal, cantonal or communal authority. General information, not legal advice."
   },
   "errors": {
     "unknown_error": "Something went wrong. Please try again.",
@@ -107,11 +103,10 @@
   },
   "landing": {
     "title": "{{name}}",
-    "lead": "Prepare for the citizenship knowledge test: understand every question in your own language, then practise in German.",
+    "lead": "Prepare for the citizenship knowledge test. Understand every question in your own language, then practise in German. Try free sample questions first, then unlock everything with a Civics Pass.",
     "cta": "Start free practice",
     "plansTitle": "Plans",
-    "trialNote": "Prices in CHF.",
-    "learnMore": "Learn more on swisssciencetutors.ch"
+    "trialNote": "Prices in CHF."
   },
   "signup": {
     "title": "Create your account",
@@ -202,7 +197,7 @@
     "noCourses": "No courses chosen yet",
     "tutorOffline": "The tutor is not connected in this environment yet.",
     "noticeTitle": "Before you start with {{name}}",
-    "noticeBody": "Your tutor here is AI-based, with Swiss Science Tutors' human tutors behind it. It explains and coaches but never writes work you hand in. Use it the way your school allows.",
+    "noticeBody": "The explanations here are written by an AI assistant and can contain mistakes. Use them to understand a question, and check anything important against the information from your canton.",
     "noticeOk": "Got it",
     "topic": "Topic",
     "chooseTopic": "Choose a topic",
@@ -213,7 +208,7 @@
     "usageToday": "Today: {{used}} of {{limit}}",
     "usageMonth": "This month: {{used}} of {{limit}}",
     "nearLimit": "You are close to this month's message limit.",
-    "integrity": "The tutor explains and coaches; it never writes assessed coursework such as IAs, EEs or TOK essays.",
+    "integrity": "The tutor explains and coaches; it does not give legal advice.",
     "overall": "Overall mastery",
     "testedOf": "{{tested}} of {{total}} topics tested",
     "notTested": "Not tested yet",
@@ -241,7 +236,7 @@
     "ended": "This session has ended.",
     "newSession": "Start a new one",
     "helplineTitle": "Someone to talk to, right now",
-    "helplineBody": "Pro Juventute: call or text 147, free and confidential, 24 hours a day. In an emergency call 144 (ambulance) or 117 (police). It also helps to tell an adult you trust.",
+    "helplineBody": "Die Dargebotene Hand (Swiss helpline): call 143, free and confidential, 24 hours a day. In an emergency call 144 (ambulance) or 117 (police). It also helps to talk to someone you trust.",
     "nearLimit": "{{used}} of {{limit}} messages used this month.",
     "dailyLimit": "You have reached today's message limit. The tutor is back tomorrow.",
     "monthlyLimit": "You have reached this month's message limit.",
@@ -395,7 +390,7 @@
     "backOnTrack": "Back on track!",
     "tricky": "A tricky one. Read the solution, then try the next.",
     "difficulty": "Difficulty {{level}} of 5",
-    "unreviewed": "not yet checked by a tutor",
+    "unreviewed": "not yet reviewed",
     "yourAnswer": "Your answer",
     "submit": "Check answer",
     "correct": "Correct",
@@ -406,7 +401,7 @@
     "report": "Report a problem",
     "reportHint": "What is wrong? (optional)",
     "reportSend": "Send report",
-    "reported": "Thank you. A tutor will look at this question."
+    "reported": "Thank you. We will look at this question."
   },
   "figure": {
     "failed": "Figure could not be drawn",

@@ -9,9 +9,9 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["brand/*.png", "fonts/*.woff2", "icons/*.svg"],
       manifest: {
-        name: "SST Virtual Tutor",
-        short_name: "SST Tutor",
-        description: "AI tutor for IB, IGCSE, A Level and Swiss school science and maths, by Swiss Science Tutors.",
+        name: "Civics Trainer",
+        short_name: "Civics",
+        description: "Practice trainer for the Swiss citizenship knowledge test.",
         lang: "en-GB",
         start_url: "/",
         display: "standalone",

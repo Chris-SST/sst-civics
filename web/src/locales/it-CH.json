@@ -8,7 +8,7 @@
   },
   "roles": {
     "admin": "Amministratore",
-    "learner": "Studente"
+    "learner": "Utente"
   },
   "env": {
     "banner": "Ambiente {{env}}: modalità di prova, nessun pagamento reale"
@@ -25,16 +25,12 @@
     "no": "No"
   },
   "footer": {
-    "home": "Swiss Science Tutors",
-    "consultation": "Prenoti una consulenza gratuita",
-    "lessons": "Lezioni con un tutor",
     "faq": "Domande frequenti",
     "contact": "Contatto",
-    "about": "Chi siamo",
     "terms": "Condizioni d'uso",
     "privacy": "Informativa sulla protezione dei dati",
     "aiSafety": "IA e sicurezza",
-    "trademark": "IB e International Baccalaureate sono marchi dell'International Baccalaureate Organization. Swiss Science Tutors non è affiliata né approvata da IB, Cambridge, Pearson Edexcel, AQA o OCR."
+    "independence": "Servizio indipendente, non collegato ad alcuna autorità federale, cantonale o comunale. Informazioni generali, non consulenza legale."
   },
   "errors": {
     "unknown_error": "Qualcosa è andato storto. Riprovi, per favore.",
@@ -107,11 +103,10 @@
   },
   "landing": {
     "title": "{{name}}",
-    "lead": "Si prepari al test di conoscenza per la naturalizzazione: comprenda ogni domanda nella Sua lingua, poi si eserciti in tedesco.",
+    "lead": "Si prepari al test di conoscenza per la naturalizzazione. Comprenda ogni domanda nella Sua lingua, poi si eserciti in tedesco. Provi prima le domande di esempio gratuite, poi sblocchi tutto con un Civics Pass.",
     "cta": "Inizi la prova gratuita di 7 giorni",
     "plansTitle": "Piani",
-    "trialNote": "Prezzi in CHF.",
-    "learnMore": "Scopra di più su swisssciencetutors.ch"
+    "trialNote": "Prezzi in CHF."
   },
   "signup": {
     "title": "Crei il Suo account",
@@ -202,7 +197,7 @@
     "noCourses": "Nessun corso ancora scelto",
     "tutorOffline": "Il tutor non è ancora collegato in questo ambiente.",
     "noticeTitle": "Prima di iniziare con {{name}}",
-    "noticeBody": "Il Suo tutor qui si basa sull'IA, con i tutor in carne e ossa di Swiss Science Tutors a supporto. Spiega e accompagna, ma non scrive mai lavori da consegnare. Lo utilizzi nei limiti consentiti dalla Sua scuola.",
+    "noticeBody": "Le spiegazioni qui sono redatte da un assistente IA e possono contenere errori. Le utilizzi per comprendere una domanda e verifichi le informazioni importanti con quelle del Suo cantone.",
     "noticeOk": "Ho capito",
     "topic": "Argomento",
     "chooseTopic": "Scelga un argomento",
@@ -213,7 +208,7 @@
     "usageToday": "Oggi: {{used}} su {{limit}}",
     "usageMonth": "Questo mese: {{used}} su {{limit}}",
     "nearLimit": "Si sta avvicinando al limite di messaggi di questo mese.",
-    "integrity": "Il tutor spiega e accompagna; non scrive mai lavori valutati come IA, EE o saggi TOK.",
+    "integrity": "Il tutor spiega e accompagna; non fornisce consulenza legale.",
     "overall": "Padronanza complessiva",
     "testedOf": "{{tested}} argomenti su {{total}} verificati",
     "notTested": "Non ancora verificato",
@@ -241,7 +236,7 @@
     "ended": "Questa sessione è terminata.",
     "newSession": "Avvii una nuova sessione",
     "helplineTitle": "Qualcuno con cui parlare, subito",
-    "helplineBody": "Pro Juventute: chiami o invii un SMS al 147, gratuito e confidenziale, 24 ore su 24. In caso di emergenza chiami il 144 (ambulanza) o il 117 (polizia). Aiuta anche parlarne con un adulto di cui si fida.",
+    "helplineBody": "La Mano Tesa: chiami il 143, gratuito e confidenziale, 24 ore su 24. In caso di emergenza chiami il 144 (ambulanza) o il 117 (polizia). Aiuta anche parlarne con una persona di fiducia.",
     "nearLimit": "{{used}} messaggi su {{limit}} utilizzati questo mese.",
     "dailyLimit": "Ha raggiunto il limite di messaggi di oggi. Il tutor tornerà disponibile domani.",
     "monthlyLimit": "Ha raggiunto il limite di messaggi di questo mese.",
@@ -254,7 +249,7 @@
   "usage": {
     "intro": "Chiamate IA dal {{date}}. I costi si basano sui prezzi di listino convertiti in CHF; fa fede la fattura del fornitore.",
     "cost": "Costo",
-    "messages": "Messaggi degli studenti",
+    "messages": "Messaggi degli utenti",
     "calls": "Chiamate",
     "perMessage": "Costo per messaggio",
     "cacheRate": "Tasso di riscontro nella cache",
@@ -269,7 +264,7 @@
     },
     "topLearners": "Costo più elevato questo mese",
     "noLearners": "Ancora nessun utilizzo.",
-    "learner": "Studente"
+    "learner": "Utente"
   },
   "access": {
     "full": "Attivo",
@@ -300,8 +295,8 @@
     "viewAs": "Visualizza come",
     "usage": "Utilizzo dell'IA",
     "staffIntro": "Gli account amministratore vengono creati con lo script di inizializzazione sul server. Ogni amministratore utilizza l'autenticazione a due fattori.",
-    "learners": "Studenti",
-    "noLearners": "Nessuno studente trovato.",
+    "learners": "Utenti",
+    "noLearners": "Nessun utente trovato.",
     "activeEntitlements": "Accessi attivi",
     "lastLogin": "Ultimo accesso",
     "plan": "Piano",
@@ -395,7 +390,7 @@
     "backOnTrack": "Di nuovo in carreggiata!",
     "tricky": "Una domanda insidiosa. Legga la soluzione, poi provi la successiva.",
     "difficulty": "Difficoltà {{level}} su 5",
-    "unreviewed": "non ancora verificata da un tutor",
+    "unreviewed": "non ancora verificata",
     "yourAnswer": "La Sua risposta",
     "submit": "Verifica la risposta",
     "correct": "Giusto",
@@ -406,7 +401,7 @@
     "report": "Segnala un problema",
     "reportHint": "Che cosa non va? (facoltativo)",
     "reportSend": "Invia la segnalazione",
-    "reported": "Grazie. Un tutor esaminerà questa domanda."
+    "reported": "Grazie. Esamineremo questa domanda."
   },
   "figure": {
     "failed": "Non è stato possibile disegnare la figura",
@@ -437,7 +432,7 @@
     "spotCheck": "Controllo a campione",
     "reports_one": "{{count}} segnalazione",
     "reports_other": "{{count}} segnalazioni",
-    "reportsLabel": "Segnalazioni degli studenti",
+    "reportsLabel": "Segnalazioni degli utenti",
     "panelTitle": "Rivedi la domanda",
     "options": "Opzioni",
     "optionsHint": "Una per riga, ad es. A) 2x+1",
@@ -475,7 +470,7 @@
       "mcq_options_invalid": "Opzioni non valide",
       "no_solution": "Nessuna soluzione svolta",
       "near_duplicate": "Quasi un duplicato",
-      "student_reports": "Segnalazioni degli studenti"
+      "student_reports": "Segnalazioni degli utenti"
     }
   },
   "qbank": {

@@ -27,9 +27,8 @@ export default function Layout({ children }: { children: ReactNode }) {
     <div className="shell">
       <header className="topbar">
         <div className="container topbar-inner">
-          <Link to={me ? homeFor(me.user.role) : "/"} className="brand" aria-label="SST Virtual Tutor">
-            <img src="/brand/logo-green-black.png" alt="Swiss Science Tutors" className="brand-logo" />
-            <span className="brand-sub">{config?.tutor_name ?? "Virtual Tutor"}</span>
+          <Link to={me ? homeFor(me.user.role) : "/"} className="brand" aria-label={config?.tutor_name ?? "Civics Trainer"}>
+            <span className="brand-sub">{config?.tutor_name ?? "Civics Trainer"}</span>
           </Link>
           <nav className="topnav">
             <label className="lang">
@@ -99,22 +98,10 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="container footer-inner">
           <ul className="footer-links">
             <li>
-              <a href={`${SITE}/`}>{t("footer.home")}</a>
-            </li>
-            <li>
-              <a href={`${SITE}/book-a-consultation/`}>{t("footer.consultation")}</a>
-            </li>
-            <li>
-              <a href={`${SITE}/how-we-operate/`}>{t("footer.lessons")}</a>
-            </li>
-            <li>
               <a href={`${SITE}/frequently-asked-questions/`}>{t("footer.faq")}</a>
             </li>
             <li>
               <a href={`${SITE}/contact/`}>{t("footer.contact")}</a>
-            </li>
-            <li>
-              <a href={`${SITE}/about-us/`}>{t("footer.about")}</a>
             </li>
             <li>
               <a href={`${SITE}/terms/`}>{t("footer.terms")}</a>
@@ -126,7 +113,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               <a href={`${SITE}/ai-safety/`}>{t("footer.aiSafety")}</a>
             </li>
           </ul>
-          <p className="muted small">{t("footer.trademark")}</p>
+          <p className="muted small">{t("footer.independence")}</p>
         </div>
       </footer>
     </div>

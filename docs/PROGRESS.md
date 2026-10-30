@@ -14,7 +14,8 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 - [x] Stripe one-off payments working in test mode, with entitlements per canton (0.7; D-033 to D-038). Civics Pass and extension by lookup key, one-off Checkout, webhook grants, refund rule and admin refund, `plans` table removed. 105 tests.
 - [ ] Interface locales for the launch languages (0.8).
 - [ ] Staging site live on the shared VPS with its own host names, TLS and nightly backups (0.9 code done, D-004; deploy waits on DNS, the edge Caddy change and a GitHub repository).
-- [ ] Phase 0 review, README, `docs/DEMO_PHASE0.md`, demo walked (0.10).
+- [x] Phase 0 code review (ten findings, nine fixed, one deferred to Phase 1), README rewritten, `docs/DEMO_PHASE0.md` written, old-product wording removed (0.10 code side, 30 October 2026).
+- [ ] Staging deployed and demo walked with Chris (waits on DNS, the edge Caddy change and a GitHub repository).
 
 ## Next
 

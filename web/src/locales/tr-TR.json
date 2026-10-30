@@ -8,7 +8,7 @@
   },
   "roles": {
     "admin": "Yönetici",
-    "learner": "Öğrenci"
+    "learner": "Kullanıcı"
   },
   "env": {
     "banner": "{{env}} ortamı: test modu, gerçek ödeme yok"
@@ -25,16 +25,12 @@
     "no": "Hayır"
   },
   "footer": {
-    "home": "Swiss Science Tutors",
-    "consultation": "Ücretsiz görüşme ayırtın",
-    "lessons": "Eğitmenle dersler",
     "faq": "Sık sorulan sorular",
     "contact": "İletişim",
-    "about": "Hakkımızda",
     "terms": "Kullanım koşulları",
     "privacy": "Gizlilik bildirimi",
     "aiSafety": "Yapay zekâ ve güvenlik",
-    "trademark": "IB ve International Baccalaureate, International Baccalaureate Organization'ın ticari markalarıdır. Swiss Science Tutors; IB, Cambridge, Pearson Edexcel, AQA veya OCR ile bağlantılı değildir ve bunlar tarafından onaylanmamıştır."
+    "independence": "Federal, kantonal veya yerel hiçbir makamla bağlantısı olmayan bağımsız bir hizmettir. Genel bilgidir, hukuki danışmanlık değildir."
   },
   "errors": {
     "unknown_error": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
@@ -107,11 +103,10 @@
   },
   "landing": {
     "title": "{{name}}",
-    "lead": "Vatandaşlık bilgi sınavına hazırlanın: her soruyu kendi dilinizde anlayın, ardından Almanca alıştırma yapın.",
-    "cta": "7 günlük ücretsiz denemeyi başlatın",
+    "lead": "Vatandaşlık bilgi sınavına hazırlanın. Her soruyu kendi dilinizde anlayın, ardından Almanca alıştırma yapın. Önce ücretsiz örnek soruları deneyin, ardından bir Civics Pass ile her şeyin kilidini açın.",
+    "cta": "Ücretsiz alıştırmaya başlayın",
     "plansTitle": "Planlar",
-    "trialNote": "Fiyatlar CHF cinsindendir.",
-    "learnMore": "swisssciencetutors.ch adresinde daha fazlasını öğrenin"
+    "trialNote": "Fiyatlar CHF cinsindendir."
   },
   "signup": {
     "title": "Hesabınızı oluşturun",
@@ -202,7 +197,7 @@
     "noCourses": "Henüz kurs seçilmedi",
     "tutorOffline": "Eğitmen bu ortamda henüz bağlı değil.",
     "noticeTitle": "{{name}} ile başlamadan önce",
-    "noticeBody": "Buradaki eğitmeniniz yapay zekâ tabanlıdır ve arkasında Swiss Science Tutors'ın insan eğitmenleri vardır. Açıklar ve yol gösterir, ancak teslim edeceğiniz ödevleri asla yazmaz. Okulunuzun izin verdiği ölçüde kullanın.",
+    "noticeBody": "Buradaki açıklamaları bir yapay zekâ asistanı yazar ve hata içerebilir. Bir soruyu anlamak için kullanın; önemli konuları kantonunuzun bilgileriyle karşılaştırın.",
     "noticeOk": "Anladım",
     "topic": "Konu",
     "chooseTopic": "Bir konu seçin",
@@ -213,7 +208,7 @@
     "usageToday": "Bugün: {{used}} / {{limit}}",
     "usageMonth": "Bu ay: {{used}} / {{limit}}",
     "nearLimit": "Bu ayki mesaj sınırınıza yaklaştınız.",
-    "integrity": "Eğitmen açıklar ve yol gösterir; IA, EE veya TOK denemesi gibi değerlendirilen ödevleri asla yazmaz.",
+    "integrity": "Eğitmen açıklar ve yol gösterir; hukuki danışmanlık vermez.",
     "overall": "Genel hâkimiyet",
     "testedOf": "{{total}} konudan {{tested}} tanesi test edildi",
     "notTested": "Henüz test edilmedi",
@@ -223,8 +218,8 @@
     "askTutor": "Eğitmene sorun",
     "diagTitle": "Eksiklerinizi bulun",
     "diagBody": "Yaklaşık {{count}} soruluk kısa bir değerlendirme nereden başlayacağınızı gösterir.",
-    "diagStart": "Başla",
-    "diagContinue": "Devam et",
+    "diagStart": "Başlayın",
+    "diagContinue": "Devam edin",
     "diagSkip": "Şimdilik atla",
     "showTopics": "{{count}} konunun tümünü göster",
     "hideTopics": "Konuları gizle",
@@ -241,7 +236,7 @@
     "ended": "Bu oturum sona erdi.",
     "newSession": "Yeni bir oturum başlatın",
     "helplineTitle": "Konuşacak biri, hemen şimdi",
-    "helplineBody": "Pro Juventute: 147'yi arayın veya kısa mesaj gönderin; ücretsiz, gizli ve günün 24 saati hizmet verir. Acil durumda 144'ü (ambulans) veya 117'yi (polis) arayın. Güvendiğiniz bir yetişkine anlatmak da yardımcı olur.",
+    "helplineBody": "Dargebotene Hand (İsviçre yardım hattı): 143'ü arayın; ücretsiz, gizli ve günün 24 saati hizmet verir. Acil durumda 144'ü (ambulans) veya 117'yi (polis) arayın. Güvendiğiniz biriyle konuşmak da yardımcı olur.",
     "nearLimit": "Bu ay {{limit}} mesajın {{used}} tanesi kullanıldı.",
     "dailyLimit": "Bugünkü mesaj sınırınıza ulaştınız. Eğitmen yarın yeniden hizmetinizde.",
     "monthlyLimit": "Bu ayki mesaj sınırınıza ulaştınız.",
@@ -254,7 +249,7 @@
   "usage": {
     "intro": "{{date}} tarihinden bu yana yapay zekâ çağrıları. Maliyetler CHF'ye çevrilmiş liste fiyatlarına göredir; sağlayıcının faturası esastır.",
     "cost": "Maliyet",
-    "messages": "Öğrenci mesajları",
+    "messages": "Kullanıcı mesajları",
     "calls": "Çağrılar",
     "perMessage": "Mesaj başına maliyet",
     "cacheRate": "Önbellek isabet oranı",
@@ -269,7 +264,7 @@
     },
     "topLearners": "Bu ay en yüksek maliyet",
     "noLearners": "Henüz kullanım yok.",
-    "learner": "Öğrenci"
+    "learner": "Kullanıcı"
   },
   "access": {
     "full": "Etkin",
@@ -300,8 +295,8 @@
     "viewAs": "Şu olarak görüntüle",
     "usage": "Yapay zekâ kullanımı",
     "staffIntro": "Yönetici hesapları sunucudaki başlangıç betiğiyle oluşturulur. Her yönetici iki aşamalı doğrulama kullanır.",
-    "learners": "Öğrenciler",
-    "noLearners": "Öğrenci bulunamadı.",
+    "learners": "Kullanıcılar",
+    "noLearners": "Kullanıcı bulunamadı.",
     "activeEntitlements": "Etkin erişimler",
     "lastLogin": "Son giriş",
     "plan": "Plan",
@@ -395,7 +390,7 @@
     "backOnTrack": "Yeniden yoldasınız!",
     "tricky": "Zor bir soru. Çözümü okuyun, sonra bir sonrakini deneyin.",
     "difficulty": "Zorluk {{level}} / 5",
-    "unreviewed": "henüz bir eğitmen tarafından kontrol edilmedi",
+    "unreviewed": "henüz kontrol edilmedi",
     "yourAnswer": "Yanıtınız",
     "submit": "Yanıtı kontrol et",
     "correct": "Doğru",
@@ -406,7 +401,7 @@
     "report": "Sorun bildirin",
     "reportHint": "Neyin yanlış olduğunu belirtin (isteğe bağlı)",
     "reportSend": "Bildirimi gönder",
-    "reported": "Teşekkürler. Bir eğitmen bu soruyu inceleyecek."
+    "reported": "Teşekkürler. Bu soruyu inceleyeceğiz."
   },
   "figure": {
     "failed": "Şekil çizilemedi",
@@ -437,7 +432,7 @@
     "spotCheck": "Örnekleme kontrolü",
     "reports_one": "{{count}} bildirim",
     "reports_other": "{{count}} bildirim",
-    "reportsLabel": "Öğrenci bildirimleri",
+    "reportsLabel": "Kullanıcı bildirimleri",
     "panelTitle": "Soruyu incele",
     "options": "Seçenekler",
     "optionsHint": "Her satıra bir tane, örn. A) 2x+1",
@@ -475,7 +470,7 @@
       "mcq_options_invalid": "Seçenekler geçersiz",
       "no_solution": "Adım adım çözüm yok",
       "near_duplicate": "Neredeyse yinelenen",
-      "student_reports": "Öğrenci bildirimleri"
+      "student_reports": "Kullanıcı bildirimleri"
     }
   },
   "qbank": {
