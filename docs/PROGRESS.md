@@ -29,9 +29,10 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 - [x] Explain this (1.10; done 30 October 2026, D-057). `POST /api/explain/start`, `prompts/explain/v1.md`, `prompts/gatekeeper/v2.md`, `ExplainPanel` on Learn and Practise cards (never in the mock test); the topic chat's entry points are removed from the learner home. Not yet checked with the live model or in a browser on staging; run the evals before go-live.
 - [x] Glossary admin screen and learner glossary page (1.3 screen; done 30 October 2026, D-058). Official fr/it/en names from TERMDAT are still to be confirmed by a reviewer in the new Glossary tab.
 - [x] Guide site scaffold (1.11): Astro in `site/`, eight-language routing with hreflang and sitemap, design-system components, residence calculator island, served by the civics Caddy from `site-releases`, CI build and tag-gated rsync deploy (D-043, D-056, D-059, D-060).
-- [x] Guide content in German and English with official sources (1.12): overview, Zurich step by step, knowledge test, language certificates, fees, calculator, free practice, ten FAQs each. Open: the same pages in fr, it, pt, es, sq, tr for the pages the plan lists in all launch languages; Umami analytics container.
+- [x] Guide content in German and English with official sources (1.12): overview, Zurich step by step, knowledge test, language certificates, fees, calculator, free practice, ten FAQs each. Overview, knowledge test, calculator, free practice and FAQ also in fr, it, pt, es, sq, tr as drafts for native review (56 pages). Umami analytics wired (D-062), awaiting the stats DNS record and one-time setup on the server.
 - [x] Terms, privacy notice, independence notice drafted in English (1.13, `docs/legal/`); lawyer and accountant review open; other languages after approval.
-- [ ] Tests, link check, test panel (1.14 to 1.16).
+- [x] Quality (1.14): Playwright end-to-end suite (free questions, email link, full mock, webhook fulfilment, expiry, deletion), axe accessibility on the main screens with fixes, Lighthouse 100/100/100/100 on three guide pages, hreflang check; CI jobs added. Weekly link check (1.15) exists in the worker.
+- [ ] Test panel of 15 to 20 people (1.16): Chris recruits once the first questions are approved.
 
 ## Next
 
