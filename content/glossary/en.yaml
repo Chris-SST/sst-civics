@@ -1,0 +1,192 @@
+# Glossary en: key German terms of the question bank (task 1.5). Used by
+# scripts/content/translate and shown to learners in 'German with help'.
+# `source` says where the translation comes from; entries marked 'to confirm' or
+# 'draft for native-speaker review' still need a reviewer.
+lang: en
+terms:
+- term_de: Bund
+  translation: Confederation
+  note: The federal level of the Swiss state.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Kanton
+  translation: canton
+  note: One of the 26 member states of the Confederation.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Gemeinde
+  translation: commune
+  note: The local level; also called municipality in English.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Bundesrat
+  translation: Federal Council
+  note: 'The Swiss government: seven members elected by the Federal Assembly.'
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Bundespräsident
+  translation: President of the Swiss Confederation
+  note: A member of the Federal Council who chairs it for one year.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Bundesversammlung
+  translation: Federal Assembly
+  note: 'The Swiss parliament: the National Council and the Council of States together.'
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Nationalrat
+  translation: National Council
+  note: 'The larger chamber of parliament: 200 members, seats shared out by population.'
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Ständerat
+  translation: Council of States
+  note: 'The chamber of the cantons: 46 members, two per canton and one for each of the six former half-cantons.'
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Bundesgericht
+  translation: Federal Supreme Court
+  note: The highest court of Switzerland, in Lausanne.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Bundesverfassung
+  translation: Federal Constitution
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Bundeskanzlei
+  translation: Federal Chancellery
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Kantonsverfassung
+  translation: cantonal constitution
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Kantonsrat
+  translation: Cantonal Council
+  note: The parliament of the canton of Zurich (180 members).
+  source: zh.ch usage (no TERMDAT entry checked; to confirm)
+  keep_german: true
+- term_de: Regierungsrat
+  translation: Executive Council
+  note: 'The government of the canton of Zurich: seven members elected by the people.'
+  source: zh.ch usage (no TERMDAT entry checked; to confirm)
+  keep_german: true
+- term_de: Gemeindeversammlung
+  translation: communal assembly
+  note: A meeting of all the voters of a commune; it decides the budget and local matters.
+  source: common usage; no official translation
+  keep_german: true
+- term_de: Gemeinderat
+  translation: communal council
+  note: In most Zurich communes the executive; in the city of Zurich and some towns the parliament.
+  source: common usage; no official translation
+  keep_german: true
+- term_de: Stadtrat
+  translation: City Council
+  note: In the city of Zurich and in Winterthur the executive of the town.
+  source: common usage; no official translation
+  keep_german: true
+- term_de: Bezirk
+  translation: district
+  note: null
+  source: common usage; no official translation
+- term_de: Volksinitiative
+  translation: popular initiative
+  note: 100,000 signatures collected within 18 months to propose a change to the Federal Constitution.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Initiative
+  translation: initiative
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Referendum
+  translation: referendum
+  note: 'Optional: 50,000 signatures within 100 days to put a law to the vote; mandatory for changes to
+    the constitution.'
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Volksabstimmung
+  translation: popular vote
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Volksmehr
+  translation: popular majority
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Ständemehr
+  translation: majority of the cantons
+  note: Needed with the popular majority for a change to the constitution.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Stimmrecht
+  translation: right to vote
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Gewaltenteilung
+  translation: separation of powers
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Föderalismus
+  translation: federalism
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Grundrechte
+  translation: fundamental rights
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Vernehmlassung
+  translation: consultation procedure
+  note: Cantons, parties and organisations comment on a draft law before parliament debates it.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Einbürgerung
+  translation: naturalisation
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Bürgerrecht
+  translation: citizenship
+  note: 'Swiss citizenship is held at three levels: commune, canton and Confederation.'
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Niederlassungsbewilligung
+  translation: settlement permit (C permit)
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Aufenthaltsbewilligung
+  translation: residence permit (B permit)
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: AHV
+  translation: old-age and survivors' insurance (OASI)
+  note: The state pension, the first pillar of old-age provision.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: IV
+  translation: invalidity insurance (IV)
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Krankenkasse
+  translation: health insurer
+  note: Basic health insurance is compulsory for everyone who lives in Switzerland.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Steuererklärung
+  translation: tax return
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Militärdienst
+  translation: military service
+  note: null
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+- term_de: Zivildienst
+  translation: civilian service
+  note: Longer service for men who cannot do military service for reasons of conscience.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Milizsystem
+  translation: militia system
+  note: Citizens take on public offices and army service alongside their jobs.
+  source: admin.ch, English pages (TERMDAT not queried; to confirm)
+  keep_german: true

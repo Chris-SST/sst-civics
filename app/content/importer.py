@@ -7,9 +7,12 @@ nothing is written.
 - Topics: one row per entry of each canton file, matched on (canton, code); entries gone
   from the files are deleted.
 - Questions: matched on id. A higher version replaces the row (and clears any admin changes
-  waiting for write-back); the same version with the same content hash is left alone, so a
-  status set in the admin area survives; the same version with different content is an
-  error. A question whose file is gone is retired, never deleted, so attempts survive.
+  waiting for write-back); the same version with the same content is an error. The content
+  hash leaves out the workflow fields (status, the pipeline's checks, the review note and
+  the dates sources were checked), which the pipeline changes without a new version: with
+  the same version and content, the file's status and sources are taken over unless an
+  admin change is still waiting for write-back, so that status survives. A question whose
+  file is gone is retired, never deleted, so attempts survive.
 - Translations: matched on (id, lang), replaced when their content hash changes. A
   translation made from an older German version is imported but hidden.
 - Glossary: matched on (term, lang); entries gone from the files are deleted."""
@@ -23,7 +26,8 @@ from pathlib import Path
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.content.files import content_hash
+from app.content.files import content_hash, question_content_hash
+from app.content.schema import QuestionFile
 from app.content.validate import Report, validate_content
 from app.db import utcnow
 from app.models import Q_RETIRED, GlossaryTerm, Question, QuestionTranslation, Topic
@@ -104,12 +108,13 @@ async def _import_questions(db: AsyncSession, result: ImportResult) -> None:
     now = utcnow()
     existing = {q.id: q for q in (await db.execute(select(Question))).scalars()}
     for qid, qf in cs.questions.items():
-        digest = content_hash(qf)
+        digest = question_content_hash(qf)
         row = existing.get(qid)
         if row is not None:
+            if qf.version == row.version and row.content_hash == content_hash(qf):
+                row.content_hash = digest  # imported before the workflow fields were left out
             if qf.version == row.version and digest == row.content_hash:
-                if row.file_status == FILE_MISSING:  # the file came back unchanged
-                    row.status = row.file_status = qf.status
+                _take_workflow_fields(row, qf)
                 result.bump("questions_unchanged")
                 continue
             if qf.version == row.version:
@@ -162,6 +167,21 @@ async def _import_questions(db: AsyncSession, result: ImportResult) -> None:
     await db.flush()
 
 
+def _take_workflow_fields(row: Question, qf: QuestionFile) -> None:
+    """Same version and content: the file may still have a new status (set by the pipeline
+    or written back from review) or new source dates. An admin change that is not yet in the
+    file keeps its status (D-046)."""
+    if row.file_status == FILE_MISSING:  # the file came back unchanged
+        row.status = row.file_status = qf.status
+    elif row.file_status != qf.status:
+        row.file_status = qf.status
+        if not row.file_sync_pending:
+            row.status = qf.status
+    sources = [{"url": s.url, "checked": s.checked.isoformat()} for s in qf.sources]
+    if row.sources != sources:
+        row.sources = sources
+
+
 async def _import_translations(db: AsyncSession, result: ImportResult) -> None:
     cs = result.report.content
     now = utcnow()
@@ -209,13 +229,13 @@ async def _import_glossary(db: AsyncSession, result: ImportResult) -> None:
     wanted: set[tuple[str, str]] = set()
     for lang, gf in cs.glossary.items():
         for entry in gf.terms:
-            key = (entry.term, lang)
+            key = (entry.term_de, lang)
             if key in wanted:
                 continue
             wanted.add(key)
             row = existing.get(key)
             if row is None:
-                row = GlossaryTerm(term=entry.term, lang=lang)
+                row = GlossaryTerm(term=entry.term_de, lang=lang)
                 db.add(row)
             row.translation = entry.translation
             row.note = entry.note

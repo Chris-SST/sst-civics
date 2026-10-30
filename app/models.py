@@ -314,20 +314,24 @@ class CostAlert(Base):
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
 
 
-# --- Question bank (filled from content/ on deploy), attempts, mastery -------------------
+# --- Question bank (filled from content/ on deploy), attempts, progress, mock tests ------
 
 # Status of a question in its file (content/questions/) and, after admin review, in the
 # database. Only approved questions are served (in_review too on staging, see settings).
+# needs_fix: the content pipeline or a reviewer found a problem (never served).
 Q_DRAFT = "draft"
+Q_NEEDS_FIX = "needs_fix"
 Q_IN_REVIEW = "in_review"
 Q_APPROVED = "approved"
 Q_RETIRED = "retired"
-QUESTION_STATUSES = (Q_DRAFT, Q_IN_REVIEW, Q_APPROVED, Q_RETIRED)
+QUESTION_STATUSES = (Q_DRAFT, Q_NEEDS_FIX, Q_IN_REVIEW, Q_APPROVED, Q_RETIRED)
 
+# flagged: the back-translation differs in meaning; a reviewer must look (never served).
 T_DRAFT = "draft"
+T_FLAGGED = "flagged"
 T_IN_REVIEW = "in_review"
 T_APPROVED = "approved"
-TRANSLATION_STATUSES = (T_DRAFT, T_IN_REVIEW, T_APPROVED)
+TRANSLATION_STATUSES = (T_DRAFT, T_FLAGGED, T_IN_REVIEW, T_APPROVED)
 
 SCOPE_FEDERAL = "federal"
 SCOPE_CANTON = "canton"
@@ -339,9 +343,22 @@ OPTION_KEYS = ("a", "b", "c", "d")
 CONTENT_MASTER_LANGUAGE = "de"
 TRANSLATION_LANGUAGES = tuple(lang for lang in LANGUAGES if lang != CONTENT_MASTER_LANGUAGE)
 
-ATTEMPT_DIAGNOSTIC = "diagnostic"
 ATTEMPT_PRACTICE = "practice"
+ATTEMPT_MOCK = "mock"
 ATTEMPT_CHECK = "check"  # check questions at the end of a chat session
+
+# Study modes (PLAN.md, Languages), in the order a question moves through them as the
+# learner answers it correctly: own language, side by side, German with help, German only.
+MODE_OWN = "own"
+MODE_SIDE = "side"
+MODE_HELP = "help"
+MODE_DE = "de"
+STUDY_MODES = (MODE_OWN, MODE_SIDE, MODE_HELP, MODE_DE)
+
+MOCK_IN_PROGRESS = "in_progress"
+MOCK_FINISHED = "finished"  # handed in by the learner
+MOCK_EXPIRED = "expired"  # the deadline passed first; scored on the answers saved in time
+MOCK_STATUSES = (MOCK_IN_PROGRESS, MOCK_FINISHED, MOCK_EXPIRED)
 
 
 class Topic(Base):
@@ -464,8 +481,8 @@ class QuestionReport(Base):
 
 
 class Attempt(Base):
-    """A learner's answer to a question, in a diagnostic, in practice, or as a check at
-    the end of a chat session."""
+    """A learner's answer to a question: in Practise, in a mock test, or as a check at the end
+    of a chat session. `study_mode` is the mode the question was shown in."""
 
     __tablename__ = "attempts"
 
@@ -481,42 +498,67 @@ class Attempt(Base):
     answer_text: Mapped[str] = mapped_column(Text, default="")
     score: Mapped[float] = mapped_column(Float, default=0.0)  # 0 to 1
     correct: Mapped[bool] = mapped_column(Boolean, default=False)
+    study_mode: Mapped[str | None] = mapped_column(String(8))
     conversation_id: Mapped[uuid.UUID | None] = mapped_column(Uuid, index=True)
-    diagnostic_id: Mapped[uuid.UUID | None] = mapped_column(Uuid, index=True)
+    mock_run_id: Mapped[uuid.UUID | None] = mapped_column(Uuid, index=True)
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, index=True)
 
 
-class TopicMastery(Base):
-    """Mastery per learner and topic code. Federal topic codes are shared between cantons,
-    so progress on them carries over if the learner changes canton."""
+class QuestionProgress(Base):
+    """Progress per learner and question (PLAN.md, Languages). `mode` is the study mode the
+    question is shown in next; a correct answer moves it one mode forward and the learner can
+    step back at any time. `understood`: answered correctly in the learner's language (own
+    language or side by side). `known`: answered correctly in German only twice, on different
+    days (Zurich calendar days). `box` and `due_at` schedule the next review (Leitner boxes,
+    app.study.progress)."""
 
-    __tablename__ = "topic_mastery"
-    __table_args__ = (UniqueConstraint("user_id", "topic_code", name="uq_mastery"),)
+    __tablename__ = "question_progress"
+    __table_args__ = (UniqueConstraint("user_id", "question_id", name="uq_question_progress"),)
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
     user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
-    topic_code: Mapped[str] = mapped_column(String(80))
-    rating: Mapped[float] = mapped_column(Float, default=1200.0)
-    attempts: Mapped[int] = mapped_column(Integer, default=0)
-    correct: Mapped[int] = mapped_column(Integer, default=0)
-    last_attempt_at: Mapped[datetime | None] = mapped_column(TZDateTime)
-    next_review_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    question_id: Mapped[str] = mapped_column(
+        ForeignKey("questions.id", ondelete="CASCADE"), index=True
+    )
+    mode: Mapped[str] = mapped_column(String(8), default=MODE_OWN)
+    mode_reached: Mapped[str] = mapped_column(String(8), default=MODE_OWN)
+    correct_own: Mapped[int] = mapped_column(Integer, default=0)
+    correct_side: Mapped[int] = mapped_column(Integer, default=0)
+    correct_help: Mapped[int] = mapped_column(Integer, default=0)
+    correct_de: Mapped[int] = mapped_column(Integer, default=0)
+    wrong: Mapped[int] = mapped_column(Integer, default=0)
+    last_correct_de_date: Mapped[date | None] = mapped_column(Date)
+    understood: Mapped[bool] = mapped_column(Boolean, default=False)
+    known: Mapped[bool] = mapped_column(Boolean, default=False)
+    box: Mapped[int] = mapped_column(Integer, default=0)
+    due_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    last_answered_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    seen_at: Mapped[datetime | None] = mapped_column(TZDateTime)  # last shown in Learn
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, onupdate=utcnow)
 
 
-class DiagnosticRun(Base):
-    """A short check across a canton's topics (D-010: may become the mock test in 1.9)."""
+class MockRun(Base):
+    """A mock test: German only, the canton's number of questions and time limit, a deadline
+    set by the server at the start. Replaces the diagnostic runs (D-010). `answers` maps
+    question id to the option key given; `free` marks the one mock test of the free tier."""
 
-    __tablename__ = "diagnostic_runs"
+    __tablename__ = "mock_runs"
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
     user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
     canton: Mapped[str] = mapped_column(String(2))
-    status: Mapped[str] = mapped_column(String(16), default="in_progress")
+    status: Mapped[str] = mapped_column(String(16), default=MOCK_IN_PROGRESS)
     question_ids: Mapped[list[str]] = mapped_column(JSON)
-    position: Mapped[int] = mapped_column(Integer, default=0)
-    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
-    completed_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    answers: Mapped[dict[str, str]] = mapped_column(JSON, default=dict)
+    minutes: Mapped[int] = mapped_column(Integer)
+    pass_mark: Mapped[int | None] = mapped_column(Integer)
+    free: Mapped[bool] = mapped_column(Boolean, default=False)
+    started_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    deadline_at: Mapped[datetime] = mapped_column(TZDateTime)
+    finished_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    score: Mapped[int | None] = mapped_column(Integer)

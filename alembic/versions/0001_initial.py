@@ -2,10 +2,11 @@
 
 Learners and admins, entitlements per canton, sessions, tokens, Stripe events, one-off
 Civics Pass payments, audit log, chat conversations, AI call log, cost alerts, and the question
-bank filled from content/ (topics, questions, translations, glossary, attempts, mastery, reports).
+bank filled from content/ (topics, questions, translations, glossary, reports), attempts,
+progress per question and study mode, and mock-test runs.
 Replaces the source app's migrations 0001 to 0004 (D-005). Rewritten in place for the question
-model in Phase 1 task 1.1, before any production data existed (D-044); staging's database is
-recreated.
+model in Phase 1 task 1.1 and for the study modes, progress and mock test in tasks 1.7 to 1.9,
+before any production data existed (D-044); staging's database is recreated.
 
 Revision ID: 0001
 Revises:
@@ -225,7 +226,7 @@ def upgrade() -> None:
     op.create_index("ix_messages_created_at", "messages", ["created_at"], unique=False)
     op.create_index("ix_messages_user_id", "messages", ["user_id"], unique=False)
     op.create_table(
-        "diagnostic_runs",
+        "mock_runs",
         sa.Column("id", sa.Uuid(), primary_key=True),
         sa.Column(
             "user_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False
@@ -233,26 +234,16 @@ def upgrade() -> None:
         sa.Column("canton", sa.String(2), nullable=False),
         sa.Column("status", sa.String(16), nullable=False),
         sa.Column("question_ids", sa.JSON(), nullable=False),
-        sa.Column("position", sa.Integer(), nullable=False),
-        sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
-        sa.Column("completed_at", sa.DateTime(timezone=True)),
+        sa.Column("answers", sa.JSON(), nullable=False),
+        sa.Column("minutes", sa.Integer(), nullable=False),
+        sa.Column("pass_mark", sa.Integer()),
+        sa.Column("free", sa.Boolean(), nullable=False),
+        sa.Column("started_at", sa.DateTime(timezone=True), nullable=False),
+        sa.Column("deadline_at", sa.DateTime(timezone=True), nullable=False),
+        sa.Column("finished_at", sa.DateTime(timezone=True)),
+        sa.Column("score", sa.Integer()),
     )
-    op.create_index("ix_diagnostic_runs_user_id", "diagnostic_runs", ["user_id"], unique=False)
-    op.create_table(
-        "topic_mastery",
-        sa.Column("id", sa.Uuid(), primary_key=True),
-        sa.Column(
-            "user_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False
-        ),
-        sa.Column("topic_code", sa.String(80), nullable=False),
-        sa.Column("rating", sa.Float(), nullable=False),
-        sa.Column("attempts", sa.Integer(), nullable=False),
-        sa.Column("correct", sa.Integer(), nullable=False),
-        sa.Column("last_attempt_at", sa.DateTime(timezone=True)),
-        sa.Column("next_review_at", sa.DateTime(timezone=True)),
-        sa.UniqueConstraint("user_id", "topic_code", name="uq_mastery"),
-    )
-    op.create_index("ix_topic_mastery_user_id", "topic_mastery", ["user_id"], unique=False)
+    op.create_index("ix_mock_runs_user_id", "mock_runs", ["user_id"], unique=False)
     # Question bank, filled from content/ by scripts/import_content.py (D-041).
     op.create_table(
         "topics",
@@ -363,15 +354,50 @@ def upgrade() -> None:
         sa.Column("answer_text", sa.Text(), nullable=False),
         sa.Column("score", sa.Float(), nullable=False),
         sa.Column("correct", sa.Boolean(), nullable=False),
+        sa.Column("study_mode", sa.String(8)),
         sa.Column("conversation_id", sa.Uuid()),
-        sa.Column("diagnostic_id", sa.Uuid()),
+        sa.Column("mock_run_id", sa.Uuid()),
         sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
     )
     op.create_index("ix_attempts_conversation_id", "attempts", ["conversation_id"], unique=False)
     op.create_index("ix_attempts_created_at", "attempts", ["created_at"], unique=False)
-    op.create_index("ix_attempts_diagnostic_id", "attempts", ["diagnostic_id"], unique=False)
+    op.create_index("ix_attempts_mock_run_id", "attempts", ["mock_run_id"], unique=False)
     op.create_index("ix_attempts_question_id", "attempts", ["question_id"], unique=False)
     op.create_index("ix_attempts_user_id", "attempts", ["user_id"], unique=False)
+    op.create_table(
+        "question_progress",
+        sa.Column("id", sa.Uuid(), primary_key=True),
+        sa.Column(
+            "user_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+        ),
+        sa.Column(
+            "question_id",
+            sa.String(80),
+            sa.ForeignKey("questions.id", ondelete="CASCADE"),
+            nullable=False,
+        ),
+        sa.Column("mode", sa.String(8), nullable=False),
+        sa.Column("mode_reached", sa.String(8), nullable=False),
+        sa.Column("correct_own", sa.Integer(), nullable=False),
+        sa.Column("correct_side", sa.Integer(), nullable=False),
+        sa.Column("correct_help", sa.Integer(), nullable=False),
+        sa.Column("correct_de", sa.Integer(), nullable=False),
+        sa.Column("wrong", sa.Integer(), nullable=False),
+        sa.Column("last_correct_de_date", sa.Date()),
+        sa.Column("understood", sa.Boolean(), nullable=False),
+        sa.Column("known", sa.Boolean(), nullable=False),
+        sa.Column("box", sa.Integer(), nullable=False),
+        sa.Column("due_at", sa.DateTime(timezone=True)),
+        sa.Column("last_answered_at", sa.DateTime(timezone=True)),
+        sa.Column("seen_at", sa.DateTime(timezone=True)),
+        sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
+        sa.Column("updated_at", sa.DateTime(timezone=True), nullable=False),
+        sa.UniqueConstraint("user_id", "question_id", name="uq_question_progress"),
+    )
+    op.create_index(
+        "ix_question_progress_question_id", "question_progress", ["question_id"], unique=False
+    )
+    op.create_index("ix_question_progress_user_id", "question_progress", ["user_id"], unique=False)
     op.create_table(
         "question_reports",
         sa.Column("id", sa.Uuid(), primary_key=True),
@@ -401,10 +427,13 @@ def downgrade() -> None:
     op.drop_table("question_reports")
     op.drop_index("ix_attempts_conversation_id", table_name="attempts")
     op.drop_index("ix_attempts_created_at", table_name="attempts")
-    op.drop_index("ix_attempts_diagnostic_id", table_name="attempts")
+    op.drop_index("ix_attempts_mock_run_id", table_name="attempts")
     op.drop_index("ix_attempts_question_id", table_name="attempts")
     op.drop_index("ix_attempts_user_id", table_name="attempts")
     op.drop_table("attempts")
+    op.drop_index("ix_question_progress_question_id", table_name="question_progress")
+    op.drop_index("ix_question_progress_user_id", table_name="question_progress")
+    op.drop_table("question_progress")
     op.drop_index("ix_glossary_terms_term", table_name="glossary_terms")
     op.drop_table("glossary_terms")
     op.drop_index("ix_question_translations_lang", table_name="question_translations")
@@ -418,10 +447,8 @@ def downgrade() -> None:
     op.drop_index("ix_topics_canton", table_name="topics")
     op.drop_index("ix_topics_code", table_name="topics")
     op.drop_table("topics")
-    op.drop_index("ix_topic_mastery_user_id", table_name="topic_mastery")
-    op.drop_table("topic_mastery")
-    op.drop_index("ix_diagnostic_runs_user_id", table_name="diagnostic_runs")
-    op.drop_table("diagnostic_runs")
+    op.drop_index("ix_mock_runs_user_id", table_name="mock_runs")
+    op.drop_table("mock_runs")
     op.drop_index("ix_conversations_user_id", table_name="conversations")
     op.drop_table("conversations")
     op.drop_index("ix_sessions_impersonator_user_id", table_name="sessions")

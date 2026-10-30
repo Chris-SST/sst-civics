@@ -10,7 +10,7 @@ import re
 from datetime import date
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from pydantic import AliasChoices, BaseModel, ConfigDict, Field, field_validator, model_validator
 
 from app.models import CANTONS, OPTION_KEYS, TRANSLATION_LANGUAGES
 
@@ -21,9 +21,13 @@ TOPIC_CODE_RE = re.compile(r"^[a-z][a-z0-9_]*(?:\.[a-z][a-z0-9_]*)+$")
 SCOPE_RE = re.compile(r"^(federal|[a-z]{2}|[a-z]{2}-[a-z0-9]+(?:-[a-z0-9]+)*)$")
 TOPIC_PREFIX = {"federal": "bund.", "canton": "kanton.", "commune": "gemeinde."}
 
-Status = Literal["draft", "in_review", "approved", "retired"]
-TranslationStatus = Literal["draft", "in_review", "approved"]
+# needs_fix (questions) and flagged (translations) are set by the content pipeline or a
+# reviewer when a check fails; neither is ever served.
+Status = Literal["draft", "needs_fix", "in_review", "approved", "retired"]
+TranslationStatus = Literal["draft", "flagged", "in_review", "approved"]
 OptionKey = Literal["a", "b", "c", "d"]
+SourceVerdict = Literal["supported", "not_supported", "unclear", "dead_link"]
+ReviewAction = Literal["approve", "send_back", "retire", "learner_reports", "broken_links"]
 
 
 class _Strict(BaseModel):
@@ -111,6 +115,51 @@ class SourceRef(_Strict):
         return _https(v)
 
 
+# --- Pipeline checks and review notes (written by scripts/content/, task 1.5) --------------
+
+
+class IndependentAnswer(_Strict):
+    """The answer pass: a second model call that saw the question and options, not the key."""
+
+    option: OptionKey
+    agrees: bool
+    model: str = Field(max_length=64)
+    at: date
+    version: int | None = Field(default=None, ge=1)  # the question version it answered
+    reasoning: str | None = None
+
+
+class SourceCheck(_Strict):
+    """Does the cited page support the correct answer? dead_link: a page could not be read."""
+
+    verdict: SourceVerdict
+    note: str = ""
+    at: date
+    model: str | None = Field(default=None, max_length=64)
+    version: int | None = Field(default=None, ge=1)
+
+
+class LinkCheck(_Strict):
+    """The weekly link check (no AI): source URLs that did not answer."""
+
+    broken: list[str] = Field(default_factory=list)
+    at: date
+
+
+class QuestionChecks(_Strict):
+    independent_answer: IndependentAnswer | None = None
+    source: SourceCheck | None = None
+    links: LinkCheck | None = None
+
+
+class ReviewNote(_Strict):
+    """The last review action written back from the admin area (scripts/content/sync_reviews)."""
+
+    action: ReviewAction
+    note: str | None = None
+    at: date
+
+
 def _four_options(v: dict[str, str]) -> dict[str, str]:
     keys = set(v)
     if keys != set(OPTION_KEYS):
@@ -135,6 +184,8 @@ class QuestionFile(_Strict):
     status: Status
     difficulty: Literal[1, 2, 3]
     translations_missing: bool = False
+    checks: QuestionChecks | None = None
+    review: ReviewNote | None = None
 
     @field_validator("id")
     @classmethod
@@ -178,6 +229,23 @@ class QuestionFile(_Strict):
 # --- Translations ------------------------------------------------------------------------
 
 
+class BackTranslation(_Strict):
+    """Independent translation back into German, compared with the German original."""
+
+    verdict: Literal["same", "different"]
+    reason: str = ""
+    model: str = Field(max_length=64)
+    at: date
+    source_version: int = Field(ge=1)
+    question_de: str | None = None
+    options_de: dict[str, str] | None = None
+    explanation_de: str | None = None
+
+
+class TranslationChecks(_Strict):
+    back_translation: BackTranslation | None = None
+
+
 class TranslationFile(_Strict):
     id: str
     lang: str
@@ -188,6 +256,7 @@ class TranslationFile(_Strict):
     status: TranslationStatus
     reviewed_by: str | None = Field(default=None, max_length=120)
     reviewed_at: date | None = None
+    checks: TranslationChecks | None = None
 
     @field_validator("lang")
     @classmethod
@@ -219,9 +288,21 @@ class TranslationFile(_Strict):
 
 
 class GlossaryEntry(_Strict):
-    term: str = Field(min_length=1, max_length=120)
+    """A German key term and its translation. `source` names where an official translation
+    comes from (TERMDAT, an admin.ch page) or says that none exists; `keep_german` asks the
+    translator to add the German term in brackets after its first use."""
+
+    term_de: str = Field(
+        min_length=1, max_length=120, validation_alias=AliasChoices("term_de", "term")
+    )
     translation: str = Field(min_length=1, max_length=200)
     note: str | None = None
+    source: str | None = Field(default=None, max_length=300)
+    keep_german: bool = False
+
+    @property
+    def term(self) -> str:
+        return self.term_de
 
 
 class GlossaryFile(_Strict):

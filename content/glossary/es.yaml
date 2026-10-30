@@ -1,0 +1,191 @@
+# Glossary es: key German terms of the question bank (task 1.5). Used by
+# scripts/content/translate and shown to learners in 'German with help'.
+# `source` says where the translation comes from; entries marked 'to confirm' or
+# 'draft for native-speaker review' still need a reviewer.
+lang: es
+terms:
+- term_de: Bund
+  translation: Confederación
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Kanton
+  translation: cantón
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Gemeinde
+  translation: municipio
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesrat
+  translation: Consejo Federal
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundespräsident
+  translation: presidente de la Confederación
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesversammlung
+  translation: Asamblea Federal
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Nationalrat
+  translation: Consejo Nacional
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Ständerat
+  translation: Consejo de los Estados
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesgericht
+  translation: Tribunal Federal
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesverfassung
+  translation: Constitución Federal
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Bundeskanzlei
+  translation: Cancillería Federal
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Kantonsverfassung
+  translation: constitución cantonal
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Kantonsrat
+  translation: Consejo Cantonal
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Regierungsrat
+  translation: Consejo de Gobierno
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Gemeindeversammlung
+  translation: asamblea municipal
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Gemeinderat
+  translation: consejo municipal
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Stadtrat
+  translation: Consejo de la Ciudad
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bezirk
+  translation: distrito
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Volksinitiative
+  translation: iniciativa popular
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Initiative
+  translation: iniciativa
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Referendum
+  translation: referéndum
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Volksabstimmung
+  translation: votación popular
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Volksmehr
+  translation: mayoría del pueblo
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Ständemehr
+  translation: mayoría de los cantones
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Stimmrecht
+  translation: derecho de voto
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Gewaltenteilung
+  translation: separación de poderes
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Föderalismus
+  translation: federalismo
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Grundrechte
+  translation: derechos fundamentales
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Vernehmlassung
+  translation: procedimiento de consulta
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Einbürgerung
+  translation: naturalización
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Bürgerrecht
+  translation: ciudadanía
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Niederlassungsbewilligung
+  translation: permiso de establecimiento (permiso C)
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Aufenthaltsbewilligung
+  translation: permiso de residencia (permiso B)
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: AHV
+  translation: seguro de vejez y supervivencia (AVS)
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: IV
+  translation: seguro de invalidez
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Krankenkasse
+  translation: aseguradora de salud
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Steuererklärung
+  translation: declaración de impuestos
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Militärdienst
+  translation: servicio militar
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Zivildienst
+  translation: servicio civil
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Milizsystem
+  translation: sistema de milicia
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true

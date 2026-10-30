@@ -23,6 +23,7 @@ from app.models import (
     Q_APPROVED,
     Q_DRAFT,
     Q_IN_REVIEW,
+    Q_NEEDS_FIX,
     Q_RETIRED,
     QUESTION_STATUSES,
     TRANSLATION_LANGUAGES,
@@ -37,11 +38,13 @@ from app.questions import checks
 
 router = APIRouter(prefix="/api/review", tags=["review"])
 
-# action -> (statuses it may start from, resulting status)
+# action -> (statuses it may start from, resulting status). needs_fix (set by the content
+# pipeline) can be reviewed too: the reviewer may overrule a failed check.
+_REVIEWABLE = (Q_DRAFT, Q_NEEDS_FIX, Q_IN_REVIEW, Q_APPROVED)
 TRANSITIONS: dict[str, tuple[tuple[str, ...], str]] = {
-    "approve": ((Q_DRAFT, Q_IN_REVIEW, Q_APPROVED), Q_APPROVED),
-    "send_back": ((Q_DRAFT, Q_IN_REVIEW, Q_APPROVED), Q_DRAFT),
-    "retire": ((Q_DRAFT, Q_IN_REVIEW, Q_APPROVED), Q_RETIRED),
+    "approve": (_REVIEWABLE, Q_APPROVED),
+    "send_back": (_REVIEWABLE, Q_DRAFT),
+    "retire": (_REVIEWABLE, Q_RETIRED),
 }
 
 
@@ -348,7 +351,15 @@ async def translations(
             trs[(t.lang, t.question_id)] = t
     languages = []
     for lang in TRANSLATION_LANGUAGES:
-        row = {"lang": lang, "approved": 0, "in_review": 0, "draft": 0, "stale": 0, "missing": 0}
+        row = {
+            "lang": lang,
+            "approved": 0,
+            "in_review": 0,
+            "draft": 0,
+            "flagged": 0,
+            "stale": 0,
+            "missing": 0,
+        }
         for qid, version, _ in approved:
             tr = trs.get((lang, qid))
             if tr is None:
@@ -356,7 +367,7 @@ async def translations(
             elif tr.hidden or tr.source_version < version:
                 row["stale"] += 1
             else:
-                row[tr.status] += 1
+                row[tr.status] = row.get(tr.status, 0) + 1
         languages.append(row)
     return {
         "approved_questions": len(approved),

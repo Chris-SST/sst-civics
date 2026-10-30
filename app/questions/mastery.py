@@ -1,86 +1,51 @@
-"""Elo-style mastery per learner and topic code. Question difficulty runs from 1 to 3."""
+"""Topic mastery and the readiness estimate, both computed from question progress
+(app.study.progress) rather than stored.
+
+Mastery of a topic: known questions count fully, questions understood but not yet known count
+half, over the topic's approved questions (the whole bank, also for free-tier learners, so a
+learner who has studied only the sample questions does not see a full bar).
+
+Readiness for a canton: the share of known questions per topic, weighted by the topic's
+`target_questions` in the canton's topic file, so topics that weigh more in the official
+catalogue weigh more here. It is labelled "practice estimate, not an official result".
+"""
 
 from __future__ import annotations
 
-import math
-import uuid
-from datetime import timedelta
+from collections.abc import Iterable
+from dataclasses import dataclass
 
-from sqlalchemy import select
-from sqlalchemy.ext.asyncio import AsyncSession
-
-from app.db import utcnow
-from app.models import TopicMastery
-
-START_RATING = 1200.0  # equal to a difficulty-2 question: an untested learner sits at 50%
-K_EARLY = 64.0
-K_LATE = 32.0
-EARLY_ATTEMPTS = 10
-MIN_DIFFICULTY, MAX_DIFFICULTY = 1, 3
+READINESS_LABEL_KEY = "study.readinessLabel"
 
 
-def question_rating(difficulty: int) -> float:
-    """800, 1200 and 1600 for difficulties 1, 2 and 3."""
-    d = max(MIN_DIFFICULTY, min(MAX_DIFFICULTY, difficulty))
-    return 1200.0 + 400.0 * (d - 2)
+@dataclass(frozen=True)
+class TopicCounts:
+    topic_code: str
+    target: int  # target_questions from the topic file
+    total: int  # approved (servable) questions on the topic
+    understood: int  # understood, known or not
+    known: int
 
 
-def expected_score(learner_rating: float, q_rating: float) -> float:
-    return 1.0 / (1.0 + 10 ** ((q_rating - learner_rating) / 400.0))
+def topic_mastery_percent(known: int, understood: int, total: int) -> int:
+    """0 to 100. `understood` includes the known questions."""
+    if total <= 0:
+        return 0
+    known = min(known, total)
+    understood_only = max(0, min(understood, total) - known)
+    return int(round(100 * (known + 0.5 * understood_only) / total))
 
 
-def mastery_percent(rating: float) -> int:
-    """0 to 100: the chance of answering a difficulty-2 question, roughly."""
-    p = 1.0 / (1.0 + 10 ** ((question_rating(2) - rating) / 400.0))
-    return int(round(100 * p))
-
-
-def review_interval(rating: float, correct: bool) -> timedelta:
-    """Spaced revisits: weak topics come back soon, strong ones later."""
-    if not correct:
-        return timedelta(days=1)
-    pct = mastery_percent(rating)
-    if pct < 50:
-        return timedelta(days=2)
-    if pct < 75:
-        return timedelta(days=5)
-    return timedelta(days=12)
-
-
-def target_difficulty(rating: float) -> int:
-    """The difficulty at which the learner has about a 65% chance: a stretch, not a wall."""
-    q = rating - 400 * math.log10(0.65 / 0.35)
-    d = 2 + (q - 1200.0) / 400.0
-    return max(MIN_DIFFICULTY, min(MAX_DIFFICULTY, int(round(d))))
-
-
-async def get_or_create(db: AsyncSession, user_id: uuid.UUID, topic_code: str) -> TopicMastery:
-    row = (
-        await db.execute(
-            select(TopicMastery).where(
-                TopicMastery.user_id == user_id, TopicMastery.topic_code == topic_code
-            )
-        )
-    ).scalar_one_or_none()
-    if row is None:
-        row = TopicMastery(user_id=user_id, topic_code=topic_code, rating=START_RATING)
-        db.add(row)
-        await db.flush()
-    return row
-
-
-async def record_result(
-    db: AsyncSession, user_id: uuid.UUID, topic_code: str, difficulty: int, score: float
-) -> TopicMastery:
-    row = await get_or_create(db, user_id, topic_code)
-    k = K_EARLY if row.attempts < EARLY_ATTEMPTS else K_LATE
-    exp = expected_score(row.rating, question_rating(difficulty))
-    row.rating = row.rating + k * (score - exp)
-    row.attempts += 1
-    if score >= 0.7:
-        row.correct += 1
-    now = utcnow()
-    row.last_attempt_at = now
-    row.next_review_at = now + review_interval(row.rating, score >= 0.7)
-    await db.flush()
-    return row
+def readiness_percent(topics: Iterable[TopicCounts]) -> int:
+    """0 to 100: known share per topic weighted by target_questions. Topics without questions
+    yet count as not known, because the test may still ask about them. When no topic has a
+    target, every topic weighs the same."""
+    rows = list(topics)
+    if not rows:
+        return 0
+    weights = [t.target for t in rows]
+    if sum(weights) <= 0:
+        weights = [1] * len(rows)
+    shares = [min(t.known, t.total) / t.total if t.total else 0.0 for t in rows]
+    num = sum(w * share for w, share in zip(weights, shares, strict=True))
+    return int(round(100 * num / sum(weights)))

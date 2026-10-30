@@ -1,0 +1,191 @@
+# Glossary tr: key German terms of the question bank (task 1.5). Used by
+# scripts/content/translate and shown to learners in 'German with help'.
+# `source` says where the translation comes from; entries marked 'to confirm' or
+# 'draft for native-speaker review' still need a reviewer.
+lang: tr
+terms:
+- term_de: Bund
+  translation: Konfederasyon
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Kanton
+  translation: kanton
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Gemeinde
+  translation: belediye
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesrat
+  translation: Federal Konsey
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundespräsident
+  translation: Konfederasyon Başkanı
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesversammlung
+  translation: Federal Meclis
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Nationalrat
+  translation: Ulusal Konsey
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Ständerat
+  translation: Kantonlar Konseyi
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesgericht
+  translation: Federal Mahkeme
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesverfassung
+  translation: Federal Anayasa
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Bundeskanzlei
+  translation: Federal Kançılarya
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Kantonsverfassung
+  translation: kanton anayasası
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Kantonsrat
+  translation: Kanton Konseyi
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Regierungsrat
+  translation: Hükümet Konseyi
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Gemeindeversammlung
+  translation: belediye halk toplantısı
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Gemeinderat
+  translation: belediye konseyi
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Stadtrat
+  translation: Şehir Konseyi
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bezirk
+  translation: ilçe
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Volksinitiative
+  translation: halk girişimi
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Initiative
+  translation: girişim
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Referendum
+  translation: referandum
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Volksabstimmung
+  translation: halk oylaması
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Volksmehr
+  translation: halk çoğunluğu
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Ständemehr
+  translation: kantonlar çoğunluğu
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Stimmrecht
+  translation: oy hakkı
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Gewaltenteilung
+  translation: kuvvetler ayrılığı
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Föderalismus
+  translation: federalizm
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Grundrechte
+  translation: temel haklar
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Vernehmlassung
+  translation: görüş alma süreci
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Einbürgerung
+  translation: vatandaşlığa kabul
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Bürgerrecht
+  translation: vatandaşlık
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Niederlassungsbewilligung
+  translation: yerleşim izni (C izni)
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Aufenthaltsbewilligung
+  translation: oturma izni (B izni)
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: AHV
+  translation: yaşlılık ve dul-yetim sigortası
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: IV
+  translation: malullük sigortası
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Krankenkasse
+  translation: sağlık sigortası şirketi
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Steuererklärung
+  translation: vergi beyannamesi
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Militärdienst
+  translation: askerlik hizmeti
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Zivildienst
+  translation: sivil hizmet
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Milizsystem
+  translation: milis sistemi
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true

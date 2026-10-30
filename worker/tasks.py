@@ -67,6 +67,17 @@ async def purge_sessions(ctx: dict[str, Any]) -> int:
     return n
 
 
+async def check_source_links(ctx: dict[str, Any]) -> int:
+    """Weekly: HEAD or GET every source cited by a question file (no AI). Questions with a
+    broken link get `file_sync_pending` and a report is written (app/content/links.py).
+    Returns the number of broken URLs."""
+    from app.content.links import run_link_check
+
+    async with SessionLocal() as db:
+        report = await run_link_check(db)
+    return len(report.broken)
+
+
 async def log_expiring_entitlements(ctx: dict[str, Any]) -> int:
     """Nightly: count the entitlements that end in the next 7 days. Changes nothing and
     sends nothing; the number is the basis for a later reminder email."""

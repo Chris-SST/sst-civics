@@ -6,7 +6,9 @@ Errors: four distinct options with exactly one correct key, a source checked in 
 365 days, a known topic code, a non-empty explanation, unique ids, and for approved
 questions a translation per launch language or `translations_missing: true`.
 Warnings: translations made from an older German version (stale; the app hides them).
-Retired questions skip the source-age and topic checks."""
+Retired questions skip the source-age and topic checks; for a question in needs_fix (the
+pipeline or a reviewer found a problem, it is not served) an outdated source is a warning,
+so the yearly re-check does not break the build while the question waits for a fix."""
 
 from __future__ import annotations
 
@@ -16,7 +18,7 @@ from pathlib import Path
 
 from app.content.files import ERROR, WARNING, ContentSet, Issue, load_content
 from app.content.schema import QuestionFile, TopicEntry
-from app.models import QUESTION_STATUSES, TRANSLATION_LANGUAGES
+from app.models import Q_NEEDS_FIX, QUESTION_STATUSES, TRANSLATION_LANGUAGES
 
 SOURCE_MAX_AGE = timedelta(days=365)  # "under 366 days old"
 
@@ -46,12 +48,19 @@ class Report:
         return {i.kind for i in self.issues}
 
     def translation_counts(self) -> dict[str, dict[str, int]]:
-        """Per language, over approved German questions: approved, draft, in_review, stale,
-        missing. A stale translation counts only as stale, whatever its own status."""
+        """Per language, over approved German questions: approved, draft, flagged, in_review,
+        stale, missing. A stale translation counts only as stale, whatever its own status."""
         approved = [q for q in self.content.questions.values() if q.status == "approved"]
         out: dict[str, dict[str, int]] = {}
         for lang in TRANSLATION_LANGUAGES:
-            row = {"approved": 0, "draft": 0, "in_review": 0, "stale": 0, "missing": 0}
+            row = {
+                "approved": 0,
+                "draft": 0,
+                "flagged": 0,
+                "in_review": 0,
+                "stale": 0,
+                "missing": 0,
+            }
             for q in approved:
                 tr = self.content.translations.get((lang, q.id))
                 if tr is None:
@@ -79,7 +88,7 @@ class Report:
             lines.append(f"{scope:<16}{len(qs):>7}{counts}")
         if not scopes:
             lines.append(f"{'(no questions)':<16}{0:>7}")
-        cols = ("approved", "draft", "in_review", "stale", "missing")
+        cols = ("approved", "draft", "flagged", "in_review", "stale", "missing")
         lines.append(f"{'translations':<16}" + "".join(f"{c:>11}" for c in cols))
         for lang, row in self.translation_counts().items():
             lines.append(f"{lang:<16}" + "".join(f"{row[c]:>11}" for c in cols))
@@ -149,7 +158,9 @@ def _check_question(cs: ContentSet, path: str, q: QuestionFile, today: date) -> 
     if future:
         cs.error("source_date", path, f"a source has a checked date in the future: {future[0].url}")
     fresh = [s for s in q.sources if today - SOURCE_MAX_AGE <= s.checked <= today]
-    if not fresh and q.status != "retired":
+    if not fresh and q.status == Q_NEEDS_FIX:
+        cs.warn("source_outdated", path, "no source was checked in the last 365 days")
+    elif not fresh and q.status != "retired":
         cs.error(
             "source_outdated",
             path,
@@ -189,7 +200,7 @@ def _check_translations(cs: ContentSet) -> None:
         texts = [tr.options[k].casefold() for k in tr.options]
         if len(set(texts)) != len(texts):
             cs.error("options_not_distinct", path, "the four options must all differ")
-        if q.status in ("draft", "in_review"):
+        if q.status in ("draft", "needs_fix", "in_review"):
             cs.warn(
                 "translation_of_unapproved",
                 path,

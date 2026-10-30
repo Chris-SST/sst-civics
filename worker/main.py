@@ -8,6 +8,7 @@ from arq.cron import cron
 from app import observability
 from app.config import get_settings
 from worker.tasks import (
+    check_source_links,
     log_expiring_entitlements,
     process_stripe_event,
     purge_sessions,
@@ -27,10 +28,12 @@ class WorkerSettings:
         process_stripe_event,
         purge_sessions,
         log_expiring_entitlements,
+        check_source_links,
     ]
     cron_jobs = [
         cron(purge_sessions, minute=5),
         cron(log_expiring_entitlements, hour=3, minute=15),  # UTC
+        cron(check_source_links, weekday=0, hour=4, minute=30),  # Mondays, UTC
     ]
     on_startup = startup
     redis_settings = RedisSettings.from_dsn(get_settings().redis_url)

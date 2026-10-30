@@ -15,8 +15,9 @@ import TwoFactor from "./pages/TwoFactor";
 import BillingReturn from "./pages/BillingReturn";
 import LearnerHome from "./pages/LearnerHome";
 const LearnerChat = lazy(() => import("./pages/LearnerChat"));
-const LearnerDiagnostic = lazy(() => import("./pages/LearnerDiagnostic"));
-const LearnerPractice = lazy(() => import("./pages/LearnerPractice"));
+const Learn = lazy(() => import("./pages/Learn"));
+const Practise = lazy(() => import("./pages/Practise"));
+const Mock = lazy(() => import("./pages/Mock"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 import NotFound from "./pages/NotFound";
 
@@ -70,18 +71,34 @@ export default function App() {
           }
         />
         <Route
-          path="/learner/diagnostic/:id"
+          path="/learn"
           element={
             <RequireRole roles={LEARNER}>
-              <LearnerDiagnostic />
+              <Learn />
             </RequireRole>
           }
         />
         <Route
-          path="/learner/practice"
+          path="/practise"
           element={
             <RequireRole roles={LEARNER}>
-              <LearnerPractice />
+              <Practise />
+            </RequireRole>
+          }
+        />
+        <Route
+          path="/mock"
+          element={
+            <RequireRole roles={LEARNER}>
+              <Mock />
+            </RequireRole>
+          }
+        />
+        <Route
+          path="/mock/:id"
+          element={
+            <RequireRole roles={LEARNER}>
+              <Mock />
             </RequireRole>
           }
         />

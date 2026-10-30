@@ -9,7 +9,7 @@ import pytest
 from sqlalchemy import select
 
 from app.config import get_settings
-from app.db import SessionLocal
+from app.db import SessionLocal, utcnow
 from app.email.backend import memory_outbox
 from app.llm.client import FakeProvider, LLMError, set_provider
 from app.models import (
@@ -78,7 +78,7 @@ async def test_overview_has_no_courses_any_more(api, api2, fake):
     assert data["tutor_enabled"] is True
     assert data["access"] == "full"
     assert "notice_seen" not in data
-    assert "courses" not in data  # topics come from /api/practice/overview
+    assert "courses" not in data  # topics come from /api/study/overview
     assert data["usage"]["monthly_limit"] is None and data["usage"]["daily_limit"] == 20
 
 
@@ -364,7 +364,7 @@ def test_empty_model_setting_falls_back_to_default(monkeypatch):
 
 
 async def test_tutor_context_carries_recent_mistakes_and_mastery(api, api2, fake):
-    from app.models import Attempt, TopicMastery, User
+    from app.models import Attempt, QuestionProgress, User
 
     await learner_in(api2)
     async with SessionLocal() as db:
@@ -383,14 +383,16 @@ async def test_tutor_context_carries_recent_mistakes_and_mastery(api, api2, fake
                 user_id=learner.id,
                 question_id=q.id,
                 topic_code=TOPIC,
-                mode="diagnostic",
+                mode="practice",
                 answer_text="c",
                 score=0.0,
                 correct=False,
             )
         )
         db.add(
-            TopicMastery(user_id=learner.id, topic_code=TOPIC, rating=950.0, attempts=2, correct=0)
+            QuestionProgress(
+                user_id=learner.id, question_id=q.id, wrong=2, last_answered_at=utcnow()
+            )
         )
         await db.commit()
     conv_id = await start_conversation(api2)

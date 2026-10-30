@@ -87,8 +87,7 @@ class Settings(BaseSettings):
     # "Explain this" messages a day for every learner with an active entitlement.
     ai_daily_message_limit: int = 20
     serve_unreviewed_questions: bool = False  # staging/dev: also serve in_review questions
-    diagnostic_questions_per_topic: int = 1
-    practice_round_size: int = 5
+    practice_round_size: int = 5  # questions per Practise round
     conversation_window_turns: int = 20
 
     @field_validator("tutor_model", "fast_model", "tutor_effort", mode="before")

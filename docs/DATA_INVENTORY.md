@@ -44,9 +44,9 @@ Backups hold everything below for up to 30 days after it leaves the live databas
 
 | Field | Purpose | Retention | Deleted on account deletion |
 | --- | --- | --- | --- |
-| `attempts` (question, answer given, score) | Practice history | Life of the account | Yes |
-| `topic_mastery` | Progress per topic, spaced repetition | Life of the account | Yes |
-| `diagnostic_runs` | Placement test | Life of the account | Yes |
+| `attempts` (question, answer given, score, study mode) | Practice and mock-test history | Life of the account | Yes |
+| `question_progress` (study mode, correct answers per mode, understood, known, review schedule) | Progress per question and study mode, spaced repetition | Life of the account | Yes |
+| `mock_runs` (questions drawn, answers, start, deadline, score) | Mock tests | Life of the account | Yes |
 | `conversations`, `messages` (tutor chat text) | Tutor sessions; content is never logged or sent with identifiers | Life of the account | Yes |
 | `question_reports` (optional comment) | Learner reports a faulty question | Until resolved, or the account is deleted | Yes (the question's open-report count is reduced) |
 | `entitlements` | Access to a canton's content for a period (payment status) | Life of the account | Yes |

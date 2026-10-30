@@ -138,10 +138,12 @@ async def record_call(
     status: str,
     usage: Usage | None,
     latency_ms: int,
+    price_factor: float = 1.0,
 ) -> LlmCall:
+    """`price_factor` scales the list price (0.5 for the batch API)."""
     settings = get_settings()
     usage = usage or Usage()
-    usd = cost_usd(
+    usd = price_factor * cost_usd(
         model,
         input_tokens=usage.input_tokens,
         output_tokens=usage.output_tokens,

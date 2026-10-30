@@ -22,6 +22,10 @@ PRICES_USD_PER_MTOK: dict[str, Price] = {
     "claude-opus-5-5": Price(input=4.00, output=20.00, cache_read=0.20, cache_write=5.00),
 }
 
+# The Message Batches API bills half the list price; the content pipeline (task 1.5) logs
+# batch calls with this factor.
+BATCH_PRICE_FACTOR = 0.5
+
 # Used for a model that is not in the table, so a new model never logs zero cost.
 FALLBACK_PRICE = PRICES_USD_PER_MTOK["claude-sonnet-5-5"]
 

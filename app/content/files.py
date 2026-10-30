@@ -65,6 +65,21 @@ def content_hash(model: BaseModel) -> str:
     return hashlib.sha256(blob.encode("utf-8")).hexdigest()
 
 
+# Workflow fields of a question file: the pipeline and the review write-back change them
+# without raising the version (task 1.5), so they are not part of the question's content.
+QUESTION_WORKFLOW_FIELDS = frozenset({"status", "checks", "review"})
+
+
+def question_content_hash(q: QuestionFile) -> str:
+    """SHA-256 of what the learner sees and what was checked: everything except the status,
+    the pipeline's checks, the review note and the dates sources were checked. A change to
+    any of these needs no new version; any other change does."""
+    data = q.model_dump(mode="json", exclude=set(QUESTION_WORKFLOW_FIELDS))
+    data["sources"] = [s["url"] for s in data["sources"]]
+    blob = json.dumps(data, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    return hashlib.sha256(blob.encode("utf-8")).hexdigest()
+
+
 def _yaml_files(directory: Path) -> list[Path]:
     if not directory.is_dir():
         return []

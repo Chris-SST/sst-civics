@@ -9,8 +9,13 @@ content/
   topics/<canton>.yaml                 topic list of a canton (zh.yaml, later ag.yaml)
   questions/<scope>/<id>.yaml          one file per question; scope federal, zh, ag or zh-<commune>
   translations/<lang>/<id>.yaml        one file per question and language (en fr it pt es sq tr)
-  glossary/<lang>.yaml                 key German terms with translations (optional, task 1.3)
+  glossary/<lang>.yaml                 key German terms with translations, used by the pipeline
+  reports/link-check-<date>.md         weekly link check reports (not read by the import)
 ```
+
+The content pipeline (`scripts/content/`, task 1.5) drafts, checks and translates these files;
+the order of commands and what needs a person are in
+[docs/runbooks/content-pipeline.md](../docs/runbooks/content-pipeline.md).
 
 Never copy text from a cantonal question catalogue or test series into these files. The
 catalogues may be used only to list topics. Every question is written in our own words.
@@ -61,10 +66,41 @@ sources:                          # at least one; one must be checked within the
   - url: https://www.admin.ch/...
     checked: 2026-10-30
 glossary: [Bundesrat]             # key German terms in the question
-status: draft                     # draft | in_review | approved | retired
+status: draft                     # draft | needs_fix | in_review | approved | retired
 difficulty: 2                     # 1, 2 or 3
 translations_missing: false       # optional; true lets an approved question lack translations
+checks:                           # optional; written by the pipeline (scripts/content/)
+  independent_answer:             # answer pass without the key
+    option: b
+    agrees: true                  # false sets status needs_fix
+    model: claude-sonnet-5-5
+    at: 2026-10-30
+    version: 1                    # the question version that was checked
+    reasoning: "..."              # one sentence, kept for the reviewer
+  source:                         # does the cited page support the answer?
+    verdict: supported            # supported | not_supported | unclear | dead_link
+    note: "..."
+    at: 2026-10-30
+    model: claude-sonnet-5-5
+    version: 1
+  links:                          # weekly link check, written back by sync_reviews
+    broken: [https://...]
+    at: 2026-10-30
+review:                           # optional; the last admin action, written by sync_reviews
+  action: send_back               # approve | send_back | retire | learner_reports | broken_links
+  note: "..."
+  at: 2026-10-30
 ```
+
+Statuses: `draft` (new, checks running), `needs_fix` (a check or a reviewer found a problem;
+the reason is under `checks` or `review`), `in_review` (every check passed, waiting for a
+person), `approved` (served), `retired`. Only approved questions are served (and `in_review`
+on staging); `needs_fix` never is. For a `needs_fix` question an outdated source is only a
+warning, so the yearly re-check does not break the build.
+
+The status, `checks`, `review` and the `checked` dates of the sources are workflow fields: the
+pipeline and the review write-back change them without raising `version`. Any other change
+raises `version` by one.
 
 - A federal question uses a federal topic; a canton question (`zh`) a canton or commune topic of
   that canton; a commune question (`zh-winterthur`) a commune topic.
@@ -83,27 +119,48 @@ source_version: 1                 # the German version this translates
 question: "..."
 options: {a: "...", b: "...", c: "...", d: "..."}
 explanation: "..."
-status: draft                     # draft | in_review | approved
+status: draft                     # draft | flagged | in_review | approved
 reviewed_by: null                 # required (with reviewed_at) when approved
 reviewed_at: null                 # ISO date
+checks:                           # optional; written by scripts/content/back_translate
+  back_translation:
+    verdict: same                 # same | different; different sets status flagged
+    reason: "..."
+    model: claude-sonnet-5-5
+    at: 2026-10-30
+    source_version: 1
+    question_de: "..."            # the back-translation, for the reviewer
+    options_de: {a: "...", b: "...", c: "...", d: "..."}
+    explanation_de: "..."
 ```
+
+`flagged`: the back-translation means something else than the German; a reviewer looks at it.
+It is never served.
 
 - Translate only approved German questions. An approved question needs a translation file for
   every launch language, or `translations_missing: true` until they exist.
 - When the German `version` rises, every translation with a lower `source_version` is stale: the
   check reports it as a warning, the import keeps it but marks it hidden, and the app does not
   show it until it is refreshed and its `source_version` raised.
-- The pipeline (task 1.5) never overwrites a translation a reviewer approved.
+- The pipeline never overwrites a translation that is `approved` or `in_review`, stale or not;
+  set it back to `draft` by hand to have it refreshed.
 
 ## Glossary: `glossary/<lang>.yaml`
 
 ```yaml
 lang: en
 terms:
-  - term: Ständerat
+  - term_de: Ständerat             # `term` is still read
     translation: Council of States
-    note: "The chamber of the cantons; ..."
+    note: "The chamber of the cantons; ..."   # optional, shown to learners
+    source: "admin.ch, English pages"        # where the translation comes from
+    keep_german: true              # the translator adds (Ständerat) after the first use
 ```
+
+For French, Italian and English the institution names are the federal administration's
+(TERMDAT, https://www.termdat.bk.admin.ch, or its admin.ch pages); `source` says which, and
+"to confirm" where it has not been checked yet. The other languages have no official names;
+their entries are marked for the native-speaker reviewer.
 
 ## Checking and importing
 
@@ -125,15 +182,22 @@ import is rolled back.
 ## Admin review and these files
 
 The admin review queue (Admin, Question bank) can approve a question (optionally with edits),
-send it back to draft with a note, or retire it. **These actions are recorded in the database
-only; they are not written back to these files yet.** Each one sets `file_sync_pending` on the
-question and is listed in its `pending_changes`, with the reviewer, time, note and edits; the
-same actions are in the audit log. The file must then be updated by the pipeline (task 1.5 adds
-the write-back), with the version raised.
+send it back with a note, or retire it. These actions are recorded in the database first: each
+one sets `file_sync_pending` on the question and is listed in its `pending_changes`, with the
+reviewer, time, note and edits; the same actions are in the audit log. Two learner reports and
+a broken link found by the weekly link check are recorded the same way.
 
-Until then the next import keeps the admin's status as long as the file's version has not
-changed. Once a new version of the file is imported, the file wins and the pending changes are
-cleared (the import names each question where that happened).
+`python -m scripts.content.sync_reviews` writes them to these files, the only path from the
+database to the files: approve gives `status: approved`, send back `status: needs_fix` with the
+note under `review.note`, retire `status: retired`, learner reports `status: in_review`, broken
+links `checks.links`; text edits are applied and the version raised by one. It then clears the
+pending flags. Commit the files; the next import finds file and database equal.
+
+Until the write-back has run, the next import keeps the admin's status as long as the file's
+version has not changed. Once a new version of the file is imported, the file wins and the
+pending changes are cleared (the import names each question where that happened). With the
+same version, a new status in the file (set by the pipeline) is taken over unless an admin
+change is still waiting.
 
 ## Examples
 

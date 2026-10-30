@@ -16,17 +16,17 @@ from app.models import (
     Attempt,
     AuditLog,
     Conversation,
-    DiagnosticRun,
     Entitlement,
     LlmCall,
     Message,
+    MockRun,
     OneTimeToken,
     Payment,
     Question,
+    QuestionProgress,
     QuestionReport,
     Session,
     StripeEvent,
-    TopicMastery,
     User,
 )
 
@@ -92,7 +92,14 @@ async def delete_account(db: AsyncSession, user: User) -> None:
             question.report_count -= 1
 
     # Deleted.
-    for model in (Message, Attempt, TopicMastery, DiagnosticRun, QuestionReport, Entitlement):
+    for model in (
+        Message,
+        Attempt,
+        QuestionProgress,
+        MockRun,
+        QuestionReport,
+        Entitlement,
+    ):
         await db.execute(delete(model).where(model.user_id == uid))
     await db.execute(delete(Conversation).where(Conversation.user_id == uid))
     await db.execute(delete(OneTimeToken).where(OneTimeToken.user_id == uid))

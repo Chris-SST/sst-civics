@@ -302,7 +302,13 @@ class FakeCall:
 @dataclass
 class FakeProvider:
     """Scripted provider for tests. `replies` are consumed in order by `stream`,
-    `classifications` by `structured`; when a list runs out the last default is used."""
+    `classifications` by `structured`; when a list runs out the last default is used.
+
+    `json_replies` scripts the content pipeline (task 1.5), keyed by prompt name such as
+    "content/draft": a dict is returned every time, a list is consumed in order, and a
+    callable gets the user message text and returns the reply. A call whose system prompt
+    is the text of one of these prompts is answered from here, both directly and in a
+    batch; anything else keeps the behaviour above."""
 
     replies: list[str | Exception | Completion] = field(default_factory=list)
     classifications: list[dict[str, Any] | Exception] = field(default_factory=list)
@@ -315,6 +321,24 @@ class FakeProvider:
     # Batch API: custom_id -> JSON-serialisable result (or Exception); batches end at once.
     batch_answers: dict[str, Any] = field(default_factory=dict)
     batches: dict[str, list[BatchRequest]] = field(default_factory=dict)
+    json_replies: dict[str, Any] = field(default_factory=dict)
+
+    def scripted_json(self, system: Any, messages: list[dict[str, Any]]) -> Any:
+        """The `json_replies` entry for this call, or None if the prompt is not scripted."""
+        if not self.json_replies or not isinstance(system, str):
+            return None
+        from app.llm import prompts
+
+        for name, reply in self.json_replies.items():
+            if prompts.load(name).text != system:
+                continue
+            if isinstance(reply, list):
+                return reply.pop(0) if reply else None
+            if callable(reply):
+                content = messages[-1]["content"] if messages else ""
+                return reply(content if isinstance(content, str) else json.dumps(content))
+            return reply
+        return None
 
     async def stream(
         self,
@@ -357,9 +381,11 @@ class FakeProvider:
         timeout: float,
     ) -> tuple[dict[str, Any], Completion]:
         self.calls.append(FakeCall("structured", model, system, messages))
-        scripted = (
-            self.classifications.pop(0) if self.classifications else self.default_classification
-        )
+        scripted = self.scripted_json(system, messages)
+        if scripted is None:
+            scripted = (
+                self.classifications.pop(0) if self.classifications else self.default_classification
+            )
         if isinstance(scripted, Exception):
             raise scripted
         return scripted, Completion(
@@ -394,6 +420,10 @@ def _fake_batch_methods():
         for r in self.batches.get(batch_id, []):
             answer = self.batch_answers.get(r.custom_id)
             if answer is None:
+                answer = self.scripted_json(r.system, r.messages)
+            if isinstance(answer, Exception):
+                out.append(BatchResult(r.custom_id, "errored", None, None, "fake", str(answer)))
+            elif answer is None:
                 out.append(BatchResult(r.custom_id, "errored", None, None, "fake"))
             else:
                 out.append(

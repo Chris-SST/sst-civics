@@ -1,0 +1,191 @@
+# Glossary sq: key German terms of the question bank (task 1.5). Used by
+# scripts/content/translate and shown to learners in 'German with help'.
+# `source` says where the translation comes from; entries marked 'to confirm' or
+# 'draft for native-speaker review' still need a reviewer.
+lang: sq
+terms:
+- term_de: Bund
+  translation: Konfederata
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Kanton
+  translation: kanton
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Gemeinde
+  translation: komunë
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesrat
+  translation: Këshilli Federal
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundespräsident
+  translation: Presidenti i Konfederatës
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesversammlung
+  translation: Kuvendi Federal
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Nationalrat
+  translation: Këshilli Kombëtar
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Ständerat
+  translation: Këshilli i Shteteve
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesgericht
+  translation: Gjykata Federale
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bundesverfassung
+  translation: Kushtetuta Federale
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Bundeskanzlei
+  translation: Kancelaria Federale
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Kantonsverfassung
+  translation: kushtetuta kantonale
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Kantonsrat
+  translation: Këshilli Kantonal
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Regierungsrat
+  translation: Këshilli Qeveritar
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Gemeindeversammlung
+  translation: kuvendi i komunës
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Gemeinderat
+  translation: këshilli komunal
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Stadtrat
+  translation: Këshilli i Qytetit
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Bezirk
+  translation: rreth
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Volksinitiative
+  translation: nismë popullore
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Initiative
+  translation: nismë
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Referendum
+  translation: referendum
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Volksabstimmung
+  translation: votim popullor
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Volksmehr
+  translation: shumica e popullit
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Ständemehr
+  translation: shumica e kantoneve
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Stimmrecht
+  translation: e drejta e votës
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Gewaltenteilung
+  translation: ndarja e pushteteve
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Föderalismus
+  translation: federalizmi
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Grundrechte
+  translation: të drejtat themelore
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Vernehmlassung
+  translation: procedura e konsultimit
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Einbürgerung
+  translation: natyralizim
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Bürgerrecht
+  translation: shtetësi
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Niederlassungsbewilligung
+  translation: leje vendosjeje (leja C)
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Aufenthaltsbewilligung
+  translation: leje qëndrimi (leja B)
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: AHV
+  translation: sigurimi i pleqërisë dhe i të mbijetuarve
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: IV
+  translation: sigurimi i invaliditetit
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Krankenkasse
+  translation: arkë e sigurimit shëndetësor
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Steuererklärung
+  translation: deklaratë tatimore
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Militärdienst
+  translation: shërbim ushtarak
+  note: null
+  source: no official translation; draft for native-speaker review
+- term_de: Zivildienst
+  translation: shërbim civil
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true
+- term_de: Milizsystem
+  translation: sistemi i milicisë
+  note: null
+  source: no official translation; draft for native-speaker review
+  keep_german: true

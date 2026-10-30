@@ -1,0 +1,192 @@
+# Glossary fr: key German terms of the question bank (task 1.5). Used by
+# scripts/content/translate and shown to learners in 'German with help'.
+# `source` says where the translation comes from; entries marked 'to confirm' or
+# 'draft for native-speaker review' still need a reviewer.
+lang: fr
+terms:
+- term_de: Bund
+  translation: Confédération
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Kanton
+  translation: canton
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Gemeinde
+  translation: commune
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Bundesrat
+  translation: Conseil fédéral
+  note: 'Le gouvernement suisse : sept membres élus par l''Assemblée fédérale.'
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Bundespräsident
+  translation: président de la Confédération
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Bundesversammlung
+  translation: Assemblée fédérale
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Nationalrat
+  translation: Conseil national
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Ständerat
+  translation: Conseil des États
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Bundesgericht
+  translation: Tribunal fédéral
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Bundesverfassung
+  translation: Constitution fédérale
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Bundeskanzlei
+  translation: Chancellerie fédérale
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Kantonsverfassung
+  translation: constitution cantonale
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Kantonsrat
+  translation: Conseil cantonal
+  note: Le parlement du canton de Zurich (180 membres).
+  source: usage courant pour le canton de Zurich (no TERMDAT entry checked; to confirm)
+  keep_german: true
+- term_de: Regierungsrat
+  translation: Conseil d'État
+  note: 'Le gouvernement du canton de Zurich : sept membres élus par le peuple.'
+  source: usage courant pour le canton de Zurich (no TERMDAT entry checked; to confirm)
+  keep_german: true
+- term_de: Gemeindeversammlung
+  translation: assemblée communale
+  note: null
+  source: common usage; no official translation
+  keep_german: true
+- term_de: Gemeinderat
+  translation: conseil communal
+  note: Dans la plupart des communes zurichoises l'exécutif ; dans la ville de Zurich et quelques villes
+    le parlement.
+  source: common usage; no official translation
+  keep_german: true
+- term_de: Stadtrat
+  translation: Conseil municipal
+  note: Dans la ville de Zurich et à Winterthour, l'exécutif de la ville.
+  source: common usage; no official translation
+  keep_german: true
+- term_de: Bezirk
+  translation: district
+  note: null
+  source: common usage; no official translation
+- term_de: Volksinitiative
+  translation: initiative populaire
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Initiative
+  translation: initiative
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Referendum
+  translation: référendum
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Volksabstimmung
+  translation: votation populaire
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Volksmehr
+  translation: majorité du peuple
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Ständemehr
+  translation: majorité des cantons
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Stimmrecht
+  translation: droit de vote
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Gewaltenteilung
+  translation: séparation des pouvoirs
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Föderalismus
+  translation: fédéralisme
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Grundrechte
+  translation: droits fondamentaux
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Vernehmlassung
+  translation: procédure de consultation
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Einbürgerung
+  translation: naturalisation
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Bürgerrecht
+  translation: droit de cité
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Niederlassungsbewilligung
+  translation: autorisation d'établissement (permis C)
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Aufenthaltsbewilligung
+  translation: autorisation de séjour (permis B)
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: AHV
+  translation: assurance-vieillesse et survivants (AVS)
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: IV
+  translation: assurance-invalidité (AI)
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Krankenkasse
+  translation: caisse-maladie
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Steuererklärung
+  translation: déclaration d'impôt
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Militärdienst
+  translation: service militaire
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+- term_de: Zivildienst
+  translation: service civil
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true
+- term_de: Milizsystem
+  translation: système de milice
+  note: null
+  source: admin.ch, pages en français (TERMDAT not queried; to confirm)
+  keep_german: true

@@ -20,10 +20,10 @@ from app.models import (
     AuditLog,
     GlossaryTerm,
     Question,
+    QuestionProgress,
     QuestionReport,
     QuestionTranslation,
     Topic,
-    TopicMastery,
 )
 from scripts import validate_content as validate_script
 from tests.conftest import (
@@ -82,7 +82,14 @@ def test_fixture_content_is_valid_and_summarised(content, capsys):
     assert report.warnings == []
     assert set(report.content.questions) == {Q1, Q2, Q3}
     counts = report.translation_counts()
-    assert counts["en"] == {"approved": 2, "draft": 0, "in_review": 0, "stale": 0, "missing": 0}
+    assert counts["en"] == {
+        "approved": 2,
+        "draft": 0,
+        "flagged": 0,
+        "in_review": 0,
+        "stale": 0,
+        "missing": 0,
+    }
     assert counts["sq"]["draft"] == 1 and counts["sq"]["missing"] == 1
     assert validate_script.main(["--root", str(content), "--today", "2026-11-01"]) == 0
     out = capsys.readouterr().out
@@ -139,6 +146,63 @@ def test_source_exactly_365_days_old_still_counts(content):
     assert check(content).ok
     edit(content, sources=[{"url": "https://www.ch.ch/de/", "checked": date(2025, 10, 31)}])
     assert "source_outdated" in check(content).kinds()
+
+
+def test_pipeline_statuses_checks_and_review_blocks_are_accepted(content):
+    """Task 1.5: needs_fix and flagged are valid, non-served statuses; the pipeline's checks
+    and the review note are part of the schema."""
+    checks = {
+        "independent_answer": {
+            "option": "c",
+            "agrees": False,
+            "model": "claude-sonnet-5-5",
+            "at": date(2026, 10, 31),
+            "version": 1,
+            "reasoning": "Antwort c scheint zu stimmen.",
+        },
+        "source": {"verdict": "dead_link", "note": "HTTP 404", "at": date(2026, 10, 31)},
+        "links": {"broken": ["https://www.zh.ch/alt"], "at": date(2026, 10, 31)},
+    }
+    review = {"action": "send_back", "note": "Quelle fehlt", "at": date(2026, 10, 31)}
+    edit(content, Q3, "zh", status="needs_fix", checks=checks, review=review)
+    path = content / "translations" / "sq" / f"{Q1}.yaml"
+    back = {
+        "verdict": "different",
+        "reason": "Antwort b bedeutet etwas anderes.",
+        "model": "m",
+        "at": date(2026, 10, 31),
+        "source_version": 1,
+    }
+    write(path, {**read(path), "status": "flagged", "checks": {"back_translation": back}})
+    report = check(content)
+    assert report.ok, report.errors
+    assert report.content.questions[Q3].checks.independent_answer.agrees is False
+    assert report.translation_counts()["sq"]["flagged"] == 1
+    # An outdated source on a question waiting for a fix is a warning, not an error.
+    old = [{"url": "https://www.ch.ch/de/", "checked": date(2025, 1, 1)}]
+    edit(content, Q3, "zh", sources=old)
+    report = check(content)
+    assert report.ok and "source_outdated" in {i.kind for i in report.warnings}
+    edit(content, Q3, "zh", status="draft")
+    assert "source_outdated" in {i.kind for i in check(content).errors}
+
+    for bad in (
+        {"checks": {"source": {"verdict": "maybe", "at": date(2026, 10, 31)}}},
+        {"checks": {"independent_answer": {"option": "e", "agrees": True}}},
+        {"review": {"action": "approve"}},
+        {"checks": {"surprise": {}}},
+    ):
+        edit(
+            content,
+            Q3,
+            "zh",
+            sources=[{"url": "https://www.ch.ch/", "checked": date(2026, 10, 30)}],
+            **bad,
+        )
+        assert "schema" in check(content).kinds(), bad
+        edit(content, Q3, "zh", checks=None, review=None)
+    write(path, {**read(path), "status": "rejected"})
+    assert "schema" in check(content).kinds()
 
 
 def test_one_fresh_source_is_enough_and_retired_questions_skip_age_checks(content):
@@ -512,7 +576,7 @@ async def test_learner_reports_reach_the_queue_and_approval_resolves_them(api, a
     await learner_logged_in(api2, "lena@example.ch", access=True)
     r = await api2.post(f"/api/questions/{Q1}/report", json={"comment": "Tippfehler"})
     assert r.status_code == 201 and r.json()["report_count"] == 1
-    r = await api2.post(f"/api/practice/questions/{Q1}/report", json={"lang": "fr"})
+    r = await api2.post(f"/api/questions/{Q1}/report", json={"lang": "fr"})
     assert r.json()["report_count"] == 2
     await admin_logged_in(api)
     queue = (await api.get("/api/review/queue")).json()
@@ -543,6 +607,7 @@ async def test_translation_status_screen(api, content):
         "approved": 2,
         "in_review": 0,
         "draft": 0,
+        "flagged": 0,
         "stale": 0,
         "missing": 0,
     }
@@ -559,17 +624,15 @@ async def test_translation_status_screen(api, content):
     assert zh_only["approved_questions"] == 0
 
 
-async def test_mastery_is_keyed_by_user_and_topic_code(api, content):
+async def test_progress_is_kept_per_user_and_question(api, content):
     await do_import(content)
     await learner_logged_in(api, "lena@example.ch", access=True)
     for qid, answer in ((Q1, "b"), (Q2, "a")):
-        r = await api.post("/api/practice/attempts", json={"question_id": qid, "answer": answer})
+        r = await api.post("/api/study/answer", json={"question_id": qid, "answer": answer})
         assert r.status_code == 200, r.text
     assert r.json()["correct"] is False and r.json()["answer"] == "c"
+    assert r.json()["mastery"]["topic_code"] == "bund.demokratie.kantone_rolle"
     async with SessionLocal() as db:
-        rows = (await db.execute(select(TopicMastery))).scalars().all()
-        assert {m.topic_code for m in rows} == {
-            "bund.demokratie.foederalismus",
-            "bund.demokratie.kantone_rolle",
-        }
-        assert all(m.attempts == 1 for m in rows)
+        rows = (await db.execute(select(QuestionProgress))).scalars().all()
+        assert {p.question_id for p in rows} == {Q1, Q2}
+        assert sorted((p.correct_own, p.wrong) for p in rows) == [(0, 1), (1, 0)]

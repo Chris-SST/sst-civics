@@ -17,13 +17,14 @@ from app.models import (
     Entitlement,
     LlmCall,
     Message,
+    MockRun,
     OneTimeToken,
     Payment,
     Question,
+    QuestionProgress,
     QuestionReport,
     Session,
     StripeEvent,
-    TopicMastery,
     User,
 )
 from tests.conftest import (
@@ -134,7 +135,16 @@ async def _fill_learning_data(email: str) -> None:
         await db.flush()
         db.add(Message(conversation_id=conv.id, user_id=user.id, seq=1, role="user", content="x"))
         db.add(Attempt(user_id=user.id, question_id=q.id, topic_code="t"))
-        db.add(TopicMastery(user_id=user.id, topic_code="t"))
+        db.add(QuestionProgress(user_id=user.id, question_id=q.id))
+        db.add(
+            MockRun(
+                user_id=user.id,
+                canton="zh",
+                question_ids=[q.id],
+                minutes=60,
+                deadline_at=utcnow(),
+            )
+        )
         db.add(QuestionReport(question_id=q.id, user_id=user.id, comment="typo"))
         q.report_count = 1
         db.add(
@@ -182,7 +192,8 @@ async def _assert_deleted(email: str) -> None:
             Conversation,
             Message,
             Attempt,
-            TopicMastery,
+            QuestionProgress,
+            MockRun,
             QuestionReport,
             Entitlement,
             OneTimeToken,

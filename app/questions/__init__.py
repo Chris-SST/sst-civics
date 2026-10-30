@@ -1,2 +1,3 @@
-"""Question bank: generation through app/llm, two independent checks before a question goes
-live, tutor review, serving to students, answer checking, mastery and diagnostics."""
+"""Question bank: which questions are servable, answer and duplicate checks, topic mastery
+and readiness, admin review and learner reports. Study modes, Learn, Practise and the mock test
+are in app.study."""

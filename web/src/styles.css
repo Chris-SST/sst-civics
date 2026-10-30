@@ -1877,3 +1877,332 @@ td.warn {
 .text-error {
   color: var(--error);
 }
+
+/* --- Study modes, Learn, Practise and the mock test (tasks 1.7 to 1.9) --- */
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  pointer-events: none;
+}
+.mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mode stepper: four steps, the current one filled */
+.mode-stepper {
+  margin: 0 0 var(--space-3);
+}
+.mode-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+.mode-step {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: var(--fs-caption);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+}
+.mode-step:hover:not(:disabled) {
+  background: var(--surface-tint);
+}
+.mode-step:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+.mode-num {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--border-strong);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+}
+.mode-step.reached .mode-num {
+  background: var(--support);
+  border-color: var(--support);
+  color: var(--on-support);
+}
+.mode-step.current {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--on-primary);
+}
+.mode-step.current .mode-num {
+  background: var(--on-primary);
+  border-color: var(--on-primary);
+  color: var(--primary);
+}
+.mode-name {
+  overflow-wrap: anywhere;
+}
+.mode-tools {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 8px;
+}
+@media (max-width: 640px) {
+  .mode-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Question text in its mode */
+.study-de-small {
+  display: block;
+  font-size: var(--fs-caption);
+  color: var(--muted);
+  margin-top: var(--space-1);
+}
+.study-de-small p {
+  margin: 0;
+}
+.study-own .question-text p {
+  margin-bottom: 0;
+}
+.study-side {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+@media (min-width: 641px) {
+  .study-side {
+    grid-template-columns: 1fr 1fr;
+  }
+  .study-side > div + div {
+    border-left: 2px solid var(--line);
+    padding-left: var(--space-3);
+  }
+}
+.opt-text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.opt-side {
+  grid-template-columns: 1fr;
+}
+.opt-side > span + span {
+  border-top: 1px solid var(--line);
+  padding-top: 2px;
+}
+.term {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+button.term {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.term-wrap {
+  position: relative;
+}
+.term-pop {
+  display: block;
+  margin: var(--space-1) 0;
+  padding: var(--space-2) var(--space-3);
+  background: var(--accent-soft);
+  color: var(--text);
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-body);
+  font-weight: 400;
+}
+.term-list {
+  margin: 0 0 var(--space-3);
+}
+.term-list summary {
+  cursor: pointer;
+  font-weight: 800;
+  min-height: 32px;
+}
+.term-list dl {
+  margin: var(--space-2) 0 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px var(--space-3);
+}
+.term-list dt {
+  font-weight: 800;
+}
+.term-list dd {
+  margin: 0;
+}
+.progress-note {
+  margin: 0 0 var(--space-2);
+}
+.result-reveal {
+  background: var(--surface-tint);
+  border-color: var(--line);
+}
+
+/* Home: readiness and the three study areas */
+.readiness {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+.readiness h2 {
+  margin-bottom: 2px;
+}
+.readiness p {
+  margin: 0;
+}
+.readiness-value {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--support-ink);
+}
+.study-areas {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+  margin-top: var(--space-5);
+}
+@media (min-width: 820px) {
+  .study-areas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.study-areas .card + .card {
+  margin-top: 0;
+}
+.area-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.area-card p {
+  margin: 0;
+}
+.area-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+.topic-empty {
+  cursor: default;
+}
+a.topic-row {
+  text-decoration: none;
+}
+a.topic-row:hover {
+  background: var(--surface-tint);
+}
+
+/* Mock test */
+.mock-head {
+  align-items: center;
+}
+.countdown {
+  display: grid;
+  justify-items: end;
+  gap: 2px;
+  padding: var(--space-2) var(--space-3);
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+.countdown-time {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.countdown-warn {
+  border-color: var(--warning);
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+.mock-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 6px;
+  margin: var(--space-3) 0;
+}
+.mock-nav-item {
+  min-height: 40px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  cursor: pointer;
+}
+.mock-nav-item.answered {
+  background: var(--support-soft);
+  border-color: var(--support-ink);
+}
+.mock-nav-item.current {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
+.mock-actions {
+  margin-top: var(--space-4);
+}
+.confirm-card {
+  margin-top: var(--space-4);
+  border-color: var(--primary);
+}
+.mock-rules {
+  margin: 0 0 var(--space-3);
+  padding-left: 1.2em;
+}
+.mock-format {
+  font-weight: 800;
+}
+.mock-score {
+  border-width: 3px;
+}
+.mock-score.result-ok {
+  border-color: var(--success);
+}
+.mock-score.result-bad {
+  border-color: var(--error);
+}
+.mock-score.result-ok h2 {
+  color: var(--success);
+}
+.mock-score.result-bad h2 {
+  color: var(--error);
+}
+.mock-score-value {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin: 0 0 var(--space-2);
+}

@@ -5,7 +5,7 @@ import { ApiError, ensureCsrf, get, post } from "../api";
 import ErrorText from "../components/ErrorText";
 import QuestionCard from "../components/QuestionCard";
 import RichText from "../components/RichText";
-import type { AttemptOut, QuestionPublic } from "../practice";
+import type { AnswerOut, StudyQuestion } from "../study";
 
 interface Msg {
   id: string;
@@ -40,7 +40,7 @@ type Notice = "off_topic" | "override" | "wellbeing" | "ended" | "refusal";
 interface CheckOut {
   conversation_id: string;
   topic_code: string;
-  questions: QuestionPublic[];
+  questions: StudyQuestion[];
 }
 
 const MAX_CHARS = 2000;
@@ -201,7 +201,7 @@ export default function LearnerChat() {
     setCheckBusy(true);
     setCheckError(null);
     try {
-      setCheck(await get<CheckOut>(`/api/practice/check?conversation_id=${conv.id}`));
+      setCheck(await get<CheckOut>(`/api/study/check?conversation_id=${conv.id}`));
       setTimeout(() => checkRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
     } catch (e) {
       setCheckError(e);
@@ -329,10 +329,11 @@ export default function LearnerChat() {
                   key={q.id}
                   question={q}
                   submit={(answer) =>
-                    post<AttemptOut>("/api/practice/attempts", {
+                    post<AnswerOut>("/api/study/answer", {
                       question_id: q.id,
                       answer,
-                      mode: "check",
+                      mode: q.mode,
+                      context: "check",
                       conversation_id: conv.id,
                     })
                   }

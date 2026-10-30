@@ -25,7 +25,7 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 - [x] Zurich topic list (1.4): 35 topics in `content/topics/zh.yaml`, targets 275/55/20, sources in `SOURCES-zh.md`. Unconfirmed: pass mark 30, 60-minute duration, per-section counts; to ask the Gemeindeamt together with the licensing question.
 - [ ] Content pipeline scripts (1.5).
 - [ ] About 350 Zurich questions approved, translated and reviewed (1.6).
-- [ ] Learn, Practise and Mock test with the four study modes (1.7 to 1.9).
+- [x] Learn, Practise and Mock test with the four study modes (1.7 to 1.9; done 30 October 2026, D-048 to D-051). Package `app/study/`: study modes as a rendering contract, tables `question_progress` and `mock_runs` (replacing `topic_mastery` and `diagnostic_runs`), Leitner spaced repetition weighted towards weak topics, readiness estimate, free-tier sample set and one free mock test; pages `/learn`, `/practise`, `/mock` with the mode stepper and countdown; the diagnostic and `/api/practice` are gone. Migration 0001 rewritten again, so staging's database is recreated. Not yet checked in a browser on staging.
 - [ ] Explain this (1.10).
 - [ ] Guide site, residence calculator, free practice (1.11, 1.12).
 - [ ] Terms, privacy notice, independence notice (1.13).
