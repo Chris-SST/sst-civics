@@ -40,5 +40,5 @@ Tasks 0.2 to 0.7 and 0.9 are done (30 October 2026). Next: 0.8 locales; the five
 ## Waiting on Chris
 
 - Confirm launch languages (D-014) and whether to write to the Zurich Gemeindeamt about licensing.
-- Brand: confirm Civigo despite the Civi-Go conflict, or choose another (D-017, NAMING.md); attorney trade mark search.
+- Brand: confirm Viapunt despite the Civi-Go conflict, or choose another (D-017, NAMING.md); attorney trade mark search.
 - Edge Caddy change on the tutor server (`infra/edge-snippet.Caddyfile`).

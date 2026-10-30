@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["fonts/*.woff2", "icons/*.svg"],
       manifest: {
-        name: "Civigo",
-        short_name: "Civigo",
+        name: "Viapunt",
+        short_name: "Viapunt",
         description: "Understand the Swiss naturalisation test in your own language, then practise it in German.",
         lang: "en-GB",
         start_url: "/",

@@ -1,6 +1,6 @@
 # civics
 
-A trainer for the Swiss citizenship knowledge test, starting with the canton of Zurich. Learners sign up with an email address, practise sample questions free, and buy a one-off Civics Pass (CHF 29 for six months, paid by card or TWINT) for a canton. Each question is studied first in the learner's own language beside the German, then in German only, as in the real test. The working name in the code is `civics`; the provisional brand is Civigo (decision D-017). It is an independent service with no connection to any authority, and it gives general information, not legal advice.
+A trainer for the Swiss citizenship knowledge test, starting with the canton of Zurich. Learners sign up with an email address, practise sample questions free, and buy a one-off Civics Pass (CHF 29 for six months, paid by card or TWINT) for a canton. Each question is studied first in the learner's own language beside the German, then in German only, as in the real test. The working name in the code is `civics`; the provisional brand is Viapunt (decision D-017). It is an independent service with no connection to any authority, and it gives general information, not legal advice.
 
 The build plan is [PLAN.md](PLAN.md). Progress and decisions: [docs/PROGRESS.md](docs/PROGRESS.md) and [docs/DECISIONS.md](docs/DECISIONS.md). The repository began as a copy of the SST Virtual Tutor (D-001); what was kept, adapted and removed is in [REUSE.md](REUSE.md).
 

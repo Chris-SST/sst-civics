@@ -3,10 +3,10 @@
 > **DRAFT for review by Chris and a lawyer; not published.**
 >
 > Operator: Swiss Science Tutors GmbH, [address], Switzerland
-> Service: Civigo (working name; the brand is provisional)
+> Service: Viapunt (working name; the brand is provisional)
 > Date of draft: 30 October 2026
 
-This notice explains how personal data is handled when you use the guide website and the learning app of Civigo (working name), under the Swiss Federal Act on Data Protection as revised (revFADP).
+This notice explains how personal data is handled when you use the guide website and the learning app of Viapunt (working name), under the Swiss Federal Act on Data Protection as revised (revFADP).
 
 ## 1. Controller
 

@@ -3,14 +3,14 @@
 > **DRAFT for review by Chris and a lawyer; not published.**
 >
 > Operator: Swiss Science Tutors GmbH, [address], Switzerland
-> Service: Civigo (working name; the brand is provisional)
+> Service: Viapunt (working name; the brand is provisional)
 > Date of draft: 30 October 2026
 
-These terms apply to the guide website and the learning app of Civigo (working name), run by Swiss Science Tutors GmbH, [address], Switzerland ("we", "us"). By creating an account or buying a Civics Pass you accept them.
+These terms apply to the guide website and the learning app of Viapunt (working name), run by Swiss Science Tutors GmbH, [address], Switzerland ("we", "us"). By creating an account or buying a Civics Pass you accept them.
 
 ## 1. Who we are and what the service is
 
-1.1 Civigo is an independent private service that helps people prepare for the Swiss citizenship knowledge test. It has a free guide website and a learning app.
+1.1 Viapunt is an independent private service that helps people prepare for the Swiss citizenship knowledge test. It has a free guide website and a learning app.
 
 1.2 We are not connected to any federal, cantonal or communal authority and have no official status. See the independence notice.
 

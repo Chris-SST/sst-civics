@@ -44,7 +44,7 @@ function svg(name) {
 
 writeFileSync(
   join(out, "icon.svg"),
-  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Civigo">\n  ${svg("any")}\n</svg>\n`,
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Viapunt">\n  ${svg("any")}\n</svg>\n`,
 );
 
 function inPoly(poly, x, y) {

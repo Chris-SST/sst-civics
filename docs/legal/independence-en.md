@@ -3,18 +3,18 @@
 > **DRAFT for review by Chris and a lawyer; not published.**
 >
 > Operator: Swiss Science Tutors GmbH, [address], Switzerland
-> Service: Civigo (working name; the brand is provisional)
+> Service: Viapunt (working name; the brand is provisional)
 > Date of draft: 30 October 2026
 
 ## Short version (footer of every page)
 
-> Civigo is an independent private service of Swiss Science Tutors GmbH. It is not connected to any federal, cantonal or communal authority. It gives general information, not legal advice.
+> Viapunt is an independent private service of Swiss Science Tutors GmbH. It is not connected to any federal, cantonal or communal authority. It gives general information, not legal advice.
 
 ## Long version ("About" page)
 
 ### Who runs this service
 
-1. Civigo (working name) is an independent private service of Swiss Science Tutors GmbH, [address], Switzerland.
+1. Viapunt (working name) is an independent private service of Swiss Science Tutors GmbH, [address], Switzerland.
 2. It has no connection to any federal, cantonal or communal authority and has no official status. No authority approves, endorses or runs it.
 
 ### Our questions
