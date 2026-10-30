@@ -10,7 +10,7 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.billing import plans, stripe_client
+from app.billing import events, plans, stripe_client
 from app.billing.access import access_level, compute_access
 from app.config import get_settings
 from app.db import get_db
@@ -132,7 +132,7 @@ async def create_checkout(
         "client_reference_id": str(user.id),
         "success_url": f"{base}/billing/return?status=success&session_id={{CHECKOUT_SESSION_ID}}",
         "cancel_url": f"{base}/billing/return?status=cancelled",
-        "locale": user.locale,
+        "locale": stripe_client.stripe_locale(user.locale),
         "allow_promotion_codes": True,
     }
 
@@ -239,7 +239,9 @@ async def stripe_webhook(request: Request, db: AsyncSession = Depends(get_db)) -
     event_id = event["id"]
     if await db.get(StripeEvent, event_id) is not None:
         return {"received": True, "duplicate": True}
-    db.add(StripeEvent(id=event_id, type=event.get("type", ""), payload=event))
+    # Stored without the customer's contact and address details (task 0.6).
+    stored = events.scrub_personal_fields(dict(event))
+    db.add(StripeEvent(id=event_id, type=event.get("type", ""), payload=stored))
     try:
         await db.commit()
     except IntegrityError:

@@ -13,6 +13,7 @@ from worker.tasks import (
     process_stripe_event,
     purge_sessions,
     send_email,
+    send_sign_in_link,
 )
 
 
@@ -23,6 +24,7 @@ async def startup(ctx: dict) -> None:
 class WorkerSettings:
     functions = [
         send_email,
+        send_sign_in_link,
         process_stripe_event,
         purge_sessions,
         generate_questions_direct,

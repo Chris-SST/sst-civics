@@ -21,6 +21,36 @@ from app.models import Payment, User
 log = logging.getLogger(__name__)
 
 
+# Keys in Stripe objects that carry the customer's contact or address details. None of the
+# handlers needs them, so they are dropped before a webhook payload is stored (task 0.6).
+PERSONAL_KEYS = frozenset(
+    {
+        "customer_email",
+        "customer_name",
+        "customer_phone",
+        "customer_address",
+        "customer_shipping",
+        "customer_tax_ids",
+        "customer_details",
+        "billing_details",
+        "shipping",
+        "shipping_details",
+        "email",
+        "phone",
+        "address",
+    }
+)
+
+
+def scrub_personal_fields(value: Any) -> Any:
+    """A copy of a Stripe payload without contact and address details, at any depth."""
+    if isinstance(value, dict):
+        return {k: scrub_personal_fields(v) for k, v in value.items() if k not in PERSONAL_KEYS}
+    if isinstance(value, list):
+        return [scrub_personal_fields(v) for v in value]
+    return value
+
+
 def _ts(value: int | None) -> datetime | None:
     return datetime.fromtimestamp(value, tz=UTC) if value else None
 

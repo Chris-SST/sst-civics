@@ -11,6 +11,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 
 from app import observability
 from app.admin.routes import router as admin_router
+from app.auth.account import router as account_router
 from app.auth.routes import router as auth_router
 from app.billing.routes import router as billing_router
 from app.config import get_settings
@@ -85,6 +86,7 @@ def create_app() -> FastAPI:
     app.add_middleware(SecurityHeadersMiddleware)
 
     app.include_router(auth_router)
+    app.include_router(account_router)
     app.include_router(billing_router)
     app.include_router(admin_router)
     app.include_router(portal_router)

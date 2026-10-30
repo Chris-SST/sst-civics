@@ -73,11 +73,18 @@ def test_all_email_messages_render_in_every_language():
         "threshold": "8.00",
         "period": "2026-10",
     }
-    assert set(messages.TEXTS) == {"verify_email", "reset_password", "cost_alert"}
+    assert set(messages.TEXTS) == {
+        "verify_email",
+        "reset_password",
+        "sign_in_link",
+        "account_deleted",
+        "cost_alert",
+    }
     for kind in messages.TEXTS:
-        for locale in ("en", "de", "fr", "it"):
+        for locale in ("en", "de", "fr", "it", "sq"):
             m = messages.build(kind, locale, "a@b.ch", **params)
-            assert m.subject and "https://x" in m.text
+            assert m.subject
+            assert kind == "account_deleted" or "https://x" in m.text
             assert "{" not in m.text
 
 

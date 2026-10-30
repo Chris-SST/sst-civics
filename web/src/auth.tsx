@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { ApiError, get, post, type Me, type PublicConfig } from "./api";
+import { ApiError, get, post, type LoginOut, type Me, type PublicConfig } from "./api";
 
 interface AuthState {
   me: Me | null;
@@ -67,6 +67,14 @@ export function homeFor(role: string): string {
     default:
       return "/";
   }
+}
+
+/** Where to go after a password or email-link sign-in. `from` is an in-app path only. */
+export function pathAfterSignIn(out: LoginOut, from?: string | null): string {
+  if (out.status === "mfa_required") return "/2fa";
+  if (out.status === "mfa_setup_required") return "/2fa/setup";
+  if (from && from.startsWith("/") && !from.startsWith("//") && from !== "/login") return from;
+  return homeFor(out.me?.user.role ?? "");
 }
 
 /** Route guard. Sends people to login, the 2FA step, or their own home. */

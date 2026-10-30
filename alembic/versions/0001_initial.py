@@ -65,7 +65,8 @@ def upgrade() -> None:
         sa.Column("terms_version", sa.String(40)),
         sa.Column("terms_accepted_at", sa.DateTime(timezone=True)),
         sa.Column("stripe_customer_id", sa.String(64)),
-        sa.Column("totp_secret", sa.String(64)),
+        # Encrypted at rest (app.crypto.EncryptedString), D-011.
+        sa.Column("totp_secret", sa.String(255)),
         sa.Column("totp_enabled", sa.Boolean(), nullable=False),
         sa.Column("is_active", sa.Boolean(), nullable=False),
         sa.Column("last_login_at", sa.DateTime(timezone=True)),
@@ -212,6 +213,7 @@ def upgrade() -> None:
         sa.Column("amount_cents", sa.Integer(), nullable=False),
         sa.Column("currency", sa.String(3), nullable=False),
         sa.Column("paid_at", sa.DateTime(timezone=True), nullable=False),
+        sa.Column("email_hash", sa.String(64)),
         sa.UniqueConstraint("stripe_invoice_id"),
     )
     op.create_index("ix_payments_user_id", "payments", ["user_id"], unique=False)
@@ -225,6 +227,7 @@ def upgrade() -> None:
         sa.Column("expires_at", sa.DateTime(timezone=True), nullable=False),
         sa.Column("last_seen_at", sa.DateTime(timezone=True), nullable=False),
         sa.Column("mfa_pending", sa.Boolean(), nullable=False),
+        sa.Column("email_link_at", sa.DateTime(timezone=True)),
         sa.Column("impersonator_user_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE")),
     )
     op.create_index(

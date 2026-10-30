@@ -52,6 +52,11 @@ export default function Layout({ children }: { children: ReactNode }) {
                   <span className="who-name">{me.user.email}</span>
                   <span className="role-pill">{t(`roles.${me.user.role}`)}</span>
                 </span>
+                {me.user.role === "learner" && !me.session.mfa_pending && (
+                  <Link className="btn btn-ghost" to="/account">
+                    {t("nav.account")}
+                  </Link>
+                )}
                 <button className="btn btn-ghost" onClick={() => void onLogout()}>
                   {t("nav.logout")}
                 </button>

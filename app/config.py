@@ -33,6 +33,13 @@ class Settings(BaseSettings):
     terms_version: str = "2026-10-draft"
     login_rate_limit: int = 10  # attempts per window per identifier and per IP
     login_rate_window_seconds: int = 900
+    # One-time sign-in links: requests per hour per email address and per IP address.
+    link_rate_limit_per_email: int = 5
+    link_rate_limit_per_ip: int = 20
+    link_consume_rate_limit: int = 30  # per IP per 15 minutes
+    # Key material for encrypting TOTP secrets at rest. Empty means derived from SECRET_KEY.
+    # Changing either one makes stored secrets unreadable: admins must set up 2FA again.
+    totp_encryption_key: str = ""
 
     # Stripe (test mode until go-live is approved)
     stripe_secret_key: str = ""

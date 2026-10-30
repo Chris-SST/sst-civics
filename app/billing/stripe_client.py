@@ -34,12 +34,21 @@ def _client() -> stripe.StripeClient:
     )
 
 
+# Interface languages Stripe's hosted pages support; others (Albanian) use "auto".
+STRIPE_LOCALES = {"de", "en", "fr", "it", "pt", "es", "tr"}
+
+
+def stripe_locale(locale: str) -> str:
+    return locale if locale in STRIPE_LOCALES else "auto"
+
+
 def create_customer(email: str, user_id: str, locale: str) -> dict[str, Any]:
+    preferred = [locale] if locale in STRIPE_LOCALES else []
     c = _client().customers.create(
         params={
             "email": email,
             "metadata": {"user_id": user_id},
-            "preferred_locales": [locale],
+            "preferred_locales": preferred,
         }
     )
     return _plain(c)
@@ -59,7 +68,11 @@ def create_checkout_session(params: dict[str, Any]) -> dict[str, Any]:
 
 def create_portal_session(customer_id: str, return_url: str, locale: str) -> dict[str, Any]:
     s = _client().billing_portal.sessions.create(
-        params={"customer": customer_id, "return_url": return_url, "locale": locale}
+        params={
+            "customer": customer_id,
+            "return_url": return_url,
+            "locale": stripe_locale(locale),
+        }
     )
     return _plain(s)
 

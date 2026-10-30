@@ -64,10 +64,6 @@ i18n.on("languageChanged", (lng) => {
 });
 document.documentElement.lang = i18n.language;
 
-/** Two-letter code the API stores: en, de or fr. */
-export const shortLocale = (lng: string = i18n.language): "en" | "de" | "fr" =>
-  lng.startsWith("de") ? "de" : lng.startsWith("fr") ? "fr" : "en";
-
 /** Swiss currency formatting: CHF 24.00, CHF 1’234.50 */
 export function formatChf(cents: number | null | undefined, currency = "CHF"): string {
   if (cents === null || cents === undefined) return "–";

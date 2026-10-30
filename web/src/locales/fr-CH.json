@@ -3,7 +3,8 @@
     "language": "Langue",
     "logout": "Se déconnecter",
     "login": "Se connecter",
-    "signup": "Créer un compte"
+    "signup": "Créer un compte",
+    "account": "Compte"
   },
   "roles": {
     "admin": "Admin",
@@ -84,7 +85,12 @@
     "conversation_required": "Ouvre le bilan depuis une séance avec le tuteur.",
     "invalid_difficulty": "La difficulté doit être comprise entre 1 et 5.",
     "age_confirmation_required": "Veuillez confirmer que vous avez 16 ans ou plus.",
-    "invalid_canton": "Veuillez choisir un canton dans la liste."
+    "invalid_canton": "Veuillez choisir un canton dans la liste.",
+    "wrong_password": "Ce mot de passe n'est pas correct.",
+    "no_password": "Votre compte n'a pas de mot de passe.",
+    "password_required_for_admins": "Les comptes admin doivent conserver un mot de passe.",
+    "reauth_required": "Veuillez confirmer qu'il s'agit bien de vous : saisissez votre mot de passe ou ouvrez un nouveau lien de connexion.",
+    "not_while_impersonating": "Impossible pendant que vous consultez l'application en tant qu'une autre personne."
   },
   "impersonation": {
     "banner": "Vue en tant que {{name}} ({{role}}). Vous êtes connecté comme admin {{admin}}.",
@@ -134,7 +140,11 @@
     "checkEmailBody": "Nous avons envoyé un lien de confirmation à {{email}}. Ouvrez-le dans les 24 heures pour activer votre compte.",
     "ageConfirm": "J'ai 16 ans ou plus",
     "cantonHint": "Le canton où vous passerez le test. Vous pourrez le modifier plus tard.",
-    "studyLanguageHint": "La langue dans laquelle vous voulez d'abord comprendre les questions et les réponses."
+    "studyLanguageHint": "La langue dans laquelle vous voulez d'abord comprendre les questions et les réponses.",
+    "interfaceLanguageHint": "La langue des menus et des boutons. Lorsqu'une traduction manque, l'anglais est affiché.",
+    "withPassword": "Définir aussi un mot de passe (facultatif)",
+    "passwordOptionalHint": "Sans mot de passe, vous vous connectez avec un lien que nous vous envoyons par e-mail. Vous pourrez ajouter ou supprimer un mot de passe plus tard dans votre compte.",
+    "checkEmailSignIn": "Ce lien vous connecte également."
   },
   "fields": {
     "email": "Adresse e-mail",
@@ -143,12 +153,15 @@
     "confirmPassword": "Répéter le mot de passe",
     "newPassword": "Nouveau mot de passe",
     "canton": "Canton",
-    "studyLanguage": "Langue d'étude"
+    "studyLanguage": "Langue d'étude",
+    "interfaceLanguage": "Langue de l'interface"
   },
   "verify": {
     "title": "Confirmation de votre e-mail",
     "ok": "Votre adresse e-mail est confirmée. Vous pouvez vous connecter.",
-    "retryHint": "Connectez-vous et demandez un nouveau lien de confirmation si le vôtre a expiré."
+    "retryHint": "Connectez-vous et demandez un nouveau lien de confirmation si le vôtre a expiré.",
+    "signedIn": "Votre adresse e-mail est confirmée et votre session est ouverte.",
+    "continue": "Continuer"
   },
   "login": {
     "title": "Se connecter",
@@ -156,7 +169,16 @@
     "forgot": "Mot de passe oublié ?",
     "noAccount": "Nouveau ici ?",
     "resend": "Renvoyer l'e-mail de confirmation",
-    "resent": "Envoyé. Veuillez consulter votre boîte de réception."
+    "resent": "Envoyé. Veuillez consulter votre boîte de réception.",
+    "linkIntro": "Saisissez votre adresse e-mail et nous vous enverrons un lien de connexion. Il fonctionne une fois, pendant 15 minutes.",
+    "sendLink": "M'envoyer un lien de connexion",
+    "usePassword": "Me connecter plutôt avec un mot de passe",
+    "useLink": "Me connecter plutôt avec un lien par e-mail",
+    "checkEmailTitle": "Consultez vos e-mails",
+    "checkEmailBody": "Si un compte existe pour {{email}}, un lien de connexion est en route. Ouvrez-le dans les 15 minutes, sur cet appareil ou un autre.",
+    "checkEmailHint": "Rien reçu ? Vérifiez vos courriers indésirables, ou créez un compte si vous n'en avez pas encore.",
+    "sendAgain": "Renvoyer le lien",
+    "otherAddress": "Utiliser une autre adresse"
   },
   "forgot": {
     "title": "Réinitialiser votre mot de passe",
@@ -507,6 +529,42 @@
   "languages": {
     "en": "Anglais",
     "de": "Allemand",
-    "fr": "Français"
+    "fr": "Français",
+    "it": "Italien",
+    "pt": "Portugais",
+    "es": "Espagnol",
+    "sq": "Albanais",
+    "tr": "Turc"
+  },
+  "linkSignIn": {
+    "title": "Connexion en cours",
+    "retryHint": "Les liens de connexion fonctionnent une fois, pendant 15 minutes. Veuillez en demander un nouveau.",
+    "newLink": "Obtenir un nouveau lien"
+  },
+  "account": {
+    "title": "Votre compte",
+    "profileTitle": "Langues et canton",
+    "saved": "Enregistré.",
+    "passwordTitle": "Mot de passe",
+    "passwordOn": "Vous pouvez vous connecter avec votre mot de passe ou avec un lien par e-mail.",
+    "passwordOff": "Vous vous connectez avec un lien par e-mail. Vous pouvez ajouter un mot de passe si vous le souhaitez.",
+    "currentPassword": "Mot de passe actuel",
+    "setPassword": "Définir le mot de passe",
+    "changePassword": "Changer le mot de passe",
+    "removeIntro": "Supprimez votre mot de passe pour vous connecter uniquement avec des liens par e-mail.",
+    "removePassword": "Supprimer le mot de passe",
+    "passwordSaved": "Votre mot de passe est enregistré. Les autres appareils ont été déconnectés.",
+    "passwordRemoved": "Votre mot de passe est supprimé. Connectez-vous désormais avec un lien par e-mail.",
+    "deleteTitle": "Supprimer le compte",
+    "deleteIntro": "Cette action supprime votre compte, votre progression, vos réponses, vos conversations avec le tuteur et vos signalements de questions. Elle est irréversible.",
+    "deleteKept": "Les pièces comptables de vos paiements sont conservées aussi longtemps que la loi l'exige, sans votre adresse e-mail. Nous vous envoyons une confirmation par e-mail.",
+    "reauthFresh": "Vous avez ouvert un lien de connexion il y a quelques minutes : aucun mot de passe n'est nécessaire.",
+    "reauthEither": "Saisissez votre mot de passe, ou confirmez avec un nouveau lien de connexion.",
+    "reauthLink": "Pour confirmer qu'il s'agit bien de vous, ouvrez un nouveau lien de connexion et revenez sur cette page dans les 10 minutes.",
+    "reauthLinkSent": "Nous vous avons envoyé un lien de connexion. Ouvrez-le, puis supprimez votre compte dans les 10 minutes.",
+    "deleteConfirm": "Je comprends que mon compte et mes données d'apprentissage seront définitivement supprimés.",
+    "deleteSubmit": "Supprimer mon compte",
+    "deletedTitle": "Votre compte est supprimé",
+    "deletedBody": "Votre compte et vos données d'apprentissage ont été supprimés. Nous vous avons envoyé une confirmation par e-mail."
   }
 }

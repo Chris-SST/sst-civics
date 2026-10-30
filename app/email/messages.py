@@ -1,4 +1,4 @@
-"""Email texts in British English, German and French.
+"""Email texts in British English, German and French. Other languages fall back to English.
 
 Each message is a function of (locale, **params) returning (subject, text).
 Keep these short and plain; the app address comes from settings."""
@@ -57,6 +57,57 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
             "SST Virtual Tutor. Ouvrez ce lien dans les 30 minutes pour choisir un nouveau "
             "mot de passe :\n\n{link}\n\n"
             "Si ce n'était pas vous, ignorez cet e-mail ; votre mot de passe reste inchangé.",
+        ),
+    },
+    "sign_in_link": {
+        "en": (
+            "Your sign-in link",
+            "Hello,\n\nOpen this link within 15 minutes to sign in. It works once:\n\n{link}\n\n"
+            "If you did not ask for it, you can ignore this email. Nobody can sign in without "
+            "the link.",
+        ),
+        "de": (
+            "Ihr Anmeldelink",
+            "Guten Tag,\n\nÖffnen Sie diesen Link innerhalb von 15 Minuten, um sich anzumelden. "
+            "Er funktioniert einmal:\n\n{link}\n\n"
+            "Falls Sie ihn nicht angefordert haben, können Sie diese E-Mail ignorieren. Ohne den "
+            "Link kann sich niemand anmelden.",
+        ),
+        "fr": (
+            "Votre lien de connexion",
+            "Bonjour,\n\nOuvrez ce lien dans les 15 minutes pour vous connecter. Il ne fonctionne "
+            "qu'une fois :\n\n{link}\n\n"
+            "Si vous ne l'avez pas demandé, vous pouvez ignorer cet e-mail. Personne ne peut se "
+            "connecter sans ce lien.",
+        ),
+    },
+    "account_deleted": {
+        "en": (
+            "Your account is being deleted",
+            "Hello,\n\nAs you asked, we are deleting your account and your learning data: "
+            "progress, answers, tutor conversations and question reports.\n\n"
+            "Billing records of payments you made are kept for as long as the law requires, "
+            "without your email address.\n\n"
+            "If you did not ask for this, please reply to this email at once.",
+        ),
+        "de": (
+            "Ihr Konto wird gelöscht",
+            "Guten Tag,\n\nWie von Ihnen gewünscht, löschen wir Ihr Konto und Ihre Lerndaten: "
+            "Fortschritt, Antworten, Tutor-Gespräche und Fragemeldungen.\n\n"
+            "Buchhaltungsbelege zu Ihren Zahlungen bewahren wir so lange auf, wie es das Gesetz "
+            "verlangt, ohne Ihre E-Mail-Adresse.\n\n"
+            "Falls Sie dies nicht veranlasst haben, antworten Sie bitte umgehend auf diese "
+            "E-Mail.",
+        ),
+        "fr": (
+            "Votre compte est en cours de suppression",
+            "Bonjour,\n\nComme vous l'avez demandé, nous supprimons votre compte et vos données "
+            "d'apprentissage : progression, réponses, conversations avec le tuteur et "
+            "signalements de questions.\n\n"
+            "Les pièces comptables de vos paiements sont conservées aussi longtemps que la loi "
+            "l'exige, sans votre adresse e-mail.\n\n"
+            "Si vous n'êtes pas à l'origine de cette demande, répondez immédiatement à cet "
+            "e-mail.",
         ),
     },
     "cost_alert": {

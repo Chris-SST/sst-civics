@@ -3,7 +3,8 @@
     "language": "Sprache",
     "logout": "Abmelden",
     "login": "Anmelden",
-    "signup": "Konto erstellen"
+    "signup": "Konto erstellen",
+    "account": "Konto"
   },
   "roles": {
     "admin": "Admin",
@@ -84,7 +85,12 @@
     "conversation_required": "Öffne den Check aus einer Tutor-Sitzung.",
     "invalid_difficulty": "Der Schwierigkeitsgrad muss zwischen 1 und 5 liegen.",
     "age_confirmation_required": "Bitte bestätigen Sie, dass Sie 16 Jahre alt oder älter sind.",
-    "invalid_canton": "Bitte wählen Sie einen Kanton aus der Liste."
+    "invalid_canton": "Bitte wählen Sie einen Kanton aus der Liste.",
+    "wrong_password": "Dieses Passwort ist nicht korrekt.",
+    "no_password": "Ihr Konto hat kein Passwort.",
+    "password_required_for_admins": "Admin-Konten müssen ein Passwort behalten.",
+    "reauth_required": "Bitte bestätigen Sie, dass Sie es sind: Geben Sie Ihr Passwort ein oder öffnen Sie einen neuen Anmeldelink.",
+    "not_while_impersonating": "Dies ist nicht möglich, während Sie die App als andere Person ansehen."
   },
   "impersonation": {
     "banner": "Ansicht als {{name}} ({{role}}). Sie sind als Admin {{admin}} angemeldet.",
@@ -134,7 +140,11 @@
     "checkEmailBody": "Wir haben einen Bestätigungslink an {{email}} gesendet. Öffnen Sie ihn innerhalb von 24 Stunden, um Ihr Konto zu aktivieren.",
     "ageConfirm": "Ich bin 16 Jahre alt oder älter",
     "cantonHint": "Der Kanton, in dem Sie den Test ablegen. Sie können ihn später ändern.",
-    "studyLanguageHint": "Die Sprache, in der Sie die Fragen und Antworten zuerst verstehen möchten."
+    "studyLanguageHint": "Die Sprache, in der Sie die Fragen und Antworten zuerst verstehen möchten.",
+    "interfaceLanguageHint": "Die Sprache von Menüs und Schaltflächen. Wo eine Übersetzung fehlt, wird Englisch angezeigt.",
+    "withPassword": "Zusätzlich ein Passwort festlegen (freiwillig)",
+    "passwordOptionalHint": "Ohne Passwort melden Sie sich mit einem Link an, den wir Ihnen per E-Mail senden. Sie können später in Ihrem Konto ein Passwort hinzufügen oder entfernen.",
+    "checkEmailSignIn": "Mit dem Link sind Sie zugleich angemeldet."
   },
   "fields": {
     "email": "E-Mail-Adresse",
@@ -143,12 +153,15 @@
     "confirmPassword": "Passwort wiederholen",
     "newPassword": "Neues Passwort",
     "canton": "Kanton",
-    "studyLanguage": "Lernsprache"
+    "studyLanguage": "Lernsprache",
+    "interfaceLanguage": "Sprache der Oberfläche"
   },
   "verify": {
     "title": "E-Mail-Adresse wird bestätigt",
     "ok": "Ihre E-Mail-Adresse ist bestätigt. Sie können sich jetzt anmelden.",
-    "retryHint": "Melden Sie sich an und fordern Sie einen neuen Bestätigungslink an, falls Ihrer abgelaufen ist."
+    "retryHint": "Melden Sie sich an und fordern Sie einen neuen Bestätigungslink an, falls Ihrer abgelaufen ist.",
+    "signedIn": "Ihre E-Mail-Adresse ist bestätigt und Sie sind angemeldet.",
+    "continue": "Weiter"
   },
   "login": {
     "title": "Anmelden",
@@ -156,7 +169,16 @@
     "forgot": "Passwort vergessen?",
     "noAccount": "Neu hier?",
     "resend": "Bestätigungs-E-Mail erneut senden",
-    "resent": "Gesendet. Bitte prüfen Sie Ihren Posteingang."
+    "resent": "Gesendet. Bitte prüfen Sie Ihren Posteingang.",
+    "linkIntro": "Geben Sie Ihre E-Mail-Adresse ein, und wir senden Ihnen einen Anmeldelink. Er funktioniert einmal und 15 Minuten lang.",
+    "sendLink": "Anmeldelink senden",
+    "usePassword": "Stattdessen mit Passwort anmelden",
+    "useLink": "Stattdessen mit E-Mail-Link anmelden",
+    "checkEmailTitle": "Prüfen Sie Ihre E-Mails",
+    "checkEmailBody": "Falls für {{email}} ein Konto besteht, ist ein Anmeldelink unterwegs. Öffnen Sie ihn innerhalb von 15 Minuten auf diesem oder einem anderen Gerät.",
+    "checkEmailHint": "Nichts erhalten? Sehen Sie im Spam-Ordner nach, oder erstellen Sie ein Konto, falls Sie noch keines haben.",
+    "sendAgain": "Link erneut senden",
+    "otherAddress": "Andere Adresse verwenden"
   },
   "forgot": {
     "title": "Passwort zurücksetzen",
@@ -507,6 +529,42 @@
   "languages": {
     "en": "Englisch",
     "de": "Deutsch",
-    "fr": "Französisch"
+    "fr": "Französisch",
+    "it": "Italienisch",
+    "pt": "Portugiesisch",
+    "es": "Spanisch",
+    "sq": "Albanisch",
+    "tr": "Türkisch"
+  },
+  "linkSignIn": {
+    "title": "Sie werden angemeldet",
+    "retryHint": "Anmeldelinks funktionieren einmal und 15 Minuten lang. Bitte fordern Sie einen neuen an.",
+    "newLink": "Neuen Link anfordern"
+  },
+  "account": {
+    "title": "Ihr Konto",
+    "profileTitle": "Sprachen und Kanton",
+    "saved": "Gespeichert.",
+    "passwordTitle": "Passwort",
+    "passwordOn": "Sie können sich mit Ihrem Passwort oder mit einem E-Mail-Link anmelden.",
+    "passwordOff": "Sie melden sich mit einem E-Mail-Link an. Wenn Sie möchten, können Sie ein Passwort hinzufügen.",
+    "currentPassword": "Aktuelles Passwort",
+    "setPassword": "Passwort festlegen",
+    "changePassword": "Passwort ändern",
+    "removeIntro": "Entfernen Sie Ihr Passwort, um sich nur noch mit E-Mail-Links anzumelden.",
+    "removePassword": "Passwort entfernen",
+    "passwordSaved": "Ihr Passwort ist gespeichert. Andere Geräte wurden abgemeldet.",
+    "passwordRemoved": "Ihr Passwort ist entfernt. Melden Sie sich ab jetzt mit einem E-Mail-Link an.",
+    "deleteTitle": "Konto löschen",
+    "deleteIntro": "Dabei werden Ihr Konto, Ihr Fortschritt, Ihre Antworten, Ihre Tutor-Gespräche und Ihre Fragemeldungen gelöscht. Dies lässt sich nicht rückgängig machen.",
+    "deleteKept": "Buchhaltungsbelege zu Ihren Zahlungen bewahren wir so lange auf, wie es das Gesetz verlangt, ohne Ihre E-Mail-Adresse. Sie erhalten eine Bestätigung per E-Mail.",
+    "reauthFresh": "Sie haben sich vor wenigen Minuten mit einem E-Mail-Link angemeldet; ein Passwort ist daher nicht nötig.",
+    "reauthEither": "Geben Sie Ihr Passwort ein, oder bestätigen Sie mit einem neuen Anmeldelink.",
+    "reauthLink": "Um zu bestätigen, dass Sie es sind, öffnen Sie einen neuen Anmeldelink und kehren Sie innerhalb von 10 Minuten auf diese Seite zurück.",
+    "reauthLinkSent": "Wir haben Ihnen einen Anmeldelink gesendet. Öffnen Sie ihn und löschen Sie Ihr Konto danach innerhalb von 10 Minuten.",
+    "deleteConfirm": "Mir ist bewusst, dass mein Konto und meine Lerndaten endgültig gelöscht werden.",
+    "deleteSubmit": "Mein Konto löschen",
+    "deletedTitle": "Ihr Konto ist gelöscht",
+    "deletedBody": "Ihr Konto und Ihre Lerndaten wurden gelöscht. Wir haben Ihnen eine Bestätigung per E-Mail gesendet."
   }
 }

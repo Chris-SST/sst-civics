@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from datetime import timedelta
+
 from fastapi import Request, Response
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -9,8 +11,19 @@ from app.auth.schemas import AccessOut, EntitlementOut, MeOut, SessionOut, UserO
 from app.auth.sessions import ensure_csrf_cookie
 from app.billing.access import access_level, is_active
 from app.config import get_settings
+from app.db import utcnow
 from app.deps import AuthContext
-from app.models import Entitlement, User
+from app.models import Entitlement, Session, User
+
+REAUTH_WINDOW = timedelta(minutes=10)
+
+
+def reauth_seconds_left(session: Session) -> int:
+    """Seconds left of the re-authentication window opened by an email link."""
+    if session.email_link_at is None or session.impersonator_user_id is not None:
+        return 0
+    left = (session.email_link_at + REAUTH_WINDOW - utcnow()).total_seconds()
+    return max(0, int(left))
 
 
 def _iso(value) -> str | None:
@@ -47,6 +60,7 @@ def user_out(user: User) -> UserOut:
         canton=user.canton,
         email_verified=user.email_verified_at is not None,
         totp_enabled=user.totp_enabled,
+        has_password=user.password_hash is not None,
     )
 
 
@@ -67,6 +81,7 @@ async def build_me(
             and not user.totp_enabled
             and not ctx.session.impersonator_user_id,
             impersonated_by=impersonated_by,
+            reauth_seconds_left=reauth_seconds_left(ctx.session),
         ),
         access=access_out(user),
         csrf_token=csrf,

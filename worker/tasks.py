@@ -7,6 +7,7 @@ from typing import Any
 
 from sqlalchemy import select
 
+from app.auth import email_link, one_time
 from app.auth.sessions import purge_expired_sessions
 from app.billing.events import handle_event
 from app.db import SessionLocal, utcnow
@@ -21,6 +22,15 @@ async def send_email(
     ctx: dict[str, Any], kind: str, locale: str, to: str, params: dict[str, str]
 ) -> None:
     backend.send(messages.build(kind, locale, to, **params))
+
+
+async def send_sign_in_link(
+    ctx: dict[str, Any], email: str, locale: str, next_path: str | None = None
+) -> None:
+    """Look up the address and email a sign-in link if it has an account (see
+    app/auth/email_link.py). Never logs the address."""
+    async with SessionLocal() as db:
+        await email_link.send_sign_in_link(db, email, locale, next_path)
 
 
 async def process_stripe_event(ctx: dict[str, Any], event_id: str) -> None:
@@ -49,8 +59,10 @@ async def process_stripe_event(ctx: dict[str, Any], event_id: str) -> None:
 
 
 async def purge_sessions(ctx: dict[str, Any]) -> int:
+    """Hourly: expired sessions, and one-time tokens expired more than a day ago."""
     async with SessionLocal() as db:
         n = await purge_expired_sessions(db)
+        n += await one_time.purge_old_tokens(db)
         await db.commit()
     return n
 

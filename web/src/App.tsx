@@ -5,6 +5,9 @@ import Layout from "./components/Layout";
 import Landing from "./pages/Landing";
 import Signup from "./pages/Signup";
 import VerifyEmail from "./pages/VerifyEmail";
+import LinkSignIn from "./pages/LinkSignIn";
+import Account from "./pages/Account";
+import AccountDeleted from "./pages/AccountDeleted";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
@@ -28,6 +31,16 @@ export default function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/verify-email" element={<VerifyEmail />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/auth/link" element={<LinkSignIn />} />
+        <Route
+          path="/account"
+          element={
+            <RequireRole roles={LEARNER}>
+              <Account />
+            </RequireRole>
+          }
+        />
+        <Route path="/account/deleted" element={<AccountDeleted />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/2fa" element={<TwoFactor mode="verify" />} />

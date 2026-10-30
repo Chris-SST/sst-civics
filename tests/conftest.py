@@ -99,9 +99,9 @@ class Api:
         headers = {"X-CSRF-Token": await self._csrf()}
         return await self.client.patch(url, json=json, headers=headers, **kw)
 
-    async def delete(self, url: str, **kw):
+    async def delete(self, url: str, json=None, **kw):
         headers = {"X-CSRF-Token": await self._csrf()}
-        return await self.client.delete(url, headers=headers, **kw)
+        return await self.client.request("DELETE", url, json=json, headers=headers, **kw)
 
 
 @pytest.fixture
@@ -162,6 +162,15 @@ async def signup_and_verify(api: Api, email: str, password: str = LEARNER_PASSWO
 
 async def login(api: Api, email: str, password: str):
     return await api.post("/api/auth/login", json={"email": email, "password": password})
+
+
+async def link_sign_in(api: Api, email: str, **extra):
+    """Request a sign-in link for `email` and consume it. Returns the consume response."""
+    memory_outbox.clear()
+    r = await api.post("/api/auth/link", json={"email": email, "locale": "en", **extra})
+    assert r.status_code == 202, r.text
+    token = token_from_link(last_email_link())
+    return await api.post("/api/auth/link/consume", json={"token": token})
 
 
 async def grant_access(email: str, canton: str = "zh", days: int = 30) -> None:

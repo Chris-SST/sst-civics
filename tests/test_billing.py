@@ -260,3 +260,27 @@ async def test_admin_entitlement_validation(api, api2):
     # Learners cannot grant themselves access
     r = await api2.post(url, json={"canton": "zh", "expires_at": until})
     assert r.status_code == 403
+
+
+async def test_webhook_payload_is_stored_without_contact_details(api):
+    event = {
+        "id": "evt_pii",
+        "type": "invoice.paid",
+        "data": {
+            "object": {
+                "id": "in_pii",
+                "customer": "cus_x",
+                "customer_email": "someone@example.ch",
+                "customer_name": "Some One",
+                "customer_address": {"line1": "Street 1"},
+                "lines": {"data": [{"price": {"lookup_key": "k"}, "billing_details": {"x": 1}}]},
+            }
+        },
+    }
+    assert (await webhook(api, event)).status_code == 200
+    async with SessionLocal() as db:
+        row = await db.get(StripeEvent, "evt_pii")
+    stored = json.dumps(row.payload)
+    assert "someone@example.ch" not in stored and "Some One" not in stored
+    assert "Street 1" not in stored and "billing_details" not in stored
+    assert row.payload["data"]["object"]["customer"] == "cus_x"

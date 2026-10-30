@@ -3,7 +3,8 @@
     "language": "Language",
     "logout": "Log out",
     "login": "Log in",
-    "signup": "Create account"
+    "signup": "Create account",
+    "account": "Account"
   },
   "roles": {
     "admin": "Admin",
@@ -84,7 +85,12 @@
     "conversation_required": "Open the check from a tutor session.",
     "invalid_difficulty": "Difficulty must be between 1 and 5.",
     "age_confirmation_required": "Please confirm that you are 16 or older.",
-    "invalid_canton": "Please choose a canton from the list."
+    "invalid_canton": "Please choose a canton from the list.",
+    "wrong_password": "That password is not right.",
+    "no_password": "Your account has no password.",
+    "password_required_for_admins": "Admin accounts must keep a password.",
+    "reauth_required": "Please confirm it is you: enter your password or open a fresh sign-in link.",
+    "not_while_impersonating": "This is not possible while viewing as another user."
   },
   "impersonation": {
     "banner": "Viewing as {{name}} ({{role}}). You are signed in as admin {{admin}}.",
@@ -134,7 +140,11 @@
     "checkEmailBody": "We sent a confirmation link to {{email}}. Open it within 24 hours to activate your account.",
     "ageConfirm": "I am 16 or older",
     "cantonHint": "The canton where you will take the test. You can change it later.",
-    "studyLanguageHint": "The language you want to understand the questions and answers in first."
+    "studyLanguageHint": "The language you want to understand the questions and answers in first.",
+    "interfaceLanguageHint": "The language of menus and buttons. Where a translation is missing, English is shown.",
+    "withPassword": "Also set a password (optional)",
+    "passwordOptionalHint": "Without a password you sign in with a link we email you. You can add or remove a password later in your account.",
+    "checkEmailSignIn": "The link also signs you in."
   },
   "fields": {
     "email": "Email address",
@@ -143,12 +153,15 @@
     "confirmPassword": "Repeat password",
     "newPassword": "New password",
     "canton": "Canton",
-    "studyLanguage": "Study language"
+    "studyLanguage": "Study language",
+    "interfaceLanguage": "Interface language"
   },
   "verify": {
     "title": "Confirming your email",
     "ok": "Your email address is confirmed. You can log in now.",
-    "retryHint": "Log in and request a new confirmation link if yours has expired."
+    "retryHint": "Log in and request a new confirmation link if yours has expired.",
+    "signedIn": "Your email address is confirmed and you are signed in.",
+    "continue": "Continue"
   },
   "login": {
     "title": "Log in",
@@ -156,7 +169,16 @@
     "forgot": "Forgotten your password?",
     "noAccount": "New here?",
     "resend": "Send the confirmation email again",
-    "resent": "Sent. Please check your inbox."
+    "resent": "Sent. Please check your inbox.",
+    "linkIntro": "Enter your email address and we will send you a sign-in link. It works once, for 15 minutes.",
+    "sendLink": "Send me a sign-in link",
+    "usePassword": "Sign in with a password instead",
+    "useLink": "Sign in with an email link instead",
+    "checkEmailTitle": "Check your email",
+    "checkEmailBody": "If an account exists for {{email}}, a sign-in link is on its way. Open it within 15 minutes on this device or another.",
+    "checkEmailHint": "Nothing arrived? Check your spam folder, or create an account if you do not have one yet.",
+    "sendAgain": "Send the link again",
+    "otherAddress": "Use another address"
   },
   "forgot": {
     "title": "Reset your password",
@@ -507,6 +529,42 @@
   "languages": {
     "en": "English",
     "de": "German",
-    "fr": "French"
+    "fr": "French",
+    "it": "Italian",
+    "pt": "Portuguese",
+    "es": "Spanish",
+    "sq": "Albanian",
+    "tr": "Turkish"
+  },
+  "linkSignIn": {
+    "title": "Signing you in",
+    "retryHint": "Sign-in links work once and for 15 minutes. Please ask for a new one.",
+    "newLink": "Get a new link"
+  },
+  "account": {
+    "title": "Your account",
+    "profileTitle": "Languages and canton",
+    "saved": "Saved.",
+    "passwordTitle": "Password",
+    "passwordOn": "You can sign in with your password or with an email link.",
+    "passwordOff": "You sign in with an email link. You can add a password if you prefer.",
+    "currentPassword": "Current password",
+    "setPassword": "Set password",
+    "changePassword": "Change password",
+    "removeIntro": "Remove your password to sign in only with email links.",
+    "removePassword": "Remove password",
+    "passwordSaved": "Your password is saved. Other devices have been signed out.",
+    "passwordRemoved": "Your password is removed. Sign in with an email link from now on.",
+    "deleteTitle": "Delete account",
+    "deleteIntro": "This deletes your account, your progress, your answers, your tutor conversations and your question reports. It cannot be undone.",
+    "deleteKept": "Billing records of payments you made are kept for as long as the law requires, without your email address. We send you a confirmation email.",
+    "reauthFresh": "You signed in with an email link a few minutes ago, so no password is needed.",
+    "reauthEither": "Enter your password, or confirm with a fresh sign-in link.",
+    "reauthLink": "To confirm it is you, open a fresh sign-in link and come back to this page within 10 minutes.",
+    "reauthLinkSent": "We sent you a sign-in link. Open it, then delete your account within 10 minutes.",
+    "deleteConfirm": "I understand that my account and learning data will be deleted for good.",
+    "deleteSubmit": "Delete my account",
+    "deletedTitle": "Your account is deleted",
+    "deletedBody": "Your account and learning data have been deleted. We have sent you a confirmation email."
   }
 }

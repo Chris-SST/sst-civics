@@ -55,7 +55,7 @@ export async function api<T>(method: string, path: string, body?: unknown): Prom
 export const get = <T,>(path: string) => api<T>("GET", path);
 export const post = <T,>(path: string, body?: unknown) => api<T>("POST", path, body);
 export const patch = <T,>(path: string, body?: unknown) => api<T>("PATCH", path, body);
-export const del = <T,>(path: string) => api<T>("DELETE", path);
+export const del = <T,>(path: string, body?: unknown) => api<T>("DELETE", path, body);
 
 export type Role = "learner" | "admin";
 
@@ -68,6 +68,7 @@ export interface UserOut {
   canton: string;
   email_verified: boolean;
   totp_enabled: boolean;
+  has_password: boolean;
 }
 
 export interface EntitlementOut {
@@ -89,7 +90,13 @@ export interface AccessOut {
 
 export interface Me {
   user: UserOut;
-  session: { mfa_pending: boolean; mfa_setup_required: boolean; impersonated_by: string | null };
+  session: {
+    mfa_pending: boolean;
+    mfa_setup_required: boolean;
+    impersonated_by: string | null;
+    /** Seconds left in which a sign-in link counts as re-authentication (account deletion). */
+    reauth_seconds_left: number;
+  };
   access: AccessOut;
   csrf_token: string;
 }
@@ -113,5 +120,31 @@ export interface PublicConfig {
 
 /** Cantons a learner can choose at sign-up and an admin can grant access for. */
 export const CANTONS = ["zh", "ag"] as const;
+/** Interface and study languages the API accepts (launch languages, D-014). */
+export const LANGUAGE_CODES = ["de", "en", "fr", "it", "pt", "es", "sq", "tr"] as const;
+export type LanguageCode = (typeof LANGUAGE_CODES)[number];
 /** Languages a learner can study the questions in. */
-export const STUDY_LANGUAGES = ["en", "de", "fr"] as const;
+export const STUDY_LANGUAGES = LANGUAGE_CODES;
+/** Each language in its own name, for the interface-language choice. */
+export const LANGUAGE_ENDONYMS: Record<LanguageCode, string> = {
+  de: "Deutsch",
+  en: "English",
+  fr: "Français",
+  it: "Italiano",
+  pt: "Português",
+  es: "Español",
+  sq: "Shqip",
+  tr: "Türkçe",
+};
+
+/** Two-letter code the API stores for an i18next language such as "it-CH". Unknown
+ * languages map to English. */
+export function apiLocale(lng: string): LanguageCode {
+  const short = lng.slice(0, 2).toLowerCase();
+  return (LANGUAGE_CODES as readonly string[]).includes(short) ? (short as LanguageCode) : "en";
+}
+
+export interface LoginOut {
+  status: "ok" | "mfa_required" | "mfa_setup_required";
+  me: Me | null;
+}

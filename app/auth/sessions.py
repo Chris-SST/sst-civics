@@ -24,16 +24,23 @@ IMPERSONATION_TTL = timedelta(hours=2)
 
 
 async def create_session(
-    db: AsyncSession, user: User, *, mfa_pending: bool, impersonator_id=None
+    db: AsyncSession,
+    user: User,
+    *,
+    mfa_pending: bool,
+    impersonator_id=None,
+    via_email_link: bool = False,
 ) -> str:
     token = new_token()
+    now = utcnow()
     ttl = IMPERSONATION_TTL if impersonator_id else session_ttl(user)
     row = Session(
         id=hash_token(token),
         user_id=user.id,
-        expires_at=utcnow() + ttl,
+        expires_at=now + ttl,
         mfa_pending=mfa_pending,
         impersonator_user_id=impersonator_id,
+        email_link_at=now if via_email_link else None,
     )
     db.add(row)
     await db.flush()
@@ -69,6 +76,12 @@ async def destroy_session(db: AsyncSession, token: str | None) -> None:
 
 async def destroy_all_sessions(db: AsyncSession, user_id) -> None:
     await db.execute(delete(Session).where(Session.user_id == user_id))
+
+
+async def destroy_other_sessions(db: AsyncSession, user_id, keep_session_id: str) -> None:
+    await db.execute(
+        delete(Session).where(Session.user_id == user_id, Session.id != keep_session_id)
+    )
 
 
 async def purge_expired_sessions(db: AsyncSession) -> int:

@@ -1,9 +1,17 @@
 import { useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { CANTONS, STUDY_LANGUAGES, post } from "../api";
+import {
+  CANTONS,
+  LANGUAGE_CODES,
+  LANGUAGE_ENDONYMS,
+  STUDY_LANGUAGES,
+  apiLocale,
+  post,
+  type LanguageCode,
+} from "../api";
 import ErrorText from "../components/ErrorText";
-import { shortLocale } from "../i18n";
+import { switchInterface } from "../language";
 
 const SITE = "https://swisssciencetutors.ch";
 
@@ -11,7 +19,9 @@ export default function Signup() {
   const { t, i18n } = useTranslation();
   const [email, setEmail] = useState("");
   const [canton, setCanton] = useState<string>("zh");
-  const [studyLanguage, setStudyLanguage] = useState<string>("en");
+  const [locale, setLocale] = useState<LanguageCode>(apiLocale(i18n.language));
+  const [studyLanguage, setStudyLanguage] = useState<string>(apiLocale(i18n.language));
+  const [withPassword, setWithPassword] = useState(false);
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [ageConfirmed, setAgeConfirmed] = useState(false);
@@ -23,7 +33,7 @@ export default function Signup() {
   async function submit(e: FormEvent) {
     e.preventDefault();
     setError(null);
-    if (password !== confirm) {
+    if (withPassword && password !== confirm) {
       setError({ code: "password_mismatch" });
       return;
     }
@@ -31,8 +41,8 @@ export default function Signup() {
     try {
       await post("/api/auth/signup", {
         email,
-        password,
-        locale: shortLocale(i18n.language),
+        password: withPassword ? password : null,
+        locale,
         study_language: studyLanguage,
         canton,
         age_confirmed: ageConfirmed,
@@ -51,6 +61,7 @@ export default function Signup() {
       <div className="card narrow">
         <h1>{t("signup.checkEmailTitle")}</h1>
         <p>{t("signup.checkEmailBody", { email })}</p>
+        <p className="small">{t("signup.checkEmailSignIn")}</p>
         <Link className="btn btn-secondary" to="/login">
           {t("nav.login")}
         </Link>
@@ -70,37 +81,22 @@ export default function Signup() {
           <input type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </label>
         <label className="field">
-          <span>{t("fields.password")}</span>
-          <input
-            type="password"
-            required
-            minLength={10}
-            autoComplete="new-password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <span className="hint">{t("fields.passwordHint")}</span>
-        </label>
-        <label className="field">
-          <span>{t("fields.confirmPassword")}</span>
-          <input
-            type="password"
-            required
-            autoComplete="new-password"
-            value={confirm}
-            onChange={(e) => setConfirm(e.target.value)}
-          />
-        </label>
-        <label className="field">
-          <span>{t("fields.canton")}</span>
-          <select value={canton} onChange={(e) => setCanton(e.target.value)}>
-            {CANTONS.map((c) => (
-              <option key={c} value={c}>
-                {t(`cantons.${c}`)}
+          <span>{t("fields.interfaceLanguage")}</span>
+          <select
+            value={locale}
+            onChange={(e) => {
+              const code = e.target.value as LanguageCode;
+              setLocale(code);
+              switchInterface(code, (lng) => i18n.changeLanguage(lng));
+            }}
+          >
+            {LANGUAGE_CODES.map((l) => (
+              <option key={l} value={l}>
+                {LANGUAGE_ENDONYMS[l]}
               </option>
             ))}
           </select>
-          <span className="hint">{t("signup.cantonHint")}</span>
+          <span className="hint">{t("signup.interfaceLanguageHint")}</span>
         </label>
         <label className="field">
           <span>{t("fields.studyLanguage")}</span>
@@ -113,6 +109,48 @@ export default function Signup() {
           </select>
           <span className="hint">{t("signup.studyLanguageHint")}</span>
         </label>
+        <label className="field">
+          <span>{t("fields.canton")}</span>
+          <select value={canton} onChange={(e) => setCanton(e.target.value)}>
+            {CANTONS.map((c) => (
+              <option key={c} value={c}>
+                {t(`cantons.${c}`)}
+              </option>
+            ))}
+          </select>
+          <span className="hint">{t("signup.cantonHint")}</span>
+        </label>
+        <label className="check">
+          <input type="checkbox" checked={withPassword} onChange={(e) => setWithPassword(e.target.checked)} />
+          <span>{t("signup.withPassword")}</span>
+        </label>
+        <p className="hint">{t("signup.passwordOptionalHint")}</p>
+        {withPassword && (
+          <>
+            <label className="field">
+              <span>{t("fields.password")}</span>
+              <input
+                type="password"
+                required
+                minLength={10}
+                autoComplete="new-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span className="hint">{t("fields.passwordHint")}</span>
+            </label>
+            <label className="field">
+              <span>{t("fields.confirmPassword")}</span>
+              <input
+                type="password"
+                required
+                autoComplete="new-password"
+                value={confirm}
+                onChange={(e) => setConfirm(e.target.value)}
+              />
+            </label>
+          </>
+        )}
         <label className="check">
           <input type="checkbox" checked={ageConfirmed} onChange={(e) => setAgeConfirmed(e.target.checked)} required />
           <span>{t("signup.ageConfirm")}</span>

@@ -20,13 +20,17 @@ from sqlalchemy import (
 )
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
+from app.crypto import EncryptedString
 from app.db import Base, TZDateTime, utcnow
 
 ROLE_LEARNER = "learner"
 ROLE_ADMIN = "admin"
 ROLES = (ROLE_LEARNER, ROLE_ADMIN)
+# Languages with tutor topic names and email texts today; others fall back to English.
 LOCALES = ("en", "de", "fr")
-STUDY_LANGUAGES = LOCALES
+# Interface and study languages a learner can choose (D-014, widening D-020).
+LANGUAGES = ("de", "en", "fr", "it", "pt", "es", "sq", "tr")
+STUDY_LANGUAGES = LANGUAGES
 # Two-letter canton codes, lower case.
 CANTONS = (
     "ag", "ai", "ar", "be", "bl", "bs", "fr", "ge", "gl", "gr", "ju", "lu", "ne",
@@ -36,6 +40,7 @@ DEFAULT_CANTON = "zh"
 
 TOKEN_VERIFY_EMAIL = "verify_email"  # noqa: S105
 TOKEN_RESET_PASSWORD = "reset_password"  # noqa: S105
+TOKEN_SIGN_IN = "sign_in"  # noqa: S105
 
 ENTITLEMENT_STRIPE = "stripe"
 ENTITLEMENT_ADMIN = "admin"
@@ -71,8 +76,9 @@ class User(TimestampMixin, Base):
     terms_accepted_at: Mapped[datetime | None] = mapped_column(TZDateTime)
     stripe_customer_id: Mapped[str | None] = mapped_column(String(64), unique=True, index=True)
 
-    # Two-factor authentication (TOTP). Mandatory for admins.
-    totp_secret: Mapped[str | None] = mapped_column(String(64))
+    # Two-factor authentication (TOTP). Mandatory for admins. The secret is encrypted at
+    # rest (D-011); the attribute holds the plain secret, the column the ciphertext.
+    totp_secret: Mapped[str | None] = mapped_column(EncryptedString(255))
     totp_enabled: Mapped[bool] = mapped_column(Boolean, default=False)
 
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
@@ -127,6 +133,9 @@ class Session(Base):
     expires_at: Mapped[datetime] = mapped_column(TZDateTime)
     last_seen_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
     mfa_pending: Mapped[bool] = mapped_column(Boolean, default=False)
+    # When this session was opened from a one-time email link. Account deletion accepts a
+    # link consumed in the last 10 minutes as re-authentication.
+    email_link_at: Mapped[datetime | None] = mapped_column(TZDateTime)
     # Set when an admin is viewing the app as this user (never in production).
     impersonator_user_id: Mapped[uuid.UUID | None] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
@@ -136,7 +145,7 @@ class Session(Base):
 
 
 class OneTimeToken(Base):
-    """Single-use tokens for email verification and password reset."""
+    """Single-use tokens for email verification, sign-in links and password reset."""
 
     __tablename__ = "one_time_tokens"
 
@@ -189,6 +198,9 @@ class Payment(Base):
     amount_cents: Mapped[int] = mapped_column(Integer)
     currency: Mapped[str] = mapped_column(String(3))
     paid_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    # Set when the account is deleted: a keyed hash of the email address, so the record can
+    # still be matched to the person if they ask, without keeping the address itself.
+    email_hash: Mapped[str | None] = mapped_column(String(64))
 
 
 class AuditLog(Base):
