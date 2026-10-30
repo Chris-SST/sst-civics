@@ -25,13 +25,13 @@ export const LOCALE_NAMES = {
  * The overview slug is `ueberblick` in German and `overview` elsewhere, as agreed.
  */
 export const SLUGS = {
-  overview: { de: "ueberblick", other: "overview" },
+  overview: { de: "ueberblick", fr: "apercu", it: "panoramica", pt: "visao-geral", es: "resumen", sq: "pergjithesim", tr: "genel-bakis", other: "overview" },
   zurich: { de: "zuerich-schritt-fuer-schritt", other: "zurich-step-by-step" },
-  test: { de: "grundkenntnistest", other: "knowledge-test" },
+  test: { de: "grundkenntnistest", fr: "test-de-connaissances", it: "test-di-conoscenze", pt: "teste-de-conhecimentos", es: "prueba-de-conocimientos", sq: "testi-i-njohurive", tr: "bilgi-testi", other: "knowledge-test" },
   language: { de: "sprachzertifikate", other: "language-certificates" },
   fees: { de: "gebuehren", other: "fees" },
-  calculator: { de: "rechner", other: "calculator" },
-  free: { de: "kostenlos", other: "free-practice" },
+  calculator: { de: "rechner", fr: "calculateur", it: "calcolatore", pt: "calculadora", es: "calculadora", sq: "llogaritesi", tr: "hesaplayici", other: "calculator" },
+  free: { de: "kostenlos", fr: "pratique-gratuite", it: "pratica-gratuita", pt: "pratica-gratuita", es: "practica-gratuita", sq: "praktike-falas", tr: "ucretsiz-pratik", other: "free-practice" },
   faq: { de: "faq", other: "faq" },
 };
 
