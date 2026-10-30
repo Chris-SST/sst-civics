@@ -45,6 +45,14 @@ services:
       dockerfile: infra/Dockerfile.api
     restart: unless-stopped
     command: ["arq", "worker.main.WorkerSettings"]
+    # The image's HTTP health check does not apply to the worker; arq records its own health
+    # key in Redis, which `arq --check` reads.
+    healthcheck:
+      test: ["CMD", "arq", "--check", "worker.main.WorkerSettings"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
     env_file: ../.env
     environment:
       DATABASE_URL: postgresql+asyncpg://sst:${POSTGRES_PASSWORD}@postgres:5432/sst
