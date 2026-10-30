@@ -179,7 +179,7 @@ function LearnTopic({ topicCode }: { topicCode: string }) {
           <div className="progress" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={index + 1}>
             <span style={{ width: `${((index + 1) / total) * 100}%` }} />
           </div>
-          <QuestionCard key={`${card.id}-${card.mode}`} question={card} reveal>
+          <QuestionCard key={`${card.id}-${card.mode}`} question={card} reveal explain>
             <div className="actions">
               <button type="button" className="btn btn-ghost" disabled={index === 0} onClick={() => go(-1)}>
                 {t("learn.previous")}

@@ -25,6 +25,7 @@ TOPIC_PREFIX = {"federal": "bund.", "canton": "kanton.", "commune": "gemeinde."}
 # reviewer when a check fails; neither is ever served.
 Status = Literal["draft", "needs_fix", "in_review", "approved", "retired"]
 TranslationStatus = Literal["draft", "flagged", "in_review", "approved"]
+GlossaryStatus = Literal["draft", "reviewed"]
 OptionKey = Literal["a", "b", "c", "d"]
 SourceVerdict = Literal["supported", "not_supported", "unclear", "dead_link"]
 ReviewAction = Literal["approve", "send_back", "retire", "learner_reports", "broken_links"]
@@ -290,7 +291,8 @@ class TranslationFile(_Strict):
 class GlossaryEntry(_Strict):
     """A German key term and its translation. `source` names where an official translation
     comes from (TERMDAT, an admin.ch page) or says that none exists; `keep_german` asks the
-    translator to add the German term in brackets after its first use."""
+    translator to add the German term in brackets after its first use. A reviewer marks an
+    entry `reviewed` (with `reviewed_by` and `reviewed_at`) once the translation is checked."""
 
     term_de: str = Field(
         min_length=1, max_length=120, validation_alias=AliasChoices("term_de", "term")
@@ -299,6 +301,15 @@ class GlossaryEntry(_Strict):
     note: str | None = None
     source: str | None = Field(default=None, max_length=300)
     keep_german: bool = False
+    status: GlossaryStatus = "draft"
+    reviewed_by: str | None = Field(default=None, max_length=120)
+    reviewed_at: date | None = None
+
+    @model_validator(mode="after")
+    def _review(self) -> GlossaryEntry:
+        if self.status == "reviewed" and not (self.reviewed_by and self.reviewed_at):
+            raise ValueError("a reviewed entry names reviewed_by and reviewed_at")
+        return self
 
     @property
     def term(self) -> str:

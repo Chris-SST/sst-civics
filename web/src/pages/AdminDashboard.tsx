@@ -8,6 +8,7 @@ import ErrorText from "../components/ErrorText";
 import { formatChf, formatDate } from "../i18n";
 import { AiUsage } from "./AdminTutor";
 import AdminQuestions from "./AdminQuestions";
+import AdminGlossary from "./AdminGlossary";
 
 /** Staging and development only: open the app as a learner. The server refuses it in production. */
 function useViewAs(setError: (e: unknown) => void) {
@@ -39,6 +40,7 @@ export default function AdminDashboard() {
         <NavLink to="/admin/staff">{t("admin.staff")}</NavLink>
         <NavLink to="/admin/usage">{t("admin.usage")}</NavLink>
         <NavLink to="/admin/questions">{t("qbank.tab")}</NavLink>
+        <NavLink to="/admin/glossary">{t("glossary.tab")}</NavLink>
       </nav>
       <Routes>
         <Route index element={<Overview />} />
@@ -46,6 +48,7 @@ export default function AdminDashboard() {
         <Route path="staff" element={<Staff />} />
         <Route path="usage" element={<AiUsage />} />
         <Route path="questions/*" element={<AdminQuestions />} />
+        <Route path="glossary" element={<AdminGlossary />} />
       </Routes>
     </>
   );

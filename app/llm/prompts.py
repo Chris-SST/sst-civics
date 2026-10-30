@@ -5,6 +5,7 @@ Layout (see prompts/README.md):
     prompts/base/vN.md                     persona, teaching method, safety rules
     prompts/civics/vN.md                   civics-trainer context (test, levels of government)
     prompts/gatekeeper/vN.md               fast-model classification instructions
+    prompts/explain/vN.md                  "Explain this": the question block and its rules
     prompts/summary/vN.md                  running-summary instructions
     prompts/replies/vN.json                fixed server replies in en, de, fr
 
@@ -90,6 +91,17 @@ def load(name: str) -> PromptFile:
         raise FileNotFoundError(f"no prompt version in {directory}")
     version = path.stem
     return PromptFile(name=name, version=version, text=_render(path.read_text(encoding="utf-8")))
+
+
+_FIELD_RE = re.compile(r"\{\{([A-Z_]+)\}\}")
+
+
+def explain_block(values: dict[str, str]) -> PromptFile:
+    """The "Explain this" block with the question filled in. One pass over the placeholders,
+    so a question that happens to contain `{{...}}` is never expanded."""
+    base = load("explain")
+    text = _FIELD_RE.sub(lambda m: values.get(m.group(1), m.group(0)), base.text)
+    return PromptFile(name=base.name, version=base.version, text=text)
 
 
 @lru_cache(maxsize=4)

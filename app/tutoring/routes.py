@@ -1,5 +1,6 @@
 """Learner-facing tutor API: conversations on a topic of the learner's canton, streaming
-replies. "Explain this" on a single question replaces the topic chat in task 1.10.
+replies. A conversation bound to one question ("Explain this", app.tutoring.explain) is
+answered with that question as context; the general topic chat stays for now.
 
 Replies stream as server-sent events over a POST:
 
@@ -40,10 +41,12 @@ from app.models import (
     MESSAGE_USER,
     Conversation,
     Message,
+    Question,
     User,
 )
 from app.questions import bank
 from app.study.selection import topic_mastery_for
+from app.tutoring import context as question_context
 from app.tutoring.limits import UsageInfo, usage_for
 
 log = logging.getLogger(__name__)
@@ -66,6 +69,7 @@ class ConversationOut(BaseModel):
     canton: str
     topic_code: str
     topic_name: str
+    question_id: str | None = None
     language: str
     title: str
     status: str
@@ -92,12 +96,13 @@ class MessageIn(BaseModel):
 # --- Helpers ---------------------------------------------------------------------------
 
 
-def _conversation_out(c: Conversation) -> ConversationOut:
+def conversation_out(c: Conversation) -> ConversationOut:
     return ConversationOut(
         id=c.id,
         canton=c.canton,
         topic_code=c.topic_code,
         topic_name=c.topic_name,
+        question_id=c.question_id,
         language=c.language,
         title=c.title,
         status=c.status,
@@ -131,7 +136,7 @@ async def overview(
         (
             await db.execute(
                 select(Conversation)
-                .where(Conversation.user_id == user.id)
+                .where(Conversation.user_id == user.id, Conversation.question_id.is_(None))
                 .order_by(Conversation.last_activity_at.desc())
                 .limit(10)
             )
@@ -144,7 +149,7 @@ async def overview(
         "tutor_enabled": get_provider().available,
         "access": access_level(user),
         "usage": usage.to_dict(),
-        "recent": [_conversation_out(c).model_dump(mode="json") for c in recent],
+        "recent": [conversation_out(c).model_dump(mode="json") for c in recent],
     }
 
 
@@ -171,7 +176,7 @@ async def create_conversation(
     db.add(conv)
     await db.commit()
     await db.refresh(conv)
-    return _conversation_out(conv)
+    return conversation_out(conv)
 
 
 @router.get("/conversations", response_model=list[ConversationOut])
@@ -182,7 +187,7 @@ async def list_conversations(
         (
             await db.execute(
                 select(Conversation)
-                .where(Conversation.user_id == user.id)
+                .where(Conversation.user_id == user.id, Conversation.question_id.is_(None))
                 .order_by(Conversation.last_activity_at.desc())
                 .limit(50)
             )
@@ -190,7 +195,7 @@ async def list_conversations(
         .scalars()
         .all()
     )
-    return [_conversation_out(c) for c in rows]
+    return [conversation_out(c) for c in rows]
 
 
 @router.get("/conversations/{conversation_id}", response_model=ConversationDetail)
@@ -209,7 +214,7 @@ async def get_conversation(
         .scalars()
         .all()
     )
-    out = _conversation_out(conv)
+    out = conversation_out(conv)
     return ConversationDetail(
         **out.model_dump(),
         messages=[
@@ -229,7 +234,7 @@ async def end_conversation(
     conv.status = CONVERSATION_ENDED
     await db.commit()
     await db.refresh(conv)
-    return _conversation_out(conv)
+    return conversation_out(conv)
 
 
 @router.post("/conversations/{conversation_id}/messages")
@@ -247,6 +252,8 @@ async def send_message(
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "tutor_unavailable")
     if not has_access(user, user.canton):
         raise HTTPException(status.HTTP_403_FORBIDDEN, "no_access")
+    if conv.question_id and await question_context.mock_running(db, user):
+        raise HTTPException(status.HTTP_409_CONFLICT, "mock_in_progress")
     text = body.content.strip()
     if not text:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "empty_message")
@@ -365,6 +372,13 @@ async def _reply_stream(
             )
         ).scalar_one_or_none()
 
+        question: Question | None = None
+        if conv.question_id:
+            question = await db.get(Question, conv.question_id)
+        question_ctx = (
+            await question_context.question_context(db, question, locale) if question else None
+        )
+
         user_msg = _add_message(db, conv, MESSAGE_USER, text)
         await db.flush()
 
@@ -376,6 +390,7 @@ async def _reply_stream(
             canton=conv.canton,
             topic_name=conv.topic_name,
             previous_assistant=previous_assistant,
+            question_de=question.question_de if question else None,
         )
         user_msg.gate_label = gate.label
 
@@ -404,7 +419,13 @@ async def _reply_stream(
 
         conv.off_topic_streak = 0
         note = None
-        if gate.label == service.GATE_BORDERLINE:
+        if gate.label == service.GATE_BORDERLINE and question_ctx is not None:
+            note = (
+                "The latest message drifts from this question or touches the learner's own "
+                "application. Answer only the part about the question and its topic, and "
+                "decline the rest in one sentence."
+            )
+        elif gate.label == service.GATE_BORDERLINE:
             note = (
                 "The latest message drifts from the session topic. Help briefly if it is "
                 "schoolwork, then steer back to the topic."
@@ -419,8 +440,11 @@ async def _reply_stream(
             yield _sse("notice", {"kind": "wellbeing"})
         await db.commit()
 
-        topic_mastery = await topic_mastery_for(db, learner, conv.topic_code)
-        misses = await bank.recent_misses(db, learner.id, conv.topic_code)
+        if question_ctx is None:
+            topic_mastery = await topic_mastery_for(db, learner, conv.topic_code)
+            misses = await bank.recent_misses(db, learner.id, conv.topic_code)
+        else:  # "Explain this" is about the one question, not the learner's record
+            topic_mastery, misses = None, None
         ctx = service.TutorContext(
             canton=conv.canton,
             language=locale,
@@ -430,9 +454,10 @@ async def _reply_stream(
             note=note,
             mastery=topic_mastery,
             misses=misses or None,
+            question=question_ctx,
         )
         history = await _history(db, conv)
-        version = service.prompt_version()
+        version = service.prompt_version(explain=question_ctx is not None)
         collected: list[str] = []
         outcome: service.ReplyOutcome | None = None
         async for item in service.stream_reply(ctx, history):

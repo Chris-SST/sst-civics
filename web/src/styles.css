@@ -2206,3 +2206,42 @@ a.topic-row:hover {
   line-height: 1.1;
   margin: 0 0 var(--space-2);
 }
+
+/* --- Explain this and the glossary --------------------------------------------------- */
+
+.explain-panel {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 3px solid var(--primary);
+}
+.explain-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.explain-head h3 {
+  margin: 0;
+}
+.explain-note {
+  margin: var(--space-1) 0 var(--space-2);
+}
+.explain-log {
+  flex: none;
+  max-height: 360px;
+  overflow-y: auto;
+  padding: var(--space-2) 0;
+}
+.explain-compose {
+  position: static;
+  padding: var(--space-2) 0 0;
+}
+.explain-compose textarea {
+  min-height: 48px;
+}
+.glossary-search {
+  max-width: 420px;
+}
+.glossary-table td b {
+  overflow-wrap: anywhere;
+}

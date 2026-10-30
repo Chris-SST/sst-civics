@@ -228,7 +228,9 @@ MESSAGE_NOTICE = "notice"  # fixed server replies (off topic, limits), never sen
 
 
 class Conversation(Base):
-    """One chat session, always started from a topic of the learner's canton."""
+    """One chat session, started from a topic of the learner's canton or, with `question_id`,
+    bound to one question ("Explain this"). The id is not a foreign key: a retired question
+    keeps its conversation."""
 
     __tablename__ = "conversations"
 
@@ -239,6 +241,7 @@ class Conversation(Base):
     canton: Mapped[str] = mapped_column(String(2))
     topic_code: Mapped[str] = mapped_column(String(80))
     topic_name: Mapped[str] = mapped_column(String(200))
+    question_id: Mapped[str | None] = mapped_column(String(80), index=True)
     language: Mapped[str] = mapped_column(String(5), default="en")
     title: Mapped[str] = mapped_column(String(160), default="")
     status: Mapped[str] = mapped_column(String(16), default=CONVERSATION_ACTIVE)
@@ -331,6 +334,9 @@ T_DRAFT = "draft"
 T_FLAGGED = "flagged"
 T_IN_REVIEW = "in_review"
 T_APPROVED = "approved"
+G_DRAFT = "draft"  # glossary entries: draft until a reviewer has checked them
+G_REVIEWED = "reviewed"
+GLOSSARY_STATUSES = (G_DRAFT, G_REVIEWED)
 TRANSLATION_STATUSES = (T_DRAFT, T_FLAGGED, T_IN_REVIEW, T_APPROVED)
 
 SCOPE_FEDERAL = "federal"
@@ -461,6 +467,15 @@ class GlossaryTerm(Base):
     lang: Mapped[str] = mapped_column(String(5))
     translation: Mapped[str] = mapped_column(String(200))
     note: Mapped[str | None] = mapped_column(Text)
+    source: Mapped[str | None] = mapped_column(String(300))
+    keep_german: Mapped[bool] = mapped_column(Boolean, default=False)
+    # 'draft' until a reviewer has checked the translation (task 1.3).
+    status: Mapped[str] = mapped_column(String(12), default=G_DRAFT)
+    reviewed_by: Mapped[str | None] = mapped_column(String(120))
+    reviewed_at: Mapped[date | None] = mapped_column(Date)
+    # Admin edits not yet in content/glossary/<lang>.yaml (scripts/content/sync_reviews).
+    file_sync_pending: Mapped[bool] = mapped_column(Boolean, default=False)
+    pending_changes: Mapped[list[dict[str, Any]] | None] = mapped_column(JSON)
     imported_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
 
 

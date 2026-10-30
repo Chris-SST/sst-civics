@@ -155,7 +155,13 @@ terms:
     note: "The chamber of the cantons; ..."   # optional, shown to learners
     source: "admin.ch, English pages"        # where the translation comes from
     keep_german: true              # the translator adds (Ständerat) after the first use
+    status: reviewed               # optional; `draft` (default) or `reviewed`
+    reviewed_by: Name              # required with `reviewed`
+    reviewed_at: 2026-10-30        # required with `reviewed`
 ```
+
+Reviewers edit the entries in the admin area (Glossary tab); `python -m scripts.content.sync_reviews`
+writes those edits back to these files.
 
 For French, Italian and English the institution names are the federal administration's
 (TERMDAT, https://www.termdat.bk.admin.ch, or its admin.ch pages); `source` says which, and

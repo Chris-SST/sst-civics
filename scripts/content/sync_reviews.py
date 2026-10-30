@@ -15,6 +15,10 @@ to content/questions/<scope>/<id>.yaml in order:
 - broken_links (weekly link check): the URLs under `checks.links` and a review note; the
   status is left alone, the source check decides.
 
+Glossary terms with `file_sync_pending` (edited in the admin Glossary tab) are written to
+content/glossary/<lang>.yaml: the translation, the note and the `reviewed` status with who
+and when. The file's other entries and its leading comment lines stay as they are.
+
 Then the pending flags are cleared and the database row takes the file's status, version
 and content hash, so the next import finds them equal. A file whose version differs from the
 database (changed by hand since the last import) is skipped: import first, then review
@@ -24,15 +28,25 @@ from __future__ import annotations
 
 import sys
 from datetime import date, datetime
+from pathlib import Path
 from typing import Any
 
 from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.content import store
-from app.content.files import question_content_hash
-from app.content.schema import QuestionFile
+from app.content.files import ContentSet, question_content_hash
+from app.content.schema import GlossaryFile, QuestionFile
 from app.db import SessionLocal
-from app.models import OPTION_KEYS, Q_APPROVED, Q_IN_REVIEW, Q_NEEDS_FIX, Q_RETIRED, Question
+from app.models import (
+    OPTION_KEYS,
+    Q_APPROVED,
+    Q_IN_REVIEW,
+    Q_NEEDS_FIX,
+    Q_RETIRED,
+    GlossaryTerm,
+    Question,
+)
 from scripts.content._common import base_parser, load, main_of, root_of, say, today_of
 
 STATUS_OF = {
@@ -106,6 +120,79 @@ def apply_changes(
     return data, log
 
 
+def apply_glossary_changes(
+    gf: GlossaryFile, rows: list[GlossaryTerm], today: date
+) -> tuple[dict[str, Any], list[str], list[GlossaryTerm]]:
+    """The glossary file's new content, a line per term changed and the rows applied. A term
+    that is not in the file (removed since the import) is left out and reported."""
+    data = gf.model_dump(mode="python")
+    by_term = {entry["term_de"]: entry for entry in data["terms"]}
+    log: list[str] = []
+    applied: list[GlossaryTerm] = []
+    for row in rows:
+        entry = by_term.get(row.term)
+        if entry is None:
+            log.append(f"{row.term}: not in the file; skipped")
+            continue
+        for change in row.pending_changes or []:
+            if change.get("action") != "review":
+                log.append(f"{row.term}: unknown action {change.get('action')!r} left out")
+                continue
+            entry["translation"] = str(change["translation"]).strip()
+            entry["note"] = (change.get("note") or "").strip() or None
+            entry["status"] = change.get("status") or "draft"
+            if entry["status"] == "reviewed":
+                entry["reviewed_by"] = change.get("reviewed_by")
+                entry["reviewed_at"] = _day(change.get("at"), today)
+            else:
+                entry["reviewed_by"] = entry["reviewed_at"] = None
+        log.append(f"{row.term}: translation {entry['translation']!r}, {entry['status']}")
+        applied.append(row)
+    return data, log, applied
+
+
+async def _sync_glossary(
+    db: AsyncSession, root: Path, cs: ContentSet, today: date, dry_run: bool
+) -> tuple[int, int, int]:
+    """Write the glossary edits; returns (files written, terms skipped, terms waiting)."""
+    rows = (
+        (
+            await db.execute(
+                select(GlossaryTerm)
+                .where(GlossaryTerm.file_sync_pending.is_(True))
+                .order_by(GlossaryTerm.lang, GlossaryTerm.term)
+            )
+        )
+        .scalars()
+        .all()
+    )
+    written = skipped = 0
+    for lang in sorted({r.lang for r in rows}):
+        lang_rows = [r for r in rows if r.lang == lang]
+        gf = cs.glossary.get(lang)
+        if gf is None:
+            skipped += len(lang_rows)
+            say(f"glossary/{lang}.yaml: no such file; {len(lang_rows)} term(s) skipped")
+            continue
+        data, log, applied = apply_glossary_changes(gf, lang_rows, today)
+        skipped += len(lang_rows) - len(applied)
+        say(f"glossary/{lang}.yaml: " + "; ".join(log))
+        if dry_run or not applied:
+            continue
+        try:
+            store.write_glossary(root, data)
+        except ValueError as exc:
+            skipped += len(applied)
+            say(f"glossary/{lang}.yaml: the result does not fit the schema, skipped ({exc})")
+            continue
+        for row in applied:
+            row.file_sync_pending = False
+            row.pending_changes = None
+        await db.commit()
+        written += 1
+    return written, skipped, len(rows)
+
+
 async def run(argv: list[str] | None = None) -> int:
     parser = base_parser(__doc__.splitlines()[0])
     parser.add_argument("--dry-run", action="store_true", help="print, change nothing")
@@ -126,9 +213,6 @@ async def run(argv: list[str] | None = None) -> int:
             .scalars()
             .all()
         )
-        if not rows:
-            say("No review actions waiting for write-back.")
-            return 0
         for row in rows:
             q = cs.questions.get(row.id)
             if q is None:
@@ -159,6 +243,14 @@ async def run(argv: list[str] | None = None) -> int:
             row.content_hash = question_content_hash(new)
             await db.commit()  # one question at a time: a failure later keeps this one
             written += 1
+        glossary_written, glossary_skipped, glossary_waiting = await _sync_glossary(
+            db, root, cs, today, args.dry_run
+        )
+        written += glossary_written
+        skipped += glossary_skipped
+    if not (rows or glossary_waiting):
+        say("No review actions waiting for write-back.")
+        return 0
     say(f"{written} file(s) written, {skipped} skipped" + (" (dry run)" if args.dry_run else ""))
     return 0 if not skipped else 1
 

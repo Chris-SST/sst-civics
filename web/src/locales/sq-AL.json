@@ -103,7 +103,10 @@
     "no_mock_test": "Ende nuk ka test provë për kantonin tuaj.",
     "deadline_passed": "Koha për këtë test provë mbaroi. Përgjigjet pas afatit nuk numërohen.",
     "mock_finished": "Ky test provë është dorëzuar tashmë.",
-    "invalid_answer": "Ju lutemi zgjidhni një nga katër opsionet."
+    "invalid_answer": "Ju lutemi zgjidhni një nga katër opsionet.",
+    "mock_in_progress": "Shpjegimi nuk është i disponueshëm gjatë një testi provë.",
+    "invalid_language": "Zgjidhni një gjuhë nga lista.",
+    "translation_required": "Shkruani një përkthim."
   },
   "impersonation": {
     "banner": "Po shihni si {{name}} ({{role}}). Keni hyrë si administratori {{admin}}.",
@@ -225,7 +228,7 @@
     "integrity": "Tutori shpjegon dhe ndihmon; nuk jep këshillim juridik.",
     "practise": "Ushtrohuni",
     "askTutor": "Pyesni tutorin",
-    "noQuestionsYet": "Pyetjet praktike për kantonin tuaj do të vijnë së shpejti. Për çdo temë mund ta pyesni tutorin që tani.",
+    "noQuestionsYet": "Pyetjet e ushtrimit për kantonin tuaj po vijnë.",
     "welcome": "Mirë se vini",
     "noTopics": "Temat për kantonin tuaj do të vijnë së shpejti.",
     "topicsTitle": "Temat e testit: {{canton}}",
@@ -649,5 +652,45 @@
     "reviewIntro_one": "{{count}} pyetje për ta parë sërish, në gjuhën tuaj.",
     "reviewIntro_other": "{{count}} pyetje për t'i parë sërish, në gjuhën tuaj.",
     "allRight": "Të gjitha përgjigjet ishin të sakta."
+  },
+  "explain": {
+    "button": "Shpjegim",
+    "title": "Shpjegim për këtë pyetje",
+    "note": "Asistenti IA mund të bëjë gabime dhe përgjigjet e tij nuk përbëjnë këshillë juridike. Verifikoni çdo gjë të rëndësishme në burimet zyrtare.",
+    "intro": "Pyesni për këtë pyetje ose temën e saj. Asistenti përgjigjet shkurt, në gjuhën tuaj të studimit.",
+    "placeholder": "Bëni pyetjen tuaj… (Enter për të dërguar)",
+    "remaining": "{{left}} nga {{limit}} mesazhe të mbetura sot",
+    "limitReached": "Keni arritur kufirin e mesazheve për sot. Nesër funksionon sërish.",
+    "offline": "Asistenti ende nuk është i lidhur në këtë mjedis."
+  },
+  "glossary": {
+    "link": "Fjalori i termave kryesorë",
+    "tab": "Fjalori",
+    "title": "Fjalori",
+    "intro": "Termat kryesorë gjermanë të testit, me përkthim dhe një shënim të shkurtër në gjuhën tuaj të studimit.",
+    "none": "Nuk ka fjalor për gjuhën tuaj të studimit. Ju studioni në gjermanisht, ndaj termat shfaqen si në pyetje.",
+    "search": "Kërko",
+    "searchPlaceholder": "Term gjermanisht, përkthim ose shënim",
+    "count_one": "{{count}} term",
+    "count_other": "{{count}} terma",
+    "noMatch": "Asnjë term nuk përputhet me kërkimin tuaj.",
+    "german": "Termi në gjermanisht",
+    "translation": "Përkthimi",
+    "note": "Shënim",
+    "source": "Burimi",
+    "unconfirmed": "për t'u konfirmuar",
+    "adminTitle": "Rishikimi i fjalorit",
+    "adminIntro": "Kontrolloni çdo përkthim dhe shënim, redaktojini nëse është e nevojshme dhe shënojeni termin si të rishikuar. Ndryshimet shkruhen në skedarët e fjalorit gjatë sinkronizimit të radhës.",
+    "adminNone": "Ende nuk ka terma për këtë gjuhë.",
+    "reviewedCount": "{{reviewed}} nga {{total}} të rishikuar",
+    "edit": "Redakto",
+    "saveReviewed": "Ruaj dhe shëno si të rishikuar",
+    "markReviewed": "Shëno si të rishikuar",
+    "reviewedBy": "Rishikuar nga {{name}} më {{date}}",
+    "pendingSync": "Në pritje të shkrimit në skedar",
+    "status": {
+      "draft": "Draft",
+      "reviewed": "I rishikuar"
+    }
   }
 }

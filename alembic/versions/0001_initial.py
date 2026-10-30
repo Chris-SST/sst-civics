@@ -192,6 +192,7 @@ def upgrade() -> None:
         sa.Column("canton", sa.String(2), nullable=False),
         sa.Column("topic_code", sa.String(80), nullable=False),
         sa.Column("topic_name", sa.String(200), nullable=False),
+        sa.Column("question_id", sa.String(80)),
         sa.Column("language", sa.String(5), nullable=False),
         sa.Column("title", sa.String(160), nullable=False),
         sa.Column("status", sa.String(16), nullable=False),
@@ -203,6 +204,7 @@ def upgrade() -> None:
         sa.Column("last_activity_at", sa.DateTime(timezone=True), nullable=False),
     )
     op.create_index("ix_conversations_user_id", "conversations", ["user_id"], unique=False)
+    op.create_index("ix_conversations_question_id", "conversations", ["question_id"], unique=False)
     op.create_table(
         "messages",
         sa.Column("id", sa.Uuid(), primary_key=True),
@@ -333,6 +335,13 @@ def upgrade() -> None:
         sa.Column("lang", sa.String(5), nullable=False),
         sa.Column("translation", sa.String(200), nullable=False),
         sa.Column("note", sa.Text()),
+        sa.Column("source", sa.String(300)),
+        sa.Column("keep_german", sa.Boolean(), nullable=False),
+        sa.Column("status", sa.String(12), nullable=False),
+        sa.Column("reviewed_by", sa.String(120)),
+        sa.Column("reviewed_at", sa.Date()),
+        sa.Column("file_sync_pending", sa.Boolean(), nullable=False),
+        sa.Column("pending_changes", sa.JSON()),
         sa.Column("imported_at", sa.DateTime(timezone=True), nullable=False),
         sa.UniqueConstraint("term", "lang", name="uq_glossary_term_lang"),
     )
@@ -449,6 +458,7 @@ def downgrade() -> None:
     op.drop_table("topics")
     op.drop_index("ix_mock_runs_user_id", table_name="mock_runs")
     op.drop_table("mock_runs")
+    op.drop_index("ix_conversations_question_id", table_name="conversations")
     op.drop_index("ix_conversations_user_id", table_name="conversations")
     op.drop_table("conversations")
     op.drop_index("ix_sessions_impersonator_user_id", table_name="sessions")

@@ -103,7 +103,10 @@
     "no_mock_test": "Todavía no hay simulacro para su cantón.",
     "deadline_passed": "Se ha acabado el tiempo de este simulacro. Las respuestas fuera de plazo no cuentan.",
     "mock_finished": "Este simulacro ya se ha entregado.",
-    "invalid_answer": "Elija una de las cuatro opciones."
+    "invalid_answer": "Elija una de las cuatro opciones.",
+    "mock_in_progress": "Explicar esto no está disponible mientras se realiza un simulacro.",
+    "invalid_language": "Elija un idioma de la lista.",
+    "translation_required": "Introduzca una traducción."
   },
   "impersonation": {
     "banner": "Viendo como {{name}} ({{role}}). Ha iniciado sesión como administrador {{admin}}.",
@@ -225,7 +228,7 @@
     "integrity": "El tutor explica y orienta; no ofrece asesoramiento jurídico.",
     "practise": "Practique",
     "askTutor": "Pregunte al tutor",
-    "noQuestionsYet": "Las preguntas de práctica para su cantón llegarán pronto. Ya puede preguntar al tutor sobre cada tema.",
+    "noQuestionsYet": "Las preguntas de práctica para su cantón están en camino.",
     "welcome": "Bienvenido/a",
     "noTopics": "Los temas de su cantón llegarán pronto.",
     "topicsTitle": "Temas del examen: {{canton}}",
@@ -649,5 +652,45 @@
     "reviewIntro_one": "{{count}} pregunta para volver a mirar, en su idioma.",
     "reviewIntro_other": "{{count}} preguntas para volver a mirar, en su idioma.",
     "allRight": "Todas las respuestas eran correctas."
+  },
+  "explain": {
+    "button": "Explicar esto",
+    "title": "Explicar esta pregunta",
+    "note": "El asistente de IA puede cometer errores y sus respuestas no constituyen asesoramiento jurídico. Compruebe lo importante en las fuentes oficiales.",
+    "intro": "Pregunte sobre esta pregunta o su tema. El asistente responde con brevedad, en su idioma de estudio.",
+    "placeholder": "Haga su pregunta… (Intro para enviar)",
+    "remaining": "Quedan {{left}} de {{limit}} mensajes hoy",
+    "limitReached": "Ha alcanzado el límite de mensajes de hoy. Mañana vuelve a estar disponible.",
+    "offline": "El asistente aún no está conectado en este entorno."
+  },
+  "glossary": {
+    "link": "Glosario de términos clave",
+    "tab": "Glosario",
+    "title": "Glosario",
+    "intro": "Términos alemanes clave de la prueba, con su traducción y una nota breve en su idioma de estudio.",
+    "none": "No hay glosario para su idioma de estudio. Usted estudia en alemán, así que los términos aparecen como en las preguntas.",
+    "search": "Buscar",
+    "searchPlaceholder": "Término alemán, traducción o nota",
+    "count_one": "{{count}} término",
+    "count_other": "{{count}} términos",
+    "noMatch": "Ningún término coincide con su búsqueda.",
+    "german": "Término alemán",
+    "translation": "Traducción",
+    "note": "Nota",
+    "source": "Fuente",
+    "unconfirmed": "por confirmar",
+    "adminTitle": "Revisión del glosario",
+    "adminIntro": "Compruebe cada traducción y nota, edítelas si es necesario y marque el término como revisado. Los cambios se escriben en los archivos del glosario en la próxima sincronización.",
+    "adminNone": "Todavía no hay términos para este idioma.",
+    "reviewedCount": "{{reviewed}} de {{total}} revisados",
+    "edit": "Editar",
+    "saveReviewed": "Guardar y marcar como revisado",
+    "markReviewed": "Marcar como revisado",
+    "reviewedBy": "Revisado por {{name}} el {{date}}",
+    "pendingSync": "Pendiente de escribirse en el archivo",
+    "status": {
+      "draft": "Borrador",
+      "reviewed": "Revisado"
+    }
   }
 }

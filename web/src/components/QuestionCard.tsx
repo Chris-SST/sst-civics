@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { post } from "../api";
 import type { AnswerOut, StudyMode, StudyQuestion } from "../study";
 import ErrorText from "./ErrorText";
+import ExplainPanel from "./ExplainPanel";
 import ModeStepper from "./ModeStepper";
 import RichText from "./RichText";
 import { ExplanationText, OptionText, QuestionText } from "./StudyText";
@@ -13,7 +14,11 @@ import { ExplanationText, OptionText, QuestionText } from "./StudyText";
  *   the correct answer and the explanation in the learner's language.
  * - Learn and the mock-test review: pass `reveal`; the correct answer (and `given`, if any) is
  *   marked and the explanation shown in the question's mode, with no scoring.
- * - Mock test: pass `onSelect` and `selected`; German only, no result, no help, no explanation.
+ * - Mock test: pass `onSelect` and `selected`; German only, no result, no help, no explanation,
+ *   and never Explain this.
+ * `explain` adds the "Explain this" button and chat panel (Learn and Practise only; in Practise the
+ * button shows once the question is answered, because the chat knows the answer). It is never
+ * passed in the mock test or its review.
  * Mount it with `key={question.id}` so the state resets for each new question. */
 
 interface Props {
@@ -26,6 +31,8 @@ interface Props {
   onModeChange?: (mode: StudyMode) => void;
   modeBusy?: boolean;
   reveal?: boolean;
+  /** Offer "Explain this" (Learn and Practise). Ignored in the mock test. */
+  explain?: boolean;
   selected?: string | null;
   onSelect?: (key: string) => void;
   /** Rendered under the result panel (or the revealed answer), typically a "Next" button. */
@@ -127,6 +134,7 @@ export default function QuestionCard({
   onModeChange,
   modeBusy,
   reveal,
+  explain,
   selected,
   onSelect,
   children,
@@ -142,6 +150,7 @@ export default function QuestionCard({
   const [reporting, setReporting] = useState(false);
   const [reportText, setReportText] = useState("");
   const [reported, setReported] = useState(false);
+  const [explaining, setExplaining] = useState(false);
 
   const chosen = testMode ? (selected ?? "") : reveal ? (q.given ?? "") : answer;
   const correctKey = result?.answer ?? (reveal ? q.answer : undefined);
@@ -179,6 +188,13 @@ export default function QuestionCard({
     if (testMode) onSelect?.(key);
     else if (!locked) setAnswer(key);
   }
+
+  const canExplain = !!explain && !testMode && (!!reveal || !!result);
+  const explainButton = canExplain ? (
+    <button type="button" className="btn btn-secondary btn-sm" aria-expanded={explaining} onClick={() => setExplaining((e) => !e)}>
+      {t("explain.button")}
+    </button>
+  ) : null;
 
   const report = reported ? (
     <span className="small muted">{t("question.reported")}</span>
@@ -255,6 +271,7 @@ export default function QuestionCard({
           <ExplanationText q={q} />
           <div className="question-footer">
             {children}
+            {explainButton}
             {report}
           </div>
         </section>
@@ -289,10 +306,13 @@ export default function QuestionCard({
           )}
           <div className="question-footer">
             {children}
+            {explainButton}
             {report}
           </div>
         </section>
       )}
+
+      {canExplain && explaining && <ExplainPanel questionId={q.id} lang={q.lang} onClose={() => setExplaining(false)} />}
 
       {reporting && !reported && (
         <form className="form report-form" onSubmit={(e) => void sendReport(e)}>

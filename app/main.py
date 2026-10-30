@@ -22,6 +22,7 @@ from app.questions.routes_student import questions_router
 from app.study.routes import mock_router
 from app.study.routes import router as study_router
 from app.tutoring.admin_routes import router as admin_tutor_router
+from app.tutoring.explain import router as explain_router
 from app.tutoring.routes import router as tutor_router
 
 UNSAFE_METHODS = {"POST", "PUT", "PATCH", "DELETE"}
@@ -94,6 +95,7 @@ def create_app() -> FastAPI:
     app.include_router(admin_router)
     app.include_router(portal_router)
     app.include_router(tutor_router)
+    app.include_router(explain_router)
     app.include_router(admin_tutor_router)
     app.include_router(study_router)
     app.include_router(mock_router)

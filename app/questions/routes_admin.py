@@ -8,6 +8,7 @@ import keeps these changes as long as the file's version has not risen."""
 
 from __future__ import annotations
 
+import uuid
 from typing import Any, Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -19,6 +20,8 @@ from app.content.routes import translation_status
 from app.db import get_db, utcnow
 from app.deps import require_admin
 from app.models import (
+    G_DRAFT,
+    G_REVIEWED,
     OPTION_KEYS,
     Q_APPROVED,
     Q_DRAFT,
@@ -28,6 +31,7 @@ from app.models import (
     QUESTION_STATUSES,
     TRANSLATION_LANGUAGES,
     AuditLog,
+    GlossaryTerm,
     Question,
     QuestionReport,
     QuestionTranslation,
@@ -55,6 +59,13 @@ class QuestionEdits(BaseModel):
     explanation_de: str | None = Field(default=None, min_length=1, max_length=4000)
     difficulty: Literal[1, 2, 3] | None = None
     topic_code: str | None = Field(default=None, max_length=80)
+
+
+class GlossaryEdit(BaseModel):
+    translation: str = Field(min_length=1, max_length=200)
+    note: str | None = Field(default=None, max_length=2000)
+    # False puts an entry back to draft; the default marks it reviewed.
+    reviewed: bool = True
 
 
 class ReviewIn(BaseModel):
@@ -313,6 +324,11 @@ async def stats(
             select(func.count(Question.id)).where(Question.file_sync_pending.is_(True))
         )
     ).scalar_one()
+    pending += (
+        await db.execute(
+            select(func.count(GlossaryTerm.id)).where(GlossaryTerm.file_sync_pending.is_(True))
+        )
+    ).scalar_one()
     minutes = (
         await db.execute(
             select(func.coalesce(func.sum(Question.review_minutes), 0)).where(
@@ -402,3 +418,96 @@ async def reports(
         }
         for r, q in rows
     ]
+
+
+def _glossary_out(g: GlossaryTerm) -> dict[str, Any]:
+    return {
+        "id": str(g.id),
+        "term": g.term,
+        "lang": g.lang,
+        "translation": g.translation,
+        "note": g.note,
+        "source": g.source,
+        "keep_german": g.keep_german,
+        "status": g.status,
+        "reviewed_by": g.reviewed_by,
+        "reviewed_at": g.reviewed_at,
+        "file_sync_pending": g.file_sync_pending,
+    }
+
+
+@router.get("/glossary")
+async def glossary(
+    lang: str = Query(max_length=5),
+    user: User = Depends(require_admin),
+    db: AsyncSession = Depends(get_db),
+) -> dict[str, Any]:
+    """The glossary of one language: translation, note, source and review status."""
+    if lang not in TRANSLATION_LANGUAGES:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_language")
+    rows = (
+        (
+            await db.execute(
+                select(GlossaryTerm).where(GlossaryTerm.lang == lang).order_by(GlossaryTerm.term)
+            )
+        )
+        .scalars()
+        .all()
+    )
+    return {
+        "lang": lang,
+        "languages": list(TRANSLATION_LANGUAGES),
+        "reviewed": sum(1 for g in rows if g.status == G_REVIEWED),
+        "terms": [_glossary_out(g) for g in rows],
+    }
+
+
+@router.patch("/glossary/{term_id}")
+async def review_glossary_term(
+    term_id: uuid.UUID,
+    body: GlossaryEdit,
+    user: User = Depends(require_admin),
+    db: AsyncSession = Depends(get_db),
+) -> dict[str, Any]:
+    """Edit a term's translation and note and mark it reviewed. Like question reviews, the
+    change is recorded with `file_sync_pending` until scripts/content/sync_reviews writes it
+    to content/glossary/<lang>.yaml."""
+    g = await db.get(GlossaryTerm, term_id)
+    if g is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
+    translation = body.translation.strip()
+    if not translation:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "translation_required")
+    note = (body.note or "").strip() or None
+    now = utcnow()
+    previous = g.status
+    g.translation = translation
+    g.note = note
+    g.status = G_REVIEWED if body.reviewed else G_DRAFT
+    g.reviewed_by = (user.email or str(user.id))[:120] if body.reviewed else None
+    g.reviewed_at = now.date() if body.reviewed else None
+    g.file_sync_pending = True
+    g.pending_changes = [
+        *(g.pending_changes or []),
+        {
+            "action": "review",
+            "translation": translation,
+            "note": note,
+            "status": g.status,
+            "reviewed_by": g.reviewed_by,
+            "by": str(user.id),
+            "at": now.isoformat(),
+        },
+    ]
+    db.add(
+        AuditLog(
+            actor_user_id=user.id,
+            action="glossary.review",
+            target_type="glossary_term",
+            target_id=str(g.id),
+            meta={"term": g.term, "lang": g.lang, "from": previous, "to": g.status},
+        )
+    )
+    await db.commit()
+    await db.refresh(g)
+    return _glossary_out(g)

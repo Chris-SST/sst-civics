@@ -26,7 +26,8 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 - [ ] Content pipeline scripts (1.5).
 - [ ] About 350 Zurich questions approved, translated and reviewed (1.6).
 - [x] Learn, Practise and Mock test with the four study modes (1.7 to 1.9; done 30 October 2026, D-048 to D-051). Package `app/study/`: study modes as a rendering contract, tables `question_progress` and `mock_runs` (replacing `topic_mastery` and `diagnostic_runs`), Leitner spaced repetition weighted towards weak topics, readiness estimate, free-tier sample set and one free mock test; pages `/learn`, `/practise`, `/mock` with the mode stepper and countdown; the diagnostic and `/api/practice` are gone. Migration 0001 rewritten again, so staging's database is recreated. Not yet checked in a browser on staging.
-- [ ] Explain this (1.10).
+- [x] Explain this (1.10; done 30 October 2026, D-057). `POST /api/explain/start`, `prompts/explain/v1.md`, `prompts/gatekeeper/v2.md`, `ExplainPanel` on Learn and Practise cards (never in the mock test); the topic chat's entry points are removed from the learner home. Not yet checked with the live model or in a browser on staging; run the evals before go-live.
+- [x] Glossary admin screen and learner glossary page (1.3 screen; done 30 October 2026, D-058). Official fr/it/en names from TERMDAT are still to be confirmed by a reviewer in the new Glossary tab.
 - [ ] Guide site, residence calculator, free practice (1.11, 1.12).
 - [ ] Terms, privacy notice, independence notice (1.13).
 - [ ] Tests, link check, test panel (1.14 to 1.16).

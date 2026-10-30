@@ -103,7 +103,10 @@
     "no_mock_test": "Für Ihren Kanton gibt es noch keinen Probetest.",
     "deadline_passed": "Die Zeit für diesen Probetest ist abgelaufen. Antworten nach Ablauf zählen nicht.",
     "mock_finished": "Dieser Probetest wurde bereits abgegeben.",
-    "invalid_answer": "Bitte wählen Sie eine der vier Antworten."
+    "invalid_answer": "Bitte wählen Sie eine der vier Antworten.",
+    "mock_in_progress": "Während eines Probetests ist «Das erklären» nicht verfügbar.",
+    "invalid_language": "Bitte wählen Sie eine Sprache aus der Liste.",
+    "translation_required": "Bitte geben Sie eine Übersetzung ein."
   },
   "impersonation": {
     "banner": "Ansicht als {{name}} ({{role}}). Sie sind als Admin {{admin}} angemeldet.",
@@ -225,7 +228,7 @@
     "integrity": "Der Tutor erklärt und begleitet; er gibt keine Rechtsberatung.",
     "practise": "Üben",
     "askTutor": "Tutor fragen",
-    "noQuestionsYet": "Die Übungsfragen für Ihren Kanton folgen in Kürze. Zu jedem Thema können Sie schon jetzt den Tutor fragen.",
+    "noQuestionsYet": "Übungsfragen für Ihren Kanton sind in Vorbereitung.",
     "welcome": "Willkommen",
     "noTopics": "Die Themen für Ihren Kanton folgen in Kürze.",
     "topicsTitle": "Themen des Tests: {{canton}}",
@@ -649,5 +652,45 @@
     "reviewIntro_one": "{{count}} Frage zum nochmaligen Ansehen, in Ihrer Sprache.",
     "reviewIntro_other": "{{count}} Fragen zum nochmaligen Ansehen, in Ihrer Sprache.",
     "allRight": "Alle Antworten waren richtig."
+  },
+  "explain": {
+    "button": "Das erklären",
+    "title": "Diese Frage erklären",
+    "note": "Der KI-Assistent kann Fehler machen, und seine Antworten sind keine Rechtsberatung. Prüfen Sie Wichtiges anhand der offiziellen Quellen.",
+    "intro": "Fragen Sie zu dieser Frage oder ihrem Thema. Der Assistent antwortet kurz und in Ihrer Lernsprache.",
+    "placeholder": "Fragen Sie zu dieser Frage … (Enter zum Senden)",
+    "remaining": "Heute noch {{left}} von {{limit}} Nachrichten",
+    "limitReached": "Sie haben das heutige Nachrichtenlimit erreicht. Morgen geht es weiter.",
+    "offline": "Der Assistent ist in dieser Umgebung noch nicht verbunden."
+  },
+  "glossary": {
+    "link": "Glossar der wichtigsten Begriffe",
+    "tab": "Glossar",
+    "title": "Glossar",
+    "intro": "Wichtige deutsche Begriffe aus dem Test, mit Übersetzung und kurzer Anmerkung in Ihrer Lernsprache.",
+    "none": "Für Ihre Lernsprache gibt es kein Glossar. Sie lernen auf Deutsch, die Begriffe stehen so in den Fragen.",
+    "search": "Suchen",
+    "searchPlaceholder": "Deutscher Begriff, Übersetzung oder Anmerkung",
+    "count_one": "{{count}} Begriff",
+    "count_other": "{{count}} Begriffe",
+    "noMatch": "Kein Begriff passt zu Ihrer Suche.",
+    "german": "Deutscher Begriff",
+    "translation": "Übersetzung",
+    "note": "Anmerkung",
+    "source": "Quelle",
+    "unconfirmed": "noch zu bestätigen",
+    "adminTitle": "Glossar prüfen",
+    "adminIntro": "Prüfen Sie Übersetzung und Anmerkung, passen Sie sie bei Bedarf an und markieren Sie den Begriff als geprüft. Änderungen werden beim nächsten Rückschreiben in die Glossardateien übernommen.",
+    "adminNone": "Für diese Sprache gibt es noch keine Begriffe.",
+    "reviewedCount": "{{reviewed}} von {{total}} geprüft",
+    "edit": "Bearbeiten",
+    "saveReviewed": "Speichern und als geprüft markieren",
+    "markReviewed": "Als geprüft markieren",
+    "reviewedBy": "Geprüft von {{name}} am {{date}}",
+    "pendingSync": "Wartet auf das Schreiben in die Datei",
+    "status": {
+      "draft": "Entwurf",
+      "reviewed": "Geprüft"
+    }
   }
 }

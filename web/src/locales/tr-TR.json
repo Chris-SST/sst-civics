@@ -103,7 +103,10 @@
     "no_mock_test": "Kantonunuz için henüz deneme sınavı yok.",
     "deadline_passed": "Bu deneme sınavının süresi doldu. Süre bittikten sonraki cevaplar sayılmaz.",
     "mock_finished": "Bu deneme sınavı zaten teslim edildi.",
-    "invalid_answer": "Lütfen dört seçenekten birini seçin."
+    "invalid_answer": "Lütfen dört seçenekten birini seçin.",
+    "mock_in_progress": "Deneme sınavı sürerken açıklama özelliği kullanılamaz.",
+    "invalid_language": "Lütfen listeden bir dil seçin.",
+    "translation_required": "Lütfen bir çeviri girin."
   },
   "impersonation": {
     "banner": "{{name}} ({{role}}) olarak görüntüleniyor. Yönetici {{admin}} olarak giriş yaptınız.",
@@ -225,7 +228,7 @@
     "integrity": "Eğitmen açıklar ve yol gösterir; hukuki danışmanlık vermez.",
     "practise": "Alıştırma yapın",
     "askTutor": "Eğitmene sorun",
-    "noQuestionsYet": "Kantonunuz için alıştırma soruları yakında eklenecek. Her konu hakkında şimdiden eğitmene sorabilirsiniz.",
+    "noQuestionsYet": "Kantonunuz için alıştırma soruları yolda.",
     "welcome": "Hoş geldiniz",
     "noTopics": "Kantonunuzun konuları yakında eklenecek.",
     "topicsTitle": "Sınav konuları: {{canton}}",
@@ -649,5 +652,45 @@
     "reviewIntro_one": "Kendi dilinizde yeniden bakmanız gereken {{count}} soru.",
     "reviewIntro_other": "Kendi dilinizde yeniden bakmanız gereken {{count}} soru.",
     "allRight": "Tüm cevaplar doğruydu."
+  },
+  "explain": {
+    "button": "Bunu açıklayın",
+    "title": "Bu soruyu açıklayın",
+    "note": "Yapay zekâ asistanı hata yapabilir ve yanıtları hukuki tavsiye değildir. Önemli bilgileri resmî kaynaklardan kontrol edin.",
+    "intro": "Bu soru veya konusu hakkında sorular sorun. Asistan kısa ve çalışma dilinizde yanıt verir.",
+    "placeholder": "Sorunuzu yazın… (Göndermek için Enter)",
+    "remaining": "Bugün için {{limit}} mesajdan {{left}} tanesi kaldı",
+    "limitReached": "Bugünkü mesaj sınırına ulaştınız. Yarın yeniden kullanabilirsiniz.",
+    "offline": "Asistan bu ortamda henüz bağlı değil."
+  },
+  "glossary": {
+    "link": "Temel terimler sözlüğü",
+    "tab": "Sözlük",
+    "title": "Sözlük",
+    "intro": "Sınavdaki temel Almanca terimler, çalışma dilinizde çeviri ve kısa bir notla.",
+    "none": "Çalışma diliniz için bir sözlük yok. Almanca çalıştığınız için terimler sorulardaki gibi görünür.",
+    "search": "Ara",
+    "searchPlaceholder": "Almanca terim, çeviri veya not",
+    "count_one": "{{count}} terim",
+    "count_other": "{{count}} terim",
+    "noMatch": "Aramanıza uyan terim yok.",
+    "german": "Almanca terim",
+    "translation": "Çeviri",
+    "note": "Not",
+    "source": "Kaynak",
+    "unconfirmed": "doğrulanacak",
+    "adminTitle": "Sözlük incelemesi",
+    "adminIntro": "Her çeviriyi ve notu kontrol edin, gerekirse düzenleyin ve terimi incelendi olarak işaretleyin. Değişiklikler bir sonraki eşitlemede sözlük dosyalarına yazılır.",
+    "adminNone": "Bu dil için henüz terim yok.",
+    "reviewedCount": "{{total}} terimden {{reviewed}} tanesi incelendi",
+    "edit": "Düzenle",
+    "saveReviewed": "Kaydet ve incelendi olarak işaretle",
+    "markReviewed": "İncelendi olarak işaretle",
+    "reviewedBy": "{{name}} tarafından {{date}} tarihinde incelendi",
+    "pendingSync": "Dosyaya yazılmayı bekliyor",
+    "status": {
+      "draft": "Taslak",
+      "reviewed": "İncelendi"
+    }
   }
 }

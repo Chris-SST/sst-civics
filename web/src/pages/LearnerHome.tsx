@@ -1,19 +1,12 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
-import { get, post } from "../api";
+import { Link } from "react-router-dom";
+import { get } from "../api";
 import ErrorText from "../components/ErrorText";
 import Pricing from "../components/Pricing";
 import { MasteryBar } from "../components/QuestionCard";
-import { formatDate } from "../i18n";
 import { TOPIC_SCOPES, learnUrl, practiseUrl, type StudyOverview, type TopicOverview } from "../study";
 
-interface Recent {
-  id: string;
-  topic_name: string;
-  status: "active" | "ended";
-  last_activity_at: string;
-}
 interface Usage {
   daily_used: number;
   daily_limit: number | null;
@@ -28,7 +21,6 @@ interface TutorOverview {
   tutor_enabled: boolean;
   access: "full" | "none";
   usage: Usage;
-  recent: Recent[];
 }
 
 const NOTICE_KEY = "sst.tutorNoticeSeen";
@@ -42,15 +34,14 @@ function noticeSeen(): boolean {
 }
 
 /** Learner home: readiness estimate, the three study areas (Learn, Practise, Mock test), mastery
- * per topic, the free-tier notice, and recent chats. */
+ * per topic, the free-tier notice and the message count. The topic chat has no entry here any
+ * more: Explain this, on every question in Learn and Practise, replaces it (task 1.10). */
 export default function LearnerHome() {
   const { t } = useTranslation();
   const [showNotice, setShowNotice] = useState(() => !noticeSeen());
-  const navigate = useNavigate();
   const [tutor, setTutor] = useState<TutorOverview | null>(null);
   const [study, setStudy] = useState<StudyOverview | null | undefined>(undefined);
   const [error, setError] = useState<unknown>(null);
-  const [busy, setBusy] = useState<string | null>(null);
 
   useEffect(() => {
     get<TutorOverview>("/api/tutor/overview").then(setTutor).catch(setError);
@@ -71,18 +62,6 @@ export default function LearnerHome() {
       /* storage unavailable: the notice shows again next time */
     }
     setShowNotice(false);
-  }
-
-  async function askTutor(topicCode: string) {
-    setBusy(`chat:${topicCode}`);
-    setError(null);
-    try {
-      const conv = await post<{ id: string }>("/api/tutor/conversations", { topic_code: topicCode });
-      navigate(`/learner/chat/${conv.id}`);
-    } catch (e) {
-      setError(e);
-      setBusy(null);
-    }
   }
 
   return (
@@ -114,29 +93,11 @@ export default function LearnerHome() {
       <Pricing />
 
       {study && study.topics.length > 0 && (
-        <TopicsCard overview={study} canChat={canChat} busy={busy} onAsk={(code) => void askTutor(code)} />
+        <TopicsCard overview={study} />
       )}
 
       <section className="card">
-        <h2>{t("learner.recent")}</h2>
-        {tutor.recent.length === 0 ? (
-          <p className="muted">{t("learner.noRecent")}</p>
-        ) : (
-          <ul className="recent-list">
-            {tutor.recent.map((r) => (
-              <li key={r.id}>
-                <Link to={`/learner/chat/${r.id}`}>
-                  <b>{r.topic_name}</b>
-                  <span className="small muted">
-                    {formatDate(r.last_activity_at)}
-                    {r.status === "ended" && ` · ${t("learner.endedTag")}`}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-        <h3>{t("learner.usage")}</h3>
+        <h2>{t("learner.usage")}</h2>
         <p className="small">
           {t("learner.usageToday", { used: tutor.usage.daily_used, limit: tutor.usage.daily_limit ?? "∞" })}
           {tutor.usage.monthly_limit !== null && (
@@ -177,6 +138,9 @@ function StudyAreas({ study }: { study: StudyOverview }) {
           {study.due > 0 && ` · ${t("learner.dueCount", { count: study.due })}`}
         </p>
         {empty && <p className="small muted">{t("learner.noQuestionsYet")}</p>}
+        <p className="small">
+          <Link to="/glossary">{t("glossary.link")}</Link>
+        </p>
       </section>
 
       <div className="study-areas">
@@ -211,14 +175,7 @@ function StudyAreas({ study }: { study: StudyOverview }) {
   );
 }
 
-interface TopicsCardProps {
-  overview: StudyOverview;
-  canChat: boolean;
-  busy: string | null;
-  onAsk: (topicCode: string) => void;
-}
-
-function TopicsCard({ overview, canChat, busy, onAsk }: TopicsCardProps) {
+function TopicsCard({ overview }: { overview: StudyOverview }) {
   const { t } = useTranslation();
   const [selected, setSelected] = useState<string | null>(null);
   const canton = t(`cantons.${overview.canton}`, { defaultValue: overview.canton.toUpperCase() });
@@ -231,9 +188,6 @@ function TopicsCard({ overview, canChat, busy, onAsk }: TopicsCardProps) {
       <Link className="btn btn-primary btn-sm" to={practiseUrl(tp.topic_code)} aria-disabled={tp.questions_available === 0}>
         {t("learner.practise")}
       </Link>
-      <button type="button" className="btn btn-ghost btn-sm" disabled={!canChat || busy !== null} onClick={() => onAsk(tp.topic_code)}>
-        {busy === `chat:${tp.topic_code}` ? t("common.working") : t("learner.askTutor")}
-      </button>
     </div>
   );
 

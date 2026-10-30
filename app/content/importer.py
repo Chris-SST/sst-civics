@@ -15,7 +15,8 @@ nothing is written.
   file is gone is retired, never deleted, so attempts survive.
 - Translations: matched on (id, lang), replaced when their content hash changes. A
   translation made from an older German version is imported but hidden.
-- Glossary: matched on (term, lang); entries gone from the files are deleted."""
+- Glossary: matched on (term, lang); entries gone from the files are deleted. An entry with an
+  admin edit waiting for write-back (`file_sync_pending`) keeps its edited text and status."""
 
 from __future__ import annotations
 
@@ -237,9 +238,16 @@ async def _import_glossary(db: AsyncSession, result: ImportResult) -> None:
             if row is None:
                 row = GlossaryTerm(term=entry.term_de, lang=lang)
                 db.add(row)
+            row.source = entry.source
+            row.keep_german = entry.keep_german
+            row.imported_at = now
+            if row.file_sync_pending:
+                continue  # an admin edit waits for write-back; keep it (D-052)
             row.translation = entry.translation
             row.note = entry.note
-            row.imported_at = now
+            row.status = entry.status
+            row.reviewed_by = entry.reviewed_by
+            row.reviewed_at = entry.reviewed_at
     for key, row in existing.items():
         if key not in wanted:
             await db.delete(row)

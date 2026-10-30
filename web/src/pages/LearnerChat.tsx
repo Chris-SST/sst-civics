@@ -1,18 +1,11 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { ApiError, ensureCsrf, get, post } from "../api";
+import { get, post } from "../api";
+import { ChatLog, streamMessage, type Msg, type Notice, type Usage } from "../components/ChatParts";
 import ErrorText from "../components/ErrorText";
 import QuestionCard from "../components/QuestionCard";
-import RichText from "../components/RichText";
 import type { AnswerOut, StudyQuestion } from "../study";
-
-interface Msg {
-  id: string;
-  seq: number;
-  role: "user" | "assistant" | "notice";
-  content: string;
-}
 
 interface Conversation {
   id: string;
@@ -24,18 +17,6 @@ interface Conversation {
   status: "active" | "ended";
   messages: Msg[];
 }
-
-interface Usage {
-  daily_used: number;
-  daily_limit: number | null;
-  monthly_used: number;
-  monthly_limit: number | null;
-  daily_exhausted: boolean;
-  monthly_exhausted: boolean;
-  near_monthly_limit: boolean;
-}
-
-type Notice = "off_topic" | "override" | "wellbeing" | "ended" | "refusal";
 
 interface CheckOut {
   conversation_id: string;
@@ -88,92 +69,21 @@ export default function LearnerChat() {
       setDraft("");
       setStreaming("");
       try {
-        const r = await fetch(`/api/tutor/conversations/${conv.id}/messages`, {
-          method: "POST",
-          credentials: "same-origin",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "text/event-stream",
-            "X-CSRF-Token": await ensureCsrf(),
+        const { ended } = await streamMessage(conv.id, text, {
+          onDelta: setStreaming,
+          onNotice: setNotice,
+          onMessage: (m) => {
+            setConv((c) =>
+              c ? { ...c, messages: [...c.messages, { id: m.id, seq: c.messages.length + 1, role: m.role, content: m.content }] } : c,
+            );
+            setStreaming(null);
           },
-          body: JSON.stringify({ content: text }),
+          onUsage: setUsage,
+          onError: (e) => {
+            setError(e);
+            setStreaming(null);
+          },
         });
-        if (!r.ok || !r.body) {
-          let code = "unknown_error";
-          try {
-            const data = (await r.json()) as { detail?: string };
-            if (typeof data.detail === "string") code = data.detail;
-          } catch {
-            /* no body */
-          }
-          throw new ApiError(r.status, code);
-        }
-        const reader = r.body.getReader();
-        const decoder = new TextDecoder();
-        let buffer = "";
-        let collected = "";
-        let ended = false;
-        const handle = (event: string, data: Record<string, unknown>) => {
-          switch (event) {
-            case "delta":
-              collected += String(data.text ?? "");
-              setStreaming(collected);
-              break;
-            case "notice":
-              setNotice(data.kind as Notice);
-              if (data.kind === "ended") ended = true;
-              break;
-            case "message":
-              setConv((c) =>
-                c
-                  ? {
-                      ...c,
-                      messages: [
-                        ...c.messages,
-                        {
-                          id: String(data.id),
-                          seq: c.messages.length + 1,
-                          role: data.role as Msg["role"],
-                          content: String(data.content),
-                        },
-                      ],
-                    }
-                  : c,
-              );
-              setStreaming(null);
-              break;
-            case "usage":
-              setUsage(data as unknown as Usage);
-              break;
-            case "error":
-              setError(new ApiError(502, String(data.code ?? "unknown_error")));
-              setStreaming(null);
-              break;
-            default:
-              break;
-          }
-        };
-        for (;;) {
-          const { value, done } = await reader.read();
-          if (done) break;
-          buffer += decoder.decode(value, { stream: true });
-          let idx: number;
-          while ((idx = buffer.indexOf("\n\n")) >= 0) {
-            const chunk = buffer.slice(0, idx);
-            buffer = buffer.slice(idx + 2);
-            let event = "message";
-            let data = "{}";
-            for (const line of chunk.split("\n")) {
-              if (line.startsWith("event: ")) event = line.slice(7);
-              else if (line.startsWith("data: ")) data = line.slice(6);
-            }
-            try {
-              handle(event, JSON.parse(data) as Record<string, unknown>);
-            } catch {
-              /* ignore malformed chunk */
-            }
-          }
-        }
         if (ended) setConv((c) => (c ? { ...c, status: "ended" } : c));
       } catch (err) {
         setError(err);
@@ -250,26 +160,7 @@ export default function LearnerChat() {
         )}
       </header>
 
-      <div className="chat-log" role="log" aria-live="polite">
-        {conv.messages.length === 0 && <p className="chat-intro muted">{t("chat.intro")}</p>}
-        {conv.messages.map((m) => (
-          <div key={m.id} className={`bubble bubble-${m.role}`}>
-            {m.role === "user" ? <p>{m.content}</p> : <RichText text={m.content} />}
-          </div>
-        ))}
-        {streaming !== null && (
-          <div className="bubble bubble-assistant bubble-streaming">
-            {streaming ? <RichText text={streaming} /> : <span className="dots">…</span>}
-          </div>
-        )}
-        {notice === "wellbeing" && (
-          <div className="alert alert-info helpline">
-            <b>{t("chat.helplineTitle")}</b>
-            <p>{t("chat.helplineBody")}</p>
-          </div>
-        )}
-        <div ref={bottomRef} />
-      </div>
+      <ChatLog messages={conv.messages} streaming={streaming} notice={notice} intro={t("chat.intro")} bottomRef={bottomRef} />
 
       {usage?.near_monthly_limit && !limitReached && (
         <p className="alert alert-warn small">

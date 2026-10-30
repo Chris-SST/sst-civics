@@ -103,7 +103,10 @@
     "no_mock_test": "Non c'è ancora una simulazione d'esame per il Suo cantone.",
     "deadline_passed": "Il tempo per questa simulazione d'esame è scaduto. Le risposte date dopo la scadenza non contano.",
     "mock_finished": "Questa simulazione d'esame è già stata consegnata.",
-    "invalid_answer": "Scelga una delle quattro risposte."
+    "invalid_answer": "Scelga una delle quattro risposte.",
+    "mock_in_progress": "La spiegazione non è disponibile durante una simulazione d'esame.",
+    "invalid_language": "Scelga una lingua dall'elenco.",
+    "translation_required": "Inserisca una traduzione."
   },
   "impersonation": {
     "banner": "Visualizzazione come {{name}} ({{role}}). Ha effettuato l'accesso come amministratore {{admin}}.",
@@ -225,7 +228,7 @@
     "integrity": "Il tutor spiega e accompagna; non fornisce consulenza legale.",
     "practise": "Si eserciti",
     "askTutor": "Chieda al tutor",
-    "noQuestionsYet": "Le domande di esercizio per il Suo Cantone arriveranno a breve. Può già chiedere al tutor su ogni tema.",
+    "noQuestionsYet": "Le domande di esercizio per il Suo cantone sono in arrivo.",
     "welcome": "Benvenuto/a",
     "noTopics": "I temi per il Suo Cantone arriveranno a breve.",
     "topicsTitle": "Temi del test: {{canton}}",
@@ -649,5 +652,45 @@
     "reviewIntro_one": "{{count}} domanda da rivedere, nella Sua lingua.",
     "reviewIntro_other": "{{count}} domande da rivedere, nella Sua lingua.",
     "allRight": "Tutte le risposte erano giuste."
+  },
+  "explain": {
+    "button": "Spiegare questo",
+    "title": "Spiegare questa domanda",
+    "note": "L'assistente IA può commettere errori e le sue risposte non costituiscono consulenza legale. Verifichi le informazioni importanti presso le fonti ufficiali.",
+    "intro": "Ponga domande su questa domanda o sul suo tema. L'assistente risponde in modo breve, nella Sua lingua di studio.",
+    "placeholder": "Ponga la Sua domanda… (Invio per inviare)",
+    "remaining": "{{left}} messaggi rimasti su {{limit}} oggi",
+    "limitReached": "Ha raggiunto il limite di messaggi di oggi. Si riprende domani.",
+    "offline": "L'assistente non è ancora collegato in questo ambiente."
+  },
+  "glossary": {
+    "link": "Glossario dei termini chiave",
+    "tab": "Glossario",
+    "title": "Glossario",
+    "intro": "Termini tedeschi chiave del test, con traduzione e una breve nota nella Sua lingua di studio.",
+    "none": "Non esiste un glossario per la Sua lingua di studio. Studia in tedesco: i termini compaiono come nelle domande.",
+    "search": "Cerca",
+    "searchPlaceholder": "Termine tedesco, traduzione o nota",
+    "count_one": "{{count}} termine",
+    "count_other": "{{count}} termini",
+    "noMatch": "Nessun termine corrisponde alla Sua ricerca.",
+    "german": "Termine tedesco",
+    "translation": "Traduzione",
+    "note": "Nota",
+    "source": "Fonte",
+    "unconfirmed": "da confermare",
+    "adminTitle": "Revisione del glossario",
+    "adminIntro": "Controlli ogni traduzione e ogni nota, le modifichi se necessario e contrassegni il termine come rivisto. Le modifiche vengono scritte nei file del glossario alla prossima sincronizzazione.",
+    "adminNone": "Non ci sono ancora termini per questa lingua.",
+    "reviewedCount": "{{reviewed}} di {{total}} rivisti",
+    "edit": "Modifica",
+    "saveReviewed": "Salva e contrassegna come rivisto",
+    "markReviewed": "Contrassegna come rivisto",
+    "reviewedBy": "Rivisto da {{name}} il {{date}}",
+    "pendingSync": "In attesa di essere scritto nel file",
+    "status": {
+      "draft": "Bozza",
+      "reviewed": "Rivisto"
+    }
   }
 }

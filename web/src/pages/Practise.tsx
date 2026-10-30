@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ApiError, get, post } from "../api";
 import ErrorText from "../components/ErrorText";
 import QuestionCard, { MasteryBar, feedbackHeadline } from "../components/QuestionCard";
@@ -13,7 +13,6 @@ import type { AnswerOut, PractiseRound, StudyMode, StudyQuestion } from "../stud
 export default function Practise() {
   const { t } = useTranslation();
   const [params] = useSearchParams();
-  const navigate = useNavigate();
   const topicCode = params.get("topic") ?? "";
   const [round, setRound] = useState<PractiseRound | null>(null);
   const [questions, setQuestions] = useState<StudyQuestion[]>([]);
@@ -48,17 +47,6 @@ export default function Practise() {
   useEffect(() => {
     void load();
   }, [load]);
-
-  async function askTutor(code: string) {
-    setBusy(true);
-    try {
-      const conv = await post<{ id: string }>("/api/tutor/conversations", { topic_code: code });
-      navigate(`/learner/chat/${conv.id}`);
-    } catch (e) {
-      setError(e);
-      setBusy(false);
-    }
-  }
 
   async function changeMode(q: StudyQuestion, mode: StudyMode) {
     setBusy(true);
@@ -112,11 +100,6 @@ export default function Practise() {
         <h1>{title}</h1>
         <p className="small muted">{t("practice.title")}</p>
       </div>
-      {question && (
-        <button type="button" className="btn btn-ghost btn-sm" disabled={busy} onClick={() => void askTutor(question.topic_code)}>
-          {t("learner.askTutor")}
-        </button>
-      )}
     </header>
   );
 
@@ -211,6 +194,7 @@ export default function Practise() {
             headline={headline}
             onModeChange={(m) => void changeMode(question, m)}
             modeBusy={busy}
+            explain
             submit={(answer) =>
               post<AnswerOut>("/api/study/answer", {
                 question_id: question.id,

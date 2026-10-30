@@ -103,7 +103,10 @@
     "no_mock_test": "Ainda não há simulacro para o seu cantão.",
     "deadline_passed": "O tempo deste simulacro acabou. As respostas depois do fim do tempo não contam.",
     "mock_finished": "Este simulacro já foi entregue.",
-    "invalid_answer": "Escolha uma das quatro opções."
+    "invalid_answer": "Escolha uma das quatro opções.",
+    "mock_in_progress": "A função Explicar isto não está disponível durante um simulacro.",
+    "invalid_language": "Escolha uma língua da lista.",
+    "translation_required": "Introduza uma tradução."
   },
   "impersonation": {
     "banner": "A ver como {{name}} ({{role}}). Iniciou sessão como administrador {{admin}}.",
@@ -225,7 +228,7 @@
     "integrity": "O tutor explica e orienta; não presta aconselhamento jurídico.",
     "practise": "Pratique",
     "askTutor": "Pergunte ao tutor",
-    "noQuestionsYet": "As perguntas de exercício para o seu cantão estão a caminho. Já pode perguntar ao tutor sobre cada tema.",
+    "noQuestionsYet": "As perguntas de treino para o seu cantão estão a caminho.",
     "welcome": "Bem-vindo(a)",
     "noTopics": "Os temas do seu cantão estão a caminho.",
     "topicsTitle": "Temas do teste: {{canton}}",
@@ -649,5 +652,45 @@
     "reviewIntro_one": "{{count}} pergunta para rever, na sua língua.",
     "reviewIntro_other": "{{count}} perguntas para rever, na sua língua.",
     "allRight": "Todas as respostas estavam certas."
+  },
+  "explain": {
+    "button": "Explicar isto",
+    "title": "Explicar esta pergunta",
+    "note": "O assistente de IA pode cometer erros e as suas respostas não constituem aconselhamento jurídico. Confirme o que for importante nas fontes oficiais.",
+    "intro": "Pergunte sobre esta pergunta ou o seu tema. O assistente responde de forma breve, na sua língua de estudo.",
+    "placeholder": "Faça a sua pergunta… (Enter para enviar)",
+    "remaining": "Restam {{left}} de {{limit}} mensagens hoje",
+    "limitReached": "Atingiu o limite de mensagens de hoje. Volta amanhã.",
+    "offline": "O assistente ainda não está ligado neste ambiente."
+  },
+  "glossary": {
+    "link": "Glossário dos termos principais",
+    "tab": "Glossário",
+    "title": "Glossário",
+    "intro": "Termos alemães principais do teste, com tradução e uma nota breve na sua língua de estudo.",
+    "none": "Não existe glossário para a sua língua de estudo. Estuda em alemão, por isso os termos aparecem como nas perguntas.",
+    "search": "Pesquisar",
+    "searchPlaceholder": "Termo alemão, tradução ou nota",
+    "count_one": "{{count}} termo",
+    "count_other": "{{count}} termos",
+    "noMatch": "Nenhum termo corresponde à sua pesquisa.",
+    "german": "Termo alemão",
+    "translation": "Tradução",
+    "note": "Nota",
+    "source": "Fonte",
+    "unconfirmed": "a confirmar",
+    "adminTitle": "Revisão do glossário",
+    "adminIntro": "Verifique cada tradução e nota, edite-as se necessário e marque o termo como revisto. As alterações são escritas nos ficheiros do glossário na próxima sincronização.",
+    "adminNone": "Ainda não há termos para esta língua.",
+    "reviewedCount": "{{reviewed}} de {{total}} revistos",
+    "edit": "Editar",
+    "saveReviewed": "Guardar e marcar como revisto",
+    "markReviewed": "Marcar como revisto",
+    "reviewedBy": "Revisto por {{name}} em {{date}}",
+    "pendingSync": "A aguardar escrita no ficheiro",
+    "status": {
+      "draft": "Rascunho",
+      "reviewed": "Revisto"
+    }
   }
 }

@@ -1,7 +1,8 @@
 """High-level AI operations: tutor reply streaming, the gatekeeper classification, running
 summaries, and cost logging with alerts. Callers never see the SDK.
 
-Data sent to the provider: the civics context, canton, topic and the conversation. Never a
+Data sent to the provider: the civics context, canton, topic, the question text in "Explain
+this" and the conversation. Never a
 name, email, username or any identifier; `user_id` is used only in our own cost log."""
 
 from __future__ import annotations
@@ -48,7 +49,16 @@ GATE_SCHEMA: dict[str, Any] = {
     "additionalProperties": False,
 }
 
-LANGUAGE_NAMES = {"en": "English (British spelling)", "de": "German", "fr": "French"}
+LANGUAGE_NAMES = {
+    "en": "English (British spelling)",
+    "de": "German",
+    "fr": "French",
+    "it": "Italian",
+    "pt": "Portuguese (European)",
+    "es": "Spanish",
+    "sq": "Albanian",
+    "tr": "Turkish",
+}
 
 
 @dataclass
@@ -57,6 +67,20 @@ class GateResult:
     wellbeing: str = "none"
     coursework: bool = False
     failed_open: bool = False  # the check did not run; the message went through
+
+
+@dataclass
+class QuestionContext:
+    """The question an "Explain this" conversation is about. Question content only."""
+
+    question_de: str
+    options_de: dict[str, str]
+    correct: str
+    explanation_de: str
+    sources: list[str]
+    # The approved translation in the reply language, if there is one:
+    # {"lang", "question", "options", "explanation"}.
+    translation: dict[str, Any] | None = None
 
 
 @dataclass
@@ -69,6 +93,7 @@ class TutorContext:
     note: str | None = None  # borderline or wellbeing steer for this turn
     mastery: int | None = None  # 0 to 100 on this topic, if the student has been tested
     misses: list[dict[str, str]] | None = None  # recent wrong answers on this topic
+    question: QuestionContext | None = None  # set in "Explain this"
 
 
 # --- Prompt assembly -----------------------------------------------------------------
@@ -82,10 +107,37 @@ def canton_label(canton: str) -> str:
     return f"canton of {name} ({canton.upper()})" if name else f"canton {canton.upper()}"
 
 
-def prompt_version() -> str:
+def prompt_version(explain: bool = False) -> str:
     base = prompts.load("base")
     civics = prompts.load("civics")
-    return f"{base.label}+{civics.label}"
+    label = f"{base.label}+{civics.label}"
+    return f"{label}+{prompts.load('explain').label}" if explain else label
+
+
+def _options_text(options: dict[str, str]) -> str:
+    return "\n".join(f"{k}) {options.get(k, '')}" for k in "abcd")
+
+
+def explain_text(ctx: QuestionContext) -> str:
+    """The filled "Explain this" block (prompts/explain)."""
+    translation = ""
+    if ctx.translation:
+        tr = ctx.translation
+        translation = (
+            f"Approved translation in {LANGUAGE_NAMES.get(tr['lang'], tr['lang'])}:\n"
+            f"Question: {tr['question']}\nOptions:\n{_options_text(tr['options'])}\n"
+            f"Explanation: {tr['explanation']}"
+        )
+    return prompts.explain_block(
+        {
+            "QUESTION_DE": ctx.question_de,
+            "OPTIONS_DE": _options_text(ctx.options_de),
+            "CORRECT": ctx.correct,
+            "EXPLANATION_DE": ctx.explanation_de,
+            "TRANSLATION": translation or "(No approved translation in the reply language.)",
+            "SOURCES": "\n".join(f"- {u}" for u in ctx.sources) or "- admin.ch, ch.ch",
+        }
+    ).text
 
 
 def build_system(ctx: TutorContext) -> list[dict[str, Any]]:
@@ -117,6 +169,8 @@ def build_system(ctx: TutorContext) -> list[dict[str, Any]]:
             )
     if ctx.note:
         lines.append("- Note for this turn: " + ctx.note)
+    if ctx.question is not None:
+        lines.append("\n" + explain_text(ctx.question))
     return [
         {"type": "text", "text": base.text},
         {"type": "text", "text": civics.text, "cache_control": {"type": "ephemeral"}},
@@ -266,6 +320,7 @@ async def classify_message(
     canton: str,
     topic_name: str,
     previous_assistant: str | None,
+    question_de: str | None = None,
 ) -> GateResult:
     """Label a student message before the tutor sees it. If the check fails or times out
     the message is passed through as on topic (the tutor still has its own scope rules)."""
@@ -276,6 +331,8 @@ async def classify_message(
         f"Course: Swiss citizenship knowledge test, {canton_label(canton)}",
         f"Session topic: {topic_name}",
     ]
+    if question_de:
+        context.append("Question under discussion (German):\n" + question_de[:1500])
     if previous_assistant:
         context.append("Tutor's previous reply (for context only):\n" + previous_assistant[:1500])
     user_block = (

@@ -12,7 +12,7 @@ from typing import Any
 
 import yaml
 
-from app.content.schema import QuestionFile, TranslationFile
+from app.content.schema import GlossaryFile, QuestionFile, TranslationFile
 
 
 def question_path(root: Path, scope: str, qid: str) -> Path:
@@ -21,6 +21,10 @@ def question_path(root: Path, scope: str, qid: str) -> Path:
 
 def translation_path(root: Path, lang: str, qid: str) -> Path:
     return root / "translations" / lang / f"{qid}.yaml"
+
+
+def glossary_path(root: Path, lang: str) -> Path:
+    return root / "glossary" / f"{lang}.yaml"
 
 
 def _prune(value: Any) -> Any:
@@ -81,3 +85,36 @@ def write_translation(root: Path, data: dict[str, Any]) -> TranslationFile:
     tr = TranslationFile.model_validate(data)
     _write(translation_path(root, tr.lang, tr.id), _dump(translation_data(tr)))
     return tr
+
+
+def glossary_data(gf: GlossaryFile) -> dict[str, Any]:
+    """The file's mapping; entries keep only what differs from the defaults (no empty note,
+    no `keep_german: false`, no `status: draft`), as the hand-written files do."""
+    data = gf.model_dump(mode="python")
+    terms = []
+    for entry in data["terms"]:
+        entry = {k: v for k, v in entry.items() if v is not None}
+        if not entry.get("keep_german"):
+            entry.pop("keep_german", None)
+        if entry.get("status") == "draft":
+            entry.pop("status", None)
+        terms.append(entry)
+    data["terms"] = terms
+    return data
+
+
+def write_glossary(root: Path, data: dict[str, Any]) -> GlossaryFile:
+    """Check `data` against the schema and write glossary/<lang>.yaml. The comment lines at
+    the top of an existing file are kept; comments elsewhere are not."""
+    gf = GlossaryFile.model_validate(data)
+    path = glossary_path(root, gf.lang)
+    header = ""
+    if path.is_file():
+        lines = []
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if not line.startswith("#"):
+                break
+            lines.append(line)
+        header = "".join(line + "\n" for line in lines)
+    _write(path, header + _dump(glossary_data(gf)))
+    return gf

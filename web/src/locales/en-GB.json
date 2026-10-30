@@ -103,7 +103,10 @@
     "no_mock_test": "There is no mock test for your canton yet.",
     "deadline_passed": "The time for this mock test is up. Answers after the deadline are not counted.",
     "mock_finished": "This mock test has already been handed in.",
-    "invalid_answer": "Please choose one of the four options."
+    "invalid_answer": "Please choose one of the four options.",
+    "mock_in_progress": "Explain this is not available while a mock test is running.",
+    "invalid_language": "Please choose a language from the list.",
+    "translation_required": "Please enter a translation."
   },
   "impersonation": {
     "banner": "Viewing as {{name}} ({{role}}). You are signed in as admin {{admin}}.",
@@ -225,7 +228,7 @@
     "integrity": "The tutor explains and coaches; it does not give legal advice.",
     "practise": "Practise",
     "askTutor": "Ask the tutor",
-    "noQuestionsYet": "Practice questions for your canton are on their way. You can already ask the tutor about each topic.",
+    "noQuestionsYet": "Practice questions for your canton are on their way.",
     "welcome": "Welcome",
     "noTopics": "The topics for your canton are on their way.",
     "topicsTitle": "Test topics: {{canton}}",
@@ -649,5 +652,45 @@
     "reviewIntro_one": "{{count}} question to look at again, in your language.",
     "reviewIntro_other": "{{count}} questions to look at again, in your language.",
     "allRight": "Every answer was right."
+  },
+  "explain": {
+    "button": "Explain this",
+    "title": "Explain this question",
+    "note": "The AI assistant can make mistakes, and its answers are not legal advice. Check anything important against the official sources.",
+    "intro": "Ask about this question or its topic. The assistant answers briefly, in your study language.",
+    "placeholder": "Ask about this question… (Enter to send)",
+    "remaining": "{{left}} of {{limit}} messages left today",
+    "limitReached": "You have reached today's message limit. Explain this is back tomorrow.",
+    "offline": "The assistant is not connected in this environment yet."
+  },
+  "glossary": {
+    "link": "Glossary of key terms",
+    "tab": "Glossary",
+    "title": "Glossary",
+    "intro": "Key German terms from the test, with a translation and a short note in your study language.",
+    "none": "There is no glossary for your study language. You study in German, so the terms appear as they do in the questions.",
+    "search": "Search",
+    "searchPlaceholder": "German term, translation or note",
+    "count_one": "{{count}} term",
+    "count_other": "{{count}} terms",
+    "noMatch": "No terms match your search.",
+    "german": "German term",
+    "translation": "Translation",
+    "note": "Note",
+    "source": "Source",
+    "unconfirmed": "to be confirmed",
+    "adminTitle": "Glossary review",
+    "adminIntro": "Check each translation and note, edit them if needed and mark the term as reviewed. Edits are written to the glossary files by the next write-back run.",
+    "adminNone": "There are no terms for this language yet.",
+    "reviewedCount": "{{reviewed}} of {{total}} reviewed",
+    "edit": "Edit",
+    "saveReviewed": "Save and mark reviewed",
+    "markReviewed": "Mark reviewed",
+    "reviewedBy": "Reviewed by {{name}} on {{date}}",
+    "pendingSync": "Waiting to be written to the file",
+    "status": {
+      "draft": "Draft",
+      "reviewed": "Reviewed"
+    }
   }
 }

@@ -22,6 +22,7 @@ from app.deps import require_learner
 from app.models import (
     ATTEMPT_CHECK,
     ATTEMPT_PRACTICE,
+    G_REVIEWED,
     MOCK_FINISHED,
     MODE_OWN,
     Attempt,
@@ -233,6 +234,30 @@ async def mark_seen(
     p.seen_at = clock.now()
     await db.commit()
     return {"ok": True, "progress": progress.progress_out(p)}
+
+
+# --- Glossary ------------------------------------------------------------------------------
+
+
+@router.get("/glossary")
+async def glossary(
+    user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
+) -> dict[str, Any]:
+    """The key terms with translation and note in the learner's study language (none for a
+    learner who studies in German). Free to everyone."""
+    terms = await modes.glossary_for(db, user.study_language)
+    return {
+        "lang": user.study_language,
+        "terms": [
+            {
+                "term": g.term,
+                "translation": g.translation,
+                "note": g.note,
+                "reviewed": g.status == G_REVIEWED,
+            }
+            for g in sorted(terms, key=lambda g: g.term.casefold())
+        ],
+    }
 
 
 # --- Learn ---------------------------------------------------------------------------------
