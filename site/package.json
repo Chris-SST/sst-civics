@@ -10,7 +10,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "check:hreflang": "node scripts/check-hreflang.mjs",
+    "lighthouse": "lhci collect --config=lighthouserc.cjs && node scripts/lighthouse-scores.mjs && lhci assert --config=lighthouserc.cjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
@@ -18,6 +20,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
+    "@lhci/cli": "^0.15.1",
     "typescript": "^6.0.3"
   }
 }

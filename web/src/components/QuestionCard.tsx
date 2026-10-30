@@ -93,7 +93,7 @@ export function MasteryBar({ value, label }: { value: number | null; label?: str
 export function DifficultyDots({ level }: { level: number }) {
   const { t } = useTranslation();
   return (
-    <span className="dots-difficulty" aria-label={t("question.difficulty", { level })} title={t("question.difficulty", { level })}>
+    <span className="dots-difficulty" role="img" aria-label={t("question.difficulty", { level })} title={t("question.difficulty", { level })}>
       {[1, 2, 3].map((i) => (
         <i key={i} className={i <= level ? "on" : ""} />
       ))}

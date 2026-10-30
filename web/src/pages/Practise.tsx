@@ -170,7 +170,7 @@ export default function Practise() {
         <>
           {round.free_tier && index === 0 && !current && <p className="small muted">{t("practice.freeTier")}</p>}
           <p className="small muted progress-label">{t("practice.progress", { n: index + 1, total })}</p>
-          <div className="round-progress" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={index}>
+          <div className="round-progress" role="progressbar" aria-label={t("practice.progress", { n: index + 1, total })} aria-valuemin={0} aria-valuemax={total} aria-valuenow={index}>
             {questions.map((q, i) => {
               const r = results[i];
               const cls = r ? (r.correct ? "ok" : "bad") : i === index ? (current ? (current.correct ? "ok" : "bad") : "current") : "";

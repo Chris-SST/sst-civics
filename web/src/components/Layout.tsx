@@ -40,7 +40,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                   key={l.code}
                   lang={l.short}
                   title={l.label}
-                  aria-label={l.label}
+                  aria-label={`${l.short} ${l.label}`}
                   aria-current={i18n.language === l.code ? "true" : undefined}
                   onClick={() => void i18n.changeLanguage(l.code)}
                 >

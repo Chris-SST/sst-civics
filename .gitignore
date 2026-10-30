@@ -35,3 +35,8 @@ Thumbs.db
 infra/caddy_data/
 infra/backups/
 site/dist/
+
+# End-to-end test output
+web/test-results/
+web/playwright-report/
+site/.lighthouseci/

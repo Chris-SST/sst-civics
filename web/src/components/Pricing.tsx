@@ -81,6 +81,7 @@ export default function Pricing() {
       <h2>{t("pricing.title")}</h2>
       <p className="small">{t("pricing.intro")}</p>
       <ErrorText error={error} />
+      {!billingOn && <p className="alert alert-info small">{t("errors.billing_not_configured")}</p>}
       {products === null && <p className="muted">…</p>}
       {products !== null && passes.length === 0 && <p className="muted">{t("pricing.unavailable")}</p>}
       <div className="plans">

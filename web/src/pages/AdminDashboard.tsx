@@ -222,9 +222,9 @@ function Learners() {
         expires_at: until,
         source,
       });
-      setOk(t("admin.granted", { canton: cantonName(t, canton), date: formatDate(until) }));
       await open(detail.id);
       await load();
+      setOk(t("admin.granted", { canton: cantonName(t, canton), date: formatDate(until) }));
     } catch (err) {
       setError(err);
     }
