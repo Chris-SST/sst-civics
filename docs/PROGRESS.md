@@ -17,7 +17,19 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 - [x] Phase 0 code review (ten findings, nine fixed, one deferred to Phase 1), README rewritten, `docs/DEMO_PHASE0.md` written, old-product wording removed (0.10 code side, 30 October 2026).
 - [x] DNS records and the shared edge Caddy on the tutor server done (30 October 2026); GitHub repository `Chris-SST/sst-civics` created and pushed (D-039).
 - [x] Staging deployed on 30 October 2026: `https://app.civics-staging.swisssciencetutors.ch` (compose project `civics` in `/opt/civics`, console email, Stripe and AI keys empty), first admin created, deploy key installed.
-- [ ] Demo walked with Chris (`docs/DEMO_PHASE0.md`) and gate A signed off.
+- [x] Gate A signed off by Chris on 30 October 2026 after walking the admin, sign-up and access steps on staging. Stripe was not re-exercised on civics staging (no test key yet); the integration is the one proven in the tutor app. Release tagged `v0.1.0`.
+
+## Phase 1: Zurich launch (gate B)
+
+- [ ] Question model, import from repository files, and the review queue in the admin area (1.1, 1.2; started 30 October 2026).
+- [ ] Zurich topic list from the official catalogue's subject headings (1.4; started 30 October 2026).
+- [ ] Content pipeline scripts (1.5).
+- [ ] About 350 Zurich questions approved, translated and reviewed (1.6).
+- [ ] Learn, Practise and Mock test with the four study modes (1.7 to 1.9).
+- [ ] Explain this (1.10).
+- [ ] Guide site, residence calculator, free practice (1.11, 1.12).
+- [ ] Terms, privacy notice, independence notice (1.13).
+- [ ] Tests, link check, test panel (1.14 to 1.16).
 
 ## Next
 
