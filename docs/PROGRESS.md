@@ -28,8 +28,9 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 - [x] Learn, Practise and Mock test with the four study modes (1.7 to 1.9; done 30 October 2026, D-048 to D-051). Package `app/study/`: study modes as a rendering contract, tables `question_progress` and `mock_runs` (replacing `topic_mastery` and `diagnostic_runs`), Leitner spaced repetition weighted towards weak topics, readiness estimate, free-tier sample set and one free mock test; pages `/learn`, `/practise`, `/mock` with the mode stepper and countdown; the diagnostic and `/api/practice` are gone. Migration 0001 rewritten again, so staging's database is recreated. Not yet checked in a browser on staging.
 - [x] Explain this (1.10; done 30 October 2026, D-057). `POST /api/explain/start`, `prompts/explain/v1.md`, `prompts/gatekeeper/v2.md`, `ExplainPanel` on Learn and Practise cards (never in the mock test); the topic chat's entry points are removed from the learner home. Not yet checked with the live model or in a browser on staging; run the evals before go-live.
 - [x] Glossary admin screen and learner glossary page (1.3 screen; done 30 October 2026, D-058). Official fr/it/en names from TERMDAT are still to be confirmed by a reviewer in the new Glossary tab.
-- [ ] Guide site, residence calculator, free practice (1.11, 1.12).
-- [ ] Terms, privacy notice, independence notice (1.13).
+- [x] Guide site scaffold (1.11): Astro in `site/`, eight-language routing with hreflang and sitemap, design-system components, residence calculator island, served by the civics Caddy from `site-releases`, CI build and tag-gated rsync deploy (D-043, D-056, D-059, D-060).
+- [x] Guide content in German and English with official sources (1.12): overview, Zurich step by step, knowledge test, language certificates, fees, calculator, free practice, ten FAQs each. Open: the same pages in fr, it, pt, es, sq, tr for the pages the plan lists in all launch languages; Umami analytics container.
+- [x] Terms, privacy notice, independence notice drafted in English (1.13, `docs/legal/`); lawyer and accountant review open; other languages after approval.
 - [ ] Tests, link check, test panel (1.14 to 1.16).
 
 ## Next
