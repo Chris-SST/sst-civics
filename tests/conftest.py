@@ -32,11 +32,10 @@ from sqlalchemy import select  # noqa: E402
 from app.auth import ratelimit  # noqa: E402
 from app.auth.passwords import hash_password  # noqa: E402
 from app.billing import routes as billing_routes  # noqa: E402
-from app.billing.plans import PLAN_DEFAULTS  # noqa: E402
 from app.db import Base, SessionLocal, engine, utcnow  # noqa: E402
 from app.email.backend import memory_outbox  # noqa: E402
 from app.main import app  # noqa: E402
-from app.models import ENTITLEMENT_ADMIN, ROLE_ADMIN, Entitlement, Plan, User  # noqa: E402
+from app.models import ENTITLEMENT_ADMIN, ROLE_ADMIN, Entitlement, User  # noqa: E402
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -54,19 +53,6 @@ async def _clean_state():
     async with engine.begin() as conn:
         for table in reversed(Base.metadata.sorted_tables):
             await conn.execute(table.delete())
-    async with SessionLocal() as db:
-        for d in PLAN_DEFAULTS:
-            db.add(
-                Plan(
-                    key=d.key,
-                    kind=d.kind,
-                    monthly_message_limit=d.monthly_message_limit,
-                    daily_message_limit=d.daily_message_limit,
-                    sort_order=d.sort_order,
-                    is_active=True,
-                )
-            )
-        await db.commit()
     memory_outbox.clear()
     ratelimit.reset_memory()
     billing_routes.clear_price_cache()

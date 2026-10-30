@@ -90,7 +90,16 @@
     "no_password": "Votre compte n'a pas de mot de passe.",
     "password_required_for_admins": "Les comptes admin doivent conserver un mot de passe.",
     "reauth_required": "Veuillez confirmer qu'il s'agit bien de vous : saisissez votre mot de passe ou ouvrez un nouveau lien de connexion.",
-    "not_while_impersonating": "Impossible pendant que vous consultez l'application en tant qu'une autre personne."
+    "not_while_impersonating": "Impossible pendant que vous consultez l'application en tant qu'une autre personne.",
+    "not_for_sale": "Ce Civics Pass n'est pas encore en vente.",
+    "pass_active": "Vous avez déjà un pass actif pour ce canton. Vous pouvez le prolonger à la place.",
+    "no_pass_to_extend": "Une prolongation nécessite un pass pour ce canton, actif ou échu depuis moins de 90 jours.",
+    "already_refunded": "Ce paiement a déjà été remboursé.",
+    "no_payment_intent": "Stripe n'a aucun paiement pour cet enregistrement ; il ne peut pas être remboursé ici.",
+    "refund_failed": "Stripe n'a pas accepté le remboursement. Veuillez réessayer ou rembourser depuis le tableau de bord Stripe.",
+    "refund_too_late": "Le délai de remboursement de ce paiement est échu.",
+    "refund_too_many_questions": "Trop de questions ont été étudiées depuis ce paiement pour un remboursement selon la règle.",
+    "refund_refunded": "Ce paiement a déjà été remboursé."
   },
   "impersonation": {
     "banner": "Vue en tant que {{name}} ({{role}}). Vous êtes connecté comme admin {{admin}}.",
@@ -99,7 +108,7 @@
   "landing": {
     "title": "{{name}}",
     "lead": "Préparez le test de connaissances pour la naturalisation : comprenez chaque question dans votre langue, puis entraînez-vous en allemand.",
-    "cta": "Essai gratuit de 7 jours",
+    "cta": "S'entraîner gratuitement",
     "plansTitle": "Formules",
     "trialNote": "Prix en CHF.",
     "learnMore": "En savoir plus sur swisssciencetutors.ch"
@@ -209,10 +218,11 @@
   "billingReturn": {
     "title": "Paiement",
     "cancelled": "Le paiement a été annulé. Rien n'a été débité.",
-    "active": "Merci. Votre accès est actif.",
-    "waiting": "En attente de la confirmation du moyen de paiement par Stripe. Cela ne prend généralement que quelques secondes…",
-    "slow": "Stripe n'a pas encore confirmé. Votre accès sera mis à jour automatiquement ; vous pouvez quitter cette page.",
-    "toDashboard": "Aller au tableau de bord"
+    "active": "Merci. Votre Civics Pass est actif.",
+    "waiting": "Nous attendons la confirmation de votre paiement par Stripe. Cela ne prend généralement que quelques secondes…",
+    "slow": "Stripe n'a pas encore confirmé votre paiement. Votre accès apparaîtra automatiquement dès que ce sera fait ; vous pouvez quitter cette page.",
+    "toDashboard": "Aller au tableau de bord",
+    "activeUntil": "Merci. Votre Civics Pass pour {{canton}} est actif jusqu'au {{date}}."
   },
   "learner": {
     "noCourses": "Aucun cours choisi pour l'instant",
@@ -246,7 +256,7 @@
     "hideTopics": "Masquer les sujets",
     "noQuestionsYet": "Les questions d'exercice pour ce cours arrivent bientôt. Tu peux quand même demander au tuteur.",
     "welcome": "Bienvenue",
-    "noAccess": "Tu n'as pas encore accès pour ton canton."
+    "noAccess": "Vous utilisez l'entraînement gratuit. Un Civics Pass pour votre canton donne accès à toutes les questions, aux examens blancs et aux explications par l'IA."
   },
   "chat": {
     "back": "Tes séances",
@@ -340,6 +350,23 @@
       "admin": "Accordé par un admin",
       "trial": "Essai",
       "stripe": "Payé"
+    },
+    "refund": "Rembourser",
+    "refundAnyway": "Rembourser quand même",
+    "refundConfirm": "Rembourser intégralement ce paiement via Stripe ? L'accès prend fin dès que Stripe confirme le remboursement.",
+    "refundOverrideConfirm": "Ce paiement ne remplit pas la règle de remboursement. Le rembourser intégralement quand même ? L'accès prend fin dès que Stripe confirme le remboursement.",
+    "refundRequested": "Remboursement transmis à Stripe. L'accès change dès que Stripe le confirme.",
+    "refundedOn": "Remboursé le {{date}}",
+    "refundRule": {
+      "too_late": "hors du délai de remboursement de 14 jours",
+      "too_many_questions": "{{count}} questions étudiées depuis l'achat",
+      "refunded": "déjà remboursé",
+      "no_payment": "aucun paiement"
+    },
+    "product": {
+      "civics_pass_zh": "Civics Pass",
+      "civics_pass_ag": "Civics Pass",
+      "civics_extension": "Prolongation"
     }
   },
   "diagnostic": {
@@ -566,5 +593,26 @@
     "deleteSubmit": "Supprimer mon compte",
     "deletedTitle": "Votre compte est supprimé",
     "deletedBody": "Votre compte et vos données d'apprentissage ont été supprimés. Nous vous avons envoyé une confirmation par e-mail."
+  },
+  "pricing": {
+    "title": "Civics Pass",
+    "intro": "Commencez par l'entraînement gratuit. Un Civics Pass ouvre tout pour un canton : toutes les questions et tous les modes d'étude, des examens blancs illimités et les explications par l'IA, dans chaque langue. Vous payez une seule fois, sans abonnement.",
+    "passName": "Civics Pass {{canton}}",
+    "period": "pour {{months}} mois",
+    "passIncludes": "Toutes les questions et tous les modes d'étude pour ce canton, des examens blancs illimités et les explications par l'IA.",
+    "activeUntil": "Actif jusqu'au {{date}}",
+    "endedOn": "Échu le {{date}}",
+    "freeTier": "Entraînement gratuit",
+    "buy": "Acheter",
+    "signUpToBuy": "S'inscrire gratuitement",
+    "extend": "Prolonger de {{months}} mois ({{price}})",
+    "extensionNote": "Besoin de plus de temps ? Une prolongation ajoute {{months}} mois pour {{price}}, tant que votre pass est actif ou jusqu'à 90 jours après son échéance.",
+    "priceNote": "Prix en CHF. Paiement unique par carte ou TWINT, via Stripe.",
+    "unavailable": "Les prix ne sont pas disponibles pour le moment. Veuillez réessayer dans un instant.",
+    "refundEligible": "Pas ce que vous espériez ? Votre dernier paiement peut être remboursé jusqu'au {{date}} si vous avez étudié moins de {{max}} questions depuis l'achat (jusqu'ici : {{count}}).",
+    "writeToSupport": "Écrivez au support pour demander un remboursement.",
+    "refundTooLate": "Le délai de remboursement de votre dernier paiement a pris fin le {{date}}.",
+    "refundTooMany": "Votre dernier paiement ne peut plus être remboursé : vous avez étudié {{count}} questions depuis l'achat, et un remboursement est possible en dessous de {{max}}.",
+    "refundDone": "Votre dernier paiement a été remboursé."
   }
 }

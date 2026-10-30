@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState, type FormEvent } from "react";
 import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
-import { CANTONS, get, patch, post, type EntitlementOut } from "../api";
+import { CANTONS, get, patch, post, type EntitlementOut, type RefundEligibility } from "../api";
 import { homeFor, useAuth } from "../auth";
 import ErrorText from "../components/ErrorText";
 import { formatChf, formatDate } from "../i18n";
@@ -37,7 +37,6 @@ export default function AdminDashboard() {
         </NavLink>
         <NavLink to="/admin/learners">{t("admin.learners")}</NavLink>
         <NavLink to="/admin/staff">{t("admin.staff")}</NavLink>
-        <NavLink to="/admin/plans">{t("admin.plans")}</NavLink>
         <NavLink to="/admin/usage">{t("admin.usage")}</NavLink>
         <NavLink to="/admin/questions">{t("qbank.tab")}</NavLink>
       </nav>
@@ -45,7 +44,6 @@ export default function AdminDashboard() {
         <Route index element={<Overview />} />
         <Route path="learners" element={<Learners />} />
         <Route path="staff" element={<Staff />} />
-        <Route path="plans" element={<Plans />} />
         <Route path="usage" element={<AiUsage />} />
         <Route path="questions/*" element={<AdminQuestions />} />
       </Routes>
@@ -138,7 +136,18 @@ interface LearnerDetail extends LearnerRow {
   terms_version: string | null;
   terms_accepted_at: string | null;
   has_stripe_customer: boolean;
-  payments: { id: string; amount_cents: number; currency: string; paid_at: string }[];
+  payments: AdminPayment[];
+}
+
+interface AdminPayment {
+  id: string;
+  product: string;
+  canton: string;
+  amount_cents: number;
+  currency: string;
+  paid_at: string;
+  refunded_at: string | null;
+  refund: RefundEligibility;
 }
 
 /** Default expiry for a manual grant: six months from today, as yyyy-mm-dd. */
@@ -178,6 +187,21 @@ function Learners() {
       const d = await get<LearnerDetail>(`/api/admin/learners/${id}`);
       setDetail(d);
       setCanton(d.canton || CANTONS[0]);
+    } catch (err) {
+      setError(err);
+    }
+  }
+
+  async function refund(p: AdminPayment) {
+    if (!detail) return;
+    const question = p.refund.eligible ? t("admin.refundConfirm") : t("admin.refundOverrideConfirm");
+    if (!window.confirm(question)) return;
+    setError(null);
+    setOk("");
+    try {
+      await post(`/api/admin/payments/${p.id}/refund`, { override: !p.refund.eligible });
+      await open(detail.id);
+      setOk(t("admin.refundRequested"));
     } catch (err) {
       setError(err);
     }
@@ -297,7 +321,21 @@ function Learners() {
             <ul className="small">
               {detail.payments.map((p) => (
                 <li key={p.id}>
-                  {formatDate(p.paid_at)} · {formatChf(p.amount_cents, p.currency)}
+                  {formatDate(p.paid_at)} · {formatChf(p.amount_cents, p.currency.toUpperCase())} ·{" "}
+                  {t(`admin.product.${p.product}`, { defaultValue: p.product })} ({cantonName(t, p.canton)})
+                  {p.refunded_at ? (
+                    <> · <span className="status status-none">{t("admin.refundedOn", { date: formatDate(p.refunded_at) })}</span></>
+                  ) : (
+                    <>
+                      {" "}
+                      <button type="button" className="btn btn-sm btn-secondary" onClick={() => void refund(p)}>
+                        {p.refund.eligible ? t("admin.refund") : t("admin.refundAnyway")}
+                      </button>
+                      {!p.refund.eligible && (
+                        <span className="hint"> {t(`admin.refundRule.${p.refund.reason}`, { count: p.refund.questions_studied })}</span>
+                      )}
+                    </>
+                  )}
                 </li>
               ))}
             </ul>
@@ -422,108 +460,5 @@ function Staff() {
         </table>
       </div>
     </>
-  );
-}
-
-interface PlanRow {
-  key: string;
-  kind: string;
-  monthly_message_limit: number | null;
-  daily_message_limit: number | null;
-  is_active: boolean;
-}
-
-function Plans() {
-  const { t } = useTranslation();
-  const [rows, setRows] = useState<PlanRow[]>([]);
-  const [error, setError] = useState<unknown>(null);
-  const load = useCallback(async () => setRows(await get<PlanRow[]>("/api/admin/plans")), []);
-  useEffect(() => {
-    load().catch(setError);
-  }, [load]);
-
-  async function save(p: PlanRow) {
-    try {
-      await patch(`/api/admin/plans/${p.key}`, {
-        monthly_message_limit: p.monthly_message_limit,
-        daily_message_limit: p.daily_message_limit,
-        is_active: p.is_active,
-      });
-      await load();
-    } catch (err) {
-      setError(err);
-    }
-  }
-
-  function update(key: string, field: keyof PlanRow, value: number | boolean | null) {
-    setRows((rs) => rs.map((r) => (r.key === key ? { ...r, [field]: value } : r)));
-  }
-
-  return (
-    <div className="card">
-      <ErrorText error={error} />
-      <p className="small">{t("admin.plansIntro")}</p>
-      <div className="table-wrap">
-        <table className="table table-stack">
-          <thead>
-            <tr>
-              <th>{t("admin.plan")}</th>
-              <th>{t("admin.monthlyLimit")}</th>
-              <th>{t("admin.dailyLimit")}</th>
-              <th>{t("admin.active")}</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((p) => (
-              <tr key={p.key}>
-                <td data-label={t("admin.plan")}>
-                  {t(`plans.${p.key}.name`)} <span className="hint">({p.key})</span>
-                </td>
-                <td data-label={t("admin.monthlyLimit")}>
-                  {p.kind === "subscription" ? (
-                    <input
-                      type="number"
-                      min={0}
-                      value={p.monthly_message_limit ?? 0}
-                      onChange={(e) => update(p.key, "monthly_message_limit", Number(e.target.value))}
-                    />
-                  ) : (
-                    "–"
-                  )}
-                </td>
-                <td data-label={t("admin.dailyLimit")}>
-                  {p.kind === "subscription" ? (
-                    <input
-                      type="number"
-                      min={0}
-                      value={p.daily_message_limit ?? 0}
-                      onChange={(e) => update(p.key, "daily_message_limit", Number(e.target.value))}
-                    />
-                  ) : (
-                    "–"
-                  )}
-                </td>
-                <td data-label={t("admin.active")}>
-                  <label className="check">
-                    <input
-                      type="checkbox"
-                      checked={p.is_active}
-                      onChange={(e) => update(p.key, "is_active", e.target.checked)}
-                    />
-                    <span className="visually-hidden">{t("admin.active")}</span>
-                  </label>
-                </td>
-                <td className="table-actions">
-                  <button className="btn btn-sm btn-secondary" onClick={() => void save(p)}>
-                    {t("common.save")}
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
   );
 }

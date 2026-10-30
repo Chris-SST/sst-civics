@@ -86,6 +86,15 @@ export interface AccessOut {
   canton: string;
   entitlements: EntitlementOut[];
   has_stripe_customer: boolean;
+  /** No active entitlement for the learner's canton: free practice only, no "Explain this". */
+  free_tier: boolean;
+  latest_payment: {
+    product: string;
+    canton: string;
+    paid_at: string;
+    refunded: boolean;
+    checkout_session_id: string;
+  } | null;
 }
 
 export interface Me {
@@ -101,14 +110,32 @@ export interface Me {
   csrf_token: string;
 }
 
-export interface PlanOut {
-  key: string;
-  kind: "subscription" | "addon";
+export type ProductKey = "civics_pass_zh" | "civics_pass_ag" | "civics_extension";
+
+/** A Civics Pass or the extension, priced from Stripe by lookup key. */
+export interface ProductOut {
+  key: ProductKey;
+  kind: "pass" | "extension";
+  /** The canton a pass is for; null for the extension. */
+  canton: string | null;
   amount_cents: number | null;
   currency: string;
-  interval: string | null;
-  monthly_message_limit: number | null;
-  daily_message_limit: number | null;
+  months: number;
+  /** False when Stripe has no price for the key right now. */
+  available: boolean;
+}
+
+export interface RefundEligibility {
+  eligible: boolean;
+  reason: "no_payment" | "refunded" | "too_late" | "too_many_questions" | null;
+  payment_id: string | null;
+  product: string | null;
+  canton: string | null;
+  paid_at: string | null;
+  deadline: string | null;
+  questions_studied: number;
+  max_questions: number;
+  window_days: number;
 }
 
 export interface PublicConfig {

@@ -8,11 +8,11 @@ Subscription web app that gives Swiss Science Tutors' students an AI tutor with 
 
 ```
 app/      FastAPI API: auth, billing (Stripe), family, admin, portal, email, llm (Phase 1)
-worker/   arq background worker: emails, Stripe events, nightly reconciliation
+worker/   arq background worker: emails, Stripe events, nightly expiry count
 alembic/  database migrations
 web/      React + TypeScript + Vite PWA (en-GB, de-CH, fr-CH)
 infra/    Docker Compose, Caddy, backup script
-scripts/  seed (plans, first admin), Stripe bootstrap
+scripts/  seed (first admin), Stripe bootstrap (Civics Pass products)
 tests/    pytest suite (runs on SQLite locally, SQLite and PostgreSQL in CI)
 docs/     PROGRESS.md, DECISIONS.md, runbooks/, DEMO_PHASE0.md
 prompts/  versioned tutor prompts and course modules (Phase 1)
@@ -67,7 +67,7 @@ For front-end development with hot reload, run `npm run dev` in `web/` (port 517
 4. Forward webhooks locally: `stripe listen --forward-to localhost:8000/api/billing/webhook` and copy the printed `whsec_...` into `STRIPE_WEBHOOK_SECRET`.
 5. Restart the API. Test card: `4242 4242 4242 4242`, any future date, any CVC.
 
-Details and test clocks: [docs/runbooks/stripe-test-mode.md](docs/runbooks/stripe-test-mode.md).
+Products, webhook events, TWINT and refunds: [docs/runbooks/stripe-test-mode.md](docs/runbooks/stripe-test-mode.md).
 
 ### With PostgreSQL, Redis and a mail catcher
 

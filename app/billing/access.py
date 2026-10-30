@@ -2,6 +2,8 @@
 
 An entitlement gives one canton's content from `starts_at` until `expires_at`. It comes
 from a Stripe payment, an admin grant or a trial. Admins have access to every canton.
+Learners without an active entitlement are on the free tier: free practice only, no
+"Explain this".
 
 full : the learner may use the paid features for that canton
 none : no active entitlement for that canton
@@ -11,13 +13,18 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta
 
+from app.config import get_settings
 from app.db import utcnow
-from app.models import Entitlement, User
+from app.models import ENTITLEMENT_ADMIN, ENTITLEMENT_STRIPE, Entitlement, User
 
 FULL = "full"
 NONE = "none"
+
+# Entitlements that count as a Civics Pass: bought, or granted by an admin in place of a
+# purchase. A trial does not, so it can be neither extended nor blocks buying a pass.
+PASS_SOURCES = (ENTITLEMENT_STRIPE, ENTITLEMENT_ADMIN)
 
 
 @dataclass(frozen=True)
@@ -64,3 +71,29 @@ def access_level(user: User | None, canton: str | None = None) -> str:
     if user is None:
         return NONE
     return FULL if has_access(user, canton or user.canton) else NONE
+
+
+def is_free_tier(user: User | None) -> bool:
+    """A learner with no active entitlement for their canton."""
+    return user is not None and not user.is_staff and not has_access(user, user.canton)
+
+
+def latest_pass(user: User, canton: str) -> Entitlement | None:
+    """The learner's pass for `canton` that runs (or ran) longest."""
+    passes = [e for e in user.entitlements if e.canton == canton and e.source in PASS_SOURCES]
+    return max(passes, key=lambda e: e.expires_at, default=None)
+
+
+def active_pass(user: User, canton: str, now: datetime | None = None) -> Entitlement | None:
+    p = latest_pass(user, canton)
+    return p if p is not None and is_active(p, now) else None
+
+
+def extendable_pass(user: User, canton: str, now: datetime | None = None) -> Entitlement | None:
+    """The pass an extension would lengthen: active, or expired within the grace period."""
+    now = now or utcnow()
+    p = latest_pass(user, canton)
+    if p is None or p.starts_at > now:
+        return None
+    grace = timedelta(days=get_settings().extension_grace_days)
+    return p if p.expires_at > now - grace else None

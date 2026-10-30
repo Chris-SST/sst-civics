@@ -1,7 +1,7 @@
 """Initial schema for the citizenship-test trainer.
 
-Learners and admins, entitlements per canton, sessions, tokens, plans, Stripe events,
-payments, audit log, tutor conversations, AI call log, cost alerts and the question bank.
+Learners and admins, entitlements per canton, sessions, tokens, Stripe events, one-off
+Civics Pass payments, audit log, tutor conversations, AI call log, cost alerts and the question bank.
 Replaces the source app's migrations 0001 to 0004 (D-005). Until gate A this migration may be
 rewritten in place.
 
@@ -31,15 +31,6 @@ def upgrade() -> None:
         sa.Column("amount_chf", sa.Float(), nullable=False),
         sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
         sa.UniqueConstraint("kind", "scope", "period", name="uq_cost_alert"),
-    )
-    op.create_table(
-        "plans",
-        sa.Column("key", sa.String(40), primary_key=True),
-        sa.Column("kind", sa.String(16), nullable=False),
-        sa.Column("monthly_message_limit", sa.Integer()),
-        sa.Column("daily_message_limit", sa.Integer()),
-        sa.Column("is_active", sa.Boolean(), nullable=False),
-        sa.Column("sort_order", sa.Integer(), nullable=False),
     )
     op.create_table(
         "stripe_events",
@@ -209,12 +200,28 @@ def upgrade() -> None:
         "payments",
         sa.Column("id", sa.Uuid(), primary_key=True),
         sa.Column("user_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="SET NULL")),
-        sa.Column("stripe_invoice_id", sa.String(64), nullable=False),
+        sa.Column(
+            "entitlement_id", sa.Uuid(), sa.ForeignKey("entitlements.id", ondelete="SET NULL")
+        ),
+        sa.Column("product", sa.String(40), nullable=False),
+        sa.Column("canton", sa.String(2), nullable=False),
+        sa.Column("months", sa.Integer(), nullable=False),
+        sa.Column("stripe_checkout_session_id", sa.String(255), nullable=False),
+        sa.Column("stripe_payment_intent_id", sa.String(255)),
         sa.Column("amount_cents", sa.Integer(), nullable=False),
         sa.Column("currency", sa.String(3), nullable=False),
         sa.Column("paid_at", sa.DateTime(timezone=True), nullable=False),
+        sa.Column("amount_refunded_cents", sa.Integer(), nullable=False),
+        sa.Column("refunded_at", sa.DateTime(timezone=True)),
         sa.Column("email_hash", sa.String(64)),
-        sa.UniqueConstraint("stripe_invoice_id"),
+        sa.UniqueConstraint("stripe_checkout_session_id"),
+    )
+    op.create_index("ix_payments_entitlement_id", "payments", ["entitlement_id"], unique=False)
+    op.create_index(
+        "ix_payments_stripe_payment_intent_id",
+        "payments",
+        ["stripe_payment_intent_id"],
+        unique=False,
     )
     op.create_index("ix_payments_user_id", "payments", ["user_id"], unique=False)
     op.create_table(
@@ -374,6 +381,8 @@ def downgrade() -> None:
     op.drop_index("ix_sessions_user_id", table_name="sessions")
     op.drop_table("sessions")
     op.drop_index("ix_payments_user_id", table_name="payments")
+    op.drop_index("ix_payments_stripe_payment_intent_id", table_name="payments")
+    op.drop_index("ix_payments_entitlement_id", table_name="payments")
     op.drop_table("payments")
     op.drop_index("ix_one_time_tokens_user_id", table_name="one_time_tokens")
     op.drop_table("one_time_tokens")
@@ -400,5 +409,4 @@ def downgrade() -> None:
     op.drop_table("users")
     op.drop_index("ix_stripe_events_type", table_name="stripe_events")
     op.drop_table("stripe_events")
-    op.drop_table("plans")
     op.drop_table("cost_alerts")

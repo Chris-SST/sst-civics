@@ -64,7 +64,11 @@ async def delete_account(db: AsyncSession, user: User) -> None:
     await db.execute(
         update(Payment)
         .where(Payment.user_id == uid)
-        .values(user_id=None, email_hash=email_digest(user.email) if user.email else None)
+        .values(
+            user_id=None,
+            entitlement_id=None,
+            email_hash=email_digest(user.email) if user.email else None,
+        )
     )
     await db.execute(update(LlmCall).where(LlmCall.user_id == uid).values(user_id=None))
     await _redact_stripe_events(db, user)

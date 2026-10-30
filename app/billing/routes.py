@@ -1,8 +1,11 @@
+"""Civics Pass billing: products and prices from Stripe, one-off Checkout, payments, refund
+eligibility and the Stripe webhook."""
+
 from __future__ import annotations
 
 import logging
 import time
-from typing import Any
+from typing import Any, Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from pydantic import BaseModel, Field
@@ -10,13 +13,13 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.billing import events, plans, stripe_client
-from app.billing.access import access_level, compute_access
+from app.billing import events, products, refunds, stripe_client
+from app.billing.access import access_level, active_pass, compute_access, extendable_pass
 from app.config import get_settings
 from app.db import get_db
 from app.deps import current_user, require_learner
 from app.jobs import enqueue
-from app.models import Payment, Plan, StripeEvent, User
+from app.models import CANTONS, Payment, StripeEvent, User
 
 log = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/billing", tags=["billing"])
@@ -25,20 +28,20 @@ _price_cache: dict[str, Any] = {"at": 0.0, "prices": {}}
 PRICE_CACHE_SECONDS = 600
 
 
-class PlanOut(BaseModel):
+class ProductOut(BaseModel):
     key: str
-    kind: str
+    kind: Literal["pass", "extension"]
+    canton: str | None
     amount_cents: int | None
     currency: str
-    interval: str | None
-    monthly_message_limit: int | None
-    daily_message_limit: int | None
-    price_id: str | None
+    months: int
+    available: bool  # a price exists in Stripe
 
 
 class CheckoutIn(BaseModel):
-    plan_key: str
-    quantity: int = Field(default=1, ge=1, le=10)
+    product: Literal["civics_pass_zh", "civics_pass_ag", "civics_extension"]
+    # Which pass an extension is for; by default the learner's extendable pass or canton.
+    canton: str | None = Field(default=None, min_length=2, max_length=2)
 
 
 class UrlOut(BaseModel):
@@ -47,9 +50,12 @@ class UrlOut(BaseModel):
 
 class PaymentOut(BaseModel):
     id: str
+    product: str
+    canton: str
     amount_cents: int
     currency: str
     paid_at: str
+    refunded_at: str | None
 
 
 def _prices() -> dict[str, dict[str, Any]]:
@@ -60,7 +66,7 @@ def _prices() -> dict[str, dict[str, Any]]:
     if not get_settings().stripe_secret_key:
         return {}
     try:
-        found = stripe_client.list_prices_by_lookup_keys(list(plans.ALL_PLANS))
+        found = stripe_client.list_prices_by_lookup_keys(list(products.ALL_KEYS))
     except Exception as exc:  # noqa: BLE001
         log.warning("Could not load Stripe prices: %s", exc.__class__.__name__)
         return _price_cache["prices"] or {}
@@ -73,28 +79,40 @@ def clear_price_cache() -> None:
     _price_cache.update(at=0.0, prices={})
 
 
-@router.get("/plans", response_model=list[PlanOut])
-async def list_plans(db: AsyncSession = Depends(get_db)) -> list[PlanOut]:
-    rows = (
-        (await db.execute(select(Plan).where(Plan.is_active.is_(True)).order_by(Plan.sort_order)))
-        .scalars()
-        .all()
-    )
+def price_months(price: dict[str, Any], product: products.Product) -> int:
+    """The access period from the price's `access_months` metadata, else the product's."""
+    try:
+        months = int((price.get("metadata") or {}).get("access_months") or product.months)
+    except (TypeError, ValueError):
+        return product.months
+    return months if 0 < months <= 24 else product.months
+
+
+def products_for_sale() -> list[products.Product]:
+    on_sale = get_settings().cantons_on_sale
+    return [
+        p
+        for p in products.PRODUCTS.values()
+        if p.kind == products.KIND_EXTENSION or p.canton in on_sale
+    ]
+
+
+@router.get("/products", response_model=list[ProductOut])
+async def list_products() -> list[ProductOut]:
+    """The passes for the cantons on sale and the extension, priced from Stripe."""
     prices = _prices()
     out = []
-    for p in rows:
+    for p in products_for_sale():
         price = prices.get(p.key) or {}
-        recurring = price.get("recurring") or {}
         out.append(
-            PlanOut(
+            ProductOut(
                 key=p.key,
-                kind=p.kind,
+                kind=p.kind,  # type: ignore[arg-type]
+                canton=p.canton,
                 amount_cents=price.get("unit_amount"),
                 currency=(price.get("currency") or "chf").upper(),
-                interval=recurring.get("interval"),
-                monthly_message_limit=p.monthly_message_limit,
-                daily_message_limit=p.daily_message_limit,
-                price_id=price.get("id"),
+                months=price_months(price, p),
+                available=bool(price.get("id")),
             )
         )
     return out
@@ -103,85 +121,65 @@ async def list_plans(db: AsyncSession = Depends(get_db)) -> list[PlanOut]:
 async def _ensure_customer(db: AsyncSession, user: User) -> str:
     if user.stripe_customer_id:
         return user.stripe_customer_id
-    customer = stripe_client.create_customer(user.email or "", str(user.id), user.locale)
+    customer = stripe_client.create_customer(user.email or "")
     user.stripe_customer_id = customer["id"]
     await db.commit()
     return customer["id"]
+
+
+def _extension_canton(user: User, requested: str | None) -> str:
+    if requested:
+        return requested.lower()
+    for canton in sorted({e.canton for e in user.entitlements}):
+        if extendable_pass(user, canton) is not None:
+            return canton
+    return user.canton
 
 
 @router.post("/checkout", response_model=UrlOut)
 async def create_checkout(
     body: CheckoutIn, user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
 ) -> UrlOut:
-    """TODO(task 0.7): replace with one-off Civics Pass checkout per canton. Until then the
-    source app's plan keys are kept so the route and its tests keep working."""
+    """A Stripe Checkout Session in payment mode for one pass or an extension. Payment
+    methods (card, TWINT) come from the Dashboard settings."""
     settings = get_settings()
     if not settings.stripe_secret_key:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "billing_not_configured")
-    plan = await db.get(Plan, body.plan_key)
-    if plan is None or not plan.is_active:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "unknown_plan")
-    price = _prices().get(plan.key)
+    product = products.PRODUCTS[body.product]
+    if product.kind == products.KIND_PASS:
+        canton = product.canton or ""
+        if canton not in settings.cantons_on_sale:
+            raise HTTPException(status.HTTP_404_NOT_FOUND, "not_for_sale")
+        if active_pass(user, canton) is not None:
+            raise HTTPException(status.HTTP_409_CONFLICT, "pass_active")
+    else:
+        canton = _extension_canton(user, body.canton)
+        if canton not in CANTONS:
+            raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_canton")
+        if extendable_pass(user, canton) is None:
+            raise HTTPException(status.HTTP_409_CONFLICT, "no_pass_to_extend")
+    price = _prices().get(product.key)
     if price is None:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "price_not_found")
 
     base = settings.app_base_url.rstrip("/")
     customer_id = await _ensure_customer(db, user)
-    params: dict[str, Any] = {
-        "customer": customer_id,
-        "client_reference_id": str(user.id),
-        "success_url": f"{base}/billing/return?status=success&session_id={{CHECKOUT_SESSION_ID}}",
-        "cancel_url": f"{base}/billing/return?status=cancelled",
-        "locale": stripe_client.stripe_locale(user.locale),
-        "allow_promotion_codes": True,
-    }
-
-    if plan.kind == "subscription":
-        quantity = 1
-        params.update(
-            {
-                "mode": "subscription",
-                "line_items": [{"price": price["id"], "quantity": quantity}],
-                "payment_method_collection": "always",
-                "subscription_data": {
-                    "trial_period_days": settings.stripe_trial_days,
-                    "metadata": {"user_id": str(user.id), "plan_key": plan.key},
-                },
-                "metadata": {
-                    "user_id": str(user.id),
-                    "plan_key": plan.key,
-                    "quantity": str(quantity),
-                },
-            }
-        )
-    else:
-        params.update(
-            {
-                "mode": "payment",
-                "line_items": [{"price": price["id"], "quantity": body.quantity}],
-                "metadata": {
-                    "user_id": str(user.id),
-                    "plan_key": plan.key,
-                    "quantity": str(body.quantity),
-                },
-            }
-        )
-
-    session = stripe_client.create_checkout_session(params)
-    return UrlOut(url=session["url"])
-
-
-@router.post("/portal", response_model=UrlOut)
-async def create_portal(
-    user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
-) -> UrlOut:
-    settings = get_settings()
-    if not settings.stripe_secret_key:
-        raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "billing_not_configured")
-    if not user.stripe_customer_id:
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "no_stripe_customer")
-    session = stripe_client.create_portal_session(
-        user.stripe_customer_id, f"{settings.app_base_url.rstrip('/')}/learner", user.locale
+    meta = {"product": product.key, "canton": canton, "months": str(price_months(price, product))}
+    session = stripe_client.create_checkout_session(
+        {
+            "mode": "payment",
+            "customer": customer_id,
+            "client_reference_id": str(user.id),
+            "line_items": [{"price": price["id"], "quantity": 1}],
+            "metadata": meta,
+            "payment_intent_data": {"metadata": meta},
+            "success_url": (
+                f"{base}/billing/return?status=success&canton={canton}"
+                "&session_id={CHECKOUT_SESSION_ID}"
+            ),
+            "cancel_url": f"{base}/billing/return?status=cancelled",
+            "locale": stripe_client.stripe_locale(user.locale),
+        }
     )
     return UrlOut(url=session["url"])
 
@@ -202,12 +200,25 @@ async def list_payments(
     return [
         PaymentOut(
             id=str(p.id),
+            product=p.product,
+            canton=p.canton,
             amount_cents=p.amount_cents,
             currency=p.currency.upper(),
             paid_at=p.paid_at.isoformat(),
+            refunded_at=p.refunded_at.isoformat() if p.refunded_at else None,
         )
         for p in rows
     ]
+
+
+@router.get("/refund-eligibility")
+async def refund_eligibility(
+    user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
+) -> dict[str, Any]:
+    """Whether the learner's latest payment may still be refunded. There is no self-service
+    refund: the learner writes to support and an admin refunds."""
+    payment = await refunds.latest_payment(db, user)
+    return (await refunds.eligibility(db, payment)).to_dict()
 
 
 @router.get("/access")

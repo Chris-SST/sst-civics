@@ -160,19 +160,6 @@ class OneTimeToken(Base):
     used_at: Mapped[datetime | None] = mapped_column(TZDateTime)
 
 
-class Plan(Base):
-    """Plan limits, editable by admin. Prices live in Stripe and are looked up by key."""
-
-    __tablename__ = "plans"
-
-    key: Mapped[str] = mapped_column(String(40), primary_key=True)
-    kind: Mapped[str] = mapped_column(String(16))  # subscription | addon
-    monthly_message_limit: Mapped[int | None] = mapped_column(Integer)
-    daily_message_limit: Mapped[int | None] = mapped_column(Integer)
-    is_active: Mapped[bool] = mapped_column(Boolean, default=True)
-    sort_order: Mapped[int] = mapped_column(Integer, default=0)
-
-
 class StripeEvent(Base):
     """Every webhook event we have accepted, for idempotency and audit."""
 
@@ -187,6 +174,8 @@ class StripeEvent(Base):
 
 
 class Payment(Base):
+    """One paid Civics Pass or extension, from a Stripe Checkout Session in payment mode."""
+
     __tablename__ = "payments"
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
@@ -194,10 +183,20 @@ class Payment(Base):
     user_id: Mapped[uuid.UUID | None] = mapped_column(
         ForeignKey("users.id", ondelete="SET NULL"), index=True
     )
-    stripe_invoice_id: Mapped[str] = mapped_column(String(64), unique=True)
+    # The entitlement this payment created or extended; a refund shortens it.
+    entitlement_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("entitlements.id", ondelete="SET NULL"), index=True
+    )
+    product: Mapped[str] = mapped_column(String(40))  # Stripe lookup key
+    canton: Mapped[str] = mapped_column(String(2))
+    months: Mapped[int] = mapped_column(Integer)  # access the payment added
+    stripe_checkout_session_id: Mapped[str] = mapped_column(String(255), unique=True)
+    stripe_payment_intent_id: Mapped[str | None] = mapped_column(String(255), index=True)
     amount_cents: Mapped[int] = mapped_column(Integer)
     currency: Mapped[str] = mapped_column(String(3))
     paid_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    amount_refunded_cents: Mapped[int] = mapped_column(Integer, default=0)
+    refunded_at: Mapped[datetime | None] = mapped_column(TZDateTime)
     # Set when the account is deleted: a keyed hash of the email address, so the record can
     # still be matched to the person if they ask, without keeping the address itself.
     email_hash: Mapped[str | None] = mapped_column(String(64))

@@ -7,9 +7,17 @@ from datetime import timedelta
 from fastapi import Request, Response
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.auth.schemas import AccessOut, EntitlementOut, MeOut, SessionOut, UserOut
+from app.auth.schemas import (
+    AccessOut,
+    EntitlementOut,
+    LatestPaymentOut,
+    MeOut,
+    SessionOut,
+    UserOut,
+)
 from app.auth.sessions import ensure_csrf_cookie
-from app.billing.access import access_level, is_active
+from app.billing.access import access_level, is_active, is_free_tier
+from app.billing.refunds import latest_payment
 from app.config import get_settings
 from app.db import utcnow
 from app.deps import AuthContext
@@ -41,12 +49,23 @@ def entitlement_out(e: Entitlement) -> EntitlementOut:
     )
 
 
-def access_out(user: User) -> AccessOut:
+async def access_out(db: AsyncSession, user: User) -> AccessOut:
+    payment = await latest_payment(db, user) if user.is_learner else None
     return AccessOut(
         access=access_level(user),  # type: ignore[arg-type]
         canton=user.canton,
         entitlements=[entitlement_out(e) for e in user.entitlements],
         has_stripe_customer=bool(user.stripe_customer_id),
+        free_tier=is_free_tier(user),
+        latest_payment=LatestPaymentOut(
+            product=payment.product,
+            canton=payment.canton,
+            paid_at=payment.paid_at.isoformat(),
+            refunded=payment.refunded_at is not None,
+            checkout_session_id=payment.stripe_checkout_session_id,
+        )
+        if payment
+        else None,
     )
 
 
@@ -83,6 +102,6 @@ async def build_me(
             impersonated_by=impersonated_by,
             reauth_seconds_left=reauth_seconds_left(ctx.session),
         ),
-        access=access_out(user),
+        access=await access_out(db, user),
         csrf_token=csrf,
     )

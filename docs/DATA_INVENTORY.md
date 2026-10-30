@@ -55,7 +55,7 @@ Backups hold everything below for up to 30 days after it leaves the live databas
 
 | Field | Purpose | Retention | Deleted on account deletion |
 | --- | --- | --- | --- |
-| `payments` (invoice id, amount, currency, date) | Accounting records | 10 years (Swiss Code of Obligations, art. 958f) | No: `user_id` set to null, keyed hash of the email stored in `email_hash` |
+| `payments` (product, canton, months, Checkout Session and payment intent ids, amount, currency, paid and refunded dates) | Accounting records | 10 years (Swiss Code of Obligations, art. 958f) | No: `user_id` set to null, keyed hash of the email stored in `email_hash` |
 | `llm_calls` (tokens, cost, model, latency; no content) | AI cost accounting and budgets | Kept | No: `user_id` set to null |
 | `stripe_events` (webhook payloads, without contact or address details) | Idempotency and audit of payment events | Kept | No: payloads naming the person's customer or account id are reduced to event id and type |
 | `cost_alerts` (scope may be a user id) | One alert per threshold and month | Kept | No (holds an id only) |

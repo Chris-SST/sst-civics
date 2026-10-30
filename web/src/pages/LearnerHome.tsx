@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import { get, post } from "../api";
 import ErrorText from "../components/ErrorText";
+import Pricing from "../components/Pricing";
 import { MasteryBar } from "../components/QuestionCard";
 import { formatDate } from "../i18n";
 import { estimateDiagnosticSize, type PracticeOverview, type TopicOverview } from "../practice";
@@ -142,6 +143,8 @@ export default function LearnerHome() {
       {fullAccess && !data.tutor_enabled && <p className="alert alert-info">{t("learner.tutorOffline")}</p>}
       {error ? <ErrorText error={error} /> : null}
 
+      <Pricing />
+
       {data.courses.length === 0 && (
         <section className="card">
           <p className="muted">{t("learner.noCourses")}</p>
@@ -195,8 +198,12 @@ export default function LearnerHome() {
         <h3>{t("learner.usage")}</h3>
         <p className="small">
           {t("learner.usageToday", { used: data.usage.daily_used, limit: data.usage.daily_limit ?? "∞" })}
-          <br />
-          {t("learner.usageMonth", { used: data.usage.monthly_used, limit: data.usage.monthly_limit ?? "∞" })}
+          {data.usage.monthly_limit !== null && (
+            <>
+              <br />
+              {t("learner.usageMonth", { used: data.usage.monthly_used, limit: data.usage.monthly_limit })}
+            </>
+          )}
         </p>
         {data.usage.near_monthly_limit && <p className="alert alert-warn small">{t("learner.nearLimit")}</p>}
         <p className="small muted">{t("learner.integrity")}</p>

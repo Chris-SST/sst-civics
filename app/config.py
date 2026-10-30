@@ -45,7 +45,16 @@ class Settings(BaseSettings):
     stripe_secret_key: str = ""
     stripe_webhook_secret: str = ""
     stripe_api_version: str = "2026-05-27.dahlia"
-    stripe_trial_days: int = 7
+    # Cantons whose Civics Pass is on sale, comma-separated lower-case codes. A canton is
+    # added once its question content exists.
+    cantons_for_sale: str = "zh"
+    # Refund rule (plan, "Payments and pricing"): within this many days of purchase, if
+    # fewer than this many questions have been studied since.
+    refund_window_days: int = 14
+    refund_max_questions_studied: int = 50
+    # An extension may be bought while a pass is active or up to this many days after it
+    # expired.
+    extension_grace_days: int = 90
 
     # Email
     email_backend: Literal["console", "smtp", "memory"] = "console"
@@ -74,6 +83,8 @@ class Settings(BaseSettings):
     ai_monthly_budget_chf: float = 300
     ai_learner_alert_chf: float = 8
     max_student_message_chars: int = 2000
+    # "Explain this" messages a day for every learner with an active entitlement.
+    ai_daily_message_limit: int = 20
     serve_unreviewed_questions: bool = False  # staging/dev: also serve auto_verified
     question_spot_check_first: int = 50
     question_spot_check_rate: float = 0.10
@@ -92,6 +103,10 @@ class Settings(BaseSettings):
     @property
     def unreviewed_questions_allowed(self) -> bool:
         return self.serve_unreviewed_questions and self.app_env != "production"
+
+    @property
+    def cantons_on_sale(self) -> tuple[str, ...]:
+        return tuple(c.strip().lower() for c in self.cantons_for_sale.split(",") if c.strip())
 
     @property
     def cookies_secure(self) -> bool:

@@ -5,7 +5,7 @@ import { post } from "../api";
 import { homeFor, useAuth } from "../auth";
 import { LANGUAGES } from "../i18n";
 
-const SITE = "https://swisssciencetutors.ch";
+export const SITE = "https://swisssciencetutors.ch";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const { t, i18n } = useTranslation();

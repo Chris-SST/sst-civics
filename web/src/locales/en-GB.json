@@ -90,7 +90,16 @@
     "no_password": "Your account has no password.",
     "password_required_for_admins": "Admin accounts must keep a password.",
     "reauth_required": "Please confirm it is you: enter your password or open a fresh sign-in link.",
-    "not_while_impersonating": "This is not possible while viewing as another user."
+    "not_while_impersonating": "This is not possible while viewing as another user.",
+    "not_for_sale": "This Civics Pass is not on sale yet.",
+    "pass_active": "You already have an active pass for this canton. You can extend it instead.",
+    "no_pass_to_extend": "An extension needs a pass for this canton that is active or ended less than 90 days ago.",
+    "already_refunded": "This payment has already been refunded.",
+    "no_payment_intent": "Stripe has no payment for this record, so it cannot be refunded here.",
+    "refund_failed": "Stripe did not accept the refund. Please try again or refund in the Stripe Dashboard.",
+    "refund_too_late": "The refund period for this payment has ended.",
+    "refund_too_many_questions": "Too many questions have been studied since this payment for a refund under the rule.",
+    "refund_refunded": "This payment has already been refunded."
   },
   "impersonation": {
     "banner": "Viewing as {{name}} ({{role}}). You are signed in as admin {{admin}}.",
@@ -99,7 +108,7 @@
   "landing": {
     "title": "{{name}}",
     "lead": "Prepare for the citizenship knowledge test: understand every question in your own language, then practise in German.",
-    "cta": "Start a 7-day free trial",
+    "cta": "Start free practice",
     "plansTitle": "Plans",
     "trialNote": "Prices in CHF.",
     "learnMore": "Learn more on swisssciencetutors.ch"
@@ -209,10 +218,11 @@
   "billingReturn": {
     "title": "Payment",
     "cancelled": "Checkout was cancelled. Nothing has been charged.",
-    "active": "Thank you. Your access is active.",
-    "waiting": "Waiting for Stripe to confirm your payment method. This usually takes a few seconds…",
-    "slow": "Stripe has not confirmed yet. Your access will update automatically; you can leave this page.",
-    "toDashboard": "Go to your dashboard"
+    "active": "Thank you. Your Civics Pass is active.",
+    "waiting": "Waiting for Stripe to confirm your payment. This usually takes a few seconds…",
+    "slow": "Stripe has not confirmed your payment yet. Your access will appear automatically once it does; you can leave this page.",
+    "toDashboard": "Go to your dashboard",
+    "activeUntil": "Thank you. Your Civics Pass for {{canton}} is active until {{date}}."
   },
   "learner": {
     "noCourses": "No courses chosen yet",
@@ -246,7 +256,7 @@
     "hideTopics": "Hide topics",
     "noQuestionsYet": "Practice questions for this course are on their way. You can still ask the tutor.",
     "welcome": "Welcome",
-    "noAccess": "You do not have access for your canton yet."
+    "noAccess": "You are on free practice. A Civics Pass for your canton opens all questions, mock tests and Explain this."
   },
   "chat": {
     "back": "Your sessions",
@@ -340,6 +350,23 @@
       "admin": "Granted by admin",
       "trial": "Trial",
       "stripe": "Paid"
+    },
+    "refund": "Refund",
+    "refundAnyway": "Refund anyway",
+    "refundConfirm": "Refund this payment in full through Stripe? Access ends when Stripe confirms the refund.",
+    "refundOverrideConfirm": "This payment falls outside the refund rule. Refund it in full anyway? Access ends when Stripe confirms the refund.",
+    "refundRequested": "Refund sent to Stripe. Access changes when Stripe confirms it.",
+    "refundedOn": "Refunded on {{date}}",
+    "refundRule": {
+      "too_late": "outside the 14-day refund period",
+      "too_many_questions": "{{count}} questions studied since purchase",
+      "refunded": "already refunded",
+      "no_payment": "no payment"
+    },
+    "product": {
+      "civics_pass_zh": "Civics Pass",
+      "civics_pass_ag": "Civics Pass",
+      "civics_extension": "Extension"
     }
   },
   "diagnostic": {
@@ -566,5 +593,26 @@
     "deleteSubmit": "Delete my account",
     "deletedTitle": "Your account is deleted",
     "deletedBody": "Your account and learning data have been deleted. We have sent you a confirmation email."
+  },
+  "pricing": {
+    "title": "Civics Pass",
+    "intro": "Start with free practice. A Civics Pass opens everything for one canton: all questions and study modes, unlimited mock tests and Explain this, in every language. You pay once; there is no subscription.",
+    "passName": "Civics Pass {{canton}}",
+    "period": "for {{months}} months",
+    "passIncludes": "All questions and study modes for this canton, unlimited mock tests and Explain this.",
+    "activeUntil": "Active until {{date}}",
+    "endedOn": "Ended on {{date}}",
+    "freeTier": "Free practice",
+    "buy": "Buy",
+    "signUpToBuy": "Sign up free",
+    "extend": "Extend by {{months}} months ({{price}})",
+    "extensionNote": "Need more time? An extension adds {{months}} months for {{price}}, while your pass is active or up to 90 days after it ends.",
+    "priceNote": "Prices in CHF. Paid once, by card or TWINT, through Stripe.",
+    "unavailable": "Prices are not available right now. Please try again shortly.",
+    "refundEligible": "Not what you hoped for? Your last payment can be refunded until {{date}} if you have studied fewer than {{max}} questions since buying (so far: {{count}}).",
+    "writeToSupport": "Write to support to ask for a refund.",
+    "refundTooLate": "The refund period for your last payment ended on {{date}}.",
+    "refundTooMany": "Your last payment can no longer be refunded: you have studied {{count}} questions since buying, and refunds are possible below {{max}}.",
+    "refundDone": "Your last payment has been refunded."
   }
 }

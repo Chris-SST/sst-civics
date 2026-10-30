@@ -90,7 +90,16 @@
     "no_password": "Ihr Konto hat kein Passwort.",
     "password_required_for_admins": "Admin-Konten müssen ein Passwort behalten.",
     "reauth_required": "Bitte bestätigen Sie, dass Sie es sind: Geben Sie Ihr Passwort ein oder öffnen Sie einen neuen Anmeldelink.",
-    "not_while_impersonating": "Dies ist nicht möglich, während Sie die App als andere Person ansehen."
+    "not_while_impersonating": "Dies ist nicht möglich, während Sie die App als andere Person ansehen.",
+    "not_for_sale": "Dieser Civics Pass ist noch nicht erhältlich.",
+    "pass_active": "Sie haben für diesen Kanton bereits einen aktiven Pass. Sie können ihn stattdessen verlängern.",
+    "no_pass_to_extend": "Für eine Verlängerung braucht es einen Pass für diesen Kanton, der aktiv ist oder vor weniger als 90 Tagen abgelaufen ist.",
+    "already_refunded": "Diese Zahlung wurde bereits zurückerstattet.",
+    "no_payment_intent": "Zu diesem Eintrag gibt es bei Stripe keine Zahlung; er kann hier nicht zurückerstattet werden.",
+    "refund_failed": "Stripe hat die Rückerstattung nicht angenommen. Bitte versuchen Sie es erneut oder erstatten Sie im Stripe-Dashboard zurück.",
+    "refund_too_late": "Die Rückerstattungsfrist für diese Zahlung ist abgelaufen.",
+    "refund_too_many_questions": "Seit dieser Zahlung wurden zu viele Fragen bearbeitet, als dass die Regel eine Rückerstattung erlaubt.",
+    "refund_refunded": "Diese Zahlung wurde bereits zurückerstattet."
   },
   "impersonation": {
     "banner": "Ansicht als {{name}} ({{role}}). Sie sind als Admin {{admin}} angemeldet.",
@@ -99,7 +108,7 @@
   "landing": {
     "title": "{{name}}",
     "lead": "Bereiten Sie sich auf den Einbürgerungstest vor: Verstehen Sie jede Frage in Ihrer Sprache und üben Sie dann auf Deutsch.",
-    "cta": "7 Tage kostenlos testen",
+    "cta": "Kostenlos üben",
     "plansTitle": "Pläne",
     "trialNote": "Preise in CHF.",
     "learnMore": "Mehr erfahren auf swisssciencetutors.ch"
@@ -209,10 +218,11 @@
   "billingReturn": {
     "title": "Zahlung",
     "cancelled": "Der Bezahlvorgang wurde abgebrochen. Es wurde nichts belastet.",
-    "active": "Vielen Dank. Ihr Zugang ist aktiv.",
-    "waiting": "Warten auf die Bestätigung der Zahlungsmethode durch Stripe. Das dauert meist nur wenige Sekunden…",
-    "slow": "Stripe hat noch nicht bestätigt. Ihr Zugang wird automatisch aktualisiert; Sie können diese Seite verlassen.",
-    "toDashboard": "Zur Übersicht"
+    "active": "Vielen Dank. Ihr Civics Pass ist aktiv.",
+    "waiting": "Wir warten auf die Zahlungsbestätigung von Stripe. Das dauert meist nur wenige Sekunden …",
+    "slow": "Stripe hat Ihre Zahlung noch nicht bestätigt. Ihr Zugang erscheint automatisch, sobald dies geschieht; Sie können diese Seite verlassen.",
+    "toDashboard": "Zur Übersicht",
+    "activeUntil": "Vielen Dank. Ihr Civics Pass für {{canton}} ist bis am {{date}} aktiv."
   },
   "learner": {
     "noCourses": "Noch keine Kurse gewählt",
@@ -246,7 +256,7 @@
     "hideTopics": "Themen ausblenden",
     "noQuestionsYet": "Übungsfragen für diesen Kurs sind in Arbeit. Den Tutor kannst du trotzdem fragen.",
     "welcome": "Willkommen",
-    "noAccess": "Du hast noch keinen Zugang für deinen Kanton."
+    "noAccess": "Sie üben derzeit kostenlos. Ein Civics Pass für Ihren Kanton schaltet alle Fragen, Probetests und KI-Erklärungen frei."
   },
   "chat": {
     "back": "Deine Sitzungen",
@@ -340,6 +350,23 @@
       "admin": "Von Admin gewährt",
       "trial": "Testzugang",
       "stripe": "Bezahlt"
+    },
+    "refund": "Zurückerstatten",
+    "refundAnyway": "Trotzdem zurückerstatten",
+    "refundConfirm": "Diese Zahlung vollständig über Stripe zurückerstatten? Der Zugang endet, sobald Stripe die Rückerstattung bestätigt.",
+    "refundOverrideConfirm": "Diese Zahlung fällt nicht unter die Rückerstattungsregel. Trotzdem vollständig zurückerstatten? Der Zugang endet, sobald Stripe die Rückerstattung bestätigt.",
+    "refundRequested": "Rückerstattung an Stripe übermittelt. Der Zugang ändert sich, sobald Stripe sie bestätigt.",
+    "refundedOn": "Zurückerstattet am {{date}}",
+    "refundRule": {
+      "too_late": "ausserhalb der Rückerstattungsfrist von 14 Tagen",
+      "too_many_questions": "{{count}} Fragen seit dem Kauf bearbeitet",
+      "refunded": "bereits zurückerstattet",
+      "no_payment": "keine Zahlung"
+    },
+    "product": {
+      "civics_pass_zh": "Civics Pass",
+      "civics_pass_ag": "Civics Pass",
+      "civics_extension": "Verlängerung"
     }
   },
   "diagnostic": {
@@ -566,5 +593,26 @@
     "deleteSubmit": "Mein Konto löschen",
     "deletedTitle": "Ihr Konto ist gelöscht",
     "deletedBody": "Ihr Konto und Ihre Lerndaten wurden gelöscht. Wir haben Ihnen eine Bestätigung per E-Mail gesendet."
+  },
+  "pricing": {
+    "title": "Civics Pass",
+    "intro": "Beginnen Sie mit dem kostenlosen Üben. Ein Civics Pass schaltet für einen Kanton alles frei: alle Fragen und Lernmodi, unbegrenzte Probetests und KI-Erklärungen, in jeder Sprache. Sie bezahlen einmal, ohne Abonnement.",
+    "passName": "Civics Pass {{canton}}",
+    "period": "für {{months}} Monate",
+    "passIncludes": "Alle Fragen und Lernmodi für diesen Kanton, unbegrenzte Probetests und KI-Erklärungen.",
+    "activeUntil": "Aktiv bis {{date}}",
+    "endedOn": "Abgelaufen am {{date}}",
+    "freeTier": "Kostenlos üben",
+    "buy": "Kaufen",
+    "signUpToBuy": "Kostenlos registrieren",
+    "extend": "Um {{months}} Monate verlängern ({{price}})",
+    "extensionNote": "Brauchen Sie mehr Zeit? Eine Verlängerung um {{months}} Monate kostet {{price}}, solange Ihr Pass aktiv ist oder bis 90 Tage nach dem Ablauf.",
+    "priceNote": "Preise in CHF. Einmalige Zahlung mit Karte oder TWINT über Stripe.",
+    "unavailable": "Preise sind gerade nicht verfügbar. Bitte versuchen Sie es in Kürze erneut.",
+    "refundEligible": "Nicht das Richtige für Sie? Ihre letzte Zahlung kann bis am {{date}} zurückerstattet werden, wenn Sie seit dem Kauf weniger als {{max}} Fragen bearbeitet haben (bisher: {{count}}).",
+    "writeToSupport": "Schreiben Sie dem Support, um eine Rückerstattung zu beantragen.",
+    "refundTooLate": "Die Rückerstattungsfrist für Ihre letzte Zahlung ist am {{date}} abgelaufen.",
+    "refundTooMany": "Ihre letzte Zahlung kann nicht mehr zurückerstattet werden: Sie haben seit dem Kauf {{count}} Fragen bearbeitet, eine Rückerstattung ist unter {{max}} möglich.",
+    "refundDone": "Ihre letzte Zahlung wurde zurückerstattet."
   }
 }

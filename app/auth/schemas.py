@@ -93,11 +93,23 @@ class EntitlementOut(BaseModel):
     active: bool
 
 
+class LatestPaymentOut(BaseModel):
+    product: str
+    canton: str
+    paid_at: str
+    refunded: bool
+    # Lets the return page from Checkout see that its own session has been confirmed.
+    checkout_session_id: str
+
+
 class AccessOut(BaseModel):
     access: Literal["full", "none"]  # for the user's own canton
     canton: str
     entitlements: list[EntitlementOut]
     has_stripe_customer: bool
+    # No active entitlement for the learner's canton: free practice only, no "Explain this".
+    free_tier: bool = False
+    latest_payment: LatestPaymentOut | None = None
 
 
 class SessionOut(BaseModel):

@@ -42,15 +42,9 @@ def stripe_locale(locale: str) -> str:
     return locale if locale in STRIPE_LOCALES else "auto"
 
 
-def create_customer(email: str, user_id: str, locale: str) -> dict[str, Any]:
-    preferred = [locale] if locale in STRIPE_LOCALES else []
-    c = _client().customers.create(
-        params={
-            "email": email,
-            "metadata": {"user_id": user_id},
-            "preferred_locales": preferred,
-        }
-    )
+def create_customer(email: str) -> dict[str, Any]:
+    """A Stripe customer with the email address only, nothing else about the person."""
+    c = _client().customers.create(params={"email": email})
     return _plain(c)
 
 
@@ -66,27 +60,15 @@ def create_checkout_session(params: dict[str, Any]) -> dict[str, Any]:
     return _plain(s)
 
 
-def create_portal_session(customer_id: str, return_url: str, locale: str) -> dict[str, Any]:
-    s = _client().billing_portal.sessions.create(
-        params={
-            "customer": customer_id,
-            "return_url": return_url,
-            "locale": stripe_locale(locale),
-        }
+def create_refund(
+    payment_intent_id: str, metadata: dict[str, str], idempotency_key: str
+) -> dict[str, Any]:
+    """Refund a payment in full. The `charge.refunded` webhook then adjusts access."""
+    r = _client().refunds.create(
+        params={"payment_intent": payment_intent_id, "metadata": metadata},
+        options={"idempotency_key": idempotency_key},
     )
-    return _plain(s)
-
-
-def retrieve_subscription(subscription_id: str) -> dict[str, Any]:
-    s = _client().subscriptions.retrieve(subscription_id)
-    return _plain(s)
-
-
-def retrieve_checkout_line_items(session_id: str) -> list[dict[str, Any]]:
-    result = _client().checkout.sessions.list_line_items(
-        session_id, params={"expand": ["data.price"]}
-    )
-    return [_plain(li) for li in result.data]
+    return _plain(r)
 
 
 def construct_event(payload: bytes, signature: str) -> dict[str, Any]:

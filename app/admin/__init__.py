@@ -1,1 +1,1 @@
-"""Admin area: families, staff accounts, plans and Stripe events."""
+"""Admin area: learners and their access, payments and refunds, admins and Stripe events."""

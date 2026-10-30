@@ -88,6 +88,8 @@ async def test_signup_sends_verification_and_blocks_login_until_verified(api):
         "canton": "zh",
         "entitlements": [],
         "has_stripe_customer": False,
+        "free_tier": True,
+        "latest_payment": None,
     }
     assert "family" not in me
 

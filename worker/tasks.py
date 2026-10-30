@@ -3,16 +3,17 @@
 from __future__ import annotations
 
 import logging
+from datetime import timedelta
 from typing import Any
 
-from sqlalchemy import select
+from sqlalchemy import func, select
 
 from app.auth import email_link, one_time
 from app.auth.sessions import purge_expired_sessions
 from app.billing.events import handle_event
 from app.db import SessionLocal, utcnow
 from app.email import backend, messages
-from app.models import GenerationBatch, StripeEvent
+from app.models import Entitlement, GenerationBatch, StripeEvent
 from app.questions import pipeline
 
 log = logging.getLogger(__name__)
@@ -65,6 +66,20 @@ async def purge_sessions(ctx: dict[str, Any]) -> int:
         n += await one_time.purge_old_tokens(db)
         await db.commit()
     return n
+
+
+async def log_expiring_entitlements(ctx: dict[str, Any]) -> int:
+    """Nightly: count the entitlements that end in the next 7 days. Changes nothing and
+    sends nothing; the number is the basis for a later reminder email."""
+    now = utcnow()
+    async with SessionLocal() as db:
+        n = await db.scalar(
+            select(func.count())
+            .select_from(Entitlement)
+            .where(Entitlement.expires_at > now, Entitlement.expires_at <= now + timedelta(days=7))
+        )
+    log.info("Entitlements expiring in the next 7 days: %d", n or 0)
+    return int(n or 0)
 
 
 async def generate_questions_direct(ctx: dict[str, Any], batch_id: str) -> int:

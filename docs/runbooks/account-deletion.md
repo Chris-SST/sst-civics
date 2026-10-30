@@ -25,11 +25,11 @@ attempts, topic mastery, diagnostic runs, question reports and entitlements.
 
 | Record | Kept as | Why |
 | --- | --- | --- |
-| `payments` | Amount, currency, date, Stripe invoice id; `user_id` null; `email_hash` set to an HMAC-SHA256 of the email keyed with `SECRET_KEY` | Accounting records must be kept for 10 years (Swiss Code of Obligations, art. 958f). The hash lets us find the records if the person later asks about a payment and gives their address, without storing the address. |
+| `payments` | Product, canton, amount, currency, dates, Stripe Checkout Session and payment intent ids; `user_id` and `entitlement_id` null; `email_hash` set to an HMAC-SHA256 of the email keyed with `SECRET_KEY` | Accounting records must be kept for 10 years (Swiss Code of Obligations, art. 958f). The hash lets us find the records if the person later asks about a payment and gives their address, without storing the address. |
 | `llm_calls` | Tokens, cost, model, latency; `user_id` null | AI cost accounting and the monthly budget. These rows never contain message content. |
 | `stripe_events` | Payloads naming the person's Stripe customer or account id reduced to `{id, type, redacted_at}` | The event id must stay for idempotency (Stripe re-sends events). Payloads are already stored without contact and address details. |
 | `audit_log` | Admin actions stay; the person's id is removed where they were the actor; one `user.self_delete` row with the old account id | Accountability for admin actions and a record that the deletion happened. |
-| Stripe's own records | The Stripe customer, invoices and payment methods remain in Stripe | Stripe is the payment processor and keeps its records under its own legal duties. If the person also asks for the Stripe customer to go, delete the customer in the Stripe Dashboard (Customers → the customer → Delete); invoices stay for accounting. |
+| Stripe's own records | The Stripe customer, its payments and payment methods remain in Stripe | Stripe is the payment processor and keeps its records under its own legal duties. If the person also asks for the Stripe customer to go, delete the customer in the Stripe Dashboard (Customers → the customer → Delete); payment records stay for accounting. |
 | Backups | Nightly backups still contain the data | They expire after 30 days (`backups-and-restore.md`); the deletion is complete when the last backup holding the data has expired. |
 
 ## Handling a deletion request by email

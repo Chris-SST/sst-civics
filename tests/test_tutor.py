@@ -18,7 +18,6 @@ from app.models import (
     CostAlert,
     LlmCall,
     Message,
-    Plan,
 )
 from tests.conftest import Api, admin_logged_in, grant_access, learner_logged_in
 
@@ -75,7 +74,7 @@ async def test_overview_lists_courses_and_topics(api, api2, fake):
     assert any(t["code"] == "AA-1.5" for t in aa["topics"])  # HL-only topic present
     physics = next(c for c in data["courses"] if c["key"] == "ib_physics_sl")
     assert not any(t["code"] == "PH-A.4" for t in physics["topics"])  # HL-only hidden for SL
-    assert data["usage"]["monthly_limit"] == 300 and data["usage"]["daily_limit"] == 60
+    assert data["usage"]["monthly_limit"] is None and data["usage"]["daily_limit"] == 20
 
 
 async def test_streamed_reply_is_stored_counted_and_costed(api, api2, fake):
@@ -182,12 +181,9 @@ async def test_wellbeing_note_reaches_tutor_without_a_safeguarding_queue(api, ap
     assert not [r for r in app.routes if "safety-flags" in getattr(r, "path", "")]
 
 
-async def test_daily_limit_blocks_further_messages(api, api2, fake):
+async def test_daily_limit_blocks_further_messages(api, api2, fake, monkeypatch):
     await learner_in(api2)
-    async with SessionLocal() as db:
-        plan = await db.get(Plan, "ai_monthly")
-        plan.daily_message_limit = 1
-        await db.commit()
+    monkeypatch.setattr(get_settings(), "ai_daily_message_limit", 1)
     conv_id = await start_conversation(api2)
     r = await api2.post(f"/api/tutor/conversations/{conv_id}/messages", json={"content": "Hi"})
     assert r.status_code == 200

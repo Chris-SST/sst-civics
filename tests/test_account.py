@@ -137,7 +137,15 @@ async def _fill_learning_data(email: str) -> None:
         db.add(QuestionReport(question_id=q.id, user_id=user.id, comment="typo"))
         q.report_count = 1
         db.add(
-            Payment(user_id=user.id, stripe_invoice_id="in_1", amount_cents=2900, currency="chf")
+            Payment(
+                user_id=user.id,
+                product="civics_pass_zh",
+                canton="zh",
+                months=6,
+                stripe_checkout_session_id="cs_1",
+                amount_cents=2900,
+                currency="chf",
+            )
         )
         db.add(
             LlmCall(user_id=user.id, purpose="tutor_reply", model="m", cost_chf=0.12, cost_usd=0.15)

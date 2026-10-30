@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 import uuid
 from datetime import UTC, datetime
 from typing import Any, Literal
@@ -12,6 +13,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.auth.me import entitlement_out
 from app.auth.schemas import EntitlementOut
 from app.auth.sessions import create_session, destroy_all_sessions, set_session_cookie
+from app.billing import refunds, stripe_client
 from app.billing.access import access_level
 from app.config import get_settings
 from app.db import get_db, utcnow
@@ -24,11 +26,11 @@ from app.models import (
     AuditLog,
     Entitlement,
     Payment,
-    Plan,
     StripeEvent,
     User,
 )
 
+log = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/admin", tags=["admin"], dependencies=[Depends(require_admin)])
 
 
@@ -138,7 +140,15 @@ async def learner_detail(
     user_id: str, admin: User = Depends(require_admin), db: AsyncSession = Depends(get_db)
 ) -> dict[str, Any]:
     user = await _learner(db, user_id)
-    payments = (await db.execute(select(Payment).where(Payment.user_id == user.id))).scalars().all()
+    payments = (
+        (
+            await db.execute(
+                select(Payment).where(Payment.user_id == user.id).order_by(Payment.paid_at.desc())
+            )
+        )
+        .scalars()
+        .all()
+    )
     await _audit(db, admin, "learner.view", "user", str(user.id))
     await db.commit()
     return {
@@ -150,9 +160,13 @@ async def learner_detail(
         "payments": [
             {
                 "id": str(p.id),
+                "product": p.product,
+                "canton": p.canton,
                 "amount_cents": p.amount_cents,
                 "currency": p.currency,
                 "paid_at": _iso(p.paid_at),
+                "refunded_at": _iso(p.refunded_at),
+                "refund": (await refunds.eligibility(db, p)).to_dict(),
             }
             for p in payments
         ],
@@ -265,46 +279,60 @@ async def reset_2fa(
     return {"status": "ok"}
 
 
-@router.get("/plans")
-async def list_plans(db: AsyncSession = Depends(get_db)) -> list[dict[str, Any]]:
-    rows = (await db.execute(select(Plan).order_by(Plan.sort_order))).scalars().all()
-    return [
-        {
-            "key": p.key,
-            "kind": p.kind,
-            "monthly_message_limit": p.monthly_message_limit,
-            "daily_message_limit": p.daily_message_limit,
-            "is_active": p.is_active,
-        }
-        for p in rows
-    ]
+class RefundIn(BaseModel):
+    # Refund although the rule (14 days, fewer than 50 questions) says no: goodwill cases.
+    override: bool = False
 
 
-class PlanPatch(BaseModel):
-    monthly_message_limit: int | None = Field(default=None, ge=0)
-    daily_message_limit: int | None = Field(default=None, ge=0)
-    is_active: bool | None = None
-
-
-@router.patch("/plans/{key}")
-async def update_plan(
-    key: str,
-    body: PlanPatch,
+@router.post("/payments/{payment_id}/refund")
+async def refund_payment(
+    payment_id: str,
+    body: RefundIn | None = None,
     admin: User = Depends(require_admin),
     db: AsyncSession = Depends(get_db),
-) -> dict[str, str]:
-    plan = await db.get(Plan, key)
-    if plan is None:
+) -> dict[str, Any]:
+    """Refund a payment in full through Stripe. Access is shortened when the
+    `charge.refunded` webhook arrives, not here."""
+    body = body or RefundIn()
+    payment = await db.get(Payment, _parse_uuid(payment_id))
+    if payment is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
-    if body.monthly_message_limit is not None:
-        plan.monthly_message_limit = body.monthly_message_limit
-    if body.daily_message_limit is not None:
-        plan.daily_message_limit = body.daily_message_limit
-    if body.is_active is not None:
-        plan.is_active = body.is_active
-    await _audit(db, admin, "plan.update", "plan", key, body.model_dump(exclude_none=True))
+    if payment.refunded_at is not None:
+        raise HTTPException(status.HTTP_409_CONFLICT, "already_refunded")
+    if not payment.stripe_payment_intent_id:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "no_payment_intent")
+    if not get_settings().stripe_secret_key:
+        raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "billing_not_configured")
+    rule = await refunds.eligibility(db, payment)
+    if not rule.eligible and not body.override:
+        raise HTTPException(status.HTTP_409_CONFLICT, f"refund_{rule.reason}")
+    try:
+        refund = stripe_client.create_refund(
+            payment.stripe_payment_intent_id,
+            metadata={"payment_id": str(payment.id)},
+            idempotency_key=f"civics-refund-{payment.id}",
+        )
+    except Exception as exc:  # noqa: BLE001
+        log.warning("Stripe refund failed for payment %s: %s", payment.id, exc.__class__.__name__)
+        raise HTTPException(status.HTTP_502_BAD_GATEWAY, "refund_failed") from None
+    await _audit(
+        db,
+        admin,
+        "payment.refund",
+        "payment",
+        str(payment.id),
+        {
+            "refund_id": refund.get("id"),
+            "amount_cents": payment.amount_cents,
+            "product": payment.product,
+            "override": body.override,
+            "eligible": rule.eligible,
+            "reason": rule.reason,
+            "questions_studied": rule.questions_studied,
+        },
+    )
     await db.commit()
-    return {"status": "ok"}
+    return {"status": refund.get("status") or "pending", "refund_id": refund.get("id")}
 
 
 @router.get("/audit")

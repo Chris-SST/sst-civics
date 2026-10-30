@@ -11,14 +11,14 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
   - [x] 0.3 Remove maths rendering and checks (KaTeX, figures, sympy, LaTeX prompts, mark-scheme marking); multiple choice is the only question kind; prompts bumped to v2. 64 tests.
   - [x] 0.4 New initial migration (D-005).
 - [x] Learner and admin accounts with email sign-in links (0.5, 0.6; D-027 to D-032). Optional learner passwords, encrypted TOTP secrets, account self-deletion, data inventory in `docs/DATA_INVENTORY.md`. 89 tests.
-- [ ] Stripe one-off payments working in test mode, with entitlements per canton (0.7).
+- [x] Stripe one-off payments working in test mode, with entitlements per canton (0.7; D-033 to D-038). Civics Pass and extension by lookup key, one-off Checkout, webhook grants, refund rule and admin refund, `plans` table removed. 105 tests.
 - [ ] Interface locales for the launch languages (0.8).
 - [ ] Staging site live on the shared VPS with its own host names, TLS and nightly backups (0.9 code done, D-004; deploy waits on DNS, the edge Caddy change and a GitHub repository).
 - [ ] Phase 0 review, README, `docs/DEMO_PHASE0.md`, demo walked (0.10).
 
 ## Next
 
-Tasks 0.2, 0.3, 0.4, 0.5, 0.6 and 0.9 are done (30 October 2026). Next: 0.7 payments. The five new locale files lack the strings added in 0.5 (they fall back to English; `npm run check:locales` lists them). The IB course modules under prompts/courses still hold maths examples; they go with the question model in Phase 1. Known leftovers: German learner screens use "du", old SST copy on the Landing page, main JS chunk over 500 kB.
+Tasks 0.2 to 0.7 and 0.9 are done (30 October 2026). Next: 0.8 locales; the five new locale files also lack the 0.7 billing strings (`pricing.*`, `billingReturn.activeUntil`, new `errors.*` and `admin.refund*` keys). The five new locale files lack the strings added in 0.5 (they fall back to English; `npm run check:locales` lists them). The IB course modules under prompts/courses still hold maths examples; they go with the question model in Phase 1. Known leftovers: German learner screens use "du", old SST copy on the Landing page, main JS chunk over 500 kB.
 
 ## Waiting on Chris
 

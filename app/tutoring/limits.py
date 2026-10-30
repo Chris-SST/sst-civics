@@ -1,4 +1,7 @@
-"""Message limits. Days and months are counted in Swiss time."""
+"""Message limits for "Explain this". Every learner with an active entitlement gets the same
+daily cap (`AI_DAILY_MESSAGE_LIMIT`); learners without one cannot use the chat at all (the
+routes check `has_access`). There is no monthly cap; months are still counted for display.
+Days and months are counted in Swiss time."""
 
 from __future__ import annotations
 
@@ -9,9 +12,9 @@ from zoneinfo import ZoneInfo
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.billing.plans import AI_MONTHLY
+from app.config import get_settings
 from app.db import utcnow
-from app.models import MESSAGE_USER, Message, Plan, User
+from app.models import MESSAGE_USER, Message, User
 
 ZURICH = ZoneInfo("Europe/Zurich")
 
@@ -55,14 +58,6 @@ def month_start(now: datetime | None = None) -> datetime:
     return local.replace(day=1, hour=0, minute=0, second=0, microsecond=0).astimezone(UTC)
 
 
-async def plan_for(db: AsyncSession) -> Plan | None:
-    """The plan whose limits apply: the same for every learner.
-
-    TODO(task 0.7): replace the subscription plan rows with the flat daily cap for
-    Explain this once the Civics Pass products exist."""
-    return await db.get(Plan, AI_MONTHLY)
-
-
 async def _count(db: AsyncSession, user_id, since: datetime) -> int:
     stmt = select(func.count(Message.id)).where(
         Message.user_id == user_id,
@@ -74,11 +69,10 @@ async def _count(db: AsyncSession, user_id, since: datetime) -> int:
 
 
 async def usage_for(db: AsyncSession, user: User) -> UsageInfo:
-    plan = await plan_for(db)
     now = utcnow()
     return UsageInfo(
         daily_used=await _count(db, user.id, day_start(now)),
-        daily_limit=plan.daily_message_limit if plan else None,
+        daily_limit=get_settings().ai_daily_message_limit,
         monthly_used=await _count(db, user.id, month_start(now)),
-        monthly_limit=plan.monthly_message_limit if plan else None,
+        monthly_limit=None,
     )
