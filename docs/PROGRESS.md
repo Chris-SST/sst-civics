@@ -15,7 +15,8 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 - [ ] Interface locales for the launch languages (0.8).
 - [ ] Staging site live on the shared VPS with its own host names, TLS and nightly backups (0.9 code done, D-004; deploy waits on DNS, the edge Caddy change and a GitHub repository).
 - [x] Phase 0 code review (ten findings, nine fixed, one deferred to Phase 1), README rewritten, `docs/DEMO_PHASE0.md` written, old-product wording removed (0.10 code side, 30 October 2026).
-- [ ] Staging deployed and demo walked with Chris (waits on DNS, the edge Caddy change and a GitHub repository).
+- [x] DNS records and the shared edge Caddy on the tutor server done (30 October 2026); GitHub repository `Chris-SST/sst-civics` created and pushed (D-039).
+- [ ] Staging deployed and demo walked with Chris.
 
 ## Next
 
@@ -23,7 +24,6 @@ Tasks 0.2 to 0.7 and 0.9 are done (30 October 2026). Next: 0.8 locales; the five
 
 ## Waiting on Chris
 
-- GitHub repository for this code (CI and deploys need it).
 - DNS records for the staging host names (D-004) or a different naming.
 - Confirm launch languages (D-014) and whether to write to the Zurich Gemeindeamt about licensing.
 - Brand: confirm Civigo despite the Civi-Go conflict, or choose another (D-017, NAMING.md); attorney trade mark search.
