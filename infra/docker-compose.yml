@@ -1,23 +1,30 @@
-# Staging and production stack. Run from the repository root:
+# Civics stack (staging shares the tutor VPS; see docs/runbooks/deploy-staging.md and D-004).
+# Run from the repository root (/opt/civics):
 #   docker compose -f infra/docker-compose.yml --env-file .env up -d --build
+# Binds no host ports. The web service joins the external Docker network "edge", where the
+# shared edge Caddy (tutor stack) reaches it as civics-web:80 and terminates TLS.
+# Create the network once on the server: docker network create edge
+name: civics
+
 services:
-  caddy:
+  web:
     build:
       context: ..
       dockerfile: infra/Dockerfile.web
     restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-      - "443:443/udp"
-    environment:
-      DOMAIN: ${DOMAIN}
-      ACME_EMAIL: ${ACME_EMAIL}
-    volumes:
-      - caddy_data:/data
-      - caddy_config:/config
+    expose:
+      - "80"
+    networks:
+      default: {}
+      edge:
+        aliases:
+          - civics-web
     depends_on:
       - api
+    deploy:
+      resources:
+        limits:
+          memory: 64m
 
   api:
     build:
@@ -26,7 +33,7 @@ services:
     restart: unless-stopped
     env_file: ../.env
     environment:
-      DATABASE_URL: postgresql+asyncpg://sst:${POSTGRES_PASSWORD}@postgres:5432/sst
+      DATABASE_URL: postgresql+asyncpg://civics:${POSTGRES_PASSWORD}@postgres:5432/civics
       REDIS_URL: redis://redis:6379/0
       JOBS_INLINE: "false"
     volumes:
@@ -38,6 +45,10 @@ services:
         condition: service_started
     expose:
       - "8000"
+    deploy:
+      resources:
+        limits:
+          memory: 512m
 
   worker:
     build:
@@ -55,7 +66,7 @@ services:
       start_period: 30s
     env_file: ../.env
     environment:
-      DATABASE_URL: postgresql+asyncpg://sst:${POSTGRES_PASSWORD}@postgres:5432/sst
+      DATABASE_URL: postgresql+asyncpg://civics:${POSTGRES_PASSWORD}@postgres:5432/civics
       REDIS_URL: redis://redis:6379/0
     volumes:
       - outbox:/srv/var/outbox
@@ -64,6 +75,10 @@ services:
         condition: service_healthy
       redis:
         condition: service_started
+    deploy:
+      resources:
+        limits:
+          memory: 512m
 
   migrate:
     build:
@@ -72,7 +87,7 @@ services:
     command: ["sh", "-c", "alembic upgrade head && python -m scripts.seed"]
     env_file: ../.env
     environment:
-      DATABASE_URL: postgresql+asyncpg://sst:${POSTGRES_PASSWORD}@postgres:5432/sst
+      DATABASE_URL: postgresql+asyncpg://civics:${POSTGRES_PASSWORD}@postgres:5432/civics
     depends_on:
       postgres:
         condition: service_healthy
@@ -83,21 +98,29 @@ services:
     image: postgres:16-alpine
     restart: unless-stopped
     environment:
-      POSTGRES_DB: sst
-      POSTGRES_USER: sst
+      POSTGRES_DB: civics
+      POSTGRES_USER: civics
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - pg_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U sst -d sst"]
+      test: ["CMD-SHELL", "pg_isready -U civics -d civics"]
       interval: 5s
       timeout: 3s
       retries: 20
+    deploy:
+      resources:
+        limits:
+          memory: 512m
 
   redis:
     image: redis:7-alpine
     restart: unless-stopped
-    command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "128mb", "--maxmemory-policy", "noeviction"]
+    command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "96mb", "--maxmemory-policy", "noeviction"]
+    deploy:
+      resources:
+        limits:
+          memory: 160m
 
   backup:
     image: postgres:16-alpine
@@ -113,10 +136,18 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          memory: 128m
 
+# Compose prefixes volume names with the project name (civics_pg_data, ...), so they cannot
+# collide with the tutor stack's volumes.
 volumes:
   pg_data:
-  caddy_data:
-  caddy_config:
   backups:
   outbox:
+
+networks:
+  edge:
+    external: true

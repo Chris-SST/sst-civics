@@ -2,7 +2,7 @@
 
 | Runbook | When |
 | --- | --- |
-| [deploy-staging.md](deploy-staging.md) | Setting up or redeploying the staging (or production) server |
+| [deploy-staging.md](deploy-staging.md) | Setting up or redeploying the civics stack on the shared staging server (or production) |
 | [backups-and-restore.md](backups-and-restore.md) | Nightly backups, the quarterly restore test, recovering from data loss |
 | [stripe-test-mode.md](stripe-test-mode.md) | Working with Stripe in test mode: prices, webhooks, test cards, test clocks |
 | [stripe-outage.md](stripe-outage.md) | Stripe is down or webhooks stop arriving |

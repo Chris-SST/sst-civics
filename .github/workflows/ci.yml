@@ -18,12 +18,12 @@ jobs:
       postgres:
         image: postgres:16-alpine
         env:
-          POSTGRES_DB: sst_test
-          POSTGRES_USER: sst
-          POSTGRES_PASSWORD: sst
+          POSTGRES_DB: civics_test
+          POSTGRES_USER: civics
+          POSTGRES_PASSWORD: civics
         ports: ["5432:5432"]
         options: >-
-          --health-cmd "pg_isready -U sst -d sst_test"
+          --health-cmd "pg_isready -U civics -d civics_test"
           --health-interval 5s --health-timeout 3s --health-retries 20
     steps:
       - uses: actions/checkout@v4
@@ -36,13 +36,13 @@ jobs:
       - run: ruff format --check app worker tests scripts alembic
       - name: Migrations apply cleanly on PostgreSQL
         env:
-          DATABASE_URL: postgresql+asyncpg://sst:sst@localhost:5432/sst_test
+          DATABASE_URL: postgresql+asyncpg://civics:civics@localhost:5432/civics_test
         run: alembic upgrade head && alembic downgrade base && alembic upgrade head
       - name: Tests (SQLite, fast)
         run: pytest -q
       - name: Tests (PostgreSQL)
         env:
-          CI_DATABASE_URL: postgresql+asyncpg://sst:sst@localhost:5432/sst_test
+          CI_DATABASE_URL: postgresql+asyncpg://civics:civics@localhost:5432/civics_test
         run: pytest -q
       - name: Dependency audit
         run: pip-audit --strict --skip-editable || true
@@ -78,7 +78,7 @@ jobs:
           file: infra/Dockerfile.api
           push: false
           load: true
-          tags: sst-tutor-api:ci
+          tags: civics-api:ci
       - name: Build web image
         uses: docker/build-push-action@v6
         with:
@@ -86,18 +86,18 @@ jobs:
           file: infra/Dockerfile.web
           push: false
           load: true
-          tags: sst-tutor-web:ci
+          tags: civics-web:ci
       - name: Scan API image
         uses: aquasecurity/trivy-action@0.28.0
         with:
-          image-ref: sst-tutor-api:ci
+          image-ref: civics-api:ci
           severity: CRITICAL,HIGH
           exit-code: "0"
           ignore-unfixed: true
       - name: Scan web image
         uses: aquasecurity/trivy-action@0.28.0
         with:
-          image-ref: sst-tutor-web:ci
+          image-ref: civics-web:ci
           severity: CRITICAL,HIGH
           exit-code: "0"
           ignore-unfixed: true
@@ -121,7 +121,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh && echo "$KEY" > ~/.ssh/id_ed25519 && chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H "$HOST" >> ~/.ssh/known_hosts
-          ssh "$USER@$HOST" "cd /opt/sst-tutor && git fetch --tags && git checkout $REF && \
-            docker compose -f infra/docker-compose.yml --env-file .env --profile ops build && \
-            docker compose -f infra/docker-compose.yml --env-file .env --profile ops run --rm migrate && \
-            docker compose -f infra/docker-compose.yml --env-file .env up -d --remove-orphans"
+          ssh "$USER@$HOST" "cd /opt/civics && git fetch --tags && git checkout $REF && \
+            docker compose -p civics -f infra/docker-compose.yml --env-file .env --profile ops build && \
+            docker compose -p civics -f infra/docker-compose.yml --env-file .env --profile ops run --rm migrate && \
+            docker compose -p civics -f infra/docker-compose.yml --env-file .env up -d --remove-orphans"

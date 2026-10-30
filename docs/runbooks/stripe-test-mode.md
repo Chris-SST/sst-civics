@@ -54,6 +54,10 @@ Synthetic events from `stripe trigger` will not match a family and are logged as
 ## Reconcile by hand
 
 ```bash
-docker compose -f infra/docker-compose.yml --env-file .env exec worker \
+cd /opt/civics && docker compose -f infra/docker-compose.yml --env-file .env exec worker \
   python -c "import asyncio; from worker.tasks import reconcile_subscriptions; print(asyncio.run(reconcile_subscriptions({})))"
 ```
+
+## Staging webhook (shared server)
+
+The civics staging endpoint is `https://app.civics-staging.swisssciencetutors.ch/api/billing/webhook`; it replaces the old tutor host name from the source app. The events that matter for civics are the one-off payment events `checkout.session.completed` and `charge.refunded`. The subscription events (`customer.subscription.*`, `invoice.*`) are being removed in task 0.7, so subscribe only to the two one-off events once that lands. The price table and test-clock sections above are inherited from the source app and are replaced by the civics pass products (D-015) in the same task. Run commands from `/opt/civics`.

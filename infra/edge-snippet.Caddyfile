@@ -1,0 +1,33 @@
+# Site block for the SHARED EDGE Caddy (the tutor stack's Caddy, which owns ports 80/443).
+# Add this block to /opt/sst-tutor/infra/Caddyfile on the staging server, then reload.
+#
+# One-off changes the tutor stack needs (D-004):
+#   1. docker network create edge
+#   2. In /opt/sst-tutor/infra/docker-compose.yml, give the caddy service the network and
+#      declare it external:
+#          services:
+#            caddy:
+#              networks: [default, edge]
+#          networks:
+#            edge:
+#              external: true
+#   3. docker compose -f infra/docker-compose.yml --env-file .env up -d caddy
+#      (recreates Caddy once; later Caddyfile edits only need a reload:
+#       docker compose ... exec caddy caddy reload --config /etc/caddy/Caddyfile)
+#
+# The civics stack must be started after `docker network create edge`; its web service
+# joins `edge` with the alias civics-web.
+#
+# Fall-back: there is none. The civics stack binds no host ports, and a second Caddy cannot
+# bind 80/443 on the same server, so sharing the VPS requires this change to the tutor stack.
+# Without it, use a separate server.
+#
+# Certificates are issued automatically once both names resolve to the server.
+
+civics-staging.swisssciencetutors.ch, app.civics-staging.swisssciencetutors.ch {
+	encode zstd gzip
+
+	header Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+	reverse_proxy civics-web:80
+}

@@ -1,17 +1,18 @@
+# Internal web server for the civics stack. Plain HTTP on port 80, reachable only over the
+# Docker networks; TLS and HSTS are handled by the shared edge Caddy (see edge-snippet.Caddyfile).
 {
-	email {$ACME_EMAIL}
+	auto_https off
 }
 
-{$DOMAIN} {
+:80 {
 	encode zstd gzip
 
 	header {
-		Strict-Transport-Security "max-age=31536000; includeSubDomains"
 		X-Content-Type-Options nosniff
 		X-Frame-Options DENY
 		Referrer-Policy strict-origin-when-cross-origin
 		Permissions-Policy "camera=(self), microphone=(), geolocation=()"
-		Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://swisssciencetutors.ch; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://checkout.stripe.com https://billing.stripe.com"
+		Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://checkout.stripe.com https://billing.stripe.com"
 		-Server
 	}
 

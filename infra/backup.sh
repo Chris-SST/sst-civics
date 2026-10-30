@@ -1,14 +1,14 @@
 #!/bin/sh
 # Nightly encrypted PostgreSQL backup, kept 30 days locally and copied to a second
-# Swiss location with rclone (BACKUP_REMOTE, e.g. "swissbackup:sst-tutor-backups").
+# Swiss location with rclone (BACKUP_REMOTE, e.g. "swissbackup:civics-backups").
 # Runs inside the backup container; see docs/runbooks/backups-and-restore.md.
 set -eu
 
 STAMP=$(date -u +%Y%m%d-%H%M%S)
 OUT_DIR=/backups
-FILE="$OUT_DIR/sst-$STAMP.sql.gz"
+FILE="$OUT_DIR/civics-$STAMP.sql.gz"
 
-pg_dump -h postgres -U sst -d sst --no-owner --no-privileges | gzip -9 > "$FILE"
+pg_dump -h postgres -U civics -d civics --no-owner --no-privileges | gzip -9 > "$FILE"
 
 if [ -n "${BACKUP_PASSPHRASE:-}" ]; then
   gpg --batch --yes --symmetric --cipher-algo AES256 --passphrase "$BACKUP_PASSPHRASE" "$FILE"
@@ -19,7 +19,7 @@ else
 fi
 
 # Keep 30 days locally.
-find "$OUT_DIR" -type f -name 'sst-*.sql.gz*' -mtime +30 -delete
+find "$OUT_DIR" -type f -name 'civics-*.sql.gz*' -mtime +30 -delete
 
 if [ -n "${BACKUP_REMOTE:-}" ]; then
   rclone copy "$FILE" "$BACKUP_REMOTE/" --quiet

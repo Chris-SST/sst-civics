@@ -4,9 +4,9 @@
 
 The `backup` container in `infra/docker-compose.yml` runs `infra/backup.sh` once a day:
 
-1. `pg_dump` of the `sst` database, gzip-compressed.
+1. `pg_dump` of the `civics` database, gzip-compressed.
 2. Symmetric encryption with GPG (AES-256) using `BACKUP_PASSPHRASE`.
-3. Local copy in the `backups` Docker volume, kept 30 days.
+3. Local copy in the `civics_backups` Docker volume (Compose project `civics`), kept 30 days.
 4. If `BACKUP_REMOTE` is set, `rclone copy` to a second Swiss location, also pruned at 30 days.
 
 Photos (Phase 1) live in Swiss object storage with their own 30-day lifecycle and are not part of this backup.
@@ -16,11 +16,11 @@ Photos (Phase 1) live in Swiss object storage with their own 30-day lifecycle an
 Use a storage bucket at a different Swiss provider from the server, for example Infomaniak Swiss Backup (OpenStack Swift or S3) when hosting at Exoscale, or Exoscale SOS when hosting at Infomaniak. Configure rclone on the host once:
 
 ```bash
-docker run --rm -it -v sst_rclone:/config/rclone rclone/rclone config
-# create a remote named "swissbackup", then set BACKUP_REMOTE=swissbackup:sst-tutor-backups in .env
+docker run --rm -it -v civics_rclone:/config/rclone rclone/rclone config
+# create a remote named "swissbackup", then set BACKUP_REMOTE=swissbackup:civics-backups in .env
 ```
 
-Mount the rclone config into the backup container by adding `- sst_rclone:/root/.config/rclone:ro` to its volumes.
+Mount the rclone config into the backup container by adding `- civics_rclone:/root/.config/rclone:ro` to its volumes.
 
 ## Check a backup exists
 
@@ -31,20 +31,20 @@ docker compose -f infra/docker-compose.yml --env-file .env logs --tail 20 backup
 
 ## Restore (also the quarterly restore test)
 
-Do the test on the staging server, never on production, unless recovering production.
+Do the test on the civics stack on the staging server (`/opt/civics`), never on production, unless recovering production.
 
 ```bash
-cd /opt/sst-tutor
+cd /opt/civics
 docker compose -f infra/docker-compose.yml --env-file .env stop api worker
 docker compose -f infra/docker-compose.yml --env-file .env exec backup sh -c \
-  'gpg --batch --passphrase "$BACKUP_PASSPHRASE" -d /backups/sst-<stamp>.sql.gz.gpg | gunzip > /tmp/restore.sql'
-docker compose -f infra/docker-compose.yml --env-file .env exec -T postgres psql -U sst -d postgres -c "DROP DATABASE sst;" -c "CREATE DATABASE sst OWNER sst;"
+  'gpg --batch --passphrase "$BACKUP_PASSPHRASE" -d /backups/civics-<stamp>.sql.gz.gpg | gunzip > /tmp/restore.sql'
+docker compose -f infra/docker-compose.yml --env-file .env exec -T postgres psql -U civics -d postgres -c "DROP DATABASE civics;" -c "CREATE DATABASE civics OWNER civics;"
 docker compose -f infra/docker-compose.yml --env-file .env exec backup cat /tmp/restore.sql | \
-  docker compose -f infra/docker-compose.yml --env-file .env exec -T postgres psql -U sst -d sst
+  docker compose -f infra/docker-compose.yml --env-file .env exec -T postgres psql -U civics -d civics
 docker compose -f infra/docker-compose.yml --env-file .env start api worker
 ```
 
-Then log in as admin and confirm families and users are present. Record the date and outcome of each restore test in `docs/PROGRESS.md`.
+Then log in as admin and confirm users are present. Record the date and outcome of each restore test in `docs/PROGRESS.md`.
 
 ## Retention and deletion requests
 
