@@ -1,5 +1,9 @@
-"""Apply Stripe webhook events to our records. Called from the background worker and
-from the nightly reconciliation. Every handler is idempotent."""
+"""Apply Stripe webhook events to our records. Called from the background worker. Every
+handler is idempotent.
+
+TODO(task 0.7): one-off Civics Pass checkout. `checkout.session.completed` must grant an
+`Entitlement` for the canton in the line item's price lookup key. The subscription handlers
+of the source app were removed with the subscription fields."""
 
 from __future__ import annotations
 
@@ -11,11 +15,8 @@ from typing import Any
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.billing import plans, stripe_client
 from app.db import utcnow
-from app.email.messages import app_link
-from app.jobs import send_email_job
-from app.models import PAYER_ROLES, Family, Payment, User
+from app.models import Payment, User
 
 log = logging.getLogger(__name__)
 
@@ -24,58 +25,20 @@ def _ts(value: int | None) -> datetime | None:
     return datetime.fromtimestamp(value, tz=UTC) if value else None
 
 
-async def _family_by_customer(db: AsyncSession, customer_id: str | None) -> Family | None:
+async def _user_by_customer(db: AsyncSession, customer_id: str | None) -> User | None:
     if not customer_id:
         return None
-    result = await db.execute(select(Family).where(Family.stripe_customer_id == customer_id))
+    result = await db.execute(select(User).where(User.stripe_customer_id == customer_id))
     return result.scalar_one_or_none()
 
 
-async def _family_by_subscription(db: AsyncSession, sub_id: str | None) -> Family | None:
-    if not sub_id:
-        return None
-    result = await db.execute(select(Family).where(Family.stripe_subscription_id == sub_id))
-    return result.scalar_one_or_none()
-
-
-async def _family_by_id(db: AsyncSession, family_id: str | None) -> Family | None:
-    if not family_id:
+async def _user_by_id(db: AsyncSession, user_id: str | None) -> User | None:
+    if not user_id:
         return None
     try:
-        return await db.get(Family, uuid.UUID(family_id))
+        return await db.get(User, uuid.UUID(user_id))
     except ValueError:
         return None
-
-
-async def _payer(db: AsyncSession, family: Family) -> User | None:
-    result = await db.execute(
-        select(User).where(User.family_id == family.id, User.role.in_(PAYER_ROLES))
-    )
-    return result.scalars().first()
-
-
-def apply_subscription(family: Family, sub: dict[str, Any]) -> None:
-    """Copy plan, quantity, status and period end from a Stripe subscription object."""
-    items = (sub.get("items") or {}).get("data") or []
-    first = items[0] if items else {}
-    price = first.get("price") or {}
-    lookup = price.get("lookup_key") or (sub.get("metadata") or {}).get("plan_key")
-    family.stripe_subscription_id = sub["id"]
-    if lookup:
-        family.plan_key = lookup
-    family.quantity = int(first.get("quantity") or 1)
-    family.subscription_status = sub.get("status")
-    # Newer API versions keep the period on the item, older ones on the subscription.
-    family.current_period_end = _ts(
-        first.get("current_period_end") or sub.get("current_period_end")
-    )
-    family.trial_end = _ts(sub.get("trial_end"))
-    family.cancel_at_period_end = bool(sub.get("cancel_at_period_end"))
-    if family.subscription_status == "past_due":
-        family.past_due_since = family.past_due_since or utcnow()
-    elif family.subscription_status in ("active", "trialing"):
-        family.past_due_since = None
-        family.payment_warning = False
 
 
 async def handle_event(db: AsyncSession, event: dict[str, Any]) -> None:
@@ -90,76 +53,26 @@ async def handle_event(db: AsyncSession, event: dict[str, Any]) -> None:
 
 async def on_checkout_completed(db: AsyncSession, session: dict[str, Any]) -> None:
     meta = session.get("metadata") or {}
-    family = await _family_by_id(db, session.get("client_reference_id") or meta.get("family_id"))
-    if family is None:
-        family = await _family_by_customer(db, session.get("customer"))
-    if family is None:
-        log.warning("Checkout session without a matching family")
+    user = await _user_by_id(db, session.get("client_reference_id") or meta.get("user_id"))
+    if user is None:
+        user = await _user_by_customer(db, session.get("customer"))
+    if user is None:
+        log.warning("Checkout session without a matching user")
         return
     if session.get("customer"):
-        family.stripe_customer_id = session["customer"]
-    if session.get("mode") == "subscription" and session.get("subscription"):
-        sub_id = session["subscription"]
-        family.stripe_subscription_id = sub_id
-        if meta.get("plan_key"):
-            family.plan_key = meta["plan_key"]
-        try:
-            apply_subscription(family, stripe_client.retrieve_subscription(sub_id))
-        except Exception as exc:  # noqa: BLE001
-            # The subscription.created event will fill in the rest.
-            log.warning("Could not fetch subscription after checkout: %s", exc.__class__.__name__)
-    elif session.get("mode") == "payment":
-        plan_key = meta.get("plan_key")
-        quantity = int(meta.get("quantity") or 1)
-        if plan_key == plans.ASK_TUTOR_SINGLE:
-            family.tutor_credits += quantity
-        elif plan_key == plans.EXAM_SPRINT:
-            family.exam_sprint_purchased_at = utcnow()
-
-
-async def on_subscription_changed(db: AsyncSession, sub: dict[str, Any]) -> None:
-    family = await _family_by_subscription(db, sub.get("id"))
-    if family is None:
-        family = await _family_by_customer(db, sub.get("customer"))
-    if family is None:
-        family = await _family_by_id(db, (sub.get("metadata") or {}).get("family_id"))
-    if family is None:
-        log.warning("Subscription event without a matching family")
-        return
-    apply_subscription(family, sub)
-
-
-async def on_subscription_deleted(db: AsyncSession, sub: dict[str, Any]) -> None:
-    family = await _family_by_subscription(db, sub.get("id"))
-    if family is None:
-        return
-    family.subscription_status = "canceled"
-    family.cancel_at_period_end = False
-    family.current_period_end = (
-        _ts(sub.get("ended_at") or sub.get("current_period_end")) or family.current_period_end
-    )
-
-
-async def on_trial_will_end(db: AsyncSession, sub: dict[str, Any]) -> None:
-    family = await _family_by_subscription(db, sub.get("id"))
-    if family is None:
-        return
-    payer = await _payer(db, family)
-    if payer and payer.email:
-        await send_email_job(
-            "trial_ending", payer.locale, payer.email, link=app_link("/parent/billing")
-        )
+        user.stripe_customer_id = session["customer"]
+    # TODO(task 0.7): grant the canton entitlement for a paid one-off session here.
 
 
 async def on_invoice_paid(db: AsyncSession, invoice: dict[str, Any]) -> None:
-    family = await _family_by_customer(db, invoice.get("customer"))
-    if family is None:
+    user = await _user_by_customer(db, invoice.get("customer"))
+    if user is None:
         return
     existing = await db.execute(select(Payment).where(Payment.stripe_invoice_id == invoice["id"]))
     if existing.scalar_one_or_none() is None:
         db.add(
             Payment(
-                family_id=family.id,
+                user_id=user.id,
                 stripe_invoice_id=invoice["id"],
                 amount_cents=int(invoice.get("amount_paid") or 0),
                 currency=(invoice.get("currency") or "chf").lower(),
@@ -170,29 +83,9 @@ async def on_invoice_paid(db: AsyncSession, invoice: dict[str, Any]) -> None:
                 or utcnow(),
             )
         )
-    family.payment_warning = False
-    family.past_due_since = None
-
-
-async def on_invoice_payment_failed(db: AsyncSession, invoice: dict[str, Any]) -> None:
-    family = await _family_by_customer(db, invoice.get("customer"))
-    if family is None:
-        return
-    family.payment_warning = True
-    family.past_due_since = family.past_due_since or utcnow()
-    payer = await _payer(db, family)
-    if payer and payer.email:
-        await send_email_job(
-            "payment_failed", payer.locale, payer.email, link=app_link("/parent/billing")
-        )
 
 
 HANDLERS = {
     "checkout.session.completed": on_checkout_completed,
-    "customer.subscription.created": on_subscription_changed,
-    "customer.subscription.updated": on_subscription_changed,
-    "customer.subscription.deleted": on_subscription_deleted,
-    "customer.subscription.trial_will_end": on_trial_will_end,
     "invoice.paid": on_invoice_paid,
-    "invoice.payment_failed": on_invoice_payment_failed,
 }

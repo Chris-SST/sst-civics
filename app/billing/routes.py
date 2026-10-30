@@ -6,30 +6,20 @@ from typing import Any
 
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from pydantic import BaseModel, Field
-from sqlalchemy import func, select
+from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.billing import plans, stripe_client
-from app.billing.access import compute_access
+from app.billing.access import access_level, compute_access
 from app.config import get_settings
 from app.db import get_db
-from app.deps import current_user, require_roles
+from app.deps import current_user, require_learner
 from app.jobs import enqueue
-from app.models import (
-    PAYER_ROLES,
-    ROLE_ADULT,
-    ROLE_STUDENT,
-    Family,
-    Payment,
-    Plan,
-    StripeEvent,
-    User,
-)
+from app.models import Payment, Plan, StripeEvent, User
 
 log = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/billing", tags=["billing"])
-require_payer = require_roles(*PAYER_ROLES)
 
 _price_cache: dict[str, Any] = {"at": 0.0, "prices": {}}
 PRICE_CACHE_SECONDS = 600
@@ -110,63 +100,44 @@ async def list_plans(db: AsyncSession = Depends(get_db)) -> list[PlanOut]:
     return out
 
 
-async def _ensure_customer(db: AsyncSession, family: Family, user: User) -> str:
-    if family.stripe_customer_id:
-        return family.stripe_customer_id
-    customer = stripe_client.create_customer(user.email or "", str(family.id), family.locale)
-    family.stripe_customer_id = customer["id"]
+async def _ensure_customer(db: AsyncSession, user: User) -> str:
+    if user.stripe_customer_id:
+        return user.stripe_customer_id
+    customer = stripe_client.create_customer(user.email or "", str(user.id), user.locale)
+    user.stripe_customer_id = customer["id"]
     await db.commit()
     return customer["id"]
 
 
 @router.post("/checkout", response_model=UrlOut)
 async def create_checkout(
-    body: CheckoutIn, user: User = Depends(require_payer), db: AsyncSession = Depends(get_db)
+    body: CheckoutIn, user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
 ) -> UrlOut:
+    """TODO(task 0.7): replace with one-off Civics Pass checkout per canton. Until then the
+    source app's plan keys are kept so the route and its tests keep working."""
     settings = get_settings()
     if not settings.stripe_secret_key:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "billing_not_configured")
     plan = await db.get(Plan, body.plan_key)
     if plan is None or not plan.is_active:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "unknown_plan")
-    family = await db.get(Family, user.family_id)
-    if family is None:
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "no_family")
     price = _prices().get(plan.key)
     if price is None:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "price_not_found")
 
     base = settings.app_base_url.rstrip("/")
-    customer_id = await _ensure_customer(db, family, user)
+    customer_id = await _ensure_customer(db, user)
     params: dict[str, Any] = {
         "customer": customer_id,
-        "client_reference_id": str(family.id),
+        "client_reference_id": str(user.id),
         "success_url": f"{base}/billing/return?status=success&session_id={{CHECKOUT_SESSION_ID}}",
         "cancel_url": f"{base}/billing/return?status=cancelled",
-        "locale": family.locale,
+        "locale": user.locale,
         "allow_promotion_codes": True,
     }
 
     if plan.kind == "subscription":
-        if family.subscription_status in ("trialing", "active", "past_due"):
-            raise HTTPException(status.HTTP_409_CONFLICT, "already_subscribed")
-        if user.role == ROLE_ADULT:
-            quantity = 1
-        else:
-            quantity = int(
-                await db.scalar(
-                    select(func.count())
-                    .select_from(User)
-                    .where(
-                        User.family_id == family.id,
-                        User.role == ROLE_STUDENT,
-                        User.is_active.is_(True),
-                    )
-                )
-                or 0
-            )
-            if quantity == 0:
-                raise HTTPException(status.HTTP_400_BAD_REQUEST, "add_student_first")
+        quantity = 1
         params.update(
             {
                 "mode": "subscription",
@@ -174,10 +145,10 @@ async def create_checkout(
                 "payment_method_collection": "always",
                 "subscription_data": {
                     "trial_period_days": settings.stripe_trial_days,
-                    "metadata": {"family_id": str(family.id), "plan_key": plan.key},
+                    "metadata": {"user_id": str(user.id), "plan_key": plan.key},
                 },
                 "metadata": {
-                    "family_id": str(family.id),
+                    "user_id": str(user.id),
                     "plan_key": plan.key,
                     "quantity": str(quantity),
                 },
@@ -189,7 +160,7 @@ async def create_checkout(
                 "mode": "payment",
                 "line_items": [{"price": price["id"], "quantity": body.quantity}],
                 "metadata": {
-                    "family_id": str(family.id),
+                    "user_id": str(user.id),
                     "plan_key": plan.key,
                     "quantity": str(body.quantity),
                 },
@@ -202,30 +173,27 @@ async def create_checkout(
 
 @router.post("/portal", response_model=UrlOut)
 async def create_portal(
-    user: User = Depends(require_payer), db: AsyncSession = Depends(get_db)
+    user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
 ) -> UrlOut:
     settings = get_settings()
     if not settings.stripe_secret_key:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "billing_not_configured")
-    family = await db.get(Family, user.family_id)
-    if family is None or not family.stripe_customer_id:
+    if not user.stripe_customer_id:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "no_stripe_customer")
     session = stripe_client.create_portal_session(
-        family.stripe_customer_id, f"{settings.app_base_url.rstrip('/')}/parent", family.locale
+        user.stripe_customer_id, f"{settings.app_base_url.rstrip('/')}/learner", user.locale
     )
     return UrlOut(url=session["url"])
 
 
 @router.get("/payments", response_model=list[PaymentOut])
 async def list_payments(
-    user: User = Depends(require_payer), db: AsyncSession = Depends(get_db)
+    user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
 ) -> list[PaymentOut]:
     rows = (
         (
             await db.execute(
-                select(Payment)
-                .where(Payment.family_id == user.family_id)
-                .order_by(Payment.paid_at.desc())
+                select(Payment).where(Payment.user_id == user.id).order_by(Payment.paid_at.desc())
             )
         )
         .scalars()
@@ -243,9 +211,16 @@ async def list_payments(
 
 
 @router.get("/access")
-async def my_access(user: User = Depends(current_user), db: AsyncSession = Depends(get_db)):
-    family = await db.get(Family, user.family_id) if user.family_id else None
-    return {"access": compute_access(family), "plan_key": family.plan_key if family else None}
+async def my_access(user: User = Depends(current_user)) -> dict[str, Any]:
+    cantons = compute_access(user, user.entitlements)
+    return {
+        "access": access_level(user),
+        "canton": user.canton,
+        "cantons": {
+            c.canton: {"expires_at": c.expires_at.isoformat(), "source": c.source}
+            for c in cantons.values()
+        },
+    }
 
 
 @router.post("/webhook", include_in_schema=False)

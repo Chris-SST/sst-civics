@@ -1,4 +1,4 @@
-"""Single-use tokens sent by email: verification, password reset, student invites."""
+"""Single-use tokens sent by email: email verification and password reset."""
 
 from __future__ import annotations
 
@@ -9,20 +9,11 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.tokens import hash_token, new_token
 from app.db import utcnow
-from app.models import (
-    TOKEN_RESET_PASSWORD,
-    TOKEN_STAFF_INVITE,
-    TOKEN_STUDENT_INVITE,
-    TOKEN_VERIFY_EMAIL,
-    OneTimeToken,
-    User,
-)
+from app.models import TOKEN_RESET_PASSWORD, TOKEN_VERIFY_EMAIL, OneTimeToken, User
 
 TOKEN_LIFETIMES = {
     TOKEN_VERIFY_EMAIL: timedelta(hours=24),
     TOKEN_RESET_PASSWORD: timedelta(minutes=30),
-    TOKEN_STUDENT_INVITE: timedelta(days=7),
-    TOKEN_STAFF_INVITE: timedelta(days=7),
 }
 
 

@@ -86,7 +86,7 @@ Create the first admin (asked to set up an authenticator app at first login):
 
 ```bash
 docker compose -f infra/docker-compose.yml --env-file .env exec \
-  -e ADMIN_EMAIL=chris@swisssciencetutors.ch -e ADMIN_PASSWORD='<long password>' -e ADMIN_NAME=Chris \
+  -e ADMIN_EMAIL=chris@swisssciencetutors.ch -e ADMIN_PASSWORD='<long password>' \
   api python -m scripts.seed
 ```
 

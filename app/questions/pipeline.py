@@ -282,7 +282,7 @@ async def generate_direct(db: AsyncSession, batch: GenerationBatch) -> int:
         except LLMError as exc:
             await service.record_call(
                 db,
-                student_id=None,
+                user_id=None,
                 conversation_id=None,
                 purpose=PURPOSE_GEN,
                 model=settings.tutor_model,
@@ -295,7 +295,7 @@ async def generate_direct(db: AsyncSession, batch: GenerationBatch) -> int:
             continue
         await service.record_call(
             db,
-            student_id=None,
+            user_id=None,
             conversation_id=None,
             purpose=PURPOSE_GEN,
             model=completion.model,
@@ -335,7 +335,7 @@ async def process_batch(db: AsyncSession, batch: GenerationBatch) -> int:
             continue
         await service.record_call(
             db,
-            student_id=None,
+            user_id=None,
             conversation_id=None,
             purpose=PURPOSE_GEN,
             model=res.model,
@@ -459,7 +459,7 @@ async def independent_solve(db: AsyncSession, q: Question) -> dict[str, Any] | N
     except LLMError:
         await service.record_call(
             db,
-            student_id=None,
+            user_id=None,
             conversation_id=q.id,
             purpose=PURPOSE_SOLVE,
             model=settings.tutor_model,
@@ -471,7 +471,7 @@ async def independent_solve(db: AsyncSession, q: Question) -> dict[str, Any] | N
         return None
     await service.record_call(
         db,
-        student_id=None,
+        user_id=None,
         conversation_id=q.id,
         purpose=PURPOSE_SOLVE,
         model=completion.model,
@@ -581,7 +581,7 @@ async def run_checks(db: AsyncSession, q: Question) -> None:
 
 
 async def mark_structured(
-    db: AsyncSession, q: Question, answer_text: str, student_id: uuid.UUID
+    db: AsyncSession, q: Question, answer_text: str, user_id: uuid.UUID
 ) -> tuple[float, str, bool]:
     settings = get_settings()
     mark = prompts.load("questions/mark")
@@ -604,7 +604,7 @@ async def mark_structured(
     except LLMError:
         await service.record_call(
             db,
-            student_id=student_id,
+            user_id=user_id,
             conversation_id=None,
             purpose=PURPOSE_MARK,
             model=settings.tutor_model,
@@ -616,7 +616,7 @@ async def mark_structured(
         raise
     await service.record_call(
         db,
-        student_id=student_id,
+        user_id=user_id,
         conversation_id=None,
         purpose=PURPOSE_MARK,
         model=completion.model,

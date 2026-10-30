@@ -1,4 +1,4 @@
-/** Shapes returned by the practice API (app/questions/routes_student.py). */
+/** Shapes returned by the practice API (/api/practice). */
 
 export type QType = "mcq" | "numeric" | "short" | "structured";
 
@@ -59,7 +59,7 @@ export interface PracticeRound {
   topic_name: string;
   mastery: number;
   attempts: number;
-  /** Questions available on the topic, and how many of them the student has never seen. */
+  /** Questions available on the topic, and how many of them the learner has never seen. */
   pool: number;
   unseen: number;
   questions: QuestionPublic[];

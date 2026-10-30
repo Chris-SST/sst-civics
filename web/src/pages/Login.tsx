@@ -15,7 +15,7 @@ export default function Login() {
   const { refresh } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [identifier, setIdentifier] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<unknown>(null);
@@ -26,7 +26,7 @@ export default function Login() {
     setError(null);
     setBusy(true);
     try {
-      const out = await post<LoginOut>("/api/auth/login", { identifier, password });
+      const out = await post<LoginOut>("/api/auth/login", { email, password });
       await refresh();
       if (out.status === "mfa_required") navigate("/2fa");
       else if (out.status === "mfa_setup_required") navigate("/2fa/setup");
@@ -42,7 +42,7 @@ export default function Login() {
   }
 
   async function resend() {
-    await post("/api/auth/resend-verification", { email: identifier });
+    await post("/api/auth/resend-verification", { email });
     setResent(true);
   }
 
@@ -53,14 +53,14 @@ export default function Login() {
       <h1>{t("login.title")}</h1>
       <form className="form" onSubmit={(e) => void submit(e)}>
         <label className="field">
-          <span>{t("login.identifier")}</span>
+          <span>{t("fields.email")}</span>
           <input
+            type="email"
             required
-            autoComplete="username"
-            value={identifier}
-            onChange={(e) => setIdentifier(e.target.value)}
+            autoComplete="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <span className="hint">{t("login.identifierHint")}</span>
         </label>
         <label className="field">
           <span>{t("fields.password")}</span>

@@ -7,6 +7,7 @@ import os
 import re
 import tempfile
 from collections.abc import AsyncIterator
+from datetime import timedelta
 
 _TMP = tempfile.mkdtemp(prefix="sst-tests-")
 os.environ.update(
@@ -26,6 +27,7 @@ os.environ.update(
 import pyotp  # noqa: E402
 import pytest  # noqa: E402
 from httpx import ASGITransport, AsyncClient  # noqa: E402
+from sqlalchemy import select  # noqa: E402
 
 from app.auth import ratelimit  # noqa: E402
 from app.auth.passwords import hash_password  # noqa: E402
@@ -34,7 +36,7 @@ from app.billing.plans import PLAN_DEFAULTS  # noqa: E402
 from app.db import Base, SessionLocal, engine, utcnow  # noqa: E402
 from app.email.backend import memory_outbox  # noqa: E402
 from app.main import app  # noqa: E402
-from app.models import ROLE_ADMIN, ROLE_TUTOR, Plan, User  # noqa: E402
+from app.models import ENTITLEMENT_ADMIN, ROLE_ADMIN, Entitlement, Plan, User  # noqa: E402
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -132,48 +134,72 @@ def token_from_link(link: str) -> str:
     return link.split("token=")[1]
 
 
-async def signup_and_verify(
-    api: Api, email: str, password: str = "Parent-pass-123", account_type: str = "parent"
-) -> None:
-    r = await api.post(
-        "/api/auth/signup",
-        json={
-            "email": email,
-            "password": password,
-            "locale": "en",
-            "account_type": account_type,
-            "guardian_confirmed": account_type == "parent",
-            "accept_terms": True,
-        },
-    )
+LEARNER_PASSWORD = "Learner-pass-123"
+ADMIN_PASSWORD = "Admin-pass-123"
+
+
+def signup_body(email: str, password: str = LEARNER_PASSWORD, **overrides) -> dict:
+    body = {
+        "email": email,
+        "password": password,
+        "locale": "en",
+        "study_language": "en",
+        "canton": "zh",
+        "age_confirmed": True,
+        "accept_terms": True,
+    }
+    body.update(overrides)
+    return body
+
+
+async def signup_and_verify(api: Api, email: str, password: str = LEARNER_PASSWORD) -> None:
+    r = await api.post("/api/auth/signup", json=signup_body(email, password))
     assert r.status_code == 201, r.text
     token = token_from_link(last_email_link())
     r = await api.post("/api/auth/verify-email", json={"token": token})
     assert r.status_code == 200, r.text
 
 
-async def login(api: Api, identifier: str, password: str):
-    return await api.post("/api/auth/login", json={"identifier": identifier, "password": password})
+async def login(api: Api, email: str, password: str):
+    return await api.post("/api/auth/login", json={"email": email, "password": password})
 
 
-async def parent_logged_in(api: Api, email: str = "parent@example.ch") -> dict:
+async def grant_access(email: str, canton: str = "zh", days: int = 30) -> None:
+    """Give a learner an active entitlement directly in the database."""
+    async with SessionLocal() as db:
+        user = (await db.execute(select(User).where(User.email == email))).scalar_one()
+        db.add(
+            Entitlement(
+                user_id=user.id,
+                canton=canton,
+                starts_at=utcnow() - timedelta(minutes=1),
+                expires_at=utcnow() + timedelta(days=days),
+                source=ENTITLEMENT_ADMIN,
+            )
+        )
+        await db.commit()
+
+
+async def learner_logged_in(
+    api: Api, email: str = "learner@example.ch", *, access: bool = False
+) -> dict:
+    """A verified learner (canton zh), signed in. With `access`, also an active entitlement."""
     await signup_and_verify(api, email)
-    r = await login(api, email, "Parent-pass-123")
+    if access:
+        await grant_access(email)
+    r = await login(api, email, LEARNER_PASSWORD)
     assert r.status_code == 200, r.text
     assert r.json()["status"] == "ok"
     return r.json()["me"]
 
 
-async def create_staff(
-    email: str, role: str = ROLE_ADMIN, password: str = "Staff-pass-123", totp: bool = False
-) -> User:
+async def create_admin(email: str, password: str = ADMIN_PASSWORD, totp: bool = False) -> User:
     async with SessionLocal() as db:
         user = User(
-            role=role,
+            role=ROLE_ADMIN,
             email=email,
             email_verified_at=utcnow(),
             password_hash=hash_password(password),
-            first_name="Staff",
             locale="en",
         )
         if totp:
@@ -187,13 +213,10 @@ async def create_staff(
 
 async def admin_logged_in(api: Api, email: str = "admin@sst-example.ch") -> User:
     """Admin with 2FA already enabled, fully signed in."""
-    user = await create_staff(email, ROLE_ADMIN, totp=True)
-    r = await login(api, email, "Staff-pass-123")
+    user = await create_admin(email, totp=True)
+    r = await login(api, email, ADMIN_PASSWORD)
     assert r.json()["status"] == "mfa_required"
     code = pyotp.TOTP(user.totp_secret).now()
     r = await api.post("/api/auth/totp/verify", json={"code": code})
     assert r.status_code == 200, r.text
     return user
-
-
-__all__ = ["ROLE_TUTOR"]

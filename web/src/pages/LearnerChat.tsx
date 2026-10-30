@@ -47,7 +47,7 @@ interface CheckOut {
 
 const MAX_CHARS = 2000;
 
-export default function StudentChat() {
+export default function LearnerChat() {
   const { t } = useTranslation();
   const { id } = useParams();
   const navigate = useNavigate();
@@ -192,7 +192,7 @@ export default function StudentChat() {
     if (!conv) return;
     try {
       await post(`/api/tutor/conversations/${conv.id}/end`);
-      navigate("/student");
+      navigate("/learner");
     } catch (e) {
       setError(e);
     }
@@ -229,7 +229,7 @@ export default function StudentChat() {
     <div className="chat">
       <header className="chat-head">
         <div>
-          <Link to="/student" className="small">
+          <Link to="/learner" className="small">
             ← {t("chat.back")}
           </Link>
           <h1 className="chat-title">{conv.topic_name}</h1>
@@ -287,7 +287,7 @@ export default function StudentChat() {
 
       {ended ? (
         <p className="alert alert-info">
-          {t("chat.ended")} <Link to="/student">{t("chat.newSession")}</Link>
+          {t("chat.ended")} <Link to="/learner">{t("chat.newSession")}</Link>
         </p>
       ) : (
         <form className="chat-compose" onSubmit={send}>

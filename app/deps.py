@@ -11,7 +11,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.auth.sessions import load_session
 from app.config import get_settings
 from app.db import get_db
-from app.models import ROLE_ADMIN, STAFF_ROLES, Session, User
+from app.models import ROLE_ADMIN, ROLE_LEARNER, Session, User
 
 
 @dataclass
@@ -47,7 +47,8 @@ async def auth_any_state(ctx: AuthContext | None = Depends(optional_auth)) -> Au
 
 
 async def current_auth(ctx: AuthContext = Depends(auth_any_state)) -> AuthContext:
-    """Fully authenticated: password plus second factor where required."""
+    """Fully authenticated: password plus second factor where required (admins only;
+    learners have no second factor)."""
     if ctx.session.mfa_pending:
         raise HTTPException(status.HTTP_403_FORBIDDEN, "mfa_required")
     if ctx.user.is_staff and not ctx.user.totp_enabled and not ctx.session.impersonator_user_id:
@@ -69,4 +70,4 @@ def require_roles(*roles: str) -> Callable:
 
 
 require_admin = require_roles(ROLE_ADMIN)
-require_staff = require_roles(*STAFF_ROLES)
+require_learner = require_roles(ROLE_LEARNER)

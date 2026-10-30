@@ -1,4 +1,4 @@
-"""Review and generation API for tutors (their tagged courses) and admins (everything)."""
+"""Review and generation API for admins. Reviewer scopes arrive in Phase 1."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db import get_db, utcnow
-from app.deps import require_admin, require_staff
+from app.deps import require_admin
 from app.jobs import enqueue
 from app.llm import prompts
 from app.models import (
@@ -21,7 +21,6 @@ from app.models import (
     Q_RETIRED,
     QUESTION_STATUSES,
     QUESTION_TYPES,
-    ROLE_ADMIN,
     AuditLog,
     GenerationBatch,
     Question,
@@ -69,9 +68,8 @@ class ReviewIn(BaseModel):
 
 
 def _modules_for(user: User) -> set[str]:
-    if user.role == ROLE_ADMIN:
-        return set(AVAILABLE_MODULES)
-    return {prompts.course_module_key(c) for c in (user.tagged_courses or [])}
+    """Admins review every module. Reviewer scopes arrive in Phase 1 (D-009)."""
+    return set(AVAILABLE_MODULES)
 
 
 def _check_module(user: User, module_key: str) -> None:
@@ -111,7 +109,7 @@ def _question_full(q: Question) -> dict[str, Any]:
 
 
 @router.get("/modules")
-async def modules(user: User = Depends(require_staff)) -> list[dict[str, Any]]:
+async def modules(user: User = Depends(require_admin)) -> list[dict[str, Any]]:
     out = []
     for key in sorted(_modules_for(user)):
         info = prompts.course_info(key)
@@ -135,7 +133,7 @@ async def modules(user: User = Depends(require_staff)) -> list[dict[str, Any]]:
 async def queue(
     module_key: str | None = None,
     q_status: str | None = None,
-    user: User = Depends(require_staff),
+    user: User = Depends(require_admin),
     db: AsyncSession = Depends(get_db),
 ) -> list[dict[str, Any]]:
     allowed = _modules_for(user)
@@ -146,7 +144,7 @@ async def queue(
     if q_status in QUESTION_STATUSES:
         stmt = stmt.where(Question.status == q_status)
     else:
-        # The review queue: everything a tutor should look at
+        # The review queue: everything an admin should look at
         stmt = stmt.where(
             (Question.status == Q_NEEDS_REVIEW)
             | ((Question.status == Q_AUTO_VERIFIED) & Question.spot_check.is_(True))
@@ -157,7 +155,7 @@ async def queue(
 
 @router.get("/questions/{question_id}")
 async def get_question(
-    question_id: uuid.UUID, user: User = Depends(require_staff), db: AsyncSession = Depends(get_db)
+    question_id: uuid.UUID, user: User = Depends(require_admin), db: AsyncSession = Depends(get_db)
 ) -> dict[str, Any]:
     q = await db.get(Question, question_id)
     if q is None:
@@ -170,7 +168,7 @@ async def get_question(
 async def review_question(
     question_id: uuid.UUID,
     body: ReviewIn,
-    user: User = Depends(require_staff),
+    user: User = Depends(require_admin),
     db: AsyncSession = Depends(get_db),
 ) -> dict[str, Any]:
     q = await db.get(Question, question_id)
@@ -215,7 +213,7 @@ async def review_question(
 
 @router.get("/stats")
 async def stats(
-    user: User = Depends(require_staff), db: AsyncSession = Depends(get_db)
+    user: User = Depends(require_admin), db: AsyncSession = Depends(get_db)
 ) -> dict[str, Any]:
     allowed = _modules_for(user)
     rows = (
@@ -344,7 +342,7 @@ async def poll_batch(
 
 @router.get("/reports")
 async def reports(
-    user: User = Depends(require_staff), db: AsyncSession = Depends(get_db)
+    user: User = Depends(require_admin), db: AsyncSession = Depends(get_db)
 ) -> list[dict[str, Any]]:
     allowed = _modules_for(user)
     rows = (

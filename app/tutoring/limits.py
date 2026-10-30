@@ -1,4 +1,4 @@
-"""Per-plan message limits. Days and months are counted in Swiss time."""
+"""Message limits. Days and months are counted in Swiss time."""
 
 from __future__ import annotations
 
@@ -9,9 +9,9 @@ from zoneinfo import ZoneInfo
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.billing.plans import AI_MONTHLY, SUBSCRIPTION_PLANS
+from app.billing.plans import AI_MONTHLY
 from app.db import utcnow
-from app.models import MESSAGE_USER, Family, Message, Plan, User
+from app.models import MESSAGE_USER, Message, Plan, User
 
 ZURICH = ZoneInfo("Europe/Zurich")
 
@@ -55,18 +55,17 @@ def month_start(now: datetime | None = None) -> datetime:
     return local.replace(day=1, hour=0, minute=0, second=0, microsecond=0).astimezone(UTC)
 
 
-async def plan_for(db: AsyncSession, family: Family | None) -> Plan | None:
-    """The plan whose limits apply. A free-access grant uses the AI-only limits."""
-    key = AI_MONTHLY
-    if family is not None and family.plan_key in SUBSCRIPTION_PLANS:
-        if family.subscription_status in ("trialing", "active", "past_due"):
-            key = family.plan_key
-    return await db.get(Plan, key)
+async def plan_for(db: AsyncSession) -> Plan | None:
+    """The plan whose limits apply: the same for every learner.
+
+    TODO(task 0.7): replace the subscription plan rows with the flat daily cap for
+    Explain this once the Civics Pass products exist."""
+    return await db.get(Plan, AI_MONTHLY)
 
 
-async def _count(db: AsyncSession, student_id, since: datetime) -> int:
+async def _count(db: AsyncSession, user_id, since: datetime) -> int:
     stmt = select(func.count(Message.id)).where(
-        Message.student_id == student_id,
+        Message.user_id == user_id,
         Message.role == MESSAGE_USER,
         Message.counted.is_(True),
         Message.created_at >= since,
@@ -74,12 +73,12 @@ async def _count(db: AsyncSession, student_id, since: datetime) -> int:
     return int((await db.execute(stmt)).scalar_one())
 
 
-async def usage_for(db: AsyncSession, student: User, family: Family | None) -> UsageInfo:
-    plan = await plan_for(db, family)
+async def usage_for(db: AsyncSession, user: User) -> UsageInfo:
+    plan = await plan_for(db)
     now = utcnow()
     return UsageInfo(
-        daily_used=await _count(db, student.id, day_start(now)),
+        daily_used=await _count(db, user.id, day_start(now)),
         daily_limit=plan.daily_message_limit if plan else None,
-        monthly_used=await _count(db, student.id, month_start(now)),
+        monthly_used=await _count(db, user.id, month_start(now)),
         monthly_limit=plan.monthly_message_limit if plan else None,
     )

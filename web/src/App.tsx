@@ -8,17 +8,16 @@ import VerifyEmail from "./pages/VerifyEmail";
 import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
-import AcceptInvite from "./pages/AcceptInvite";
 import TwoFactor from "./pages/TwoFactor";
-import ParentDashboard from "./pages/ParentDashboard";
 import BillingReturn from "./pages/BillingReturn";
-import StudentHome from "./pages/StudentHome";
-const StudentChat = lazy(() => import("./pages/StudentChat"));
-const StudentDiagnostic = lazy(() => import("./pages/StudentDiagnostic"));
-const StudentPractice = lazy(() => import("./pages/StudentPractice"));
-import TutorDashboard from "./pages/TutorDashboard";
+import LearnerHome from "./pages/LearnerHome";
+const LearnerChat = lazy(() => import("./pages/LearnerChat"));
+const LearnerDiagnostic = lazy(() => import("./pages/LearnerDiagnostic"));
+const LearnerPractice = lazy(() => import("./pages/LearnerPractice"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 import NotFound from "./pages/NotFound";
+
+const LEARNER = ["learner"];
 
 export default function App() {
   return (
@@ -31,62 +30,45 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
-        <Route path="/accept-invite" element={<AcceptInvite />} />
         <Route path="/2fa" element={<TwoFactor mode="verify" />} />
         <Route path="/2fa/setup" element={<TwoFactor mode="setup" />} />
         <Route
-          path="/parent/*"
-          element={
-            <RequireRole roles={["parent", "adult"]}>
-              <ParentDashboard />
-            </RequireRole>
-          }
-        />
-        <Route
           path="/billing/return"
           element={
-            <RequireRole roles={["parent", "adult"]}>
+            <RequireRole roles={LEARNER}>
               <BillingReturn />
             </RequireRole>
           }
         />
         <Route
-          path="/student"
+          path="/learner"
           element={
-            <RequireRole roles={["student", "adult"]}>
-              <StudentHome />
+            <RequireRole roles={LEARNER}>
+              <LearnerHome />
             </RequireRole>
           }
         />
         <Route
-          path="/student/chat/:id"
+          path="/learner/chat/:id"
           element={
-            <RequireRole roles={["student", "adult"]}>
-              <StudentChat />
+            <RequireRole roles={LEARNER}>
+              <LearnerChat />
             </RequireRole>
           }
         />
         <Route
-          path="/student/diagnostic/:id"
+          path="/learner/diagnostic/:id"
           element={
-            <RequireRole roles={["student", "adult"]}>
-              <StudentDiagnostic />
+            <RequireRole roles={LEARNER}>
+              <LearnerDiagnostic />
             </RequireRole>
           }
         />
         <Route
-          path="/student/practice"
+          path="/learner/practice"
           element={
-            <RequireRole roles={["student", "adult"]}>
-              <StudentPractice />
-            </RequireRole>
-          }
-        />
-        <Route
-          path="/tutor/*"
-          element={
-            <RequireRole roles={["tutor", "admin"]}>
-              <TutorDashboard />
+            <RequireRole roles={LEARNER}>
+              <LearnerPractice />
             </RequireRole>
           }
         />

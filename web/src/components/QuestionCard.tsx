@@ -58,8 +58,8 @@ export function MasteryBar({ value, due, label }: { value: number | null; due?: 
         <span style={{ width: `${pct}%` }} />
       </div>
       <span className="mastery-value small">
-        {value === null ? t("student.notTested") : `${value}%`}
-        {due && <span className="status status-due">{t("student.due")}</span>}
+        {value === null ? t("learner.notTested") : `${value}%`}
+        {due && <span className="status status-due">{t("learner.due")}</span>}
       </span>
     </div>
   );

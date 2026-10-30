@@ -169,6 +169,25 @@ def has_course_module(course_key: str) -> bool:
     )
 
 
+def available_courses() -> list[str]:
+    """Every course key with a topic list and a tutor prompt, e.g. ib_maths_aa_hl. Every
+    learner may use every course until the canton modules replace them in Phase 1."""
+    root = prompts_root() / "courses"
+    if not root.is_dir():
+        return []
+    out: list[str] = []
+    for directory in sorted(p for p in root.iterdir() if p.is_dir()):
+        info = course_info(directory.name)
+        if info is None or _latest(directory, "md") is None:
+            continue
+        levels = list(info.level_names)
+        if levels:
+            out.extend(f"{directory.name}_{lvl}" for lvl in levels)
+        else:
+            out.append(directory.name)
+    return out
+
+
 @lru_cache(maxsize=4)
 def _replies() -> tuple[str, dict[str, dict[str, str]]]:
     path = _latest(prompts_root() / "replies", "json")

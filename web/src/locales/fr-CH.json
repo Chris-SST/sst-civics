@@ -1,8 +1,28 @@
 {
-  "nav": { "language": "Langue", "logout": "Se déconnecter", "login": "Se connecter", "signup": "Créer un compte" },
-  "roles": { "parent": "Parent", "student": "Élève", "adult": "Apprenant adulte", "tutor": "Tuteur", "admin": "Admin" },
-  "env": { "banner": "Environnement {{env}} : mode test, aucun paiement réel" },
-  "common": { "working": "Un instant…", "back": "Retour", "home": "Accueil", "save": "Enregistrer", "cancel": "Annuler", "open": "Ouvrir", "close": "Fermer", "yes": "Oui", "no": "Non" },
+  "nav": {
+    "language": "Langue",
+    "logout": "Se déconnecter",
+    "login": "Se connecter",
+    "signup": "Créer un compte"
+  },
+  "roles": {
+    "admin": "Admin",
+    "learner": "Apprenant·e"
+  },
+  "env": {
+    "banner": "Environnement {{env}} : mode test, aucun paiement réel"
+  },
+  "common": {
+    "working": "Un instant…",
+    "back": "Retour",
+    "home": "Accueil",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "open": "Ouvrir",
+    "close": "Fermer",
+    "yes": "Oui",
+    "no": "Non"
+  },
   "footer": {
     "home": "Swiss Science Tutors",
     "consultation": "Réserver une consultation gratuite",
@@ -21,7 +41,6 @@
     "validation_error": "Veuillez vérifier les champs indiqués.",
     "rate_limited": "Trop de tentatives. Veuillez patienter quelques minutes.",
     "terms_required": "Veuillez accepter les conditions d'utilisation et la déclaration de confidentialité.",
-    "guardian_confirmation_required": "Veuillez confirmer que vous êtes le parent ou le représentant légal de l'élève.",
     "weak_password": "Veuillez choisir un mot de passe d'au moins 10 caractères.",
     "email_in_use": "Un compte existe déjà avec cette adresse e-mail.",
     "invalid_token": "Ce lien est invalide ou a expiré. Veuillez en demander un nouveau.",
@@ -35,27 +54,19 @@
     "invalid_code": "Ce code n'est pas correct. Les codes changent toutes les 30 secondes.",
     "totp_already_enabled": "L'authentification à deux facteurs est déjà activée.",
     "totp_not_in_setup": "Commencez d'abord la configuration de l'application d'authentification.",
-    "invalid_year_of_birth": "Veuillez vérifier l'année de naissance.",
-    "invalid_curriculum": "Veuillez choisir un programme.",
     "invalid_course": "Veuillez choisir des cours dans la liste.",
-    "invalid_username": "Les noms d'utilisateur comptent 3 à 40 caractères : lettres, chiffres, points, tirets.",
-    "username_in_use": "Ce nom d'utilisateur est déjà pris. Veuillez en choisir un autre.",
-    "login_method_required": "Choisissez un nom d'utilisateur et un mot de passe, ou saisissez l'e-mail de l'élève.",
     "not_found": "Introuvable.",
-    "no_family": "Aucun compte famille trouvé.",
     "billing_not_configured": "Les paiements ne sont pas encore activés dans cet environnement.",
     "unknown_plan": "Formule inconnue.",
     "price_not_found": "Les prix ne sont pas disponibles pour le moment. Veuillez réessayer sous peu.",
     "already_subscribed": "Vous avez déjà un abonnement. Modifiez-le via « Gérer la facturation ».",
-    "add_student_first": "Ajoutez au moins un élève avant de vous abonner.",
     "no_stripe_customer": "Il n'y a pas encore de compte de facturation. Commencez d'abord une formule.",
     "csrf_failed": "Votre session a expiré. Veuillez recharger la page.",
     "cannot_deactivate_self": "Vous ne pouvez pas désactiver votre propre compte.",
-    "not_invitable": "Ce compte ne peut pas être réinvité.",
     "impersonation_disabled": "La vue en tant qu'autre utilisateur est désactivée en production.",
     "cannot_impersonate": "Ce compte ne peut pas être affiché de cette manière.",
     "not_impersonating": "Vous ne consultez pas l'application en tant qu'autre utilisateur.",
-    "no_access": "Ta formule n'inclut pas le tuteur pour le moment.",
+    "no_access": "Tu n'as pas accès pour ton canton pour le moment.",
     "invalid_topic": "Choisis un sujet dans la liste.",
     "conversation_ended": "Cette séance est terminée. Démarres-en une nouvelle.",
     "tutor_unavailable": "Le tuteur n'est pas disponible pour le moment. Réessaie plus tard.",
@@ -72,7 +83,9 @@
     "wrong_question": "Ce n'était pas la question en cours. Recharge la page.",
     "conversation_required": "Ouvre le bilan depuis une séance avec le tuteur.",
     "invalid_difficulty": "La difficulté doit être comprise entre 1 et 5.",
-    "invalid_qtype": "Veuillez choisir un type de question valide."
+    "invalid_qtype": "Veuillez choisir un type de question valide.",
+    "age_confirmation_required": "Veuillez confirmer que vous avez 16 ans ou plus.",
+    "invalid_canton": "Veuillez choisir un canton dans la liste."
   },
   "impersonation": {
     "banner": "Vue en tant que {{name}} ({{role}}). Vous êtes connecté comme admin {{admin}}.",
@@ -80,35 +93,49 @@
   },
   "landing": {
     "title": "{{name}}",
-    "lead": "Un tuteur IA en mathématiques et sciences (IB, IGCSE, A Level, écoles suisses) qui guide votre enfant dans ses devoirs et ses révisions, avec les tuteurs humains de Swiss Science Tutors à portée de clic.",
+    "lead": "Préparez le test de connaissances pour la naturalisation : comprenez chaque question dans votre langue, puis entraînez-vous en allemand.",
     "cta": "Essai gratuit de 7 jours",
     "plansTitle": "Formules",
-    "trialNote": "Prix par élève, en CHF. Les formules AI-only et Hybride commencent par un essai gratuit de 7 jours ; annulez avant la fin et vous ne payez rien.",
+    "trialNote": "Prix en CHF.",
     "learnMore": "En savoir plus sur swisssciencetutors.ch"
   },
   "plans": {
-    "ai_monthly": { "name": "AI-only, mensuel", "blurb": "Tuteur IA et exercices pour tous vos cours activés, plus un résumé hebdomadaire pour les parents." },
-    "ai_annual": { "name": "AI-only, annuel", "blurb": "Comme le mensuel, payé une fois par an à un prix réduit." },
-    "hybrid_monthly": { "name": "Hybride", "blurb": "Tout AI-only, plus une heure par mois avec un tuteur SST et une note de progression mensuelle." },
-    "ask_tutor_single": { "name": "Demander à un tuteur", "blurb": "Une réponse écrite d'un tuteur SST sous 24 heures. Un crédit par question." },
-    "exam_sprint": { "name": "Sprint examens IB", "blurb": "Plan de révision de février à mai, séries chronométrées de type examen et trois heures de correction par un tuteur." },
-    "per_month": "par élève et par mois",
-    "per_year": "par élève et par an",
+    "ai_monthly": {
+      "name": "AI-only, mensuel",
+      "blurb": "Tuteur IA et exercices pour tous les cours activés."
+    },
+    "ai_annual": {
+      "name": "AI-only, annuel",
+      "blurb": "Comme le mensuel, payé une fois par an à un prix réduit."
+    },
+    "hybrid_monthly": {
+      "name": "Hybride",
+      "blurb": "Tout AI-only, plus une heure par mois avec un tuteur SST et une note de progression mensuelle."
+    },
+    "ask_tutor_single": {
+      "name": "Demander à un tuteur",
+      "blurb": "Une réponse écrite d'un tuteur SST sous 24 heures. Un crédit par question."
+    },
+    "exam_sprint": {
+      "name": "Sprint examens IB",
+      "blurb": "Plan de révision de février à mai, séries chronométrées de type examen et trois heures de correction par un tuteur."
+    },
+    "per_month": "par mois",
+    "per_year": "par an",
     "limits": "Usage raisonnable : {{monthly}} messages au tuteur par mois, {{daily}} par jour.",
     "unavailable": "Les prix apparaîtront une fois la facturation connectée."
   },
   "signup": {
     "title": "Créer votre compte",
-    "intro": "Les parents créent le compte et ajoutent leurs enfants. Les apprenants de 18 ans et plus peuvent s'inscrire eux-mêmes.",
-    "accountType": "Je suis",
-    "typeParent": "un parent ou représentant légal",
-    "typeAdult": "un apprenant adulte (18 ans ou plus)",
-    "guardian": "Je confirme être le parent ou le représentant légal du ou des élèves que je vais ajouter.",
+    "intro": "Créez votre propre compte pour préparer le test de connaissances pour la naturalisation. Les comptes sont réservés aux personnes de 16 ans et plus.",
     "terms": "J'accepte les",
     "submit": "Créer un compte",
     "haveAccount": "Déjà un compte ? Se connecter",
     "checkEmailTitle": "Consultez vos e-mails",
-    "checkEmailBody": "Nous avons envoyé un lien de confirmation à {{email}}. Ouvrez-le dans les 24 heures pour activer votre compte."
+    "checkEmailBody": "Nous avons envoyé un lien de confirmation à {{email}}. Ouvrez-le dans les 24 heures pour activer votre compte.",
+    "ageConfirm": "J'ai 16 ans ou plus",
+    "cantonHint": "Le canton où vous passerez le test. Vous pourrez le modifier plus tard.",
+    "studyLanguageHint": "La langue dans laquelle vous voulez d'abord comprendre les questions et les réponses."
   },
   "fields": {
     "email": "Adresse e-mail",
@@ -116,32 +143,37 @@
     "passwordHint": "Au moins 10 caractères. Une courte phrase convient bien.",
     "confirmPassword": "Répéter le mot de passe",
     "newPassword": "Nouveau mot de passe",
-    "firstName": "Prénom ou surnom",
-    "yearOfBirth": "Année de naissance",
-    "curriculum": "Programme",
-    "courses": "Cours",
-    "username": "Nom d'utilisateur",
-    "usernameHint": "Lettres, chiffres, points et tirets. L'élève l'utilise pour se connecter.",
-    "studentEmail": "Adresse e-mail de l'élève"
+    "canton": "Canton",
+    "studyLanguage": "Langue d'étude"
   },
-  "verify": { "title": "Confirmation de votre e-mail", "ok": "Votre adresse e-mail est confirmée. Vous pouvez vous connecter.", "retryHint": "Connectez-vous et demandez un nouveau lien de confirmation si le vôtre a expiré." },
+  "verify": {
+    "title": "Confirmation de votre e-mail",
+    "ok": "Votre adresse e-mail est confirmée. Vous pouvez vous connecter.",
+    "retryHint": "Connectez-vous et demandez un nouveau lien de confirmation si le vôtre a expiré."
+  },
   "login": {
     "title": "Se connecter",
-    "identifier": "E-mail ou nom d'utilisateur",
-    "identifierHint": "Les élèves se connectent avec le nom d'utilisateur défini par leur parent, ou avec leur propre e-mail.",
     "submit": "Se connecter",
     "forgot": "Mot de passe oublié ?",
     "noAccount": "Nouveau ici ?",
     "resend": "Renvoyer l'e-mail de confirmation",
     "resent": "Envoyé. Veuillez consulter votre boîte de réception."
   },
-  "forgot": { "title": "Réinitialiser votre mot de passe", "intro": "Saisissez votre adresse e-mail ; nous vous enverrons un lien valable 30 minutes.", "sent": "Si un compte existe pour cette adresse, un lien est en route.", "submit": "Envoyer le lien" },
-  "reset": { "title": "Choisir un nouveau mot de passe", "ok": "Votre mot de passe a été modifié. Veuillez vous connecter.", "submit": "Modifier le mot de passe" },
-  "invite": { "title": "Bienvenue sur le SST Virtual Tutor", "intro": "Choisissez un mot de passe pour terminer la configuration de votre compte.", "ok": "C'est prêt. Vous pouvez vous connecter.", "submit": "Définir le mot de passe" },
+  "forgot": {
+    "title": "Réinitialiser votre mot de passe",
+    "intro": "Saisissez votre adresse e-mail ; nous vous enverrons un lien valable 30 minutes.",
+    "sent": "Si un compte existe pour cette adresse, un lien est en route.",
+    "submit": "Envoyer le lien"
+  },
+  "reset": {
+    "title": "Choisir un nouveau mot de passe",
+    "ok": "Votre mot de passe a été modifié. Veuillez vous connecter.",
+    "submit": "Modifier le mot de passe"
+  },
   "twofa": {
     "setupTitle": "Configurer votre application d'authentification",
     "verifyTitle": "Saisir votre code d'authentification",
-    "requiredStaff": "Les tuteurs et les admins doivent utiliser l'authentification à deux facteurs.",
+    "requiredStaff": "Les admins doivent utiliser l'authentification à deux facteurs.",
     "optional": "Protégez votre compte avec un second facteur.",
     "setupSteps": "Scannez le code avec Google Authenticator, Microsoft Authenticator, 1Password ou une application similaire, ou saisissez la clé. Entrez ensuite le code à 6 chiffres affiché.",
     "qrAlt": "Code QR pour votre application d'authentification",
@@ -150,29 +182,25 @@
     "enable": "Activer",
     "confirm": "Continuer"
   },
-  "notFound": { "title": "Cette page n'existe pas" },
+  "notFound": {
+    "title": "Cette page n'existe pas"
+  },
   "billingReturn": {
     "title": "Paiement",
     "cancelled": "Le paiement a été annulé. Rien n'a été débité.",
-    "active": "Merci. Votre formule est active ; votre élève pourra commencer dès l'ouverture du tuteur.",
+    "active": "Merci. Votre accès est actif.",
     "waiting": "En attente de la confirmation du moyen de paiement par Stripe. Cela ne prend généralement que quelques secondes…",
     "slow": "Stripe n'a pas encore confirmé. Votre accès sera mis à jour automatiquement ; vous pouvez quitter cette page.",
     "toDashboard": "Aller au tableau de bord"
   },
-  "student": {
-    "hello": "Bonjour {{name}}",
+  "learner": {
     "noCourses": "Aucun cours choisi pour l'instant",
-    "askParent": "Demande à tes parents de démarrer une formule pour utiliser le tuteur.",
     "tutorOffline": "Le tuteur n'est pas encore connecté dans cet environnement.",
     "noticeTitle": "Avant de commencer avec {{name}}",
     "noticeBody": "Ton tuteur ici est basé sur l'IA, avec les tuteurs humains de Swiss Science Tutors derrière lui. Il explique et accompagne, mais ne rédige jamais un travail que tu rends. Utilise-le comme ton école l'autorise.",
     "noticeOk": "Compris",
-    "startSession": "Démarrer une séance",
-    "course": "Cours",
-    "chooseCourse": "Choisir un cours",
     "topic": "Sujet",
     "chooseTopic": "Choisir un sujet",
-    "start": "Démarrer",
     "recent": "Séances récentes",
     "noRecent": "Aucune séance pour l'instant. Choisis un sujet pour commencer.",
     "endedTag": "terminée",
@@ -195,7 +223,9 @@
     "diagSkip": "Plus tard",
     "showTopics": "Afficher les {{count}} sujets",
     "hideTopics": "Masquer les sujets",
-    "noQuestionsYet": "Les questions d'exercice pour ce cours arrivent bientôt. Tu peux quand même demander au tuteur."
+    "noQuestionsYet": "Les questions d'exercice pour ce cours arrivent bientôt. Tu peux quand même demander au tuteur.",
+    "welcome": "Bienvenue",
+    "noAccess": "Tu n'as pas encore accès pour ton canton."
   },
   "chat": {
     "back": "Tes séances",
@@ -209,36 +239,17 @@
     "helplineBody": "Pro Juventute : appelle ou envoie un SMS au 147, gratuit et confidentiel, 24 h sur 24. En cas d'urgence, appelle le 144 (ambulance) ou le 117 (police). Parler à un adulte de confiance aide aussi.",
     "nearLimit": "{{used}} messages sur {{limit}} utilisés ce mois-ci.",
     "dailyLimit": "Tu as atteint la limite de messages d'aujourd'hui. Le tuteur revient demain.",
-    "monthlyLimit": "Tu as atteint la limite de messages de ce mois. Parle de la formule hybride à tes parents, ou utilise « Demander à un tuteur ».",
+    "monthlyLimit": "Tu as atteint la limite de messages de ce mois.",
     "check": "Vérifier ce que tu as appris",
     "checkTitle": "Vérifier ce que tu as appris",
     "checkIntro": "Réponds seul·e à ces questions, puis regarde comment ta maîtrise évolue.",
     "checkEmpty": "Il n'y a pas encore de questions de vérification pour ce sujet.",
     "masteryNow": "Ta maîtrise en {{topic}} est maintenant de {{value}} %."
   },
-  "safety": {
-    "intro": "Conversations signalées par le tuteur au responsable de la protection. L'ouverture d'une transcription est inscrite dans le journal d'audit.",
-    "filter": "Afficher",
-    "all": "Toutes",
-    "none": "Rien à examiner.",
-    "when": "Quand",
-    "student": "Élève",
-    "kind": "Motif",
-    "course": "Cours",
-    "statusLabel": "Statut",
-    "review": "Examiner",
-    "reviewTitle": "Conversation avec {{name}}",
-    "viewLogged": "Cette consultation a été inscrite dans le journal d'audit.",
-    "notes": "Notes (mesures prises)",
-    "markReviewed": "Marquer comme examiné",
-    "dismiss": "Classer sans suite",
-    "status": { "open": "Ouvert", "reviewed": "Examiné", "dismissed": "Classé" },
-    "kinds": { "self_harm": "Automutilation", "abuse": "Maltraitance", "sexual": "Contenu sexuel", "bullying": "Harcèlement", "danger": "Danger", "override": "Tentative de contourner les règles", "coursework": "Demande de travail évalué" }
-  },
   "usage": {
     "intro": "Appels IA depuis le {{date}}. Coûts aux prix catalogue convertis en CHF ; la facture du fournisseur fait foi.",
     "cost": "Coût",
-    "messages": "Messages d'élèves",
+    "messages": "Messages des apprenants",
     "calls": "Appels",
     "perMessage": "Coût par message",
     "cacheRate": "Taux de cache",
@@ -246,116 +257,23 @@
     "purpose": "Usage",
     "latency": "Latence moyenne",
     "errors": "Erreurs",
-    "topStudents": "Coûts les plus élevés ce mois-ci",
-    "noStudents": "Aucune utilisation pour l'instant.",
-    "purposes": { "tutor_reply": "Réponses du tuteur", "gatekeeper": "Filtrage des messages", "summary": "Résumés" }
+    "purposes": {
+      "tutor_reply": "Réponses du tuteur",
+      "gatekeeper": "Filtrage des messages",
+      "summary": "Résumés"
+    },
+    "topLearners": "Coûts les plus élevés ce mois-ci",
+    "noLearners": "Aucune utilisation pour l'instant.",
+    "learner": "Apprenant·e"
   },
-  "access": { "full": "Actif", "read_only": "Lecture seule", "none": "Aucune formule" },
-  "tutor": {
-    "title": "Bonjour {{name}}",
-    "queue": "File « Demander à un tuteur »",
-    "queueEmpty": "Pas encore de questions. La file ouvre lors de la prochaine phase.",
-    "profile": "Votre profil",
-    "courses": "Cours attribués",
-    "noCourses": "aucun pour l'instant",
-    "availability": "Disponibilité",
-    "available": "Disponible",
-    "away": "Absent",
-    "timeLog": "Temps enregistré ce mois-ci",
-    "dashboardTab": "Tableau de bord"
-  },
-  "parent": {
-    "title": "Votre famille",
-    "billingDisabled": "Les paiements ne sont pas connectés dans cet environnement ; les formules ne peuvent pas encore être démarrées.",
-    "paymentWarning": "Votre dernier paiement a échoué. Veuillez mettre à jour votre moyen de paiement sous 7 jours pour conserver l'accès.",
-    "updatePayment": "Mettre à jour le moyen de paiement",
-    "subscription": "Abonnement",
-    "freeAccess": "Accès gratuit en tant que famille suivant des cours SST jusqu'au {{date}}.",
-    "plan": "Formule",
-    "status": "Statut",
-    "students": "Élèves",
-    "trialEnds": "L'essai gratuit se termine le {{date}}",
-    "endsOn": "Se termine le {{date}}",
-    "renewsOn": "Se renouvelle le {{date}}",
-    "tutorCredits_one": "{{count}} crédit « Demander à un tuteur »",
-    "tutorCredits_other": "{{count}} crédits « Demander à un tuteur »",
-    "manageBilling": "Gérer la facturation",
-    "goToTutor": "Aller au tuteur",
-    "noStudents": "Aucun élève pour l'instant.",
-    "loginUsername": "Se connecte avec le nom d'utilisateur {{username}}",
-    "invitePending": "Invitation envoyée à {{email}}, pas encore acceptée",
-    "loginEmail": "Se connecte avec {{email}}",
-    "resetPassword": "Changer le mot de passe",
-    "remove": "Retirer",
-    "addStudent": "Ajouter un élève",
-    "adultTitle": "Votre apprentissage",
-    "adultBody": "En tant qu'apprenant adulte, vous gérez votre formule ici et utilisez le tuteur depuis votre page d'apprenant.",
-    "choosePlan": "Choisir une formule",
-    "addStudentFirst": "Ajoutez d'abord au moins un élève. Le prix est par élève.",
-    "startTrial": "Commencer l'essai gratuit",
-    "addons": "Options",
-    "buy": "Acheter",
-    "settings": "Paramètres",
-    "security": "Sécurité",
-    "twofaOn": "L'authentification à deux facteurs est activée.",
-    "enable2fa": "Activer l'authentification à deux facteurs",
-    "dataRights": "Vous pouvez demander une copie des données de votre famille ou la suppression du compte en écrivant à tutor@swisssciencetutors.ch. Le téléchargement et la suppression en libre-service arrivent avec la prochaine phase.",
-    "confirmRemove": "Retirer {{name}} ? Sa connexion cessera immédiatement de fonctionner.",
-    "newStudentPassword": "Nouveau mot de passe pour {{name}} (au moins 10 caractères) :",
-    "passwordChanged": "Mot de passe modifié.",
-    "firstNameHint": "Seul ce nom est montré aux tuteurs. Il n'est jamais envoyé à l'IA.",
-    "loginMethod": "Comment l'élève se connectera-t-il ?",
-    "methodUsername": "Avec un nom d'utilisateur et un mot de passe que je définis",
-    "methodInvite": "Avec sa propre adresse e-mail (nous envoyons une invitation)"
-  },
-  "subStatus": {
-    "none": "Aucun abonnement",
-    "trialing": "Essai gratuit",
-    "active": "Actif",
-    "past_due": "Paiement en retard",
-    "canceled": "Résilié",
-    "unpaid": "Impayé",
-    "incomplete": "Incomplet",
-    "incomplete_expired": "Expiré",
-    "paused": "En pause"
-  },
-  "curricula": {
-    "ib_dp": "IB Diploma",
-    "igcse": "IGCSE",
-    "a_level": "A Level",
-    "ib_myp": "IB MYP",
-    "swiss_matura": "Maturité suisse",
-    "french_bac": "Baccalauréat français",
-    "university": "Admission universitaire",
-    "other": "Autre"
-  },
-  "courses": {
-    "ib_maths_aa_sl": "IB Maths : Analysis and Approaches SL",
-    "ib_maths_aa_hl": "IB Maths : Analysis and Approaches HL",
-    "ib_maths_ai_sl": "IB Maths : Applications and Interpretation SL",
-    "ib_maths_ai_hl": "IB Maths : Applications and Interpretation HL",
-    "ib_physics_sl": "IB Physique SL",
-    "ib_physics_hl": "IB Physique HL",
-    "ib_chemistry_sl": "IB Chimie SL",
-    "ib_chemistry_hl": "IB Chimie HL",
-    "ib_biology_sl": "IB Biologie SL",
-    "ib_biology_hl": "IB Biologie HL",
-    "igcse_maths": "IGCSE Maths",
-    "igcse_physics": "IGCSE Physique",
-    "igcse_chemistry": "IGCSE Chimie",
-    "igcse_biology": "IGCSE Biologie",
-    "a_level_maths": "A Level Maths",
-    "a_level_further_maths": "A Level Further Maths",
-    "a_level_physics": "A Level Physique",
-    "a_level_chemistry": "A Level Chimie",
-    "a_level_biology": "A Level Biologie",
-    "other": "Autre"
+  "access": {
+    "full": "Actif",
+    "none": "Aucun accès"
   },
   "admin": {
     "title": "Admin",
     "overview": "Vue d'ensemble",
-    "families": "Familles",
-    "staff": "Tuteurs et admins",
+    "staff": "Admins",
     "plans": "Formules et limites",
     "stripeEvents": "Derniers événements Stripe",
     "eventType": "Événement",
@@ -364,33 +282,44 @@
     "noEvents": "Aucun événement webhook reçu pour l'instant.",
     "processed": "traité",
     "pending": "en attente",
-    "searchEmail": "Rechercher par e-mail du parent",
+    "searchEmail": "Rechercher par e-mail",
     "access": "Accès",
     "unverified": "non confirmé",
-    "freeAccessUntil": "Accès gratuit jusqu'au",
-    "members": "Membres",
-    "inactive": "inactif",
-    "grantFreeAccess": "Accorder un accès gratuit",
     "until": "Jusqu'au",
-    "untilHint": "Laissez vide pour retirer l'accès gratuit.",
-    "reason": "Motif",
     "role": "Rôle",
-    "invitePending": "invitation en attente",
-    "resendInvite": "Renvoyer l'invitation",
     "reset2fa": "Réinitialiser la 2FA",
     "deactivate": "Désactiver",
     "activate": "Activer",
-    "inviteStaff": "Inviter un tuteur ou un admin",
-    "taggedCourses": "Cours attribués (clés, séparées par des virgules)",
-    "sendInvite": "Envoyer l'invitation",
-    "invited": "Invitation envoyée à {{email}}.",
     "plansIntro": "Les prix sont dans Stripe. Vous définissez ici les limites d'usage raisonnable par formule.",
     "monthlyLimit": "Messages par mois",
     "dailyLimit": "Messages par jour",
     "active": "En vente",
     "viewAs": "Voir en tant que",
-    "safety": "Protection",
-    "usage": "Utilisation de l'IA"
+    "usage": "Utilisation de l'IA",
+    "staffIntro": "Les comptes admin sont créés avec le script de seed sur le serveur. Chaque admin utilise l'authentification à deux facteurs.",
+    "learners": "Apprenants",
+    "noLearners": "Aucun apprenant trouvé.",
+    "activeEntitlements": "Accès actifs",
+    "lastLogin": "Dernière connexion",
+    "plan": "Formule",
+    "status": "Statut",
+    "ageConfirmed": "16 ans ou plus confirmé",
+    "termsAccepted": "Conditions acceptées",
+    "stripeCustomer": "Client Stripe",
+    "entitlements": "Accès par canton",
+    "noEntitlements": "Aucun accès accordé pour l'instant.",
+    "expired": "Expiré",
+    "payments": "Paiements",
+    "noPayments": "Aucun paiement pour l'instant.",
+    "grantAccess": "Accorder un accès",
+    "grant": "Accorder",
+    "granted": "Accès pour {{canton}} accordé jusqu'au {{date}}.",
+    "sourceLabel": "Type",
+    "source": {
+      "admin": "Accordé par un admin",
+      "trial": "Essai",
+      "stripe": "Payé"
+    }
   },
   "diagnostic": {
     "title": "Trouve tes lacunes",
@@ -429,8 +358,19 @@
     "back": "Retour à l'accueil"
   },
   "question": {
-    "praise": ["Correct !", "Bien joué !", "Exactement !", "C'est ça !", "Parfait !"],
-    "encourage": ["Pas cette fois.", "Pas tout à fait. Regarde la solution.", "Presque, mais pas tout à fait.", "Pas celle-ci. La prochaine est un nouveau départ."],
+    "praise": [
+      "Correct !",
+      "Bien joué !",
+      "Exactement !",
+      "C'est ça !",
+      "Parfait !"
+    ],
+    "encourage": [
+      "Pas cette fois.",
+      "Pas tout à fait. Regarde la solution.",
+      "Presque, mais pas tout à fait.",
+      "Pas celle-ci. La prochaine est un nouveau départ."
+    ],
     "streak": "{{count}} d'affilée !",
     "backOnTrack": "De retour sur les rails !",
     "tricky": "Une question délicate. Lis la solution, puis passe à la suivante.",
@@ -473,7 +413,6 @@
     }
   },
   "review": {
-    "tab": "Révision des questions",
     "queue": "File de révision",
     "module": "Module",
     "allModules": "Tous les modules",
@@ -489,7 +428,7 @@
     "spotCheck": "Contrôle aléatoire",
     "reports_one": "{{count}} signalement",
     "reports_other": "{{count}} signalements",
-    "reportsLabel": "Signalements d'élèves",
+    "reportsLabel": "Signalements d'apprenants",
     "panelTitle": "Réviser la question",
     "options": "Options",
     "optionsHint": "Une par ligne, p. ex. A) 2x+1",
@@ -541,7 +480,7 @@
       "no_solution": "Pas de solution détaillée",
       "no_mark_scheme": "Pas de barème",
       "near_duplicate": "Quasi-doublon",
-      "student_reports": "Signalements d'élèves"
+      "student_reports": "Signalements d'apprenants"
     }
   },
   "qbank": {
@@ -550,7 +489,11 @@
     "reviewQueue": "File de révision",
     "generate": "Générer des questions",
     "level": "Niveau",
-    "levels": { "sl": "SL", "hl": "HL", "both": "SL et HL" },
+    "levels": {
+      "sl": "SL",
+      "hl": "HL",
+      "both": "SL et HL"
+    },
     "topics": "Sujets",
     "allTopics": "Tous les sujets",
     "difficulties": "Difficultés",
@@ -561,7 +504,10 @@
     "modeBatch": "Lot",
     "modeDirect": "Direct",
     "modeHelp": "Le lot coûte moitié prix et arrive en une heure environ ; le mode direct s'exécute tout de suite.",
-    "modes": { "batch": "Lot", "direct": "Direct" },
+    "modes": {
+      "batch": "Lot",
+      "direct": "Direct"
+    },
     "estimate": "{{requests}} requêtes, jusqu'à {{questions}} questions avant les vérifications.",
     "submit": "Générer",
     "submitted": "Demande envoyée : {{count}} requêtes.",
@@ -570,10 +516,23 @@
     "requests": "Requêtes",
     "created": "Questions créées",
     "checkNow": "Vérifier maintenant",
-    "batchStatus": { "submitted": "Envoyé", "processed": "Traité", "failed": "Échoué" },
+    "batchStatus": {
+      "submitted": "Envoyé",
+      "processed": "Traité",
+      "failed": "Échoué"
+    },
     "reports": "Signalements ouverts",
     "noReports": "Aucun signalement ouvert.",
     "comment": "Commentaire",
     "noComment": "sans commentaire"
+  },
+  "cantons": {
+    "zh": "Zurich",
+    "ag": "Argovie"
+  },
+  "languages": {
+    "en": "Anglais",
+    "de": "Allemand",
+    "fr": "Français"
   }
 }

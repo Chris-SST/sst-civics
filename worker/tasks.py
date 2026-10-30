@@ -8,11 +8,10 @@ from typing import Any
 from sqlalchemy import select
 
 from app.auth.sessions import purge_expired_sessions
-from app.billing import stripe_client
-from app.billing.events import apply_subscription, handle_event
+from app.billing.events import handle_event
 from app.db import SessionLocal, utcnow
 from app.email import backend, messages
-from app.models import Family, GenerationBatch, StripeEvent
+from app.models import GenerationBatch, StripeEvent
 from app.questions import pipeline
 
 log = logging.getLogger(__name__)
@@ -47,28 +46,6 @@ async def process_stripe_event(ctx: dict[str, Any], event_id: str) -> None:
             from arq import Retry
 
             raise Retry(defer=ctx.get("job_try", 1) * 60) from exc
-
-
-async def reconcile_subscriptions(ctx: dict[str, Any]) -> int:
-    """Nightly: re-read every subscription from Stripe so missed webhooks heal."""
-    updated = 0
-    async with SessionLocal() as db:
-        families = (
-            (await db.execute(select(Family).where(Family.stripe_subscription_id.is_not(None))))
-            .scalars()
-            .all()
-        )
-        for family in families:
-            try:
-                sub = stripe_client.retrieve_subscription(family.stripe_subscription_id)
-            except Exception as exc:  # noqa: BLE001
-                log.warning("Reconcile: could not fetch subscription: %s", exc.__class__.__name__)
-                continue
-            apply_subscription(family, sub)
-            updated += 1
-        await db.commit()
-    log.info("Reconciled %d subscriptions", updated)
-    return updated
 
 
 async def purge_sessions(ctx: dict[str, Any]) -> int:

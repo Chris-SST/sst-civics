@@ -9,7 +9,6 @@ from app.auth.me import build_me
 from app.auth.passwords import hash_password, password_is_acceptable, verify_password
 from app.auth.ratelimit import hit
 from app.auth.schemas import (
-    AcceptInviteIn,
     EmailIn,
     LoginIn,
     LoginOut,
@@ -35,14 +34,11 @@ from app.deps import AuthContext, auth_any_state, client_ip
 from app.email.messages import app_link
 from app.jobs import send_email_job
 from app.models import (
-    ROLE_ADULT,
-    ROLE_PARENT,
+    CANTONS,
+    ROLE_LEARNER,
     TOKEN_RESET_PASSWORD,
-    TOKEN_STAFF_INVITE,
-    TOKEN_STUDENT_INVITE,
     TOKEN_VERIFY_EMAIL,
     AuditLog,
-    Family,
     User,
 )
 
@@ -51,11 +47,6 @@ router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 async def _user_by_email(db: AsyncSession, email: str) -> User | None:
     result = await db.execute(select(User).where(User.email == email.lower().strip()))
-    return result.scalar_one_or_none()
-
-
-async def _user_by_username(db: AsyncSession, username: str) -> User | None:
-    result = await db.execute(select(User).where(User.username == username.lower().strip()))
     return result.scalar_one_or_none()
 
 
@@ -83,8 +74,11 @@ async def signup(
         raise HTTPException(status.HTTP_429_TOO_MANY_REQUESTS, "rate_limited")
     if not body.accept_terms:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "terms_required")
-    if body.account_type == "parent" and not body.guardian_confirmed:
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "guardian_confirmation_required")
+    if not body.age_confirmed:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "age_confirmation_required")
+    canton = body.canton.lower()
+    if canton not in CANTONS:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_canton")
     if not password_is_acceptable(body.password):
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "weak_password")
     email = body.email.lower().strip()
@@ -92,20 +86,16 @@ async def signup(
         raise HTTPException(status.HTTP_409_CONFLICT, "email_in_use")
 
     now = utcnow()
-    family = Family(
-        locale=body.locale,
-        terms_version=get_settings().terms_version,
-        terms_accepted_at=now,
-        guardian_confirmed_at=now if body.account_type == "parent" else None,
-    )
-    db.add(family)
-    await db.flush()
     user = User(
-        family_id=family.id,
-        role=ROLE_PARENT if body.account_type == "parent" else ROLE_ADULT,
+        role=ROLE_LEARNER,
         email=email,
         password_hash=hash_password(body.password),
         locale=body.locale,
+        study_language=body.study_language,
+        canton=canton,
+        age_confirmed_at=now,
+        terms_version=get_settings().terms_version,
+        terms_accepted_at=now,
     )
     db.add(user)
     await db.flush()
@@ -142,7 +132,7 @@ async def login(
     body: LoginIn, request: Request, response: Response, db: AsyncSession = Depends(get_db)
 ) -> LoginOut:
     settings = get_settings()
-    ident = body.identifier.lower().strip()
+    ident = body.email.lower().strip()
     ip = client_ip(request)
     window = settings.login_rate_window_seconds
     ok_ip = await hit(f"login:ip:{ip}", settings.login_rate_limit * 3, window)
@@ -150,15 +140,12 @@ async def login(
     if not (ok_ip and ok_id):
         raise HTTPException(status.HTTP_429_TOO_MANY_REQUESTS, "rate_limited")
 
-    if "@" in ident:
-        user = await _user_by_email(db, ident)
-    else:
-        user = await _user_by_username(db, ident)
+    user = await _user_by_email(db, ident)
     if user is None or not verify_password(body.password, user.password_hash):
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "invalid_credentials")
     if not user.is_active:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "invalid_credentials")
-    if user.email and user.email_verified_at is None:
+    if user.email_verified_at is None:
         raise HTTPException(status.HTTP_403_FORBIDDEN, "email_not_verified")
 
     mfa_pending = user.totp_enabled
@@ -233,22 +220,6 @@ async def reset_password(
     return {"status": "password_reset"}
 
 
-@router.post("/accept-invite")
-async def accept_invite(body: AcceptInviteIn, db: AsyncSession = Depends(get_db)) -> dict[str, str]:
-    if not password_is_acceptable(body.password):
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "weak_password")
-    user = await one_time.consume_token(db, body.token, TOKEN_STUDENT_INVITE)
-    if user is None:
-        user = await one_time.consume_token(db, body.token, TOKEN_STAFF_INVITE)
-    if user is None:
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_token")
-    user.password_hash = hash_password(body.password)
-    user.email_verified_at = user.email_verified_at or utcnow()
-    user.is_active = True
-    await db.commit()
-    return {"status": "invite_accepted"}
-
-
 @router.post("/totp/setup", response_model=TotpSetupOut)
 async def totp_setup(
     ctx: AuthContext = Depends(auth_any_state), db: AsyncSession = Depends(get_db)
@@ -259,7 +230,7 @@ async def totp_setup(
     secret = totp.new_secret()
     user.totp_secret = secret
     await db.commit()
-    label = user.email or user.username or str(user.id)
+    label = user.email or str(user.id)
     return TotpSetupOut(secret=secret, otpauth_uri=totp.provisioning_uri(secret, label))
 
 

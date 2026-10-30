@@ -22,20 +22,25 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db import Base, TZDateTime, utcnow
 
-ROLE_PARENT = "parent"
-ROLE_STUDENT = "student"
-ROLE_ADULT = "adult"
-ROLE_TUTOR = "tutor"
+ROLE_LEARNER = "learner"
 ROLE_ADMIN = "admin"
-ROLES = (ROLE_PARENT, ROLE_STUDENT, ROLE_ADULT, ROLE_TUTOR, ROLE_ADMIN)
-STAFF_ROLES = (ROLE_TUTOR, ROLE_ADMIN)
-PAYER_ROLES = (ROLE_PARENT, ROLE_ADULT)
+ROLES = (ROLE_LEARNER, ROLE_ADMIN)
 LOCALES = ("en", "de", "fr")
+STUDY_LANGUAGES = LOCALES
+# Two-letter canton codes, lower case.
+CANTONS = (
+    "ag", "ai", "ar", "be", "bl", "bs", "fr", "ge", "gl", "gr", "ju", "lu", "ne",
+    "nw", "ow", "sg", "sh", "so", "sz", "tg", "ti", "ur", "vd", "vs", "zg", "zh",
+)  # fmt: skip
+DEFAULT_CANTON = "zh"
 
 TOKEN_VERIFY_EMAIL = "verify_email"  # noqa: S105
 TOKEN_RESET_PASSWORD = "reset_password"  # noqa: S105
-TOKEN_STUDENT_INVITE = "student_invite"  # noqa: S105
-TOKEN_STAFF_INVITE = "staff_invite"  # noqa: S105
+
+ENTITLEMENT_STRIPE = "stripe"
+ENTITLEMENT_ADMIN = "admin"
+ENTITLEMENT_TRIAL = "trial"
+ENTITLEMENT_SOURCES = (ENTITLEMENT_STRIPE, ENTITLEMENT_ADMIN, ENTITLEMENT_TRIAL)
 
 
 def new_id() -> uuid.UUID:
@@ -46,78 +51,67 @@ class TimestampMixin:
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
 
 
-class Family(TimestampMixin, Base):
-    """One paying household (or one adult learner). Maps to one Stripe customer."""
-
-    __tablename__ = "families"
-
-    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    locale: Mapped[str] = mapped_column(String(5), default="en")
-    terms_version: Mapped[str | None] = mapped_column(String(40))
-    terms_accepted_at: Mapped[datetime | None] = mapped_column(TZDateTime)
-    guardian_confirmed_at: Mapped[datetime | None] = mapped_column(TZDateTime)
-
-    stripe_customer_id: Mapped[str | None] = mapped_column(String(64), unique=True, index=True)
-    stripe_subscription_id: Mapped[str | None] = mapped_column(String(64), unique=True, index=True)
-    plan_key: Mapped[str | None] = mapped_column(String(40))
-    subscription_status: Mapped[str | None] = mapped_column(String(32))
-    quantity: Mapped[int] = mapped_column(Integer, default=0)
-    current_period_end: Mapped[datetime | None] = mapped_column(TZDateTime)
-    trial_end: Mapped[datetime | None] = mapped_column(TZDateTime)
-    cancel_at_period_end: Mapped[bool] = mapped_column(Boolean, default=False)
-    past_due_since: Mapped[datetime | None] = mapped_column(TZDateTime)
-    payment_warning: Mapped[bool] = mapped_column(Boolean, default=False)
-
-    free_access_until: Mapped[datetime | None] = mapped_column(TZDateTime)
-    free_access_reason: Mapped[str | None] = mapped_column(String(200))
-    tutor_credits: Mapped[int] = mapped_column(Integer, default=0)
-    exam_sprint_purchased_at: Mapped[datetime | None] = mapped_column(TZDateTime)
-
-    users: Mapped[list[User]] = relationship(back_populates="family")
-    payments: Mapped[list[Payment]] = relationship(back_populates="family")
-
-
 class User(TimestampMixin, Base):
+    """A learner (who signs up and pays for themselves) or an admin. Holds only email,
+    interface language, study language, canton and the age declaration."""
+
     __tablename__ = "users"
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    family_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("families.id"), index=True)
-    role: Mapped[str] = mapped_column(String(16), index=True)
+    role: Mapped[str] = mapped_column(String(16), index=True, default=ROLE_LEARNER)
     email: Mapped[str | None] = mapped_column(String(254), unique=True, index=True)
     email_verified_at: Mapped[datetime | None] = mapped_column(TZDateTime)
-    username: Mapped[str | None] = mapped_column(String(40), unique=True, index=True)
     password_hash: Mapped[str | None] = mapped_column(String(255))
-    first_name: Mapped[str] = mapped_column(String(80), default="")
     locale: Mapped[str] = mapped_column(String(5), default="en")
+    study_language: Mapped[str] = mapped_column(String(5), default="en")
+    canton: Mapped[str] = mapped_column(String(2), default=DEFAULT_CANTON)
+    # Self-declared "16 or older" at sign-up. No date of birth is ever stored.
+    age_confirmed_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    terms_version: Mapped[str | None] = mapped_column(String(40))
+    terms_accepted_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    stripe_customer_id: Mapped[str | None] = mapped_column(String(64), unique=True, index=True)
 
-    # Student details (year of birth only, never a full date of birth)
-    year_of_birth: Mapped[int | None] = mapped_column(Integer)
-    curriculum: Mapped[str | None] = mapped_column(String(40))
-    courses: Mapped[list[str] | None] = mapped_column(JSON)
-
-    # Two-factor authentication (TOTP). Mandatory for tutors and admin.
+    # Two-factor authentication (TOTP). Mandatory for admins.
     totp_secret: Mapped[str | None] = mapped_column(String(64))
     totp_enabled: Mapped[bool] = mapped_column(Boolean, default=False)
 
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
     last_login_at: Mapped[datetime | None] = mapped_column(TZDateTime)
 
-    # Tutor profile (Phase 1 fills this in)
-    tagged_courses: Mapped[list[str] | None] = mapped_column(JSON)
-    available: Mapped[bool] = mapped_column(Boolean, default=True)
-
-    # One-time notice shown the first time a student opens the tutor (D-025)
-    tutor_notice_seen_at: Mapped[datetime | None] = mapped_column(TZDateTime)
-
-    family: Mapped[Family | None] = relationship(back_populates="users")
+    entitlements: Mapped[list[Entitlement]] = relationship(
+        back_populates="user",
+        lazy="selectin",
+        order_by="Entitlement.expires_at",
+        cascade="all, delete-orphan",
+    )
 
     @property
     def is_staff(self) -> bool:
-        return self.role in STAFF_ROLES
+        return self.role == ROLE_ADMIN
 
     @property
-    def is_payer(self) -> bool:
-        return self.role in PAYER_ROLES
+    def is_learner(self) -> bool:
+        return self.role == ROLE_LEARNER
+
+
+class Entitlement(Base):
+    """Access to one canton's content for a period: bought, granted by an admin, or a trial."""
+
+    __tablename__ = "entitlements"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    canton: Mapped[str] = mapped_column(String(2), index=True)
+    starts_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    expires_at: Mapped[datetime] = mapped_column(TZDateTime)
+    source: Mapped[str] = mapped_column(String(16))  # stripe | admin | trial
+    stripe_checkout_session_id: Mapped[str | None] = mapped_column(String(255), index=True)
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, onupdate=utcnow)
+
+    user: Mapped[User] = relationship(back_populates="entitlements")
 
 
 class Session(Base):
@@ -142,7 +136,7 @@ class Session(Base):
 
 
 class OneTimeToken(Base):
-    """Single-use tokens for email verification, password reset and student invites."""
+    """Single-use tokens for email verification and password reset."""
 
     __tablename__ = "one_time_tokens"
 
@@ -187,13 +181,14 @@ class Payment(Base):
     __tablename__ = "payments"
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    family_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("families.id"), index=True)
+    # Billing records survive account deletion.
+    user_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("users.id", ondelete="SET NULL"), index=True
+    )
     stripe_invoice_id: Mapped[str] = mapped_column(String(64), unique=True)
     amount_cents: Mapped[int] = mapped_column(Integer)
     currency: Mapped[str] = mapped_column(String(3))
     paid_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
-
-    family: Mapped[Family] = relationship(back_populates="payments")
 
 
 class AuditLog(Base):
@@ -210,7 +205,7 @@ class AuditLog(Base):
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
 
 
-# --- Phase 1: tutor conversations, AI call log, safeguarding ---------------------------
+# --- Phase 1: tutor conversations and AI call log -----------------------------------------
 
 CONVERSATION_ACTIVE = "active"
 CONVERSATION_ENDED = "ended"
@@ -219,10 +214,6 @@ MESSAGE_USER = "user"
 MESSAGE_ASSISTANT = "assistant"
 MESSAGE_NOTICE = "notice"  # fixed server replies (off topic, limits), never sent to the model
 
-FLAG_OPEN = "open"
-FLAG_REVIEWED = "reviewed"
-FLAG_DISMISSED = "dismissed"
-
 
 class Conversation(Base):
     """One tutoring session, always started from a course and topic."""
@@ -230,7 +221,7 @@ class Conversation(Base):
     __tablename__ = "conversations"
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    student_id: Mapped[uuid.UUID] = mapped_column(
+    user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
     course_key: Mapped[str] = mapped_column(String(40))
@@ -260,7 +251,7 @@ class Message(Base):
     conversation_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("conversations.id", ondelete="CASCADE"), index=True
     )
-    student_id: Mapped[uuid.UUID] = mapped_column(
+    user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
     seq: Mapped[int] = mapped_column(Integer)
@@ -279,7 +270,7 @@ class LlmCall(Base):
     __tablename__ = "llm_calls"
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    student_id: Mapped[uuid.UUID | None] = mapped_column(
+    user_id: Mapped[uuid.UUID | None] = mapped_column(
         ForeignKey("users.id", ondelete="SET NULL"), index=True
     )
     conversation_id: Mapped[uuid.UUID | None] = mapped_column(Uuid, index=True)
@@ -297,28 +288,6 @@ class LlmCall(Base):
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, index=True)
 
 
-class SafetyFlag(Base):
-    """A conversation flagged for the safeguarding lead. Admin only."""
-
-    __tablename__ = "safety_flags"
-
-    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    student_id: Mapped[uuid.UUID] = mapped_column(
-        ForeignKey("users.id", ondelete="CASCADE"), index=True
-    )
-    conversation_id: Mapped[uuid.UUID] = mapped_column(
-        ForeignKey("conversations.id", ondelete="CASCADE"), index=True
-    )
-    message_id: Mapped[uuid.UUID | None] = mapped_column(Uuid)
-    kind: Mapped[str] = mapped_column(String(32))  # wellbeing | override | abuse_material
-    detail: Mapped[str | None] = mapped_column(String(64))  # self_harm, abuse, sexual, ...
-    status: Mapped[str] = mapped_column(String(16), default=FLAG_OPEN)
-    notes: Mapped[str | None] = mapped_column(Text)
-    reviewed_by: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("users.id"))
-    reviewed_at: Mapped[datetime | None] = mapped_column(TZDateTime)
-    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, index=True)
-
-
 class CostAlert(Base):
     """One alert email per threshold, scope and month."""
 
@@ -326,8 +295,8 @@ class CostAlert(Base):
     __table_args__ = (UniqueConstraint("kind", "scope", "period", name="uq_cost_alert"),)
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    kind: Mapped[str] = mapped_column(String(16))  # student | budget
-    scope: Mapped[str] = mapped_column(String(64))  # student id or "all"
+    kind: Mapped[str] = mapped_column(String(16))  # learner | budget
+    scope: Mapped[str] = mapped_column(String(64))  # user id or "all"
     period: Mapped[str] = mapped_column(String(7))  # YYYY-MM
     amount_chf: Mapped[float] = mapped_column(Float)
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
@@ -421,22 +390,20 @@ class QuestionReport(Base):
     question_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("questions.id", ondelete="CASCADE"), index=True
     )
-    student_id: Mapped[uuid.UUID | None] = mapped_column(
-        ForeignKey("users.id", ondelete="SET NULL")
-    )
+    user_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("users.id", ondelete="SET NULL"))
     comment: Mapped[str | None] = mapped_column(String(1000))
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
     resolved_at: Mapped[datetime | None] = mapped_column(TZDateTime)
 
 
 class Attempt(Base):
-    """A student's answer to a question, in a diagnostic, in practice, or as a check at
+    """A learner's answer to a question, in a diagnostic, in practice, or as a check at
     the end of a tutor session."""
 
     __tablename__ = "attempts"
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    student_id: Mapped[uuid.UUID] = mapped_column(
+    user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
     question_id: Mapped[uuid.UUID] = mapped_column(
@@ -457,12 +424,10 @@ class Attempt(Base):
 
 class TopicMastery(Base):
     __tablename__ = "topic_mastery"
-    __table_args__ = (
-        UniqueConstraint("student_id", "course_key", "topic_code", name="uq_mastery"),
-    )
+    __table_args__ = (UniqueConstraint("user_id", "course_key", "topic_code", name="uq_mastery"),)
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    student_id: Mapped[uuid.UUID] = mapped_column(
+    user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
     course_key: Mapped[str] = mapped_column(String(40))
@@ -478,7 +443,7 @@ class DiagnosticRun(Base):
     __tablename__ = "diagnostic_runs"
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    student_id: Mapped[uuid.UUID] = mapped_column(
+    user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
     course_key: Mapped[str] = mapped_column(String(40))

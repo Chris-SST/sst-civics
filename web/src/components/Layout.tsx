@@ -49,7 +49,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             {me ? (
               <>
                 <span className="who">
-                  <span className="who-name">{me.user.first_name || me.user.email || me.user.username}</span>
+                  <span className="who-name">{me.user.email}</span>
                   <span className="role-pill">{t(`roles.${me.user.role}`)}</span>
                 </span>
                 <button className="btn btn-ghost" onClick={() => void onLogout()}>
@@ -77,7 +77,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="impersonation-banner">
           <span>
             {t("impersonation.banner", {
-              name: me.user.first_name || me.user.email || me.user.username,
+              name: me.user.email ?? "",
               role: t(`roles.${me.user.role}`),
               admin: me.session.impersonated_by,
             })}

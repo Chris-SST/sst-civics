@@ -1,39 +1,26 @@
-"""Chat tutor: topics, streaming replies, gatekeeper, limits, safeguarding, cost log."""
+"""Chat tutor: topics, streaming replies, gatekeeper, limits, cost log."""
 
 from __future__ import annotations
 
 import json
 import uuid
-from datetime import timedelta
 
 import pytest
 from sqlalchemy import select
 
 from app.config import get_settings
-from app.db import SessionLocal, utcnow
+from app.db import SessionLocal
 from app.email.backend import memory_outbox
 from app.llm.client import FakeProvider, LLMError, set_provider
 from app.models import (
     CONVERSATION_ENDED,
     Conversation,
     CostAlert,
-    Family,
     LlmCall,
     Message,
     Plan,
-    SafetyFlag,
 )
-from tests.conftest import Api, admin_logged_in, login, parent_logged_in
-
-STUDENT = {
-    "first_name": "Lina",
-    "year_of_birth": 2010,
-    "curriculum": "ib_dp",
-    "courses": ["ib_maths_aa_hl", "ib_physics_sl"],
-    "locale": "en",
-    "username": "lina",
-    "password": "Lina-secret-99",
-}
+from tests.conftest import Api, admin_logged_in, grant_access, learner_logged_in
 
 
 @pytest.fixture
@@ -44,18 +31,12 @@ def fake() -> FakeProvider:
     set_provider(None)
 
 
-async def student_logged_in(api: Api, api2: Api, *, free_access: bool = True) -> dict:
-    await parent_logged_in(api)
-    r = await api.post("/api/family/students", json=STUDENT)
-    assert r.status_code == 201, r.text
-    if free_access:
-        async with SessionLocal() as db:
-            family = (await db.execute(select(Family))).scalars().one()
-            family.free_access_until = utcnow() + timedelta(days=30)
-            await db.commit()
-    r = await login(api2, "lina", "Lina-secret-99")
-    assert r.status_code == 200, r.text
-    return r.json()["me"]
+LEARNER_EMAIL = "lina@example.ch"
+
+
+async def learner_in(api: Api, *, access: bool = True) -> dict:
+    """A learner (canton zh) signed in on `api`, by default with an active entitlement."""
+    return await learner_logged_in(api, LEARNER_EMAIL, access=access)
 
 
 def parse_sse(text: str) -> list[tuple[str, dict]]:
@@ -79,16 +60,16 @@ async def start_conversation(api2: Api, course="ib_maths_aa_hl", topic="AA-1.2")
     return r.json()["id"]
 
 
-async def test_overview_lists_courses_topics_and_notice(api, api2, fake):
-    await student_logged_in(api, api2)
+async def test_overview_lists_courses_and_topics(api, api2, fake):
+    await learner_in(api2)
     r = await api2.get("/api/tutor/overview")
     assert r.status_code == 200, r.text
     data = r.json()
     assert data["tutor_enabled"] is True
     assert data["access"] == "full"
-    assert data["notice_seen"] is False
+    assert "notice_seen" not in data
     keys = {c["key"] for c in data["courses"]}
-    assert keys == {"ib_maths_aa_hl", "ib_physics_sl"}
+    assert {"ib_maths_aa_hl", "ib_physics_sl"} <= keys  # every course, no per-user list
     aa = next(c for c in data["courses"] if c["key"] == "ib_maths_aa_hl")
     assert aa["level"] == "Higher Level"
     assert any(t["code"] == "AA-1.5" for t in aa["topics"])  # HL-only topic present
@@ -96,14 +77,9 @@ async def test_overview_lists_courses_topics_and_notice(api, api2, fake):
     assert not any(t["code"] == "PH-A.4" for t in physics["topics"])  # HL-only hidden for SL
     assert data["usage"]["monthly_limit"] == 300 and data["usage"]["daily_limit"] == 60
 
-    r = await api2.post("/api/tutor/notice-seen")
-    assert r.status_code == 204
-    r = await api2.get("/api/tutor/overview")
-    assert r.json()["notice_seen"] is True
-
 
 async def test_streamed_reply_is_stored_counted_and_costed(api, api2, fake):
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     conv_id = await start_conversation(api2)
     fake.replies = ["Good question. What have you tried so far with the log rules?"]
     r = await api2.post(
@@ -154,7 +130,7 @@ async def test_streamed_reply_is_stored_counted_and_costed(api, api2, fake):
 
 
 async def test_off_topic_gets_fixed_reply_and_three_strikes_end_session(api, api2, fake):
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     conv_id = await start_conversation(api2)
     fake.classifications = [
         {"label": "off_topic", "wellbeing": "none", "coursework": False},
@@ -179,17 +155,15 @@ async def test_off_topic_gets_fixed_reply_and_three_strikes_end_session(api, api
     async with SessionLocal() as db:
         conv = await db.get(Conversation, uuid.UUID(conv_id))
         assert conv.status == CONVERSATION_ENDED
-        flags = (await db.execute(select(SafetyFlag))).scalars().all()
-        assert [f.kind for f in flags] == ["override"]
         counted = (await db.execute(select(Message).where(Message.role == "user"))).scalars().all()
         assert all(m.counted for m in counted)  # off-topic messages count towards the daily cap
     r = await api2.post(f"/api/tutor/conversations/{conv_id}/messages", json={"content": "hi"})
     assert r.status_code == 409
 
 
-async def test_wellbeing_flags_conversation_and_alerts_admin(api, api2, api3, fake):
-    await admin_logged_in(api3)  # creates an admin account to notify
-    await student_logged_in(api, api2)
+async def test_wellbeing_note_reaches_tutor_without_a_safeguarding_queue(api, api2, api3, fake):
+    await admin_logged_in(api3)
+    await learner_in(api2)
     conv_id = await start_conversation(api2)
     fake.classifications = [{"label": "on_topic", "wellbeing": "self_harm", "coursework": False}]
     fake.replies = ["I'm really glad you told me. You can call or text 147 any time."]
@@ -202,34 +176,14 @@ async def test_wellbeing_flags_conversation_and_alerts_admin(api, api2, api3, fa
     assert any(e == "message" and "147" in d["content"] for e, d in events)
     stream_call = next(c for c in fake.calls if c.kind == "stream")
     assert "wellbeing concern (self_harm)" in stream_call.system[3]["text"]
-    assert memory_outbox.messages, "safeguarding lead must be emailed"
-    alert = memory_outbox.messages[-1]
-    assert alert.to == "admin@sst-example.ch"
-    assert "Safeguarding" in alert.subject
-    assert "dont want" not in alert.text  # never message content
-    async with SessionLocal() as db:
-        flag = (await db.execute(select(SafetyFlag))).scalars().one()
-        assert flag.kind == "wellbeing" and flag.detail == "self_harm" and flag.status == "open"
+    assert not memory_outbox.messages, "no safeguarding email any more (D-007)"
+    from app.main import app
 
-    # Admin reviews the flag
-    r = await api3.get("/api/admin/safety-flags?flag_status=open")
-    assert r.status_code == 200 and len(r.json()) == 1
-    flag_id = r.json()[0]["id"]
-    assert r.json()[0]["student_first_name"] == "Lina"
-    r = await api3.get(f"/api/admin/safety-flags/{flag_id}/conversation")
-    assert r.status_code == 200
-    assert r.json()["messages"][0]["gate_label"] == "wellbeing"
-    r = await api3.patch(
-        f"/api/admin/safety-flags/{flag_id}", json={"status": "reviewed", "notes": "Called parent."}
-    )
-    assert r.status_code == 200, r.text
-    assert r.json()["status"] == "reviewed"
-    r = await api2.get("/api/admin/safety-flags")
-    assert r.status_code == 403
+    assert not [r for r in app.routes if "safety-flags" in getattr(r, "path", "")]
 
 
 async def test_daily_limit_blocks_further_messages(api, api2, fake):
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     async with SessionLocal() as db:
         plan = await db.get(Plan, "ai_monthly")
         plan.daily_message_limit = 1
@@ -244,7 +198,7 @@ async def test_daily_limit_blocks_further_messages(api, api2, fake):
 
 
 async def test_provider_error_is_not_counted(api, api2, fake):
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     conv_id = await start_conversation(api2)
     fake.replies = [LLMError("timeout")]
     r = await api2.post(f"/api/tutor/conversations/{conv_id}/messages", json={"content": "Help"})
@@ -264,7 +218,7 @@ async def test_provider_error_is_not_counted(api, api2, fake):
 
 
 async def test_gatekeeper_failure_lets_message_through(api, api2, fake):
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     conv_id = await start_conversation(api2)
     fake.classifications = [LLMError("timeout")]
     r = await api2.post(f"/api/tutor/conversations/{conv_id}/messages", json={"content": "Hi"})
@@ -275,7 +229,7 @@ async def test_gatekeeper_failure_lets_message_through(api, api2, fake):
 async def test_refusal_gets_fixed_reply_and_is_not_counted(api, api2, fake):
     from app.llm.client import Completion, Usage
 
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     conv_id = await start_conversation(api2)
     fake.replies = [
         Completion(text="", usage=Usage(input_tokens=10), stop_reason="refusal", model="m")
@@ -289,15 +243,12 @@ async def test_refusal_gets_fixed_reply_and_is_not_counted(api, api2, fake):
 
 
 async def test_no_access_and_bad_inputs(api, api2, fake):
-    await student_logged_in(api, api2, free_access=False)
+    await learner_in(api2, access=False)
     r = await api2.post(
         "/api/tutor/conversations", json={"course_key": "ib_maths_aa_hl", "topic_code": "AA-1.2"}
     )
     assert r.status_code == 403 and r.json()["detail"] == "no_access"
-    async with SessionLocal() as db:
-        family = (await db.execute(select(Family))).scalars().one()
-        family.free_access_until = utcnow() + timedelta(days=1)
-        await db.commit()
+    await grant_access(LEARNER_EMAIL, days=1)
     r = await api2.post(
         "/api/tutor/conversations", json={"course_key": "ib_chemistry_sl", "topic_code": "X"}
     )
@@ -311,14 +262,15 @@ async def test_no_access_and_bad_inputs(api, api2, fake):
         f"/api/tutor/conversations/{conv_id}/messages", json={"content": "x" * 2001}
     )
     assert r.status_code == 400 and r.json()["detail"] == "message_too_long"
-    # A parent cannot use the student endpoints
+    # An admin cannot use the learner endpoints
+    await admin_logged_in(api)
     r = await api.get("/api/tutor/overview")
     assert r.status_code == 403
 
 
 async def test_tutor_disabled_without_api_key(api, api2):
     set_provider(None)  # settings-based default: no key in tests
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     r = await api2.get("/api/tutor/overview")
     assert r.json()["tutor_enabled"] is False
     conv_id = await start_conversation(api2)
@@ -328,8 +280,8 @@ async def test_tutor_disabled_without_api_key(api, api2):
 
 async def test_cost_alert_emailed_once_per_month(api, api2, api3, fake, monkeypatch):
     await admin_logged_in(api3)
-    await student_logged_in(api, api2)
-    monkeypatch.setattr(get_settings(), "ai_student_alert_chf", 0.000001)
+    await learner_in(api2)
+    monkeypatch.setattr(get_settings(), "ai_learner_alert_chf", 0.000001)
     conv_id = await start_conversation(api2)
     memory_outbox.clear()
     for _ in range(2):
@@ -337,14 +289,14 @@ async def test_cost_alert_emailed_once_per_month(api, api2, api3, fake, monkeypa
         assert r.status_code == 200
     alerts = [m for m in memory_outbox.messages if "AI cost alert" in m.subject]
     assert len(alerts) == 1
-    assert "student" in alerts[0].text
+    assert "learner" in alerts[0].text
     async with SessionLocal() as db:
         rows = (await db.execute(select(CostAlert))).scalars().all()
-        assert len(rows) == 1 and rows[0].kind == "student"
+        assert len(rows) == 1 and rows[0].kind == "learner"
 
 
 async def test_running_summary_folds_older_turns(api, api2, fake, monkeypatch):
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     monkeypatch.setattr(get_settings(), "conversation_window_turns", 1)
     conv_id = await start_conversation(api2)
     # 7 exchanges = 14 messages > 2*1 + 10, so the 7th reply triggers a summary
@@ -377,15 +329,15 @@ async def test_running_summary_folds_older_turns(api, api2, fake, monkeypatch):
 
 async def test_admin_ai_usage_report(api, api2, api3, fake):
     await admin_logged_in(api3)
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     conv_id = await start_conversation(api2)
     await api2.post(f"/api/tutor/conversations/{conv_id}/messages", json={"content": "Hi"})
     r = await api3.get("/api/admin/ai-usage")
     assert r.status_code == 200, r.text
     data = r.json()
-    assert data["calls"] == 2 and data["cost_chf"] > 0 and data["student_messages"] == 1
+    assert data["calls"] == 2 and data["cost_chf"] > 0 and data["learner_messages"] == 1
     assert {p["purpose"] for p in data["by_purpose"]} == {"gatekeeper", "tutor_reply"}
-    assert data["top_students"][0]["first_name"] == "Lina"
+    assert data["top_learners"][0]["email"] == LEARNER_EMAIL
 
 
 def test_empty_model_setting_falls_back_to_default(monkeypatch):
@@ -403,9 +355,11 @@ def test_empty_model_setting_falls_back_to_default(monkeypatch):
 async def test_tutor_context_carries_recent_mistakes_and_mastery(api, api2, fake):
     from app.models import Attempt, Question, TopicMastery, User
 
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     async with SessionLocal() as db:
-        student = (await db.execute(select(User).where(User.username == "lina"))).scalars().one()
+        learner = (
+            (await db.execute(select(User).where(User.email == LEARNER_EMAIL))).scalars().one()
+        )
         q = Question(
             module_key="ib_maths_aa",
             level="both",
@@ -422,7 +376,7 @@ async def test_tutor_context_carries_recent_mistakes_and_mastery(api, api2, fake
         await db.flush()
         db.add(
             Attempt(
-                student_id=student.id,
+                user_id=learner.id,
                 question_id=q.id,
                 course_key="ib_maths_aa_hl",
                 topic_code="AA-1.2",
@@ -434,7 +388,7 @@ async def test_tutor_context_carries_recent_mistakes_and_mastery(api, api2, fake
         )
         db.add(
             TopicMastery(
-                student_id=student.id,
+                user_id=learner.id,
                 course_key="ib_maths_aa_hl",
                 topic_code="AA-1.2",
                 rating=950.0,
@@ -450,4 +404,4 @@ async def test_tutor_context_carries_recent_mistakes_and_mastery(api, api2, fake
     context = stream_call.system[3]["text"]
     assert "Mastery on this topic" in context and "(weak)" in context
     assert "Solve 2^x = 10" in context and "Student's answer: 5" in context
-    assert "Lina" not in context
+    assert LEARNER_EMAIL not in context and "lina" not in context

@@ -8,16 +8,19 @@ Locale = Literal["en", "de", "fr"]
 
 
 class SignupIn(BaseModel):
+    """A learner signs up alone. Nothing beyond these fields is collected."""
+
     email: EmailStr
     password: str = Field(min_length=10, max_length=200)
     locale: Locale = "en"
-    account_type: Literal["parent", "adult"] = "parent"
-    guardian_confirmed: bool = False
+    study_language: Locale = "en"
+    canton: str = Field(default="zh", min_length=2, max_length=2)
+    age_confirmed: bool = False  # self-declared "I am 16 or older"
     accept_terms: bool
 
 
 class LoginIn(BaseModel):
-    identifier: str = Field(min_length=1, max_length=254)  # email or student username
+    email: str = Field(min_length=1, max_length=254)
     password: str = Field(min_length=1, max_length=200)
 
 
@@ -34,11 +37,6 @@ class ResetPasswordIn(BaseModel):
     password: str = Field(min_length=10, max_length=200)
 
 
-class AcceptInviteIn(BaseModel):
-    token: str = Field(min_length=10, max_length=200)
-    password: str = Field(min_length=10, max_length=200)
-
-
 class TotpCodeIn(BaseModel):
     code: str = Field(min_length=6, max_length=8)
 
@@ -47,28 +45,27 @@ class UserOut(BaseModel):
     id: str
     role: str
     email: str | None
-    username: str | None
-    first_name: str
     locale: str
+    study_language: str
+    canton: str
     email_verified: bool
     totp_enabled: bool
 
 
-class FamilyOut(BaseModel):
+class EntitlementOut(BaseModel):
     id: str
-    locale: str
-    plan_key: str | None
-    subscription_status: str | None
-    quantity: int
-    current_period_end: str | None
-    trial_end: str | None
-    cancel_at_period_end: bool
-    payment_warning: bool
-    free_access_until: str | None
-    tutor_credits: int
-    access: str
+    canton: str
+    starts_at: str
+    expires_at: str
+    source: str
+    active: bool
+
+
+class AccessOut(BaseModel):
+    access: Literal["full", "none"]  # for the user's own canton
+    canton: str
+    entitlements: list[EntitlementOut]
     has_stripe_customer: bool
-    student_count: int
 
 
 class SessionOut(BaseModel):
@@ -80,7 +77,7 @@ class SessionOut(BaseModel):
 class MeOut(BaseModel):
     user: UserOut
     session: SessionOut
-    family: FamilyOut | None
+    access: AccessOut
     csrf_token: str
 
 

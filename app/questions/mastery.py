@@ -52,12 +52,12 @@ def target_difficulty(rating: float) -> int:
 
 
 async def get_or_create(
-    db: AsyncSession, student_id, course_key: str, topic_code: str
+    db: AsyncSession, user_id, course_key: str, topic_code: str
 ) -> TopicMastery:
     row = (
         await db.execute(
             select(TopicMastery).where(
-                TopicMastery.student_id == student_id,
+                TopicMastery.user_id == user_id,
                 TopicMastery.course_key == course_key,
                 TopicMastery.topic_code == topic_code,
             )
@@ -65,7 +65,7 @@ async def get_or_create(
     ).scalar_one_or_none()
     if row is None:
         row = TopicMastery(
-            student_id=student_id, course_key=course_key, topic_code=topic_code, rating=START_RATING
+            user_id=user_id, course_key=course_key, topic_code=topic_code, rating=START_RATING
         )
         db.add(row)
         await db.flush()
@@ -73,9 +73,9 @@ async def get_or_create(
 
 
 async def record_result(
-    db: AsyncSession, student_id, course_key: str, topic_code: str, difficulty: int, score: float
+    db: AsyncSession, user_id, course_key: str, topic_code: str, difficulty: int, score: float
 ) -> TopicMastery:
-    row = await get_or_create(db, student_id, course_key, topic_code)
+    row = await get_or_create(db, user_id, course_key, topic_code)
     k = K_EARLY if row.attempts < EARLY_ATTEMPTS else K_LATE
     exp = expected_score(row.rating, question_rating(difficulty))
     row.rating = row.rating + k * (score - exp)

@@ -6,8 +6,8 @@ import ErrorText from "../components/ErrorText";
 import QuestionCard, { MasteryBar } from "../components/QuestionCard";
 import type { AttemptOut, DiagnosticOut, TopicOverview } from "../practice";
 
-/** The short check that finds a student's gaps: one question at a time, then a results screen. */
-export default function StudentDiagnostic() {
+/** The short check that finds a learner's gaps: one question at a time, then a results screen. */
+export default function LearnerDiagnostic() {
   const { t } = useTranslation();
   const { id } = useParams();
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ export default function StudentDiagnostic() {
         course_key: run.course_key,
         topic_code: topicCode,
       });
-      navigate(`/student/chat/${conv.id}`);
+      navigate(`/learner/chat/${conv.id}`);
     } catch (e) {
       setError(e);
       setBusy(false);
@@ -40,14 +40,14 @@ export default function StudentDiagnostic() {
 
   function practise(topicCode: string) {
     if (!run) return;
-    navigate(`/student/practice?course_key=${encodeURIComponent(run.course_key)}&topic_code=${encodeURIComponent(topicCode)}`);
+    navigate(`/learner/practice?course_key=${encodeURIComponent(run.course_key)}&topic_code=${encodeURIComponent(topicCode)}`);
   }
 
   async function stop() {
     if (!run) return;
     try {
       await post(`/api/practice/diagnostic/${run.id}/skip`);
-      navigate("/student");
+      navigate("/learner");
     } catch (e) {
       setError(e);
     }
@@ -76,17 +76,17 @@ export default function StudentDiagnostic() {
               <h3>{t("diagnostic.weakest", { topic: weakest.topic_name })}</h3>
               <div className="actions">
                 <button type="button" className="btn btn-primary" onClick={() => practise(weakest.topic_code)}>
-                  {t("student.practise")}
+                  {t("learner.practise")}
                 </button>
                 <button type="button" className="btn btn-secondary" disabled={busy} onClick={() => void askTutor(weakest.topic_code)}>
-                  {busy ? t("common.working") : t("student.askTutor")}
+                  {busy ? t("common.working") : t("learner.askTutor")}
                 </button>
               </div>
             </>
           )}
           {error ? <ErrorText error={error} /> : null}
           <p style={{ marginTop: 16 }}>
-            <Link to="/student" className="btn btn-ghost">
+            <Link to="/learner" className="btn btn-ghost">
               {t("diagnostic.backHome")}
             </Link>
           </p>
@@ -101,7 +101,7 @@ export default function StudentDiagnostic() {
         <h1>{t("diagnostic.title")}</h1>
         <section className="card">
           <p className="alert alert-info">{run.total === 0 ? t("diagnostic.empty") : t("diagnostic.alreadyDone")}</p>
-          <Link to="/student" className="btn btn-ghost">
+          <Link to="/learner" className="btn btn-ghost">
             {t("diagnostic.backHome")}
           </Link>
         </section>
@@ -116,7 +116,7 @@ export default function StudentDiagnostic() {
     <>
       <header className="page-head">
         <div>
-          <Link to="/student" className="small">
+          <Link to="/learner" className="small">
             ← {t("chat.back")}
           </Link>
           <h1>{t("diagnostic.title")}</h1>

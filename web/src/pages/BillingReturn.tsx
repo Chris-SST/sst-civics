@@ -10,7 +10,7 @@ export default function BillingReturn() {
   const { me, refresh } = useAuth();
   const [tries, setTries] = useState(0);
 
-  const active = me?.family?.access === "full";
+  const active = me?.access.access === "full";
 
   useEffect(() => {
     if (status !== "success" || active || tries >= 15) return;
@@ -32,7 +32,7 @@ export default function BillingReturn() {
       {status === "success" && !active && tries >= 15 && (
         <div className="alert alert-warn">{t("billingReturn.slow")}</div>
       )}
-      <Link className="btn btn-primary" to="/parent">
+      <Link className="btn btn-primary" to="/learner">
         {t("billingReturn.toDashboard")}
       </Link>
     </div>

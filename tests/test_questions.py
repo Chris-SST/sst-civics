@@ -3,38 +3,25 @@
 from __future__ import annotations
 
 import uuid
-from datetime import timedelta
 
 import pytest
 from sqlalchemy import select
 
 from app.config import get_settings
-from app.db import SessionLocal, utcnow
+from app.db import SessionLocal
 from app.llm.client import FakeProvider, set_provider
 from app.models import (
     Q_APPROVED,
     Q_AUTO_VERIFIED,
     Q_NEEDS_REVIEW,
     Attempt,
-    Family,
     GenerationBatch,
     LlmCall,
     Question,
     TopicMastery,
-    User,
 )
 from app.questions import checks, mastery, pipeline
-from tests.conftest import Api, admin_logged_in, create_staff, login, parent_logged_in
-
-STUDENT = {
-    "first_name": "Lina",
-    "year_of_birth": 2010,
-    "curriculum": "ib_dp",
-    "courses": ["ib_maths_aa_hl"],
-    "locale": "en",
-    "username": "lina",
-    "password": "Lina-secret-99",
-}
+from tests.conftest import Api, admin_logged_in, learner_logged_in
 
 GOOD_SOLVE = {"final_answer": "", "confidence": "high", "issue": ""}
 
@@ -71,17 +58,9 @@ def gen_item(topic="AA-1.2", qtype="short", answer="9", difficulty=3, text=None,
     return item
 
 
-async def student_logged_in(api: Api, api2: Api) -> dict:
-    await parent_logged_in(api)
-    r = await api.post("/api/family/students", json=STUDENT)
-    assert r.status_code == 201, r.text
-    async with SessionLocal() as db:
-        family = (await db.execute(select(Family))).scalars().one()
-        family.free_access_until = utcnow() + timedelta(days=30)
-        await db.commit()
-    r = await login(api2, "lina", "Lina-secret-99")
-    assert r.status_code == 200, r.text
-    return r.json()["me"]
+async def learner_in(api: Api) -> dict:
+    """A learner with an active entitlement for their canton, signed in on `api`."""
+    return await learner_logged_in(api, "lina@example.ch", access=True)
 
 
 async def seed_questions(
@@ -254,34 +233,13 @@ async def test_batch_generation_is_polled_and_processed(api3, fake):
         assert all(q.tolerance >= 0.02 for q in qs)  # widened: "24" is given to 2 s.f.
 
 
-async def test_tutor_reviews_only_tagged_courses(api, api2, fake):
+async def test_admin_reviews_every_module(api, api2, fake):
     await seed_questions(status=Q_NEEDS_REVIEW, topics=("AA-1.1",))
-    tutor = await create_staff("tutor@sst-example.ch", role="tutor", totp=True)
-    async with SessionLocal() as db:
-        t = await db.get(User, tutor.id)
-        t.tagged_courses = ["ib_physics_hl"]
-        await db.commit()
-    import pyotp
-
-    r = await login(api, "tutor@sst-example.ch", "Staff-pass-123")
-    assert r.json()["status"] == "mfa_required"
-    r = await api.post("/api/auth/totp/verify", json={"code": pyotp.TOTP(tutor.totp_secret).now()})
-    assert r.status_code == 200
-    r = await api.get("/api/review/queue")
-    assert r.status_code == 200 and r.json() == []  # physics tutor sees no maths questions
+    await admin_logged_in(api)
+    modules = {m["module_key"] for m in (await api.get("/api/review/modules")).json()}
+    assert {"ib_maths_aa", "ib_physics"} <= modules
     r = await api.get("/api/review/queue?module_key=ib_maths_aa")
-    assert r.status_code == 403
-    r = await api.post(
-        "/api/review/generate", json={"module_key": "ib_physics", "topic_codes": ["PH-A.1"]}
-    )
-    assert r.status_code == 403  # admin only
-
-    async with SessionLocal() as db:
-        t = await db.get(User, tutor.id)
-        t.tagged_courses = ["ib_maths_aa_hl"]
-        await db.commit()
-    r = await api.get("/api/review/queue")
-    assert len(r.json()) == 2
+    assert r.status_code == 200 and len(r.json()) == 2
     qid = r.json()[0]["id"]
     r = await api.patch(
         f"/api/review/questions/{qid}",
@@ -296,14 +254,17 @@ async def test_tutor_reviews_only_tagged_courses(api, api2, fake):
     assert r.json()["status"] == Q_APPROVED and r.json()["difficulty"] == 1
     r = await api.get("/api/review/stats")
     assert r.json()["my_review_minutes"] == 4
+    # Learners have no access to the review queue
+    await learner_in(api2)
+    assert (await api2.get("/api/review/queue")).status_code == 403
 
 
-# --- Student side ------------------------------------------------------------------------------
+# --- Learner side ------------------------------------------------------------------------------
 
 
 async def test_diagnostic_flow_updates_mastery_and_suggests_next(api, api2, fake):
     await seed_questions(n_per_topic=3)
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     r = await api2.get("/api/practice/overview?course_key=ib_maths_aa_hl")
     assert r.status_code == 200, r.text
     data = r.json()
@@ -364,7 +325,7 @@ async def test_diagnostic_flow_updates_mastery_and_suggests_next(api, api2, fake
 
 async def test_practice_next_and_report_hides_after_two(api, api2, fake):
     await seed_questions(n_per_topic=2, topics=("AA-1.2",))
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     r = await api2.get("/api/practice/next?course_key=ib_maths_aa_hl&topic_code=AA-1.2")
     assert r.status_code == 200, r.text
     q = r.json()
@@ -392,7 +353,7 @@ async def test_practice_next_and_report_hides_after_two(api, api2, fake):
 async def test_practice_round_never_repeats_while_alternatives_exist(api, api2, fake):
     """Staging showed the same question twice in a row once a small topic was used up."""
     await seed_questions(n_per_topic=4, topics=("AA-1.2",))
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     r = await api2.get("/api/practice/round?course_key=ib_maths_aa_hl&topic_code=AA-1.2")
     assert r.status_code == 200, r.text
     rnd = r.json()
@@ -450,7 +411,7 @@ async def test_structured_answers_are_ai_marked(api, api2, fake):
         )
         await db.commit()
         qid = (await db.execute(select(Question.id))).scalar_one()
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     fake.classifications = [
         {"score": 0.5, "feedback": "Good method, the constant was lost.", "correct": False}
     ]
@@ -474,7 +435,7 @@ async def test_structured_answers_are_ai_marked(api, api2, fake):
 
 async def test_production_serves_only_approved(api, api2, fake, monkeypatch):
     await seed_questions(n_per_topic=1, topics=("AA-1.2",), status=Q_AUTO_VERIFIED)
-    await student_logged_in(api, api2)
+    await learner_in(api2)
     monkeypatch.setattr(get_settings(), "serve_unreviewed_questions", False)
     r = await api2.get("/api/practice/next?course_key=ib_maths_aa_hl&topic_code=AA-1.2")
     assert r.status_code == 404

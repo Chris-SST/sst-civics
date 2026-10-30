@@ -5,9 +5,9 @@ services:
   postgres:
     image: postgres:16-alpine
     environment:
-      POSTGRES_DB: sst
-      POSTGRES_USER: sst
-      POSTGRES_PASSWORD: sst
+      POSTGRES_DB: civics
+      POSTGRES_USER: civics
+      POSTGRES_PASSWORD: civics
     ports:
       - "5432:5432"
     volumes:

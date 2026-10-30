@@ -1,4 +1,5 @@
-"""Seed plan limits and, optionally, the first admin account.
+"""Seed plan limits (still read by the tutor's message limits until task 0.7) and,
+optionally, the first admin account. Further admins are added the same way.
 
 Usage:
   python -m scripts.seed                       # plans only
@@ -38,7 +39,7 @@ async def seed_plans() -> int:
     return created
 
 
-async def seed_admin(email: str, password: str, first_name: str) -> bool:
+async def seed_admin(email: str, password: str) -> bool:
     if not password_is_acceptable(password):
         raise SystemExit("ADMIN_PASSWORD must be at least 10 characters")
     async with SessionLocal() as db:
@@ -51,7 +52,6 @@ async def seed_admin(email: str, password: str, first_name: str) -> bool:
                 email=email.lower(),
                 email_verified_at=utcnow(),
                 password_hash=hash_password(password),
-                first_name=first_name,
                 locale="en",
             )
         )
@@ -65,7 +65,7 @@ async def main() -> None:
     email = os.environ.get("ADMIN_EMAIL")
     password = os.environ.get("ADMIN_PASSWORD")
     if email and password:
-        created = await seed_admin(email, password, os.environ.get("ADMIN_NAME", "Admin"))
+        created = await seed_admin(email, password)
         print("Admin: created" if created else "Admin: already exists")
         print("The admin must set up an authenticator app at first login.")
 

@@ -57,38 +57,40 @@ export const post = <T,>(path: string, body?: unknown) => api<T>("POST", path, b
 export const patch = <T,>(path: string, body?: unknown) => api<T>("PATCH", path, body);
 export const del = <T,>(path: string) => api<T>("DELETE", path);
 
+export type Role = "learner" | "admin";
+
 export interface UserOut {
   id: string;
-  role: "parent" | "student" | "adult" | "tutor" | "admin";
+  role: Role;
   email: string | null;
-  username: string | null;
-  first_name: string;
   locale: string;
+  study_language: string;
+  canton: string;
   email_verified: boolean;
   totp_enabled: boolean;
 }
 
-export interface FamilyOut {
+export interface EntitlementOut {
   id: string;
-  locale: string;
-  plan_key: string | null;
-  subscription_status: string | null;
-  quantity: number;
-  current_period_end: string | null;
-  trial_end: string | null;
-  cancel_at_period_end: boolean;
-  payment_warning: boolean;
-  free_access_until: string | null;
-  tutor_credits: number;
-  access: "full" | "read_only" | "none";
+  canton: string;
+  starts_at: string;
+  expires_at: string;
+  source: "stripe" | "admin" | "trial";
+  active: boolean;
+}
+
+export interface AccessOut {
+  /** Access for the learner's own canton. */
+  access: "full" | "none";
+  canton: string;
+  entitlements: EntitlementOut[];
   has_stripe_customer: boolean;
-  student_count: number;
 }
 
 export interface Me {
   user: UserOut;
   session: { mfa_pending: boolean; mfa_setup_required: boolean; impersonated_by: string | null };
-  family: FamilyOut | null;
+  access: AccessOut;
   csrf_token: string;
 }
 
@@ -102,23 +104,14 @@ export interface PlanOut {
   daily_message_limit: number | null;
 }
 
-export interface StudentOut {
-  id: string;
-  first_name: string;
-  year_of_birth: number | null;
-  curriculum: string | null;
-  courses: string[];
-  locale: string;
-  username: string | null;
-  email: string | null;
-  invite_pending: boolean;
-  last_login_at: string | null;
-}
-
 export interface PublicConfig {
   tutor_name: string;
-  main_site_url: string;
   terms_version: string;
   billing_enabled: boolean;
   env: string;
 }
+
+/** Cantons a learner can choose at sign-up and an admin can grant access for. */
+export const CANTONS = ["zh", "ag"] as const;
+/** Languages a learner can study the questions in. */
+export const STUDY_LANGUAGES = ["en", "de", "fr"] as const;

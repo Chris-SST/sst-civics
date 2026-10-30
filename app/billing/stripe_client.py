@@ -34,11 +34,11 @@ def _client() -> stripe.StripeClient:
     )
 
 
-def create_customer(email: str, family_id: str, locale: str) -> dict[str, Any]:
+def create_customer(email: str, user_id: str, locale: str) -> dict[str, Any]:
     c = _client().customers.create(
         params={
             "email": email,
-            "metadata": {"family_id": family_id},
+            "metadata": {"user_id": user_id},
             "preferred_locales": [locale],
         }
     )

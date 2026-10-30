@@ -60,13 +60,8 @@ export const useAuth = () => useContext(AuthContext);
 
 export function homeFor(role: string): string {
   switch (role) {
-    case "parent":
-    case "adult":
-      return "/parent";
-    case "student":
-      return "/student";
-    case "tutor":
-      return "/tutor";
+    case "learner":
+      return "/learner";
     case "admin":
       return "/admin";
     default:

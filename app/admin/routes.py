@@ -1,31 +1,28 @@
 from __future__ import annotations
 
 import uuid
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Any, Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Response, status
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.auth import one_time
+from app.auth.me import entitlement_out
+from app.auth.schemas import EntitlementOut
 from app.auth.sessions import create_session, destroy_all_sessions, set_session_cookie
-from app.billing.access import compute_access
+from app.billing.access import access_level
 from app.config import get_settings
-from app.db import get_db
+from app.db import get_db, utcnow
 from app.deps import AuthContext, current_auth, require_admin
-from app.email.messages import app_link
-from app.jobs import send_email_job
 from app.models import (
-    PAYER_ROLES,
+    CANTONS,
+    ENTITLEMENT_ADMIN,
     ROLE_ADMIN,
-    ROLE_STUDENT,
-    ROLE_TUTOR,
-    STAFF_ROLES,
-    TOKEN_STAFF_INVITE,
+    ROLE_LEARNER,
     AuditLog,
-    Family,
+    Entitlement,
     Payment,
     Plan,
     StripeEvent,
@@ -37,6 +34,11 @@ router = APIRouter(prefix="/api/admin", tags=["admin"], dependencies=[Depends(re
 
 def _iso(v: datetime | None) -> str | None:
     return v.isoformat() if v else None
+
+
+def _aware(v: datetime) -> datetime:
+    """A date sent without a time zone is taken as UTC."""
+    return v if v.tzinfo is not None else v.replace(tzinfo=UTC)
 
 
 def _parse_uuid(value: str) -> uuid.UUID:
@@ -67,10 +69,15 @@ async def _audit(
 
 @router.get("/overview")
 async def overview(db: AsyncSession = Depends(get_db)) -> dict[str, Any]:
-    families = await db.scalar(select(func.count()).select_from(Family))
+    learners = await db.scalar(
+        select(func.count()).select_from(User).where(User.role == ROLE_LEARNER)
+    )
     roles = await db.execute(select(User.role, func.count()).group_by(User.role))
-    statuses = await db.execute(
-        select(Family.subscription_status, func.count()).group_by(Family.subscription_status)
+    now = utcnow()
+    active = await db.scalar(
+        select(func.count())
+        .select_from(Entitlement)
+        .where(Entitlement.starts_at <= now, Entitlement.expires_at > now)
     )
     events = (
         (await db.execute(select(StripeEvent).order_by(StripeEvent.received_at.desc()).limit(20)))
@@ -78,9 +85,9 @@ async def overview(db: AsyncSession = Depends(get_db)) -> dict[str, Any]:
         .all()
     )
     return {
-        "families": families or 0,
+        "learners": learners or 0,
         "users_by_role": {r: c for r, c in roles.all()},
-        "subscriptions_by_status": {(s or "none"): c for s, c in statuses.all()},
+        "active_entitlements": active or 0,
         "recent_stripe_events": [
             {
                 "id": e.id,
@@ -94,82 +101,52 @@ async def overview(db: AsyncSession = Depends(get_db)) -> dict[str, Any]:
     }
 
 
-@router.get("/families")
-async def list_families(q: str = "", db: AsyncSession = Depends(get_db)) -> list[dict[str, Any]]:
-    stmt = select(Family).order_by(Family.created_at.desc()).limit(200)
-    families = (await db.execute(stmt)).scalars().all()
-    out = []
-    for f in families:
-        users = (await db.execute(select(User).where(User.family_id == f.id))).scalars().all()
-        payer = next((u for u in users if u.role in PAYER_ROLES), None)
-        if q and not (payer and payer.email and q.lower() in payer.email):
-            continue
-        out.append(
-            {
-                "id": str(f.id),
-                "created_at": _iso(f.created_at),
-                "payer_email": payer.email if payer else None,
-                "payer_verified": bool(payer and payer.email_verified_at),
-                "plan_key": f.plan_key,
-                "subscription_status": f.subscription_status,
-                "quantity": f.quantity,
-                "access": compute_access(f),
-                "student_count": sum(1 for u in users if u.role == ROLE_STUDENT and u.is_active),
-                "free_access_until": _iso(f.free_access_until),
-                "payment_warning": f.payment_warning,
-            }
-        )
-    return out
+def _learner_out(u: User) -> dict[str, Any]:
+    return {
+        "id": str(u.id),
+        "email": u.email,
+        "email_verified": u.email_verified_at is not None,
+        "is_active": u.is_active,
+        "locale": u.locale,
+        "study_language": u.study_language,
+        "canton": u.canton,
+        "created_at": _iso(u.created_at),
+        "last_login_at": _iso(u.last_login_at),
+        "access": access_level(u),
+        "entitlements": [entitlement_out(e).model_dump() for e in u.entitlements],
+    }
 
 
-@router.get("/families/{family_id}")
-async def family_detail(
-    family_id: str, admin: User = Depends(require_admin), db: AsyncSession = Depends(get_db)
-) -> dict[str, Any]:
-    family = await db.get(Family, _parse_uuid(family_id))
-    if family is None:
+async def _learner(db: AsyncSession, user_id: str) -> User:
+    user = await db.get(User, _parse_uuid(user_id))
+    if user is None or user.role != ROLE_LEARNER:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
-    users = (await db.execute(select(User).where(User.family_id == family.id))).scalars().all()
-    payments = (
-        (await db.execute(select(Payment).where(Payment.family_id == family.id))).scalars().all()
-    )
-    await _audit(db, admin, "family.view", "family", str(family.id))
+    return user
+
+
+@router.get("/learners")
+async def list_learners(q: str = "", db: AsyncSession = Depends(get_db)) -> list[dict[str, Any]]:
+    stmt = select(User).where(User.role == ROLE_LEARNER)
+    if q:
+        stmt = stmt.where(User.email.contains(q.lower().strip()))
+    rows = (await db.execute(stmt.order_by(User.created_at.desc()).limit(200))).scalars().all()
+    return [_learner_out(u) for u in rows]
+
+
+@router.get("/learners/{user_id}")
+async def learner_detail(
+    user_id: str, admin: User = Depends(require_admin), db: AsyncSession = Depends(get_db)
+) -> dict[str, Any]:
+    user = await _learner(db, user_id)
+    payments = (await db.execute(select(Payment).where(Payment.user_id == user.id))).scalars().all()
+    await _audit(db, admin, "learner.view", "user", str(user.id))
     await db.commit()
     return {
-        "id": str(family.id),
-        "locale": family.locale,
-        "created_at": _iso(family.created_at),
-        "terms_version": family.terms_version,
-        "terms_accepted_at": _iso(family.terms_accepted_at),
-        "guardian_confirmed_at": _iso(family.guardian_confirmed_at),
-        "stripe_customer_id": family.stripe_customer_id,
-        "stripe_subscription_id": family.stripe_subscription_id,
-        "plan_key": family.plan_key,
-        "subscription_status": family.subscription_status,
-        "quantity": family.quantity,
-        "current_period_end": _iso(family.current_period_end),
-        "trial_end": _iso(family.trial_end),
-        "cancel_at_period_end": family.cancel_at_period_end,
-        "past_due_since": _iso(family.past_due_since),
-        "payment_warning": family.payment_warning,
-        "free_access_until": _iso(family.free_access_until),
-        "free_access_reason": family.free_access_reason,
-        "tutor_credits": family.tutor_credits,
-        "access": compute_access(family),
-        "users": [
-            {
-                "id": str(u.id),
-                "role": u.role,
-                "email": u.email,
-                "username": u.username,
-                "first_name": u.first_name,
-                "email_verified": u.email_verified_at is not None,
-                "is_active": u.is_active,
-                "totp_enabled": u.totp_enabled,
-                "last_login_at": _iso(u.last_login_at),
-            }
-            for u in users
-        ],
+        **_learner_out(user),
+        "age_confirmed_at": _iso(user.age_confirmed_at),
+        "terms_version": user.terms_version,
+        "terms_accepted_at": _iso(user.terms_accepted_at),
+        "has_stripe_customer": bool(user.stripe_customer_id),
         "payments": [
             {
                 "id": str(p.id),
@@ -182,110 +159,80 @@ async def family_detail(
     }
 
 
-class FreeAccessIn(BaseModel):
-    until: datetime | None
-    reason: str = Field(default="", max_length=200)
+class EntitlementIn(BaseModel):
+    canton: str = Field(min_length=2, max_length=2)
+    expires_at: datetime
+    starts_at: datetime | None = None
+    source: Literal["admin", "trial"] = ENTITLEMENT_ADMIN
 
 
-@router.post("/families/{family_id}/free-access")
-async def grant_free_access(
-    family_id: str,
-    body: FreeAccessIn,
+@router.post(
+    "/users/{user_id}/entitlements",
+    response_model=EntitlementOut,
+    status_code=status.HTTP_201_CREATED,
+)
+async def grant_entitlement(
+    user_id: str,
+    body: EntitlementIn,
     admin: User = Depends(require_admin),
     db: AsyncSession = Depends(get_db),
-) -> dict[str, Any]:
-    family = await db.get(Family, _parse_uuid(family_id))
-    if family is None:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
-    family.free_access_until = body.until
-    family.free_access_reason = body.reason or None
+) -> EntitlementOut:
+    """Give a learner access to one canton, for support, testing or a trial."""
+    user = await _learner(db, user_id)
+    canton = body.canton.lower()
+    if canton not in CANTONS:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_canton")
+    starts_at = _aware(body.starts_at) if body.starts_at else utcnow()
+    expires_at = _aware(body.expires_at)
+    if expires_at <= starts_at:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_period")
+    entitlement = Entitlement(
+        user_id=user.id,
+        canton=canton,
+        starts_at=starts_at,
+        expires_at=expires_at,
+        source=body.source,
+    )
+    user.entitlements.append(entitlement)
+    await db.flush()
     await _audit(
         db,
         admin,
-        "family.free_access",
-        "family",
-        str(family.id),
-        {"until": _iso(body.until), "reason": body.reason},
+        "entitlement.grant",
+        "user",
+        str(user.id),
+        {"canton": canton, "expires_at": _iso(expires_at), "source": body.source},
     )
     await db.commit()
-    return {"free_access_until": _iso(family.free_access_until), "access": compute_access(family)}
+    return entitlement_out(entitlement)
 
 
 @router.get("/users")
-async def list_staff(
-    role: Literal["tutor", "admin", "all"] = "all", db: AsyncSession = Depends(get_db)
-) -> list[dict[str, Any]]:
-    stmt = select(User).where(User.role.in_(STAFF_ROLES)).order_by(User.created_at)
-    if role != "all":
-        stmt = select(User).where(User.role == role).order_by(User.created_at)
+async def list_admins(db: AsyncSession = Depends(get_db)) -> list[dict[str, Any]]:
+    stmt = select(User).where(User.role == ROLE_ADMIN).order_by(User.created_at)
     users = (await db.execute(stmt)).scalars().all()
     return [
         {
             "id": str(u.id),
             "role": u.role,
             "email": u.email,
-            "first_name": u.first_name,
             "locale": u.locale,
             "is_active": u.is_active,
             "totp_enabled": u.totp_enabled,
-            "invite_pending": u.password_hash is None,
-            "tagged_courses": u.tagged_courses or [],
-            "available": u.available,
             "last_login_at": _iso(u.last_login_at),
         }
         for u in users
     ]
 
 
-class StaffIn(BaseModel):
-    email: EmailStr
-    role: Literal["tutor", "admin"]
-    first_name: str = Field(min_length=1, max_length=80)
-    locale: Literal["en", "de", "fr"] = "en"
-    tagged_courses: list[str] = Field(default_factory=list)
-
-
-@router.post("/users", status_code=status.HTTP_201_CREATED)
-async def create_staff(
-    body: StaffIn, admin: User = Depends(require_admin), db: AsyncSession = Depends(get_db)
-) -> dict[str, str]:
-    email = body.email.lower().strip()
-    exists = await db.execute(select(User.id).where(User.email == email))
-    if exists.first() is not None:
-        raise HTTPException(status.HTTP_409_CONFLICT, "email_in_use")
-    user = User(
-        role=ROLE_TUTOR if body.role == "tutor" else ROLE_ADMIN,
-        email=email,
-        first_name=body.first_name.strip(),
-        locale=body.locale,
-        tagged_courses=body.tagged_courses,
-    )
-    db.add(user)
-    await db.flush()
-    token = await one_time.issue_token(db, user, TOKEN_STAFF_INVITE)
-    await send_email_job(
-        "staff_invite",
-        user.locale,
-        email,
-        first_name=user.first_name,
-        role=user.role,
-        link=app_link(f"/accept-invite?token={token}"),
-    )
-    await _audit(db, admin, "staff.create", "user", str(user.id), {"role": user.role})
-    await db.commit()
-    return {"id": str(user.id), "status": "invited"}
-
-
-class StaffPatch(BaseModel):
+class UserPatch(BaseModel):
     is_active: bool | None = None
-    tagged_courses: list[str] | None = None
-    available: bool | None = None
 
 
 @router.patch("/users/{user_id}")
-async def update_staff(
+async def update_user(
     user_id: str,
-    body: StaffPatch,
+    body: UserPatch,
     admin: User = Depends(require_admin),
     db: AsyncSession = Depends(get_db),
 ) -> dict[str, str]:
@@ -298,10 +245,6 @@ async def update_staff(
         user.is_active = body.is_active
         if not body.is_active:
             await destroy_all_sessions(db, user.id)
-    if body.tagged_courses is not None:
-        user.tagged_courses = body.tagged_courses
-    if body.available is not None:
-        user.available = body.available
     await _audit(db, admin, "user.update", "user", str(user.id), body.model_dump(exclude_none=True))
     await db.commit()
     return {"status": "ok"}
@@ -320,26 +263,6 @@ async def reset_2fa(
     await _audit(db, admin, "user.reset_2fa", "user", str(user.id))
     await db.commit()
     return {"status": "ok"}
-
-
-@router.post("/users/{user_id}/resend-invite")
-async def resend_invite(
-    user_id: str, admin: User = Depends(require_admin), db: AsyncSession = Depends(get_db)
-) -> dict[str, str]:
-    user = await db.get(User, _parse_uuid(user_id))
-    if user is None or not user.is_staff or user.password_hash is not None or not user.email:
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "not_invitable")
-    token = await one_time.issue_token(db, user, TOKEN_STAFF_INVITE)
-    await send_email_job(
-        "staff_invite",
-        user.locale,
-        user.email,
-        first_name=user.first_name,
-        role=user.role,
-        link=app_link(f"/accept-invite?token={token}"),
-    )
-    await db.commit()
-    return {"status": "invited"}
 
 
 @router.get("/plans")
@@ -412,14 +335,14 @@ async def impersonate(
     ctx: AuthContext = Depends(current_auth),
     db: AsyncSession = Depends(get_db),
 ) -> dict[str, str]:
-    """Open the app as another user. Staging and development only; always logged."""
+    """Open the app as a learner. Staging and development only; always logged."""
     admin = ctx.user
     if admin.role != ROLE_ADMIN:
         raise HTTPException(status.HTTP_403_FORBIDDEN, "forbidden")
     if not get_settings().impersonation_enabled:
         raise HTTPException(status.HTTP_403_FORBIDDEN, "impersonation_disabled")
     target = await db.get(User, _parse_uuid(user_id))
-    if target is None or not target.is_active or target.role == ROLE_ADMIN:
+    if target is None or not target.is_active or target.role != ROLE_LEARNER:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "cannot_impersonate")
     # The admin's own session is removed so one browser holds one identity at a time.
     await db.delete(ctx.session)

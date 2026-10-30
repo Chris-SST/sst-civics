@@ -6,9 +6,9 @@ import ErrorText from "../components/ErrorText";
 import QuestionCard, { MasteryBar, feedbackHeadline } from "../components/QuestionCard";
 import type { AttemptOut, PracticeRound } from "../practice";
 
-/** Practice on one topic in short rounds: the student sees how many questions are to go, gets a
+/** Practice on one topic in short rounds: the learner sees how many questions are to go, gets a
  * varied word of feedback after each answer, and a summary with the mastery change at the end. */
-export default function StudentPractice() {
+export default function LearnerPractice() {
   const { t } = useTranslation();
   const [params] = useSearchParams();
   const navigate = useNavigate();
@@ -51,7 +51,7 @@ export default function StudentPractice() {
     setBusy(true);
     try {
       const conv = await post<{ id: string }>("/api/tutor/conversations", { course_key: courseKey, topic_code: topicCode });
-      navigate(`/student/chat/${conv.id}`);
+      navigate(`/learner/chat/${conv.id}`);
     } catch (e) {
       setError(e);
       setBusy(false);
@@ -62,7 +62,7 @@ export default function StudentPractice() {
     return (
       <section className="card">
         <ErrorText error={new ApiError(400, "invalid_topic")} />
-        <Link to="/student" className="btn btn-ghost">
+        <Link to="/learner" className="btn btn-ghost">
           {t("practice.back")}
         </Link>
       </section>
@@ -100,14 +100,14 @@ export default function StudentPractice() {
   const header = (
     <header className="page-head">
       <div>
-        <Link to="/student" className="small">
+        <Link to="/learner" className="small">
           {"←"} {t("chat.back")}
         </Link>
         <h1>{round?.topic_name || t("practice.title")}</h1>
         {round && <p className="small muted">{t("practice.title")}</p>}
       </div>
       <button type="button" className="btn btn-ghost btn-sm" disabled={busy} onClick={() => void askTutor()}>
-        {t("student.askTutor")}
+        {t("learner.askTutor")}
       </button>
     </header>
   );
@@ -140,9 +140,9 @@ export default function StudentPractice() {
               {t("practice.anotherRound")}
             </button>
             <button type="button" className="btn btn-secondary" disabled={busy} onClick={() => void askTutor()}>
-              {busy ? t("common.working") : t("student.askTutor")}
+              {busy ? t("common.working") : t("learner.askTutor")}
             </button>
-            <Link to="/student" className="btn btn-ghost">
+            <Link to="/learner" className="btn btn-ghost">
               {t("practice.back")}
             </Link>
           </div>
@@ -164,7 +164,7 @@ export default function StudentPractice() {
             <button type="button" className="btn btn-primary" disabled={busy} onClick={() => void askTutor()}>
               {busy ? t("common.working") : t("practice.askInstead")}
             </button>
-            <Link to="/student" className="btn btn-ghost">
+            <Link to="/learner" className="btn btn-ghost">
               {t("practice.back")}
             </Link>
           </div>

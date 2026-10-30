@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import { get, post } from "../api";
-import { useAuth } from "../auth";
 import ErrorText from "../components/ErrorText";
 import { MasteryBar } from "../components/QuestionCard";
 import { formatDate } from "../i18n";
@@ -37,16 +36,25 @@ interface Usage {
 interface Overview {
   tutor_name: string;
   tutor_enabled: boolean;
-  access: "full" | "read_only" | "none";
-  notice_seen: boolean;
+  access: "full" | "none";
   courses: Course[];
   usage: Usage;
   recent: Recent[];
 }
 
-export default function StudentHome() {
+const NOTICE_KEY = "sst.tutorNoticeSeen";
+
+function noticeSeen(): boolean {
+  try {
+    return localStorage.getItem(NOTICE_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+export default function LearnerHome() {
   const { t } = useTranslation();
-  const { me } = useAuth();
+  const [showNotice, setShowNotice] = useState(() => !noticeSeen());
   const navigate = useNavigate();
   const [data, setData] = useState<Overview | null>(null);
   const [practice, setPractice] = useState<Record<string, PracticeOverview | null>>({});
@@ -72,13 +80,13 @@ export default function StudentHome() {
   const fullAccess = data.access === "full";
   const canChat = fullAccess && data.tutor_enabled;
 
-  async function acknowledge() {
+  function acknowledge() {
     try {
-      await post("/api/tutor/notice-seen");
-      setData((d) => (d ? { ...d, notice_seen: true } : d));
-    } catch (e) {
-      setError(e);
+      localStorage.setItem(NOTICE_KEY, "1");
+    } catch {
+      /* storage unavailable: the notice shows again next time */
     }
+    setShowNotice(false);
   }
 
   async function askTutor(courseKey: string, topicCode: string) {
@@ -89,7 +97,7 @@ export default function StudentHome() {
         course_key: courseKey,
         topic_code: topicCode,
       });
-      navigate(`/student/chat/${conv.id}`);
+      navigate(`/learner/chat/${conv.id}`);
     } catch (e) {
       setError(e);
       setBusy(null);
@@ -97,7 +105,7 @@ export default function StudentHome() {
   }
 
   function practise(courseKey: string, topicCode: string) {
-    navigate(`/student/practice?course_key=${encodeURIComponent(courseKey)}&topic_code=${encodeURIComponent(topicCode)}`);
+    navigate(`/learner/practice?course_key=${encodeURIComponent(courseKey)}&topic_code=${encodeURIComponent(topicCode)}`);
   }
 
   async function startDiagnostic(courseKey: string) {
@@ -105,7 +113,7 @@ export default function StudentHome() {
     setError(null);
     try {
       const run = await post<{ id: string }>("/api/practice/diagnostic/start", { course_key: courseKey });
-      navigate(`/student/diagnostic/${run.id}`);
+      navigate(`/learner/diagnostic/${run.id}`);
     } catch (e) {
       setError(e);
       setBusy(null);
@@ -114,29 +122,29 @@ export default function StudentHome() {
 
   return (
     <>
-      <h1>{t("student.hello", { name: me?.user.first_name || me?.user.email || "" })}</h1>
+      <h1>{t("learner.welcome")}</h1>
 
-      {!data.notice_seen && canChat && (
+      {showNotice && canChat && (
         <section className="card notice-card">
-          <h2>{t("student.noticeTitle", { name: data.tutor_name })}</h2>
-          <p>{t("student.noticeBody")}</p>
+          <h2>{t("learner.noticeTitle", { name: data.tutor_name })}</h2>
+          <p>{t("learner.noticeBody")}</p>
           <button type="button" className="btn btn-primary" onClick={acknowledge}>
-            {t("student.noticeOk")}
+            {t("learner.noticeOk")}
           </button>
         </section>
       )}
 
       {data.access !== "full" && (
         <p className="alert alert-warn">
-          <span className={`status status-${data.access}`}>{t(`access.${data.access}`)}</span> {t("student.askParent")}
+          <span className={`status status-${data.access}`}>{t(`access.${data.access}`)}</span> {t("learner.noAccess")}
         </p>
       )}
-      {fullAccess && !data.tutor_enabled && <p className="alert alert-info">{t("student.tutorOffline")}</p>}
+      {fullAccess && !data.tutor_enabled && <p className="alert alert-info">{t("learner.tutorOffline")}</p>}
       {error ? <ErrorText error={error} /> : null}
 
       {data.courses.length === 0 && (
         <section className="card">
-          <p className="muted">{t("student.noCourses")}</p>
+          <p className="muted">{t("learner.noCourses")}</p>
         </section>
       )}
 
@@ -166,32 +174,32 @@ export default function StudentHome() {
       })}
 
       <section className="card">
-        <h2>{t("student.recent")}</h2>
+        <h2>{t("learner.recent")}</h2>
         {data.recent.length === 0 ? (
-          <p className="muted">{t("student.noRecent")}</p>
+          <p className="muted">{t("learner.noRecent")}</p>
         ) : (
           <ul className="recent-list">
             {data.recent.map((r) => (
               <li key={r.id}>
-                <Link to={`/student/chat/${r.id}`}>
+                <Link to={`/learner/chat/${r.id}`}>
                   <b>{r.topic_name}</b>
                   <span className="small muted">
                     {r.course_name} · {formatDate(r.last_activity_at)}
-                    {r.status === "ended" && ` · ${t("student.endedTag")}`}
+                    {r.status === "ended" && ` · ${t("learner.endedTag")}`}
                   </span>
                 </Link>
               </li>
             ))}
           </ul>
         )}
-        <h3>{t("student.usage")}</h3>
+        <h3>{t("learner.usage")}</h3>
         <p className="small">
-          {t("student.usageToday", { used: data.usage.daily_used, limit: data.usage.daily_limit ?? "∞" })}
+          {t("learner.usageToday", { used: data.usage.daily_used, limit: data.usage.daily_limit ?? "∞" })}
           <br />
-          {t("student.usageMonth", { used: data.usage.monthly_used, limit: data.usage.monthly_limit ?? "∞" })}
+          {t("learner.usageMonth", { used: data.usage.monthly_used, limit: data.usage.monthly_limit ?? "∞" })}
         </p>
-        {data.usage.near_monthly_limit && <p className="alert alert-warn small">{t("student.nearLimit")}</p>}
-        <p className="small muted">{t("student.integrity")}</p>
+        {data.usage.near_monthly_limit && <p className="alert alert-warn small">{t("learner.nearLimit")}</p>}
+        <p className="small muted">{t("learner.integrity")}</p>
       </section>
     </>
   );
@@ -237,11 +245,11 @@ function CourseCard({ course, overview, showDiag, fullAccess, canChat, busy, onA
     return (
       <section className="card course-card">
         {title}
-        {overview && <p className="small muted">{t("student.noQuestionsYet")}</p>}
+        {overview && <p className="small muted">{t("learner.noQuestionsYet")}</p>}
         <label className="field">
-          <span>{t("student.topic")}</span>
+          <span>{t("learner.topic")}</span>
           <select value={pickerTopic} onChange={(e) => setPickerTopic(e.target.value)} disabled={!canChat}>
-            <option value="">{t("student.chooseTopic")}</option>
+            <option value="">{t("learner.chooseTopic")}</option>
             {course.topics.map((tp) => (
               <option key={tp.code} value={tp.code}>
                 {tp.name}
@@ -256,7 +264,7 @@ function CourseCard({ course, overview, showDiag, fullAccess, canChat, busy, onA
             disabled={!canChat || !pickerTopic || busy !== null}
             onClick={() => onAsk(pickerTopic)}
           >
-            {busy === `chat:${course.key}:${pickerTopic}` ? t("common.working") : t("student.askTutor")}
+            {busy === `chat:${course.key}:${pickerTopic}` ? t("common.working") : t("learner.askTutor")}
           </button>
         </div>
       </section>
@@ -275,7 +283,7 @@ function CourseCard({ course, overview, showDiag, fullAccess, canChat, busy, onA
         disabled={!fullAccess || tp.questions_available === 0}
         onClick={() => onPractise(tp.topic_code)}
       >
-        {t("student.practise")}
+        {t("learner.practise")}
       </button>
       <button
         type="button"
@@ -283,7 +291,7 @@ function CourseCard({ course, overview, showDiag, fullAccess, canChat, busy, onA
         disabled={!canChat || busy !== null}
         onClick={() => onAsk(tp.topic_code)}
       >
-        {busy === `chat:${course.key}:${tp.topic_code}` ? t("common.working") : t("student.askTutor")}
+        {busy === `chat:${course.key}:${tp.topic_code}` ? t("common.working") : t("learner.askTutor")}
       </button>
     </div>
   );
@@ -292,23 +300,23 @@ function CourseCard({ course, overview, showDiag, fullAccess, canChat, busy, onA
     <section className="card course-card">
       <header className="course-head">
         {title}
-        <div className="overall" aria-label={t("student.overall")}>
+        <div className="overall" aria-label={t("learner.overall")}>
           <b>{overview.overall === null ? "–" : `${overview.overall}%`}</b>
-          <span className="small muted">{t("student.overall")}</span>
+          <span className="small muted">{t("learner.overall")}</span>
         </div>
       </header>
-      <p className="small muted">{t("student.testedOf", { tested, total: overview.topics.length })}</p>
+      <p className="small muted">{t("learner.testedOf", { tested, total: overview.topics.length })}</p>
 
       {showDiag && (
         <div className="diag-cta">
-          <h3>{t("student.diagTitle")}</h3>
-          <p>{t("student.diagBody", { count: estimate })}</p>
+          <h3>{t("learner.diagTitle")}</h3>
+          <p>{t("learner.diagBody", { count: estimate })}</p>
           <div className="actions">
             <button type="button" className="btn btn-primary" disabled={!fullAccess || busy !== null} onClick={onStartDiag}>
-              {busy === `diag:${course.key}` ? t("common.working") : inProgress ? t("student.diagContinue") : t("student.diagStart")}
+              {busy === `diag:${course.key}` ? t("common.working") : inProgress ? t("learner.diagContinue") : t("learner.diagStart")}
             </button>
             <button type="button" className="btn btn-ghost" onClick={onSkipDiag}>
-              {t("student.diagSkip")}
+              {t("learner.diagSkip")}
             </button>
           </div>
         </div>
@@ -316,15 +324,15 @@ function CourseCard({ course, overview, showDiag, fullAccess, canChat, busy, onA
 
       {overview.next.length > 0 && (
         <>
-          <h3>{t("student.workNext")}</h3>
+          <h3>{t("learner.workNext")}</h3>
           <ul className="next-list">
             {overview.next.map((tp) => (
               <li key={tp.topic_code}>
                 <div className="next-head">
                   <b>{tp.topic_name}</b>
                   <span className="small muted">
-                    {tp.mastery === null ? t("student.notTested") : `${tp.mastery}%`}
-                    {tp.due && <span className="status status-due">{t("student.due")}</span>}
+                    {tp.mastery === null ? t("learner.notTested") : `${tp.mastery}%`}
+                    {tp.due && <span className="status status-due">{t("learner.due")}</span>}
                   </span>
                 </div>
                 {actions(tp)}
@@ -335,7 +343,7 @@ function CourseCard({ course, overview, showDiag, fullAccess, canChat, busy, onA
       )}
 
       <button type="button" className="link-btn" aria-expanded={showAll} onClick={() => setShowAll((s) => !s)}>
-        {showAll ? t("student.hideTopics") : t("student.showTopics", { count: overview.topics.length })}
+        {showAll ? t("learner.hideTopics") : t("learner.showTopics", { count: overview.topics.length })}
       </button>
       {showAll && (
         <ul className="topic-list">

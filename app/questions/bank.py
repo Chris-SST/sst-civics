@@ -83,12 +83,12 @@ async def _candidates(
 
 
 async def recently_attempted(
-    db: AsyncSession, student_id: uuid.UUID, limit: int = 40
+    db: AsyncSession, user_id: uuid.UUID, limit: int = 40
 ) -> set[uuid.UUID]:
     rows = (
         await db.execute(
             select(Attempt.question_id)
-            .where(Attempt.student_id == student_id)
+            .where(Attempt.user_id == user_id)
             .order_by(Attempt.created_at.desc())
             .limit(limit)
         )
@@ -97,13 +97,13 @@ async def recently_attempted(
 
 
 async def topic_history(
-    db: AsyncSession, student_id: uuid.UUID, topic_code: str
+    db: AsyncSession, user_id: uuid.UUID, topic_code: str
 ) -> dict[uuid.UUID, tuple[Any, bool]]:
     """Latest attempt per question on this topic: question id -> (when, correct)."""
     rows = (
         await db.execute(
             select(Attempt.question_id, Attempt.created_at, Attempt.correct)
-            .where(Attempt.student_id == student_id, Attempt.topic_code == topic_code)
+            .where(Attempt.user_id == user_id, Attempt.topic_code == topic_code)
             .order_by(Attempt.created_at.asc())
         )
     ).all()
@@ -144,7 +144,7 @@ async def build_diagnostic(db: AsyncSession, student: User, course_key: str) -> 
                 picked += _closest(pool, target, 1)
             chosen += [str(q.id) for q in picked]
     run = DiagnosticRun(
-        student_id=student.id,
+        user_id=student.id,
         course_key=course_key,
         question_ids=chosen,
         status="in_progress" if chosen else "done",
@@ -162,12 +162,12 @@ async def diagnostic_current(db: AsyncSession, run: DiagnosticRun) -> Question |
 
 
 async def latest_diagnostic(
-    db: AsyncSession, student_id: uuid.UUID, course_key: str
+    db: AsyncSession, user_id: uuid.UUID, course_key: str
 ) -> DiagnosticRun | None:
     return (
         await db.execute(
             select(DiagnosticRun)
-            .where(DiagnosticRun.student_id == student_id, DiagnosticRun.course_key == course_key)
+            .where(DiagnosticRun.user_id == user_id, DiagnosticRun.course_key == course_key)
             .order_by(DiagnosticRun.created_at.desc())
             .limit(1)
         )
@@ -242,7 +242,7 @@ async def submit_attempt(
             # against the student. The solution is shown and mastery is left unchanged.
             score, correct, feedback = 0.0, False, None
             attempt = Attempt(
-                student_id=student.id,
+                user_id=student.id,
                 question_id=question.id,
                 course_key=course_key,
                 topic_code=question.topic_code,
@@ -264,7 +264,7 @@ async def submit_attempt(
         )
         score, correct = (1.0 if outcome.correct else 0.0), outcome.correct
     attempt = Attempt(
-        student_id=student.id,
+        user_id=student.id,
         question_id=question.id,
         course_key=course_key,
         topic_code=question.topic_code,
@@ -301,7 +301,7 @@ async def mastery_overview(
         for r in (
             await db.execute(
                 select(TopicMastery).where(
-                    TopicMastery.student_id == student.id, TopicMastery.course_key == course_key
+                    TopicMastery.user_id == student.id, TopicMastery.course_key == course_key
                 )
             )
         )
@@ -345,7 +345,7 @@ def suggest_next(overview: list[dict[str, Any]], limit: int = 3) -> list[dict[st
 
 
 async def recent_misses(
-    db: AsyncSession, student_id: uuid.UUID, course_key: str, topic_code: str, limit: int = 3
+    db: AsyncSession, user_id: uuid.UUID, course_key: str, topic_code: str, limit: int = 3
 ) -> list[dict[str, str]]:
     """What the student got wrong on this topic, for the tutor's session context. No names."""
     rows = (
@@ -353,7 +353,7 @@ async def recent_misses(
             select(Attempt, Question)
             .join(Question, Question.id == Attempt.question_id)
             .where(
-                Attempt.student_id == student_id,
+                Attempt.user_id == user_id,
                 Attempt.course_key == course_key,
                 Attempt.topic_code == topic_code,
                 Attempt.correct.is_(False),

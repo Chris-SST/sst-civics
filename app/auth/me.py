@@ -3,44 +3,37 @@
 from __future__ import annotations
 
 from fastapi import Request, Response
-from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.auth.schemas import FamilyOut, MeOut, SessionOut, UserOut
+from app.auth.schemas import AccessOut, EntitlementOut, MeOut, SessionOut, UserOut
 from app.auth.sessions import ensure_csrf_cookie
-from app.billing.access import compute_access
+from app.billing.access import access_level, is_active
 from app.config import get_settings
 from app.deps import AuthContext
-from app.models import ROLE_STUDENT, Family, User
+from app.models import Entitlement, User
 
 
 def _iso(value) -> str | None:
     return value.isoformat() if value else None
 
 
-async def family_out(db: AsyncSession, family: Family | None) -> FamilyOut | None:
-    if family is None:
-        return None
-    count = await db.scalar(
-        select(func.count())
-        .select_from(User)
-        .where(User.family_id == family.id, User.role == ROLE_STUDENT, User.is_active.is_(True))
+def entitlement_out(e: Entitlement) -> EntitlementOut:
+    return EntitlementOut(
+        id=str(e.id),
+        canton=e.canton,
+        starts_at=e.starts_at.isoformat(),
+        expires_at=e.expires_at.isoformat(),
+        source=e.source,
+        active=is_active(e),
     )
-    return FamilyOut(
-        id=str(family.id),
-        locale=family.locale,
-        plan_key=family.plan_key,
-        subscription_status=family.subscription_status,
-        quantity=family.quantity,
-        current_period_end=_iso(family.current_period_end),
-        trial_end=_iso(family.trial_end),
-        cancel_at_period_end=family.cancel_at_period_end,
-        payment_warning=family.payment_warning,
-        free_access_until=_iso(family.free_access_until),
-        tutor_credits=family.tutor_credits,
-        access=compute_access(family),
-        has_stripe_customer=bool(family.stripe_customer_id),
-        student_count=int(count or 0),
+
+
+def access_out(user: User) -> AccessOut:
+    return AccessOut(
+        access=access_level(user),  # type: ignore[arg-type]
+        canton=user.canton,
+        entitlements=[entitlement_out(e) for e in user.entitlements],
+        has_stripe_customer=bool(user.stripe_customer_id),
     )
 
 
@@ -49,9 +42,9 @@ def user_out(user: User) -> UserOut:
         id=str(user.id),
         role=user.role,
         email=user.email,
-        username=user.username,
-        first_name=user.first_name,
         locale=user.locale,
+        study_language=user.study_language,
+        canton=user.canton,
         email_verified=user.email_verified_at is not None,
         totp_enabled=user.totp_enabled,
     )
@@ -61,12 +54,11 @@ async def build_me(
     db: AsyncSession, ctx: AuthContext, request: Request, response: Response
 ) -> MeOut:
     user = ctx.user
-    family = await db.get(Family, user.family_id) if user.family_id else None
     csrf = ensure_csrf_cookie(response, request.cookies.get(get_settings().csrf_cookie_name))
     impersonated_by = None
     if ctx.session.impersonator_user_id:
         admin = await db.get(User, ctx.session.impersonator_user_id)
-        impersonated_by = (admin.first_name or admin.email) if admin else "admin"
+        impersonated_by = (admin.email or "admin") if admin else "admin"
     return MeOut(
         user=user_out(user),
         session=SessionOut(
@@ -76,6 +68,6 @@ async def build_me(
             and not ctx.session.impersonator_user_id,
             impersonated_by=impersonated_by,
         ),
-        family=await family_out(db, family),
+        access=access_out(user),
         csrf_token=csrf,
     )

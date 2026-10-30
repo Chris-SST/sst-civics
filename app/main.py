@@ -14,7 +14,6 @@ from app.admin.routes import router as admin_router
 from app.auth.routes import router as auth_router
 from app.billing.routes import router as billing_router
 from app.config import get_settings
-from app.family.routes import router as family_router
 from app.portal import router as portal_router
 from app.questions.routes_admin import router as review_router
 from app.questions.routes_student import router as practice_router
@@ -87,7 +86,6 @@ def create_app() -> FastAPI:
 
     app.include_router(auth_router)
     app.include_router(billing_router)
-    app.include_router(family_router)
     app.include_router(admin_router)
     app.include_router(portal_router)
     app.include_router(tutor_router)

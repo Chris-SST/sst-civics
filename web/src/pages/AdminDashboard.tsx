@@ -1,14 +1,15 @@
 import { useCallback, useEffect, useState, type FormEvent } from "react";
+import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
-import { get, patch, post } from "../api";
+import { CANTONS, get, patch, post, type EntitlementOut } from "../api";
 import { homeFor, useAuth } from "../auth";
 import ErrorText from "../components/ErrorText";
-import { formatDate } from "../i18n";
-import { AiUsage, SafetyFlags } from "./AdminTutor";
+import { formatChf, formatDate } from "../i18n";
+import { AiUsage } from "./AdminTutor";
 import AdminQuestions from "./AdminQuestions";
 
-/** Staging and development only: open the app as another user. The server refuses it in production. */
+/** Staging and development only: open the app as a learner. The server refuses it in production. */
 function useViewAs(setError: (e: unknown) => void) {
   const { refresh, config } = useAuth();
   const navigate = useNavigate();
@@ -34,19 +35,17 @@ export default function AdminDashboard() {
         <NavLink to="/admin" end>
           {t("admin.overview")}
         </NavLink>
-        <NavLink to="/admin/families">{t("admin.families")}</NavLink>
+        <NavLink to="/admin/learners">{t("admin.learners")}</NavLink>
         <NavLink to="/admin/staff">{t("admin.staff")}</NavLink>
         <NavLink to="/admin/plans">{t("admin.plans")}</NavLink>
-        <NavLink to="/admin/safety">{t("admin.safety")}</NavLink>
         <NavLink to="/admin/usage">{t("admin.usage")}</NavLink>
         <NavLink to="/admin/questions">{t("qbank.tab")}</NavLink>
       </nav>
       <Routes>
         <Route index element={<Overview />} />
-        <Route path="families" element={<Families />} />
+        <Route path="learners" element={<Learners />} />
         <Route path="staff" element={<Staff />} />
         <Route path="plans" element={<Plans />} />
-        <Route path="safety" element={<SafetyFlags />} />
         <Route path="usage" element={<AiUsage />} />
         <Route path="questions/*" element={<AdminQuestions />} />
       </Routes>
@@ -55,9 +54,9 @@ export default function AdminDashboard() {
 }
 
 interface OverviewOut {
-  families: number;
+  learners: number;
   users_by_role: Record<string, number>;
-  subscriptions_by_status: Record<string, number>;
+  active_entitlements: number;
   recent_stripe_events: {
     id: string;
     type: string;
@@ -78,21 +77,17 @@ function Overview() {
     <>
       <div className="kpis">
         <div className="kpi">
-          <b>{data.families}</b>
-          {t("admin.families")}
+          <b>{data.learners}</b>
+          {t("admin.learners")}
         </div>
-        {["parent", "student", "adult", "tutor", "admin"].map((r) => (
-          <div className="kpi" key={r}>
-            <b>{data.users_by_role[r] ?? 0}</b>
-            {t(`roles.${r}`)}
-          </div>
-        ))}
-        {Object.entries(data.subscriptions_by_status).map(([s, n]) => (
-          <div className="kpi" key={s}>
-            <b>{n}</b>
-            {t(`subStatus.${s}`, { defaultValue: s })}
-          </div>
-        ))}
+        <div className="kpi">
+          <b>{data.active_entitlements}</b>
+          {t("admin.activeEntitlements")}
+        </div>
+        <div className="kpi">
+          <b>{data.users_by_role.admin ?? 0}</b>
+          {t("roles.admin")}
+        </div>
       </div>
       <section className="card" style={{ marginTop: 18 }}>
         <h2>{t("admin.stripeEvents")}</h2>
@@ -106,7 +101,7 @@ function Overview() {
                   <td className="small" data-label={t("admin.received")}>
                     {formatDate(e.received_at)}
                   </td>
-                  <td className="small" data-label={t("parent.status")}>
+                  <td className="small" data-label={t("admin.status")}>
                     {e.processed_at ? t("admin.processed") : t("admin.pending")}
                   </td>
                   {e.error && (
@@ -124,41 +119,53 @@ function Overview() {
   );
 }
 
-interface FamilyRow {
+interface LearnerRow {
   id: string;
+  email: string | null;
+  email_verified: boolean;
+  is_active: boolean;
+  locale: string;
+  study_language: string;
+  canton: string;
   created_at: string;
-  payer_email: string | null;
-  payer_verified: boolean;
-  plan_key: string | null;
-  subscription_status: string | null;
-  quantity: number;
-  access: string;
-  student_count: number;
-  free_access_until: string | null;
-  payment_warning: boolean;
+  last_login_at: string | null;
+  access: "full" | "none";
+  entitlements: EntitlementOut[];
 }
 
-interface FamilyDetail extends FamilyRow {
-  stripe_customer_id: string | null;
-  stripe_subscription_id: string | null;
-  free_access_reason: string | null;
-  tutor_credits: number;
-  users: { id: string; role: string; email: string | null; username: string | null; first_name: string; totp_enabled: boolean; is_active: boolean }[];
+interface LearnerDetail extends LearnerRow {
+  age_confirmed_at: string | null;
+  terms_version: string | null;
+  terms_accepted_at: string | null;
+  has_stripe_customer: boolean;
   payments: { id: string; amount_cents: number; currency: string; paid_at: string }[];
 }
 
-function Families() {
+/** Default expiry for a manual grant: six months from today, as yyyy-mm-dd. */
+function defaultExpiry(): string {
+  const d = new Date();
+  d.setMonth(d.getMonth() + 6);
+  return d.toISOString().slice(0, 10);
+}
+
+function cantonName(t: TFunction, code: string): string {
+  return t(`cantons.${code}`, { defaultValue: code.toUpperCase() });
+}
+
+function Learners() {
   const { t } = useTranslation();
   const [q, setQ] = useState("");
-  const [rows, setRows] = useState<FamilyRow[]>([]);
-  const [detail, setDetail] = useState<FamilyDetail | null>(null);
-  const [until, setUntil] = useState("");
-  const [reason, setReason] = useState("SST lesson family");
+  const [rows, setRows] = useState<LearnerRow[]>([]);
+  const [detail, setDetail] = useState<LearnerDetail | null>(null);
+  const [canton, setCanton] = useState<string>(CANTONS[0]);
+  const [expires, setExpires] = useState(defaultExpiry());
+  const [source, setSource] = useState<"admin" | "trial">("admin");
+  const [ok, setOk] = useState("");
   const [error, setError] = useState<unknown>(null);
   const { enabled: viewAsEnabled, viewAs } = useViewAs(setError);
 
   const load = useCallback(async () => {
-    setRows(await get<FamilyRow[]>(`/api/admin/families?q=${encodeURIComponent(q)}`));
+    setRows(await get<LearnerRow[]>(`/api/admin/learners?q=${encodeURIComponent(q)}`));
   }, [q]);
 
   useEffect(() => {
@@ -166,17 +173,29 @@ function Families() {
   }, [load]);
 
   async function open(id: string) {
-    setDetail(await get<FamilyDetail>(`/api/admin/families/${id}`));
+    setOk("");
+    try {
+      const d = await get<LearnerDetail>(`/api/admin/learners/${id}`);
+      setDetail(d);
+      setCanton(d.canton || CANTONS[0]);
+    } catch (err) {
+      setError(err);
+    }
   }
 
   async function grant(e: FormEvent) {
     e.preventDefault();
-    if (!detail) return;
+    if (!detail || !expires) return;
+    setError(null);
+    setOk("");
     try {
-      await post(`/api/admin/families/${detail.id}/free-access`, {
-        until: until ? new Date(until).toISOString() : null,
-        reason,
+      const until = new Date(`${expires}T23:59:59`).toISOString();
+      await post<EntitlementOut>(`/api/admin/users/${detail.id}/entitlements`, {
+        canton,
+        expires_at: until,
+        source,
       });
+      setOk(t("admin.granted", { canton: cantonName(t, canton), date: formatDate(until) }));
       await open(detail.id);
       await load();
     } catch (err) {
@@ -195,25 +214,25 @@ function Families() {
           <thead>
             <tr>
               <th>{t("fields.email")}</th>
-              <th>{t("parent.plan")}</th>
-              <th>{t("parent.status")}</th>
+              <th>{t("fields.canton")}</th>
               <th>{t("admin.access")}</th>
-              <th>{t("parent.students")}</th>
+              <th>{t("admin.lastLogin")}</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {rows.map((r) => (
-              <tr key={r.id}>
+              <tr key={r.id} style={{ opacity: r.is_active ? 1 : 0.5 }}>
                 <td data-label={t("fields.email")}>
-                  {r.payer_email} {!r.payer_verified && <span className="hint">({t("admin.unverified")})</span>}
+                  {r.email} {!r.email_verified && <span className="hint">({t("admin.unverified")})</span>}
                 </td>
-                <td data-label={t("parent.plan")}>{r.plan_key ? t(`plans.${r.plan_key}.name`) : "–"}</td>
-                <td data-label={t("parent.status")}>{t(`subStatus.${r.subscription_status ?? "none"}`)}</td>
+                <td data-label={t("fields.canton")}>{cantonName(t, r.canton)}</td>
                 <td data-label={t("admin.access")}>
                   <span className={`status status-${r.access}`}>{t(`access.${r.access}`)}</span>
                 </td>
-                <td data-label={t("parent.students")}>{r.student_count}</td>
+                <td className="small" data-label={t("admin.lastLogin")}>
+                  {formatDate(r.last_login_at)}
+                </td>
                 <td className="table-actions">
                   <button className="btn btn-sm btn-secondary" onClick={() => void open(r.id)}>
                     {t("common.open")}
@@ -223,47 +242,93 @@ function Families() {
             ))}
           </tbody>
         </table>
+        {rows.length === 0 && <p className="muted">{t("admin.noLearners")}</p>}
       </div>
       {detail && (
         <section className="card">
-          <h2>{detail.payer_email}</h2>
+          <h2>{detail.email}</h2>
           <ul className="small">
-            <li>Stripe customer: {detail.stripe_customer_id ?? "–"}</li>
-            <li>Stripe subscription: {detail.stripe_subscription_id ?? "–"}</li>
             <li>
-              {t("parent.tutorCredits", { count: detail.tutor_credits })}
+              {t("fields.canton")}: {cantonName(t, detail.canton)}
             </li>
             <li>
-              {t("admin.freeAccessUntil")}: {formatDate(detail.free_access_until)} {detail.free_access_reason && `(${detail.free_access_reason})`}
+              {t("fields.studyLanguage")}: {t(`languages.${detail.study_language}`, { defaultValue: detail.study_language })}
+            </li>
+            <li>
+              {t("admin.ageConfirmed")}: {formatDate(detail.age_confirmed_at)}
+            </li>
+            <li>
+              {t("admin.termsAccepted")}: {formatDate(detail.terms_accepted_at)}{" "}
+              {detail.terms_version && `(${detail.terms_version})`}
+            </li>
+            <li>
+              {t("admin.stripeCustomer")}: {detail.has_stripe_customer ? t("common.yes") : t("common.no")}
             </li>
           </ul>
-          <h3>{t("admin.members")}</h3>
-          <ul className="small">
-            {detail.users.map((u) => (
-              <li key={u.id} style={{ marginBottom: 6 }}>
-                {t(`roles.${u.role}`)}: {u.first_name || u.email || u.username} {u.email && `· ${u.email}`} {u.username && `· ${u.username}`}
-                {!u.is_active && ` · ${t("admin.inactive")}`}{" "}
-                {viewAsEnabled && u.is_active && (
-                  <button className="btn btn-sm btn-secondary" onClick={() => void viewAs(u.id)}>
-                    {t("admin.viewAs")}
-                  </button>
-                )}
-              </li>
-            ))}
-          </ul>
-          <h3>{t("admin.grantFreeAccess")}</h3>
+          {viewAsEnabled && detail.is_active && (
+            <div className="actions">
+              <button className="btn btn-sm btn-secondary" onClick={() => void viewAs(detail.id)}>
+                {t("admin.viewAs")}
+              </button>
+            </div>
+          )}
+
+          <h3>{t("admin.entitlements")}</h3>
+          {detail.entitlements.length === 0 ? (
+            <p className="muted small">{t("admin.noEntitlements")}</p>
+          ) : (
+            <ul className="small">
+              {detail.entitlements.map((en) => (
+                <li key={en.id}>
+                  {cantonName(t, en.canton)}: {formatDate(en.starts_at)} – {formatDate(en.expires_at)} ·{" "}
+                  {t(`admin.source.${en.source}`)}{" "}
+                  <span className={`status status-${en.active ? "full" : "none"}`}>
+                    {en.active ? t("access.full") : t("admin.expired")}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          <h3>{t("admin.payments")}</h3>
+          {detail.payments.length === 0 ? (
+            <p className="muted small">{t("admin.noPayments")}</p>
+          ) : (
+            <ul className="small">
+              {detail.payments.map((p) => (
+                <li key={p.id}>
+                  {formatDate(p.paid_at)} · {formatChf(p.amount_cents, p.currency)}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          <h3>{t("admin.grantAccess")}</h3>
+          {ok && <div className="alert alert-ok">{ok}</div>}
           <form className="form" onSubmit={(e) => void grant(e)} style={{ maxWidth: 420 }}>
             <label className="field">
-              <span>{t("admin.until")}</span>
-              <input type="date" value={until} onChange={(e) => setUntil(e.target.value)} />
-              <span className="hint">{t("admin.untilHint")}</span>
+              <span>{t("fields.canton")}</span>
+              <select value={canton} onChange={(e) => setCanton(e.target.value)}>
+                {CANTONS.map((c) => (
+                  <option key={c} value={c}>
+                    {cantonName(t, c)}
+                  </option>
+                ))}
+              </select>
             </label>
             <label className="field">
-              <span>{t("admin.reason")}</span>
-              <input value={reason} onChange={(e) => setReason(e.target.value)} maxLength={200} />
+              <span>{t("admin.until")}</span>
+              <input type="date" required value={expires} onChange={(e) => setExpires(e.target.value)} />
+            </label>
+            <label className="field">
+              <span>{t("admin.sourceLabel")}</span>
+              <select value={source} onChange={(e) => setSource(e.target.value as "admin" | "trial")}>
+                <option value="admin">{t("admin.source.admin")}</option>
+                <option value="trial">{t("admin.source.trial")}</option>
+              </select>
             </label>
             <div className="actions">
-              <button className="btn btn-primary">{t("common.save")}</button>
+              <button className="btn btn-primary">{t("admin.grant")}</button>
               <button type="button" className="btn btn-ghost" onClick={() => setDetail(null)}>
                 {t("common.close")}
               </button>
@@ -278,59 +343,25 @@ function Families() {
 interface StaffRow {
   id: string;
   role: string;
-  email: string;
-  first_name: string;
+  email: string | null;
   locale: string;
   is_active: boolean;
   totp_enabled: boolean;
-  invite_pending: boolean;
-  tagged_courses: string[];
   last_login_at: string | null;
 }
 
 function Staff() {
   const { t } = useTranslation();
+  const { me } = useAuth();
   const [rows, setRows] = useState<StaffRow[]>([]);
-  const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [role, setRole] = useState<"tutor" | "admin">("tutor");
-  const [locale, setLocale] = useState<"en" | "de" | "fr">("en");
-  const [courses, setCourses] = useState("");
   const [error, setError] = useState<unknown>(null);
-  const [ok, setOk] = useState("");
-  const { enabled: viewAsEnabled, viewAs } = useViewAs(setError);
 
   const load = useCallback(async () => setRows(await get<StaffRow[]>("/api/admin/users")), []);
   useEffect(() => {
     load().catch(setError);
   }, [load]);
 
-  async function create(e: FormEvent) {
-    e.preventDefault();
-    setError(null);
-    setOk("");
-    try {
-      await post("/api/admin/users", {
-        email,
-        first_name: firstName,
-        role,
-        locale,
-        tagged_courses: courses
-          .split(",")
-          .map((s) => s.trim())
-          .filter(Boolean),
-      });
-      setOk(t("admin.invited", { email }));
-      setEmail("");
-      setFirstName("");
-      setCourses("");
-      await load();
-    } catch (err) {
-      setError(err);
-    }
-  }
-
-  async function action(id: string, what: "reset-2fa" | "resend-invite" | "deactivate" | "activate") {
+  async function action(id: string, what: "reset-2fa" | "deactivate" | "activate") {
     setError(null);
     try {
       if (what === "deactivate" || what === "activate") {
@@ -347,54 +378,42 @@ function Staff() {
   return (
     <>
       <ErrorText error={error} />
-      {ok && <div className="alert alert-ok">{ok}</div>}
+      <p className="small muted">{t("admin.staffIntro")}</p>
       <div className="table-wrap card">
         <table className="table table-stack">
           <thead>
             <tr>
-              <th>{t("fields.firstName")}</th>
               <th>{t("fields.email")}</th>
               <th>{t("admin.role")}</th>
               <th>2FA</th>
-              <th>{t("tutor.courses")}</th>
+              <th>{t("admin.lastLogin")}</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {rows.map((u) => (
               <tr key={u.id} style={{ opacity: u.is_active ? 1 : 0.5 }}>
-                <td data-label={t("fields.firstName")}>{u.first_name}</td>
                 <td data-label={t("fields.email")}>{u.email}</td>
                 <td data-label={t("admin.role")}>{t(`roles.${u.role}`)}</td>
-                <td data-label="2FA">
-                  {u.invite_pending ? t("admin.invitePending") : u.totp_enabled ? t("common.yes") : t("common.no")}
-                </td>
-                <td className="small" data-label={t("tutor.courses")}>
-                  {u.tagged_courses.join(", ")}
+                <td data-label="2FA">{u.totp_enabled ? t("common.yes") : t("common.no")}</td>
+                <td className="small" data-label={t("admin.lastLogin")}>
+                  {formatDate(u.last_login_at)}
                 </td>
                 <td className="table-actions">
                   <div className="actions">
-                    {viewAsEnabled && u.is_active && u.role === "tutor" && (
-                      <button className="btn btn-sm btn-secondary" onClick={() => void viewAs(u.id)}>
-                        {t("admin.viewAs")}
-                      </button>
-                    )}
-                    {u.invite_pending && (
-                      <button className="btn btn-sm btn-secondary" onClick={() => void action(u.id, "resend-invite")}>
-                        {t("admin.resendInvite")}
-                      </button>
-                    )}
                     {u.totp_enabled && (
                       <button className="btn btn-sm btn-secondary" onClick={() => void action(u.id, "reset-2fa")}>
                         {t("admin.reset2fa")}
                       </button>
                     )}
-                    <button
-                      className="btn btn-sm btn-danger"
-                      onClick={() => void action(u.id, u.is_active ? "deactivate" : "activate")}
-                    >
-                      {u.is_active ? t("admin.deactivate") : t("admin.activate")}
-                    </button>
+                    {u.id !== me?.user.id && (
+                      <button
+                        className="btn btn-sm btn-danger"
+                        onClick={() => void action(u.id, u.is_active ? "deactivate" : "activate")}
+                      >
+                        {u.is_active ? t("admin.deactivate") : t("admin.activate")}
+                      </button>
+                    )}
                   </div>
                 </td>
               </tr>
@@ -402,39 +421,6 @@ function Staff() {
           </tbody>
         </table>
       </div>
-      <section className="card">
-        <h2>{t("admin.inviteStaff")}</h2>
-        <form className="form" onSubmit={(e) => void create(e)} style={{ maxWidth: 480 }}>
-          <label className="field">
-            <span>{t("fields.firstName")}</span>
-            <input required value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-          </label>
-          <label className="field">
-            <span>{t("fields.email")}</span>
-            <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-          </label>
-          <label className="field">
-            <span>{t("admin.role")}</span>
-            <select value={role} onChange={(e) => setRole(e.target.value as "tutor" | "admin")}>
-              <option value="tutor">{t("roles.tutor")}</option>
-              <option value="admin">{t("roles.admin")}</option>
-            </select>
-          </label>
-          <label className="field">
-            <span>{t("nav.language")}</span>
-            <select value={locale} onChange={(e) => setLocale(e.target.value as "en" | "de" | "fr")}>
-              <option value="en">English</option>
-              <option value="de">Deutsch</option>
-              <option value="fr">Français</option>
-            </select>
-          </label>
-          <label className="field">
-            <span>{t("admin.taggedCourses")}</span>
-            <input value={courses} onChange={(e) => setCourses(e.target.value)} placeholder="ib_maths_aa_hl, ib_physics_sl" />
-          </label>
-          <button className="btn btn-primary">{t("admin.sendInvite")}</button>
-        </form>
-      </section>
     </>
   );
 }
@@ -481,7 +467,7 @@ function Plans() {
         <table className="table table-stack">
           <thead>
             <tr>
-              <th>{t("parent.plan")}</th>
+              <th>{t("admin.plan")}</th>
               <th>{t("admin.monthlyLimit")}</th>
               <th>{t("admin.dailyLimit")}</th>
               <th>{t("admin.active")}</th>
@@ -491,7 +477,7 @@ function Plans() {
           <tbody>
             {rows.map((p) => (
               <tr key={p.key}>
-                <td data-label={t("parent.plan")}>
+                <td data-label={t("admin.plan")}>
                   {t(`plans.${p.key}.name`)} <span className="hint">({p.key})</span>
                 </td>
                 <td data-label={t("admin.monthlyLimit")}>

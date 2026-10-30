@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { post } from "../api";
+import { CANTONS, STUDY_LANGUAGES, post } from "../api";
 import ErrorText from "../components/ErrorText";
 import { shortLocale } from "../i18n";
 
@@ -9,11 +9,12 @@ const SITE = "https://swisssciencetutors.ch";
 
 export default function Signup() {
   const { t, i18n } = useTranslation();
-  const [accountType, setAccountType] = useState<"parent" | "adult">("parent");
   const [email, setEmail] = useState("");
+  const [canton, setCanton] = useState<string>("zh");
+  const [studyLanguage, setStudyLanguage] = useState<string>("en");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
-  const [guardian, setGuardian] = useState(false);
+  const [ageConfirmed, setAgeConfirmed] = useState(false);
   const [terms, setTerms] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<unknown>(null);
@@ -32,8 +33,9 @@ export default function Signup() {
         email,
         password,
         locale: shortLocale(i18n.language),
-        account_type: accountType,
-        guardian_confirmed: accountType === "parent" ? guardian : false,
+        study_language: studyLanguage,
+        canton,
+        age_confirmed: ageConfirmed,
         accept_terms: terms,
       });
       setDone(true);
@@ -64,13 +66,6 @@ export default function Signup() {
       <p className="small">{t("signup.intro")}</p>
       <form className="form" onSubmit={(e) => void submit(e)}>
         <label className="field">
-          <span>{t("signup.accountType")}</span>
-          <select value={accountType} onChange={(e) => setAccountType(e.target.value as "parent" | "adult")}>
-            <option value="parent">{t("signup.typeParent")}</option>
-            <option value="adult">{t("signup.typeAdult")}</option>
-          </select>
-        </label>
-        <label className="field">
           <span>{t("fields.email")}</span>
           <input type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </label>
@@ -96,12 +91,32 @@ export default function Signup() {
             onChange={(e) => setConfirm(e.target.value)}
           />
         </label>
-        {accountType === "parent" && (
-          <label className="check">
-            <input type="checkbox" checked={guardian} onChange={(e) => setGuardian(e.target.checked)} required />
-            <span>{t("signup.guardian")}</span>
-          </label>
-        )}
+        <label className="field">
+          <span>{t("fields.canton")}</span>
+          <select value={canton} onChange={(e) => setCanton(e.target.value)}>
+            {CANTONS.map((c) => (
+              <option key={c} value={c}>
+                {t(`cantons.${c}`)}
+              </option>
+            ))}
+          </select>
+          <span className="hint">{t("signup.cantonHint")}</span>
+        </label>
+        <label className="field">
+          <span>{t("fields.studyLanguage")}</span>
+          <select value={studyLanguage} onChange={(e) => setStudyLanguage(e.target.value)}>
+            {STUDY_LANGUAGES.map((l) => (
+              <option key={l} value={l}>
+                {t(`languages.${l}`)}
+              </option>
+            ))}
+          </select>
+          <span className="hint">{t("signup.studyLanguageHint")}</span>
+        </label>
+        <label className="check">
+          <input type="checkbox" checked={ageConfirmed} onChange={(e) => setAgeConfirmed(e.target.checked)} required />
+          <span>{t("signup.ageConfirm")}</span>
+        </label>
         <label className="check">
           <input type="checkbox" checked={terms} onChange={(e) => setTerms(e.target.checked)} required />
           <span>

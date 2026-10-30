@@ -1,4 +1,4 @@
-"""Student practice API: diagnostic, next question, attempts, check questions, reports."""
+"""Learner practice API: diagnostic, next question, attempts, check questions, reports."""
 
 from __future__ import annotations
 
@@ -10,22 +10,19 @@ from pydantic import BaseModel, Field
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.billing.access import FULL, compute_access
+from app.billing.access import has_access
 from app.config import get_settings
 from app.db import get_db, utcnow
-from app.deps import require_roles
+from app.deps import require_learner
 from app.llm import prompts
 from app.models import (
     ATTEMPT_CHECK,
     ATTEMPT_DIAGNOSTIC,
     ATTEMPT_PRACTICE,
     Q_NEEDS_REVIEW,
-    ROLE_ADULT,
-    ROLE_STUDENT,
     Attempt,
     Conversation,
     DiagnosticRun,
-    Family,
     Question,
     QuestionReport,
     User,
@@ -33,7 +30,6 @@ from app.models import (
 from app.questions import bank, mastery
 
 router = APIRouter(prefix="/api/practice", tags=["practice"])
-require_learner = require_roles(ROLE_STUDENT, ROLE_ADULT)
 
 
 class DiagnosticStart(BaseModel):
@@ -54,13 +50,12 @@ class ReportIn(BaseModel):
 
 
 async def _full_access(db: AsyncSession, user: User) -> None:
-    family = await db.get(Family, user.family_id) if user.family_id else None
-    if compute_access(family) != FULL:
+    if not has_access(user, user.canton):
         raise HTTPException(status.HTTP_403_FORBIDDEN, "no_access")
 
 
 def _own_course(user: User, course_key: str) -> None:
-    if course_key not in (user.courses or []) or not prompts.has_course_module(course_key):
+    if not prompts.has_course_module(course_key):
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_course")
 
 
@@ -121,7 +116,7 @@ async def get_diagnostic(
     run_id: uuid.UUID, user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
 ) -> dict[str, Any]:
     run = await db.get(DiagnosticRun, run_id)
-    if run is None or run.student_id != user.id:
+    if run is None or run.user_id != user.id:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
     out = _diagnostic_out(run, await bank.diagnostic_current(db, run), user.locale)
     if run.status in ("done", "skipped"):
@@ -136,7 +131,7 @@ async def skip_diagnostic(
     run_id: uuid.UUID, user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
 ) -> dict[str, Any]:
     run = await db.get(DiagnosticRun, run_id)
-    if run is None or run.student_id != user.id:
+    if run is None or run.user_id != user.id:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
     if run.status == "in_progress":
         run.status = "skipped"
@@ -168,7 +163,7 @@ async def practice_round(
     db: AsyncSession = Depends(get_db),
 ) -> dict[str, Any]:
     """A short round of distinct practice questions on one topic, with the count up front so
-    the student knows how many are to go."""
+    the learner knows how many are to go."""
     _own_course(user, course_key)
     await _full_access(db, user)
     size = get_settings().practice_round_size
@@ -199,7 +194,7 @@ async def check_questions(
 ) -> dict[str, Any]:
     """Two or three questions on the conversation's topic, to check what was learnt."""
     conv = await db.get(Conversation, conversation_id)
-    if conv is None or conv.student_id != user.id:
+    if conv is None or conv.user_id != user.id:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
     await _full_access(db, user)
     qs = await bank.next_question(db, user, conv.course_key, conv.topic_code, n=3)
@@ -226,7 +221,7 @@ async def submit_attempt(
         if body.diagnostic_id is None:
             raise HTTPException(status.HTTP_400_BAD_REQUEST, "diagnostic_required")
         run = await db.get(DiagnosticRun, body.diagnostic_id)
-        if run is None or run.student_id != user.id or run.status != "in_progress":
+        if run is None or run.user_id != user.id or run.status != "in_progress":
             raise HTTPException(status.HTTP_409_CONFLICT, "diagnostic_not_active")
         if run.question_ids[run.position] != str(q.id):
             raise HTTPException(status.HTTP_409_CONFLICT, "wrong_question")
@@ -235,13 +230,17 @@ async def submit_attempt(
         if body.conversation_id is None:
             raise HTTPException(status.HTTP_400_BAD_REQUEST, "conversation_required")
         conv = await db.get(Conversation, body.conversation_id)
-        if conv is None or conv.student_id != user.id:
+        if conv is None or conv.user_id != user.id:
             raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
         course_key = conv.course_key
     if not course_key:
-        # Practice: find the student's course that uses this module
+        # Practice: find the course that uses this module
         course_key = next(
-            (c for c in (user.courses or []) if prompts.course_module_key(c) == q.module_key),
+            (
+                c
+                for c in prompts.available_courses()
+                if prompts.course_module_key(c) == q.module_key
+            ),
             None,
         )
         if course_key is None:
@@ -315,7 +314,7 @@ async def list_attempts(
 ) -> list[dict[str, Any]]:
     stmt = (
         select(Attempt)
-        .where(Attempt.student_id == user.id)
+        .where(Attempt.user_id == user.id)
         .order_by(Attempt.created_at.desc())
         .limit(100)
     )
@@ -346,7 +345,7 @@ async def report_question(
     q = await db.get(Question, question_id)
     if q is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
-    db.add(QuestionReport(question_id=q.id, student_id=user.id, comment=body.comment))
+    db.add(QuestionReport(question_id=q.id, user_id=user.id, comment=body.comment))
     q.report_count += 1
     # After two reports the question is hidden until a tutor has looked at it (plan).
     if q.report_count >= 2 and q.status in bank.servable_statuses():

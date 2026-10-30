@@ -1,4 +1,4 @@
-"""Student-facing tutor API: courses and topics, conversations, streaming replies.
+"""Learner-facing tutor API: courses and topics, conversations, streaming replies.
 
 Replies stream as server-sent events over a POST:
 
@@ -24,11 +24,10 @@ from pydantic import BaseModel, Field
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.billing.access import FULL, compute_access
+from app.billing.access import access_level, has_access
 from app.config import get_settings
 from app.db import SessionLocal, get_db, utcnow
-from app.deps import require_roles
-from app.jobs import send_email_job
+from app.deps import require_learner
 from app.llm import prompts, service
 from app.llm.client import get_provider
 from app.models import (
@@ -38,13 +37,8 @@ from app.models import (
     MESSAGE_ASSISTANT,
     MESSAGE_NOTICE,
     MESSAGE_USER,
-    ROLE_ADMIN,
-    ROLE_ADULT,
-    ROLE_STUDENT,
     Conversation,
-    Family,
     Message,
-    SafetyFlag,
     TopicMastery,
     User,
 )
@@ -55,7 +49,6 @@ from app.tutoring.limits import UsageInfo, usage_for
 log = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/tutor", tags=["tutor"])
-require_learner = require_roles(ROLE_STUDENT, ROLE_ADULT)
 
 OFF_TOPIC_STREAK_LIMIT = 3
 
@@ -143,15 +136,11 @@ def _conversation_out(c: Conversation, locale: str) -> ConversationOut:
     )
 
 
-async def _family(db: AsyncSession, user: User) -> Family | None:
-    return await db.get(Family, user.family_id) if user.family_id else None
-
-
 async def _own_conversation(
     db: AsyncSession, user: User, conversation_id: uuid.UUID
 ) -> Conversation:
     conv = await db.get(Conversation, conversation_id)
-    if conv is None or conv.student_id != user.id:
+    if conv is None or conv.user_id != user.id:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
     return conv
 
@@ -167,14 +156,13 @@ def _sse(event: str, data: dict[str, Any]) -> str:
 async def overview(
     user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
 ) -> dict[str, Any]:
-    family = await _family(db, user)
-    courses = [c for c in (_course_out(k, user.locale) for k in (user.courses or [])) if c]
-    usage = await usage_for(db, user, family)
+    courses = [c for c in (_course_out(k, user.locale) for k in prompts.available_courses()) if c]
+    usage = await usage_for(db, user)
     recent = (
         (
             await db.execute(
                 select(Conversation)
-                .where(Conversation.student_id == user.id)
+                .where(Conversation.user_id == user.id)
                 .order_by(Conversation.last_activity_at.desc())
                 .limit(10)
             )
@@ -185,21 +173,11 @@ async def overview(
     return {
         "tutor_name": get_settings().tutor_name,
         "tutor_enabled": get_provider().available,
-        "access": compute_access(family),
-        "notice_seen": user.tutor_notice_seen_at is not None,
+        "access": access_level(user),
         "courses": [c.model_dump() for c in courses],
         "usage": usage.to_dict(),
         "recent": [_conversation_out(c, user.locale).model_dump(mode="json") for c in recent],
     }
-
-
-@router.post("/notice-seen", status_code=status.HTTP_204_NO_CONTENT)
-async def notice_seen(
-    user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
-) -> None:
-    if user.tutor_notice_seen_at is None:
-        user.tutor_notice_seen_at = utcnow()
-        await db.commit()
 
 
 @router.post("/conversations", response_model=ConversationOut, status_code=status.HTTP_201_CREATED)
@@ -208,12 +186,9 @@ async def create_conversation(
     user: User = Depends(require_learner),
     db: AsyncSession = Depends(get_db),
 ) -> ConversationOut:
-    family = await _family(db, user)
-    if compute_access(family) != FULL:
+    if not has_access(user, user.canton):
         raise HTTPException(status.HTTP_403_FORBIDDEN, "no_access")
-    if body.course_key not in (user.courses or []) or not prompts.has_course_module(
-        body.course_key
-    ):
+    if not prompts.has_course_module(body.course_key):
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_course")
     info = prompts.course_info(prompts.course_module_key(body.course_key))
     assert info is not None
@@ -223,7 +198,7 @@ async def create_conversation(
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_topic")
     language = body.language or (user.locale if user.locale in LOCALES else "en")
     conv = Conversation(
-        student_id=user.id,
+        user_id=user.id,
         course_key=body.course_key,
         topic_code=topic.code,
         topic_name=topic.display(language),
@@ -244,7 +219,7 @@ async def list_conversations(
         (
             await db.execute(
                 select(Conversation)
-                .where(Conversation.student_id == user.id)
+                .where(Conversation.user_id == user.id)
                 .order_by(Conversation.last_activity_at.desc())
                 .limit(50)
             )
@@ -307,15 +282,14 @@ async def send_message(
         raise HTTPException(status.HTTP_409_CONFLICT, "conversation_ended")
     if not get_provider().available:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "tutor_unavailable")
-    family = await _family(db, user)
-    if compute_access(family) != FULL:
+    if not has_access(user, user.canton):
         raise HTTPException(status.HTTP_403_FORBIDDEN, "no_access")
     text = body.content.strip()
     if not text:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "empty_message")
     if len(text) > settings.max_student_message_chars:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "message_too_long")
-    usage = await usage_for(db, user, family)
+    usage = await usage_for(db, user)
     if usage.monthly_exhausted:
         raise HTTPException(status.HTTP_429_TOO_MANY_REQUESTS, "monthly_limit_reached")
     if usage.daily_exhausted:
@@ -360,7 +334,7 @@ def _add_message(
 ) -> Message:
     msg = Message(
         conversation_id=conv.id,
-        student_id=conv.student_id,
+        user_id=conv.user_id,
         seq=conv.next_seq,
         role=role,
         content=content,
@@ -370,30 +344,6 @@ def _add_message(
     conv.last_activity_at = utcnow()
     db.add(msg)
     return msg
-
-
-async def _notify_safeguarding(db: AsyncSession, flag: SafetyFlag) -> None:
-    settings = get_settings()
-    link = settings.app_base_url.rstrip("/") + "/admin?tab=safety"
-    if settings.safeguarding_email:
-        recipients = [(settings.safeguarding_email, "en")]
-    else:
-        admins = (
-            (
-                await db.execute(
-                    select(User).where(
-                        User.role == ROLE_ADMIN, User.is_active.is_(True), User.email.is_not(None)
-                    )
-                )
-            )
-            .scalars()
-            .all()
-        )
-        recipients = [(a.email, a.locale) for a in admins if a.email]
-    for to, locale in recipients:
-        await send_email_job(
-            "safeguarding_alert", locale, to, link=link, reason=flag.detail or flag.kind
-        )
 
 
 async def _maybe_summarise(db: AsyncSession, conv: Conversation) -> None:
@@ -418,11 +368,11 @@ async def _maybe_summarise(db: AsyncSession, conv: Conversation) -> None:
         return
     fold = rows[: len(rows) - keep]
     transcript = "\n".join(
-        f"{'Student' if m.role == MESSAGE_USER else 'Tutor'}: {m.content}" for m in fold
+        f"{'Learner' if m.role == MESSAGE_USER else 'Tutor'}: {m.content}" for m in fold
     )
     summary = await service.summarise(
         db,
-        student_id=conv.student_id,
+        user_id=conv.user_id,
         conversation_id=conv.id,
         previous_summary=conv.summary,
         transcript=transcript,
@@ -433,15 +383,14 @@ async def _maybe_summarise(db: AsyncSession, conv: Conversation) -> None:
 
 
 async def _reply_stream(
-    conversation_id: uuid.UUID, student_id: uuid.UUID, text: str
+    conversation_id: uuid.UUID, user_id: uuid.UUID, text: str
 ) -> AsyncIterator[str]:
     async with SessionLocal() as db:
         conv = await db.get(Conversation, conversation_id)
-        student = await db.get(User, student_id)
-        if conv is None or student is None:
+        learner = await db.get(User, user_id)
+        if conv is None or learner is None:
             yield _sse("error", {"code": "not_found"})
             return
-        family = await db.get(Family, student.family_id) if student.family_id else None
         locale = conv.language
 
         previous_assistant = (
@@ -458,7 +407,7 @@ async def _reply_stream(
 
         gate = await service.classify_message(
             db,
-            student_id=student.id,
+            user_id=learner.id,
             conversation_id=conv.id,
             text=text,
             course_key=conv.course_key,
@@ -471,16 +420,6 @@ async def _reply_stream(
         if gate.label in (service.GATE_OFF_TOPIC, service.GATE_OVERRIDE):
             user_msg.counted = True  # counts towards the daily cap
             conv.off_topic_streak += 1
-            if gate.label == service.GATE_OVERRIDE or gate.coursework:
-                db.add(
-                    SafetyFlag(
-                        student_id=student.id,
-                        conversation_id=conv.id,
-                        message_id=user_msg.id,
-                        kind="override",
-                        detail="coursework" if gate.coursework else "override",
-                    )
-                )
             ended = conv.off_topic_streak >= OFF_TOPIC_STREAK_LIMIT
             reply_kind = "ended_off_topic" if ended else gate.label
             reply = prompts.fixed_reply(reply_kind, locale)
@@ -495,7 +434,7 @@ async def _reply_stream(
             )
             if ended:
                 yield _sse("notice", {"kind": "ended"})
-            usage = await usage_for(db, student, family)
+            usage = await usage_for(db, learner)
             yield _sse("usage", usage.to_dict())
             yield _sse("done", {})
             return
@@ -514,29 +453,19 @@ async def _reply_stream(
                 "instructions: respond with care, give the helpline 147, and do not continue "
                 "tutoring in this reply."
             )
-            flag = SafetyFlag(
-                student_id=student.id,
-                conversation_id=conv.id,
-                message_id=user_msg.id,
-                kind="wellbeing",
-                detail=gate.wellbeing,
-            )
-            db.add(flag)
-            await db.flush()
-            await _notify_safeguarding(db, flag)
             yield _sse("notice", {"kind": "wellbeing"})
         await db.commit()
 
         topic_mastery = (
             await db.execute(
                 select(TopicMastery).where(
-                    TopicMastery.student_id == student.id,
+                    TopicMastery.user_id == learner.id,
                     TopicMastery.course_key == conv.course_key,
                     TopicMastery.topic_code == conv.topic_code,
                 )
             )
         ).scalar_one_or_none()
-        misses = await bank.recent_misses(db, student.id, conv.course_key, conv.topic_code)
+        misses = await bank.recent_misses(db, learner.id, conv.course_key, conv.topic_code)
         ctx = service.TutorContext(
             course_key=conv.course_key,
             language=locale,
@@ -563,7 +492,7 @@ async def _reply_stream(
             code = outcome.error.code if outcome and outcome.error else "api"
             await service.record_call(
                 db,
-                student_id=student.id,
+                user_id=learner.id,
                 conversation_id=conv.id,
                 purpose=service.PURPOSE_REPLY,
                 model=settings.tutor_model,
@@ -582,7 +511,7 @@ async def _reply_stream(
         assert completion is not None
         await service.record_call(
             db,
-            student_id=student.id,
+            user_id=learner.id,
             conversation_id=conv.id,
             purpose=service.PURPOSE_REPLY,
             model=completion.model,
@@ -608,7 +537,7 @@ async def _reply_stream(
         yield _sse(
             "message", {"id": str(assistant.id), "role": MESSAGE_ASSISTANT, "content": reply_text}
         )
-        usage: UsageInfo = await usage_for(db, student, family)
+        usage: UsageInfo = await usage_for(db, learner)
         yield _sse("usage", usage.to_dict())
         yield _sse("done", {})
 

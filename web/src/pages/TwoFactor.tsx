@@ -56,7 +56,7 @@ export default function TwoFactor({ mode }: { mode: "verify" | "setup" }) {
       <h1>{mode === "setup" ? t("twofa.setupTitle") : t("twofa.verifyTitle")}</h1>
       {mode === "setup" && (
         <>
-          <p className="small">{me.user.role === "tutor" || me.user.role === "admin" ? t("twofa.requiredStaff") : t("twofa.optional")}</p>
+          <p className="small">{me.user.role === "admin" ? t("twofa.requiredStaff") : t("twofa.optional")}</p>
           <p className="small">{t("twofa.setupSteps")}</p>
           {qr && <img className="qr" src={qr} alt={t("twofa.qrAlt")} />}
           {setup && <code className="secret">{setup.secret}</code>}

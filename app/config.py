@@ -16,7 +16,6 @@ class Settings(BaseSettings):
     app_env: Literal["dev", "test", "staging", "production"] = "dev"
     secret_key: str = Field(default="dev-only-change-me", min_length=16)
     app_base_url: str = "http://localhost:5173"
-    main_site_url: str = "https://swisssciencetutors.ch"
     log_level: str = "INFO"
     sentry_dsn: str = ""
 
@@ -28,8 +27,8 @@ class Settings(BaseSettings):
     # Sessions and security
     session_cookie_name: str = "sst_session"
     csrf_cookie_name: str = "sst_csrf"
-    session_ttl_hours: int = 24 * 14  # parents, students, adult learners
-    staff_session_ttl_hours: int = 12  # tutors and admin
+    session_ttl_hours: int = 24 * 14  # learners
+    staff_session_ttl_hours: int = 12  # admins
     cookie_secure: bool | None = None  # None means secure unless app_env is dev or test
     terms_version: str = "2026-10-draft"
     login_rate_limit: int = 10  # attempts per window per identifier and per IP
@@ -52,12 +51,6 @@ class Settings(BaseSettings):
     smtp_password: str = ""
     smtp_starttls: bool = True
 
-    # Photo storage (Phase 1)
-    s3_endpoint: str = ""
-    s3_bucket: str = ""
-    s3_access_key: str = ""
-    s3_secret_key: str = ""
-
     # AI tutor. Every call goes through app/llm; an empty key disables the tutor.
     anthropic_api_key: str = ""
     llm_fake: bool = False  # dev and test only: canned replies, no provider call
@@ -72,8 +65,7 @@ class Settings(BaseSettings):
     prompts_dir: str = "prompts"
     usd_chf_rate: float = 0.80  # for cost logging only; update occasionally
     ai_monthly_budget_chf: float = 300
-    ai_student_alert_chf: float = 8
-    safeguarding_email: str = ""  # empty: every admin account is notified
+    ai_learner_alert_chf: float = 8
     max_student_message_chars: int = 2000
     serve_unreviewed_questions: bool = False  # staging/dev: also serve auto_verified
     question_spot_check_first: int = 50
@@ -81,11 +73,6 @@ class Settings(BaseSettings):
     diagnostic_questions_per_topic: int = 2
     practice_round_size: int = 5
     conversation_window_turns: int = 20
-
-    # Other providers (later phases)
-    screening_api_key: str = ""
-    tutorcruncher_api_key: str = ""
-    tutorcruncher_sso_key: str = ""
 
     @field_validator("tutor_model", "fast_model", "tutor_effort", mode="before")
     @classmethod

@@ -2,7 +2,7 @@
 summaries, and cost logging with alerts. Callers never see the SDK.
 
 Data sent to the provider: course context, topic, the conversation and photos. Never a name,
-email, username or any identifier; `student_id` is used only in our own cost log."""
+email, username or any identifier; `user_id` is used only in our own cost log."""
 
 from __future__ import annotations
 
@@ -138,7 +138,7 @@ def build_system(ctx: TutorContext) -> list[dict[str, Any]]:
 async def record_call(
     db: AsyncSession,
     *,
-    student_id: Any | None,
+    user_id: Any | None,
     conversation_id: Any | None,
     purpose: str,
     model: str,
@@ -157,7 +157,7 @@ async def record_call(
         cache_write_tokens=usage.cache_write_tokens,
     )
     row = LlmCall(
-        student_id=student_id,
+        user_id=user_id,
         conversation_id=conversation_id,
         purpose=purpose,
         model=model,
@@ -173,8 +173,8 @@ async def record_call(
     )
     db.add(row)
     await db.flush()
-    if student_id is not None and usd > 0:
-        await check_cost_alerts(db, student_id)
+    if user_id is not None and usd > 0:
+        await check_cost_alerts(db, user_id)
     return row
 
 
@@ -183,19 +183,16 @@ def month_start(now: datetime | None = None) -> datetime:
     return now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
 
 
-async def month_cost_chf(db: AsyncSession, student_id: Any | None = None) -> float:
+async def month_cost_chf(db: AsyncSession, user_id: Any | None = None) -> float:
     stmt = select(func.coalesce(func.sum(LlmCall.cost_chf), 0.0)).where(
         LlmCall.created_at >= month_start()
     )
-    if student_id is not None:
-        stmt = stmt.where(LlmCall.student_id == student_id)
+    if user_id is not None:
+        stmt = stmt.where(LlmCall.user_id == user_id)
     return float((await db.execute(stmt)).scalar_one())
 
 
 async def _admin_recipients(db: AsyncSession) -> list[tuple[str, str]]:
-    settings = get_settings()
-    if settings.safeguarding_email:
-        return [(settings.safeguarding_email, "en")]
     rows = (
         (
             await db.execute(
@@ -239,17 +236,17 @@ async def _alert_once(
     return True
 
 
-async def check_cost_alerts(db: AsyncSession, student_id: Any) -> None:
+async def check_cost_alerts(db: AsyncSession, user_id: Any) -> None:
     settings = get_settings()
-    if settings.ai_student_alert_chf > 0:
-        spent = await month_cost_chf(db, student_id)
-        if spent >= settings.ai_student_alert_chf:
+    if settings.ai_learner_alert_chf > 0:
+        spent = await month_cost_chf(db, user_id)
+        if spent >= settings.ai_learner_alert_chf:
             await _alert_once(
                 db,
-                kind="student",
-                scope=str(student_id),
+                kind="learner",
+                scope=str(user_id),
                 amount_chf=spent,
-                threshold_chf=settings.ai_student_alert_chf,
+                threshold_chf=settings.ai_learner_alert_chf,
             )
     if settings.ai_monthly_budget_chf > 0:
         total = await month_cost_chf(db)
@@ -269,7 +266,7 @@ async def check_cost_alerts(db: AsyncSession, student_id: Any) -> None:
 async def classify_message(
     db: AsyncSession,
     *,
-    student_id: Any,
+    user_id: Any,
     conversation_id: Any,
     text: str,
     course_key: str,
@@ -304,7 +301,7 @@ async def classify_message(
     except LLMError:
         await record_call(
             db,
-            student_id=student_id,
+            user_id=user_id,
             conversation_id=conversation_id,
             purpose=PURPOSE_GATE,
             model=settings.fast_model,
@@ -316,7 +313,7 @@ async def classify_message(
         return GateResult(label=GATE_ON_TOPIC, failed_open=True)
     await record_call(
         db,
-        student_id=student_id,
+        user_id=user_id,
         conversation_id=conversation_id,
         purpose=PURPOSE_GATE,
         model=completion.model,
@@ -379,7 +376,7 @@ async def stream_reply(
 async def summarise(
     db: AsyncSession,
     *,
-    student_id: Any,
+    user_id: Any,
     conversation_id: Any,
     previous_summary: str | None,
     transcript: str,
@@ -414,7 +411,7 @@ async def summarise(
     except LLMError:
         await record_call(
             db,
-            student_id=student_id,
+            user_id=user_id,
             conversation_id=conversation_id,
             purpose=PURPOSE_SUMMARY,
             model=settings.fast_model,
@@ -426,7 +423,7 @@ async def summarise(
         return None
     await record_call(
         db,
-        student_id=student_id,
+        user_id=user_id,
         conversation_id=conversation_id,
         purpose=PURPOSE_SUMMARY,
         model=completion.model,
