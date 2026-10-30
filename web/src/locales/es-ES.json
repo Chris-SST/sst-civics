@@ -3,7 +3,8 @@
     "language": "Idioma",
     "logout": "Cerrar sesión",
     "login": "Iniciar sesión",
-    "signup": "Crear cuenta"
+    "signup": "Crear cuenta",
+    "account": "Cuenta"
   },
   "roles": {
     "admin": "Administrador",
@@ -84,7 +85,12 @@
     "conversation_required": "Abra la comprobación desde una sesión con el tutor.",
     "invalid_difficulty": "La dificultad debe estar entre 1 y 5.",
     "age_confirmation_required": "Confirme que tiene 16 años o más.",
-    "invalid_canton": "Elija un cantón de la lista."
+    "invalid_canton": "Elija un cantón de la lista.",
+    "wrong_password": "Esa contraseña no es correcta.",
+    "no_password": "Su cuenta no tiene contraseña.",
+    "password_required_for_admins": "Las cuentas de administrador deben conservar una contraseña.",
+    "reauth_required": "Confirme que es usted: introduzca su contraseña o abra un nuevo enlace de acceso.",
+    "not_while_impersonating": "Esto no es posible mientras se visualiza como otro usuario."
   },
   "impersonation": {
     "banner": "Viendo como {{name}} ({{role}}). Ha iniciado sesión como administrador {{admin}}.",
@@ -134,7 +140,11 @@
     "checkEmailBody": "Hemos enviado un enlace de confirmación a {{email}}. Ábralo en un plazo de 24 horas para activar su cuenta.",
     "ageConfirm": "Tengo 16 años o más",
     "cantonHint": "El cantón en el que hará el examen. Podrá cambiarlo más adelante.",
-    "studyLanguageHint": "El idioma en el que quiere entender primero las preguntas y las respuestas."
+    "studyLanguageHint": "El idioma en el que quiere entender primero las preguntas y las respuestas.",
+    "interfaceLanguageHint": "El idioma de los menús y botones. Donde falte una traducción, se mostrará el inglés.",
+    "withPassword": "Establezca también una contraseña (opcional)",
+    "passwordOptionalHint": "Sin contraseña, accede con un enlace que le enviamos por correo electrónico. Más adelante podrá añadir o quitar una contraseña en su cuenta.",
+    "checkEmailSignIn": "El enlace también inicia su sesión."
   },
   "fields": {
     "email": "Correo electrónico",
@@ -143,12 +153,15 @@
     "confirmPassword": "Repita la contraseña",
     "newPassword": "Nueva contraseña",
     "canton": "Cantón",
-    "studyLanguage": "Idioma de estudio"
+    "studyLanguage": "Idioma de estudio",
+    "interfaceLanguage": "Idioma de la interfaz"
   },
   "verify": {
     "title": "Confirmando su correo electrónico",
     "ok": "Su dirección de correo electrónico está confirmada. Ya puede iniciar sesión.",
-    "retryHint": "Inicie sesión y solicite un nuevo enlace de confirmación si el suyo ha caducado."
+    "retryHint": "Inicie sesión y solicite un nuevo enlace de confirmación si el suyo ha caducado.",
+    "signedIn": "Su dirección de correo electrónico está confirmada y ha iniciado sesión.",
+    "continue": "Continuar"
   },
   "login": {
     "title": "Iniciar sesión",
@@ -156,7 +169,16 @@
     "forgot": "¿Ha olvidado su contraseña?",
     "noAccount": "¿Es nuevo aquí?",
     "resend": "Enviar de nuevo el correo de confirmación",
-    "resent": "Enviado. Revise su bandeja de entrada."
+    "resent": "Enviado. Revise su bandeja de entrada.",
+    "linkIntro": "Introduzca su dirección de correo electrónico y le enviaremos un enlace de acceso. Funciona una sola vez, durante 15 minutos.",
+    "sendLink": "Enviarme un enlace de acceso",
+    "usePassword": "Iniciar sesión con contraseña",
+    "useLink": "Iniciar sesión con un enlace por correo",
+    "checkEmailTitle": "Revise su correo electrónico",
+    "checkEmailBody": "Si existe una cuenta para {{email}}, un enlace de acceso va de camino. Ábralo en un plazo de 15 minutos, en este dispositivo o en otro.",
+    "checkEmailHint": "¿No ha llegado nada? Revise su carpeta de spam o cree una cuenta si todavía no tiene una.",
+    "sendAgain": "Enviar el enlace de nuevo",
+    "otherAddress": "Usar otra dirección"
   },
   "forgot": {
     "title": "Restablezca su contraseña",
@@ -507,6 +529,42 @@
   "languages": {
     "en": "Inglés",
     "de": "Alemán",
-    "fr": "Francés"
+    "fr": "Francés",
+    "it": "Italiano",
+    "pt": "Portugués",
+    "es": "Español",
+    "sq": "Albanés",
+    "tr": "Turco"
+  },
+  "linkSignIn": {
+    "title": "Iniciando su sesión",
+    "retryHint": "Los enlaces de acceso funcionan una sola vez y durante 15 minutos. Solicite uno nuevo.",
+    "newLink": "Obtener un nuevo enlace"
+  },
+  "account": {
+    "title": "Su cuenta",
+    "profileTitle": "Idiomas y cantón",
+    "saved": "Guardado.",
+    "passwordTitle": "Contraseña",
+    "passwordOn": "Puede iniciar sesión con su contraseña o con un enlace por correo.",
+    "passwordOff": "Inicia sesión con un enlace por correo. Si lo prefiere, puede añadir una contraseña.",
+    "currentPassword": "Contraseña actual",
+    "setPassword": "Establecer contraseña",
+    "changePassword": "Cambiar contraseña",
+    "removeIntro": "Quite su contraseña para iniciar sesión solo con enlaces por correo.",
+    "removePassword": "Quitar contraseña",
+    "passwordSaved": "Su contraseña se ha guardado. Se ha cerrado la sesión en los demás dispositivos.",
+    "passwordRemoved": "Su contraseña se ha quitado. A partir de ahora inicie sesión con un enlace por correo.",
+    "deleteTitle": "Eliminar cuenta",
+    "deleteIntro": "Esto elimina su cuenta, su progreso, sus respuestas, sus conversaciones con el tutor y sus informes de preguntas. No se puede deshacer.",
+    "deleteKept": "Los registros de facturación de los pagos que realizó se conservan durante el tiempo que exija la ley, sin su dirección de correo electrónico. Le enviamos un correo de confirmación.",
+    "reauthFresh": "Inició sesión con un enlace por correo hace unos minutos, por lo que no necesita la contraseña.",
+    "reauthEither": "Introduzca su contraseña o confirme con un nuevo enlace de acceso.",
+    "reauthLink": "Para confirmar que es usted, abra un nuevo enlace de acceso y vuelva a esta página en un plazo de 10 minutos.",
+    "reauthLinkSent": "Le hemos enviado un enlace de acceso. Ábralo y después elimine su cuenta en un plazo de 10 minutos.",
+    "deleteConfirm": "Entiendo que mi cuenta y mis datos de aprendizaje se eliminarán definitivamente.",
+    "deleteSubmit": "Eliminar mi cuenta",
+    "deletedTitle": "Su cuenta se ha eliminado",
+    "deletedBody": "Su cuenta y sus datos de aprendizaje se han eliminado. Le hemos enviado un correo de confirmación."
   }
 }

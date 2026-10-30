@@ -3,7 +3,8 @@
     "language": "Lingua",
     "logout": "Esci",
     "login": "Accedi",
-    "signup": "Crea un account"
+    "signup": "Crea un account",
+    "account": "Account"
   },
   "roles": {
     "admin": "Amministratore",
@@ -84,7 +85,12 @@
     "conversation_required": "Apra la verifica da una sessione con il tutor.",
     "invalid_difficulty": "Il livello di difficoltà deve essere compreso tra 1 e 5.",
     "age_confirmation_required": "Confermi di avere almeno 16 anni.",
-    "invalid_canton": "Scelga un cantone dall'elenco."
+    "invalid_canton": "Scelga un cantone dall'elenco.",
+    "wrong_password": "La password non è corretta.",
+    "no_password": "Il Suo account non ha una password.",
+    "password_required_for_admins": "Gli account amministratore devono mantenere una password.",
+    "reauth_required": "Confermi la Sua identità: inserisca la password o apra un nuovo link di accesso.",
+    "not_while_impersonating": "Questa operazione non è possibile durante la visualizzazione come un altro utente."
   },
   "impersonation": {
     "banner": "Visualizzazione come {{name}} ({{role}}). Ha effettuato l'accesso come amministratore {{admin}}.",
@@ -134,7 +140,11 @@
     "checkEmailBody": "Abbiamo inviato un link di conferma a {{email}}. Lo apra entro 24 ore per attivare il Suo account.",
     "ageConfirm": "Ho almeno 16 anni",
     "cantonHint": "Il cantone in cui sosterrà il test. Potrà modificarlo in seguito.",
-    "studyLanguageHint": "La lingua in cui desidera comprendere dapprima le domande e le risposte."
+    "studyLanguageHint": "La lingua in cui desidera comprendere dapprima le domande e le risposte.",
+    "interfaceLanguageHint": "La lingua di menu e pulsanti. Dove manca una traduzione, viene mostrato l'inglese.",
+    "withPassword": "Imposti anche una password (facoltativo)",
+    "passwordOptionalHint": "Senza password accede con un link che Le inviamo per e-mail. Potrà aggiungere o rimuovere una password in seguito nel Suo account.",
+    "checkEmailSignIn": "Il link Le consente anche di accedere."
   },
   "fields": {
     "email": "Indirizzo e-mail",
@@ -143,12 +153,15 @@
     "confirmPassword": "Ripeta la password",
     "newPassword": "Nuova password",
     "canton": "Cantone",
-    "studyLanguage": "Lingua di studio"
+    "studyLanguage": "Lingua di studio",
+    "interfaceLanguage": "Lingua dell'interfaccia"
   },
   "verify": {
     "title": "Conferma del Suo indirizzo e-mail",
     "ok": "Il Suo indirizzo e-mail è stato confermato. Ora può accedere.",
-    "retryHint": "Acceda e richieda un nuovo link di conferma se il Suo è scaduto."
+    "retryHint": "Acceda e richieda un nuovo link di conferma se il Suo è scaduto.",
+    "signedIn": "Il Suo indirizzo e-mail è confermato e ha effettuato l'accesso.",
+    "continue": "Continua"
   },
   "login": {
     "title": "Accedi",
@@ -156,7 +169,16 @@
     "forgot": "Ha dimenticato la password?",
     "noAccount": "È la prima volta?",
     "resend": "Invia di nuovo l'e-mail di conferma",
-    "resent": "Inviata. Controlli la Sua casella di posta."
+    "resent": "Inviata. Controlli la Sua casella di posta.",
+    "linkIntro": "Inserisca il Suo indirizzo e-mail e Le invieremo un link di accesso. Funziona una sola volta, per 15 minuti.",
+    "sendLink": "Mi invii un link di accesso",
+    "usePassword": "Acceda invece con una password",
+    "useLink": "Acceda invece con un link via e-mail",
+    "checkEmailTitle": "Controlli la Sua e-mail",
+    "checkEmailBody": "Se esiste un account per {{email}}, un link di accesso è in arrivo. Lo apra entro 15 minuti su questo dispositivo o su un altro.",
+    "checkEmailHint": "Non è arrivato nulla? Controlli la cartella dello spam oppure crei un account se non ne ha ancora uno.",
+    "sendAgain": "Invii di nuovo il link",
+    "otherAddress": "Usi un altro indirizzo"
   },
   "forgot": {
     "title": "Reimposti la password",
@@ -507,6 +529,42 @@
   "languages": {
     "en": "Inglese",
     "de": "Tedesco",
-    "fr": "Francese"
+    "fr": "Francese",
+    "it": "Italiano",
+    "pt": "Portoghese",
+    "es": "Spagnolo",
+    "sq": "Albanese",
+    "tr": "Turco"
+  },
+  "linkSignIn": {
+    "title": "Accesso in corso",
+    "retryHint": "I link di accesso funzionano una sola volta e per 15 minuti. Ne richieda uno nuovo.",
+    "newLink": "Richieda un nuovo link"
+  },
+  "account": {
+    "title": "Il Suo account",
+    "profileTitle": "Lingue e cantone",
+    "saved": "Salvato.",
+    "passwordTitle": "Password",
+    "passwordOn": "Può accedere con la password o con un link via e-mail.",
+    "passwordOff": "Accede con un link via e-mail. Se preferisce, può aggiungere una password.",
+    "currentPassword": "Password attuale",
+    "setPassword": "Imposta la password",
+    "changePassword": "Modifica la password",
+    "removeIntro": "Rimuova la password per accedere solo con link via e-mail.",
+    "removePassword": "Rimuovi la password",
+    "passwordSaved": "La Sua password è stata salvata. Gli altri dispositivi sono stati disconnessi.",
+    "passwordRemoved": "La Sua password è stata rimossa. D'ora in poi acceda con un link via e-mail.",
+    "deleteTitle": "Elimina l'account",
+    "deleteIntro": "Questa operazione elimina il Suo account, i Suoi progressi, le Sue risposte, le conversazioni con il tutor e le segnalazioni di domande. Non può essere annullata.",
+    "deleteKept": "Le registrazioni di fatturazione dei pagamenti effettuati vengono conservate per il periodo previsto dalla legge, senza il Suo indirizzo e-mail. Le invieremo un'e-mail di conferma.",
+    "reauthFresh": "Ha effettuato l'accesso con un link via e-mail pochi minuti fa, quindi non è necessaria la password.",
+    "reauthEither": "Inserisca la password oppure confermi con un nuovo link di accesso.",
+    "reauthLink": "Per confermare la Sua identità, apra un nuovo link di accesso e torni a questa pagina entro 10 minuti.",
+    "reauthLinkSent": "Le abbiamo inviato un link di accesso. Lo apra, poi elimini il Suo account entro 10 minuti.",
+    "deleteConfirm": "Comprendo che il mio account e i miei dati di apprendimento saranno eliminati definitivamente.",
+    "deleteSubmit": "Elimina il mio account",
+    "deletedTitle": "Il Suo account è stato eliminato",
+    "deletedBody": "Il Suo account e i Suoi dati di apprendimento sono stati eliminati. Le abbiamo inviato un'e-mail di conferma."
   }
 }

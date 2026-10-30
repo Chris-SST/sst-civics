@@ -3,7 +3,8 @@
     "language": "Idioma",
     "logout": "Terminar sessão",
     "login": "Iniciar sessão",
-    "signup": "Criar conta"
+    "signup": "Criar conta",
+    "account": "Conta"
   },
   "roles": {
     "admin": "Administrador",
@@ -84,7 +85,12 @@
     "conversation_required": "Abra a verificação a partir de uma sessão com o tutor.",
     "invalid_difficulty": "O nível de dificuldade tem de estar entre 1 e 5.",
     "age_confirmation_required": "Confirme que tem 16 anos ou mais.",
-    "invalid_canton": "Escolha um cantão da lista."
+    "invalid_canton": "Escolha um cantão da lista.",
+    "wrong_password": "Essa palavra-passe não está correta.",
+    "no_password": "A sua conta não tem palavra-passe.",
+    "password_required_for_admins": "As contas de administrador têm de manter uma palavra-passe.",
+    "reauth_required": "Confirme a sua identidade: introduza a palavra-passe ou abra uma nova ligação de início de sessão.",
+    "not_while_impersonating": "Isto não é possível enquanto vê como outro utilizador."
   },
   "impersonation": {
     "banner": "A ver como {{name}} ({{role}}). Iniciou sessão como administrador {{admin}}.",
@@ -134,7 +140,11 @@
     "checkEmailBody": "Enviámos uma ligação de confirmação para {{email}}. Abra-a no prazo de 24 horas para ativar a sua conta.",
     "ageConfirm": "Tenho 16 anos ou mais",
     "cantonHint": "O cantão onde vai fazer o teste. Pode alterá-lo mais tarde.",
-    "studyLanguageHint": "A língua em que quer, em primeiro lugar, compreender as perguntas e as respostas."
+    "studyLanguageHint": "A língua em que quer, em primeiro lugar, compreender as perguntas e as respostas.",
+    "interfaceLanguageHint": "A língua dos menus e botões. Quando falta uma tradução, é mostrado inglês.",
+    "withPassword": "Defina também uma palavra-passe (opcional)",
+    "passwordOptionalHint": "Sem palavra-passe, inicia sessão com uma ligação que lhe enviamos por e-mail. Pode adicionar ou remover uma palavra-passe mais tarde, na sua conta.",
+    "checkEmailSignIn": "A ligação também inicia a sua sessão."
   },
   "fields": {
     "email": "Endereço de e-mail",
@@ -143,12 +153,15 @@
     "confirmPassword": "Repita a palavra-passe",
     "newPassword": "Nova palavra-passe",
     "canton": "Cantão",
-    "studyLanguage": "Língua de estudo"
+    "studyLanguage": "Língua de estudo",
+    "interfaceLanguage": "Língua da interface"
   },
   "verify": {
     "title": "A confirmar o seu e-mail",
     "ok": "O seu endereço de e-mail está confirmado. Já pode iniciar sessão.",
-    "retryHint": "Inicie sessão e peça uma nova ligação de confirmação se a sua tiver expirado."
+    "retryHint": "Inicie sessão e peça uma nova ligação de confirmação se a sua tiver expirado.",
+    "signedIn": "O seu endereço de e-mail está confirmado e a sua sessão está iniciada.",
+    "continue": "Continuar"
   },
   "login": {
     "title": "Iniciar sessão",
@@ -156,7 +169,16 @@
     "forgot": "Esqueceu-se da palavra-passe?",
     "noAccount": "É a primeira vez?",
     "resend": "Enviar novamente o e-mail de confirmação",
-    "resent": "Enviado. Verifique a sua caixa de entrada."
+    "resent": "Enviado. Verifique a sua caixa de entrada.",
+    "linkIntro": "Introduza o seu endereço de e-mail e enviaremos uma ligação de início de sessão. Funciona uma só vez, durante 15 minutos.",
+    "sendLink": "Enviar-me uma ligação de início de sessão",
+    "usePassword": "Iniciar sessão com palavra-passe",
+    "useLink": "Iniciar sessão com uma ligação por e-mail",
+    "checkEmailTitle": "Verifique o seu e-mail",
+    "checkEmailBody": "Se existir uma conta para {{email}}, uma ligação de início de sessão está a caminho. Abra-a no prazo de 15 minutos, neste dispositivo ou noutro.",
+    "checkEmailHint": "Não chegou nada? Verifique a pasta de spam ou crie uma conta, se ainda não tiver uma.",
+    "sendAgain": "Enviar a ligação novamente",
+    "otherAddress": "Utilizar outro endereço"
   },
   "forgot": {
     "title": "Repor a palavra-passe",
@@ -507,6 +529,42 @@
   "languages": {
     "en": "Inglês",
     "de": "Alemão",
-    "fr": "Francês"
+    "fr": "Francês",
+    "it": "Italiano",
+    "pt": "Português",
+    "es": "Espanhol",
+    "sq": "Albanês",
+    "tr": "Turco"
+  },
+  "linkSignIn": {
+    "title": "A iniciar a sua sessão",
+    "retryHint": "As ligações de início de sessão funcionam uma só vez e durante 15 minutos. Peça uma nova.",
+    "newLink": "Obter uma nova ligação"
+  },
+  "account": {
+    "title": "A sua conta",
+    "profileTitle": "Línguas e cantão",
+    "saved": "Guardado.",
+    "passwordTitle": "Palavra-passe",
+    "passwordOn": "Pode iniciar sessão com a palavra-passe ou com uma ligação por e-mail.",
+    "passwordOff": "Inicia sessão com uma ligação por e-mail. Se preferir, pode adicionar uma palavra-passe.",
+    "currentPassword": "Palavra-passe atual",
+    "setPassword": "Definir palavra-passe",
+    "changePassword": "Alterar palavra-passe",
+    "removeIntro": "Remova a palavra-passe para iniciar sessão apenas com ligações por e-mail.",
+    "removePassword": "Remover palavra-passe",
+    "passwordSaved": "A sua palavra-passe foi guardada. Os outros dispositivos terminaram sessão.",
+    "passwordRemoved": "A sua palavra-passe foi removida. A partir de agora, inicie sessão com uma ligação por e-mail.",
+    "deleteTitle": "Eliminar conta",
+    "deleteIntro": "Isto elimina a sua conta, o seu progresso, as suas respostas, as conversas com o tutor e as comunicações de perguntas. Não pode ser anulado.",
+    "deleteKept": "Os registos de faturação dos pagamentos que efetuou são conservados durante o tempo exigido por lei, sem o seu endereço de e-mail. Enviamos-lhe um e-mail de confirmação.",
+    "reauthFresh": "Iniciou sessão com uma ligação por e-mail há poucos minutos, por isso não é necessária a palavra-passe.",
+    "reauthEither": "Introduza a palavra-passe ou confirme com uma nova ligação de início de sessão.",
+    "reauthLink": "Para confirmar a sua identidade, abra uma nova ligação de início de sessão e volte a esta página no prazo de 10 minutos.",
+    "reauthLinkSent": "Enviámos-lhe uma ligação de início de sessão. Abra-a e depois elimine a sua conta no prazo de 10 minutos.",
+    "deleteConfirm": "Compreendo que a minha conta e os meus dados de aprendizagem serão eliminados definitivamente.",
+    "deleteSubmit": "Eliminar a minha conta",
+    "deletedTitle": "A sua conta foi eliminada",
+    "deletedBody": "A sua conta e os seus dados de aprendizagem foram eliminados. Enviámos-lhe um e-mail de confirmação."
   }
 }

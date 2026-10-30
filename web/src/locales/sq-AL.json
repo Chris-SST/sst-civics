@@ -3,7 +3,8 @@
     "language": "Gjuha",
     "logout": "Dilni",
     "login": "Hyni",
-    "signup": "Krijoni llogari"
+    "signup": "Krijoni llogari",
+    "account": "Llogaria"
   },
   "roles": {
     "admin": "Administrator",
@@ -84,7 +85,12 @@
     "conversation_required": "Hapeni kontrollin nga një sesion me tutorin.",
     "invalid_difficulty": "Niveli i vështirësisë duhet të jetë ndërmjet 1 dhe 5.",
     "age_confirmation_required": "Ju lutemi konfirmoni se jeni 16 vjeç ose më i madh.",
-    "invalid_canton": "Ju lutemi zgjidhni një kanton nga lista."
+    "invalid_canton": "Ju lutemi zgjidhni një kanton nga lista.",
+    "wrong_password": "Ky fjalëkalim nuk është i saktë.",
+    "no_password": "Llogaria juaj nuk ka fjalëkalim.",
+    "password_required_for_admins": "Llogaritë e administratorëve duhet të mbajnë një fjalëkalim.",
+    "reauth_required": "Ju lutemi konfirmoni se jeni ju: vendosni fjalëkalimin ose hapni një lidhje të re hyrjeje.",
+    "not_while_impersonating": "Kjo nuk është e mundur ndërsa po shihni si një përdorues tjetër."
   },
   "impersonation": {
     "banner": "Po shihni si {{name}} ({{role}}). Keni hyrë si administratori {{admin}}.",
@@ -134,7 +140,11 @@
     "checkEmailBody": "Dërguam një lidhje konfirmimi te {{email}}. Hapeni brenda 24 orëve për të aktivizuar llogarinë tuaj.",
     "ageConfirm": "Jam 16 vjeç ose më i madh",
     "cantonHint": "Kantoni ku do ta jepni testin. Mund ta ndryshoni më vonë.",
-    "studyLanguageHint": "Gjuha në të cilën dëshironi t'i kuptoni fillimisht pyetjet dhe përgjigjet."
+    "studyLanguageHint": "Gjuha në të cilën dëshironi t'i kuptoni fillimisht pyetjet dhe përgjigjet.",
+    "interfaceLanguageHint": "Gjuha e menyve dhe e butonave. Kur mungon një përkthim, shfaqet anglishtja.",
+    "withPassword": "Caktoni edhe një fjalëkalim (opsionale)",
+    "passwordOptionalHint": "Pa fjalëkalim, hyni me një lidhje që ju dërgojmë me email. Mund ta shtoni ose ta hiqni fjalëkalimin më vonë te llogaria juaj.",
+    "checkEmailSignIn": "Lidhja ju bën edhe hyrjen në llogari."
   },
   "fields": {
     "email": "Adresa e emailit",
@@ -143,12 +153,15 @@
     "confirmPassword": "Përsëritni fjalëkalimin",
     "newPassword": "Fjalëkalimi i ri",
     "canton": "Kantoni",
-    "studyLanguage": "Gjuha e studimit"
+    "studyLanguage": "Gjuha e studimit",
+    "interfaceLanguage": "Gjuha e ndërfaqes"
   },
   "verify": {
     "title": "Po konfirmohet emaili juaj",
     "ok": "Adresa juaj e emailit u konfirmua. Tani mund të hyni.",
-    "retryHint": "Hyni dhe kërkoni një lidhje të re konfirmimi nëse e juaja ka skaduar."
+    "retryHint": "Hyni dhe kërkoni një lidhje të re konfirmimi nëse e juaja ka skaduar.",
+    "signedIn": "Adresa juaj e emailit u konfirmua dhe keni hyrë në llogari.",
+    "continue": "Vazhdo"
   },
   "login": {
     "title": "Hyni",
@@ -156,7 +169,16 @@
     "forgot": "Keni harruar fjalëkalimin?",
     "noAccount": "Jeni i ri këtu?",
     "resend": "Dërgo përsëri emailin e konfirmimit",
-    "resent": "U dërgua. Ju lutemi kontrolloni kutinë tuaj postare."
+    "resent": "U dërgua. Ju lutemi kontrolloni kutinë tuaj postare.",
+    "linkIntro": "Shkruani adresën tuaj të emailit dhe do t'ju dërgojmë një lidhje hyrjeje. Funksionon vetëm një herë, për 15 minuta.",
+    "sendLink": "Më dërgoni një lidhje hyrjeje",
+    "usePassword": "Hyni më mirë me fjalëkalim",
+    "useLink": "Hyni më mirë me një lidhje emaili",
+    "checkEmailTitle": "Kontrolloni emailin tuaj",
+    "checkEmailBody": "Nëse ekziston një llogari për {{email}}, një lidhje hyrjeje është rrugës. Hapeni brenda 15 minutash në këtë pajisje ose në një tjetër.",
+    "checkEmailHint": "Nuk mbërriti asgjë? Kontrolloni dosjen e mesazheve të padëshiruara ose krijoni një llogari nëse nuk keni ende.",
+    "sendAgain": "Dërgo përsëri lidhjen",
+    "otherAddress": "Përdorni një adresë tjetër"
   },
   "forgot": {
     "title": "Rivendosni fjalëkalimin",
@@ -507,6 +529,42 @@
   "languages": {
     "en": "Anglisht",
     "de": "Gjermanisht",
-    "fr": "Frëngjisht"
+    "fr": "Frëngjisht",
+    "it": "Italisht",
+    "pt": "Portugalisht",
+    "es": "Spanjisht",
+    "sq": "Shqip",
+    "tr": "Turqisht"
+  },
+  "linkSignIn": {
+    "title": "Po hyni në llogari",
+    "retryHint": "Lidhjet e hyrjes funksionojnë vetëm një herë dhe për 15 minuta. Ju lutemi kërkoni një të re.",
+    "newLink": "Merrni një lidhje të re"
+  },
+  "account": {
+    "title": "Llogaria juaj",
+    "profileTitle": "Gjuhët dhe kantoni",
+    "saved": "U ruajt.",
+    "passwordTitle": "Fjalëkalimi",
+    "passwordOn": "Mund të hyni me fjalëkalim ose me një lidhje emaili.",
+    "passwordOff": "Hyni me një lidhje emaili. Mund të shtoni një fjalëkalim nëse e preferoni.",
+    "currentPassword": "Fjalëkalimi aktual",
+    "setPassword": "Cakto fjalëkalimin",
+    "changePassword": "Ndrysho fjalëkalimin",
+    "removeIntro": "Hiqeni fjalëkalimin për të hyrë vetëm me lidhje emaili.",
+    "removePassword": "Hiq fjalëkalimin",
+    "passwordSaved": "Fjalëkalimi juaj u ruajt. Pajisjet e tjera u çkyçën nga llogaria.",
+    "passwordRemoved": "Fjalëkalimi juaj u hoq. Nga tani hyni me një lidhje emaili.",
+    "deleteTitle": "Fshi llogarinë",
+    "deleteIntro": "Kjo fshin llogarinë tuaj, progresin, përgjigjet, bisedat me tutorin dhe raportet e pyetjeve. Nuk mund të zhbëhet.",
+    "deleteKept": "Regjistrimet e faturimit të pagesave që keni bërë ruhen për aq kohë sa e kërkon ligji, pa adresën tuaj të emailit. Ju dërgojmë një email konfirmimi.",
+    "reauthFresh": "Keni hyrë me një lidhje emaili para pak minutash, ndaj nuk nevojitet fjalëkalimi.",
+    "reauthEither": "Vendosni fjalëkalimin ose konfirmoni me një lidhje të re hyrjeje.",
+    "reauthLink": "Për të konfirmuar se jeni ju, hapni një lidhje të re hyrjeje dhe ktheuni në këtë faqe brenda 10 minutash.",
+    "reauthLinkSent": "Ju dërguam një lidhje hyrjeje. Hapeni, pastaj fshini llogarinë tuaj brenda 10 minutash.",
+    "deleteConfirm": "E kuptoj që llogaria ime dhe të dhënat e mia të mësimit do të fshihen përgjithmonë.",
+    "deleteSubmit": "Fshi llogarinë time",
+    "deletedTitle": "Llogaria juaj u fshi",
+    "deletedBody": "Llogaria dhe të dhënat tuaja të mësimit u fshinë. Ju dërguam një email konfirmimi."
   }
 }

@@ -29,3 +29,11 @@ reviewer and date here when done, and change the status of the file.
 Edit `en-GB.json` first, then add the key to every other file and run the check. Keep
 placeholders, HTML and Markdown exactly as in English. Amounts stay in CHF; product names are not
 translated.
+
+## Low-confidence strings (second batch)
+
+Needing particular attention from reviewers in every machine-drafted language: `account.deleteKept`,
+`account.deleteIntro`, `account.deleteConfirm` (legal wording about deletion and retained billing
+records), `errors.reauth_required`, `account.reauthLink` and `account.reauthLinkSent` (re-confirmation
+flow), and `signup.passwordOptionalHint`. In `sq-AL` and `tr-TR`, also check `login.usePassword` and
+`login.useLink`.

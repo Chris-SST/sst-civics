@@ -3,7 +3,8 @@
     "language": "Dil",
     "logout": "Oturumu kapatın",
     "login": "Giriş yapın",
-    "signup": "Hesap oluşturun"
+    "signup": "Hesap oluşturun",
+    "account": "Hesap"
   },
   "roles": {
     "admin": "Yönetici",
@@ -84,7 +85,12 @@
     "conversation_required": "Değerlendirmeyi bir eğitmen oturumundan açın.",
     "invalid_difficulty": "Zorluk düzeyi 1 ile 5 arasında olmalıdır.",
     "age_confirmation_required": "Lütfen 16 yaşında veya daha büyük olduğunuzu onaylayın.",
-    "invalid_canton": "Lütfen listeden bir kanton seçin."
+    "invalid_canton": "Lütfen listeden bir kanton seçin.",
+    "wrong_password": "Bu parola doğru değil.",
+    "no_password": "Hesabınızın parolası yok.",
+    "password_required_for_admins": "Yönetici hesapları bir parolayı korumalıdır.",
+    "reauth_required": "Lütfen kimliğinizi doğrulayın: parolanızı girin veya yeni bir giriş bağlantısı açın.",
+    "not_while_impersonating": "Başka bir kullanıcı olarak görüntülerken bu işlem yapılamaz."
   },
   "impersonation": {
     "banner": "{{name}} ({{role}}) olarak görüntüleniyor. Yönetici {{admin}} olarak giriş yaptınız.",
@@ -134,7 +140,11 @@
     "checkEmailBody": "{{email}} adresine bir onay bağlantısı gönderdik. Hesabınızı etkinleştirmek için bağlantıyı 24 saat içinde açın.",
     "ageConfirm": "16 yaşında veya daha büyüğüm",
     "cantonHint": "Sınava gireceğiniz kanton. Daha sonra değiştirebilirsiniz.",
-    "studyLanguageHint": "Soruları ve yanıtları öncelikle hangi dilde anlamak istiyorsunuz."
+    "studyLanguageHint": "Soruları ve yanıtları öncelikle hangi dilde anlamak istiyorsunuz.",
+    "interfaceLanguageHint": "Menülerin ve düğmelerin dili. Çevirisi olmayan yerlerde İngilizce gösterilir.",
+    "withPassword": "Ayrıca bir parola belirleyin (isteğe bağlı)",
+    "passwordOptionalHint": "Parola olmadan, size e-postayla gönderdiğimiz bir bağlantıyla giriş yaparsınız. Parolayı daha sonra hesabınızdan ekleyebilir veya kaldırabilirsiniz.",
+    "checkEmailSignIn": "Bağlantı aynı zamanda oturumunuzu da açar."
   },
   "fields": {
     "email": "E-posta adresi",
@@ -143,12 +153,15 @@
     "confirmPassword": "Parolayı tekrar girin",
     "newPassword": "Yeni parola",
     "canton": "Kanton",
-    "studyLanguage": "Çalışma dili"
+    "studyLanguage": "Çalışma dili",
+    "interfaceLanguage": "Arayüz dili"
   },
   "verify": {
     "title": "E-postanız onaylanıyor",
     "ok": "E-posta adresiniz onaylandı. Artık giriş yapabilirsiniz.",
-    "retryHint": "Bağlantınızın süresi dolduysa giriş yapıp yeni bir onay bağlantısı isteyin."
+    "retryHint": "Bağlantınızın süresi dolduysa giriş yapıp yeni bir onay bağlantısı isteyin.",
+    "signedIn": "E-posta adresiniz onaylandı ve oturumunuz açıldı.",
+    "continue": "Devam"
   },
   "login": {
     "title": "Giriş yapın",
@@ -156,7 +169,16 @@
     "forgot": "Parolanızı mı unuttunuz?",
     "noAccount": "Burada yeni misiniz?",
     "resend": "Onay e-postasını yeniden gönder",
-    "resent": "Gönderildi. Lütfen gelen kutunuzu kontrol edin."
+    "resent": "Gönderildi. Lütfen gelen kutunuzu kontrol edin.",
+    "linkIntro": "E-posta adresinizi girin; size bir giriş bağlantısı gönderelim. Bağlantı yalnızca bir kez ve 15 dakika boyunca geçerlidir.",
+    "sendLink": "Bana giriş bağlantısı gönderin",
+    "usePassword": "Bunun yerine parolayla giriş yapın",
+    "useLink": "Bunun yerine e-posta bağlantısıyla giriş yapın",
+    "checkEmailTitle": "E-postanızı kontrol edin",
+    "checkEmailBody": "{{email}} için bir hesap varsa, giriş bağlantısı yolda. Bağlantıyı 15 dakika içinde bu cihazda veya başka bir cihazda açın.",
+    "checkEmailHint": "Hiçbir şey gelmedi mi? Spam klasörünüzü kontrol edin veya henüz hesabınız yoksa bir hesap oluşturun.",
+    "sendAgain": "Bağlantıyı yeniden gönder",
+    "otherAddress": "Başka bir adres kullanın"
   },
   "forgot": {
     "title": "Parolanızı sıfırlayın",
@@ -507,6 +529,42 @@
   "languages": {
     "en": "İngilizce",
     "de": "Almanca",
-    "fr": "Fransızca"
+    "fr": "Fransızca",
+    "it": "İtalyanca",
+    "pt": "Portekizce",
+    "es": "İspanyolca",
+    "sq": "Arnavutça",
+    "tr": "Türkçe"
+  },
+  "linkSignIn": {
+    "title": "Giriş yapılıyor",
+    "retryHint": "Giriş bağlantıları yalnızca bir kez ve 15 dakika boyunca çalışır. Lütfen yeni bir bağlantı isteyin.",
+    "newLink": "Yeni bağlantı al"
+  },
+  "account": {
+    "title": "Hesabınız",
+    "profileTitle": "Diller ve kanton",
+    "saved": "Kaydedildi.",
+    "passwordTitle": "Parola",
+    "passwordOn": "Parolanızla veya bir e-posta bağlantısıyla giriş yapabilirsiniz.",
+    "passwordOff": "E-posta bağlantısıyla giriş yapıyorsunuz. İsterseniz bir parola ekleyebilirsiniz.",
+    "currentPassword": "Mevcut parola",
+    "setPassword": "Parola belirle",
+    "changePassword": "Parolayı değiştir",
+    "removeIntro": "Yalnızca e-posta bağlantılarıyla giriş yapmak için parolanızı kaldırın.",
+    "removePassword": "Parolayı kaldır",
+    "passwordSaved": "Parolanız kaydedildi. Diğer cihazlardaki oturumlar kapatıldı.",
+    "passwordRemoved": "Parolanız kaldırıldı. Bundan sonra e-posta bağlantısıyla giriş yapın.",
+    "deleteTitle": "Hesabı sil",
+    "deleteIntro": "Bu işlem hesabınızı, ilerlemenizi, yanıtlarınızı, eğitmen konuşmalarınızı ve soru bildirimlerinizi siler. Geri alınamaz.",
+    "deleteKept": "Yaptığınız ödemelerin faturalama kayıtları, e-posta adresiniz olmadan, yasanın gerektirdiği süre boyunca saklanır. Size bir onay e-postası göndeririz.",
+    "reauthFresh": "Birkaç dakika önce bir e-posta bağlantısıyla giriş yaptınız; bu yüzden parola gerekmez.",
+    "reauthEither": "Parolanızı girin veya yeni bir giriş bağlantısıyla onaylayın.",
+    "reauthLink": "Kimliğinizi doğrulamak için yeni bir giriş bağlantısı açın ve 10 dakika içinde bu sayfaya dönün.",
+    "reauthLinkSent": "Size bir giriş bağlantısı gönderdik. Bağlantıyı açın, ardından 10 dakika içinde hesabınızı silin.",
+    "deleteConfirm": "Hesabımın ve öğrenme verilerimin kalıcı olarak silineceğini anlıyorum.",
+    "deleteSubmit": "Hesabımı sil",
+    "deletedTitle": "Hesabınız silindi",
+    "deletedBody": "Hesabınız ve öğrenme verileriniz silindi. Size bir onay e-postası gönderdik."
   }
 }
