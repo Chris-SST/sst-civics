@@ -22,7 +22,7 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 ## Phase 1: Zurich launch (gate B)
 
 - [ ] Question model, import from repository files, and the review queue in the admin area (1.1, 1.2; started 30 October 2026).
-- [ ] Zurich topic list from the official catalogue's subject headings (1.4; started 30 October 2026).
+- [x] Zurich topic list (1.4): 35 topics in `content/topics/zh.yaml`, targets 275/55/20, sources in `SOURCES-zh.md`. Unconfirmed: pass mark 30, 60-minute duration, per-section counts; to ask the Gemeindeamt together with the licensing question.
 - [ ] Content pipeline scripts (1.5).
 - [ ] About 350 Zurich questions approved, translated and reviewed (1.6).
 - [ ] Learn, Practise and Mock test with the four study modes (1.7 to 1.9).

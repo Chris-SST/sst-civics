@@ -1,0 +1,282 @@
+canton: zh
+test:
+  questions: 50
+  minutes: 60
+  pass_mark: 30          # unconfirmed: from a 2022 press report, see SOURCES-zh.md
+  proportions: {federal: 0.78, canton: 0.16, commune: 0.06}   # derived from 274/56/20
+topics:
+  - code: bund.geschichte.gruendung
+    scope: federal
+    name_de: "Gründung der Eidgenossenschaft und Alte Eidgenossenschaft"
+    name_en: "Founding of the Confederation and the Old Confederacy"
+    target_questions: 12
+    sources:
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+  - code: bund.geschichte.bundesstaat
+    scope: federal
+    name_de: "Von der Helvetik zum Bundesstaat von 1848"
+    name_en: "From the Helvetic Republic to the 1848 federal state"
+    target_questions: 14
+    sources:
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+  - code: bund.geschichte.weltkriege_neutralitaet
+    scope: federal
+    name_de: "Neutralität, Weltkriege und Nachkriegszeit"
+    name_en: "Neutrality, the World Wars and the post-war period"
+    target_questions: 10
+    sources:
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.ch.ch/de/
+  - code: bund.geschichte.gesellschaftswandel
+    scope: federal
+    name_de: "Gesellschaftlicher Wandel und Gleichstellung"
+    name_en: "Social change and equality"
+    target_questions: 7
+    sources:
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.ch.ch/de/
+  - code: bund.demokratie.staatsprinzipien
+    scope: federal
+    name_de: "Bundesverfassung und Staatsprinzipien"
+    name_en: "Federal Constitution and state principles"
+    target_questions: 16
+    sources:
+      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+  - code: bund.demokratie.foederalismus
+    scope: federal
+    name_de: "Föderalismus: Bund, Kantone und Gemeinden"
+    name_en: "Federalism: Confederation, cantons and communes"
+    target_questions: 14
+    sources:
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+  - code: bund.demokratie.kantone_rolle
+    scope: federal
+    name_de: "Aufgaben und Stellung der Kantone"
+    name_en: "Role and standing of the cantons"
+    target_questions: 8
+    sources:
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+  - code: bund.demokratie.grundrechte
+    scope: federal
+    name_de: "Grundrechte und Bürgerrechte"
+    name_en: "Fundamental rights and civil rights"
+    target_questions: 18
+    sources:
+      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+  - code: bund.demokratie.volksrechte
+    scope: federal
+    name_de: "Volksrechte: Initiative, Referendum und Abstimmungen"
+    name_en: "Popular rights: initiative, referendum and votes"
+    target_questions: 22
+    sources:
+      - https://www.ch.ch/de/abstimmungen-und-wahlen/initiativen/was-ist-eine-eidgenossische-volksinitiative/
+      - https://www.ch.ch/de/abstimmungen-und-wahlen/referendum/
+      - https://www.ch.ch/de/
+  - code: bund.demokratie.wahlen
+    scope: federal
+    name_de: "Wahlen, Wahlrecht und Parteien"
+    name_en: "Elections, voting rights and parties"
+    target_questions: 16
+    sources:
+      - https://www.ch.ch/de/
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+  - code: bund.demokratie.parlament
+    scope: federal
+    name_de: "Bundesversammlung: Nationalrat und Ständerat"
+    name_en: "Federal Assembly: National Council and Council of States"
+    target_questions: 16
+    sources:
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+  - code: bund.demokratie.bundesrat
+    scope: federal
+    name_de: "Bundesrat und Bundesverwaltung"
+    name_en: "Federal Council and federal administration"
+    target_questions: 16
+    sources:
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+  - code: bund.demokratie.gerichte
+    scope: federal
+    name_de: "Gerichte und Rechtsstaat"
+    name_en: "Courts and the rule of law"
+    target_questions: 8
+    sources:
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+  - code: bund.sozial.sozialversicherungen
+    scope: federal
+    name_de: "Sozialversicherungen und Sozialstaat"
+    name_en: "Social insurance and the welfare state"
+    target_questions: 18
+    sources:
+      - https://www.ch.ch/de/
+      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+  - code: bund.sozial.pflichten
+    scope: federal
+    name_de: "Staatsbürgerliche Pflichten: Steuern, Militär- und Zivildienst, Versicherungspflicht"
+    name_en: "Civic duties: taxes, military and civilian service, compulsory insurance"
+    target_questions: 14
+    sources:
+      - https://www.ch.ch/de/
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+  - code: bund.sozial.bildung
+    scope: federal
+    name_de: "Bildungssystem"
+    name_en: "Education system"
+    target_questions: 8
+    sources:
+      - https://www.ch.ch/de/
+  - code: bund.sozial.gesundheit
+    scope: federal
+    name_de: "Gesundheitswesen und Krankenversicherung"
+    name_en: "Health care and health insurance"
+    target_questions: 8
+    sources:
+      - https://www.ch.ch/de/
+  - code: bund.sozial.wirtschaft_arbeit
+    scope: federal
+    name_de: "Wirtschaft und Arbeitswelt"
+    name_en: "Economy and working life"
+    target_questions: 12
+    sources:
+      - https://www.ch.ch/de/
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+  - code: bund.sozial.zivilgesellschaft
+    scope: federal
+    name_de: "Zivilgesellschaft, Vereine, Religion und Zusammenleben"
+    name_en: "Civil society, associations, religion and living together"
+    target_questions: 8
+    sources:
+      - https://www.ch.ch/de/
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+  - code: bund.geografie.landschaft
+    scope: federal
+    name_de: "Geografie der Schweiz: Landschaften, Gewässer, Kantone"
+    name_en: "Geography of Switzerland: landscapes, waters, cantons"
+    target_questions: 12
+    sources:
+      - https://www.ch.ch/de/
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+  - code: bund.geografie.sprachen
+    scope: federal
+    name_de: "Landessprachen und Sprachregionen"
+    name_en: "National languages and language regions"
+    target_questions: 8
+    sources:
+      - https://www.ch.ch/de/
+      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+  - code: bund.kultur.feiertage_brauchtum
+    scope: federal
+    name_de: "Feiertage, Brauchtum und Kultur"
+    name_en: "Holidays, customs and culture"
+    target_questions: 10
+    sources:
+      - https://www.ch.ch/de/
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+  - code: kanton.demokratie.verfassung
+    scope: canton
+    name_de: "Verfassung des Kantons Zürich"
+    name_en: "Constitution of the canton of Zurich"
+    target_questions: 5
+    sources:
+      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
+      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse.html
+  - code: kanton.demokratie.kantonsrat
+    scope: canton
+    name_de: "Kantonsrat"
+    name_en: "Cantonal Parliament (Kantonsrat)"
+    target_questions: 8
+    sources:
+      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+  - code: kanton.demokratie.regierungsrat
+    scope: canton
+    name_de: "Regierungsrat und Kantonsverwaltung"
+    name_en: "Cantonal Government (Regierungsrat) and administration"
+    target_questions: 8
+    sources:
+      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+  - code: kanton.demokratie.gerichte
+    scope: canton
+    name_de: "Zürcher Gerichte"
+    name_en: "Zurich courts"
+    target_questions: 4
+    sources:
+      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
+  - code: kanton.demokratie.abstimmungen_wahlen
+    scope: canton
+    name_de: "Kantonale Abstimmungen, Wahlen und Volksrechte"
+    name_en: "Cantonal votes, elections and popular rights"
+    target_questions: 8
+    sources:
+      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+  - code: kanton.sozial.steuern_leistungen
+    scope: canton
+    name_de: "Kantonale Leistungen und Steuern"
+    name_en: "Cantonal services and taxes"
+    target_questions: 6
+    sources:
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse.html
+  - code: kanton.sozial.bildung_gesundheit
+    scope: canton
+    name_de: "Bildung und Gesundheit im Kanton Zürich"
+    name_en: "Education and health in the canton of Zurich"
+    target_questions: 4
+    sources:
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+  - code: kanton.geschichte.zuerich
+    scope: canton
+    name_de: "Geschichte des Kantons Zürich"
+    name_en: "History of the canton of Zurich"
+    target_questions: 6
+    sources:
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+  - code: kanton.geografie.zuerich
+    scope: canton
+    name_de: "Geografie des Kantons Zürich"
+    name_en: "Geography of the canton of Zurich"
+    target_questions: 6
+    sources:
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+  - code: gemeinde.organisation.versammlung_parlament
+    scope: commune
+    name_de: "Gemeindeversammlung und Gemeindeparlament"
+    name_en: "Communal assembly and communal parliament"
+    target_questions: 6
+    sources:
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
+  - code: gemeinde.organisation.gemeinderat_stadtrat
+    scope: commune
+    name_de: "Gemeinderat, Stadtrat und Gemeindeverwaltung"
+    name_en: "Communal executive (Gemeinderat, Stadtrat in the city) and administration"
+    target_questions: 5
+    sources:
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
+  - code: gemeinde.leistungen
+    scope: commune
+    name_de: "Leistungen der Gemeinde"
+    name_en: "Communal services"
+    target_questions: 5
+    sources:
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+  - code: gemeinde.einbuergerung
+    scope: commune
+    name_de: "Einbürgerung auf Gemeindeebene"
+    name_en: "Naturalisation at commune level"
+    target_questions: 4
+    sources:
+      - https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/publlikationen/Kommunale%20Einb%C3%BCrgerungsprozesse%202025.pdf
+      - https://www.ch.ch/de/einbuergerung
+      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
