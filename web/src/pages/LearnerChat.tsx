@@ -16,8 +16,7 @@ interface Msg {
 
 interface Conversation {
   id: string;
-  course_key: string;
-  course_name: string;
+  canton: string;
   topic_code: string;
   topic_name: string;
   language: string;
@@ -40,7 +39,6 @@ type Notice = "off_topic" | "override" | "wellbeing" | "ended" | "refusal";
 
 interface CheckOut {
   conversation_id: string;
-  course_key: string;
   topic_code: string;
   questions: QuestionPublic[];
 }
@@ -233,7 +231,7 @@ export default function LearnerChat() {
             ← {t("chat.back")}
           </Link>
           <h1 className="chat-title">{conv.topic_name}</h1>
-          <p className="small muted">{conv.course_name}</p>
+          <p className="small muted">{t(`cantons.${conv.canton}`, { defaultValue: conv.canton.toUpperCase() })}</p>
         </div>
         {!ended && (
           <div className="chat-head-actions">

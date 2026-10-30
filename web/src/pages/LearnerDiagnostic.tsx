@@ -4,7 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { get, post } from "../api";
 import ErrorText from "../components/ErrorText";
 import QuestionCard, { MasteryBar } from "../components/QuestionCard";
-import type { AttemptOut, DiagnosticOut, TopicOverview } from "../practice";
+import { practiceUrl, type AttemptOut, type DiagnosticOut, type TopicOverview } from "../practice";
 
 /** The short check that finds a learner's gaps: one question at a time, then a results screen. */
 export default function LearnerDiagnostic() {
@@ -27,10 +27,7 @@ export default function LearnerDiagnostic() {
     if (!run) return;
     setBusy(true);
     try {
-      const conv = await post<{ id: string }>("/api/tutor/conversations", {
-        course_key: run.course_key,
-        topic_code: topicCode,
-      });
+      const conv = await post<{ id: string }>("/api/tutor/conversations", { topic_code: topicCode });
       navigate(`/learner/chat/${conv.id}`);
     } catch (e) {
       setError(e);
@@ -39,8 +36,7 @@ export default function LearnerDiagnostic() {
   }
 
   function practise(topicCode: string) {
-    if (!run) return;
-    navigate(`/learner/practice?course_key=${encodeURIComponent(run.course_key)}&topic_code=${encodeURIComponent(topicCode)}`);
+    navigate(practiceUrl(topicCode));
   }
 
   async function stop() {

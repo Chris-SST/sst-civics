@@ -95,7 +95,11 @@
     "refund_failed": "Stripe hat die Rückerstattung nicht angenommen. Bitte versuchen Sie es erneut oder erstatten Sie im Stripe-Dashboard zurück.",
     "refund_too_late": "Die Rückerstattungsfrist für diese Zahlung ist abgelaufen.",
     "refund_too_many_questions": "Seit dieser Zahlung wurden zu viele Fragen bearbeitet, als dass die Regel eine Rückerstattung erlaubt.",
-    "refund_refunded": "Diese Zahlung wurde bereits zurückerstattet."
+    "refund_refunded": "Diese Zahlung wurde bereits zurückerstattet.",
+    "note_required": "Bitte notieren Sie, was geändert werden muss.",
+    "invalid_options": "Es braucht vier verschiedene Antworten, darunter die richtige.",
+    "invalid_transition": "Diese Frage kann so nicht mehr geändert werden.",
+    "edits_need_approve": "Änderungen lassen sich nur zusammen mit einer Freigabe speichern."
   },
   "impersonation": {
     "banner": "Ansicht als {{name}} ({{role}}). Sie sind als Admin {{admin}} angemeldet.",
@@ -194,13 +198,10 @@
     "activeUntil": "Vielen Dank. Ihr Civics Pass für {{canton}} ist bis am {{date}} aktiv."
   },
   "learner": {
-    "noCourses": "Noch keine Kurse gewählt",
     "tutorOffline": "Der Tutor ist in dieser Umgebung noch nicht verbunden.",
     "noticeTitle": "Bevor Sie mit {{name}} starten",
     "noticeBody": "Die Erklärungen hier stammen von einem KI-Assistenten und können Fehler enthalten. Nutzen Sie sie, um eine Frage zu verstehen, und prüfen Sie Wichtiges anhand der Informationen Ihres Kantons.",
     "noticeOk": "Verstanden",
-    "topic": "Thema",
-    "chooseTopic": "Thema wählen",
     "recent": "Letzte Sitzungen",
     "noRecent": "Noch keine Sitzungen. Wählen Sie ein Thema, um zu beginnen.",
     "endedTag": "beendet",
@@ -223,9 +224,13 @@
     "diagSkip": "Vorerst überspringen",
     "showTopics": "Alle {{count}} Themen anzeigen",
     "hideTopics": "Themen ausblenden",
-    "noQuestionsYet": "Übungsfragen für diesen Kurs sind in Arbeit. Den Tutor können Sie trotzdem fragen.",
+    "noQuestionsYet": "Die Übungsfragen für Ihren Kanton folgen in Kürze. Zu jedem Thema können Sie schon jetzt den Tutor fragen.",
     "welcome": "Willkommen",
-    "noAccess": "Sie üben derzeit kostenlos. Ein Civics Pass für Ihren Kanton schaltet alle Fragen, Probetests und KI-Erklärungen frei."
+    "noAccess": "Sie üben derzeit kostenlos. Ein Civics Pass für Ihren Kanton schaltet alle Fragen, Probetests und KI-Erklärungen frei.",
+    "noTopics": "Die Themen für Ihren Kanton folgen in Kürze.",
+    "topicsTitle": "Themen des Tests: {{canton}}",
+    "questionsCount_one": "{{count}} Frage",
+    "questionsCount_other": "{{count}} Fragen"
   },
   "chat": {
     "back": "Ihre Sitzungen",
@@ -389,19 +394,19 @@
     "streak": "{{count}} in Folge!",
     "backOnTrack": "Wieder auf Kurs!",
     "tricky": "Eine knifflige Frage. Lesen Sie die Lösung und versuchen Sie die nächste.",
-    "difficulty": "Schwierigkeit {{level}} von 5",
+    "difficulty": "Schwierigkeit {{level}} von 3",
     "unreviewed": "noch nicht geprüft",
     "yourAnswer": "Ihre Antwort",
     "submit": "Antwort prüfen",
     "correct": "Richtig",
     "incorrect": "Nicht ganz",
     "answerLabel": "Antwort",
-    "showSolution": "Lösungsweg anzeigen",
-    "hideSolution": "Lösungsweg ausblenden",
     "report": "Problem melden",
     "reportHint": "Was stimmt nicht? (optional)",
     "reportSend": "Meldung senden",
-    "reported": "Danke. Wir sehen uns diese Frage an."
+    "reported": "Danke. Wir sehen uns diese Frage an.",
+    "showExplanation": "Erklärung anzeigen",
+    "hideExplanation": "Erklärung ausblenden"
   },
   "figure": {
     "failed": "Die Abbildung konnte nicht gezeichnet werden",
@@ -419,32 +424,20 @@
   },
   "review": {
     "queue": "Prüfwarteschlange",
-    "module": "Modul",
-    "allModules": "Alle Module",
     "statusFilter": "Anzeigen",
-    "needsAttention": "Zu prüfen",
+    "needsAttention": "Entwürfe und in Prüfung",
     "empty": "Nichts zu prüfen.",
     "question": "Frage",
     "topic": "Thema",
     "difficulty": "Schwierigkeit",
     "statusLabel": "Status",
-    "issuesLabel": "Auffälligkeiten",
-    "spotCheck": "Stichprobe",
     "reports_one": "{{count}} Meldung",
     "reports_other": "{{count}} Meldungen",
     "reportsLabel": "Meldungen von Lernenden",
     "panelTitle": "Frage prüfen",
-    "options": "Antwortmöglichkeiten",
-    "optionsHint": "Eine pro Zeile, z. B. A) 2x+1",
-    "answer": "Antwort",
-    "workedSolution": "Lösungsweg",
-    "level": "Niveau",
+    "options": "Antwort",
+    "answer": "Richtige Antwort",
     "topicCode": "Thema",
-    "checks": "Automatische Prüfungen",
-    "solveAnswer": "Unabhängige Lösung",
-    "storedAnswer": "Gespeicherte Antwort",
-    "similarity": "Ähnlichste bestehende Frage",
-    "source": "Quelle und Prompt-Version",
     "previousNote": "Frühere Notiz",
     "edit": "Frage bearbeiten",
     "hideEdit": "Editor ausblenden",
@@ -458,63 +451,51 @@
     "myMinutes": "Meine Prüfminuten",
     "status": {
       "draft": "Entwurf",
-      "auto_verified": "Automatisch geprüft",
-      "needs_review": "Prüfung nötig",
       "approved": "Freigegeben",
-      "retired": "Zurückgezogen"
+      "retired": "Zurückgezogen",
+      "in_review": "In Prüfung"
     },
-    "issues": {
-      "solve_failed": "Lösen fehlgeschlagen",
-      "solver_low_confidence": "Löser unsicher",
-      "answers_differ": "Antworten weichen ab",
-      "mcq_options_invalid": "Optionen ungültig",
-      "no_solution": "Kein Lösungsweg",
-      "near_duplicate": "Fast ein Duplikat",
-      "student_reports": "Meldungen von Lernenden"
+    "explanation": "Erklärung",
+    "sources": "Quellen",
+    "checked": "geprüft am {{date}}",
+    "glossary": "Glossarbegriffe",
+    "version": "Version {{version}}",
+    "canton": "Kanton",
+    "allCantons": "Alle",
+    "federal": "Bund",
+    "allTopics": "Alle Themen",
+    "fileStatus": "Status in der Datei",
+    "imported": "Importiert",
+    "filePending": "In der App geändert, aber noch nicht in der Inhaltsdatei. Die Pipeline muss diese Änderung in die Datei schreiben.",
+    "filePendingShort": "Dateiänderung ausstehend",
+    "translations": "Übersetzungen",
+    "translationsMissing": "Als noch nicht übersetzt markiert.",
+    "sourceVersion": "aus Version {{version}}",
+    "pendingUpdates": "Ausstehende Dateiänderungen",
+    "noteHint": "Beim Zurückweisen erforderlich.",
+    "dbOnlyHint": "Nur in der App gespeichert. Die Inhaltsdatei wird von der Pipeline mit einer neuen Version aktualisiert.",
+    "tstate": {
+      "approved": "Freigegeben",
+      "in_review": "In Prüfung",
+      "draft": "Entwurf",
+      "stale": "Veraltet",
+      "missing": "Fehlt",
+      "source": "Deutsches Original"
     }
   },
   "qbank": {
     "tab": "Fragenpool",
-    "overview": "Übersicht und Generierung",
+    "overview": "Übersicht",
     "reviewQueue": "Prüfwarteschlange",
-    "generate": "Fragen generieren",
-    "level": "Niveau",
-    "levels": {
-      "sl": "SL",
-      "hl": "HL",
-      "both": "SL und HL"
-    },
-    "topics": "Themen",
-    "allTopics": "Alle Themen",
-    "difficulties": "Schwierigkeitsgrade",
-    "perRequest": "Fragen pro Anfrage",
-    "perRequestShort": "Anfrage",
     "language": "Sprache",
-    "mode": "Modus",
-    "modeBatch": "Batch",
-    "modeDirect": "Direkt",
-    "modeHelp": "Batch kostet die Hälfte und ist innert etwa einer Stunde da; direkt läuft sofort.",
-    "modes": {
-      "batch": "Batch",
-      "direct": "Direkt"
-    },
-    "estimate": "{{requests}} Anfragen, bis zu {{questions}} Fragen vor den Prüfungen.",
-    "submit": "Generieren",
-    "submitted": "Auftrag eingereicht: {{count}} Anfragen.",
-    "batches": "Generierungsaufträge",
-    "noBatches": "Noch keine Aufträge.",
-    "requests": "Anfragen",
-    "created": "Erstellte Fragen",
-    "checkNow": "Jetzt prüfen",
-    "batchStatus": {
-      "submitted": "Eingereicht",
-      "processed": "Verarbeitet",
-      "failed": "Fehlgeschlagen"
-    },
     "reports": "Offene Meldungen",
     "noReports": "Keine offenen Meldungen.",
     "comment": "Kommentar",
-    "noComment": "kein Kommentar"
+    "noComment": "kein Kommentar",
+    "translationsTitle": "Stand der Übersetzungen",
+    "translationsIntro": "Bezogen auf die {{count}} freigegebenen deutschen Fragen. Veraltete Übersetzungen beruhen auf einer früheren deutschen Version und werden Lernenden nicht angezeigt.",
+    "flaggedMissing": "Als noch nicht übersetzt markiert: {{count}}",
+    "importNote": "Die Fragen stammen aus den Inhaltsdateien im Repository und werden bei jedem Deployment importiert. Änderungen hier werden festgehalten, bis die Pipeline sie in die Dateien schreibt."
   },
   "cantons": {
     "zh": "Zürich",
@@ -581,5 +562,12 @@
     "refundTooLate": "Die Rückerstattungsfrist für Ihre letzte Zahlung ist am {{date}} abgelaufen.",
     "refundTooMany": "Ihre letzte Zahlung kann nicht mehr zurückerstattet werden: Sie haben seit dem Kauf {{count}} Fragen bearbeitet, eine Rückerstattung ist unter {{max}} möglich.",
     "refundDone": "Ihre letzte Zahlung wurde zurückerstattet."
+  },
+  "topics": {
+    "scope": {
+      "federal": "Bund",
+      "canton": "Kanton",
+      "commune": "Gemeinde"
+    }
   }
 }

@@ -33,6 +33,7 @@ from tests.conftest import (
     learner_logged_in,
     link_sign_in,
     login,
+    make_question,
     signup_body,
 )
 
@@ -125,15 +126,15 @@ async def _fill_learning_data(email: str) -> None:
     async with SessionLocal() as db:
         user = (await db.execute(select(User).where(User.email == email))).scalar_one()
         user.stripe_customer_id = "cus_test_1"
-        q = Question(module_key="m", topic_code="t", question_text="Q?", answer="A")
+        q = make_question()
         db.add(q)
         await db.flush()
-        conv = Conversation(user_id=user.id, course_key="c", topic_code="t", topic_name="T")
+        conv = Conversation(user_id=user.id, canton="zh", topic_code="t", topic_name="T")
         db.add(conv)
         await db.flush()
         db.add(Message(conversation_id=conv.id, user_id=user.id, seq=1, role="user", content="x"))
-        db.add(Attempt(user_id=user.id, question_id=q.id, course_key="c", topic_code="t"))
-        db.add(TopicMastery(user_id=user.id, course_key="c", topic_code="t"))
+        db.add(Attempt(user_id=user.id, question_id=q.id, topic_code="t"))
+        db.add(TopicMastery(user_id=user.id, topic_code="t"))
         db.add(QuestionReport(question_id=q.id, user_id=user.id, comment="typo"))
         q.report_count = 1
         db.add(

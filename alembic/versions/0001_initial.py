@@ -1,9 +1,11 @@
 """Initial schema for the citizenship-test trainer.
 
 Learners and admins, entitlements per canton, sessions, tokens, Stripe events, one-off
-Civics Pass payments, audit log, tutor conversations, AI call log, cost alerts and the question bank.
-Replaces the source app's migrations 0001 to 0004 (D-005). Until gate A this migration may be
-rewritten in place.
+Civics Pass payments, audit log, chat conversations, AI call log, cost alerts, and the question
+bank filled from content/ (topics, questions, translations, glossary, attempts, mastery, reports).
+Replaces the source app's migrations 0001 to 0004 (D-005). Rewritten in place for the question
+model in Phase 1 task 1.1, before any production data existed (D-044); staging's database is
+recreated.
 
 Revision ID: 0001
 Revises:
@@ -78,40 +80,6 @@ def upgrade() -> None:
     )
     op.create_index("ix_audit_log_actor_user_id", "audit_log", ["actor_user_id"], unique=False)
     op.create_table(
-        "conversations",
-        sa.Column("id", sa.Uuid(), primary_key=True),
-        sa.Column(
-            "user_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False
-        ),
-        sa.Column("course_key", sa.String(40), nullable=False),
-        sa.Column("topic_code", sa.String(20), nullable=False),
-        sa.Column("topic_name", sa.String(120), nullable=False),
-        sa.Column("language", sa.String(5), nullable=False),
-        sa.Column("title", sa.String(160), nullable=False),
-        sa.Column("status", sa.String(16), nullable=False),
-        sa.Column("summary", sa.Text()),
-        sa.Column("summary_upto_seq", sa.Integer(), nullable=False),
-        sa.Column("next_seq", sa.Integer(), nullable=False),
-        sa.Column("off_topic_streak", sa.Integer(), nullable=False),
-        sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
-        sa.Column("last_activity_at", sa.DateTime(timezone=True), nullable=False),
-    )
-    op.create_index("ix_conversations_user_id", "conversations", ["user_id"], unique=False)
-    op.create_table(
-        "diagnostic_runs",
-        sa.Column("id", sa.Uuid(), primary_key=True),
-        sa.Column(
-            "user_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False
-        ),
-        sa.Column("course_key", sa.String(40), nullable=False),
-        sa.Column("status", sa.String(16), nullable=False),
-        sa.Column("question_ids", sa.JSON(), nullable=False),
-        sa.Column("position", sa.Integer(), nullable=False),
-        sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
-        sa.Column("completed_at", sa.DateTime(timezone=True)),
-    )
-    op.create_index("ix_diagnostic_runs_user_id", "diagnostic_runs", ["user_id"], unique=False)
-    op.create_table(
         "entitlements",
         sa.Column("id", sa.Uuid(), primary_key=True),
         sa.Column(
@@ -133,34 +101,6 @@ def upgrade() -> None:
         unique=False,
     )
     op.create_index("ix_entitlements_user_id", "entitlements", ["user_id"], unique=False)
-    op.create_table(
-        "generation_batches",
-        sa.Column("id", sa.Uuid(), primary_key=True),
-        sa.Column("provider_batch_id", sa.String(80)),
-        sa.Column("mode", sa.String(10), nullable=False),
-        sa.Column("module_key", sa.String(40), nullable=False),
-        sa.Column("level", sa.String(4), nullable=False),
-        sa.Column("topic_codes", sa.JSON(), nullable=False),
-        sa.Column("difficulties", sa.JSON(), nullable=False),
-        sa.Column("per_request", sa.Integer(), nullable=False),
-        sa.Column("language", sa.String(5), nullable=False),
-        sa.Column("status", sa.String(16), nullable=False),
-        sa.Column("requests", sa.Integer(), nullable=False),
-        sa.Column("questions_created", sa.Integer(), nullable=False),
-        sa.Column("error", sa.Text()),
-        sa.Column("requested_by", sa.Uuid(), sa.ForeignKey("users.id")),
-        sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
-        sa.Column("ended_at", sa.DateTime(timezone=True)),
-    )
-    op.create_index(
-        "ix_generation_batches_module_key", "generation_batches", ["module_key"], unique=False
-    )
-    op.create_index(
-        "ix_generation_batches_provider_batch_id",
-        "generation_batches",
-        ["provider_batch_id"],
-        unique=False,
-    )
     op.create_table(
         "llm_calls",
         sa.Column("id", sa.Uuid(), primary_key=True),
@@ -241,22 +181,27 @@ def upgrade() -> None:
         "ix_sessions_impersonator_user_id", "sessions", ["impersonator_user_id"], unique=False
     )
     op.create_index("ix_sessions_user_id", "sessions", ["user_id"], unique=False)
+
     op.create_table(
-        "topic_mastery",
+        "conversations",
         sa.Column("id", sa.Uuid(), primary_key=True),
         sa.Column(
             "user_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False
         ),
-        sa.Column("course_key", sa.String(40), nullable=False),
-        sa.Column("topic_code", sa.String(20), nullable=False),
-        sa.Column("rating", sa.Float(), nullable=False),
-        sa.Column("attempts", sa.Integer(), nullable=False),
-        sa.Column("correct", sa.Integer(), nullable=False),
-        sa.Column("last_attempt_at", sa.DateTime(timezone=True)),
-        sa.Column("next_review_at", sa.DateTime(timezone=True)),
-        sa.UniqueConstraint("user_id", "course_key", "topic_code", name="uq_mastery"),
+        sa.Column("canton", sa.String(2), nullable=False),
+        sa.Column("topic_code", sa.String(80), nullable=False),
+        sa.Column("topic_name", sa.String(200), nullable=False),
+        sa.Column("language", sa.String(5), nullable=False),
+        sa.Column("title", sa.String(160), nullable=False),
+        sa.Column("status", sa.String(16), nullable=False),
+        sa.Column("summary", sa.Text()),
+        sa.Column("summary_upto_seq", sa.Integer(), nullable=False),
+        sa.Column("next_seq", sa.Integer(), nullable=False),
+        sa.Column("off_topic_streak", sa.Integer(), nullable=False),
+        sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
+        sa.Column("last_activity_at", sa.DateTime(timezone=True), nullable=False),
     )
-    op.create_index("ix_topic_mastery_user_id", "topic_mastery", ["user_id"], unique=False)
+    op.create_index("ix_conversations_user_id", "conversations", ["user_id"], unique=False)
     op.create_table(
         "messages",
         sa.Column("id", sa.Uuid(), primary_key=True),
@@ -280,28 +225,74 @@ def upgrade() -> None:
     op.create_index("ix_messages_created_at", "messages", ["created_at"], unique=False)
     op.create_index("ix_messages_user_id", "messages", ["user_id"], unique=False)
     op.create_table(
-        "questions",
+        "diagnostic_runs",
         sa.Column("id", sa.Uuid(), primary_key=True),
-        sa.Column("module_key", sa.String(40), nullable=False),
-        sa.Column("level", sa.String(4), nullable=False),
-        sa.Column("topic_code", sa.String(20), nullable=False),
-        sa.Column("difficulty", sa.Integer(), nullable=False),
-        sa.Column("qtype", sa.String(12), nullable=False),
-        sa.Column("language", sa.String(5), nullable=False),
-        sa.Column("question_text", sa.Text(), nullable=False),
-        sa.Column("options", sa.JSON()),
-        sa.Column("answer", sa.Text(), nullable=False),
-        sa.Column("worked_solution", sa.Text(), nullable=False),
-        sa.Column("status", sa.String(16), nullable=False),
-        sa.Column("spot_check", sa.Boolean(), nullable=False),
-        sa.Column("source", sa.String(16), nullable=False),
-        sa.Column("prompt_version", sa.String(80), nullable=False),
-        sa.Column("check_results", sa.JSON()),
-        sa.Column("solve_answer", sa.Text()),
         sa.Column(
-            "batch_id", sa.Uuid(), sa.ForeignKey("generation_batches.id", ondelete="SET NULL")
+            "user_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False
         ),
-        sa.Column("reviewer_id", sa.Uuid(), sa.ForeignKey("users.id")),
+        sa.Column("canton", sa.String(2), nullable=False),
+        sa.Column("status", sa.String(16), nullable=False),
+        sa.Column("question_ids", sa.JSON(), nullable=False),
+        sa.Column("position", sa.Integer(), nullable=False),
+        sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
+        sa.Column("completed_at", sa.DateTime(timezone=True)),
+    )
+    op.create_index("ix_diagnostic_runs_user_id", "diagnostic_runs", ["user_id"], unique=False)
+    op.create_table(
+        "topic_mastery",
+        sa.Column("id", sa.Uuid(), primary_key=True),
+        sa.Column(
+            "user_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+        ),
+        sa.Column("topic_code", sa.String(80), nullable=False),
+        sa.Column("rating", sa.Float(), nullable=False),
+        sa.Column("attempts", sa.Integer(), nullable=False),
+        sa.Column("correct", sa.Integer(), nullable=False),
+        sa.Column("last_attempt_at", sa.DateTime(timezone=True)),
+        sa.Column("next_review_at", sa.DateTime(timezone=True)),
+        sa.UniqueConstraint("user_id", "topic_code", name="uq_mastery"),
+    )
+    op.create_index("ix_topic_mastery_user_id", "topic_mastery", ["user_id"], unique=False)
+    # Question bank, filled from content/ by scripts/import_content.py (D-041).
+    op.create_table(
+        "topics",
+        sa.Column("id", sa.Uuid(), primary_key=True),
+        sa.Column("canton", sa.String(2), nullable=False),
+        sa.Column("code", sa.String(80), nullable=False),
+        sa.Column("scope", sa.String(10), nullable=False),
+        sa.Column("name_de", sa.String(200), nullable=False),
+        sa.Column("name_en", sa.String(200), nullable=False),
+        sa.Column("target_questions", sa.Integer(), nullable=False),
+        sa.Column("sources", sa.JSON(), nullable=False),
+        sa.Column("position", sa.Integer(), nullable=False),
+        sa.Column("content_hash", sa.String(64), nullable=False),
+        sa.Column("imported_at", sa.DateTime(timezone=True), nullable=False),
+        sa.UniqueConstraint("canton", "code", name="uq_topic_canton_code"),
+    )
+    op.create_index("ix_topics_canton", "topics", ["canton"], unique=False)
+    op.create_index("ix_topics_code", "topics", ["code"], unique=False)
+    op.create_table(
+        "questions",
+        sa.Column("id", sa.String(80), primary_key=True),
+        sa.Column("version", sa.Integer(), nullable=False),
+        sa.Column("scope", sa.String(40), nullable=False),
+        sa.Column("canton", sa.String(2)),
+        sa.Column("topic_code", sa.String(80), nullable=False),
+        sa.Column("question_de", sa.Text(), nullable=False),
+        sa.Column("options_de", sa.JSON(), nullable=False),
+        sa.Column("correct", sa.String(1), nullable=False),
+        sa.Column("explanation_de", sa.Text(), nullable=False),
+        sa.Column("sources", sa.JSON(), nullable=False),
+        sa.Column("glossary", sa.JSON(), nullable=False),
+        sa.Column("difficulty", sa.Integer(), nullable=False),
+        sa.Column("translations_missing", sa.Boolean(), nullable=False),
+        sa.Column("status", sa.String(16), nullable=False),
+        sa.Column("file_status", sa.String(16), nullable=False),
+        sa.Column("content_hash", sa.String(64), nullable=False),
+        sa.Column("imported_at", sa.DateTime(timezone=True), nullable=False),
+        sa.Column("file_sync_pending", sa.Boolean(), nullable=False),
+        sa.Column("pending_changes", sa.JSON()),
+        sa.Column("reviewer_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="SET NULL")),
         sa.Column("reviewed_at", sa.DateTime(timezone=True)),
         sa.Column("review_note", sa.Text()),
         sa.Column("review_minutes", sa.Integer(), nullable=False),
@@ -309,9 +300,52 @@ def upgrade() -> None:
         sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
         sa.Column("updated_at", sa.DateTime(timezone=True), nullable=False),
     )
-    op.create_index("ix_questions_module_key", "questions", ["module_key"], unique=False)
+    op.create_index("ix_questions_canton", "questions", ["canton"], unique=False)
+    op.create_index("ix_questions_scope", "questions", ["scope"], unique=False)
     op.create_index("ix_questions_status", "questions", ["status"], unique=False)
     op.create_index("ix_questions_topic_code", "questions", ["topic_code"], unique=False)
+    op.create_table(
+        "question_translations",
+        sa.Column("id", sa.Uuid(), primary_key=True),
+        sa.Column(
+            "question_id",
+            sa.String(80),
+            sa.ForeignKey("questions.id", ondelete="CASCADE"),
+            nullable=False,
+        ),
+        sa.Column("lang", sa.String(5), nullable=False),
+        sa.Column("source_version", sa.Integer(), nullable=False),
+        sa.Column("question", sa.Text(), nullable=False),
+        sa.Column("options", sa.JSON(), nullable=False),
+        sa.Column("explanation", sa.Text(), nullable=False),
+        sa.Column("status", sa.String(16), nullable=False),
+        sa.Column("reviewed_by", sa.String(120)),
+        sa.Column("reviewed_at", sa.Date()),
+        sa.Column("hidden", sa.Boolean(), nullable=False),
+        sa.Column("content_hash", sa.String(64), nullable=False),
+        sa.Column("imported_at", sa.DateTime(timezone=True), nullable=False),
+        sa.UniqueConstraint("question_id", "lang", name="uq_translation_lang"),
+    )
+    op.create_index(
+        "ix_question_translations_lang", "question_translations", ["lang"], unique=False
+    )
+    op.create_index(
+        "ix_question_translations_question_id",
+        "question_translations",
+        ["question_id"],
+        unique=False,
+    )
+    op.create_table(
+        "glossary_terms",
+        sa.Column("id", sa.Uuid(), primary_key=True),
+        sa.Column("term", sa.String(120), nullable=False),
+        sa.Column("lang", sa.String(5), nullable=False),
+        sa.Column("translation", sa.String(200), nullable=False),
+        sa.Column("note", sa.Text()),
+        sa.Column("imported_at", sa.DateTime(timezone=True), nullable=False),
+        sa.UniqueConstraint("term", "lang", name="uq_glossary_term_lang"),
+    )
+    op.create_index("ix_glossary_terms_term", "glossary_terms", ["term"], unique=False)
     op.create_table(
         "attempts",
         sa.Column("id", sa.Uuid(), primary_key=True),
@@ -320,12 +354,11 @@ def upgrade() -> None:
         ),
         sa.Column(
             "question_id",
-            sa.Uuid(),
+            sa.String(80),
             sa.ForeignKey("questions.id", ondelete="CASCADE"),
             nullable=False,
         ),
-        sa.Column("course_key", sa.String(40), nullable=False),
-        sa.Column("topic_code", sa.String(20), nullable=False),
+        sa.Column("topic_code", sa.String(80), nullable=False),
         sa.Column("mode", sa.String(12), nullable=False),
         sa.Column("answer_text", sa.Text(), nullable=False),
         sa.Column("score", sa.Float(), nullable=False),
@@ -344,11 +377,12 @@ def upgrade() -> None:
         sa.Column("id", sa.Uuid(), primary_key=True),
         sa.Column(
             "question_id",
-            sa.Uuid(),
+            sa.String(80),
             sa.ForeignKey("questions.id", ondelete="CASCADE"),
             nullable=False,
         ),
         sa.Column("user_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="SET NULL")),
+        sa.Column("lang", sa.String(5)),
         sa.Column("comment", sa.String(1000)),
         sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
         sa.Column("resolved_at", sa.DateTime(timezone=True)),
@@ -359,6 +393,10 @@ def upgrade() -> None:
 
 
 def downgrade() -> None:
+    op.drop_index("ix_messages_conversation_id", table_name="messages")
+    op.drop_index("ix_messages_created_at", table_name="messages")
+    op.drop_index("ix_messages_user_id", table_name="messages")
+    op.drop_table("messages")
     op.drop_index("ix_question_reports_question_id", table_name="question_reports")
     op.drop_table("question_reports")
     op.drop_index("ix_attempts_conversation_id", table_name="attempts")
@@ -367,16 +405,25 @@ def downgrade() -> None:
     op.drop_index("ix_attempts_question_id", table_name="attempts")
     op.drop_index("ix_attempts_user_id", table_name="attempts")
     op.drop_table("attempts")
-    op.drop_index("ix_questions_module_key", table_name="questions")
+    op.drop_index("ix_glossary_terms_term", table_name="glossary_terms")
+    op.drop_table("glossary_terms")
+    op.drop_index("ix_question_translations_lang", table_name="question_translations")
+    op.drop_index("ix_question_translations_question_id", table_name="question_translations")
+    op.drop_table("question_translations")
+    op.drop_index("ix_questions_canton", table_name="questions")
+    op.drop_index("ix_questions_scope", table_name="questions")
     op.drop_index("ix_questions_status", table_name="questions")
     op.drop_index("ix_questions_topic_code", table_name="questions")
     op.drop_table("questions")
-    op.drop_index("ix_messages_conversation_id", table_name="messages")
-    op.drop_index("ix_messages_created_at", table_name="messages")
-    op.drop_index("ix_messages_user_id", table_name="messages")
-    op.drop_table("messages")
+    op.drop_index("ix_topics_canton", table_name="topics")
+    op.drop_index("ix_topics_code", table_name="topics")
+    op.drop_table("topics")
     op.drop_index("ix_topic_mastery_user_id", table_name="topic_mastery")
     op.drop_table("topic_mastery")
+    op.drop_index("ix_diagnostic_runs_user_id", table_name="diagnostic_runs")
+    op.drop_table("diagnostic_runs")
+    op.drop_index("ix_conversations_user_id", table_name="conversations")
+    op.drop_table("conversations")
     op.drop_index("ix_sessions_impersonator_user_id", table_name="sessions")
     op.drop_index("ix_sessions_user_id", table_name="sessions")
     op.drop_table("sessions")
@@ -390,17 +437,10 @@ def downgrade() -> None:
     op.drop_index("ix_llm_calls_created_at", table_name="llm_calls")
     op.drop_index("ix_llm_calls_user_id", table_name="llm_calls")
     op.drop_table("llm_calls")
-    op.drop_index("ix_generation_batches_module_key", table_name="generation_batches")
-    op.drop_index("ix_generation_batches_provider_batch_id", table_name="generation_batches")
-    op.drop_table("generation_batches")
     op.drop_index("ix_entitlements_canton", table_name="entitlements")
     op.drop_index("ix_entitlements_stripe_checkout_session_id", table_name="entitlements")
     op.drop_index("ix_entitlements_user_id", table_name="entitlements")
     op.drop_table("entitlements")
-    op.drop_index("ix_diagnostic_runs_user_id", table_name="diagnostic_runs")
-    op.drop_table("diagnostic_runs")
-    op.drop_index("ix_conversations_user_id", table_name="conversations")
-    op.drop_table("conversations")
     op.drop_index("ix_audit_log_actor_user_id", table_name="audit_log")
     op.drop_table("audit_log")
     op.drop_index("ix_users_email", table_name="users")

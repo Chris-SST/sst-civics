@@ -1,0 +1,15 @@
+# EXAMPLE TRANSLATION FOR TESTS ONLY, written for the test suite.
+id: beispiel-staatsebenen
+lang: tr
+source_version: 1
+question: İsviçre kaç devlet kademesinde örgütlenmiştir?
+options:
+  a: 'İki kademede: Federal Devlet ve kantonlar'
+  b: 'Üç kademede: Federal Devlet, kantonlar ve belediyeler'
+  c: 'Dört kademede: Federal Devlet, bölgeler, kantonlar ve belediyeler'
+  d: 'Tek kademede: yalnızca Federal Devlet'
+explanation: 'İsviçre üç kademeli bir federal devlettir: Federal Devlet, kantonlar ve belediyeler.
+  Her kademenin kendi görevleri ve makamları vardır ve kendi vergilerini toplar.'
+status: approved
+reviewed_by: Beispiel-Reviewer
+reviewed_at: '2026-10-30'

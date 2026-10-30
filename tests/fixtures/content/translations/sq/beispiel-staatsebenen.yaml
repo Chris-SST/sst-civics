@@ -1,0 +1,15 @@
+# EXAMPLE TRANSLATION FOR TESTS ONLY, written for the test suite.
+id: beispiel-staatsebenen
+lang: sq
+source_version: 1
+question: Në sa nivele shtetërore është e organizuar Zvicra?
+options:
+  a: 'Në dy nivele: Konfederata dhe kantonet'
+  b: 'Në tri nivele: Konfederata, kantonet dhe komunat'
+  c: 'Në katër nivele: Konfederata, rajonet, kantonet dhe komunat'
+  d: 'Në një nivel: vetëm Konfederata'
+explanation: 'Zvicra është një shtet federal me tri nivele: Konfederata, kantonet dhe komunat.
+  Çdo nivel ka detyrat dhe autoritetet e veta dhe mbledh taksat e veta.'
+status: draft
+reviewed_by: null
+reviewed_at: null

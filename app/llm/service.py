@@ -1,8 +1,8 @@
 """High-level AI operations: tutor reply streaming, the gatekeeper classification, running
 summaries, and cost logging with alerts. Callers never see the SDK.
 
-Data sent to the provider: course context, topic, the conversation and photos. Never a name,
-email, username or any identifier; `user_id` is used only in our own cost log."""
+Data sent to the provider: the civics context, canton, topic and the conversation. Never a
+name, email, username or any identifier; `user_id` is used only in our own cost log."""
 
 from __future__ import annotations
 
@@ -61,7 +61,7 @@ class GateResult:
 
 @dataclass
 class TutorContext:
-    course_key: str
+    canton: str
     language: str
     topic_code: str
     topic_name: str
@@ -74,33 +74,28 @@ class TutorContext:
 # --- Prompt assembly -----------------------------------------------------------------
 
 
-def _course_label(course_key: str, locale: str = "en") -> str:
-    module = prompts.course_module_key(course_key)
-    info = prompts.course_info(module)
-    level = prompts.course_level(course_key)
-    if info is None:
-        return course_key
-    name = info.display("en")
-    level_name = info.level_display(level, "en")
-    return f"{name}, {level_name}" if level_name else name
+CANTON_NAMES = {"zh": "Zurich", "ag": "Aargau"}
 
 
-def prompt_version(course_key: str) -> str:
+def canton_label(canton: str) -> str:
+    name = CANTON_NAMES.get(canton)
+    return f"canton of {name} ({canton.upper()})" if name else f"canton {canton.upper()}"
+
+
+def prompt_version() -> str:
     base = prompts.load("base")
-    module = prompts.course_module_key(course_key)
-    course = prompts.load(f"courses/{module}")
-    return f"{base.label}+{course.label}"
+    civics = prompts.load("civics")
+    return f"{base.label}+{civics.label}"
 
 
 def build_system(ctx: TutorContext) -> list[dict[str, Any]]:
-    """Layers 1 and 2 are cached (one breakpoint after the course module); layer 3 is the
-    per-session context and changes every turn."""
+    """Layers 1 and 2 (base instructions, civics context) are cached with one breakpoint
+    after the civics context; layer 3 is the per-session context and changes every turn."""
     base = prompts.load("base")
-    module = prompts.course_module_key(ctx.course_key)
-    course = prompts.load(f"courses/{module}")
+    civics = prompts.load("civics")
     lines = [
-        "Student context (no personal details are ever provided):",
-        f"- Course: {_course_label(ctx.course_key)}",
+        "Learner context (no personal details are ever provided):",
+        f"- Canton: {canton_label(ctx.canton)}",
         f"- Reply language: {LANGUAGE_NAMES.get(ctx.language, 'English (British spelling)')}",
         f"- Session topic: {ctx.topic_name} (topic code {ctx.topic_code})",
     ]
@@ -111,8 +106,8 @@ def build_system(ctx: TutorContext) -> list[dict[str, Any]]:
         lines.append(f"- Mastery on this topic from practice questions: {ctx.mastery}/100 ({band})")
     if ctx.misses:
         lines.append(
-            "- Recent practice questions the student got wrong on this topic. Start by finding "
-            "out what went wrong with the first one, then teach the idea behind it; do not "
+            "- Recent practice questions the learner got wrong on this topic. Start by finding "
+            "out what went wrong with the first one, then explain the idea behind it; do not "
             "simply give the correct answer:"
         )
         for i, m in enumerate(ctx.misses, 1):
@@ -124,7 +119,7 @@ def build_system(ctx: TutorContext) -> list[dict[str, Any]]:
         lines.append("- Note for this turn: " + ctx.note)
     return [
         {"type": "text", "text": base.text},
-        {"type": "text", "text": course.text, "cache_control": {"type": "ephemeral"}},
+        {"type": "text", "text": civics.text, "cache_control": {"type": "ephemeral"}},
         {"type": "text", "text": "\n".join(lines)},
     ]
 
@@ -266,7 +261,7 @@ async def classify_message(
     user_id: Any,
     conversation_id: Any,
     text: str,
-    course_key: str,
+    canton: str,
     topic_name: str,
     previous_assistant: str | None,
 ) -> GateResult:
@@ -276,7 +271,7 @@ async def classify_message(
     gate = prompts.load("gatekeeper")
     system = gate.text
     context = [
-        f"Course: {_course_label(course_key)}",
+        f"Course: Swiss citizenship knowledge test, {canton_label(canton)}",
         f"Session topic: {topic_name}",
     ]
     if previous_assistant:

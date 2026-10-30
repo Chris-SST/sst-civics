@@ -1,0 +1,16 @@
+# EXAMPLE TRANSLATION FOR TESTS ONLY, written for the test suite.
+id: beispiel-staatsebenen
+lang: pt
+source_version: 1
+question: Em quantos níveis de governo está organizada a Suíça?
+options:
+  a: 'Em dois níveis: a Confederação e os cantões'
+  b: 'Em três níveis: a Confederação, os cantões e as comunas'
+  c: 'Em quatro níveis: a Confederação, as regiões, os cantões e as comunas'
+  d: 'Num só nível: apenas a Confederação'
+explanation: 'A Suíça é um Estado federal com três níveis: a Confederação, os cantões e as
+  comunas. Cada nível tem as suas próprias tarefas e autoridades e cobra os seus próprios
+  impostos.'
+status: approved
+reviewed_by: Beispiel-Reviewer
+reviewed_at: '2026-10-30'

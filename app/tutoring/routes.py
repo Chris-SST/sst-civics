@@ -1,4 +1,5 @@
-"""Learner-facing tutor API: courses and topics, conversations, streaming replies.
+"""Learner-facing tutor API: conversations on a topic of the learner's canton, streaming
+replies. "Explain this" on a single question replaces the topic chat in task 1.10.
 
 Replies stream as server-sent events over a POST:
 
@@ -56,28 +57,14 @@ OFF_TOPIC_STREAK_LIMIT = 3
 # --- Schemas ---------------------------------------------------------------------------
 
 
-class TopicOut(BaseModel):
-    code: str
-    name: str
-
-
-class CourseOut(BaseModel):
-    key: str
-    name: str
-    level: str
-    topics: list[TopicOut]
-
-
 class ConversationCreate(BaseModel):
-    course_key: str
-    topic_code: str
+    topic_code: str = Field(max_length=80)
     language: Literal["en", "de", "fr"] | None = None
 
 
 class ConversationOut(BaseModel):
     id: uuid.UUID
-    course_key: str
-    course_name: str
+    canton: str
     topic_code: str
     topic_name: str
     language: str
@@ -106,26 +93,10 @@ class MessageIn(BaseModel):
 # --- Helpers ---------------------------------------------------------------------------
 
 
-def _course_out(course_key: str, locale: str) -> CourseOut | None:
-    if not prompts.has_course_module(course_key):
-        return None
-    info = prompts.course_info(prompts.course_module_key(course_key))
-    assert info is not None
-    level = prompts.course_level(course_key)
-    return CourseOut(
-        key=course_key,
-        name=info.display(locale),
-        level=info.level_display(level, locale),
-        topics=[TopicOut(code=t.code, name=t.display(locale)) for t in info.topics_for(level)],
-    )
-
-
-def _conversation_out(c: Conversation, locale: str) -> ConversationOut:
-    info = prompts.course_info(prompts.course_module_key(c.course_key))
+def _conversation_out(c: Conversation) -> ConversationOut:
     return ConversationOut(
         id=c.id,
-        course_key=c.course_key,
-        course_name=info.display(locale) if info else c.course_key,
+        canton=c.canton,
         topic_code=c.topic_code,
         topic_name=c.topic_name,
         language=c.language,
@@ -156,7 +127,6 @@ def _sse(event: str, data: dict[str, Any]) -> str:
 async def overview(
     user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
 ) -> dict[str, Any]:
-    courses = [c for c in (_course_out(k, user.locale) for k in prompts.available_courses()) if c]
     usage = await usage_for(db, user)
     recent = (
         (
@@ -174,9 +144,8 @@ async def overview(
         "tutor_name": get_settings().tutor_name,
         "tutor_enabled": get_provider().available,
         "access": access_level(user),
-        "courses": [c.model_dump() for c in courses],
         "usage": usage.to_dict(),
-        "recent": [_conversation_out(c, user.locale).model_dump(mode="json") for c in recent],
+        "recent": [_conversation_out(c).model_dump(mode="json") for c in recent],
     }
 
 
@@ -188,18 +157,13 @@ async def create_conversation(
 ) -> ConversationOut:
     if not has_access(user, user.canton):
         raise HTTPException(status.HTTP_403_FORBIDDEN, "no_access")
-    if not prompts.has_course_module(body.course_key):
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_course")
-    info = prompts.course_info(prompts.course_module_key(body.course_key))
-    assert info is not None
-    topic = info.topic(body.topic_code)
-    level = prompts.course_level(body.course_key)
-    if topic is None or (level and level not in topic.levels):
+    topic = await bank.get_topic(db, user.canton, body.topic_code)
+    if topic is None:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_topic")
     language = body.language or (user.locale if user.locale in LOCALES else "en")
     conv = Conversation(
         user_id=user.id,
-        course_key=body.course_key,
+        canton=user.canton,
         topic_code=topic.code,
         topic_name=topic.display(language),
         language=language,
@@ -208,7 +172,7 @@ async def create_conversation(
     db.add(conv)
     await db.commit()
     await db.refresh(conv)
-    return _conversation_out(conv, user.locale)
+    return _conversation_out(conv)
 
 
 @router.get("/conversations", response_model=list[ConversationOut])
@@ -227,7 +191,7 @@ async def list_conversations(
         .scalars()
         .all()
     )
-    return [_conversation_out(c, user.locale) for c in rows]
+    return [_conversation_out(c) for c in rows]
 
 
 @router.get("/conversations/{conversation_id}", response_model=ConversationDetail)
@@ -246,7 +210,7 @@ async def get_conversation(
         .scalars()
         .all()
     )
-    out = _conversation_out(conv, user.locale)
+    out = _conversation_out(conv)
     return ConversationDetail(
         **out.model_dump(),
         messages=[
@@ -266,7 +230,7 @@ async def end_conversation(
     conv.status = CONVERSATION_ENDED
     await db.commit()
     await db.refresh(conv)
-    return _conversation_out(conv, user.locale)
+    return _conversation_out(conv)
 
 
 @router.post("/conversations/{conversation_id}/messages")
@@ -410,7 +374,7 @@ async def _reply_stream(
             user_id=learner.id,
             conversation_id=conv.id,
             text=text,
-            course_key=conv.course_key,
+            canton=conv.canton,
             topic_name=conv.topic_name,
             previous_assistant=previous_assistant,
         )
@@ -460,14 +424,13 @@ async def _reply_stream(
             await db.execute(
                 select(TopicMastery).where(
                     TopicMastery.user_id == learner.id,
-                    TopicMastery.course_key == conv.course_key,
                     TopicMastery.topic_code == conv.topic_code,
                 )
             )
         ).scalar_one_or_none()
-        misses = await bank.recent_misses(db, learner.id, conv.course_key, conv.topic_code)
+        misses = await bank.recent_misses(db, learner.id, conv.topic_code)
         ctx = service.TutorContext(
-            course_key=conv.course_key,
+            canton=conv.canton,
             language=locale,
             topic_code=conv.topic_code,
             topic_name=conv.topic_name,
@@ -477,7 +440,7 @@ async def _reply_stream(
             misses=misses or None,
         )
         history = await _history(db, conv)
-        version = service.prompt_version(conv.course_key)
+        version = service.prompt_version()
         collected: list[str] = []
         outcome: service.ReplyOutcome | None = None
         async for item in service.stream_reply(ctx, history):

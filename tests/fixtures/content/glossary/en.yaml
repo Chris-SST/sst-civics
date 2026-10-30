@@ -1,0 +1,9 @@
+# EXAMPLE GLOSSARY FOR TESTS ONLY.
+lang: en
+terms:
+- term: Bund
+  translation: Confederation
+  note: The federal level.
+- term: Ständerat
+  translation: Council of States
+  note: null

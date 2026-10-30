@@ -1,0 +1,15 @@
+# EXAMPLE TRANSLATION FOR TESTS ONLY, written for the test suite.
+id: beispiel-anzahl-kantone
+lang: en
+source_version: 1
+question: How many cantons does Switzerland have?
+options:
+  a: '20'
+  b: '23'
+  c: '26'
+  d: '30'
+explanation: Switzerland has 26 cantons. Six of them used to be called half-cantons; they
+  have one seat each in the Council of States instead of two.
+status: approved
+reviewed_by: Beispiel-Reviewer
+reviewed_at: '2026-10-30'

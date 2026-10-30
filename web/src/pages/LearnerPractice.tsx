@@ -12,7 +12,6 @@ export default function LearnerPractice() {
   const { t } = useTranslation();
   const [params] = useSearchParams();
   const navigate = useNavigate();
-  const courseKey = params.get("course_key") ?? "";
   const topicCode = params.get("topic_code") ?? "";
   const [round, setRound] = useState<PracticeRound | null>(null);
   const [roundNo, setRoundNo] = useState(0);
@@ -33,24 +32,24 @@ export default function LearnerPractice() {
     setError(null);
     try {
       const r = await get<PracticeRound>(
-        `/api/practice/round?course_key=${encodeURIComponent(courseKey)}&topic_code=${encodeURIComponent(topicCode)}`,
+        `/api/practice/round?topic_code=${encodeURIComponent(topicCode)}`,
       );
       setRound(r);
     } catch (e) {
       if (e instanceof ApiError && e.code === "no_questions") setNoQuestions(true);
       else setError(e);
     }
-  }, [courseKey, topicCode]);
+  }, [topicCode]);
 
   useEffect(() => {
-    if (!courseKey || !topicCode) return;
+    if (!topicCode) return;
     void load();
-  }, [courseKey, topicCode, load]);
+  }, [topicCode, load]);
 
   async function askTutor() {
     setBusy(true);
     try {
-      const conv = await post<{ id: string }>("/api/tutor/conversations", { course_key: courseKey, topic_code: topicCode });
+      const conv = await post<{ id: string }>("/api/tutor/conversations", { topic_code: topicCode });
       navigate(`/learner/chat/${conv.id}`);
     } catch (e) {
       setError(e);
@@ -58,7 +57,7 @@ export default function LearnerPractice() {
     }
   }
 
-  if (!courseKey || !topicCode) {
+  if (!topicCode) {
     return (
       <section className="card">
         <ErrorText error={new ApiError(400, "invalid_topic")} />
@@ -203,7 +202,6 @@ export default function LearnerPractice() {
                 question_id: question.id,
                 answer,
                 mode: "practice",
-                course_key: courseKey,
               })
             }
             onResult={setCurrent}

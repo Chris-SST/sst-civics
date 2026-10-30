@@ -19,7 +19,14 @@ from app.models import (
     LlmCall,
     Message,
 )
-from tests.conftest import Api, admin_logged_in, grant_access, learner_logged_in
+from tests.conftest import (
+    Api,
+    admin_logged_in,
+    grant_access,
+    learner_logged_in,
+    make_question,
+    seed_topics,
+)
 
 
 @pytest.fixture
@@ -31,6 +38,12 @@ def fake() -> FakeProvider:
 
 
 LEARNER_EMAIL = "lina@example.ch"
+TOPIC = "bund.demokratie.foederalismus"
+
+
+@pytest.fixture(autouse=True)
+async def _topics():
+    await seed_topics()
 
 
 async def learner_in(api: Api, *, access: bool = True) -> dict:
@@ -51,15 +64,13 @@ def parse_sse(text: str) -> list[tuple[str, dict]]:
     return events
 
 
-async def start_conversation(api2: Api, course="ib_maths_aa_hl", topic="AA-1.2") -> str:
-    r = await api2.post(
-        "/api/tutor/conversations", json={"course_key": course, "topic_code": topic}
-    )
+async def start_conversation(api2: Api, topic=TOPIC) -> str:
+    r = await api2.post("/api/tutor/conversations", json={"topic_code": topic})
     assert r.status_code == 201, r.text
     return r.json()["id"]
 
 
-async def test_overview_lists_courses_and_topics(api, api2, fake):
+async def test_overview_has_no_courses_any_more(api, api2, fake):
     await learner_in(api2)
     r = await api2.get("/api/tutor/overview")
     assert r.status_code == 200, r.text
@@ -67,23 +78,27 @@ async def test_overview_lists_courses_and_topics(api, api2, fake):
     assert data["tutor_enabled"] is True
     assert data["access"] == "full"
     assert "notice_seen" not in data
-    keys = {c["key"] for c in data["courses"]}
-    assert {"ib_maths_aa_hl", "ib_physics_sl"} <= keys  # every course, no per-user list
-    aa = next(c for c in data["courses"] if c["key"] == "ib_maths_aa_hl")
-    assert aa["level"] == "Higher Level"
-    assert any(t["code"] == "AA-1.5" for t in aa["topics"])  # HL-only topic present
-    physics = next(c for c in data["courses"] if c["key"] == "ib_physics_sl")
-    assert not any(t["code"] == "PH-A.4" for t in physics["topics"])  # HL-only hidden for SL
+    assert "courses" not in data  # topics come from /api/practice/overview
     assert data["usage"]["monthly_limit"] is None and data["usage"]["daily_limit"] == 20
+
+
+def test_course_modules_are_gone_and_civics_context_is_loaded():
+    from app.llm import prompts, service
+
+    root = prompts.prompts_root()
+    assert not (root / "courses").exists()
+    assert not hasattr(prompts, "course_info") and not hasattr(prompts, "available_courses")
+    assert service.prompt_version() == "base@v2+civics@v1"
+    assert "three levels" in prompts.load("civics").text.lower()
 
 
 async def test_streamed_reply_is_stored_counted_and_costed(api, api2, fake):
     await learner_in(api2)
     conv_id = await start_conversation(api2)
-    fake.replies = ["Good question. What have you tried so far with the log rules?"]
+    fake.replies = ["Good question. What do you already know about the tasks of a canton?"]
     r = await api2.post(
         f"/api/tutor/conversations/{conv_id}/messages",
-        json={"content": "How do I solve 2^x = 10?"},
+        json={"content": "What does a canton decide?"},
     )
     assert r.status_code == 200, r.text
     assert r.headers["content-type"].startswith("text/event-stream")
@@ -91,23 +106,24 @@ async def test_streamed_reply_is_stored_counted_and_costed(api, api2, fake):
     kinds = [e for e, _ in events]
     assert "delta" in kinds and kinds[-1] == "done"
     streamed = "".join(d["text"] for e, d in events if e == "delta")
-    assert "log rules" in streamed
+    assert "tasks of a canton" in streamed
     message = next(d for e, d in events if e == "message")
     assert message["role"] == "assistant"
-    assert "log rules" in message["content"]
+    assert "tasks of a canton" in message["content"]
     usage = next(d for e, d in events if e == "usage")
     assert usage["daily_used"] == 1 and usage["monthly_used"] == 1
 
-    # Prompt layering: base + course cached, student context last, no personal data.
+    # Prompt layering: base + civics context cached, learner context last, no personal data.
     stream_call = next(c for c in fake.calls if c.kind == "stream")
     assert stream_call.model == get_settings().tutor_model
     assert len(stream_call.system) == 3
     assert stream_call.system[1].get("cache_control") == {"type": "ephemeral"}
-    assert "Exponents and logarithms" in stream_call.system[2]["text"]
-    assert "Higher Level" in stream_call.system[2]["text"]
+    assert "Federalism" in stream_call.system[2]["text"]
+    assert "canton of Zurich (ZH)" in stream_call.system[2]["text"]
+    assert "knowledge test" in stream_call.system[1]["text"]
     joined = json.dumps(stream_call.system) + json.dumps(stream_call.messages)
     assert "Lina" not in joined and "lina" not in joined and "example.ch" not in joined
-    assert stream_call.messages[-1] == {"role": "user", "content": "How do I solve 2^x = 10?"}
+    assert stream_call.messages[-1] == {"role": "user", "content": "What does a canton decide?"}
     gate_call = next(c for c in fake.calls if c.kind == "structured")
     assert gate_call.model == get_settings().fast_model
 
@@ -120,7 +136,7 @@ async def test_streamed_reply_is_stored_counted_and_costed(api, api2, fake):
         assert purposes == ["gatekeeper", "tutor_reply"]
         reply = next(c for c in calls if c.purpose == "tutor_reply")
         assert reply.cost_usd > 0 and reply.cost_chf == pytest.approx(reply.cost_usd * 0.8)
-        assert reply.prompt_version.startswith("base@v2+courses/ib_maths_aa@v1")
+        assert reply.prompt_version == "base@v2+civics@v1"
         assert reply.cache_read_tokens == 1000
 
     r = await api2.get(f"/api/tutor/conversations/{conv_id}")
@@ -240,20 +256,19 @@ async def test_refusal_gets_fixed_reply_and_is_not_counted(api, api2, fake):
 
 async def test_no_access_and_bad_inputs(api, api2, fake):
     await learner_in(api2, access=False)
-    r = await api2.post(
-        "/api/tutor/conversations", json={"course_key": "ib_maths_aa_hl", "topic_code": "AA-1.2"}
-    )
+    r = await api2.post("/api/tutor/conversations", json={"topic_code": TOPIC})
     assert r.status_code == 403 and r.json()["detail"] == "no_access"
     await grant_access(LEARNER_EMAIL, days=1)
+    r = await api2.post("/api/tutor/conversations", json={"topic_code": "bund.unbekannt"})
+    assert r.status_code == 400 and r.json()["detail"] == "invalid_topic"
+    await seed_topics("ag", (("kanton.demokratie.grosser_rat", "canton", "Grosser Rat", "GR"),))
     r = await api2.post(
-        "/api/tutor/conversations", json={"course_key": "ib_chemistry_sl", "topic_code": "X"}
+        "/api/tutor/conversations", json={"topic_code": "kanton.demokratie.grosser_rat"}
     )
-    assert r.status_code == 400 and r.json()["detail"] == "invalid_course"
-    r = await api2.post(
-        "/api/tutor/conversations", json={"course_key": "ib_physics_sl", "topic_code": "PH-A.4"}
-    )
-    assert r.status_code == 400 and r.json()["detail"] == "invalid_topic"  # HL-only topic
-    conv_id = await start_conversation(api2, "ib_physics_sl", "PH-A.1")
+    assert r.status_code == 400 and r.json()["detail"] == "invalid_topic"  # another canton
+    r = await api2.post("/api/tutor/conversations", json={"course_key": "ib_physics_sl"})
+    assert r.status_code == 422  # the course concept is gone
+    conv_id = await start_conversation(api2, "kanton.demokratie.kantonsrat")
     r = await api2.post(
         f"/api/tutor/conversations/{conv_id}/messages", json={"content": "x" * 2001}
     )
@@ -300,7 +315,7 @@ async def test_running_summary_folds_older_turns(api, api2, fake, monkeypatch):
         fake.classifications.append({"label": "on_topic", "wellbeing": "none", "coursework": False})
         if i == 6:
             fake.classifications.append(
-                {"summary": "The student practised log laws and solved 2^x=10."}
+                {"summary": "The learner went through the three levels of government."}
             )
         r = await api2.post(
             f"/api/tutor/conversations/{conv_id}/messages", json={"content": f"Step {i}"}
@@ -308,7 +323,7 @@ async def test_running_summary_folds_older_turns(api, api2, fake, monkeypatch):
         assert r.status_code == 200, r.text
     async with SessionLocal() as db:
         conv = await db.get(Conversation, uuid.UUID(conv_id))
-        assert conv.summary and "log laws" in conv.summary
+        assert conv.summary and "three levels" in conv.summary
         assert conv.summary_upto_seq > 0
         summary_calls = (
             (await db.execute(select(LlmCall).where(LlmCall.purpose == "summary"))).scalars().all()
@@ -319,7 +334,7 @@ async def test_running_summary_folds_older_turns(api, api2, fake, monkeypatch):
     r = await api2.post(f"/api/tutor/conversations/{conv_id}/messages", json={"content": "Next"})
     assert r.status_code == 200
     stream_call = [c for c in fake.calls if c.kind == "stream"][-1]
-    assert "log laws" in stream_call.system[2]["text"]
+    assert "three levels" in stream_call.system[2]["text"]
     assert len(stream_call.messages) <= 3
 
 
@@ -349,25 +364,17 @@ def test_empty_model_setting_falls_back_to_default(monkeypatch):
 
 
 async def test_tutor_context_carries_recent_mistakes_and_mastery(api, api2, fake):
-    from app.models import Attempt, Question, TopicMastery, User
+    from app.models import Attempt, TopicMastery, User
 
     await learner_in(api2)
     async with SessionLocal() as db:
         learner = (
             (await db.execute(select(User).where(User.email == LEARNER_EMAIL))).scalars().one()
         )
-        q = Question(
-            module_key="ib_maths_aa",
-            level="both",
-            topic_code="AA-1.2",
-            difficulty=3,
-            qtype="mcq",
-            options=[{"key": k, "text": str(i)} for i, k in enumerate("ABCD")],
-            language="en",
-            question_text="Solve 2^x = 10, giving x to three significant figures.",
-            answer="C",
-            worked_solution="Take logs.",
-            status="auto_verified",
+        q = make_question(
+            question_de="Auf wie vielen Ebenen ist die Schweiz organisiert?",
+            options_de={"a": "Zwei", "b": "Drei", "c": "Vier", "d": "Eine"},
+            correct="b",
         )
         db.add(q)
         await db.flush()
@@ -375,23 +382,15 @@ async def test_tutor_context_carries_recent_mistakes_and_mastery(api, api2, fake
             Attempt(
                 user_id=learner.id,
                 question_id=q.id,
-                course_key="ib_maths_aa_hl",
-                topic_code="AA-1.2",
+                topic_code=TOPIC,
                 mode="diagnostic",
-                answer_text="5",
+                answer_text="c",
                 score=0.0,
                 correct=False,
             )
         )
         db.add(
-            TopicMastery(
-                user_id=learner.id,
-                course_key="ib_maths_aa_hl",
-                topic_code="AA-1.2",
-                rating=950.0,
-                attempts=2,
-                correct=0,
-            )
+            TopicMastery(user_id=learner.id, topic_code=TOPIC, rating=950.0, attempts=2, correct=0)
         )
         await db.commit()
     conv_id = await start_conversation(api2)
@@ -400,5 +399,6 @@ async def test_tutor_context_carries_recent_mistakes_and_mastery(api, api2, fake
     stream_call = [c for c in fake.calls if c.kind == "stream"][-1]
     context = stream_call.system[2]["text"]
     assert "Mastery on this topic" in context and "(weak)" in context
-    assert "Solve 2^x = 10" in context and "Student's answer: 5" in context
+    assert "Auf wie vielen Ebenen" in context and "Student's answer: c) Vier" in context
+    assert "Correct answer: b) Drei" in context
     assert LEARNER_EMAIL not in context and "lina" not in context

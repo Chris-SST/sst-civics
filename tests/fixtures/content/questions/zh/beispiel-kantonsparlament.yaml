@@ -1,0 +1,22 @@
+# EXAMPLE QUESTION FOR TESTS ONLY, written for the test suite. Not part of the question bank.
+id: beispiel-kantonsparlament
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.kantonsrat
+question_de: "Wie heisst das Parlament des Kantons Zürich?"
+options_de:
+  a: "Grosser Rat"
+  b: "Kantonsrat"
+  c: "Landrat"
+  d: "Gemeinderat"
+correct: b
+explanation_de: >-
+  Das Parlament des Kantons Zürich heisst Kantonsrat. Andere Kantone verwenden andere
+  Namen für ihr Parlament, zum Beispiel Grosser Rat oder Landrat.
+sources:
+  - url: https://www.zh.ch/de/politik-staat.html
+    checked: 2026-10-30
+glossary: [Kantonsrat]
+status: draft
+difficulty: 2

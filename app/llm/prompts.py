@@ -3,8 +3,7 @@
 Layout (see prompts/README.md):
 
     prompts/base/vN.md                     persona, teaching method, safety rules
-    prompts/courses/<module>/vN.md         course module (topics, notation, misconceptions)
-    prompts/courses/<module>/topics.json   topic list shown to students and sent as context
+    prompts/civics/vN.md                   civics-trainer context (test, levels of government)
     prompts/gatekeeper/vN.md               fast-model classification instructions
     prompts/summary/vN.md                  running-summary instructions
     prompts/replies/vN.json                fixed server replies in en, de, fr
@@ -35,41 +34,6 @@ class PromptFile:
     @property
     def label(self) -> str:
         return f"{self.name}@{self.version}"
-
-
-@dataclass(frozen=True)
-class Topic:
-    code: str
-    name: dict[str, str]
-    levels: tuple[str, ...]  # ("sl", "hl") or a subset
-
-    def display(self, locale: str) -> str:
-        return self.name.get(locale) or self.name["en"]
-
-
-@dataclass(frozen=True)
-class CourseInfo:
-    module_key: str
-    name: dict[str, str]
-    level_names: dict[str, dict[str, str]]  # level -> locale -> name
-    topics: tuple[Topic, ...]
-
-    def display(self, locale: str) -> str:
-        return self.name.get(locale) or self.name["en"]
-
-    def level_display(self, level: str | None, locale: str) -> str:
-        if not level:
-            return ""
-        names = self.level_names.get(level, {})
-        return names.get(locale) or names.get("en") or level.upper()
-
-    def topics_for(self, level: str | None) -> list[Topic]:
-        if not level:
-            return list(self.topics)
-        return [t for t in self.topics if level in t.levels]
-
-    def topic(self, code: str) -> Topic | None:
-        return next((t for t in self.topics if t.code == code), None)
 
 
 def prompts_root() -> Path:
@@ -119,73 +83,13 @@ def _render(text: str) -> str:
 
 @lru_cache(maxsize=64)
 def load(name: str) -> PromptFile:
-    """`name` is a path under prompts/, for example "base" or "courses/ib_maths_aa"."""
+    """`name` is a path under prompts/, for example "base" or "civics"."""
     directory = prompts_root() / name
     path = _latest(directory, "md")
     if path is None:
         raise FileNotFoundError(f"no prompt version in {directory}")
     version = path.stem
     return PromptFile(name=name, version=version, text=_render(path.read_text(encoding="utf-8")))
-
-
-def course_module_key(course_key: str) -> str:
-    """ib_maths_aa_hl -> ib_maths_aa. The level travels separately as student context."""
-    for suffix in ("_sl", "_hl"):
-        if course_key.endswith(suffix):
-            return course_key[: -len(suffix)]
-    return course_key
-
-
-def course_level(course_key: str) -> str | None:
-    for level in ("sl", "hl"):
-        if course_key.endswith("_" + level):
-            return level
-    return None
-
-
-@lru_cache(maxsize=64)
-def course_info(module_key: str) -> CourseInfo | None:
-    path = prompts_root() / "courses" / module_key / "topics.json"
-    if not path.is_file():
-        return None
-    data = json.loads(path.read_text(encoding="utf-8"))
-    topics = tuple(
-        Topic(code=t["code"], name=t["name"], levels=tuple(t.get("levels", ["sl", "hl"])))
-        for t in data["topics"]
-    )
-    return CourseInfo(
-        module_key=module_key,
-        name=data["name"],
-        level_names=data.get("levels", {}),
-        topics=topics,
-    )
-
-
-def has_course_module(course_key: str) -> bool:
-    module = course_module_key(course_key)
-    return (
-        course_info(module) is not None
-        and _latest(prompts_root() / "courses" / module, "md") is not None
-    )
-
-
-def available_courses() -> list[str]:
-    """Every course key with a topic list and a tutor prompt, e.g. ib_maths_aa_hl. Every
-    learner may use every course until the canton modules replace them in Phase 1."""
-    root = prompts_root() / "courses"
-    if not root.is_dir():
-        return []
-    out: list[str] = []
-    for directory in sorted(p for p in root.iterdir() if p.is_dir()):
-        info = course_info(directory.name)
-        if info is None or _latest(directory, "md") is None:
-            continue
-        levels = list(info.level_names)
-        if levels:
-            out.extend(f"{directory.name}_{lvl}" for lvl in levels)
-        else:
-            out.append(directory.name)
-    return out
 
 
 @lru_cache(maxsize=4)
@@ -204,5 +108,4 @@ def fixed_reply(kind: str, locale: str) -> str:
 
 def clear_cache() -> None:
     load.cache_clear()
-    course_info.cache_clear()
     _replies.cache_clear()

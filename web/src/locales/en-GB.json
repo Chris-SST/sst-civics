@@ -95,7 +95,11 @@
     "refund_failed": "Stripe did not accept the refund. Please try again or refund in the Stripe Dashboard.",
     "refund_too_late": "The refund period for this payment has ended.",
     "refund_too_many_questions": "Too many questions have been studied since this payment for a refund under the rule.",
-    "refund_refunded": "This payment has already been refunded."
+    "refund_refunded": "This payment has already been refunded.",
+    "note_required": "Please add a note saying what needs to change.",
+    "invalid_options": "Four different options are needed, with the correct one among them.",
+    "invalid_transition": "This question can no longer be changed in this way.",
+    "edits_need_approve": "Edits can only be saved together with an approval."
   },
   "impersonation": {
     "banner": "Viewing as {{name}} ({{role}}). You are signed in as admin {{admin}}.",
@@ -194,13 +198,10 @@
     "activeUntil": "Thank you. Your Civics Pass for {{canton}} is active until {{date}}."
   },
   "learner": {
-    "noCourses": "No courses chosen yet",
     "tutorOffline": "The tutor is not connected in this environment yet.",
     "noticeTitle": "Before you start with {{name}}",
     "noticeBody": "The explanations here are written by an AI assistant and can contain mistakes. Use them to understand a question, and check anything important against the information from your canton.",
     "noticeOk": "Got it",
-    "topic": "Topic",
-    "chooseTopic": "Choose a topic",
     "recent": "Recent sessions",
     "noRecent": "No sessions yet. Pick a topic to begin.",
     "endedTag": "ended",
@@ -223,9 +224,13 @@
     "diagSkip": "Skip for now",
     "showTopics": "Show all {{count}} topics",
     "hideTopics": "Hide topics",
-    "noQuestionsYet": "Practice questions for this course are on their way. You can still ask the tutor.",
+    "noQuestionsYet": "Practice questions for your canton are on their way. You can already ask the tutor about each topic.",
     "welcome": "Welcome",
-    "noAccess": "You are on free practice. A Civics Pass for your canton opens all questions, mock tests and Explain this."
+    "noAccess": "You are on free practice. A Civics Pass for your canton opens all questions, mock tests and Explain this.",
+    "noTopics": "The topics for your canton are on their way.",
+    "topicsTitle": "Test topics: {{canton}}",
+    "questionsCount_one": "{{count}} question",
+    "questionsCount_other": "{{count}} questions"
   },
   "chat": {
     "back": "Your sessions",
@@ -389,19 +394,19 @@
     "streak": "{{count}} in a row!",
     "backOnTrack": "Back on track!",
     "tricky": "A tricky one. Read the solution, then try the next.",
-    "difficulty": "Difficulty {{level}} of 5",
+    "difficulty": "Difficulty {{level}} of 3",
     "unreviewed": "not yet reviewed",
     "yourAnswer": "Your answer",
     "submit": "Check answer",
     "correct": "Correct",
     "incorrect": "Not quite",
     "answerLabel": "Answer",
-    "showSolution": "Show solution",
-    "hideSolution": "Hide solution",
     "report": "Report a problem",
     "reportHint": "What is wrong? (optional)",
     "reportSend": "Send report",
-    "reported": "Thank you. We will look at this question."
+    "reported": "Thank you. We will look at this question.",
+    "showExplanation": "Show explanation",
+    "hideExplanation": "Hide explanation"
   },
   "figure": {
     "failed": "Figure could not be drawn",
@@ -419,32 +424,20 @@
   },
   "review": {
     "queue": "Review queue",
-    "module": "Module",
-    "allModules": "All modules",
     "statusFilter": "Show",
-    "needsAttention": "Needs attention",
+    "needsAttention": "Drafts and in review",
     "empty": "Nothing to review.",
     "question": "Question",
     "topic": "Topic",
     "difficulty": "Difficulty",
     "statusLabel": "Status",
-    "issuesLabel": "Issues",
-    "spotCheck": "Spot check",
     "reports_one": "{{count}} report",
     "reports_other": "{{count}} reports",
     "reportsLabel": "Learner reports",
     "panelTitle": "Review question",
-    "options": "Options",
-    "optionsHint": "One per line, e.g. A) 2x+1",
-    "answer": "Answer",
-    "workedSolution": "Worked solution",
-    "level": "Level",
+    "options": "Option",
+    "answer": "Correct answer",
     "topicCode": "Topic",
-    "checks": "Automatic checks",
-    "solveAnswer": "Independent solve",
-    "storedAnswer": "Stored answer",
-    "similarity": "Closest existing question",
-    "source": "Source and prompt version",
     "previousNote": "Previous note",
     "edit": "Edit the question",
     "hideEdit": "Hide the editor",
@@ -458,63 +451,51 @@
     "myMinutes": "My review minutes",
     "status": {
       "draft": "Draft",
-      "auto_verified": "Auto-verified",
-      "needs_review": "Needs review",
       "approved": "Approved",
-      "retired": "Retired"
+      "retired": "Retired",
+      "in_review": "In review"
     },
-    "issues": {
-      "solve_failed": "Solver failed",
-      "solver_low_confidence": "Solver unsure",
-      "answers_differ": "Answers differ",
-      "mcq_options_invalid": "Options invalid",
-      "no_solution": "No worked solution",
-      "near_duplicate": "Near duplicate",
-      "student_reports": "Learner reports"
+    "explanation": "Explanation",
+    "sources": "Sources",
+    "checked": "checked {{date}}",
+    "glossary": "Glossary terms",
+    "version": "version {{version}}",
+    "canton": "Canton",
+    "allCantons": "All",
+    "federal": "Federal",
+    "allTopics": "All topics",
+    "fileStatus": "Status in the file",
+    "imported": "Imported",
+    "filePending": "Changed in the app but not yet in the content file. The pipeline must write this change to the file.",
+    "filePendingShort": "File update pending",
+    "translations": "Translations",
+    "translationsMissing": "Marked as not yet translated.",
+    "sourceVersion": "from version {{version}}",
+    "pendingUpdates": "File updates pending",
+    "noteHint": "Required when sending back.",
+    "dbOnlyHint": "Saved in the app only. The content file is updated by the pipeline, with a new version.",
+    "tstate": {
+      "approved": "Approved",
+      "in_review": "In review",
+      "draft": "Draft",
+      "stale": "Out of date",
+      "missing": "Missing",
+      "source": "German original"
     }
   },
   "qbank": {
     "tab": "Question bank",
-    "overview": "Overview and generation",
+    "overview": "Overview",
     "reviewQueue": "Review queue",
-    "generate": "Generate questions",
-    "level": "Level",
-    "levels": {
-      "sl": "SL",
-      "hl": "HL",
-      "both": "SL and HL"
-    },
-    "topics": "Topics",
-    "allTopics": "All topics",
-    "difficulties": "Difficulties",
-    "perRequest": "Questions per request",
-    "perRequestShort": "request",
     "language": "Language",
-    "mode": "Mode",
-    "modeBatch": "Batch",
-    "modeDirect": "Direct",
-    "modeHelp": "Batch is half price and arrives within about an hour; direct runs now.",
-    "modes": {
-      "batch": "Batch",
-      "direct": "Direct"
-    },
-    "estimate": "{{requests}} requests, up to {{questions}} questions before checks.",
-    "submit": "Generate",
-    "submitted": "Request submitted: {{count}} requests.",
-    "batches": "Generation requests",
-    "noBatches": "No requests yet.",
-    "requests": "Requests",
-    "created": "Questions created",
-    "checkNow": "Check now",
-    "batchStatus": {
-      "submitted": "Submitted",
-      "processed": "Processed",
-      "failed": "Failed"
-    },
     "reports": "Open reports",
     "noReports": "No open reports.",
     "comment": "Comment",
-    "noComment": "no comment"
+    "noComment": "no comment",
+    "translationsTitle": "Translation status",
+    "translationsIntro": "Over the {{count}} approved German questions. Out-of-date translations were made from an earlier German version and are hidden from learners.",
+    "flaggedMissing": "Marked as not yet translated: {{count}}",
+    "importNote": "Questions come from the content files in the repository and are imported on every deploy. Changes made here are recorded until the pipeline writes them to the files."
   },
   "cantons": {
     "zh": "Zurich",
@@ -581,5 +562,12 @@
     "refundTooLate": "The refund period for your last payment ended on {{date}}.",
     "refundTooMany": "Your last payment can no longer be refunded: you have studied {{count}} questions since buying, and refunds are possible below {{max}}.",
     "refundDone": "Your last payment has been refunded."
+  },
+  "topics": {
+    "scope": {
+      "federal": "Confederation",
+      "canton": "Canton",
+      "commune": "Commune"
+    }
   }
 }

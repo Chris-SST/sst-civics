@@ -19,11 +19,10 @@ from app.models import (
     AuditLog,
     Entitlement,
     Payment,
-    Question,
     StripeEvent,
     User,
 )
-from tests.conftest import admin_logged_in, learner_logged_in
+from tests.conftest import admin_logged_in, learner_logged_in, make_question, seed_topics
 
 EMAIL = "learner@example.ch"
 
@@ -520,10 +519,10 @@ async def _study(n: int, email: str = EMAIL) -> None:
     async with SessionLocal() as db:
         user = await _user(db, email)
         for i in range(n):
-            q = Question(module_key="m", topic_code="t", question_text=f"Q{i}?", answer="A")
+            q = make_question(question_de=f"Frage {i}?")
             db.add(q)
             await db.flush()
-            db.add(Attempt(user_id=user.id, question_id=q.id, course_key="c", topic_code="t"))
+            db.add(Attempt(user_id=user.id, question_id=q.id, topic_code="t"))
         await db.commit()
 
 
@@ -619,7 +618,8 @@ async def test_chat_needs_an_entitlement_and_has_a_daily_limit(api, monkeypatch)
     set_provider(provider)
     try:
         me = await learner_logged_in(api)
-        body = {"course_key": "ib_physics_sl", "topic_code": "PH-A.1"}
+        await seed_topics()
+        body = {"topic_code": "bund.demokratie.foederalismus"}
         r = await api.post("/api/tutor/conversations", json=body)
         assert r.status_code == 403 and r.json()["detail"] == "no_access"
 

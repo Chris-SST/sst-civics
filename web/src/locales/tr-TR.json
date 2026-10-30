@@ -95,7 +95,11 @@
     "refund_failed": "Stripe iadeyi kabul etmedi. Lütfen tekrar deneyin veya Stripe panosundan iade edin.",
     "refund_too_late": "Bu ödeme için iade süresi sona erdi.",
     "refund_too_many_questions": "Bu ödemeden bu yana kurala göre iade için çok fazla soru çalışıldı.",
-    "refund_refunded": "Bu ödeme zaten iade edildi."
+    "refund_refunded": "Bu ödeme zaten iade edildi.",
+    "note_required": "Lütfen neyin değişmesi gerektiğini belirten bir not ekleyin.",
+    "invalid_options": "Doğru cevap dahil dört farklı cevap gereklidir.",
+    "invalid_transition": "Bu soru artık bu şekilde değiştirilemez.",
+    "edits_need_approve": "Değişiklikler yalnızca bir onayla birlikte kaydedilebilir."
   },
   "impersonation": {
     "banner": "{{name}} ({{role}}) olarak görüntüleniyor. Yönetici {{admin}} olarak giriş yaptınız.",
@@ -194,13 +198,10 @@
     "activeUntil": "Teşekkürler. {{canton}} için Civics Pass'iniz {{date}} tarihine kadar etkin."
   },
   "learner": {
-    "noCourses": "Henüz kurs seçilmedi",
     "tutorOffline": "Eğitmen bu ortamda henüz bağlı değil.",
     "noticeTitle": "{{name}} ile başlamadan önce",
     "noticeBody": "Buradaki açıklamaları bir yapay zekâ asistanı yazar ve hata içerebilir. Bir soruyu anlamak için kullanın; önemli konuları kantonunuzun bilgileriyle karşılaştırın.",
     "noticeOk": "Anladım",
-    "topic": "Konu",
-    "chooseTopic": "Bir konu seçin",
     "recent": "Son oturumlar",
     "noRecent": "Henüz oturum yok. Başlamak için bir konu seçin.",
     "endedTag": "sona erdi",
@@ -223,9 +224,13 @@
     "diagSkip": "Şimdilik atla",
     "showTopics": "{{count}} konunun tümünü göster",
     "hideTopics": "Konuları gizle",
-    "noQuestionsYet": "Bu kurs için alıştırma soruları hazırlanıyor. Yine de eğitmene sorabilirsiniz.",
+    "noQuestionsYet": "Kantonunuz için alıştırma soruları yakında eklenecek. Her konu hakkında şimdiden eğitmene sorabilirsiniz.",
     "welcome": "Hoş geldiniz",
-    "noAccess": "Kantonunuz için henüz erişiminiz yok."
+    "noAccess": "Kantonunuz için henüz erişiminiz yok.",
+    "noTopics": "Kantonunuzun konuları yakında eklenecek.",
+    "topicsTitle": "Sınav konuları: {{canton}}",
+    "questionsCount_one": "{{count}} soru",
+    "questionsCount_other": "{{count}} soru"
   },
   "chat": {
     "back": "Oturumlarınız",
@@ -389,19 +394,19 @@
     "streak": "Üst üste {{count}}!",
     "backOnTrack": "Yeniden yoldasınız!",
     "tricky": "Zor bir soru. Çözümü okuyun, sonra bir sonrakini deneyin.",
-    "difficulty": "Zorluk {{level}} / 5",
+    "difficulty": "Zorluk {{level}} / 3",
     "unreviewed": "henüz kontrol edilmedi",
     "yourAnswer": "Yanıtınız",
     "submit": "Yanıtı kontrol et",
     "correct": "Doğru",
     "incorrect": "Tam değil",
     "answerLabel": "Yanıt",
-    "showSolution": "Çözümü göster",
-    "hideSolution": "Çözümü gizle",
     "report": "Sorun bildirin",
     "reportHint": "Neyin yanlış olduğunu belirtin (isteğe bağlı)",
     "reportSend": "Bildirimi gönder",
-    "reported": "Teşekkürler. Bu soruyu inceleyeceğiz."
+    "reported": "Teşekkürler. Bu soruyu inceleyeceğiz.",
+    "showExplanation": "Açıklamayı göster",
+    "hideExplanation": "Açıklamayı gizle"
   },
   "figure": {
     "failed": "Şekil çizilemedi",
@@ -419,32 +424,20 @@
   },
   "review": {
     "queue": "İnceleme kuyruğu",
-    "module": "Modül",
-    "allModules": "Tüm modüller",
     "statusFilter": "Göster",
-    "needsAttention": "İlgi gerekiyor",
+    "needsAttention": "Taslaklar ve incelemedekiler",
     "empty": "İncelenecek bir şey yok.",
     "question": "Soru",
     "topic": "Konu",
     "difficulty": "Zorluk",
     "statusLabel": "Durum",
-    "issuesLabel": "Sorunlar",
-    "spotCheck": "Örnekleme kontrolü",
     "reports_one": "{{count}} bildirim",
     "reports_other": "{{count}} bildirim",
     "reportsLabel": "Kullanıcı bildirimleri",
     "panelTitle": "Soruyu incele",
-    "options": "Seçenekler",
-    "optionsHint": "Her satıra bir tane, örn. A) 2x+1",
-    "answer": "Yanıt",
-    "workedSolution": "Adım adım çözüm",
-    "level": "Düzey",
+    "options": "Cevap",
+    "answer": "Doğru cevap",
     "topicCode": "Konu",
-    "checks": "Otomatik kontroller",
-    "solveAnswer": "Bağımsız çözüm",
-    "storedAnswer": "Kayıtlı yanıt",
-    "similarity": "En yakın mevcut soru",
-    "source": "Kaynak ve prompt sürümü",
     "previousNote": "Önceki not",
     "edit": "Soruyu düzenle",
     "hideEdit": "Düzenleyiciyi gizle",
@@ -458,63 +451,51 @@
     "myMinutes": "İnceleme dakikalarım",
     "status": {
       "draft": "Taslak",
-      "auto_verified": "Otomatik doğrulandı",
-      "needs_review": "İnceleme gerekiyor",
       "approved": "Onaylandı",
-      "retired": "Kullanımdan kaldırıldı"
+      "retired": "Kullanımdan kaldırıldı",
+      "in_review": "İncelemede"
     },
-    "issues": {
-      "solve_failed": "Çözüm başarısız",
-      "solver_low_confidence": "Çözücü emin değil",
-      "answers_differ": "Yanıtlar farklı",
-      "mcq_options_invalid": "Seçenekler geçersiz",
-      "no_solution": "Adım adım çözüm yok",
-      "near_duplicate": "Neredeyse yinelenen",
-      "student_reports": "Kullanıcı bildirimleri"
+    "explanation": "Açıklama",
+    "sources": "Kaynaklar",
+    "checked": "{{date}} tarihinde kontrol edildi",
+    "glossary": "Sözlük terimleri",
+    "version": "sürüm {{version}}",
+    "canton": "Kanton",
+    "allCantons": "Tümü",
+    "federal": "Federal",
+    "allTopics": "Tüm konular",
+    "fileStatus": "Dosyadaki durum",
+    "imported": "İçe aktarıldı",
+    "filePending": "Uygulamada değiştirildi, ancak içerik dosyasında henüz değil. Pipeline bu değişikliği dosyaya yazmalıdır.",
+    "filePendingShort": "Dosya güncellemesi bekliyor",
+    "translations": "Çeviriler",
+    "translationsMissing": "Henüz çevrilmedi olarak işaretlendi.",
+    "sourceVersion": "{{version}}. sürümden",
+    "pendingUpdates": "Bekleyen dosya güncellemeleri",
+    "noteHint": "Geri gönderirken zorunludur.",
+    "dbOnlyHint": "Yalnızca uygulamada kaydedildi. İçerik dosyası, yeni bir sürümle pipeline tarafından güncellenir.",
+    "tstate": {
+      "approved": "Onaylandı",
+      "in_review": "İncelemede",
+      "draft": "Taslak",
+      "stale": "Güncel değil",
+      "missing": "Eksik",
+      "source": "Almanca asıl metin"
     }
   },
   "qbank": {
     "tab": "Soru bankası",
-    "overview": "Genel bakış ve üretim",
+    "overview": "Genel bakış",
     "reviewQueue": "İnceleme kuyruğu",
-    "generate": "Soru üret",
-    "level": "Düzey",
-    "levels": {
-      "sl": "SL",
-      "hl": "HL",
-      "both": "SL ve HL"
-    },
-    "topics": "Konular",
-    "allTopics": "Tüm konular",
-    "difficulties": "Zorluk düzeyleri",
-    "perRequest": "İstek başına soru",
-    "perRequestShort": "istek",
     "language": "Dil",
-    "mode": "Mod",
-    "modeBatch": "Toplu",
-    "modeDirect": "Doğrudan",
-    "modeHelp": "Toplu mod yarı fiyatadır ve yaklaşık bir saat içinde gelir; doğrudan mod hemen çalışır.",
-    "modes": {
-      "batch": "Toplu",
-      "direct": "Doğrudan"
-    },
-    "estimate": "{{requests}} istek, kontrollerden önce en fazla {{questions}} soru.",
-    "submit": "Üret",
-    "submitted": "İstek gönderildi: {{count}} istek.",
-    "batches": "Üretim istekleri",
-    "noBatches": "Henüz istek yok.",
-    "requests": "İstekler",
-    "created": "Oluşturulan sorular",
-    "checkNow": "Şimdi kontrol et",
-    "batchStatus": {
-      "submitted": "Gönderildi",
-      "processed": "İşlendi",
-      "failed": "Başarısız"
-    },
     "reports": "Açık bildirimler",
     "noReports": "Açık bildirim yok.",
     "comment": "Yorum",
-    "noComment": "yorum yok"
+    "noComment": "yorum yok",
+    "translationsTitle": "Çeviri durumu",
+    "translationsIntro": "Onaylanmış {{count}} Almanca soru üzerinden. Güncel olmayan çeviriler, Almanca metnin önceki bir sürümünden yapılmıştır ve öğrencilere gösterilmez.",
+    "flaggedMissing": "Henüz çevrilmedi olarak işaretlenenler: {{count}}",
+    "importNote": "Sorular depodaki içerik dosyalarından gelir ve her yayında içe aktarılır. Burada yapılan değişiklikler, pipeline bunları dosyalara yazana kadar kaydedilir."
   },
   "cantons": {
     "zh": "Zürih",
@@ -581,5 +562,12 @@
     "refundTooLate": "Son ödemeniz için iade süresi {{date}} tarihinde sona erdi.",
     "refundTooMany": "Son ödemeniz artık iade edilemez: satın alımdan bu yana {{count}} soru çalıştınız ve iade {{max}} sorunun altında mümkündür.",
     "refundDone": "Son ödemeniz iade edildi."
+  },
+  "topics": {
+    "scope": {
+      "federal": "Federal Devlet",
+      "canton": "Kanton",
+      "commune": "Belediye"
+    }
   }
 }

@@ -1,0 +1,15 @@
+# EXAMPLE TRANSLATION FOR TESTS ONLY, written for the test suite.
+id: beispiel-staatsebenen
+lang: it
+source_version: 1
+question: Su quanti livelli statali è organizzata la Svizzera?
+options:
+  a: 'Su due livelli: Confederazione e Cantoni'
+  b: 'Su tre livelli: Confederazione, Cantoni e Comuni'
+  c: 'Su quattro livelli: Confederazione, regioni, Cantoni e Comuni'
+  d: 'Su un solo livello: la Confederazione'
+explanation: 'La Svizzera è uno Stato federale con tre livelli: la Confederazione, i Cantoni
+  e i Comuni. Ogni livello ha compiti e autorità propri e riscuote imposte proprie.'
+status: approved
+reviewed_by: Beispiel-Reviewer
+reviewed_at: '2026-10-30'

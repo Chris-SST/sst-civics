@@ -1,19 +1,30 @@
-/** Shapes returned by the practice API (/api/practice). */
+/** Shapes returned by the practice API (/api/practice) and the content API (/api/content). */
+
+export type TopicScope = "federal" | "canton" | "commune";
+
+export interface OptionOut {
+  key: string;
+  text: string;
+}
 
 export interface QuestionPublic {
   id: string;
-  module_key?: string;
   topic_code: string;
+  topic_name: string;
+  /** 1 to 3 */
   difficulty: number;
-  qtype: "mcq";
+  /** The German question, as in the test. */
   question_text: string;
-  options: { key: string; text: string }[] | null;
+  options: OptionOut[];
   reviewed: boolean;
 }
 
 export interface TopicOverview {
   topic_code: string;
   topic_name: string;
+  name_de: string;
+  name_en: string;
+  scope: TopicScope;
   mastery: number | null;
   attempts: number;
   due: boolean;
@@ -21,17 +32,18 @@ export interface TopicOverview {
 }
 
 export interface PracticeOverview {
-  course_key: string;
+  canton: string;
   topics: TopicOverview[];
   overall: number | null;
   questions_available: number;
+  diagnostic_total_estimate: number;
   diagnostic: { id: string; status: "in_progress" | "done" | "skipped" } | null;
   next: TopicOverview[];
 }
 
 export interface DiagnosticOut {
   id: string;
-  course_key: string;
+  canton: string;
   status: "in_progress" | "done" | "skipped";
   position: number;
   total: number;
@@ -49,7 +61,6 @@ export interface MasteryOut {
 
 /** A short round of distinct questions on one topic (GET /api/practice/round). */
 export interface PracticeRound {
-  course_key: string;
   topic_code: string;
   topic_name: string;
   mastery: number;
@@ -64,16 +75,18 @@ export interface AttemptOut {
   attempt_id: string;
   correct: boolean;
   score: number;
+  /** The correct option key, a to d. */
   answer: string;
   answer_text: string | null;
-  worked_solution: string;
+  explanation: string;
   mastery: MasteryOut;
   diagnostic?: DiagnosticOut;
 }
 
 export type AttemptMode = "diagnostic" | "practice" | "check";
 
-/** The diagnostic picks up to two questions per topic (app settings default). */
-export function estimateDiagnosticSize(topics: TopicOverview[]): number {
-  return topics.reduce((n, t) => n + Math.min(2, t.questions_available), 0);
+export const TOPIC_SCOPES: TopicScope[] = ["federal", "canton", "commune"];
+
+export function practiceUrl(topicCode: string): string {
+  return `/learner/practice?topic_code=${encodeURIComponent(topicCode)}`;
 }

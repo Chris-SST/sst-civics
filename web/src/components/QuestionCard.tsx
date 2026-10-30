@@ -6,8 +6,9 @@ import type { AttemptOut, QuestionPublic } from "../practice";
 import ErrorText from "./ErrorText";
 import RichText from "./RichText";
 
-/** One question with its answer input and, after submitting, the result panel. Mount it with
- * `key={question.id}` so the state resets for each new question. */
+/** One question in German with its four options and, after submitting, the result panel with
+ * the explanation. Mount it with `key={question.id}` so the state resets for each new question.
+ * The study modes (own language, side by side, German with help) arrive in task 1.7. */
 
 interface Props {
   question: QuestionPublic;
@@ -69,7 +70,7 @@ export function DifficultyDots({ level }: { level: number }) {
   const { t } = useTranslation();
   return (
     <span className="dots-difficulty" aria-label={t("question.difficulty", { level })} title={t("question.difficulty", { level })}>
-      {[1, 2, 3, 4, 5].map((i) => (
+      {[1, 2, 3].map((i) => (
         <i key={i} className={i <= level ? "on" : ""} />
       ))}
     </span>
@@ -139,7 +140,7 @@ export default function QuestionCard({ question: q, submit, onResult, headline, 
               onClick={() => !result && setAnswer(o.key)}
               disabled={!!result}
             >
-              <b>{o.key}</b>
+              <b>{o.key.toUpperCase()}</b>
               <RichText text={o.text} />
             </button>
           ))}
@@ -161,14 +162,14 @@ export default function QuestionCard({ question: q, submit, onResult, headline, 
           </h3>
           <div className="result-answer">
             <b className="small">{t("question.answerLabel")}</b>
-            <RichText text={result.answer_text ? `${result.answer}. ${result.answer_text}` : result.answer} />
+            <RichText text={result.answer_text ? `${result.answer.toUpperCase()}. ${result.answer_text}` : result.answer.toUpperCase()} />
           </div>
-          {result.worked_solution && (
+          {result.explanation && (
             <>
               <button type="button" className="btn btn-secondary btn-sm" onClick={() => setShowSolution((s) => !s)} aria-expanded={showSolution}>
-                {showSolution ? t("question.hideSolution") : t("question.showSolution")}
+                {showSolution ? t("question.hideExplanation") : t("question.showExplanation")}
               </button>
-              {showSolution && <RichText className="solution" text={result.worked_solution} />}
+              {showSolution && <RichText className="solution" text={result.explanation} />}
             </>
           )}
           <div className="question-footer">

@@ -6,8 +6,10 @@ from __future__ import annotations
 import os
 import re
 import tempfile
+import uuid
 from collections.abc import AsyncIterator
-from datetime import timedelta
+from datetime import date, timedelta
+from pathlib import Path
 
 _TMP = tempfile.mkdtemp(prefix="sst-tests-")
 os.environ.update(
@@ -35,7 +37,14 @@ from app.billing import routes as billing_routes  # noqa: E402
 from app.db import Base, SessionLocal, engine, utcnow  # noqa: E402
 from app.email.backend import memory_outbox  # noqa: E402
 from app.main import app  # noqa: E402
-from app.models import ENTITLEMENT_ADMIN, ROLE_ADMIN, Entitlement, User  # noqa: E402
+from app.models import (  # noqa: E402
+    ENTITLEMENT_ADMIN,
+    ROLE_ADMIN,
+    Entitlement,
+    Question,
+    Topic,
+    User,
+)
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -215,3 +224,58 @@ async def admin_logged_in(api: Api, email: str = "admin@sst-example.ch") -> User
     r = await api.post("/api/auth/totp/verify", json={"code": code})
     assert r.status_code == 200, r.text
     return user
+
+
+# --- Question bank helpers -------------------------------------------------------------------
+
+FIXTURE_CONTENT = Path(__file__).parent / "fixtures" / "content"
+# The fixtures' sources were checked on 30 October 2026; tests check content as of this day.
+CONTENT_TODAY = date(2026, 11, 1)
+
+TOPICS_ZH = (
+    ("bund.demokratie.foederalismus", "federal", "Föderalismus", "Federalism"),
+    ("bund.demokratie.volksrechte", "federal", "Volksrechte", "Popular rights"),
+    ("kanton.demokratie.kantonsrat", "canton", "Kantonsrat", "Cantonal Parliament"),
+)
+
+
+async def seed_topics(canton: str = "zh", topics=TOPICS_ZH) -> None:
+    async with SessionLocal() as db:
+        for position, (code, scope, name_de, name_en) in enumerate(topics):
+            db.add(
+                Topic(
+                    canton=canton,
+                    code=code,
+                    scope=scope,
+                    name_de=name_de,
+                    name_en=name_en,
+                    target_questions=5,
+                    sources=[],
+                    position=position,
+                    content_hash="seed",
+                )
+            )
+        await db.commit()
+
+
+def make_question(qid: str | None = None, **overrides) -> Question:
+    """A valid question row without going through the files (for route and model tests)."""
+    fields = {
+        "id": qid or f"q-{uuid.uuid4().hex[:10]}",
+        "version": 1,
+        "scope": "federal",
+        "canton": None,
+        "topic_code": "bund.demokratie.foederalismus",
+        "question_de": "Welche Ebene ist hier gemeint?",
+        "options_de": {"a": "Bund", "b": "Kanton", "c": "Gemeinde", "d": "Bezirk"},
+        "correct": "a",
+        "explanation_de": "Gemeint ist der Bund. Er ist die oberste Ebene.",
+        "sources": [{"url": "https://www.ch.ch/de/", "checked": "2026-10-30"}],
+        "glossary": [],
+        "difficulty": 2,
+        "status": "approved",
+        "file_status": "approved",
+        "content_hash": "seed",
+    }
+    fields.update(overrides)
+    return Question(**fields)

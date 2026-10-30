@@ -1230,19 +1230,16 @@ button.topic-row:hover {
   background: var(--green-tint);
   color: var(--green-dark);
 }
-.status-needs_review {
+.status-in_review,
+.status-draft,
+.status-stale {
   background: #fbf4e6;
   color: #7b5f22;
 }
 .status-retired,
-.status-failed {
+.status-missing {
   background: #fbeeec;
   color: var(--red);
-}
-.status-auto_verified,
-.status-processed {
-  background: #eef5fb;
-  color: #24506f;
 }
 .q-preview p {
   margin: 0;
@@ -1471,4 +1468,17 @@ button.topic-row:hover {
 .round-perfect h2,
 .round-great h2 {
   color: var(--green-dark);
+}
+
+/* Question bank review (task 1.2) */
+.options-list li.is-correct {
+  background: var(--green-tint);
+  border-radius: 6px;
+}
+.topic-group h3 {
+  margin: 16px 0 6px;
+}
+td.warn {
+  color: var(--red);
+  font-weight: 600;
 }

@@ -4,12 +4,13 @@ production on PostgreSQL."""
 from __future__ import annotations
 
 import uuid
-from datetime import datetime
+from datetime import date, datetime
 from typing import Any
 
 from sqlalchemy import (
     JSON,
     Boolean,
+    Date,
     Float,
     ForeignKey,
     Integer,
@@ -216,7 +217,7 @@ class AuditLog(Base):
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
 
 
-# --- Phase 1: tutor conversations and AI call log -----------------------------------------
+# --- Chat conversations and AI call log ------------------------------------------------
 
 CONVERSATION_ACTIVE = "active"
 CONVERSATION_ENDED = "ended"
@@ -227,7 +228,7 @@ MESSAGE_NOTICE = "notice"  # fixed server replies (off topic, limits), never sen
 
 
 class Conversation(Base):
-    """One tutoring session, always started from a course and topic."""
+    """One chat session, always started from a topic of the learner's canton."""
 
     __tablename__ = "conversations"
 
@@ -235,9 +236,9 @@ class Conversation(Base):
     user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
-    course_key: Mapped[str] = mapped_column(String(40))
-    topic_code: Mapped[str] = mapped_column(String(20))
-    topic_name: Mapped[str] = mapped_column(String(120))
+    canton: Mapped[str] = mapped_column(String(2))
+    topic_code: Mapped[str] = mapped_column(String(80))
+    topic_name: Mapped[str] = mapped_column(String(200))
     language: Mapped[str] = mapped_column(String(5), default="en")
     title: Mapped[str] = mapped_column(String(160), default="")
     status: Mapped[str] = mapped_column(String(16), default=CONVERSATION_ACTIVE)
@@ -313,73 +314,90 @@ class CostAlert(Base):
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
 
 
-# --- Phase 1: question bank, attempts, mastery -----------------------------------------
+# --- Question bank (filled from content/ on deploy), attempts, mastery -------------------
 
+# Status of a question in its file (content/questions/) and, after admin review, in the
+# database. Only approved questions are served (in_review too on staging, see settings).
 Q_DRAFT = "draft"
-Q_AUTO_VERIFIED = "auto_verified"
-Q_NEEDS_REVIEW = "needs_review"
+Q_IN_REVIEW = "in_review"
 Q_APPROVED = "approved"
 Q_RETIRED = "retired"
-QUESTION_STATUSES = (Q_DRAFT, Q_AUTO_VERIFIED, Q_NEEDS_REVIEW, Q_APPROVED, Q_RETIRED)
+QUESTION_STATUSES = (Q_DRAFT, Q_IN_REVIEW, Q_APPROVED, Q_RETIRED)
 
-QTYPE_MCQ = "mcq"
-QUESTION_TYPES = (QTYPE_MCQ,)  # multiple choice with four options is the only kind
+T_DRAFT = "draft"
+T_IN_REVIEW = "in_review"
+T_APPROVED = "approved"
+TRANSLATION_STATUSES = (T_DRAFT, T_IN_REVIEW, T_APPROVED)
+
+SCOPE_FEDERAL = "federal"
+SCOPE_CANTON = "canton"
+SCOPE_COMMUNE = "commune"
+TOPIC_SCOPES = (SCOPE_FEDERAL, SCOPE_CANTON, SCOPE_COMMUNE)
+
+OPTION_KEYS = ("a", "b", "c", "d")
+# Content languages: German is the master, every other launch language is a translation.
+CONTENT_MASTER_LANGUAGE = "de"
+TRANSLATION_LANGUAGES = tuple(lang for lang in LANGUAGES if lang != CONTENT_MASTER_LANGUAGE)
 
 ATTEMPT_DIAGNOSTIC = "diagnostic"
 ATTEMPT_PRACTICE = "practice"
-ATTEMPT_CHECK = "check"  # check questions at the end of a tutor session
+ATTEMPT_CHECK = "check"  # check questions at the end of a chat session
 
 
-class GenerationBatch(Base):
-    """One request to generate questions, either through the provider's Batch API or
-    directly in the worker."""
+class Topic(Base):
+    """One entry of a canton's topic file (content/topics/<canton>.yaml). Federal topics
+    appear in every canton's file, so the key is (canton, code)."""
 
-    __tablename__ = "generation_batches"
+    __tablename__ = "topics"
+    __table_args__ = (UniqueConstraint("canton", "code", name="uq_topic_canton_code"),)
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    provider_batch_id: Mapped[str | None] = mapped_column(String(80), index=True)
-    mode: Mapped[str] = mapped_column(String(10), default="batch")  # batch | direct
-    module_key: Mapped[str] = mapped_column(String(40), index=True)
-    level: Mapped[str] = mapped_column(String(4), default="both")  # sl | hl | both
-    topic_codes: Mapped[list[str]] = mapped_column(JSON)
-    difficulties: Mapped[list[int]] = mapped_column(JSON)
-    per_request: Mapped[int] = mapped_column(Integer, default=5)
-    language: Mapped[str] = mapped_column(String(5), default="en")
-    status: Mapped[str] = mapped_column(String(16), default="submitted")
-    requests: Mapped[int] = mapped_column(Integer, default=0)
-    questions_created: Mapped[int] = mapped_column(Integer, default=0)
-    error: Mapped[str | None] = mapped_column(Text)
-    requested_by: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("users.id"))
-    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
-    ended_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    canton: Mapped[str] = mapped_column(String(2), index=True)
+    code: Mapped[str] = mapped_column(String(80), index=True)
+    scope: Mapped[str] = mapped_column(String(10))  # federal | canton | commune
+    name_de: Mapped[str] = mapped_column(String(200))
+    name_en: Mapped[str] = mapped_column(String(200))
+    target_questions: Mapped[int] = mapped_column(Integer, default=0)
+    sources: Mapped[list[str]] = mapped_column(JSON, default=list)
+    position: Mapped[int] = mapped_column(Integer, default=0)  # order in the file
+    content_hash: Mapped[str] = mapped_column(String(64))
+    imported_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+
+    def display(self, locale: str) -> str:
+        return self.name_de if locale == "de" else self.name_en
 
 
 class Question(Base):
+    """A question as imported from content/questions/<scope>/<id>.yaml. The file is the
+    master copy: admin review changes the status here and records the change in
+    `pending_changes` until the pipeline writes it back to the file (task 1.5)."""
+
     __tablename__ = "questions"
 
-    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    module_key: Mapped[str] = mapped_column(String(40), index=True)
-    level: Mapped[str] = mapped_column(String(4), default="both")  # sl | hl | both
-    topic_code: Mapped[str] = mapped_column(String(20), index=True)
-    difficulty: Mapped[int] = mapped_column(Integer, default=3)  # 1 to 5
-    qtype: Mapped[str] = mapped_column(String(12), default=QTYPE_MCQ)
-    language: Mapped[str] = mapped_column(String(5), default="en")
-    question_text: Mapped[str] = mapped_column(Text)
-    options: Mapped[list[dict[str, str]] | None] = mapped_column(
-        JSON
-    )  # [{key, text}], four entries
-    answer: Mapped[str] = mapped_column(Text)
-    worked_solution: Mapped[str] = mapped_column(Text, default="")
+    id: Mapped[str] = mapped_column(String(80), primary_key=True)  # stable slug
+    version: Mapped[int] = mapped_column(Integer, default=1)
+    scope: Mapped[str] = mapped_column(String(40), index=True)  # federal | zh | zh-<commune>
+    canton: Mapped[str | None] = mapped_column(String(2), index=True)  # null for federal
+    topic_code: Mapped[str] = mapped_column(String(80), index=True)
+    question_de: Mapped[str] = mapped_column(Text)
+    options_de: Mapped[dict[str, str]] = mapped_column(JSON)  # {"a": ..., "b": ..., ...}
+    correct: Mapped[str] = mapped_column(String(1))
+    explanation_de: Mapped[str] = mapped_column(Text)
+    sources: Mapped[list[dict[str, str]]] = mapped_column(JSON, default=list)  # [{url, checked}]
+    glossary: Mapped[list[str]] = mapped_column(JSON, default=list)
+    difficulty: Mapped[int] = mapped_column(Integer, default=2)  # 1 to 3
+    translations_missing: Mapped[bool] = mapped_column(Boolean, default=False)
+    # The status the app uses, and the status written in the file at the last import.
     status: Mapped[str] = mapped_column(String(16), default=Q_DRAFT, index=True)
-    spot_check: Mapped[bool] = mapped_column(Boolean, default=False)
-    source: Mapped[str] = mapped_column(String(16), default="generated")
-    prompt_version: Mapped[str] = mapped_column(String(80), default="")
-    check_results: Mapped[dict[str, Any] | None] = mapped_column(JSON)
-    solve_answer: Mapped[str | None] = mapped_column(Text)
-    batch_id: Mapped[uuid.UUID | None] = mapped_column(
-        ForeignKey("generation_batches.id", ondelete="SET NULL")
+    file_status: Mapped[str] = mapped_column(String(16), default=Q_DRAFT)
+    content_hash: Mapped[str] = mapped_column(String(64))
+    imported_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    # Admin actions not yet in the file: the pipeline must write them back (task 1.5).
+    file_sync_pending: Mapped[bool] = mapped_column(Boolean, default=False)
+    pending_changes: Mapped[list[dict[str, Any]] | None] = mapped_column(JSON)
+    reviewer_id: Mapped[uuid.UUID | None] = mapped_column(
+        ForeignKey("users.id", ondelete="SET NULL")
     )
-    reviewer_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("users.id"))
     reviewed_at: Mapped[datetime | None] = mapped_column(TZDateTime)
     review_note: Mapped[str | None] = mapped_column(Text)
     review_minutes: Mapped[int] = mapped_column(Integer, default=0)
@@ -387,15 +405,59 @@ class Question(Base):
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, onupdate=utcnow)
 
+    def options_list(self) -> list[dict[str, str]]:
+        return [{"key": k, "text": self.options_de.get(k, "")} for k in OPTION_KEYS]
+
+
+class QuestionTranslation(Base):
+    """A translation file (content/translations/<lang>/<id>.yaml). Hidden when it was made
+    from an older German version than the one now imported."""
+
+    __tablename__ = "question_translations"
+    __table_args__ = (UniqueConstraint("question_id", "lang", name="uq_translation_lang"),)
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    question_id: Mapped[str] = mapped_column(
+        ForeignKey("questions.id", ondelete="CASCADE"), index=True
+    )
+    lang: Mapped[str] = mapped_column(String(5), index=True)
+    source_version: Mapped[int] = mapped_column(Integer)
+    question: Mapped[str] = mapped_column(Text)
+    options: Mapped[dict[str, str]] = mapped_column(JSON)
+    explanation: Mapped[str] = mapped_column(Text)
+    status: Mapped[str] = mapped_column(String(16), default=T_DRAFT)
+    reviewed_by: Mapped[str | None] = mapped_column(String(120))
+    reviewed_at: Mapped[date | None] = mapped_column(Date)
+    hidden: Mapped[bool] = mapped_column(Boolean, default=False)
+    content_hash: Mapped[str] = mapped_column(String(64))
+    imported_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+
+
+class GlossaryTerm(Base):
+    """A key German term with its translation and a short note (content/glossary/)."""
+
+    __tablename__ = "glossary_terms"
+    __table_args__ = (UniqueConstraint("term", "lang", name="uq_glossary_term_lang"),)
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    term: Mapped[str] = mapped_column(String(120), index=True)
+    lang: Mapped[str] = mapped_column(String(5))
+    translation: Mapped[str] = mapped_column(String(200))
+    note: Mapped[str | None] = mapped_column(Text)
+    imported_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+
 
 class QuestionReport(Base):
+    """A learner's flag on a question or, with `lang`, on one of its translations."""
+
     __tablename__ = "question_reports"
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
-    question_id: Mapped[uuid.UUID] = mapped_column(
+    question_id: Mapped[str] = mapped_column(
         ForeignKey("questions.id", ondelete="CASCADE"), index=True
     )
     user_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("users.id", ondelete="SET NULL"))
+    lang: Mapped[str | None] = mapped_column(String(5))
     comment: Mapped[str | None] = mapped_column(String(1000))
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
     resolved_at: Mapped[datetime | None] = mapped_column(TZDateTime)
@@ -403,7 +465,7 @@ class QuestionReport(Base):
 
 class Attempt(Base):
     """A learner's answer to a question, in a diagnostic, in practice, or as a check at
-    the end of a tutor session."""
+    the end of a chat session."""
 
     __tablename__ = "attempts"
 
@@ -411,11 +473,10 @@ class Attempt(Base):
     user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
-    question_id: Mapped[uuid.UUID] = mapped_column(
+    question_id: Mapped[str] = mapped_column(
         ForeignKey("questions.id", ondelete="CASCADE"), index=True
     )
-    course_key: Mapped[str] = mapped_column(String(40))
-    topic_code: Mapped[str] = mapped_column(String(20))
+    topic_code: Mapped[str] = mapped_column(String(80))
     mode: Mapped[str] = mapped_column(String(12), default=ATTEMPT_PRACTICE)
     answer_text: Mapped[str] = mapped_column(Text, default="")
     score: Mapped[float] = mapped_column(Float, default=0.0)  # 0 to 1
@@ -426,16 +487,18 @@ class Attempt(Base):
 
 
 class TopicMastery(Base):
+    """Mastery per learner and topic code. Federal topic codes are shared between cantons,
+    so progress on them carries over if the learner changes canton."""
+
     __tablename__ = "topic_mastery"
-    __table_args__ = (UniqueConstraint("user_id", "course_key", "topic_code", name="uq_mastery"),)
+    __table_args__ = (UniqueConstraint("user_id", "topic_code", name="uq_mastery"),)
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
     user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
-    course_key: Mapped[str] = mapped_column(String(40))
-    topic_code: Mapped[str] = mapped_column(String(20))
-    rating: Mapped[float] = mapped_column(Float, default=1000.0)
+    topic_code: Mapped[str] = mapped_column(String(80))
+    rating: Mapped[float] = mapped_column(Float, default=1200.0)
     attempts: Mapped[int] = mapped_column(Integer, default=0)
     correct: Mapped[int] = mapped_column(Integer, default=0)
     last_attempt_at: Mapped[datetime | None] = mapped_column(TZDateTime)
@@ -443,13 +506,15 @@ class TopicMastery(Base):
 
 
 class DiagnosticRun(Base):
+    """A short check across a canton's topics (D-010: may become the mock test in 1.9)."""
+
     __tablename__ = "diagnostic_runs"
 
     id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
     user_id: Mapped[uuid.UUID] = mapped_column(
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
-    course_key: Mapped[str] = mapped_column(String(40))
+    canton: Mapped[str] = mapped_column(String(2))
     status: Mapped[str] = mapped_column(String(16), default="in_progress")
     question_ids: Mapped[list[str]] = mapped_column(JSON)
     position: Mapped[int] = mapped_column(Integer, default=0)

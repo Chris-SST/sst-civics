@@ -1,0 +1,22 @@
+# EXAMPLE QUESTION FOR TESTS ONLY, written for the test suite. Not part of the question bank.
+id: beispiel-staatsebenen
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: "Auf wie vielen staatlichen Ebenen ist die Schweiz organisiert?"
+options_de:
+  a: "Auf zwei Ebenen: Bund und Kantone"
+  b: "Auf drei Ebenen: Bund, Kantone und Gemeinden"
+  c: "Auf vier Ebenen: Bund, Regionen, Kantone und Gemeinden"
+  d: "Auf einer Ebene: nur beim Bund"
+correct: b
+explanation_de: >-
+  Die Schweiz ist ein föderaler Staat mit drei Ebenen: dem Bund, den Kantonen und den
+  Gemeinden. Jede Ebene hat eigene Aufgaben, eigene Behörden und erhebt eigene Steuern.
+sources:
+  - url: https://www.bk.admin.ch/bund-kurz-erklaert
+    checked: 2026-10-30
+glossary: [Bund, Kanton, Gemeinde]
+status: approved
+difficulty: 1

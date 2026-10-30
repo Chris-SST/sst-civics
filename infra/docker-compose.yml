@@ -84,7 +84,7 @@ services:
     build:
       context: ..
       dockerfile: infra/Dockerfile.api
-    command: ["sh", "-c", "alembic upgrade head && python -m scripts.seed"]
+    command: ["sh", "-c", "alembic upgrade head && python -m scripts.import_content && python -m scripts.seed"]
     env_file: ../.env
     environment:
       DATABASE_URL: postgresql+asyncpg://civics:${POSTGRES_PASSWORD}@postgres:5432/civics

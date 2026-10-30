@@ -18,7 +18,6 @@ from app.models import (
     Conversation,
     DiagnosticRun,
     Entitlement,
-    GenerationBatch,
     LlmCall,
     Message,
     OneTimeToken,
@@ -76,9 +75,6 @@ async def delete_account(db: AsyncSession, user: User) -> None:
     await _redact_stripe_events(db, user)
     await db.execute(
         update(AuditLog).where(AuditLog.actor_user_id == uid).values(actor_user_id=None)
-    )
-    await db.execute(
-        update(GenerationBatch).where(GenerationBatch.requested_by == uid).values(requested_by=None)
     )
     await db.execute(update(Question).where(Question.reviewer_id == uid).values(reviewer_id=None))
 

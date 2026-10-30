@@ -1,10 +1,13 @@
-"""Automatic checks: does a given answer match the stored one, and is a question a near
-duplicate of an existing one. Pure functions, no database and no provider."""
+"""Automatic checks: does a given answer match the correct option, are four options valid,
+and is a question a near duplicate of another (kept for the content pipeline, task 1.5).
+Pure functions, no database and no provider."""
 
 from __future__ import annotations
 
 import re
 from dataclasses import dataclass
+
+from app.models import OPTION_KEYS
 
 
 @dataclass(frozen=True)
@@ -14,24 +17,32 @@ class CheckOutcome:
     detail: str = ""
 
 
+def option_key(given: str) -> str:
+    """The option key a learner chose: "B", "b)" and "b. text" all give "b"."""
+    return re.sub(r"[^a-d]", "", (given or "").strip().lower())[:1]
+
+
 def mcq_match(given: str, expected: str) -> CheckOutcome:
-    g = re.sub(r"[^a-d]", "", given.strip().lower())[:1]
+    g = option_key(given)
     e = expected.strip().lower()[:1]
     return CheckOutcome(bool(g) and g == e, "mcq", f"given {g or '?'}, expected {e}")
 
 
 def check_answer(given: str, expected: str) -> CheckOutcome:
-    """Multiple choice is the only question kind: compare the chosen option key."""
+    """Four-option multiple choice is the only question kind: compare the option key."""
     given = (given or "").strip()
     if not given:
         return CheckOutcome(False, "none", "empty answer")
     return mcq_match(given, expected)
 
 
-def options_valid(options: list[dict[str, str]] | None, answer: str) -> bool:
-    """Exactly four options with distinct keys, and the stated answer is one of them."""
-    keys = [str(o.get("key", "")).strip().upper()[:1] for o in (options or [])]
-    return len(keys) == 4 and len(set(keys)) == 4 and answer.strip().upper()[:1] in keys
+def options_valid(options: dict[str, str] | None, correct: str) -> bool:
+    """Exactly the keys a to d, four different non-empty texts, and the correct key among
+    them."""
+    if not options or set(options) != set(OPTION_KEYS):
+        return False
+    texts = [str(options[k]).strip().casefold() for k in OPTION_KEYS]
+    return all(texts) and len(set(texts)) == 4 and correct in OPTION_KEYS
 
 
 # --- Duplicate detection ------------------------------------------------------------------

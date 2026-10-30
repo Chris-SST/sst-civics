@@ -95,7 +95,11 @@
     "refund_failed": "Stripe n'a pas accepté le remboursement. Veuillez réessayer ou rembourser depuis le tableau de bord Stripe.",
     "refund_too_late": "Le délai de remboursement de ce paiement est échu.",
     "refund_too_many_questions": "Trop de questions ont été étudiées depuis ce paiement pour un remboursement selon la règle.",
-    "refund_refunded": "Ce paiement a déjà été remboursé."
+    "refund_refunded": "Ce paiement a déjà été remboursé.",
+    "note_required": "Veuillez ajouter une note indiquant ce qui doit changer.",
+    "invalid_options": "Il faut quatre réponses différentes, dont la bonne.",
+    "invalid_transition": "Cette question ne peut plus être modifiée de cette manière.",
+    "edits_need_approve": "Les modifications ne peuvent être enregistrées qu'avec une approbation."
   },
   "impersonation": {
     "banner": "Vue en tant que {{name}} ({{role}}). Vous êtes connecté comme admin {{admin}}.",
@@ -194,13 +198,10 @@
     "activeUntil": "Merci. Votre Civics Pass pour {{canton}} est actif jusqu'au {{date}}."
   },
   "learner": {
-    "noCourses": "Aucun cours choisi pour l'instant",
     "tutorOffline": "Le tuteur n'est pas encore connecté dans cet environnement.",
     "noticeTitle": "Avant de commencer avec {{name}}",
     "noticeBody": "Les explications données ici sont rédigées par un assistant IA et peuvent contenir des erreurs. Servez-vous-en pour comprendre une question et vérifiez les points importants auprès des informations de votre canton.",
     "noticeOk": "Compris",
-    "topic": "Sujet",
-    "chooseTopic": "Choisir un sujet",
     "recent": "Séances récentes",
     "noRecent": "Aucune séance pour l'instant. Choisissez un sujet pour commencer.",
     "endedTag": "terminée",
@@ -223,9 +224,13 @@
     "diagSkip": "Plus tard",
     "showTopics": "Afficher les {{count}} sujets",
     "hideTopics": "Masquer les sujets",
-    "noQuestionsYet": "Les questions d'exercice pour ce cours arrivent bientôt. Vous pouvez quand même demander au tuteur.",
+    "noQuestionsYet": "Les questions d'exercice pour votre canton arrivent bientôt. Vous pouvez déjà interroger le tuteur sur chaque thème.",
     "welcome": "Bienvenue",
-    "noAccess": "Vous utilisez l'entraînement gratuit. Un Civics Pass pour votre canton donne accès à toutes les questions, aux examens blancs et aux explications par l'IA."
+    "noAccess": "Vous utilisez l'entraînement gratuit. Un Civics Pass pour votre canton donne accès à toutes les questions, aux examens blancs et aux explications par l'IA.",
+    "noTopics": "Les thèmes de votre canton arrivent bientôt.",
+    "topicsTitle": "Thèmes du test : {{canton}}",
+    "questionsCount_one": "{{count}} question",
+    "questionsCount_other": "{{count}} questions"
   },
   "chat": {
     "back": "Vos séances",
@@ -389,19 +394,19 @@
     "streak": "{{count}} d'affilée !",
     "backOnTrack": "De retour sur les rails !",
     "tricky": "Une question délicate. Lisez la solution, puis passez à la suivante.",
-    "difficulty": "Difficulté {{level}} sur 5",
+    "difficulty": "Difficulté {{level}} sur 3",
     "unreviewed": "pas encore vérifiée",
     "yourAnswer": "Votre réponse",
     "submit": "Vérifier la réponse",
     "correct": "Correct",
     "incorrect": "Pas tout à fait",
     "answerLabel": "Réponse",
-    "showSolution": "Afficher la solution",
-    "hideSolution": "Masquer la solution",
     "report": "Signaler un problème",
     "reportHint": "Qu'est-ce qui ne va pas ? (facultatif)",
     "reportSend": "Envoyer le signalement",
-    "reported": "Merci. Nous examinerons cette question."
+    "reported": "Merci. Nous examinerons cette question.",
+    "showExplanation": "Afficher l'explication",
+    "hideExplanation": "Masquer l'explication"
   },
   "figure": {
     "failed": "La figure n'a pas pu être dessinée",
@@ -419,32 +424,20 @@
   },
   "review": {
     "queue": "File de révision",
-    "module": "Module",
-    "allModules": "Tous les modules",
     "statusFilter": "Afficher",
-    "needsAttention": "À examiner",
+    "needsAttention": "Brouillons et en révision",
     "empty": "Rien à réviser.",
     "question": "Question",
     "topic": "Sujet",
     "difficulty": "Difficulté",
     "statusLabel": "Statut",
-    "issuesLabel": "Problèmes",
-    "spotCheck": "Contrôle aléatoire",
     "reports_one": "{{count}} signalement",
     "reports_other": "{{count}} signalements",
     "reportsLabel": "Signalements d'apprenants",
     "panelTitle": "Réviser la question",
-    "options": "Options",
-    "optionsHint": "Une par ligne, p. ex. A) 2x+1",
-    "answer": "Réponse",
-    "workedSolution": "Solution détaillée",
-    "level": "Niveau",
+    "options": "Réponse",
+    "answer": "Bonne réponse",
     "topicCode": "Sujet",
-    "checks": "Vérifications automatiques",
-    "solveAnswer": "Résolution indépendante",
-    "storedAnswer": "Réponse enregistrée",
-    "similarity": "Question existante la plus proche",
-    "source": "Source et version du prompt",
     "previousNote": "Note précédente",
     "edit": "Modifier la question",
     "hideEdit": "Masquer l'éditeur",
@@ -458,63 +451,51 @@
     "myMinutes": "Mes minutes de révision",
     "status": {
       "draft": "Brouillon",
-      "auto_verified": "Vérifiée automatiquement",
-      "needs_review": "À réviser",
       "approved": "Approuvée",
-      "retired": "Retirée"
+      "retired": "Retirée",
+      "in_review": "En révision"
     },
-    "issues": {
-      "solve_failed": "Résolution échouée",
-      "solver_low_confidence": "Résolveur incertain",
-      "answers_differ": "Réponses divergentes",
-      "mcq_options_invalid": "Options invalides",
-      "no_solution": "Pas de solution détaillée",
-      "near_duplicate": "Quasi-doublon",
-      "student_reports": "Signalements d'apprenants"
+    "explanation": "Explication",
+    "sources": "Sources",
+    "checked": "vérifiée le {{date}}",
+    "glossary": "Termes du glossaire",
+    "version": "version {{version}}",
+    "canton": "Canton",
+    "allCantons": "Tous",
+    "federal": "Confédération",
+    "allTopics": "Tous les thèmes",
+    "fileStatus": "Statut dans le fichier",
+    "imported": "Importée",
+    "filePending": "Modifiée dans l'application mais pas encore dans le fichier de contenu. Le pipeline doit reporter cette modification dans le fichier.",
+    "filePendingShort": "Mise à jour du fichier en attente",
+    "translations": "Traductions",
+    "translationsMissing": "Marquée comme pas encore traduite.",
+    "sourceVersion": "d'après la version {{version}}",
+    "pendingUpdates": "Mises à jour de fichiers en attente",
+    "noteHint": "Obligatoire pour renvoyer.",
+    "dbOnlyHint": "Enregistré dans l'application uniquement. Le fichier de contenu est mis à jour par le pipeline, avec une nouvelle version.",
+    "tstate": {
+      "approved": "Approuvée",
+      "in_review": "En révision",
+      "draft": "Brouillon",
+      "stale": "Périmée",
+      "missing": "Manquante",
+      "source": "Original allemand"
     }
   },
   "qbank": {
     "tab": "Banque de questions",
-    "overview": "Vue d'ensemble et génération",
+    "overview": "Vue d'ensemble",
     "reviewQueue": "File de révision",
-    "generate": "Générer des questions",
-    "level": "Niveau",
-    "levels": {
-      "sl": "SL",
-      "hl": "HL",
-      "both": "SL et HL"
-    },
-    "topics": "Sujets",
-    "allTopics": "Tous les sujets",
-    "difficulties": "Difficultés",
-    "perRequest": "Questions par requête",
-    "perRequestShort": "requête",
     "language": "Langue",
-    "mode": "Mode",
-    "modeBatch": "Lot",
-    "modeDirect": "Direct",
-    "modeHelp": "Le lot coûte moitié prix et arrive en une heure environ ; le mode direct s'exécute tout de suite.",
-    "modes": {
-      "batch": "Lot",
-      "direct": "Direct"
-    },
-    "estimate": "{{requests}} requêtes, jusqu'à {{questions}} questions avant les vérifications.",
-    "submit": "Générer",
-    "submitted": "Demande envoyée : {{count}} requêtes.",
-    "batches": "Demandes de génération",
-    "noBatches": "Aucune demande pour l'instant.",
-    "requests": "Requêtes",
-    "created": "Questions créées",
-    "checkNow": "Vérifier maintenant",
-    "batchStatus": {
-      "submitted": "Envoyé",
-      "processed": "Traité",
-      "failed": "Échoué"
-    },
     "reports": "Signalements ouverts",
     "noReports": "Aucun signalement ouvert.",
     "comment": "Commentaire",
-    "noComment": "sans commentaire"
+    "noComment": "sans commentaire",
+    "translationsTitle": "État des traductions",
+    "translationsIntro": "Sur les {{count}} questions allemandes approuvées. Les traductions périmées ont été faites d'après une version allemande antérieure et sont masquées pour les apprenants.",
+    "flaggedMissing": "Marquées comme pas encore traduites : {{count}}",
+    "importNote": "Les questions proviennent des fichiers de contenu du dépôt et sont importées à chaque déploiement. Les modifications faites ici sont enregistrées jusqu'à ce que le pipeline les reporte dans les fichiers."
   },
   "cantons": {
     "zh": "Zurich",
@@ -581,5 +562,12 @@
     "refundTooLate": "Le délai de remboursement de votre dernier paiement a pris fin le {{date}}.",
     "refundTooMany": "Votre dernier paiement ne peut plus être remboursé : vous avez étudié {{count}} questions depuis l'achat, et un remboursement est possible en dessous de {{max}}.",
     "refundDone": "Votre dernier paiement a été remboursé."
+  },
+  "topics": {
+    "scope": {
+      "federal": "Confédération",
+      "canton": "Canton",
+      "commune": "Commune"
+    }
   }
 }

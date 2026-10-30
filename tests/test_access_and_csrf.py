@@ -90,7 +90,7 @@ def test_all_email_messages_render_in_every_language():
 
 async def test_csrf_required_for_authenticated_writes(api):
     await learner_logged_in(api)
-    body = {"course_key": "ib_maths_aa_hl", "topic_code": "AA-1.1"}
+    body = {"topic_code": "bund.demokratie.foederalismus"}
     r = await api.post("/api/tutor/conversations", json=body, csrf=False)
     assert r.status_code == 403 and r.json()["detail"] == "csrf_failed"
     r = await api.client.post(

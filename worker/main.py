@@ -8,9 +8,7 @@ from arq.cron import cron
 from app import observability
 from app.config import get_settings
 from worker.tasks import (
-    generate_questions_direct,
     log_expiring_entitlements,
-    poll_generation_batches,
     process_stripe_event,
     purge_sessions,
     send_email,
@@ -28,16 +26,13 @@ class WorkerSettings:
         send_sign_in_link,
         process_stripe_event,
         purge_sessions,
-        generate_questions_direct,
-        poll_generation_batches,
         log_expiring_entitlements,
     ]
     cron_jobs = [
         cron(purge_sessions, minute=5),
-        cron(poll_generation_batches, minute={2, 12, 22, 32, 42, 52}),
         cron(log_expiring_entitlements, hour=3, minute=15),  # UTC
     ]
     on_startup = startup
     redis_settings = RedisSettings.from_dsn(get_settings().redis_url)
     max_tries = 5
-    job_timeout = 3600  # direct generation runs many provider calls
+    job_timeout = 600

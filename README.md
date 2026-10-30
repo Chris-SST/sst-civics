@@ -14,7 +14,8 @@ worker/     arq background worker: emails, Stripe events, nightly jobs
 alembic/    database migrations (one initial migration, D-005)
 web/        React + TypeScript + Vite PWA; locales in web/src/locales
 infra/      Docker Compose, Caddy snippet for the shared edge, backup script
-scripts/    seed (first admin), Stripe bootstrap (Civics Pass products)
+scripts/    seed (first admin), Stripe bootstrap, content check and import
+content/    question bank as YAML: topics, questions, translations (content/README.md)
 tests/      pytest suite (SQLite locally; SQLite and PostgreSQL in CI)
 prompts/    versioned prompt files
 evals/      evaluation suite
@@ -48,9 +49,12 @@ COOKIE_SECURE=false
 ```bash
 mkdir -p var
 alembic upgrade head
+python -m scripts.import_content   # topics, questions and translations from content/
 cd web && npm ci && npm run build && cd ..
 uvicorn app.main:app --reload --port 8000
 ```
+
+Run the import again after changing anything under `content/`; it validates the files first and changes nothing if they have errors. The file format and the rules are in [content/README.md](content/README.md).
 
 Open http://localhost:8000. Every email (verification, sign-in link, deletion notice) is written as an `.eml` file in `var/outbox/`; open it in a text editor and follow the link. `LLM_FAKE=true` (dev and test only) gives canned chat replies without an API key.
 
@@ -83,7 +87,7 @@ docker compose -f infra/docker-compose.dev.yml up -d
 # .env: DATABASE_URL=postgresql+asyncpg://civics:civics@localhost:5432/civics
 #       REDIS_URL=redis://localhost:6379/0  JOBS_INLINE=false
 #       EMAIL_BACKEND=smtp  SMTP_HOST=localhost  SMTP_PORT=1025  SMTP_STARTTLS=false
-alembic upgrade head
+alembic upgrade head && python -m scripts.import_content
 uvicorn app.main:app --reload            # terminal 1
 arq worker.main.WorkerSettings           # terminal 2
 ```
@@ -92,6 +96,7 @@ arq worker.main.WorkerSettings           # terminal 2
 
 ```bash
 ruff check app worker tests scripts alembic && ruff format --check app worker tests scripts alembic
+python scripts/validate_content.py       # content files: sources, options, topics, translations
 pytest -q                                # SQLite; set CI_DATABASE_URL for PostgreSQL
 cd web && npm run build                  # type-check and build
 cd web && npm run check:locales          # every locale has the same keys and placeholders as en-GB

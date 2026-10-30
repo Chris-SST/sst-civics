@@ -1,0 +1,16 @@
+# EXAMPLE TRANSLATION FOR TESTS ONLY, written for the test suite.
+id: beispiel-staatsebenen
+lang: fr
+source_version: 1
+question: À combien de niveaux de l'État la Suisse est-elle organisée ?
+options:
+  a: 'À deux niveaux : la Confédération et les cantons'
+  b: 'À trois niveaux : la Confédération, les cantons et les communes'
+  c: 'À quatre niveaux : la Confédération, les régions, les cantons et les communes'
+  d: 'À un seul niveau : la Confédération'
+explanation: 'La Suisse est un État fédéral à trois niveaux : la Confédération, les cantons
+  et les communes. Chaque niveau a ses propres tâches et autorités et prélève ses propres
+  impôts.'
+status: approved
+reviewed_by: Beispiel-Reviewer
+reviewed_at: '2026-10-30'

@@ -95,7 +95,11 @@
     "refund_failed": "O Stripe não aceitou o reembolso. Tente novamente ou reembolse no painel do Stripe.",
     "refund_too_late": "O prazo de reembolso deste pagamento terminou.",
     "refund_too_many_questions": "Foram estudadas demasiadas perguntas desde este pagamento para um reembolso segundo a regra.",
-    "refund_refunded": "Este pagamento já foi reembolsado."
+    "refund_refunded": "Este pagamento já foi reembolsado.",
+    "note_required": "Acrescente uma nota sobre o que deve mudar.",
+    "invalid_options": "São necessárias quatro respostas diferentes, incluindo a correta.",
+    "invalid_transition": "Esta pergunta já não pode ser alterada desta forma.",
+    "edits_need_approve": "As alterações só podem ser guardadas juntamente com uma aprovação."
   },
   "impersonation": {
     "banner": "A ver como {{name}} ({{role}}). Iniciou sessão como administrador {{admin}}.",
@@ -194,13 +198,10 @@
     "activeUntil": "Obrigado. O seu Civics Pass para {{canton}} está ativo até {{date}}."
   },
   "learner": {
-    "noCourses": "Ainda não escolheu cursos",
     "tutorOffline": "O tutor ainda não está ligado neste ambiente.",
     "noticeTitle": "Antes de começar com {{name}}",
     "noticeBody": "As explicações aqui são redigidas por um assistente de IA e podem conter erros. Utilize-as para compreender uma pergunta e confirme o que for importante com as informações do seu cantão.",
     "noticeOk": "Entendi",
-    "topic": "Tema",
-    "chooseTopic": "Escolha um tema",
     "recent": "Sessões recentes",
     "noRecent": "Ainda não há sessões. Escolha um tema para começar.",
     "endedTag": "terminada",
@@ -223,9 +224,13 @@
     "diagSkip": "Saltar por agora",
     "showTopics": "Mostrar todos os {{count}} temas",
     "hideTopics": "Ocultar temas",
-    "noQuestionsYet": "As perguntas de exercício para este curso estão a caminho. Pode, ainda assim, perguntar ao tutor.",
+    "noQuestionsYet": "As perguntas de exercício para o seu cantão estão a caminho. Já pode perguntar ao tutor sobre cada tema.",
     "welcome": "Bem-vindo(a)",
-    "noAccess": "Ainda não tem acesso para o seu cantão."
+    "noAccess": "Ainda não tem acesso para o seu cantão.",
+    "noTopics": "Os temas do seu cantão estão a caminho.",
+    "topicsTitle": "Temas do teste: {{canton}}",
+    "questionsCount_one": "{{count}} pergunta",
+    "questionsCount_other": "{{count}} perguntas"
   },
   "chat": {
     "back": "As suas sessões",
@@ -389,19 +394,19 @@
     "streak": "{{count}} seguidas!",
     "backOnTrack": "De volta ao bom caminho!",
     "tricky": "Uma pergunta difícil. Leia a solução e depois tente a seguinte.",
-    "difficulty": "Dificuldade {{level}} de 5",
+    "difficulty": "Dificuldade {{level}} de 3",
     "unreviewed": "ainda não verificada",
     "yourAnswer": "A sua resposta",
     "submit": "Verificar resposta",
     "correct": "Correto",
     "incorrect": "Não exatamente",
     "answerLabel": "Resposta",
-    "showSolution": "Mostrar solução",
-    "hideSolution": "Ocultar solução",
     "report": "Comunicar um problema",
     "reportHint": "O que está errado? (opcional)",
     "reportSend": "Enviar comunicação",
-    "reported": "Obrigado. Vamos analisar esta pergunta."
+    "reported": "Obrigado. Vamos analisar esta pergunta.",
+    "showExplanation": "Mostrar explicação",
+    "hideExplanation": "Ocultar explicação"
   },
   "figure": {
     "failed": "Não foi possível desenhar a figura",
@@ -419,32 +424,20 @@
   },
   "review": {
     "queue": "Fila de revisão",
-    "module": "Módulo",
-    "allModules": "Todos os módulos",
     "statusFilter": "Mostrar",
-    "needsAttention": "Requer atenção",
+    "needsAttention": "Rascunhos e em revisão",
     "empty": "Nada para rever.",
     "question": "Pergunta",
     "topic": "Tema",
     "difficulty": "Dificuldade",
     "statusLabel": "Estado",
-    "issuesLabel": "Problemas",
-    "spotCheck": "Verificação por amostragem",
     "reports_one": "{{count}} comunicação",
     "reports_other": "{{count}} comunicações",
     "reportsLabel": "Comunicações dos utilizadores",
     "panelTitle": "Rever pergunta",
-    "options": "Opções",
-    "optionsHint": "Uma por linha, p. ex. A) 2x+1",
-    "answer": "Resposta",
-    "workedSolution": "Resolução passo a passo",
-    "level": "Nível",
+    "options": "Resposta",
+    "answer": "Resposta correta",
     "topicCode": "Tema",
-    "checks": "Verificações automáticas",
-    "solveAnswer": "Resolução independente",
-    "storedAnswer": "Resposta guardada",
-    "similarity": "Pergunta existente mais próxima",
-    "source": "Fonte e versão do prompt",
     "previousNote": "Nota anterior",
     "edit": "Editar a pergunta",
     "hideEdit": "Ocultar o editor",
@@ -458,63 +451,51 @@
     "myMinutes": "Os meus minutos de revisão",
     "status": {
       "draft": "Rascunho",
-      "auto_verified": "Verificada automaticamente",
-      "needs_review": "Requer revisão",
       "approved": "Aprovada",
-      "retired": "Retirada"
+      "retired": "Retirada",
+      "in_review": "Em revisão"
     },
-    "issues": {
-      "solve_failed": "Falha na resolução",
-      "solver_low_confidence": "Resolutor inseguro",
-      "answers_differ": "Respostas diferentes",
-      "mcq_options_invalid": "Opções inválidas",
-      "no_solution": "Sem resolução passo a passo",
-      "near_duplicate": "Quase duplicada",
-      "student_reports": "Comunicações dos utilizadores"
+    "explanation": "Explicação",
+    "sources": "Fontes",
+    "checked": "verificada a {{date}}",
+    "glossary": "Termos do glossário",
+    "version": "versão {{version}}",
+    "canton": "Cantão",
+    "allCantons": "Todos",
+    "federal": "Confederação",
+    "allTopics": "Todos os temas",
+    "fileStatus": "Estado no ficheiro",
+    "imported": "Importada",
+    "filePending": "Alterada na aplicação, mas ainda não no ficheiro de conteúdo. O pipeline tem de escrever esta alteração no ficheiro.",
+    "filePendingShort": "Atualização do ficheiro pendente",
+    "translations": "Traduções",
+    "translationsMissing": "Marcada como ainda não traduzida.",
+    "sourceVersion": "a partir da versão {{version}}",
+    "pendingUpdates": "Atualizações de ficheiros pendentes",
+    "noteHint": "Obrigatória ao devolver.",
+    "dbOnlyHint": "Guardado apenas na aplicação. O ficheiro de conteúdo é atualizado pelo pipeline, com uma nova versão.",
+    "tstate": {
+      "approved": "Aprovada",
+      "in_review": "Em revisão",
+      "draft": "Rascunho",
+      "stale": "Desatualizada",
+      "missing": "Em falta",
+      "source": "Original alemão"
     }
   },
   "qbank": {
     "tab": "Banco de perguntas",
-    "overview": "Visão geral e geração",
+    "overview": "Visão geral",
     "reviewQueue": "Fila de revisão",
-    "generate": "Gerar perguntas",
-    "level": "Nível",
-    "levels": {
-      "sl": "SL",
-      "hl": "HL",
-      "both": "SL e HL"
-    },
-    "topics": "Temas",
-    "allTopics": "Todos os temas",
-    "difficulties": "Dificuldades",
-    "perRequest": "Perguntas por pedido",
-    "perRequestShort": "pedido",
     "language": "Língua",
-    "mode": "Modo",
-    "modeBatch": "Lote",
-    "modeDirect": "Direto",
-    "modeHelp": "O modo em lote custa metade e chega em cerca de uma hora; o direto corre de imediato.",
-    "modes": {
-      "batch": "Lote",
-      "direct": "Direto"
-    },
-    "estimate": "{{requests}} pedidos, até {{questions}} perguntas antes das verificações.",
-    "submit": "Gerar",
-    "submitted": "Pedido enviado: {{count}} pedidos.",
-    "batches": "Pedidos de geração",
-    "noBatches": "Ainda sem pedidos.",
-    "requests": "Pedidos",
-    "created": "Perguntas criadas",
-    "checkNow": "Verificar agora",
-    "batchStatus": {
-      "submitted": "Enviado",
-      "processed": "Processado",
-      "failed": "Falhou"
-    },
     "reports": "Comunicações em aberto",
     "noReports": "Sem comunicações em aberto.",
     "comment": "Comentário",
-    "noComment": "sem comentário"
+    "noComment": "sem comentário",
+    "translationsTitle": "Estado das traduções",
+    "translationsIntro": "Sobre as {{count}} perguntas alemãs aprovadas. As traduções desatualizadas foram feitas a partir de uma versão alemã anterior e não são mostradas aos formandos.",
+    "flaggedMissing": "Marcadas como ainda não traduzidas: {{count}}",
+    "importNote": "As perguntas vêm dos ficheiros de conteúdo do repositório e são importadas em cada implementação. As alterações feitas aqui ficam registadas até o pipeline as escrever nos ficheiros."
   },
   "cantons": {
     "zh": "Zurique",
@@ -581,5 +562,12 @@
     "refundTooLate": "O prazo de reembolso do seu último pagamento terminou em {{date}}.",
     "refundTooMany": "O seu último pagamento já não pode ser reembolsado: estudou {{count}} perguntas desde a compra e os reembolsos são possíveis abaixo de {{max}}.",
     "refundDone": "O seu último pagamento foi reembolsado."
+  },
+  "topics": {
+    "scope": {
+      "federal": "Confederação",
+      "canton": "Cantão",
+      "commune": "Comuna"
+    }
   }
 }

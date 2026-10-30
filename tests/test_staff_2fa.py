@@ -57,4 +57,5 @@ async def test_learner_cannot_use_admin_or_review_endpoints(api):
     await learner_logged_in(api)
     assert (await api.get("/api/admin/overview")).status_code == 403
     assert (await api.get("/api/admin/learners")).status_code == 403
-    assert (await api.get("/api/review/modules")).status_code == 403
+    assert (await api.get("/api/review/meta")).status_code == 403
+    assert (await api.get("/api/review/translations")).status_code == 403

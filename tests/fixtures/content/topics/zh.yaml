@@ -1,0 +1,36 @@
+# EXAMPLE FIXTURE FOR TESTS ONLY. Not the real Zurich topic list (that is
+# content/topics/zh.yaml). Four topics, one per scope plus a second federal one.
+canton: zh
+test:
+  questions: 50
+  minutes: 60
+  pass_mark: 30
+  proportions: {federal: 0.78, canton: 0.16, commune: 0.06}
+topics:
+  - code: bund.demokratie.foederalismus
+    scope: federal
+    name_de: "Föderalismus: Bund, Kantone und Gemeinden"
+    name_en: "Federalism: Confederation, cantons and communes"
+    target_questions: 14
+    sources:
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+  - code: bund.demokratie.kantone_rolle
+    scope: federal
+    name_de: "Aufgaben und Stellung der Kantone"
+    name_en: "Role and standing of the cantons"
+    target_questions: 8
+    sources:
+      - https://www.bk.admin.ch/bund-kurz-erklaert
+  - code: kanton.demokratie.kantonsrat
+    scope: canton
+    name_de: "Kantonsrat"
+    name_en: "Cantonal Parliament (Kantonsrat)"
+    target_questions: 8
+    sources:
+      - https://www.zh.ch/de/politik-staat.html
+  - code: gemeinde.leistungen
+    scope: commune
+    name_de: "Leistungen der Gemeinde"
+    name_en: "Communal services"
+    target_questions: 5
+    sources: []

@@ -79,16 +79,15 @@ class Settings(BaseSettings):
     tutor_name: str = "Civics Trainer"
     disclose_model_provider: bool = True
     prompts_dir: str = "prompts"
+    content_dir: str = "content"  # question, topic and translation files (D-041)
     usd_chf_rate: float = 0.80  # for cost logging only; update occasionally
     ai_monthly_budget_chf: float = 300
     ai_learner_alert_chf: float = 8
     max_student_message_chars: int = 2000
     # "Explain this" messages a day for every learner with an active entitlement.
     ai_daily_message_limit: int = 20
-    serve_unreviewed_questions: bool = False  # staging/dev: also serve auto_verified
-    question_spot_check_first: int = 50
-    question_spot_check_rate: float = 0.10
-    diagnostic_questions_per_topic: int = 2
+    serve_unreviewed_questions: bool = False  # staging/dev: also serve in_review questions
+    diagnostic_questions_per_topic: int = 1
     practice_round_size: int = 5
     conversation_window_turns: int = 20
 

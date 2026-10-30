@@ -1,0 +1,15 @@
+# EXAMPLE TRANSLATION FOR TESTS ONLY, written for the test suite.
+id: beispiel-staatsebenen
+lang: en
+source_version: 1
+question: On how many levels of government is Switzerland organised?
+options:
+  a: 'On two levels: the Confederation and the cantons'
+  b: 'On three levels: the Confederation, the cantons and the communes'
+  c: 'On four levels: the Confederation, regions, cantons and communes'
+  d: 'On one level: the Confederation only'
+explanation: 'Switzerland is a federal state with three levels: the Confederation, the cantons
+  and the communes. Each level has its own tasks and authorities and raises its own taxes.'
+status: approved
+reviewed_by: Beispiel-Reviewer
+reviewed_at: '2026-10-30'

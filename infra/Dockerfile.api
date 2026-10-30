@@ -19,6 +19,7 @@ COPY alembic ./alembic
 COPY alembic.ini ./
 COPY scripts ./scripts
 COPY prompts ./prompts
+COPY content ./content
 
 RUN pip install --upgrade pip && pip install . \
     && mkdir -p /srv/var/outbox && chown -R app:app /srv/var

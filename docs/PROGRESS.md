@@ -21,7 +21,7 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 
 ## Phase 1: Zurich launch (gate B)
 
-- [ ] Question model, import from repository files, and the review queue in the admin area (1.1, 1.2; started 30 October 2026).
+- [x] Question model, import from repository files, and the review queue in the admin area (1.1, 1.2; done 30 October 2026, D-044 to D-047). Content files under `content/` (schema in `content/README.md`), `scripts/validate_content.py` in CI, `scripts/import_content.py` in the compose migrate step, tables `topics`, `questions`, `question_translations`, `glossary_terms`; content API, practice and diagnostic on the canton's topics, review queue and translation status screen; course concept and generation pipeline removed. 151 tests. Admin review actions are not yet written back to the files (task 1.5). Before the next staging deploy: the API image must copy `content/` (`infra/Dockerfile.api`), and staging's database is recreated (migration 0001 rewritten).
 - [x] Zurich topic list (1.4): 35 topics in `content/topics/zh.yaml`, targets 275/55/20, sources in `SOURCES-zh.md`. Unconfirmed: pass mark 30, 60-minute duration, per-section counts; to ask the Gemeindeamt together with the licensing question.
 - [ ] Content pipeline scripts (1.5).
 - [ ] About 350 Zurich questions approved, translated and reviewed (1.6).
@@ -33,7 +33,7 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 
 ## Next
 
-Tasks 0.2 to 0.7 and 0.9 are done (30 October 2026). Next: 0.8 locales; the five new locale files also lack the 0.7 billing strings (`pricing.*`, `billingReturn.activeUntil`, new `errors.*` and `admin.refund*` keys). The five new locale files lack the strings added in 0.5 (they fall back to English; `npm run check:locales` lists them). The IB course modules under prompts/courses still hold maths examples; they go with the question model in Phase 1. Known leftovers: German learner screens use "du", old SST copy on the Landing page, main JS chunk over 500 kB.
+Tasks 0.2 to 0.7 and 0.9 are done (30 October 2026). Next: 0.8 locales; the five new locale files also lack the 0.7 billing strings (`pricing.*`, `billingReturn.activeUntil`, new `errors.*` and `admin.refund*` keys). The five new locale files lack the strings added in 0.5 (they fall back to English; `npm run check:locales` lists them). Known leftovers: German learner screens use "du", old SST copy on the Landing page, main JS chunk over 500 kB.
 
 ## Waiting on Chris
 

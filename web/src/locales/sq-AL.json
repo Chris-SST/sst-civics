@@ -95,7 +95,11 @@
     "refund_failed": "Stripe nuk e pranoi rimbursimin. Ju lutemi provoni përsëri ose rimbursoni nga paneli i Stripe.",
     "refund_too_late": "Periudha e rimbursimit për këtë pagesë ka përfunduar.",
     "refund_too_many_questions": "Janë studiuar shumë pyetje që nga kjo pagesë për një rimbursim sipas rregullit.",
-    "refund_refunded": "Kjo pagesë është rimbursuar tashmë."
+    "refund_refunded": "Kjo pagesë është rimbursuar tashmë.",
+    "note_required": "Ju lutemi shtoni një shënim se çfarë duhet ndryshuar.",
+    "invalid_options": "Nevojiten katër përgjigje të ndryshme, përfshirë atë të saktën.",
+    "invalid_transition": "Kjo pyetje nuk mund të ndryshohet më në këtë mënyrë.",
+    "edits_need_approve": "Ndryshimet mund të ruhen vetëm së bashku me një miratim."
   },
   "impersonation": {
     "banner": "Po shihni si {{name}} ({{role}}). Keni hyrë si administratori {{admin}}.",
@@ -194,13 +198,10 @@
     "activeUntil": "Faleminderit. Civics Pass juaj për {{canton}} është aktiv deri më {{date}}."
   },
   "learner": {
-    "noCourses": "Nuk keni zgjedhur ende kurse",
     "tutorOffline": "Tutori nuk është lidhur ende në këtë mjedis.",
     "noticeTitle": "Para se të filloni me {{name}}",
     "noticeBody": "Shpjegimet këtu shkruhen nga një asistent IA dhe mund të përmbajnë gabime. Përdoreni për të kuptuar një pyetje dhe kontrolloni çdo gjë të rëndësishme me informacionin e kantonit tuaj.",
     "noticeOk": "E kuptova",
-    "topic": "Tema",
-    "chooseTopic": "Zgjidhni një temë",
     "recent": "Sesionet e fundit",
     "noRecent": "Nuk ka ende sesione. Zgjidhni një temë për të filluar.",
     "endedTag": "përfunduar",
@@ -223,9 +224,13 @@
     "diagSkip": "Kapërce tani",
     "showTopics": "Shfaq të gjitha {{count}} temat",
     "hideTopics": "Fshih temat",
-    "noQuestionsYet": "Pyetjet praktike për këtë kurs po vijnë. Mund ta pyesni prapë tutorin.",
+    "noQuestionsYet": "Pyetjet praktike për kantonin tuaj do të vijnë së shpejti. Për çdo temë mund ta pyesni tutorin që tani.",
     "welcome": "Mirë se vini",
-    "noAccess": "Nuk keni ende qasje për kantonin tuaj."
+    "noAccess": "Nuk keni ende qasje për kantonin tuaj.",
+    "noTopics": "Temat për kantonin tuaj do të vijnë së shpejti.",
+    "topicsTitle": "Temat e testit: {{canton}}",
+    "questionsCount_one": "{{count}} pyetje",
+    "questionsCount_other": "{{count}} pyetje"
   },
   "chat": {
     "back": "Sesionet tuaja",
@@ -389,19 +394,19 @@
     "streak": "{{count}} radhazi!",
     "backOnTrack": "Përsëri në rrugë të mbarë!",
     "tricky": "Një pyetje e ndërlikuar. Lexoni zgjidhjen, pastaj provoni të tjetrën.",
-    "difficulty": "Vështirësia {{level}} nga 5",
+    "difficulty": "Vështirësia {{level}} nga 3",
     "unreviewed": "ende e pakontrolluar",
     "yourAnswer": "Përgjigjja juaj",
     "submit": "Kontrollo përgjigjen",
     "correct": "Saktë",
     "incorrect": "Jo plotësisht",
     "answerLabel": "Përgjigjja",
-    "showSolution": "Shfaq zgjidhjen",
-    "hideSolution": "Fshih zgjidhjen",
     "report": "Raportoni një problem",
     "reportHint": "Çfarë nuk shkon? (opsionale)",
     "reportSend": "Dërgo raportin",
-    "reported": "Faleminderit. Do ta shqyrtojmë këtë pyetje."
+    "reported": "Faleminderit. Do ta shqyrtojmë këtë pyetje.",
+    "showExplanation": "Shfaq shpjegimin",
+    "hideExplanation": "Fshih shpjegimin"
   },
   "figure": {
     "failed": "Figura nuk u vizatua dot",
@@ -419,32 +424,20 @@
   },
   "review": {
     "queue": "Radha e shqyrtimit",
-    "module": "Moduli",
-    "allModules": "Të gjitha modulet",
     "statusFilter": "Shfaq",
-    "needsAttention": "Kërkon vëmendje",
+    "needsAttention": "Skica dhe në shqyrtim",
     "empty": "Nuk ka asgjë për t'u shqyrtuar.",
     "question": "Pyetja",
     "topic": "Tema",
     "difficulty": "Vështirësia",
     "statusLabel": "Statusi",
-    "issuesLabel": "Probleme",
-    "spotCheck": "Kontroll i rastësishëm",
     "reports_one": "{{count}} raport",
     "reports_other": "{{count}} raporte",
     "reportsLabel": "Raportet e përdoruesve",
     "panelTitle": "Shqyrto pyetjen",
-    "options": "Opsionet",
-    "optionsHint": "Një për rresht, p.sh. A) 2x+1",
-    "answer": "Përgjigjja",
-    "workedSolution": "Zgjidhja e hollësishme",
-    "level": "Niveli",
+    "options": "Përgjigjja",
+    "answer": "Përgjigjja e saktë",
     "topicCode": "Tema",
-    "checks": "Kontrolle automatike",
-    "solveAnswer": "Zgjidhje e pavarur",
-    "storedAnswer": "Përgjigjja e ruajtur",
-    "similarity": "Pyetja ekzistuese më e ngjashme",
-    "source": "Burimi dhe versioni i prompt-it",
     "previousNote": "Shënimi i mëparshëm",
     "edit": "Redakto pyetjen",
     "hideEdit": "Fshih redaktorin",
@@ -458,63 +451,51 @@
     "myMinutes": "Minutat e mia të shqyrtimit",
     "status": {
       "draft": "Skicë",
-      "auto_verified": "Verifikuar automatikisht",
-      "needs_review": "Kërkon shqyrtim",
       "approved": "Miratuar",
-      "retired": "Tërhequr"
+      "retired": "Tërhequr",
+      "in_review": "Në shqyrtim"
     },
-    "issues": {
-      "solve_failed": "Zgjidhja dështoi",
-      "solver_low_confidence": "Zgjidhësi i pasigurt",
-      "answers_differ": "Përgjigjet ndryshojnë",
-      "mcq_options_invalid": "Opsione të pavlefshme",
-      "no_solution": "Pa zgjidhje të hollësishme",
-      "near_duplicate": "Pothuajse dublikatë",
-      "student_reports": "Raportet e përdoruesve"
+    "explanation": "Shpjegimi",
+    "sources": "Burimet",
+    "checked": "kontrolluar më {{date}}",
+    "glossary": "Termat e fjalorit",
+    "version": "versioni {{version}}",
+    "canton": "Kantoni",
+    "allCantons": "Të gjitha",
+    "federal": "Konfederata",
+    "allTopics": "Të gjitha temat",
+    "fileStatus": "Statusi në skedar",
+    "imported": "Importuar",
+    "filePending": "Ndryshuar në aplikacion, por ende jo në skedarin e përmbajtjes. Pipeline duhet ta shkruajë këtë ndryshim në skedar.",
+    "filePendingShort": "Përditësim skedari në pritje",
+    "translations": "Përkthimet",
+    "translationsMissing": "Shënuar si ende e papërkthyer.",
+    "sourceVersion": "nga versioni {{version}}",
+    "pendingUpdates": "Përditësime skedarësh në pritje",
+    "noteHint": "E detyrueshme kur e ktheni mbrapsht.",
+    "dbOnlyHint": "Ruajtur vetëm në aplikacion. Skedari i përmbajtjes përditësohet nga pipeline, me një version të ri.",
+    "tstate": {
+      "approved": "Miratuar",
+      "in_review": "Në shqyrtim",
+      "draft": "Skicë",
+      "stale": "E vjetëruar",
+      "missing": "Mungon",
+      "source": "Origjinali gjermanisht"
     }
   },
   "qbank": {
     "tab": "Banka e pyetjeve",
-    "overview": "Përmbledhje dhe gjenerim",
+    "overview": "Përmbledhje",
     "reviewQueue": "Radha e shqyrtimit",
-    "generate": "Gjenero pyetje",
-    "level": "Niveli",
-    "levels": {
-      "sl": "SL",
-      "hl": "HL",
-      "both": "SL dhe HL"
-    },
-    "topics": "Temat",
-    "allTopics": "Të gjitha temat",
-    "difficulties": "Vështirësitë",
-    "perRequest": "Pyetje për kërkesë",
-    "perRequestShort": "kërkesë",
     "language": "Gjuha",
-    "mode": "Mënyra",
-    "modeBatch": "Në grupe",
-    "modeDirect": "Direkte",
-    "modeHelp": "Mënyra në grupe kushton përgjysmë dhe vjen brenda rreth një ore; ajo direkte ekzekutohet tani.",
-    "modes": {
-      "batch": "Në grupe",
-      "direct": "Direkte"
-    },
-    "estimate": "{{requests}} kërkesa, deri në {{questions}} pyetje përpara kontrolleve.",
-    "submit": "Gjenero",
-    "submitted": "Kërkesa u dërgua: {{count}} kërkesa.",
-    "batches": "Kërkesat e gjenerimit",
-    "noBatches": "Nuk ka ende kërkesa.",
-    "requests": "Kërkesa",
-    "created": "Pyetje të krijuara",
-    "checkNow": "Kontrollo tani",
-    "batchStatus": {
-      "submitted": "Dërguar",
-      "processed": "Përpunuar",
-      "failed": "Dështuar"
-    },
     "reports": "Raporte të hapura",
     "noReports": "Nuk ka raporte të hapura.",
     "comment": "Koment",
-    "noComment": "pa koment"
+    "noComment": "pa koment",
+    "translationsTitle": "Gjendja e përkthimeve",
+    "translationsIntro": "Për {{count}} pyetjet gjermanisht të miratuara. Përkthimet e vjetëruara janë bërë nga një version i mëparshëm gjermanisht dhe nuk u shfaqen nxënësve.",
+    "flaggedMissing": "Shënuar si ende të papërkthyera: {{count}}",
+    "importNote": "Pyetjet vijnë nga skedarët e përmbajtjes në repozitor dhe importohen në çdo publikim. Ndryshimet e bëra këtu regjistrohen derisa pipeline t'i shkruajë në skedarë."
   },
   "cantons": {
     "zh": "Cyrihu",
@@ -581,5 +562,12 @@
     "refundTooLate": "Periudha e rimbursimit për pagesën tuaj të fundit përfundoi më {{date}}.",
     "refundTooMany": "Pagesa juaj e fundit nuk mund të rimbursohet më: keni studiuar {{count}} pyetje që nga blerja dhe rimbursimet janë të mundura nën {{max}}.",
     "refundDone": "Pagesa juaj e fundit u rimbursua."
+  },
+  "topics": {
+    "scope": {
+      "federal": "Konfederata",
+      "canton": "Kantoni",
+      "commune": "Komuna"
+    }
   }
 }

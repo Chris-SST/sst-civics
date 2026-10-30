@@ -1,0 +1,23 @@
+# EXAMPLE QUESTION FOR TESTS ONLY, written for the test suite. Not part of the question bank.
+id: beispiel-anzahl-kantone
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.kantone_rolle
+question_de: "Wie viele Kantone hat die Schweiz?"
+options_de:
+  a: "20"
+  b: "23"
+  c: "26"
+  d: "30"
+correct: c
+explanation_de: >-
+  Die Schweiz besteht aus 26 Kantonen. Sechs von ihnen wurden früher Halbkantone genannt;
+  sie haben im Ständerat je einen Sitz statt zwei.
+sources:
+  - url: https://www.bk.admin.ch/bund-kurz-erklaert
+    checked: 2026-10-30
+glossary: [Kanton, Ständerat]
+status: approved
+difficulty: 1
+translations_missing: true
