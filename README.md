@@ -1,37 +1,38 @@
-# SST Virtual Tutor
+# civics
 
-Subscription web app that gives Swiss Science Tutors' students an AI tutor with a one-tap route to SST's human tutors. The build plan is [PLAN.md](PLAN.md); progress and decisions live in [docs/PROGRESS.md](docs/PROGRESS.md) and [docs/DECISIONS.md](docs/DECISIONS.md).
+A trainer for the Swiss citizenship knowledge test, starting with the canton of Zurich. Learners sign up with an email address, practise sample questions free, and buy a one-off Civics Pass (CHF 29 for six months, paid by card or TWINT) for a canton. Each question is studied first in the learner's own language beside the German, then in German only, as in the real test. The working name in the code is `civics`; the provisional brand is Civigo (decision D-017). It is an independent service with no connection to any authority, and it gives general information, not legal advice.
 
-**Current state: Phase 0 (Foundations), awaiting gate A sign-off.** Accounts, login, 2FA, Stripe test mode, admin area, brand and three languages are built. The AI tutor itself arrives in Phase 1.
+The build plan is [PLAN.md](PLAN.md). Progress and decisions: [docs/PROGRESS.md](docs/PROGRESS.md) and [docs/DECISIONS.md](docs/DECISIONS.md). The repository began as a copy of the SST Virtual Tutor (D-001); what was kept, adapted and removed is in [REUSE.md](REUSE.md).
+
+**Current state: Phase 0 (copy and strip) is complete, pending gate A.** Adult learner and admin accounts, sign-in by email link, one-off Stripe payments with per-canton entitlements, refunds, account deletion, an admin area and eight interface languages are built and tested. The staging deploy waits on DNS, the edge Caddy change and a GitHub repository. The question model, study modes, mock tests and guide site arrive in Phase 1; the chat is the earlier tutor chat, to be reshaped into "Explain this". The demo script for gate A is [docs/DEMO_PHASE0.md](docs/DEMO_PHASE0.md).
 
 ## Layout
 
 ```
-app/      FastAPI API: auth, billing (Stripe), family, admin, portal, email, llm (Phase 1)
-worker/   arq background worker: emails, Stripe events, nightly expiry count
-alembic/  database migrations
-web/      React + TypeScript + Vite PWA (en-GB, de-CH, fr-CH)
-infra/    Docker Compose, Caddy, backup script
-scripts/  seed (first admin), Stripe bootstrap (Civics Pass products)
-tests/    pytest suite (runs on SQLite locally, SQLite and PostgreSQL in CI)
-docs/     PROGRESS.md, DECISIONS.md, runbooks/, DEMO_PHASE0.md
-prompts/  versioned tutor prompts and course modules (Phase 1)
-evals/    tutor evaluation suite (Phase 1)
+app/        FastAPI API: auth, billing (Stripe), admin, email, llm, questions, tutoring
+worker/     arq background worker: emails, Stripe events, nightly jobs
+alembic/    database migrations (one initial migration, D-005)
+web/        React + TypeScript + Vite PWA; locales in web/src/locales
+infra/      Docker Compose, Caddy snippet for the shared edge, backup script
+scripts/    seed (first admin), Stripe bootstrap (Civics Pass products)
+tests/      pytest suite (SQLite locally; SQLite and PostgreSQL in CI)
+prompts/    versioned prompt files
+evals/      evaluation suite
+docs/       PROGRESS, DECISIONS, DATA_INVENTORY, DEMO_PHASE0, runbooks/, source-app/
 ```
 
-## Run it locally in 10 minutes (no Docker needed)
+## Run it locally in ten minutes
 
-Requirements: Python 3.12 or newer, Node 22 or newer.
+Requirements: Python 3.12 or newer, Node 22 or newer. No Docker needed.
 
 ```bash
-# 1. Backend
 python -m venv .venv
 . .venv/bin/activate          # Windows PowerShell: .venv\Scripts\Activate.ps1
 pip install -e ".[dev]"
 cp .env.example .env
 ```
 
-Edit `.env` for a laptop setup (SQLite, in-process jobs, emails written to `var/outbox/`):
+Edit `.env` for a laptop (SQLite, jobs run in the API process, emails written to files, canned AI replies):
 
 ```
 APP_ENV=dev
@@ -39,6 +40,7 @@ SECRET_KEY=<any long random string>
 DATABASE_URL=sqlite+aiosqlite:///./var/dev.db
 JOBS_INLINE=true
 EMAIL_BACKEND=console
+LLM_FAKE=true
 APP_BASE_URL=http://localhost:8000
 COOKIE_SECURE=false
 ```
@@ -46,36 +48,42 @@ COOKIE_SECURE=false
 ```bash
 mkdir -p var
 alembic upgrade head
-ADMIN_EMAIL=you@example.ch ADMIN_PASSWORD='choose-a-long-one' python -m scripts.seed
-
-# 2. Front end (built once, then served by the API at http://localhost:8000)
 cd web && npm ci && npm run build && cd ..
-
-# 3. Start
 uvicorn app.main:app --reload --port 8000
 ```
 
-Open http://localhost:8000. Sign up as a parent; the confirmation email appears as a `.eml` file in `var/outbox/` (open it and follow the link). The admin you seeded logs in at `/login` and is asked to set up an authenticator app.
+Open http://localhost:8000. Every email (verification, sign-in link, deletion notice) is written as an `.eml` file in `var/outbox/`; open it in a text editor and follow the link. `LLM_FAKE=true` (dev and test only) gives canned chat replies without an API key.
 
-For front-end development with hot reload, run `npm run dev` in `web/` (port 5173, proxies `/api` to 8000) and set `APP_BASE_URL=http://localhost:5173`.
+For front-end work with hot reload, run `npm run dev` in `web/` (port 5173, proxies `/api` to 8000) and set `APP_BASE_URL=http://localhost:5173`.
+
+### The first admin
+
+`scripts/seed.py` reads two environment variables and creates one admin (verified, with a password; no name field):
+
+```bash
+ADMIN_EMAIL=you@example.ch ADMIN_PASSWORD='a-long-password-of-10-or-more' python -m scripts.seed
+```
+
+It does nothing if either is missing or the address exists. At first sign-in at `/login` the admin is sent to `/2fa/setup` to set up an authenticator app; admins always need it.
 
 ### Stripe in test mode
 
-1. Put the **test** keys in `.env`: `STRIPE_SECRET_KEY=sk_test_...`.
-2. Create the products and prices once: `python -m scripts.stripe_bootstrap`.
-3. Enable cards and TWINT under Settings → Payment methods in the Stripe Dashboard (test mode).
-4. Forward webhooks locally: `stripe listen --forward-to localhost:8000/api/billing/webhook` and copy the printed `whsec_...` into `STRIPE_WEBHOOK_SECRET`.
-5. Restart the API. Test card: `4242 4242 4242 4242`, any future date, any CVC.
+1. Put the test key in `.env`: `STRIPE_SECRET_KEY=sk_test_...` (the bootstrap script refuses live keys).
+2. Create the products and prices once: `python -m scripts.stripe_bootstrap` (lookup keys `civics_pass_zh`, `civics_pass_ag`, `civics_extension`; add `--amount KEY=RAPPEN` to change an amount). Prices are read from Stripe by key, never from code.
+3. In the Stripe Dashboard (test mode), Settings, Payment methods: enable cards and TWINT.
+4. Webhooks go to `/api/billing/webhook`, with exactly four events: `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `checkout.session.async_payment_failed`, `charge.refunded`. Locally: `stripe listen --forward-to localhost:8000/api/billing/webhook --events <the four, comma-separated>` and copy the printed `whsec_...` into `STRIPE_WEBHOOK_SECRET`.
+5. Restart the API. Test card `4242 4242 4242 4242`, any future date, any CVC.
 
-Products, webhook events, TWINT and refunds: [docs/runbooks/stripe-test-mode.md](docs/runbooks/stripe-test-mode.md).
+`CANTONS_FOR_SALE` (default `zh`) decides which passes are on sale. Details: [docs/runbooks/stripe-test-mode.md](docs/runbooks/stripe-test-mode.md).
 
 ### With PostgreSQL, Redis and a mail catcher
 
 ```bash
-docker compose -f infra/docker-compose.dev.yml up -d     # Postgres 5432, Redis 6379, Mailpit http://localhost:8025
-# .env: DATABASE_URL=postgresql+asyncpg://sst:sst@localhost:5432/sst  REDIS_URL=redis://localhost:6379/0
-#       JOBS_INLINE=false  EMAIL_BACKEND=smtp  SMTP_HOST=localhost  SMTP_PORT=1025  SMTP_STARTTLS=false
-alembic upgrade head && python -m scripts.seed
+docker compose -f infra/docker-compose.dev.yml up -d
+# .env: DATABASE_URL=postgresql+asyncpg://civics:civics@localhost:5432/civics
+#       REDIS_URL=redis://localhost:6379/0  JOBS_INLINE=false
+#       EMAIL_BACKEND=smtp  SMTP_HOST=localhost  SMTP_PORT=1025  SMTP_STARTTLS=false
+alembic upgrade head
 uvicorn app.main:app --reload            # terminal 1
 arq worker.main.WorkerSettings           # terminal 2
 ```
@@ -84,51 +92,33 @@ arq worker.main.WorkerSettings           # terminal 2
 
 ```bash
 ruff check app worker tests scripts alembic && ruff format --check app worker tests scripts alembic
-pytest -q                                # 28 tests, SQLite
-CI_DATABASE_URL=postgresql+asyncpg://sst:sst@localhost:5432/sst_test pytest -q   # against PostgreSQL
+pytest -q                                # SQLite; set CI_DATABASE_URL for PostgreSQL
 cd web && npm run build                  # type-check and build
+cd web && npm run check:locales          # every locale has the same keys and placeholders as en-GB
 ```
 
-CI ([.github/workflows/ci.yml](.github/workflows/ci.yml)) runs lint, migrations up/down on PostgreSQL, both test runs, the web build, dependency audits and Trivy image scans on every push. Deploys to staging run only from `v*` tags.
+CI is in [.github/workflows/ci.yml](.github/workflows/ci.yml) and needs the GitHub repository (not yet created). Locale review status: [web/src/locales/README.md](web/src/locales/README.md).
 
 ## Staging and production
 
-Everything runs on one Swiss virtual server with Docker Compose: Caddy (TLS, static front end, `/api` proxy), API, worker, PostgreSQL 16, Redis and a nightly encrypted backup to a second Swiss location. See [docs/runbooks/deploy-staging.md](docs/runbooks/deploy-staging.md).
+Staging shares the existing SST tutor VPS (D-004): the civics stack is its own Docker Compose project under `/opt/civics` (API, worker, PostgreSQL, Redis, nightly encrypted backup) and binds no host ports; the tutor stack's Caddy is the shared edge and proxies the civics host names. Production gets its own server before go-live.
+
+- [docs/runbooks/deploy-staging.md](docs/runbooks/deploy-staging.md): prerequisites, first start, redeploy, checks
+- [docs/runbooks/backups-and-restore.md](docs/runbooks/backups-and-restore.md)
+- [docs/runbooks/stripe-test-mode.md](docs/runbooks/stripe-test-mode.md) and [stripe-outage.md](docs/runbooks/stripe-outage.md)
+- [docs/runbooks/account-deletion.md](docs/runbooks/account-deletion.md)
 
 ## Environment variables
 
-All variables are documented in [.env.example](.env.example). Secrets are never committed; Stripe stays in test mode until Chris approves go-live.
+All are documented in [.env.example](.env.example). Never commit `.env`. Stripe stays in test mode, and the staging AI key is used, until Chris approves go-live.
 
 ## Conventions
 
-- Interface text in British English, German and French; amounts in CHF with Swiss formatting.
-- Every AI call goes through `app/llm/` (Phase 1). Prompts live as versioned files in `prompts/`, never in code.
-- Names, emails and other identifiers never leave the server; logs carry no message content.
-- No AI attribution anywhere in code, docs, interface text or commit messages.
-
-## The chat tutor (Phase 1)
-
-Set `ANTHROPIC_API_KEY` in `.env` and the tutor switches on; without it the student page says
-the tutor is not connected. For local development without a key, set `LLM_FAKE=true` (dev and
-test only) to get canned replies that exercise the whole interface, including maths rendering.
-
-Models and behaviour are configured with `TUTOR_MODEL`, `FAST_MODEL`, `TUTOR_EFFORT`,
-`TUTOR_NAME` and `DISCLOSE_MODEL_PROVIDER`; cost alerts with `AI_MONTHLY_BUDGET_CHF`,
-`AI_STUDENT_ALERT_CHF` and `SAFEGUARDING_EMAIL`. Prompts live in `prompts/` (see its README).
-Every call is logged in `llm_calls` and summarised under Admin → AI usage; flagged
-conversations appear under Admin → Safeguarding.
-
-## Question bank
-
-Admin → Question bank generates questions per course, topic and difficulty, either through
-the provider's Batch API (half price, results within about an hour, fetched by the worker every
-ten minutes) or directly. Every generated question is solved independently by the model and
-checked automatically (answer agreement, multiple-choice validity, rounding-consistent
-tolerances, near duplicates) before it becomes `auto_verified`; anything doubtful becomes
-`needs_review`. Tutors review questions for their tagged courses under Tutor → Question review
-and can approve with edits, send back or retire. Production serves only approved questions;
-set `SERVE_UNREVIEWED_QUESTIONS=true` on staging to serve auto-verified ones as well (D-039).
-
-Students take a short diagnostic per course, get a mastery score per topic, practise at an
-adapted difficulty, and can check what they learnt at the end of a tutor session. Structured
-answers are marked by the model against the mark scheme and labelled "AI-marked".
+- Interface text in British English; German is formal ("Sie"); French, Italian, Portuguese, Spanish, Albanian and Turkish follow the locale notes. Amounts in CHF with Swiss number formatting.
+- Every AI call goes through `app/llm/`; no other module imports the provider's SDK. Prompts are versioned files in `prompts/`, never strings in code. Question content and guide pages are versioned files; the database is filled from them on deploy.
+- No personal data to the AI provider: no names, emails or identifiers, and message content is never logged. Nationality, permit type, date of birth and address are never collected ([docs/DATA_INVENTORY.md](docs/DATA_INVENTORY.md)).
+- No secrets in the repository.
+- No Swiss or cantonal coats of arms and no "official" wording. The independence notice goes in every footer.
+- Never copy text from cantonal question catalogues or test series; use them only to list topics.
+- No AI attribution anywhere: code, docs, interface text or commit messages.
+- Each feature ships with tests; lint, tests and the web build must pass.
