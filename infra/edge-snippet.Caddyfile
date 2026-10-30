@@ -22,9 +22,10 @@
 # bind 80/443 on the same server, so sharing the VPS requires this change to the tutor stack.
 # Without it, use a separate server.
 #
+# stats.* is the Umami dashboard (D-062); it needs its own DNS record and certificate.
 # Certificates are issued automatically once both names resolve to the server.
 
-civics-staging.swisssciencetutors.ch, app.civics-staging.swisssciencetutors.ch {
+civics-staging.swisssciencetutors.ch, app.civics-staging.swisssciencetutors.ch, stats.civics-staging.swisssciencetutors.ch {
 	encode zstd gzip
 
 	header Strict-Transport-Security "max-age=31536000; includeSubDomains"

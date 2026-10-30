@@ -56,11 +56,13 @@ const icon =
     <link rel="preload" href="/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin />
     {/*
-      Analytics (cookie-free, self-hosted Umami, D-056). Switched on when the Umami container
-      exists at stats.<domain>: uncomment, set the website id, and add the stats host to
-      script-src and connect-src in the CSP of infra/Caddyfile. Do not add it before then.
-      <script defer src="https://stats.civics-staging.swisssciencetutors.ch/script.js" data-website-id="REPLACE-ME"></script>
+      Analytics (cookie-free, self-hosted Umami, D-062). Renders only when PUBLIC_UMAMI_WEBSITE_ID
+      is set at build time. Same-origin /stats/ paths are proxied to Umami by infra/Caddyfile;
+      data-host-url keeps the collect call on /stats/api/send. Do Not Track is honoured.
     */}
+    {import.meta.env.PUBLIC_UMAMI_WEBSITE_ID && (
+      <script is:inline defer src="/stats/script.js" data-host-url="/stats" data-do-not-track="true" data-website-id={import.meta.env.PUBLIC_UMAMI_WEBSITE_ID}></script>
+    )}
   </head>
   <body>
     <a class="skip" href="#main">{t.skip}</a>
