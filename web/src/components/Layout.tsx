@@ -3,7 +3,9 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import { post } from "../api";
 import { homeFor, useAuth } from "../auth";
+import { BRAND_NAME } from "../brand";
 import { LANGUAGES } from "../i18n";
+import Wordmark from "./Wordmark";
 
 export const SITE = "https://swisssciencetutors.ch";
 
@@ -27,24 +29,25 @@ export default function Layout({ children }: { children: ReactNode }) {
     <div className="shell">
       <header className="topbar">
         <div className="container topbar-inner">
-          <Link to={me ? homeFor(me.user.role) : "/"} className="brand" aria-label={config?.tutor_name ?? "Civics Trainer"}>
-            <span className="brand-sub">{config?.tutor_name ?? "Civics Trainer"}</span>
+          <Link to={me ? homeFor(me.user.role) : "/"} className="brand" aria-label={BRAND_NAME}>
+            <Wordmark />
           </Link>
           <nav className="topnav">
-            <label className="lang">
-              <span className="visually-hidden">{t("nav.language")}</span>
-              <select
-                value={i18n.language}
-                onChange={(e) => void i18n.changeLanguage(e.target.value)}
-                aria-label={t("nav.language")}
-              >
-                {LANGUAGES.map((l) => (
-                  <option key={l.code} value={l.code}>
-                    {l.label}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <div className="lang" role="group" aria-label={t("nav.language")}>
+              {LANGUAGES.map((l) => (
+                <button
+                  type="button"
+                  key={l.code}
+                  lang={l.short}
+                  title={l.label}
+                  aria-label={l.label}
+                  aria-current={i18n.language === l.code ? "true" : undefined}
+                  onClick={() => void i18n.changeLanguage(l.code)}
+                >
+                  {l.short}
+                </button>
+              ))}
+            </div>
             {me ? (
               <>
                 <span className="who">

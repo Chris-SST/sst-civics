@@ -106,11 +106,20 @@
     "back": "Ktheheni te administrimi"
   },
   "landing": {
-    "title": "{{name}}",
-    "lead": "Përgatituni për testin e njohurive për shtetësinë. Kuptoni çdo pyetje në gjuhën tuaj, pastaj ushtrohuni në gjermanisht. Provoni fillimisht pyetje shembull falas, pastaj zhbllokoni gjithçka me një Civics Pass.",
-    "cta": "Filloni provën falas 7-ditore",
+    "title": "Kuptoni testin e natyralizimit në gjuhën tuaj.",
+    "lead": "Mësoni çfarë do të thotë çdo pyetje në gjuhën që e njihni më mirë, pastaj ushtrohuni me të njëjtat pyetje në gjermanisht, gjuhën e testit të vërtetë.",
+    "cta": "Filloni ushtrimet falas",
     "plansTitle": "Planet",
-    "trialNote": "Çmimet në CHF."
+    "trialNote": "Çmimet në CHF.",
+    "howTitle": "Si funksionon",
+    "step1Title": "Kuptoni",
+    "step1Body": "Lexoni çdo pyetje krah për krah në gjuhën tuaj dhe në gjermanisht, me një shpjegim të shkurtër kur ju nevojitet.",
+    "step2Title": "Ushtrohuni në gjermanisht",
+    "step2Body": "Kaloni hap pas hapi nga gjuha juaj te gjermanishtja e vetme, me raunde të shkurtra dhe teste provë.",
+    "step3Title": "Kaloni",
+    "step3Body": "Jepni testin në gjermanisht me siguri. Vlerësimi i ushtrimeve është një orientim, jo rezultat zyrtar.",
+    "freeTitle": "Provoni 30 pyetje falas",
+    "freeBody": "Nuk kërkohet pagesë. Krijoni një llogari falas dhe shihni si funksionon përpara se të vendosni për ndonjë gjë."
   },
   "signup": {
     "title": "Krijoni llogarinë tuaj",

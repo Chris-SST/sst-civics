@@ -7,16 +7,16 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["brand/*.png", "fonts/*.woff2", "icons/*.svg"],
+      includeAssets: ["fonts/*.woff2", "icons/*.svg"],
       manifest: {
-        name: "Civics Trainer",
-        short_name: "Civics",
-        description: "Practice trainer for the Swiss citizenship knowledge test.",
+        name: "Civigo",
+        short_name: "Civigo",
+        description: "Understand the Swiss naturalisation test in your own language, then practise it in German.",
         lang: "en-GB",
         start_url: "/",
         display: "standalone",
-        background_color: "#f9f9f9",
-        theme_color: "#84b796",
+        background_color: "#f4f1ff",
+        theme_color: "#5b4bdb",
         icons: [
           { src: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
           { src: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },

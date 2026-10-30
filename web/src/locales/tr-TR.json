@@ -106,11 +106,20 @@
     "back": "Yönetime dön"
   },
   "landing": {
-    "title": "{{name}}",
-    "lead": "Vatandaşlık bilgi sınavına hazırlanın. Her soruyu kendi dilinizde anlayın, ardından Almanca alıştırma yapın. Önce ücretsiz örnek soruları deneyin, ardından bir Civics Pass ile her şeyin kilidini açın.",
-    "cta": "Ücretsiz alıştırmaya başlayın",
+    "title": "Vatandaşlığa geçiş sınavını kendi dilinizde anlayın.",
+    "lead": "Her sorunun ne anlama geldiğini en iyi bildiğiniz dilde öğrenin, ardından aynı soruları gerçek sınavın dili olan Almancada çalışın.",
+    "cta": "Ücretsiz çalışmaya başlayın",
     "plansTitle": "Planlar",
-    "trialNote": "Fiyatlar CHF cinsindendir."
+    "trialNote": "Fiyatlar CHF cinsindendir.",
+    "howTitle": "Nasıl çalışır",
+    "step1Title": "Anlayın",
+    "step1Body": "Her soruyu kendi dilinizde ve Almanca olarak yan yana okuyun, gerektiğinde kısa bir açıklamayla.",
+    "step2Title": "Almanca çalışın",
+    "step2Body": "Kısa turlar ve deneme sınavlarıyla adım adım kendi dilinizden yalnızca Almancaya geçin.",
+    "step3Title": "Geçin",
+    "step3Body": "Sınava Almanca olarak güvenle girin. Çalışma tahmininiz bir yol göstericidir, resmî bir sonuç değildir.",
+    "freeTitle": "30 soruyu ücretsiz deneyin",
+    "freeBody": "Ödeme gerekmez. Ücretsiz bir hesap oluşturun ve bir karar vermeden önce nasıl çalıştığını görün."
   },
   "signup": {
     "title": "Hesabınızı oluşturun",

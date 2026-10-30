@@ -106,11 +106,20 @@
     "back": "Volver a la administración"
   },
   "landing": {
-    "title": "{{name}}",
-    "lead": "Prepárese para el examen de conocimientos para la naturalización. Entienda cada pregunta en su idioma y practique después en alemán. Pruebe primero preguntas de ejemplo gratuitas y luego desbloquee todo con un Civics Pass.",
-    "cta": "Empiece una prueba gratuita de 7 días",
+    "title": "Comprenda el examen de naturalización en su propio idioma.",
+    "lead": "Aprenda qué significa cada pregunta en el idioma que mejor conoce y practique después las mismas preguntas en alemán, el idioma del examen real.",
+    "cta": "Empezar a practicar gratis",
     "plansTitle": "Planes",
-    "trialNote": "Precios en CHF."
+    "trialNote": "Precios en CHF.",
+    "howTitle": "Cómo funciona",
+    "step1Title": "Comprender",
+    "step1Body": "Lea cada pregunta en paralelo en su idioma y en alemán, con una breve explicación cuando la necesite.",
+    "step2Title": "Practicar en alemán",
+    "step2Body": "Pase paso a paso de su idioma al alemán solamente, con rondas cortas y exámenes de prueba.",
+    "step3Title": "Aprobar",
+    "step3Body": "Haga el examen en alemán con confianza. Su estimación de práctica es una orientación, no un resultado oficial.",
+    "freeTitle": "Pruebe 30 preguntas gratis",
+    "freeBody": "No hace falta pagar. Cree una cuenta gratuita y vea cómo funciona antes de decidir nada."
   },
   "signup": {
     "title": "Cree su cuenta",

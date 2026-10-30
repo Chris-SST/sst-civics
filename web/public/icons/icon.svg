@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <rect width="512" height="512" rx="112" fill="#84b796"/>
-  <path d="M160 352c0 26 24 44 60 44 38 0 62-20 62-48 0-62-112-40-112-110 0-30 26-50 62-50 34 0 58 18 58 44" fill="none" stroke="#fff" stroke-width="34" stroke-linecap="round"/>
-  <path d="M300 160h120M360 160v200" fill="none" stroke="#fff" stroke-width="34" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Civigo">
+  <rect width="512" height="512" rx="112" fill="#5b4bdb"/>
+  <rect x="106" y="106" width="300" height="300" rx="94.7" fill="#ffd23f"/>
+  <polygon points="192.8,200.7 287.6,200.7 287.6,200.7 295.8,201.8 303.4,205.0 309.9,210.0 314.9,216.5 318.1,224.1 319.2,232.3 318.1,240.5 314.9,248.1 309.9,254.6 303.4,259.7 295.8,262.8 287.6,263.9 224.4,263.9 192.8,295.5" fill="#1b1740"/>
+  <circle cx="311.3" cy="287.6" r="31.6" fill="#5b4bdb"/>
 </svg>

@@ -106,11 +106,20 @@
     "back": "Retour à l'admin"
   },
   "landing": {
-    "title": "{{name}}",
-    "lead": "Préparez le test de connaissances pour la naturalisation. Comprenez chaque question dans votre langue, puis entraînez-vous en allemand. Essayez d'abord des questions d'exemple gratuites, puis débloquez tout avec un Civics Pass.",
+    "title": "Comprenez le test de naturalisation dans votre propre langue.",
+    "lead": "Apprenez ce que signifie chaque question dans la langue que vous connaissez le mieux, puis exercez-vous sur les mêmes questions en allemand, la langue du vrai test.",
     "cta": "S'entraîner gratuitement",
     "plansTitle": "Formules",
-    "trialNote": "Prix en CHF."
+    "trialNote": "Prix en CHF.",
+    "howTitle": "Comment cela fonctionne",
+    "step1Title": "Comprendre",
+    "step1Body": "Lisez chaque question côte à côte dans votre langue et en allemand, avec une courte explication si vous en avez besoin.",
+    "step2Title": "S'entraîner en allemand",
+    "step2Body": "Passez pas à pas de votre langue à l'allemand seul, avec de courtes séries et des tests blancs.",
+    "step3Title": "Réussir",
+    "step3Body": "Passez le test en allemand en toute confiance. Votre estimation d'entraînement est un repère, pas un résultat officiel.",
+    "freeTitle": "Essayez 30 questions gratuites",
+    "freeBody": "Aucun paiement requis. Créez un compte gratuit et voyez comment cela fonctionne avant de vous décider."
   },
   "signup": {
     "title": "Créer votre compte",

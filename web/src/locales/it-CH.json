@@ -106,11 +106,20 @@
     "back": "Torna all'amministrazione"
   },
   "landing": {
-    "title": "{{name}}",
-    "lead": "Si prepari al test di conoscenza per la naturalizzazione. Comprenda ogni domanda nella Sua lingua, poi si eserciti in tedesco. Provi prima le domande di esempio gratuite, poi sblocchi tutto con un Civics Pass.",
-    "cta": "Inizi la prova gratuita di 7 giorni",
+    "title": "Comprenda il test di naturalizzazione nella Sua lingua.",
+    "lead": "Impari che cosa significa ogni domanda nella lingua che conosce meglio, poi si eserciti con le stesse domande in tedesco, la lingua del test vero e proprio.",
+    "cta": "Inizi a esercitarsi gratis",
     "plansTitle": "Piani",
-    "trialNote": "Prezzi in CHF."
+    "trialNote": "Prezzi in CHF.",
+    "howTitle": "Come funziona",
+    "step1Title": "Capire",
+    "step1Body": "Legga ogni domanda affiancata nella Sua lingua e in tedesco, con una breve spiegazione quando serve.",
+    "step2Title": "Esercitarsi in tedesco",
+    "step2Body": "Passi gradualmente dalla Sua lingua al solo tedesco, con brevi serie e test di prova.",
+    "step3Title": "Superare",
+    "step3Body": "Affronti il test in tedesco con sicurezza. La stima dell'esercitazione è un'indicazione, non un risultato ufficiale.",
+    "freeTitle": "Provi 30 domande gratuite",
+    "freeBody": "Nessun pagamento richiesto. Crei un account gratuito e veda come funziona prima di decidere."
   },
   "signup": {
     "title": "Crei il Suo account",

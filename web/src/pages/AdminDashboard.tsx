@@ -103,7 +103,7 @@ function Overview() {
                     {e.processed_at ? t("admin.processed") : t("admin.pending")}
                   </td>
                   {e.error && (
-                    <td className="small" data-label={t("admin.error")} style={{ color: "var(--red)" }}>
+                    <td className="small text-error" data-label={t("admin.error")}>
                       {e.error}
                     </td>
                   )}

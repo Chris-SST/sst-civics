@@ -106,11 +106,20 @@
     "back": "Back to admin"
   },
   "landing": {
-    "title": "{{name}}",
-    "lead": "Prepare for the citizenship knowledge test. Understand every question in your own language, then practise in German. Try free sample questions first, then unlock everything with a Civics Pass.",
+    "title": "Understand the naturalisation test in your own language.",
+    "lead": "Learn what every question means in the language you know best, then practise the same questions in German, the language of the real test.",
     "cta": "Start free practice",
     "plansTitle": "Plans",
-    "trialNote": "Prices in CHF."
+    "trialNote": "Prices in CHF.",
+    "howTitle": "How it works",
+    "step1Title": "Understand",
+    "step1Body": "Read each question side by side in your own language and in German, with a short explanation when you need one.",
+    "step2Title": "Practise in German",
+    "step2Body": "Move step by step from your own language to German only, with short rounds and mock tests.",
+    "step3Title": "Pass",
+    "step3Body": "Sit the test in German with confidence. Your practice estimate is a guide, not an official result.",
+    "freeTitle": "Try 30 free questions",
+    "freeBody": "No payment needed. Create a free account and see how it works before you decide on anything."
   },
   "signup": {
     "title": "Create your account",

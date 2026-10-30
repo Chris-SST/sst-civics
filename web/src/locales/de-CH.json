@@ -106,11 +106,20 @@
     "back": "Zurück zum Admin"
   },
   "landing": {
-    "title": "{{name}}",
-    "lead": "Bereiten Sie sich auf den Einbürgerungstest vor. Verstehen Sie jede Frage in Ihrer eigenen Sprache und üben Sie dann auf Deutsch. Probieren Sie zuerst kostenlose Beispielfragen aus und schalten Sie danach mit einem Civics Pass alles frei.",
+    "title": "Verstehen Sie den Einbürgerungstest in Ihrer eigenen Sprache.",
+    "lead": "Lernen Sie, was jede Frage bedeutet, in der Sprache, die Sie am besten kennen, und üben Sie dieselben Fragen danach auf Deutsch, der Sprache des echten Tests.",
     "cta": "Kostenlos üben",
     "plansTitle": "Pläne",
-    "trialNote": "Preise in CHF."
+    "trialNote": "Preise in CHF.",
+    "howTitle": "So funktioniert es",
+    "step1Title": "Verstehen",
+    "step1Body": "Lesen Sie jede Frage nebeneinander in Ihrer Sprache und auf Deutsch, bei Bedarf mit einer kurzen Erklärung.",
+    "step2Title": "Auf Deutsch üben",
+    "step2Body": "Wechseln Sie Schritt für Schritt von Ihrer Sprache zu reinem Deutsch, mit kurzen Runden und Probetests.",
+    "step3Title": "Bestehen",
+    "step3Body": "Legen Sie den Test sicher auf Deutsch ab. Ihre Übungseinschätzung ist ein Anhaltspunkt, kein offizielles Ergebnis.",
+    "freeTitle": "30 Fragen kostenlos ausprobieren",
+    "freeBody": "Ohne Bezahlung. Erstellen Sie ein kostenloses Konto und sehen Sie, wie es funktioniert, bevor Sie sich für etwas entscheiden."
   },
   "signup": {
     "title": "Konto erstellen",

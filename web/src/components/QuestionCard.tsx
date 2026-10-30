@@ -43,6 +43,14 @@ export function feedbackHeadline(
   return pick(t("question.encourage", { returnObjects: true }), seed) ?? t("question.incorrect");
 }
 
+function StateIcon({ ok }: { ok: boolean }) {
+  return (
+    <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      {ok ? <path d="M4 10.5l4 4 8-9" /> : <path d="M10 4v7M10 15.5v.5" />}
+    </svg>
+  );
+}
+
 export function MasteryBar({ value, due, label }: { value: number | null; due?: boolean; label?: string }) {
   const { t } = useTranslation();
   const pct = value === null ? 0 : Math.max(0, Math.min(100, value));
@@ -142,6 +150,17 @@ export default function QuestionCard({ question: q, submit, onResult, headline, 
             >
               <b>{o.key.toUpperCase()}</b>
               <RichText text={o.text} />
+              {result && o.key.trim().toLowerCase() === result.answer.trim().toLowerCase() ? (
+                <span className="opt-state">
+                  <StateIcon ok />
+                  {t("question.correct")}
+                </span>
+              ) : result && answer === o.key ? (
+                <span className="opt-state">
+                  <StateIcon ok={false} />
+                  {t("question.incorrect")}
+                </span>
+              ) : null}
             </button>
           ))}
         </div>
@@ -158,6 +177,7 @@ export default function QuestionCard({ question: q, submit, onResult, headline, 
       {result && (
         <section className={`result ${result.correct ? "result-ok" : "result-bad"}`} aria-live="polite">
           <h3>
+            <StateIcon ok={result.correct} />
             {heading || (result.correct ? t("question.correct") : t("question.incorrect"))}
           </h3>
           <div className="result-answer">
