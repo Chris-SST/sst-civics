@@ -6,7 +6,7 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 
 - [x] REUSE.md written and approved (D-002).
 - [x] New repository from a copy of the SST app at tag `v0.1.0-citizen-base` (D-001); source docs moved to `docs/source-app/`.
-- [ ] CI and tests pass after the removals (tests pass locally; CI needs the GitHub repository).
+- [x] CI and tests pass after the removals: lint, SQLite and PostgreSQL suites, web build, image build and scan all green on GitHub (30 October 2026).
   - [x] 0.2 Remove family, parent/student/tutor roles, under-18 rules, safeguarding queue; collapse to Learner and Admin (D-018 to D-025). 61 tests.
   - [x] 0.3 Remove maths rendering and checks (KaTeX, figures, sympy, LaTeX prompts, mark-scheme marking); multiple choice is the only question kind; prompts bumped to v2. 64 tests.
   - [x] 0.4 New initial migration (D-005).
