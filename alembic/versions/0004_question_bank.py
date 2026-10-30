@@ -36,7 +36,9 @@ def upgrade() -> None:
         sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
         sa.Column("ended_at", sa.DateTime(timezone=True), nullable=True),
     )
-    op.create_index("ix_generation_batches_provider_batch_id", "generation_batches", ["provider_batch_id"])
+    op.create_index(
+        "ix_generation_batches_provider_batch_id", "generation_batches", ["provider_batch_id"]
+    )
     op.create_index("ix_generation_batches_module_key", "generation_batches", ["module_key"])
 
     op.create_table(
@@ -64,7 +66,10 @@ def upgrade() -> None:
         sa.Column("check_results", sa.JSON(), nullable=True),
         sa.Column("solve_answer", sa.Text(), nullable=True),
         sa.Column(
-            "batch_id", sa.Uuid(), sa.ForeignKey("generation_batches.id", ondelete="SET NULL"), nullable=True
+            "batch_id",
+            sa.Uuid(),
+            sa.ForeignKey("generation_batches.id", ondelete="SET NULL"),
+            nullable=True,
         ),
         sa.Column("reviewer_id", sa.Uuid(), sa.ForeignKey("users.id"), nullable=True),
         sa.Column("reviewed_at", sa.DateTime(timezone=True), nullable=True),
@@ -81,8 +86,15 @@ def upgrade() -> None:
     op.create_table(
         "question_reports",
         sa.Column("id", sa.Uuid(), primary_key=True),
-        sa.Column("question_id", sa.Uuid(), sa.ForeignKey("questions.id", ondelete="CASCADE"), nullable=False),
-        sa.Column("student_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="SET NULL"), nullable=True),
+        sa.Column(
+            "question_id",
+            sa.Uuid(),
+            sa.ForeignKey("questions.id", ondelete="CASCADE"),
+            nullable=False,
+        ),
+        sa.Column(
+            "student_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="SET NULL"), nullable=True
+        ),
         sa.Column("comment", sa.String(1000), nullable=True),
         sa.Column("created_at", sa.DateTime(timezone=True), nullable=False),
         sa.Column("resolved_at", sa.DateTime(timezone=True), nullable=True),
@@ -92,8 +104,15 @@ def upgrade() -> None:
     op.create_table(
         "attempts",
         sa.Column("id", sa.Uuid(), primary_key=True),
-        sa.Column("student_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False),
-        sa.Column("question_id", sa.Uuid(), sa.ForeignKey("questions.id", ondelete="CASCADE"), nullable=False),
+        sa.Column(
+            "student_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+        ),
+        sa.Column(
+            "question_id",
+            sa.Uuid(),
+            sa.ForeignKey("questions.id", ondelete="CASCADE"),
+            nullable=False,
+        ),
         sa.Column("course_key", sa.String(40), nullable=False),
         sa.Column("topic_code", sa.String(20), nullable=False),
         sa.Column("mode", sa.String(12), nullable=False),
@@ -115,7 +134,9 @@ def upgrade() -> None:
     op.create_table(
         "topic_mastery",
         sa.Column("id", sa.Uuid(), primary_key=True),
-        sa.Column("student_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False),
+        sa.Column(
+            "student_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+        ),
         sa.Column("course_key", sa.String(40), nullable=False),
         sa.Column("topic_code", sa.String(20), nullable=False),
         sa.Column("rating", sa.Float(), nullable=False),
@@ -130,7 +151,9 @@ def upgrade() -> None:
     op.create_table(
         "diagnostic_runs",
         sa.Column("id", sa.Uuid(), primary_key=True),
-        sa.Column("student_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False),
+        sa.Column(
+            "student_id", sa.Uuid(), sa.ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+        ),
         sa.Column("course_key", sa.String(40), nullable=False),
         sa.Column("status", sa.String(16), nullable=False),
         sa.Column("question_ids", sa.JSON(), nullable=False),
