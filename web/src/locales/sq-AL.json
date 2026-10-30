@@ -90,7 +90,16 @@
     "no_password": "Llogaria juaj nuk ka fjalëkalim.",
     "password_required_for_admins": "Llogaritë e administratorëve duhet të mbajnë një fjalëkalim.",
     "reauth_required": "Ju lutemi konfirmoni se jeni ju: vendosni fjalëkalimin ose hapni një lidhje të re hyrjeje.",
-    "not_while_impersonating": "Kjo nuk është e mundur ndërsa po shihni si një përdorues tjetër."
+    "not_while_impersonating": "Kjo nuk është e mundur ndërsa po shihni si një përdorues tjetër.",
+    "not_for_sale": "Ky Civics Pass nuk është ende në shitje.",
+    "pass_active": "Keni tashmë një pass aktiv për këtë kanton. Mund ta zgjatni.",
+    "no_pass_to_extend": "Një zgjatje kërkon një pass për këtë kanton që është aktiv ose ka përfunduar më pak se 90 ditë më parë.",
+    "already_refunded": "Kjo pagesë është rimbursuar tashmë.",
+    "no_payment_intent": "Stripe nuk ka pagesë për këtë regjistrim, ndaj nuk mund të rimbursohet këtu.",
+    "refund_failed": "Stripe nuk e pranoi rimbursimin. Ju lutemi provoni përsëri ose rimbursoni nga paneli i Stripe.",
+    "refund_too_late": "Periudha e rimbursimit për këtë pagesë ka përfunduar.",
+    "refund_too_many_questions": "Janë studiuar shumë pyetje që nga kjo pagesë për një rimbursim sipas rregullit.",
+    "refund_refunded": "Kjo pagesë është rimbursuar tashmë."
   },
   "impersonation": {
     "banner": "Po shihni si {{name}} ({{role}}). Keni hyrë si administratori {{admin}}.",
@@ -103,32 +112,6 @@
     "plansTitle": "Planet",
     "trialNote": "Çmimet në CHF.",
     "learnMore": "Mësoni më shumë në swisssciencetutors.ch"
-  },
-  "plans": {
-    "ai_monthly": {
-      "name": "Vetëm IA, mujor",
-      "blurb": "Tutor IA dhe ushtrime për të gjitha kurset e aktivizuara."
-    },
-    "ai_annual": {
-      "name": "Vetëm IA, vjetor",
-      "blurb": "Njësoj si mujori, i paguar një herë në vit me çmim më të ulët."
-    },
-    "hybrid_monthly": {
-      "name": "Hibrid",
-      "blurb": "Gjithçka nga plani vetëm IA, plus një orë në muaj me një tutor të SST dhe një shënim mujor progresi."
-    },
-    "ask_tutor_single": {
-      "name": "Pyesni një tutor",
-      "blurb": "Një përgjigje me shkrim nga një tutor i SST brenda 24 orëve. Një kredit për pyetje."
-    },
-    "exam_sprint": {
-      "name": "Sprint provimesh IB",
-      "blurb": "Plan përsëritjeje nga shkurti deri në maj, seri me kohë në stilin e provimit dhe tri orë korrigjimi nga një tutor."
-    },
-    "per_month": "në muaj",
-    "per_year": "në vit",
-    "limits": "Përdorim i drejtë: {{monthly}} mesazhe për tutorin në muaj, {{daily}} në ditë.",
-    "unavailable": "Çmimet do të shfaqen sapo të lidhet faturimi."
   },
   "signup": {
     "title": "Krijoni llogarinë tuaj",
@@ -212,7 +195,8 @@
     "active": "Faleminderit. Qasja juaj është aktive.",
     "waiting": "Po pritet që Stripe të konfirmojë mënyrën tuaj të pagesës. Zakonisht zgjat disa sekonda…",
     "slow": "Stripe nuk ka konfirmuar ende. Qasja juaj do të përditësohet automatikisht; mund ta lini këtë faqe.",
-    "toDashboard": "Shkoni te paneli juaj"
+    "toDashboard": "Shkoni te paneli juaj",
+    "activeUntil": "Faleminderit. Civics Pass juaj për {{canton}} është aktiv deri më {{date}}."
   },
   "learner": {
     "noCourses": "Nuk keni zgjedhur ende kurse",
@@ -295,7 +279,6 @@
     "title": "Administrimi",
     "overview": "Përmbledhje",
     "staff": "Administratorët",
-    "plans": "Planet dhe kufijtë",
     "stripeEvents": "Ngjarjet e fundit të Stripe",
     "eventType": "Ngjarja",
     "received": "Marrë",
@@ -311,7 +294,6 @@
     "reset2fa": "Rivendos 2FA",
     "deactivate": "Çaktivizo",
     "activate": "Aktivizo",
-    "plansIntro": "Çmimet ruhen në Stripe. Këtu caktoni kufijtë e mesazheve të përdorimit të drejtë për çdo plan.",
     "monthlyLimit": "Mesazhe në muaj",
     "dailyLimit": "Mesazhe në ditë",
     "active": "Në shitje",
@@ -340,6 +322,23 @@
       "admin": "Dhënë nga administratori",
       "trial": "Provë",
       "stripe": "Me pagesë"
+    },
+    "refund": "Rimburso",
+    "refundAnyway": "Rimburso gjithsesi",
+    "refundConfirm": "Ta rimbursoni plotësisht këtë pagesë përmes Stripe? Qasja përfundon kur Stripe konfirmon rimbursimin.",
+    "refundOverrideConfirm": "Kjo pagesë është jashtë rregullit të rimbursimit. Ta rimbursoni plotësisht gjithsesi? Qasja përfundon kur Stripe konfirmon rimbursimin.",
+    "refundRequested": "Rimbursimi u dërgua te Stripe. Qasja ndryshon kur Stripe e konfirmon.",
+    "refundedOn": "Rimbursuar më {{date}}",
+    "refundRule": {
+      "too_late": "jashtë periudhës 14-ditore të rimbursimit",
+      "too_many_questions": "{{count}} pyetje të studiuara që nga blerja",
+      "refunded": "rimbursuar tashmë",
+      "no_payment": "pa pagesë"
+    },
+    "product": {
+      "civics_pass_zh": "Civics Pass",
+      "civics_pass_ag": "Civics Pass",
+      "civics_extension": "Zgjatje"
     }
   },
   "diagnostic": {
@@ -566,5 +565,26 @@
     "deleteSubmit": "Fshi llogarinë time",
     "deletedTitle": "Llogaria juaj u fshi",
     "deletedBody": "Llogaria dhe të dhënat tuaja të mësimit u fshinë. Ju dërguam një email konfirmimi."
+  },
+  "pricing": {
+    "title": "Civics Pass",
+    "intro": "Filloni me ushtrimet falas. Një Civics Pass hap gjithçka për një kanton: të gjitha pyetjet dhe mënyrat e studimit, teste provë pa limit dhe Shpjegoje këtë, në çdo gjuhë. Paguani vetëm një herë; nuk ka abonim.",
+    "passName": "Civics Pass {{canton}}",
+    "period": "për {{months}} muaj",
+    "passIncludes": "Të gjitha pyetjet dhe mënyrat e studimit për këtë kanton, teste provë pa limit dhe Shpjegoje këtë.",
+    "activeUntil": "Aktiv deri më {{date}}",
+    "endedOn": "Përfundoi më {{date}}",
+    "freeTier": "Ushtrime falas",
+    "buy": "Bli",
+    "signUpToBuy": "Regjistrohuni falas",
+    "extend": "Zgjatni me {{months}} muaj ({{price}})",
+    "extensionNote": "Ju duhet më shumë kohë? Një zgjatje shton {{months}} muaj për {{price}}, ndërsa pass-i juaj është aktiv ose deri në 90 ditë pas përfundimit.",
+    "priceNote": "Çmimet në CHF. Paguhet një herë, me kartë ose TWINT, përmes Stripe.",
+    "unavailable": "Çmimet nuk janë të disponueshme tani. Ju lutemi provoni përsëri pas pak.",
+    "refundEligible": "Nuk është ajo që prisnit? Pagesa juaj e fundit mund të rimbursohet deri më {{date}} nëse keni studiuar më pak se {{max}} pyetje që nga blerja (deri tani: {{count}}).",
+    "writeToSupport": "Shkruani te mbështetja për të kërkuar rimbursim.",
+    "refundTooLate": "Periudha e rimbursimit për pagesën tuaj të fundit përfundoi më {{date}}.",
+    "refundTooMany": "Pagesa juaj e fundit nuk mund të rimbursohet më: keni studiuar {{count}} pyetje që nga blerja dhe rimbursimet janë të mundura nën {{max}}.",
+    "refundDone": "Pagesa juaj e fundit u rimbursua."
   }
 }

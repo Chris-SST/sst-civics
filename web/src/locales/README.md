@@ -37,3 +37,7 @@ Needing particular attention from reviewers in every machine-drafted language: `
 records), `errors.reauth_required`, `account.reauthLink` and `account.reauthLinkSent` (re-confirmation
 flow), and `signup.passwordOptionalHint`. In `sq-AL` and `tr-TR`, also check `login.usePassword` and
 `login.useLink`.
+
+## Low-confidence strings (third batch)
+
+Check `pricing.intro`, `pricing.refundEligible`, `pricing.refundTooMany`, `admin.refundConfirm`, `admin.refundOverrideConfirm` and the `errors.refund_*` keys (refund rule wording), and the rendering of the feature name "Explain this" in `pricing.intro` and `pricing.passIncludes`.

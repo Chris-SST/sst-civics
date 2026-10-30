@@ -113,32 +113,6 @@
     "trialNote": "Prices in CHF.",
     "learnMore": "Learn more on swisssciencetutors.ch"
   },
-  "plans": {
-    "ai_monthly": {
-      "name": "AI-only, monthly",
-      "blurb": "AI tutor and practice for all enabled courses."
-    },
-    "ai_annual": {
-      "name": "AI-only, annual",
-      "blurb": "The same as monthly, paid once a year at a lower price."
-    },
-    "hybrid_monthly": {
-      "name": "Hybrid",
-      "blurb": "Everything in AI-only, plus one hour a month with an SST tutor and a monthly progress note."
-    },
-    "ask_tutor_single": {
-      "name": "Ask a tutor",
-      "blurb": "A written answer from an SST tutor within 24 hours. One credit per question."
-    },
-    "exam_sprint": {
-      "name": "IB exam sprint",
-      "blurb": "February to May revision plan, timed paper-style sets and three hours of tutor marking."
-    },
-    "per_month": "per month",
-    "per_year": "per year",
-    "limits": "Fair use: {{monthly}} tutor messages a month, {{daily}} a day.",
-    "unavailable": "Prices will appear once billing is connected."
-  },
   "signup": {
     "title": "Create your account",
     "intro": "Create your own account to study for the citizenship knowledge test. Accounts are for people aged 16 and over.",
@@ -305,7 +279,6 @@
     "title": "Admin",
     "overview": "Overview",
     "staff": "Admins",
-    "plans": "Plans and limits",
     "stripeEvents": "Recent Stripe events",
     "eventType": "Event",
     "received": "Received",
@@ -321,7 +294,6 @@
     "reset2fa": "Reset 2FA",
     "deactivate": "Deactivate",
     "activate": "Activate",
-    "plansIntro": "Prices live in Stripe. Here you set the fair-use message limits per plan.",
     "monthlyLimit": "Messages per month",
     "dailyLimit": "Messages per day",
     "active": "On sale",

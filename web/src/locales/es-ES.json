@@ -90,7 +90,16 @@
     "no_password": "Su cuenta no tiene contraseña.",
     "password_required_for_admins": "Las cuentas de administrador deben conservar una contraseña.",
     "reauth_required": "Confirme que es usted: introduzca su contraseña o abra un nuevo enlace de acceso.",
-    "not_while_impersonating": "Esto no es posible mientras se visualiza como otro usuario."
+    "not_while_impersonating": "Esto no es posible mientras se visualiza como otro usuario.",
+    "not_for_sale": "Este Civics Pass todavía no está a la venta.",
+    "pass_active": "Ya tiene un pase activo para este cantón. Puede ampliarlo.",
+    "no_pass_to_extend": "Una ampliación requiere un pase para este cantón que esté activo o haya terminado hace menos de 90 días.",
+    "already_refunded": "Este pago ya ha sido reembolsado.",
+    "no_payment_intent": "Stripe no tiene ningún pago para este registro, así que no se puede reembolsar aquí.",
+    "refund_failed": "Stripe no ha aceptado el reembolso. Inténtelo de nuevo o reembolse desde el panel de Stripe.",
+    "refund_too_late": "El plazo de reembolso de este pago ha terminado.",
+    "refund_too_many_questions": "Se han estudiado demasiadas preguntas desde este pago para un reembolso según la norma.",
+    "refund_refunded": "Este pago ya ha sido reembolsado."
   },
   "impersonation": {
     "banner": "Viendo como {{name}} ({{role}}). Ha iniciado sesión como administrador {{admin}}.",
@@ -103,32 +112,6 @@
     "plansTitle": "Planes",
     "trialNote": "Precios en CHF.",
     "learnMore": "Más información en swisssciencetutors.ch"
-  },
-  "plans": {
-    "ai_monthly": {
-      "name": "Solo IA, mensual",
-      "blurb": "Tutor de IA y práctica para todos los cursos habilitados."
-    },
-    "ai_annual": {
-      "name": "Solo IA, anual",
-      "blurb": "Igual que el mensual, pagado una vez al año a un precio más bajo."
-    },
-    "hybrid_monthly": {
-      "name": "Híbrido",
-      "blurb": "Todo lo del plan solo IA, más una hora al mes con un tutor de SST y una nota mensual de progreso."
-    },
-    "ask_tutor_single": {
-      "name": "Pregunte a un tutor",
-      "blurb": "Una respuesta escrita de un tutor de SST en un plazo de 24 horas. Un crédito por pregunta."
-    },
-    "exam_sprint": {
-      "name": "Sprint de exámenes IB",
-      "blurb": "Plan de repaso de febrero a mayo, series cronometradas al estilo del examen y tres horas de corrección por un tutor."
-    },
-    "per_month": "al mes",
-    "per_year": "al año",
-    "limits": "Uso razonable: {{monthly}} mensajes al tutor al mes, {{daily}} al día.",
-    "unavailable": "Los precios aparecerán cuando se conecte la facturación."
   },
   "signup": {
     "title": "Cree su cuenta",
@@ -212,7 +195,8 @@
     "active": "Gracias. Su acceso está activo.",
     "waiting": "Esperando a que Stripe confirme su método de pago. Suele tardar unos segundos…",
     "slow": "Stripe aún no lo ha confirmado. Su acceso se actualizará automáticamente; puede salir de esta página.",
-    "toDashboard": "Ir a su panel"
+    "toDashboard": "Ir a su panel",
+    "activeUntil": "Gracias. Su Civics Pass para {{canton}} está activo hasta el {{date}}."
   },
   "learner": {
     "noCourses": "Aún no ha elegido cursos",
@@ -295,7 +279,6 @@
     "title": "Administración",
     "overview": "Resumen",
     "staff": "Administradores",
-    "plans": "Planes y límites",
     "stripeEvents": "Eventos recientes de Stripe",
     "eventType": "Evento",
     "received": "Recibido",
@@ -311,7 +294,6 @@
     "reset2fa": "Restablecer 2FA",
     "deactivate": "Desactivar",
     "activate": "Activar",
-    "plansIntro": "Los precios están en Stripe. Aquí se fijan los límites de mensajes de uso razonable por plan.",
     "monthlyLimit": "Mensajes al mes",
     "dailyLimit": "Mensajes al día",
     "active": "A la venta",
@@ -340,6 +322,23 @@
       "admin": "Concedido por un administrador",
       "trial": "Prueba",
       "stripe": "De pago"
+    },
+    "refund": "Reembolsar",
+    "refundAnyway": "Reembolsar de todos modos",
+    "refundConfirm": "¿Reembolsar este pago íntegramente a través de Stripe? El acceso termina cuando Stripe confirme el reembolso.",
+    "refundOverrideConfirm": "Este pago queda fuera de la norma de reembolso. ¿Reembolsarlo íntegramente de todos modos? El acceso termina cuando Stripe confirme el reembolso.",
+    "refundRequested": "Reembolso enviado a Stripe. El acceso cambia cuando Stripe lo confirme.",
+    "refundedOn": "Reembolsado el {{date}}",
+    "refundRule": {
+      "too_late": "fuera del plazo de reembolso de 14 días",
+      "too_many_questions": "{{count}} preguntas estudiadas desde la compra",
+      "refunded": "ya reembolsado",
+      "no_payment": "sin pago"
+    },
+    "product": {
+      "civics_pass_zh": "Civics Pass",
+      "civics_pass_ag": "Civics Pass",
+      "civics_extension": "Ampliación"
     }
   },
   "diagnostic": {
@@ -566,5 +565,26 @@
     "deleteSubmit": "Eliminar mi cuenta",
     "deletedTitle": "Su cuenta se ha eliminado",
     "deletedBody": "Su cuenta y sus datos de aprendizaje se han eliminado. Le hemos enviado un correo de confirmación."
+  },
+  "pricing": {
+    "title": "Civics Pass",
+    "intro": "Empiece con la práctica gratuita. Un Civics Pass abre todo para un cantón: todas las preguntas y modos de estudio, simulacros ilimitados y Explícame esto, en todos los idiomas. Se paga una sola vez; no hay suscripción.",
+    "passName": "Civics Pass {{canton}}",
+    "period": "por {{months}} meses",
+    "passIncludes": "Todas las preguntas y modos de estudio de este cantón, simulacros ilimitados y Explícame esto.",
+    "activeUntil": "Activo hasta el {{date}}",
+    "endedOn": "Terminó el {{date}}",
+    "freeTier": "Práctica gratuita",
+    "buy": "Comprar",
+    "signUpToBuy": "Regístrese gratis",
+    "extend": "Ampliar {{months}} meses ({{price}})",
+    "extensionNote": "¿Necesita más tiempo? Una ampliación añade {{months}} meses por {{price}}, mientras su pase esté activo o hasta 90 días después de que termine.",
+    "priceNote": "Precios en CHF. Pago único, con tarjeta o TWINT, a través de Stripe.",
+    "unavailable": "Los precios no están disponibles en este momento. Inténtelo de nuevo en breve.",
+    "refundEligible": "¿No es lo que esperaba? Su último pago puede reembolsarse hasta el {{date}} si ha estudiado menos de {{max}} preguntas desde la compra (hasta ahora: {{count}}).",
+    "writeToSupport": "Escriba a soporte para solicitar un reembolso.",
+    "refundTooLate": "El plazo de reembolso de su último pago terminó el {{date}}.",
+    "refundTooMany": "Su último pago ya no puede reembolsarse: ha estudiado {{count}} preguntas desde la compra y los reembolsos son posibles por debajo de {{max}}.",
+    "refundDone": "Su último pago ha sido reembolsado."
   }
 }

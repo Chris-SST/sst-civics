@@ -113,32 +113,6 @@
     "trialNote": "Preise in CHF.",
     "learnMore": "Mehr erfahren auf swisssciencetutors.ch"
   },
-  "plans": {
-    "ai_monthly": {
-      "name": "AI-only, monatlich",
-      "blurb": "KI-Tutor und Übungen für alle freigeschalteten Kurse."
-    },
-    "ai_annual": {
-      "name": "AI-only, jährlich",
-      "blurb": "Wie monatlich, einmal jährlich zum günstigeren Preis bezahlt."
-    },
-    "hybrid_monthly": {
-      "name": "Hybrid",
-      "blurb": "Alles aus AI-only, plus eine Stunde pro Monat mit einer SST-Tutorin oder einem SST-Tutor und eine monatliche Fortschrittsnotiz."
-    },
-    "ask_tutor_single": {
-      "name": "Frag eine Tutorin / einen Tutor",
-      "blurb": "Eine schriftliche Antwort von SST innerhalb von 24 Stunden. Ein Guthaben pro Frage."
-    },
-    "exam_sprint": {
-      "name": "IB-Prüfungssprint",
-      "blurb": "Lernplan Februar bis Mai, Übungssets im Prüfungsstil und drei Stunden Korrektur durch Tutorinnen und Tutoren."
-    },
-    "per_month": "pro Monat",
-    "per_year": "pro Jahr",
-    "limits": "Fair Use: {{monthly}} Tutor-Nachrichten pro Monat, {{daily}} pro Tag.",
-    "unavailable": "Preise erscheinen, sobald die Abrechnung verbunden ist."
-  },
   "signup": {
     "title": "Konto erstellen",
     "intro": "Erstellen Sie Ihr eigenes Konto, um sich auf den Einbürgerungstest vorzubereiten. Konten sind für Personen ab 16 Jahren.",
@@ -305,7 +279,6 @@
     "title": "Admin",
     "overview": "Übersicht",
     "staff": "Admins",
-    "plans": "Pläne und Limits",
     "stripeEvents": "Letzte Stripe-Ereignisse",
     "eventType": "Ereignis",
     "received": "Empfangen",
@@ -321,7 +294,6 @@
     "reset2fa": "2FA zurücksetzen",
     "deactivate": "Deaktivieren",
     "activate": "Aktivieren",
-    "plansIntro": "Preise liegen in Stripe. Hier legen Sie die Fair-Use-Limits pro Plan fest.",
     "monthlyLimit": "Nachrichten pro Monat",
     "dailyLimit": "Nachrichten pro Tag",
     "active": "Im Verkauf",

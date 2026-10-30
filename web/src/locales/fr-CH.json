@@ -113,32 +113,6 @@
     "trialNote": "Prix en CHF.",
     "learnMore": "En savoir plus sur swisssciencetutors.ch"
   },
-  "plans": {
-    "ai_monthly": {
-      "name": "AI-only, mensuel",
-      "blurb": "Tuteur IA et exercices pour tous les cours activés."
-    },
-    "ai_annual": {
-      "name": "AI-only, annuel",
-      "blurb": "Comme le mensuel, payé une fois par an à un prix réduit."
-    },
-    "hybrid_monthly": {
-      "name": "Hybride",
-      "blurb": "Tout AI-only, plus une heure par mois avec un tuteur SST et une note de progression mensuelle."
-    },
-    "ask_tutor_single": {
-      "name": "Demander à un tuteur",
-      "blurb": "Une réponse écrite d'un tuteur SST sous 24 heures. Un crédit par question."
-    },
-    "exam_sprint": {
-      "name": "Sprint examens IB",
-      "blurb": "Plan de révision de février à mai, séries chronométrées de type examen et trois heures de correction par un tuteur."
-    },
-    "per_month": "par mois",
-    "per_year": "par an",
-    "limits": "Usage raisonnable : {{monthly}} messages au tuteur par mois, {{daily}} par jour.",
-    "unavailable": "Les prix apparaîtront une fois la facturation connectée."
-  },
   "signup": {
     "title": "Créer votre compte",
     "intro": "Créez votre propre compte pour préparer le test de connaissances pour la naturalisation. Les comptes sont réservés aux personnes de 16 ans et plus.",
@@ -305,7 +279,6 @@
     "title": "Admin",
     "overview": "Vue d'ensemble",
     "staff": "Admins",
-    "plans": "Formules et limites",
     "stripeEvents": "Derniers événements Stripe",
     "eventType": "Événement",
     "received": "Reçu",
@@ -321,7 +294,6 @@
     "reset2fa": "Réinitialiser la 2FA",
     "deactivate": "Désactiver",
     "activate": "Activer",
-    "plansIntro": "Les prix sont dans Stripe. Vous définissez ici les limites d'usage raisonnable par formule.",
     "monthlyLimit": "Messages par mois",
     "dailyLimit": "Messages par jour",
     "active": "En vente",
