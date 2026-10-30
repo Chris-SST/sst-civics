@@ -109,7 +109,9 @@ class AccessOut(BaseModel):
     has_stripe_customer: bool
     # No active entitlement for the learner's canton: free practice only, no "Explain this".
     free_tier: bool = False
-    latest_payment: LatestPaymentOut | None = None
+    # Per canton: an extension may be bought now (the pass is active or within the grace
+    # period). The same rule the server enforces at checkout.
+    can_extend: dict[str, bool] = {}
 
 
 class SessionOut(BaseModel):

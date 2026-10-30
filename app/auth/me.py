@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 from fastapi import Request, Response
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -10,18 +10,16 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.auth.schemas import (
     AccessOut,
     EntitlementOut,
-    LatestPaymentOut,
     MeOut,
     SessionOut,
     UserOut,
 )
 from app.auth.sessions import ensure_csrf_cookie
-from app.billing.access import access_level, is_active, is_free_tier
-from app.billing.refunds import latest_payment
+from app.billing.access import access_level, extendable_pass, is_active, is_free_tier
 from app.config import get_settings
 from app.db import utcnow
 from app.deps import AuthContext
-from app.models import Entitlement, Session, User
+from app.models import CANTONS, Entitlement, Session, User
 
 REAUTH_WINDOW = timedelta(minutes=10)
 
@@ -34,7 +32,7 @@ def reauth_seconds_left(session: Session) -> int:
     return max(0, int(left))
 
 
-def _iso(value) -> str | None:
+def _iso(value: datetime | None) -> str | None:
     return value.isoformat() if value else None
 
 
@@ -49,23 +47,16 @@ def entitlement_out(e: Entitlement) -> EntitlementOut:
     )
 
 
-async def access_out(db: AsyncSession, user: User) -> AccessOut:
-    payment = await latest_payment(db, user) if user.is_learner else None
+def access_out(user: User) -> AccessOut:
+    now = utcnow()
     return AccessOut(
         access=access_level(user),  # type: ignore[arg-type]
         canton=user.canton,
         entitlements=[entitlement_out(e) for e in user.entitlements],
         has_stripe_customer=bool(user.stripe_customer_id),
         free_tier=is_free_tier(user),
-        latest_payment=LatestPaymentOut(
-            product=payment.product,
-            canton=payment.canton,
-            paid_at=payment.paid_at.isoformat(),
-            refunded=payment.refunded_at is not None,
-            checkout_session_id=payment.stripe_checkout_session_id,
-        )
-        if payment
-        else None,
+        # The same rule the server applies when an extension is bought (extension_grace_days).
+        can_extend={c: extendable_pass(user, c, now) is not None for c in CANTONS},
     )
 
 
@@ -102,6 +93,6 @@ async def build_me(
             impersonated_by=impersonated_by,
             reauth_seconds_left=reauth_seconds_left(ctx.session),
         ),
-        access=await access_out(db, user),
+        access=access_out(user),
         csrf_token=csrf,
     )

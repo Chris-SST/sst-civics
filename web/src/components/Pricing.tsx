@@ -1,17 +1,11 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { get, post, type EntitlementOut, type ProductKey, type ProductOut, type RefundEligibility } from "../api";
+import { get, post, type AccessOut, type ProductKey, type ProductOut, type RefundEligibility } from "../api";
 import { useAuth } from "../auth";
 import { formatChf, formatDate } from "../i18n";
 import ErrorText from "./ErrorText";
 import { SITE } from "./Layout";
-
-/** Entitlement sources that count as a pass (the server's PASS_SOURCES). */
-const PASS_SOURCES = ["stripe", "admin"];
-/** An extension may be bought up to this many days after a pass ended (EXTENSION_GRACE_DAYS). */
-const GRACE_DAYS = 90;
-const DAY_MS = 24 * 60 * 60 * 1000;
 
 interface CantonStatus {
   /** Longest-running access of any kind (pass, admin grant or trial) active now. */
@@ -22,19 +16,18 @@ interface CantonStatus {
   canExtend: boolean;
 }
 
-function cantonStatus(entitlements: EntitlementOut[], canton: string, now = Date.now()): CantonStatus {
-  const mine = entitlements.filter((e) => e.canton === canton);
+/** Whether an extension can be bought comes from the server (`access.can_extend`). */
+function cantonStatus(access: AccessOut, canton: string, now = Date.now()): CantonStatus {
+  const mine = access.entitlements.filter((e) => e.canton === canton);
   const active = mine.filter((e) => e.active).sort((a, b) => b.expires_at.localeCompare(a.expires_at))[0];
   const pass = mine
-    .filter((e) => PASS_SOURCES.includes(e.source))
+    .filter((e) => e.source === "stripe" || e.source === "admin")
     .sort((a, b) => b.expires_at.localeCompare(a.expires_at))[0];
-  const passEnds = pass ? Date.parse(pass.expires_at) : 0;
-  const passStarted = pass ? Date.parse(pass.starts_at) <= now : false;
   return {
     activeUntil: active ? active.expires_at : null,
-    endedOn: pass && !pass.active && passEnds <= now ? pass.expires_at : null,
+    endedOn: pass && !pass.active && Date.parse(pass.expires_at) <= now ? pass.expires_at : null,
     passActive: !!pass && pass.active,
-    canExtend: !!pass && passStarted && passEnds > now - GRACE_DAYS * DAY_MS,
+    canExtend: access.can_extend?.[canton] === true,
   };
 }
 
@@ -49,10 +42,6 @@ export default function Pricing() {
   const [error, setError] = useState<unknown>(null);
   const learner = me?.user.role === "learner" ? me : null;
   const isLearner = learner !== null;
-  // Refetch the refund rule whenever the latest payment changes (bought, refunded).
-  const paymentKey = learner
-    ? `${learner.access.latest_payment?.checkout_session_id ?? ""}:${learner.access.latest_payment?.refunded ?? ""}`
-    : "";
 
   useEffect(() => {
     get<ProductOut[]>("/api/billing/products")
@@ -61,14 +50,15 @@ export default function Pricing() {
   }, []);
 
   useEffect(() => {
-    if (!isLearner || paymentKey.startsWith(":")) {
+    // The refund rule covers the latest payment; "no_payment" when there is none.
+    if (!isLearner) {
       setRefund(null);
       return;
     }
     get<RefundEligibility>("/api/billing/refund-eligibility")
       .then(setRefund)
       .catch(() => setRefund(null));
-  }, [isLearner, paymentKey]);
+  }, [isLearner]);
 
   async function checkout(product: ProductKey, canton?: string) {
     setBusy(`${product}:${canton ?? ""}`);
@@ -97,7 +87,7 @@ export default function Pricing() {
         {passes.map((p) => {
           const canton = p.canton ?? "";
           const name = t(`cantons.${canton}`, { defaultValue: canton.toUpperCase() });
-          const status = learner ? cantonStatus(learner.access.entitlements, canton) : null;
+          const status = learner ? cantonStatus(learner.access, canton) : null;
           const buyable = p.available && billingOn && !status?.passActive;
           return (
             <div key={p.key} className={`plan ${status?.activeUntil ? "featured" : ""}`}>

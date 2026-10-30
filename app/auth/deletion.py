@@ -39,18 +39,20 @@ def _redacted(event: dict[str, Any], when: str) -> dict[str, Any]:
 
 async def _redact_stripe_events(db: AsyncSession, user: User) -> int:
     """Webhook payloads carry the customer's email and billing details. Strip the payloads
-    that mention this person's customer or user id (processed or not: the account they
-    would apply to is gone)."""
+    that mention this person's customer or user id and have already been processed. Events
+    still waiting are left alone so the worker applies them (a payment or refund must not be
+    lost); it copes with the account being gone, see app/billing/events.py."""
     needles = [str(user.id)]
     if user.stripe_customer_id:
         needles.append(user.stripe_customer_id)
     text = cast(StripeEvent.payload, String)
-    query = select(StripeEvent).where(or_(*[text.contains(n) for n in needles]))
+    query = select(StripeEvent).where(
+        StripeEvent.processed_at.is_not(None), or_(*[text.contains(n) for n in needles])
+    )
     rows = (await db.execute(query)).scalars().all()
     when = utcnow().isoformat()
     for row in rows:
         row.payload = _redacted(row.payload or {}, when)
-        row.processed_at = row.processed_at or utcnow()
     return len(rows)
 
 

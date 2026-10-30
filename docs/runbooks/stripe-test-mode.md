@@ -37,7 +37,7 @@ Subscribe the endpoint to exactly these four events:
 | `checkout.session.completed` | If `payment_status=paid`: grants the pass (new entitlement, `source=stripe`, 6 months) or extends the pass by 3 months, and records a `Payment`. If unpaid (a delayed method), waits for the next event. |
 | `checkout.session.async_payment_succeeded` | Same as a paid `checkout.session.completed`. |
 | `checkout.session.async_payment_failed` | Records nothing; logged only. |
-| `charge.refunded` | On a full refund: the entitlement the payment started ends at the refund time (for an extension, the 3 months come off again) and the payment is marked refunded. A partial refund changes no access. |
+| `charge.refunded` | On a full refund: the entitlement the payment started ends at the refund time (for an extension, the 3 months come off again) and the payment is marked refunded. If the original pass is refunded after an extension was bought, only the pass's 6 months come off (never below the refund time), so the paid extension months stay. A partial refund changes no access. |
 
 Each Checkout Session is fulfilled once (the `Payment` row is unique on `stripe_checkout_session_id`), so repeated or out-of-order deliveries are harmless. Events are stored once by event id in `stripe_events`.
 
@@ -75,6 +75,7 @@ The rule (plan, D-015): a refund within 14 days of purchase if fewer than 50 que
 - The learner sees on the home page whether their latest payment is still refundable (`GET /api/billing/refund-eligibility`) and is asked to write to support. There is no self-service refund button.
 - An admin opens Admin → Learners → the learner → Payments and clicks **Refund** (`POST /api/admin/payments/{id}/refund`). Outside the rule the button reads **Refund anyway** and sends `override: true`. The app calls Stripe's refund API for the payment intent with an idempotency key and writes a `payment.refund` audit entry.
 - Access is not changed by the button. It changes when `charge.refunded` arrives, which in test mode is within seconds.
+- Refunding the original pass after an extension was bought removes only the pass's months from the expiry (never below the refund time); the paid, un-refunded extension months remain. With no extension, access ends at the refund time.
 - A refund made directly in the Stripe Dashboard has the same effect on access, through the same webhook, but leaves no audit entry; prefer the admin screen.
 
 ## Where events go

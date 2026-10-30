@@ -4,7 +4,7 @@ from sqlalchemy import select
 
 from app.db import SessionLocal
 from app.email.backend import memory_outbox
-from app.models import User
+from app.models import CANTONS, User
 from tests.conftest import (
     LEARNER_PASSWORD,
     last_email_link,
@@ -89,7 +89,7 @@ async def test_signup_sends_verification_and_blocks_login_until_verified(api):
         "entitlements": [],
         "has_stripe_customer": False,
         "free_tier": True,
-        "latest_payment": None,
+        "can_extend": dict.fromkeys(CANTONS, False),
     }
     assert "family" not in me
 

@@ -88,13 +88,17 @@ export interface AccessOut {
   has_stripe_customer: boolean;
   /** No active entitlement for the learner's canton: free practice only, no "Explain this". */
   free_tier: boolean;
-  latest_payment: {
-    product: string;
-    canton: string;
-    paid_at: string;
-    refunded: boolean;
-    checkout_session_id: string;
-  } | null;
+  /** Per canton: an extension may be bought now (server rule: pass active or within the grace period). */
+  can_extend: Record<string, boolean>;
+}
+
+/** From GET /api/billing/payments/latest (not part of /me). */
+export interface LatestPaymentOut {
+  product: string;
+  canton: string;
+  paid_at: string;
+  refunded: boolean;
+  checkout_session_id: string;
 }
 
 export interface Me {

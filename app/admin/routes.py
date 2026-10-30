@@ -10,7 +10,7 @@ from pydantic import BaseModel, Field
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.auth.me import entitlement_out
+from app.auth.me import _iso, entitlement_out
 from app.auth.schemas import EntitlementOut
 from app.auth.sessions import create_session, destroy_all_sessions, set_session_cookie
 from app.billing import refunds, stripe_client
@@ -32,10 +32,6 @@ from app.models import (
 
 log = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/admin", tags=["admin"], dependencies=[Depends(require_admin)])
-
-
-def _iso(v: datetime | None) -> str | None:
-    return v.isoformat() if v else None
 
 
 def _aware(v: datetime) -> datetime:
@@ -130,7 +126,7 @@ async def _learner(db: AsyncSession, user_id: str) -> User:
 async def list_learners(q: str = "", db: AsyncSession = Depends(get_db)) -> list[dict[str, Any]]:
     stmt = select(User).where(User.role == ROLE_LEARNER)
     if q:
-        stmt = stmt.where(User.email.contains(q.lower().strip()))
+        stmt = stmt.where(User.email.contains(q.lower().strip(), autoescape=True))
     rows = (await db.execute(stmt.order_by(User.created_at.desc()).limit(200))).scalars().all()
     return [_learner_out(u) for u in rows]
 

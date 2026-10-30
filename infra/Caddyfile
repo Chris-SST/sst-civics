@@ -2,6 +2,17 @@
 # Docker networks; TLS and HSTS are handled by the shared edge Caddy (see edge-snippet.Caddyfile).
 {
 	auto_https off
+
+	# The only client of this Caddy is the shared edge Caddy, on the private Docker network.
+	# Trust its X-Forwarded-For so the real client address reaches the API. Without this,
+	# Caddy replaces the header with the edge container's address and every per-IP rate limit
+	# in the API becomes one global counter. The edge sets the header from the real
+	# connection (it faces the internet and trusts nobody), then this Caddy appends the edge's
+	# address, giving "client, edge". client_ip() in app/deps.py reads the FIRST entry.
+	# Do not publish this server's port: a direct client could then forge the header.
+	servers {
+		trusted_proxies static private_ranges
+	}
 }
 
 :80 {

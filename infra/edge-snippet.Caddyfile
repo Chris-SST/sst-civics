@@ -29,5 +29,8 @@ civics-staging.swisssciencetutors.ch, app.civics-staging.swisssciencetutors.ch {
 
 	header Strict-Transport-Security "max-age=31536000; includeSubDomains"
 
+	# Caddy sets X-Forwarded-For to the real client address by default (the edge trusts no
+	# upstream proxy), and the internal Caddy trusts the edge's header; see infra/Caddyfile.
+	# Do not add trusted_proxies to the edge unless a CDN sits in front of it.
 	reverse_proxy civics-web:80
 }

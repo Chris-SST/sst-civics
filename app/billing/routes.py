@@ -13,6 +13,7 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.auth.schemas import LatestPaymentOut
 from app.billing import events, products, refunds, stripe_client
 from app.billing.access import access_level, active_pass, compute_access, extendable_pass
 from app.config import get_settings
@@ -209,6 +210,24 @@ async def list_payments(
         )
         for p in rows
     ]
+
+
+@router.get("/payments/latest", response_model=LatestPaymentOut | None)
+async def latest_payment_out(
+    user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
+) -> LatestPaymentOut | None:
+    """The learner's latest payment, or null. The return page from Checkout polls this to see
+    that its own session has been confirmed; it is not part of `/api/auth/me`."""
+    payment = await refunds.latest_payment(db, user)
+    if payment is None:
+        return None
+    return LatestPaymentOut(
+        product=payment.product,
+        canton=payment.canton,
+        paid_at=payment.paid_at.isoformat(),
+        refunded=payment.refunded_at is not None,
+        checkout_session_id=payment.stripe_checkout_session_id,
+    )
 
 
 @router.get("/refund-eligibility")

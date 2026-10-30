@@ -154,6 +154,7 @@ async def _fill_learning_data(email: str) -> None:
             StripeEvent(
                 id="evt_1",
                 type="invoice.paid",
+                processed_at=utcnow(),
                 payload={
                     "id": "evt_1",
                     "type": "invoice.paid",
@@ -162,6 +163,14 @@ async def _fill_learning_data(email: str) -> None:
             )
         )
         db.add(StripeEvent(id="evt_2", type="other", payload={"id": "evt_2", "type": "other"}))
+        # Still queued: must survive untouched so the worker can apply it.
+        db.add(
+            StripeEvent(
+                id="evt_3",
+                type="charge.refunded",
+                payload={"id": "evt_3", "type": "charge.refunded", "customer": "cus_test_1"},
+            )
+        )
         await db.commit()
 
 
@@ -190,6 +199,8 @@ async def _assert_deleted(email: str) -> None:
         assert email not in str(evt1.payload) and "cus_test_1" not in str(evt1.payload)
         assert evt1.payload["type"] == "invoice.paid"
         assert evt2.payload == {"id": "evt_2", "type": "other"}
+        evt3 = await db.get(StripeEvent, "evt_3")
+        assert evt3.processed_at is None and evt3.payload["customer"] == "cus_test_1"
         question = (await db.execute(select(Question))).scalar_one()
         assert question.report_count == 0
         actions = (await db.execute(select(AuditLog.action))).scalars().all()
@@ -214,6 +225,22 @@ async def test_delete_account_with_password(api):
     assert memory_outbox.messages[0].subject == "Your account is being deleted"
     assert (await api.get("/api/auth/me")).status_code == 401
     await _assert_deleted("del@example.ch")
+
+
+async def test_delete_account_stands_when_the_email_cannot_be_queued(api, monkeypatch):
+    from app.auth import account
+
+    async def boom(*args, **kwargs):
+        raise RuntimeError("queue down")
+
+    monkeypatch.setattr(account, "send_email_job", boom)
+    await learner_logged_in(api, "del2@example.ch")
+    r = await api.delete("/api/me", json={"password": LEARNER_PASSWORD})
+    assert r.status_code == 200 and r.json() == {"status": "deleted"}
+    async with SessionLocal() as db:
+        assert (
+            await db.execute(select(User).where(User.email == "del2@example.ch"))
+        ).first() is None
 
 
 async def test_delete_account_without_password_needs_a_fresh_link(api):

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import logging
+
 from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -16,6 +18,7 @@ from app.deps import AuthContext, current_auth
 from app.jobs import send_email_job
 from app.models import CANTONS
 
+log = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/me", tags=["account"])
 
 
@@ -113,10 +116,12 @@ async def delete_me(
 
     email, locale = user.email, user.locale
     await delete_account(db, user)
-    # The confirmation goes out before the deletion is committed, so the data is not gone
-    # until the email has been handed over (or queued).
-    if email:
-        await send_email_job("account_deleted", locale, email)
     await db.commit()
+    # Only once the deletion stands: a failure to queue the email must not undo it.
+    if email:
+        try:
+            await send_email_job("account_deleted", locale, email)
+        except Exception:
+            log.exception("Could not queue the account deletion confirmation email")
     clear_session_cookie(response)
     return {"status": "deleted"}

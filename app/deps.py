@@ -21,7 +21,9 @@ class AuthContext:
 
 
 def client_ip(request: Request) -> str:
-    # Caddy sets X-Forwarded-For; only trust the first hop it added.
+    # The edge Caddy sets X-Forwarded-For to the real client; the internal Caddy trusts it
+    # (trusted_proxies, infra/Caddyfile) and appends the edge's address. The first entry is
+    # the client. Never expose the API port directly, or the header can be forged.
     forwarded = request.headers.get("x-forwarded-for")
     if forwarded:
         return forwarded.split(",")[0].strip()

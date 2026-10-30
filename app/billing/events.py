@@ -8,7 +8,9 @@ One-off Civics Pass payments (D-015):
   canton entitlement and record a `Payment`, once per Checkout Session.
 - `checkout.session.async_payment_failed`: nothing is recorded; logged only.
 - `charge.refunded` (full refund): the entitlement the payment bought ends at the refund
-  time, or loses the months the payment added; the payment is marked refunded.
+  time, or loses the months the payment added; the payment is marked refunded. Refunding
+  the original pass after an extension was bought removes only the pass's months, so the
+  paid, un-refunded extension months stay.
 """
 
 from __future__ import annotations
@@ -107,10 +109,8 @@ async def _session_user(db: AsyncSession, session: dict[str, Any]) -> User | Non
 
 async def on_checkout_completed(db: AsyncSession, session: dict[str, Any], at: datetime) -> None:
     user = await _session_user(db, session)
-    if user is None:
-        return
     customer = _id(session.get("customer"))
-    if customer and not user.stripe_customer_id:
+    if user is not None and customer and not user.stripe_customer_id:
         user.stripe_customer_id = customer
     if session.get("mode") != "payment":
         log.info("Ignoring checkout session %s in mode %s", session.get("id"), session.get("mode"))
@@ -119,15 +119,14 @@ async def on_checkout_completed(db: AsyncSession, session: dict[str, Any], at: d
         # A delayed method: `async_payment_succeeded` or `async_payment_failed` follows.
         log.info("Checkout session %s awaits payment", session.get("id"))
         return
-    await fulfil(db, user, session)
+    await fulfil(db, user, session, at)
 
 
 async def on_async_payment_succeeded(
     db: AsyncSession, session: dict[str, Any], at: datetime
 ) -> None:
     user = await _session_user(db, session)
-    if user is not None:
-        await fulfil(db, user, session)
+    await fulfil(db, user, session, at)
 
 
 async def on_async_payment_failed(db: AsyncSession, session: dict[str, Any], at: datetime) -> None:
@@ -142,8 +141,15 @@ def _months(meta: dict[str, Any], product: products.Product) -> int:
     return months if 0 < months <= 24 else product.months
 
 
-async def fulfil(db: AsyncSession, user: User, session: dict[str, Any]) -> Payment | None:
-    """Grant what a paid Checkout Session bought. Once per session."""
+async def fulfil(
+    db: AsyncSession, user: User | None, session: dict[str, Any], at: datetime | None = None
+) -> Payment | None:
+    """Grant what a paid Checkout Session bought. Once per session.
+
+    `at` is the Stripe event time: it dates the payment and the start and expiry of the pass.
+    Processing time is used only to decide whether a pass is still active. With no user (the
+    account was deleted while the event was queued) nothing is granted; the payment is still
+    recorded, with no user, so the billing record is complete."""
     session_id = session.get("id")
     if not session_id:
         return None
@@ -162,11 +168,15 @@ async def fulfil(db: AsyncSession, user: User, session: dict[str, Any]) -> Payme
         log.warning("Checkout session %s without a valid canton", session_id)
         return None
     months = _months(meta, product)
-    now = utcnow()
-    entitlement = await _grant(db, user, product, canton, months, now, session_id)
+    at = at or utcnow()
+    entitlement = (
+        await _grant(db, user, product, canton, months, at, utcnow(), session_id)
+        if user is not None
+        else None
+    )
     payment = Payment(
-        user_id=user.id,
-        entitlement_id=entitlement.id,
+        user_id=user.id if user is not None else None,
+        entitlement_id=entitlement.id if entitlement is not None else None,
         product=product.key,
         canton=canton,
         months=months,
@@ -174,7 +184,7 @@ async def fulfil(db: AsyncSession, user: User, session: dict[str, Any]) -> Payme
         stripe_payment_intent_id=_id(session.get("payment_intent")),
         amount_cents=int(session.get("amount_total") or 0),
         currency=(session.get("currency") or "chf").lower(),
-        paid_at=now,
+        paid_at=at,
     )
     db.add(payment)
     await db.flush()
@@ -188,12 +198,14 @@ async def _grant(
     product: products.Product,
     canton: str,
     months: int,
+    at: datetime,
     now: datetime,
     session_id: str,
 ) -> Entitlement:
     """Extend an active pass from its expiry; for an extension, revive a pass that expired
     within the grace period, from now; otherwise start a new pass now. A second pass paid
-    while one is active (two Checkouts opened at once) extends it instead of overlapping."""
+    while one is active (two Checkouts opened at once) extends it instead of overlapping.
+    `at` (the event time) dates new and revived passes; `now` only decides what is active."""
     current = active_pass(user, canton, now)
     if current is not None:
         current.expires_at = products.add_months(current.expires_at, months)
@@ -201,14 +213,14 @@ async def _grant(
     if product.kind == products.KIND_EXTENSION:
         lapsed = extendable_pass(user, canton, now)
         if lapsed is not None:
-            lapsed.expires_at = products.add_months(now, months)
+            lapsed.expires_at = products.add_months(at, months)
             return lapsed
         log.warning("Extension in session %s found no pass to extend; started anew", session_id)
     entitlement = Entitlement(
         user_id=user.id,
         canton=canton,
-        starts_at=now,
-        expires_at=products.add_months(now, months),
+        starts_at=at,
+        expires_at=products.add_months(at, months),
         source=ENTITLEMENT_STRIPE,
         stripe_checkout_session_id=session_id,
     )
@@ -218,6 +230,13 @@ async def _grant(
 
 
 async def on_charge_refunded(db: AsyncSession, charge: dict[str, Any], at: datetime) -> None:
+    """Full refund: mark the payment refunded and take back what it bought.
+
+    - A payment that extended the entitlement loses its months (never into the past).
+    - The payment that started the entitlement ends access at the refund time, unless later
+      un-refunded payments extended it: then only the refunded payment's months come off
+      (never below the refund time), so the paid extension months stay.
+    - A partial refund changes no access."""
     intent = _id(charge.get("payment_intent"))
     if not intent:
         log.info("Refunded charge %s without a payment intent", charge.get("id"))
@@ -241,8 +260,22 @@ async def on_charge_refunded(db: AsyncSession, charge: dict[str, Any], at: datet
     )
     if entitlement is not None:
         if entitlement.stripe_checkout_session_id == payment.stripe_checkout_session_id:
-            # This payment started the entitlement: access ends at the refund.
-            entitlement.expires_at = min(entitlement.expires_at, when)
+            later = await db.execute(
+                select(Payment.id).where(
+                    Payment.entitlement_id == entitlement.id,
+                    Payment.id != payment.id,
+                    Payment.refunded_at.is_(None),
+                    Payment.paid_at >= payment.paid_at,
+                )
+            )
+            if later.first() is not None:
+                # Paid extensions follow: only this payment's months come off.
+                entitlement.expires_at = max(
+                    when, products.add_months(entitlement.expires_at, -payment.months)
+                )
+            else:
+                # Nothing paid on top: access ends at the refund.
+                entitlement.expires_at = min(entitlement.expires_at, when)
         else:
             # This payment extended it: take its months off again, but not into the past.
             entitlement.expires_at = max(

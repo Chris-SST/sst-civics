@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import json
 from datetime import timedelta
 
@@ -244,7 +245,7 @@ async def test_cantons_for_sale_hides_and_shows_aargau(api, sale_cantons):
 
 async def test_checkout_session_for_a_pass(api, fake_stripe):
     me = await learner_logged_in(api)
-    assert me["access"]["free_tier"] is True and me["access"]["latest_payment"] is None
+    assert me["access"]["free_tier"] is True and "latest_payment" not in me["access"]
     r = await api.post("/api/billing/checkout", json={"product": "civics_pass_zh"})
     assert r.status_code == 200, r.text
     assert r.json()["url"].startswith("https://checkout.stripe.com/")
@@ -344,7 +345,9 @@ async def test_paid_checkout_grants_the_pass_once(api):
     me = (await api.get("/api/auth/me")).json()
     assert me["access"]["access"] == "full" and me["access"]["free_tier"] is False
     assert me["access"]["has_stripe_customer"] is True
-    assert me["access"]["latest_payment"]["checkout_session_id"] == "cs_1"
+    assert me["access"]["can_extend"]["zh"] is True and me["access"]["can_extend"]["ag"] is False
+    latest = (await api.get("/api/billing/payments/latest")).json()
+    assert latest["checkout_session_id"] == "cs_1"
     listed = (await api.get("/api/billing/payments")).json()
     assert len(listed) == 1 and listed[0]["currency"] == "CHF" and listed[0]["refunded_at"] is None
 
@@ -400,7 +403,7 @@ async def test_refund_webhook_ends_the_pass_and_marks_the_payment(api):
     assert ent.expires_at <= utcnow()
     me = (await api.get("/api/auth/me")).json()
     assert me["access"]["access"] == "none" and me["access"]["free_tier"] is True
-    assert me["access"]["latest_payment"]["refunded"] is True
+    assert (await api.get("/api/billing/payments/latest")).json()["refunded"] is True
 
 
 async def test_refund_of_an_extension_takes_its_months_off_again(api):
@@ -417,6 +420,72 @@ async def test_refund_of_an_extension_takes_its_months_off_again(api):
     [after] = await entitlements()
     assert close(after.expires_at, before.expires_at, seconds=5)
     assert (await api.get("/api/auth/me")).json()["access"]["access"] == "full"
+
+
+async def test_refund_of_the_pass_keeps_paid_extension_months(api):
+    me = await learner_logged_in(api)
+    uid = me["user"]["id"]
+    await webhook(api, session_event("evt_a", uid))
+    await webhook(
+        api,
+        session_event("evt_x", uid, session_id="cs_2", product="civics_extension",
+                      amount=900, intent="pi_ext"),
+    )  # fmt: skip
+    [ent] = await entitlements()
+    full = ent.expires_at
+    assert close(full, add_months(utcnow(), 9), seconds=86400 * 3)
+    await webhook(api, refund_event("evt_r"))
+    [after] = await entitlements()
+    assert close(after.expires_at, add_months(full, -6), seconds=5)
+    assert after.expires_at > utcnow()
+    assert (await api.get("/api/auth/me")).json()["access"]["access"] == "full"
+
+
+async def test_fulfil_dates_the_pass_from_the_event_time(api):
+    me = await learner_logged_in(api)
+    event = session_event("evt_old", me["user"]["id"])
+    created = utcnow() - timedelta(days=3)
+    event["created"] = int(created.timestamp())
+    await webhook(api, event)
+    [ent] = await entitlements()
+    [payment] = await payments()
+    assert close(ent.starts_at, created, seconds=5)
+    assert close(ent.expires_at, add_months(created, 6), seconds=5)
+    assert close(payment.paid_at, created, seconds=5)
+
+
+async def test_payment_for_a_deleted_account_is_recorded_without_a_user(api):
+    event = session_event("evt_gone", "00000000-0000-4000-8000-000000000000")
+    assert (await webhook(api, event)).status_code == 200
+    [payment] = await payments()
+    assert payment.user_id is None and payment.entitlement_id is None
+    async with SessionLocal() as db:
+        row = await db.get(StripeEvent, "evt_gone")
+        assert row.processed_at is not None and row.error is None
+    await webhook(api, refund_event("evt_gone_r"))
+    [payment] = await payments()
+    assert payment.refunded_at is not None
+
+
+async def test_admin_learner_search_treats_wildcards_literally(api, api2):
+    await learner_logged_in(api2, "pass@example.ch")
+    await admin_logged_in(api)
+    assert len((await api.get("/api/admin/learners?q=pass")).json()) == 1
+    assert (await api.get("/api/admin/learners?q=%25")).json() == []
+    assert (await api.get("/api/admin/learners?q=_")).json() == []
+
+
+async def test_can_extend_follows_the_grace_period(api):
+    await learner_logged_in(api)
+    await add_entitlement(started_days_ago=400, expires_in_days=-30)
+    access = (await api.get("/api/auth/me")).json()["access"]
+    assert access["can_extend"]["zh"] is True and access["can_extend"]["ag"] is False
+    async with SessionLocal() as db:
+        ent = (await db.execute(select(Entitlement))).scalar_one()
+        ent.expires_at = utcnow() - timedelta(days=get_settings().extension_grace_days + 5)
+        await db.commit()
+    access = (await api.get("/api/auth/me")).json()["access"]
+    assert access["can_extend"]["zh"] is False
 
 
 async def test_partial_refund_leaves_access_alone(api):
@@ -471,6 +540,7 @@ async def test_refund_eligibility(api):
     assert r.json()["eligible"] is False and r.json()["reason"] == "no_payment"
 
     await _study(10)  # free practice before buying does not count
+    await asyncio.sleep(1.1)  # event times are whole seconds
     await webhook(api, session_event("evt_a", me["user"]["id"]))
     await _study(49)
     out = (await api.get("/api/billing/refund-eligibility")).json()
