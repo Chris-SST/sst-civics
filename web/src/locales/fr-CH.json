@@ -406,6 +406,21 @@
     "backHome": "Retour à l'accueil"
   },
   "practice": {
+    "progress": "Question {{n}} sur {{total}}",
+    "masteryTopic": "Maîtrise de ce sujet",
+    "allSeen": "Tu as déjà travaillé toutes les questions de ce sujet, elles reviennent donc en révision. De nouvelles questions sont ajoutées régulièrement.",
+    "seeResults": "Voir le bilan",
+    "roundPerfect": "Série parfaite !",
+    "roundGreat": "Bravo !",
+    "roundGood": "Bons progrès",
+    "roundKeep": "Continue",
+    "roundScore": "{{correct}} sur {{total}} justes",
+    "roundBodyPerfect": "Toutes les réponses sont justes. La prochaine fois, ce sera un peu plus difficile.",
+    "roundBodyGreat": "Presque tout juste. Encore une série et ce sujet est acquis.",
+    "roundBodyGood": "Au moins la moitié de bonnes réponses. Relis les solutions des questions manquées et réessaie.",
+    "roundBodyKeep": "Une série difficile. C'est exactement à ça que sert l'entraînement ; le tuteur peut t'expliquer les questions délicates.",
+    "masteryChange": "Maîtrise de ce sujet : de {{from}}% à {{to}}%",
+    "anotherRound": "Encore une série",
     "title": "Exercices",
     "mastery": "Maîtrise",
     "nextQuestion": "Question suivante",
@@ -414,6 +429,11 @@
     "back": "Retour à l'accueil"
   },
   "question": {
+    "praise": ["Correct !", "Bien joué !", "Exactement !", "C'est ça !", "Parfait !"],
+    "encourage": ["Pas cette fois.", "Pas tout à fait. Regarde la solution.", "Presque, mais pas tout à fait.", "Pas celle-ci. La prochaine est un nouveau départ."],
+    "streak": "{{count}} d'affilée !",
+    "backOnTrack": "De retour sur les rails !",
+    "tricky": "Une question délicate. Lis la solution, puis passe à la suivante.",
     "calculator": "Calculatrice autorisée",
     "noCalculator": "Sans calculatrice",
     "difficulty": "Difficulté {{level}} sur 5",

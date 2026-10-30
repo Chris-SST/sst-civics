@@ -406,6 +406,21 @@
     "backHome": "Zur Startseite"
   },
   "practice": {
+    "progress": "Frage {{n}} von {{total}}",
+    "masteryTopic": "Beherrschung in diesem Thema",
+    "allSeen": "Du hast alle Fragen zu diesem Thema schon bearbeitet, darum kommen sie zur Wiederholung zurück. Neue Fragen kommen laufend dazu.",
+    "seeResults": "Runde auswerten",
+    "roundPerfect": "Perfekte Runde!",
+    "roundGreat": "Stark!",
+    "roundGood": "Gute Fortschritte",
+    "roundKeep": "Dranbleiben",
+    "roundScore": "{{correct}} von {{total}} richtig",
+    "roundBodyPerfect": "Alle Fragen richtig. Beim nächsten Mal wird es etwas schwieriger.",
+    "roundBodyGreat": "Fast alles richtig. Noch eine Runde, und das Thema sitzt.",
+    "roundBodyGood": "Mindestens die Hälfte richtig. Schau dir die Lösungen der verpassten Fragen an und versuch es nochmals.",
+    "roundBodyKeep": "Eine harte Runde. Genau dafür ist Üben da; der Tutor erklärt dir gern die kniffligen Fragen.",
+    "masteryChange": "Beherrschung in diesem Thema: {{from}}% auf {{to}}%",
+    "anotherRound": "Noch eine Runde",
     "title": "Üben",
     "mastery": "Beherrschung",
     "nextQuestion": "Nächste Frage",
@@ -414,6 +429,11 @@
     "back": "Zur Startseite"
   },
   "question": {
+    "praise": ["Richtig!", "Sehr gut!", "Genau!", "Das ist es!", "Perfekt!"],
+    "encourage": ["Diesmal nicht.", "Nicht ganz. Schau dir die Lösung an.", "Knapp daneben.", "Nicht diese. Die nächste ist ein Neustart."],
+    "streak": "{{count}} in Folge!",
+    "backOnTrack": "Wieder auf Kurs!",
+    "tricky": "Eine knifflige Frage. Lies die Lösung und versuch die nächste.",
     "calculator": "Taschenrechner erlaubt",
     "noCalculator": "Ohne Taschenrechner",
     "difficulty": "Schwierigkeit {{level}} von 5",

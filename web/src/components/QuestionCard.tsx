@@ -1,4 +1,5 @@
 import { useState, type FormEvent, type ReactNode } from "react";
+import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 import { post } from "../api";
 import type { AttemptOut, QuestionPublic } from "../practice";
@@ -12,8 +13,33 @@ interface Props {
   question: QuestionPublic;
   submit: (answer: string) => Promise<AttemptOut>;
   onResult?: (result: AttemptOut) => void;
+  /** The result heading; when omitted a varied message is picked for the outcome. */
+  headline?: (result: AttemptOut) => string;
   /** Rendered under the result panel, typically a "Next" button. */
   children?: ReactNode;
+}
+
+function pick(list: unknown, seed: number): string | null {
+  if (!Array.isArray(list) || list.length === 0) return null;
+  return String(list[Math.abs(seed) % list.length]);
+}
+
+/** A short, varied heading for a result. Streaks and recoveries get their own line so a run of
+ * answers reads like a coach, not a form. */
+export function feedbackHeadline(
+  t: TFunction,
+  result: AttemptOut,
+  context: { streak?: number; previousWrong?: boolean } = {},
+): string {
+  const seed = Math.floor(Math.random() * 1000);
+  const streak = context.streak ?? 0;
+  if (result.correct) {
+    if (streak >= 3) return t("question.streak", { count: streak });
+    if (context.previousWrong) return t("question.backOnTrack");
+    return pick(t("question.praise", { returnObjects: true }), seed) ?? t("question.correct");
+  }
+  if (context.previousWrong) return t("question.tricky");
+  return pick(t("question.encourage", { returnObjects: true }), seed) ?? t("question.incorrect");
 }
 
 export function MasteryBar({ value, due, label }: { value: number | null; due?: boolean; label?: string }) {
@@ -50,11 +76,12 @@ export function DifficultyDots({ level }: { level: number }) {
   );
 }
 
-export default function QuestionCard({ question: q, submit, onResult, children }: Props) {
+export default function QuestionCard({ question: q, submit, onResult, headline, children }: Props) {
   const { t } = useTranslation();
   const [answer, setAnswer] = useState("");
   const [busy, setBusy] = useState(false);
   const [result, setResult] = useState<AttemptOut | null>(null);
+  const [heading, setHeading] = useState("");
   const [error, setError] = useState<unknown>(null);
   const [showSolution, setShowSolution] = useState(false);
   const [reporting, setReporting] = useState(false);
@@ -68,6 +95,7 @@ export default function QuestionCard({ question: q, submit, onResult, children }
     setError(null);
     try {
       const r = await submit(answer.trim());
+      setHeading(headline ? headline(r) : feedbackHeadline(t, r));
       setResult(r);
       onResult?.(r);
     } catch (err) {
@@ -188,9 +216,7 @@ export default function QuestionCard({ question: q, submit, onResult, children }
               ? t("question.markingUnavailable")
               : structured
                 ? t("question.score", { percent })
-                : result.correct
-                  ? t("question.correct")
-                  : t("question.incorrect")}
+                : heading || (result.correct ? t("question.correct") : t("question.incorrect"))}
           </h3>
           {result.feedback && (
             <div className="result-feedback">

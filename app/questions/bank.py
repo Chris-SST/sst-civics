@@ -96,6 +96,20 @@ async def recently_attempted(
     return set(rows)
 
 
+async def topic_history(
+    db: AsyncSession, student_id: uuid.UUID, topic_code: str
+) -> dict[uuid.UUID, tuple[Any, bool]]:
+    """Latest attempt per question on this topic: question id -> (when, correct)."""
+    rows = (
+        await db.execute(
+            select(Attempt.question_id, Attempt.created_at, Attempt.correct)
+            .where(Attempt.student_id == student_id, Attempt.topic_code == topic_code)
+            .order_by(Attempt.created_at.asc())
+        )
+    ).all()
+    return {qid: (at, bool(ok)) for qid, at, ok in rows}
+
+
 def _closest(cands: list[Question], difficulty: int, n: int) -> list[Question]:
     random.shuffle(cands)
     cands.sort(key=lambda q: abs(q.difficulty - difficulty))
@@ -163,32 +177,42 @@ async def latest_diagnostic(
 # --- Practice and check questions ------------------------------------------------------------
 
 
-async def next_question(
+async def select_questions(
     db: AsyncSession, student: User, course_key: str, topic_code: str, n: int = 1
-) -> list[Question]:
+) -> tuple[list[Question], int, int]:
+    """Up to `n` distinct questions on a topic, and (pool size, how many are new to the student).
+
+    Questions the student has never attempted come first, nearest the target difficulty. When
+    those run out, earlier questions return: the ones answered wrong first, then the ones seen
+    longest ago, so the question just answered is the very last to come back.
+    """
     module = prompts.course_module_key(course_key)
     level = prompts.course_level(course_key)
     m = await mastery.get_or_create(db, student.id, course_key, topic_code)
     target = mastery.target_difficulty(m.rating)
-    seen = await recently_attempted(db, student.id)
     cands = await _candidates(
         db,
         module_key=module,
         level=level,
         topic_code=topic_code,
         language=student.locale,
-        exclude=seen,
+        exclude=set(),
     )
-    if not cands:
-        cands = await _candidates(
-            db,
-            module_key=module,
-            level=level,
-            topic_code=topic_code,
-            language=student.locale,
-            exclude=set(),
-        )
-    return _closest(cands, target, n)
+    history = await topic_history(db, student.id, topic_code)
+    unseen = [q for q in cands if q.id not in history]
+    picked = _closest(unseen, target, n)
+    if len(picked) < n:
+        seen = [q for q in cands if q.id in history]
+        seen.sort(key=lambda q: (history[q.id][1], history[q.id][0]))
+        picked += seen[: n - len(picked)]
+    return picked, len(cands), len(unseen)
+
+
+async def next_question(
+    db: AsyncSession, student: User, course_key: str, topic_code: str, n: int = 1
+) -> list[Question]:
+    picked, _, _ = await select_questions(db, student, course_key, topic_code, n)
+    return picked
 
 
 # --- Attempts ----------------------------------------------------------------------------------

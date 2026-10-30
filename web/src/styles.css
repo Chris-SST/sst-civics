@@ -1455,3 +1455,83 @@ button.topic-row:hover {
     min-height: 40px;
   }
 }
+
+/* Practice rounds: one segment per question, coloured by the result */
+.round-progress {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+.round-progress span {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--line);
+}
+.round-progress span.current {
+  background: #cfd8d2;
+  box-shadow: inset 0 0 0 2px var(--green);
+}
+.round-progress span.ok {
+  background: var(--green);
+}
+.round-progress span.bad {
+  background: var(--gold);
+}
+.mastery-delta {
+  margin-left: 8px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: #ededed;
+  color: var(--charcoal);
+}
+.mastery-delta.up {
+  background: var(--green-tint);
+  color: var(--green-dark);
+}
+.mastery-delta.down {
+  background: #fbf4e6;
+  color: #7b5f22;
+}
+.round-summary {
+  text-align: center;
+}
+.round-summary h2 {
+  margin-bottom: 4px;
+}
+.round-summary .round-score {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.round-summary .practice-mastery {
+  text-align: left;
+  margin: 16px 0;
+}
+.round-summary .actions {
+  justify-content: center;
+}
+.round-dots {
+  display: inline-flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.round-dots i {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--line);
+}
+.round-dots i.ok {
+  background: var(--green);
+}
+.round-dots i.bad {
+  background: var(--gold);
+}
+.round-perfect h2,
+.round-great h2 {
+  color: var(--green-dark);
+}

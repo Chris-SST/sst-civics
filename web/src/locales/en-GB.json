@@ -406,6 +406,21 @@
     "backHome": "Back to home"
   },
   "practice": {
+    "progress": "Question {{n}} of {{total}}",
+    "masteryTopic": "Mastery in this topic",
+    "allSeen": "You have worked through every question on this topic, so these come back for review. New questions are added regularly.",
+    "seeResults": "See your round",
+    "roundPerfect": "Perfect round!",
+    "roundGreat": "Great work!",
+    "roundGood": "Good progress",
+    "roundKeep": "Keep going",
+    "roundScore": "{{correct}} of {{total}} right",
+    "roundBodyPerfect": "Every question right. Expect something a little harder next time.",
+    "roundBodyGreat": "Nearly all right. One more round and this topic is yours.",
+    "roundBodyGood": "Half or more right. Look through the solutions you missed and have another go.",
+    "roundBodyKeep": "A tough round. That is exactly what practice is for; the tutor can walk you through the tricky ones.",
+    "masteryChange": "Mastery in this topic: {{from}}% to {{to}}%",
+    "anotherRound": "Another round",
     "title": "Practice",
     "mastery": "Mastery",
     "nextQuestion": "Next question",
@@ -414,6 +429,11 @@
     "back": "Back to home"
   },
   "question": {
+    "praise": ["Correct!", "Nice one!", "Spot on!", "That's it!", "Exactly right!"],
+    "encourage": ["Not this time.", "Not quite. Have a look at the solution.", "Close, but not quite.", "Not this one. The next one is a fresh start."],
+    "streak": "{{count}} in a row!",
+    "backOnTrack": "Back on track!",
+    "tricky": "A tricky one. Read the solution, then try the next.",
     "calculator": "Calculator allowed",
     "noCalculator": "No calculator",
     "difficulty": "Difficulty {{level}} of 5",

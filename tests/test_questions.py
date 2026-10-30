@@ -389,6 +389,47 @@ async def test_practice_next_and_report_hides_after_two(api, api2, fake):
     assert r.status_code == 404 and r.json()["detail"] == "no_questions"
 
 
+async def test_practice_round_never_repeats_while_alternatives_exist(api, api2, fake):
+    """Staging showed the same question twice in a row once a small topic was used up."""
+    await seed_questions(n_per_topic=4, topics=("AA-1.2",))
+    await student_logged_in(api, api2)
+    r = await api2.get("/api/practice/round?course_key=ib_maths_aa_hl&topic_code=AA-1.2")
+    assert r.status_code == 200, r.text
+    rnd = r.json()
+    assert rnd["topic_name"] == "Exponents and logarithms"
+    assert rnd["pool"] == 4 and rnd["unseen"] == 4 and rnd["mastery"] == 50
+    ids = [q["id"] for q in rnd["questions"]]
+    assert len(ids) == 4 and len(set(ids)) == 4  # the round is as long as the pool allows
+
+    # Answer the whole round: the first two wrong, the last two right.
+    for i, qid in enumerate(ids):
+        async with SessionLocal() as db:
+            stored = await db.get(Question, uuid.UUID(qid))
+        r = await api2.post(
+            "/api/practice/attempts",
+            json={
+                "question_id": qid,
+                "answer": "999" if i < 2 else stored.answer,
+                "mode": "practice",
+            },
+        )
+        assert r.status_code == 200, r.text
+        m = r.json()["mastery"]
+        assert "previous" in m and m["previous"] != m["mastery"]
+
+    # Second round: nothing is new, the wrong ones come first, the last answered comes last.
+    r = await api2.get("/api/practice/round?course_key=ib_maths_aa_hl&topic_code=AA-1.2")
+    again = [q["id"] for q in r.json()["questions"]]
+    assert r.json()["unseen"] == 0 and len(set(again)) == 4
+    assert set(again[:2]) == set(ids[:2]) and again[-1] == ids[-1]
+
+    # /next, used by the chat check panel, follows the same order.
+    r = await api2.get("/api/practice/next?course_key=ib_maths_aa_hl&topic_code=AA-1.2")
+    assert r.json()["id"] in ids[:2]
+    r = await api2.get("/api/practice/round?course_key=ib_maths_aa_hl&topic_code=AA-5.4")
+    assert r.status_code == 404 and r.json()["detail"] == "no_questions"
+
+
 async def test_structured_answers_are_ai_marked(api, api2, fake):
     async with SessionLocal() as db:
         db.add(

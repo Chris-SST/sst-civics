@@ -48,6 +48,21 @@ export interface DiagnosticOut {
 export interface MasteryOut {
   topic_code: string;
   mastery: number;
+  /** Mastery before this attempt, so the change can be shown. */
+  previous?: number;
+}
+
+/** A short round of distinct questions on one topic (GET /api/practice/round). */
+export interface PracticeRound {
+  course_key: string;
+  topic_code: string;
+  topic_name: string;
+  mastery: number;
+  attempts: number;
+  /** Questions available on the topic, and how many of them the student has never seen. */
+  pool: number;
+  unseen: number;
+  questions: QuestionPublic[];
 }
 
 export interface AttemptOut {

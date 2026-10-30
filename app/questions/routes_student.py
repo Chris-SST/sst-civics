@@ -160,6 +160,37 @@ async def next_question(
     return bank.question_public(qs[0], locale=user.locale)
 
 
+@router.get("/round")
+async def practice_round(
+    course_key: str,
+    topic_code: str,
+    user: User = Depends(require_learner),
+    db: AsyncSession = Depends(get_db),
+) -> dict[str, Any]:
+    """A short round of distinct practice questions on one topic, with the count up front so
+    the student knows how many are to go."""
+    _own_course(user, course_key)
+    await _full_access(db, user)
+    size = get_settings().practice_round_size
+    qs, pool, unseen = await bank.select_questions(db, user, course_key, topic_code, n=size)
+    if not qs:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "no_questions")
+    m = await mastery.get_or_create(db, user.id, course_key, topic_code)
+    await db.commit()
+    return {
+        "course_key": course_key,
+        "topic_code": topic_code,
+        "topic_name": bank.topic_name(
+            prompts.course_module_key(course_key), topic_code, user.locale
+        ),
+        "mastery": mastery.mastery_percent(m.rating),
+        "attempts": m.attempts,
+        "pool": pool,
+        "unseen": unseen,
+        "questions": [bank.question_public(q, locale=user.locale) for q in qs],
+    }
+
+
 @router.get("/check")
 async def check_questions(
     conversation_id: uuid.UUID,
@@ -216,6 +247,8 @@ async def submit_attempt(
         if course_key is None:
             raise HTTPException(status.HTTP_400_BAD_REQUEST, "invalid_course")
     _own_course(user, course_key)
+    before = await mastery.get_or_create(db, user.id, course_key, q.topic_code)
+    mastery_before = mastery.mastery_percent(before.rating)
 
     attempt = await bank.submit_attempt(
         db,
@@ -249,7 +282,11 @@ async def submit_attempt(
         "worked_solution": q.worked_solution,
     }
     m = await mastery.get_or_create(db, user.id, course_key, q.topic_code)
-    out["mastery"] = {"topic_code": q.topic_code, "mastery": mastery.mastery_percent(m.rating)}
+    out["mastery"] = {
+        "topic_code": q.topic_code,
+        "mastery": mastery.mastery_percent(m.rating),
+        "previous": mastery_before,
+    }
 
     if run is not None:
         run.position += 1

@@ -79,6 +79,7 @@ class Settings(BaseSettings):
     question_spot_check_first: int = 50
     question_spot_check_rate: float = 0.10
     diagnostic_questions_per_topic: int = 2
+    practice_round_size: int = 5
     conversation_window_turns: int = 20
 
     # Other providers (later phases)
