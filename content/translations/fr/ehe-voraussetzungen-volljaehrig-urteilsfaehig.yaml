@@ -1,0 +1,31 @@
+id: ehe-voraussetzungen-volljaehrig-urteilsfaehig
+lang: fr
+source_version: 1
+question: Quelles conditions les personnes doivent-elles remplir pour pouvoir se marier en Suisse ?
+options:
+  a: Elles doivent posséder le droit de cité suisse (Bürgerrecht) et être majeures
+  b: Elles doivent être majeures et capables d'agir raisonnablement
+  c: Elles doivent vivre ensemble depuis au moins cinq ans
+  d: Elles doivent appartenir à la même religion
+explanation: Peut se marier toute personne majeure et capable de discernement. Être capable de discernement
+  signifie que l'on peut agir raisonnablement. La nationalité, la religion ou une certaine durée de vie
+  commune ne sont pas des conditions requises.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Voraussetzungen müssen Personen erfüllen, um in der Schweiz heiraten zu können?
+    options_de:
+      a: Sie müssen das Schweizer Bürgerrecht besitzen und volljährig sein
+      b: Sie müssen volljährig und fähig sein, vernünftig zu handeln
+      c: Sie müssen seit mindestens fünf Jahren zusammenleben
+      d: Sie müssen derselben Religion angehören
+    explanation_de: Heiraten kann jede volljährige und urteilsfähige Person. Urteilsfähig zu sein bedeutet,
+      dass man vernünftig handeln kann. Die Staatsangehörigkeit, die Religion oder eine bestimmte Dauer
+      des Zusammenlebens sind keine erforderlichen Voraussetzungen.

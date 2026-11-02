@@ -1,0 +1,31 @@
+id: neutralitaet-bedeutung-bewaffnete-konflikte
+lang: sq
+source_version: 1
+question: Çfarë do të thotë asnjanësia e Zvicrës në rast konfliktesh të armatosura mes shteteve të tjera?
+options:
+  a: Zvicra dërgon trupa për ruajtjen e paqes në çdo zonë lufte.
+  b: Zvicra ndërpret të gjitha marrëdhëniet me shtetet e përfshira.
+  c: Zvicra nuk merr anën e asnjërës palë në konflikt.
+  d: Zvicra mbështet gjithmonë palën më të dobët.
+explanation: Asnjanësia do të thotë që Zvicra nuk merr anën e asnjë pale në luftë. Kështu ajo qëndron
+  jashtë konflikteve të shteteve të tjera. Kjo nuk përjashton bisedimet dhe ndihmën humanitare.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Neutralität der Schweiz im Falle bewaffneter Konflikte zwischen anderen
+      Staaten?
+    options_de:
+      a: Die Schweiz schickt Truppen zur Friedenssicherung in jedes Kriegsgebiet.
+      b: Die Schweiz bricht alle Beziehungen zu den beteiligten Staaten ab.
+      c: Die Schweiz ergreift für keine der Konfliktparteien Partei.
+      d: Die Schweiz unterstützt immer die schwächere Partei.
+    explanation_de: Neutralität bedeutet, dass die Schweiz für keine Kriegspartei Partei ergreift. So
+      bleibt sie ausserhalb der Konflikte anderer Staaten. Das schliesst Gespräche und humanitäre Hilfe
+      nicht aus.

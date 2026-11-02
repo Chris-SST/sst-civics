@@ -1,0 +1,31 @@
+id: pfaeffikersee-im-kanton-zuerich
+lang: tr
+source_version: 1
+question: Pfäffikersee hangi kantonda yer alır?
+options:
+  a: Thurgau kantonu
+  b: St. Gallen kantonu
+  c: Zürih kantonu
+  d: Zug kantonu
+explanation: Pfäffikersee, Zürcher Oberland bölgesinde yer alır ve Zürih kantonunun topraklarına aittir.
+  Kantondaki daha büyük göllerden biridir. Adı geçen diğer kantonların bazıları Zürih ile komşudur, ancak
+  gölü kendi sınırları içinde barındırmaz.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Kanton liegt der Pfäffikersee?
+    options_de:
+      a: Kanton Thurgau
+      b: Kanton St. Gallen
+      c: Kanton Zürich
+      d: Kanton Zug
+    explanation_de: Der Pfäffikersee liegt in der Region Zürcher Oberland und gehört zum Gebiet des Kantons
+      Zürich. Er ist einer der grösseren Seen im Kanton. Einige der anderen genannten Kantone grenzen
+      an Zürich, beherbergen den See aber nicht innerhalb ihrer Grenzen.

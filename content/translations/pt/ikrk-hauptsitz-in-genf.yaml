@@ -1,0 +1,29 @@
+id: ikrk-hauptsitz-in-genf
+lang: pt
+source_version: 1
+question: Em que país o Comité Internacional da Cruz Vermelha (CICV) tem a sua sede?
+options:
+  a: Nos Países Baixos
+  b: Na Suíça
+  c: Na Áustria
+  d: Na Bélgica
+explanation: O CICV tem a sua sede em Genebra, na Suíça. Foi fundado em Genebra em 1863 e protege as vítimas
+  de conflitos armados. A Suíça apoia o seu trabalho.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Land hat das Internationale Komitee vom Roten Kreuz (IKRK) seinen Sitz?
+    options_de:
+      a: In den Niederlanden
+      b: In der Schweiz
+      c: In Österreich
+      d: In Belgien
+    explanation_de: Das IKRK hat seinen Sitz in Genf, in der Schweiz. Es wurde 1863 in Genf gegründet
+      und schützt die Opfer bewaffneter Konflikte. Die Schweiz unterstützt seine Arbeit.

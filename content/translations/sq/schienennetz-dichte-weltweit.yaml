@@ -1,0 +1,30 @@
+id: schienennetz-dichte-weltweit
+lang: sq
+source_version: 1
+question: Për çfarë është i njohur rrjeti hekurudhor zviceran në krahasim ndërkombëtar?
+options:
+  a: Është rrjeti hekurudhor më i dendur në botë.
+  b: Është i vetmi rrjet hekurudhor që kalon tërësisht nëpër tunele.
+  c: Është rrjeti hekurudhor më i gjatë në Evropë.
+  d: Është rrjeti hekurudhor më i vjetër në botë.
+explanation: Në një sipërfaqe të vogël ka shumë linja hekurudhore dhe shumë stacione. Prandaj rrjeti zviceran
+  konsiderohet si më i denduri në botë. Por dendësia nuk tregon asgjë për gjatësinë absolute.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür ist das Schweizer Eisenbahnnetz im internationalen Vergleich bekannt?
+    options_de:
+      a: Es ist das dichteste Eisenbahnnetz der Welt.
+      b: Es ist das einzige Eisenbahnnetz, das vollständig durch Tunnel führt.
+      c: Es ist das längste Eisenbahnnetz in Europa.
+      d: Es ist das älteste Eisenbahnnetz der Welt.
+    explanation_de: Auf einer kleinen Fläche gibt es viele Eisenbahnlinien und viele Bahnhöfe. Deshalb
+      gilt das Schweizer Netz als das dichteste der Welt. Aber die Dichte sagt nichts über die absolute
+      Länge aus.

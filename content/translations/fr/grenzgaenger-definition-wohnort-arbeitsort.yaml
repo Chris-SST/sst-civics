@@ -1,0 +1,34 @@
+id: grenzgaenger-definition-wohnort-arbeitsort
+lang: fr
+source_version: 2
+question: Qui est considéré comme frontalier ou frontalière en Suisse ?
+options:
+  a: Une personne qui travaille en Suisse, mais dont le domicile est à l'étranger et qui y retourne régulièrement
+  b: Une personne qui travaille à la douane et contrôle la frontière nationale
+  c: Une personne qui franchit la frontière sans autorisation pour travailler ici
+  d: Une personne qui habite dans un canton et travaille chaque jour dans un autre canton
+explanation: Les frontaliers et les frontalières ont leur lieu de travail en Suisse, mais vivent dans
+  un autre pays. Ils ont besoin d'une autorisation de frontalier et retournent régulièrement, au moins
+  une fois par semaine, à leur lieu de domicile à l'étranger. Celui qui fait uniquement la navette entre
+  deux cantons n'est pas un frontalier.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer gilt in der Schweiz als Grenzgänger oder Grenzgängerin?
+    options_de:
+      a: Eine Person, die in der Schweiz arbeitet, aber ihren Wohnsitz im Ausland hat und regelmässig
+        dorthin zurückkehrt
+      b: Eine Person, die beim Zoll arbeitet und die Landesgrenze kontrolliert
+      c: Eine Person, die die Grenze ohne Bewilligung überquert, um hier zu arbeiten
+      d: Eine Person, die in einem Kanton wohnt und jeden Tag in einem anderen Kanton arbeitet
+    explanation_de: Grenzgänger und Grenzgängerinnen haben ihren Arbeitsort in der Schweiz, leben aber
+      in einem anderen Land. Sie brauchen eine Grenzgängerbewilligung und kehren regelmässig, mindestens
+      einmal pro Woche, an ihren Wohnort im Ausland zurück. Wer nur zwischen zwei Kantonen pendelt, ist
+      kein Grenzgänger.

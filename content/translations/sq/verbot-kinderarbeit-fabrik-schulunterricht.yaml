@@ -1,0 +1,29 @@
+id: verbot-kinderarbeit-fabrik-schulunterricht
+lang: sq
+source_version: 1
+question: Çfarë duhej të garantonte para së gjithash ndalimi i punës së fëmijëve në fabrika i vitit 1877?
+options:
+  a: Që fabrikat të paguanin më pak rrogë
+  b: Që fëmijët të mund të ndiqnin shkollën
+  c: Që fëmijët të duhej të ndihmonin më herët në punët e shtëpisë
+  d: Që fabrikat të sillnin më shumë fuqi punëtore nga jashtë vendit
+explanation: Ligji për fabrikat i vitit 1877 e ndaloi punën në fabrika për fëmijët. Ata duhej të ndiqnin
+  mësimin në shkollë në vend që të punonin. Ligji mbrojti gjithashtu shëndetin e punëtorëve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sollte das Verbot der Kinderarbeit in Fabriken von 1877 vor allem gewährleisten?
+    options_de:
+      a: Dass die Fabriken weniger Lohn zahlten
+      b: Dass die Kinder die Schule besuchen konnten
+      c: Dass die Kinder früher im Haushalt helfen mussten
+      d: Dass die Fabriken mehr Arbeitskräfte aus dem Ausland brachten
+    explanation_de: Das Fabrikgesetz von 1877 verbot die Fabrikarbeit für Kinder. Sie sollten den Unterricht
+      in der Schule besuchen, anstatt zu arbeiten. Das Gesetz schützte auch die Gesundheit der Arbeiter.

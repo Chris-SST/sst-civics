@@ -1,0 +1,32 @@
+id: gleichberechtigung-frau-mann-bedeutung
+lang: tr
+source_version: 1
+question: Kadın ve erkek eşitliği ilke olarak ne anlama gelir?
+options:
+  a: Kadınlar ve erkekler ilke olarak aynı haklara sahiptir.
+  b: Kadınlar ve erkekler yaşamın her alanında aynı yükümlülüklere, ancak farklı haklara sahiptir.
+  c: Kadınlar ve erkekler her meslekte tam olarak aynı kazancı elde eder.
+  d: Kadınlar ve erkekler ailedeki tüm görevleri eşit olarak paylaşmak zorundadır.
+explanation: Eşit haklılık, her iki cinsiyetin de ilke olarak aynı haklara sahip olduğu anlamına gelir.
+  Bu ilke Federal Anayasa'da (Bundesverfassung) güvence altına alınmıştır. İlke, ailelerin görevlerini
+  ayrıntılı olarak nasıl paylaşacakları konusunda hiçbir şey söylemez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Gleichstellung von Frau und Mann grundsätzlich?
+    options_de:
+      a: Frauen und Männer haben grundsätzlich die gleichen Rechte.
+      b: Frauen und Männer haben in allen Lebensbereichen die gleichen Pflichten, aber unterschiedliche
+        Rechte.
+      c: Frauen und Männer verdienen in jedem Beruf genau gleich viel.
+      d: Frauen und Männer müssen alle Aufgaben in der Familie gleichmässig aufteilen.
+    explanation_de: Gleichberechtigung bedeutet, dass beide Geschlechter grundsätzlich die gleichen Rechte
+      haben. Dieser Grundsatz ist in der Bundesverfassung verankert. Der Grundsatz sagt nichts darüber
+      aus, wie die Familien ihre Aufgaben im Einzelnen aufteilen.

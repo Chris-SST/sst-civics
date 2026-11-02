@@ -1,0 +1,29 @@
+id: ikrk-gruendung-genf-1863
+lang: tr
+source_version: 1
+question: 1863 yılında Cenevre'de kurulan tanınmış insani yardım kuruluşu hangisidir?
+options:
+  a: Birleşmiş Milletler (BM)
+  b: Dünya Sağlık Örgütü (DSÖ)
+  c: Dünya Gıda Programı (WFP)
+  d: Uluslararası Kızılhaç Komitesi (ICRC)
+explanation: ICRC, 1863 yılında Cenevre'de, başka etkenlerin yanı sıra Henry Dunant'ın önerisi üzerine
+  kuruldu. İsviçre'nin insani yardım geleneğini temsil eder. Diğer kuruluşlar daha sonra kuruldu.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches ist die bekannte humanitäre Organisation, die 1863 in Genf gegründet wurde?
+    options_de:
+      a: Vereinte Nationen (UNO)
+      b: Weltgesundheitsorganisation (WHO)
+      c: Welternährungsprogramm (WFP)
+      d: Internationales Komitee vom Roten Kreuz (IKRK)
+    explanation_de: Das IKRK wurde 1863 in Genf unter anderem auf Anregung von Henry Dunant gegründet.
+      Es vertritt die humanitäre Tradition der Schweiz. Die anderen Organisationen wurden später gegründet.

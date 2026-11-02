@@ -20,7 +20,7 @@ glossary:
 - Referendum
 - Volksabstimmung
 - Stimmberechtigte
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-026
@@ -43,3 +43,36 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte konkreter sagen, wann ein Referendum zustande kommt, zum Beispiel
+        mit dem Zusatz «wenn innerhalb von 100 Tagen 50 000 Stimmberechtigte oder acht Kantone es verlangen».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte konkreter sein, etwa mit dem Zusatz «Dafür braucht es 50 000 Unterschriften
+        innert 100 Tagen nach der Veröffentlichung des Gesetzes (oder das Begehren von acht Kantonen).»,
+        damit klar wird, wann ein Referendum zustande kommt.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c) enthält das Wort «immer», das die Antwort sofort als falsch erkennbar macht;
+        eine realistischere Formulierung wäre z. B. «Es tritt sofort in Kraft, ohne dass das Volk mitreden
+        kann.»'
+      - 'Klein: In der Frage wäre «verabschiedet» für B1 etwas einfacher als «beschlossen»; ebenso ist
+        «fakultatives Referendum» in der Erklärung ein Fachbegriff, den man in einem Halbsatz erklären
+        könnte (z. B. «wenn 50 000 Unterschriften innert 100 Tagen zustande kommen»).'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

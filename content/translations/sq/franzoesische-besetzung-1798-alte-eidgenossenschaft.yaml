@@ -1,0 +1,30 @@
+id: franzoesische-besetzung-1798-alte-eidgenossenschaft
+lang: sq
+source_version: 1
+question: Çfarë shkaktoi hyrja e trupave franceze në Zvicër në vitin 1798?
+options:
+  a: E shndërroi Zvicrën në pjesë të Francës
+  b: Forcoi pushtetin e kantoneve të vjetra (alte Orte)
+  c: Çoi në themelimin e shtetit federal të vitit 1848
+  d: I dha fund rendit të vjetër të Konfederatës së vjetër (Eidgenossenschaft)
+explanation: Me pushtimin nga Franca u shemb Konfederata e vjetër (Eidgenossenschaft). Në vend të saj
+  erdhi Republika Helvetike si shtet unitar. Shteti federal i sotëm u krijua vetëm në vitin 1848.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bewirkte der Einmarsch der französischen Truppen in die Schweiz im Jahr 1798?
+    options_de:
+      a: Er verwandelte die Schweiz in einen Teil Frankreichs
+      b: Er stärkte die Macht der alten Orte
+      c: Er führte zur Gründung des Bundesstaates von 1848
+      d: Er setzte der alten Ordnung der alten Eidgenossenschaft ein Ende
+    explanation_de: Mit der Besetzung durch Frankreich brach die alte Eidgenossenschaft zusammen. An ihre
+      Stelle trat die Helvetische Republik als Einheitsstaat. Der heutige Bundesstaat wurde erst im Jahr
+      1848 geschaffen.

@@ -1,15 +1,36 @@
 id: auslandschweizer-stimmrecht-vom-ausland
 lang: en
-source_version: 1
-question: A Swiss citizen lives permanently abroad. How can she take part in federal elections and votes?
+source_version: 2
+question: A Swiss woman lives permanently abroad. How can she take part in federal elections and referendums?
 options:
-  a: She may only vote if she travels to Switzerland for that purpose.
-  b: She may only take part in elections, but not in votes.
-  c: She can elect and vote from her place of residence abroad without travelling to Switzerland.
-  d: She loses the right to vote and to elect at Confederation level.
-explanation: Swiss citizens living abroad have political rights at Confederation level. They can exercise
-  them from abroad without travelling to Switzerland. To do so, they must register with their representation
-  or their voting municipality.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: She may only vote if she travels to Switzerland to do so.
+  b: She may only take part in elections, but not in referendums.
+  c: She can vote in elections and referendums from her place of residence abroad, without travelling
+    to Switzerland.
+  d: She loses the right to vote and to stand in elections at Confederation level.
+explanation: Swiss citizens living abroad may vote in elections and referendums at federal level without
+  having to travel to Switzerland. To do so, they must be registered with the competent Swiss representation
+  abroad and apply through it to be entered in the electoral register. Their municipality of voting then
+  sends them the election and voting materials.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Schweizerin lebt dauerhaft im Ausland. Wie kann sie an eidgenössischen Wahlen und
+      Abstimmungen teilnehmen?
+    options_de:
+      a: Sie darf nur abstimmen, wenn sie dafür in die Schweiz reist.
+      b: Sie darf nur an Wahlen teilnehmen, aber nicht an Abstimmungen.
+      c: Sie kann von ihrem Wohnort im Ausland aus an Wahlen und Abstimmungen teilnehmen, ohne in die
+        Schweiz zu reisen.
+      d: Sie verliert das Stimm- und Wahlrecht auf Ebene des Bundes.
+    explanation_de: Auslandschweizerinnen und Auslandschweizer dürfen auf Bundesebene an Wahlen und Abstimmungen
+      teilnehmen, ohne in die Schweiz reisen zu müssen. Dazu müssen sie bei der zuständigen Schweizer
+      Vertretung im Ausland angemeldet sein und sich über diese ins Stimmregister eintragen lassen. Ihre
+      Stimmgemeinde schickt ihnen dann die Wahl- und Abstimmungsunterlagen zu.

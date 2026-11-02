@@ -22,7 +22,7 @@ sources:
   checked: 2026-11-02
 glossary:
 - Jodeln
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-313
@@ -46,3 +46,49 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Jodeln wird laut Quelle manchmal von Instrumenten wie dem Akkordeon begleitet, darum die
+        Frage eindeutiger formulieren, etwa «Womit jodelt man?» oder «Was ist beim Jodeln das Instrument?».'
+      - 'Klein: In der Erklärung «ohne Worte» auf den Naturjodel und den gejodelten Teil beschränken,
+        da Jodellieder auch Strophen mit Text haben, etwa: «Beim Jodeln singt man ohne Worte, nur mit
+        Silben (beim Jodellied im Refrain)».'
+      - 'Klein: Der Satz in der Erklärung, Jodeln werde oft mit dem Schwyzerörgeli verbunden, macht eine
+        falsche Antwort scheinbar plausibel; besser schreiben: «Manchmal begleiten Instrumente wie das
+        Schwyzerörgeli das Jodeln, aber das eigentliche Instrument ist die Stimme.»'
+      - 'Klein: Schwyzerörgeli und Handorgel sind beide Akkordeons; eine der beiden Antworten durch ein
+        anderes Instrument ersetzen, etwa «Die Trommel» oder «Das Hackbrett».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Jodellieder werden oft mit Schwyzerörgeli oder Handorgel begleitet, darum könnte jemand
+        die Frage als Frage nach der Begleitung verstehen; besser wäre «Womit erzeugt man beim Jodeln
+        die Töne?» oder «Welches ‹Instrument› braucht man zum Jodeln?».'
+      - 'Klein: Die Erklärung sagt, man singe beim Jodeln ohne Worte, das gilt aber nur für den Naturjodel;
+        besser: «Beim Jodeln singt man oft ohne Worte, nur mit Silben, …».'
+      - 'Klein: Das Schwyzerörgeli ist eine Art Handorgel, die zwei Antworten sind sich also sehr ähnlich;
+        eine davon könnte durch ein anderes Instrument wie «Die Trommel» oder «Das Hackbrett» ersetzt
+        werden.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Schwyzerörgeli ist eine Art Handorgel, daher überschneiden sich die Antworten c) und
+        d); ersetze eine davon durch ein klar anderes Instrument, etwa die Geige oder die Trommel.'
+      - 'Klein: Jodeln wird oft mit Schwyzerörgeli oder Handorgel begleitet, und die Erklärung nennt das
+        selbst. Formuliere die Frage deshalb eindeutiger, etwa «Welches Instrument braucht man zum Jodeln
+        selbst?» oder «Womit jodelt man?».'
+      - 'Klein: Die Frage ist sprachlich etwas holprig; besser wäre «Was ist beim Jodeln das Instrument?».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

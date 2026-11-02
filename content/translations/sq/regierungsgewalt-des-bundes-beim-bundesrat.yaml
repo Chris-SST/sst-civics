@@ -1,0 +1,30 @@
+id: regierungsgewalt-des-bundes-beim-bundesrat
+lang: sq
+source_version: 1
+question: Cili autoritet ushtron pushtetin më të lartë qeverisës në nivel të Konfederatës?
+options:
+  a: Këshilli Federal (Bundesrat)
+  b: Këshilli Kombëtar (Nationalrat)
+  c: Kancelaria Federale (Bundeskanzlei)
+  d: Gjykata Federale (Bundesgericht)
+explanation: Sipas Kushtetutës Federale, Këshilli Federal është autoriteti më i lartë drejtues dhe ekzekutiv
+  i Konfederatës. Parlamenti nxjerr ligjet, ndërsa Gjykata Federale zbaton drejtësinë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde übt die höchste leitende Gewalt auf Ebene des Bundes aus?
+    options_de:
+      a: Bundesrat
+      b: Nationalrat
+      c: Bundeskanzlei
+      d: Bundesgericht
+    explanation_de: Gemäss der Bundesverfassung ist der Bundesrat die oberste leitende und vollziehende
+      Behörde des Bundes. Das Parlament erlässt die Gesetze, während das Bundesgericht die Rechtsprechung
+      ausübt.

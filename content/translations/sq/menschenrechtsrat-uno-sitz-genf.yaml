@@ -1,0 +1,31 @@
+id: menschenrechtsrat-uno-sitz-genf
+lang: sq
+source_version: 1
+question: Në cilin qytet zvicerian ka selinë Këshilli i të Drejtave të Njeriut i Kombeve të Bashkuara
+  (OKB)?
+options:
+  a: Lozanë
+  b: Gjenevë
+  c: Bernë
+  d: Bazel
+explanation: Këshilli i të Drejtave të Njeriut i OKB-së mbledhet në Gjenevë. Gjeneva, krahas Nju Jorkut,
+  është një nga vendndodhjet më të rëndësishme të OKB-së dhe selia e shumë organizatave ndërkombëtare.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Schweizer Stadt hat der Menschenrechtsrat der Vereinten Nationen (UNO) seinen
+      Sitz?
+    options_de:
+      a: Lausanne
+      b: Genf
+      c: Bern
+      d: Basel
+    explanation_de: Der Menschenrechtsrat der UNO tagt in Genf. Genf ist neben New York einer der wichtigsten
+      Standorte der UNO und der Sitz vieler internationaler Organisationen.

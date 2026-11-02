@@ -1,0 +1,31 @@
+id: stimmrecht-bund-schweizer-buergerrecht
+lang: sq
+source_version: 1
+question: Cila është një kusht për të drejtën e votës dhe të zgjedhjes në nivel të Konfederatës?
+options:
+  a: Shtetësia (Bürgerrecht) zvicerane
+  b: Anëtarësimi në një parti politike
+  c: Të paktën dhjetë vjet banim në Zvicër
+  d: Një leje vendosjeje (leja C) (Niederlassungsbewilligung)
+explanation: Në nivel të Konfederatës mund të zgjedhin dhe të votojnë vetëm personat me shtetësi zvicerane.
+  Të huajt nuk kanë të drejtën e votës dhe të zgjedhjes në nivel të Konfederatës, as me një leje vendosjeje.
+  Anëtarësimi në parti nuk është i nevojshëm.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist eine Voraussetzung für das Stimm- und Wahlrecht auf Ebene des Bundes?
+    options_de:
+      a: Das Schweizer Bürgerrecht
+      b: Die Mitgliedschaft in einer politischen Partei
+      c: Mindestens zehn Jahre Wohnsitz in der Schweiz
+      d: Eine Niederlassungsbewilligung (Bewilligung C)
+    explanation_de: Auf Ebene des Bundes können nur Personen mit Schweizer Bürgerrecht wählen und abstimmen.
+      Ausländer haben auf Ebene des Bundes kein Stimm- und Wahlrecht, auch nicht mit einer Niederlassungsbewilligung.
+      Die Mitgliedschaft in einer Partei ist nicht notwendig.

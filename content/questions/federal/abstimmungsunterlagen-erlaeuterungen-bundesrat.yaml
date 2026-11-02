@@ -26,7 +26,7 @@ glossary:
 - Bundesrat
 - Stimmmaterial
 - Abstimmung
-status: in_review
+status: approved
 difficulty: 1
 checks:
   independent_answer:
@@ -47,3 +47,36 @@ checks:
     at: *id002
     model: claude-opus-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Zur Frage ist keine Tatsache aus der Themenliste angegeben, deshalb lässt sich der Umfang
+        nicht überprüfen; bitte die passende Tatsache ergänzen, etwa «Vor Abstimmungen erhalten die Stimmberechtigten
+        die Erläuterungen des Bundesrates».'
+      - 'Klein: Laut Art. 11 Abs. 3 BPR dürfen die Erläuterungen auch früher als das Stimmmaterial verschickt
+        werden; die Frage könnte deshalb neutraler «vor einer eidgenössischen Abstimmung per Post» statt
+        «zusammen mit dem Stimmmaterial» formulieren.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Es ist keine Tatsache aus der Themenliste angegeben, deshalb lässt sich der Umfang nicht
+        prüfen; bitte die passende Tatsache aus der Themenliste des Kantons ergänzen (z. B. zu den politischen
+        Rechten und Abstimmungen).'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Themenliste nennt keine Tatsache; die Frage ist aber durch Art. 11 BPR (Erläuterung
+        des Bundesrates) gut gestützt und gehört zum Grundwissen über Abstimmungen.'
+    round: 1
+    at: &id003 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id003

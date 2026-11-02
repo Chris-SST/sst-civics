@@ -1,0 +1,30 @@
+id: rav-aufgabe-stellensuchende-unterstuetzen
+lang: fr
+source_version: 1
+question: Quelle est la mission de l'Office régional de placement (ORP) ?
+options:
+  a: Il contrôle les salaires dans les entreprises
+  b: Il verse une rente à tous les habitants
+  c: Il soutient les personnes en recherche d'emploi dans leurs démarches et leur propose des places de
+    travail
+  d: Il établit des certificats de travail pour les personnes en recherche d'emploi
+explanation: L'ORP est le point de contact régional pour les personnes en recherche d'emploi. Il les conseille
+  et leur propose des places de travail. Dans le canton de Zurich, il fait partie de l'Office du travail.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die Aufgabe des Regionalen Arbeitsvermittlungszentrums (RAV)?
+    options_de:
+      a: Es kontrolliert die Löhne in den Unternehmen
+      b: Es zahlt allen Einwohnern eine Rente aus
+      c: Es unterstützt Stellensuchende bei ihren Schritten und schlägt ihnen Arbeitsstellen vor
+      d: Es stellt Arbeitszeugnisse für Stellensuchende aus
+    explanation_de: Das RAV ist die regionale Anlaufstelle für Stellensuchende. Es berät sie und schlägt
+      ihnen Arbeitsstellen vor. Im Kanton Zürich gehört es zum Amt für Arbeit.

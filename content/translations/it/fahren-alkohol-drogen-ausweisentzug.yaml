@@ -1,0 +1,32 @@
+id: fahren-alkohol-drogen-ausweisentzug
+lang: it
+source_version: 1
+question: Che cosa rischia una persona che guida un'automobile in stato di ebbrezza o sotto l'effetto
+  di stupefacenti?
+options:
+  a: La perdita del diritto di voto
+  b: L'espulsione dal comune di domicilio
+  c: La revoca dell'assicurazione malattia
+  d: La revoca della licenza di condurre
+explanation: Chi non è in grado di guidare mette in pericolo gli altri nella circolazione stradale. Per
+  questo l'autorità può revocare la licenza di condurre. A ciò possono aggiungersi anche multe o altre
+  pene.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was riskiert eine Person, die ein Auto in angetrunkenem Zustand oder unter Drogeneinfluss
+      lenkt?
+    options_de:
+      a: Den Verlust des Stimmrechts
+      b: Den Ausschluss aus der Wohngemeinde
+      c: Den Entzug der Krankenversicherung
+      d: Den Entzug des Führerausweises
+    explanation_de: Wer nicht fahrfähig ist, gefährdet andere im Strassenverkehr. Deshalb kann die Behörde
+      den Führerausweis entziehen. Dazu können auch Bussen oder andere Strafen hinzukommen.

@@ -1,0 +1,31 @@
+id: romandie-welschland-bedeutung
+lang: it
+source_version: 1
+question: Che cosa si intende con il termine «Romandia» o «Svizzera romanda»?
+options:
+  a: La parte della Svizzera di lingua italiana
+  b: La parte della Svizzera di lingua francese
+  c: La parte della Svizzera di lingua romancia
+  d: La parte della Svizzera di lingua tedesca
+explanation: Con Romandia o Svizzera romanda si indicano le regioni della Svizzera in cui si parla francese.
+  Ne fanno parte, per esempio, i Cantoni Ginevra e Vaud. La parte di lingua italiana è soprattutto il
+  Ticino.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was versteht man unter dem Begriff «Romandie» oder «Westschweiz»?
+    options_de:
+      a: Den italienischsprachigen Teil der Schweiz
+      b: Den französischsprachigen Teil der Schweiz
+      c: Den rätoromanischsprachigen Teil der Schweiz
+      d: Den deutschsprachigen Teil der Schweiz
+    explanation_de: Mit Romandie oder Westschweiz bezeichnet man die Regionen der Schweiz, in denen Französisch
+      gesprochen wird. Dazu gehören zum Beispiel die Kantone Genf und Waadt. Der italienischsprachige
+      Teil ist vor allem das Tessin.

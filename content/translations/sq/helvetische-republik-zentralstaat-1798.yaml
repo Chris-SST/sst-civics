@@ -1,0 +1,31 @@
+id: helvetische-republik-zentralstaat-1798
+lang: sq
+source_version: 1
+question: Çfarë ndodhi me Zvicrën në vitin 1798 nën ndikimin e Napoleon Bonapartit?
+options:
+  a: Ajo u bë pjesë e Perandorisë Gjermane.
+  b: Ajo u bë monarki me mbret të vet.
+  c: Ajo u nda përgjithmonë në dy shtete.
+  d: Ajo u bë përkohësisht shtet i centralizuar, Republika Helvetike.
+explanation: Në vitin 1798, pas hyrjes së trupave franceze, lindi Republika Helvetike. Ajo ishte një shtet
+  unitar i qeverisur në mënyrë të centralizuar dhe e zëvendësoi përkohësisht Konfederatën e vjetër. Kantonet
+  kishin vetëm pak të drejta të veta.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was geschah im Jahr 1798 unter dem Einfluss von Napoleon Bonaparte mit der Schweiz?
+    options_de:
+      a: Sie wurde Teil des Deutschen Reiches.
+      b: Sie wurde eine Monarchie mit einem eigenen König.
+      c: Sie wurde für immer in zwei Staaten aufgeteilt.
+      d: Sie wurde vorübergehend ein zentralisierter Staat, die Helvetische Republik.
+    explanation_de: Im Jahr 1798, nach dem Einmarsch der französischen Truppen, entstand die Helvetische
+      Republik. Sie war ein zentral regierter Einheitsstaat und ersetzte vorübergehend die alte Eidgenossenschaft.
+      Die Kantone hatten nur wenige eigene Rechte.

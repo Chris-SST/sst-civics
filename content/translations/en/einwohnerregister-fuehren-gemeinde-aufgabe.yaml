@@ -10,6 +10,22 @@ options:
 explanation: The commune keeps the register of the people who live in it. This is where you register,
   deregister or change your registration when you move. Criminal judgments, tax laws and cantonal roads
   are not part of this task.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aufgaben nimmt das Einwohneramt in Zürcher Gemeinden wahr?
+    options_de:
+      a: Es erlässt Strafurteile.
+      b: Es führt das Einwohnerregister der Gemeinde.
+      c: Es erteilt Baubewilligungen für Kantonsstrassen.
+      d: Es legt Steuergesetze fest.
+    explanation_de: Die Gemeinde führt das Register der Personen, die in ihr wohnen. Hier meldet man sich
+      an, ab oder ändert seine Anmeldung, wenn man umzieht. Strafurteile, Steuergesetze und Kantonsstrassen
+      gehören nicht zu dieser Aufgabe.

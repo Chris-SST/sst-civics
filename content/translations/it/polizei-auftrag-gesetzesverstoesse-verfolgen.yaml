@@ -1,0 +1,31 @@
+id: polizei-auftrag-gesetzesverstoesse-verfolgen
+lang: it
+source_version: 1
+question: Quale compito rientra nel mandato della polizia?
+options:
+  a: Perseguire le violazioni della legge
+  b: Svolgere le votazioni popolari
+  c: Emanare le leggi per il Paese
+  d: Pronunciare sentenze giudiziarie contro i autori di reati
+explanation: La polizia garantisce la sicurezza e l'ordine e persegue le violazioni della legge. Chiarisce
+  i reati e trasmette i risultati. Le leggi sono emanate dal Parlamento, le sentenze sono pronunciate
+  dai tribunali.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe gehört zum Auftrag der Polizei?
+    options_de:
+      a: Rechtsverletzungen verfolgen
+      b: Die Volksabstimmungen durchführen
+      c: Die Gesetze für das Land erlassen
+      d: Gerichtsurteile gegen die Urheber von Straftaten aussprechen
+    explanation_de: Die Polizei gewährleistet die Sicherheit und Ordnung und verfolgt die Rechtsverletzungen.
+      Sie klärt die Straftaten ab und leitet die Ergebnisse weiter. Die Gesetze werden vom Parlament erlassen,
+      die Urteile werden von den Gerichten ausgesprochen.

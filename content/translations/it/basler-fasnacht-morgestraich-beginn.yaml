@@ -1,0 +1,30 @@
+id: basler-fasnacht-morgestraich-beginn
+lang: it
+source_version: 1
+question: Che cosa succede durante il Morgestraich, l'inizio del Carnevale di Basilea?
+options:
+  a: Il sindaco consegna la chiave della città alla società del Carnevale.
+  b: I vicoli vengono illuminati a giorno e inizia uno spettacolo di fuochi d'artificio.
+  c: Le luci nei vicoli si spengono, poi iniziano a suonare pifferi e tamburi.
+  d: I carnevalisti lanciano coriandoli dalla torre della cattedrale e fanno suonare tutte le campane
+    delle chiese.
+explanation: Il Morgestraich inizia il lunedì dopo il Mercoledì delle Ceneri, alle quattro del mattino.
+  Allora le luci nei vicoli vengono spente. Subito dopo iniziano a suonare pifferi e tamburi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was geschieht während des Morgestraichs, des Beginns der Basler Fasnacht?
+    options_de:
+      a: Der Stadtpräsident übergibt den Schlüssel der Stadt der Fasnachtsgesellschaft.
+      b: Die Gassen werden taghell beleuchtet und es beginnt ein Feuerwerk.
+      c: Die Lichter in den Gassen werden gelöscht, dann beginnen Pfeifen und Trommeln zu spielen.
+      d: Die Fasnächtler werfen Konfetti vom Turm des Münsters und lassen alle Kirchenglocken läuten.
+    explanation_de: Der Morgestraich beginnt am Montag nach dem Aschermittwoch, um vier Uhr morgens. Dann
+      werden die Lichter in den Gassen gelöscht. Unmittelbar danach beginnen Pfeifen und Trommeln zu spielen.

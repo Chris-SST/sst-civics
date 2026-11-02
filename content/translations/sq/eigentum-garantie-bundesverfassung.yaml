@@ -1,0 +1,31 @@
+id: eigentum-garantie-bundesverfassung
+lang: sq
+source_version: 1
+question: Cila e drejtë themelore mbron në Zvicër shtëpitë, tokat dhe pasuritë e tjera të personave privatë?
+options:
+  a: Garancia e pronës
+  b: Liria e besimit dhe e ndërgjegjes
+  c: Liria e vendosjes
+  d: Liria e tubimit
+explanation: Kushtetuta Federale e garanton pronën në nenin 26. Shteti mund ta kufizojë pronën vetëm në
+  kushte të caktuara, për shembull me bazë ligjore dhe me dëmshpërblim të plotë në rast shpronësimi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht schützt in der Schweiz die Häuser, das Land und das übrige Vermögen
+      von Privatpersonen?
+    options_de:
+      a: Die Eigentumsgarantie
+      b: Die Glaubens- und Gewissensfreiheit
+      c: Die Niederlassungsfreiheit
+      d: Die Versammlungsfreiheit
+    explanation_de: Die Bundesverfassung garantiert das Eigentum in Artikel 26. Der Staat darf das Eigentum
+      nur unter bestimmten Bedingungen einschränken, zum Beispiel auf gesetzlicher Grundlage und mit voller
+      Entschädigung im Fall einer Enteignung.

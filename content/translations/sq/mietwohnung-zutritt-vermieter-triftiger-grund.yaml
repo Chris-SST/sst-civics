@@ -1,0 +1,31 @@
+id: mietwohnung-zutritt-vermieter-triftiger-grund
+lang: sq
+source_version: 1
+question: Në cilin rast duhet që qiramarrësit t'i lejojnë qiradhënësit hyrjen në banesë?
+options:
+  a: Asnjëherë, banesa është gjithmonë e mbrojtur
+  b: Kur ekziston një arsye e justifikuar
+  c: Vetëm kur qiradhënësi e kërkon, pa arsyetim
+  d: Në çdo kohë dhe pa njoftim paraprak
+explanation: Qiramarrësit duhet ta lejojnë hyrjen kur për këtë ekziston një arsye e justifikuar, për shembull
+  një riparim urgjent. Qiradhënësi duhet ta njoftojë vizitën me kohë dhe të tregojë konsideratë ndaj qiramarrësve.
+  Hyrja pa arsye nuk lejohet.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall müssen die Mieter dem Vermieter den Zutritt zur Wohnung erlauben?
+    options_de:
+      a: Nie, die Wohnung ist immer geschützt
+      b: Wenn ein berechtigter Grund besteht
+      c: Nur wenn der Vermieter es verlangt, ohne Begründung
+      d: Jederzeit und ohne vorherige Ankündigung
+    explanation_de: Die Mieter müssen den Zutritt erlauben, wenn dafür ein berechtigter Grund besteht,
+      zum Beispiel eine dringende Reparatur. Der Vermieter muss den Besuch rechtzeitig ankündigen und
+      Rücksicht auf die Mieter nehmen. Der Zutritt ohne Grund ist nicht erlaubt.

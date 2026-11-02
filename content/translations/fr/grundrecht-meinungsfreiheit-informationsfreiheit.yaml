@@ -1,0 +1,33 @@
+id: grundrecht-meinungsfreiheit-informationsfreiheit
+lang: fr
+source_version: 1
+question: Quel droit fondamental protège la liberté de se forger sa propre opinion et de s'informer à
+  partir de sources généralement accessibles ?
+options:
+  a: La liberté d'établissement
+  b: La liberté d'opinion et d'information
+  c: La liberté économique
+  d: La liberté de réunion
+explanation: La Constitution fédérale protège la liberté d'opinion et d'information à l'article 16. Toute
+  personne a le droit de se procurer librement des informations auprès de sources généralement accessibles.
+  C'est un fondement important de la démocratie.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht schützt die Freiheit, sich eine eigene Meinung zu bilden und sich
+      aus allgemein zugänglichen Quellen zu informieren?
+    options_de:
+      a: Die Niederlassungsfreiheit
+      b: Die Meinungs- und Informationsfreiheit
+      c: Die Wirtschaftsfreiheit
+      d: Die Versammlungsfreiheit
+    explanation_de: Die Bundesverfassung schützt die Meinungs- und Informationsfreiheit in Artikel 16.
+      Jede Person hat das Recht, Informationen aus allgemein zugänglichen Quellen frei zu beschaffen.
+      Das ist eine wichtige Grundlage der Demokratie.

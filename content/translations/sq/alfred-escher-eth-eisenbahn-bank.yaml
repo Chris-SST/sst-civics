@@ -1,0 +1,33 @@
+id: alfred-escher-eth-eisenbahn-bank
+lang: sq
+source_version: 2
+question: Për çfarë është i njohur politikani dhe sipërmarrësi zyrixhas Alfred Escher?
+options:
+  a: Ai udhëhoqi trupat zvicerane në Luftën e Sonderbundit.
+  b: Ai e shkroi vetëm, plotësisht, Kushtetutën e parë Federale.
+  c: Ai themeloi Kryqin e Kuq në Gjenevë.
+  d: Ai mbështeti ETH-në dhe ndërtimin e hekurudhave dhe themeloi bankën nga e cila u bë Credit Suisse.
+explanation: Alfred Escher u angazhua në shekullin e 19-të për themelimin e ETH-së së Cyrihut dhe për
+  ndërtimin e hekurudhave, sidomos të hekurudhës së Gotthardit. Në vitin 1856 ai themeloi Kreditanstalt-in
+  Zviceran (Schweizerische Kreditanstalt), që më vonë u bë Credit Suisse. Kjo bankë u pre në vitin 2023
+  nga UBS.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür ist der Zürcher Politiker und Unternehmer Alfred Escher bekannt?
+    options_de:
+      a: Er führte die Schweizer Truppen im Sonderbundskrieg an.
+      b: Er schrieb allein und vollständig die erste Bundesverfassung.
+      c: Er gründete das Rote Kreuz in Genf.
+      d: Er unterstützte die ETH und den Bau der Eisenbahnen und gründete die Bank, aus der die Credit
+        Suisse wurde.
+    explanation_de: Alfred Escher setzte sich im 19. Jahrhundert für die Gründung der ETH Zürich und für
+      den Bau der Eisenbahnen ein, besonders der Gotthardbahn. Im Jahr 1856 gründete er die Schweizerische
+      Kreditanstalt, die später zur Credit Suisse wurde. Diese Bank wurde im Jahr 2023 von der UBS übernommen.

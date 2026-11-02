@@ -1,15 +1,31 @@
 id: gemeinde-unterste-stufe-staatsaufbau
 lang: en
-source_version: 1
+source_version: 2
 question: Which level is at the very bottom of Switzerland's three-tier state structure?
 options:
   a: The commune (Gemeinde)
   b: The region
   c: The canton
-  d: The district
-explanation: 'Switzerland''s state structure has three tiers: the Confederation, the cantons and the communes.
-  The commune is the lowest tier and closest to the people. It carries out tasks that the Confederation
-  and the canton assign to it.'
-status: draft
-reviewed_by: null
-reviewed_at: null
+  d: The Confederation
+explanation: 'Switzerland is organised in three tiers: the Confederation, the cantons and the communes.
+  The commune is the lowest tier and the closest to the people. It carries out many tasks itself, for
+  example primary school, building permits or social assistance.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Ebene steht im dreistufigen Staatsaufbau der Schweiz ganz unten?
+    options_de:
+      a: Die Gemeinde
+      b: Die Region
+      c: Der Kanton
+      d: Der Bund
+    explanation_de: 'Die Schweiz ist in drei Ebenen organisiert: den Bund, die Kantone und die Gemeinden.
+      Die Gemeinde ist die unterste Ebene und steht den Menschen am nächsten. Sie erledigt viele Aufgaben
+      selbst, zum Beispiel die Primarschule, Baubewilligungen oder die Sozialhilfe.'

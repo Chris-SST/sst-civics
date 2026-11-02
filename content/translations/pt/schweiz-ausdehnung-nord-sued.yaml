@@ -1,0 +1,29 @@
+id: schweiz-ausdehnung-nord-sued
+lang: pt
+source_version: 1
+question: Qual é, aproximadamente, a distância na Suíça entre o ponto mais a norte e o ponto mais a sul?
+options:
+  a: cerca de 650 quilómetros
+  b: cerca de 220 quilómetros
+  c: cerca de 120 quilómetros
+  d: cerca de 450 quilómetros
+explanation: A Suíça mede cerca de 220 quilómetros de norte a sul. É, portanto, um país pequeno.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie gross ist ungefähr die Entfernung in der Schweiz zwischen dem nördlichsten und dem
+      südlichsten Punkt?
+    options_de:
+      a: etwa 650 Kilometer
+      b: etwa 220 Kilometer
+      c: etwa 120 Kilometer
+      d: etwa 450 Kilometer
+    explanation_de: Die Schweiz misst von Norden nach Süden etwa 220 Kilometer. Sie ist also ein kleines
+      Land.

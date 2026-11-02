@@ -1,0 +1,34 @@
+id: finanzausgleich-hilfe-schwache-gemeinden
+lang: tr
+source_version: 1
+question: Zürich kantonundaki belediyeler (Gemeinden) arasındaki mali denkleştirme (Finanzausgleich) ne
+  işe yarar?
+options:
+  a: Tüm belediyelerde vergileri aynı orana düşürür.
+  b: Belediyelere belediye halk toplantıları (Gemeindeversammlungen) için oluşan giderleri öder.
+  c: Mali açıdan zayıf olan veya yüksek sosyal giderlerin yükü altındaki belediyelerin görevlerini yerine
+    getirmelerine yardımcı olur.
+  d: Konfederasyonun parasını tüm sakinlere eşit şekilde dağıtır.
+explanation: Belediyelerin mali olanakları birbirinden çok farklıdır. Mali denkleştirme bu farkları kısmen
+  giderir. Böylece vergi gücü az olan veya sosyal giderleri yüksek olan belediyeler de görevlerini yerine
+  getirebilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient der Finanzausgleich zwischen den Gemeinden im Kanton Zürich?
+    options_de:
+      a: Er senkt die Steuern in allen Gemeinden auf denselben Satz.
+      b: Er bezahlt den Gemeinden die Kosten, die für die Gemeindeversammlungen anfallen.
+      c: Er hilft finanziell schwachen Gemeinden oder Gemeinden, die unter der Last hoher Sozialausgaben
+        stehen, ihre Aufgaben zu erfüllen.
+      d: Er verteilt das Geld des Bundes gleichmässig an alle Einwohnerinnen und Einwohner.
+    explanation_de: Die finanziellen Möglichkeiten der Gemeinden sind sehr unterschiedlich. Der Finanzausgleich
+      gleicht diese Unterschiede teilweise aus. So können auch Gemeinden mit geringer Steuerkraft oder
+      hohen Sozialausgaben ihre Aufgaben erfüllen.

@@ -1,0 +1,31 @@
+id: primarschule-gehoert-zur-schulpflicht
+lang: sq
+source_version: 2
+question: Cila nga këto shkallë i përket shkollimit të detyrueshëm në Zvicër?
+options:
+  a: Shkolla e lartë (Hochschule)
+  b: Shkolla fillore
+  c: Grupi i lojërave (Spielgruppe)
+  d: Shkolla profesionale (Berufsfachschule)
+explanation: 'Në kantonin Zürich shkollimi i detyrueshëm zgjat njëmbëdhjetë vjet: kopshti, shkolla fillore
+  dhe shkalla e mesme I. Grupi i lojërave për fëmijët e vegjël është vullnetar. Shkollën profesionale
+  dhe shkollën e lartë i ndjek njeriu vetëm pas shkollimit të detyrueshëm.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche dieser Stufen gehört in der Schweiz zur obligatorischen Schulzeit?
+    options_de:
+      a: Die Hochschule
+      b: Die Primarschule
+      c: Die Spielgruppe
+      d: Die Berufsfachschule
+    explanation_de: 'Im Kanton Zürich dauert die obligatorische Schulzeit elf Jahre: Kindergarten, Primarschule
+      und Sekundarstufe I. Die Spielgruppe für Kleinkinder ist freiwillig. Die Berufsfachschule und die
+      Hochschule besucht man erst nach der obligatorischen Schulzeit.'

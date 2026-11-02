@@ -1,0 +1,34 @@
+id: schwingen-schweizer-traditionssport
+lang: sq
+source_version: 2
+question: Cili sport tradicional në Zvicër është një lloj lufte e lirë (mundjeje)?
+options:
+  a: Hornussen
+  b: Schwingen
+  c: Curling
+  d: Steinstossen
+explanation: 'Schwingen është një mundje midis dy personave në një fushë të rrumbullakët me tallash dhe
+  konsiderohet sport tradicional zviceran. Hornussen dhe Steinstossen janë gjithashtu sporte të vjetra
+  zvicerane, por nuk janë mundje: te Hornussen goditet një disk i vogël që fluturon larg nëpër ajër, ndërsa
+  te Steinstossen hidhet një gur i rëndë. Curling luhet mbi akull dhe e ka origjinën nga Skocia.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welcher traditionelle Sport in der Schweiz ist eine Art freier Kampf (Ringen)?
+    options_de:
+      a: Hornussen
+      b: Schwingen
+      c: Curling
+      d: Steinstossen
+    explanation_de: 'Schwingen ist ein Ringkampf zwischen zwei Personen auf einem runden Platz mit Sägemehl
+      und gilt als traditioneller Schweizer Sport. Hornussen und Steinstossen sind ebenfalls alte Schweizer
+      Sportarten, aber sie sind kein Ringen: Beim Hornussen wird eine kleine Scheibe geschlagen, die weit
+      durch die Luft fliegt, während beim Steinstossen ein schwerer Stein geworfen wird. Curling wird
+      auf dem Eis gespielt und hat seinen Ursprung in Schottland.'

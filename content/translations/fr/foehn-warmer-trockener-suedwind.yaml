@@ -1,0 +1,29 @@
+id: foehn-warmer-trockener-suedwind
+lang: fr
+source_version: 1
+question: Qu'est-ce que le foehn ?
+options:
+  a: Un vent froid et humide venant du nord
+  b: Un vent froid venant de l'est en hiver
+  c: Une forte pluie au printemps
+  d: Un vent chaud et sec venant du sud
+explanation: Le foehn est un vent descendant chaud et sec qui souffle dans les Alpes surtout depuis le
+  sud. Il peut faire monter rapidement les températures et rendre la visibilité très bonne.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist der Föhn?
+    options_de:
+      a: Ein kalter und feuchter Wind aus dem Norden
+      b: Ein kalter Wind aus dem Osten im Winter
+      c: Ein starker Regen im Frühling
+      d: Ein warmer und trockener Wind aus dem Süden
+    explanation_de: Der Föhn ist ein warmer und trockener Fallwind, der in den Alpen vor allem aus dem
+      Süden weht. Er kann die Temperaturen schnell ansteigen lassen und die Sicht sehr gut machen.

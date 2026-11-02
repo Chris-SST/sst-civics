@@ -1,0 +1,31 @@
+id: dienstpflicht-nur-maenner-bis-alter
+lang: tr
+source_version: 1
+question: İsviçre'de belirli bir yaşa kadar askerlik hizmeti veya yedek hizmet (alternatif hizmet) yapmakla
+  yükümlü olan kimdir?
+options:
+  a: Yalnızca erkekler
+  b: Kadınlar ve erkekler eşit ölçüde
+  c: Yalnızca eğitim görmüş kişiler
+  d: Yalnızca bir belediyede (Gemeinde) görevi olan kişiler
+explanation: İsviçre'de hizmet yükümlülüğü yalnızca erkekler için geçerlidir. Kadınlar için askerlik hizmeti
+  gönüllüdür. Yükümlülük, yasayla belirlenmiş bir yaşa kadar sürer.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz bis zu einem bestimmten Alter verpflichtet, Militärdienst oder
+      Ersatzdienst (Alternativdienst) zu leisten?
+    options_de:
+      a: Nur Männer
+      b: Frauen und Männer im gleichen Mass
+      c: Nur Personen, die eine Ausbildung genossen haben
+      d: Nur Personen, die in einer Gemeinde ein Amt haben
+    explanation_de: In der Schweiz gilt die Dienstpflicht nur für Männer. Für Frauen ist der Militärdienst
+      freiwillig. Die Verpflichtung dauert bis zu einem gesetzlich festgelegten Alter.

@@ -20,7 +20,7 @@ sources:
 glossary:
 - politische Gemeinde
 - Gemeindefusion
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-057
@@ -41,3 +41,35 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der letzte Satz der Erklärung «Darum ist der Stand wichtig» ist unklar; besser: «Darum
+        nennt die Frage ein bestimmtes Jahr. Heute (2026) sind es etwas weniger, rund 2100.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «Darum ist der Stand wichtig.» ist unklar; besser wäre «Darum fragt die Frage
+        nach dem Stand Ende 2021.»'
+      - 'Klein: Die Erklärung könnte ergänzen, dass es Ende 2021 genau etwa 2150 Gemeinden waren und es
+        heute (2026) nur noch rund 2100 sind, damit niemand die Zahl für den heutigen Stand hält.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der letzte Satz der Erklärung («Darum ist der Stand wichtig.») ist vage; besser wäre ein
+        Hinweis wie «Darum nennt die Frage das Jahr 2021; heute sind es etwas weniger Gemeinden.»'
+      - 'Klein: Genau waren es Ende 2021 rund 2150 Gemeinden, «rund 2200» entspricht aber der Themenliste
+        und der Broschüre und ist von den anderen Antworten klar abgegrenzt.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,31 @@
+id: uno-beitritt-der-schweiz-jahr
+lang: pt
+source_version: 1
+question: Em que ano a Suíça se tornou membro das Nações Unidas (ONU)?
+options:
+  a: '2002'
+  b: '1945'
+  c: '1986'
+  d: '2010'
+explanation: A Suíça aderiu à ONU em 2002, depois de o povo e os cantões terem aprovado a adesão. Foi,
+  assim, um dos últimos países a aderir. No entanto, muitas organizações da ONU têm sede em Genebra há
+  muito tempo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr wurde die Schweiz Mitglied der Vereinten Nationen (UNO)?
+    options_de:
+      a: '2002'
+      b: '1945'
+      c: '1986'
+      d: '2010'
+    explanation_de: Die Schweiz trat 2002 der UNO bei, nachdem das Volk und die Kantone den Beitritt gutgeheissen
+      hatten. Sie war somit eines der letzten Länder, die beitraten. Dennoch haben viele Organisationen
+      der UNO seit langer Zeit ihren Sitz in Genf.

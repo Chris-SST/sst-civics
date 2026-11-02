@@ -1,0 +1,31 @@
+id: wo-wohnt-die-mehrheit-der-bevoelkerung
+lang: tr
+source_version: 2
+question: İsviçre'nin hangi bölgesinde nüfusun çoğunluğu yaşamaktadır?
+options:
+  a: Alplerde
+  b: Ticino'da
+  c: Mittelland'da (Orta Bölge)
+  d: Jura'da
+explanation: Mittelland (Orta Bölge), Jura ile Alpler arasında yer alır. Büyük şehirlerin çoğu burada
+  bulunur ve nüfusun büyük bölümü burada yaşar. Alpler geniş bir alanı kaplasa da nüfus yoğunluğu çok
+  düşüktür.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welcher Region der Schweiz lebt die Mehrheit der Bevölkerung?
+    options_de:
+      a: In den Alpen
+      b: Im Tessin
+      c: Im Mittelland
+      d: Im Jura
+    explanation_de: Das Mittelland liegt zwischen dem Jura und den Alpen. Die meisten grossen Städte befinden
+      sich hier, und der grösste Teil der Bevölkerung lebt hier. Obwohl die Alpen eine grosse Fläche einnehmen,
+      ist die Bevölkerungsdichte sehr gering.

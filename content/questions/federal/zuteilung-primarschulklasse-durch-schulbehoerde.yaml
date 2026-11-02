@@ -23,7 +23,7 @@ glossary:
 - Schulpflege
 - Schulleitung
 - Primarschule
-status: draft
+status: approved
 difficulty: 2
 covers:
 - zh-160
@@ -34,6 +34,48 @@ checks:
     model: claude-sonnet-5-5
     at: 2026-11-02
     version: 1
-    reasoning: Im Kanton Zürich teilt die Schulbehörde (Schulpflege) bzw. in ihrem Auftrag die Schulleitung
-      die Kinder den Klassen zu, während weder der Bund noch die Gemeindeversammlung noch die Eltern darüber
-      entscheiden.
+    reasoning: Im Kanton Zürich teilen die kommunalen Schulbehörden (Schulpflege bzw. Schulleitung, je
+      nach Gemeindeorganisation) die Kinder den Klassen zu, weder der Bund noch die Gemeindeversammlung
+      noch die Eltern entscheiden darüber.
+  source:
+    verdict: supported
+    note: Quelle 1 (§ 25 VSV, Rekursentscheid) zeigt, dass die Schulpflege bzw. Schulleitung Kinder Schulen
+      und Klassen zuteilt und dass kein Anspruch auf freie Wahl von Schulhaus oder Klasse besteht. Quelle
+      2 (§ 62 VSV) sagt, dass Eltern bei der Zuteilung zu einer Schule oder Klasse nicht mitwirken, und
+      Quelle 3 nennt Schulbehörde und Schulleitung bei der Klassenbildung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte ergänzen, dass Eltern zwar ein begründetes Gesuch stellen können,
+        aber keinen Anspruch auf eine bestimmte Klasse haben (VSV § 62 Abs. 2). Vorschlag: «Die Eltern
+        können einen Wunsch äussern, aber die Klasse nicht frei wählen.»'
+      - 'Klein: Ein «Bildungsdepartement des Bundes» gibt es unter diesem Namen nicht (zuständig wäre
+        das WBF). Als falsche Antwort ist es trotzdem klar falsch. Vorschlag für eine plausiblere Formulierung:
+        «Der Bund».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Ein «Bildungsdepartement des Bundes» gibt es so nicht (zuständig ist das WBF); besser
+        einfach «Der Bund» schreiben, damit die falsche Antwort keine erfundene Behörde nennt.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das «Bildungsdepartement des Bundes» gibt es so nicht, weil die Volksschule Sache der
+        Kantone ist. Die Antwort ist dadurch leicht auszuschliessen. Besser wäre ein real existierendes
+        Amt, zum Beispiel «Die Bildungsdirektion des Kantons Zürich».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

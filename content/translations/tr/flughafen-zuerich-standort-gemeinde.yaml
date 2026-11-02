@@ -1,0 +1,31 @@
+id: flughafen-zuerich-standort-gemeinde
+lang: tr
+source_version: 2
+question: Zürich Havalimanı bu belediyelerden (Gemeinde) hangisinin sınırları içinde yer almaktadır?
+options:
+  a: Winterthur
+  b: Kloten
+  c: Uster
+  d: Dübendorf
+explanation: Zürich Havalimanı büyük ölçüde Zürcher Unterland bölgesindeki Kloten kentinin sınırları içinde
+  yer almaktadır. Bu nedenle birçok kişi «Kloten Havalimanı» da der. Dübendorf'ta ise başka bir havaalanı
+  bulunmaktadır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In den Grenzen welcher dieser Gemeinden liegt der Flughafen Zürich?
+    options_de:
+      a: Winterthur
+      b: Kloten
+      c: Uster
+      d: Dübendorf
+    explanation_de: Der Flughafen Zürich liegt zum grössten Teil in den Grenzen der Stadt Kloten in der
+      Region Zürcher Unterland. Deshalb sagen viele Leute auch «Flughafen Kloten». In Dübendorf hingegen
+      befindet sich ein anderer Flugplatz.

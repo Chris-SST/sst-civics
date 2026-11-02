@@ -1,0 +1,30 @@
+id: zuerich-groesste-staedte-einwohnerzahl
+lang: sq
+source_version: 1
+question: Cilat janë tri qytetet më të mëdha sipas numrit të banorëve në kantonin e Cyrihut?
+options:
+  a: Cyrihu, Uster dhe Wetzikon
+  b: Cyrihu, Dietikon dhe Winterthur
+  c: Cyrihu, Winterthur dhe Uster
+  d: Cyrihu, Winterthur dhe Dübendorf
+explanation: Cyrihu është qyteti më i madh me një diferencë të madhe, pas tij vijnë Winterthur dhe Uster.
+  Dübendorf, Dietikon dhe Wetzikon janë gjithashtu qytete mjaft të mëdha, por kanë më pak banorë se Uster.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches sind die drei grössten Städte nach Einwohnerzahl im Kanton Zürich?
+    options_de:
+      a: Zürich, Uster und Wetzikon
+      b: Zürich, Dietikon und Winterthur
+      c: Zürich, Winterthur und Uster
+      d: Zürich, Winterthur und Dübendorf
+    explanation_de: Zürich ist mit grossem Abstand die grösste Stadt, danach folgen Winterthur und Uster.
+      Dübendorf, Dietikon und Wetzikon sind ebenfalls recht grosse Städte, haben aber weniger Einwohner
+      als Uster.

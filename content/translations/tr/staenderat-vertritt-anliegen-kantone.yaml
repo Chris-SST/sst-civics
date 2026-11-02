@@ -1,0 +1,29 @@
+id: staenderat-vertritt-anliegen-kantone
+lang: tr
+source_version: 1
+question: Parlamentonun hangi meclisi esas olarak kantonların çıkarlarını temsil eder?
+options:
+  a: Federal Konsey (Bundesrat)
+  b: Ulusal Konsey (Nationalrat)
+  c: Kantonlar Konseyi (Ständerat)
+  d: Federal Mahkeme (Bundesgericht)
+explanation: Kantonlar Konseyi esas olarak kantonları temsil eder. Her kanton bu meclise temsilciler gönderir.
+  Ulusal Konsey ise buna karşılık halkı temsil eder.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Kammer des Parlaments vertritt hauptsächlich die Interessen der Kantone?
+    options_de:
+      a: Bundesrat
+      b: Nationalrat
+      c: Ständerat
+      d: Bundesgericht
+    explanation_de: Der Ständerat vertritt hauptsächlich die Kantone. Jeder Kanton schickt Vertreter in
+      diese Kammer. Der Nationalrat hingegen vertritt das Volk.

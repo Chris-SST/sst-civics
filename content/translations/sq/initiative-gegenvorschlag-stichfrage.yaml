@@ -1,0 +1,33 @@
+id: initiative-gegenvorschlag-stichfrage
+lang: sq
+source_version: 1
+question: Për një nismë popullore (Volksinitiative) dhe një kundërpropozim të drejtpërdrejtë të Kuvendit
+  Federal (Bundesversammlung) votohet në të njëjtën kohë. Për çfarë shërben këtu pyetja vendimtare?
+options:
+  a: Ajo vendos nëse votimi duhet përsëritur
+  b: Ajo vendos nëse nisma është e vlefshme
+  c: Ajo vendos se cili propozim vlen, nëse pranohen të dyja
+  d: Ajo vendos nëse kantonet lejohen të votojnë bashkë
+explanation: Qytetarët me të drejtë vote mund t'i miratojnë si nismën, ashtu edhe kundërpropozimin. Me
+  pyetjen vendimtare ata tregojnë se cili nga dy propozimet duhet të hyjë në fuqi, nëse pranohen të dyja.
+  Kështu nuk humbet asnjë votë për një ndryshim.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Über eine Volksinitiative und einen direkten Gegenentwurf der Bundesversammlung wird
+      gleichzeitig abgestimmt. Wozu dient hier die Stichfrage?
+    options_de:
+      a: Sie entscheidet, ob die Abstimmung wiederholt werden muss
+      b: Sie entscheidet, ob die Initiative gültig ist
+      c: Sie entscheidet, welcher Vorschlag gilt, wenn beide angenommen werden
+      d: Sie entscheidet, ob die Kantone gemeinsam abstimmen dürfen
+    explanation_de: Die stimmberechtigten Bürgerinnen und Bürger können sowohl der Initiative als auch
+      dem Gegenentwurf zustimmen. Mit der Stichfrage geben sie an, welcher der beiden Vorschläge in Kraft
+      treten soll, wenn beide angenommen werden. So geht keine Stimme für eine Änderung verloren.

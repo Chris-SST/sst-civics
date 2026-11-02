@@ -1,0 +1,32 @@
+id: kantone-eigene-verwaltung-und-recht
+lang: es
+source_version: 2
+question: ¿Cuál es una de las tareas de los cantones?
+options:
+  a: Determinan la política exterior y la moneda de Suiza.
+  b: Dictan las leyes para todo el país.
+  c: Dirigen el ejército y determinan los aranceles.
+  d: Dirigen su propia administración y dictan el derecho cantonal.
+explanation: Cada cantón tiene su propio gobierno, su propio parlamento y su propia administración. Hace
+  sus propias leyes, que solo rigen en el cantón, por ejemplo para las escuelas o la policía. La política
+  exterior, la moneda, el ejército, los aranceles y las leyes para toda Suiza son competencia de la Confederación.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was ist eine der Aufgaben der Kantone?
+    options_de:
+      a: Sie bestimmen die Aussenpolitik und die Währung der Schweiz.
+      b: Sie erlassen die Gesetze für das ganze Land.
+      c: Sie führen die Armee und bestimmen die Zölle.
+      d: Sie führen ihre eigene Verwaltung und erlassen das kantonale Recht.
+    explanation_de: Jeder Kanton hat seine eigene Regierung, sein eigenes Parlament und seine eigene Verwaltung.
+      Er macht seine eigenen Gesetze, die nur im Kanton gelten, zum Beispiel für die Schulen oder die
+      Polizei. Die Aussenpolitik, die Währung, die Armee, die Zölle und die Gesetze für die ganze Schweiz
+      sind Sache des Bundes.

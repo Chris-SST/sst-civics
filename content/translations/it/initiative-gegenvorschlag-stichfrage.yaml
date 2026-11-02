@@ -1,0 +1,33 @@
+id: initiative-gegenvorschlag-stichfrage
+lang: it
+source_version: 1
+question: Si vota contemporaneamente su un'iniziativa popolare (Volksinitiative) e su un controprogetto
+  diretto dell'Assemblea federale (Bundesversammlung). A cosa serve in questo caso la domanda risolutiva?
+options:
+  a: Decide se la votazione deve essere ripetuta
+  b: Decide se l'iniziativa è valida
+  c: Decide quale progetto è applicabile se entrambi vengono accettati
+  d: Decide se i Cantoni possono partecipare al voto
+explanation: Gli aventi diritto di voto possono approvare sia l'iniziativa sia il controprogetto. Con
+  la domanda risolutiva indicano quale dei due progetti deve entrare in vigore, nel caso in cui entrambi
+  vengano accettati. In questo modo nessun voto a favore di una modifica va perso.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Es wird gleichzeitig über eine Volksinitiative und über einen direkten Gegenentwurf der
+      Bundesversammlung abgestimmt. Wozu dient in diesem Fall die Stichfrage?
+    options_de:
+      a: Sie entscheidet, ob die Abstimmung wiederholt werden muss
+      b: Sie entscheidet, ob die Initiative gültig ist
+      c: Sie entscheidet, welche Vorlage gilt, wenn beide angenommen werden
+      d: Sie entscheidet, ob die Kantone an der Abstimmung teilnehmen dürfen
+    explanation_de: Die Stimmberechtigten können sowohl der Initiative als auch dem Gegenentwurf zustimmen.
+      Mit der Stichfrage geben sie an, welche der beiden Vorlagen in Kraft treten soll, falls beide angenommen
+      werden. Auf diese Weise geht keine Stimme für eine Änderung verloren.

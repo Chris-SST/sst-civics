@@ -1,0 +1,31 @@
+id: schulpflicht-beginn-kindergarten-zuerich
+lang: it
+source_version: 1
+question: Con quale evento inizia, nel Cantone di Zurigo, l'obbligo scolastico di un bambino?
+options:
+  a: Con l'ingresso nella scuola secondaria
+  b: Con l'ingresso nella scuola elementare
+  c: Con l'ingresso nel gruppo di gioco
+  d: Con l'ingresso nella scuola dell'infanzia
+explanation: Nel Cantone di Zurigo la scuola dell'infanzia fa parte della scuola dell'obbligo (Volksschule).
+  L'obbligo scolastico inizia quindi già con l'ingresso nella scuola dell'infanzia. Il gruppo di gioco
+  è facoltativo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Mit welchem Ereignis beginnt im Kanton Zürich die Schulpflicht eines Kindes?
+    options_de:
+      a: Mit dem Eintritt in die Sekundarschule
+      b: Mit dem Eintritt in die Primarschule
+      c: Mit dem Eintritt in die Spielgruppe
+      d: Mit dem Eintritt in den Kindergarten
+    explanation_de: Im Kanton Zürich ist der Kindergarten Teil der obligatorischen Schule (Volksschule).
+      Die Schulpflicht beginnt somit bereits mit dem Eintritt in den Kindergarten. Die Spielgruppe ist
+      freiwillig.

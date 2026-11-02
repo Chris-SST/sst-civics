@@ -1,0 +1,30 @@
+id: kanton-zuerich-heutige-form-1803
+lang: it
+source_version: 1
+question: In quale anno è nato il Cantone di Zurigo nella sua forma attuale?
+options:
+  a: '1291'
+  b: '1519'
+  c: '1848'
+  d: '1803'
+explanation: Il Cantone di Zurigo è stato creato nella sua forma attuale nel 1803 con l'Atto di Mediazione.
+  Il giubileo è stato celebrato nel 2003 come 200 anni del Cantone di Zurigo. Nel 1848 è nato l'attuale
+  Stato federale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr ist der Kanton Zürich in seiner heutigen Form entstanden?
+    options_de:
+      a: '1291'
+      b: '1519'
+      c: '1848'
+      d: '1803'
+    explanation_de: Der Kanton Zürich wurde 1803 mit der Mediationsakte in seiner heutigen Form geschaffen.
+      Das Jubiläum wurde 2003 als 200 Jahre Kanton Zürich gefeiert. 1848 ist der heutige Bundesstaat entstanden.

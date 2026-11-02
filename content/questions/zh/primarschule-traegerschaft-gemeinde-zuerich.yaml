@@ -1,17 +1,18 @@
 id: primarschule-traegerschaft-gemeinde-zuerich
-version: 1
+version: 2
 scope: zh
 canton: zh
 topic: gemeinde.leistungen
 question_de: Wer betreibt im Kanton Zürich die Schulen der Primarstufe?
 options_de:
-  a: Die Bildungsdirektion des Kantons als Schulleitung jeder Schule
+  a: Die Bildungsdirektion des Kantons
   b: Der Bund
-  c: Die politische Gemeinde bzw. die Schulgemeinde vor Ort
-  d: Die Bezirksverwaltung
+  c: Die Gemeinden
+  d: Die Bezirke
 correct: c
-explanation_de: Die Primarschule ist im Kanton Zürich eine Aufgabe der Gemeinden. Sie führen die Schulen
-  vor Ort und stellen die Schulbehörde. Der Kanton legt den Rahmen fest und beaufsichtigt die Volksschule.
+explanation_de: Im Kanton Zürich betreiben die Gemeinden die Primarschulen. Das sind je nach Ort die politischen
+  Gemeinden oder eigene Schulgemeinden, und die gewählte Schulpflege ist die Schulbehörde vor Ort. Der
+  Kanton gibt nur den Rahmen vor, zum Beispiel den Lehrplan, und beaufsichtigt die Volksschule.
 sources:
 - url: https://www.zh.ch/de/bildung/schulen/volksschule/rechte-und-pflichten-der-eltern.html
   checked: 2026-11-02
@@ -21,7 +22,7 @@ glossary:
 - Primarstufe
 - Gemeinde
 - Volksschule
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-117
@@ -31,17 +32,46 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Im Kanton Zürich sind die Gemeinden (politische Gemeinden bzw. Schulgemeinden) Träger der
-      Volksschule und betreiben die Primarschulen, während der Kanton nur die Aufsicht und die Rahmenbedingungen
-      festlegt.
+    version: 2
+    reasoning: Im Kanton Zürich sind die Gemeinden (Schulgemeinden bzw. politische Gemeinden) Trägerinnen
+      und Betreiberinnen der Volksschule und damit der Primarstufe, während der Kanton nur die Aufsicht
+      und die Rahmenbedingungen festlegt.
   source:
     verdict: supported
     note: Quelle 2 sagt, dass Schulgemeinden die Volksschulaufgaben erfüllen und dass politische Gemeinden
-      (Einheitsgemeinden) diese Aufgaben übernehmen, inklusive Schulpflege. Das stützt Antwort c. Dass
-      der Kanton den Rahmen festlegt und die Aufsicht führt, steht dort nicht ausdrücklich, ist für die
-      richtige Antwort aber nicht entscheidend. Quelle 1 behandelt Elternrechte und trägt dazu nichts
-      bei.
+      diese Aufgaben übernehmen, wenn es keine Schulgemeinde gibt (Einheitsgemeinde). Die Schulpflege
+      leitet das Schulwesen. Zur Rolle des Kantons (Lehrplan, Aufsicht) sagt die Seite nichts Ausdrückliches.
+      Das ist aber für die Antwort nicht entscheidend. Quelle 1 behandelt ein anderes Thema.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Der Kanton gibt nur den Rahmen vor» greift etwas zu kurz, weil der Kanton die Lehrpersonen
+        der Volksschule anstellt und einen Teil der Löhne zahlt; besser wäre «Der Kanton gibt den Rahmen
+        vor, zum Beispiel den Lehrplan, und beaufsichtigt die Volksschule».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «Der Kanton gibt nur den Rahmen vor» vereinfacht stark, weil der Kanton auch
+        einen Teil der Lehrerlöhne bezahlt; besser «Der Kanton gibt den Rahmen vor, zum Beispiel den Lehrplan,
+        und beaufsichtigt die Volksschule» ohne «nur».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte kurz erwähnen, dass die Gemeinden Schulträger sind, damit das Wort
+        «betreiben» im Zusammenhang klarer wird; das ist aber nicht zwingend.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

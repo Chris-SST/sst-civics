@@ -1,0 +1,33 @@
+id: kantone-eigene-verwaltung-und-recht
+lang: it
+source_version: 2
+question: Quale delle seguenti è un compito dei Cantoni?
+options:
+  a: Determinano la politica estera e la moneta della Svizzera.
+  b: Emanano le leggi per tutto il Paese.
+  c: Dirigono l'esercito e stabiliscono i dazi doganali.
+  d: Gestiscono la propria amministrazione ed emanano il diritto cantonale.
+explanation: Ogni Cantone ha un proprio governo, un proprio parlamento e una propria amministrazione.
+  Emana proprie leggi, che valgono solo nel Cantone, ad esempio per le scuole o la polizia. La politica
+  estera, la moneta, l'esercito, i dazi doganali e le leggi per tutta la Svizzera sono di competenza della
+  Confederazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche der folgenden Aufgaben gehört zu den Aufgaben der Kantone?
+    options_de:
+      a: Sie bestimmen die Aussenpolitik und die Währung der Schweiz.
+      b: Sie erlassen die Gesetze für das ganze Land.
+      c: Sie führen die Armee und legen die Zölle fest.
+      d: Sie führen ihre eigene Verwaltung und erlassen das kantonale Recht.
+    explanation_de: Jeder Kanton hat eine eigene Regierung, ein eigenes Parlament und eine eigene Verwaltung.
+      Er erlässt eigene Gesetze, die nur im Kanton gelten, zum Beispiel für die Schulen oder die Polizei.
+      Die Aussenpolitik, die Währung, die Armee, die Zölle und die Gesetze für die ganze Schweiz fallen
+      in die Zuständigkeit des Bundes.

@@ -1,0 +1,31 @@
+id: grundrecht-glaubens-gewissensfreiheit-schweiz
+lang: sq
+source_version: 1
+question: Cila e drejtë themelore mbrohet në Zvicër nga Kushtetuta Federale?
+options:
+  a: E drejta për një të ardhur nga shteti
+  b: E drejta për një makinë
+  c: E drejta për një vend pune
+  d: Liria e besimit dhe e ndërgjegjes
+explanation: Liria e besimit dhe e ndërgjegjes përcaktohet në nenin 15 të Kushtetutës Federale. Shteti
+  nuk mund ta detyrojë askënd të ketë një besim. E drejta për një vend pune ose për një të ardhur nuk
+  ekziston si e drejtë themelore.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht wird in der Schweiz von der Bundesverfassung geschützt?
+    options_de:
+      a: Das Recht auf ein Einkommen vom Staat
+      b: Das Recht auf ein Auto
+      c: Das Recht auf einen Arbeitsplatz
+      d: Die Glaubens- und Gewissensfreiheit
+    explanation_de: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung festgelegt.
+      Der Staat kann niemanden zwingen, einen Glauben zu haben. Das Recht auf einen Arbeitsplatz oder
+      auf ein Einkommen existiert nicht als Grundrecht.

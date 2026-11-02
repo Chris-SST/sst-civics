@@ -1,0 +1,31 @@
+id: demokratie-bevoelkerung-waehlt-parlament
+lang: it
+source_version: 1
+question: Quali diritti spettano alla popolazione in una democrazia come la Svizzera?
+options:
+  a: Nomina i giudici del Tribunale federale (Bundesgericht) tramite sorteggio.
+  b: Stabilisce le leggi da sola, senza il Parlamento.
+  c: Determina il proprio Parlamento attraverso le elezioni.
+  d: Elegge direttamente i vertici dell'esercito.
+explanation: In una democrazia la popolazione elegge i propri rappresentanti in Parlamento. A livello
+  federale si tratta del Consiglio nazionale (Nationalrat) e del Consiglio degli Stati (Ständerat). Il
+  Parlamento emana poi le leggi federali a nome del popolo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Rechte stehen der Bevölkerung in einer Demokratie wie der Schweiz zu?
+    options_de:
+      a: Sie ernennt die Richter des Bundesgerichts durch Losentscheid.
+      b: Sie legt die Gesetze allein fest, ohne das Parlament.
+      c: Sie bestimmt ihr eigenes Parlament durch Wahlen.
+      d: Sie wählt die Spitzen der Armee direkt.
+    explanation_de: In einer Demokratie wählt die Bevölkerung ihre Vertreter ins Parlament. Auf Bundesebene
+      sind dies der Nationalrat und der Ständerat. Das Parlament erlässt dann im Namen des Volkes die
+      Bundesgesetze.

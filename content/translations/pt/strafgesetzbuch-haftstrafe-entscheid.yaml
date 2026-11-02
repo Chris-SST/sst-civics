@@ -1,0 +1,31 @@
+id: strafgesetzbuch-haftstrafe-entscheid
+lang: pt
+source_version: 1
+question: De acordo com que lei se determina se uma pessoa tem de cumprir uma pena de prisão?
+options:
+  a: De acordo com o Código Civil
+  b: De acordo com o Código das Obrigações
+  c: De acordo com o direito do arrendamento
+  d: De acordo com o Código Penal
+explanation: O Código Penal determina quais os atos puníveis e quais as penas possíveis para esses atos.
+  Entre elas contam-se as penas pecuniárias e as penas privativas de liberdade. Quem decide sobre a pena
+  em cada caso concreto é um tribunal.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Nach welchem Gesetz wird bestimmt, ob eine Person eine Gefängnisstrafe verbüssen muss?
+    options_de:
+      a: Nach dem Zivilgesetzbuch
+      b: Nach dem Obligationenrecht
+      c: Nach dem Mietrecht
+      d: Nach dem Strafgesetzbuch
+    explanation_de: Das Strafgesetzbuch bestimmt, welche Handlungen strafbar sind und welche Strafen für
+      diese Handlungen möglich sind. Dazu gehören Geldstrafen und Freiheitsstrafen. Wer im konkreten Einzelfall
+      über die Strafe entscheidet, ist ein Gericht.

@@ -1,0 +1,31 @@
+id: arbeitsrecht-beratung-anlaufstellen
+lang: pt
+source_version: 1
+question: Quem pode ajudar em questões de direito do trabalho?
+options:
+  a: A Schulpflege (comissão escolar) e a paróquia
+  b: A advocacia, os sindicatos e os tribunais do trabalho
+  c: As empresas de transportes públicos e os correios
+  d: As conservatórias do registo civil e o controlo de residentes
+explanation: Em questões de direito do trabalho, existem vários pontos de contacto. Entre eles contam-se
+  advogadas e advogados, os sindicatos e os tribunais do trabalho. As outras entidades são responsáveis
+  por outras tarefas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann bei Fragen des Arbeitsrechts helfen?
+    options_de:
+      a: Die Schulpflege und die Kirchgemeinde
+      b: Die Anwaltschaft, die Gewerkschaften und die Arbeitsgerichte
+      c: Die Unternehmen des öffentlichen Verkehrs und die Post
+      d: Die Zivilstandsämter und die Einwohnerkontrolle
+    explanation_de: Bei Fragen des Arbeitsrechts gibt es mehrere Anlaufstellen. Dazu zählen Anwältinnen
+      und Anwälte, die Gewerkschaften und die Arbeitsgerichte. Die anderen Stellen sind für andere Aufgaben
+      zuständig.

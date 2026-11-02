@@ -1,0 +1,35 @@
+id: ungueltigkeit-volksinitiative-bundesversammlung
+lang: tr
+source_version: 1
+question: Hangi makam, örneğin konunun birliği ilkesini ihlal ettiği durumda, federal bir halk girişimini
+  (Volksinitiative) geçersiz ilan edebilir?
+options:
+  a: Federal Konsey (Bundesrat)
+  b: Federal Mahkeme (Bundesgericht)
+  c: Federal Meclis (Bundesversammlung)
+  d: Federal Kançılarya (Bundeskanzlei)
+explanation: Federal Anayasa uyarınca Federal Meclis, bir halk girişimi şekil birliğini, konunun birliğini
+  veya uluslararası hukukun emredici kurallarını ihlal ederse girişimi tamamen veya kısmen geçersiz ilan
+  eder. Federal Kançılarya ise buna karşın esas olarak biçimsel hususları inceler; örneğin yeterli sayıda
+  geçerli imzanın sunulup sunulmadığına bakar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde kann eine eidgenössische Volksinitiative (Volksinitiative) zum Beispiel
+      dann für ungültig erklären, wenn sie den Grundsatz der Einheit der Materie verletzt?
+    options_de:
+      a: Der Bundesrat
+      b: Das Bundesgericht
+      c: Die Bundesversammlung
+      d: Die Bundeskanzlei
+    explanation_de: Gemäss der Bundesverfassung erklärt die Bundesversammlung eine Volksinitiative ganz
+      oder teilweise für ungültig, wenn sie die Einheit der Form, die Einheit der Materie oder die zwingenden
+      Bestimmungen des Völkerrechts verletzt. Die Bundeskanzlei hingegen prüft hauptsächlich formale Gesichtspunkte;
+      sie schaut zum Beispiel, ob eine ausreichende Zahl gültiger Unterschriften eingereicht wurde.

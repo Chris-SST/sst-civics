@@ -1,0 +1,33 @@
+id: gewaltmonopol-des-staates
+lang: tr
+source_version: 2
+question: İsviçre'de prensip olarak kimler fiziksel güç kullanabilir?
+options:
+  a: Derneklerin görevlendirdiği özel güvenlik şirketleri
+  b: Kendini tehdit altında hisseden herkes
+  c: Yalnızca devlet
+  d: Kendi yurttaş milislerine sahip her belediye (Gemeinde)
+explanation: 'İsviçre''de şiddet tekeli devlete aittir: Prensip olarak yalnızca devlet fiziksel güç kullanabilir,
+  örneğin polis veya ordu aracılığıyla. Bir istisna meşru müdafaadır: Hukuka aykırı biçimde saldırıya
+  uğrayan kişi kendini orantılı bir şekilde savunabilir, ancak yalnızca tehdit altında hissetmek bunun
+  için yeterli değildir.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer darf in der Schweiz grundsätzlich physische Gewalt anwenden?
+    options_de:
+      a: Private Sicherheitsfirmen, die von Vereinen beauftragt werden
+      b: Jeder, der sich bedroht fühlt
+      c: Nur der Staat
+      d: Jede Gemeinde, die über eigene Bürgermilizen verfügt
+    explanation_de: 'In der Schweiz liegt das Gewaltmonopol beim Staat: Grundsätzlich darf nur der Staat
+      physische Gewalt anwenden, zum Beispiel durch die Polizei oder die Armee. Eine Ausnahme ist die
+      Notwehr: Wer rechtswidrig angegriffen wird, darf sich verhältnismässig verteidigen, aber sich nur
+      bedroht zu fühlen, reicht dafür nicht aus.'

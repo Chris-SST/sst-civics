@@ -10,6 +10,23 @@ options:
 explanation: Under the Federal Constitution, foreign policy is a matter for the Confederation. The cantons
   may cooperate with other countries within their own areas of responsibility, but overall responsibility
   lies with the Confederation.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz grundsätzlich für die Gestaltung der Beziehungen zu anderen Staaten
+      zuständig?
+    options_de:
+      a: Die Konferenz der Kantonsregierungen
+      b: Der Bund
+      c: Die Kantone gemeinsam
+      d: Die Gemeinden an der Grenze
+    explanation_de: Nach der Bundesverfassung ist die Aussenpolitik Sache des Bundes. Die Kantone können
+      im Rahmen ihrer eigenen Zuständigkeitsbereiche mit dem Ausland zusammenarbeiten, aber die Gesamtverantwortung
+      liegt beim Bund.

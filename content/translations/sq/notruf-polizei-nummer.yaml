@@ -1,0 +1,33 @@
+id: notruf-polizei-nummer
+lang: sq
+source_version: 1
+question: Cilin numër telefoni thirret në Zvicër kur në rast urgjence nevojitet policia?
+options:
+  a: '143'
+  b: '118'
+  c: '144'
+  d: '117'
+explanation: Policia mund të arrihet në të gjithë Zvicrën në numrin 117. Zjarrfikësit kanë numrin 118,
+  shërbimi i ndihmës së shpejtë mjekësore ka numrin 144. Numri 143 është numri i «Dargebotene Hand» (Dora
+  e shtrirë) për personat që ndodhen në krizë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Telefonnummer wird in der Schweiz angerufen, wenn im Notfall die Polizei benötigt
+      wird?
+    options_de:
+      a: '143'
+      b: '118'
+      c: '144'
+      d: '117'
+    explanation_de: Die Polizei kann in der ganzen Schweiz unter der Nummer 117 erreicht werden. Die Feuerwehr
+      hat die Nummer 118, der Rettungsdienst (der schnellen medizinischen Hilfe) hat die Nummer 144. Die
+      Nummer 143 ist die Nummer der «Dargebotenen Hand» (Die ausgestreckte Hand) für Personen, die sich
+      in einer Krise befinden.

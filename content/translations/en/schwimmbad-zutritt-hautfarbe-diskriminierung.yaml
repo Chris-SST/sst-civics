@@ -10,6 +10,22 @@ options:
   d: The right to marry and to have a family
 explanation: In Article 8, the Federal Constitution prohibits discrimination, for example on grounds of
   origin or race. No one may therefore be treated worse.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ein öffentliches Schwimmbad verweigert einer Person wegen ihrer Hautfarbe den Einlass.
+      Welcher Grundsatz der Bundesverfassung wird dadurch verletzt?
+    options_de:
+      a: Die Wirtschaftsfreiheit
+      b: Das Diskriminierungsverbot
+      c: Das Stimmrecht
+      d: Das Recht auf Ehe und Familie
+    explanation_de: Die Bundesverfassung verbietet in Artikel 8 Diskriminierung, zum Beispiel aufgrund
+      der Herkunft oder der Rasse. Niemand darf daher schlechter behandelt werden.

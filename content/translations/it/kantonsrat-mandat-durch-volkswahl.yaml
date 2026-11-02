@@ -1,0 +1,31 @@
+id: kantonsrat-mandat-durch-volkswahl
+lang: it
+source_version: 1
+question: Come ottengono il loro mandato i membri del Consiglio cantonale (Kantonsrat) di Zurigo?
+options:
+  a: Sono eletti dal popolo.
+  b: Sono designati dai consigli comunali (Gemeinderäte).
+  c: Sono nominati dal Consiglio di Stato (Regierungsrat).
+  d: Sono insediati dal Consiglio federale (Bundesrat).
+explanation: I membri del Consiglio cantonale sono eletti dagli aventi diritto di voto del Cantone in
+  un'elezione popolare. Il parlamento è quindi designato direttamente dal popolo. Né il governo né la
+  Confederazione insediano i membri.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie erhalten die Mitglieder des Kantonsrats von Zürich ihr Mandat?
+    options_de:
+      a: Sie werden vom Volk gewählt.
+      b: Sie werden von den Gemeinderäten bestimmt.
+      c: Sie werden vom Regierungsrat ernannt.
+      d: Sie werden vom Bundesrat eingesetzt.
+    explanation_de: Die Mitglieder des Kantonsrats werden von den Stimmberechtigten des Kantons in einer
+      Volkswahl gewählt. Das Parlament wird somit direkt vom Volk bestimmt. Weder die Regierung noch der
+      Bund setzen die Mitglieder ein.

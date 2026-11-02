@@ -1,9 +1,9 @@
 id: hoechster-gipfel-der-schweiz
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.geografie.landschaft
-question_de: Wie heisst der höchste Berggipfel, der ganz auf Schweizer Gebiet liegt?
+question_de: Wie heisst der höchste Berggipfel der Schweiz?
 options_de:
   a: Piz Bernina
   b: Matterhorn
@@ -11,8 +11,8 @@ options_de:
   d: Jungfrau
 correct: c
 explanation_de: Die Dufourspitze im Monte-Rosa-Massiv im Wallis ist mit rund 4634 Metern der höchste Gipfel
-  der Schweiz. Das Matterhorn ist bekannter, aber niedriger. Der Piz Bernina ist der höchste Gipfel in
-  den Ostalpen.
+  der Schweiz. Das Matterhorn ist bekannter, aber niedriger. Der Piz Bernina in Graubünden ist der höchste
+  Gipfel der Ostalpen.
 sources:
 - url: https://www.aboutswitzerland.eda.admin.ch/de/alpen
   checked: &id001 2026-11-02
@@ -21,7 +21,7 @@ sources:
 glossary:
 - Dufourspitze
 - Gipfel
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-267
@@ -31,17 +31,46 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Die Dufourspitze (4634 m) ist der höchste Gipfel der Schweiz, während der Monte Rosa mit
-      der Grenze zu Italien verläuft, die Dufourspitze selbst liegt aber ganz auf Schweizer Gebiet (der
-      Gipfel ist nicht grenzbildend), und der Piz Bernina, das Matterhorn und die Jungfrau sind niedriger
-      oder (beim Matterhorn) ein Grenzgipfel.
+    version: 2
+    reasoning: Die Dufourspitze im Monte-Rosa-Massiv ist mit 4634 Metern der höchste Gipfel der Schweiz
+      (der Dom ist der höchste Berg, der vollständig auf Schweizer Boden liegt).
   source:
     verdict: supported
     note: 'Beide Seiten nennen die Dufourspitze im Monte-Rosa-Massiv als höchsten Gipfel der Schweiz (Quelle
-      1: 4634 m, Quelle 2: 4636 m). Die Höhenangabe weicht zwischen den Quellen leicht ab; die Erklärung
-      nennt 4634 m, was zu Quelle 1 passt. Aussagen zum Piz Bernina oder zum Matterhorn fehlen, sie sind
-      für die Antwort aber nicht nötig.'
+      1: 4634 m, Quelle 2: 4636 m). Die Angaben zu Matterhorn und Piz Bernina in der Erklärung stehen
+      nicht in den Quellen, sind für die richtige Antwort aber nicht nötig. Die Höhe von rund 4634 m stimmt
+      mit Quelle 1 überein, Quelle 2 nennt 4636 m.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die beiden Quellen nennen unterschiedliche Höhen (4634 m und 4636 m); «rund 4634 Metern»
+        ist korrekt, man könnte aber einfach «über 4600 Metern» schreiben, um Verwirrung zu vermeiden.'
+      - 'Klein: Die Erklärung könnte die Höhe des Matterhorns nennen (rund 4478 m), damit klar wird, um
+        wie viel niedriger es ist.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung erwähnt die Jungfrau nicht; man könnte ergänzen, dass die Jungfrau im Berner
+        Oberland mit rund 4158 Metern ebenfalls niedriger ist.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die beiden Quellen nennen unterschiedliche Höhen (4634 m und 4636 m); die Erklärung nennt
+        zu Recht «rund 4634 Metern», man könnte aber ganz auf die genaue Zahl verzichten, um Verwirrung
+        zu vermeiden.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,31 @@
+id: gemeinde-unterste-stufe-staatsaufbau
+lang: fr
+source_version: 2
+question: Quel niveau se situe tout en bas dans la structure de l'État à trois niveaux de la Suisse ?
+options:
+  a: La commune (Gemeinde)
+  b: La région
+  c: Le canton
+  d: La Confédération
+explanation: 'La Suisse est organisée en trois niveaux : la Confédération, les cantons et les communes.
+  La commune est le niveau le plus bas et le plus proche des habitants. Elle accomplit elle-même de nombreuses
+  tâches, par exemple l''école primaire, les permis de construire ou l''aide sociale.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Ebene steht im dreistufigen Staatsaufbau der Schweiz ganz unten?
+    options_de:
+      a: Die Gemeinde
+      b: Die Region
+      c: Der Kanton
+      d: Der Bund
+    explanation_de: 'Die Schweiz ist auf drei Ebenen organisiert: dem Bund, den Kantonen und den Gemeinden.
+      Die Gemeinde ist die unterste und den Einwohnern am nächsten stehende Ebene. Sie erfüllt selbst
+      zahlreiche Aufgaben, zum Beispiel die Primarschule, die Baubewilligungen oder die Sozialhilfe.'

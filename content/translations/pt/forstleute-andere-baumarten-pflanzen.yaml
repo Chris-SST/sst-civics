@@ -1,0 +1,30 @@
+id: forstleute-andere-baumarten-pflanzen
+lang: pt
+source_version: 1
+question: Como reagem os silvicultores na Suíça ao aumento das temperaturas?
+options:
+  a: Plantam cada vez mais outras espécies de árvores.
+  b: Plantam apenas árvores que sempre estiveram ali.
+  c: Abandonam por completo os cuidados com a floresta.
+  d: Desflorestam as florestas em altitudes baixas.
+explanation: Algumas espécies de árvores toleram mal o calor e a seca. Por isso, os silvicultores apostam
+  em outras espécies, mais adaptadas ao clima mais quente. Assim, pretende-se que a floresta permaneça
+  estável.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie reagieren die Forstwirte in der Schweiz auf den Anstieg der Temperaturen?
+    options_de:
+      a: Sie pflanzen immer mehr andere Baumarten.
+      b: Sie pflanzen nur Bäume, die schon immer dort waren.
+      c: Sie geben die Pflege des Waldes vollständig auf.
+      d: Sie roden die Wälder in tiefen Lagen.
+    explanation_de: Einige Baumarten vertragen Hitze und Trockenheit schlecht. Deshalb setzen die Forstwirte
+      auf andere Arten, die besser an das wärmere Klima angepasst sind. Damit soll der Wald stabil bleiben.

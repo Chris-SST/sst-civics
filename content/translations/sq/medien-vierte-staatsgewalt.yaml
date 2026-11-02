@@ -1,0 +1,33 @@
+id: medien-vierte-staatsgewalt
+lang: sq
+source_version: 1
+question: Mediat shpesh quhen me një shprehje të veçantë që përshkruan rolin e tyre në shtet. Cila është
+  kjo shprehje?
+options:
+  a: Pushteti i dytë shtetëror
+  b: Pushteti suprem shtetëror
+  c: Pushteti i parë shtetëror
+  d: Pushteti i katërt shtetëror
+explanation: Tre pushtetet shtetërore janë legjislativi, ekzekutivi dhe gjyqësori. Mediat nuk bëjnë pjesë
+  në to, por ato kontrollojnë politikën dhe informojnë popullatën. Prandaj ato quhen shpesh pushteti i
+  katërt shtetëror.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Medien werden oft mit einem besonderen Ausdruck bezeichnet, der ihre Rolle im Staat
+      beschreibt. Welcher Ausdruck ist das?
+    options_de:
+      a: Zweite Staatsgewalt
+      b: Oberste Staatsgewalt
+      c: Erste Staatsgewalt
+      d: Vierte Staatsgewalt
+    explanation_de: Die drei Staatsgewalten sind die Legislative, die Exekutive und die Judikative. Die
+      Medien gehören nicht dazu, aber sie kontrollieren die Politik und informieren die Bevölkerung. Deshalb
+      werden sie oft die vierte Staatsgewalt genannt.

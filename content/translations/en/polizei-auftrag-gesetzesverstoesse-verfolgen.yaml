@@ -9,6 +9,22 @@ options:
   d: To pass court judgments on offenders
 explanation: The police maintain safety and order and pursue breaches of the law. They investigate criminal
   offences and pass on the results. Laws are enacted by Parliament, and judgments are passed by the courts.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe gehört zum Aufgabenbereich der Polizei?
+    options_de:
+      a: Gesetzesverstösse zu verfolgen
+      b: Volksabstimmungen durchzuführen
+      c: Gesetze für das Land zu erlassen
+      d: Straftäter gerichtlich zu verurteilen
+    explanation_de: Die Polizei wahrt die Sicherheit und Ordnung und verfolgt Gesetzesverstösse. Sie ermittelt
+      bei Straftaten und gibt die Ergebnisse weiter. Gesetze werden vom Parlament erlassen, und Urteile
+      werden von den Gerichten gefällt.

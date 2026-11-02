@@ -1,0 +1,31 @@
+id: staendemehr-mehrheit-der-kantone
+lang: it
+source_version: 1
+question: Che cosa significa il termine «maggioranza dei Cantoni (Ständemehr)» nelle votazioni federali?
+options:
+  a: La maggioranza dei Cantoni deve approvare il progetto.
+  b: La maggioranza dei Comuni (Gemeinden) deve approvare il progetto.
+  c: La maggioranza dei partiti deve approvare il progetto.
+  d: La maggioranza dei membri del Consiglio degli Stati (Ständerat) deve essere presente.
+explanation: La maggioranza dei Cantoni richiede che la maggioranza dei Cantoni approvi un progetto. Il
+  voto di un Cantone conta secondo il risultato della votazione in quel Cantone. Per le modifiche della
+  Costituzione, oltre alla maggioranza del popolo (Volksmehr) è necessaria anche la maggioranza dei Cantoni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet der Begriff «Ständemehr» bei eidgenössischen Abstimmungen?
+    options_de:
+      a: Die Mehrheit der Kantone muss die Vorlage annehmen.
+      b: Die Mehrheit der Gemeinden muss die Vorlage annehmen.
+      c: Die Mehrheit der Parteien muss die Vorlage annehmen.
+      d: Die Mehrheit der Mitglieder des Ständerats muss anwesend sein.
+    explanation_de: Das Ständemehr verlangt, dass die Mehrheit der Kantone eine Vorlage annimmt. Die Stimme
+      eines Kantons zählt gemäss dem Abstimmungsergebnis in diesem Kanton. Bei Änderungen der Verfassung
+      ist zusätzlich zum Volksmehr auch das Ständemehr erforderlich.

@@ -21,7 +21,53 @@ sources:
   checked: *id001
 glossary:
 - Nationalhymne
-status: draft
+status: approved
 difficulty: 1
 covers:
 - zh-212
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Nationalhymne der Schweiz ist seit 1981 (definitiv seit 2015) der Schweizerpsalm, während
+      «Rufst du, mein Vaterland» die frühere Hymne war und die anderen beiden Volkslieder sind.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die Nationalhymne «Schweizerpsalm». Quelle 2 und 3 bestätigen, dass der Bundesrat
+      ihn 1981 definitiv zur Nationalhymne erklärt hat, und Quelle 2 nennt «Rufst du, mein Vaterland»
+      als erste Nationalhymne, was zur Erklärung passt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung steht «Landeshymne», in der Frage «Nationalhymne»; besser einheitlich
+        «Nationalhymne» schreiben, damit Lernende nicht an zwei verschiedene Dinge denken.'
+      - 'Klein: Die Erklärung könnte ergänzen, dass der Bundesrat den Schweizerpsalm 1961 zuerst provisorisch
+        eingeführt hat; so wird die Angabe «1981 endgültig» besser verständlich.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte erwähnen, dass «Rufst du, mein Vaterland» bis 1961 als Hymne galt
+        und der Schweizerpsalm ab 1961 provisorisch eingeführt wurde, zum Beispiel: «Ab 1961 wurde er
+        provisorisch verwendet, vorher war ‹Rufst du, mein Vaterland› die Hymne.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues: []
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

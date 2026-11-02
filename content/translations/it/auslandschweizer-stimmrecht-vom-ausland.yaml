@@ -1,0 +1,35 @@
+id: auslandschweizer-stimmrecht-vom-ausland
+lang: it
+source_version: 2
+question: Una cittadina svizzera vive stabilmente all'estero. Come può partecipare alle elezioni e alle
+  votazioni federali?
+options:
+  a: Può votare soltanto se si reca in Svizzera a tale scopo.
+  b: Può partecipare soltanto alle elezioni, ma non alle votazioni.
+  c: Può eleggere e votare dal suo luogo di residenza all'estero, senza recarsi in Svizzera.
+  d: Perde il diritto di voto e di elezione a livello di Confederazione.
+explanation: Gli svizzeri all'estero possono eleggere e votare a livello federale senza recarsi in Svizzera.
+  A tal fine devono essere registrati presso la rappresentanza svizzera competente all'estero e chiedere
+  tramite quest'ultima l'iscrizione nel registro elettorale. Il materiale per le elezioni e le votazioni
+  viene poi inviato loro dal loro comune di voto.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Schweizer Bürgerin lebt dauerhaft im Ausland. Wie kann sie an den eidgenössischen
+      Wahlen und Abstimmungen teilnehmen?
+    options_de:
+      a: Sie kann nur abstimmen, wenn sie zu diesem Zweck in die Schweiz reist.
+      b: Sie kann nur an den Wahlen teilnehmen, aber nicht an den Abstimmungen.
+      c: Sie kann von ihrem Wohnort im Ausland aus wählen und abstimmen, ohne in die Schweiz zu reisen.
+      d: Sie verliert das Stimm- und Wahlrecht auf Ebene des Bundes.
+    explanation_de: Auslandschweizer können auf Bundesebene wählen und abstimmen, ohne in die Schweiz
+      zu reisen. Dazu müssen sie bei der zuständigen schweizerischen Vertretung im Ausland registriert
+      sein und über diese die Eintragung ins Stimmregister beantragen. Das Material für die Wahlen und
+      Abstimmungen wird ihnen dann von ihrer Stimmgemeinde zugeschickt.

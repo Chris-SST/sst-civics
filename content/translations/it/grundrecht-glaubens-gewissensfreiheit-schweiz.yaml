@@ -1,0 +1,31 @@
+id: grundrecht-glaubens-gewissensfreiheit-schweiz
+lang: it
+source_version: 1
+question: Quale diritto fondamentale è protetto in Svizzera dalla Costituzione federale?
+options:
+  a: Il diritto a un reddito da parte dello Stato
+  b: Il diritto a un'automobile
+  c: Il diritto a un posto di lavoro
+  d: La libertà di credo e di coscienza
+explanation: La libertà di credo e di coscienza è sancita nell'articolo 15 della Costituzione federale.
+  Lo Stato non può costringere nessuno ad avere una determinata fede. Un diritto a un posto di lavoro
+  o a un reddito non esiste come diritto fondamentale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht wird in der Schweiz durch die Bundesverfassung geschützt?
+    options_de:
+      a: Das Recht auf ein Einkommen vonseiten des Staates
+      b: Das Recht auf ein Auto
+      c: Das Recht auf einen Arbeitsplatz
+      d: Die Glaubens- und Gewissensfreiheit
+    explanation_de: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung verankert.
+      Der Staat kann niemanden zwingen, einen bestimmten Glauben zu haben. Ein Recht auf einen Arbeitsplatz
+      oder auf ein Einkommen besteht nicht als Grundrecht.

@@ -1,0 +1,29 @@
+id: alpenuebergaenge-simplon-gotthard-st-bernhard
+lang: en
+source_version: 1
+question: What do the Simplon, the Gotthard and the Great St Bernard have in common?
+options:
+  a: They are cantons in the Alps.
+  b: They are rivers that flow into the sea.
+  c: They are lakes in the Central Plateau (Mittelland).
+  d: They are crossings over the Alps.
+explanation: The Simplon, the Gotthard and the Great St Bernard are well-known passes that lead across
+  the Alps. They connect the northern side of the Alps with the southern side of the Alps.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was haben der Simplon, der Gotthard und der Grosse St. Bernhard gemeinsam?
+    options_de:
+      a: Sie sind Kantone in den Alpen.
+      b: Sie sind Flüsse, die ins Meer fliessen.
+      c: Sie sind Seen im Mittelland.
+      d: Sie sind Übergänge über die Alpen.
+    explanation_de: Der Simplon, der Gotthard und der Grosse St. Bernhard sind bekannte Pässe, die über
+      die Alpen führen. Sie verbinden die Alpennordseite mit der Alpensüdseite.

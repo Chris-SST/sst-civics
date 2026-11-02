@@ -1,0 +1,32 @@
+id: kantonshauptort-zuerich-stadt
+lang: sq
+source_version: 1
+question: Cili qytet është qendra administrative e kantonit të Cyrihut?
+options:
+  a: Uster
+  b: Qyteti i Cyrihut
+  c: Winterthur
+  d: Dübendorf
+explanation: Qyteti i Cyrihut është qendra administrative e kantonit dhe ka të njëjtin emër. Aty ndodhen,
+  ndër të tjera, Këshilli Kantonal (Kantonsrat) dhe Këshilli Qeveritar (Regierungsrat). Winterthur është
+  qyteti i dytë më i madh i kantonit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: «Verwaltungssitz» statt «Hauptort» ist ein Synonym, Antworten und Erklärung
+      stimmen sachlich überein.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Stadt ist der Verwaltungssitz des Kantons Zürich?
+    options_de:
+      a: Uster
+      b: Stadt Zürich
+      c: Winterthur
+      d: Dübendorf
+    explanation_de: Die Stadt Zürich ist der Verwaltungssitz des Kantons und trägt denselben Namen. Dort
+      befinden sich unter anderem der Kantonsrat und der Regierungsrat. Winterthur ist die zweitgrösste
+      Stadt des Kantons.

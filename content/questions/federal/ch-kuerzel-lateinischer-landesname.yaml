@@ -22,7 +22,7 @@ glossary:
 - Confoederatio Helvetica
 - Landesname
 - Landessprache
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-324
@@ -44,3 +44,43 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Confédération Helvétique» ist im Französischen als inoffizielle Bezeichnung gebräuchlich
+        (amtlich heisst es «Confédération suisse»); damit Antwort a) nicht als halb richtig gelesen wird,
+        könnte die Erklärung kurz ergänzen, dass CH offiziell vom lateinischen Namen kommt und nicht vom
+        französischen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) kommt der richtigen Antwort sehr nahe, weil «Confédération helvétique» im Französischen
+        tatsächlich gebraucht wird. Der amtliche französische Name ist aber «Confédération suisse». Vorschlag:
+        a) zu «Für den amtlichen französischen Namen Confédération suisse» ändern oder in der Erklärung
+        kurz sagen, dass CH vom lateinischen Namen kommt und nicht vom französischen.'
+      - 'Klein: Nur die richtige Antwort d) enthält das Wort «Landesnamen» aus der Themenliste. Vorschlag:
+        in a) bis d) einheitlich «Namen» oder einheitlich «Landesnamen» verwenden, damit die Wortwahl
+        keinen Hinweis gibt.'
+      - 'Klein: Nur Antwort b) setzt den Begriff in Anführungszeichen. Vorschlag: die Schreibweise in
+        allen Antworten vereinheitlichen und im Französischen «helvétique» klein schreiben.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) ist nicht ganz eindeutig falsch, weil «Confédération helvétique» im Französischen
+        auch vorkommt und dieselben Anfangsbuchstaben hat; der offizielle französische Name lautet aber
+        «Confédération suisse». Ersetze a) durch einen klar falschen Namen, zum Beispiel «Confédération
+        Suisse» (Abkürzung CS), oder ergänze «offiziell» in der Frage, zum Beispiel «Wofür steht das Länderkürzel
+        CH offiziell?».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,33 @@
+id: ergaenzungsleistungen-existenzminimum-rente-reicht-nicht
+lang: sq
+source_version: 1
+question: Kush mund të marrë në Zvicër përfitime plotësuese (Ergänzungsleistungen)?
+options:
+  a: Personat që e kanë humbur punën dhe marrin dëmshpërblim papunësie
+  b: Të gjithë personat që janë mbi 50 vjeç
+  c: Personat, pensioni i të cilëve nga sigurimi i pleqërisë dhe i të mbijetuarve (AHV) ose nga sigurimi
+    i invaliditetit (IV) nuk e mbulon minimumin jetik
+  d: Të gjithë personat që marrin ndihmë sociale
+explanation: Përfitimet plotësuese ndihmojnë personat, për të cilët pensioni i sigurimit të pleqërisë
+  dhe i të mbijetuarve ose i sigurimit të invaliditetit dhe të ardhurat e tjera nuk mjaftojnë për të jetuar.
+  Ato janë e drejtë ligjore dhe nuk janë ndihmë sociale. Ato paguhen përveç pensionit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann in der Schweiz Ergänzungsleistungen erhalten?
+    options_de:
+      a: Personen, die ihre Arbeit verloren haben und eine Arbeitslosenentschädigung erhalten
+      b: Alle Personen, die über 50 Jahre alt sind
+      c: Personen, deren Rente aus der Alters- und Hinterlassenenversicherung (AHV) oder aus der Invalidenversicherung
+        (IV) das Existenzminimum nicht deckt
+      d: Alle Personen, die Sozialhilfe erhalten
+    explanation_de: Ergänzungsleistungen helfen Personen, für die die Rente der Alters- und Hinterlassenenversicherung
+      oder der Invalidenversicherung und das übrige Einkommen nicht zum Leben ausreichen. Sie sind ein
+      gesetzlicher Anspruch und keine Sozialhilfe. Sie werden zusätzlich zur Rente bezahlt.

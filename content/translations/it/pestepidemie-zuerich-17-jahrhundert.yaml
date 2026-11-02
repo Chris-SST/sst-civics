@@ -1,0 +1,31 @@
+id: pestepidemie-zuerich-17-jahrhundert
+lang: it
+source_version: 1
+question: Quale catastrofe costò la vita a quasi la metà della popolazione di Zurigo all'inizio del XVII
+  secolo?
+options:
+  a: Un incendio della città
+  b: Un'epidemia di peste
+  c: Un'inondazione
+  d: Una carestia
+explanation: All'inizio del XVII secolo quasi la metà degli abitanti di Zurigo morì di peste. La peste
+  era una malattia contagiosa che in quel periodo si diffuse più volte in Europa.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Katastrophe kostete zu Beginn des 17. Jahrhunderts fast die Hälfte der Bevölkerung
+      von Zürich das Leben?
+    options_de:
+      a: Ein Stadtbrand
+      b: Eine Pestepidemie
+      c: Eine Überschwemmung
+      d: Eine Hungersnot
+    explanation_de: Zu Beginn des 17. Jahrhunderts starb fast die Hälfte der Einwohner von Zürich an der
+      Pest. Die Pest war eine ansteckende Krankheit, die sich in dieser Zeit mehrmals in Europa verbreitete.

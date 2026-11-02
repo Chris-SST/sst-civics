@@ -1,0 +1,31 @@
+id: roestigraben-kulturelle-unterschiede
+lang: fr
+source_version: 1
+question: Que désigne-t-on en Suisse par le terme «Röstigraben» ?
+options:
+  a: Les Alpes comme ligne de séparation entre le nord et le sud
+  b: Les différences entre la ville et la campagne
+  c: La frontière entre la Suisse et l'Allemagne
+  d: Les différences culturelles entre la Suisse alémanique et la Romandie
+explanation: Le terme «Röstigraben» est une expression imagée. Il décrit les différences culturelles entre
+  la Suisse alémanique et la Romandie, de langue française. Celles-ci se manifestent par exemple parfois
+  lors des votations.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bezeichnet man in der Schweiz mit dem Begriff «Röstigraben»?
+    options_de:
+      a: Die Alpen als Trennlinie zwischen dem Norden und dem Süden
+      b: Die Unterschiede zwischen der Stadt und dem Land
+      c: Die Grenze zwischen der Schweiz und Deutschland
+      d: Die kulturellen Unterschiede zwischen der Deutschschweiz und der Romandie
+    explanation_de: Der Begriff «Röstigraben» ist ein bildhafter Ausdruck. Er beschreibt die kulturellen
+      Unterschiede zwischen der Deutschschweiz und der französischsprachigen Romandie. Diese zeigen sich
+      zum Beispiel manchmal bei Abstimmungen.

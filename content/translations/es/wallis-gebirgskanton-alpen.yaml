@@ -1,0 +1,30 @@
+id: wallis-gebirgskanton-alpen
+lang: es
+source_version: 1
+question: ¿Cuál de estos cantones está marcado en gran medida por la montaña?
+options:
+  a: Basilea-Ciudad
+  b: Valais
+  c: Turgovia
+  d: Ginebra
+explanation: En Valais se encuentran muchas cumbres alpinas elevadas, entre ellas la Punta Dufour, la
+  montaña más alta de Suiza. Turgovia, Basilea-Ciudad y Ginebra se encuentran más bien en tierras llanas
+  o junto a lagos y ríos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher dieser Kantone ist stark von den Bergen geprägt?
+    options_de:
+      a: Basel-Stadt
+      b: Wallis
+      c: Thurgau
+      d: Genf
+    explanation_de: Im Wallis befinden sich viele hohe Alpengipfel, darunter die Dufourspitze, der höchste
+      Berg der Schweiz. Thurgau, Basel-Stadt und Genf liegen eher im Flachland oder an Seen und Flüssen.

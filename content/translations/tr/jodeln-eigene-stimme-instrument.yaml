@@ -1,0 +1,32 @@
+id: jodeln-eigene-stimme-instrument
+lang: tr
+source_version: 1
+question: Yodel söylerken enstrüman olarak ne kullanılır?
+options:
+  a: Alphorn (alp borusu)
+  b: Kişinin kendi sesi
+  c: Schwyzerörgeli (İsviçre tipi küçük akordeon)
+  d: Handorgel (el org akordeonu)
+explanation: Yodel söylerken sözcükler olmadan, çoğunlukla yalnızca hecelerle şarkı söylenir ve göğüs
+  sesi ile baş sesi arasında hızlıca geçiş yapılır. Enstrüman, sesin kendisidir. Yodel, İsviçre'nin geleneklerine
+  ait bir unsurdur ve çoğu zaman Alphorn veya Schwyzerörgeli ile birlikte anılır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird beim Jodeln als Instrument verwendet?
+    options_de:
+      a: Alphorn
+      b: Die eigene Stimme der Person
+      c: Schwyzerörgeli
+      d: Handorgel
+    explanation_de: Beim Jodeln wird ohne Wörter gesungen, meistens nur mit Silben, und es wird schnell
+      zwischen Bruststimme und Kopfstimme gewechselt. Das Instrument ist die Stimme selbst. Das Jodeln
+      ist ein Element der Traditionen der Schweiz und wird oft zusammen mit dem Alphorn oder dem Schwyzerörgeli
+      erwähnt.

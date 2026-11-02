@@ -9,6 +9,21 @@ options:
   d: The public prosecutor
 explanation: Judges decide independently in court proceedings and deliver the judgment. The public prosecutor's
   office conducts the investigation and brings charges. The police investigate, but do not pass judgment.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer spricht in Gerichtsverfahren das Urteil aus?
+    options_de:
+      a: Der Richter
+      b: Der Polizist
+      c: Der Gemeindepräsident
+      d: Der Staatsanwalt
+    explanation_de: Richter entscheiden in Gerichtsverfahren unabhängig und fällen das Urteil. Die Staatsanwaltschaft
+      führt die Untersuchung und erhebt Anklage. Die Polizei ermittelt, fällt aber kein Urteil.

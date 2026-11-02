@@ -1,0 +1,29 @@
+id: stimmenauszaehlung-urnengang-wahlbuero
+lang: tr
+source_version: 1
+question: Zürich kantonundaki bir belediyede (Gemeinde) sandık oylamalarında verilen oyları kim sayar?
+options:
+  a: Sosyal yardım kurulu
+  b: Seçim bürosu
+  c: Belediye yazmanı (kadın) tek başına
+  d: Cumhuriyet savcılığı
+explanation: Seçim bürosu, oylamalarda ve seçimlerde belediyenin sonuçlarını belirler. Sayımın doğru ve
+  izlenebilir biçimde yapılması için birkaç kişiden oluşur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zählt in einer Gemeinde im Kanton Zürich die an der Urne abgegebenen Stimmen?
+    options_de:
+      a: Die Sozialbehörde
+      b: Das Wahlbüro
+      c: Die Gemeindeschreiberin allein
+      d: Die Staatsanwaltschaft
+    explanation_de: Das Wahlbüro ermittelt bei Abstimmungen und Wahlen die Ergebnisse der Gemeinde. Es
+      besteht aus mehreren Personen, damit die Auszählung korrekt und nachvollziehbar erfolgt.

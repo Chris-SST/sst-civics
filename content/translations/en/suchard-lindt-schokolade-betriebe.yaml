@@ -10,6 +10,22 @@ options:
 explanation: Philippe Suchard and Rudolph Lindt set up businesses for the production of chocolate. In
   this way, chocolate became a well-known Swiss product. Industry also played an important role in the
   economic history of Zurich.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was stellten Philippe Suchard und Rudolph Lindt in ihren Betrieben her?
+    options_de:
+      a: Schokolade
+      b: Maschinen
+      c: Uhren
+      d: Textilien
+    explanation_de: Philippe Suchard und Rudolph Lindt gründeten Betriebe für die Herstellung von Schokolade.
+      Auf diese Weise wurde Schokolade zu einem bekannten Schweizer Produkt. Die Industrie spielte auch
+      in der Wirtschaftsgeschichte von Zürich eine wichtige Rolle.

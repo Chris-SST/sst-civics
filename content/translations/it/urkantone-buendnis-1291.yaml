@@ -1,0 +1,31 @@
+id: urkantone-buendnis-1291
+lang: it
+source_version: 1
+question: Quali tre territori si allearono nel 1291 e sono considerati il nucleo della futura Confederazione?
+options:
+  a: Uri, Svitto e Untervaldo
+  b: Glarona, Zugo e Uri
+  c: Basilea, Sciaffusa e Appenzello
+  d: Zurigo, Berna e Lucerna
+explanation: Uri, Svitto e Untervaldo conclusero una Confederazione nel 1291. Questa data è considerata
+  l'origine della Svizzera e viene celebrata il 1° agosto. Gli altri luoghi si unirono alla Confederazione
+  solo più tardi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche drei Gebiete verbündeten sich 1291 und gelten als Kern der zukünftigen Eidgenossenschaft?
+    options_de:
+      a: Uri, Schwyz und Unterwalden
+      b: Glarus, Zug und Uri
+      c: Basel, Schaffhausen und Appenzell
+      d: Zürich, Bern und Luzern
+    explanation_de: Uri, Schwyz und Unterwalden schlossen 1291 eine Eidgenossenschaft. Dieses Datum gilt
+      als Ursprung der Schweiz und wird am 1. August gefeiert. Die anderen Orte schlossen sich der Eidgenossenschaft
+      erst später an.

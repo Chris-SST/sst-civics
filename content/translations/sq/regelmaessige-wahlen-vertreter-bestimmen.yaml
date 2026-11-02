@@ -1,0 +1,31 @@
+id: regelmaessige-wahlen-vertreter-bestimmen
+lang: sq
+source_version: 1
+question: Çfarë rëndësie kanë zgjedhjet e rregullta në një demokraci?
+options:
+  a: Popullsia vendos vetë se kush e përfaqëson.
+  b: Qeveria emëron vetë pasardhësit e saj.
+  c: Partitë e përcaktojnë përfaqësimin mes tyre.
+  d: Gjykata vendos se kush merr një detyrë publike.
+explanation: Në zgjedhje, qytetarët me të drejtë vote vendosin se kush i përfaqëson ata në parlament ose
+  në qeveri. Meqenëse zgjedhjet mbahen rregullisht, ata mund t'i konfirmojnë personat ose t'i zëvendësojnë
+  me të tjerë. Kështu popullsia ruan ndikimin e saj mbi politikën.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Bedeutung haben regelmässige Wahlen in einer Demokratie?
+    options_de:
+      a: Die Bevölkerung entscheidet selbst, wer sie vertritt.
+      b: Die Regierung ernennt ihre Nachfolger selbst.
+      c: Die Parteien legen die Vertretung unter sich fest.
+      d: Das Gericht entscheidet, wer ein öffentliches Amt erhält.
+    explanation_de: Bei Wahlen entscheiden die stimmberechtigten Bürgerinnen und Bürger, wer sie im Parlament
+      oder in der Regierung vertritt. Da die Wahlen regelmässig stattfinden, können sie die Personen bestätigen
+      oder durch andere ersetzen. So behält die Bevölkerung ihren Einfluss auf die Politik.

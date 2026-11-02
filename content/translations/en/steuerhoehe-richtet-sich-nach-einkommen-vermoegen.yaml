@@ -10,6 +10,22 @@ options:
   d: On the number of times the person has exercised their right to vote
 explanation: Tax is calculated on taxable income and wealth. Those who earn or own more generally pay
   more tax.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wovon hängt die Höhe der Einkommens- und Vermögenssteuer, die eine Person im Kanton Zürich
+      bezahlt, hauptsächlich ab?
+    options_de:
+      a: Vom steuerbaren Einkommen und Vermögen der Person
+      b: Vom Beruf der Person
+      c: Davon, wie lange die Person in der Gemeinde gewohnt hat
+      d: Von der Anzahl der Male, die die Person ihr Stimmrecht ausgeübt hat
+    explanation_de: Die Steuer wird auf dem steuerbaren Einkommen und Vermögen berechnet. Wer mehr verdient
+      oder besitzt, bezahlt in der Regel mehr Steuern.

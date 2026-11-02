@@ -10,6 +10,22 @@ options:
 explanation: CH is the short form of Confoederatio Helvetica, the Latin name of Switzerland. Latin is
   used because it does not favour any of the four national languages. The abbreviation appears, for example,
   on vehicle number plates and in internet addresses.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür steht das Landeskürzel «CH» der Schweiz?
+    options_de:
+      a: Für den französischen Namen Confédération Helvétique
+      b: Für den Begriff «Cantons Helvétiques»
+      c: Für den lateinischen Namen Civitas Helvetica
+      d: Für den lateinischen Namen des Landes, Confoederatio Helvetica
+    explanation_de: CH ist die Kurzform von Confoederatio Helvetica, dem lateinischen Namen der Schweiz.
+      Latein wird verwendet, weil es keine der vier Landessprachen bevorzugt. Das Kürzel erscheint zum
+      Beispiel auf Fahrzeugkennzeichen und in Internetadressen.

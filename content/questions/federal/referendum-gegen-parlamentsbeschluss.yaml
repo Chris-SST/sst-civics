@@ -21,7 +21,7 @@ glossary:
 - Nationalrat
 - Ständerat
 - Parlament
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-032
@@ -44,3 +44,40 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Laut Quelle unterstehen neben Bundesgesetzen auch andere Erlasse der Bundesversammlung
+        (etwa bestimmte Bundesbeschlüsse und Staatsverträge) dem fakultativen Referendum; die Erklärung
+        könnte mit einem kurzen Satz wie «Auch gewisse andere Beschlüsse des Parlaments, zum Beispiel
+        Staatsverträge, können mit einem Referendum angefochten werden» ergänzt werden.'
+      - 'Klein: Die Erklärung könnte die Hürde nennen, damit sie beim Lernen mehr hilft, zum Beispiel:
+        «Dafür braucht es 50 000 Unterschriften innerhalb von 100 Tagen.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung geht nicht auf Antwort d) ein. Ein kurzer Satz würde helfen, etwa: «Verordnungen
+        von Gemeinden betreffen nicht die Bundesebene.»'
+      - 'Klein: Die Erklärung könnte zum besseren Verständnis ergänzen, dass für ein fakultatives Referendum
+        50 000 Unterschriften innert 100 Tagen nötig sind.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage sagt nicht, ob das fakultative oder obligatorische Referendum gemeint ist; die
+        Antwort a) bleibt aber eindeutig die beste, weil b) bis d) klar falsch sind.'
+      - 'Klein: Die Erklärung könnte erwähnen, dass das Referendum verlangt, dass ein Gesetz dem Volk
+        zur Abstimmung vorgelegt wird (50 000 Unterschriften in 100 Tagen), damit der Begriff besser verständlich
+        wird.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

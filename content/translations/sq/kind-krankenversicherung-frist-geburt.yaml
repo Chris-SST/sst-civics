@@ -1,0 +1,31 @@
+id: kind-krankenversicherung-frist-geburt
+lang: sq
+source_version: 1
+question: Brenda çfarë afati nga lindja duhet të ekzistojë një sigurim shëndetësor për një fëmijë që banon
+  në Zvicër?
+options:
+  a: brenda 12 muajve
+  b: brenda 3 muajve
+  c: brenda 14 ditëve
+  d: brenda 6 muajve
+explanation: Për një fëmijë, prindërit duhet të lidhin një sigurim shëndetësor brenda tre muajve pas lindjes.
+  Nëse afati respektohet, mbulimi i sigurimit vlen me efekt prapaveprues që nga lindja.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Innerhalb welcher Frist ab der Geburt muss für ein Kind, das in der Schweiz wohnt, eine
+      Krankenversicherung bestehen?
+    options_de:
+      a: innerhalb von 12 Monaten
+      b: innerhalb von 3 Monaten
+      c: innerhalb von 14 Tagen
+      d: innerhalb von 6 Monaten
+    explanation_de: Für ein Kind müssen die Eltern innerhalb von drei Monaten nach der Geburt eine Krankenversicherung
+      abschliessen. Wenn die Frist eingehalten wird, gilt der Versicherungsschutz rückwirkend ab der Geburt.

@@ -1,0 +1,29 @@
+id: rechtsstaat-keine-festnahme-ohne-grund
+lang: fr
+source_version: 1
+question: Que prévaut-il dans un État de droit en matière d'arrestation et de détention ?
+options:
+  a: L'État ne peut arrêter ni placer en détention personne sans motif.
+  b: L'État peut détenir des personnes à sa discrétion.
+  c: Le gouvernement peut placer préventivement en détention ses détracteurs.
+  d: Seuls les étrangers et les étrangères peuvent être arrêtés sans motif.
+explanation: Dans un État de droit, l'action de l'État est soumise au droit. Une arrestation ou une détention
+  requiert un motif légal. Cela protège la liberté des personnes contre l'arbitraire.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in einem Rechtsstaat in Bezug auf Verhaftung und Haft?
+    options_de:
+      a: Der Staat darf niemanden ohne Grund verhaften oder in Haft nehmen.
+      b: Der Staat darf Personen nach seinem Ermessen festhalten.
+      c: Die Regierung darf ihre Kritiker vorbeugend in Haft nehmen.
+      d: Nur Ausländer und Ausländerinnen dürfen ohne Grund verhaftet werden.
+    explanation_de: In einem Rechtsstaat unterliegt das Handeln des Staates dem Recht. Eine Verhaftung
+      oder eine Haft erfordert einen gesetzlichen Grund. Dies schützt die Freiheit der Personen vor Willkür.

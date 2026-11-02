@@ -1,17 +1,18 @@
 id: hundehaltung-abgabe-hundesteuer
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.sozial.pflichten
-question_de: Was muss eine Person im Kanton Zürich zusätzlich tun, wenn sie einen Hund hält?
+question_de: Was gilt im Kanton Zürich für Personen, die einen Hund halten?
 options_de:
-  a: Sie muss dafür jährlich eine Abgabe, die Hundesteuer, bezahlen
-  b: Sie muss den Hund alle zwei Jahre dem Bundesrat melden
-  c: Sie muss die Mehrwertsteuer auf das Futter nicht bezahlen
-  d: Sie muss dafür einen Militärdienst-Ersatz leisten
+  a: Sie müssen jedes Jahr eine Hundeabgabe an die Gemeinde bezahlen.
+  b: Sie müssen nur beim Kauf des Hundes einmal eine Gebühr an den Bund bezahlen.
+  c: Sie müssen mit dem Hund jedes Jahr beim Kanton eine Prüfung machen.
+  d: Sie müssen nur dann eine Abgabe bezahlen, wenn sie mit dem Hund Geld verdienen.
 correct: a
-explanation_de: Hundehalterinnen und Hundehalter zahlen jährlich eine Hundesteuer an die Gemeinde. Der
-  Hund muss ausserdem registriert sein. Die Abgabe gehört zu den Pflichten gegenüber dem Staat.
+explanation_de: Wer im Kanton Zürich einen Hund hält, bezahlt jedes Jahr eine Abgabe für den Hund, die
+  sogenannte Hundesteuer. Das Geld geht an die Wohngemeinde, nicht an den Bund. Die Abgabe ist nicht einmalig
+  und gilt auch für Hunde, die man nur privat hält.
 sources:
 - url: https://www.zh.ch/de/umwelt-tiere/tiere/haustiere-heimtiere/hunde.html
   checked: &id001 2026-11-02
@@ -19,7 +20,7 @@ glossary:
 - Hundesteuer
 - Abgabe
 - Gemeinde
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-190
@@ -29,14 +30,46 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Im Kanton Zürich müssen Hundehalterinnen und Hundehalter jährlich die Hundesteuer an die
-      Gemeinde bezahlen, während die anderen Antworten frei erfunden sind.
+    version: 2
+    reasoning: Im Kanton Zürich erheben die Gemeinden jährlich eine Hundetaxe (Hundeabgabe) von den Hundehaltern,
+      während es keine einmalige Bundesgebühr, keine jährliche kantonale Prüfung und keine Abgabepflicht
+      nur bei Erwerbstätigkeit mit dem Hund gibt.
   source:
     verdict: supported
-    note: 'Quelle 1 (Kanton Zürich, Haltung & Pflichten) sagt ausdrücklich: «Sie müssen für jeden Hund
-      bei Ihrer Wohngemeinde jährlich eine Abgabe (Hundesteuer) bezahlen.» Auch die Registrierung (AMICUS,
-      Meldung bei der Gemeinde) ist genannt, die Erklärung passt also.'
+    note: 'Quelle 1 sagt unter «5 – Hundeabgabe»: «Sie müssen für jeden Hund bei Ihrer Wohngemeinde jährlich
+      eine Abgabe (Hundesteuer) bezahlen.» Das stützt Antwort a und die Erklärung (jährlich, an die Wohngemeinde).'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, das Geld gehe an die Wohngemeinde; da der Kanton nach meinem Wissen
+        einen Zuschlag zur Abgabe erhebt, wäre «Man bezahlt die Abgabe bei der Wohngemeinde» genauer.'
+      - 'Klein: Seit dem 1. Juni 2025 gibt es im Kanton Zürich eine obligatorische Hundeausbildung mit
+        Theorieprüfung; die Erklärung könnte kurz sagen, dass es aber keine jährliche Prüfung beim Kanton
+        gibt, damit Antwort c) klar als falsch verstanden wird.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, das Geld gehe an die Wohngemeinde; im Kanton Zürich zieht die Gemeinde
+        die Abgabe zwar ein, ein Teil geht aber als Zuschlag an den Kanton. Vorschlag: «Die Wohngemeinde
+        zieht die Abgabe ein, nicht der Bund.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In Antwort a) könnte man zusätzlich den gebräuchlichen Begriff nennen, zum Beispiel «Hundeabgabe
+        (Hundesteuer)», damit Lernende den Begriff aus dem Alltag wiedererkennen.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

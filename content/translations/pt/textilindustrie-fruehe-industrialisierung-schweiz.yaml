@@ -1,0 +1,33 @@
+id: textilindustrie-fruehe-industrialisierung-schweiz
+lang: pt
+source_version: 1
+question: Qual foi o setor económico mais importante na fase inicial da industrialização da Suíça?
+options:
+  a: A indústria relojoeira
+  b: A indústria farmacêutica
+  c: A indústria têxtil
+  d: A indústria de máquinas
+explanation: Na fase inicial da industrialização, a indústria têxtil marcou a economia suíça, por exemplo
+  com fiações, tecelagens e bordados. Um exemplo conhecido são os bordados de St. Gallen (St. Galler Stickereien),
+  que eram muito procurados em todo o mundo. Outros setores só se tornaram tão importantes mais tarde.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Wirtschaftszweig war in der Anfangsphase der Industrialisierung der Schweiz der
+      wichtigste?
+    options_de:
+      a: Die Uhrenindustrie
+      b: Die Pharmaindustrie
+      c: Die Textilindustrie
+      d: Die Maschinenindustrie
+    explanation_de: In der Anfangsphase der Industrialisierung prägte die Textilindustrie die Schweizer
+      Wirtschaft, zum Beispiel mit Spinnereien, Webereien und Stickereien. Ein bekanntes Beispiel sind
+      die St. Galler Stickereien, die auf der ganzen Welt sehr gefragt waren. Andere Branchen wurden erst
+      später so wichtig.

@@ -1,0 +1,33 @@
+id: gewaltmonopol-des-staates
+lang: es
+source_version: 2
+question: ¿Quién puede, en principio, emplear la fuerza física en Suiza?
+options:
+  a: Las empresas privadas de seguridad por encargo de asociaciones
+  b: Cualquier persona que se sienta amenazada
+  c: Solo el Estado
+  d: Cada municipio (Gemeinde) con sus propias milicias ciudadanas
+explanation: 'En Suiza, el Estado tiene el monopolio de la fuerza: en principio, solo él puede emplear
+  la fuerza física, por ejemplo a través de la policía o del ejército. Una excepción es la legítima defensa:
+  quien sea atacado de forma ilícita puede defenderse de manera proporcionada, pero el mero hecho de sentirse
+  amenazado no basta para ello.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer darf in der Schweiz grundsätzlich körperliche Gewalt anwenden?
+    options_de:
+      a: Private Sicherheitsunternehmen im Auftrag von Vereinen
+      b: Jede Person, die sich bedroht fühlt
+      c: Nur der Staat
+      d: Jede Gemeinde mit ihren eigenen Bürgermilizen
+    explanation_de: 'In der Schweiz hat der Staat das Gewaltmonopol: Grundsätzlich darf nur er körperliche
+      Gewalt anwenden, zum Beispiel durch die Polizei oder die Armee. Eine Ausnahme ist die Notwehr: Wer
+      rechtswidrig angegriffen wird, kann sich verhältnismässig verteidigen, aber die blosse Tatsache,
+      sich bedroht zu fühlen, genügt dafür nicht.'

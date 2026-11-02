@@ -1,0 +1,31 @@
+id: ruetli-zusammenschluss-der-urkantone
+lang: fr
+source_version: 1
+question: Que symbolise le Grütli dans l'histoire suisse ?
+options:
+  a: L'union des cantons primitifs
+  b: La victoire à la bataille de Marignan
+  c: Le début de la Réforme
+  d: La fondation de l'État fédéral en 1848
+explanation: Selon la tradition, des représentants des cantons primitifs se seraient alliés sur le Grütli.
+  C'est pourquoi il est considéré comme le symbole des débuts de la Confédération. La prairie se trouve
+  au bord du lac des Quatre-Cantons.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was symbolisiert das Rütli in der Schweizer Geschichte?
+    options_de:
+      a: Den Zusammenschluss der Urkantone
+      b: Den Sieg in der Schlacht von Marignano
+      c: Den Beginn der Reformation
+      d: Die Gründung des Bundesstaates im Jahr 1848
+    explanation_de: Der Überlieferung nach sollen sich Vertreter der Urkantone auf dem Rütli verbündet
+      haben. Deshalb gilt es als Symbol für die Anfänge der Eidgenossenschaft. Die Wiese liegt am Ufer
+      des Vierwaldstättersees.

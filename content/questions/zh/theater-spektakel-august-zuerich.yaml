@@ -22,7 +22,7 @@ sources:
 glossary:
 - Theater Spektakel
 - Bühnenkunst
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-341
@@ -45,3 +45,36 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte kurz erwähnen, dass das Festival auf der Landiwiese stattfindet und
+        dass «Weltklasse Zürich» ein Leichtathletik-Anlass ist, damit der Unterschied zu den falschen
+        Antworten klarer wird.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Begriff «darstellende Künste» in der Erklärung ist für Niveau B1 eher schwierig; besser
+        «Festival für Theater, Tanz und Musik» schreiben und ergänzen, dass es am Seeufer auf der Landiwiese
+        stattfindet.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte den Ort (Landiwiese) und die falschen Antworten kurz einordnen, zum
+        Beispiel: Das Sechseläuten findet im April statt, Weltklasse Zürich ist ein Leichtathletik-Anlass
+        und das Knabenschiessen ist im September.'
+      - 'Klein: Die Frage nennt «Bühnenkunst, Tanz und Musik» fast wörtlich wie die Antwort; das ist aber
+        nicht problematisch, da alle Antworten klar unterscheidbar sind.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

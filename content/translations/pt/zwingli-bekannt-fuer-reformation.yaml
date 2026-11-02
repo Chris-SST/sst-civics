@@ -1,0 +1,31 @@
+id: zwingli-bekannt-fuer-reformation
+lang: pt
+source_version: 2
+question: Pelo que Huldrych (Ulrich) Zwingli é sobretudo conhecido na história de Zurique?
+options:
+  a: Construiu o primeiro caminho-de-ferro do cantão.
+  b: Foi o primeiro Presidente da Confederação (Bundespräsident) da Suíça.
+  c: Introduziu o direito de voto das mulheres.
+  d: Foi o líder da Reforma em Zurique.
+explanation: No século XVI, Huldrych (Ulrich) Zwingli liderou a Reforma em Zurique, e a Igreja de Zurique
+  tornou-se reformada. O caminho-de-ferro, o Estado federal com um Presidente da Confederação e o direito
+  de voto das mulheres só surgiram séculos mais tarde.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür ist Huldrych (Ulrich) Zwingli in der Geschichte Zürichs vor allem bekannt?
+    options_de:
+      a: Er baute die erste Eisenbahn des Kantons.
+      b: Er war der erste Bundespräsident der Schweiz.
+      c: Er führte das Stimmrecht der Frauen ein.
+      d: Er war der Anführer der Reformation in Zürich.
+    explanation_de: Im 16. Jahrhundert führte Huldrych (Ulrich) Zwingli die Reformation in Zürich an,
+      und die Zürcher Kirche wurde reformiert. Die Eisenbahn, der Bundesstaat mit einem Bundespräsidenten
+      und das Stimmrecht der Frauen entstanden erst Jahrhunderte später.

@@ -1,0 +1,31 @@
+id: zweifraenkler-helvetia-symbolfigur
+lang: it
+source_version: 1
+question: Quale figura simbolica è raffigurata sulla moneta da due franchi?
+options:
+  a: Il Cervino
+  b: Helvetia
+  c: Guglielmo Tell
+  d: Un membro del Consiglio federale (Bundesrat) svizzero
+explanation: Sulla moneta svizzera da due franchi è raffigurata Helvetia, la figura simbolica femminile
+  della Confederazione. Rappresenta la Svizzera come nazione. Helvetia compare anche su altre monete e
+  su francobolli.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Symbolfigur ist auf der Zweifrankenmünze abgebildet?
+    options_de:
+      a: Das Matterhorn
+      b: Helvetia
+      c: Wilhelm Tell
+      d: Ein Mitglied des Schweizer Bundesrates
+    explanation_de: Auf der Schweizer Zweifrankenmünze ist Helvetia abgebildet, die weibliche Symbolfigur
+      der Eidgenossenschaft. Sie stellt die Schweiz als Nation dar. Helvetia erscheint auch auf anderen
+      Münzen und auf Briefmarken.

@@ -1,0 +1,31 @@
+id: steuerhoehe-richtet-sich-nach-einkommen-vermoegen
+lang: sq
+source_version: 1
+question: Nga çfarë varet kryesisht sa tatim mbi të ardhurat dhe pasurinë paguan një person në kantonin
+  e Cyrihut?
+options:
+  a: Nga të ardhurat dhe pasuria e tatueshme
+  b: Nga profesioni i personit
+  c: Nga kohëzgjatja e banimit në komunë (Gemeinde)
+  d: Nga numri i herëve të ushtrimit të së drejtës së votës
+explanation: Tatimi llogaritet mbi të ardhurat dhe pasurinë e tatueshme. Kush fiton ose zotëron më shumë,
+  paguan zakonisht më shumë tatim.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wovon hängt hauptsächlich ab, wie viel Steuern auf das Einkommen und das Vermögen eine
+      Person im Kanton Zürich bezahlt?
+    options_de:
+      a: Vom steuerbaren Einkommen und Vermögen
+      b: Vom Beruf der Person
+      c: Von der Dauer des Wohnens in der Gemeinde
+      d: Von der Anzahl der Ausübungen des Stimmrechts
+    explanation_de: Die Steuer wird auf das steuerbare Einkommen und Vermögen berechnet. Wer mehr verdient
+      oder besitzt, bezahlt in der Regel mehr Steuern.

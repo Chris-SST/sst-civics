@@ -1,0 +1,33 @@
+id: kantonsreferendum-acht-kantone
+lang: tr
+source_version: 1
+question: 50.000 oy hakkına sahip kişinin yanı sıra, bir federal yasaya karşı isteğe bağlı referandum
+  talebinde bir başka kim bulunabilir?
+options:
+  a: Sekiz kanton
+  b: Üç büyük parti birlikte
+  c: Federal Konsey (Bundesrat)
+  d: Federal Mahkeme (Bundesgericht)
+explanation: Federal Anayasa'ya göre sekiz kanton da bir federal yasa hakkında halk oylaması talep edebilir.
+  Buna kanton referandumu denir. Nadiren kullanılır, ancak kantonların federal devlet içinde söz hakkına
+  sahip olduğunu gösterir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann neben 50 000 Stimmberechtigten ein fakultatives Referendum gegen ein Bundesgesetz
+      verlangen?
+    options_de:
+      a: Acht Kantone
+      b: Drei grosse Parteien gemeinsam
+      c: Der Bundesrat
+      d: Das Bundesgericht
+    explanation_de: Gemäss der Bundesverfassung können auch acht Kantone eine Volksabstimmung über ein
+      Bundesgesetz verlangen. Dies nennt man Kantonsreferendum. Es wird selten genutzt, zeigt aber, dass
+      die Kantone im Bundesstaat ein Mitspracherecht haben.

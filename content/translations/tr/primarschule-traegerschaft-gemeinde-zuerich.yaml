@@ -1,0 +1,32 @@
+id: primarschule-traegerschaft-gemeinde-zuerich
+lang: tr
+source_version: 2
+question: Zürich kantonunda ilkokul kademesindeki okulları kim işletir?
+options:
+  a: Kantonun Eğitim Müdürlüğü (Bildungsdirektion)
+  b: Konfederasyon
+  c: Belediyeler (Gemeinden)
+  d: İlçeler
+explanation: Zürich kantonunda ilkokulları belediyeler işletir. Bunlar, yerine göre siyasi belediyeler
+  ya da ayrı okul belediyeleridir ve seçilmiş okul kurulu (Schulpflege) yerel okul makamıdır. Kanton yalnızca
+  müfredat gibi çerçeveyi belirler ve devlet okullarını (Volksschule) denetler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer betreibt im Kanton Zürich die Schulen auf der Primarstufe?
+    options_de:
+      a: Die Bildungsdirektion des Kantons
+      b: Der Bund
+      c: Die Gemeinden
+      d: Die Bezirke
+    explanation_de: Im Kanton Zürich werden die Primarschulen von den Gemeinden betrieben. Dies sind je
+      nach Ort politische Gemeinden oder separate Schulgemeinden, und die gewählte Schulpflege ist die
+      lokale Schulbehörde. Der Kanton legt nur den Rahmen fest, wie zum Beispiel den Lehrplan, und beaufsichtigt
+      die staatlichen Schulen (Volksschule).

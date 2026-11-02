@@ -10,6 +10,22 @@ options:
 explanation: Parties bring together the various interests and opinions of the population and introduce
   them into politics. Enforcing laws is the task of the authorities, and administering justice is the
   task of the courts.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Rolle spielen politische Parteien in einer Demokratie?
+    options_de:
+      a: Sie sprechen Recht bei Streitigkeiten
+      b: Sie vertreten die verschiedenen Interessen der Bevölkerung
+      c: Sie führen eidgenössische Abstimmungen durch
+      d: Sie setzen die Gesetze im Alltag durch
+    explanation_de: Parteien bündeln die verschiedenen Interessen und Meinungen der Bevölkerung und bringen
+      sie in die Politik ein. Die Durchsetzung der Gesetze ist die Aufgabe der Behörden, und die Rechtsprechung
+      ist die Aufgabe der Gerichte.

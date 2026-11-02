@@ -1,0 +1,29 @@
+id: eu-wichtigster-aussenhandelspartner-schweiz
+lang: es
+source_version: 1
+question: ¿Quién es el socio más importante para la economía suiza en el comercio exterior?
+options:
+  a: China
+  b: Japón
+  c: La Unión Europea
+  d: Los Estados Unidos de América
+explanation: La mayor parte del comercio de Suiza con el extranjero se realiza con los países de la Unión
+  Europea. Por eso, Suiza está vinculada a la UE mediante diversos tratados.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist für die Schweizer Wirtschaft der wichtigste Partner im Aussenhandel?
+    options_de:
+      a: China
+      b: Japan
+      c: Die Europäische Union
+      d: Die Vereinigten Staaten von Amerika
+    explanation_de: Der grösste Teil des Handels der Schweiz mit dem Ausland findet mit den Ländern der
+      Europäischen Union statt. Deshalb ist die Schweiz durch verschiedene Verträge mit der EU verbunden.

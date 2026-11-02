@@ -10,6 +10,23 @@ options:
   d: Verbally in a private conversation
 explanation: With registered post or a written confirmation of receipt, it is possible to prove that the
   notice of termination has arrived. This is important because notice periods start to run from receipt.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie soll eine ordentliche Kündigung eines Arbeitsverhältnisses zugestellt werden, damit
+      der Empfang nachgewiesen werden kann?
+    options_de:
+      a: Durch Meldung an die Gemeindeverwaltung
+      b: Per eingeschriebenen Brief, oder die andere Partei bestätigt den Empfang schriftlich
+      c: Per gewöhnliche E-Mail ohne Bestätigung
+      d: Mündlich in einem privaten Gespräch
+    explanation_de: Mit einem eingeschriebenen Brief oder einer schriftlichen Empfangsbestätigung kann
+      nachgewiesen werden, dass die Kündigung angekommen ist. Das ist wichtig, weil die Kündigungsfristen
+      ab dem Empfang zu laufen beginnen.

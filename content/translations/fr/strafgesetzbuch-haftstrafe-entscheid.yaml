@@ -1,0 +1,31 @@
+id: strafgesetzbuch-haftstrafe-entscheid
+lang: fr
+source_version: 1
+question: De quelle loi dépend le fait qu'une personne doive purger une peine de prison ?
+options:
+  a: Du Code civil
+  b: Du Code des obligations
+  c: Du droit du bail
+  d: Du Code pénal
+explanation: Le Code pénal détermine quels actes sont punissables et quelles peines peuvent être prononcées
+  pour ceux-ci. Ces peines comprennent les peines pécuniaires et les peines privatives de liberté. Dans
+  chaque cas particulier, c'est un tribunal qui décide de la peine.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Von welchem Gesetz hängt es ab, ob eine Person eine Gefängnisstrafe verbüssen muss?
+    options_de:
+      a: Vom Zivilgesetzbuch
+      b: Vom Obligationenrecht
+      c: Vom Mietrecht
+      d: Vom Strafgesetzbuch
+    explanation_de: Das Strafgesetzbuch bestimmt, welche Handlungen strafbar sind und welche Strafen dafür
+      ausgesprochen werden können. Diese Strafen umfassen Geldstrafen und Freiheitsstrafen. In jedem Einzelfall
+      entscheidet ein Gericht über die Strafe.

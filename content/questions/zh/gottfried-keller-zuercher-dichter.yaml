@@ -1,28 +1,29 @@
 id: gottfried-keller-zuercher-dichter
-version: 1
+version: 2
 scope: zh
 canton: zh
 topic: kanton.kultur.zuerich
-question_de: Wer war ein bekannter Dichter und Schriftsteller aus Zürich?
+question_de: Welcher bekannte Dichter und Schriftsteller stammte aus Zürich?
 options_de:
-  a: Max Frisch
+  a: Robert Walser
   b: Gottfried Keller
   c: Friedrich Dürrenmatt
   d: Jeremias Gotthelf
 correct: b
-explanation_de: Gottfried Keller wurde 1819 in Zürich geboren und schrieb unter anderem «Der grüne Heinrich».
-  Er war auch Staatsschreiber des Kantons Zürich. Gotthelf lebte im Kanton Bern.
+explanation_de: Gottfried Keller kam 1819 in Zürich zur Welt, schrieb zum Beispiel «Der grüne Heinrich»
+  und arbeitete auch als Staatsschreiber des Kantons Zürich. Robert Walser stammte aus Biel, Friedrich
+  Dürrenmatt aus Konolfingen im Kanton Bern, und Jeremias Gotthelf wirkte als Pfarrer im Kanton Bern.
 sources:
 - url: https://www.stadt-zuerich.ch/misc/de/mitteilungsarchiv/medienmitteilungen/2009/01/090128b.html
-  checked: &id001 2026-11-02
+  checked: 2026-11-02
 - url: https://www.kantonsrat.zh.ch/besuch/das-rathaus/
-  checked: *id001
+  checked: &id001 2026-11-02
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: *id001
 glossary:
 - Gottfried Keller
 - Dichter
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-347
@@ -32,18 +33,41 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Gottfried Keller (1819–1890) wurde in Zürich geboren und war ein bekannter Dichter und
-      Schriftsteller; Max Frisch wurde zwar ebenfalls in Zürich geboren, doch Keller ist der klassische
-      Zürcher Dichter, während Dürrenmatt aus dem Kanton Bern und Gotthelf aus dem Emmental stammt, daher
-      ist b die beste Antwort, auch wenn a ebenfalls vertretbar wäre.
+    version: 2
+    reasoning: Gottfried Keller wurde 1819 in Zürich geboren, während Robert Walser aus Biel, Friedrich
+      Dürrenmatt aus dem Emmental (Konolfingen) und Jeremias Gotthelf aus Murten stammten.
   source:
     verdict: supported
-    note: Quelle 3 (Broschüre) sagt, Gottfried Keller sei 1819 in Zürich geboren, ein berühmter Schriftsteller
-      und Politiker gewesen und habe «Der grüne Heinrich» geschrieben. Quelle 1 nennt ihn Dichter und
-      Zürcher Staatsschreiber (1861–1876), Quelle 2 den bedeutenden Zürcher Schriftsteller und Staatsschreiber.
-      Dass Gotthelf im Kanton Bern lebte, steht in den Quellen nicht, ist aber für die richtige Antwort
-      nicht nötig.
+    note: Quelle 3 (Broschüre, S. 44/45) sagt ausdrücklich, Gottfried Keller sei 1819 in Zürich geboren
+      und schrieb «Der grüne Heinrich». Quelle 2 nennt ihn Zürcher Schriftsteller und Staatsschreiber,
+      Quelle 1 bestätigt die Tätigkeit als Zürcher Staatsschreiber. Die Herkunft der anderen drei Autoren
+      (Walser aus Biel, Dürrenmatt aus Konolfingen, Gotthelf als Pfarrer im Kanton Bern) steht nicht in
+      den Quellen, widerspricht der Antwort aber auch nicht.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt bei Jeremias Gotthelf nur seinen Wirkungsort und nicht seine Herkunft
+        wie bei den anderen Autoren; besser wäre: «Jeremias Gotthelf kam in Murten zur Welt und wirkte
+        als Pfarrer im Kanton Bern.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues: []
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

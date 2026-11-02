@@ -9,6 +9,22 @@ options:
   d: They are free to decide whether they want to take out insurance
 explanation: The Health Insurance Act requires every person resident in Switzerland to have health insurance.
   You must take out insurance within three months of birth or of taking up residence.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für Personen, die in der Schweiz wohnen, in Bezug auf die Krankenversicherung?
+    options_de:
+      a: Sie müssen nur dann eine Versicherung abschliessen, wenn sie in der Schweiz arbeiten
+      b: Sie sind gesetzlich verpflichtet, eine Krankenversicherung abzuschliessen
+      c: Sie müssen nur dann eine Versicherung abschliessen, wenn sie älter als 50 sind
+      d: Es steht ihnen frei, zu entscheiden, ob sie eine Versicherung abschliessen wollen
+    explanation_de: Das Krankenversicherungsgesetz verpflichtet jede in der Schweiz wohnhafte Person,
+      krankenversichert zu sein. Man muss sich innerhalb von drei Monaten nach der Geburt oder nach der
+      Wohnsitznahme versichern.

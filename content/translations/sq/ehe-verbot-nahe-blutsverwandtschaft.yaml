@@ -1,0 +1,31 @@
+id: ehe-verbot-nahe-blutsverwandtschaft
+lang: sq
+source_version: 1
+question: Kush nuk lejohet të martohet në Zvicër?
+options:
+  a: Personat që janë divorcuar tashmë një herë
+  b: Personat që vijnë nga kantone të ndryshme
+  c: Personat që janë të afërm të ngushtë në gjak
+  d: Personat që banojnë në komuna (Gemeinden) të ndryshme
+explanation: Martesa mes të afërmve të ngushtë në gjak është e ndaluar, për shembull mes vëllezërve e
+  motrave ose mes prindërve dhe fëmijëve. Prejardhja, vendbanimi dhe një divorc i mëparshëm, përkundrazi,
+  nuk përbëjnë pengesë për martesë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer darf in der Schweiz nicht heiraten?
+    options_de:
+      a: Personen, die bereits einmal geschieden sind
+      b: Personen, die aus verschiedenen Kantonen kommen
+      c: Personen, die nahe Blutsverwandte sind
+      d: Personen, die in verschiedenen Gemeinden wohnen
+    explanation_de: Die Ehe zwischen nahen Blutsverwandten ist verboten, zum Beispiel zwischen Geschwistern
+      oder zwischen Eltern und Kindern. Die Herkunft, der Wohnort und eine frühere Scheidung hingegen
+      stellen kein Ehehindernis dar.

@@ -1,0 +1,29 @@
+id: gewerkschaften-vertreten-arbeitnehmende-interessen
+lang: tr
+source_version: 1
+question: Sendikalar kimlerin çıkarlarını temsil eder?
+options:
+  a: İşverenlerin çıkarlarını
+  b: Belediyelerin (Gemeinde) çıkarlarını
+  c: Bankaların çıkarlarını
+  d: Çalışanların çıkarlarını
+explanation: Sendikalar, örneğin ücretler ve çalışma koşulları konusunda çalışanların taleplerini savunur.
+  İşverenlerle çoğunlukla toplu iş sözleşmeleri konusunda müzakere ederler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wessen Interessen vertreten die Gewerkschaften?
+    options_de:
+      a: Die Interessen der Arbeitgeber
+      b: Die Interessen der Gemeinden
+      c: Die Interessen der Banken
+      d: Die Interessen der Arbeitnehmer
+    explanation_de: Die Gewerkschaften setzen sich zum Beispiel bei Löhnen und Arbeitsbedingungen für
+      die Forderungen der Arbeitnehmer ein. Mit den Arbeitgebern verhandeln sie meistens über Gesamtarbeitsverträge.

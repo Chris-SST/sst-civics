@@ -1,0 +1,31 @@
+id: rechtsprechende-gewalt-bund-bundesgericht
+lang: sq
+source_version: 1
+question: Cili autoritet është në nivel federal organi më i lartë gjyqësor i Zvicrës?
+options:
+  a: Kancelaria Federale (Bundeskanzlei)
+  b: Këshilli Federal (Bundesrat)
+  c: Kuvendi Federal (Bundesversammlung)
+  d: Gjykata Federale (Bundesgericht)
+explanation: Kushtetuta Federale ia ka caktuar pushtetin gjyqësor të Konfederatës Gjykatës Federale. Ajo
+  është autoriteti më i lartë gjyqësor i Konfederatës. Këshilli Federal dhe Kuvendi Federal ushtrojnë
+  përkatësisht pushtetin ekzekutiv dhe pushtetin legjislativ.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde ist auf Bundesebene das oberste richterliche Organ der Schweiz?
+    options_de:
+      a: Die Bundeskanzlei
+      b: Der Bundesrat
+      c: Die Bundesversammlung
+      d: Das Bundesgericht
+    explanation_de: Die Bundesverfassung hat die richterliche Gewalt des Bundes dem Bundesgericht zugewiesen.
+      Es ist die oberste richterliche Behörde des Bundes. Der Bundesrat und die Bundesversammlung üben
+      jeweils die vollziehende Gewalt und die gesetzgebende Gewalt aus.

@@ -1,0 +1,29 @@
+id: bezeichnung-regierung-bund-bundesrat
+lang: sq
+source_version: 1
+question: Si quhet qeveria e Zvicrës në nivel federal?
+options:
+  a: Kuvendi Federal (Bundesversammlung)
+  b: Këshilli Federal (Bundesrat)
+  c: Kancelaria Federale (Bundeskanzlei)
+  d: Gjykata Federale (Bundesgericht)
+explanation: Qeveria e Konfederatës quhet Këshilli Federal. Kuvendi Federal është parlamenti, Gjykata
+  Federale është gjykata më e lartë. Kancelaria Federale e mbështet Këshillin Federal.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Regierung der Schweiz auf Bundesebene?
+    options_de:
+      a: Bundesversammlung
+      b: Bundesrat
+      c: Bundeskanzlei
+      d: Bundesgericht
+    explanation_de: Die Regierung der Eidgenossenschaft heisst Bundesrat. Die Bundesversammlung ist das
+      Parlament, das Bundesgericht ist das höchste Gericht. Die Bundeskanzlei unterstützt den Bundesrat.

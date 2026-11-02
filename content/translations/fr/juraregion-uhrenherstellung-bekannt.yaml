@@ -1,0 +1,29 @@
+id: juraregion-uhrenherstellung-bekannt
+lang: fr
+source_version: 1
+question: Pour quelle activité économique la région jurassienne en Suisse est-elle célèbre ?
+options:
+  a: Pour l'industrie pharmaceutique
+  b: Pour les grandes banques
+  c: Pour la viticulture au bord du lac de Zurich
+  d: Pour la fabrication de montres
+explanation: Dans l'Arc jurassien, de nombreuses entreprises horlogères réputées ont leur siège et leurs
+  ateliers. La région est donc un centre de l'industrie horlogère suisse.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für welche wirtschaftliche Tätigkeit ist die Jura-Region in der Schweiz berühmt?
+    options_de:
+      a: Für die Pharmaindustrie
+      b: Für die Grossbanken
+      c: Für den Weinbau am Zürichsee
+      d: Für die Herstellung von Uhren
+    explanation_de: Im Jurabogen haben zahlreiche bekannte Uhrenunternehmen ihren Sitz und ihre Werkstätten.
+      Die Region ist daher ein Zentrum der Schweizer Uhrenindustrie.

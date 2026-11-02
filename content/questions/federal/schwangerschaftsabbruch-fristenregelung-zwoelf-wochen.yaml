@@ -23,7 +23,7 @@ sources:
 glossary:
 - Schwangerschaftsabbruch
 - Fristenregelung
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-142
@@ -47,3 +47,41 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «geltend machen» ist für Niveau B1 eher schwer; besser: «Sie muss schriftlich erklären,
+        dass sie in einer Notlage ist.»'
+      - 'Klein: Die Erklärung könnte ergänzen, dass eine Ärztin oder ein Arzt den Abbruch vornimmt und
+        die Frau vorher beraten muss (Art. 119 Abs. 2 StGB); so wird klar, wie «selbst entscheiden» gemeint
+        ist.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «eine Notlage geltend machen» ist für Niveau B1 schwer verständlich; besser: «Sie muss
+        schriftlich erklären, dass sie sich in einer Notlage befindet, und sich von einer Ärztin oder
+        einem Arzt beraten lassen.»'
+      - 'Klein: Die Erklärung könnte erwähnen, dass das Volk die Fristenregelung 2002 in einer Abstimmung
+        angenommen hat und dass der Abbruch nach der zwölften Woche nur mit ärztlicher Begründung erlaubt
+        ist.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage sagt «seit 2002», die Fristenregelung ist formal seit dem 1. Oktober 2002 in
+        Kraft; das ist für die Frage aber ausreichend genau.'
+      - 'Klein: Die Erklärung könnte die Zusatzbedingungen kurz nennen (Beratungsgespräch mit der Ärztin
+        oder dem Arzt, Eingriff nur durch zugelassene Ärztinnen und Ärzte), damit «selbst entscheiden»
+        nicht missverstanden wird.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

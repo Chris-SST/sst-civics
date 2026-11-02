@@ -1,0 +1,31 @@
+id: gewerkschaften-vertreten-arbeitnehmende-interessen
+lang: it
+source_version: 1
+question: Quali interessi rappresentano i sindacati?
+options:
+  a: Gli interessi dei datori di lavoro
+  b: Gli interessi dei Comuni (Gemeinde)
+  c: Gli interessi delle banche
+  d: Gli interessi dei lavoratori e delle lavoratrici
+explanation: I sindacati si impegnano per le istanze dei lavoratori e delle lavoratrici, ad esempio in
+  materia di salari e condizioni di lavoro. Spesso negoziano con i datori di lavoro i contratti collettivi
+  di lavoro.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Interessen vertreten die Gewerkschaften?
+    options_de:
+      a: Die Interessen der Arbeitgeber
+      b: Die Interessen der Gemeinden
+      c: Die Interessen der Banken
+      d: Die Interessen der Arbeitnehmer und Arbeitnehmerinnen
+    explanation_de: Die Gewerkschaften setzen sich für die Anliegen der Arbeitnehmer und Arbeitnehmerinnen
+      ein, zum Beispiel in Bezug auf Löhne und Arbeitsbedingungen. Oft verhandeln sie mit den Arbeitgebern
+      die Gesamtarbeitsverträge.

@@ -10,6 +10,22 @@ options:
 explanation: The Federal Council decides as a collegial body. Even a member who held a different opinion
   within the Federal Council supports the decision outwardly. In this way, the government presents a united
   front.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet das Kollegialitätsprinzip im Bundesrat?
+    options_de:
+      a: Der Bundespräsident entscheidet allein.
+      b: Die Mitglieder vertreten die Entscheide des Bundesrates gegen aussen einheitlich.
+      c: Jedes Mitglied entscheidet in seinem eigenen Departement, ohne die anderen zu konsultieren.
+      d: Die Mitglieder dürfen ihre abweichende Meinung öffentlich äussern.
+    explanation_de: Der Bundesrat entscheidet als Kollegialbehörde. Auch ein Mitglied, das im Bundesrat
+      eine andere Meinung vertreten hat, trägt den Entscheid nach aussen mit. Auf diese Weise tritt die
+      Regierung geschlossen auf.

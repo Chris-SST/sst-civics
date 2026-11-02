@@ -1,0 +1,36 @@
+id: stimmrecht-bund-schweizer-buergerrecht-erwerb
+lang: tr
+source_version: 1
+question: Yurt dışından gelen bir kişi Konfederasyon düzeyinde oy hakkını ve seçilme ile seçme hakkını
+  hangi andan itibaren kazanır?
+options:
+  a: İsviçre'de on yıl boyunca yaşadığı andan itibaren.
+  b: Yerleşim izni (C izni) (Niederlassungsbewilligung) aldığı andan itibaren.
+  c: İsviçre'de vergi ödediği ve çalıştığı andan itibaren.
+  d: İsviçre vatandaşlığına (Bürgerrecht) sahip olduğu ve reşit olduğu andan itibaren.
+explanation: Konfederasyon düzeyinde oy hakkı ve seçme ve seçilme hakkı, İsviçre vatandaşlığına bağlıdır.
+  Yerleşim izni, belirli bir oturma süresi veya vergi ödemek bunun için yeterli değildir. Vatandaşlığa
+  alınan ve reşit olan kişi, federal seçimlere ve oylamalara katılabilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; die Rückübersetzung nennt das passive Wahlrecht ausdrücklich (Wählbarkeit),
+      was den Inhalt nicht verändert, alle Antworten und die Erklärung stimmen sachlich überein
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ab welchem Zeitpunkt erlangt eine aus dem Ausland kommende Person auf Ebene der Eidgenossenschaft
+      das Stimmrecht sowie das Recht, gewählt zu werden und zu wählen?
+    options_de:
+      a: Ab dem Zeitpunkt, in dem sie zehn Jahre lang in der Schweiz gelebt hat.
+      b: Ab dem Zeitpunkt, in dem sie die Niederlassungsbewilligung (Niederlassungsbewilligung, C-Bewilligung)
+        erhalten hat.
+      c: Ab dem Zeitpunkt, in dem sie in der Schweiz Steuern zahlt und arbeitet.
+      d: Ab dem Zeitpunkt, in dem sie das Schweizer Bürgerrecht besitzt und volljährig ist.
+    explanation_de: Das Stimmrecht sowie das Wahl- und Wählbarkeitsrecht auf Ebene der Eidgenossenschaft
+      sind an das Schweizer Bürgerrecht gebunden. Die Niederlassungsbewilligung, eine bestimmte Aufenthaltsdauer
+      oder das Zahlen von Steuern reichen dafür nicht aus. Eine eingebürgerte und volljährige Person kann
+      an den eidgenössischen Wahlen und Abstimmungen teilnehmen.

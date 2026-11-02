@@ -1,0 +1,29 @@
+id: primarschule-finanzierung-kanton-gemeinde
+lang: tr
+source_version: 1
+question: Zürich kantonunda ilkokulu kim finanse eder ve organize eder?
+options:
+  a: Yalnızca kilise belediyeleri (Kirchgemeinden)
+  b: Yalnızca okul çağındaki çocukların ebeveynleri
+  c: Yalnızca Konfederasyon
+  d: Kanton ve belediyeler birlikte
+explanation: Zürich kantonunda devlet okulu (Volksschule), kanton ile belediyelerin (Gemeinden) ortak
+  görevidir. Kanton temel esasları belirler, belediyeler ise okulları yerinde yönetir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer finanziert und organisiert im Kanton Zürich die Primarschule?
+    options_de:
+      a: Nur die Kirchgemeinden
+      b: Nur die Eltern der schulpflichtigen Kinder
+      c: Nur der Bund
+      d: Kanton und Gemeinden gemeinsam
+    explanation_de: Im Kanton Zürich ist die Volksschule eine gemeinsame Aufgabe von Kanton und Gemeinden.
+      Der Kanton legt die Grundlagen fest, die Gemeinden führen die Schulen vor Ort.

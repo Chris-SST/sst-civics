@@ -1,0 +1,35 @@
+id: stimmrecht-bund-ab-18-jahren
+lang: it
+source_version: 2
+question: Chi può votare e eleggere a livello federale?
+options:
+  a: I cittadini svizzeri a partire dai 20 anni
+  b: Tutte le persone con permesso di domicilio (Niederlassungsbewilligung, permesso C) a partire dai
+    18 anni
+  c: I cittadini svizzeri a partire dai 18 anni
+  d: Tutte le persone domiciliate in Svizzera a partire dai 16 anni
+explanation: Nella Confederazione, gli svizzeri e le svizzere possono votare e eleggere a partire dal
+  18° compleanno. Gli stranieri e le straniere non hanno questo diritto a livello federale, nemmeno con
+  un permesso di domicilio. Anche gli svizzeri e le svizzere che vivono all'estero possono partecipare,
+  se si fanno iscrivere nel catalogo elettorale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer darf auf Bundesebene abstimmen und wählen?
+    options_de:
+      a: Schweizer Bürgerinnen und Bürger ab 20 Jahren
+      b: Alle Personen mit Niederlassungsbewilligung (Niederlassungsbewilligung, Bewilligung C) ab 18
+        Jahren
+      c: Schweizer Bürgerinnen und Bürger ab 18 Jahren
+      d: Alle in der Schweiz wohnhaften Personen ab 16 Jahren
+    explanation_de: Im Bund dürfen die Schweizer und Schweizerinnen ab dem 18. Geburtstag abstimmen und
+      wählen. Ausländer und Ausländerinnen haben dieses Recht auf Bundesebene nicht, auch nicht mit einer
+      Niederlassungsbewilligung. Auch die im Ausland lebenden Schweizer und Schweizerinnen können teilnehmen,
+      wenn sie sich ins Wahlverzeichnis eintragen lassen.

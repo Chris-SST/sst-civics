@@ -1,0 +1,29 @@
+id: emilie-lieberherr-frauenstimmrecht
+lang: it
+source_version: 1
+question: Per che cosa si impegnò la politica zurighese Emilie Lieberherr?
+options:
+  a: Per la costruzione dell'aeroporto di Zurigo
+  b: Per l'adesione della Svizzera all'ONU
+  c: Per il diritto di voto e di eleggibilità delle donne
+  d: Per l'abolizione dell'assemblea comunale (Gemeindeversammlung)
+explanation: Negli anni Sessanta Emilie Lieberherr lottò per il diritto di voto e di eleggibilità delle
+  donne. A livello di Confederazione fu introdotto nel 1971. Nel Cantone di Zurigo vale dal 1970.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür setzte sich die Zürcher Politikerin Emilie Lieberherr ein?
+    options_de:
+      a: Für den Bau des Flughafens Zürich
+      b: Für den Beitritt der Schweiz zur UNO
+      c: Für das Stimm- und Wahlrecht der Frauen
+      d: Für die Abschaffung der Gemeindeversammlung
+    explanation_de: In den Sechzigerjahren kämpfte Emilie Lieberherr für das Stimm- und Wahlrecht der
+      Frauen. Auf Ebene des Bundes wurde es 1971 eingeführt. Im Kanton Zürich gilt es seit 1970.

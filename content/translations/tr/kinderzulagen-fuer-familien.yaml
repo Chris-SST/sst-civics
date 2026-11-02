@@ -1,0 +1,30 @@
+id: kinderzulagen-fuer-familien
+lang: tr
+source_version: 1
+question: İsviçre'de çocuklu aileler hangi devlet yardımını alır?
+options:
+  a: Maluliyet aylığı
+  b: Çocuk zammı
+  c: Konut sahipliği primi
+  d: İşsizlik günlük ödeneği
+explanation: Aileler, çocukların bakım masraflarına katkı olarak çocuk zammı alır. Bu zam, Konfederasyon
+  yasasında düzenlenen aile ödenekleri arasında yer alır.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Erklärung: Die Kinderzulagen sind in der deutschen Fassung ein Beitrag an die Unterhaltskosten
+      der Kinder, in der Rückübersetzung an die Betreuungskosten. Das sind unterschiedliche Kosten.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Welche staatliche Leistung erhalten Familien mit Kindern in der Schweiz?
+    options_de:
+      a: Invalidenrente
+      b: Kinderzulage
+      c: Wohneigentumsprämie
+      d: Arbeitslosentaggeld
+    explanation_de: Familien erhalten die Kinderzulage als Beitrag an die Betreuungskosten der Kinder.
+      Diese Zulage gehört zu den Familienzulagen, die im Bundesgesetz geregelt sind.

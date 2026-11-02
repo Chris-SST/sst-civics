@@ -10,6 +10,22 @@ options:
 explanation: Compulsory basic health insurance applies to all persons resident in Switzerland. Citizenship,
   employment and age are irrelevant. The insurance must be taken out within three months of moving to
   Switzerland.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz eine Krankenversicherung abschliessen?
+    options_de:
+      a: Nur Personen mit Schweizer Bürgerrecht
+      b: Alle Personen, die in der Schweiz wohnen
+      c: Nur Personen unter 65 Jahren
+      d: Nur Erwerbstätige
+    explanation_de: Die obligatorische Grundversicherung gilt für alle Personen mit Wohnsitz in der Schweiz.
+      Bürgerrecht, Erwerbstätigkeit und Alter spielen keine Rolle. Die Versicherung muss innerhalb von
+      drei Monaten nach dem Zuzug in die Schweiz abgeschlossen werden.

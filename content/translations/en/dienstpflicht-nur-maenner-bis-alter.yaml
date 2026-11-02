@@ -10,6 +10,22 @@ options:
   d: Only people who hold an office in a commune (Gemeinde)
 explanation: In Switzerland, the duty to serve applies only to men. For women, military service is voluntary.
   The obligation lasts until an age set by law.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer in der Schweiz ist bis zu einem bestimmten Alter verpflichtet, Militärdienst oder
+      zivilen Ersatzdienst zu leisten?
+    options_de:
+      a: Nur Männer
+      b: Frauen und Männer gleichermassen
+      c: Nur Personen mit einer Qualifikation
+      d: Nur Personen, die in einer Gemeinde ein Amt innehaben
+    explanation_de: In der Schweiz gilt die Dienstpflicht nur für Männer. Für Frauen ist der Militärdienst
+      freiwillig. Die Pflicht dauert bis zu einem gesetzlich festgelegten Alter.

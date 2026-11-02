@@ -1,0 +1,30 @@
+id: schweiz-ausdehnung-ost-west
+lang: pt
+source_version: 1
+question: Qual é, aproximadamente, a distância entre o ponto mais a leste e o ponto mais a oeste da Suíça?
+options:
+  a: Cerca de 250 quilómetros
+  b: Cerca de 350 quilómetros
+  c: Cerca de 550 quilómetros
+  d: Cerca de 150 quilómetros
+explanation: A Suíça mede cerca de 350 quilómetros de leste a oeste. É, portanto, um país bastante pequeno,
+  que é mais comprido na direção leste-oeste do que de norte a sul.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie gross ist ungefähr die Entfernung zwischen dem östlichsten und dem westlichsten Punkt
+      der Schweiz?
+    options_de:
+      a: Etwa 250 Kilometer
+      b: Etwa 350 Kilometer
+      c: Etwa 550 Kilometer
+      d: Etwa 150 Kilometer
+    explanation_de: Die Schweiz misst von Osten nach Westen etwa 350 Kilometer. Sie ist also ein ziemlich
+      kleines Land, das in Ost-West-Richtung länger ist als von Norden nach Süden.

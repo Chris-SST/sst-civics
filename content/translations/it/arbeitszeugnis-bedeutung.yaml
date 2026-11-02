@@ -1,0 +1,31 @@
+id: arbeitszeugnis-bedeutung
+lang: it
+source_version: 1
+question: Che cos'è un certificato di lavoro?
+options:
+  a: Un certificato del medico che attesta che non si può lavorare
+  b: Un documento del datore di lavoro che valuta le prestazioni e il comportamento della persona impiegata
+  c: Il permesso dell'ufficio della migrazione per lavorare in Svizzera
+  d: Il certificato di salario annuale per la dichiarazione d'imposta
+explanation: Il certificato di lavoro viene rilasciato dal datore di lavoro. Descrive il tipo e la durata
+  dell'attività e valuta le prestazioni e il comportamento. I dipendenti possono richiederlo in qualsiasi
+  momento.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist ein Arbeitszeugnis?
+    options_de:
+      a: Ein ärztliches Zeugnis, das bescheinigt, dass man nicht arbeiten kann
+      b: Ein Dokument des Arbeitgebers, das die Leistungen und das Verhalten der angestellten Person beurteilt
+      c: Die Bewilligung des Migrationsamtes, in der Schweiz zu arbeiten
+      d: Der jährliche Lohnausweis für die Steuererklärung
+    explanation_de: Das Arbeitszeugnis wird vom Arbeitgeber ausgestellt. Es beschreibt die Art und die
+      Dauer der Tätigkeit und beurteilt die Leistungen und das Verhalten. Die Angestellten können es jederzeit
+      verlangen.

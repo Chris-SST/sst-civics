@@ -1,0 +1,30 @@
+id: referendum-gesetz-verhindern
+lang: it
+source_version: 1
+question: Che cosa possono ottenere gli aventi diritto di voto con un referendum?
+options:
+  a: Possono scrivere personalmente una nuova legge e farla entrare in vigore.
+  b: Possono impedire una legge approvata dal Parlamento.
+  c: Possono revocare i membri del Consiglio federale (Bundesrat).
+  d: Possono sciogliere il Parlamento e chiedere nuove elezioni.
+explanation: Con un referendum gli aventi diritto di voto possono chiedere che una legge approvata dal
+  Parlamento sia sottoposta a votazione. Se il popolo respinge la legge, questa non entra in vigore.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was können die Stimmberechtigten mit einem Referendum erreichen?
+    options_de:
+      a: Sie können persönlich ein neues Gesetz schreiben und in Kraft treten lassen.
+      b: Sie können ein vom Parlament verabschiedetes Gesetz verhindern.
+      c: Sie können die Mitglieder des Bundesrates abberufen.
+      d: Sie können das Parlament auflösen und Neuwahlen verlangen.
+    explanation_de: Mit einem Referendum können die Stimmberechtigten verlangen, dass ein vom Parlament
+      verabschiedetes Gesetz zur Abstimmung vorgelegt wird. Lehnt das Volk das Gesetz ab, tritt es nicht
+      in Kraft.

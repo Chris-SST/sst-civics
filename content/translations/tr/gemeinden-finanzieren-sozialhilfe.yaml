@@ -1,0 +1,30 @@
+id: gemeinden-finanzieren-sozialhilfe
+lang: tr
+source_version: 1
+question: Zürich kantonunda zor durumdaki insanlara yönelik sosyal yardımı kim finanse eder?
+options:
+  a: Yalnızca kiliseler
+  b: İsviçre Ulusal Bankası
+  c: İşveren birlikleri
+  d: Belediyeler (Gemeinden)
+explanation: Zürich kantonunda sosyal yardımdan belediyeler sorumludur ve bunun maliyetlerini de onlar
+  karşılar. Bu durum küçük belediyeleri ciddi ölçüde zorlayabilir. Bu nedenle mali denkleştirme sistemi
+  vardır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer finanziert im Kanton Zürich die Sozialhilfe für Menschen in Not?
+    options_de:
+      a: Nur die Kirchen
+      b: Die Schweizerische Nationalbank
+      c: Die Arbeitgeberverbände
+      d: Die Gemeinden
+    explanation_de: Im Kanton Zürich sind die Gemeinden für die Sozialhilfe zuständig und tragen auch
+      deren Kosten. Dies kann kleine Gemeinden erheblich belasten. Deshalb gibt es ein System des Finanzausgleichs.

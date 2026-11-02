@@ -1,16 +1,34 @@
 id: gewaltmonopol-des-staates
 lang: en
-source_version: 1
-question: Who is permitted to use physical force in Switzerland, for example through the police and the
-  army?
+source_version: 2
+question: Who is, in principle, permitted to use physical force in Switzerland?
 options:
   a: Private security firms acting on behalf of associations
   b: Any person who feels threatened
   c: Only the state
-  d: Any commune (Gemeinde) with its own vigilante groups
-explanation: The state has a monopoly on the use of force. Only the state may use physical force to protect
-  public order, for example through the police and the army. This is to ensure that disputes are not settled
-  through vigilantism.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  d: Every commune (Gemeinde) with its own vigilante groups
+explanation: 'In Switzerland, the state has a monopoly on the use of force: in principle, only the state
+  may use physical force, for example through the police or the army. One exception is self-defence: a
+  person who is unlawfully attacked may defend themselves proportionately, but the mere feeling of being
+  threatened is not sufficient for this.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Vereine» und «Verbände» sind hier sinngleich, und die übrigen Abweichungen
+      sind nur sprachlich.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer darf in der Schweiz grundsätzlich physische Gewalt anwenden?
+    options_de:
+      a: Private Sicherheitsfirmen, die im Auftrag von Verbänden handeln
+      b: Jede Person, die sich bedroht fühlt
+      c: Nur der Staat
+      d: Jede Gemeinde mit eigenen Bürgerwehren
+    explanation_de: 'In der Schweiz hat der Staat das Gewaltmonopol: Grundsätzlich darf nur der Staat
+      physische Gewalt anwenden, zum Beispiel durch die Polizei oder die Armee. Eine Ausnahme ist die
+      Notwehr: Eine Person, die rechtswidrig angegriffen wird, darf sich verhältnismässig verteidigen,
+      aber das blosse Gefühl, bedroht zu sein, reicht dafür nicht aus.'

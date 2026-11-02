@@ -1,0 +1,31 @@
+id: landesschutz-innen-aussen-bund
+lang: pt
+source_version: 1
+question: Qual das seguintes tarefas é uma das tarefas centrais da Confederação?
+options:
+  a: A organização das escolas locais
+  b: A proteção do país contra ameaças internas e externas
+  c: A manutenção das ruas da comuna (Gemeinde)
+  d: A administração dos registos de habitantes das comunas
+explanation: A Confederação zela pela segurança do país no exterior, por exemplo com o exército, e pela
+  segurança interna. As escolas, as ruas das comunas e os registos de habitantes são, pelo contrário,
+  sobretudo da responsabilidade dos cantões e das comunas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aufgaben ist eine der zentralen Aufgaben des Bundes?
+    options_de:
+      a: Die Organisation der örtlichen Schulen
+      b: Der Schutz des Landes vor inneren und äusseren Bedrohungen
+      c: Der Unterhalt der Strassen der Gemeinde
+      d: Die Verwaltung der Einwohnerregister der Gemeinden
+    explanation_de: Der Bund sorgt für die Sicherheit des Landes nach aussen, zum Beispiel mit der Armee,
+      und für die innere Sicherheit. Die Schulen, die Strassen der Gemeinden und die Einwohnerregister
+      fallen hingegen vor allem in die Verantwortung der Kantone und der Gemeinden.

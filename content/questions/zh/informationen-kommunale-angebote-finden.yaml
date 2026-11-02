@@ -1,48 +1,82 @@
 id: informationen-kommunale-angebote-finden
-version: 1
+version: 2
 scope: zh
 canton: zh
 topic: gemeinde.leistungen
-question_de: Wo kann man sich über Angebote und Vorschriften der eigenen Gemeinde informieren?
+question_de: Wo findet man Informationen über die Angebote und Regeln der eigenen Gemeinde?
 options_de:
-  a: Nur direkt beim Bundesrat in Bern
-  b: Nur bei der Kantonspolizei am Schalter
-  c: Nur an der Gemeindeversammlung, die einmal im Jahr stattfindet
-  d: Über die Lokalzeitung oder das Internet, zum Beispiel die Website der Gemeinde
-correct: d
-explanation_de: Gemeinden informieren über ihre Angebote und Vorschriften in der Lokalzeitung, im amtlichen
-  Publikationsorgan und auf ihrer Website. So finden Einwohnerinnen und Einwohner leicht, was für sie
-  gilt. Die Gemeindeverwaltung gibt auf Anfrage ebenfalls Auskunft.
+  a: Im Bundesblatt der Eidgenossenschaft
+  b: In der Lokalzeitung oder auf der Website der Gemeinde
+  c: Bei der Botschaft des Herkunftslandes
+  d: Beim Bundesrat in Bern
+correct: b
+explanation_de: Die Gemeinde informiert über ihre Angebote und Regeln vor allem in der Lokalzeitung und
+  auf ihrer Website im Internet. Bund und Bundesrat sind für nationale Themen zuständig, eine ausländische
+  Botschaft gar nicht für die Gemeinde. Auch die Gemeindeverwaltung gibt Auskunft.
 sources:
 - url: https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/vorgaben-zur-amtlichen-publikation.html
-  checked: &id001 2026-11-02
+  checked: 2026-11-02
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: *id001
+  checked: &id001 2026-11-02
 - url: https://www.zh.ch/de/politik-staat/gemeinden.html
   checked: 2026-11-02
 glossary:
 - Gemeinde
 - Lokalzeitung
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-201
 checks:
   independent_answer:
-    option: d
+    option: b
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Über Angebote und Vorschriften der eigenen Gemeinde informiert man sich zum Beispiel über
-      die Lokalzeitung oder die Website der Gemeinde, während die anderen Antworten mit «nur» fälschlich
-      ausschliessliche Informationsquellen nennen.
+    version: 2
+    reasoning: Informationen über Angebote und Regeln der eigenen Gemeinde veröffentlicht die Gemeinde
+      selbst, typischerweise auf ihrer Website und in der Lokalzeitung, während Bundesblatt, Botschaft
+      und Bundesrat dafür nicht zuständig sind.
   source:
     verdict: supported
-    note: 'Quelle 2 (Broschüre Einbürgerung, Kanton Zürich) sagt wörtlich: «Alle Informationen über die
-      Angebote und Regelungen in der Gemeinde gibt es in der Lokalzeitung oder im Internet.» Quelle 1
-      stützt die Erklärung zusätzlich: Gemeinden publizieren in Zeitung oder Internet (Website der Gemeinde
-      als Publikationsorgan) und die Verwaltung kann Beschlüsse einsehen lassen.'
+    note: 'Quelle 2 (Broschüre zum Grundkenntnistest, Kapitel zu den Gemeinden) sagt wörtlich: «Alle Informationen
+      über die Angebote und Regelungen in der Gemeinde gibt es in der Lokalzeitung oder im Internet.»
+      Das stützt Antwort b); der Hinweis auf die Auskunft der Gemeindeverwaltung in der Erklärung ist
+      durch die Quellen nur indirekt gedeckt.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt das Bundesblatt nicht ausdrücklich; besser ergänzen: «Das Bundesblatt
+        ist das amtliche Publikationsorgan des Bundes und enthält keine Informationen der Gemeinden.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «eine ausländische Botschaft gar nicht für die Gemeinde» ist sprachlich holprig;
+        besser: «Eine ausländische Botschaft ist für Fragen zur Gemeinde gar nicht zuständig.»'
+      - 'Klein: Der Begriff «Bundesblatt» ist vielen Lernenden unbekannt; die Erklärung könnte kurz sagen,
+        dass im Bundesblatt Gesetze und Beschlüsse des Bundes veröffentlicht werden, nicht die Informationen
+        der Gemeinde.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt «vor allem», die Broschüre nennt Lokalzeitung und Internet; das passt,
+        aber «Auch die Gemeindeverwaltung gibt Auskunft» steht nicht in der Quelle und könnte weggelassen
+        oder als allgemeine Ergänzung gekürzt werden.'
+      - 'Klein: Antwort a) «Bundesblatt» ist für Lernende mit B1 ein schwieriger Fachbegriff; die Frage
+        bleibt aber fair, da die Antwort klar falsch ist.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

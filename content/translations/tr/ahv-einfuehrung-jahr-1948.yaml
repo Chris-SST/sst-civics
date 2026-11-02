@@ -1,0 +1,33 @@
+id: ahv-einfuehrung-jahr-1948
+lang: tr
+source_version: 1
+question: Yaşlılık ve dul-yetim sigortası (AHV), yani yaşlılık ve geride kalanlar için devlet emeklilik
+  sigortası, hangi yıl kurulmuştur?
+options:
+  a: '1975'
+  b: '1918'
+  c: '1930'
+  d: '1948'
+explanation: Yaşlılık ve dul-yetim sigortası, halk yasayı 1947'de kabul ettikten sonra 1948'de faaliyete
+  başlamıştır. İsviçre'deki üç sütunlu sistemin birinci sütununu oluşturur. Yaşlılık döneminde ve geride
+  kalanlar için geçim güvencesi sağlar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr wurde die Alters- und Hinterlassenenversicherung (AHV), also die staatliche
+      Rentenversicherung für das Alter und für Hinterbliebene, gegründet?
+    options_de:
+      a: '1975'
+      b: '1918'
+      c: '1930'
+      d: '1948'
+    explanation_de: Die Alters- und Hinterlassenenversicherung nahm ihre Tätigkeit 1948 auf, nachdem das
+      Volk das Gesetz 1947 angenommen hatte. Sie bildet die erste Säule des Drei-Säulen-Systems in der
+      Schweiz. Sie bietet im Alter und für Hinterbliebene eine Existenzsicherung.

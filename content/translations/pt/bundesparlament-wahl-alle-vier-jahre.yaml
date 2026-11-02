@@ -1,0 +1,31 @@
+id: bundesparlament-wahl-alle-vier-jahre
+lang: pt
+source_version: 2
+question: Com que periodicidade o povo elege de novo o Parlamento federal?
+options:
+  a: De três em três anos
+  b: De quatro em quatro anos
+  c: De seis em seis anos
+  d: De dois em dois anos
+explanation: O povo elege de novo o Conselho Nacional (Nationalrat) de quatro em quatro anos. Também os
+  membros do Conselho dos Estados (Ständerat) são hoje eleitos por quatro anos em todos os cantões. Como
+  se elege e, em parte, também quando, cada cantão determina por si próprio.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welchem Rhythmus wählt das Volk das Bundesparlament neu?
+    options_de:
+      a: Alle drei Jahre
+      b: Alle vier Jahre
+      c: Alle sechs Jahre
+      d: Alle zwei Jahre
+    explanation_de: Das Volk wählt den Nationalrat alle vier Jahre neu. Auch die Mitglieder des Ständerats
+      werden heute in allen Kantonen für vier Jahre gewählt. Wie gewählt wird und teilweise auch wann,
+      bestimmt jeder Kanton selbst.

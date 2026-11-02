@@ -1,0 +1,29 @@
+id: familien-steuerabzuege-entlastung
+lang: sq
+source_version: 1
+question: Si lehtësohen familjet në lidhje me taksat?
+options:
+  a: Familjet nuk paguajnë taksa.
+  b: Familjet mund të bëjnë zbritje në taksa.
+  c: Familjet nuk duhet të plotësojnë deklaratë tatimore.
+  d: Familjet paguajnë vetëm tatimin mbi vlerën e shtuar.
+explanation: Familjet mund të bëjnë, për shembull, zbritje për fëmijët ose për kujdesin ndaj fëmijëve.
+  Kështu ulet të ardhurat e tatueshme dhe, si rrjedhojë, edhe taksa.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie werden Familien bei den Steuern entlastet?
+    options_de:
+      a: Familien zahlen keine Steuern.
+      b: Familien können Abzüge bei den Steuern machen.
+      c: Familien müssen keine Steuererklärung ausfüllen.
+      d: Familien zahlen nur die Mehrwertsteuer.
+    explanation_de: Familien können zum Beispiel Abzüge für Kinder oder für die Kinderbetreuung machen.
+      So sinkt das steuerbare Einkommen und folglich auch die Steuer.

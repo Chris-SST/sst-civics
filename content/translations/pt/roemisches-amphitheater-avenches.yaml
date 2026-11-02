@@ -1,0 +1,33 @@
+id: roemisches-amphitheater-avenches
+lang: pt
+source_version: 1
+question: Em qual cidade suíça os romanos construíram um anfiteatro cujos vestígios ainda hoje podem ser
+  vistos?
+options:
+  a: Coira
+  b: Thun
+  c: Sion
+  d: Avenches
+explanation: Avenches chamava-se Aventicum na época romana e era uma cidade importante. O anfiteatro aí
+  situado é um testemunho conhecido da época romana na Suíça. As outras cidades não são conhecidas por
+  esta construção.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Schweizer Stadt haben die Römer ein Amphitheater gebaut, dessen Überreste
+      noch heute zu sehen sind?
+    options_de:
+      a: Chur
+      b: Thun
+      c: Sitten
+      d: Avenches
+    explanation_de: Avenches hiess in der Römerzeit Aventicum und war eine wichtige Stadt. Das dort gelegene
+      Amphitheater ist ein bekanntes Zeugnis der Römerzeit in der Schweiz. Die anderen Städte sind für
+      dieses Bauwerk nicht bekannt.

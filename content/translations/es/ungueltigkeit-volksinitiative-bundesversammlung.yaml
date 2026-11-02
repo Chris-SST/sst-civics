@@ -1,0 +1,35 @@
+id: ungueltigkeit-volksinitiative-bundesversammlung
+lang: es
+source_version: 1
+question: ¿Qué autoridad puede declarar inválida una iniciativa popular (Volksinitiative) federal, por
+  ejemplo cuando vulnera la unidad de la materia?
+options:
+  a: El Consejo Federal (Bundesrat)
+  b: El Tribunal Federal (Bundesgericht)
+  c: La Asamblea Federal (Bundesversammlung)
+  d: La Cancillería Federal (Bundeskanzlei)
+explanation: Según la Constitución Federal, la Asamblea Federal declara total o parcialmente inválida
+  una iniciativa popular cuando vulnera la unidad de la forma, la unidad de la materia o las disposiciones
+  imperativas del derecho internacional. La Cancillería Federal, en cambio, examina sobre todo aspectos
+  formales, por ejemplo si se han presentado suficientes firmas válidas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde kann eine eidgenössische Volksinitiative für ungültig erklären, zum Beispiel
+      wenn sie die Einheit der Materie verletzt?
+    options_de:
+      a: Der Bundesrat
+      b: Das Bundesgericht
+      c: Die Bundesversammlung
+      d: Die Bundeskanzlei
+    explanation_de: Gemäss der Bundesverfassung erklärt die Bundesversammlung eine Volksinitiative ganz
+      oder teilweise für ungültig, wenn sie die Einheit der Form, die Einheit der Materie oder die zwingenden
+      Bestimmungen des Völkerrechts verletzt. Die Bundeskanzlei hingegen prüft vor allem formale Aspekte,
+      zum Beispiel ob genügend gültige Unterschriften eingereicht wurden.

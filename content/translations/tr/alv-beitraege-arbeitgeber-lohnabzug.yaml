@@ -1,0 +1,30 @@
+id: alv-beitraege-arbeitgeber-lohnabzug
+lang: tr
+source_version: 1
+question: İşsizlik sigortasına ödenen primleri maaştan kim keser?
+options:
+  a: İkamet yerindeki belediye (Gemeinde)
+  b: Çalışanın kendisi, ödeme yaparak
+  c: Bölgesel İş Bulma Merkezi
+  d: İşveren
+explanation: İşveren primleri maaştan otomatik olarak keser ve yetkili kuruma aktarır. Çalışanların bununla
+  kendilerinin ilgilenmesi gerekmez. İşveren de primlerin bir kısmını öder.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zieht die für die Arbeitslosenversicherung bezahlten Prämien vom Lohn ab?
+    options_de:
+      a: Die Gemeinde am Wohnort
+      b: Der Arbeitnehmer selbst, durch Zahlung
+      c: Das Regionale Arbeitsvermittlungszentrum
+      d: Der Arbeitgeber
+    explanation_de: Der Arbeitgeber zieht die Prämien automatisch vom Lohn ab und überweist sie an die
+      zuständige Stelle. Die Arbeitnehmenden müssen sich nicht selbst darum kümmern. Der Arbeitgeber bezahlt
+      auch einen Teil der Prämien.

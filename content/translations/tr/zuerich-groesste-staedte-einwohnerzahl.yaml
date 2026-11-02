@@ -1,0 +1,30 @@
+id: zuerich-groesste-staedte-einwohnerzahl
+lang: tr
+source_version: 1
+question: Zürich kantonunda nüfusa göre en büyük üç şehir hangileridir?
+options:
+  a: Zürich, Uster ve Wetzikon
+  b: Zürich, Dietikon ve Winterthur
+  c: Zürich, Winterthur ve Uster
+  d: Zürich, Winterthur ve Dübendorf
+explanation: Zürich açık ara en büyük şehirdir; ardından Winterthur ve Uster gelir. Dübendorf, Dietikon
+  ve Wetzikon da daha büyük şehirlerdir, ancak Uster'den daha az nüfusa sahiptir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches sind nach der Einwohnerzahl die drei grössten Städte im Kanton Zürich?
+    options_de:
+      a: Zürich, Uster und Wetzikon
+      b: Zürich, Dietikon und Winterthur
+      c: Zürich, Winterthur und Uster
+      d: Zürich, Winterthur und Dübendorf
+    explanation_de: Zürich ist mit grossem Abstand die grösste Stadt; danach folgen Winterthur und Uster.
+      Dübendorf, Dietikon und Wetzikon sind ebenfalls grössere Städte, haben aber weniger Einwohner als
+      Uster.

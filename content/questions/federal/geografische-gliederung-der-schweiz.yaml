@@ -19,7 +19,7 @@ glossary:
 - Jura
 - Mittelland
 - Alpen
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-263
@@ -42,3 +42,32 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte kurz sagen, warum die falschen Antworten nicht stimmen, zum Beispiel:
+        «Der Schwarzwald liegt in Deutschland, der Bodensee ist ein See und das Tessin ist ein Kanton.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, der Jura liege «im Nordwesten»; die Quelle nennt «im Westen der Schweiz».
+        Vorschlag: «im Westen und Nordwesten» oder nur «im Westen» schreiben.'
+      - 'Klein: Der Satz «in dem die meisten Menschen leben» ist für das Mittelland ungefähr richtig,
+        die Quelle nennt aber urbane Gebiete «vorwiegend im Mittelland». Vorschlag: «in dem besonders
+        viele Menschen leben» oder «die meisten Städte liegen».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

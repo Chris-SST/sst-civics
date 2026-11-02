@@ -1,0 +1,31 @@
+id: pfaeffikersee-im-kanton-zuerich
+lang: pt
+source_version: 1
+question: Em que cantão se situa o Pfäffikersee?
+options:
+  a: Cantão da Turgóvia
+  b: Cantão de São Galo
+  c: Cantão de Zurique
+  d: Cantão de Zug
+explanation: O Pfäffikersee situa-se no Zürcher Oberland e pertence ao território do cantão de Zurique.
+  É um dos lagos maiores do cantão. Os outros cantões mencionados fazem fronteira, em parte, com Zurique,
+  mas não contêm o lago.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Kanton liegt der Pfäffikersee?
+    options_de:
+      a: Kanton Thurgau
+      b: Kanton St. Gallen
+      c: Kanton Zürich
+      d: Kanton Zug
+    explanation_de: Der Pfäffikersee liegt im Zürcher Oberland und gehört zum Gebiet des Kantons Zürich.
+      Er ist einer der grösseren Seen des Kantons. Die anderen genannten Kantone grenzen teilweise an
+      Zürich, enthalten den See aber nicht.

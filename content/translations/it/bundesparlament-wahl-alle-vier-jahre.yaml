@@ -1,0 +1,31 @@
+id: bundesparlament-wahl-alle-vier-jahre
+lang: it
+source_version: 2
+question: Con quale cadenza il popolo rinnova il Parlamento federale?
+options:
+  a: Ogni tre anni
+  b: Ogni quattro anni
+  c: Ogni sei anni
+  d: Ogni due anni
+explanation: Il popolo rinnova il Consiglio nazionale (Nationalrat) ogni quattro anni. Anche i membri
+  del Consiglio degli Stati (Ständerat) sono oggi eletti in tutti i Cantoni per quattro anni. Come si
+  vota, e in parte anche quando, lo stabilisce ogni Cantone autonomamente.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welchem Rhythmus erneuert das Volk das Bundesparlament?
+    options_de:
+      a: Alle drei Jahre
+      b: Alle vier Jahre
+      c: Alle sechs Jahre
+      d: Alle zwei Jahre
+    explanation_de: Das Volk erneuert den Nationalrat alle vier Jahre. Auch die Mitglieder des Ständerats
+      werden heute in allen Kantonen für vier Jahre gewählt. Wie gewählt wird, und teilweise auch wann,
+      legt jeder Kanton selbstständig fest.

@@ -1,0 +1,32 @@
+id: textilindustrie-fruehe-industrialisierung-schweiz
+lang: sq
+source_version: 1
+question: Cili degë e ekonomisë ishte më e rëndësishmja gjatë industrializimit të hershëm të Zvicrës?
+options:
+  a: Industria e orëve
+  b: Industria farmaceutike
+  c: Industria tekstile
+  d: Industria e makinerive
+explanation: Gjatë industrializimit të hershëm, industria tekstile e përcaktoi ekonominë zvicerane, për
+  shembull me fabrika tjerrjeje, endjeje dhe qëndisjeje. Një shembull i njohur janë qëndisjet e St. Gallenit,
+  të cilat kërkoheshin në mbarë botën. Degët e tjera u bënë kaq të rëndësishme vetëm më vonë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Wirtschaftszweig war während der frühen Industrialisierung der Schweiz der wichtigste?
+    options_de:
+      a: Die Uhrenindustrie
+      b: Die Pharmaindustrie
+      c: Die Textilindustrie
+      d: Die Maschinenindustrie
+    explanation_de: Während der frühen Industrialisierung prägte die Textilindustrie die Schweizer Wirtschaft,
+      zum Beispiel mit Spinnereien, Webereien und Stickereifabriken. Ein bekanntes Beispiel sind die St.
+      Galler Stickereien, die auf der ganzen Welt gefragt waren. Die anderen Wirtschaftszweige wurden
+      erst später so wichtig.

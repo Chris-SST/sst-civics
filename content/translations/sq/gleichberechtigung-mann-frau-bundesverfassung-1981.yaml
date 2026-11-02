@@ -1,0 +1,32 @@
+id: gleichberechtigung-mann-frau-bundesverfassung-1981
+lang: sq
+source_version: 1
+question: Që nga kur është e parashikuar barazia mes burrit dhe gruas në Kushtetutën Federale të Zvicrës?
+options:
+  a: Që nga viti 1999
+  b: Që nga viti 1971
+  c: Që nga viti 1981
+  d: Që nga viti 1848
+explanation: Në vitin 1981 neni për barazinë u përfshi në Kushtetutën Federale. Ai e detyron shtetin të
+  sigurojë barazinë në familje, në arsim dhe në punë. E drejta e votës për gratë ekzistonte që nga viti
+  1971.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Seit wann ist die Gleichstellung von Mann und Frau in der Schweizerischen Bundesverfassung
+      vorgesehen?
+    options_de:
+      a: Seit dem Jahr 1999
+      b: Seit dem Jahr 1971
+      c: Seit dem Jahr 1981
+      d: Seit dem Jahr 1848
+    explanation_de: Im Jahr 1981 wurde der Gleichstellungsartikel in die Bundesverfassung aufgenommen.
+      Er verpflichtet den Staat, die Gleichstellung in der Familie, in der Bildung und bei der Arbeit
+      zu gewährleisten. Das Stimmrecht für Frauen bestand seit dem Jahr 1971.

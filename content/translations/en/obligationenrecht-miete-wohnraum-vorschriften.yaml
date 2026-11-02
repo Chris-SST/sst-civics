@@ -1,15 +1,32 @@
 id: obligationenrecht-miete-wohnraum-vorschriften
 lang: en
-source_version: 1
-question: In which law are the rules on the rental of residential premises found?
+source_version: 2
+question: In which law are the rules for renting a flat set out?
 options:
   a: In the Code of Obligations
-  b: In the Federal Constitution alone
+  b: In the Employment Act
   c: In the Criminal Code
-  d: In the Swiss Road Traffic Act
-explanation: Tenancy law is regulated in the Code of Obligations. It contains, for example, rules on the
-  tenancy agreement, the rent and termination. The Code of Obligations is the fifth part of the Civil
-  Code, but it is a separate law.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  d: In the Road Traffic Act
+explanation: The rules on the rental of flats are set out in the Code of Obligations (OR). It states,
+  for example, what applies in a tenancy agreement, how high the rent may be and how to give notice of
+  termination. The Civil Code (ZGB), by contrast, mainly governs matters such as family, marriage and
+  inheritance.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welchem Gesetz sind die Regeln für die Miete einer Wohnung festgelegt?
+    options_de:
+      a: Im Obligationenrecht
+      b: Im Arbeitsgesetz
+      c: Im Strafgesetzbuch
+      d: Im Strassenverkehrsgesetz
+    explanation_de: Die Regeln zur Miete von Wohnungen sind im Obligationenrecht (OR) festgelegt. Es besagt
+      zum Beispiel, was in einem Mietvertrag gilt, wie hoch der Mietzins sein darf und wie man kündigt.
+      Das Zivilgesetzbuch (ZGB) hingegen regelt hauptsächlich Angelegenheiten wie Familie, Ehe und Erbschaft.

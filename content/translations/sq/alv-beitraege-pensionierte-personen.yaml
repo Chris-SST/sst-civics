@@ -1,0 +1,35 @@
+id: alv-beitraege-pensionierte-personen
+lang: sq
+source_version: 1
+question: Kush nuk duhet më të paguajë kontribute në Zvicër për sigurimin kundër papunësisë (ALV)?
+options:
+  a: Personat që kanë një marrëdhënie pune pa afat
+  b: Personat që kanë arritur moshën e rregullt të pensionit të sigurimit të pleqërisë dhe të të mbijetuarve
+    (AHV)
+  c: Personat që punojnë me kohë të pjesshme
+  d: Personat që nuk kanë qenë kurrë të papunë në dy vitet e fundit
+explanation: Detyrimi për të paguar kontribute për sigurimin kundër papunësisë përfundon me arritjen e
+  moshës së pensionit të sigurimit të pleqërisë dhe të të mbijetuarve (AHV). Kush është në pension, nuk
+  paguan më kontribute ALV për një pagë eventuale. Të punësuarit me kohë të pjesshme dhe me kohë të plotë,
+  përkundrazi, paguajnë kontribute.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz keine Beiträge mehr für die Arbeitslosenversicherung (ALV) bezahlen?
+    options_de:
+      a: Personen, die ein unbefristetes Arbeitsverhältnis haben
+      b: Personen, die das ordentliche Rentenalter der Alters- und Hinterlassenenversicherung (AHV) erreicht
+        haben
+      c: Personen, die in Teilzeit arbeiten
+      d: Personen, die in den letzten zwei Jahren nie arbeitslos waren
+    explanation_de: Die Pflicht, Beiträge für die Arbeitslosenversicherung zu bezahlen, endet mit dem
+      Erreichen des Rentenalters der Alters- und Hinterlassenenversicherung (AHV). Wer pensioniert ist,
+      bezahlt für einen allfälligen Lohn keine ALV-Beiträge mehr. Teilzeit- und Vollzeitangestellte hingegen
+      bezahlen Beiträge.

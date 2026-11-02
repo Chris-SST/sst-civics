@@ -1,0 +1,30 @@
+id: eheschliessung-anmeldung-zivilstandsamt-brautpaar
+lang: tr
+source_version: 1
+question: Planlanan evliliği nüfus (medeni durum) dairesine kim bildirir?
+options:
+  a: Tanıklar, çiftin adına
+  b: Evlenecek çift birlikte
+  c: Oturulan belediyenin ikamet kayıt dairesi otomatik olarak
+  d: Gelinin veya damadın anne babası
+explanation: Evlenecek çift, evlilik hazırlık usulünün yürütülmesi için başvuruyu birlikte medeni durum
+  dairesine yapar. Başka kişiler bunu çiftin yerine yapamaz. Ardından daire, evliliğin şartlarını inceler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer meldet die geplante Eheschliessung beim Zivilstandsamt an?
+    options_de:
+      a: Die Trauzeugen im Namen des Paares
+      b: Das heiratswillige Paar gemeinsam
+      c: Das Einwohnerkontrollamt der Wohngemeinde automatisch
+      d: Die Eltern der Braut oder des Bräutigams
+    explanation_de: Das heiratswillige Paar stellt den Antrag auf Durchführung des Ehevorbereitungsverfahrens
+      gemeinsam beim Zivilstandsamt. Andere Personen können dies nicht anstelle des Paares tun. Anschliessend
+      prüft das Amt die Voraussetzungen der Ehe.

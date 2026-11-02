@@ -1,0 +1,32 @@
+id: berufsinformationszentrum-auskunft-lehrstellen-berufswahl
+lang: sq
+source_version: 1
+question: Ku mund të merren informacione për vendet e praktikës profesionale, zgjedhjen e profesionit
+  dhe punën?
+options:
+  a: Në Qendrën e Informimit Profesional
+  b: Në Zyrën e Gjendjes Civile
+  c: Në kopsht
+  d: Në Zyrën e Përmbarimit
+explanation: Qendra e Informimit Profesional (BIZ) jep informacione dhe këshillim për vendet e praktikës
+  profesionale, zgjedhjen e profesionit, formimin e mëtejshëm dhe punën. Shërbimi është i hapur për të
+  rinjtë dhe për të rriturit. Zyrat e tjera kanë detyra të tjera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo kann man Informationen über Lehrstellen, Berufswahl und Arbeit erhalten?
+    options_de:
+      a: Im Berufsinformationszentrum
+      b: Im Zivilstandsamt
+      c: Im Kindergarten
+      d: Im Betreibungsamt
+    explanation_de: Das Berufsinformationszentrum (BIZ) gibt Informationen und Beratung über Lehrstellen,
+      Berufswahl, Weiterbildung und Arbeit. Der Dienst ist für Jugendliche und für Erwachsene offen. Die
+      anderen Ämter haben andere Aufgaben.

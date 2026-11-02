@@ -1,0 +1,29 @@
+id: bag-zustaendig-gesundheitsfragen-bund
+lang: sq
+source_version: 1
+question: Cila autoritet e Konfederatës është përgjegjëse për çështjet e shëndetësisë?
+options:
+  a: Zyra Federale për Mjedisin (BAFU)
+  b: Sekretariati i Shtetit për Migracionin (SEM)
+  c: Zyra Federale e Statistikës (BFS)
+  d: Zyra Federale e Shëndetësisë Publike (BAG)
+explanation: Zyra Federale e Shëndetësisë Publike (BAG) është autoriteti përgjegjës i Konfederatës për
+  çështjet e shëndetësisë. Ajo mbikëqyr, për shembull, sigurimin shoqëror shëndetësor.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde des Bundes ist für Gesundheitsfragen zuständig?
+    options_de:
+      a: Bundesamt für Umwelt (BAFU)
+      b: Staatssekretariat für Migration (SEM)
+      c: Bundesamt für Statistik (BFS)
+      d: Bundesamt für Gesundheit (BAG)
+    explanation_de: Das Bundesamt für Gesundheit (BAG) ist die zuständige Behörde des Bundes für Gesundheitsfragen.
+      Es beaufsichtigt zum Beispiel die soziale Krankenversicherung.

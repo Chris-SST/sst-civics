@@ -10,6 +10,22 @@ options:
 explanation: According to tradition, representatives of the original cantons are said to have formed an
   alliance on the Rütli. It is therefore regarded as a symbol of the beginnings of the Swiss Confederacy.
   The meadow is located on Lake Lucerne.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür steht das Rütli in der Schweizer Geschichte?
+    options_de:
+      a: Der Zusammenschluss der Urkantone
+      b: Der Sieg in der Schlacht bei Marignano
+      c: Der Beginn der Reformation
+      d: Die Gründung des Bundesstaates im Jahr 1848
+    explanation_de: Der Überlieferung nach sollen Vertreter der Urkantone auf dem Rütli ein Bündnis geschlossen
+      haben. Es gilt daher als Symbol für die Anfänge der Schweizerischen Eidgenossenschaft. Die Wiese
+      befindet sich am Vierwaldstättersee.

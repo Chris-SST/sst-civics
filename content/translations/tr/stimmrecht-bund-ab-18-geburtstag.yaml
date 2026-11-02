@@ -1,0 +1,31 @@
+id: stimmrecht-bund-ab-18-geburtstag
+lang: tr
+source_version: 1
+question: İsviçre vatandaşları federal düzeyde kaç yaşından itibaren oy kullanabilir ve seçimlere katılabilir?
+options:
+  a: 20. doğum gününden itibaren
+  b: 21. doğum gününden itibaren
+  c: 16. doğum gününden itibaren
+  d: 18. doğum gününden itibaren
+explanation: Konfederasyon düzeyinde oy hakkı ve seçme hakkı, reşit olmayla, yani 18. doğum günüyle başlar.
+  Bu yaş sınırı, Konfederasyonun seçimleri ve oylamaları için aynı şekilde geçerlidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ab welchem Alter können Schweizer Staatsbürger auf Bundesebene abstimmen und an Wahlen
+      teilnehmen?
+    options_de:
+      a: Ab dem 20. Geburtstag
+      b: Ab dem 21. Geburtstag
+      c: Ab dem 16. Geburtstag
+      d: Ab dem 18. Geburtstag
+    explanation_de: Das Stimm- und Wahlrecht auf Ebene der Eidgenossenschaft beginnt mit der Volljährigkeit,
+      das heisst mit dem 18. Geburtstag. Diese Altersgrenze gilt gleichermassen für die Wahlen und Abstimmungen
+      der Eidgenossenschaft.

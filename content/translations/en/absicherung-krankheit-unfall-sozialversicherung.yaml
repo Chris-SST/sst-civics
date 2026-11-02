@@ -9,6 +9,21 @@ options:
   d: Against rent increases
 explanation: Social insurance protects people from the financial consequences of major life risks. These
   include illness and accident. Health insurance and accident insurance are examples.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen welche Risiken bietet das Schweizer Sozialversicherungssystem unter anderem Schutz?
+    options_de:
+      a: Gegen Verluste bei privaten Geldanlagen
+      b: Gegen Schäden an Autos und Hausrat durch Diebstahl
+      c: Gegen die Folgen von Krankheit und Unfall
+      d: Gegen Mieterhöhungen
+    explanation_de: Die Sozialversicherung schützt die Menschen vor den finanziellen Folgen grosser Lebensrisiken.
+      Dazu gehören Krankheit und Unfall. Krankenversicherung und Unfallversicherung sind Beispiele dafür.

@@ -1,0 +1,37 @@
+id: auslieferung-schweizer-staatsangehoerige-ausnahme
+lang: tr
+source_version: 2
+question: İsviçre vatandaşlarının yurt dışına iadesi konusunda esas olarak hangi kural geçerlidir?
+options:
+  a: Herhangi bir devletin talebi üzerine iade edilirler.
+  b: İradelerine aykırı olarak başka bir devlete iade edilmezler. Ancak uluslararası bir mahkemeye teslim
+    edilebilirler.
+  c: Yalnızca İsviçre'nin komşu devletlerine iade edilirler.
+  d: Federal Konsey (Bundesrat) bunu somut olayda isterse iade edilirler.
+explanation: Federal Anayasa'nın 25. maddesine göre İsviçre vatandaşları sınır dışı edilemez. Başka bir
+  devlete ancak kendileri razı olursa iade edilebilirler. Uluslararası bir mahkeme, örneğin Uluslararası
+  Ceza Mahkemesi, yabancı bir makam değildir; bu nedenle bir Konfederasyon kanunu, İsviçre vatandaşlarının
+  bir yargılama için oraya teslim edilmesine izin verir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Regel gilt grundsätzlich für die Auslieferung von Schweizer Bürgerinnen und Bürgern
+      ins Ausland?
+    options_de:
+      a: Sie werden auf Antrag irgendeines Staates ausgeliefert.
+      b: Sie werden gegen ihren Willen nicht an einen anderen Staat ausgeliefert. Sie können jedoch an
+        ein internationales Gericht überstellt werden.
+      c: Sie werden nur an die Nachbarstaaten der Schweiz ausgeliefert.
+      d: Sie werden ausgeliefert, wenn der Bundesrat dies im konkreten Fall will.
+    explanation_de: Gemäss Artikel 25 der Bundesverfassung dürfen Schweizer Bürgerinnen und Bürger nicht
+      aus der Schweiz ausgewiesen werden. Sie dürfen nur dann an einen anderen Staat ausgeliefert werden,
+      wenn sie selbst einwilligen. Ein internationales Gericht, zum Beispiel der Internationale Strafgerichtshof,
+      ist keine ausländische Behörde; deshalb erlaubt ein Bundesgesetz, Schweizer Bürgerinnen und Bürger
+      für ein Verfahren dorthin zu überstellen.

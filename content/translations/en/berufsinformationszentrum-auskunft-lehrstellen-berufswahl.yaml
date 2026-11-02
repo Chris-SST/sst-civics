@@ -10,6 +10,22 @@ options:
 explanation: The careers information centre (BIZ) provides information and advice on apprenticeships,
   choosing a career, further training and work. The service is open to young people and adults. The other
   offices have different responsibilities.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo kann man sich über Lehren, die Berufswahl und die Arbeit informieren?
+    options_de:
+      a: Im Berufsinformationszentrum
+      b: Auf dem Zivilstandsamt
+      c: Im Kindergarten
+      d: Auf dem Betreibungsamt
+    explanation_de: Das Berufsinformationszentrum (BIZ) bietet Informationen und Beratung zu Lehren, zur
+      Berufswahl, zur Weiterbildung und zur Arbeit. Das Angebot steht Jugendlichen und Erwachsenen offen.
+      Die anderen Ämter haben andere Zuständigkeiten.

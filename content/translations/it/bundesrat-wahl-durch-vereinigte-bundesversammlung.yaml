@@ -1,0 +1,30 @@
+id: bundesrat-wahl-durch-vereinigte-bundesversammlung
+lang: it
+source_version: 1
+question: Chi elegge i sette membri del Consiglio federale (Bundesrat)?
+options:
+  a: Il popolo, con un'elezione alle urne
+  b: I governi cantonali
+  c: Il Tribunale federale (Bundesgericht)
+  d: Il Consiglio nazionale (Nationalrat) e il Consiglio degli Stati (Ständerat) insieme
+explanation: Le due Camere del Parlamento si riuniscono in Assemblea federale plenaria (Vereinigte Bundesversammlung)
+  ed eleggono i membri del Consiglio federale. In Svizzera il popolo non elegge direttamente il Consiglio
+  federale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wählt die sieben Mitglieder des Bundesrates?
+    options_de:
+      a: Das Volk, mit einer Wahl an der Urne
+      b: Die Kantonsregierungen
+      c: Das Bundesgericht
+      d: Der Nationalrat und der Ständerat gemeinsam
+    explanation_de: Die beiden Kammern des Parlaments versammeln sich in der Vereinigten Bundesversammlung
+      und wählen die Mitglieder des Bundesrates. In der Schweiz wählt das Volk den Bundesrat nicht direkt.

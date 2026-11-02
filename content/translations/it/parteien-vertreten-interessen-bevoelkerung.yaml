@@ -1,0 +1,31 @@
+id: parteien-vertreten-interessen-bevoelkerung
+lang: it
+source_version: 1
+question: Quale compito hanno i partiti politici nella democrazia?
+options:
+  a: Giudicano le controversie
+  b: Rappresentano i diversi interessi della popolazione
+  c: Svolgono le votazioni federali
+  d: Fanno applicare le leggi nella vita quotidiana
+explanation: I partiti raccolgono i diversi interessi e le diverse opinioni della popolazione e li portano
+  nella politica. Far applicare le leggi è compito delle autorità, mentre rendere giustizia è compito
+  dei tribunali.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe haben die politischen Parteien in der Demokratie?
+    options_de:
+      a: Sie beurteilen die Streitigkeiten
+      b: Sie vertreten die verschiedenen Interessen der Bevölkerung
+      c: Sie führen die eidgenössischen Abstimmungen durch
+      d: Sie sorgen dafür, dass die Gesetze im Alltag angewendet werden
+    explanation_de: Die Parteien bündeln die verschiedenen Interessen und die verschiedenen Meinungen
+      der Bevölkerung und bringen sie in die Politik ein. Die Gesetze anwenden zu lassen ist Aufgabe der
+      Behörden, während Recht zu sprechen Aufgabe der Gerichte ist.

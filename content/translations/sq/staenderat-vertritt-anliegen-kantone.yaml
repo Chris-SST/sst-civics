@@ -1,0 +1,29 @@
+id: staenderat-vertritt-anliegen-kantone
+lang: sq
+source_version: 1
+question: Cila dhomë e Parlamentit përfaqëson kryesisht interesat e kantoneve?
+options:
+  a: Këshilli Federal (Bundesrat)
+  b: Këshilli Kombëtar (Nationalrat)
+  c: Këshilli i Shteteve (Ständerat)
+  d: Gjykata Federale (Bundesgericht)
+explanation: Këshilli i Shteteve përfaqëson para së gjithash kantonet. Çdo kanton dërgon përfaqësuese
+  dhe përfaqësues në këtë dhomë. Këshilli Kombëtar, në të kundërt, përfaqëson popullin.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Kammer des Parlaments vertritt hauptsächlich die Interessen der Kantone?
+    options_de:
+      a: Bundesrat
+      b: Nationalrat
+      c: Ständerat
+      d: Bundesgericht
+    explanation_de: Der Ständerat vertritt in erster Linie die Kantone. Jeder Kanton entsendet Vertreterinnen
+      und Vertreter in diese Kammer. Der Nationalrat hingegen vertritt das Volk.

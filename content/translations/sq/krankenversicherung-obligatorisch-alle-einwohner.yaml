@@ -1,0 +1,31 @@
+id: krankenversicherung-obligatorisch-alle-einwohner
+lang: sq
+source_version: 1
+question: Kush duhet të ketë në Zvicër një sigurim bazë pranë një arke të sigurimit shëndetësor (Krankenkasse)?
+options:
+  a: të gjitha personat që jetojnë në Zvicër
+  b: vetëm personat me të ardhura të ulëta
+  c: vetëm personat me shtetësi (Bürgerrecht) zvicerane
+  d: vetëm personat që kanë punë
+explanation: Sigurimi shëndetësor është i detyrueshëm për të gjitha personat me vendbanim në Zvicër. Kjo
+  vlen pavarësisht nga shtetësia, mosha apo fakti nëse personi punon. Arkat e sigurimit shëndetësor duhet
+  t'i pranojnë të gjitha personat në sigurimin bazë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz eine Grundversicherung bei einer Krankenkasse haben?
+    options_de:
+      a: alle Personen, die in der Schweiz leben
+      b: nur Personen mit niedrigem Einkommen
+      c: nur Personen mit Schweizer Bürgerrecht
+      d: nur Personen, die Arbeit haben
+    explanation_de: Die Krankenversicherung ist für alle Personen mit Wohnsitz in der Schweiz obligatorisch.
+      Das gilt unabhängig von der Staatsangehörigkeit, vom Alter oder davon, ob die Person arbeitet. Die
+      Krankenkassen müssen alle Personen in der Grundversicherung aufnehmen.

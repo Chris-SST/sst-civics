@@ -1,0 +1,29 @@
+id: name-der-schweizer-verfassung
+lang: pt
+source_version: 1
+question: Como se chama a constituição da Suíça?
+options:
+  a: Lei Fundamental Federal
+  b: Constituição Federal
+  c: Ordenamento Federal da Suíça
+  d: Carta do Estado Suíço
+explanation: A constituição da Suíça chama-se Constituição Federal, abreviadamente BV. É a base jurídica
+  suprema do país. A versão em vigor data de 1999.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Verfassung der Schweiz?
+    options_de:
+      a: Bundesgrundgesetz
+      b: Bundesverfassung
+      c: Schweizerische Bundesordnung
+      d: Charta des Schweizer Staates
+    explanation_de: Die Verfassung der Schweiz heisst Bundesverfassung, abgekürzt BV. Sie ist die oberste
+      Rechtsgrundlage des Landes. Die geltende Fassung stammt von 1999.

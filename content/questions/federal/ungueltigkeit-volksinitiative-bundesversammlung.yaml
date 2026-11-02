@@ -25,7 +25,7 @@ glossary:
 - Einheit der Materie
 - Volksinitiative
 - Ungültigkeit
-status: in_review
+status: approved
 difficulty: 3
 checks:
   independent_answer:
@@ -46,3 +46,39 @@ checks:
     at: *id001
     model: claude-opus-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte die Fundstelle nennen (Art. 139 Abs. 3 BV) und kurz erwähnen, dass
+        der Bundesrat dem Parlament nur einen Antrag stellt, aber nicht selbst entscheidet; so wird klarer,
+        warum Antwort a) falsch ist.'
+      - 'Klein: Der Begriff «Einheit der Materie» ist für Lernende auf Niveau B1 schwer verständlich;
+        ein kurzer Zusatz in der Erklärung würde helfen, etwa: «Eine Initiative darf nur ein Thema behandeln.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Begriff «Einheit der Materie» ist für Niveau B1 schwer; in der Erklärung einen kurzen
+        Zusatz ergänzen, etwa «(eine Initiative darf nur ein Thema behandeln)».'
+      - 'Klein: Die Frage ist keiner Tatsache aus der Themenliste zugeordnet; prüfen und eine passende
+        Tatsache zum Thema Volksinitiative angeben, damit der Umfang beurteilt werden kann.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Themenliste nennt keine Tatsache; die Frage deckt aber eine zentrale Regel (Art. 139
+        Abs. 3 BV) ab und ist inhaltlich korrekt. Vorschlag: Die Tatsache der Themenliste nachtragen.'
+      - 'Klein: Die Formulierung «zum Beispiel wenn sie die Einheit der Materie verletzt» ist für B1 etwas
+        anspruchsvoll. Vorschlag: «Einheit der Materie» kurz erklären, etwa in der Erklärung («Eine Initiative
+        darf nur ein Thema behandeln»).'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

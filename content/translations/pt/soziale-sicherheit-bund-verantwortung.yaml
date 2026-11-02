@@ -1,0 +1,33 @@
+id: soziale-sicherheit-bund-verantwortung
+lang: pt
+source_version: 1
+question: Qual nível do Estado na Suíça é responsável por garantir a proteção social da população, por
+  exemplo através da previdência para a velhice?
+options:
+  a: Os distritos
+  b: Apenas as comunas (Gemeinden)
+  c: A Confederação
+  d: Apenas os cantões
+explanation: A Constituição Federal atribui à Confederação importantes tarefas de segurança social. Entre
+  elas contam-se, por exemplo, o seguro de velhice e sobrevivência (AVS) e o seguro de invalidez. Assim,
+  aplicam-se bases uniformes em toda a Suíça.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Ebene des Staates in der Schweiz ist dafür verantwortlich, den sozialen Schutz
+      der Bevölkerung sicherzustellen, zum Beispiel durch die Altersvorsorge?
+    options_de:
+      a: Die Bezirke
+      b: Nur die Gemeinden
+      c: Der Bund
+      d: Nur die Kantone
+    explanation_de: Die Bundesverfassung überträgt dem Bund wichtige Aufgaben der sozialen Sicherheit.
+      Dazu zählen zum Beispiel die Alters- und Hinterlassenenversicherung (AHV) und die Invalidenversicherung.
+      So gelten in der ganzen Schweiz einheitliche Grundlagen.

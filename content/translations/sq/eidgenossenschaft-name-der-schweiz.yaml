@@ -1,0 +1,30 @@
+id: eidgenossenschaft-name-der-schweiz
+lang: sq
+source_version: 1
+question: Cili emër përdoret gjithashtu në Kushtetutën Federale për Zvicrën?
+options:
+  a: Republika Federale
+  b: Eidgenossenschaft (Besëlidhja)
+  c: Konfederata e kantoneve
+  d: Mbretëria Federale (Eidgenössisches Königreich)
+explanation: Emri zyrtar është «Schweizerische Eidgenossenschaft» (Besëlidhja Zvicerane). Fjala Eidgenossenschaft
+  përfaqëson pra Zvicrën në tërësi. Ajo kujton aleancat që u vulosën me një be.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Name wird in der Bundesverfassung ebenfalls für die Schweiz verwendet?
+    options_de:
+      a: Bundesrepublik
+      b: Eidgenossenschaft
+      c: Konföderation der Kantone
+      d: Eidgenössisches Königreich
+    explanation_de: Der offizielle Name ist «Schweizerische Eidgenossenschaft» (Schweizerische Eidgenossenschaft).
+      Das Wort Eidgenossenschaft steht also für die Schweiz als Ganzes. Es erinnert an die Bündnisse,
+      die mit einem Eid besiegelt wurden.

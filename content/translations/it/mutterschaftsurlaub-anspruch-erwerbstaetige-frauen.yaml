@@ -1,0 +1,32 @@
+id: mutterschaftsurlaub-anspruch-erwerbstaetige-frauen
+lang: it
+source_version: 1
+question: Chi ha diritto per legge, in Svizzera, al congedo di maternità dopo la nascita di un figlio?
+options:
+  a: Solo le donne che lavorano in un'azienda con più di 50 dipendenti
+  b: Ogni donna che esercita un'attività lucrativa e mette al mondo un figlio
+  c: Solo le donne sposate
+  d: Solo le donne con cittadinanza (Bürgerrecht) svizzera
+explanation: La legge prevede per le madri che esercitano un'attività lucrativa il diritto al congedo
+  di maternità e a un'indennità. Le dimensioni dell'azienda, la nazionalità e lo stato civile non hanno
+  alcuna importanza al riguardo. L'indennità è finanziata tramite l'indennità per perdita di guadagno
+  (Erwerbsersatzordnung).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer hat in der Schweiz von Gesetzes wegen nach der Geburt eines Kindes Anspruch auf Mutterschaftsurlaub?
+    options_de:
+      a: Nur Frauen, die in einem Unternehmen mit mehr als 50 Angestellten arbeiten
+      b: Jede Frau, die eine Erwerbstätigkeit ausübt und ein Kind zur Welt bringt
+      c: Nur verheiratete Frauen
+      d: Nur Frauen mit Schweizer Bürgerrecht
+    explanation_de: Das Gesetz sieht für Mütter, die eine Erwerbstätigkeit ausüben, den Anspruch auf Mutterschaftsurlaub
+      und auf eine Entschädigung vor. Die Grösse des Unternehmens, die Staatsangehörigkeit und der Zivilstand
+      spielen dabei keine Rolle. Die Entschädigung wird über die Erwerbsersatzordnung finanziert.

@@ -1,0 +1,32 @@
+id: universitaet-zuerich-traegerschaft-kanton
+lang: fr
+source_version: 1
+question: Qui est responsable, dans le canton de Zurich, du fonctionnement et de la tutelle de l'Université
+  de Zurich ?
+options:
+  a: La Confédération
+  b: La ville de Zurich
+  c: Le canton de Zurich
+  d: Les conseils de district du canton
+explanation: L'Université de Zurich est une haute école cantonale. Le canton de Zurich en assure la tutelle
+  et le fonctionnement. La ville de Zurich et la Confédération n'en sont pas les principales responsables.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: Die Frage nennt in der Rückübersetzung «Aufsicht» statt «Trägerschaft»; auch die Erklärung
+      sagt «Aufsicht und Betrieb sicherstellen» statt «tragen und betreiben», das ist eine andere Aufgabe.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wer ist im Kanton Zürich für den Betrieb und die Aufsicht der Universität Zürich verantwortlich?
+    options_de:
+      a: Der Bund
+      b: Die Stadt Zürich
+      c: Der Kanton Zürich
+      d: Die Bezirksräte des Kantons
+    explanation_de: Die Universität Zürich ist eine kantonale Hochschule. Der Kanton Zürich stellt ihre
+      Aufsicht und ihren Betrieb sicher. Die Stadt Zürich und der Bund sind nicht die Hauptverantwortlichen
+      dafür.

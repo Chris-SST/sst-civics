@@ -1,0 +1,33 @@
+id: nutzungsplanung-ortsebene-gemeinden
+lang: it
+source_version: 1
+question: Chi pianifica nel Cantone di Zurigo, a livello locale, come viene utilizzato il suolo, ad esempio
+  dove si trovano le zone residenziali e le zone artigianali o commerciali?
+options:
+  a: L'Assemblea federale svizzera (Bundesversammlung)
+  b: La polizia cantonale
+  c: I Comuni (Gemeinden)
+  d: I soli consigli distrettuali
+explanation: I Comuni emanano la pianificazione dell'utilizzazione per il proprio territorio, ad esempio
+  il regolamento edilizio e delle zone. In questo, rispettano le disposizioni della Confederazione e del
+  Cantone. In questo modo contribuiscono a decidere come si sviluppa la località.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer plant im Kanton Zürich auf lokaler Ebene, wie der Boden genutzt wird, zum Beispiel
+      wo sich die Wohnzonen und die Gewerbe- oder Handelszonen befinden?
+    options_de:
+      a: Die Schweizerische Bundesversammlung
+      b: Die Kantonspolizei
+      c: Die Gemeinden
+      d: Einzig die Bezirksräte
+    explanation_de: Die Gemeinden erlassen die Nutzungsplanung für ihr eigenes Gebiet, zum Beispiel die
+      Bau- und Zonenordnung. Dabei halten sie die Vorgaben des Bundes und des Kantons ein. Auf diese Weise
+      tragen sie dazu bei, mitzuentscheiden, wie sich der Ort entwickelt.

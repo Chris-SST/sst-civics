@@ -1,0 +1,31 @@
+id: ch-kuerzel-lateinischer-landesname
+lang: pt
+source_version: 1
+question: O que significa a sigla do país «CH» da Suíça?
+options:
+  a: O nome francês Confédération Helvétique
+  b: A expressão «Cantons Helvétiques»
+  c: O nome latino Civitas Helvetica
+  d: O nome latino do país Confoederatio Helvetica
+explanation: CH é a forma abreviada de Confoederatio Helvetica, o nome latino da Suíça. Utiliza-se o latim
+  porque não favorece nenhuma das quatro línguas nacionais. A sigla aparece, por exemplo, nas matrículas
+  dos automóveis e nos endereços da Internet.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet das Länderkürzel «CH» der Schweiz?
+    options_de:
+      a: Der französische Name Confédération Helvétique
+      b: Der Ausdruck «Cantons Helvétiques»
+      c: Der lateinische Name Civitas Helvetica
+      d: Der lateinische Landesname Confoederatio Helvetica
+    explanation_de: CH ist die Kurzform von Confoederatio Helvetica, dem lateinischen Namen der Schweiz.
+      Latein wird verwendet, weil es keine der vier Landessprachen bevorzugt. Das Kürzel erscheint zum
+      Beispiel auf den Autokennzeichen und in Internetadressen.

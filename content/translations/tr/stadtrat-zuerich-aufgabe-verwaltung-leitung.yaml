@@ -1,0 +1,31 @@
+id: stadtrat-zuerich-aufgabe-verwaltung-leitung
+lang: tr
+source_version: 1
+question: Zürich Şehri'nin Şehir Konseyi (Stadtrat) hangi görevi yerine getirir?
+options:
+  a: Şehirdeki kanton vergi idaresini yönetir.
+  b: Şehir bölgesi için kantonun yasalarını çıkarır.
+  c: Sakinler arasındaki uyuşmazlıklarda hüküm verir.
+  d: Şehir idaresini yönlendirir ve şehrin eylemlerine ilişkin ana ilkeleri belirler.
+explanation: Şehir Konseyi, Zürich Şehri'nin yürütme organıdır. Şehir idaresini yönetir ve şehrin hangi
+  yönde gelişeceğini belirler. Hüküm vermek mahkemelerin işidir, kanton yasalarını ise Kanton Konseyi
+  (Kantonsrat) çıkarır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe erfüllt der Stadtrat der Stadt Zürich?
+    options_de:
+      a: Er leitet die kantonale Steuerverwaltung in der Stadt.
+      b: Er erlässt die Gesetze des Kantons für das Stadtgebiet.
+      c: Er urteilt bei Streitigkeiten zwischen Einwohnern.
+      d: Er leitet die Stadtverwaltung und legt die Grundsätze für das Handeln der Stadt fest.
+    explanation_de: Der Stadtrat ist das Exekutivorgan der Stadt Zürich. Er leitet die Stadtverwaltung
+      und bestimmt, in welche Richtung sich die Stadt entwickelt. Urteilen ist Sache der Gerichte, die
+      Gesetze des Kantons erlässt der Kantonsrat.

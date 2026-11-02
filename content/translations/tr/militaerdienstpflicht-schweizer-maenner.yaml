@@ -1,0 +1,31 @@
+id: militaerdienstpflicht-schweizer-maenner
+lang: tr
+source_version: 1
+question: İsviçre'de askerlik hizmeti veya yedek hizmet yükümlülüğü kimleri kapsar?
+options:
+  a: 18 yaşından itibaren tüm sakinler
+  b: İsviçre vatandaşlığına (Bürgerrecht) sahip erkekler
+  c: İsviçre'de yaşayan tüm erkekler
+  d: Yalnızca İsviçre vatandaşlığına sahip kadınlar
+explanation: Federal Anayasa'ya (Bundesverfassung) göre her İsviçreli erkek askerlik hizmeti yapmakla
+  yükümlüdür. Bunu vicdanıyla bağdaştıramayan kişi, sivil yedek hizmet yapar. Yabancılar hizmet yükümlüsü
+  değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wen betrifft in der Schweiz die Militärdienstpflicht oder die Ersatzdienstpflicht?
+    options_de:
+      a: Alle Einwohner ab 18 Jahren
+      b: Männer mit Schweizer Bürgerrecht
+      c: Alle Männer, die in der Schweiz leben
+      d: Nur Frauen mit Schweizer Bürgerrecht
+    explanation_de: Gemäss der Bundesverfassung ist jeder Schweizer Mann verpflichtet, Militärdienst zu
+      leisten. Wer dies nicht mit seinem Gewissen vereinbaren kann, leistet zivilen Ersatzdienst. Ausländer
+      sind nicht dienstpflichtig.

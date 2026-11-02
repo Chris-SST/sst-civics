@@ -1,0 +1,30 @@
+id: ahv-pflichtversicherung
+lang: fr
+source_version: 1
+question: Quelle affirmation concernant l'assurance-vieillesse et survivants (AHV) est correcte ?
+options:
+  a: L'assurance-vieillesse et survivants fait partie des assurances obligatoires.
+  b: L'assurance-vieillesse et survivants est une assurance facultative pour les indépendants.
+  c: L'assurance-vieillesse et survivants s'applique uniquement aux personnes titulaires d'un passeport
+    suisse.
+  d: L'assurance-vieillesse et survivants est une assurance privée des employeurs.
+explanation: L'assurance-vieillesse et survivants est obligatoire. Toute personne qui habite ou travaille
+  en Suisse y est en principe assurée et doit verser des cotisations.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage zur Alters- und Hinterlassenenversicherung (AHV) ist richtig?
+    options_de:
+      a: Die Alters- und Hinterlassenenversicherung gehört zu den obligatorischen Versicherungen.
+      b: Die Alters- und Hinterlassenenversicherung ist eine freiwillige Versicherung für Selbstständigerwerbende.
+      c: Die Alters- und Hinterlassenenversicherung gilt nur für Personen mit einem Schweizer Pass.
+      d: Die Alters- und Hinterlassenenversicherung ist eine private Versicherung der Arbeitgeber.
+    explanation_de: Die Alters- und Hinterlassenenversicherung ist obligatorisch. Jede Person, die in
+      der Schweiz wohnt oder arbeitet, ist grundsätzlich dort versichert und muss Beiträge bezahlen.

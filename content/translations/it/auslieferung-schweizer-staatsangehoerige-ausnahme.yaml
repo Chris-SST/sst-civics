@@ -1,0 +1,37 @@
+id: auslieferung-schweizer-staatsangehoerige-ausnahme
+lang: it
+source_version: 2
+question: Che cosa vale in linea di principio per l'estradizione di cittadini svizzeri all'estero?
+options:
+  a: Vengono estradati su richiesta di qualsiasi Stato.
+  b: Non vengono estradati a un altro Stato contro la loro volontà. Possono però essere consegnati a un
+    tribunale internazionale.
+  c: Vengono estradati soltanto agli Stati confinanti con la Svizzera.
+  d: Vengono estradati se il Consiglio federale (Bundesrat) lo vuole nel singolo caso.
+explanation: Secondo l'articolo 25 della Costituzione federale, gli Svizzeri non possono essere espulsi.
+  Possono essere estradati a un altro Stato soltanto se vi acconsentono essi stessi. Un tribunale internazionale,
+  ad esempio la Corte penale internazionale, non è un'autorità straniera; per questo una legge federale
+  consente di consegnare cittadini svizzeri a tale tribunale per un procedimento.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt grundsätzlich für die Auslieferung von Schweizer Bürgerinnen und Bürgern ins
+      Ausland?
+    options_de:
+      a: Sie werden auf Ersuchen jedes beliebigen Staates ausgeliefert.
+      b: Sie werden gegen ihren Willen nicht an einen anderen Staat ausgeliefert. Sie können aber einem
+        internationalen Gericht überstellt werden.
+      c: Sie werden nur an Staaten ausgeliefert, die an die Schweiz grenzen.
+      d: Sie werden ausgeliefert, wenn der Bundesrat es im Einzelfall will.
+    explanation_de: Gemäss Artikel 25 der Bundesverfassung dürfen Schweizerinnen und Schweizer nicht ausgewiesen
+      werden. Sie dürfen nur dann an einen anderen Staat ausgeliefert werden, wenn sie selbst zustimmen.
+      Ein internationales Gericht, zum Beispiel der Internationale Strafgerichtshof, ist keine ausländische
+      Behörde; deshalb erlaubt ein Bundesgesetz, Schweizer Bürgerinnen und Bürger für ein Verfahren an
+      dieses Gericht zu überstellen.

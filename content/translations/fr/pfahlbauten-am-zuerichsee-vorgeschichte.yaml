@@ -1,0 +1,31 @@
+id: pfahlbauten-am-zuerichsee-vorgeschichte
+lang: fr
+source_version: 1
+question: Comment les habitats préhistoriques au bord du lac de Zurich étaient-ils construits ?
+options:
+  a: Sous forme de grottes dans la roche
+  b: Sous forme de palafittes, c'est-à-dire de maisons sur pilotis
+  c: Sous forme de maisons en briques dans des villages
+  d: Sous forme de châteaux forts sur des rochers
+explanation: Sur les rives du lac de Zurich se dressaient à l'époque préhistorique des palafittes, c'est-à-dire
+  des maisons sur pilotis. Leurs vestiges se trouvent aujourd'hui encore sous l'eau et sont étudiés par
+  des archéologues subaquatiques.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie waren die prähistorischen Siedlungen am Ufer des Zürichsees gebaut?
+    options_de:
+      a: In Form von Höhlen im Fels
+      b: In Form von Pfahlbauten, das heisst von Häusern auf Pfählen
+      c: In Form von Backsteinhäusern in Dörfern
+      d: In Form von Burgen auf Felsen
+    explanation_de: An den Ufern des Zürichsees standen in prähistorischer Zeit Pfahlbauten, das heisst
+      Häuser auf Pfählen. Ihre Überreste befinden sich noch heute unter Wasser und werden von Unterwasserarchäologen
+      erforscht.

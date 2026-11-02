@@ -1,0 +1,31 @@
+id: iv-kuerzel-invalidenversicherung
+lang: it
+source_version: 1
+question: Che cosa significa l'abbreviazione «IV» nel sistema svizzero delle assicurazioni sociali?
+options:
+  a: Assicurazione nazionale (Inlandversicherung)
+  b: Assicurazione per l'invalidità (Invalidenversicherung)
+  c: Assicurazione per l'integrazione (Integrationsversicherung)
+  d: Assicurazione individuale (Individualversicherung)
+explanation: «IV» sta per assicurazione per l'invalidità (Invalidenversicherung, IV). Fa parte del primo
+  pilastro della previdenza per la vecchiaia e aiuta le persone con limitazioni di salute, ad esempio
+  con provvedimenti d'integrazione o rendite.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Abkürzung «IV» im schweizerischen Sozialversicherungssystem?
+    options_de:
+      a: Nationale Versicherung (Inlandversicherung)
+      b: Invalidenversicherung
+      c: Integrationsversicherung
+      d: Individualversicherung
+    explanation_de: «IV» steht für Invalidenversicherung (IV). Sie gehört zur ersten Säule der Altersvorsorge
+      und hilft Menschen mit gesundheitlichen Einschränkungen, zum Beispiel mit Eingliederungsmassnahmen
+      oder Renten.

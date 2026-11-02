@@ -1,0 +1,29 @@
+id: kanton-zuerich-nachbarkanton-thurgau
+lang: sq
+source_version: 1
+question: Cili nga kantonet e mëposhtme kufizohet drejtpërdrejt me kantonin e Cyrihut?
+options:
+  a: Graubünden
+  b: Thurgau
+  c: Uri
+  d: Vaud
+explanation: Kantoni i Thurgaut shtrihet në verilindje të kantonit të Cyrihut dhe kufizohet drejtpërdrejt
+  me të. Graubünden, Vaud dhe Uri nuk kanë kufi të përbashkët me Cyrihun.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher der folgenden Kantone grenzt direkt an den Kanton Zürich?
+    options_de:
+      a: Graubünden
+      b: Thurgau
+      c: Uri
+      d: Waadt
+    explanation_de: Der Kanton Thurgau liegt im Nordosten des Kantons Zürich und grenzt direkt an ihn.
+      Graubünden, Waadt und Uri haben keine gemeinsame Grenze mit Zürich.

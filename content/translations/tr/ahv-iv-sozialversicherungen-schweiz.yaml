@@ -1,0 +1,37 @@
+id: ahv-iv-sozialversicherungen-schweiz
+lang: tr
+source_version: 1
+question: İsviçre'nin sosyal sigortalarıyla ilgili hangi ifade doğrudur?
+options:
+  a: Yaşlılık ve dul-yetim sigortası (AHV) ile malullük sigortası (IV), İsviçre'nin sosyal sigortaları
+    arasında yer alır.
+  b: Yaşlılık ve dul-yetim sigortası ile malullük sigortası yalnızca belediyeler (Gemeinde) tarafından
+    yürütülür.
+  c: Yaşlılık ve dul-yetim sigortası ile malullük sigortası, yasal dayanağı olmayan özel sigortalardır.
+  d: Yaşlılık ve dul-yetim sigortası ile malullük sigortası yalnızca serbest meslek sahipleri için öngörülmüştür.
+explanation: Yaşlılık ve dul-yetim sigortası (AHV), Alters- und Hinterlassenenversicherung anlamına gelir;
+  malullük sigortası (IV) ise Invalidenversicherung anlamına gelir. Her ikisi de Konfederasyon hukukunda
+  düzenlenmiştir ve devletin sosyal sigorta sisteminin parçasıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage über die Sozialversicherungen der Schweiz ist richtig?
+    options_de:
+      a: Die Alters- und Hinterlassenenversicherung (AHV) und die Invalidenversicherung (IV) gehören zu
+        den Sozialversicherungen der Schweiz.
+      b: Die Alters- und Hinterlassenenversicherung und die Invalidenversicherung werden ausschliesslich
+        von den Gemeinden durchgeführt.
+      c: Die Alters- und Hinterlassenenversicherung und die Invalidenversicherung sind private Versicherungen
+        ohne gesetzliche Grundlage.
+      d: Die Alters- und Hinterlassenenversicherung und die Invalidenversicherung sind ausschliesslich
+        für Selbstständigerwerbende vorgesehen.
+    explanation_de: Die Alters- und Hinterlassenenversicherung (AHV) bedeutet Alters- und Hinterlassenenversicherung;
+      die Invalidenversicherung (IV) bedeutet Invalidenversicherung. Beide sind im Recht der Eidgenossenschaft
+      geregelt und sind Teil des staatlichen Sozialversicherungssystems.

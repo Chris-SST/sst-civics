@@ -9,6 +9,21 @@ options:
   d: The debt enforcement office
 explanation: The civil registry office prepares and conducts the marriage ceremony. It also records other
   events such as births and deaths.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welches Amt sollen sich Paare wenden, die heiraten möchten?
+    options_de:
+      a: An die Schulpflege
+      b: An das Zivilstandsamt
+      c: An das Steueramt
+      d: An das Betreibungsamt
+    explanation_de: Das Zivilstandsamt bereitet die Eheschliessung vor und führt sie durch. Es erfasst
+      auch andere Ereignisse wie Geburten und Todesfälle.

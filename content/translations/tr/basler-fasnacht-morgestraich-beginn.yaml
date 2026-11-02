@@ -1,0 +1,29 @@
+id: basler-fasnacht-morgestraich-beginn
+lang: tr
+source_version: 1
+question: Basel Karnavalı'nın başlangıcı olan Morgestraich sırasında ne olur?
+options:
+  a: Belediye başkanı şehrin anahtarını karnaval derneğine teslim eder.
+  b: Sokaklar parlak şekilde aydınlatılır ve bir havai fişek gösterisi başlar.
+  c: Sokaklardaki ışıklar söner, ardından fifreler ve davullar çalmaya başlar.
+  d: Karnaval katılımcıları Münster Kulesi'nden konfeti atar ve tüm kilise çanlarını çalar.
+explanation: Morgestraich, Kül Çarşambası'nı izleyen Pazartesi günü sabah saat dörtte başlar. Ardından
+  sokaklardaki ışıklar söndürülür. Sonra fifre ve davul müziği başlar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was passiert während des Morgestraichs, dem Beginn der Basler Fasnacht?
+    options_de:
+      a: Der Bürgermeister übergibt den Schlüssel der Stadt an die Fasnachtsgesellschaft.
+      b: Die Strassen werden hell beleuchtet und ein Feuerwerk beginnt.
+      c: Die Lichter in den Strassen gehen aus, danach beginnen die Pfeifen und Trommeln zu spielen.
+      d: Die Fasnachtsteilnehmer werfen vom Münsterturm Konfetti und läuten alle Kirchenglocken.
+    explanation_de: Der Morgestraich beginnt am Montag nach dem Aschermittwoch um vier Uhr morgens. Danach
+      werden die Lichter in den Strassen gelöscht. Dann beginnt die Pfeifen- und Trommelmusik.

@@ -1,0 +1,30 @@
+id: auslaender-kein-stimmrecht-national
+lang: sq
+source_version: 1
+question: A mund të marrin pjesë të huajt që jetojnë prej vitesh në Zvicër në votimet federale?
+options:
+  a: Po, por vetëm në votime dhe jo në zgjedhje.
+  b: Po, nëse kanë leje vendosjeje (leja C) (Niederlassungsbewilligung).
+  c: Po, nëse paguajnë tatime.
+  d: Jo, në nivel kombëtar nuk kanë të drejtë vote.
+explanation: E drejta e votës në nivel kombëtar është e lidhur me shtetësinë (Bürgerrecht) zvicerane.
+  Të huajt mund ta ushtrojnë atë vetëm pas një natyralizimi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Können Ausländer, die seit Jahren in der Schweiz leben, an eidgenössischen Abstimmungen
+      teilnehmen?
+    options_de:
+      a: Ja, aber nur an Abstimmungen und nicht an Wahlen.
+      b: Ja, wenn sie eine Niederlassungsbewilligung (Bewilligung C) haben.
+      c: Ja, wenn sie Steuern zahlen.
+      d: Nein, auf nationaler Ebene haben sie kein Stimmrecht.
+    explanation_de: Das Stimmrecht auf nationaler Ebene ist an das Schweizer Bürgerrecht gebunden. Ausländer
+      können es erst nach einer Einbürgerung ausüben.

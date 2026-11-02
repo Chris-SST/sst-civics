@@ -1,0 +1,30 @@
+id: kanton-zuerich-anzahl-bezirke
+lang: tr
+source_version: 1
+question: Zürih kantonu kaç ilçeye ayrılmıştır?
+options:
+  a: On ilçeye
+  b: On iki ilçeye
+  c: On dört ilçeye
+  d: Sekiz ilçeye
+explanation: Zürih kantonu on iki ilçeye ayrılmıştır; örneğin Affoltern, Meilen, Winterthur ve Zürih.
+  İlçeler, kanton ile belediyeler (Gemeinden) arasında yer alan idari ve adli ilçelerdir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In wie viele Bezirke ist der Kanton Zürich unterteilt?
+    options_de:
+      a: In zehn Bezirke
+      b: In zwölf Bezirke
+      c: In vierzehn Bezirke
+      d: In acht Bezirke
+    explanation_de: Der Kanton Zürich ist in zwölf Bezirke unterteilt; zum Beispiel Affoltern, Meilen,
+      Winterthur und Zürich. Die Bezirke sind Verwaltungs- und Gerichtsbezirke, die zwischen dem Kanton
+      und den Gemeinden liegen.

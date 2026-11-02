@@ -21,7 +21,7 @@ glossary:
 - Rütli
 - Urkanton
 - Eidgenossenschaft
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-318
@@ -42,3 +42,32 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte die drei Urkantone Uri, Schwyz und Unterwalden und das Jahr 1291
+        nennen, zum Beispiel: «Nach der Überlieferung haben sich 1291 Vertreter von Uri, Schwyz und Unterwalden
+        auf dem Rütli verbündet.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte die drei Urkantone Uri, Schwyz und Unterwalden nennen, damit Lernende
+        den Begriff «Urkantone» besser verstehen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte zusätzlich das Jahr 1291 und die drei Orte Uri, Schwyz und Unterwalden
+        nennen, damit die Verbindung zum Bundesbrief und zum 1. August klarer wird.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

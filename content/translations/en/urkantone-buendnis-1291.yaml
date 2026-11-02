@@ -11,6 +11,22 @@ options:
 explanation: Uri, Schwyz and Unterwalden formed a Confederation in 1291. This date is regarded as the
   origin of Switzerland and is celebrated on 1 August. The other places only joined the Confederation
   later.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche drei Gebiete schlossen 1291 ein Bündnis und gelten als der Kern der späteren Eidgenossenschaft?
+    options_de:
+      a: Uri, Schwyz und Unterwalden
+      b: Glarus, Zug und Uri
+      c: Basel, Schaffhausen und Appenzell
+      d: Zürich, Bern und Luzern
+    explanation_de: Uri, Schwyz und Unterwalden bildeten 1291 eine Eidgenossenschaft. Dieses Datum gilt
+      als Ursprung der Schweiz und wird am 1. August gefeiert. Die anderen Orte traten der Eidgenossenschaft
+      erst später bei.

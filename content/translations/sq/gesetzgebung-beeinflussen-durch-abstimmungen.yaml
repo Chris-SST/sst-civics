@@ -1,0 +1,32 @@
+id: gesetzgebung-beeinflussen-durch-abstimmungen
+lang: sq
+source_version: 1
+question: Si ndikojnë drejtpërdrejt qytetarët me të drejtë vote në Zvicër në legjislacionin e Konfederatës?
+options:
+  a: Ata votojnë në kutinë e votimit për nisma dhe referendume.
+  b: Ata zgjedhin gjyqtarët që vendosin për ligjet e reja.
+  c: Ata emërojnë anëtarët e Këshillit Federal, të cilët nxjerrin ligjet e reja.
+  d: Ata vetë miratojnë ligjet në Kuvendin Federal (Bundesversammlung).
+explanation: Qytetarët me të drejtë vote marrin pjesë në votime popullore për nisma dhe referendume dhe
+  bashkëvendosin aty. Kështu ata bashkëveprojnë drejtpërdrejt në legjislacion mes zgjedhjeve. Kjo është
+  një karakteristikë e demokracisë së drejtpërdrejtë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie wirken stimmberechtigte Bürgerinnen und Bürger in der Schweiz direkt an der Gesetzgebung
+      des Bundes mit?
+    options_de:
+      a: Sie stimmen an der Urne über Initiativen und Referenden ab.
+      b: Sie wählen die Richter, die über neue Gesetze entscheiden.
+      c: Sie ernennen die Mitglieder des Bundesrates, die neue Gesetze erlassen.
+      d: Sie verabschieden die Gesetze selbst in der Bundesversammlung.
+    explanation_de: Die stimmberechtigten Bürgerinnen und Bürger nehmen an Volksabstimmungen über Initiativen
+      und Referenden teil und entscheiden dort mit. So wirken sie zwischen den Wahlen direkt an der Gesetzgebung
+      mit. Das ist ein Merkmal der direkten Demokratie.

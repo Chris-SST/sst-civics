@@ -1,0 +1,31 @@
+id: reformation-spaltung-der-alten-eidgenossenschaft
+lang: sq
+source_version: 1
+question: Çfarë pasoje pati Reforma për Zvicrën?
+options:
+  a: Zvicra u nda në aspektin fetar në një pjesë protestante (reformuese) dhe një pjesë katolike.
+  b: Zvicra u bë pjesë e Perandorisë Gjermane.
+  c: Kisha humbi kudo çdo ndikim mbi politikën.
+  d: Të gjitha vendet (Orte) e Konfederatës u bënë protestante (reformuese).
+explanation: Disa vende e pranuan Reformën, ndërsa të tjerë mbetën katolikë. Kështu lindi një kontrast
+  fetar, që e ngarkoi gjatë Konfederatën. Pati edhe konflikte mes konfesioneve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Folgen hatte die Reformation für die Schweiz?
+    options_de:
+      a: Die Schweiz wurde in religiöser Hinsicht in einen protestantischen (reformierten) und einen katholischen
+        Teil gespalten.
+      b: Die Schweiz wurde Teil des Deutschen Reiches.
+      c: Die Kirche verlor überall jeden Einfluss auf die Politik.
+      d: Alle Orte der Eidgenossenschaft wurden protestantisch (reformiert).
+    explanation_de: Einige Orte nahmen die Reformation an, während andere katholisch blieben. So entstand
+      ein religiöser Gegensatz, der die Eidgenossenschaft lange belastete. Es gab auch Konflikte zwischen
+      den Konfessionen.

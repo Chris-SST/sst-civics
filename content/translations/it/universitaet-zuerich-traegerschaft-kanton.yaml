@@ -1,0 +1,31 @@
+id: universitaet-zuerich-traegerschaft-kanton
+lang: it
+source_version: 1
+question: Chi è responsabile, nel Cantone di Zurigo, della gestione e dell'ente responsabile dell'Università
+  di Zurigo?
+options:
+  a: La Confederazione
+  b: La città di Zurigo
+  c: Il Cantone di Zurigo
+  d: I consigli distrettuali del Cantone
+explanation: L'Università di Zurigo è un'università cantonale. Il Cantone di Zurigo ne è l'ente responsabile
+  e la gestisce. La città di Zurigo e la Confederazione non ne sono i principali responsabili.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist im Kanton Zürich für die Führung und die Trägerschaft der Universität Zürich
+      zuständig?
+    options_de:
+      a: Der Bund
+      b: Die Stadt Zürich
+      c: Der Kanton Zürich
+      d: Die Bezirksräte des Kantons
+    explanation_de: Die Universität Zürich ist eine kantonale Universität. Der Kanton Zürich ist ihr Träger
+      und führt sie. Die Stadt Zürich und der Bund sind nicht die Hauptverantwortlichen dafür.

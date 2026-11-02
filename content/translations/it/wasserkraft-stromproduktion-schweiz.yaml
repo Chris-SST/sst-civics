@@ -1,0 +1,31 @@
+id: wasserkraft-stromproduktion-schweiz
+lang: it
+source_version: 1
+question: La Svizzera dispone di abbondanti risorse idriche. Come vengono utilizzate per la produzione
+  di elettricità?
+options:
+  a: Nelle centrali a gas
+  b: Nelle raffinerie di petrolio
+  c: Nelle centrali idroelettriche
+  d: Nelle centrali a carbone
+explanation: L'acqua dei fiumi e dei bacini di accumulo aziona le turbine nelle centrali idroelettriche.
+  In Svizzera la forza idrica è una fonte indigena fondamentale di elettricità.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Schweiz verfügt über reichliche Wasserressourcen. Wie werden sie für die Stromproduktion
+      genutzt?
+    options_de:
+      a: In Gaskraftwerken
+      b: In Erdölraffinerien
+      c: In Wasserkraftwerken
+      d: In Kohlekraftwerken
+    explanation_de: Das Wasser der Flüsse und der Stauseen treibt in den Wasserkraftwerken die Turbinen
+      an. In der Schweiz ist die Wasserkraft eine grundlegende einheimische Stromquelle.

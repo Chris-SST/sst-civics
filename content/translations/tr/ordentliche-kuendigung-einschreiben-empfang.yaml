@@ -1,0 +1,31 @@
+id: ordentliche-kuendigung-einschreiben-empfang
+lang: tr
+source_version: 1
+question: Bir iş ilişkisinin olağan feshi, alındığının kanıtlanabilmesi için nasıl tebliğ edilmelidir?
+options:
+  a: Belediye (Gemeinde) idaresine yapılan bir bildirim yoluyla
+  b: Taahhütlü posta ile veya karşı tarafın alındığını yazılı olarak onaylaması yoluyla
+  c: Onay alınmayan basit bir e-posta ile
+  d: Baş başa yapılan bir görüşmede sözlü olarak
+explanation: Taahhütlü posta veya yazılı bir alındı onayı ile fesih bildiriminin karşı tarafa ulaştığı
+  kanıtlanabilir. Bu önemlidir, çünkü fesih süreleri bildirimin alındığı andan itibaren işlemeye başlar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie muss die ordentliche Kündigung eines Arbeitsverhältnisses mitgeteilt werden, damit
+      der Empfang nachgewiesen werden kann?
+    options_de:
+      a: Durch eine Mitteilung an die Gemeindeverwaltung
+      b: Per eingeschriebenen Brief oder durch schriftliche Empfangsbestätigung der Gegenpartei
+      c: Durch eine einfache E-Mail ohne Bestätigung
+      d: Mündlich in einem persönlichen Gespräch unter vier Augen
+    explanation_de: Mit einem eingeschriebenen Brief oder einer schriftlichen Empfangsbestätigung kann
+      nachgewiesen werden, dass die Kündigung die Gegenpartei erreicht hat. Das ist wichtig, weil die
+      Kündigungsfristen ab dem Zeitpunkt des Empfangs der Mitteilung zu laufen beginnen.

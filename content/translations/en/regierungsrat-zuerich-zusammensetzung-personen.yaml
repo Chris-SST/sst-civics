@@ -9,6 +9,21 @@ options:
   d: It consists of five people.
 explanation: The Zurich Executive Council is a body of seven people. Together they govern the canton,
   and each of them heads one department.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage zur Zusammensetzung des Zürcher Regierungsrates ist richtig?
+    options_de:
+      a: Er besteht aus drei Personen.
+      b: Er besteht aus sieben Personen.
+      c: Er besteht aus neun Personen.
+      d: Er besteht aus fünf Personen.
+    explanation_de: Der Zürcher Regierungsrat ist ein Gremium aus sieben Personen. Gemeinsam regieren
+      sie den Kanton, und jede von ihnen leitet eine Direktion.

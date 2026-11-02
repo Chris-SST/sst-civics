@@ -1,0 +1,31 @@
+id: krankenversicherung-obligatorisch-einwohner
+lang: sq
+source_version: 1
+question: Kush duhet të lidhë një sigurim shëndetësor në Zvicër?
+options:
+  a: Vetëm personat me shtetësi (Bürgerrecht) zvicerane
+  b: Të gjithë personat që banojnë në Zvicër
+  c: Vetëm personat nën 65 vjeç
+  d: Vetëm personat që punojnë
+explanation: Sigurimi i detyrueshëm shëndetësor (Krankenpflegeversicherung) vlen për të gjithë personat
+  me vendbanim në Zvicër. Shtetësia, puna dhe mosha nuk kanë rëndësi. Sigurimi duhet të lidhet brenda
+  tre muajve pas ardhjes në Zvicër.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz eine Krankenversicherung abschliessen?
+    options_de:
+      a: Nur Personen mit Schweizer Bürgerrecht
+      b: Alle Personen, die in der Schweiz wohnen
+      c: Nur Personen unter 65 Jahren
+      d: Nur Personen, die arbeiten
+    explanation_de: Die obligatorische Krankenpflegeversicherung gilt für alle Personen mit Wohnsitz in
+      der Schweiz. Die Staatsbürgerschaft, die Arbeit und das Alter spielen keine Rolle. Die Versicherung
+      muss innerhalb von drei Monaten nach der Ankunft in der Schweiz abgeschlossen werden.

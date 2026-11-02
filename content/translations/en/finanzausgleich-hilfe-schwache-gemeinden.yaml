@@ -12,6 +12,23 @@ options:
 explanation: Communes have very different financial resources. Financial equalisation partially balances
   out these differences. In this way, communes with little tax revenue or high social costs can also carry
   out their tasks.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist der Zweck des Finanzausgleichs zwischen den Gemeinden im Kanton Zürich?
+    options_de:
+      a: Er senkt die Steuern in allen Gemeinden auf den gleichen Satz.
+      b: Er bezahlt den Gemeinden die Kosten der Gemeindeversammlungen.
+      c: Er hilft Gemeinden mit schwachen Finanzen oder Gemeinden, die durch hohe Sozialkosten belastet
+        sind, ihre Aufgaben zu erfüllen.
+      d: Er verteilt das Geld des Bundes gleichmässig an alle Einwohnerinnen und Einwohner.
+    explanation_de: Die Gemeinden haben sehr unterschiedliche finanzielle Mittel. Der Finanzausgleich
+      gleicht diese Unterschiede teilweise aus. So können auch Gemeinden mit wenig Steuereinnahmen oder
+      hohen Sozialkosten ihre Aufgaben erfüllen.

@@ -1,0 +1,30 @@
+id: staenderat-vertritt-anliegen-kantone
+lang: fr
+source_version: 1
+question: Quelle chambre du Parlement défend principalement les intérêts des cantons ?
+options:
+  a: Le Conseil fédéral (Bundesrat)
+  b: Le Conseil national (Nationalrat)
+  c: Le Conseil des États (Ständerat)
+  d: Le Tribunal fédéral (Bundesgericht)
+explanation: Le Conseil des États (Ständerat) représente avant tout les cantons. Chaque canton envoie
+  des représentantes et des représentants dans cette chambre. Le Conseil national (Nationalrat), en revanche,
+  représente le peuple.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Kammer des Parlaments vertritt hauptsächlich die Interessen der Kantone?
+    options_de:
+      a: Der Bundesrat
+      b: Der Nationalrat
+      c: Der Ständerat
+      d: Das Bundesgericht
+    explanation_de: Der Ständerat vertritt vor allem die Kantone. Jeder Kanton entsendet Vertreterinnen
+      und Vertreter in diese Kammer. Der Nationalrat hingegen vertritt das Volk.

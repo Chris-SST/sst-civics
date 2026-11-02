@@ -1,0 +1,31 @@
+id: stimmenauszaehlung-urnengang-wahlbuero
+lang: pt
+source_version: 1
+question: Quem conta os votos depositados nas eleições e votações numa comuna (Gemeinde) do cantão de
+  Zurique?
+options:
+  a: A autoridade de assistência social
+  b: A mesa eleitoral
+  c: A secretária municipal, sozinha
+  d: O Ministério Público
+explanation: A mesa eleitoral apura os resultados da comuna nas votações e nas eleições. É composta por
+  várias pessoas, para que a contagem decorra de forma correta e transparente.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zählt bei Wahlen und Abstimmungen in einer Gemeinde des Kantons Zürich die abgegebenen
+      Stimmen aus?
+    options_de:
+      a: Die Sozialbehörde
+      b: Das Wahlbüro
+      c: Die Gemeindeschreiberin allein
+      d: Die Staatsanwaltschaft
+    explanation_de: Das Wahlbüro ermittelt bei Abstimmungen und Wahlen die Ergebnisse der Gemeinde. Es
+      besteht aus mehreren Personen, damit die Auszählung korrekt und transparent abläuft.

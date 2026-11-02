@@ -1,0 +1,29 @@
+id: kantonsregierung-zuerich-name-regierungsrat
+lang: tr
+source_version: 1
+question: Zürih kantonunun hükümetine ne ad verilir?
+options:
+  a: Obergericht (Yüksek Mahkeme)
+  b: Kanton Konseyi (Kantonsrat)
+  c: Federal Konsey (Bundesrat)
+  d: Hükümet Konseyi (Regierungsrat)
+explanation: Zürih kantonunun hükümetine Hükümet Konseyi (Regierungsrat) denir. Kanton Konseyi parlamentodur,
+  Obergericht ise yargıya aittir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie wird die Regierung des Kantons Zürich genannt?
+    options_de:
+      a: Obergericht
+      b: Kantonsrat
+      c: Bundesrat
+      d: Regierungsrat
+    explanation_de: Die Regierung des Kantons Zürich wird Regierungsrat genannt. Der Kantonsrat ist das
+      Parlament, das Obergericht gehört hingegen zur Justiz.

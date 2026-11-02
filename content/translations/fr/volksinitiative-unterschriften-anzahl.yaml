@@ -1,0 +1,31 @@
+id: volksinitiative-unterschriften-anzahl
+lang: fr
+source_version: 1
+question: Combien de signatures de personnes ayant le droit de vote une initiative populaire (Volksinitiative)
+  fédérale doit-elle recueillir pour aboutir ?
+options:
+  a: 50 000 signatures
+  b: 150 000 signatures
+  c: 200 000 signatures
+  d: 100 000 signatures
+explanation: Une initiative populaire fédérale nécessite 100 000 signatures valables. Celles-ci doivent
+  être récoltées dans un délai de 18 mois.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Unterschriften von stimmberechtigten Personen muss eine eidgenössische Volksinitiative
+      sammeln, um zustande zu kommen?
+    options_de:
+      a: 50 000 Unterschriften
+      b: 150 000 Unterschriften
+      c: 200 000 Unterschriften
+      d: 100 000 Unterschriften
+    explanation_de: Eine eidgenössische Volksinitiative benötigt 100 000 gültige Unterschriften. Diese
+      müssen innerhalb einer Frist von 18 Monaten gesammelt werden.

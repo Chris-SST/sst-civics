@@ -18,7 +18,7 @@ sources:
 glossary:
 - Einwohnerkontrolle
 - Wohnortswechsel
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-205
@@ -41,3 +41,42 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Bezeichnung des Amtes ist nicht überall gleich, etwa «Einwohnerdienste» oder in der
+        Stadt Zürich «Personenmeldeamt»; die Erklärung könnte das ergänzen und erwähnen, dass die Anmeldung
+        auch online über eUmzugCH möglich ist.'
+      - 'Klein: Die Erklärung könnte den Hinweis ergänzen, dass man sich zusätzlich bei der bisherigen
+        Gemeinde abmelden muss, damit der ganze Ablauf beim Umzug klar wird.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die richtige Antwort d) ist deutlich länger und genauer als die anderen und fällt dadurch
+        auf; die falschen Antworten könnten ähnlich konkret formuliert werden, zum Beispiel «Beim Steueramt
+        des Kantons Zürich» statt «Beim Bundesamt für Statistik».'
+      - 'Klein: Die Erklärung könnte ergänzen, dass man sich bei der alten Gemeinde abmeldet und bei der
+        neuen Wohngemeinde innerhalb von 14 Tagen anmeldet; so lernt man den ganzen Ablauf.'
+      - 'Klein: Die Erklärung könnte erwähnen, dass das Amt je nach Gemeinde anders heissen kann, zum
+        Beispiel in der Stadt Zürich «Personenmeldeamt» oder «Kreisbüro».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage sagt «anmelden», aber bei einem Umzug innerhalb des Kantons muss man sich in
+        der alten Gemeinde abmelden und in der neuen anmelden; die Erklärung könnte das kurz erwähnen
+        (z.B. «Man meldet sich in der alten Gemeinde ab und in der neuen an, auch online über eUmzugCH»).'
+      - 'Klein: Die Erklärung könnte erwähnen, dass die Anmeldefrist in der Regel 14 Tage beträgt, nur
+        falls dies im Test relevant ist; sie ist für die Frage aber nicht nötig.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

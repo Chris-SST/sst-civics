@@ -1,0 +1,30 @@
+id: arbeitslosenversicherung-bei-stellenverlust
+lang: it
+source_version: 1
+question: Quale assicurazione sociale interviene quando una persona perde il posto di lavoro?
+options:
+  a: L'assicurazione per l'invalidità
+  b: L'assicurazione per la vecchiaia e per i superstiti
+  c: L'assicurazione contro la disoccupazione
+  d: L'assicurazione contro gli infortuni
+explanation: L'assicurazione contro la disoccupazione versa, a determinate condizioni, un'indennità quando
+  una persona perde il posto di lavoro. Aiuta inoltre a cercare un nuovo lavoro.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sozialversicherung greift, wenn eine Person ihre Arbeitsstelle verliert?
+    options_de:
+      a: Die Invalidenversicherung
+      b: Die Alters- und Hinterlassenenversicherung
+      c: Die Arbeitslosenversicherung
+      d: Die Unfallversicherung
+    explanation_de: Die Arbeitslosenversicherung zahlt unter bestimmten Bedingungen eine Entschädigung,
+      wenn eine Person ihre Arbeitsstelle verliert. Sie hilft ausserdem bei der Suche nach einer neuen
+      Arbeit.

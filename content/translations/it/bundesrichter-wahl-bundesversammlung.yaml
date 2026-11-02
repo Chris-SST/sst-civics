@@ -1,0 +1,29 @@
+id: bundesrichter-wahl-bundesversammlung
+lang: it
+source_version: 1
+question: Chi elegge i giudici del Tribunale federale (Bundesgericht)?
+options:
+  a: Il Consiglio federale (Bundesrat)
+  b: Il popolo alle urne
+  c: L'Assemblea federale (Bundesversammlung)
+  d: I governi dei Cantoni
+explanation: L'Assemblea federale, ossia il Consiglio nazionale (Nationalrat) e il Consiglio degli Stati
+  (Ständerat) riuniti, elegge i giudici del Tribunale federale. La loro durata in carica è di sei anni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wählt die Richter des Bundesgerichts?
+    options_de:
+      a: Der Bundesrat
+      b: Das Volk an der Urne
+      c: Die Bundesversammlung
+      d: Die Regierungen der Kantone
+    explanation_de: Die Bundesversammlung, das heisst der Nationalrat und der Ständerat vereint, wählt
+      die Richter des Bundesgerichts. Ihre Amtsdauer beträgt sechs Jahre.

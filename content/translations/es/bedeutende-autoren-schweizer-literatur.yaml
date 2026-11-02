@@ -1,0 +1,31 @@
+id: bedeutende-autoren-schweizer-literatur
+lang: es
+source_version: 2
+question: ¿Cuáles de los siguientes dos escritores son autores importantes de la literatura suiza?
+options:
+  a: Günter Grass y Heinrich Böll
+  b: Thomas Mann y Bertolt Brecht
+  c: Johann Wolfgang von Goethe y Friedrich Schiller
+  d: Max Frisch y Friedrich Dürrenmatt
+explanation: Max Frisch y Friedrich Dürrenmatt son dos escritores suizos muy importantes del siglo XX.
+  Sus libros y sus obras de teatro también son conocidos en el extranjero. Los autores de las otras respuestas
+  son escritores de Alemania.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche der folgenden beiden Schriftsteller sind wichtige Autoren der Schweizer Literatur?
+    options_de:
+      a: Günter Grass und Heinrich Böll
+      b: Thomas Mann und Bertolt Brecht
+      c: Johann Wolfgang von Goethe und Friedrich Schiller
+      d: Max Frisch und Friedrich Dürrenmatt
+    explanation_de: Max Frisch und Friedrich Dürrenmatt sind zwei sehr wichtige Schweizer Schriftsteller
+      des 20. Jahrhunderts. Ihre Bücher und ihre Theaterstücke sind auch im Ausland bekannt. Die Autoren
+      der anderen Antworten sind Schriftsteller aus Deutschland.

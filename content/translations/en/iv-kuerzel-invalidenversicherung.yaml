@@ -10,6 +10,22 @@ options:
 explanation: IV stands for invalidity insurance (Invalidenversicherung). It belongs to the first pillar
   of retirement provision and helps people with health impairments, for example through integration measures
   or pensions.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür steht die Abkürzung «IV» im Schweizer Sozialversicherungssystem?
+    options_de:
+      a: Inlandversicherung
+      b: Invalidenversicherung
+      c: Integrationsversicherung
+      d: Individualversicherung
+    explanation_de: IV steht für Invalidenversicherung. Sie gehört zur ersten Säule der Altersvorsorge
+      und unterstützt Menschen mit gesundheitlichen Beeinträchtigungen, zum Beispiel durch Eingliederungsmassnahmen
+      oder Renten.

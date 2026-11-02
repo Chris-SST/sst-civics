@@ -1,0 +1,29 @@
+id: kanton-zuerich-anzahl-nachbarkantone
+lang: en
+source_version: 1
+question: How many neighbouring cantons does the canton of Zürich have?
+options:
+  a: Four
+  b: Seven
+  c: Six
+  d: Five
+explanation: 'The canton of Zürich borders six cantons: Schaffhausen, Thurgau, St Gallen, Schwyz, Zug
+  and Aargau. In the north, it also borders Germany.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Nachbarkantone hat der Kanton Zürich?
+    options_de:
+      a: Vier
+      b: Sieben
+      c: Sechs
+      d: Fünf
+    explanation_de: 'Der Kanton Zürich grenzt an sechs Kantone: Schaffhausen, Thurgau, St. Gallen, Schwyz,
+      Zug und Aargau. Im Norden grenzt er ausserdem an Deutschland.'

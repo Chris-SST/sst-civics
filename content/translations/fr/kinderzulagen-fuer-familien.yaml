@@ -1,0 +1,29 @@
+id: kinderzulagen-fuer-familien
+lang: fr
+source_version: 1
+question: Quelle prestation de l'État les familles avec enfants reçoivent-elles en Suisse ?
+options:
+  a: Rente d'invalidité
+  b: Allocations pour enfants
+  c: Prime à l'accession à la propriété du logement
+  d: Indemnité journalière de chômage
+explanation: Les familles reçoivent des allocations pour enfants en contribution aux frais d'entretien
+  des enfants. Elles font partie des allocations familiales, qui sont réglées dans la loi fédérale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Leistung erhalten Familien mit Kindern in der Schweiz?
+    options_de:
+      a: Invalidenrente
+      b: Kinderzulagen
+      c: Prämie für den Erwerb von Wohneigentum
+      d: Taggeld der Arbeitslosenversicherung
+    explanation_de: Familien erhalten Kinderzulagen als Beitrag an die Kosten für den Unterhalt der Kinder.
+      Sie gehören zu den Familienzulagen, die im Bundesgesetz geregelt sind.

@@ -1,0 +1,30 @@
+id: grundrecht-glaubens-gewissensfreiheit-schweiz
+lang: tr
+source_version: 1
+question: İsviçre'de Federal Anayasa tarafından hangi temel hak güvence altına alınmıştır?
+options:
+  a: Devletten gelir elde etme hakkı
+  b: Araba sahibi olma hakkı
+  c: Bir iş yerine sahip olma hakkı
+  d: İnanç ve vicdan özgürlüğü
+explanation: İnanç ve vicdan özgürlüğü, Federal Anayasa'nın 15. maddesinde yer alır. Devlet hiç kimseyi
+  bir inanca zorlayamaz. Temel hak olarak bir iş yeri veya gelir hakkı bulunmamaktadır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht wird in der Schweiz durch die Bundesverfassung gewährleistet?
+    options_de:
+      a: Das Recht, vom Staat ein Einkommen zu beziehen
+      b: Das Recht, ein Auto zu besitzen
+      c: Das Recht, einen Arbeitsplatz zu haben
+      d: Die Glaubens- und Gewissensfreiheit
+    explanation_de: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung enthalten.
+      Der Staat kann niemanden zu einem Glauben zwingen. Als Grundrecht gibt es kein Recht auf einen Arbeitsplatz
+      oder auf ein Einkommen.

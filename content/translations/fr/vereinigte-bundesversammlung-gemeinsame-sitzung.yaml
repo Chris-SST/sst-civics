@@ -1,0 +1,30 @@
+id: vereinigte-bundesversammlung-gemeinsame-sitzung
+lang: fr
+source_version: 1
+question: Quand parle-t-on de l'Assemblée fédérale (Bundesversammlung) réunie ?
+options:
+  a: Lorsque le Conseil national (Nationalrat) et le Conseil des États (Ständerat) délibèrent séparément
+    dans leurs salles respectives
+  b: Lorsque tous les parlements cantonaux siègent en même temps
+  c: Lorsque les membres du Conseil national et du Conseil des États siègent ensemble
+  d: Lorsque le Conseil fédéral (Bundesrat) et le Parlement siègent ensemble
+explanation: L'Assemblée fédérale réunie existe lorsque les deux chambres siègent ensemble. Elle élit
+  par exemple les membres du Conseil fédéral.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wann spricht man von der Vereinigten Bundesversammlung?
+    options_de:
+      a: Wenn der Nationalrat und der Ständerat getrennt in ihren jeweiligen Sälen beraten
+      b: Wenn alle kantonalen Parlamente gleichzeitig tagen
+      c: Wenn die Mitglieder des Nationalrats und des Ständerats gemeinsam tagen
+      d: Wenn der Bundesrat und das Parlament gemeinsam tagen
+    explanation_de: Die Vereinigte Bundesversammlung besteht, wenn die beiden Kammern gemeinsam tagen.
+      Sie wählt zum Beispiel die Mitglieder des Bundesrates.

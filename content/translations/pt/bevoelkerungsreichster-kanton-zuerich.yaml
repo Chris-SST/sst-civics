@@ -1,0 +1,29 @@
+id: bevoelkerungsreichster-kanton-zuerich
+lang: pt
+source_version: 1
+question: Qual cantão tem o maior número de habitantes?
+options:
+  a: Berna
+  b: Zurique
+  c: Vaud
+  d: Argóvia
+explanation: O cantão de Zurique tem o maior número de habitantes da Suíça, cerca de 1,6 milhão. Seguem-se
+  os cantões de Berna e Vaud.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton hat die grösste Zahl an Einwohnern?
+    options_de:
+      a: Bern
+      b: Zürich
+      c: Waadt
+      d: Aargau
+    explanation_de: Der Kanton Zürich hat die grösste Zahl an Einwohnern der Schweiz, etwa 1,6 Millionen.
+      Es folgen die Kantone Bern und Waadt.

@@ -9,6 +9,21 @@ options:
   d: The United States of America
 explanation: The largest share of Swiss trade with other countries is with the countries of the European
   Union. Switzerland is therefore linked to the EU by various agreements.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist der wichtigste Aussenhandelspartner der Schweizer Wirtschaft?
+    options_de:
+      a: China
+      b: Japan
+      c: Die Europäische Union
+      d: Die Vereinigten Staaten von Amerika
+    explanation_de: Der grösste Anteil des Schweizer Handels mit anderen Ländern entfällt auf die Länder
+      der Europäischen Union. Die Schweiz ist daher durch verschiedene Abkommen mit der EU verbunden.

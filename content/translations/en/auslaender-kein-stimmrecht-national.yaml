@@ -10,6 +10,23 @@ options:
   d: No, they have no right to vote at national level.
 explanation: The right to vote at national level is tied to Swiss citizenship (Bürgerrecht). Foreign nationals
   can only exercise it after naturalisation.
-status: draft
+status: flagged
 reviewed_by: null
 reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Erklärung: «Schweizer Bürgerrecht» wird zu «Bürgerrecht» ohne «Schweizer»; zudem enthält
+      Antwort b den Zusatz «(Niederlassungsbewilligung C)», der in der deutschen Fassung fehlt.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Dürfen Ausländerinnen und Ausländer, die seit Jahren in der Schweiz leben, an eidgenössischen
+      Abstimmungen teilnehmen?
+    options_de:
+      a: Ja, aber nur bei Abstimmungen und nicht bei Wahlen.
+      b: Ja, wenn sie eine Niederlassungsbewilligung (Niederlassungsbewilligung C) haben.
+      c: Ja, wenn sie Steuern zahlen.
+      d: Nein, sie haben auf nationaler Ebene kein Stimmrecht.
+    explanation_de: Das Stimmrecht auf nationaler Ebene ist an das Bürgerrecht gebunden. Ausländerinnen
+      und Ausländer können es erst nach der Einbürgerung ausüben.

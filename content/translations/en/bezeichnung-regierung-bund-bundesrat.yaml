@@ -10,6 +10,21 @@ options:
 explanation: The government of the Confederation is called the Federal Council (Bundesrat). The Federal
   Assembly (Bundesversammlung) is the parliament, and the Federal Supreme Court (Bundesgericht) is the
   highest court. The Federal Chancellery (Bundeskanzlei) supports the Federal Council.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Regierung der Schweiz auf Bundesebene?
+    options_de:
+      a: Bundesversammlung
+      b: Bundesrat
+      c: Bundeskanzlei
+      d: Bundesgericht
+    explanation_de: Die Regierung des Bundes heisst Bundesrat. Die Bundesversammlung ist das Parlament,
+      und das Bundesgericht ist das höchste Gericht. Die Bundeskanzlei unterstützt den Bundesrat.

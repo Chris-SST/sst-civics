@@ -1,0 +1,32 @@
+id: eidgenoessische-abstimmungstermine-pro-jahr
+lang: sq
+source_version: 1
+question: Sa herë në vit zhvillohen zakonisht në Zvicër votime popullore federale?
+options:
+  a: Një herë
+  b: Vetëm çdo katër vjet
+  c: Deri në katër herë
+  d: Çdo muaj
+explanation: Për votimet popullore federale parashikohen deri në katër të diela votimi në vit. Në një
+  afat shpesh votohet njëkohësisht për disa projekte. Çdo katër vjet zhvillohen, përkundrazi, zgjedhjet
+  për në Këshillin Kombëtar (Nationalrat), të cilat nuk janë votime.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie oft im Jahr finden in der Schweiz üblicherweise eidgenössische Volksabstimmungen
+      statt?
+    options_de:
+      a: Einmal
+      b: Nur alle vier Jahre
+      c: Bis zu viermal
+      d: Jeden Monat
+    explanation_de: Für eidgenössische Volksabstimmungen sind bis zu vier Abstimmungssonntage im Jahr
+      vorgesehen. An einem Termin wird oft gleichzeitig über mehrere Vorlagen abgestimmt. Alle vier Jahre
+      finden hingegen die Wahlen für den Nationalrat statt, die keine Abstimmungen sind.

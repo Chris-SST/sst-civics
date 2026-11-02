@@ -1,0 +1,29 @@
+id: bundesrichter-wahl-bundesversammlung
+lang: sq
+source_version: 1
+question: Kush zgjedh gjyqtaret dhe gjyqtaret e Gjykatës Federale (Bundesgericht)?
+options:
+  a: Këshilli Federal (Bundesrat)
+  b: Populli me votim në kuti
+  c: Kuvendi Federal (Bundesversammlung)
+  d: Qeveritë e kantoneve
+explanation: Kuvendi Federal, pra Këshilli Kombëtar (Nationalrat) dhe Këshilli i Shteteve (Ständerat)
+  së bashku, zgjedh gjyqtaret dhe gjyqtaret e Gjykatës Federale. Mandati i tyre zgjat gjashtë vjet.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wählt die Richter und Richterinnen des Bundesgerichts?
+    options_de:
+      a: Der Bundesrat
+      b: Das Volk an der Urne
+      c: Die Bundesversammlung
+      d: Die Regierungen der Kantone
+    explanation_de: Die Bundesversammlung, also der Nationalrat und der Ständerat zusammen, wählt die
+      Richter und Richterinnen des Bundesgerichts. Ihre Amtszeit dauert sechs Jahre.

@@ -9,6 +9,21 @@ options:
   d: It is prohibited.
 explanation: The Federal Constitution protects the right to life in Article 10. The death penalty is expressly
   prohibited, even for serious crimes.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in der Schweiz nach der Bundesverfassung für die Todesstrafe?
+    options_de:
+      a: Sie ist nur bei Mord zulässig.
+      b: Sie ist nur in Kriegszeiten zulässig.
+      c: Die Kantone entscheiden, ob sie gilt.
+      d: Sie ist verboten.
+    explanation_de: Die Bundesverfassung schützt das Recht auf Leben in Artikel 10. Die Todesstrafe ist
+      ausdrücklich verboten, auch bei schweren Verbrechen.

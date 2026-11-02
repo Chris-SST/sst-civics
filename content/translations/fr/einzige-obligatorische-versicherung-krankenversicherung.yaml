@@ -1,0 +1,31 @@
+id: einzige-obligatorische-versicherung-krankenversicherung
+lang: fr
+source_version: 1
+question: Laquelle des assurances suivantes est obligatoire par la loi pour toutes les personnes qui vivent
+  en Suisse ?
+options:
+  a: L'assurance de protection juridique
+  b: L'assurance-maladie
+  c: L'assurance voyage
+  d: L'assurance ménage
+explanation: L'assurance-maladie est obligatoire pour toutes les personnes domiciliées en Suisse. Les
+  assurances ménage, de protection juridique et voyage sont facultatives.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Versicherungen ist gesetzlich für alle Personen obligatorisch, die
+      in der Schweiz leben?
+    options_de:
+      a: Die Rechtsschutzversicherung
+      b: Die Krankenversicherung
+      c: Die Reiseversicherung
+      d: Die Hausratversicherung
+    explanation_de: Die Krankenversicherung ist für alle Personen mit Wohnsitz in der Schweiz obligatorisch.
+      Die Hausrat-, Rechtsschutz- und Reiseversicherungen sind freiwillig.

@@ -1,0 +1,31 @@
+id: richter-sprechen-urteile-gerichtsverfahren
+lang: fr
+source_version: 1
+question: Qui prononce le jugement dans une procédure judiciaire ?
+options:
+  a: La juge ou le juge
+  b: La policière ou le policier
+  c: La présidente ou le président de la commune (Gemeinde)
+  d: La procureure ou le procureur
+explanation: Les juges décident de manière indépendante dans les procédures judiciaires et rendent le
+  jugement. Le ministère public mène l'enquête et porte l'accusation. La police enquête, mais ne rend
+  pas de jugement.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer spricht in einem Gerichtsverfahren das Urteil?
+    options_de:
+      a: Die Richterin oder der Richter
+      b: Die Polizistin oder der Polizist
+      c: Die Gemeindepräsidentin oder der Gemeindepräsident
+      d: Die Staatsanwältin oder der Staatsanwalt
+    explanation_de: Die Richterinnen und Richter entscheiden in Gerichtsverfahren unabhängig und fällen
+      das Urteil. Die Staatsanwaltschaft führt die Untersuchung und erhebt die Anklage. Die Polizei ermittelt,
+      fällt aber kein Urteil.

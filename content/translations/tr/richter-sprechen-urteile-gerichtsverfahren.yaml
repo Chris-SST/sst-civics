@@ -1,0 +1,30 @@
+id: richter-sprechen-urteile-gerichtsverfahren
+lang: tr
+source_version: 1
+question: Bir yargılama sürecinde hükmü kim açıklar?
+options:
+  a: Kadın veya erkek hâkim
+  b: Kadın veya erkek polis memuru
+  c: Belediye (Gemeinde) başkanı (kadın veya erkek)
+  d: Kadın veya erkek savcı
+explanation: Hâkimler yargılama süreçlerinde bağımsız olarak karar verir ve hükmü verir. Savcılık soruşturmayı
+  yürütür ve iddianame düzenler. Polis araştırma yapar, ancak hüküm vermez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer verkündet in einem Gerichtsverfahren das Urteil?
+    options_de:
+      a: Die Richterin oder der Richter
+      b: Die Polizistin oder der Polizist
+      c: Die Gemeindepräsidentin oder der Gemeindepräsident
+      d: Die Staatsanwältin oder der Staatsanwalt
+    explanation_de: Richterinnen und Richter entscheiden in Gerichtsverfahren unabhängig und fällen das
+      Urteil. Die Staatsanwaltschaft führt die Untersuchung und erhebt Anklage. Die Polizei führt Ermittlungen
+      durch, fällt aber kein Urteil.

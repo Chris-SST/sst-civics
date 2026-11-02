@@ -1,0 +1,29 @@
+id: familien-steuerabzuege-entlastung
+lang: tr
+source_version: 1
+question: Aileler vergilerde nasıl rahatlatılır?
+options:
+  a: Aileler vergi ödemez.
+  b: Aileler vergilerde indirim talep edebilir.
+  c: Aileler vergi beyannamesi doldurmak zorunda değildir.
+  d: Aileler yalnızca katma değer vergisini öder.
+explanation: Aileler, örneğin çocuklar için veya çocuk bakımı için indirim talep edebilir. Bu sayede vergiye
+  tabi gelir azalır ve böylece vergi de düşer.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie werden Familien bei den Steuern entlastet?
+    options_de:
+      a: Familien zahlen keine Steuern.
+      b: Familien können bei den Steuern einen Abzug geltend machen.
+      c: Familien müssen keine Steuererklärung ausfüllen.
+      d: Familien zahlen nur die Mehrwertsteuer.
+    explanation_de: Familien können zum Beispiel für Kinder oder für die Kinderbetreuung einen Abzug geltend
+      machen. Dadurch verringert sich das steuerpflichtige Einkommen und somit sinkt auch die Steuer.

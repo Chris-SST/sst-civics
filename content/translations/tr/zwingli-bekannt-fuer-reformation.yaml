@@ -1,0 +1,32 @@
+id: zwingli-bekannt-fuer-reformation
+lang: tr
+source_version: 2
+question: Huldrych (Ulrich) Zwingli, Zürih tarihinde en çok hangi özelliğiyle tanınır?
+options:
+  a: Kanton'daki ilk demiryolunu inşa etti.
+  b: İsviçre'nin ilk Konfederasyon Başkanı (Bundespräsident) oldu.
+  c: Kadınlara oy hakkını getirdi.
+  d: Zürih'te Reform hareketinin önderiydi.
+explanation: Huldrych (Ulrich) Zwingli, 16. yüzyılda Zürih'te Reform hareketine önderlik etti ve Zürih
+  kilisesi reformcu (Protestan) kilise haline geldi. Demiryolu, bir Konfederasyon Başkanı bulunan federal
+  devlet ve kadınlara oy hakkı ise ancak yüzyıllar sonra ortaya çıktı.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür ist Huldrych (Ulrich) Zwingli in Zürich am bekanntesten?
+    options_de:
+      a: Er baute die erste Eisenbahn im Kanton.
+      b: Er wurde der erste Bundespräsident der Schweiz.
+      c: Er führte das Stimmrecht für Frauen ein.
+      d: Er war der Anführer der Reformationsbewegung in Zürich.
+    explanation_de: Huldrych (Ulrich) Zwingli führte im 16. Jahrhundert die Reformationsbewegung in Zürich
+      an, und die Zürcher Kirche wurde zur reformierten (protestantischen) Kirche. Die Eisenbahn, der
+      Bundesstaat mit einem Bundespräsidenten und das Stimmrecht für Frauen entstanden erst Jahrhunderte
+      später.

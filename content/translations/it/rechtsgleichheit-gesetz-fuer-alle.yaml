@@ -1,0 +1,31 @@
+id: rechtsgleichheit-gesetz-fuer-alle
+lang: it
+source_version: 1
+question: Che cosa significa il principio dell'uguaglianza giuridica?
+options:
+  a: Tutti i Cantoni hanno le stesse leggi.
+  b: Tutte le persone hanno le stesse cariche politiche.
+  c: Tutte le persone hanno lo stesso reddito.
+  d: La legge si applica a tutte le persone allo stesso modo.
+explanation: L'uguaglianza giuridica è sancita all'articolo 8 della Costituzione federale. Tutti gli esseri
+  umani sono uguali davanti alla legge e nessuno può essere discriminato, ad esempio a causa dell'origine
+  o del sesso. Ciò non significa che tutti possiedano la stessa quantità di beni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet der Grundsatz der Rechtsgleichheit?
+    options_de:
+      a: Alle Kantone haben die gleichen Gesetze.
+      b: Alle Personen haben die gleichen politischen Ämter.
+      c: Alle Personen haben das gleiche Einkommen.
+      d: Das Gesetz gilt für alle Personen auf die gleiche Weise.
+    explanation_de: Die Rechtsgleichheit ist in Artikel 8 der Bundesverfassung verankert. Alle Menschen
+      sind vor dem Gesetz gleich und niemand darf diskriminiert werden, zum Beispiel wegen der Herkunft
+      oder des Geschlechts. Das bedeutet nicht, dass alle die gleiche Menge an Gütern besitzen.

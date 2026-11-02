@@ -1,0 +1,29 @@
+id: arbeitslosenversicherung-bei-stellenverlust
+lang: tr
+source_version: 1
+question: Bir kişi işini kaybettiğinde hangi sosyal sigorta devreye girer?
+options:
+  a: Malullük sigortası
+  b: Yaşlılık ve ölüm (hayatta kalanlar) sigortası
+  c: İşsizlik sigortası
+  d: Kaza sigortası
+explanation: İşsizlik sigortası, belirli koşullar altında bir kişi işini kaybettiğinde tazminat öder.
+  Ayrıca yeni bir iş aranmasında da yardımcı olur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sozialversicherung greift, wenn eine Person ihre Arbeit verliert?
+    options_de:
+      a: Invalidenversicherung
+      b: Alters- und Hinterlassenenversicherung
+      c: Arbeitslosenversicherung
+      d: Unfallversicherung
+    explanation_de: Die Arbeitslosenversicherung zahlt unter bestimmten Bedingungen eine Entschädigung,
+      wenn eine Person ihre Arbeit verliert. Ausserdem hilft sie auch bei der Suche nach einer neuen Arbeit.

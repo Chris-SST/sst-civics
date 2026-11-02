@@ -1,0 +1,31 @@
+id: krankenversicherung-obligatorisch-alle-einwohner
+lang: fr
+source_version: 1
+question: Qui doit avoir une assurance de base auprès d'une caisse-maladie (Krankenkasse) en Suisse ?
+options:
+  a: toutes les personnes qui vivent en Suisse
+  b: uniquement les personnes à faible revenu
+  c: uniquement les personnes ayant le droit de cité (Bürgerrecht) suisse
+  d: uniquement les personnes qui exercent une activité lucrative
+explanation: L'assurance-maladie est obligatoire pour toutes les personnes domiciliées en Suisse. Cela
+  s'applique indépendamment de la nationalité, de l'âge ou de l'exercice d'une activité lucrative. Les
+  caisses-maladie doivent accepter toutes les personnes dans l'assurance de base.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz eine Grundversicherung bei einer Krankenkasse haben?
+    options_de:
+      a: alle Personen, die in der Schweiz leben
+      b: nur Personen mit geringem Einkommen
+      c: nur Personen mit Schweizer Bürgerrecht
+      d: nur Personen, die einer Erwerbstätigkeit nachgehen
+    explanation_de: Die Krankenversicherung ist für alle Personen mit Wohnsitz in der Schweiz obligatorisch.
+      Dies gilt unabhängig von der Staatsangehörigkeit, vom Alter oder von der Ausübung einer Erwerbstätigkeit.
+      Die Krankenkassen müssen alle Personen in der Grundversicherung aufnehmen.

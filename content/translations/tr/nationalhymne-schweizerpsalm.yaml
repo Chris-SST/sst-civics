@@ -1,0 +1,30 @@
+id: nationalhymne-schweizerpsalm
+lang: tr
+source_version: 1
+question: İsviçre'nin ulusal marşının adı nedir?
+options:
+  a: Rufst du, mein Vaterland
+  b: Lueget vo Bärg und Tal
+  c: Vo Luzern gäg Weggis zue
+  d: Schweizerpsalm
+explanation: İsviçre'nin ulusal marşı Schweizerpsalm'dır. Federal Konsey (Bundesrat) onu 1981'de kesin
+  olarak ulusal marş ilan etmiştir. Daha önce çoğunlukla «Rufst du, mein Vaterland» söylenirdi.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Erklärung: Im Deutschen wurde früher «oft» «Rufst du, mein Vaterland» gesungen, in der Rückübersetzung
+      «meistens», was eine stärkere Aussage ist. Frage und Antworten sind gleich.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wie heisst die Nationalhymne der Schweiz?
+    options_de:
+      a: Rufst du, mein Vaterland
+      b: Lueget vo Bärg und Tal
+      c: Vo Luzern gäg Weggis zue
+      d: Schweizerpsalm
+    explanation_de: Die Nationalhymne der Schweiz ist der Schweizerpsalm. Der Bundesrat hat ihn 1981 definitiv
+      zur Nationalhymne erklärt. Früher wurde meistens «Rufst du, mein Vaterland» gesungen.

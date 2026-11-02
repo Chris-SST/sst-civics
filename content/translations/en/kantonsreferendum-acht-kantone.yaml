@@ -11,6 +11,23 @@ options:
 explanation: According to the Federal Constitution, eight cantons can also demand a popular vote on a
   federal act. This is called a cantonal referendum. It is rarely used, but it shows that the cantons
   have a say in the federal state.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann neben 50 000 Stimmberechtigten ebenfalls ein fakultatives Referendum gegen ein
+      Bundesgesetz verlangen?
+    options_de:
+      a: Acht Kantone
+      b: Drei grosse Parteien gemeinsam
+      c: Der Bundesrat
+      d: Das Bundesgericht
+    explanation_de: Gemäss der Bundesverfassung können auch acht Kantone eine Volksabstimmung über ein
+      Bundesgesetz verlangen. Dies wird Kantonsreferendum genannt. Es wird selten genutzt, zeigt aber,
+      dass die Kantone im Bundesstaat mitreden können.

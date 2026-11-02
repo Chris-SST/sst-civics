@@ -1,0 +1,33 @@
+id: ergaenzungsleistungen-existenzminimum-rente-reicht-nicht
+lang: tr
+source_version: 1
+question: İsviçre'de tamamlayıcı yardımları kimler alabilir?
+options:
+  a: İşini kaybetmiş ve işsizlik ödeneği alan kişiler
+  b: 50 yaşından büyük tüm kişiler
+  c: yaşlılık ve dul-yetim sigortası (AHV) veya malullük sigortası (IV) aylığı asgari geçim düzeyini karşılamayan
+    kişiler
+  d: Sosyal yardım alan tüm kişiler
+explanation: Tamamlayıcı yardımlar, yaşlılık ve dul-yetim sigortası (AHV) veya malullük sigortası (IV)
+  aylığı ile diğer gelirleri geçinmeye yetmeyen kişilere yardımcı olur. Bunlar yasal bir haktır ve sosyal
+  yardım değildir. Aylığa ek olarak ödenirler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann in der Schweiz Ergänzungsleistungen erhalten?
+    options_de:
+      a: Personen, die ihre Arbeit verloren haben und Arbeitslosenentschädigung erhalten
+      b: Alle Personen über 50 Jahren
+      c: Personen, deren Rente der Alters- und Hinterlassenenversicherung (AHV) oder der Invalidenversicherung
+        (IV) das Existenzminimum nicht deckt
+      d: Alle Personen, die Sozialhilfe erhalten
+    explanation_de: Ergänzungsleistungen helfen Personen, deren Rente der Alters- und Hinterlassenenversicherung
+      (AHV) oder der Invalidenversicherung (IV) und deren übriges Einkommen zum Leben nicht ausreichen.
+      Diese sind ein gesetzlicher Anspruch und keine Sozialhilfe. Sie werden zusätzlich zur Rente ausgezahlt.

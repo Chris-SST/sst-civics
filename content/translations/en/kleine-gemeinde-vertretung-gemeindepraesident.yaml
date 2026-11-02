@@ -10,6 +10,22 @@ options:
 explanation: In smaller Zurich communes, the communal president represents the commune externally. He
   or she chairs the communal council (Gemeinderat). In the city of Zurich, this role is taken by the city
   president (Stadtpräsidentin or Stadtpräsident).
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer vertritt eine kleinere Zürcher Gemeinde nach aussen?
+    options_de:
+      a: die Gemeindepräsidentin oder der Gemeindepräsident
+      b: die Bezirksrätin oder der Bezirksrat
+      c: die Gemeindeschreiberin oder der Gemeindeschreiber
+      d: die Schulleiterin oder der Schulleiter
+    explanation_de: In kleineren Zürcher Gemeinden vertritt die Gemeindepräsidentin oder der Gemeindepräsident
+      die Gemeinde nach aussen. Er oder sie leitet den Gemeinderat. In der Stadt Zürich wird diese Rolle
+      von der Stadtpräsidentin oder dem Stadtpräsidenten übernommen.

@@ -1,15 +1,33 @@
 id: primarschule-traegerschaft-gemeinde-zuerich
 lang: en
-source_version: 1
-question: Who runs the primary schools in the canton of Zürich?
+source_version: 2
+question: Who runs primary schools in the canton of Zürich?
 options:
-  a: The cantonal Education Department, as the school management of each school
+  a: The canton's Education Department
   b: The Confederation
-  c: The local political commune (Gemeinde) or the local school commune (Schulgemeinde)
-  d: The district administration
-explanation: In the canton of Zürich, primary school is a responsibility of the communes. They run the
-  schools locally and appoint the school authority. The canton sets the framework and supervises the state
-  school system.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  c: The communes (Gemeinden)
+  d: The districts
+explanation: In the canton of Zürich, the communes run the primary schools. Depending on the location,
+  these are either the political communes or separate school communes, and the elected school board (Schulpflege)
+  is the local school authority. The canton only sets the framework, for example the curriculum, and supervises
+  the public school system (Volksschule).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer führt im Kanton Zürich die Primarschulen?
+    options_de:
+      a: Die Bildungsdirektion des Kantons
+      b: Der Bund
+      c: Die Gemeinden
+      d: Die Bezirke
+    explanation_de: Im Kanton Zürich führen die Gemeinden die Primarschulen. Je nach Ort sind dies entweder
+      die politischen Gemeinden oder separate Schulgemeinden, und die gewählte Schulpflege ist die lokale
+      Schulbehörde. Der Kanton legt nur den Rahmen fest, zum Beispiel den Lehrplan, und beaufsichtigt
+      das öffentliche Schulwesen (Volksschule).

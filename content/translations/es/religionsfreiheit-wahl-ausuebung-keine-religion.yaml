@@ -1,0 +1,33 @@
+id: religionsfreiheit-wahl-ausuebung-keine-religion
+lang: es
+source_version: 1
+question: Una mujer se traslada a Suiza y quiere elegir ella misma su religión. También se plantea no
+  pertenecer a ninguna religión. ¿Qué le garantiza la Constitución Federal en este contexto?
+options:
+  a: Solo puede pertenecer a una religión que esté reconocida de derecho público en el cantón.
+  b: Puede elegir libremente su religión, practicarla o no pertenecer a ninguna religión.
+  c: Puede elegir su religión en privado, pero no puede practicarla en ningún lugar junto con otras personas.
+  d: Debe decidirse en el municipio (Gemeinde) por una religión reconocida.
+explanation: La libertad de creencia y de conciencia está garantizada en el artículo 15 de la Constitución
+  Federal. Toda persona puede elegir libremente su religión, practicarla sola o con otras personas, o
+  no pertenecer a ninguna religión. Nadie puede ser obligado a pertenecer a una comunidad religiosa.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Frau zieht in die Schweiz und möchte ihre Religion selbst wählen. Sie erwägt auch,
+      keiner Religion anzugehören. Was garantiert ihr die Bundesverfassung in diesem Zusammenhang?
+    options_de:
+      a: Sie kann nur einer Religion angehören, die im Kanton öffentlich-rechtlich anerkannt ist.
+      b: Sie kann ihre Religion frei wählen, sie ausüben oder keiner Religion angehören.
+      c: Sie kann ihre Religion privat wählen, darf sie aber nirgends gemeinsam mit anderen Personen ausüben.
+      d: Sie muss sich in der Gemeinde für eine anerkannte Religion entscheiden.
+    explanation_de: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung garantiert.
+      Jede Person kann ihre Religion frei wählen, sie allein oder mit anderen Personen ausüben oder keiner
+      Religion angehören. Niemand kann gezwungen werden, einer Religionsgemeinschaft anzugehören.

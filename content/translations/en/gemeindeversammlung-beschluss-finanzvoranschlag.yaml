@@ -11,6 +11,23 @@ options:
 explanation: In communes with a communal assembly, the eligible voters decide on important matters, including
   the budget estimate (budget) and the tax rate. Criminal law and Confederation taxes are not matters
   for the commune.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Worüber entscheiden die Stimmberechtigten in einer Zürcher Gemeinde mit Gemeindeversammlung
+      jedes Jahr an der Versammlung?
+    options_de:
+      a: Über die Höhe der Bundessteuern
+      b: Über das Strafrecht im Kanton
+      c: Über den Voranschlag der Gemeinde
+      d: Über die Lehrpläne der obligatorischen öffentlichen Schule
+    explanation_de: In Gemeinden mit Gemeindeversammlung entscheiden die Stimmberechtigten über wichtige
+      Angelegenheiten, darunter den Voranschlag (Budget) und den Steuerfuss. Das Strafrecht und die Bundessteuern
+      sind keine Angelegenheiten der Gemeinde.

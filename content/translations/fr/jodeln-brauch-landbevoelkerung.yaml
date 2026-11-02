@@ -1,0 +1,33 @@
+id: jodeln-brauch-landbevoelkerung
+lang: fr
+source_version: 2
+question: Quelle coutume traditionnelle de la population rurale suisse est une manière de chanter dans
+  laquelle la voix passe rapidement de la voix de poitrine à la voix de tête ?
+options:
+  a: Le cor des Alpes (Alphornblasen)
+  b: Le yodel (Jodeln)
+  c: Le hornussen (Hornussen)
+  d: Le lancer de drapeau (Fahnenschwingen)
+explanation: Dans le yodel, la voix passe rapidement de la voix de poitrine à la voix de tête. Le yodel
+  est une coutume traditionnelle de la population rurale suisse. Le yodel naturel se passe de paroles,
+  mais de nombreux chants de yodel ont un texte.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welcher traditionelle Brauch der Schweizer Landbevölkerung ist eine Art des Singens,
+      bei der die Stimme schnell von der Bruststimme in die Kopfstimme wechselt?
+    options_de:
+      a: Das Alphorn (Alphornblasen)
+      b: Das Jodeln (Jodeln)
+      c: Das Hornussen (Hornussen)
+      d: Das Fahnenschwingen (Fahnenschwingen)
+    explanation_de: Beim Jodeln wechselt die Stimme schnell von der Bruststimme in die Kopfstimme. Das
+      Jodeln ist ein traditioneller Brauch der Schweizer Landbevölkerung. Das Naturjodeln kommt ohne Worte
+      aus, aber viele Jodellieder haben einen Text.

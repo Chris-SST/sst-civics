@@ -1,0 +1,30 @@
+id: masoala-halle-zuercher-zoo
+lang: sq
+source_version: 1
+question: Cilës institucion në Zyrih i përket salla Masoala me pyllin tropikal nga Madagaskari?
+options:
+  a: Kopshtit Zoologjik të Zyrihut
+  b: Kopshtit Botanik të Universitetit
+  c: Muzeut të Historisë Natyrore
+  d: Technorama-s
+explanation: Salla Masoala është pjesë e Kopshtit Zoologjik të Zyrihut. Ajo paraqet një pyll tropikal,
+  siç rritet në Madagaskar. Aty jetojnë edhe kafshë të këtij pylli tropikal.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Zu welcher Institution in Zürich gehört die Masoala-Halle mit dem tropischen Wald aus
+      Madagaskar?
+    options_de:
+      a: Zum Zoologischen Garten Zürich
+      b: Zum Botanischen Garten der Universität
+      c: Zum Museum für Naturgeschichte
+      d: Zum Technorama
+    explanation_de: Die Masoala-Halle ist Teil des Zoologischen Gartens Zürich. Sie stellt einen tropischen
+      Wald dar, wie er in Madagaskar wächst. Dort leben auch Tiere dieses tropischen Waldes.

@@ -1,0 +1,33 @@
+id: ahv-einfuehrung-jahr-1948
+lang: pt
+source_version: 1
+question: Em que ano foi introduzido o seguro de velhice e sobrevivência (AHV), o seguro estatal de pensões
+  para a velhice e para os sobreviventes?
+options:
+  a: '1975'
+  b: '1918'
+  c: '1930'
+  d: '1948'
+explanation: O seguro de velhice e sobrevivência iniciou a sua atividade em 1948, depois de o povo ter
+  aprovado a lei em 1947. Constitui o primeiro pilar do sistema suíço dos três pilares. Garante a subsistência
+  na velhice e a dos sobreviventes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr wurde die Alters- und Hinterlassenenversicherung (AHV), die staatliche
+      Rentenversicherung für das Alter und für die Hinterlassenen, eingeführt?
+    options_de:
+      a: '1975'
+      b: '1918'
+      c: '1930'
+      d: '1948'
+    explanation_de: Die Alters- und Hinterlassenenversicherung nahm ihre Tätigkeit 1948 auf, nachdem das
+      Volk das Gesetz 1947 angenommen hatte. Sie bildet die erste Säule des schweizerischen Drei-Säulen-Systems.
+      Sie garantiert den Lebensunterhalt im Alter und denjenigen der Hinterlassenen.

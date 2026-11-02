@@ -1,0 +1,29 @@
+id: gotthard-basistunnel-laengster-eisenbahntunnel
+lang: sq
+source_version: 1
+question: Çfarë e dallon Tunelin Bazë të Gotardit në krahasim me tunelet e tjera në botë?
+options:
+  a: Është tuneli hekurudhor më i gjatë në botë.
+  b: Është tuneli hekurudhor më i lartë në botë.
+  c: Është tuneli rrugor më i gjatë në botë.
+  d: Është tuneli hekurudhor më i vjetër në Evropë.
+explanation: Tuneli Bazë i Gotardit është tuneli hekurudhor më i gjatë në botë. Ai lidh Zvicrën veriore
+  me Ticinon dhe është pjesë e rëndësishme e boshtit veri-jug përmes Alpeve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was zeichnet den Gotthard-Basistunnel im Vergleich zu anderen Tunneln der Welt aus?
+    options_de:
+      a: Er ist der längste Eisenbahntunnel der Welt.
+      b: Er ist der höchste Eisenbahntunnel der Welt.
+      c: Er ist der längste Strassentunnel der Welt.
+      d: Er ist der älteste Eisenbahntunnel in Europa.
+    explanation_de: Der Gotthard-Basistunnel ist der längste Eisenbahntunnel der Welt. Er verbindet die
+      Nordschweiz mit dem Tessin und ist ein wichtiger Teil der Nord-Süd-Achse durch die Alpen.

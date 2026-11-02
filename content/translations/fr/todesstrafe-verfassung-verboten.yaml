@@ -1,0 +1,29 @@
+id: todesstrafe-verfassung-verboten
+lang: fr
+source_version: 1
+question: Que prévoit la Constitution fédérale pour la peine de mort en Suisse ?
+options:
+  a: Elle n'est autorisée qu'en cas de meurtre.
+  b: Elle n'est autorisée qu'en temps de guerre.
+  c: Les cantons décident si elle s'applique.
+  d: Elle est interdite.
+explanation: La Constitution fédérale protège le droit à la vie à l'article 10. La peine de mort est expressément
+  interdite, même pour les crimes graves.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sieht die Bundesverfassung für die Todesstrafe in der Schweiz vor?
+    options_de:
+      a: Sie ist nur im Fall von Mord erlaubt.
+      b: Sie ist nur in Kriegszeiten erlaubt.
+      c: Die Kantone entscheiden, ob sie angewendet wird.
+      d: Sie ist verboten.
+    explanation_de: Die Bundesverfassung schützt das Recht auf Leben in Artikel 10. Die Todesstrafe ist
+      ausdrücklich verboten, auch für schwere Verbrechen.

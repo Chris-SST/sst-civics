@@ -1,0 +1,31 @@
+id: folterverbot-bundesverfassung
+lang: tr
+source_version: 1
+question: Federal Anayasa işkence hakkında ne söylüyor?
+options:
+  a: İşkence yalnızca suçlulara karşı yasaktır.
+  b: İşkence, acil durumlarda polis için serbesttir.
+  c: Bir mahkeme onay verirse işkence serbesttir.
+  d: Hiç kimseye işkence yapılamaz.
+explanation: Federal Anayasa'nın 10. maddesi, işkenceyi ve diğer her türlü acımasız, insanlık dışı veya
+  aşağılayıcı muameleyi yasaklar. Bu yasak istisnasız tüm insanlar için geçerlidir. Devlet de istisna
+  yapamaz.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sagt die Bundesverfassung über Folter?
+    options_de:
+      a: Folter ist nur gegenüber Straftätern verboten.
+      b: Folter ist für die Polizei in Notfällen erlaubt.
+      c: Wenn ein Gericht die Zustimmung erteilt, ist Folter erlaubt.
+      d: Niemand darf gefoltert werden.
+    explanation_de: Artikel 10 der Bundesverfassung verbietet Folter und jede andere Form grausamer, unmenschlicher
+      oder erniedrigender Behandlung. Dieses Verbot gilt ausnahmslos für alle Menschen. Auch der Staat
+      kann keine Ausnahme machen.

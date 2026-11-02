@@ -1,0 +1,31 @@
+id: kantonsrat-amtsdauer-vier-jahre
+lang: tr
+source_version: 1
+question: Zürich Kanton Konseyi (Kantonsrat) üyeleri kaç yıllığına seçilir?
+options:
+  a: İki yıllığına
+  b: Üç yıllığına
+  c: Altı yıllığına
+  d: Dört yıllığına
+explanation: Zürich Kanton Konseyi üyeleri dört yıllık bir görev süresi için seçilir. Ardından genel yenileme
+  seçimleri yapılır. Oy hakkına sahip kişiler, parlamentoda kimin yer alacağına o zaman yeniden karar
+  verebilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für wie viele Jahre werden die Mitglieder des Zürcher Kantonsrats gewählt?
+    options_de:
+      a: Für zwei Jahre
+      b: Für drei Jahre
+      c: Für sechs Jahre
+      d: Für vier Jahre
+    explanation_de: Die Mitglieder des Zürcher Kantonsrats werden für eine Amtsdauer von vier Jahren gewählt.
+      Danach finden Gesamterneuerungswahlen statt. Die Stimmberechtigten können dann erneut darüber entscheiden,
+      wer im Parlament vertreten sein wird.

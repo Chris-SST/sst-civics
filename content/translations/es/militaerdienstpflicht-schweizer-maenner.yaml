@@ -1,0 +1,31 @@
+id: militaerdienstpflicht-schweizer-maenner
+lang: es
+source_version: 1
+question: ¿A quién obliga en Suiza el deber de prestar el servicio militar o el servicio sustitutorio?
+options:
+  a: A todos los habitantes a partir de los 18 años
+  b: A los hombres con ciudadanía (Bürgerrecht) suiza
+  c: A todos los hombres que residen en Suiza
+  d: Solo a las mujeres con ciudadanía suiza
+explanation: Según la Constitución Federal, todo hombre suizo está obligado a prestar el servicio militar.
+  Quien no pueda conciliarlo con su conciencia presta un servicio sustitutorio civil. Los extranjeros
+  no están sujetos a la obligación de prestar servicio.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wen verpflichtet in der Schweiz die Pflicht, Militärdienst oder Ersatzdienst zu leisten?
+    options_de:
+      a: Alle Einwohner ab 18 Jahren
+      b: Männer mit Schweizer Bürgerrecht
+      c: Alle Männer, die in der Schweiz wohnen
+      d: Nur Frauen mit Schweizer Bürgerrecht
+    explanation_de: Gemäss der Bundesverfassung ist jeder Schweizer Mann verpflichtet, Militärdienst zu
+      leisten. Wer dies nicht mit seinem Gewissen vereinbaren kann, leistet einen zivilen Ersatzdienst.
+      Ausländer unterliegen nicht der Dienstpflicht.

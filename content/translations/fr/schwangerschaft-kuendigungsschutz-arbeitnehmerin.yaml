@@ -1,0 +1,34 @@
+id: schwangerschaft-kuendigungsschutz-arbeitnehmerin
+lang: fr
+source_version: 1
+question: Que prévoit la loi en Suisse pour les travailleuses enceintes en cas de licenciement ?
+options:
+  a: Elles ne bénéficient d'une protection contre le licenciement que dans les entreprises soumises à
+    une convention collective de travail
+  b: Elles bénéficient d'une protection légale contre le licenciement pendant la grossesse
+  c: Elles doivent annoncer immédiatement leur grossesse à l'employeur, faute de quoi la protection s'éteint
+  d: Elles peuvent être licenciées à tout moment, sans aucune restriction
+explanation: La loi protège les femmes contre un licenciement par l'employeur pendant la grossesse. Cette
+  protection s'applique indépendamment de l'entreprise. Elle vise à garantir la sécurité des femmes durant
+  cette période.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sieht das Gesetz in der Schweiz für schwangere Arbeitnehmerinnen im Falle einer Kündigung
+      vor?
+    options_de:
+      a: Sie geniessen nur in Unternehmen, die einem Gesamtarbeitsvertrag unterstellt sind, einen Schutz
+        vor Kündigung.
+      b: Sie geniessen während der Schwangerschaft einen gesetzlichen Kündigungsschutz.
+      c: Sie müssen ihre Schwangerschaft dem Arbeitgeber sofort mitteilen, andernfalls erlischt der Schutz.
+      d: Sie können jederzeit und ohne jegliche Einschränkung entlassen werden.
+    explanation_de: Das Gesetz schützt Frauen während der Schwangerschaft vor einer Kündigung durch den
+      Arbeitgeber. Dieser Schutz gilt unabhängig vom Unternehmen. Er soll die Sicherheit der Frauen in
+      dieser Zeit gewährleisten.

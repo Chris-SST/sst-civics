@@ -1,0 +1,29 @@
+id: economiesuisse-wirtschaftsdachverband
+lang: en
+source_version: 1
+question: What is Economiesuisse?
+options:
+  a: An unemployment insurance fund of the Confederation
+  b: The Federal Office for Economic Affairs
+  c: The umbrella business association that represents the interests of companies
+  d: A trade union for employees in the retail sector
+explanation: Economiesuisse is the umbrella association of Swiss business and represents the interests
+  of companies. It is not a government body and not a trade union.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist Economiesuisse?
+    options_de:
+      a: Eine Arbeitslosenversicherungskasse des Bundes
+      b: Das Bundesamt für Wirtschaft
+      c: Der Dachverband der Wirtschaft, der die Interessen der Unternehmen vertritt
+      d: Eine Gewerkschaft für Angestellte im Detailhandel
+    explanation_de: Economiesuisse ist der Dachverband der Schweizer Wirtschaft und vertritt die Interessen
+      der Unternehmen. Sie ist keine staatliche Stelle und keine Gewerkschaft.

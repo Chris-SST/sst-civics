@@ -1,0 +1,30 @@
+id: bundesgesetz-referendum-volksabstimmung
+lang: it
+source_version: 1
+question: Che cosa vale per una legge federale approvata da entrambe le Camere del Parlamento?
+options:
+  a: Gli aventi diritto di voto possono chiedere una votazione popolare in merito mediante un referendum.
+  b: Il Consiglio federale (Bundesrat) deve poi sottoporla ancora al Tribunale federale (Bundesgericht)
+    per l'approvazione.
+  c: Entra sempre in vigore immediatamente, senza che il popolo possa esprimersi.
+  d: I governi dei Cantoni devono prima approvarla singolarmente.
+explanation: Dopo la decisione di entrambe le Camere, le leggi federali sono soggette al referendum facoltativo.
+  Se il referendum riesce, gli aventi diritto di voto decidono alle urne sulla legge.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für ein Bundesgesetz, das von beiden Räten des Parlaments verabschiedet wurde?
+    options_de:
+      a: Die Stimmberechtigten können mittels eines Referendums eine Volksabstimmung darüber verlangen.
+      b: Der Bundesrat muss es danach noch dem Bundesgericht zur Genehmigung vorlegen.
+      c: Es tritt immer sofort in Kraft, ohne dass sich das Volk äussern kann.
+      d: Die Regierungen der Kantone müssen es zuvor einzeln genehmigen.
+    explanation_de: Nach dem Beschluss beider Räte unterliegen die Bundesgesetze dem fakultativen Referendum.
+      Kommt das Referendum zustande, entscheiden die Stimmberechtigten an der Urne über das Gesetz.

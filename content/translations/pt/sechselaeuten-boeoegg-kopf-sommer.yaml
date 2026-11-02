@@ -1,0 +1,31 @@
+id: sechselaeuten-boeoegg-kopf-sommer
+lang: pt
+source_version: 2
+question: Segundo a crença popular, o que significa quando, no Sechseläuten, a cabeça do Böögg arde rapidamente?
+options:
+  a: O próximo verão será chuvoso.
+  b: O próximo inverno será particularmente frio.
+  c: O próximo verão será bonito.
+  d: A colheita do outono será fraca.
+explanation: 'O Böögg é um boneco de neve que é queimado em Zurique durante o Sechseläuten. Segundo a
+  crença popular: quanto mais rapidamente a sua cabeça arde ou explode, mais bonito será o próximo verão.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was bedeutet es laut dem Volksglauben, wenn am Sechseläuten der Kopf des Böögg schnell
+      brennt?
+    options_de:
+      a: Der nächste Sommer wird regnerisch.
+      b: Der nächste Winter wird besonders kalt.
+      c: Der nächste Sommer wird schön.
+      d: Die Herbsternte wird schlecht ausfallen.
+    explanation_de: 'Der Böögg ist ein Schneemann, der in Zürich während des Sechseläutens verbrannt wird.
+      Laut dem Volksglauben gilt: Je schneller sein Kopf brennt oder explodiert, desto schöner wird der
+      nächste Sommer.'

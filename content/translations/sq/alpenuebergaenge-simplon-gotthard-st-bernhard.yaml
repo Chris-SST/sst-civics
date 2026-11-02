@@ -1,0 +1,29 @@
+id: alpenuebergaenge-simplon-gotthard-st-bernhard
+lang: sq
+source_version: 1
+question: Çfarë kanë të përbashkët Simplon, Gotthard dhe Grosser St. Bernhard?
+options:
+  a: Ata janë kantone në Alpe.
+  b: Ata janë lumenj që derdhen në det.
+  c: Ata janë liqene në Mittelland.
+  d: Ata janë kalime përtej Alpeve.
+explanation: Simplon, Gotthard dhe Grosser St. Bernhard janë qafa të njohura malore që kalojnë përtej
+  Alpeve. Ato lidhin anën veriore të Alpeve me anën jugore të Alpeve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was haben Simplon, Gotthard und Grosser St. Bernhard gemeinsam?
+    options_de:
+      a: Sie sind Kantone in den Alpen.
+      b: Sie sind Flüsse, die ins Meer münden.
+      c: Sie sind Seen im Mittelland.
+      d: Sie sind Übergänge über die Alpen.
+    explanation_de: Simplon, Gotthard und Grosser St. Bernhard sind bekannte Bergpässe, die über die Alpen
+      führen. Sie verbinden die Nordseite der Alpen mit der Südseite der Alpen.

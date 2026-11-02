@@ -1,0 +1,29 @@
+id: uhrmacherei-schweizer-spitzenbranche
+lang: sq
+source_version: 1
+question: Në cilin sektor ekonomik udhëheq Zvicra në nivel ndërkombëtar prej kohësh të gjata?
+options:
+  a: Industria tekstile
+  b: Ndërtimi i anijeve
+  c: Industria e automobilave
+  d: Orëbërja
+explanation: Orët zvicerane janë të njohura në mbarë botën për cilësinë e tyre. Orëbërja ka një traditë
+  të gjatë në Zvicër dhe është edhe sot një degë e rëndësishme eksporti.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Wirtschaftssektor ist die Schweiz seit langer Zeit international führend?
+    options_de:
+      a: Textilindustrie
+      b: Schiffbau
+      c: Automobilindustrie
+      d: Uhrenherstellung
+    explanation_de: Schweizer Uhren sind auf der ganzen Welt für ihre Qualität bekannt. Die Uhrenherstellung
+      hat in der Schweiz eine lange Tradition und ist auch heute noch ein wichtiger Exportzweig.

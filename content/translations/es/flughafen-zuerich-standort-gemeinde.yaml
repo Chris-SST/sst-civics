@@ -1,0 +1,31 @@
+id: flughafen-zuerich-standort-gemeinde
+lang: es
+source_version: 2
+question: ¿En el territorio de cuál de estos municipios (Gemeinden) se encuentra el aeropuerto de Zúrich?
+options:
+  a: Winterthur
+  b: Kloten
+  c: Uster
+  d: Dübendorf
+explanation: El aeropuerto de Zúrich se encuentra en su mayor parte en el territorio de la ciudad de Kloten,
+  en el Zürcher Unterland (la parte baja del cantón de Zúrich). Por eso mucha gente también dice «aeropuerto
+  de Kloten». En Dübendorf hay otro aeródromo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Auf dem Gebiet welcher dieser Gemeinden befindet sich der Flughafen Zürich?
+    options_de:
+      a: Winterthur
+      b: Kloten
+      c: Uster
+      d: Dübendorf
+    explanation_de: Der Flughafen Zürich befindet sich zum grössten Teil auf dem Gebiet der Stadt Kloten,
+      im Zürcher Unterland (dem unteren Teil des Kantons Zürich). Deshalb sagen viele Leute auch «Flughafen
+      Kloten». In Dübendorf gibt es einen anderen Flugplatz.

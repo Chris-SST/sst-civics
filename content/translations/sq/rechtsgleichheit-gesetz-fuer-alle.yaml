@@ -1,0 +1,32 @@
+id: rechtsgleichheit-gesetz-fuer-alle
+lang: sq
+source_version: 1
+question: Çfarë do të thotë parimi i barazisë përpara ligjit?
+options:
+  a: Të gjithë kantonet kanë të njëjtat ligje.
+  b: Të gjithë personat kanë të njëjtat detyra politike.
+  c: Të gjithë personat kanë të njëjtin të ardhur.
+  d: Ligji vlen për të gjithë personat në mënyrë të barabartë.
+explanation: Barazia përpara ligjit përmbahet në nenin 8 të Kushtetutës Federale. Të gjithë njerëzit janë
+  të barabartë përpara ligjit dhe askush nuk lejohet, për shembull, të diskriminohet për shkak të prejardhjes
+  ose gjinisë. Kjo nuk do të thotë se të gjithë zotërojnë po aq.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort b): Im Original haben alle Personen dieselben politischen «Ämter», in der Rückübersetzung
+      dieselben politischen «Pflichten»; das ist eine andere Aussage.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Was bedeutet der Grundsatz der Gleichheit vor dem Gesetz?
+    options_de:
+      a: Alle Kantone haben dieselben Gesetze.
+      b: Alle Personen haben dieselben politischen Pflichten.
+      c: Alle Personen haben dasselbe Einkommen.
+      d: Das Gesetz gilt für alle Personen in gleicher Weise.
+    explanation_de: Die Gleichheit vor dem Gesetz ist in Artikel 8 der Bundesverfassung enthalten. Alle
+      Menschen sind vor dem Gesetz gleich und niemand darf zum Beispiel wegen der Herkunft oder des Geschlechts
+      diskriminiert werden. Das bedeutet nicht, dass alle gleich viel besitzen.

@@ -1,28 +1,29 @@
 id: grenzgaenger-definition-wohnort-arbeitsort
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.sozial.wirtschaft_arbeit
-question_de: Was versteht man in der Schweiz unter einem Grenzgänger?
+question_de: Wer gilt in der Schweiz als Grenzgängerin oder Grenzgänger?
 options_de:
-  a: Eine Person, die in der Schweiz arbeitet, aber im Ausland nahe der Grenze wohnt
-  b: Eine Person, die für den Zoll an der Landesgrenze arbeitet
-  c: Eine Person, die ohne Bewilligung die Grenze überquert, um zu arbeiten
-  d: Eine Person, die in der Schweiz wohnt, aber täglich im Ausland arbeitet
+  a: Eine Person, die in der Schweiz arbeitet, ihren Wohnsitz aber im Ausland hat und regelmässig dorthin
+    zurückkehrt
+  b: Eine Person, die beim Zoll arbeitet und die Landesgrenze kontrolliert
+  c: Eine Person, die ohne Bewilligung über die Grenze kommt, um hier zu arbeiten
+  d: Eine Person, die in einem Kanton wohnt und jeden Tag in einem anderen Kanton arbeitet
 correct: a
 explanation_de: Grenzgängerinnen und Grenzgänger haben ihre Arbeitsstelle in der Schweiz, wohnen aber
-  jenseits der Landesgrenze. Sie brauchen dafür eine besondere Bewilligung. Sie kommen zum Beispiel aus
-  Deutschland, Frankreich, Italien oder Österreich.
+  in einem anderen Land. Sie brauchen eine Grenzgängerbewilligung und kehren regelmässig, mindestens einmal
+  pro Woche, an ihren Wohnort im Ausland zurück. Wer nur zwischen zwei Kantonen pendelt, ist kein Grenzgänger.
 sources:
 - url: https://www.sem.admin.ch/sem/de/home/themen/aufenthalt/eu_efta/ausweis_g_eu_efta.html
-  checked: &id002 2026-11-02
-- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/758/20261101/de/html/fedlex-data-admin-ch-eli-cc-2007-758-20261101-de-html-2.html
   checked: &id001 2026-11-02
-- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/758/20261101/de/html/fedlex-data-admin-ch-eli-cc-2007-758-20261101-de-html-2.html
   checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
 glossary:
 - Grenzgänger
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-002
@@ -32,17 +33,48 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Ein Grenzgänger (Grenzgängerbewilligung G) ist eine Person, die im Ausland wohnt und in
-      der Schweiz arbeitet, in der Regel in der Grenzzone und mit mindestens wöchentlicher Rückkehr an
-      den Wohnort.
+    version: 2
+    reasoning: Als Grenzgängerin oder Grenzgänger gilt eine Person, die in der Schweiz arbeitet, ihren
+      Wohnsitz aber im Ausland hat und regelmässig, in der Regel täglich oder wöchentlich, dorthin zurückkehrt.
   source:
     verdict: supported
-    note: Quelle 1 (SEM) definiert Grenzgängerinnen und Grenzgänger als Personen, die in einem EU/EFTA-Staat
-      wohnen und in der Schweiz arbeiten, und nennt die Grenzgängerbewilligung. Das stützt Antwort a und
-      die Erklärung. Die genannten Herkunftsländer (Deutschland, Frankreich, Italien, Österreich) stehen
-      nicht ausdrücklich auf der Seite, und «nahe der Grenze» wird dort sogar relativiert, weil keine
-      Grenzzonen mehr gelten. Quellen 2 und 3 liefern dazu nichts Eindeutiges.
-    at: *id002
+    note: Quelle 1 definiert Grenzgängerinnen und Grenzgänger als Personen, die in einem EU/EFTA-Staat
+      wohnen, in der Schweiz arbeiten und täglich oder mindestens einmal wöchentlich an den ausländischen
+      Wohnort zurückkehren. Quelle 2 (AIG) sagt, dass Personen mit Grenzgängerbewilligung mindestens einmal
+      wöchentlich an ihren Wohnort im Ausland zurückkehren müssen. Damit sind Antwort a und die Erklärung
+      gestützt.
+    at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) ist deutlich länger und genauer als die anderen Antworten und fällt dadurch
+        auf; die falschen Antworten könnten ähnlich ausführlich formuliert werden.'
+      - 'Klein: In der Erklärung könnte man nach «Grenzgängerbewilligung» den Zusatz «(Ausweis G)» ergänzen,
+        damit der Begriff wiedererkannt wird.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) ist deutlich länger und genauer als die anderen Antworten und fällt deshalb
+        auf; man könnte sie kürzen, etwa zu «Eine Person, die in der Schweiz arbeitet, aber im Ausland
+        wohnt».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, Grenzgänger brauchten immer eine Grenzgängerbewilligung. Bei Anstellungen
+        unter drei Monaten gilt aber das Online-Meldeverfahren. Vorschlag: «brauchen in der Regel eine
+        Grenzgängerbewilligung».'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

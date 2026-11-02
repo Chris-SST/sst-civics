@@ -1,0 +1,30 @@
+id: parlament-zwei-kammern-bund
+lang: es
+source_version: 1
+question: ¿Por qué dos cámaras está formado el Parlamento suizo a nivel federal?
+options:
+  a: Por el Consejo Federal (Bundesrat) y el Consejo de los Estados (Ständerat)
+  b: Por el Consejo Federal y el Consejo Nacional (Nationalrat)
+  c: Por el Consejo de los Estados y el Tribunal Federal (Bundesgericht)
+  d: Por el Consejo Nacional y el Consejo de los Estados
+explanation: 'La Asamblea Federal (Bundesversammlung), el Parlamento de la Confederación, está formada
+  por dos cámaras: el Consejo Nacional y el Consejo de los Estados. El Consejo Federal es el Gobierno
+  y no forma parte del Parlamento.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchen zwei Kammern besteht das schweizerische Parlament auf Bundesebene?
+    options_de:
+      a: Aus dem Bundesrat und dem Ständerat
+      b: Aus dem Bundesrat und dem Nationalrat
+      c: Aus dem Ständerat und dem Bundesgericht
+      d: Aus dem Nationalrat und dem Ständerat
+    explanation_de: 'Die Bundesversammlung, das Parlament der Eidgenossenschaft, besteht aus zwei Kammern:
+      dem Nationalrat und dem Ständerat. Der Bundesrat ist die Regierung und gehört nicht zum Parlament.'

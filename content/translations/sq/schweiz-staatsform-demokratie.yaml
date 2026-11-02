@@ -1,0 +1,30 @@
+id: schweiz-staatsform-demokratie
+lang: sq
+source_version: 1
+question: Çfarë forme shtetërore ka Zvicra?
+options:
+  a: Ajo është një diktaturë me një parti të vetme.
+  b: Ajo është një monarki me një mbret të zgjedhur.
+  c: Ajo është një shtet demokratik.
+  d: Ajo është një shtet që qeveriset nga një familje fisnike.
+explanation: Zvicra është një demokraci. Popullata merr pjesë në vendimet politike përmes zgjedhjeve dhe
+  votimeve. Kushtetuta Federale e parashikon këtë si themel të shtetit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Staatsform hat die Schweiz?
+    options_de:
+      a: Sie ist eine Diktatur mit einer einzigen Partei.
+      b: Sie ist eine Monarchie mit einem gewählten König.
+      c: Sie ist ein demokratischer Staat.
+      d: Sie ist ein Staat, der von einer adligen Familie regiert wird.
+    explanation_de: Die Schweiz ist eine Demokratie. Die Bevölkerung nimmt durch Wahlen und Abstimmungen
+      an den politischen Entscheidungen teil. Die Bundesverfassung sieht dies als Grundlage des Staates
+      vor.

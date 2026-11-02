@@ -9,6 +9,22 @@ options:
   d: The Federal Supreme Court (Bundesgericht)
 explanation: According to the Federal Constitution, the Federal Council is the supreme governing and executive
   authority of the Confederation. Parliament makes the laws, the Federal Supreme Court administers justice.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde übt auf Bundesebene die oberste leitende Gewalt aus?
+    options_de:
+      a: Der Bundesrat
+      b: Der Nationalrat
+      c: Die Bundeskanzlei
+      d: Das Bundesgericht
+    explanation_de: Gemäss der Bundesverfassung ist der Bundesrat die oberste leitende und vollziehende
+      Behörde des Bundes. Das Parlament erlässt die Gesetze, das Bundesgericht übt die Rechtsprechung
+      aus.

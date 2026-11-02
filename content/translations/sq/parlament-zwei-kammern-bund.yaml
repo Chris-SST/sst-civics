@@ -1,0 +1,30 @@
+id: parlament-zwei-kammern-bund
+lang: sq
+source_version: 1
+question: Nga cilat dy dhoma përbëhet Parlamenti zvicerian në nivel federal (Konfederata)?
+options:
+  a: Nga Këshilli Federal (Bundesrat) dhe Këshilli i Shteteve (Ständerat)
+  b: Nga Këshilli Federal (Bundesrat) dhe Këshilli Kombëtar (Nationalrat)
+  c: Nga Këshilli i Shteteve (Ständerat) dhe Gjykata Federale (Bundesgericht)
+  d: Nga Këshilli Kombëtar (Nationalrat) dhe Këshilli i Shteteve (Ständerat)
+explanation: 'Kuvendi Federal (Bundesversammlung), parlamenti i Konfederatës, përbëhet nga dy dhoma: Këshilli
+  Kombëtar (Nationalrat) dhe Këshilli i Shteteve (Ständerat). Këshilli Federal (Bundesrat) është qeveria
+  dhe nuk i përket parlamentit.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchen zwei Kammern besteht das Schweizer Parlament auf Bundesebene (Konfederata)?
+    options_de:
+      a: Aus dem Bundesrat und dem Ständerat
+      b: Aus dem Bundesrat und dem Nationalrat
+      c: Aus dem Ständerat und dem Bundesgericht
+      d: Aus dem Nationalrat und dem Ständerat
+    explanation_de: 'Die Bundesversammlung, das Parlament der Eidgenossenschaft, besteht aus zwei Kammern:
+      dem Nationalrat und dem Ständerat. Der Bundesrat ist die Regierung und gehört nicht zum Parlament.'

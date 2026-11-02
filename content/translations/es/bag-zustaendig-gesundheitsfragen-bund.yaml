@@ -1,0 +1,29 @@
+id: bag-zustaendig-gesundheitsfragen-bund
+lang: es
+source_version: 1
+question: ¿Qué autoridad de la Confederación es competente en materia de salud?
+options:
+  a: La Oficina Federal de Medio Ambiente (BAFU)
+  b: La Secretaría de Estado de Migración (SEM)
+  c: La Oficina Federal de Estadística (BFS)
+  d: La Oficina Federal de Salud Pública (BAG)
+explanation: La Oficina Federal de Salud Pública (BAG) es la autoridad de la Confederación competente
+  en materia de salud. Supervisa, por ejemplo, el seguro social de enfermedad.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde des Bundes ist für das Gesundheitswesen zuständig?
+    options_de:
+      a: Das Bundesamt für Umwelt (BAFU)
+      b: Das Staatssekretariat für Migration (SEM)
+      c: Das Bundesamt für Statistik (BFS)
+      d: Das Bundesamt für Gesundheit (BAG)
+    explanation_de: Das Bundesamt für Gesundheit (BAG) ist die Behörde des Bundes, die für das Gesundheitswesen
+      zuständig ist. Es beaufsichtigt zum Beispiel die soziale Krankenversicherung.

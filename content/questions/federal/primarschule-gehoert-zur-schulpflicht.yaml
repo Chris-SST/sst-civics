@@ -1,18 +1,18 @@
 id: primarschule-gehoert-zur-schulpflicht
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.sozial.bildung
-question_de: Welche Schulstufe gehört in der Schweiz zur gesetzlichen Schulpflicht?
+question_de: Welche dieser Stufen gehört in der Schweiz zur obligatorischen Schulzeit?
 options_de:
   a: Die Hochschule
   b: Die Primarschule
-  c: Das Gymnasium
+  c: Die Spielgruppe
   d: Die Berufsfachschule
 correct: b
-explanation_de: Die Schulpflicht umfasst die obligatorische Schule. Dazu gehört die Primarschule, die
-  alle Kinder besuchen müssen. Gymnasium, Berufsfachschule und Hochschule sind freiwillige Ausbildungen
-  nach der obligatorischen Schulzeit.
+explanation_de: 'Im Kanton Zürich dauert die obligatorische Schulzeit elf Jahre: Kindergarten, Primarschule
+  und Sekundarstufe I. Die Spielgruppe für kleine Kinder ist freiwillig. Berufsfachschule und Hochschule
+  besucht man erst nach der obligatorischen Schulzeit.'
 sources:
 - url: https://www.zh.ch/de/bildung/schulen/volksschule.html
   checked: &id001 2026-11-02
@@ -22,7 +22,7 @@ glossary:
 - Schulpflicht
 - Primarschule
 - Volksschule
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-162
@@ -32,17 +32,43 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Die Primarschule gehört zur obligatorischen Schulzeit, während Hochschule, Gymnasium und
-      Berufsfachschule nachobligatorische Bildungsangebote sind (das Gymnasium kann zwar teilweise die
-      Sekundarstufe I umfassen, die Primarschule ist aber die eindeutig richtige Antwort).
+    version: 2
+    reasoning: Die Primarschule gehört zur obligatorischen Schulzeit (Primarstufe und Sekundarstufe I),
+      während Hochschule, Spielgruppe und Berufsfachschule nicht zur obligatorischen Schule zählen.
   source:
     verdict: supported
-    note: Quelle 1 (Kanton Zürich) nennt die Primarschule als Teil der Volksschule (Kindergarten-, Primar-
-      und Sekundarstufe, elf Jahre, unentgeltlich). Gymnasium, Berufsfachschule und Hochschule erscheinen
-      dort als weiterführende Schulen. Das Wort «obligatorisch» steht nur im Titel eines Merkblatts, und
-      die Freiwilligkeit der Mittelschulen wird nicht ausdrücklich gesagt, doch die Antwort wird klar
-      gestützt. Quelle 2 (Bundesverfassung, gekürzt) enthält dazu nichts Verwertbares.
+    note: Quelle 1 (Kanton Zürich) sagt, die Volksschule umfasse Kindergarten-, Primar- und Sekundarstufe
+      und dauere elf Jahre; damit gehört die Primarschule zur obligatorischen Schulzeit. Zur Spielgruppe
+      sagt die Seite nichts, Berufsfachschulen und Hochschulen nennt sie nur ausserhalb der Volksschule.
+      Quelle 2 enthält nichts Einschlägiges.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt im Kanton Zürich elf Jahre Schulzeit (Quelle 1 stützt das). Die Frage
+        fragt aber allgemein «in der Schweiz». Besser wäre «im Kanton Zürich» in der Frage, weil die Schulpflicht
+        kantonal geregelt ist (HarmoS ist aber überall ähnlich).'
+      - 'Klein: Quelle 2 (Bundesverfassung) enthält im gezeigten Ausschnitt keinen Artikel zur Schulpflicht
+        (Art. 62), nur Quelle 1 stützt die Antwort. Das ist unproblematisch, da die Antwort allgemein
+        bekanntes Wissen ist.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

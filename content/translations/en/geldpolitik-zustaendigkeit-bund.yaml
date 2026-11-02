@@ -10,6 +10,22 @@ options:
 explanation: Under the Federal Constitution, monetary and currency policy is a matter for the Confederation.
   It has the right to issue coins and banknotes. The Swiss National Bank carries out monetary policy on
   behalf of the Confederation and is independent in doing so.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz für die Geldpolitik zuständig?
+    options_de:
+      a: Der Bund
+      b: Die Gemeinden
+      c: Die Kantonalbanken
+      d: Die Kantone gemeinsam
+    explanation_de: Gemäss der Bundesverfassung ist die Geld- und Währungspolitik Sache des Bundes. Er
+      hat das Recht, Münzen und Banknoten auszugeben. Die Schweizerische Nationalbank führt die Geldpolitik
+      im Auftrag des Bundes und ist dabei unabhängig.

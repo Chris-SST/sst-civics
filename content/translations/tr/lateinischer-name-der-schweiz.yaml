@@ -1,0 +1,32 @@
+id: lateinischer-name-der-schweiz
+lang: tr
+source_version: 2
+question: İsviçre Konfederasyonu Latince'de ne diye adlandırılır?
+options:
+  a: Helvetia Unita
+  b: Res Publica Helvetica
+  c: Confoederatio Helvetica
+  d: Respublica Alpina
+explanation: İsviçre'nin Latince adı Confoederatio Helvetica'dır. CH kısaltması buradan gelir; bu kısaltmayı
+  örneğin araç plakalarında ve internet adreslerinde (.ch) görürsünüz. Latince ad kullanılır, çünkü tarafsızdır
+  ve dört ulusal dilden hiçbirine öncelik vermez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie wird die Schweizerische Eidgenossenschaft auf Latein genannt?
+    options_de:
+      a: Helvetia Unita
+      b: Res Publica Helvetica
+      c: Confoederatio Helvetica
+      d: Respublica Alpina
+    explanation_de: Der lateinische Name der Schweiz ist Confoederatio Helvetica. Das Kürzel CH stammt
+      daher; dieses Kürzel sieht man zum Beispiel auf Fahrzeugkennzeichen und in Internetadressen (.ch).
+      Der lateinische Name wird verwendet, weil er neutral ist und keiner der vier Landessprachen den
+      Vorrang gibt.

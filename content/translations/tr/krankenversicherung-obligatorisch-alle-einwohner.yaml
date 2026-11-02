@@ -1,0 +1,31 @@
+id: krankenversicherung-obligatorisch-alle-einwohner
+lang: tr
+source_version: 1
+question: İsviçre'de kimlerin sağlık sigortası şirketi (Krankenkasse) nezdinde temel sigortası olmak zorundadır?
+options:
+  a: İsviçre'de yaşayan tüm kişiler
+  b: yalnızca düşük gelirli kişiler
+  c: yalnızca İsviçre vatandaşlığına (Bürgerrecht) sahip kişiler
+  d: yalnızca çalışan kişiler
+explanation: Sağlık sigortası, İsviçre'de ikamet eden tüm kişiler için zorunludur. Bu durum uyruğa, yaşa
+  veya çalışıp çalışmamaya bakılmaksızın geçerlidir. Sağlık sigortası şirketleri tüm kişileri temel sigortaya
+  kabul etmek zorundadır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz bei einer Krankenkasse eine Grundversicherung haben?
+    options_de:
+      a: Alle Personen, die in der Schweiz leben
+      b: nur Personen mit niedrigem Einkommen
+      c: nur Personen mit Schweizer Bürgerrecht
+      d: nur erwerbstätige Personen
+    explanation_de: Die Krankenversicherung ist für alle Personen, die in der Schweiz wohnhaft sind, obligatorisch.
+      Dies gilt unabhängig von der Staatsangehörigkeit, vom Alter oder davon, ob man arbeitet oder nicht.
+      Die Krankenkassen müssen alle Personen in die Grundversicherung aufnehmen.

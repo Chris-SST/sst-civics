@@ -1,0 +1,32 @@
+id: waehlbar-in-bundesamt-voraussetzungen
+lang: tr
+source_version: 2
+question: Ulusal Konsey'e (Nationalrat), Federal Konsey'e (Bundesrat) veya Federal Mahkeme'ye (Bundesgericht)
+  kimler seçilebilir?
+options:
+  a: Yalnızca yükseköğrenimini tamamlamış olanlar
+  b: Yalnızca en az on yıldır İsviçre'de yaşayanlar
+  c: Yalnızca bir siyasi partinin üyesi olanlar
+  d: 18 yaşını doldurmuş, oy hakkına sahip tüm İsviçre vatandaşları
+explanation: Federal Anayasa'ya göre oy hakkına sahip olan herkes seçilebilir. 18 yaşını doldurmuş İsviçre
+  vatandaşları oy hakkına sahiptir. Partiye üyelik veya belirli bir eğitim gerekmez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer kann in den Nationalrat, in den Bundesrat oder in das Bundesgericht gewählt werden?
+    options_de:
+      a: Nur diejenigen, die ihre Hochschulausbildung abgeschlossen haben
+      b: Nur diejenigen, die seit mindestens zehn Jahren in der Schweiz leben
+      c: Nur diejenigen, die Mitglied einer politischen Partei sind
+      d: Alle Schweizer Bürgerinnen und Bürger, die das 18. Lebensjahr vollendet haben und stimmberechtigt
+        sind
+    explanation_de: Gemäss der Bundesverfassung kann jede Person gewählt werden, die stimmberechtigt ist.
+      Schweizer Bürgerinnen und Bürger, die das 18. Lebensjahr vollendet haben, sind stimmberechtigt.
+      Eine Parteimitgliedschaft oder eine bestimmte Ausbildung ist nicht erforderlich.

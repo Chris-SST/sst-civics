@@ -1,0 +1,31 @@
+id: sonntagszeitung-erscheint-woechentlich
+lang: it
+source_version: 1
+question: Con quale frequenza esce un giornale domenicale in Svizzera?
+options:
+  a: Una volta alla settimana
+  b: Due volte alla settimana
+  c: Una volta al mese
+  d: Ogni giorno
+explanation: Un giornale domenicale esce solo una volta alla settimana, la domenica. I quotidiani, invece,
+  escono nella maggior parte dei giorni della settimana. La stampa fa parte della cultura e della formazione
+  dell'opinione pubblica nel Paese.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie oft erscheint in der Schweiz eine Sonntagszeitung?
+    options_de:
+      a: Einmal pro Woche
+      b: Zweimal pro Woche
+      c: Einmal pro Monat
+      d: Jeden Tag
+    explanation_de: Eine Sonntagszeitung erscheint nur einmal pro Woche, am Sonntag. Die Tageszeitungen
+      hingegen erscheinen an den meisten Tagen der Woche. Die Presse ist Teil der Kultur und der öffentlichen
+      Meinungsbildung im Land.

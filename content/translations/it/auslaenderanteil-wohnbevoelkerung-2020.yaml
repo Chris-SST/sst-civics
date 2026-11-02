@@ -1,0 +1,33 @@
+id: auslaenderanteil-wohnbevoelkerung-2020
+lang: it
+source_version: 2
+question: Quanto era grande approssimativamente, nel 2020, la quota di stranieri e straniere sulla popolazione
+  residente permanente della Svizzera?
+options:
+  a: circa tre quinti
+  b: circa un decimo
+  c: circa la metà
+  d: circa un quarto
+explanation: Nel 2020 circa un quarto della popolazione residente permanente non aveva il passaporto svizzero.
+  Alla fine del 2020 erano circa 2,2 su 8,7 milioni di persone, cioè circa il 25 per cento. Rispetto ad
+  altri Paesi in Europa, questa quota è elevata.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie gross war ungefähr im Jahr 2020 der Anteil der Ausländerinnen und Ausländer an der
+      ständigen Wohnbevölkerung der Schweiz?
+    options_de:
+      a: etwa drei Fünftel
+      b: etwa ein Zehntel
+      c: etwa die Hälfte
+      d: etwa ein Viertel
+    explanation_de: Im Jahr 2020 hatte etwa ein Viertel der ständigen Wohnbevölkerung keinen Schweizer
+      Pass. Ende 2020 waren es etwa 2,2 von 8,7 Millionen Personen, das heisst etwa 25 Prozent. Im Vergleich
+      zu anderen Ländern in Europa ist dieser Anteil hoch.

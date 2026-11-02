@@ -10,6 +10,24 @@ options:
 explanation: A neighbourhood association is a voluntary association of residents. It raises the neighbourhood's
   concerns with the authorities and organises events that strengthen community life. Sovereign tasks such
   as taxes, building permits or residents' registration belong to the commune.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist eine typische Aufgabe eines Quartiervereins in einer Zürcher Gemeinde oder Stadt?
+    options_de:
+      a: Er vertritt die Anliegen der Anwohnerinnen und Anwohner gegenüber den Behörden und fördert das
+        Gemeinschaftsleben.
+      b: Er führt das Einwohnerkontrollamt für das Quartier.
+      c: Er erhebt Steuern bei den Einwohnerinnen und Einwohnern des Quartiers.
+      d: Er genehmigt Baugesuche im Quartier.
+    explanation_de: Ein Quartierverein ist ein freiwilliger Zusammenschluss von Anwohnerinnen und Anwohnern.
+      Er bringt die Anliegen des Quartiers bei den Behörden vor und organisiert Veranstaltungen, die das
+      Gemeinschaftsleben stärken. Hoheitliche Aufgaben wie Steuern, Baubewilligungen oder die Einwohnerkontrolle
+      gehören zur Gemeinde.

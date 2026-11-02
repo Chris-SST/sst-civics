@@ -1,0 +1,32 @@
+id: arbeitsgericht-streit-arbeitsverhaeltnis
+lang: fr
+source_version: 1
+question: Une employée estime que son licenciement est abusif et veut le contester. Quelle instance traite
+  ce type de litiges relatifs au contrat de travail ?
+options:
+  a: L'Office régional de placement (ORP)
+  b: Le Service des automobiles
+  c: Le tribunal des prud'hommes
+  d: L'Office des poursuites
+explanation: Le tribunal des prud'hommes est compétent pour les litiges entre employeurs et employés.
+  Cela comprend aussi les litiges portant sur un licenciement. L'ORP, en revanche, aide à la recherche
+  d'un emploi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Angestellte ist der Ansicht, dass ihre Kündigung missbräuchlich ist, und möchte
+      sie anfechten. Welche Instanz behandelt diese Art von Streitigkeiten im Zusammenhang mit dem Arbeitsvertrag?
+    options_de:
+      a: Das Regionale Arbeitsvermittlungszentrum (RAV)
+      b: Das Strassenverkehrsamt
+      c: Das Arbeitsgericht
+      d: Das Betreibungsamt
+    explanation_de: Das Arbeitsgericht ist für Streitigkeiten zwischen Arbeitgebern und Angestellten zuständig.
+      Dazu gehören auch Streitigkeiten über eine Kündigung. Das RAV hingegen hilft bei der Stellensuche.

@@ -1,0 +1,30 @@
+id: mitwirkung-gemeinde-urnengang-stimmabgabe
+lang: sq
+source_version: 1
+question: Si marrin pjesë politikisht në komunën (Gemeinde) e tyre votuesit me të drejtë vote gjatë votimeve
+  me urnë?
+options:
+  a: Ata drejtojnë mbledhjet e këshillit komunal (Gemeinderat)
+  b: Ata zbatojnë vendimet e komunës
+  c: Ata japin votën e tyre në zgjedhje dhe në votime
+  d: Ata nxjerrin vetë ligjet e kantonit
+explanation: Gjatë votimeve me urnë, votuesit me të drejtë vote votojnë për projektet e paraqitura dhe
+  zgjedhin autoritetet. Zbatimi i vendimeve është detyrë e autoriteteve dhe e administratës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie nehmen die Stimmberechtigten bei Urnenabstimmungen politisch an ihrer Gemeinde teil?
+    options_de:
+      a: Sie leiten die Sitzungen des Gemeinderats
+      b: Sie setzen die Beschlüsse der Gemeinde um
+      c: Sie geben ihre Stimme bei Wahlen und Abstimmungen ab
+      d: Sie erlassen selbst die Gesetze des Kantons
+    explanation_de: Bei Urnenabstimmungen stimmen die Stimmberechtigten über die vorgelegten Vorlagen
+      ab und wählen die Behörden. Die Umsetzung der Beschlüsse ist Aufgabe der Behörden und der Verwaltung.

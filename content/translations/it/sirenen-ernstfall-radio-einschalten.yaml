@@ -1,0 +1,33 @@
+id: sirenen-ernstfall-radio-einschalten
+lang: it
+source_version: 2
+question: In caso di emergenza suona l'«Allarme generale» delle sirene (un suono ululante che sale e scende).
+  Che cosa deve fare?
+options:
+  a: Lasciare subito la casa
+  b: Chiamare i vigili del fuoco
+  c: Ascoltare la radio e seguire le istruzioni delle autorità
+  d: Allontanarsi in automobile
+explanation: In caso di Allarme generale, le autorità informano tramite la radio su che cosa si deve fare.
+  Le informazioni sono disponibili anche nell'app Alertswiss. Si devono seguire le istruzioni e non chiamare
+  inutilmente i numeri di emergenza, in modo che rimangano liberi per le vere emergenze.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Im Notfall ertönt der «Allgemeine Alarm» der Sirenen (ein heulender Ton, der auf- und
+      abschwillt). Was muss man tun?
+    options_de:
+      a: Das Haus sofort verlassen
+      b: Die Feuerwehr anrufen
+      c: Das Radio hören und den Anweisungen der Behörden folgen
+      d: Sich mit dem Auto entfernen
+    explanation_de: Bei einem Allgemeinen Alarm informieren die Behörden über das Radio darüber, was zu
+      tun ist. Die Informationen sind auch in der App Alertswiss verfügbar. Man muss den Anweisungen folgen
+      und die Notrufnummern nicht unnötig anrufen, damit sie für die wirklichen Notfälle frei bleiben.

@@ -1,0 +1,29 @@
+id: geografische-gliederung-der-schweiz
+lang: sq
+source_version: 1
+question: Në cilat tri hapësira të mëdha peizazhi ndahet Zvicra nga ana gjeografike?
+options:
+  a: Jura, Mittelland (Rrafshnalta Qendrore) dhe Alpet
+  b: Jura, Liqeni i Konstancës dhe Alpet
+  c: Pylli i Zi, Mittelland (Rrafshnalta Qendrore) dhe Alpet
+  d: Mittelland (Rrafshnalta Qendrore), Parealpet dhe Tiçino
+explanation: Jura ndodhet në veriperëndim, ndërsa Alpet zënë pjesën më të madhe të sipërfaqes. Në mes
+  tyre shtrihet Mittelland (Rrafshnalta Qendrore), ku jeton pjesa më e madhe e njerëzve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welche drei grossen Landschaftsräume gliedert sich die Schweiz geografisch?
+    options_de:
+      a: Jura, Mittelland und Alpen
+      b: Jura, Bodensee und Alpen
+      c: Schwarzwald, Mittelland und Alpen
+      d: Mittelland, Voralpen und Tessin
+    explanation_de: Der Jura liegt im Nordwesten, während die Alpen den grössten Teil der Fläche einnehmen.
+      Dazwischen erstreckt sich das Mittelland, wo der grösste Teil der Menschen lebt.

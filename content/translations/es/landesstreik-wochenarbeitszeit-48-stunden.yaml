@@ -1,0 +1,32 @@
+id: landesstreik-wochenarbeitszeit-48-stunden
+lang: es
+source_version: 1
+question: ¿Qué jornada laboral semanal estuvo vigente en Suiza después de la huelga general nacional de
+  1918?
+options:
+  a: 48 horas
+  b: 54 horas
+  c: 60 horas
+  d: 40 horas
+explanation: La huelga general nacional de 1918 (Landesstreik) fue una huelga general de la clase obrera.
+  Una de las reivindicaciones que se aplicaron después fue la semana de 48 horas. Antes eran habituales
+  jornadas laborales claramente más largas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche wöchentliche Arbeitszeit galt in der Schweiz nach dem Landesstreik von 1918?
+    options_de:
+      a: 48 Stunden
+      b: 54 Stunden
+      c: 60 Stunden
+      d: 40 Stunden
+    explanation_de: Der Landesstreik von 1918 war ein Generalstreik der Arbeiterklasse. Eine der Forderungen,
+      die danach umgesetzt wurden, war die 48-Stunden-Woche. Zuvor waren deutlich längere Arbeitszeiten
+      üblich.

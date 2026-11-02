@@ -18,7 +18,7 @@ sources:
 glossary:
 - Neutralität
 - Grossmacht
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-232
@@ -40,3 +40,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) («allen Nachbarstaaten den Krieg erklärt») ist sehr unplausibel; besser wäre
+        eine glaubwürdigere falsche Antwort, zum Beispiel «Die Schweiz trat einem militärischen Bündnis
+        der Grossmächte bei.»'
+      - 'Klein: Die formelle Anerkennung erfolgte genau genommen in der Pariser Urkunde vom 20. November
+        1815 im Anschluss an den Wiener Kongress; die Erklärung könnte «am Wiener Kongress und im Pariser
+        Frieden 1815» schreiben, die heutige Formulierung stimmt aber mit der Quelle überein.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die förmliche Anerkennung der dauernden Neutralität erfolgte erst im November 1815 in
+        Paris, im Anschluss an den Wiener Kongress; die Erklärung könnte daher lauten «Nach dem Wiener
+        Kongress anerkannten die europäischen Grossmächte 1815 in Paris die dauernde Neutralität der Schweiz».'
+      - 'Klein: Antwort a) ist kaum plausibel und lässt sich zu leicht ausschliessen; besser wäre eine
+        glaubwürdigere Ablenkung wie «Die Schweiz trat einem Militärbündnis mit Frankreich bei».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung könnte «am Wiener Kongress» ergänzt werden, dass die Anerkennung in der
+        Wiener Kongressakte bzw. der Erklärung vom 20. November 1815 (Pariser Akte) erfolgte; für den
+        Test genügt die jetzige Formulierung aber.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

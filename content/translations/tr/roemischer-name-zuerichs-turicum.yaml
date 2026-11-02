@@ -1,0 +1,31 @@
+id: roemischer-name-zuerichs-turicum
+lang: tr
+source_version: 1
+question: Zürih'in Roma dönemindeki adı neydi?
+options:
+  a: Turicum
+  b: Augusta Raurica
+  c: Vindonissa
+  d: Aventicum
+explanation: 'Romalılar, Limmat Nehri kıyısındaki yerleşimlerine ve gümrük istasyonlarına Turicum adını
+  verdi. Zürih adı daha sonra bu addan gelişti. Diğer adlar, bugünkü İsviçre''de bulunan Roma dönemi yerleşimlerine
+  aittir: Windisch, Augst ve Avenches.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie hiess Zürich in der Römerzeit?
+    options_de:
+      a: Turicum
+      b: Augusta Raurica
+      c: Vindonissa
+      d: Aventicum
+    explanation_de: 'Die Römer gaben ihrer Siedlung und Zollstation am Ufer der Limmat den Namen Turicum.
+      Der Name Zürich entwickelte sich später aus diesem Namen. Die anderen Namen gehören zu römerzeitlichen
+      Siedlungen in der heutigen Schweiz: Windisch, Augst und Avenches.'

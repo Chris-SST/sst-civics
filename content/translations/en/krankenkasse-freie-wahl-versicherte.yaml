@@ -10,6 +10,23 @@ options:
   d: The canton of residence assigns a health insurer to each person
 explanation: In Switzerland, there is free choice of health insurer. Insured persons can choose from among
   the authorised health insurers and can switch insurer under certain conditions.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet in der Schweiz, bei welcher Krankenkasse eine Person die Grundversicherung
+      abschliesst?
+    options_de:
+      a: Die Wohngemeinde bestimmt die Krankenkasse
+      b: Die versicherte Person wählt ihre Krankenkasse selbst
+      c: Der Arbeitgeber bestimmt die Krankenkasse für alle Angestellten
+      d: Der Wohnkanton weist jeder Person eine Krankenkasse zu
+    explanation_de: In der Schweiz gibt es die freie Wahl der Krankenkasse. Versicherte Personen können
+      unter den zugelassenen Krankenkassen auswählen und unter bestimmten Bedingungen die Krankenkasse
+      wechseln.

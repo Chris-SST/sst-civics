@@ -1,15 +1,33 @@
 id: informationen-kommunale-angebote-finden
 lang: en
-source_version: 1
-question: Where can one find information about the services and regulations of one's own commune (Gemeinde)?
+source_version: 2
+question: Where can you find information about the services and rules of your own commune (Gemeinde)?
 options:
-  a: Only directly from the Federal Council (Bundesrat) in Bern
-  b: Only at the counter of the cantonal police
-  c: Only at the communal assembly (Gemeindeversammlung), which takes place once a year
-  d: Through the local newspaper or the internet, for example the website of the commune
-explanation: Communes inform people about their services and regulations in the local newspaper, in the
-  official publication and on their website. In this way, residents can easily find out what applies to
-  them. The communal administration also provides information on request.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: In the Federal Gazette (Bundesblatt) of the Confederation
+  b: In the local newspaper or on the website of the commune
+  c: At the embassy of your country of origin
+  d: At the Federal Council (Bundesrat) in Bern
+explanation: The commune provides information about its services and rules mainly in the local newspaper
+  and on its website on the internet. The Confederation and the Federal Council are responsible for national
+  matters, and a foreign embassy is not responsible for the commune at all. The municipal administration
+  also provides information.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wo kann man sich über die Dienstleistungen und Regeln der eigenen Gemeinde informieren?
+    options_de:
+      a: Im Bundesblatt des Bundes
+      b: In der lokalen Zeitung oder auf der Website der Gemeinde
+      c: Bei der Botschaft des Herkunftslandes
+      d: Beim Bundesrat in Bern
+    explanation_de: Die Gemeinde informiert hauptsächlich in der lokalen Zeitung und auf ihrer Website
+      im Internet über ihre Dienstleistungen und Regeln. Der Bund und der Bundesrat sind für nationale
+      Angelegenheiten zuständig, und eine ausländische Botschaft ist für die Gemeinde überhaupt nicht
+      zuständig. Auch die Gemeindeverwaltung gibt Auskunft.

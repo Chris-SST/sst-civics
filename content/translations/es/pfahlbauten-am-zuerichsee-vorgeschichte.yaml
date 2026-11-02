@@ -1,0 +1,31 @@
+id: pfahlbauten-am-zuerichsee-vorgeschichte
+lang: es
+source_version: 1
+question: ¿Cómo estaban construidos los asentamientos prehistóricos del lago de Zúrich?
+options:
+  a: Como cuevas en la roca
+  b: Como palafitos, es decir, casas sobre pilotes
+  c: Como casas de ladrillo en aldeas
+  d: Como castillos sobre rocas
+explanation: En la orilla del lago de Zúrich había en tiempos prehistóricos palafitos, es decir, casas
+  sobre pilotes. Sus restos se encuentran todavía hoy bajo el agua y son investigados por arqueólogos
+  subacuáticos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie waren die prähistorischen Siedlungen am Zürichsee gebaut?
+    options_de:
+      a: Als Höhlen im Fels
+      b: Als Pfahlbauten, das heisst Häuser auf Pfählen
+      c: Als Backsteinhäuser in Dörfern
+      d: Als Burgen auf Felsen
+    explanation_de: Am Ufer des Zürichsees gab es in prähistorischer Zeit Pfahlbauten, das heisst Häuser
+      auf Pfählen. Ihre Überreste befinden sich noch heute unter Wasser und werden von Unterwasserarchäologen
+      erforscht.

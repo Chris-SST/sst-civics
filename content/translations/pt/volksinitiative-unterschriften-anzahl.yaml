@@ -1,0 +1,31 @@
+id: volksinitiative-unterschriften-anzahl
+lang: pt
+source_version: 1
+question: Quantas assinaturas de pessoas com direito de voto são necessárias para que uma iniciativa popular
+  (Volksinitiative) federal seja validamente apresentada?
+options:
+  a: 50 000 assinaturas
+  b: 150 000 assinaturas
+  c: 200 000 assinaturas
+  d: 100 000 assinaturas
+explanation: Para uma iniciativa popular federal são necessárias 100 000 assinaturas válidas. Estas têm
+  de ser recolhidas no prazo de 18 meses.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Unterschriften von stimmberechtigten Personen sind nötig, damit eine eidgenössische
+      Volksinitiative gültig eingereicht wird?
+    options_de:
+      a: 50 000 Unterschriften
+      b: 150 000 Unterschriften
+      c: 200 000 Unterschriften
+      d: 100 000 Unterschriften
+    explanation_de: Für eine eidgenössische Volksinitiative sind 100 000 gültige Unterschriften nötig.
+      Diese müssen innerhalb von 18 Monaten gesammelt werden.

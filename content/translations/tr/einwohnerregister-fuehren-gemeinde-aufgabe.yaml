@@ -1,0 +1,32 @@
+id: einwohnerregister-fuehren-gemeinde-aufgabe
+lang: tr
+source_version: 1
+question: Aşağıdaki görevlerden hangisini Zürih belediyelerinde (Gemeinde) nüfus müdürlüğü (Einwohneramt)
+  yerine getirir?
+options:
+  a: Ceza mahkûmiyeti kararları verir.
+  b: Belediyenin nüfus kayıt defterini tutar.
+  c: Kanton yolları için inşaat ruhsatı verir.
+  d: Vergi kanunlarını belirler.
+explanation: Belediye, orada ikamet eden kişilerin kaydını tutar. Taşındığınızda kaydınızı orada yaptırır,
+  sildirir veya adres değişikliğini bildirirsiniz. Ceza mahkûmiyeti kararları, vergi kanunları ve kanton
+  yolları bu görevin kapsamına girmez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aufgaben erfüllt das Einwohneramt in den Gemeinden des Kantons Zürich?
+    options_de:
+      a: Es fällt Strafurteile.
+      b: Es führt das Einwohnerregister der Gemeinde.
+      c: Es erteilt Baubewilligungen für Kantonsstrassen.
+      d: Es legt die Steuergesetze fest.
+    explanation_de: Die Gemeinde führt das Register der Personen, die dort wohnen. Wenn man umzieht, meldet
+      man sich dort an, ab oder teilt eine Adressänderung mit. Strafurteile, Steuergesetze und Kantonsstrassen
+      fallen nicht in den Bereich dieser Aufgabe.

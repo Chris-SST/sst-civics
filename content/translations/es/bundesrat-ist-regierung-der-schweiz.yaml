@@ -1,0 +1,30 @@
+id: bundesrat-ist-regierung-der-schweiz
+lang: es
+source_version: 1
+question: ¿Qué función tiene el Consejo Federal (Bundesrat) en Suiza?
+options:
+  a: Es el gobierno de Suiza.
+  b: Es el tribunal supremo del país.
+  c: Es el parlamento de la Confederación.
+  d: Es la representación de los cantones.
+explanation: El Consejo Federal es la máxima autoridad directiva y ejecutiva de la Confederación, es decir,
+  el gobierno. Tiene siete miembros. El parlamento y el Tribunal Federal (Bundesgericht) son otros poderes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Funktion hat der Bundesrat in der Schweiz?
+    options_de:
+      a: Er ist die Regierung der Schweiz.
+      b: Er ist das oberste Gericht des Landes.
+      c: Er ist das Parlament der Eidgenossenschaft.
+      d: Er ist die Vertretung der Kantone.
+    explanation_de: Der Bundesrat ist die oberste leitende und vollziehende Behörde der Eidgenossenschaft,
+      das heisst, die Regierung. Er hat sieben Mitglieder. Das Parlament und das Bundesgericht sind andere
+      Gewalten.

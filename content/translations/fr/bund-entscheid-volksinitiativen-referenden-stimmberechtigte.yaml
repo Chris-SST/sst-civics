@@ -1,0 +1,33 @@
+id: bund-entscheid-volksinitiativen-referenden-stimmberechtigte
+lang: fr
+source_version: 1
+question: Qui décide définitivement, au niveau fédéral, lors d'une votation si une initiative populaire
+  (Volksinitiative) ou un référendum est accepté ?
+options:
+  a: L'Assemblée fédérale (Bundesversammlung) réunie en séance commune des deux chambres
+  b: Le Conseil fédéral (Bundesrat) après consultation des gouvernements cantonaux
+  c: Le Tribunal fédéral (Bundesgericht) après un examen juridique du projet
+  d: Les électeurs, qui votent aux urnes ou par correspondance
+explanation: Pour les initiatives populaires et les référendums, les électeurs ont le dernier mot. Ils
+  décident lors de la votation populaire aux urnes, qui est aussi possible par correspondance en Suisse.
+  Le Conseil fédéral, le Parlement et le Tribunal fédéral ne peuvent pas remplacer le résultat.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet auf Bundesebene bei einer Abstimmung endgültig, ob eine Volksinitiative
+      oder ein Referendum angenommen wird?
+    options_de:
+      a: Die Bundesversammlung in gemeinsamer Sitzung der beiden Räte
+      b: Der Bundesrat nach Anhörung der Kantonsregierungen
+      c: Das Bundesgericht nach einer rechtlichen Prüfung der Vorlage
+      d: Die Stimmberechtigten, die an der Urne oder brieflich abstimmen
+    explanation_de: Bei Volksinitiativen und Referenden haben die Stimmberechtigten das letzte Wort. Sie
+      entscheiden in der Volksabstimmung an der Urne, die in der Schweiz auch brieflich möglich ist. Der
+      Bundesrat, das Parlament und das Bundesgericht können das Ergebnis nicht ersetzen.

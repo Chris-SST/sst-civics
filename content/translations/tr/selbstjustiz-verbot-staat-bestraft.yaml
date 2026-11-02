@@ -1,0 +1,32 @@
+id: selbstjustiz-verbot-staat-bestraft
+lang: tr
+source_version: 2
+question: İsviçre'de biri bir yasayı çiğnediğinde ne geçerlidir?
+options:
+  a: Cezaya mahalle sakinleri birlikte karar verir.
+  b: Devlet fiili soruşturur ve cezalandırır; kendi hakkını kendi eliyle almak yasaktır.
+  c: Mağdur, cezayı kendisi belirleyebilir ve uygulayabilir.
+  d: Mağdurun ailesi, faili kendisi cezalandırabilir.
+explanation: İsviçre'de suçları soruşturma ve cezalandırma hakkı yalnızca devlete aittir. Bunun için polis,
+  savcılık ve mahkemeler yetkilidir. Kendi başına intikam alan kişi, mağdur veya mağdurun ailesi olsa
+  bile, bu nedenle kendisi de suç işlemiş olabilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt in der Schweiz, wenn jemand ein Gesetz verletzt?
+    options_de:
+      a: Über die Strafe entscheiden die Bewohner des Quartiers gemeinsam.
+      b: Der Staat untersucht die Tat und bestraft den Täter; Selbstjustiz ist verboten.
+      c: Das Opfer kann die Strafe selbst bestimmen und vollziehen.
+      d: Die Familie des Opfers kann den Täter selbst bestrafen.
+    explanation_de: In der Schweiz liegt das Recht, Straftaten zu untersuchen und zu bestrafen, allein
+      beim Staat. Dafür sind die Polizei, die Staatsanwaltschaft und die Gerichte zuständig. Wer auf eigene
+      Faust Rache nimmt, auch wenn er das Opfer oder die Familie des Opfers ist, kann sich deshalb selbst
+      strafbar gemacht haben.

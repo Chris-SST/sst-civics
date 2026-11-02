@@ -1,0 +1,31 @@
+id: reformation-spaltung-der-alten-eidgenossenschaft
+lang: es
+source_version: 1
+question: ¿Qué consecuencia tuvo la Reforma para Suiza?
+options:
+  a: Suiza quedó dividida religiosamente en una parte reformada y otra católica.
+  b: Suiza pasó a formar parte del Imperio alemán.
+  c: La Iglesia perdió por completo su influencia en la política en todas partes.
+  d: Todos los cantones de la Confederación se hicieron reformados.
+explanation: Algunos cantones adoptaron la Reforma, otros siguieron siendo católicos. Así surgió una oposición
+  religiosa que afectó durante mucho tiempo a la Confederación. También hubo conflictos entre las confesiones.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: «Orte» und «Kantone» bezeichnen hier dasselbe, und «belastete» und «beeinflusste»
+      weichen nur leicht ab. Fragen, Antworten und Erklärung stimmen sachlich überein.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Folge hatte die Reformation für die Schweiz?
+    options_de:
+      a: Die Schweiz war religiös in einen reformierten und einen katholischen Teil gespalten.
+      b: Die Schweiz wurde Teil des Deutschen Reiches.
+      c: Die Kirche verlor überall vollständig ihren Einfluss auf die Politik.
+      d: Alle Kantone der Eidgenossenschaft wurden reformiert.
+    explanation_de: Einige Kantone nahmen die Reformation an, andere blieben katholisch. So entstand ein
+      religiöser Gegensatz, der die Eidgenossenschaft lange Zeit beeinflusste. Es gab auch Konflikte zwischen
+      den Konfessionen.

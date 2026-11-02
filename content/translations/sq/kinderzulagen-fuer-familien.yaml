@@ -1,0 +1,29 @@
+id: kinderzulagen-fuer-familien
+lang: sq
+source_version: 1
+question: Cilin përfitim shtetëror e marrin familjet me fëmijë në Zvicër?
+options:
+  a: Pensioni i invaliditetit
+  b: Shtesat për fëmijë
+  c: Premia për pronësi banese
+  d: Dieta ditore e papunësisë
+explanation: Familjet marrin shtesa për fëmijë si kontribut për kostot e mbajtjes së fëmijëve. Ato bëjnë
+  pjesë te shtesat familjare, të cilat rregullohen në ligjin e Konfederatës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Leistung erhalten Familien mit Kindern in der Schweiz?
+    options_de:
+      a: Die Invalidenrente
+      b: Die Kinderzulagen
+      c: Die Prämie für Wohneigentum
+      d: Das Taggeld der Arbeitslosigkeit
+    explanation_de: Familien erhalten Kinderzulagen als Beitrag an die Kosten für den Unterhalt der Kinder.
+      Sie gehören zu den Familienzulagen, die im Gesetz des Bundes geregelt sind.

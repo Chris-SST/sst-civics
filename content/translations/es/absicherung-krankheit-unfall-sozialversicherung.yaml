@@ -1,0 +1,31 @@
+id: absicherung-krankheit-unfall-sozialversicherung
+lang: es
+source_version: 1
+question: ¿Contra qué riesgos protege, entre otros, el sistema de seguros sociales de Suiza?
+options:
+  a: Contra las pérdidas en inversiones financieras privadas
+  b: Contra los daños al automóvil y al mobiliario del hogar por robo
+  c: Contra las consecuencias de la enfermedad y del accidente
+  d: Contra los aumentos de precio de los alquileres
+explanation: Los seguros sociales protegen a las personas frente a las consecuencias económicas de importantes
+  riesgos de la vida. Entre ellos se cuentan la enfermedad y el accidente. El seguro de enfermedad y el
+  seguro de accidentes son ejemplos de ello.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen welche Risiken schützt unter anderem das System der Sozialversicherungen der Schweiz?
+    options_de:
+      a: Gegen Verluste bei privaten Finanzanlagen
+      b: Gegen Schäden am Auto und am Hausrat durch Diebstahl
+      c: Gegen die Folgen von Krankheit und Unfall
+      d: Gegen Preiserhöhungen bei den Mieten
+    explanation_de: Die Sozialversicherungen schützen die Menschen vor den wirtschaftlichen Folgen wichtiger
+      Lebensrisiken. Dazu gehören Krankheit und Unfall. Die Krankenversicherung und die Unfallversicherung
+      sind Beispiele dafür.

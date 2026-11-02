@@ -1,0 +1,31 @@
+id: volksschule-leitung-vor-ort-schulleitung
+lang: sq
+source_version: 2
+question: Kush udhëheq drejtpërdrejt një shkollë publike (Volksschule) në kantonin e Cyrihut në vetë shkollën?
+options:
+  a: Këshilli Kantonal (Kantonsrat)
+  b: Drejtimi i shkollës (Schulleitung)
+  c: Këshilli i prindërve (Elternrat)
+  d: Këshilli Qeveritar (Regierungsrat)
+explanation: Çdo shkollë publike në kantonin e Cyrihut ka një drejtim shkolle, i cili e udhëheq dhe e
+  organizon veprimtarinë drejtpërdrejt në vetë shkollën. Këshilli Qeveritar dhe Këshilli Kantonal punojnë
+  në nivelin e kantonit. Këshilli i prindërve paraqet shqetësimet e prindërve, por nuk e udhëheq shkollën.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer leitet eine Volksschule im Kanton Zürich direkt in der Schule selbst?
+    options_de:
+      a: Der Kantonsrat
+      b: Die Schulleitung
+      c: Der Elternrat
+      d: Der Regierungsrat
+    explanation_de: Jede Volksschule im Kanton Zürich hat eine Schulleitung, die den Betrieb direkt in
+      der Schule selbst leitet und organisiert. Der Regierungsrat und der Kantonsrat arbeiten auf der
+      Ebene des Kantons. Der Elternrat bringt die Anliegen der Eltern vor, leitet die Schule aber nicht.

@@ -1,0 +1,30 @@
+id: schweizer-fahne-aussehen
+lang: it
+source_version: 1
+question: Come si presenta la bandiera svizzera?
+options:
+  a: Una croce bianca, non toccante i bordi, su un quadrato rosso
+  b: Una croce bianca su sfondo rosso con uno stemma al centro
+  c: Una croce bianca che arriva fino al bordo del rettangolo rosso
+  d: Una croce rossa, non toccante i bordi, su un quadrato bianco
+explanation: La bandiera svizzera è quadrata. Mostra una croce bianca su sfondo rosso, i cui bracci non
+  toccano il bordo. Insieme alla bandiera del Vaticano, è una delle due bandiere nazionali quadrate.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie sieht die Schweizer Fahne aus?
+    options_de:
+      a: Ein weisses Kreuz, das die Ränder nicht berührt, auf einem roten Quadrat
+      b: Ein weisses Kreuz auf rotem Grund mit einem Wappen in der Mitte
+      c: Ein weisses Kreuz, das bis zum Rand des roten Rechtecks reicht
+      d: Ein rotes Kreuz, das die Ränder nicht berührt, auf einem weissen Quadrat
+    explanation_de: Die Schweizer Fahne ist quadratisch. Sie zeigt ein weisses Kreuz auf rotem Grund,
+      dessen Arme den Rand nicht berühren. Zusammen mit der Fahne des Vatikans ist sie eine der beiden
+      quadratischen Nationalfahnen.

@@ -1,0 +1,30 @@
+id: parteien-vertreten-interessen-bevoelkerung
+lang: tr
+source_version: 1
+question: Demokraside siyasi partilerin görevi nedir?
+options:
+  a: Uyuşmazlık durumlarında hüküm verirler
+  b: Halkın farklı çıkarlarını temsil ederler
+  c: Federal oylamaları gerçekleştirirler
+  d: Yasaları günlük yaşamda uygularlar
+explanation: Partiler, halkın farklı çıkarlarını ve görüşlerini bir araya getirir ve bunları siyasete
+  taşır. Yasaların uygulanması makamların, hüküm verilmesi ise mahkemelerin işidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die Aufgabe der politischen Parteien in der Demokratie?
+    options_de:
+      a: Sie fällen in Streitfällen Urteile
+      b: Sie vertreten die unterschiedlichen Interessen der Bevölkerung
+      c: Sie führen eidgenössische Abstimmungen durch
+      d: Sie setzen die Gesetze im Alltag um
+    explanation_de: Die Parteien bringen die unterschiedlichen Interessen und Meinungen der Bevölkerung
+      zusammen und tragen sie in die Politik. Die Umsetzung der Gesetze ist Aufgabe der Behörden, das
+      Fällen von Urteilen Aufgabe der Gerichte.

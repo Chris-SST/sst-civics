@@ -1,0 +1,32 @@
+id: gesetzgebung-beeinflussen-durch-abstimmungen
+lang: fr
+source_version: 1
+question: Comment les personnes ayant le droit de vote en Suisse influencent-elles directement la législation
+  de la Confédération ?
+options:
+  a: Elles votent dans les urnes sur des initiatives et des référendums.
+  b: Elles élisent les juges qui décident des nouvelles lois.
+  c: Elles nomment les conseillers fédéraux qui adoptent les nouvelles lois.
+  d: Elles adoptent elles-mêmes les lois à l'Assemblée fédérale (Bundesversammlung).
+explanation: Les personnes ayant le droit de vote participent aux votations populaires sur des initiatives
+  et des référendums et y prennent part à la décision. Ainsi, elles contribuent directement à la législation
+  entre les élections. C'est une caractéristique de la démocratie directe.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie beeinflussen die Stimmberechtigten in der Schweiz die Gesetzgebung des Bundes direkt?
+    options_de:
+      a: Sie stimmen an der Urne über Initiativen und Referenden ab.
+      b: Sie wählen die Richter, die über neue Gesetze entscheiden.
+      c: Sie ernennen die Bundesräte, die die neuen Gesetze erlassen.
+      d: Sie erlassen die Gesetze selbst in der Bundesversammlung.
+    explanation_de: Die Stimmberechtigten nehmen an Volksabstimmungen über Initiativen und Referenden
+      teil und wirken dabei an der Entscheidung mit. So tragen sie zwischen den Wahlen direkt zur Gesetzgebung
+      bei. Dies ist ein Merkmal der direkten Demokratie.

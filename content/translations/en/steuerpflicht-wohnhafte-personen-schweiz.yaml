@@ -9,6 +9,22 @@ options:
   d: Only people who have the right to vote
 explanation: The obligation to pay tax is linked to place of residence and not to citizenship. Foreign
   nationals who live in Switzerland also pay taxes. The right to vote plays no role in this.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz grundsätzlich steuerpflichtig?
+    options_de:
+      a: Personen, die in der Schweiz wohnen
+      b: Nur Personen, die ein Unternehmen führen
+      c: Nur Personen mit Schweizer Bürgerrecht
+      d: Nur Personen, die das Stimmrecht haben
+    explanation_de: Die Steuerpflicht ist an den Wohnort geknüpft und nicht an die Staatsbürgerschaft.
+      Ausländerinnen und Ausländer, die in der Schweiz wohnen, zahlen ebenfalls Steuern. Das Stimmrecht
+      spielt dabei keine Rolle.

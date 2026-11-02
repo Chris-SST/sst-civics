@@ -1,0 +1,31 @@
+id: wo-wohnt-die-mehrheit-der-bevoelkerung
+lang: it
+source_version: 2
+question: In quale zona della Svizzera vive la maggioranza della popolazione?
+options:
+  a: Nelle Alpi
+  b: In Ticino
+  c: Nell'Altopiano
+  d: Nel Giura
+explanation: L'Altopiano si trova tra il Giura e le Alpi. Qui si trovano la maggior parte delle grandi
+  città e vive la maggior parte della popolazione. Le Alpi coprono sì una vasta superficie, ma sono poco
+  popolate.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welcher Zone der Schweiz lebt die Mehrheit der Bevölkerung?
+    options_de:
+      a: In den Alpen
+      b: Im Tessin
+      c: Im Mittelland
+      d: Im Jura
+    explanation_de: Das Mittelland befindet sich zwischen dem Jura und den Alpen. Hier befinden sich die
+      meisten grossen Städte und hier lebt der grösste Teil der Bevölkerung. Die Alpen bedecken zwar eine
+      grosse Fläche, sind aber dünn besiedelt.

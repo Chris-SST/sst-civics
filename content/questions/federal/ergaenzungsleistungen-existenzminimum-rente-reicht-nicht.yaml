@@ -21,7 +21,7 @@ glossary:
 - Existenzminimum
 - AHV
 - IV
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-191
@@ -43,3 +43,38 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Bei den EL zählt nicht nur die Rente, sondern das ganze Einkommen und Vermögen; die Antwort
+        c) könnte deshalb «Personen mit AHV- oder IV-Rente, deren Einkommen das Existenzminimum nicht
+        deckt» lauten, die Erklärung sagt das bereits richtig.'
+      - 'Klein: Das Wort «Existenzminimum» ist für Lernende auf B1 eher schwierig; die Erklärung könnte
+        es kurz umschreiben, zum Beispiel als «das Geld, das man mindestens zum Leben braucht».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «Sie werden zur Rente hinzu ausbezahlt» klingt holprig; besser «Sie werden zusätzlich
+        zur Rente ausbezahlt».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In Antwort a) steht «Arbeitslosentaggelder»; richtig ist «Arbeitslosentaggelder» ohne
+        Fehler nur in dieser Schreibweise nicht, besser ist «Taggelder der Arbeitslosenversicherung» oder
+        «Arbeitslosentaggeld».'
+      - 'Klein: Die Erklärung sagt, Ergänzungsleistungen seien «keine Sozialhilfe»; das ist korrekt, könnte
+        aber klarer erklären, dass Antwort d) falsch ist, weil Sozialhilfe allein keinen Anspruch auf
+        Ergänzungsleistungen gibt.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,34 @@
+id: initiative-gegenvorschlag-stichfrage
+lang: tr
+source_version: 1
+question: Bir halk girişimi (Volksinitiative) ve Federal Meclis (Bundesversammlung) tarafından hazırlanan
+  doğrudan bir karşı öneri hakkında aynı anda oylama yapılır. Bu durumda nihai karar sorusu (Stichfrage)
+  ne işe yarar?
+options:
+  a: Oylamanın tekrarlanıp tekrarlanmayacağına karar verir
+  b: Girişimin geçerli olup olmadığına karar verir
+  c: Her ikisi de kabul edilirse hangi tasarının geçerli olacağına karar verir
+  d: Kantonların oylamaya katılıp katılamayacağına karar verir
+explanation: Oy hakkına sahip kişiler hem girişime hem de karşı öneriye evet diyebilir. Nihai karar sorusuyla,
+  her ikisi de kabul edilirse bu iki tasarıdan hangisinin yürürlüğe girmesi gerektiğini belirtirler. Böylece
+  bir değişiklik lehine verilen hiçbir oy boşa gitmez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Über eine Volksinitiative und einen von der Bundesversammlung ausgearbeiteten direkten
+      Gegenentwurf wird gleichzeitig abgestimmt. Wozu dient in diesem Fall die Stichfrage?
+    options_de:
+      a: Sie entscheidet, ob die Abstimmung wiederholt wird oder nicht
+      b: Sie entscheidet, ob die Initiative gültig ist oder nicht
+      c: Sie entscheidet, welche Vorlage gilt, wenn beide angenommen werden
+      d: Sie entscheidet, ob die Kantone an der Abstimmung teilnehmen können oder nicht
+    explanation_de: Die Stimmberechtigten können sowohl der Initiative als auch dem Gegenentwurf mit Ja
+      zustimmen. Mit der Stichfrage geben sie an, welche dieser beiden Vorlagen in Kraft treten soll,
+      wenn beide angenommen werden. So geht keine zugunsten einer Änderung abgegebene Stimme verloren.

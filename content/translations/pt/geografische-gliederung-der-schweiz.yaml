@@ -1,0 +1,29 @@
+id: geografische-gliederung-der-schweiz
+lang: pt
+source_version: 1
+question: Em quais três grandes regiões paisagísticas a Suíça se divide geograficamente?
+options:
+  a: Jura, Planalto Suíço (Mittelland) e Alpes
+  b: Jura, Lago de Constança e Alpes
+  c: Floresta Negra, Planalto Suíço e Alpes
+  d: Planalto Suíço, Pré-Alpes e Tessino
+explanation: O Jura situa-se no noroeste e os Alpes ocupam a maior parte da superfície. Entre eles situa-se
+  o Planalto Suíço, onde vive a maioria das pessoas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welche drei grossen Landschaftsregionen gliedert sich die Schweiz geografisch?
+    options_de:
+      a: Jura, Mittelland und Alpen
+      b: Jura, Bodensee und Alpen
+      c: Schwarzwald, Mittelland und Alpen
+      d: Mittelland, Voralpen und Tessin
+    explanation_de: Der Jura liegt im Nordwesten und die Alpen nehmen den grössten Teil der Fläche ein.
+      Dazwischen liegt das Mittelland, wo die Mehrheit der Menschen lebt.

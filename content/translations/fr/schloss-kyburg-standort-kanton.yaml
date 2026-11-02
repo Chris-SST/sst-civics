@@ -1,0 +1,29 @@
+id: schloss-kyburg-standort-kanton
+lang: fr
+source_version: 1
+question: Dans quel canton se trouve le château de Kyburg ?
+options:
+  a: Dans le canton d'Argovie
+  b: Dans le canton de Saint-Gall
+  c: Dans le canton de Zurich
+  d: Dans le canton de Thurgovie
+explanation: Le château de Kyburg se trouve dans le canton de Zurich, sur une colline au-dessus de la
+  Töss. Il fait partie des biens culturels bien connus du canton et c'est un musée.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Kanton befindet sich die Kyburg?
+    options_de:
+      a: Im Kanton Aargau
+      b: Im Kanton St. Gallen
+      c: Im Kanton Zürich
+      d: Im Kanton Thurgau
+    explanation_de: Die Kyburg befindet sich im Kanton Zürich, auf einem Hügel über der Töss. Sie gehört
+      zu den bekannten Kulturgütern des Kantons und ist ein Museum.

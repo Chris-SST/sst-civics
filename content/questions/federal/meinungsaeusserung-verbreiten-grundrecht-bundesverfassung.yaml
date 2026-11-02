@@ -21,7 +21,7 @@ glossary:
 - Meinungsfreiheit
 - Grundrecht
 - Bundesverfassung
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-077
@@ -43,3 +43,36 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Artikel 16 der Bundesverfassung heisst offiziell «Meinungs- und Informationsfreiheit»;
+        die Erklärung könnte das so nennen und kurz ergänzen, dass Eigentumsgarantie und Niederlassungsfreiheit
+        zwar auch Grundrechte sind, aber andere Dinge schützen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die vorangestellte Partizipialkonstruktion «Welches von der Bundesverfassung gesicherte
+        Grundrecht» ist für Niveau B1 etwas schwer; einfacher wäre «Welches Grundrecht in der Bundesverfassung
+        erlaubt es, die eigene Meinung frei zu äussern und zu verbreiten?»'
+      - 'Klein: Die Erklärung könnte kurz erwähnen, dass die Eigentumsgarantie das Eigentum schützt und
+        die Niederlassungsfreiheit das Recht, überall in der Schweiz zu wohnen, damit alle falschen Antworten
+        erklärt sind.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Quelle zeigt nur Art. 16 Abs. 2 (Meinung frei bilden, äussern und verbreiten) ohne
+        Artikelnummer. Die Nennung von «Artikel 16» in der Erklärung ist aber korrekt und allgemein bekannt.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

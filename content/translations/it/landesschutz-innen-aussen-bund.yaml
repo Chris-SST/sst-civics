@@ -1,0 +1,31 @@
+id: landesschutz-innen-aussen-bund
+lang: it
+source_version: 1
+question: Quale compito rientra tra i compiti centrali della Confederazione?
+options:
+  a: L'organizzazione delle scuole locali
+  b: La protezione del Paese verso l'interno e verso l'esterno
+  c: La gestione delle strade del Comune (Gemeinde)
+  d: L'amministrazione dei registri degli abitanti dei Comuni
+explanation: La Confederazione provvede alla sicurezza del Paese verso l'esterno, ad esempio con l'esercito,
+  e alla sicurezza interna. Le scuole, le strade comunali e i registri degli abitanti sono invece compiti
+  che spettano soprattutto ai Cantoni e ai Comuni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe gehört zu den zentralen Aufgaben des Bundes?
+    options_de:
+      a: Die Organisation der lokalen Schulen
+      b: Der Schutz des Landes nach innen und nach aussen
+      c: Die Verwaltung der Strassen der Gemeinde
+      d: Die Verwaltung der Einwohnerregister der Gemeinden
+    explanation_de: Der Bund sorgt für die Sicherheit des Landes nach aussen, zum Beispiel mit der Armee,
+      und für die innere Sicherheit. Die Schulen, die Gemeindestrassen und die Einwohnerregister sind
+      hingegen Aufgaben, die vor allem den Kantonen und den Gemeinden zufallen.

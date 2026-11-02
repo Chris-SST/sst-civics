@@ -9,6 +9,21 @@ options:
   d: Unemployment and medical treatment insurance
 explanation: AHV stands for Alters- und Hinterlassenenversicherung, that is, old-age and survivors' insurance
   (OASI). It pays pensions in old age and to surviving dependants, such as widows, widowers and orphans.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür steht die Abkürzung AHV?
+    options_de:
+      a: Alters- und Hinterlassenenversicherung
+      b: Amtliche Haushaltversicherung
+      c: Allgemeine Hilfe für Versicherte
+      d: Arbeitslosen- und Heilbehandlungsversicherung
+    explanation_de: AHV steht für Alters- und Hinterlassenenversicherung, das heisst Alters- und Hinterlassenenversicherung
+      (AHV). Sie zahlt Renten im Alter und an hinterbliebene Angehörige, wie Witwen, Witwer und Waisen.

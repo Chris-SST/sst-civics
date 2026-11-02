@@ -1,0 +1,29 @@
+id: anzahl-landessprachen-schweiz
+lang: tr
+source_version: 1
+question: İsviçre'de kaç ulusal dil vardır?
+options:
+  a: Altı
+  b: Beş
+  c: Üç
+  d: Dört
+explanation: 'İsviçre''nin dört ulusal dili vardır: Almanca, Fransızca, İtalyanca ve Romanşça. Dillerin
+  çeşitliliği ülkenin kimliğinin bir parçasıdır.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Landessprachen gibt es in der Schweiz?
+    options_de:
+      a: Sechs
+      b: Fünf
+      c: Drei
+      d: Vier
+    explanation_de: 'Die Schweiz hat vier Landessprachen: Deutsch, Französisch, Italienisch und Rätoromanisch.
+      Die Vielfalt der Sprachen ist ein Teil der Identität des Landes.'

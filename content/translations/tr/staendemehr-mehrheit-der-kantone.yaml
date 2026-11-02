@@ -1,0 +1,31 @@
+id: staendemehr-mehrheit-der-kantone
+lang: tr
+source_version: 1
+question: Federal oylamalarda «kantonlar çoğunluğu» (Ständemehr) terimi ne anlama gelir?
+options:
+  a: Tasarının kabul edilmesi için kantonların çoğunluğunun onay vermesi gerekir.
+  b: Tasarının kabul edilmesi için belediyelerin (Gemeinde) çoğunluğunun onay vermesi gerekir.
+  c: Tasarının kabul edilmesi için partilerin çoğunluğunun onay vermesi gerekir.
+  d: Kantonlar Konseyi (Ständerat) üyelerinin çoğunluğunun hazır bulunması gerekir.
+explanation: Kantonlar çoğunluğu, bir tasarının kabul edilmesi için kantonların çoğunluğunun onay vermesini
+  gerektirir. Bir kantonun oyu, o kantonda yapılan oylamanın sonucuna göre sayılır. Anayasa değişikliklerinde
+  halk çoğunluğunun (Volksmehr) yanı sıra kantonlar çoğunluğu da gerekir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet der Begriff «Ständemehr» bei eidgenössischen Abstimmungen?
+    options_de:
+      a: Damit eine Vorlage angenommen wird, muss die Mehrheit der Kantone zustimmen.
+      b: Damit eine Vorlage angenommen wird, muss die Mehrheit der Gemeinden zustimmen.
+      c: Damit eine Vorlage angenommen wird, muss die Mehrheit der Parteien zustimmen.
+      d: Die Mehrheit der Mitglieder des Ständerats muss anwesend sein.
+    explanation_de: Das Ständemehr erfordert, dass die Mehrheit der Kantone einer Vorlage zustimmt. Die
+      Stimme eines Kantons wird nach dem Ergebnis der im Kanton durchgeführten Abstimmung gezählt. Bei
+      Verfassungsänderungen ist neben dem Volksmehr auch das Ständemehr erforderlich.

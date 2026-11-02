@@ -11,6 +11,23 @@ options:
 explanation: Since 2002, the so-called time-limit rule (Fristenregelung) has applied. Under it, the woman
   decides for herself during the first twelve weeks of pregnancy. To do so, she must state in writing
   that she is in a situation of distress.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Regelung gilt in der Schweiz seit 2002 für den Schwangerschaftsabbruch in den
+      ersten zwölf Wochen?
+    options_de:
+      a: Grundsätzlich ist der Abbruch in diesem Zeitraum verboten.
+      b: Die Frau kann selbst über den Abbruch entscheiden.
+      c: Der Ehemann oder Partner muss dem Abbruch zustimmen.
+      d: Ein Gericht muss den Abbruch bewilligen.
+    explanation_de: Seit 2002 gilt die sogenannte Fristenregelung. Danach entscheidet die Frau in den
+      ersten zwölf Wochen der Schwangerschaft selbst. Dazu muss sie schriftlich erklären, dass sie sich
+      in einer Notlage befindet.

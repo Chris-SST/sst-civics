@@ -1,0 +1,31 @@
+id: vereinsgruendung-offen-fuer-jede-person
+lang: it
+source_version: 1
+question: Chi può fondare un'associazione in Svizzera?
+options:
+  a: Solo le persone domiciliate nel Comune (Gemeinde)
+  b: Ogni persona
+  c: Solo i cittadini svizzeri
+  d: Solo le persone con un permesso di domicilio (permesso C) (Niederlassungsbewilligung)
+explanation: In Svizzera la fondazione di un'associazione è aperta a ogni persona. La libertà di associazione
+  è garantita dalla Costituzione federale. La cittadinanza o lo statuto di dimora non hanno alcuna importanza
+  al riguardo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann in der Schweiz einen Verein gründen?
+    options_de:
+      a: Nur die in der Gemeinde wohnhaften Personen
+      b: Jede Person
+      c: Nur Schweizer Bürger
+      d: Nur Personen mit einer Niederlassungsbewilligung (Bewilligung C)
+    explanation_de: In der Schweiz steht die Gründung eines Vereins jeder Person offen. Die Vereinigungsfreiheit
+      ist durch die Bundesverfassung garantiert. Das Bürgerrecht oder der Aufenthaltsstatus spielen dabei
+      keine Rolle.

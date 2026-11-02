@@ -18,7 +18,7 @@ sources:
 glossary:
 - Fabrikgesetz
 - Kinderarbeit
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-236
@@ -40,3 +40,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt nur «für Kinder»; besser wäre «für Kinder unter 14 Jahren», wie es
+        die Quelle angibt.'
+      - 'Klein: In Antwort c) ist «früher» doppeldeutig (in jüngerem Alter oder in der Vergangenheit);
+        klarer wäre zum Beispiel «Dass Kinder mehr im Haushalt helfen mussten».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c) ist wegen des Wortes «früher» unklar (früher im Alter oder in der Vergangenheit?);
+        besser wäre zum Beispiel «Dass Kinder mehr im Haushalt helfen mussten».'
+      - 'Klein: Die Erklärung könnte die Altersgrenze nennen, etwa «Kinder unter 14 Jahren durften nicht
+        in Fabriken arbeiten», damit sie konkreter wird.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Quelle nennt als Zweck des Verbots vor allem den Schutz der Arbeiterschaft und ältere
+        kantonale Schulpflichtregeln, die Schulbesuch ausdrücklich erwähnen. Der Schulbesuch als Ziel
+        von 1877 steht dort nicht wörtlich. Das ist aber allgemein bekanntes Wissen und deckt sich mit
+        der Themenliste.'
+      - 'Klein: Die Erklärung könnte präzisieren, dass das Verbot für Kinder unter 14 Jahren galt und
+        das Gesetz am 1. Januar 1878 in Kraft trat.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

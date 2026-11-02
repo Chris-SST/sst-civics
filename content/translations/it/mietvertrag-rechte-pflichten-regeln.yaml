@@ -1,0 +1,31 @@
+id: mietvertrag-rechte-pflichten-regeln
+lang: it
+source_version: 1
+question: Che cosa viene stabilito in un contratto di locazione?
+options:
+  a: I diritti dei vicini nello stabile
+  b: L'ammontare delle imposte dei locatari
+  c: Gli obblighi del Comune (Gemeinde) nei confronti dei locatari
+  d: I diritti e gli obblighi dei locatori e dei locatari
+explanation: Il contratto di locazione disciplina il rapporto tra la persona che dà in locazione e la
+  persona che prende in locazione. Ne fanno parte, per esempio, la pigione e la durata della locazione.
+  Il Codice delle obbligazioni contiene le relative norme di legge.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird in einem Mietvertrag festgelegt?
+    options_de:
+      a: Die Rechte der Nachbarn im Gebäude
+      b: Die Höhe der Steuern der Mieter
+      c: Die Pflichten der Gemeinde gegenüber den Mietern
+      d: Die Rechte und Pflichten der Vermieter und der Mieter
+    explanation_de: Der Mietvertrag regelt das Verhältnis zwischen der Person, die vermietet, und der
+      Person, die mietet. Dazu gehören zum Beispiel der Mietzins und die Dauer der Miete. Das Obligationenrecht
+      enthält die entsprechenden gesetzlichen Bestimmungen.

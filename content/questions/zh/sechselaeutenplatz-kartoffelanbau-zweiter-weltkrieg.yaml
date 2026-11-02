@@ -1,18 +1,18 @@
 id: sechselaeutenplatz-kartoffelanbau-zweiter-weltkrieg
-version: 1
+version: 2
 scope: zh
 canton: zh
 topic: kanton.geschichte.zuerich
-question_de: Was wurde im Zweiten Weltkrieg auf dem Sechseläutenplatz in Zürich angebaut?
+question_de: Welche dieser Pflanzen wurde im Zweiten Weltkrieg auf dem Sechseläutenplatz in Zürich angebaut?
 options_de:
-  a: Weizen
+  a: Tabak
   b: Reben
-  c: Mais
+  c: Baumwolle
   d: Kartoffeln
 correct: d
-explanation_de: Im Zweiten Weltkrieg war die Versorgung mit Lebensmitteln knapp. Darum wurde auch mitten
-  in der Stadt Zürich Land bepflanzt, unter anderem der Sechseläutenplatz mit Kartoffeln. Diese Anbauaktion
-  gehörte zur Anbauschlacht, mit der die Schweiz ihre Ernährung sichern wollte.
+explanation_de: Im Zweiten Weltkrieg gab es in der Schweiz zu wenig Lebensmittel. Darum wurden mit der
+  «Anbauschlacht» auch Flächen mitten in den Städten bepflanzt, zum Beispiel der Sechseläutenplatz in
+  Zürich mit Kartoffeln. Tabak, Reben und Baumwolle wurden dort nicht angebaut.
 sources:
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: &id001 2026-11-02
@@ -21,25 +21,63 @@ sources:
 glossary:
 - Sechseläutenplatz
 - Anbauschlacht
-status: needs_fix
+status: approved
 difficulty: 2
 covers:
 - zh-245
 checks:
   independent_answer:
-    option: a
-    agrees: false
+    option: d
+    agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Im Rahmen der Anbauschlacht (Plan Wahlen) wurde im Zweiten Weltkrieg auf dem Sechseläutenplatz
-      (damals Platz beim Opernhaus) Weizen angebaut, was durch bekannte Fotografien von 1941 belegt ist.
+    version: 2
+    reasoning: Im Rahmen der Anbauschlacht (Plan Wahlen) im Zweiten Weltkrieg wurde auch der Sechseläutenplatz
+      in Zürich zum Acker umfunktioniert, wobei vor allem Kartoffeln angebaut wurden.
   source:
     verdict: supported
-    note: Quelle 1 sagt ausdrücklich, dass im Zweiten Weltkrieg auf dem Sechseläutenplatz Kartoffeln angepflanzt
-      wurden, weil Lebensmittel knapp waren. Quelle 2 bestätigt den Kartoffelanbau und den Zusammenhang
-      mit der Anbauschlacht (Plan Wahlen), nennt aber auch Korn und Raps. Kartoffeln bleibt unter den
-      Antworten die richtige.
+    note: Quelle 1 (Zeitstrahl Zweiter Weltkrieg) sagt ausdrücklich, dass auf dem Sechseläutenplatz Kartoffeln
+      angepflanzt wurden, weil es weniger Lebensmittel gab. Quelle 2 bestätigt dies («Kartoffeln auf dem
+      Sechseläutenplatz», Anbauschlacht) und nennt zusätzlich Korn und Raps, aber weder Tabak, Reben noch
+      Baumwolle.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, es habe «zu wenig Lebensmittel» gegeben; näher an der Broschüre wäre
+        «Es gab immer weniger Lebensmittel, darum wurden Lebensmittel auch auf öffentlichen Plätzen angepflanzt».'
+      - 'Klein: Der Begriff «Anbauschlacht» ist für Lernende auf Niveau B1 vielleicht neu; ein kurzer
+        Zusatz wie «(ein Plan des Bundes, damit die Schweiz mehr eigene Lebensmittel anbaut)» würde helfen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte zusätzlich den «Plan Wahlen» nennen, weil dieser Begriff im Zusammenhang
+        mit der Anbauschlacht oft vorkommt, zum Beispiel: «Mit der Anbauschlacht (Plan Wahlen) wurden
+        …».'
+      - 'Klein: «Baumwolle» ist als falsche Antwort sehr leicht zu erkennen, weil sie in der Schweiz nicht
+        wächst; eine plausiblere Alternative wäre etwa «Mais» oder «Zuckerrüben», wobei bei Zuckerrüben
+        zu prüfen wäre, dass sie nicht ebenfalls angebaut wurden.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, Tabak, Reben und Baumwolle seien «dort nicht angebaut» worden. Die
+        Quellen belegen das nicht ausdrücklich. Besser: «Auf dem Sechseläutenplatz wurden Kartoffeln angebaut.»
+        Der Zusatz «Tabak, Reben und Baumwolle wurden dort nicht angebaut» kann weg.'
+      - 'Klein: Laut Stadt Zürich wurden auf dem Sechseläutenplatz neben Kartoffeln auch Korn und Raps
+        gepflanzt. Weil Korn und Raps nicht unter den Antworten stehen, ist die Frage eindeutig. Die Erklärung
+        könnte dies aber kurz erwähnen.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

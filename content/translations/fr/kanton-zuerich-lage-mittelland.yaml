@@ -1,0 +1,31 @@
+id: kanton-zuerich-lage-mittelland
+lang: fr
+source_version: 2
+question: À quelle grande région géographique de la Suisse le canton de Zurich appartient-il ?
+options:
+  a: Aux Alpes du Sud
+  b: Au Jura
+  c: au Plateau suisse
+  d: Aux Alpes centrales
+explanation: Le canton de Zurich appartient au Plateau suisse, c'est-à-dire à la zone plus plate située
+  entre le Jura au nord-ouest et les Alpes au sud. Le Plateau suisse est la partie la plus densément peuplée
+  de la Suisse.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Zu welcher grossen geografischen Region der Schweiz gehört der Kanton Zürich?
+    options_de:
+      a: Zu den Südalpen
+      b: Zum Jura
+      c: Zum Schweizer Mittelland
+      d: Zu den Zentralalpen
+    explanation_de: Der Kanton Zürich gehört zum Schweizer Mittelland, das heisst zum flacheren Gebiet,
+      das zwischen dem Jura im Nordwesten und den Alpen im Süden liegt. Das Schweizer Mittelland ist der
+      am dichtesten besiedelte Teil der Schweiz.

@@ -1,0 +1,31 @@
+id: zulassung-motorfahrzeuge-kantonales-strassenverkehrsamt
+lang: sq
+source_version: 1
+question: Kush e lejon në kantonin e Cyrihut një automjet me motor për qarkullim rrugor dhe për këtë qëllim
+  jep targat e kontrollit?
+options:
+  a: Policia kantonale gjatë një kontrolli të qarkullimit
+  b: Zyra kantonale e qarkullimit rrugor
+  c: Touring Club Schweiz
+  d: Administrata e komunës (Gemeinde) në vendbanim
+explanation: Lejimi i automjeteve me motor për qarkullim është detyrë e zyrës kantonale të qarkullimit
+  rrugor. Ajo jep edhe targat e kontrollit. Komuna dhe policia nuk janë përgjegjëse për këtë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer lässt im Kanton Zürich ein Motorfahrzeug zum Strassenverkehr zu und gibt dafür die
+      Kontrollschilder ab?
+    options_de:
+      a: Die Kantonspolizei bei einer Verkehrskontrolle
+      b: Das kantonale Strassenverkehrsamt
+      c: Touring Club Schweiz
+      d: Die Gemeindeverwaltung (Gemeinde) am Wohnort
+    explanation_de: Die Zulassung von Motorfahrzeugen zum Verkehr ist Aufgabe des kantonalen Strassenverkehrsamts.
+      Es gibt auch die Kontrollschilder ab. Die Gemeinde und die Polizei sind dafür nicht zuständig.

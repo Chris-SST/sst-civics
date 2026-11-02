@@ -1,0 +1,31 @@
+id: bundeshaus-bern-sitz-parlament
+lang: it
+source_version: 1
+question: Quale edificio di Berna è la sede delle sedute del Parlamento svizzero?
+options:
+  a: Il Kornhaus
+  b: Il municipio (Rathaus)
+  c: Il Tribunale amministrativo federale
+  d: Il Palazzo federale (Bundeshaus)
+explanation: Il Parlamento svizzero si riunisce nel Palazzo federale (Bundeshaus) a Berna. Qui il Consiglio
+  nazionale e il Consiglio degli Stati (Ständerat) si incontrano per le loro sessioni. Il Rathaus è un
+  edificio del Cantone di Berna o della città, non del Parlamento della Confederazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gebäude in Bern ist der Sitz der Sitzungen des Schweizer Parlaments?
+    options_de:
+      a: Das Kornhaus
+      b: Das Rathaus
+      c: Das Bundesverwaltungsgericht
+      d: Das Bundeshaus
+    explanation_de: Das Schweizer Parlament tritt im Bundeshaus in Bern zusammen. Hier treffen sich der
+      Nationalrat und der Ständerat zu ihren Sessionen. Das Rathaus ist ein Gebäude des Kantons Bern oder
+      der Stadt, nicht des Parlaments der Eidgenossenschaft.

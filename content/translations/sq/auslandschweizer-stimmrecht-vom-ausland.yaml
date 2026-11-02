@@ -1,0 +1,35 @@
+id: auslandschweizer-stimmrecht-vom-ausland
+lang: sq
+source_version: 2
+question: Një shtetase zvicerane jeton përgjithmonë jashtë vendit. Si mund të marrë pjesë ajo në zgjedhjet
+  dhe votimet federale?
+options:
+  a: Ajo mund të votojë vetëm nëse udhëton për këtë qëllim në Zvicër.
+  b: Ajo mund të marrë pjesë vetëm në zgjedhje, por jo në votime.
+  c: Ajo mund të zgjedhë dhe të votojë nga vendbanimi i saj jashtë vendit, pa udhëtuar në Zvicër.
+  d: Ajo e humb të drejtën e votës dhe të zgjedhjes në nivel të Konfederatës.
+explanation: Zviceranët që jetojnë jashtë vendit mund të zgjedhin dhe të votojnë në nivel të Konfederatës
+  pa udhëtuar për këtë qëllim në Zvicër. Për këtë ata duhet të jenë të regjistruar pranë përfaqësisë kompetente
+  zvicerane jashtë vendit dhe të kërkojnë përmes saj regjistrimin në regjistrin zgjedhor. Materialet e
+  zgjedhjeve dhe të votimeve ua dërgon më pas komuna e tyre e votimit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Schweizer Bürgerin lebt dauerhaft im Ausland. Wie kann sie an den eidgenössischen
+      Wahlen und Abstimmungen teilnehmen?
+    options_de:
+      a: Sie kann nur abstimmen, wenn sie zu diesem Zweck in die Schweiz reist.
+      b: Sie kann nur an Wahlen teilnehmen, aber nicht an Abstimmungen.
+      c: Sie kann von ihrem Wohnort im Ausland aus wählen und abstimmen, ohne in die Schweiz zu reisen.
+      d: Sie verliert das Stimm- und Wahlrecht auf Ebene des Bundes.
+    explanation_de: Auslandschweizer können auf Ebene des Bundes wählen und abstimmen, ohne zu diesem
+      Zweck in die Schweiz zu reisen. Dafür müssen sie bei der zuständigen schweizerischen Vertretung
+      im Ausland registriert sein und über diese die Eintragung ins Stimmregister beantragen. Die Wahl-
+      und Abstimmungsunterlagen werden ihnen danach von ihrer Stimmgemeinde zugesandt.

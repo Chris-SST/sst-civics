@@ -1,0 +1,31 @@
+id: rechtsgleichheit-gesetz-fuer-alle
+lang: fr
+source_version: 1
+question: Que signifie le principe de l'égalité devant la loi ?
+options:
+  a: Tous les cantons ont les mêmes lois.
+  b: Toutes les personnes occupent les mêmes fonctions politiques.
+  c: Toutes les personnes ont le même revenu.
+  d: La loi s'applique de la même manière à toutes les personnes.
+explanation: L'égalité devant la loi figure à l'article 8 de la Constitution fédérale. Tous les êtres
+  humains sont égaux devant la loi et personne ne doit être discriminé, par exemple en raison de son origine
+  ou de son sexe. Cela ne signifie pas que tout le monde possède autant.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet der Grundsatz der Rechtsgleichheit (Gleichheit vor dem Gesetz)?
+    options_de:
+      a: Alle Kantone haben die gleichen Gesetze.
+      b: Alle Personen haben die gleichen politischen Ämter inne.
+      c: Alle Personen haben das gleiche Einkommen.
+      d: Das Gesetz wird auf alle Personen auf die gleiche Weise angewendet.
+    explanation_de: Die Gleichheit vor dem Gesetz steht in Artikel 8 der Bundesverfassung. Alle Menschen
+      sind vor dem Gesetz gleich und niemand darf diskriminiert werden, zum Beispiel wegen seiner Herkunft
+      oder seines Geschlechts. Das bedeutet nicht, dass alle gleich viel besitzen.

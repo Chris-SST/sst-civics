@@ -1,0 +1,31 @@
+id: kanton-zuerich-anzahl-bezirke
+lang: fr
+source_version: 1
+question: En combien de districts le canton de Zurich est-il divisé ?
+options:
+  a: En dix districts
+  b: En douze districts
+  c: En quatorze districts
+  d: En huit districts
+explanation: Le canton de Zurich est divisé en douze districts, par exemple Affoltern, Meilen, Winterthour
+  et Zurich. Les districts sont des circonscriptions administratives et judiciaires situées entre le canton
+  et les communes (Gemeinden).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In wie viele Bezirke ist der Kanton Zürich unterteilt?
+    options_de:
+      a: In zehn Bezirke
+      b: In zwölf Bezirke
+      c: In vierzehn Bezirke
+      d: In acht Bezirke
+    explanation_de: Der Kanton Zürich ist in zwölf Bezirke unterteilt, zum Beispiel Affoltern, Meilen,
+      Winterthur und Zürich. Die Bezirke sind Verwaltungs- und Gerichtsbezirke, die zwischen dem Kanton
+      und den Gemeinden liegen.

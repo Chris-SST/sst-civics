@@ -1,0 +1,29 @@
+id: schloss-kyburg-standort-kanton
+lang: sq
+source_version: 1
+question: Në cilin kanton ndodhet Kalaja e Kyburgut?
+options:
+  a: Në kantonin Aargau
+  b: Në kantonin St. Gallen
+  c: Në kantonin Zürich
+  d: Në kantonin Thurgau
+explanation: Kalaja e Kyburgut ndodhet në kantonin Zürich, në një kodër mbi lumin Töss. Ajo është një
+  nga pasuritë kulturore të njohura të kantonit dhe është një muze.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Kanton befindet sich das Schloss Kyburg?
+    options_de:
+      a: Im Kanton Aargau
+      b: Im Kanton St. Gallen
+      c: Im Kanton Zürich
+      d: Im Kanton Thurgau
+    explanation_de: Das Schloss Kyburg befindet sich im Kanton Zürich, auf einem Hügel über dem Fluss
+      Töss. Es ist eines der bekannten Kulturgüter des Kantons und ist ein Museum.

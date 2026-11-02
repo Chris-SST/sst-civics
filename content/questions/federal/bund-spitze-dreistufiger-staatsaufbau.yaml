@@ -1,47 +1,77 @@
 id: bund-spitze-dreistufiger-staatsaufbau
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.foederalismus
-question_de: Welche Staatsebene steht im dreistufigen Staatsaufbau der Schweiz an der Spitze?
+question_de: Die Schweiz ist in drei Staatsebenen aufgebaut. Welche Ebene ist die oberste?
 options_de:
-  a: Der Bund
-  b: Der Kanton Bern
-  c: Die Bundesversammlung allein
-  d: Der Gemeindeverband
-correct: a
-explanation_de: An der Spitze des Staatsaufbaus steht der Bund. Darunter folgen die Kantone und danach
-  die Gemeinden. Die Bundesverfassung regelt, welche Aufgaben beim Bund liegen und welche bei den Kantonen.
+  a: Die Gemeinden
+  b: Der Bund
+  c: Die Kantone
+  d: Die Bezirke
+correct: b
+explanation_de: Der Bund ist die oberste der drei Staatsebenen. Darunter kommen die Kantone und dann die
+  Gemeinden. Bezirke sind keine eigene Staatsebene, sondern in manchen Kantonen nur Verwaltungseinheiten
+  innerhalb des Kantons.
 sources:
 - url: https://www.aboutswitzerland.eda.admin.ch/de/foederalismus
   checked: &id001 2026-11-02
 - url: https://www.aboutswitzerland.eda.admin.ch/de/politisches-system
-  checked: *id001
+  checked: 2026-11-02
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: 2026-11-02
 glossary:
 - Bund
 - Staatsaufbau
 - Bundesverfassung
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-059
 checks:
   independent_answer:
-    option: a
+    option: b
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Im dreistufigen Staatsaufbau der Schweiz (Bund, Kantone, Gemeinden) steht der Bund an der
-      obersten Stelle, während Kanton Bern, die Bundesversammlung allein und ein Gemeindeverband keine
-      Staatsebene an der Spitze darstellen.
+    version: 2
+    reasoning: Die Schweiz ist in die drei Staatsebenen Bund, Kantone und Gemeinden gegliedert, und der
+      Bund ist die oberste Ebene, da Bundesrecht dem kantonalen Recht vorgeht.
   source:
     verdict: supported
-    note: Quelle 1 nennt Bund, Kantone und Gemeinden als die drei Ebenen und bezeichnet den Bund ausdrücklich
-      als «die höchste Ebene». Quelle 2 nennt dieselbe Reihenfolge und spricht von den «übergeordneten
-      Ebenen, Kantone und Bund». Quelle 3 nennt die drei Ebenen nur, ohne die Spitze ausdrücklich zu benennen.
+    note: Quelle 1 nennt die drei Ebenen Bund, Kantone und Gemeinden und bezeichnet den Bund ausdrücklich
+      als «höchste Ebene»; die gleiche Reihenfolge nennt Quelle 2. Dass Bezirke keine eigene Staatsebene
+      sind, folgt daraus, dass die Quellen nur drei Ebenen aufzählen, wird aber nicht ausdrücklich gesagt.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Formulierung «ist in drei Staatsebenen aufgebaut» klingt etwas holprig; besser wäre
+        «Die Schweiz hat drei Staatsebenen.» oder «Die Schweiz ist in drei Staatsebenen gegliedert.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «ist in drei Staatsebenen aufgebaut» klingt etwas holprig; besser «Die Schweiz hat drei
+        Staatsebenen. Welche Ebene ist die oberste?».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage ist sehr einfach; «oberste» könnte präziser als «höchste Ebene» formuliert werden,
+        das macht die Frage aber nicht falsch oder unklar.'
+      - 'Klein: Die Erklärung sagt «in manchen Kantonen nur Verwaltungseinheiten»; einfacher und genauer
+        wäre «in einigen Kantonen (z. B. Zürich) nur Verwaltungseinheiten ohne eigene Staatsebene».'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,30 @@
+id: neue-bundesgesetze-beschluss-kammern
+lang: sq
+source_version: 1
+question: Kush miraton shumicën e ligjeve të reja federale të Konfederatës?
+options:
+  a: Gjykata Federale (Bundesgericht)
+  b: Këshilli Federal (Bundesrat) vetëm
+  c: Parlamentet e kantoneve
+  d: Këshilli Kombëtar (Nationalrat) dhe Këshilli i Shteteve (Ständerat)
+explanation: Shumica e ligjeve të reja federale miratohen nga të dyja dhomat e Parlamentit. Këshilli Federal
+  përgatit projektet, por nuk vendos vetëm. Kundër një ligji populli mund të ngrejë një referendum.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer beschliesst die Mehrheit der neuen Bundesgesetze der Eidgenossenschaft?
+    options_de:
+      a: Das Bundesgericht
+      b: Nur der Bundesrat
+      c: Die Parlamente der Kantone
+      d: Der Nationalrat und der Ständerat
+    explanation_de: Die Mehrheit der neuen Bundesgesetze wird von beiden Kammern des Parlaments verabschiedet.
+      Der Bundesrat bereitet die Entwürfe vor, entscheidet aber nicht allein. Gegen ein Gesetz kann das
+      Volk ein Referendum ergreifen.

@@ -1,14 +1,32 @@
 id: dampfmaschine-industrialisierung-schweiz
 lang: en
-source_version: 1
-question: Which invention shaped the industrial transformation in Switzerland in the 18th century?
+source_version: 2
+question: Which invention had a strong influence on industrialisation in Switzerland in the 19th century?
 options:
-  a: The steam engine
-  b: The computer
-  c: The assembly line
-  d: The car
-explanation: Industrialisation began with the steam engine, and work increasingly shifted to factories.
-  The computer, the assembly line and the car only came much later.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: The aeroplane
+  b: The steam engine
+  c: The computer
+  d: The assembly line
+explanation: In the 19th century, the steam engine became important in Switzerland. It powered machines
+  in factories and later also railways, and more and more people worked in factories. The aeroplane, the
+  assembly line and the computer only became important in the 20th century.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Erfindung hatte im 19. Jahrhundert einen starken Einfluss auf die Industrialisierung
+      in der Schweiz?
+    options_de:
+      a: Das Flugzeug
+      b: Die Dampfmaschine
+      c: Der Computer
+      d: Das Fliessband
+    explanation_de: Im 19. Jahrhundert wurde die Dampfmaschine in der Schweiz wichtig. Sie trieb Maschinen
+      in Fabriken an und später auch Eisenbahnen, und immer mehr Menschen arbeiteten in Fabriken. Das
+      Flugzeug, das Fliessband und der Computer wurden erst im 20. Jahrhundert wichtig.

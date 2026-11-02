@@ -1,0 +1,30 @@
+id: landessprachen-der-schweiz-aufzaehlung
+lang: sq
+source_version: 1
+question: Cilat gjuhë janë gjuhë kombëtare në Zvicër?
+options:
+  a: Gjermanisht, frëngjisht, retoromanisht dhe spanjisht
+  b: Gjermanisht, frëngjisht, italisht dhe retoromanisht
+  c: Gjermanisht, frëngjisht, italisht dhe anglisht
+  d: Gjermanisht, frëngjisht dhe italisht
+explanation: Kushtetuta Federale (Bundesverfassung) përmend gjermanishten, frëngjishten, italishten dhe
+  retoromanishten si gjuhë kombëtare. Anglishtja nuk është gjuhë kombëtare, por përdoret shpesh si gjuhë
+  komunikimi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprachen sind Landessprachen in der Schweiz?
+    options_de:
+      a: Deutsch, Französisch, Rätoromanisch und Spanisch
+      b: Deutsch, Französisch, Italienisch und Rätoromanisch
+      c: Deutsch, Französisch, Italienisch und Englisch
+      d: Deutsch, Französisch und Italienisch
+    explanation_de: Die Bundesverfassung nennt Deutsch, Französisch, Italienisch und Rätoromanisch als
+      Landessprachen. Englisch ist keine Landessprache, wird aber oft als Kommunikationssprache verwendet.

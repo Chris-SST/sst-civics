@@ -12,6 +12,24 @@ explanation: According to the Federal Constitution, the Federal Assembly declare
   wholly or partially invalid if it violates the unity of form, the unity of subject matter or mandatory
   provisions of international law. The Federal Chancellery, by contrast, mainly checks formal points,
   such as whether enough valid signatures have been submitted.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde kann eine eidgenössische Volksinitiative für ungültig erklären, zum Beispiel
+      wenn sie die Einheit der Materie verletzt?
+    options_de:
+      a: Der Bundesrat
+      b: Das Bundesgericht
+      c: Die Bundesversammlung
+      d: Die Bundeskanzlei
+    explanation_de: Gemäss der Bundesverfassung erklärt die Bundesversammlung eine Volksinitiative ganz
+      oder teilweise für ungültig, wenn sie die Einheit der Form, die Einheit der Materie oder zwingende
+      Bestimmungen des Völkerrechts verletzt. Die Bundeskanzlei hingegen prüft hauptsächlich formale Punkte,
+      zum Beispiel ob genügend gültige Unterschriften eingereicht wurden.

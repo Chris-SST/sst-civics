@@ -1,0 +1,33 @@
+id: kinder-familienname-ohne-gemeinsamen-namen
+lang: sq
+source_version: 1
+question: Dy bashkëshortë nuk kanë përcaktuar një mbiemër të përbashkët familjar gjatë martesës. Kush
+  e përcakton atëherë mbiemrin e fëmijëve të tyre të përbashkët?
+options:
+  a: Fëmijët marrin automatikisht mbiemrin e babait.
+  b: Zyra e gjendjes civile vendos sipas rendit alfabetik të mbiemrave.
+  c: Bashkëshortët e zgjedhin vetë mbiemrin e fëmijëve të tyre.
+  d: Fëmijët marrin automatikisht mbiemrin e nënës.
+explanation: Nëse bashkëshortët nuk kanë përcaktuar një mbiemër të përbashkët familjar, ata duhet ta zgjedhin
+  vetë mbiemrin e fëmijëve. Ligji nuk e përcakton automatikisht. Rregullat gjenden në Kodin Civil Zviceran.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Frage: Im Original wurde bei der Heirat kein gemeinsamer Familienname bestimmt, in der Rückübersetzung
+      «während der Ehe», was zeitlich etwas anderes bedeutet. Sonst gleiche Bedeutung.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Die beiden Ehegatten haben während der Ehe keinen gemeinsamen Familiennamen bestimmt.
+      Wer bestimmt dann den Nachnamen ihrer gemeinsamen Kinder?
+    options_de:
+      a: Die Kinder erhalten automatisch den Nachnamen des Vaters.
+      b: Das Zivilstandsamt entscheidet nach der alphabetischen Reihenfolge der Nachnamen.
+      c: Die Ehegatten wählen den Nachnamen ihrer Kinder selbst.
+      d: Die Kinder erhalten automatisch den Nachnamen der Mutter.
+    explanation_de: Wenn die Ehegatten keinen gemeinsamen Familiennamen bestimmt haben, müssen sie den
+      Nachnamen der Kinder selbst wählen. Das Gesetz bestimmt ihn nicht automatisch. Die Regeln finden
+      sich im Schweizerischen Zivilgesetzbuch.

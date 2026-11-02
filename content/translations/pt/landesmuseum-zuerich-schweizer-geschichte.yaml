@@ -1,0 +1,30 @@
+id: landesmuseum-zuerich-schweizer-geschichte
+lang: pt
+source_version: 1
+question: O que é apresentado no Museu Nacional Suíço de Zurique (Landesmuseum Zürich)?
+options:
+  a: A história da Suíça
+  b: A história do caminho de ferro
+  c: Ciências naturais e fauna dos Alpes
+  d: Arte moderna de todo o mundo
+explanation: O Museu Nacional Suíço de Zurique apresenta o passado e a história cultural da Suíça. Faz
+  parte do Museu Nacional Suíço. Situa-se junto à estação central de Zurique.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird im Schweizerischen Nationalmuseum in Zürich (Landesmuseum Zürich) gezeigt?
+    options_de:
+      a: Die Geschichte der Schweiz
+      b: Die Geschichte der Eisenbahn
+      c: Naturwissenschaften und Tierwelt der Alpen
+      d: Moderne Kunst aus der ganzen Welt
+    explanation_de: Das Schweizerische Nationalmuseum in Zürich zeigt die Vergangenheit und die Kulturgeschichte
+      der Schweiz. Es ist Teil des Schweizerischen Nationalmuseums. Es befindet sich neben dem Hauptbahnhof
+      von Zürich.

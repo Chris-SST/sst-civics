@@ -1,0 +1,30 @@
+id: schienennetz-dichte-weltweit
+lang: tr
+source_version: 1
+question: İsviçre demiryolu ağı uluslararası karşılaştırmada neyle tanınır?
+options:
+  a: Dünyada en sık örülmüş, en yoğun biçimde geliştirilmiş demiryolu ağıdır.
+  b: Tamamen tünellerden geçen tek demiryolu ağıdır.
+  c: Avrupa'nın en uzun demiryolu ağıdır.
+  d: Dünyanın en eski demiryolu ağıdır.
+explanation: Küçük bir alanda çok sayıda demiryolu hattı ve tren istasyonu bulunmaktadır. Bu nedenle İsviçre
+  ağı dünyanın en yoğun ağı olarak kabul edilir. Ancak yoğunluk, mutlak uzunluk hakkında bir şey söylemez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür ist das Schweizer Eisenbahnnetz im internationalen Vergleich bekannt?
+    options_de:
+      a: Es ist das weltweit am dichtesten geknüpfte, am intensivsten ausgebaute Eisenbahnnetz.
+      b: Es ist das einzige Eisenbahnnetz, das vollständig durch Tunnel führt.
+      c: Es ist das längste Eisenbahnnetz Europas.
+      d: Es ist das älteste Eisenbahnnetz der Welt.
+    explanation_de: Auf einer kleinen Fläche gibt es sehr viele Eisenbahnlinien und Bahnhöfe. Deshalb
+      gilt das Schweizer Netz als das dichteste Netz der Welt. Die Dichte sagt jedoch nichts über die
+      absolute Länge aus.

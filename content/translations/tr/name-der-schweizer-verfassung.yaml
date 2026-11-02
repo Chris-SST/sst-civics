@@ -1,0 +1,29 @@
+id: name-der-schweizer-verfassung
+lang: tr
+source_version: 1
+question: İsviçre'nin anayasasının adı nedir?
+options:
+  a: Federal Temel Yasa (Eidgenössisches Grundgesetz)
+  b: Federal Anayasa
+  c: İsviçre Federal Düzeni (Bundesordnung der Schweiz)
+  d: İsviçre Devlet Şartı (Schweizerische Staatscharta)
+explanation: İsviçre'nin anayasasının adı Federal Anayasa'dır, kısaca BV. Federal Anayasa, ülkenin en
+  üst hukuki temelidir. Yürürlükteki metin 1999 tarihlidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Verfassung der Schweiz?
+    options_de:
+      a: Eidgenössisches Grundgesetz
+      b: Bundesverfassung
+      c: Bundesordnung der Schweiz
+      d: Schweizerische Staatscharta
+    explanation_de: Die Verfassung der Schweiz heisst Bundesverfassung, kurz BV. Die Bundesverfassung
+      ist die oberste rechtliche Grundlage des Landes. Der geltende Text stammt aus dem Jahr 1999.

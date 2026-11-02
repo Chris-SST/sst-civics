@@ -1,0 +1,29 @@
+id: bag-zustaendig-gesundheitsfragen-bund
+lang: pt
+source_version: 1
+question: Qual autoridade da Confederação é responsável pelas questões de saúde?
+options:
+  a: O Gabinete Federal do Ambiente (BAFU)
+  b: A Secretaria de Estado da Migração (SEM)
+  c: O Gabinete Federal de Estatística (BFS)
+  d: O Gabinete Federal da Saúde (BAG)
+explanation: O Gabinete Federal da Saúde (BAG) é a autoridade da Confederação responsável pelas questões
+  de saúde. Supervisiona, por exemplo, o seguro social de saúde.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde des Bundes ist für Gesundheitsfragen zuständig?
+    options_de:
+      a: Das Bundesamt für Umwelt (BAFU)
+      b: Das Staatssekretariat für Migration (SEM)
+      c: Das Bundesamt für Statistik (BFS)
+      d: Das Bundesamt für Gesundheit (BAG)
+    explanation_de: Das Bundesamt für Gesundheit (BAG) ist die Behörde des Bundes, die für Gesundheitsfragen
+      zuständig ist. Es beaufsichtigt zum Beispiel die soziale Krankenversicherung.

@@ -1,0 +1,33 @@
+id: obligationenrecht-miete-wohnraum-vorschriften
+lang: es
+source_version: 2
+question: ¿En qué ley están establecidas las normas sobre el alquiler de una vivienda?
+options:
+  a: En el Código de las Obligaciones
+  b: En la Ley del Trabajo
+  c: En el Código Penal
+  d: En la Ley de Tráfico Vial
+explanation: Las normas sobre el alquiler de viviendas se encuentran en el Código de las Obligaciones
+  (OR). Allí se establece, por ejemplo, qué se aplica en el contrato de alquiler, hasta qué importe puede
+  llegar el alquiler y cómo se puede rescindir el contrato. El Código Civil (ZGB), en cambio, regula sobre
+  todo temas como la familia, el matrimonio y la herencia.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welchem Gesetz sind die Regeln über die Miete einer Wohnung festgelegt?
+    options_de:
+      a: Im Obligationenrecht
+      b: Im Arbeitsgesetz
+      c: Im Strafgesetzbuch
+      d: Im Strassenverkehrsgesetz
+    explanation_de: Die Regeln über die Miete von Wohnungen finden sich im Obligationenrecht (OR). Dort
+      ist zum Beispiel festgelegt, was im Mietvertrag gilt, bis zu welchem Betrag die Miete gehen darf
+      und wie der Vertrag gekündigt werden kann. Das Zivilgesetzbuch (ZGB) hingegen regelt vor allem Themen
+      wie Familie, Ehe und Erbschaft.

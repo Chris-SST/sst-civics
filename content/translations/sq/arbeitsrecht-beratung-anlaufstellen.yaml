@@ -1,0 +1,31 @@
+id: arbeitsrecht-beratung-anlaufstellen
+lang: sq
+source_version: 1
+question: Kush ndihmon me pyetjet rreth të drejtës së punës?
+options:
+  a: Bordi shkollor (Schulpflege) dhe komuna kishtare
+  b: Avokatia, sindikatat dhe gjykatat e punës
+  c: Ndërmarrjet e transportit publik dhe posta
+  d: Zyrat e gjendjes civile dhe kontrolli i banorëve
+explanation: Për pyetjet rreth të drejtës së punës ka disa vende ku mund të drejtoheni. Mes tyre janë
+  avokatët dhe avokatet, sindikatat dhe gjykatat e punës. Zyrat e tjera janë përgjegjëse për detyra të
+  tjera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer hilft bei Fragen zum Arbeitsrecht?
+    options_de:
+      a: Die Schulpflege und die Kirchgemeinde
+      b: Die Anwaltschaft, die Gewerkschaften und die Arbeitsgerichte
+      c: Die öffentlichen Verkehrsbetriebe und die Post
+      d: Die Zivilstandsämter und die Einwohnerkontrolle
+    explanation_de: Bei Fragen zum Arbeitsrecht gibt es mehrere Stellen, an die Sie sich wenden können.
+      Dazu gehören die Anwälte und Anwältinnen, die Gewerkschaften und die Arbeitsgerichte. Die anderen
+      Stellen sind für andere Aufgaben zuständig.

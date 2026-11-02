@@ -11,6 +11,23 @@ options:
 explanation: The Civil Code governs the law of persons, family law, inheritance law and property law.
   This also includes marriage and divorce. The Criminal Code, by contrast, deals with criminal offences
   and penalties.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gesetz regelt unter anderem, wie eine Ehe geschlossen und wie sie durch Scheidung
+      aufgelöst wird?
+    options_de:
+      a: Das Zivilgesetzbuch
+      b: Das Strafgesetzbuch
+      c: Das Asylgesetz
+      d: Das Bundesgerichtsgesetz
+    explanation_de: Das Zivilgesetzbuch regelt das Personenrecht, das Familienrecht, das Erbrecht und
+      das Sachenrecht. Dazu gehören auch die Ehe und die Scheidung. Das Strafgesetzbuch hingegen befasst
+      sich mit Straftaten und Strafen.

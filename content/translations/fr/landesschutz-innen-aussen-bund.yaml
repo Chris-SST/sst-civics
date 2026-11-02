@@ -1,0 +1,31 @@
+id: landesschutz-innen-aussen-bund
+lang: fr
+source_version: 1
+question: Laquelle de ces tâches fait partie des tâches centrales de la Confédération ?
+options:
+  a: L'organisation des écoles locales
+  b: La protection du pays à l'intérieur comme à l'extérieur
+  c: L'entretien et l'exploitation des routes communales (Gemeindestrassen)
+  d: La gestion des registres des habitants des communes
+explanation: La Confédération assure la sécurité du pays vis-à-vis de l'extérieur, par exemple avec l'armée,
+  ainsi que la sécurité intérieure. En revanche, les écoles, les routes communales et les registres des
+  habitants relèvent avant tout de la compétence des cantons et des communes (Gemeinden).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche dieser Aufgaben gehört zu den zentralen Aufgaben des Bundes?
+    options_de:
+      a: Die Organisation der örtlichen Schulen
+      b: Der Schutz des Landes im Inneren wie nach aussen
+      c: Der Unterhalt und der Betrieb der Gemeindestrassen
+      d: Die Führung der Einwohnerregister der Gemeinden
+    explanation_de: Der Bund gewährleistet die Sicherheit des Landes gegenüber dem Ausland, zum Beispiel
+      mit der Armee, sowie die innere Sicherheit. Die Schulen, die Gemeindestrassen und die Einwohnerregister
+      fallen hingegen vor allem in die Zuständigkeit der Kantone und der Gemeinden.

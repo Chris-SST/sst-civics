@@ -24,7 +24,7 @@ glossary:
 - Kantonsrat
 - Amtsdauer
 - Gesamterneuerungswahl
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-107
@@ -45,3 +45,31 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Wort «Gesamterneuerungswahlen» ist für Niveau B1 schwierig; besser «Danach wird der
+        ganze Kantonsrat neu gewählt (Gesamterneuerungswahlen).»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Wort «Gesamterneuerungswahlen» in der Erklärung ist für Niveau B1 schwierig; besser
+        kurz erklären, etwa «Danach wird das ganze Parlament neu gewählt (Gesamterneuerungswahlen)».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt «Gesamterneuerungswahlen» und «Amtsdauer», was für B1 etwas schwierig
+        ist; einfacher wäre: «Alle vier Jahre wird der ganze Kantonsrat neu gewählt.»'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,29 @@
+id: steuerpflicht-wohnhafte-personen-schweiz
+lang: tr
+source_version: 1
+question: İsviçre'de prensip olarak kimler vergi ödemekle yükümlüdür?
+options:
+  a: İsviçre'de ikamet eden kişiler
+  b: Yalnızca bir işletme yöneten kişiler
+  c: Yalnızca İsviçre vatandaşlığına (Bürgerrecht) sahip kişiler
+  d: Yalnızca oy hakkına sahip kişiler
+explanation: Vergi yükümlülüğü ikamet yerine bağlıdır, vatandaşlığa bağlı değildir. İsviçre'de ikamet
+  eden yabancılar da vergi öder. Oy hakkının bu konuda hiçbir önemi yoktur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz grundsätzlich steuerpflichtig?
+    options_de:
+      a: Personen, die in der Schweiz wohnen
+      b: Nur Personen, die ein Unternehmen führen
+      c: Nur Personen, die das Schweizer Bürgerrecht besitzen
+      d: Nur Personen, die das Stimmrecht haben
+    explanation_de: Die Steuerpflicht hängt vom Wohnort ab, nicht von der Staatsangehörigkeit. Auch in
+      der Schweiz wohnhafte Ausländer zahlen Steuern. Das Stimmrecht spielt dabei keine Rolle.

@@ -1,0 +1,32 @@
+id: bundesebene-gesetze-erlass-parlament
+lang: es
+source_version: 1
+question: ¿Qué autoridad dicta las leyes a nivel de la Confederación?
+options:
+  a: La Asamblea Federal (Bundesversammlung), es decir, el Consejo Nacional (Nationalrat) y el Consejo
+    de los Estados (Ständerat)
+  b: El Banco Nacional Suizo
+  c: La Cancillería Federal (Bundeskanzlei)
+  d: La Conferencia de los Gobiernos Cantonales
+explanation: La Asamblea Federal es el Parlamento de la Confederación y se compone del Consejo Nacional
+  y del Consejo de los Estados. Es la responsable de la legislación. La Cancillería Federal, en cambio,
+  apoya al Consejo Federal (Bundesrat) como órgano de estado mayor.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde erlässt die Gesetze auf Ebene des Bundes?
+    options_de:
+      a: Die Bundesversammlung, das heisst der Nationalrat und der Ständerat
+      b: Die Schweizerische Nationalbank
+      c: Die Bundeskanzlei
+      d: Die Konferenz der Kantonsregierungen
+    explanation_de: Die Bundesversammlung ist das Parlament des Bundes und setzt sich aus dem Nationalrat
+      und dem Ständerat zusammen. Sie ist für die Gesetzgebung zuständig. Die Bundeskanzlei hingegen unterstützt
+      den Bundesrat als Stabsorgan.

@@ -1,0 +1,35 @@
+id: stimmrecht-bund-ab-18-jahren
+lang: es
+source_version: 2
+question: ¿Quién puede votar y elegir a nivel de la Confederación?
+options:
+  a: Los ciudadanos suizos a partir de los 20 años
+  b: Todas las personas con permiso de establecimiento (permiso C) (Niederlassungsbewilligung) a partir
+    de los 18 años
+  c: Los ciudadanos suizos a partir de los 18 años
+  d: Todas las personas con domicilio en Suiza a partir de los 16 años
+explanation: En la Confederación, los suizos y las suizas pueden votar y elegir a partir de su 18.º cumpleaños.
+  Los extranjeros y las extranjeras no tienen este derecho a nivel de la Confederación, ni siquiera con
+  un permiso de establecimiento. También los suizos y las suizas que viven en el extranjero pueden participar
+  si se inscriben en el registro electoral.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; der Zusatz «(Ausweis C)» in Antwort b bezeichnet nur die Niederlassungsbewilligung
+      und ändert nichts
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer darf auf Bundesebene abstimmen und wählen?
+    options_de:
+      a: Die Schweizer Bürgerinnen und Bürger ab 20 Jahren
+      b: Alle Personen mit Niederlassungsbewilligung (Ausweis C) ab 18 Jahren
+      c: Die Schweizer Bürgerinnen und Bürger ab 18 Jahren
+      d: Alle Personen mit Wohnsitz in der Schweiz ab 16 Jahren
+    explanation_de: Auf Bundesebene dürfen Schweizer und Schweizerinnen ab ihrem 18. Geburtstag abstimmen
+      und wählen. Ausländer und Ausländerinnen haben dieses Recht auf Bundesebene nicht, auch nicht mit
+      einer Niederlassungsbewilligung. Auch Schweizer und Schweizerinnen, die im Ausland leben, können
+      teilnehmen, wenn sie sich in das Stimmregister eintragen.

@@ -11,6 +11,23 @@ options:
 explanation: In the 19th century, Switzerland was still a country of emigration. Famines, poverty and
   a lack of work drove many people to seek a new life abroad. Only later did Switzerland become a country
   of immigration.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Im 19. Jahrhundert verliessen viele Menschen die Schweiz und wanderten zum Beispiel nach
+      Amerika aus. Was war ein wichtiger Grund dafür?
+    options_de:
+      a: Not und Mangel an Arbeit bedrohten ihre Existenzgrundlage.
+      b: Der Bund verbot ihnen, in der Schweiz zu leben.
+      c: In der Schweiz gab es zu wenig Platz für Fabriken.
+      d: Im Ausland gab es für Neuankömmlinge keine Steuern.
+    explanation_de: Im 19. Jahrhundert war die Schweiz noch ein Auswanderungsland. Hungersnöte, Armut
+      und fehlende Arbeit trieben viele Menschen dazu, im Ausland ein neues Leben zu suchen. Erst später
+      wurde die Schweiz zu einem Einwanderungsland.

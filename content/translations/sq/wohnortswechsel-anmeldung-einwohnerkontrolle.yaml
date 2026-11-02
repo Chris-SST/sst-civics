@@ -1,0 +1,29 @@
+id: wohnortswechsel-anmeldung-einwohnerkontrolle
+lang: sq
+source_version: 1
+question: Ku duhet të regjistroheni kur zhvendoseni në një tjetër komunë (Gemeinde) të kantonit të Cyrihut?
+options:
+  a: Në gjykatën e rrethit
+  b: Në Zyrën Federale të Statistikës të Konfederatës
+  c: Në policinë e kantonit
+  d: Në kontrollin e banorëve të komunës së re të banimit
+explanation: Regjistrimi bëhet në kontrollin e banorëve (Einwohnerkontrolle), që quhet edhe zyra e banorëve
+  (Einwohneramt). Ai mban regjistrin e banoreve dhe banorëve të komunës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo müssen Sie sich anmelden, wenn Sie in eine andere Gemeinde des Kantons Zürich umziehen?
+    options_de:
+      a: Beim Bezirksgericht
+      b: Beim Bundesamt für Statistik der Eidgenossenschaft
+      c: Bei der Kantonspolizei
+      d: Bei der Einwohnerkontrolle der neuen Wohngemeinde
+    explanation_de: Die Anmeldung erfolgt bei der Einwohnerkontrolle, die auch Einwohneramt genannt wird.
+      Sie führt das Register der Einwohnerinnen und Einwohner der Gemeinde.

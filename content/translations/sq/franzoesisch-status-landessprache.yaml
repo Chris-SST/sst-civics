@@ -1,0 +1,29 @@
+id: franzoesisch-status-landessprache
+lang: sq
+source_version: 1
+question: Çfarë statusi ka frëngjishtja në Zvicër?
+options:
+  a: Frëngjishtja është vetëm një gjuhë e huaj në shkollë.
+  b: Frëngjishtja është vetëm një gjuhë komunikimi rajonale.
+  c: Frëngjishtja është një gjuhë kombëtare.
+  d: Frëngjishtja është një gjuhë e pakicës pa status zyrtar.
+explanation: Frëngjishtja është një nga gjuhët kombëtare të Zvicrës. Ajo flitet kryesisht në Zvicrën perëndimore
+  dhe në nivel të Konfederatës është gjuhë zyrtare.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welchen Status hat Französisch in der Schweiz?
+    options_de:
+      a: Französisch ist nur eine Fremdsprache in der Schule.
+      b: Französisch ist nur eine regionale Verkehrssprache.
+      c: Französisch ist eine Landessprache.
+      d: Französisch ist eine Minderheitensprache ohne offiziellen Status.
+    explanation_de: Französisch ist eine der Landessprachen der Schweiz. Es wird hauptsächlich in der
+      Westschweiz gesprochen und ist auf Ebene des Bundes eine Amtssprache.

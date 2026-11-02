@@ -1,0 +1,31 @@
+id: geldpolitik-zustaendigkeit-bund
+lang: it
+source_version: 1
+question: Chi è responsabile della politica monetaria in Svizzera?
+options:
+  a: La Confederazione
+  b: I Comuni (Gemeinden)
+  c: Le banche cantonali
+  d: I Cantoni insieme
+explanation: Secondo la Costituzione federale, la politica monetaria e valutaria è di competenza della
+  Confederazione. Essa ha il diritto di emettere monete e banconote. La Banca nazionale svizzera attua
+  la politica monetaria su mandato della Confederazione e lo fa in modo indipendente.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz für die Geldpolitik zuständig?
+    options_de:
+      a: Der Bund
+      b: Die Gemeinden
+      c: Die Kantonalbanken
+      d: Die Kantone gemeinsam
+    explanation_de: Gemäss der Bundesverfassung fällt die Geld- und Währungspolitik in die Zuständigkeit
+      des Bundes. Er hat das Recht, Münzen und Banknoten auszugeben. Die Schweizerische Nationalbank führt
+      die Geldpolitik im Auftrag des Bundes durch und tut dies unabhängig.

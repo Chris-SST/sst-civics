@@ -1,0 +1,31 @@
+id: henry-dunant-gruender-rotes-kreuz
+lang: it
+source_version: 2
+question: Chi è considerato il fondatore della Croce Rossa a Ginevra?
+options:
+  a: Alfred Escher
+  b: Johann Heinrich Pestalozzi
+  c: Huldrych Zwingli
+  d: Henry Dunant
+explanation: Il ginevrino Henry Dunant vide nel 1859, dopo la battaglia di Solferino, quanti feriti restavano
+  senza aiuto. Si impegnò perciò per la loro cura e nel 1863 nacque a Ginevra la Croce Rossa. Per questo,
+  nel 1901, Dunant ricevette insieme a Frédéric Passy il primo Premio Nobel per la pace.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer gilt als der Gründer des Roten Kreuzes in Genf?
+    options_de:
+      a: Alfred Escher
+      b: Johann Heinrich Pestalozzi
+      c: Huldrych Zwingli
+      d: Henry Dunant
+    explanation_de: Der Genfer Henry Dunant sah 1859 nach der Schlacht von Solferino, wie viele Verwundete
+      ohne Hilfe blieben. Er setzte sich deshalb für ihre Pflege ein, und 1863 entstand in Genf das Rote
+      Kreuz. Dafür erhielt Dunant 1901 zusammen mit Frédéric Passy den ersten Friedensnobelpreis.

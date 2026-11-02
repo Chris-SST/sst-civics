@@ -1,0 +1,29 @@
+id: rhone-endet-im-mittelmeer
+lang: fr
+source_version: 1
+question: Où se termine le Rhône, qui prend sa source en Valais ?
+options:
+  a: Dans la mer du Nord
+  b: Dans l'océan Atlantique
+  c: Dans la mer Méditerranée
+  d: Dans la mer Noire
+explanation: Le Rhône traverse le lac Léman, puis poursuit son cours à travers la France. Il se jette
+  dans la mer Méditerranée.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo endet die Rhone, die im Wallis entspringt?
+    options_de:
+      a: In der Nordsee
+      b: Im Atlantischen Ozean
+      c: Im Mittelmeer
+      d: Im Schwarzen Meer
+    explanation_de: Die Rhone durchquert den Genfersee und setzt dann ihren Lauf durch Frankreich fort.
+      Sie mündet ins Mittelmeer.

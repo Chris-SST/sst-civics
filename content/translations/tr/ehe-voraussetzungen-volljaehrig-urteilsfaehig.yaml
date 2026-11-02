@@ -1,0 +1,31 @@
+id: ehe-voraussetzungen-volljaehrig-urteilsfaehig
+lang: tr
+source_version: 1
+question: İsviçre'de evlenebilmek için kişilerin hangi koşulları yerine getirmesi gerekir?
+options:
+  a: İsviçre vatandaşlığına (Bürgerrecht) sahip olmaları ve reşit olmaları gerekir
+  b: Reşit olmaları ve makul biçimde davranabilme yeteneğine sahip olmaları gerekir
+  c: En az beş yıldır birlikte yaşıyor olmaları gerekir
+  d: Aynı dine mensup olmaları gerekir
+explanation: Reşit olan ve ayırt etme gücüne sahip olan kişi evlenebilir. Ayırt etme gücüne sahip olmak,
+  kişinin makul biçimde davranabilmesi demektir. Uyrukluk, din ya da belirli bir süre birlikte yaşamak
+  bir koşul değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Voraussetzungen müssen Personen erfüllen, um in der Schweiz heiraten zu können?
+    options_de:
+      a: Sie müssen das Schweizer Bürgerrecht besitzen und volljährig sein
+      b: Sie müssen volljährig sein und die Fähigkeit besitzen, vernünftig zu handeln
+      c: Sie müssen seit mindestens fünf Jahren zusammenleben
+      d: Sie müssen derselben Religion angehören
+    explanation_de: Wer volljährig und urteilsfähig ist, kann heiraten. Urteilsfähig zu sein bedeutet,
+      dass die Person vernünftig handeln kann. Staatsangehörigkeit, Religion oder ein bestimmter Zeitraum
+      des Zusammenlebens sind keine Voraussetzung.

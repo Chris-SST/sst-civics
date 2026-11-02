@@ -1,0 +1,29 @@
+id: wallis-gebirgskanton-alpen
+lang: sq
+source_version: 1
+question: Cili nga këta kantone karakterizohet fort nga malet?
+options:
+  a: Basel-Stadt
+  b: Wallis
+  c: Thurgau
+  d: Zhenevë
+explanation: Në Wallis ndodhen shumë maja të larta alpine, mes tyre Dufourspitze, mali më i lartë i Zvicrës.
+  Thurgau, Basel-Stadt dhe Zhenevë shtrihen më shumë në fushë ose buzë liqeneve dhe lumenjve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher dieser Kantone ist stark von Bergen geprägt?
+    options_de:
+      a: Basel-Stadt
+      b: Wallis
+      c: Thurgau
+      d: Genf
+    explanation_de: Im Wallis befinden sich viele hohe Alpengipfel, darunter die Dufourspitze, der höchste
+      Berg der Schweiz. Thurgau, Basel-Stadt und Genf liegen mehr in der Ebene oder an Seen und Flüssen.

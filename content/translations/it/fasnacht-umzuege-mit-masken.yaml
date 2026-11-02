@@ -1,0 +1,29 @@
+id: fasnacht-umzuege-mit-masken
+lang: it
+source_version: 1
+question: Che cosa fa tipicamente parte del Carnevale svizzero (Fasnacht)?
+options:
+  a: Cortei in cui i partecipanti indossano maschere
+  b: L'addobbo degli alberi di Natale sulla piazza del paese
+  c: Fuochi d'artificio a mezzanotte il 1° agosto
+  d: L'accensione di grandi candele nelle chiese
+explanation: Durante il Carnevale (Fasnacht) gruppi di persone sfilano in corteo per le strade indossando
+  maschere e costumi. Il Carnevale di Basilea è un esempio noto di questa usanza.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gehört typischerweise zur Schweizer Fasnacht?
+    options_de:
+      a: Umzüge, bei denen die Teilnehmenden Masken tragen
+      b: Das Schmücken der Weihnachtsbäume auf dem Dorfplatz
+      c: Feuerwerk um Mitternacht am 1. August
+      d: Das Anzünden grosser Kerzen in den Kirchen
+    explanation_de: Während der Fasnacht ziehen Gruppen von Menschen in Umzügen durch die Strassen und
+      tragen dabei Masken und Kostüme. Die Basler Fasnacht ist ein bekanntes Beispiel für diesen Brauch.

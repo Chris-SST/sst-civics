@@ -1,0 +1,29 @@
+id: nationalfeiertag-erster-august
+lang: fr
+source_version: 1
+question: À quelle date la Suisse célèbre-t-elle sa fête nationale ?
+options:
+  a: Le 12 septembre
+  b: Le 1er août
+  c: Le 11 novembre
+  d: Le 1er mai
+explanation: Le 1er août est la fête nationale de la Suisse. Cette date rappelle le Pacte fédéral de 1291.
+  On la célèbre avec des feux, des feux d'artifice et des discours.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welchem Datum feiert die Schweiz ihren Nationalfeiertag?
+    options_de:
+      a: Am 12. September
+      b: Am 1. August
+      c: Am 11. November
+      d: Am 1. Mai
+    explanation_de: Der 1. August ist der Nationalfeiertag der Schweiz. Dieses Datum erinnert an den Bundesbrief
+      von 1291. Man feiert ihn mit Feuern, Feuerwerken und Reden.

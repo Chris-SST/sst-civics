@@ -23,7 +23,7 @@ sources:
 glossary:
 - Krankenversicherung
 - Versicherungspflicht
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-018
@@ -45,3 +45,33 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frist von drei Monaten gilt nicht nur nach dem Zuzug, sondern auch nach der Geburt.
+        Die Erklärung könnte lauten: «… innert drei Monaten nach dem Zuzug oder nach der Geburt abgeschlossen
+        werden.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt «innert drei Monaten nach dem Zuzug». Genauer wäre «nach der Wohnsitznahme»
+        (oder «nach der Geburt»), weil das Gesetz diese Begriffe verwendet; das ist aber nur ein Feinheitsunterschied.'
+      - 'Klein: Die Frage könnte mit «Wer muss in der Schweiz eine Grundversicherung (obligatorische Krankenversicherung)
+        abschliessen?» noch präziser sein. Die Zusatzversicherung ist freiwillig, aber der Zusammenhang
+        macht die Frage klar genug.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

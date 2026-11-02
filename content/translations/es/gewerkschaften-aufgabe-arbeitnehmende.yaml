@@ -1,0 +1,33 @@
+id: gewerkschaften-aufgabe-arbeitnehmende
+lang: es
+source_version: 2
+question: ¿Qué función tienen los sindicatos en Suiza?
+options:
+  a: Defienden las demandas de los trabajadores y las trabajadoras.
+  b: Conceden a los extranjeros y las extranjeras el permiso para trabajar.
+  c: Fijan los tipos impositivos para las empresas.
+  d: Representan las demandas de los empleadores ante la Confederación.
+explanation: Los sindicatos son organizaciones de los trabajadores y las trabajadoras. Representan sus
+  intereses, por ejemplo en materia de salarios y condiciones de trabajo, y a menudo negocian convenios
+  colectivos de trabajo con los empleadores. En cambio, los permisos de trabajo los expiden las autoridades,
+  no los sindicatos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Funktion haben die Gewerkschaften in der Schweiz?
+    options_de:
+      a: Sie verteidigen die Forderungen der Arbeitnehmer und Arbeitnehmerinnen.
+      b: Sie erteilen den Ausländern und Ausländerinnen die Erlaubnis zu arbeiten.
+      c: Sie legen die Steuersätze für die Unternehmen fest.
+      d: Sie vertreten die Forderungen der Arbeitgeber gegenüber dem Bund.
+    explanation_de: Die Gewerkschaften sind Organisationen der Arbeitnehmer und Arbeitnehmerinnen. Sie
+      vertreten deren Interessen, zum Beispiel in Bezug auf Löhne und Arbeitsbedingungen, und handeln
+      oft Gesamtarbeitsverträge mit den Arbeitgebern aus. Die Arbeitsbewilligungen hingegen werden von
+      den Behörden ausgestellt, nicht von den Gewerkschaften.

@@ -1,0 +1,29 @@
+id: kantonsregierung-zuerich-name-regierungsrat
+lang: sq
+source_version: 1
+question: Si quhet qeveria e kantonit të Cyrihut?
+options:
+  a: Gjykata e Lartë (Obergericht)
+  b: Këshilli Kantonal (Kantonsrat)
+  c: Këshilli Federal (Bundesrat)
+  d: Këshilli Qeveritar (Regierungsrat)
+explanation: Qeveria e kantonit të Cyrihut quhet Këshilli Qeveritar (Regierungsrat). Këshilli Kantonal
+  është parlamenti, ndërsa Gjykata e Lartë i përket pushtetit gjyqësor.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Regierung des Kantons Zürich?
+    options_de:
+      a: Obergericht
+      b: Kantonsrat
+      c: Bundesrat
+      d: Regierungsrat
+    explanation_de: Die Regierung des Kantons Zürich heisst Regierungsrat. Der Kantonsrat ist das Parlament,
+      während das Obergericht zur richterlichen Gewalt gehört.

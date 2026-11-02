@@ -1,0 +1,30 @@
+id: krankenversicherung-pflicht-wohnhafte-personen
+lang: it
+source_version: 1
+question: Che cosa vale per le persone che vivono in Svizzera per quanto riguarda l'assicurazione malattie?
+options:
+  a: Devono assicurarsi soltanto se lavorano in Svizzera
+  b: Sono obbligate per legge a stipulare un'assicurazione malattie
+  c: Devono assicurarsi soltanto se hanno più di 50 anni
+  d: Possono decidere liberamente se assicurarsi o meno
+explanation: La legge sull'assicurazione malattie obbliga ogni persona domiciliata in Svizzera ad avere
+  un'assicurazione malattie. Ci si deve assicurare entro tre mesi dalla nascita o dalla presa di domicilio.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für Personen, die in der Schweiz leben, in Bezug auf die Krankenversicherung?
+    options_de:
+      a: Sie müssen sich nur versichern, wenn sie in der Schweiz arbeiten
+      b: Sie sind gesetzlich verpflichtet, eine Krankenversicherung abzuschliessen
+      c: Sie müssen sich nur versichern, wenn sie über 50 Jahre alt sind
+      d: Sie können frei entscheiden, ob sie sich versichern oder nicht
+    explanation_de: Das Krankenversicherungsgesetz verpflichtet jede in der Schweiz wohnhafte Person,
+      eine Krankenversicherung zu haben. Man muss sich innerhalb von drei Monaten nach der Geburt oder
+      der Wohnsitznahme versichern.

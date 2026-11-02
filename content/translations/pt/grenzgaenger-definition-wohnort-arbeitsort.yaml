@@ -1,0 +1,35 @@
+id: grenzgaenger-definition-wohnort-arbeitsort
+lang: pt
+source_version: 2
+question: Quem é considerado trabalhador transfronteiriço (Grenzgängerin ou Grenzgänger) na Suíça?
+options:
+  a: Uma pessoa que trabalha na Suíça, mas tem o seu domicílio no estrangeiro e regressa regularmente
+    para lá
+  b: Uma pessoa que trabalha na alfândega e controla a fronteira do país
+  c: Uma pessoa que atravessa a fronteira sem autorização para trabalhar aqui
+  d: Uma pessoa que vive num cantão e trabalha todos os dias noutro cantão
+explanation: Os trabalhadores transfronteiriços têm o seu local de trabalho na Suíça, mas vivem noutro
+  país. Precisam de uma autorização de trabalhador transfronteiriço e regressam regularmente, pelo menos
+  uma vez por semana, ao seu local de residência no estrangeiro. Quem se desloca apenas entre dois cantões
+  não é trabalhador transfronteiriço.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer gilt in der Schweiz als Grenzgängerin oder Grenzgänger?
+    options_de:
+      a: Eine Person, die in der Schweiz arbeitet, aber ihren Wohnsitz im Ausland hat und regelmässig
+        dorthin zurückkehrt
+      b: Eine Person, die beim Zoll arbeitet und die Grenze des Landes kontrolliert
+      c: Eine Person, die die Grenze ohne Bewilligung überquert, um hier zu arbeiten
+      d: Eine Person, die in einem Kanton wohnt und jeden Tag in einem anderen Kanton arbeitet
+    explanation_de: Grenzgängerinnen und Grenzgänger haben ihren Arbeitsort in der Schweiz, leben aber
+      in einem anderen Land. Sie benötigen eine Grenzgängerbewilligung und kehren regelmässig, mindestens
+      einmal pro Woche, an ihren Wohnort im Ausland zurück. Wer sich nur zwischen zwei Kantonen bewegt,
+      ist keine Grenzgängerin und kein Grenzgänger.

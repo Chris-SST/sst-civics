@@ -10,6 +10,21 @@ options:
 explanation: The two chambers of Parliament meet as the United Federal Assembly (Vereinigte Bundesversammlung)
   and elect the members of the Federal Council. In Switzerland, the people do not elect the Federal Council
   directly.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wählt die sieben Mitglieder des Bundesrates?
+    options_de:
+      a: Das Volk, in einer Abstimmung an der Urne
+      b: Die Kantonsregierungen
+      c: Das Bundesgericht
+      d: Der Nationalrat und der Ständerat gemeinsam
+    explanation_de: Die beiden Kammern des Parlaments treten als Vereinigte Bundesversammlung zusammen
+      und wählen die Mitglieder des Bundesrates. In der Schweiz wählt das Volk den Bundesrat nicht direkt.

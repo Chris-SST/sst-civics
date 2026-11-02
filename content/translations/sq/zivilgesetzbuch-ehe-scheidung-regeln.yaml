@@ -1,0 +1,32 @@
+id: zivilgesetzbuch-ehe-scheidung-regeln
+lang: sq
+source_version: 1
+question: Cili ligj rregullon, ndër të tjera, se si lidhet një martesë dhe si zgjidhet më pas me divorc?
+options:
+  a: Kodi Civil
+  b: Kodi Penal
+  c: Ligji për azilin
+  d: Ligji për Gjykatën Federale (Bundesgericht)
+explanation: Kodi Civil rregullon të drejtën e personave, të drejtën familjare, të drejtën e trashëgimisë
+  dhe të drejtën e sendeve. Kjo përfshin edhe lidhjen e martesës dhe divorcin. Kodi Penal, përkundrazi,
+  merret me veprat penale dhe dënimet.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gesetz regelt unter anderem, wie eine Ehe geschlossen und danach durch Scheidung
+      aufgelöst wird?
+    options_de:
+      a: Das Zivilgesetzbuch
+      b: Das Strafgesetzbuch
+      c: Das Asylgesetz
+      d: Das Bundesgerichtsgesetz
+    explanation_de: Das Zivilgesetzbuch regelt das Personenrecht, das Familienrecht, das Erbrecht und
+      das Sachenrecht. Dazu gehören auch die Eheschliessung und die Scheidung. Das Strafgesetzbuch hingegen
+      befasst sich mit den Straftaten und den Strafen.

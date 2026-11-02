@@ -1,0 +1,29 @@
+id: kanton-zuerich-lage-mittelland
+lang: sq
+source_version: 2
+question: Cilës zonë të madhe peizazhi të Zvicrës i përket kantoni i Cyrihut?
+options:
+  a: Alpeve Jugore
+  b: Jurasë
+  c: Pllajës Qendrore (Mittelland)
+  d: Alpeve Qendrore
+explanation: Kantoni i Cyrihut i përket Pllajës Qendrore (Mittelland), pra zonës më të rrafshët midis
+  Jurasë në veriperëndim dhe Alpeve në jug. Pllaja Qendrore është pjesa më e populluar e Zvicrës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Zu welcher grossen Landschaftszone der Schweiz gehört der Kanton Zürich?
+    options_de:
+      a: Südalpen
+      b: Jura
+      c: Mittelland
+      d: Zentralalpen
+    explanation_de: Der Kanton Zürich gehört zum Mittelland, also zur flacheren Zone zwischen dem Jura
+      im Nordwesten und den Alpen im Süden. Das Mittelland ist der am dichtesten besiedelte Teil der Schweiz.

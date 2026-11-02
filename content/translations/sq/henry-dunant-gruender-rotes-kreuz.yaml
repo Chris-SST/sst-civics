@@ -1,0 +1,33 @@
+id: henry-dunant-gruender-rotes-kreuz
+lang: sq
+source_version: 2
+question: Kush konsiderohet themeluesi i Kryqit të Kuq në Gjenevë?
+options:
+  a: Alfred Escher
+  b: Johann Heinrich Pestalozzi
+  c: Huldrych Zwingli
+  d: Henry Dunant
+explanation: Gjenevasi Henry Dunant pa në vitin 1859, pas betejës së Solferinos, se shumë të plagosur
+  mbetën pa ndihmë. Prandaj ai u angazhua për kujdesin ndaj tyre dhe në vitin 1863 u krijua në Gjenevë
+  Kryqi i Kuq. Për këtë, Dunant mori në vitin 1901, së bashku me Frédéric Passy, çmimin e parë Nobel për
+  Paqen.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer gilt als Gründer des Roten Kreuzes in Genf?
+    options_de:
+      a: Alfred Escher
+      b: Johann Heinrich Pestalozzi
+      c: Huldrych Zwingli
+      d: Henry Dunant
+    explanation_de: Der Genfer Henry Dunant sah im Jahr 1859, nach der Schlacht von Solferino, dass viele
+      Verwundete ohne Hilfe blieben. Deshalb setzte er sich für ihre Pflege ein, und im Jahr 1863 wurde
+      in Genf das Rote Kreuz gegründet. Dafür erhielt Dunant im Jahr 1901 zusammen mit Frédéric Passy
+      den ersten Friedensnobelpreis.

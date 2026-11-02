@@ -1,0 +1,30 @@
+id: bundesverfassung-1848-bundesstaat-kantone
+lang: it
+source_version: 1
+question: Che cosa cambiò per la Svizzera con la Costituzione federale del 1848?
+options:
+  a: Tornò a essere una semplice confederazione di Stati
+  b: Diventò una monarchia con un re
+  c: Diventò uno Stato federale in cui i Cantoni restano autonomi
+  d: Diventò uno Stato unitario senza Cantoni
+explanation: Nel 1848 nacque il moderno Stato federale con istituzioni comuni. I Cantoni mantennero però
+  compiti propri e una propria statualità. Questa ripartizione caratterizza la Svizzera ancora oggi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was änderte sich für die Schweiz mit der Bundesverfassung von 1848?
+    options_de:
+      a: Sie wurde wieder ein blosser Staatenbund
+      b: Sie wurde eine Monarchie mit einem König
+      c: Sie wurde ein Bundesstaat, in dem die Kantone autonom bleiben
+      d: Sie wurde ein Einheitsstaat ohne Kantone
+    explanation_de: Im Jahr 1848 entstand der moderne Bundesstaat mit gemeinsamen Institutionen. Die Kantone
+      behielten jedoch eigene Aufgaben und eine eigene Staatlichkeit. Diese Aufteilung prägt die Schweiz
+      bis heute.

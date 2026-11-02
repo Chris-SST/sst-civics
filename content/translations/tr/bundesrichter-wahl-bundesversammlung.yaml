@@ -1,0 +1,29 @@
+id: bundesrichter-wahl-bundesversammlung
+lang: tr
+source_version: 1
+question: Federal Mahkeme (Bundesgericht) hâkimlerini kim seçer?
+options:
+  a: Federal Konsey (Bundesrat)
+  b: Halk, sandık başında
+  c: Federal Meclis (Bundesversammlung)
+  d: Kantonların hükümetleri
+explanation: Federal Meclis (Bundesversammlung), yani Ulusal Konsey (Nationalrat) ile Kantonlar Konseyi
+  (Ständerat) birlikte, Federal Mahkeme hâkimlerini seçer. Görev süreleri altı yıldır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wählt die Richterinnen und Richter des Bundesgerichts?
+    options_de:
+      a: Der Bundesrat
+      b: Das Volk an der Urne
+      c: Die Bundesversammlung
+      d: Die Regierungen der Kantone
+    explanation_de: Die Bundesversammlung, das heisst der Nationalrat und der Ständerat gemeinsam, wählt
+      die Richterinnen und Richter des Bundesgerichts. Ihre Amtsdauer beträgt sechs Jahre.

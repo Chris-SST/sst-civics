@@ -1,0 +1,32 @@
+id: kinder-familienname-ohne-gemeinsamen-namen
+lang: pt
+source_version: 1
+question: Dois cônjuges não determinaram um apelido de família comum no momento do casamento. Quem define,
+  então, o apelido dos filhos em comum?
+options:
+  a: Os filhos recebem automaticamente o apelido do pai.
+  b: O registo civil decide de acordo com a ordem alfabética dos apelidos.
+  c: Os cônjuges escolhem eles próprios o apelido dos filhos.
+  d: Os filhos recebem automaticamente o apelido da mãe.
+explanation: Se os cônjuges não determinaram um apelido de família comum, devem escolher eles próprios
+  o apelido dos filhos. A lei não o define automaticamente. As regras constam do Código Civil suíço.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Zwei Ehegatten haben bei der Heirat keinen gemeinsamen Familiennamen bestimmt. Wer bestimmt
+      dann den Namen der gemeinsamen Kinder?
+    options_de:
+      a: Die Kinder erhalten automatisch den Namen des Vaters.
+      b: Das Zivilstandsamt entscheidet nach der alphabetischen Reihenfolge der Namen.
+      c: Die Ehegatten wählen den Namen der Kinder selbst.
+      d: Die Kinder erhalten automatisch den Namen der Mutter.
+    explanation_de: Wenn die Ehegatten keinen gemeinsamen Familiennamen bestimmt haben, müssen sie den
+      Namen der Kinder selbst wählen. Das Gesetz legt ihn nicht automatisch fest. Die Regeln stehen im
+      Schweizerischen Zivilgesetzbuch.

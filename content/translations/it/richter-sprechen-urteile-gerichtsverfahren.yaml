@@ -1,0 +1,31 @@
+id: richter-sprechen-urteile-gerichtsverfahren
+lang: it
+source_version: 1
+question: Chi pronuncia la sentenza in un procedimento giudiziario?
+options:
+  a: La giudice o il giudice
+  b: La poliziotta o il poliziotto
+  c: La presidente o il presidente del Comune (Gemeinde)
+  d: La procuratrice pubblica o il procuratore pubblico
+explanation: Le giudici e i giudici decidono in modo indipendente nei procedimenti giudiziari ed emettono
+  la sentenza. La procura conduce l'indagine e promuove l'accusa. La polizia svolge accertamenti, ma non
+  emette sentenze.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer spricht in einem Gerichtsverfahren das Urteil aus?
+    options_de:
+      a: Die Richterin oder der Richter
+      b: Die Polizistin oder der Polizist
+      c: Die Gemeindepräsidentin oder der Gemeindepräsident
+      d: Die Staatsanwältin oder der Staatsanwalt
+    explanation_de: Die Richterinnen und Richter entscheiden in Gerichtsverfahren unabhängig und fällen
+      das Urteil. Die Staatsanwaltschaft führt die Untersuchung und erhebt die Anklage. Die Polizei führt
+      Abklärungen durch, fällt aber keine Urteile.

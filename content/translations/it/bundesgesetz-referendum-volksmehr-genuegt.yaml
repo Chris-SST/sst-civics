@@ -1,0 +1,35 @@
+id: bundesgesetz-referendum-volksmehr-genuegt
+lang: it
+source_version: 1
+question: È stato lanciato il referendum facoltativo contro una nuova legge federale. Che cosa serve affinché
+  la legge sia accettata nella votazione popolare?
+options:
+  a: La maggioranza dei votanti in tutta la Svizzera
+  b: Una maggioranza di due terzi dei votanti
+  c: La maggioranza dei Cantoni da sola
+  d: La maggioranza dei votanti e la maggioranza dei Cantoni
+explanation: In caso di referendum facoltativo contro una legge federale conta solo la maggioranza del
+  popolo (Volksmehr), cioè la maggioranza dei voti validi in tutta la Svizzera. La maggioranza dei Cantoni
+  (Ständemehr) è richiesta in aggiunta soltanto per le modifiche della Costituzione federale e per determinati
+  trattati internazionali.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Das fakultative Referendum wurde gegen ein neues Bundesgesetz ergriffen. Was braucht
+      es, damit das Gesetz in der Volksabstimmung angenommen wird?
+    options_de:
+      a: Die Mehrheit der Stimmenden in der ganzen Schweiz
+      b: Eine Zweidrittelmehrheit der Stimmenden
+      c: Die Mehrheit der Kantone allein
+      d: Die Mehrheit der Stimmenden und die Mehrheit der Kantone
+    explanation_de: Beim fakultativen Referendum gegen ein Bundesgesetz zählt nur das Volksmehr, das heisst
+      die Mehrheit der gültigen Stimmen in der ganzen Schweiz. Das Ständemehr (die Mehrheit der Kantone)
+      ist zusätzlich nur bei Änderungen der Bundesverfassung und bei bestimmten völkerrechtlichen Verträgen
+      erforderlich.

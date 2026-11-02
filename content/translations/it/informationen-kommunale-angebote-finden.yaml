@@ -1,0 +1,33 @@
+id: informationen-kommunale-angebote-finden
+lang: it
+source_version: 2
+question: Dove si trovano informazioni sulle offerte e sulle regole del proprio Comune (Gemeinde)?
+options:
+  a: Nel Foglio federale della Confederazione
+  b: Nel giornale locale o sul sito web del Comune
+  c: Presso l'ambasciata del Paese d'origine
+  d: Presso il Consiglio federale (Bundesrat) a Berna
+explanation: Il Comune informa sulle proprie offerte e regole soprattutto tramite il giornale locale e
+  il proprio sito web su Internet. La Confederazione e il Consiglio federale sono competenti per i temi
+  nazionali, mentre un'ambasciata straniera non lo è affatto per il Comune. Anche l'amministrazione comunale
+  fornisce informazioni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wo findet man Informationen über die Angebote und die Regeln der eigenen Gemeinde?
+    options_de:
+      a: Im Bundesblatt der Eidgenossenschaft
+      b: In der Lokalzeitung oder auf der Website der Gemeinde
+      c: Bei der Botschaft des Herkunftslandes
+      d: Beim Bundesrat in Bern
+    explanation_de: Die Gemeinde informiert über ihre Angebote und Regeln vor allem über die Lokalzeitung
+      und ihre eigene Website im Internet. Die Eidgenossenschaft und der Bundesrat sind für nationale
+      Themen zuständig, während eine ausländische Botschaft für die Gemeinde überhaupt nicht zuständig
+      ist. Auch die Gemeindeverwaltung gibt Auskunft.

@@ -1,0 +1,31 @@
+id: erderwaermung-gletscher-schrumpfen
+lang: it
+source_version: 1
+question: Che effetto ha il riscaldamento globale sui ghiacciai delle Alpi svizzere?
+options:
+  a: I ghiacciai si riducono.
+  b: I ghiacciai si spostano verso nord.
+  c: I ghiacciai crescono più velocemente.
+  d: I ghiacciai rimangono invariati.
+explanation: Con l'aumento delle temperature si scioglie più ghiaccio di quanto ne venga rimpiazzato dalla
+  neve. Per questo i ghiacciai svizzeri diventano più piccoli. Ciò influisce anche sulle acque e sul paesaggio
+  nelle Alpi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Auswirkung hat die globale Erwärmung auf die Gletscher der Schweizer Alpen?
+    options_de:
+      a: Die Gletscher schrumpfen.
+      b: Die Gletscher verschieben sich nach Norden.
+      c: Die Gletscher wachsen schneller.
+      d: Die Gletscher bleiben unverändert.
+    explanation_de: Mit dem Anstieg der Temperaturen schmilzt mehr Eis, als durch Schnee ersetzt wird.
+      Deshalb werden die Schweizer Gletscher kleiner. Das wirkt sich auch auf die Gewässer und auf die
+      Landschaft in den Alpen aus.

@@ -1,0 +1,33 @@
+id: religionsfreiheit-wahl-ausuebung-keine-religion
+lang: tr
+source_version: 1
+question: Bir kadın İsviçre'ye taşınıyor ve dinini kendisi seçmek istiyor. Hiçbir dine mensup olmamayı
+  da düşünüyor. Federal Anayasa bu konuda ona neyi güvence altına alır?
+options:
+  a: Yalnızca kantonda kamu hukuku kapsamında tanınmış bir dine mensup olabilir.
+  b: Dinini özgürce seçebilir, uygulayabilir veya hiçbir dine mensup olmayabilir.
+  c: Dinini özel olarak seçebilir, ancak hiçbir yerde başkalarıyla birlikte uygulayamaz.
+  d: Tanınmış bir din konusunda belediye (Gemeinde) nezdinde karar vermek zorundadır.
+explanation: İnanç ve vicdan özgürlüğü, Federal Anayasa'nın 15. maddesinde güvence altına alınmıştır.
+  Herkes dinini özgürce seçebilir, tek başına veya başkalarıyla birlikte uygulayabilir ya da hiçbir dine
+  mensup olmayabilir. Hiç kimse bir dini topluluğa mensup olmaya zorlanamaz.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Frau zieht in die Schweiz und möchte ihre Religion selbst wählen. Sie erwägt auch,
+      keiner Religion anzugehören. Was garantiert ihr die Bundesverfassung in dieser Hinsicht?
+    options_de:
+      a: Sie kann nur einer im Kanton öffentlich-rechtlich anerkannten Religion angehören.
+      b: Sie kann ihre Religion frei wählen, ausüben oder keiner Religion angehören.
+      c: Sie kann ihre Religion privat wählen, aber sie nirgendwo gemeinsam mit anderen ausüben.
+      d: Sie muss sich bei der Gemeinde für eine anerkannte Religion entscheiden.
+    explanation_de: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung garantiert.
+      Jede Person kann ihre Religion frei wählen, allein oder zusammen mit anderen ausüben oder keiner
+      Religion angehören. Niemand kann gezwungen werden, einer Religionsgemeinschaft anzugehören.

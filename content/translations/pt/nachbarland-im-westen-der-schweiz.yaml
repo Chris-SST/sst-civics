@@ -1,0 +1,29 @@
+id: nachbarland-im-westen-der-schweiz
+lang: pt
+source_version: 1
+question: Que país faz fronteira com a Suíça a oeste?
+options:
+  a: Alemanha
+  b: Itália
+  c: França
+  d: Áustria
+explanation: A oeste e a noroeste, a Suíça faz fronteira com a França. A Alemanha situa-se a norte, a
+  Áustria e o Listenstaine a leste, e a Itália a sul.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Land grenzt im Westen an die Schweiz?
+    options_de:
+      a: Deutschland
+      b: Italien
+      c: Frankreich
+      d: Österreich
+    explanation_de: Im Westen und im Nordwesten grenzt die Schweiz an Frankreich. Deutschland liegt im
+      Norden, Österreich und Liechtenstein im Osten und Italien im Süden.

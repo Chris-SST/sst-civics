@@ -1,0 +1,31 @@
+id: greifensee-zweitgroesster-see-zuerich
+lang: tr
+source_version: 1
+question: Zürih kantonunda Zürih Gölü'nden sonra en büyük ikinci göl hangisidir?
+options:
+  a: Greifensee
+  b: Pfäffikersee
+  c: Türlersee
+  d: Katzensee
+explanation: Greifensee, Uster ile Dübendorf arasında yer alır ve kantondaki Zürih Gölü'nden sonra en
+  büyük ikinci göldür. Pfäffikersee daha küçüktür. Türlersee ve Katzensee ise belirgin biçimde daha da
+  küçüktür.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher ist im Kanton Zürich nach dem Zürichsee der zweitgrösste See?
+    options_de:
+      a: Greifensee
+      b: Pfäffikersee
+      c: Türlersee
+      d: Katzensee
+    explanation_de: Der Greifensee liegt zwischen Uster und Dübendorf und ist nach dem Zürichsee der zweitgrösste
+      See im Kanton. Der Pfäffikersee ist kleiner. Der Türlersee und der Katzensee sind deutlich noch
+      kleiner.

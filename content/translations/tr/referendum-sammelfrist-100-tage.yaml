@@ -1,0 +1,31 @@
+id: referendum-sammelfrist-100-tage
+lang: tr
+source_version: 1
+question: Konfederasyon yasasına karşı isteğe bağlı bir referandum için imzaları toplamak üzere referandum
+  komitelerinin ne kadar süresi vardır?
+options:
+  a: 60 gün
+  b: 18 ay
+  c: 100 gün
+  d: 30 gün
+explanation: Süre, düzenlemenin resmî olarak yayımlanmasından itibaren 100 gündür. 18 ay ise buna karşılık
+  bir halk girişimi (Volksinitiative) için imza toplamada geçerlidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viel Zeit haben die Referendumskomitees, um Unterschriften für ein fakultatives Referendum
+      gegen ein Bundesgesetz zu sammeln?
+    options_de:
+      a: 60 Tage
+      b: 18 Monate
+      c: 100 Tage
+      d: 30 Tage
+    explanation_de: Die Frist beträgt 100 Tage ab der amtlichen Veröffentlichung des Erlasses. 18 Monate
+      gelten hingegen für die Unterschriftensammlung bei einer Volksinitiative.

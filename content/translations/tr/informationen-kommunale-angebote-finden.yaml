@@ -1,0 +1,33 @@
+id: informationen-kommunale-angebote-finden
+lang: tr
+source_version: 2
+question: Kendi belediyenizin (Gemeinde) hizmetleri ve kuralları hakkında bilgiyi nerede bulabilirsiniz?
+options:
+  a: Eidgenossenschaft'ın Resmî Gazetesi'nde (Bundesblatt)
+  b: Yerel gazetede veya belediyenin internet sitesinde
+  c: Geldiğiniz ülkenin büyükelçiliğinde
+  d: Bern'deki Federal Konsey'de (Bundesrat)
+explanation: Belediye, hizmetleri ve kuralları hakkında özellikle yerel gazetede ve internetteki web sitesinde
+  bilgi verir. Konfederasyon ve Federal Konsey ulusal konulardan sorumludur; yabancı bir büyükelçilik
+  ise belediyeden hiçbir şekilde sorumlu değildir. Belediye idaresi de bilgi verir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wo können Sie Informationen über die Dienstleistungen und Regeln Ihrer eigenen Gemeinde
+      finden?
+    options_de:
+      a: Im Amtsblatt der Eidgenossenschaft (Bundesblatt)
+      b: In der lokalen Zeitung oder auf der Internetseite der Gemeinde
+      c: In der Botschaft des Landes, aus dem Sie kommen
+      d: Im Bundesrat in Bern
+    explanation_de: Die Gemeinde informiert über ihre Dienstleistungen und Regeln insbesondere in der
+      lokalen Zeitung und auf ihrer Website im Internet. Die Eidgenossenschaft und der Bundesrat sind
+      für nationale Angelegenheiten zuständig; eine ausländische Botschaft ist hingegen in keiner Weise
+      für die Gemeinde zuständig. Auch die Gemeindeverwaltung gibt Auskunft.

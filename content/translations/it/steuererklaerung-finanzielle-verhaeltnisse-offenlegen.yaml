@@ -1,0 +1,29 @@
+id: steuererklaerung-finanzielle-verhaeltnisse-offenlegen
+lang: it
+source_version: 1
+question: A cosa serve la dichiarazione d'imposta che i contribuenti compilano ogni anno?
+options:
+  a: Serve per la registrazione presso l'ufficio controllo abitanti.
+  b: È la richiesta di un'assicurazione malattia.
+  c: È l'iscrizione al servizio civile (Zivildienst).
+  d: Serve a rendere note alle autorità fiscali le proprie condizioni finanziarie.
+explanation: Con la dichiarazione d'imposta i contribuenti indicano reddito, patrimonio e deduzioni. Su
+  questa base l'autorità fiscale calcola l'imposta.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient die Steuererklärung, die die Steuerpflichtigen jedes Jahr ausfüllen?
+    options_de:
+      a: Sie dient der Anmeldung beim Einwohnerkontrollamt.
+      b: Sie ist der Antrag auf eine Krankenversicherung.
+      c: Sie ist die Anmeldung für den Zivildienst.
+      d: Sie dient dazu, den Steuerbehörden die eigenen finanziellen Verhältnisse bekannt zu geben.
+    explanation_de: Mit der Steuererklärung geben die Steuerpflichtigen Einkommen, Vermögen und Abzüge
+      an. Auf dieser Grundlage berechnet die Steuerbehörde die Steuer.

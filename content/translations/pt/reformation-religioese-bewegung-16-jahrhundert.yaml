@@ -1,0 +1,30 @@
+id: reformation-religioese-bewegung-16-jahrhundert
+lang: pt
+source_version: 1
+question: Qual importante movimento religioso marcou a Europa, e também a Suíça, no século XVI?
+options:
+  a: A Reforma
+  b: O Iluminismo
+  c: A Regeneração
+  d: A República Helvética
+explanation: A Reforma dividiu a Igreja na Europa no século XVI. Na Suíça, foram importantes, por exemplo,
+  Huldrych Zwingli em Zurique e João Calvino em Genebra. Os outros termos designam desenvolvimentos posteriores.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche wichtige religiöse Bewegung prägte im 16. Jahrhundert Europa und auch die Schweiz?
+    options_de:
+      a: Die Reformation
+      b: Die Aufklärung
+      c: Die Regeneration
+      d: Die Helvetische Republik
+    explanation_de: Die Reformation spaltete im 16. Jahrhundert die Kirche in Europa. In der Schweiz waren
+      zum Beispiel Huldrych Zwingli in Zürich und Johannes Calvin in Genf wichtig. Die anderen Begriffe
+      bezeichnen spätere Entwicklungen.

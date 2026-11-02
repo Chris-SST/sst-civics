@@ -1,0 +1,35 @@
+id: bahnunternehmen-der-schweiz-erkennen
+lang: tr
+source_version: 1
+question: Aşağıdaki kısaltmaların hangisinde yer alan tüm kısaltmalar İsviçre'deki demiryolu şirketlerini
+  ifade etmektedir?
+options:
+  a: SOB, SEM, BLS ve SZU
+  b: SBB, BLS, SOB ve SZU
+  c: SBB, SRF, SOB ve SUVA
+  d: BLS, SZU, SNB ve SBB
+explanation: SBB, BLS, SOB ve SZU, İsviçre'de tren işleten demiryolu şirketleridir. SBB en büyük şirkettir;
+  diğerleri ise çoğunlukla bölgesel olarak hizmet veren daha küçük demiryollarıdır. Diğer kısaltmalar,
+  Merkez Bankası (SNB), Göç Devlet Sekreterliği (SEM) veya kaza sigortası (SUVA) gibi kuruluşları ifade
+  etmektedir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher der folgenden Abkürzungsreihen stehen alle Abkürzungen für Eisenbahnunternehmen
+      in der Schweiz?
+    options_de:
+      a: SOB, SEM, BLS und SZU
+      b: SBB, BLS, SOB und SZU
+      c: SBB, SRF, SOB und SUVA
+      d: BLS, SZU, SNB und SBB
+    explanation_de: SBB, BLS, SOB und SZU sind Eisenbahnunternehmen, die in der Schweiz Züge betreiben.
+      Die SBB ist das grösste Unternehmen; die anderen sind kleinere Bahnen, die meist regional verkehren.
+      Die anderen Abkürzungen stehen für Institutionen wie die Zentralbank (SNB), das Staatssekretariat
+      für Migration (SEM) oder die Unfallversicherung (SUVA).

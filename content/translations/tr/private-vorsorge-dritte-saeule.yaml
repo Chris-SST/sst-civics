@@ -1,0 +1,29 @@
+id: private-vorsorge-dritte-saeule
+lang: tr
+source_version: 1
+question: İsviçre'de yaşlılık güvencesinin üçüncü sütununu ne oluşturur?
+options:
+  a: Zorunlu kaza sigortası
+  b: Özel emeklilik birikimi
+  c: İşverenin emeklilik sandığı (Pensionskasse)
+  d: Tamamlayıcı yardımlar
+explanation: Üçüncü sütun, örneğin bağlı tasarruf gibi özel emeklilik birikimidir. İsteğe bağlıdır ve
+  ilk iki sütunu tamamlar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bildet in der Schweiz die dritte Säule der Altersvorsorge?
+    options_de:
+      a: Obligatorische Unfallversicherung
+      b: Private Altersvorsorge
+      c: Die Pensionskasse des Arbeitgebers
+      d: Ergänzungsleistungen
+    explanation_de: Die dritte Säule ist die private Altersvorsorge, zum Beispiel das gebundene Sparen.
+      Sie ist freiwillig und ergänzt die ersten beiden Säulen.

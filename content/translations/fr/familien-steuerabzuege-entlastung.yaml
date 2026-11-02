@@ -1,0 +1,29 @@
+id: familien-steuerabzuege-entlastung
+lang: fr
+source_version: 1
+question: Comment les familles sont-elles allégées en matière d'impôts ?
+options:
+  a: Les familles ne paient pas d'impôts.
+  b: Les familles peuvent faire valoir des déductions fiscales.
+  c: Les familles n'ont pas à remplir de déclaration d'impôt.
+  d: Les familles paient uniquement la taxe sur la valeur ajoutée.
+explanation: Les familles peuvent par exemple faire valoir des déductions pour les enfants ou pour la
+  garde des enfants. Le revenu imposable diminue ainsi, et l'impôt aussi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie werden Familien bei den Steuern entlastet?
+    options_de:
+      a: Familien zahlen keine Steuern.
+      b: Familien können Steuerabzüge geltend machen.
+      c: Familien müssen keine Steuererklärung ausfüllen.
+      d: Familien zahlen nur die Mehrwertsteuer.
+    explanation_de: Familien können zum Beispiel Abzüge für die Kinder oder für die Kinderbetreuung geltend
+      machen. Dadurch sinkt das steuerbare Einkommen und damit auch die Steuer.

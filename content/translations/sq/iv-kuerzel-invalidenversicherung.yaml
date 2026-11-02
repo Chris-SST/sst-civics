@@ -1,0 +1,33 @@
+id: iv-kuerzel-invalidenversicherung
+lang: sq
+source_version: 1
+question: Çfarë do të thotë shkurtesa «IV» (sigurimi i invaliditetit) në sistemin zviceran të sigurimeve
+  shoqërore?
+options:
+  a: Sigurimi i brendshëm (Inlandversicherung)
+  b: Sigurimi i invaliditetit (Invalidenversicherung)
+  c: Sigurimi i integrimit (Integrationsversicherung)
+  d: Sigurimi individual (Individualversicherung)
+explanation: IV do të thotë sigurimi i invaliditetit (Invalidenversicherung). Ai bën pjesë në shtyllën
+  e parë të parashikimit për pleqëri dhe u ndihmon personave me kufizime shëndetësore, për shembull me
+  masa riintegrimi ose me pensione.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: Die Frage der Rückübersetzung enthält zusätzlich «(Invalidenversicherung)» und verrät damit
+      die richtige Antwort b. Das ist ein zusätzlicher Teil, den die deutsche Fassung nicht hat.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Was bedeutet die Abkürzung «IV» (Invalidenversicherung) im Schweizer System der Sozialversicherungen?
+    options_de:
+      a: Inlandversicherung
+      b: Invalidenversicherung
+      c: Integrationsversicherung
+      d: Individualversicherung
+    explanation_de: IV bedeutet Invalidenversicherung. Sie gehört zur ersten Säule der Altersvorsorge
+      und hilft Personen mit gesundheitlichen Einschränkungen, zum Beispiel mit Massnahmen zur Wiedereingliederung
+      oder mit Renten.

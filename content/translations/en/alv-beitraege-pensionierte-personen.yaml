@@ -11,6 +11,23 @@ options:
 explanation: The obligation to pay contributions to unemployment insurance ends when a person reaches
   the OASI retirement age. Anyone who is retired no longer pays ALV contributions on any wages they may
   earn. Part-time and full-time employees, on the other hand, do pay contributions.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer in der Schweiz muss keine Beiträge mehr an die Arbeitslosenversicherung (ALV) bezahlen?
+    options_de:
+      a: Personen in einem unbefristeten Arbeitsverhältnis
+      b: Personen, die das ordentliche Rentenalter der Alters- und Hinterlassenenversicherung (AHV) erreicht
+        haben
+      c: Personen, die Teilzeit arbeiten
+      d: Personen, die in den letzten zwei Jahren nie arbeitslos waren
+    explanation_de: Die Beitragspflicht zur Arbeitslosenversicherung endet, wenn eine Person das AHV-Rentenalter
+      erreicht. Wer pensioniert ist, bezahlt auf einem allfälligen Lohn keine ALV-Beiträge mehr. Teilzeit-
+      und Vollzeitangestellte bezahlen hingegen Beiträge.

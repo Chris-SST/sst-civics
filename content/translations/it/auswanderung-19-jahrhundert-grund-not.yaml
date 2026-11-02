@@ -1,0 +1,33 @@
+id: auswanderung-19-jahrhundert-grund-not
+lang: it
+source_version: 1
+question: Nel XIX secolo molte persone lasciarono la Svizzera ed emigrarono, ad esempio, in America. Quale
+  fu un motivo importante?
+options:
+  a: La miseria e la mancanza di lavoro minacciavano la loro esistenza.
+  b: La Confederazione vietava loro di risiedere in Svizzera.
+  c: La Svizzera non aveva abbastanza spazio per le fabbriche.
+  d: All'estero non c'erano tasse per i nuovi arrivati.
+explanation: Nel XIX secolo la Svizzera era ancora un Paese di emigrazione. Carestie, povertà e mancanza
+  di lavoro spinsero molte persone a cercare una nuova vita all'estero. Solo più tardi la Svizzera divenne
+  un Paese di immigrazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Im 19. Jahrhundert verliessen viele Menschen die Schweiz und wanderten zum Beispiel nach
+      Amerika aus. Was war ein wichtiger Grund?
+    options_de:
+      a: Not und Arbeitsmangel bedrohten ihre Existenz.
+      b: Der Bund verbot ihnen, in der Schweiz zu wohnen.
+      c: Die Schweiz hatte nicht genügend Platz für Fabriken.
+      d: Im Ausland gab es für Neuankömmlinge keine Steuern.
+    explanation_de: Im 19. Jahrhundert war die Schweiz noch ein Auswanderungsland. Hungersnöte, Armut
+      und Arbeitsmangel trieben viele Menschen dazu, im Ausland ein neues Leben zu suchen. Erst später
+      wurde die Schweiz zu einem Einwanderungsland.

@@ -1,0 +1,33 @@
+id: krankenversicherung-obligatorisch-einwohner
+lang: es
+source_version: 1
+question: ¿Quién debe contratar un seguro de enfermedad en Suiza?
+options:
+  a: Solo las personas con ciudadanía (Bürgerrecht) suiza
+  b: Todas las personas que residen en Suiza
+  c: Solo las personas menores de 65 años
+  d: Solo las personas con actividad laboral
+explanation: El seguro obligatorio de atención médica rige para todas las personas con domicilio en Suiza.
+  La ciudadanía, la actividad laboral y la edad no tienen ninguna importancia. El seguro debe contratarse
+  en un plazo de tres meses desde la llegada al país.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: In der Erklärung wird «nach dem Zuzug» (Zuzug in die Schweiz bzw. Wohnsitznahme) zu «nach
+      der Einreise in das Land»; Einreise und Zuzug sind nicht dasselbe, da die Frist ab Wohnsitznahme
+      läuft. Die übrigen Stellen sind gleichbedeutend.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wer muss in der Schweiz eine Krankenversicherung abschliessen?
+    options_de:
+      a: Nur Personen mit Schweizer Bürgerrecht
+      b: Alle Personen, die in der Schweiz wohnen
+      c: Nur Personen unter 65 Jahren
+      d: Nur Personen mit Erwerbstätigkeit
+    explanation_de: Die obligatorische Krankenpflegeversicherung gilt für alle Personen mit Wohnsitz in
+      der Schweiz. Das Bürgerrecht, die Erwerbstätigkeit und das Alter spielen keine Rolle. Die Versicherung
+      muss innerhalb von drei Monaten nach der Einreise in das Land abgeschlossen werden.

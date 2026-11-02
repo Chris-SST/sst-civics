@@ -1,0 +1,31 @@
+id: verbot-kinderarbeit-fabrik-schulunterricht
+lang: tr
+source_version: 1
+question: 1877'de fabrikalarda çocuk işçiliğinin yasaklanması her şeyden önce neyi güvence altına almayı
+  amaçlıyordu?
+options:
+  a: Fabrikaların daha az ücret ödemek zorunda kalmasını
+  b: Çocukların okula gidebilmesini
+  c: Çocukların evde daha erken yaşta yardım etmek zorunda kalmasını
+  d: Fabrikaların yurt dışından daha fazla işgücü getirmesini
+explanation: 1877 tarihli Fabrika Yasası, çocukların fabrikada çalışmasını yasakladı. Çocuklar çalışmak
+  yerine okulda eğitim görecekti. Yasa aynı zamanda çalışanların sağlığını da koruyordu.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sollte das Verbot der Kinderarbeit in Fabriken im Jahr 1877 vor allem sicherstellen?
+    options_de:
+      a: Dass die Fabriken weniger Lohn zahlen müssen
+      b: Dass die Kinder zur Schule gehen können
+      c: Dass die Kinder zu Hause in jüngerem Alter helfen müssen
+      d: Dass die Fabriken mehr Arbeitskräfte aus dem Ausland holen
+    explanation_de: Das Fabrikgesetz von 1877 verbot die Arbeit von Kindern in der Fabrik. Die Kinder
+      sollten statt zu arbeiten in der Schule unterrichtet werden. Das Gesetz schützte gleichzeitig auch
+      die Gesundheit der Arbeitenden.

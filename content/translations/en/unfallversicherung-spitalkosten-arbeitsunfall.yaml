@@ -11,6 +11,23 @@ options:
 explanation: Compulsory accident insurance pays the treatment costs, for example hospital costs, in the
   case of occupational accidents. Employees are insured against this through their employer. The other
   insurance schemes mentioned cover other risks.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ein Arbeitnehmer hat bei der Arbeit einen schweren Unfall und muss ins Spital. Welche
+      Versicherung übernimmt die Spitalkosten?
+    options_de:
+      a: Arbeitslosenversicherung
+      b: Unfallversicherung
+      c: Erwerbsersatzordnung
+      d: Alters- und Hinterlassenenversicherung
+    explanation_de: Die obligatorische Unfallversicherung bezahlt bei Berufsunfällen die Behandlungskosten,
+      zum Beispiel die Spitalkosten. Arbeitnehmer sind dagegen über ihren Arbeitgeber versichert. Die
+      anderen genannten Versicherungen decken andere Risiken ab.

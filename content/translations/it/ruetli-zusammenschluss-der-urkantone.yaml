@@ -1,0 +1,31 @@
+id: ruetli-zusammenschluss-der-urkantone
+lang: it
+source_version: 1
+question: Che cosa rappresenta il Grütli nella storia svizzera?
+options:
+  a: L'unione dei Cantoni primitivi
+  b: La vittoria nella battaglia di Marignano
+  c: L'inizio della Riforma
+  d: La fondazione dello Stato federale nel 1848
+explanation: Secondo la tradizione, sul Grütli i rappresentanti dei Cantoni primitivi avrebbero stretto
+  un'alleanza. Per questo è considerato un simbolo delle origini della Confederazione. Il prato si trova
+  sul Lago dei Quattro Cantoni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was stellt das Rütli in der Schweizer Geschichte dar?
+    options_de:
+      a: Den Zusammenschluss der Urkantone
+      b: Den Sieg in der Schlacht von Marignano
+      c: Den Beginn der Reformation
+      d: Die Gründung des Bundesstaates im Jahr 1848
+    explanation_de: Der Überlieferung nach sollen auf dem Rütli die Vertreter der Urkantone ein Bündnis
+      geschlossen haben. Deshalb gilt es als Symbol für die Ursprünge der Eidgenossenschaft. Die Wiese
+      liegt am Vierwaldstättersee.

@@ -1,0 +1,31 @@
+id: ahv-abkuerzung-bedeutung
+lang: fr
+source_version: 1
+question: Que signifie l'abréviation AHV (assurance-vieillesse et survivants, AVS) ?
+options:
+  a: Assurance-vieillesse et survivants
+  b: Assurance officielle du ménage
+  c: Aide générale pour les assurés
+  d: Assurance-chômage et assurance de guérison
+explanation: L'AHV signifie « Alters- und Hinterlassenenversicherung », c'est-à-dire assurance-vieillesse
+  et survivants. Elle verse des rentes à la retraite et aux survivants, par exemple aux veuves, aux veufs
+  et aux orphelins.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Abkürzung AHV (Alters- und Hinterlassenenversicherung, AVS)?
+    options_de:
+      a: Alters- und Hinterlassenenversicherung
+      b: Offizielle Haushaltsversicherung
+      c: Allgemeine Hilfe für Versicherte
+      d: Arbeitslosenversicherung und Heilungsversicherung
+    explanation_de: Die AHV steht für «Alters- und Hinterlassenenversicherung», das heisst Alters- und
+      Hinterlassenenversicherung. Sie zahlt Renten bei der Pensionierung und an die Hinterlassenen, zum
+      Beispiel an Witwen, Witwer und Waisen.

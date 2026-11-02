@@ -10,6 +10,23 @@ options:
 explanation: The term «Röstigraben» is a figurative expression. It describes the cultural differences
   between German-speaking Switzerland and the French-speaking Romandie. These sometimes show themselves,
   for example, in votes.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was versteht man in der Schweiz unter dem Begriff «Röstigraben»?
+    options_de:
+      a: Die Alpen als Trennlinie zwischen Norden und Süden
+      b: Die Unterschiede zwischen Stadt und Land
+      c: Die Grenze zwischen der Schweiz und Deutschland
+      d: Die kulturellen Unterschiede zwischen der Deutschschweiz und der französischsprachigen Schweiz
+        (Romandie)
+    explanation_de: Der Begriff «Röstigraben» ist ein bildhafter Ausdruck. Er beschreibt die kulturellen
+      Unterschiede zwischen der Deutschschweiz und der französischsprachigen Romandie. Diese zeigen sich
+      manchmal zum Beispiel bei Abstimmungen.

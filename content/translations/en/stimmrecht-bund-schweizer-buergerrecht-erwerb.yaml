@@ -11,6 +11,22 @@ options:
 explanation: The right to vote and to stand for election at federal level is tied to Swiss citizenship.
   A settlement permit, a certain length of residence or paying taxes is not enough. Anyone who is naturalised
   and is of legal age may take part in federal elections and referendums.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ab wann erhält eine Person aus dem Ausland das Stimm- und Wahlrecht auf Bundesebene?
+    options_de:
+      a: Sobald sie seit zehn Jahren in der Schweiz gelebt hat.
+      b: Sobald sie eine Niederlassungsbewilligung (C-Bewilligung) erhält.
+      c: Sobald sie in der Schweiz Steuern zahlt und arbeitet.
+      d: Sobald sie das Schweizer Bürgerrecht besitzt und volljährig ist.
+    explanation_de: Das Stimm- und Wahlrecht auf Bundesebene ist an das Schweizer Bürgerrecht geknüpft.
+      Eine Niederlassungsbewilligung, eine bestimmte Aufenthaltsdauer oder das Bezahlen von Steuern genügen
+      nicht. Wer eingebürgert und volljährig ist, darf an eidgenössischen Wahlen und Abstimmungen teilnehmen.

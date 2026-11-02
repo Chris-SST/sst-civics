@@ -1,0 +1,30 @@
+id: anmeldung-wohngemeinde-bei-zuzug
+lang: pt
+source_version: 1
+question: O que devem fazer as pessoas que se estabelecem numa comuna (Gemeinde)?
+options:
+  a: Devem registar-se na comuna de residência.
+  b: Devem apresentar-se ao exército.
+  c: Devem apresentar-se ao Conselho Federal (Bundesrat).
+  d: Devem apresentar-se à administração fiscal da Confederação.
+explanation: Quem se muda para um novo local deve registar-se na comuna de residência. Isso é feito, em
+  regra, no serviço de registo de residentes (Einwohnerkontrolle). Assim, a comuna está informada sobre
+  os seus habitantes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was müssen Personen tun, die sich in einer Gemeinde niederlassen?
+    options_de:
+      a: Sie müssen sich in der Wohngemeinde anmelden.
+      b: Sie müssen sich bei der Armee melden.
+      c: Sie müssen sich beim Bundesrat melden.
+      d: Sie müssen sich bei der Steuerverwaltung des Bundes melden.
+    explanation_de: Wer an einen neuen Ort zieht, muss sich in der Wohngemeinde anmelden. Das geschieht
+      in der Regel bei der Einwohnerkontrolle. So ist die Gemeinde über ihre Einwohner informiert.

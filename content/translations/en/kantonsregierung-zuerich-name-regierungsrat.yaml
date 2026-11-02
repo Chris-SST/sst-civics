@@ -9,6 +9,21 @@ options:
   d: Executive Council (Regierungsrat)
 explanation: The government of the canton of Zürich is called the Executive Council. The Cantonal Council
   is the parliament, and the Obergericht belongs to the judiciary.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Regierung des Kantons Zürich?
+    options_de:
+      a: Obergericht
+      b: Kantonsrat
+      c: Bundesrat
+      d: Regierungsrat
+    explanation_de: Die Regierung des Kantons Zürich heisst Regierungsrat. Der Kantonsrat ist das Parlament,
+      und das Obergericht gehört zur Judikative.

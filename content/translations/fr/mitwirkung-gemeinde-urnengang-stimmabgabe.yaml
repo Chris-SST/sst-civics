@@ -1,0 +1,32 @@
+id: mitwirkung-gemeinde-urnengang-stimmabgabe
+lang: fr
+source_version: 1
+question: Comment les personnes ayant le droit de vote participent-elles à la vie politique de leur commune
+  (Gemeinde) lors des scrutins ?
+options:
+  a: Elles dirigent les séances du conseil communal (Gemeinderat)
+  b: Elles mettent en œuvre les décisions de la commune
+  c: Elles votent lors des élections et des votations
+  d: Elles édictent elles-mêmes les lois du canton
+explanation: Lors des scrutins, les personnes ayant le droit de vote se prononcent sur des objets soumis
+  au vote et élisent les autorités. La mise en œuvre des décisions incombe aux autorités et à l'administration.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie beteiligen sich die Stimmberechtigten bei Abstimmungen und Wahlen am politischen
+      Leben ihrer Gemeinde?
+    options_de:
+      a: Sie leiten die Sitzungen des Gemeinderats
+      b: Sie setzen die Beschlüsse der Gemeinde um
+      c: Sie stimmen bei den Wahlen und Abstimmungen ab
+      d: Sie erlassen selbst die Gesetze des Kantons
+    explanation_de: Bei Urnengängen äussern sich die Stimmberechtigten zu Vorlagen, die zur Abstimmung
+      gebracht werden, und wählen die Behörden. Die Umsetzung der Beschlüsse obliegt den Behörden und
+      der Verwaltung.

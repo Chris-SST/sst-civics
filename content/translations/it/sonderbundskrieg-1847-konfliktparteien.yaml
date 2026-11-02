@@ -1,0 +1,31 @@
+id: sonderbundskrieg-1847-konfliktparteien
+lang: it
+source_version: 1
+question: Tra chi fu combattuta in Svizzera, nel 1847, la guerra del Sonderbund?
+options:
+  a: Tra i Cantoni di lingua tedesca e i Cantoni di lingua francese
+  b: Tra le forze liberali e i Cantoni cattolici
+  c: Tra Cantoni urbani e Cantoni rurali a causa delle imposte
+  d: Tra la Svizzera e la Francia
+explanation: Nel Sonderbund si erano uniti diversi Cantoni cattolico-conservatori. Le forze liberali volevano
+  una Confederazione più forte. La breve guerra si concluse con la vittoria del fronte liberale e aprì
+  la strada allo Stato federale del 1848.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Zwischen wem wurde in der Schweiz 1847 der Sonderbundskrieg geführt?
+    options_de:
+      a: Zwischen den deutschsprachigen Kantonen und den französischsprachigen Kantonen
+      b: Zwischen den liberalen Kräften und den katholischen Kantonen
+      c: Zwischen städtischen Kantonen und ländlichen Kantonen wegen der Steuern
+      d: Zwischen der Schweiz und Frankreich
+    explanation_de: Im Sonderbund hatten sich mehrere katholisch-konservative Kantone zusammengeschlossen.
+      Die liberalen Kräfte wollten einen stärkeren Bund. Der kurze Krieg endete mit dem Sieg der liberalen
+      Seite und ebnete den Weg zum Bundesstaat von 1848.

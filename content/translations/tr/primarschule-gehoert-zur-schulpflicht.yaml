@@ -1,0 +1,32 @@
+id: primarschule-gehoert-zur-schulpflicht
+lang: tr
+source_version: 2
+question: İsviçre'de bu kademelerden hangisi zorunlu eğitim süresine dahildir?
+options:
+  a: Yüksekokul
+  b: İlkokul (Primarschule)
+  c: Oyun grubu
+  d: Meslek okulu
+explanation: 'Zürich kantonunda zorunlu eğitim süresi on bir yıldır: anaokulu, ilkokul ve ortaokul kademesi
+  I. Küçük çocuklar için oyun grubu isteğe bağlıdır. Meslek okuluna ve yüksekokula ancak zorunlu eğitim
+  süresinden sonra devam edilir.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: «Berufsschule» ist ein Synonym für «Berufsfachschule», alle anderen Stellen
+      stimmen inhaltlich überein.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche dieser Stufen gehört in der Schweiz zur obligatorischen Schulzeit?
+    options_de:
+      a: Hochschule
+      b: Primarschule
+      c: Spielgruppe
+      d: Berufsschule
+    explanation_de: 'Im Kanton Zürich beträgt die obligatorische Schulzeit elf Jahre: Kindergarten, Primarschule
+      und Sekundarstufe I. Die Spielgruppe für kleine Kinder ist freiwillig. Die Berufsschule und die
+      Hochschule werden erst nach der obligatorischen Schulzeit besucht.'

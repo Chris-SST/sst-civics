@@ -1,0 +1,30 @@
+id: auslaender-anzahl-schweiz-2020
+lang: tr
+source_version: 1
+question: 2020 yılında İsviçre pasaportu olmayan yaklaşık kaç kişi İsviçre'de daimi olarak yaşıyordu?
+options:
+  a: yaklaşık 2,1 milyon
+  b: yaklaşık 0,8 milyon
+  c: yaklaşık 3,5 milyon
+  d: yaklaşık 1,4 milyon
+explanation: 2020 yılının sonunda İsviçre'de yaklaşık 2,1 milyon yabancı yaşıyordu. Bu kişiler daimi yerleşik
+  nüfusa dahildir. Bu rakamları Federal İstatistik Ofisi (Bundesamt für Statistik) yayımlamaktadır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Personen ohne Schweizer Pass lebten im Jahr 2020 ungefähr dauerhaft in der
+      Schweiz?
+    options_de:
+      a: ungefähr 2,1 Millionen
+      b: ungefähr 0,8 Millionen
+      c: ungefähr 3,5 Millionen
+      d: ungefähr 1,4 Millionen
+    explanation_de: Ende 2020 lebten in der Schweiz ungefähr 2,1 Millionen Ausländer. Diese Personen gehören
+      zur ständigen Wohnbevölkerung. Diese Zahlen werden vom Bundesamt für Statistik veröffentlicht.

@@ -1,0 +1,29 @@
+id: wohnortswechsel-anmeldung-einwohnerkontrolle
+lang: es
+source_version: 1
+question: ¿Dónde debe registrarse usted si se traslada a otro municipio (Gemeinde) del cantón de Zúrich?
+options:
+  a: En el tribunal de distrito
+  b: En la Oficina Federal de Estadística
+  c: En la policía cantonal
+  d: En el control de habitantes (Einwohnerkontrolle) del nuevo municipio de residencia
+explanation: El registro se realiza en el control de habitantes, también llamado oficina de habitantes
+  (Einwohneramt). Este lleva el registro de los habitantes del municipio.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo müssen Sie sich anmelden, wenn Sie in eine andere Gemeinde des Kantons Zürich umziehen?
+    options_de:
+      a: Beim Bezirksgericht
+      b: Beim Bundesamt für Statistik
+      c: Bei der Kantonspolizei
+      d: Bei der Einwohnerkontrolle der neuen Wohngemeinde
+    explanation_de: Die Anmeldung erfolgt bei der Einwohnerkontrolle, auch Einwohneramt genannt. Diese
+      führt das Register der Einwohner der Gemeinde.

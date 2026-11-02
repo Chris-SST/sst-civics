@@ -7,8 +7,23 @@ options:
   b: Always on a Saturday
   c: Always on a Friday
   d: On a weekday that each canton chooses for itself
-explanation: Votes at Confederation level always take place on a Sunday. This allows as many eligible
-  voters as possible to take part, and the date is the same for everyone.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: Votes and elections at Confederation level always take place on a Sunday. This allows as
+  many eligible voters as possible to take part, and the date is the same for everyone.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welchem Wochentag finden in der Schweiz eidgenössische Abstimmungen und Wahlen statt?
+    options_de:
+      a: Immer an einem Sonntag
+      b: Immer an einem Samstag
+      c: Immer an einem Freitag
+      d: An einem Wochentag, den jeder Kanton selbst wählt
+    explanation_de: Abstimmungen und Wahlen auf Ebene des Bundes finden immer an einem Sonntag statt.
+      Dadurch können möglichst viele Stimmberechtigte teilnehmen, und das Datum ist für alle dasselbe.

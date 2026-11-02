@@ -1,0 +1,29 @@
+id: anmeldung-wohngemeinde-bei-zuzug
+lang: it
+source_version: 1
+question: Che cosa devono fare le persone che si stabiliscono in un Comune (Gemeinde)?
+options:
+  a: Devono annunciarsi presso il Comune di domicilio.
+  b: Devono presentarsi presso l'esercito.
+  c: Devono presentarsi presso il Consiglio federale (Bundesrat).
+  d: Devono presentarsi presso l'amministrazione delle imposte della Confederazione.
+explanation: Chi si trasferisce in un nuovo luogo deve registrarsi presso il Comune di domicilio. Di norma
+  ciò avviene presso il controllo degli abitanti. In questo modo il Comune è informato sui propri abitanti.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was müssen Personen tun, die sich in einer Gemeinde niederlassen?
+    options_de:
+      a: Sie müssen sich bei der Wohngemeinde anmelden.
+      b: Sie müssen sich bei der Armee melden.
+      c: Sie müssen sich beim Bundesrat melden.
+      d: Sie müssen sich bei der Steuerverwaltung des Bundes melden.
+    explanation_de: Wer an einen neuen Ort zieht, muss sich bei der Wohngemeinde anmelden. In der Regel
+      geschieht dies beim Einwohnerkontrolle. So ist die Gemeinde über ihre Einwohner informiert.

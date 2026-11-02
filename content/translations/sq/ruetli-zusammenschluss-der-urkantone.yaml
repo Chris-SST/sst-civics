@@ -1,0 +1,31 @@
+id: ruetli-zusammenschluss-der-urkantone
+lang: sq
+source_version: 1
+question: Çfarë simbolizon Rütli-ja në historinë e Zvicrës?
+options:
+  a: Bashkimin e kantoneve themeluese
+  b: Fitoren në betejën e Marignanos
+  c: Fillimin e Reformës
+  d: Themelimin e shtetit federal në vitin 1848
+explanation: Sipas traditës, përfaqësues të kantoneve themeluese janë lidhur me besë në Rütli. Prandaj
+  ai konsiderohet simbol i fillimeve të Konfederatës (Eidgenossenschaft). Livadhi ndodhet buzë Liqenit
+  të Katër Kantoneve (Vierwaldstättersee).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was symbolisiert das Rütli in der Geschichte der Schweiz?
+    options_de:
+      a: Den Zusammenschluss der Gründungskantone
+      b: Den Sieg in der Schlacht von Marignano
+      c: Den Beginn der Reformation
+      d: Die Gründung des Bundesstaates im Jahr 1848
+    explanation_de: Der Überlieferung nach haben sich Vertreter der Gründungskantone auf dem Rütli durch
+      einen Treueschwur verbunden. Deshalb gilt es als Symbol der Anfänge der Eidgenossenschaft. Die Wiese
+      liegt am Vierwaldstättersee.

@@ -1,0 +1,29 @@
+id: staenderat-vertritt-anliegen-kantone
+lang: es
+source_version: 1
+question: ¿Qué cámara del Parlamento defiende principalmente los intereses de los cantones?
+options:
+  a: El Consejo Federal (Bundesrat)
+  b: El Consejo Nacional (Nationalrat)
+  c: El Consejo de los Estados (Ständerat)
+  d: El Tribunal Federal (Bundesgericht)
+explanation: El Consejo de los Estados (Ständerat) representa sobre todo a los cantones. Cada cantón envía
+  representantes a esta cámara. El Consejo Nacional (Nationalrat), en cambio, representa al pueblo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Kammer des Parlaments vertritt hauptsächlich die Interessen der Kantone?
+    options_de:
+      a: Der Bundesrat
+      b: Der Nationalrat
+      c: Der Ständerat
+      d: Das Bundesgericht
+    explanation_de: Der Ständerat vertritt vor allem die Kantone. Jeder Kanton entsendet Vertreter in
+      diese Kammer. Der Nationalrat hingegen vertritt das Volk.

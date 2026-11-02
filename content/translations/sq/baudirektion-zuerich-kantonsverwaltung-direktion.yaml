@@ -1,0 +1,31 @@
+id: baudirektion-zuerich-kantonsverwaltung-direktion
+lang: sq
+source_version: 1
+question: Cila nga institucionet e mëposhtme është një drejtori e administratës së kantonit të Cyrihut?
+options:
+  a: Drejtoria e komunës (Gemeinde)
+  b: Drejtoria e ndërtimit
+  c: Drejtoria e qytetit
+  d: Drejtoria e Konfederatës
+explanation: Drejtoria e ndërtimit është një nga drejtoritë e administratës së kantonit të Cyrihut. Administrata
+  e kantonit është e ndarë në disa drejtori, secila prej të cilave udhëhiqet nga një anëtar i Këshillit
+  Qeveritar (Regierungsrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Institutionen ist eine Direktion der Verwaltung des Kantons Zürich?
+    options_de:
+      a: Die Gemeindedirektion
+      b: Die Baudirektion
+      c: Die Stadtdirektion
+      d: Die Direktion des Bundes
+    explanation_de: Die Baudirektion ist eine der Direktionen der Verwaltung des Kantons Zürich. Die Kantonsverwaltung
+      ist in mehrere Direktionen aufgeteilt, von denen jede von einem Mitglied des Regierungsrates geleitet
+      wird.

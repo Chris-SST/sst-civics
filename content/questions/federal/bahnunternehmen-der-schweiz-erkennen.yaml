@@ -18,14 +18,14 @@ sources:
 - url: https://www.bav.admin.ch/dam/de/sd-web/kaJyy00Azzbo/adressatliste-tu-2025.pdf
   checked: &id001 2026-11-02
 - url: https://www.aboutswitzerland.eda.admin.ch/de/verkehr
-  checked: *id001
+  checked: 2026-11-02
 glossary:
 - SBB
 - Bahnunternehmen
 - BLS
 - SOB
 - SZU
-status: draft
+status: approved
 difficulty: 2
 covers:
 - zh-308
@@ -36,7 +36,53 @@ checks:
     model: claude-sonnet-5-5
     at: 2026-11-02
     version: 1
-    reasoning: SBB (Schweizerische Bundesbahnen), BLS, SOB (Schweizerische Südostbahn) und SZU (Sihltal
-      Zürich Uetliberg Bahn) sind alle Bahnunternehmen, während SEM (Staatssekretariat für Migration),
-      SRF (Schweizer Radio und Fernsehen), SUVA (Unfallversicherung) und SNB (Schweizerische Nationalbank)
-      keine Bahnunternehmen sind.
+    reasoning: SBB, BLS, SOB (Schweizerische Südostbahn) und SZU (Sihltal Zürich Uetliberg Bahn) sind
+      alle Bahnunternehmen, während SEM (Staatssekretariat für Migration), SRF (Schweizer Radio und Fernsehen),
+      SUVA (Unfallversicherung) und SNB (Schweizerische Nationalbank) keine Bahnunternehmen sind.
+  source:
+    verdict: supported
+    note: Quelle 1 (BAV-Adressliste der Transportunternehmen) führt SBB (SBB Konzern), SOB (Schweizerische
+      Südostbahn AG) und SZU (Sihltal Zürich Uetliberg Bahn) auf, ebenso BLS Netz AG (BLSN). SUVA steht
+      dort als Unfallversicherungsanstalt, was zur Erklärung passt. Quelle 2 bestätigt nur die SBB als
+      zentrales Bahnunternehmen.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt SRF nicht; ergänzen Sie «SRF (Schweizer Radio und Fernsehen)», damit
+        alle falschen Abkürzungen erklärt sind.'
+      - 'Klein: Die ausgeschriebenen Namen würden beim Lernen helfen, zum Beispiel «SBB (Schweizerische
+        Bundesbahnen), BLS, SOB (Schweizerische Südostbahn) und SZU (Sihltal Zürich Uetliberg Bahn)».'
+      - 'Klein: Die BLS und die SOB fahren auch Fernverkehrszüge; die Formulierung «oft regional unterwegs»
+        ist vertretbar, man könnte aber schreiben «die anderen sind kleinere Bahnunternehmen, vor allem
+        im Regionalverkehr».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt SRF nicht; ergänzen Sie «Schweizer Radio und Fernsehen (SRF)», damit
+        alle falschen Abkürzungen erklärt sind.'
+      - 'Klein: Die Frage ist etwas umständlich formuliert; einfacher wäre «In welcher Antwort stehen
+        alle Abkürzungen für Bahnunternehmen der Schweiz?».'
+      - 'Klein: Die Unfallversicherung schreibt sich heute offiziell «Suva»; passen Sie die Schreibweise
+        in Antwort c) und in der Erklärung an, oder schreiben Sie in der Erklärung «Suva (Schweizerische
+        Unfallversicherungsanstalt)».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt SRF (Schweizer Radio und Fernsehen) nicht, obwohl diese Abkürzung
+        in Antwort c) vorkommt; ergänze «das Schweizer Radio und Fernsehen (SRF)».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

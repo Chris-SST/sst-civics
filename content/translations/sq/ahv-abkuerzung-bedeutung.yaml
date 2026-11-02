@@ -1,0 +1,32 @@
+id: ahv-abkuerzung-bedeutung
+lang: sq
+source_version: 1
+question: Çfarë do të thotë shkurtesa AHV?
+options:
+  a: Sigurimi i pleqërisë dhe i të mbijetuarve (Alters- und Hinterlassenenversicherung)
+  b: Sigurimi zyrtar i ekonomisë familjare
+  c: Ndihma e përgjithshme për të siguruarit
+  d: Sigurimi i papunësisë dhe i shërimit
+explanation: AHV do të thotë sigurimi i pleqërisë dhe i të mbijetuarve (Alters- und Hinterlassenenversicherung).
+  Ai paguan pensione në moshën e pleqërisë dhe për të mbijetuarit, për shembull për të ve, të vejusha
+  dhe jetimë.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort b: «Amtliche Haushaltsversicherung» wird zu «Amtliche Versicherung der Familienwirtschaft»,
+      also «Haushalt» wird zu «Familienwirtschaft», was eine andere Bedeutung hat; die übrigen Stellen
+      sind gleich.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Was bedeutet die Abkürzung AHV?
+    options_de:
+      a: Alters- und Hinterlassenenversicherung
+      b: Amtliche Versicherung der Familienwirtschaft
+      c: Allgemeine Hilfe für Versicherte
+      d: Versicherung der Arbeitslosigkeit und der Heilung
+    explanation_de: AHV bedeutet Alters- und Hinterlassenenversicherung. Sie zahlt Renten im Alter und
+      für die Hinterbliebenen, zum Beispiel für Witwen, Witwer und Waisen.

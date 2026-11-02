@@ -1,0 +1,33 @@
+id: alv-beitraege-pensionierte-personen
+lang: tr
+source_version: 1
+question: İsviçre'de kimler artık işsizlik sigortasına (ALV) prim ödemek zorunda değildir?
+options:
+  a: Süresiz bir iş sözleşmesiyle çalışan kişiler
+  b: Olağan yaşlılık ve dul-yetim sigortası (AHV) emeklilik yaşına ulaşmış kişiler
+  c: Yarı zamanlı çalışan kişiler
+  d: Son iki yıl içinde hiç işsiz kalmamış kişiler
+explanation: İşsizlik sigortası için prim ödeme yükümlülüğü, yaşlılık ve dul-yetim sigortası (AHV) emeklilik
+  yaşına ulaşıldığında sona erer. Emekli olan kişi, varsa maaşı üzerinden artık ALV primi ödemez. Buna
+  karşılık yarı zamanlı ve tam zamanlı çalışanlar prim öder.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz keine Beiträge mehr an die Arbeitslosenversicherung (ALV) bezahlen?
+    options_de:
+      a: Personen, die mit einem unbefristeten Arbeitsvertrag arbeiten
+      b: Personen, die das ordentliche Rentenalter der Alters- und Hinterlassenenversicherung (AHV) erreicht
+        haben
+      c: Personen, die teilzeitlich arbeiten
+      d: Personen, die in den letzten zwei Jahren nie arbeitslos waren
+    explanation_de: Die Beitragspflicht für die Arbeitslosenversicherung endet, wenn das Rentenalter der
+      Alters- und Hinterlassenenversicherung (AHV) erreicht wird. Eine Person, die in Rente geht, bezahlt
+      auf ihrem Lohn, falls vorhanden, keine ALV-Beiträge mehr. Teilzeit- und Vollzeitbeschäftigte hingegen
+      bezahlen Beiträge.

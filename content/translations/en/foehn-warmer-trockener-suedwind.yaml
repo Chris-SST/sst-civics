@@ -9,6 +9,21 @@ options:
   d: A warm, dry wind from a southerly direction
 explanation: The Föhn is a warm, dry downslope wind that blows in the Alps mainly from the south. It can
   make temperatures rise rapidly and make visibility very clear.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist der Föhn?
+    options_de:
+      a: Ein kalter, feuchter Wind aus dem Norden
+      b: Ein kalter Wind aus dem Osten im Winter
+      c: Starker Regen im Frühling
+      d: Ein warmer, trockener Wind aus südlicher Richtung
+    explanation_de: Der Föhn ist ein warmer, trockener Fallwind, der in den Alpen hauptsächlich aus dem
+      Süden weht. Er kann die Temperaturen rasch ansteigen lassen und für sehr klare Sicht sorgen.

@@ -1,0 +1,31 @@
+id: eu-wichtigster-handelspartner-der-schweiz
+lang: sq
+source_version: 1
+question: Me cilën zonë ekonomike tregton Zvicra më shumë në total?
+options:
+  a: Me shtetet e Lindjes së Mesme
+  b: Me shtetet aziatike
+  c: Me Bashkimin Evropian
+  d: Me Shtetet e Bashkuara të Amerikës
+explanation: Bashkimi Evropian është partneri tregtar më i rëndësishëm i Zvicrës. Një pjesë e madhe e
+  importeve dhe e eksporteve kalon nëpërmjet shteteve të BE-së. Prandaj marrëdhëniet me BE-në janë shumë
+  të rëndësishme për ekonominë zvicerane.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Mit welchem Wirtschaftsraum handelt die Schweiz insgesamt am meisten?
+    options_de:
+      a: Mit den Staaten des Nahen Ostens
+      b: Mit den asiatischen Staaten
+      c: Mit der Europäischen Union
+      d: Mit den Vereinigten Staaten von Amerika
+    explanation_de: Die Europäische Union ist der wichtigste Handelspartner der Schweiz. Ein grosser Teil
+      der Importe und der Exporte läuft über die Staaten der EU. Deshalb sind die Beziehungen zur EU für
+      die Schweizer Wirtschaft sehr wichtig.

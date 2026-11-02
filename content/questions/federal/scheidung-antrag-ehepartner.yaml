@@ -30,5 +30,13 @@ checks:
     at: 2026-11-02
     version: 1
     reasoning: Nach dem Schweizerischen Zivilgesetzbuch (Art. 111 ff. und Art. 114 f. ZGB) können beide
-      Ehegatten gemeinsam die Scheidung verlangen (einvernehmlich) oder ein Ehegatte allein klagen, ohne
-      dass der andere zustimmen muss, etwa nach zwei Jahren Trennung.
+      Ehegatten gemeinsam die Scheidung verlangen (Scheidung auf gemeinsames Begehren), oder ein Ehegatte
+      kann sie allein einreichen (Scheidungsklage), etwa nach zweijährigem Getrenntleben oder bei Unzumutbarkeit.
+  source:
+    verdict: unclear
+    note: Die Seite enthält nur Bruchstücke des ZGB. Art. 111 und 112 (gemeinsames Begehren) kommen vor,
+      aber die Scheidungsklage eines Ehegatten allein (Art. 114/115) fehlt im Text. Dass einer allein
+      die Scheidung verlangen kann, ist daher nicht belegt.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

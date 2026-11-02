@@ -21,7 +21,7 @@ glossary:
 - Grundrecht
 - Meinungsfreiheit
 - Informationsfreiheit
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-014
@@ -42,3 +42,43 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Tatsache aus der Themenliste betont das Recht, die eigene Meinung zu äussern. Die
+        Frage könnte deshalb lauten: «… eine eigene Meinung zu bilden und zu äussern und sich aus allgemein
+        zugänglichen Quellen zu informieren?» (Art. 16 Abs. 2 BV).'
+      - 'Klein: Die Erklärung könnte ergänzen, dass jede Person ihre Meinung frei bilden, äussern und
+        verbreiten darf (Art. 16 Abs. 2 BV), damit beide Teile des Grundrechts erklärt sind.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage verrät die Antwort, weil die Wörter «Meinung» und «informieren» direkt im Namen
+        der richtigen Antwort vorkommen; besser wäre etwa «Welches Grundrecht schützt das Recht, frei
+        zu sagen, was man denkt, und sich aus Zeitungen oder dem Internet zu informieren?».'
+      - 'Klein: Die Tatsache aus der Themenliste spricht vom Äussern der Meinung, die Frage nur vom Bilden;
+        die Frage sollte auch das Äussern und Verbreiten der Meinung nennen.'
+      - 'Klein: Die Erklärung beschreibt nur die Informationsfreiheit; sie sollte ergänzen, dass Artikel
+        16 auch das Recht schützt, die eigene Meinung frei zu bilden, zu äussern und zu verbreiten.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage nennt «Freiheit, sich eine eigene Meinung zu bilden und sich aus allgemein zugänglichen
+        Quellen zu informieren» fast wörtlich nach Art. 16; das ist für Lernende aber hilfreich und macht
+        die Frage nicht unfair.'
+      - 'Klein: Die Erklärung könnte Art. 16 genauer fassen, etwa mit dem Zusatz, dass jede Person ihre
+        Meinung auch frei äussern und verbreiten darf, damit der Bezug zur Themenliste (Meinung äussern)
+        klar bleibt.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

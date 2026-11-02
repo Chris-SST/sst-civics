@@ -1,0 +1,32 @@
+id: beschimpfung-wegen-glauben-verboten
+lang: sq
+source_version: 1
+question: Një person fyen publikisht njerëz për shkak të besimit ose të origjinës së tyre. Si është rregulluar
+  kjo çështje në Zvicër?
+options:
+  a: Ndalohet vetëm në shkolla dhe në ndërmarrje.
+  b: Ndalohet dhe mund të ndëshkohet.
+  c: Ndalohet vetëm nëse shkruhet në gazetë.
+  d: Mbrohet gjithmonë nga liria e mendimit.
+explanation: Kodi Penal ndalon poshtërimin publik të njerëzve për shkak të racës, etnisë, fesë ose orientimit
+  të tyre seksual. Liria e mendimit nuk është e pakufizuar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Person beleidigt öffentlich Menschen aufgrund ihres Glaubens oder ihrer Herkunft.
+      Wie ist diese Angelegenheit in der Schweiz geregelt?
+    options_de:
+      a: Es ist nur in Schulen und in Unternehmen verboten.
+      b: Es ist verboten und kann bestraft werden.
+      c: Es ist nur verboten, wenn es in der Zeitung geschrieben wird.
+      d: Es wird immer durch die Meinungsfreiheit geschützt.
+    explanation_de: Das Strafgesetzbuch verbietet die öffentliche Herabwürdigung von Menschen aufgrund
+      ihrer Rasse, Ethnie, Religion oder ihrer sexuellen Orientierung. Die Meinungsfreiheit ist nicht
+      unbegrenzt.

@@ -1,0 +1,31 @@
+id: kantonsrat-mandat-durch-volkswahl
+lang: fr
+source_version: 1
+question: Comment les membres du Conseil cantonal (Kantonsrat) zurichois obtiennent-ils leur mandat ?
+options:
+  a: Ils sont élus par le peuple.
+  b: Ils sont désignés par les conseils communaux (Gemeinderäte).
+  c: Ils sont nommés par le Conseil d'État (Regierungsrat).
+  d: Ils sont désignés par le Conseil fédéral (Bundesrat).
+explanation: Les membres du Conseil cantonal sont élus par les personnes ayant le droit de vote dans le
+  canton, lors d'une élection populaire. Le parlement est donc désigné directement par le peuple. Ni le
+  gouvernement ni la Confédération ne désignent les membres.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie erhalten die Mitglieder des Zürcher Kantonsrats ihr Mandat?
+    options_de:
+      a: Sie werden vom Volk gewählt.
+      b: Sie werden von den Gemeinderäten bestimmt.
+      c: Sie werden vom Regierungsrat ernannt.
+      d: Sie werden vom Bundesrat bestimmt.
+    explanation_de: Die Mitglieder des Kantonsrats werden von den Stimmberechtigten des Kantons in einer
+      Volkswahl gewählt. Das Parlament wird also direkt vom Volk bestimmt. Weder die Regierung noch der
+      Bund bestimmen die Mitglieder.

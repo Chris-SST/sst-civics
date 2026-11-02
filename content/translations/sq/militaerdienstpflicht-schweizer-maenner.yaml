@@ -1,0 +1,31 @@
+id: militaerdienstpflicht-schweizer-maenner
+lang: sq
+source_version: 1
+question: Kë e prek në Zvicër detyrimi për shërbim ushtarak ose për shërbim zëvendësues?
+options:
+  a: Të gjithë banorët dhe banoret nga mosha 18 vjeç
+  b: Burrat me shtetësi (Bürgerrecht) zvicerane
+  c: Të gjithë burrat që jetojnë në Zvicër
+  d: Vetëm gratë me shtetësi zvicerane
+explanation: Sipas Kushtetutës Federale, çdo burrë zviceran është i detyruar të kryejë shërbim ushtarak.
+  Kush nuk mund ta pajtojë këtë me ndërgjegjen e tij, kryen shërbim zëvendësues civil (shërbim civil,
+  Zivildienst). Të huajt nuk i nënshtrohen detyrimit për shërbim.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wen betrifft in der Schweiz die Pflicht zum Militärdienst oder zum Ersatzdienst?
+    options_de:
+      a: Alle Einwohner und Einwohnerinnen ab 18 Jahren
+      b: Männer mit Schweizer Bürgerrecht
+      c: Alle Männer, die in der Schweiz leben
+      d: Nur Frauen mit Schweizer Bürgerrecht
+    explanation_de: Gemäss der Bundesverfassung ist jeder Schweizer Mann verpflichtet, Militärdienst zu
+      leisten. Wer dies nicht mit seinem Gewissen vereinbaren kann, leistet zivilen Ersatzdienst (Zivildienst).
+      Ausländer unterliegen der Dienstpflicht nicht.

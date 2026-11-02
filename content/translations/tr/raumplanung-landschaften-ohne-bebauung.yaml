@@ -1,0 +1,34 @@
+id: raumplanung-landschaften-ohne-bebauung
+lang: tr
+source_version: 2
+question: İsviçre'de mekânsal planlamanın hedeflerinden biri nedir?
+options:
+  a: Yapılaşmamış doğal alanları korumalı ve araziyi tutumlu kullanmalıdır.
+  b: Kantonlar arasındaki sınırları düzenli olarak yeniden belirlemelidir.
+  c: Mümkün olduğunca çok yeni imar bölgesi (Bauzone) oluşturmalıdır.
+  d: İnşaat arazisinin fiyatını belirlemelidir.
+explanation: Mekânsal planlama, nerede inşaat yapılabileceğini ve nerede yapılamayacağını belirler. Yapılaşmaya
+  açık alanları yapılaşmaya kapalı alanlardan ayırır; böylece doğal alanlar ve tarım arazileri korunur.
+  Arazi sınırlı olduğu için tutumlu kullanılmalı ve yeni imar bölgeleri oluşturmak yerine mevcut yerleşim
+  alanları daha yoğun hale getirilmelidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was ist eines der Ziele der Raumplanung in der Schweiz?
+    options_de:
+      a: Sie soll unbebaute natürliche Flächen schützen und den Boden haushälterisch nutzen.
+      b: Sie soll die Grenzen zwischen den Kantonen regelmässig neu festlegen.
+      c: Sie soll möglichst viele neue Bauzonen schaffen.
+      d: Sie soll den Preis des Baulands festlegen.
+    explanation_de: Die Raumplanung bestimmt, wo gebaut werden darf und wo nicht. Sie trennt die für die
+      Bebauung offenen Gebiete von den für die Bebauung geschlossenen Gebieten; so werden natürliche Flächen
+      und landwirtschaftliche Flächen geschützt. Da der Boden begrenzt ist, muss er haushälterisch genutzt
+      werden, und anstatt neue Bauzonen zu schaffen, sollen die bestehenden Siedlungsgebiete dichter gemacht
+      werden.

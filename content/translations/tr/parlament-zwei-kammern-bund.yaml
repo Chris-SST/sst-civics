@@ -1,0 +1,29 @@
+id: parlament-zwei-kammern-bund
+lang: tr
+source_version: 1
+question: İsviçre Parlamentosu Konfederasyon düzeyinde hangi iki meclisten oluşur?
+options:
+  a: Federal Konsey (Bundesrat) ve Kantonlar Konseyi (Ständerat)'nden
+  b: Federal Konsey ve Ulusal Konsey (Nationalrat)'den
+  c: Kantonlar Konseyi ve Federal Mahkeme (Bundesgericht)'den
+  d: Ulusal Konsey ve Kantonlar Konseyi'nden
+explanation: 'Konfederasyonun parlamentosu olan Federal Meclis (Bundesversammlung), iki meclisten oluşur:
+  Ulusal Konsey ve Kantonlar Konseyi. Federal Konsey hükümettir ve parlamentoya ait değildir.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchen zwei Kammern besteht das Schweizer Parlament auf Bundesebene?
+    options_de:
+      a: Aus dem Bundesrat und dem Ständerat
+      b: Aus dem Bundesrat und dem Nationalrat
+      c: Aus dem Ständerat und dem Bundesgericht
+      d: Aus dem Nationalrat und dem Ständerat
+    explanation_de: 'Das Parlament des Bundes, die Bundesversammlung, besteht aus zwei Kammern: dem Nationalrat
+      und dem Ständerat. Der Bundesrat ist die Regierung und gehört nicht zum Parlament.'

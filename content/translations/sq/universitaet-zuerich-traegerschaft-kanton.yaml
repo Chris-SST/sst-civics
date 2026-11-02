@@ -1,0 +1,32 @@
+id: universitaet-zuerich-traegerschaft-kanton
+lang: sq
+source_version: 1
+question: Kush është përgjegjës në kantonin e Cyrihut për funksionimin dhe mbajtjen e Universitetit të
+  Cyrihut?
+options:
+  a: Konfederata
+  b: Qyteti i Cyrihut
+  c: Kantoni i Cyrihut
+  d: Këshillat e rrethit (Bezirksräte) të kantonit
+explanation: Universiteti i Cyrihut është një universitet kantonal. Kantoni i Cyrihut e mban dhe e administron
+  atë. Qyteti i Cyrihut dhe Konfederata nuk janë përgjegjës kryesorë për të.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: Die Antworten sind identisch und c) (Kanton Zürich) bleibt richtig. "Trägerschaft"
+      und "Unterhalt" sowie "betreibt" und "verwaltet" sind sinngemässe Varianten, die Erklärung stimmt
+      inhaltlich überein.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist im Kanton Zürich für den Betrieb und den Unterhalt der Universität Zürich verantwortlich?
+    options_de:
+      a: Der Bund
+      b: Die Stadt Zürich
+      c: Der Kanton Zürich
+      d: Die Bezirksräte des Kantons
+    explanation_de: Die Universität Zürich ist eine kantonale Universität. Der Kanton Zürich unterhält
+      und verwaltet sie. Die Stadt Zürich und der Bund sind nicht hauptverantwortlich für sie.

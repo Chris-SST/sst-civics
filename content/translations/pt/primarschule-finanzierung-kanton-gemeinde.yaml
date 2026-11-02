@@ -1,0 +1,29 @@
+id: primarschule-finanzierung-kanton-gemeinde
+lang: pt
+source_version: 1
+question: Quem financia e organiza o ensino primário no cantão de Zurique?
+options:
+  a: Apenas as comunas paroquiais (Kirchgemeinden)
+  b: Apenas os pais dos alunos
+  c: Apenas a Confederação
+  d: O cantão e as comunas (Gemeinden) em conjunto
+explanation: A escola pública no cantão de Zurique é uma tarefa partilhada entre o cantão e as comunas.
+  O cantão define as bases, e as comunas gerem as escolas no local.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer finanziert und organisiert die Primarschule im Kanton Zürich?
+    options_de:
+      a: Nur die Kirchgemeinden
+      b: Nur die Eltern der Schülerinnen und Schüler
+      c: Nur der Bund
+      d: Der Kanton und die Gemeinden gemeinsam
+    explanation_de: Die öffentliche Schule im Kanton Zürich ist eine gemeinsame Aufgabe von Kanton und
+      Gemeinden. Der Kanton legt die Grundlagen fest, und die Gemeinden führen die Schulen vor Ort.

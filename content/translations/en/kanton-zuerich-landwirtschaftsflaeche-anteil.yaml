@@ -9,6 +9,21 @@ options:
   d: Around 41 per cent
 explanation: Around 41 per cent of the area of the canton of Zurich is used for agriculture. The rest
   consists mainly of forest, built-up areas and bodies of water.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher ungefähre Anteil der Fläche des Kantons Zürich wird landwirtschaftlich genutzt?
+    options_de:
+      a: Rund 68 Prozent
+      b: Rund 25 Prozent
+      c: Rund 11 Prozent
+      d: Rund 41 Prozent
+    explanation_de: Rund 41 Prozent der Fläche des Kantons Zürich werden landwirtschaftlich genutzt. Der
+      Rest besteht hauptsächlich aus Wald, Siedlungsflächen und Gewässern.

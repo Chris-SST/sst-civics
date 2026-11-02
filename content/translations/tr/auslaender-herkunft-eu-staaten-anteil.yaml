@@ -1,0 +1,31 @@
+id: auslaender-herkunft-eu-staaten-anteil
+lang: tr
+source_version: 1
+question: İsviçre'de ikamet eden yabancıların çoğu nereden gelmektedir?
+options:
+  a: Asya ülkelerinden, yaklaşık üçte ikisi
+  b: Afrika ülkelerinden, yaklaşık yarısı
+  c: Avrupa Birliği ülkelerinden, yaklaşık üçte ikisi
+  d: Amerika kıtasındaki ülkelerden, yaklaşık üçte biri
+explanation: Yabancı yerleşik nüfusun yaklaşık yüzde 66'sı AB ülkelerinden gelmektedir, yani yaklaşık
+  üçte ikisi. Geri kalanı diğer Avrupa ülkelerinden ve dünyanın geri kalanından gelmektedir. Bu oran zaman
+  içinde hafifçe değişebilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Woher kommen die meisten in der Schweiz wohnhaften Ausländer?
+    options_de:
+      a: Aus asiatischen Ländern, etwa zwei Drittel
+      b: Aus afrikanischen Ländern, etwa die Hälfte
+      c: Aus Ländern der Europäischen Union, etwa zwei Drittel
+      d: Aus Ländern des amerikanischen Kontinents, etwa ein Drittel
+    explanation_de: Etwa 66 Prozent der ausländischen Wohnbevölkerung stammen aus EU-Ländern, also etwa
+      zwei Drittel. Der Rest stammt aus anderen europäischen Ländern und dem Rest der Welt. Dieser Anteil
+      kann sich im Laufe der Zeit leicht ändern.

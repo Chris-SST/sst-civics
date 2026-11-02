@@ -1,0 +1,30 @@
+id: vereinigte-bundesversammlung-gemeinsame-sitzung
+lang: pt
+source_version: 1
+question: Quando se fala da Assembleia Federal (Bundesversammlung) Unida?
+options:
+  a: Quando o Conselho Nacional (Nationalrat) e o Conselho dos Estados (Ständerat) deliberam separadamente
+    nas suas respetivas salas
+  b: Quando todos os parlamentos cantonais se reúnem ao mesmo tempo
+  c: Quando os membros do Conselho Nacional e do Conselho dos Estados se reúnem em conjunto
+  d: Quando o Conselho Federal (Bundesrat) e o Parlamento se reúnem em conjunto
+explanation: A Assembleia Federal Unida surge quando as duas câmaras se reúnem em conjunto. Ela elege,
+  por exemplo, os membros do Conselho Federal.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wann spricht man von der Vereinigten Bundesversammlung?
+    options_de:
+      a: Wenn der Nationalrat und der Ständerat getrennt in ihren jeweiligen Sälen beraten
+      b: Wenn alle kantonalen Parlamente gleichzeitig zusammenkommen
+      c: Wenn die Mitglieder des Nationalrats und des Ständerats gemeinsam zusammenkommen
+      d: Wenn der Bundesrat und das Parlament gemeinsam zusammenkommen
+    explanation_de: Die Vereinigte Bundesversammlung entsteht, wenn die beiden Kammern gemeinsam zusammenkommen.
+      Sie wählt zum Beispiel die Mitglieder des Bundesrates.

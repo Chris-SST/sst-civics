@@ -1,0 +1,32 @@
+id: gleichberechtigung-mann-frau-bundesverfassung-1981
+lang: it
+source_version: 1
+question: Da quando la parità di diritti tra uomo e donna è sancita nella Costituzione federale svizzera?
+options:
+  a: Dal 1999
+  b: Dal 1971
+  c: Dal 1981
+  d: Dal 1848
+explanation: Nel 1981 l'articolo sulla parità dei sessi è stato inserito nella Costituzione federale.
+  Esso obbliga lo Stato a garantire la parità nella famiglia, nella formazione e nel lavoro. Il diritto
+  di voto alle donne esisteva già dal 1971.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Seit wann ist die Gleichberechtigung von Mann und Frau in der Schweizerischen Bundesverfassung
+      verankert?
+    options_de:
+      a: Seit 1999
+      b: Seit 1971
+      c: Seit 1981
+      d: Seit 1848
+    explanation_de: Im Jahr 1981 wurde der Artikel über die Gleichstellung der Geschlechter in die Bundesverfassung
+      aufgenommen. Er verpflichtet den Staat, die Gleichstellung in der Familie, in der Ausbildung und
+      bei der Arbeit zu gewährleisten. Das Stimmrecht für Frauen bestand bereits seit 1971.

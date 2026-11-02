@@ -1,0 +1,32 @@
+id: regelmaessige-wahlen-vertreter-bestimmen
+lang: fr
+source_version: 1
+question: Quelle est l'importance d'élections régulières dans une démocratie ?
+options:
+  a: La population décide elle-même qui la représente.
+  b: Le gouvernement désigne lui-même ses successeurs.
+  c: Les partis déterminent entre eux la représentation.
+  d: Le tribunal décide qui reprend une fonction.
+explanation: Lors des élections, les personnes ayant le droit de vote décident qui les représente au Parlement
+  ou au gouvernement. Comme les élections ont lieu régulièrement, elles peuvent confirmer des personnes
+  dans leur fonction ou les remplacer par d'autres. Ainsi, la population conserve une influence sur la
+  politique.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Bedeutung haben regelmässige Wahlen in einer Demokratie?
+    options_de:
+      a: Die Bevölkerung entscheidet selbst, wer sie vertritt.
+      b: Die Regierung bestimmt selbst ihre Nachfolger.
+      c: Die Parteien legen die Vertretung unter sich fest.
+      d: Das Gericht entscheidet, wer ein Amt übernimmt.
+    explanation_de: Bei den Wahlen entscheiden die stimmberechtigten Personen, wer sie im Parlament oder
+      in der Regierung vertritt. Da die Wahlen regelmässig stattfinden, können sie Personen in ihrem Amt
+      bestätigen oder sie durch andere ersetzen. So behält die Bevölkerung einen Einfluss auf die Politik.

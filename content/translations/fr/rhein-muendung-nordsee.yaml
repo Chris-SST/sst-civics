@@ -1,0 +1,29 @@
+id: rhein-muendung-nordsee
+lang: fr
+source_version: 1
+question: Dans quelle mer l'eau du Rhin se jette-t-elle finalement ?
+options:
+  a: Dans la mer Méditerranée
+  b: Dans la mer Noire
+  c: Dans la mer du Nord
+  d: Dans la mer Baltique
+explanation: Le Rhin prend sa source dans les Alpes suisses et traverse l'Allemagne et les Pays-Bas. Il
+  se jette dans la mer du Nord.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welches Meer fliesst das Wasser des Rheins schliesslich?
+    options_de:
+      a: In das Mittelmeer
+      b: In das Schwarze Meer
+      c: In die Nordsee
+      d: In die Ostsee
+    explanation_de: Der Rhein entspringt in den Schweizer Alpen und durchquert Deutschland und die Niederlande.
+      Er mündet in die Nordsee.

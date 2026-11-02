@@ -10,6 +10,23 @@ options:
   d: '1948'
 explanation: The OASI began operating in 1948, after the people had approved the law in 1947. It forms
   the first pillar of the Swiss three-pillar system. It secures a livelihood in old age and for survivors.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr wurde die Alters- und Hinterlassenenversicherung (AHV), die staatliche
+      Rentenversicherung für das Alter und für Hinterlassene, eingeführt?
+    options_de:
+      a: '1975'
+      b: '1918'
+      c: '1930'
+      d: '1948'
+    explanation_de: Die AHV nahm 1948 ihren Betrieb auf, nachdem das Volk das Gesetz 1947 angenommen hatte.
+      Sie bildet die erste Säule des Schweizer Dreisäulensystems. Sie sichert den Lebensunterhalt im Alter
+      und für Hinterlassene.

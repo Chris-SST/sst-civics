@@ -1,0 +1,30 @@
+id: stimmenauszaehlung-urnengang-wahlbuero
+lang: it
+source_version: 1
+question: Chi conta le schede deposte nelle urne in un Comune (Gemeinde) zurighese in occasione delle
+  votazioni?
+options:
+  a: L'autorità sociale
+  b: L'ufficio elettorale
+  c: La segretaria comunale da sola
+  d: La procura
+explanation: L'ufficio elettorale determina i risultati del Comune nelle votazioni e nelle elezioni. È
+  composto da più persone, affinché lo spoglio avvenga in modo corretto e verificabile.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zählt bei Abstimmungen in einer Zürcher Gemeinde die in die Urnen eingelegten Stimmzettel?
+    options_de:
+      a: Die Sozialbehörde
+      b: Das Wahlbüro
+      c: Die Gemeindeschreiberin allein
+      d: Die Staatsanwaltschaft
+    explanation_de: Das Wahlbüro ermittelt die Ergebnisse der Gemeinde bei Abstimmungen und Wahlen. Es
+      besteht aus mehreren Personen, damit die Auszählung korrekt und überprüfbar erfolgt.

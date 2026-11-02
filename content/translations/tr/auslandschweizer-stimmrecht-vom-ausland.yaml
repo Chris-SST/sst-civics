@@ -1,0 +1,37 @@
+id: auslandschweizer-stimmrecht-vom-ausland
+lang: tr
+source_version: 2
+question: Bir İsviçreli kadın vatandaş sürekli olarak yurt dışında yaşamaktadır. Federal seçimlere ve
+  oylamalara nasıl katılabilir?
+options:
+  a: Yalnızca oy kullanmak için İsviçre'ye seyahat ederse oy kullanabilir.
+  b: Yalnızca seçimlere katılabilir, ancak oylamalara katılamaz.
+  c: İsviçre'ye seyahat etmeden, yurt dışındaki ikamet yerinden seçimlerde ve oylamalarda oy kullanabilir.
+  d: Konfederasyon düzeyindeki oy hakkını ve seçme hakkını kaybeder.
+explanation: Yurt dışında yaşayan İsviçreli vatandaşlar, İsviçre'ye seyahat etmek zorunda kalmadan Konfederasyon
+  düzeyinde seçimlerde ve oylamalarda oy kullanabilir. Bunun için yurt dışındaki yetkili İsviçre temsilciliğine
+  kayıtlı olmaları ve bu temsilcilik aracılığıyla oy kütüğüne kaydedilmek için başvurmaları gerekir. Seçim
+  ve oylama belgelerini daha sonra oy kullanma belediyeleri onlara gönderir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Schweizer Bürgerin lebt dauerhaft im Ausland. Wie kann sie an eidgenössischen Wahlen
+      und Abstimmungen teilnehmen?
+    options_de:
+      a: Sie kann nur abstimmen, wenn sie ausschliesslich zum Abstimmen in die Schweiz reist.
+      b: Sie kann nur an den Wahlen teilnehmen, aber nicht an den Abstimmungen.
+      c: Sie kann, ohne in die Schweiz zu reisen, von ihrem Wohnort im Ausland aus an den Wahlen und Abstimmungen
+        abstimmen.
+      d: Sie verliert das Stimmrecht und das Wahlrecht auf Ebene der Eidgenossenschaft.
+    explanation_de: Im Ausland lebende Schweizer Bürger können, ohne in die Schweiz reisen zu müssen,
+      auf Ebene der Eidgenossenschaft an Wahlen und Abstimmungen teilnehmen. Dafür müssen sie bei der
+      zuständigen Schweizer Vertretung im Ausland registriert sein und sich über diese Vertretung für
+      die Eintragung ins Stimmregister anmelden. Die Wahl- und Abstimmungsunterlagen werden ihnen danach
+      von den Stimmgemeinden zugesandt.

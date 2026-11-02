@@ -1,0 +1,33 @@
+id: kantone-eigene-verwaltung-und-recht
+lang: fr
+source_version: 2
+question: Quelles tâches relèvent des cantons ?
+options:
+  a: Ils déterminent la politique étrangère et la monnaie de la Suisse.
+  b: Ils édictent les lois pour l'ensemble du pays.
+  c: Ils dirigent l'armée et fixent les droits de douane.
+  d: Ils gèrent leur propre administration et édictent le droit cantonal.
+explanation: Chaque canton a son propre gouvernement, son propre parlement et sa propre administration.
+  Il fait ses propres lois, qui ne s'appliquent que dans le canton, par exemple pour les écoles ou la
+  police. La politique étrangère, la monnaie, l'armée, les droits de douane et les lois pour l'ensemble
+  de la Suisse relèvent de la Confédération.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Aufgaben fallen in die Zuständigkeit der Kantone?
+    options_de:
+      a: Sie bestimmen die Aussenpolitik und die Währung der Schweiz.
+      b: Sie erlassen die Gesetze für das ganze Land.
+      c: Sie führen die Armee und legen die Zölle fest.
+      d: Sie verwalten sich selbst und erlassen das kantonale Recht.
+    explanation_de: Jeder Kanton hat seine eigene Regierung, sein eigenes Parlament und seine eigene Verwaltung.
+      Er macht seine eigenen Gesetze, die nur im Kanton gelten, zum Beispiel für die Schulen oder die
+      Polizei. Die Aussenpolitik, die Währung, die Armee, die Zölle und die Gesetze für die ganze Schweiz
+      fallen in die Zuständigkeit des Bundes.

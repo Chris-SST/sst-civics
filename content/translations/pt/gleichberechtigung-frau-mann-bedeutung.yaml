@@ -1,0 +1,32 @@
+id: gleichberechtigung-frau-mann-bedeutung
+lang: pt
+source_version: 1
+question: O que significa, em princípio, a igualdade de direitos entre mulheres e homens?
+options:
+  a: Em princípio, mulheres e homens têm os mesmos direitos.
+  b: Em todas as áreas da vida, mulheres e homens têm os mesmos deveres, mas direitos diferentes.
+  c: Mulheres e homens ganham exatamente o mesmo em todas as profissões.
+  d: Mulheres e homens têm de dividir igualmente todas as tarefas na família.
+explanation: Igualdade de direitos significa que, em princípio, ambos os sexos possuem os mesmos direitos.
+  Ela está consagrada na Constituição Federal. O princípio não diz nada sobre a forma como as famílias
+  dividem, em cada caso, as suas tarefas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Gleichberechtigung von Frauen und Männern grundsätzlich?
+    options_de:
+      a: Grundsätzlich haben Frauen und Männer die gleichen Rechte.
+      b: In allen Lebensbereichen haben Frauen und Männer die gleichen Pflichten, aber unterschiedliche
+        Rechte.
+      c: Frauen und Männer verdienen in allen Berufen genau gleich viel.
+      d: Frauen und Männer müssen alle Aufgaben in der Familie gleichmässig aufteilen.
+    explanation_de: Gleichberechtigung bedeutet, dass grundsätzlich beide Geschlechter die gleichen Rechte
+      haben. Sie ist in der Bundesverfassung verankert. Das Prinzip sagt nichts darüber aus, wie die Familien
+      ihre Aufgaben im jeweiligen Fall aufteilen.

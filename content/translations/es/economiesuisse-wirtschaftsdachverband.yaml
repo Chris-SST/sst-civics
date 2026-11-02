@@ -1,0 +1,29 @@
+id: economiesuisse-wirtschaftsdachverband
+lang: es
+source_version: 1
+question: ¿Qué es Economiesuisse?
+options:
+  a: Una caja de desempleo de la Confederación
+  b: La Oficina Federal de Economía
+  c: La organización paraguas del sector empresarial que representa los intereses de las empresas
+  d: Un sindicato para empleados del comercio minorista
+explanation: Economiesuisse es la organización paraguas de la economía suiza y representa los intereses
+  de las empresas. No es un organismo estatal ni un sindicato.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist Economiesuisse?
+    options_de:
+      a: Eine Arbeitslosenkasse des Bundes
+      b: Das Bundesamt für Wirtschaft
+      c: Die Dachorganisation der Unternehmenswirtschaft, die die Interessen der Unternehmen vertritt
+      d: Eine Gewerkschaft für Angestellte des Einzelhandels
+    explanation_de: Economiesuisse ist die Dachorganisation der Schweizer Wirtschaft und vertritt die
+      Interessen der Unternehmen. Sie ist weder eine staatliche Stelle noch eine Gewerkschaft.

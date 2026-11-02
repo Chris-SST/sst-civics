@@ -1,0 +1,31 @@
+id: zwingli-reformation-zuerich-fuehrer
+lang: fr
+source_version: 1
+question: Qui a dirigé la Réforme à Zurich dans les années 1520 ?
+options:
+  a: Heinrich Bullinger
+  b: Ulrich Zwingli
+  c: Martin Luther
+  d: Jean Calvin
+explanation: Ulrich Zwingli était prêtre séculier (Leutpriester) au Grossmünster et a introduit la Réforme
+  à Zurich. Le Conseil de la ville l'a soutenu dans cette entreprise. Calvin a exercé son activité à Genève,
+  Luther en Allemagne.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: Frage, Antworten und Erklärung stimmen inhaltlich überein; «Weltpriester
+      (Leutpriester)» ist nur eine erläuternde Variante von «Leutpriester».'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer leitete in den 1520er Jahren die Reformation in Zürich?
+    options_de:
+      a: Heinrich Bullinger
+      b: Ulrich Zwingli
+      c: Martin Luther
+      d: Johannes Calvin
+    explanation_de: Ulrich Zwingli war Weltpriester (Leutpriester) am Grossmünster und führte die Reformation
+      in Zürich ein. Der Stadtrat unterstützte ihn dabei. Calvin wirkte in Genf, Luther in Deutschland.

@@ -1,0 +1,30 @@
+id: ikrk-hauptsitz-in-genf
+lang: sq
+source_version: 1
+question: Në cilin shtet ndodhet selia qendrore e Komitetit Ndërkombëtar të Kryqit të Kuq (KNKK)?
+options:
+  a: Në Holandë
+  b: Në Zvicër
+  c: Në Austri
+  d: Në Belgjikë
+explanation: KNKK-ja ka selinë qendrore në Gjenevë, në Zvicër. Ai u themelua në Gjenevë në vitin 1863
+  dhe mbron viktimat e konflikteve të armatosura. Zvicra e mbështet punën e tij.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Staat befindet sich der Hauptsitz des Internationalen Komitees vom Roten Kreuz
+      (IKRK)?
+    options_de:
+      a: In Holland
+      b: In der Schweiz
+      c: In Österreich
+      d: In Belgien
+    explanation_de: Das IKRK hat seinen Hauptsitz in Genf, in der Schweiz. Es wurde 1863 in Genf gegründet
+      und schützt die Opfer bewaffneter Konflikte. Die Schweiz unterstützt seine Arbeit.

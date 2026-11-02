@@ -1,0 +1,31 @@
+id: dampfmaschine-industrialisierung-schweiz
+lang: tr
+source_version: 2
+question: 19. yüzyılda hangi buluş İsviçre'de sanayileşmeyi güçlü biçimde şekillendirmiştir?
+options:
+  a: Uçak
+  b: Buhar makinesi
+  c: Bilgisayar
+  d: Montaj hattı (bant sistemi)
+explanation: 19. yüzyılda buhar makinesi İsviçre'de önem kazandı. Fabrikalardaki makineleri ve daha sonra
+  demiryollarını da çalıştırdı ve giderek daha fazla insan fabrikalarda çalıştı. Uçak, montaj hattı ve
+  bilgisayar ise ancak 20. yüzyılda önem kazandı.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Erfindung hat die Industrialisierung in der Schweiz im 19. Jahrhundert stark geprägt?
+    options_de:
+      a: Flugzeug
+      b: Dampfmaschine
+      c: Computer
+      d: Fliessband (Bandsystem)
+    explanation_de: Im 19. Jahrhundert gewann die Dampfmaschine in der Schweiz an Bedeutung. Sie trieb
+      die Maschinen in den Fabriken und später auch die Eisenbahnen an, und immer mehr Menschen arbeiteten
+      in Fabriken. Flugzeug, Fliessband und Computer gewannen dagegen erst im 20. Jahrhundert an Bedeutung.

@@ -10,6 +10,22 @@ options:
   d: The commune (Gemeinde) administration at the place of residence
 explanation: The authorisation of motor vehicles is the responsibility of the cantonal road traffic office.
   It also issues the number plates. The commune and the police are not responsible for this.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer lässt im Kanton Zürich ein Motorfahrzeug zum Strassenverkehr zu und gibt dafür die
+      Kontrollschilder ab?
+    options_de:
+      a: Die Kantonspolizei bei einer Verkehrskontrolle
+      b: Das Strassenverkehrsamt des Kantons
+      c: Der Touring Club Schweiz
+      d: Die Gemeindeverwaltung am Wohnort
+    explanation_de: Die Zulassung von Motorfahrzeugen ist Aufgabe des kantonalen Strassenverkehrsamts.
+      Es gibt auch die Kontrollschilder ab. Die Gemeinde und die Polizei sind dafür nicht zuständig.

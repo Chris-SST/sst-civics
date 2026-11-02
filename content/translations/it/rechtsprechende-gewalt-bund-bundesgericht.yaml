@@ -1,0 +1,31 @@
+id: rechtsprechende-gewalt-bund-bundesgericht
+lang: it
+source_version: 1
+question: Quale autorità è, a livello federale, l'organo giurisdizionale supremo della Svizzera?
+options:
+  a: La Cancelleria federale (Bundeskanzlei)
+  b: Il Consiglio federale (Bundesrat)
+  c: L'Assemblea federale (Bundesversammlung)
+  d: Il Tribunale federale (Bundesgericht)
+explanation: La Costituzione federale attribuisce il potere giudiziario della Confederazione al Tribunale
+  federale. Esso è l'autorità giurisdizionale suprema della Confederazione. Il Consiglio federale e l'Assemblea
+  federale esercitano rispettivamente il potere esecutivo e quello legislativo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde ist auf Bundesebene das oberste rechtsprechende Organ der Schweiz?
+    options_de:
+      a: Die Bundeskanzlei
+      b: Der Bundesrat
+      c: Die Bundesversammlung
+      d: Das Bundesgericht
+    explanation_de: Die Bundesverfassung überträgt die richterliche Gewalt des Bundes dem Bundesgericht.
+      Es ist die oberste rechtsprechende Behörde des Bundes. Der Bundesrat und die Bundesversammlung üben
+      jeweils die vollziehende beziehungsweise die gesetzgebende Gewalt aus.

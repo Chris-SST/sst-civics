@@ -1,0 +1,31 @@
+id: region-basel-pharmaunternehmen-bekannt
+lang: it
+source_version: 1
+question: Quale regione della Svizzera è nota per le grandi aziende farmaceutiche che vi hanno sede?
+options:
+  a: L'Engadina
+  b: La regione di Basilea
+  c: Il Ticino
+  d: Il Vallese
+explanation: Nella regione di Basilea hanno la loro sede principale diverse aziende farmaceutiche attive
+  a livello mondiale. L'industria farmaceutica è lì un importante settore economico ed è significativa
+  per l'esportazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Region der Schweiz ist für die grossen Pharmaunternehmen bekannt, die dort ihren
+      Sitz haben?
+    options_de:
+      a: Das Engadin
+      b: Die Region Basel
+      c: Das Tessin
+      d: Das Wallis
+    explanation_de: In der Region Basel haben mehrere weltweit tätige Pharmaunternehmen ihren Hauptsitz.
+      Die Pharmaindustrie ist dort ein wichtiger Wirtschaftszweig und ist für den Export bedeutend.

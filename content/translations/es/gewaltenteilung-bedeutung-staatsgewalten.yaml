@@ -1,0 +1,31 @@
+id: gewaltenteilung-bedeutung-staatsgewalten
+lang: es
+source_version: 1
+question: ¿Qué significa el principio de la separación de poderes en Suiza?
+options:
+  a: La Confederación, los cantones y los municipios (Gemeinden) se reparten entre sí los ingresos fiscales.
+  b: El gobierno, el parlamento y los tribunales se reparten el poder del Estado.
+  c: El poder en el Estado reside únicamente en el Consejo Federal (Bundesrat).
+  d: El pueblo y los medios de comunicación se reparten el poder del Estado.
+explanation: En la separación de poderes, el ejecutivo (gobierno), el legislativo (parlamento) y el judicial
+  (tribunales) asumen tareas distintas. Así, ningún órgano puede tener por sí solo demasiado poder. Los
+  poderes del Estado se controlan entre sí.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet das Prinzip der Gewaltenteilung in der Schweiz?
+    options_de:
+      a: Der Bund, die Kantone und die Gemeinden teilen die Steuereinnahmen untereinander auf.
+      b: Die Regierung, das Parlament und die Gerichte teilen die Staatsmacht untereinander auf.
+      c: Die Macht im Staat liegt einzig beim Bundesrat.
+      d: Das Volk und die Medien teilen die Staatsmacht untereinander auf.
+    explanation_de: Bei der Gewaltenteilung übernehmen die Exekutive (Regierung), die Legislative (Parlament)
+      und die Judikative (Gerichte) unterschiedliche Aufgaben. So kann kein Organ allein zu viel Macht
+      haben. Die Staatsgewalten kontrollieren sich gegenseitig.

@@ -1,0 +1,31 @@
+id: zweifraenkler-helvetia-symbolfigur
+lang: tr
+source_version: 1
+question: İki franklık madeni parada hangi simge figür yer almaktadır?
+options:
+  a: Matterhorn
+  b: Helvetia
+  c: Wilhelm Tell
+  d: Bir İsviçre Federal Konsey (Bundesrat) üyesi
+explanation: İsviçre'nin iki franklık madeni parasında, Konfederasyonun (Eidgenossenschaft) kadın simge
+  figürü olan Helvetia görülür. Helvetia, ulus olarak İsviçre'yi temsil eder. Helvetia ayrıca diğer madeni
+  paralarda ve pullarda da yer alır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Symbolfigur ist auf der Zweifrankenmünze abgebildet?
+    options_de:
+      a: Matterhorn
+      b: Helvetia
+      c: Wilhelm Tell
+      d: Ein Mitglied des Schweizerischen Bundesrates
+    explanation_de: Auf der Zweifrankenmünze der Schweiz ist Helvetia zu sehen, die weibliche Symbolfigur
+      der Eidgenossenschaft. Helvetia repräsentiert die Schweiz als Nation. Helvetia erscheint auch auf
+      anderen Münzen und auf Briefmarken.

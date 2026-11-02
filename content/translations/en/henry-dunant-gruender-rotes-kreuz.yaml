@@ -1,15 +1,33 @@
 id: henry-dunant-gruender-rotes-kreuz
 lang: en
-source_version: 1
-question: Which person founded the Red Cross in Geneva?
+source_version: 2
+question: Who is regarded as the founder of the Red Cross in Geneva?
 options:
   a: Alfred Escher
   b: Johann Heinrich Pestalozzi
-  c: Guillaume-Henri Dufour
+  c: Huldrych Zwingli
   d: Henry Dunant
-explanation: Henry Dunant from Geneva campaigned for the care of the wounded after the Battle of Solferino
-  in 1859. This led to the founding of the Red Cross, which stands for Switzerland's humanitarian tradition.
-  In 1901, Dunant received the first Nobel Peace Prize.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: In 1859, after the Battle of Solferino, Henry Dunant, a native of Geneva, saw how many wounded
+  soldiers were left without help. He therefore campaigned for their care, and in 1863 the Red Cross was
+  founded in Geneva. For this, Dunant received the first Nobel Peace Prize in 1901, together with Frédéric
+  Passy.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer gilt als Gründer des Roten Kreuzes in Genf?
+    options_de:
+      a: Alfred Escher
+      b: Johann Heinrich Pestalozzi
+      c: Huldrych Zwingli
+      d: Henry Dunant
+    explanation_de: Im Jahr 1859, nach der Schlacht von Solferino, sah Henry Dunant, ein gebürtiger Genfer,
+      wie viele verwundete Soldaten ohne Hilfe zurückgelassen wurden. Er setzte sich daher für ihre Pflege
+      ein, und 1863 wurde in Genf das Rote Kreuz gegründet. Dafür erhielt Dunant 1901 zusammen mit Frédéric
+      Passy den ersten Friedensnobelpreis.

@@ -11,6 +11,23 @@ options:
 explanation: The communes issue the land-use planning for their area, for example the building and zoning
   regulations. In doing so, they observe the requirements of the Confederation and the canton. In this
   way, they help to determine how the locality develops.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer plant im Kanton Zürich auf lokaler Ebene, wie das Land genutzt wird, zum Beispiel
+      wo sich Wohnzonen und Gewerbezonen befinden?
+    options_de:
+      a: Die Bundesversammlung
+      b: Die Kantonspolizei
+      c: Die Gemeinden
+      d: Die Bezirksräte allein
+    explanation_de: Die Gemeinden erlassen die Raumplanung für ihr Gebiet, zum Beispiel die Bau- und Zonenordnung.
+      Dabei beachten sie die Vorgaben des Bundes und des Kantons. Auf diese Weise tragen sie dazu bei,
+      zu bestimmen, wie sich der Ort entwickelt.

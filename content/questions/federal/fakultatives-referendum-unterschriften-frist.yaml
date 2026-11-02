@@ -21,7 +21,7 @@ glossary:
 - fakultatives Referendum
 - Bundesgesetz
 - Bundesblatt
-status: in_review
+status: approved
 difficulty: 2
 checks:
   independent_answer:
@@ -41,3 +41,42 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte ergänzen, dass auch acht Kantone ein Referendum verlangen können
+        und dass bei der Abstimmung nur das Volksmehr zählt, etwa mit dem Satz «Auch acht Kantone können
+        ein Referendum verlangen; für die Annahme genügt das Volksmehr.»'
+      - 'Klein: Zur Frage ist keine Tatsache aus der Themenliste angegeben; bitte die passende Tatsache
+        zum fakultativen Referendum (50 000 Unterschriften, 100 Tage) zuordnen, damit der Umfang überprüfbar
+        ist.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte ergänzen, dass ein fakultatives Referendum auch zustande kommt, wenn
+        acht Kantone es verlangen (Kantonsreferendum), zum Beispiel mit dem Satz «Auch acht Kantone können
+        ein Referendum verlangen.»'
+      - 'Klein: Zur Frage ist keine Tatsache aus der Themenliste angegeben; bitte die passende Tatsache
+        zu den Volksrechten (fakultatives Referendum) zuordnen, damit der Umfang überprüfbar ist.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Themenliste enthält keine Tatsache zu dieser Frage; die Frage ist aber allgemein bekanntes,
+        korrektes Grundwissen und passt zum Test.'
+      - 'Klein: Die Frage fragt zwei Dinge auf einmal (Anzahl und Frist); das ist hier vertretbar, weil
+        die falschen Antworten klar falsch sind.'
+      - 'Klein: In der Erklärung könnte «Bundesblatt» kurz erklärt werden, zum Beispiel als «amtliche
+        Veröffentlichung der Bundesgesetze», damit es für B1-Lernende verständlicher ist.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

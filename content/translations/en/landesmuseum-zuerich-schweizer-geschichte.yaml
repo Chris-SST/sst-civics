@@ -9,6 +9,21 @@ options:
   d: Modern art from all over the world
 explanation: The Swiss National Museum in Zurich shows Swiss history and cultural history. It is part
   of the Swiss National Museum group. It is located next to Zurich main railway station.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird im Schweizerischen Nationalmuseum in Zürich (Landesmuseum Zürich) ausgestellt?
+    options_de:
+      a: Die Geschichte der Schweiz
+      b: Die Geschichte der Eisenbahn
+      c: Naturgeschichte und Tierwelt der Alpen
+      d: Moderne Kunst aus der ganzen Welt
+    explanation_de: Das Schweizerische Nationalmuseum in Zürich zeigt Schweizer Geschichte und Kulturgeschichte.
+      Es gehört zur Gruppe des Schweizerischen Nationalmuseums. Es befindet sich neben dem Zürcher Hauptbahnhof.

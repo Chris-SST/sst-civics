@@ -1,0 +1,30 @@
+id: einsprache-gegen-steuerveranlagung-schriftlich
+lang: it
+source_version: 1
+question: Una persona soggetta a imposizione non è d'accordo con la propria tassazione. Che cosa può fare?
+options:
+  a: Può far votare l'assemblea comunale (Gemeindeversammlung).
+  b: Può rifiutarsi di pagare senza intraprendere ulteriori passi.
+  c: Può presentare reclamo per iscritto all'autorità fiscale.
+  d: Può presentare un'iniziativa popolare (Volksinitiative) al Consiglio federale (Bundesrat).
+explanation: Contro la tassazione esiste il mezzo di ricorso del reclamo. Questo deve essere presentato
+  per iscritto all'autorità fiscale, e precisamente entro un termine.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine steuerpflichtige Person ist mit ihrer Veranlagung nicht einverstanden. Was kann
+      sie tun?
+    options_de:
+      a: Sie kann die Gemeindeversammlung abstimmen lassen.
+      b: Sie kann sich weigern zu zahlen, ohne weitere Schritte zu unternehmen.
+      c: Sie kann bei der Steuerbehörde schriftlich Einsprache erheben.
+      d: Sie kann beim Bundesrat eine Volksinitiative einreichen.
+    explanation_de: Gegen die Veranlagung besteht das Rechtsmittel der Einsprache. Diese muss schriftlich
+      bei der Steuerbehörde eingereicht werden, und zwar innerhalb einer Frist.

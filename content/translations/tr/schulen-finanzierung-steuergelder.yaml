@@ -1,0 +1,29 @@
+id: schulen-finanzierung-steuergelder
+lang: tr
+source_version: 1
+question: İsviçre'de devlet okulları esas olarak neyle finanse edilir?
+options:
+  a: Velilerin her ay ödediği okul harçlarıyla
+  b: kanton ve belediyelerin (Gemeinden) vergi gelirleriyle
+  c: Posta ve SBB'nin gelirleriyle
+  d: sağlık sigortası şirketlerinin (Krankenkassen) katkılarıyla
+explanation: Zorunlu devlet okulu, Federal Anayasa'ya (Bundesverfassung) göre ücretsizdir. Okul, özellikle
+  kantonlar ve belediyeler tarafından olmak üzere vergi gelirleriyle finanse edilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Womit werden öffentliche Schulen in der Schweiz hauptsächlich finanziert?
+    options_de:
+      a: Mit den Schulgebühren, die die Eltern jeden Monat bezahlen
+      b: Mit den Steuereinnahmen der Kantone und Gemeinden
+      c: Mit den Einnahmen der Post und der SBB
+      d: Mit den Beiträgen der Krankenkassen
+    explanation_de: Die obligatorische öffentliche Schule ist gemäss der Bundesverfassung unentgeltlich.
+      Die Schule wird durch Steuereinnahmen finanziert, insbesondere durch die Kantone und Gemeinden.

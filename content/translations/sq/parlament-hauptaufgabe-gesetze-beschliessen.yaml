@@ -1,0 +1,29 @@
+id: parlament-hauptaufgabe-gesetze-beschliessen
+lang: sq
+source_version: 1
+question: Cila është detyra më e rëndësishme e Parlamentit të Konfederatës?
+options:
+  a: Të drejtojë policinë në të gjithë vendin
+  b: Të vendosë në çështjet e mosmarrëveshjes mes personave
+  c: Të shqyrtojë dhe të miratojë ligjet
+  d: Të zbatojë ligjet në jetën e përditshme
+explanation: Parlamenti është pushteti ligjvënës. Ai shqyrton dhe miraton ligjet e Konfederatës. Qeveria
+  i zbaton ato, dhe gjykatat gjykojnë në rastet e mosmarrëveshjes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die wichtigste Aufgabe des Parlaments der Eidgenossenschaft?
+    options_de:
+      a: Die Polizei im ganzen Land zu leiten
+      b: In Streitfällen zwischen Personen zu entscheiden
+      c: Die Gesetze zu prüfen und zu genehmigen
+      d: Die Gesetze im Alltag anzuwenden
+    explanation_de: Das Parlament ist die gesetzgebende Gewalt. Es prüft und genehmigt die Gesetze der
+      Eidgenossenschaft. Die Regierung wendet sie an, und die Gerichte urteilen in Streitfällen.

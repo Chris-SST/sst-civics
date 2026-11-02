@@ -1,0 +1,31 @@
+id: berufsinformationszentrum-auskunft-lehrstellen-berufswahl
+lang: tr
+source_version: 1
+question: Çıraklık yerleri, meslek seçimi ve iş hakkında bilgiyi nereden alabilirsiniz?
+options:
+  a: Meslek Bilgilendirme Merkezinde (Berufsinformationszentrum)
+  b: Nüfus müdürlüğünde (Zivilstandsamt)
+  c: Anaokulunda
+  d: İcra dairesinde (Betreibungsamt)
+explanation: Meslek Bilgilendirme Merkezi (BIZ), çıraklık yerleri, meslek seçimi, meslekî ileri eğitim
+  ve iş konularında bilgi verir ve danışmanlık sunar. Bu hizmet gençlere ve yetişkinlere açıktır. Diğer
+  kurumların görevleri farklıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo können Sie Informationen über Lehrstellen, Berufswahl und Arbeit erhalten?
+    options_de:
+      a: Im Berufsinformationszentrum
+      b: Im Zivilstandsamt
+      c: Im Kindergarten
+      d: Im Betreibungsamt
+    explanation_de: Das Berufsinformationszentrum (BIZ) gibt Auskunft und bietet Beratung zu Lehrstellen,
+      Berufswahl, beruflicher Weiterbildung und Arbeit. Dieses Angebot steht Jugendlichen und Erwachsenen
+      offen. Die Aufgaben der anderen Stellen sind anders.

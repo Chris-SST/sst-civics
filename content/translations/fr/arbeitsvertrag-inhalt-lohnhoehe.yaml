@@ -1,0 +1,33 @@
+id: arbeitsvertrag-inhalt-lohnhoehe
+lang: fr
+source_version: 1
+question: Qu'est-ce qui est notamment fixé dans le contrat de travail entre l'employeur et l'employée
+  ?
+options:
+  a: Le montant du salaire
+  b: Le montant de la rente de l'assurance-vieillesse et survivants (AHV)
+  c: Le montant de la taxe sur la valeur ajoutée
+  d: Le montant de la prime de la caisse-maladie (Krankenkasse)
+explanation: Le contrat de travail définit les principales conditions du travail, par exemple l'activité,
+  le temps de travail et le salaire. La rente AVS, la taxe sur la valeur ajoutée et la prime de la caisse-maladie
+  ne sont pas fixées dans le contrat de travail.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird insbesondere im Arbeitsvertrag zwischen dem Arbeitgeber und der Arbeitnehmerin
+      festgelegt?
+    options_de:
+      a: Die Höhe des Lohnes
+      b: Die Höhe der Rente der Alters- und Hinterlassenenversicherung (AHV)
+      c: Die Höhe der Mehrwertsteuer
+      d: Die Höhe der Prämie der Krankenkasse
+    explanation_de: Der Arbeitsvertrag legt die wichtigsten Bedingungen der Arbeit fest, zum Beispiel
+      die Tätigkeit, die Arbeitszeit und den Lohn. Die AHV-Rente, die Mehrwertsteuer und die Prämie der
+      Krankenkasse werden nicht im Arbeitsvertrag festgelegt.

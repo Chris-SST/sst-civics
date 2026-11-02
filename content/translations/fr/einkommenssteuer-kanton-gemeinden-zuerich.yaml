@@ -1,0 +1,33 @@
+id: einkommenssteuer-kanton-gemeinden-zuerich
+lang: fr
+source_version: 1
+question: Quel impôt important le canton de Zurich et les communes (Gemeinden) prélèvent-ils sur le salaire
+  et sur les autres revenus des personnes ?
+options:
+  a: L'impôt sur le revenu
+  b: L'impôt sur les successions
+  c: L'impôt sur les chiens
+  d: L'impôt sur les véhicules à moteur
+explanation: L'impôt sur le revenu est l'un des impôts les plus importants du canton et des communes.
+  Il est prélevé sur le revenu des personnes physiques. Les autres impôts sont moins importants ou portent
+  sur autre chose.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche wichtige Steuer erheben der Kanton Zürich und die Gemeinden auf dem Lohn und auf
+      dem übrigen Einkommen der Personen?
+    options_de:
+      a: Die Einkommenssteuer
+      b: Die Erbschaftssteuer
+      c: Die Hundesteuer
+      d: Die Motorfahrzeugsteuer
+    explanation_de: Die Einkommenssteuer ist eine der wichtigsten Steuern des Kantons und der Gemeinden.
+      Sie wird auf dem Einkommen der natürlichen Personen erhoben. Die anderen Steuern sind weniger wichtig
+      oder betreffen etwas anderes.

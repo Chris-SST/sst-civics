@@ -1,0 +1,34 @@
+id: quartierverein-aufgabe-im-quartier
+lang: sq
+source_version: 1
+question: Cila është një detyrë tipike e një shoqate lagjeje (Quartierverein) në një komunë (Gemeinde)
+  ose qytet të kantonit të Zürichut?
+options:
+  a: Ajo përfaqëson shqetësimet e banorëve të lagjes përpara autoriteteve dhe promovon bashkëjetesën.
+  b: Ajo mban regjistrin e banorëve për lagjen.
+  c: Ajo mbledh taksa nga banorët e lagjes.
+  d: Ajo miraton kërkesat për leje ndërtimi në lagje.
+explanation: Një shoqatë lagjeje është një bashkim vullnetar i banorëve. Ajo paraqet shqetësimet e lagjes
+  te autoritetet dhe organizon ngjarje që forcojnë bashkëjetesën. Detyrat sovrane, si taksat, lejet e
+  ndërtimit ose regjistri i banorëve, i përkasin komunës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist eine typische Aufgabe eines Quartiervereins in einer Gemeinde oder Stadt des
+      Kantons Zürich?
+    options_de:
+      a: Er vertritt die Anliegen der Quartierbewohner gegenüber den Behörden und fördert das Zusammenleben.
+      b: Er führt das Einwohnerregister für das Quartier.
+      c: Er erhebt Steuern bei den Bewohnern des Quartiers.
+      d: Er genehmigt die Baugesuche im Quartier.
+    explanation_de: Ein Quartierverein ist ein freiwilliger Zusammenschluss von Bewohnern. Er bringt die
+      Anliegen des Quartiers bei den Behörden vor und organisiert Veranstaltungen, die das Zusammenleben
+      stärken. Hoheitliche Aufgaben wie Steuern, Baubewilligungen oder das Einwohnerregister gehören zur
+      Gemeinde.

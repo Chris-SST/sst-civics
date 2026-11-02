@@ -1,0 +1,33 @@
+id: stichfrage-initiative-und-gegenvorschlag
+lang: pt
+source_version: 1
+question: Numa votação sobre uma iniciativa popular (Volksinitiative) e um contraprojeto direto, existe
+  uma pergunta subsidiária. Para que serve?
+options:
+  a: Decide se a votação tem de ser repetida
+  b: Decide se os cantões podem, de todo, participar na votação
+  c: Decide qual projeto se aplica quando ambos são aceites
+  d: Decide se as assinaturas devem ser verificadas mais uma vez
+explanation: Os eleitores podem aprovar tanto a iniciativa como o contraprojeto. Com a pergunta subsidiária,
+  indicam qual projeto deve entrar em vigor caso ambos sejam aceites. Assim, os votos não se perdem entre
+  dois projetos semelhantes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Bei einer Abstimmung über eine Volksinitiative und einen direkten Gegenentwurf gibt es
+      eine Eventualfrage. Wozu dient sie?
+    options_de:
+      a: Sie entscheidet, ob die Abstimmung wiederholt werden muss
+      b: Sie entscheidet, ob die Kantone überhaupt an der Abstimmung teilnehmen dürfen
+      c: Sie entscheidet, welche Vorlage gilt, wenn beide angenommen werden
+      d: Sie entscheidet, ob die Unterschriften noch einmal überprüft werden müssen
+    explanation_de: Die Stimmberechtigten können sowohl die Initiative als auch den Gegenentwurf annehmen.
+      Mit der Eventualfrage geben sie an, welche Vorlage in Kraft treten soll, falls beide angenommen
+      werden. So gehen die Stimmen nicht zwischen zwei ähnlichen Vorlagen verloren.

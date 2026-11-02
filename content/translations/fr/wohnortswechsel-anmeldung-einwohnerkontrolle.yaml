@@ -1,0 +1,30 @@
+id: wohnortswechsel-anmeldung-einwohnerkontrolle
+lang: fr
+source_version: 1
+question: Où devez-vous vous annoncer lorsque vous déménagez dans une autre commune (Gemeinde) zurichoise
+  ?
+options:
+  a: Auprès du tribunal de district
+  b: Auprès de l'Office fédéral de la statistique
+  c: Auprès de la police cantonale
+  d: Auprès du contrôle des habitants de la nouvelle commune de domicile
+explanation: L'annonce se fait auprès du contrôle des habitants, aussi appelé bureau des habitants. Il
+  tient le registre des habitantes et des habitants de la commune.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo müssen Sie sich anmelden, wenn Sie in eine andere Zürcher Gemeinde umziehen?
+    options_de:
+      a: Beim Bezirksgericht
+      b: Beim Bundesamt für Statistik
+      c: Bei der Kantonspolizei
+      d: Bei der Einwohnerkontrolle der neuen Wohngemeinde
+    explanation_de: Die Anmeldung erfolgt bei der Einwohnerkontrolle, auch Einwohneramt genannt. Sie führt
+      das Register der Einwohnerinnen und Einwohner der Gemeinde.

@@ -10,6 +10,23 @@ options:
 explanation: Some cantons adopted the Reformation, while others remained Catholic. This created a religious
   divide that placed a strain on the Confederation for a long time. There were also conflicts between
   the denominations.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Orte» und «Kantone» sind hier austauschbar, die übrigen Unterschiede sind
+      nur sprachlich
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Folge hatte die Reformation für die Schweiz?
+    options_de:
+      a: Die Schweiz wurde religiös in einen reformierten und einen katholischen Teil gespalten.
+      b: Die Schweiz wurde Teil des Deutschen Reiches.
+      c: Die Kirche verlor überall jeden Einfluss auf die Politik.
+      d: Alle Kantone der Eidgenossenschaft wurden reformiert.
+    explanation_de: Einige Kantone nahmen die Reformation an, während andere katholisch blieben. Dadurch
+      entstand eine religiöse Spaltung, die die Eidgenossenschaft lange Zeit belastete. Es gab auch Konflikte
+      zwischen den Konfessionen.

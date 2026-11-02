@@ -10,6 +10,22 @@ options:
 explanation: In the 16th century, the Reformation split the Church in Europe. In Switzerland, for example,
   Huldrych Zwingli in Zurich and John Calvin in Geneva were important. The other terms refer to later
   developments.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche wichtige religiöse Bewegung prägte im 16. Jahrhundert Europa und auch die Schweiz?
+    options_de:
+      a: Die Reformation
+      b: Die Aufklärung
+      c: Die Regeneration
+      d: Die Helvetische Republik
+    explanation_de: Im 16. Jahrhundert spaltete die Reformation die Kirche in Europa. In der Schweiz waren
+      zum Beispiel Huldrych Zwingli in Zürich und Johannes Calvin in Genf wichtig. Die anderen Begriffe
+      beziehen sich auf spätere Entwicklungen.

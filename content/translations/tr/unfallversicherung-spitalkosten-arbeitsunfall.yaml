@@ -1,0 +1,33 @@
+id: unfallversicherung-spitalkosten-arbeitsunfall
+lang: tr
+source_version: 1
+question: Bir çalışan iş yerinde ağır bir kaza geçiriyor ve hastaneye yatırılması gerekiyor. Hastane masraflarını
+  hangi sigorta karşılar?
+options:
+  a: İşsizlik sigortası
+  b: Kaza sigortası
+  c: Gelir kaybı tazminat sistemi (Erwerbsersatzordnung)
+  d: Yaşlılık ve Hayat Boyu Hayatta Kalanlar Sigortası
+explanation: Zorunlu kaza sigortası, iş kazalarında tedavi masraflarını, yani örneğin hastane masraflarını
+  öder. Çalışanlar işveren aracılığıyla bu sigortaya sahiptir. Belirtilen diğer sigortalar başka riskleri
+  kapsar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ein Arbeitnehmer erleidet am Arbeitsplatz einen schweren Unfall und muss ins Spital eingeliefert
+      werden. Welche Versicherung übernimmt die Spitalkosten?
+    options_de:
+      a: Arbeitslosenversicherung
+      b: Unfallversicherung
+      c: Erwerbsersatzordnung
+      d: Alters- und Hinterlassenenversicherung
+    explanation_de: Die obligatorische Unfallversicherung bezahlt bei Arbeitsunfällen die Behandlungskosten,
+      also zum Beispiel die Spitalkosten. Arbeitnehmende sind über den Arbeitgeber bei dieser Versicherung
+      versichert. Die anderen genannten Versicherungen decken andere Risiken ab.

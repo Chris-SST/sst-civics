@@ -1,0 +1,29 @@
+id: wiener-kongress-dauernde-neutralitaet-anerkennung
+lang: tr
+source_version: 1
+question: 1815 yılında gerçekleşen hangi olay İsviçre'nin tarafsızlığı açısından önemlidir?
+options:
+  a: İsviçre tüm komşu devletlere savaş ilan etti.
+  b: Büyük güçler İsviçre'nin kalıcı tarafsızlığını tanıdı.
+  c: İsviçre Milletler Cemiyeti'ne katıldı.
+  d: İsviçre ilk kez tarafsızlık konusunda bir halk oylaması yaptı.
+explanation: 1815'teki Viyana Kongresi'nde Avrupa'nın büyük güçleri İsviçre'nin kalıcı tarafsızlığını
+  tanıdı. Bu, tarafsızlığa uluslararası bir temel kazandırdı.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Ereignis im Jahr 1815 ist für die Neutralität der Schweiz von Bedeutung?
+    options_de:
+      a: Die Schweiz erklärte allen Nachbarstaaten den Krieg.
+      b: Die Grossmächte erkannten die dauernde Neutralität der Schweiz an.
+      c: Die Schweiz trat dem Völkerbund bei.
+      d: Die Schweiz hielt zum ersten Mal eine Volksabstimmung über die Neutralität ab.
+    explanation_de: Am Wiener Kongress von 1815 erkannten die Grossmächte Europas die dauernde Neutralität
+      der Schweiz an. Dies verlieh der Neutralität eine internationale Grundlage.

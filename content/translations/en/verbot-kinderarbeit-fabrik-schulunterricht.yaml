@@ -9,6 +9,21 @@ options:
   d: That factories would bring in more workers from abroad
 explanation: The Factory Act of 1877 banned factory work for children. They were meant to attend school
   instead of working. The law also protected the health of workers.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sollte das Verbot der Kinderarbeit in Fabriken im Jahr 1877 hauptsächlich sicherstellen?
+    options_de:
+      a: Dass die Fabriken tiefere Löhne bezahlen müssten
+      b: Dass die Kinder die Schule besuchen konnten
+      c: Dass die Kinder früher zu Hause mithelfen müssten
+      d: Dass die Fabriken mehr Arbeitskräfte aus dem Ausland holen würden
+    explanation_de: Das Fabrikgesetz von 1877 verbot die Fabrikarbeit für Kinder. Sie sollten stattdessen
+      die Schule besuchen, anstatt zu arbeiten. Das Gesetz schützte auch die Gesundheit der Arbeiter.

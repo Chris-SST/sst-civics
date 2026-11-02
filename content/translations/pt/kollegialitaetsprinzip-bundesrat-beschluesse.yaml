@@ -1,0 +1,29 @@
+id: kollegialitaetsprinzip-bundesrat-beschluesse
+lang: pt
+source_version: 1
+question: O que significa o princípio da colegialidade no Conselho Federal (Bundesrat)?
+options:
+  a: A Presidente ou o Presidente da Confederação (Bundespräsident) decide sozinho.
+  b: Os membros defendem de forma unitária, perante o exterior, as decisões do Conselho Federal.
+  c: Cada membro decide no seu departamento sem consultar os outros.
+  d: Os membros podem defender publicamente a sua opinião divergente.
+explanation: O Conselho Federal decide como colégio. Mesmo quem defendeu uma opinião diferente no Conselho
+  Federal apoia a decisão perante o exterior. Assim, o governo apresenta-se de forma unida.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet das Kollegialitätsprinzip im Bundesrat?
+    options_de:
+      a: Die Bundespräsidentin oder der Bundespräsident entscheidet allein.
+      b: Die Mitglieder vertreten die Entscheide des Bundesrates nach aussen einheitlich.
+      c: Jedes Mitglied entscheidet in seinem Departement, ohne die anderen zu konsultieren.
+      d: Die Mitglieder dürfen ihre abweichende Meinung öffentlich vertreten.
+    explanation_de: Der Bundesrat entscheidet als Kollegium. Auch wer im Bundesrat eine andere Meinung
+      vertreten hat, unterstützt den Entscheid nach aussen. So tritt die Regierung geschlossen auf.

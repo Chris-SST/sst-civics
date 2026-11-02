@@ -1,0 +1,32 @@
+id: eidgenoessische-abstimmungstermine-pro-jahr
+lang: tr
+source_version: 1
+question: İsviçre'de federal halk oylamaları normalde yılda kaç kez yapılır?
+options:
+  a: Bir kez
+  b: Yalnızca dört yılda bir
+  c: En fazla dört kez
+  d: Her ay
+explanation: Federal halk oylamaları için yılda en fazla dört oylama pazarı öngörülmüştür. Bir oylama
+  gününde çoğu zaman aynı anda birden fazla tasarı hakkında oy verilir. Buna karşın Ulusal Konsey (Nationalrat)
+  seçimleri dört yılda bir yapılır; bunlar oylama değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie oft im Jahr finden in der Schweiz normalerweise eidgenössische Volksabstimmungen
+      statt?
+    options_de:
+      a: Einmal
+      b: Nur alle vier Jahre
+      c: Höchstens viermal
+      d: Jeden Monat
+    explanation_de: Für eidgenössische Volksabstimmungen sind pro Jahr höchstens vier Abstimmungstermine
+      vorgesehen. An einem Abstimmungstag wird meistens gleichzeitig über mehrere Vorlagen abgestimmt.
+      Die Wahlen des Nationalrats hingegen finden alle vier Jahre statt; das sind keine Abstimmungen.

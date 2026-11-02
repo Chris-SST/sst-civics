@@ -1,0 +1,33 @@
+id: polizei-befugnis-festnahme-straftaeter
+lang: es
+source_version: 2
+question: ¿Qué organismo puede detener a las personas sospechosas de haber cometido un delito?
+options:
+  a: La autoridad escolar
+  b: La policía
+  c: El Parlamento
+  d: La oficina de impuestos
+explanation: La policía puede detener a las personas sospechosas de haber cometido un delito, siempre
+  que se cumplan los requisitos legales. Después, un tribunal decide si la persona es culpable. La autoridad
+  escolar, el Parlamento y la oficina de impuestos no tienen esta facultad.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Stelle kann Personen festnehmen, die verdächtigt werden, eine Straftat begangen
+      zu haben?
+    options_de:
+      a: Die Schulbehörde
+      b: Die Polizei
+      c: Das Parlament
+      d: Das Steueramt
+    explanation_de: Die Polizei kann Personen festnehmen, die verdächtigt werden, eine Straftat begangen
+      zu haben, sofern die gesetzlichen Voraussetzungen erfüllt sind. Danach entscheidet ein Gericht,
+      ob die Person schuldig ist. Die Schulbehörde, das Parlament und das Steueramt haben diese Befugnis
+      nicht.

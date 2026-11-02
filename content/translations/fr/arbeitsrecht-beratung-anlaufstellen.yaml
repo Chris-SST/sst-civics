@@ -1,0 +1,31 @@
+id: arbeitsrecht-beratung-anlaufstellen
+lang: fr
+source_version: 1
+question: Qui peut vous aider pour des questions de droit du travail ?
+options:
+  a: La commission scolaire (Schulpflege) et la paroisse
+  b: Les avocats, les syndicats et les tribunaux des prud'hommes
+  c: Les entreprises de transports publics et la Poste
+  d: Les offices de l'état civil et le contrôle des habitants
+explanation: Pour les questions de droit du travail, il existe plusieurs interlocuteurs. Parmi eux figurent
+  les avocates et les avocats, les syndicats et les tribunaux des prud'hommes. Les autres services sont
+  compétents pour d'autres tâches.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann Ihnen bei Fragen des Arbeitsrechts helfen?
+    options_de:
+      a: Die Schulpflege und die Kirchgemeinde
+      b: Die Anwälte, die Gewerkschaften und die Arbeitsgerichte
+      c: Die Unternehmen des öffentlichen Verkehrs und die Post
+      d: Die Zivilstandsämter und die Einwohnerkontrolle
+    explanation_de: Bei Fragen des Arbeitsrechts gibt es mehrere Ansprechpartner. Dazu gehören die Anwältinnen
+      und Anwälte, die Gewerkschaften und die Arbeitsgerichte. Die anderen Stellen sind für andere Aufgaben
+      zuständig.

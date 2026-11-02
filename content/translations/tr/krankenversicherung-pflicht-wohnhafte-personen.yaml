@@ -1,0 +1,31 @@
+id: krankenversicherung-pflicht-wohnhafte-personen
+lang: tr
+source_version: 1
+question: İsviçre'de ikamet eden kişiler için sağlık sigortası açısından ne geçerlidir?
+options:
+  a: Yalnızca İsviçre'de çalışıyorlarsa sigortalanmak zorundadırlar
+  b: Yasal olarak bir sağlık sigortası yaptırmakla yükümlüdürler
+  c: Yalnızca 50 yaşından büyükseler sigortalanmak zorundadırlar
+  d: Sigortalanıp sigortalanmamaya serbestçe karar verebilirler
+explanation: Sağlık Sigortası Kanunu, İsviçre'de ikametgâhı olan her kişiyi sağlık sigortası yaptırmakla
+  yükümlü kılar. Kişinin, doğumdan veya ikametgâhın İsviçre'ye taşınmasından itibaren üç ay içinde sigortalanması
+  gerekir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für Personen, die in der Schweiz wohnen, in Bezug auf die Krankenversicherung?
+    options_de:
+      a: Sie müssen nur versichert sein, wenn sie in der Schweiz arbeiten
+      b: Sie sind gesetzlich verpflichtet, eine Krankenversicherung abzuschliessen
+      c: Sie müssen nur versichert sein, wenn sie älter als 50 Jahre sind
+      d: Sie können frei entscheiden, ob sie sich versichern oder nicht
+    explanation_de: Das Krankenversicherungsgesetz verpflichtet jede Person, die ihren Wohnsitz in der
+      Schweiz hat, eine Krankenversicherung abzuschliessen. Die Person muss sich innerhalb von drei Monaten
+      ab der Geburt oder ab der Verlegung des Wohnsitzes in die Schweiz versichern.

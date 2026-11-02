@@ -1,0 +1,31 @@
+id: gemeinden-finanzieren-sozialhilfe
+lang: fr
+source_version: 1
+question: Qui finance, dans le canton de Zurich, l'aide sociale destinée aux personnes en situation de
+  détresse ?
+options:
+  a: Les Églises seules
+  b: La Banque nationale suisse
+  c: Les associations d'employeurs
+  d: Les communes (Gemeinden)
+explanation: Dans le canton de Zurich, les communes sont responsables de l'aide sociale et en supportent
+  les coûts. Cela peut représenter une lourde charge pour les petites communes. C'est pourquoi la péréquation
+  financière existe.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer finanziert im Kanton Zürich die Sozialhilfe für Personen in Notlagen?
+    options_de:
+      a: Die Kirchen allein
+      b: Die Schweizerische Nationalbank
+      c: Die Arbeitgeberverbände
+      d: Die Gemeinden
+    explanation_de: Im Kanton Zürich sind die Gemeinden für die Sozialhilfe zuständig und tragen die Kosten.
+      Das kann für kleine Gemeinden eine schwere Belastung sein. Deshalb gibt es den Finanzausgleich.

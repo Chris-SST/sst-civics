@@ -1,0 +1,31 @@
+id: groesster-kanton-nach-flaeche
+lang: pt
+source_version: 1
+question: Qual cantão tem a maior superfície de todos os cantões suíços?
+options:
+  a: Ticino
+  b: Valais
+  c: Berna
+  d: Grisões
+explanation: Os Grisões são o maior cantão da Suíça em termos de superfície. Situam-se inteiramente nos
+  Alpes e têm muitos vales e montanhas. Valais, Berna e Ticino também são grandes, mas mais pequenos do
+  que os Grisões.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton hat die grösste Fläche aller Schweizer Kantone?
+    options_de:
+      a: Tessin
+      b: Wallis
+      c: Bern
+      d: Graubünden
+    explanation_de: Graubünden ist flächenmässig der grösste Kanton der Schweiz. Er liegt vollständig
+      in den Alpen und hat viele Täler und Berge. Wallis, Bern und Tessin sind ebenfalls gross, aber kleiner
+      als Graubünden.

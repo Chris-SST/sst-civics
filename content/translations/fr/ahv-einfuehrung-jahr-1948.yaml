@@ -1,0 +1,33 @@
+id: ahv-einfuehrung-jahr-1948
+lang: fr
+source_version: 1
+question: En quelle année l'assurance-vieillesse et survivants (AHV), l'assurance-retraite étatique pour
+  la vieillesse et les survivants, a-t-elle été introduite ?
+options:
+  a: '1975'
+  b: '1918'
+  c: '1930'
+  d: '1948'
+explanation: L'assurance-vieillesse et survivants a commencé son activité en 1948, après que le peuple
+  a accepté la loi en 1947. Elle constitue le premier pilier du système suisse des trois piliers. Elle
+  garantit les moyens d'existence à la vieillesse et pour les survivants.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr wurde die Alters- und Hinterlassenenversicherung (AHV), die staatliche
+      Rentenversicherung für das Alter und die Hinterlassenen, eingeführt?
+    options_de:
+      a: '1975'
+      b: '1918'
+      c: '1930'
+      d: '1948'
+    explanation_de: Die Alters- und Hinterlassenenversicherung nahm 1948 ihre Tätigkeit auf, nachdem das
+      Volk das Gesetz 1947 angenommen hatte. Sie bildet die erste Säule des schweizerischen Dreisäulensystems.
+      Sie garantiert die Existenzmittel im Alter und für die Hinterlassenen.

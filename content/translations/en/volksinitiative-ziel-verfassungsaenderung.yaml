@@ -1,14 +1,32 @@
 id: volksinitiative-ziel-verfassungsaenderung
 lang: en
-source_version: 1
+source_version: 2
 question: What can citizens entitled to vote demand with a federal popular initiative (Volksinitiative)?
 options:
-  a: The removal from office of the Federal Council (Bundesrat)
-  b: An amendment to the Federal Constitution
-  c: The rejection of an existing federal act
-  d: An amendment to a cantonal constitution
-explanation: With a popular initiative, citizens entitled to vote can demand an amendment to the Federal
-  Constitution. The rejection of a law, on the other hand, would be a matter for the referendum.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: That the Federal Council (Bundesrat) be voted out of office
+  b: That the Federal Constitution be amended
+  c: That an existing federal act be directly repealed
+  d: That the cantonal constitution be amended
+explanation: With a federal popular initiative, citizens entitled to vote can demand an amendment to the
+  Federal Constitution. With a referendum, by contrast, the people can vote on a new law that Parliament
+  has just adopted. An existing law cannot be abolished in this way.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was können Stimmberechtigte mit einer eidgenössischen Volksinitiative verlangen?
+    options_de:
+      a: Dass der Bundesrat abgewählt wird
+      b: Dass die Bundesverfassung geändert wird
+      c: Dass ein bestehendes Bundesgesetz direkt aufgehoben wird
+      d: Dass die Kantonsverfassung geändert wird
+    explanation_de: Mit einer eidgenössischen Volksinitiative können Stimmberechtigte eine Änderung der
+      Bundesverfassung verlangen. Mit einem Referendum hingegen kann das Volk über ein neues Gesetz abstimmen,
+      das das Parlament soeben verabschiedet hat. Ein bestehendes Gesetz kann auf diese Weise nicht abgeschafft
+      werden.

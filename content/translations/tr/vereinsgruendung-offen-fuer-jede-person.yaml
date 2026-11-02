@@ -1,0 +1,31 @@
+id: vereinsgruendung-offen-fuer-jede-person
+lang: tr
+source_version: 1
+question: İsviçre'de kimler dernek kurabilir?
+options:
+  a: Yalnızca belediyede (Gemeinde) ikamet eden kişiler
+  b: Her kişi
+  c: Yalnızca İsviçre vatandaşları
+  d: Yalnızca yerleşim izni (C izni) (Niederlassungsbewilligung) sahibi kişiler
+explanation: İsviçre'de dernek kurmak her kişiye açıktır. Dernek kurma özgürlüğü Federal Anayasa (Bundesverfassung)
+  ile güvence altına alınmıştır. Vatandaşlık veya oturum statüsü bunun için önemli değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; der Zusatz «(C-Bewilligung)» in Antwort d präzisiert die Niederlassungsbewilligung
+      nur und ändert nichts.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann in der Schweiz einen Verein gründen?
+    options_de:
+      a: Nur Personen, die in der Gemeinde wohnhaft sind
+      b: Jede Person
+      c: Nur Schweizer Staatsbürger
+      d: Nur Personen mit einer Niederlassungsbewilligung (C-Bewilligung)
+    explanation_de: Die Gründung eines Vereins steht in der Schweiz jeder Person offen. Die Vereinigungsfreiheit
+      ist durch die Bundesverfassung gewährleistet. Die Staatsbürgerschaft oder der Aufenthaltsstatus
+      spielt dafür keine Rolle.

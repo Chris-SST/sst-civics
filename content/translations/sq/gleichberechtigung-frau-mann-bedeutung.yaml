@@ -1,0 +1,32 @@
+id: gleichberechtigung-frau-mann-bedeutung
+lang: sq
+source_version: 1
+question: Çfarë do të thotë, në parim, barazia në të drejta mes gruas dhe burrit?
+options:
+  a: Gratë dhe burrat kanë, në parim, të njëjtat të drejta.
+  b: Gratë dhe burrat kanë në çdo fushë të jetës të njëjtat detyrime, por të drejta të ndryshme.
+  c: Gratë dhe burrat fitojnë saktësisht aq sa njëri-tjetri në çdo profesion.
+  d: Gratë dhe burrat duhet t'i ndajnë barabar të gjitha detyrat në familje.
+explanation: Barazia në të drejta do të thotë që të dy gjinitë, në parim, kanë të njëjtat të drejta. Ajo
+  është e përcaktuar në Kushtetutën Federale. Parimi nuk thotë asgjë se si i ndajnë familjet detyrat e
+  tyre në veçanti.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Gleichberechtigung von Frau und Mann im Grundsatz?
+    options_de:
+      a: Frauen und Männer haben im Grundsatz die gleichen Rechte.
+      b: Frauen und Männer haben in jedem Lebensbereich die gleichen Pflichten, aber unterschiedliche
+        Rechte.
+      c: Frauen und Männer verdienen in jedem Beruf genau gleich viel wie einander.
+      d: Frauen und Männer müssen alle Aufgaben in der Familie gleichmässig untereinander aufteilen.
+    explanation_de: Die Gleichberechtigung bedeutet, dass beide Geschlechter im Grundsatz die gleichen
+      Rechte haben. Sie ist in der Bundesverfassung festgelegt. Der Grundsatz sagt nichts darüber aus,
+      wie die Familien ihre Aufgaben im Einzelnen aufteilen.

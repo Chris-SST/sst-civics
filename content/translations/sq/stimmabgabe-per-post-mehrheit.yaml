@@ -1,0 +1,30 @@
+id: stimmabgabe-per-post-mehrheit
+lang: sq
+source_version: 1
+question: Si e japin sot shumica e qytetarëve me të drejtë vote në Zvicër votën e tyre në votime dhe zgjedhje?
+options:
+  a: Ata e japin të dielën e votimit në kuvendin i komunës (Gemeindeversammlung).
+  b: Ata e hedhin personalisht në urnë të dielën e votimit.
+  c: Ata e dërgojnë me postë në komunë (Gemeinde).
+  d: Ata e japin përmes një faqeje interneti të Konfederatës.
+explanation: Shumica e qytetarëve me të drejtë vote votojnë me shkrim, pra me postë. Shkuarja te urna
+  të dielën e votimit sot nuk është më e zakonshme për shumicën.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie geben heute die meisten stimmberechtigten Bürgerinnen und Bürger in der Schweiz ihre
+      Stimme bei Abstimmungen und Wahlen ab?
+    options_de:
+      a: Sie geben sie am Abstimmungssonntag an der Gemeindeversammlung ab.
+      b: Sie werfen sie am Abstimmungssonntag persönlich in die Urne.
+      c: Sie schicken sie per Post an die Gemeinde.
+      d: Sie geben sie über eine Webseite des Bundes ab.
+    explanation_de: Die meisten stimmberechtigten Bürgerinnen und Bürger stimmen schriftlich, also per
+      Post. Der Gang zur Urne am Abstimmungssonntag ist heute für die Mehrheit nicht mehr üblich.

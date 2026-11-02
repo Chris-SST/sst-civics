@@ -1,0 +1,31 @@
+id: rechtsprechende-gewalt-bund-bundesgericht
+lang: tr
+source_version: 1
+question: İsviçre'de Konfederasyon düzeyinde en yüksek yargı organı hangi makamdır?
+options:
+  a: Federal Kançılarya (Bundeskanzlei)
+  b: Federal Konsey (Bundesrat)
+  c: Federal Meclis (Bundesversammlung)
+  d: Federal Mahkeme (Bundesgericht)
+explanation: Federal Anayasa, Konfederasyonun yargı yetkisini Federal Mahkeme'ye verir. Federal Mahkeme,
+  Konfederasyonun en yüksek yargı makamıdır. Federal Konsey ve Federal Meclis ise sırasıyla yürütme ve
+  yasama yetkisini kullanır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde ist in der Schweiz auf Ebene des Bundes das oberste Rechtsprechungsorgan?
+    options_de:
+      a: Bundeskanzlei
+      b: Bundesrat
+      c: Bundesversammlung
+      d: Bundesgericht
+    explanation_de: Die Bundesverfassung überträgt die richterliche Gewalt des Bundes dem Bundesgericht.
+      Das Bundesgericht ist die oberste richterliche Behörde des Bundes. Der Bundesrat und die Bundesversammlung
+      üben hingegen jeweils die vollziehende bzw. die gesetzgebende Gewalt aus.

@@ -1,23 +1,24 @@
 id: beliebter-wintersport-schweiz-skifahren
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.kultur.feiertage_brauchtum
-question_de: Welcher Sport ist im Winter in der Schweiz besonders weit verbreitet?
+question_de: Welche Sportart betreiben in der Schweiz im Winter besonders viele Menschen?
 options_de:
   a: Wasserball
   b: Skifahren
-  c: Eishockey auf dem Meer
+  c: Rudern
   d: Beachvolleyball
 correct: b
-explanation_de: Skifahren ist in der Schweiz im Winter ein sehr beliebter Sport. Viele Menschen fahren
-  in den Bergen Ski, auch Kinder lernen es oft in der Schule oder in Lagern.
+explanation_de: Skifahren ist in der Schweiz im Winter sehr beliebt, und viele Menschen fahren in den
+  Bergen Ski. Oft lernen schon Kinder das Skifahren, zum Beispiel in einem Skilager der Schule. Wasserball,
+  Rudern und Beachvolleyball sind dagegen Sportarten, die man vor allem im Sommer oder im Wasser betreibt.
 sources:
 - url: https://www.aboutswitzerland.eda.admin.ch/de/sport-und-freizeit
   checked: &id001 2026-11-02
 glossary:
 - Skifahren
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-325
@@ -27,15 +28,50 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Skifahren ist in der Schweiz der im Winter besonders weit verbreitete Sport, während Wasserball
-      und Beachvolleyball keine typischen Wintersportarten sind und es in der Schweiz kein Meer gibt,
-      auf dem Eishockey gespielt werden könnte.
+    version: 2
+    reasoning: Skifahren ist in der Schweiz die klassische und sehr verbreitete Wintersportart, während
+      Wasserball, Rudern und Beachvolleyball typische Sommer- bzw. Wassersportarten sind.
   source:
     verdict: supported
     note: Quelle 1 nennt Skifahren einen eigentlichen Nationalsport, der in den Wintermonaten unzählige
-      Skibegeisterte auf die Pisten lockt. Dass Kinder Skifahren oft in Schule oder Lagern lernen, steht
-      dort nicht, ist aber für die richtige Antwort nicht entscheidend.
+      Skibegeisterte auf die Pisten lockt. Die Aussagen zu Skilagern und zu den Sommer- bzw. Wassersportarten
+      stehen nicht auf der Seite, sind aber für die richtige Antwort nicht entscheidend.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Wasserball und Rudern werden auch im Hallenbad oder ganzjährig betrieben; die Erklärung
+        könnte daher besser sagen «Sportarten, die man vor allem im Sommer oder im Wasser betreibt und
+        nicht typisch für den Winter sind».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falschen Antworten sind alle deutlich Sommer- oder Wassersportarten, darum ist die
+        Frage sehr leicht; als plausiblere Alternative könnte man zum Beispiel «Tennis» oder «Velofahren»
+        anbieten.'
+      - 'Klein: Der Satz «vor allem im Sommer oder im Wasser» in der Erklärung ist etwas ungenau, weil
+        Wasserball auch im Hallenbad gespielt wird; besser wäre «Sportarten, die man vor allem im Sommer
+        oder im Wasser betreibt und die in der Schweiz weniger verbreitet sind».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage ist sehr leicht, weil die falschen Antworten (Wasserball, Rudern, Beachvolleyball)
+        klar Sommersportarten sind; als Alternative könnte man Wintersportarten wie Eishockey oder Langlauf
+        als Ablenker einsetzen, dann müsste die Frage aber genauer formuliert sein.'
+      - 'Klein: «besonders viele Menschen» ist etwas vage; besser wäre «Welche Sportart ist in der Schweiz
+        im Winter weit verbreitet?».'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

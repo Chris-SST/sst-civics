@@ -22,7 +22,7 @@ sources:
 glossary:
 - Kanton
 - Nachbarkanton
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-301
@@ -44,3 +44,35 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte zusätzlich die sechs Nachbarkantone nennen (Aargau, Schaffhausen,
+        Thurgau, St. Gallen, Schwyz, Zug), damit man sie besser lernen kann; die Broschüre nennt die Zahl
+        6.'
+      - 'Klein: «im Nordosten des Kantons Zürich» ist missverständlich, besser «nordöstlich vom Kanton
+        Zürich» oder «im Nordosten an den Kanton Zürich angrenzend» schreiben.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «liegt im Nordosten des Kantons Zürich» kann so verstanden werden, als liege der Thurgau
+        innerhalb des Kantons Zürich; besser «liegt nordöstlich des Kantons Zürich» schreiben.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte genauer sagen, dass Thurgau im Norden bzw. Nordosten an Zürich grenzt,
+        und die sechs Nachbarkantone nennen (Aargau, Zug, Schwyz, St. Gallen, Thurgau, Schaffhausen),
+        damit die Lernenden mehr mitnehmen.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

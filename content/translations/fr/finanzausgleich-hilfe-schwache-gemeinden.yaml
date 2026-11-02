@@ -1,0 +1,34 @@
+id: finanzausgleich-hilfe-schwache-gemeinden
+lang: fr
+source_version: 1
+question: À quoi sert la péréquation financière entre les communes (Gemeinden) du canton de Zurich ?
+options:
+  a: Elle réduit les impôts à un taux identique dans toutes les communes.
+  b: Elle paie aux communes les coûts des assemblées communales (Gemeindeversammlungen).
+  c: Elle aide les communes financièrement faibles ou pénalisées par des coûts sociaux élevés à accomplir
+    leurs tâches.
+  d: Elle répartit l'argent de la Confédération de manière égale entre tous les habitants et toutes les
+    habitantes.
+explanation: Les communes ont des capacités financières très différentes. La péréquation financière compense
+  en partie ces différences. Ainsi, les communes qui ont une faible capacité fiscale ou des coûts sociaux
+  élevés peuvent elles aussi accomplir leurs tâches.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient der Finanzausgleich zwischen den Gemeinden des Kantons Zürich?
+    options_de:
+      a: Er senkt die Steuern in allen Gemeinden auf einen identischen Satz.
+      b: Er bezahlt den Gemeinden die Kosten der Gemeindeversammlungen.
+      c: Er hilft finanzschwachen Gemeinden oder Gemeinden, die durch hohe Sozialkosten benachteiligt
+        sind, ihre Aufgaben zu erfüllen.
+      d: Er verteilt das Geld des Bundes gleichmässig auf alle Einwohnerinnen und Einwohner.
+    explanation_de: Die Gemeinden haben sehr unterschiedliche finanzielle Möglichkeiten. Der Finanzausgleich
+      gleicht diese Unterschiede teilweise aus. So können auch Gemeinden, die eine geringe Steuerkraft
+      oder hohe Sozialkosten haben, ihre Aufgaben erfüllen.

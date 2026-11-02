@@ -1,0 +1,33 @@
+id: meinungsaeusserung-verbreiten-grundrecht-bundesverfassung
+lang: sq
+source_version: 1
+question: Cila e drejtë themelore, e garantuar nga Kushtetuta Federale, e lejon që dikush ta shprehë lirisht
+  mendimin e vet dhe ta përhapë atë?
+options:
+  a: Liria e mendimit
+  b: E drejta e votës
+  c: Garancia e pronës
+  d: Liria e vendosjes
+explanation: Liria e mendimit e lejon që dikush ta shprehë lirisht mendimin e vet dhe ta përhapë atë.
+  Ajo është e përcaktuar në nenin 16 të Kushtetutës Federale. E drejta e votës, ndërkaq, ka të bëjë me
+  pjesëmarrjen në zgjedhje dhe në votime.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht, das von der Bundesverfassung garantiert wird, erlaubt es jemandem,
+      seine Meinung frei zu äussern und sie zu verbreiten?
+    options_de:
+      a: Die Meinungsfreiheit
+      b: Das Stimmrecht
+      c: Die Eigentumsgarantie
+      d: Die Niederlassungsfreiheit
+    explanation_de: Die Meinungsfreiheit erlaubt es jemandem, seine Meinung frei zu äussern und sie zu
+      verbreiten. Sie ist in Artikel 16 der Bundesverfassung festgelegt. Das Stimmrecht hingegen betrifft
+      die Teilnahme an Wahlen und Abstimmungen.

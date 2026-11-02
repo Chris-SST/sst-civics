@@ -11,6 +11,23 @@ options:
 explanation: The right of petition is open to everyone, including people without the right to vote. In
   this way, they can inform the authorities in writing of concerns, wishes or criticism. Only those entitled
   to vote may vote, elect and sign initiatives.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche politische Möglichkeit haben Ausländerinnen und Ausländer im Kanton Zürich, die
+      kein Stimmrecht haben?
+    options_de:
+      a: Sie können an der Urne über kantonale Vorlagen abstimmen.
+      b: Sie können die Mitglieder des Kantonsrats wählen.
+      c: Sie können sich mittels einer Petition an die Behörden wenden.
+      d: Sie können im Kanton eine Volksinitiative einreichen.
+    explanation_de: Das Petitionsrecht steht allen offen, auch Personen ohne Stimmrecht. So können sie
+      den Behörden Anliegen, Wünsche oder Kritik schriftlich mitteilen. Nur Stimmberechtigte dürfen abstimmen,
+      wählen und Initiativen unterschreiben.

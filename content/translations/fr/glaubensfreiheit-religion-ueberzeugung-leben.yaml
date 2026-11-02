@@ -1,0 +1,31 @@
+id: glaubensfreiheit-religion-ueberzeugung-leben
+lang: fr
+source_version: 1
+question: Selon la Constitution fédérale, que comprend la liberté de conscience et de croyance ?
+options:
+  a: Le droit d'avoir une foi et une conviction et de vivre conformément à celles-ci
+  b: Uniquement l'appartenance à une Église nationale reconnue
+  c: L'obligation de conserver la foi de ses parents
+  d: Le droit d'obliger les autres à adopter sa propre foi
+explanation: Toute personne a le droit de choisir librement sa religion et sa conviction philosophique
+  et de vivre conformément à celles-ci. On peut aussi changer de religion ou ne pas en avoir. Nul ne peut
+  être contraint d'adhérer à une croyance.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was umfasst gemäss der Bundesverfassung die Glaubens- und Gewissensfreiheit?
+    options_de:
+      a: Das Recht, einen Glauben und eine Überzeugung zu haben und gemäss diesen zu leben
+      b: Ausschliesslich die Zugehörigkeit zu einer anerkannten Landeskirche
+      c: Die Pflicht, den Glauben seiner Eltern beizubehalten
+      d: Das Recht, andere zu zwingen, den eigenen Glauben anzunehmen
+    explanation_de: Jede Person hat das Recht, ihre Religion und ihre weltanschauliche Überzeugung frei
+      zu wählen und gemäss diesen zu leben. Man kann auch die Religion wechseln oder keine haben. Niemand
+      kann gezwungen werden, sich einem Glauben anzuschliessen.

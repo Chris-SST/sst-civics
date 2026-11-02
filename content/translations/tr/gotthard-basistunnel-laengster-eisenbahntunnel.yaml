@@ -1,0 +1,29 @@
+id: gotthard-basistunnel-laengster-eisenbahntunnel
+lang: tr
+source_version: 1
+question: Gotthard Base Tüneli dünya çapında karşılaştırıldığında neyiyle öne çıkar?
+options:
+  a: Dünyanın en uzun demiryolu tünelidir.
+  b: Dünyanın en yüksek rakımda bulunan demiryolu tünelidir.
+  c: Dünyanın en uzun karayolu tünelidir.
+  d: Avrupa'nın en eski demiryolu tünelidir.
+explanation: Gotthard Base Tüneli dünyanın en uzun demiryolu tünelidir. Kuzey İsviçre'yi Ticino ile birbirine
+  bağlar ve Alpler'den geçen kuzey-güney ekseninin önemli bir parçasıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wodurch zeichnet sich der Gotthard-Basistunnel im weltweiten Vergleich aus?
+    options_de:
+      a: Er ist der längste Eisenbahntunnel der Welt.
+      b: Er ist der am höchsten gelegene Eisenbahntunnel der Welt.
+      c: Er ist der längste Strassentunnel der Welt.
+      d: Er ist der älteste Eisenbahntunnel Europas.
+    explanation_de: Der Gotthard-Basistunnel ist der längste Eisenbahntunnel der Welt. Er verbindet die
+      Nordschweiz mit dem Tessin und ist ein wichtiger Teil der Nord-Süd-Achse durch die Alpen.

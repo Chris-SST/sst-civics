@@ -1,0 +1,30 @@
+id: zivilgesetzbuch-ehe-scheidung-regeln
+lang: tr
+source_version: 1
+question: Hangi kanun, evliliğin nasıl kurulacağını ve nasıl boşanılacağını da düzenler?
+options:
+  a: Medeni Kanun (Zivilgesetzbuch)
+  b: Ceza Kanunu
+  c: İltica Kanunu
+  d: Federal Mahkeme (Bundesgericht) Kanunu
+explanation: Medeni Kanun; kişiler hukukunu, aile hukukunu, miras hukukunu ve eşya hukukunu düzenler.
+  Evlenme ve boşanma da bunlara dahildir. Ceza Kanunu ise buna karşılık suçlar ve cezalarla ilgilenir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gesetz regelt auch, wie eine Ehe geschlossen wird und wie man sich scheiden lässt?
+    options_de:
+      a: Zivilgesetzbuch
+      b: Strafgesetz
+      c: Asylgesetz
+      d: Bundesgerichtsgesetz
+    explanation_de: Das Zivilgesetzbuch regelt das Personenrecht, das Familienrecht, das Erbrecht und
+      das Sachenrecht. Eheschliessung und Scheidung gehören ebenfalls dazu. Das Strafgesetz hingegen befasst
+      sich mit Straftaten und Strafen.

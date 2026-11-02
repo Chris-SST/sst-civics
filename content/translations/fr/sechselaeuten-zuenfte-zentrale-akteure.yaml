@@ -1,0 +1,29 @@
+id: sechselaeuten-zuenfte-zentrale-akteure
+lang: fr
+source_version: 1
+question: Qui sont les acteurs centraux de la fête de printemps zurichoise du Sechseläuten ?
+options:
+  a: Les classes scolaires zurichoises
+  b: Les corporations zurichoises
+  c: Les présidences de commune (Gemeinde) du canton
+  d: Les membres du Conseil cantonal (Kantonsrat)
+explanation: Lors du Sechseläuten, les corporations défilent en costumes historiques à travers la ville.
+  Le soir, elles brûlent le Böögg. Cet événement est une fête de printemps bien connue à Zurich.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer sind die zentralen Akteure des Zürcher Frühlingsfests Sechseläuten?
+    options_de:
+      a: Die Zürcher Schulklassen
+      b: Die Zürcher Zünfte
+      c: Die Gemeindepräsidien des Kantons
+      d: Die Mitglieder des Kantonsrats
+    explanation_de: Am Sechseläuten ziehen die Zünfte in historischen Kostümen durch die Stadt. Am Abend
+      verbrennen sie den Böögg. Dieser Anlass ist ein in Zürich bekanntes Frühlingsfest.

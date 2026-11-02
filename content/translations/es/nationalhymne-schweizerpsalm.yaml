@@ -1,0 +1,29 @@
+id: nationalhymne-schweizerpsalm
+lang: es
+source_version: 1
+question: ¿Cómo se llama el himno nacional de Suiza?
+options:
+  a: «Rufst du, mein Vaterland»
+  b: «Lueget vo Bärg und Tal»
+  c: «Vo Luzern gäg Weggis zue»
+  d: «Schweizerpsalm»
+explanation: El himno nacional de Suiza es el «Schweizerpsalm». El Consejo Federal (Bundesrat) lo declaró
+  himno nacional de forma definitiva en 1981. Antes se cantaba con frecuencia «Rufst du, mein Vaterland».
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Landeshymne der Schweiz?
+    options_de:
+      a: «Rufst du, mein Vaterland»
+      b: «Lueget vo Bärg und Tal»
+      c: «Vo Luzern gäg Weggis zue»
+      d: «Schweizerpsalm»
+    explanation_de: Die Landeshymne der Schweiz ist der «Schweizerpsalm». Der Bundesrat erklärte ihn 1981
+      definitiv zur Landeshymne. Früher wurde häufig «Rufst du, mein Vaterland» gesungen.

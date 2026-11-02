@@ -1,0 +1,29 @@
+id: rav-aufgabe-stellensuchende-unterstuetzen
+lang: sq
+source_version: 1
+question: Cila është detyra e Qendrës Rajonale të Ndërmjetësimit të Punës (RAV)?
+options:
+  a: Ajo kontrollon pagat në ndërmarrje
+  b: Ajo i paguan pension të gjithë banorëve
+  c: Ajo mbështet punëkërkuesit në kërkimin e punës dhe ndërmjetëson vende pune
+  d: Ajo lëshon certifikata pune për punëkërkuesit
+explanation: RAV është pika rajonale e kontaktit për punëkërkuesit. Ajo i këshillon ata dhe u ndërmjetëson
+  vende pune. Në kantonin e Cyrihut ajo i përket Zyrës së Punës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die Aufgabe des Regionalen Arbeitsvermittlungszentrums (RAV)?
+    options_de:
+      a: Es kontrolliert die Löhne in den Unternehmen
+      b: Es zahlt allen Einwohnern eine Rente aus
+      c: Es unterstützt Stellensuchende bei der Stellensuche und vermittelt Arbeitsstellen
+      d: Es stellt Stellensuchenden Arbeitszeugnisse aus
+    explanation_de: Das RAV ist die regionale Anlaufstelle für Stellensuchende. Es berät sie und vermittelt
+      ihnen Arbeitsstellen. Im Kanton Zürich gehört es zum Amt für Arbeit.

@@ -1,0 +1,31 @@
+id: arbeitszeugnis-bedeutung
+lang: tr
+source_version: 1
+question: İş referans yazısı (Arbeitszeugnis) nedir?
+options:
+  a: Doktorun, kişinin çalışamayacağını belgeleyen onayı
+  b: İşverenin, çalışanın performansını ve davranışlarını değerlendiren belgesi
+  c: Göç dairesinin İsviçre'de çalışma izni
+  d: Vergi beyannamesi için yıllık maaş belgesi
+explanation: İş referans yazısını (Arbeitszeugnis) işveren düzenler. Yapılan işin türünü ve süresini açıklar,
+  performansı ve davranışları değerlendirir. Çalışanlar bunu istedikleri zaman talep edebilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist ein Arbeitszeugnis?
+    options_de:
+      a: Die Bestätigung des Arztes, die belegt, dass die Person nicht arbeiten kann
+      b: Das Dokument des Arbeitgebers, das die Leistung und das Verhalten der Arbeitnehmerin oder des
+        Arbeitnehmers beurteilt
+      c: Die Arbeitsbewilligung des Migrationsamtes in der Schweiz
+      d: Der jährliche Lohnausweis für die Steuererklärung
+    explanation_de: Das Arbeitszeugnis wird vom Arbeitgeber ausgestellt. Es beschreibt die Art und die
+      Dauer der ausgeübten Arbeit und beurteilt die Leistung und das Verhalten. Arbeitnehmende können
+      es jederzeit verlangen.

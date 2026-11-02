@@ -1,0 +1,30 @@
+id: politische-partei-aehnliche-ziele
+lang: tr
+source_version: 1
+question: Siyasi bir partiyi en iyi hangisi tanımlar?
+options:
+  a: Siyasi uyuşmazlıklar hakkında karar veren bir mahkeme
+  b: Benzer siyasi hedefleri olan kişilerin bir araya gelmesi
+  c: Görevleri birlikte yerine getiren belediyeler (Gemeinde) grubu
+  d: Seçimleri ve oylamaları gerçekleştiren bir makam
+explanation: Bir partide, benzer siyasi hedefleri izleyen insanlar bir araya gelir. Partiler seçimlerde
+  adaylar gösterir ve oylamaya sunulan tasarılar hakkında görüş bildirir. Partiler devlet makamları değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was beschreibt eine politische Partei am besten?
+    options_de:
+      a: Ein Gericht, das über politische Streitigkeiten entscheidet
+      b: Der Zusammenschluss von Personen mit ähnlichen politischen Zielen
+      c: Eine Gruppe von Gemeinden, die Aufgaben gemeinsam erfüllen
+      d: Eine Behörde, die Wahlen und Abstimmungen durchführt
+    explanation_de: In einer Partei kommen Menschen zusammen, die ähnliche politische Ziele verfolgen.
+      Parteien stellen bei Wahlen Kandidaten auf und äussern sich zu den Vorlagen, die zur Abstimmung
+      gebracht werden. Parteien sind keine staatlichen Behörden.

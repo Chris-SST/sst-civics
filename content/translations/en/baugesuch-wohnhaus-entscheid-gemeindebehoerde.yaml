@@ -11,6 +11,22 @@ options:
 explanation: Building applications for residential buildings are submitted to the commune. The communal
   building authority examines the application and either grants or refuses the building permit. The canton
   is involved only in special cases.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet im Kanton Zürich im Allgemeinen über das Baugesuch für ein neues Wohnhaus?
+    options_de:
+      a: Der Regierungsrat
+      b: Die Baubehörde der Gemeinde
+      c: Das Bezirksgericht
+      d: Das Bundesamt für Raumentwicklung
+    explanation_de: Baugesuche für Wohnhäuser werden bei der Gemeinde eingereicht. Die kommunale Baubehörde
+      prüft das Gesuch und erteilt oder verweigert die Baubewilligung. Der Kanton ist nur in besonderen
+      Fällen beteiligt.

@@ -1,0 +1,29 @@
+id: kanton-zuerich-einwohnerzahl-2020
+lang: pt
+source_version: 1
+question: Quantos habitantes tinha, aproximadamente, o cantão de Zurique em 2020?
+options:
+  a: Cerca de 1,1 milhão
+  b: Cerca de 2,2 milhões
+  c: Cerca de 0,8 milhão
+  d: Cerca de 1,5 milhão
+explanation: Em 2020, viviam no cantão de Zurique aproximadamente 1,5 milhão de pessoas. É, por isso,
+  o cantão mais populoso da Suíça.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Einwohner hatte der Kanton Zürich im Jahr 2020 ungefähr?
+    options_de:
+      a: Etwa 1,1 Millionen
+      b: Etwa 2,2 Millionen
+      c: Etwa 0,8 Millionen
+      d: Etwa 1,5 Millionen
+    explanation_de: Im Jahr 2020 lebten im Kanton Zürich ungefähr 1,5 Millionen Menschen. Er ist daher
+      der bevölkerungsreichste Kanton der Schweiz.

@@ -10,6 +10,23 @@ options:
   d: 100,000 signatures in 18 months
 explanation: A federal popular initiative needs 100,000 valid signatures within 18 months. The optional
   referendum, by contrast, needs 50,000 signatures within 100 days.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Unterschriften braucht eine eidgenössische Volksinitiative, und wie lange dürfen
+      Unterschriften gesammelt werden?
+    options_de:
+      a: 100 000 Unterschriften in 100 Tagen
+      b: 50 000 Unterschriften in 100 Tagen
+      c: 50 000 Unterschriften in 18 Monaten
+      d: 100 000 Unterschriften in 18 Monaten
+    explanation_de: Eine eidgenössische Volksinitiative braucht 100 000 gültige Unterschriften innerhalb
+      von 18 Monaten. Das fakultative Referendum hingegen braucht 50 000 Unterschriften innerhalb von
+      100 Tagen.

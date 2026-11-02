@@ -1,0 +1,33 @@
+id: eigentum-garantie-bundesverfassung
+lang: fr
+source_version: 1
+question: Quel droit fondamental protège en Suisse les maisons, les terrains et les autres biens patrimoniaux
+  des particuliers ?
+options:
+  a: La garantie de la propriété
+  b: La liberté de croyance et de conscience
+  c: La liberté d'établissement
+  d: La liberté de réunion
+explanation: La Constitution fédérale garantit la propriété à l'article 26. L'État ne peut restreindre
+  la propriété qu'à certaines conditions, par exemple avec une base légale et une pleine indemnité en
+  cas d'expropriation.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht schützt in der Schweiz die Häuser, die Grundstücke und die anderen
+      Vermögenswerte von Privatpersonen?
+    options_de:
+      a: Die Eigentumsgarantie
+      b: Die Glaubens- und Gewissensfreiheit
+      c: Die Niederlassungsfreiheit
+      d: Die Versammlungsfreiheit
+    explanation_de: Die Bundesverfassung garantiert das Eigentum in Artikel 26. Der Staat kann das Eigentum
+      nur unter bestimmten Bedingungen einschränken, zum Beispiel mit einer gesetzlichen Grundlage und
+      einer vollen Entschädigung im Falle einer Enteignung.

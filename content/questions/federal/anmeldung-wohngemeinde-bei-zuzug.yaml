@@ -21,7 +21,7 @@ sources:
 glossary:
 - Wohngemeinde
 - Einwohnerkontrolle
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-017
@@ -43,3 +43,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falsche Antwort «beim Bundesrat melden» ist sehr unplausibel; besser wäre eine glaubwürdigere
+        Stelle, zum Beispiel «beim Migrationsamt des Kantons» oder «bei der Post».'
+      - 'Klein: Die Erklärung könnte die Frist im Kanton Zürich nennen, zum Beispiel «Im Kanton Zürich
+        muss man sich innerhalb von 14 Tagen anmelden», wie es die Quelle des Kantons beschreibt.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Wort «Gemeinde» steht in der Frage und in der richtigen Antwort, das verrät die Lösung
+        etwas; man könnte die Frage z. B. als «Was müssen Sie tun, wenn Sie an einen neuen Wohnort ziehen?»
+        formulieren.'
+      - 'Klein: Die Erklärung könnte die übliche Frist erwähnen, z. B. «meist innerhalb von 14 Tagen nach
+        dem Umzug».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage sagt «sich niederlassen», die Antwort «anmelden», die Themenliste «registrieren».
+        Für Lernende mit wenig Deutsch könnte man «anmelden (registrieren)» schreiben oder in der Frage
+        «in eine Gemeinde ziehen» verwenden.'
+      - 'Klein: Die Erklärung könnte die Frist von 14 Tagen im Kanton Zürich nennen, weil die Quelle sie
+        ausdrücklich angibt und sie für den Alltag nützlich ist.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,29 @@
+id: bevoelkerungsreichster-kanton-zuerich
+lang: tr
+source_version: 1
+question: Hangi kanton en fazla nüfusa sahiptir?
+options:
+  a: Bern
+  b: Zürih
+  c: Vaud
+  d: Aargau
+explanation: Zürih kantonu, yaklaşık 1,6 milyon ile İsviçre'de en fazla nüfusa sahip olan kantondur. Onu
+  Bern ve Vaud kantonları izler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton hat die meisten Einwohner?
+    options_de:
+      a: Bern
+      b: Zürih
+      c: Vaud
+      d: Aargau
+    explanation_de: Der Kanton Zürih ist mit etwa 1,6 Millionen der Kanton mit den meisten Einwohnern
+      in der Schweiz. Ihm folgen die Kantone Bern und Vaud.

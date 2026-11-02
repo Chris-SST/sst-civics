@@ -9,6 +9,22 @@ options:
   d: Only foreign nationals may be arrested without a reason.
 explanation: In a state governed by the rule of law, state action is bound by the law. An arrest or detention
   requires a legal ground. This protects people's freedom from arbitrary treatment.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt bei Verhaftung und Haft in einem Rechtsstaat?
+    options_de:
+      a: Der Staat darf niemanden ohne Grund verhaften und einsperren.
+      b: Der Staat darf Personen nach eigenem Ermessen festhalten.
+      c: Die Regierung darf Kritiker vorsorglich in Gewahrsam nehmen.
+      d: Nur Ausländer dürfen ohne Grund verhaftet werden.
+    explanation_de: In einem Rechtsstaat ist das staatliche Handeln an das Gesetz gebunden. Eine Verhaftung
+      oder Haft erfordert einen gesetzlichen Grund. Dies schützt die Freiheit der Menschen vor willkürlicher
+      Behandlung.

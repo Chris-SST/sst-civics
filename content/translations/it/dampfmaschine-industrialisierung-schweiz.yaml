@@ -1,0 +1,31 @@
+id: dampfmaschine-industrialisierung-schweiz
+lang: it
+source_version: 2
+question: Quale invenzione ha influenzato fortemente l'industrializzazione in Svizzera nel XIX secolo?
+options:
+  a: L'aeroplano
+  b: La macchina a vapore
+  c: Il computer
+  d: La catena di montaggio
+explanation: Nel XIX secolo la macchina a vapore divenne importante in Svizzera. Azionava le macchine
+  nelle fabbriche e più tardi anche le ferrovie, e sempre più persone lavoravano nelle fabbriche. L'aeroplano,
+  la catena di montaggio e il computer divennero importanti solo nel XX secolo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Erfindung hat die Industrialisierung in der Schweiz im 19. Jahrhundert stark beeinflusst?
+    options_de:
+      a: Das Flugzeug
+      b: Die Dampfmaschine
+      c: Der Computer
+      d: Das Fliessband
+    explanation_de: Im 19. Jahrhundert wurde die Dampfmaschine in der Schweiz wichtig. Sie trieb die Maschinen
+      in den Fabriken an und später auch die Eisenbahnen, und immer mehr Menschen arbeiteten in den Fabriken.
+      Das Flugzeug, das Fliessband und der Computer wurden erst im 20. Jahrhundert wichtig.

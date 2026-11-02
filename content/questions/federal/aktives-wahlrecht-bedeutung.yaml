@@ -1,5 +1,5 @@
 id: aktives-wahlrecht-bedeutung
-version: 2
+version: 3
 scope: federal
 canton: null
 topic: bund.demokratie.wahlen
@@ -8,23 +8,78 @@ options_de:
   a: Das Recht, eine Partei zu gründen
   b: Das Recht, selbst in ein Amt gewählt zu werden
   c: Das Recht, im Parlament Vorstösse einzureichen
-  d: Das Recht, an Wahlen teilzunehmen und Politikerinnen und Politiker zu wählen
+  d: Das Recht, bei Wahlen und Abstimmungen mitzumachen und die eigene Stimme abzugeben
 correct: d
-explanation_de: 'Aktives Wahlrecht heisst: Man darf selbst wählen, zum Beispiel das Parlament. Das Recht,
-  selbst gewählt zu werden, heisst passives Wahlrecht. Bei Sachabstimmungen spricht man vom Stimmrecht.'
+explanation_de: Wer das aktive Wahlrecht hat, darf bei Wahlen und Abstimmungen selbst die Stimme abgeben,
+  zum Beispiel bei der Wahl des Nationalrats oder bei einer Volksabstimmung. Das Recht, selbst in ein
+  Amt gewählt zu werden, nennt man dagegen passives Wahlrecht.
 sources:
 - url: https://www.zh.ch/de-ls/politik-staat/wahlen-abstimmungen.html
   checked: &id001 2026-11-02
 - url: https://www.bk.admin.ch/de/nationalratswahlen
-  checked: *id001
+  checked: 2026-11-02
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: 2026-11-02
 glossary:
 - aktives Wahlrecht
 - passives Wahlrecht
 - Abstimmung
-status: draft
+status: approved
 difficulty: 2
 covers:
 - zh-029
-checks: {}
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 3
+    reasoning: Das aktive Wahlrecht ist das Recht, bei Wahlen und Abstimmungen die eigene Stimme abzugeben,
+      während das Recht, selbst gewählt zu werden, das passive Wahlrecht ist.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Kanton Zürich, Leichte Sprache) unterscheidet zwei Rechte: Das aktive Wahlrecht bedeutet,
+      dass man Politiker und Politikerinnen wählen darf, das passive Wahlrecht, dass man selbst gewählt
+      werden darf. Das deckt Antwort d und die Abgrenzung in der Erklärung ab. Der Zusatz «und Abstimmungen»
+      wird dort nicht ausdrücklich dem aktiven Wahlrecht zugeordnet, ist aber unschädlich.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 3
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Genau genommen bedeutet das aktive Wahlrecht nur das Recht, bei Wahlen zu wählen (so auch
+        die Quelle des Kantons Zürich: «Ich darf Politiker und Politikerinnen wählen»). Das Abstimmen
+        bei einer Volksabstimmung gehört zum Stimmrecht. Deshalb sollte die Erklärung ergänzen, dass man
+        in der Schweiz oft beides zusammen «Stimm- und Wahlrecht» nennt, oder das Beispiel «Volksabstimmung»
+        durch ein Wahlbeispiel ersetzen, etwa die Wahl des Kantonsrats.'
+      - 'Klein: Antwort d) ist deutlich länger als die anderen Antworten und fällt dadurch auf; besser
+        kürzen, etwa zu «Das Recht, bei Wahlen die eigene Stimme abzugeben».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort d) ist deutlich länger als die anderen Antworten und verrät sich dadurch leicht;
+        kürzen auf «Das Recht, bei Wahlen und Abstimmungen die eigene Stimme abzugeben».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Antwort d) ist deutlich länger als die anderen Antworten und fällt dadurch auf; sie
+        könnte gekürzt werden, etwa zu «Das Recht, bei Wahlen und Abstimmungen seine Stimme abzugeben».'
+      - 'Klein: Antwort d) nennt «Wahlen und Abstimmungen». Die Zürcher Quelle in Leichter Sprache beschreibt
+        das aktive Wahlrecht nur als Recht, Politiker zu wählen, und trennt das Stimmrecht davon. Die
+        Themenliste fasst beides zusammen, daher ist die Antwort vertretbar. Die Erklärung könnte aber
+        kurz festhalten, dass man streng genommen beim Abstimmen vom Stimmrecht spricht.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 3
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

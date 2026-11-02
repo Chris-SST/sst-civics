@@ -1,0 +1,36 @@
+id: auslieferung-schweizer-staatsangehoerige-ausnahme
+lang: sq
+source_version: 2
+question: Çfarë vlen në parim për ekstradimin e shtetasve zviceranë jashtë vendit?
+options:
+  a: Ata ekstradohen me kërkesë të çdo shteti.
+  b: Ata nuk ekstradohen në një shtet tjetër kundër dëshirës së tyre. Megjithatë, ata mund t'i dorëzohen
+    një gjykate ndërkombëtare.
+  c: Ata ekstradohen vetëm në shtetet fqinje të Zvicrës.
+  d: Ata ekstradohen nëse Këshilli Federal (Bundesrat) e dëshiron këtë në rastin konkret.
+explanation: Sipas nenit 25 të Kushtetutës Federale, shtetasit zviceranë nuk mund të dëbohen. Ata mund
+  të ekstradohen në një shtet tjetër vetëm nëse vetë janë dakord. Një gjykatë ndërkombëtare, për shembull
+  Gjykata Penale Ndërkombëtare, nuk është autoritet i huaj, prandaj një ligj i Konfederatës lejon që shtetasit
+  zviceranë t'i dorëzohen asaj për një procedim.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt grundsätzlich für die Auslieferung von Schweizer Bürgern ins Ausland?
+    options_de:
+      a: Sie werden auf Ersuchen jedes Staates ausgeliefert.
+      b: Sie werden gegen ihren Willen nicht an einen anderen Staat ausgeliefert. Sie können jedoch einem
+        internationalen Gericht übergeben werden.
+      c: Sie werden nur an die Nachbarstaaten der Schweiz ausgeliefert.
+      d: Sie werden ausgeliefert, wenn der Bundesrat dies im konkreten Fall wünscht.
+    explanation_de: Gemäss Artikel 25 der Bundesverfassung dürfen Schweizer Staatsangehörige nicht ausgewiesen
+      werden. Sie können nur dann an einen anderen Staat ausgeliefert werden, wenn sie selbst damit einverstanden
+      sind. Ein internationales Gericht, zum Beispiel der Internationale Strafgerichtshof, ist keine ausländische
+      Behörde, daher erlaubt ein Gesetz des Bundes, dass Schweizer Staatsangehörige ihm für ein Verfahren
+      übergeben werden.

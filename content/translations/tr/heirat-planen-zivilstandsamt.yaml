@@ -1,0 +1,29 @@
+id: heirat-planen-zivilstandsamt
+lang: tr
+source_version: 1
+question: Evlenmek isteyen çiftler hangi makama başvurur?
+options:
+  a: Okul kuruluna (Schulpflege)
+  b: Nüfus idaresine (Zivilstandsamt)
+  c: Vergi dairesine
+  d: İcra ve iflas dairesine
+explanation: Nüfus idaresi (Zivilstandsamt) evliliğin hazırlıklarını yapar ve nikâhı gerçekleştirir. Ayrıca
+  doğum ve ölüm gibi diğer olayları da resmen kayıt altına alır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welche Behörde wenden sich Paare, die heiraten möchten?
+    options_de:
+      a: An die Schulpflege
+      b: An das Zivilstandsamt
+      c: An das Steueramt
+      d: An das Betreibungs- und Konkursamt
+    explanation_de: Das Zivilstandsamt trifft die Vorbereitungen für die Ehe und führt die Trauung durch.
+      Ausserdem erfasst es andere Ereignisse wie Geburten und Todesfälle amtlich.

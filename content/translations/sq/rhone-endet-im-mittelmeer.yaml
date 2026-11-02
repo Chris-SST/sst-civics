@@ -1,0 +1,28 @@
+id: rhone-endet-im-mittelmeer
+lang: sq
+source_version: 1
+question: Ku derdhet Rodani, i cili buron në Valais?
+options:
+  a: Në Detin e Veriut
+  b: Në Oqeanin Atlantik
+  c: Në Detin Mesdhe
+  d: Në Detin e Zi
+explanation: Rodani rrjedh përmes Liqenit të Zhenevës dhe më tej përmes Francës. Ai derdhet në Detin Mesdhe.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wohin mündet die Rhone, die im Wallis entspringt?
+    options_de:
+      a: In die Nordsee
+      b: In den Atlantischen Ozean
+      c: In das Mittelmeer
+      d: In das Schwarze Meer
+    explanation_de: Die Rhone fliesst durch den Genfersee und weiter durch Frankreich. Sie mündet in das
+      Mittelmeer.

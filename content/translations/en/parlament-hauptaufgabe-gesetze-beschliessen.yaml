@@ -9,6 +9,21 @@ options:
   d: To enforce laws in everyday life
 explanation: Parliament is the legislative power. It discusses and adopts the laws of the Confederation.
   The government implements them, and the courts rule in disputes.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die wichtigste Aufgabe des Bundesparlaments?
+    options_de:
+      a: Die Polizei im ganzen Land zu leiten
+      b: Streitigkeiten zwischen Privatpersonen zu entscheiden
+      c: Gesetze zu beraten und zu verabschieden
+      d: Gesetze im Alltag durchzusetzen
+    explanation_de: Das Parlament ist die gesetzgebende Gewalt. Es berät und verabschiedet die Gesetze
+      des Bundes. Die Regierung setzt sie um, und die Gerichte entscheiden in Streitigkeiten.

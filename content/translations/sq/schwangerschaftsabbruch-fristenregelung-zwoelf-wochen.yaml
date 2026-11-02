@@ -1,0 +1,33 @@
+id: schwangerschaftsabbruch-fristenregelung-zwoelf-wochen
+lang: sq
+source_version: 1
+question: Cili rregullim vlen në Zvicër që nga viti 2002 për ndërprerjen e shtatzënisë në dymbëdhjetë
+  javët e para?
+options:
+  a: Ndërprerja e shtatzënisë në këtë periudhë është në parim e ndaluar.
+  b: Gruaja mund të vendosë vetë për ndërprerjen e shtatzënisë.
+  c: Bashkëshorti ose partneri duhet të japë pëlqimin për ndërprerjen e shtatzënisë.
+  d: Një gjykatë duhet ta miratojë ndërprerjen e shtatzënisë.
+explanation: Që nga viti 2002 vlen i ashtuquajturi rregullim i afatit. Sipas tij, gruaja vendos vetë në
+  dymbëdhjetë javët e para të shtatzënisë. Për këtë ajo duhet të pretendojë me shkrim se ndodhet në një
+  gjendje nevoje.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Regelung gilt in der Schweiz seit dem Jahr 2002 für den Schwangerschaftsabbruch
+      in den ersten zwölf Wochen?
+    options_de:
+      a: Der Schwangerschaftsabbruch in diesem Zeitraum ist grundsätzlich verboten.
+      b: Die Frau kann selbst über den Schwangerschaftsabbruch entscheiden.
+      c: Der Ehemann oder Partner muss dem Schwangerschaftsabbruch zustimmen.
+      d: Ein Gericht muss den Schwangerschaftsabbruch genehmigen.
+    explanation_de: Seit dem Jahr 2002 gilt die sogenannte Fristenregelung. Demnach entscheidet die Frau
+      in den ersten zwölf Wochen der Schwangerschaft selbst. Dafür muss sie schriftlich geltend machen,
+      dass sie sich in einer Notlage befindet.

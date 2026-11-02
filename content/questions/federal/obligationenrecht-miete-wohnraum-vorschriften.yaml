@@ -1,18 +1,18 @@
 id: obligationenrecht-miete-wohnraum-vorschriften
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.gerichte
-question_de: In welchem Gesetz stehen die Vorschriften zur Miete von Wohnraum?
+question_de: In welchem Gesetz sind die Regeln für die Miete einer Wohnung festgehalten?
 options_de:
   a: Im Obligationenrecht
-  b: In der Bundesverfassung allein
+  b: Im Arbeitsgesetz
   c: Im Strafgesetzbuch
-  d: Im Schweizerischen Strassenverkehrsgesetz
+  d: Im Strassenverkehrsgesetz
 correct: a
-explanation_de: Das Mietrecht ist im Obligationenrecht geregelt. Dort finden sich zum Beispiel Regeln
-  zu Mietvertrag, Mietzins und Kündigung. Das Obligationenrecht ist der fünfte Teil des Zivilgesetzbuchs,
-  aber ein eigenes Gesetz.
+explanation_de: Die Regeln zur Miete von Wohnungen stehen im Obligationenrecht (OR). Dort steht zum Beispiel,
+  was im Mietvertrag gilt, wie hoch der Mietzins sein darf und wie man kündigen kann. Das Zivilgesetzbuch
+  (ZGB) regelt dagegen vor allem Themen wie Familie, Heirat und Erbe.
 sources:
 - url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
   checked: &id001 2026-11-02
@@ -22,7 +22,7 @@ glossary:
 - Obligationenrecht
 - Miete
 - Mietvertrag
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-093
@@ -32,14 +32,50 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Das Mietrecht, auch die Miete von Wohnraum, ist im Obligationenrecht (Art. 253 ff. OR)
-      geregelt, nicht im Strafgesetzbuch, im Strassenverkehrsgesetz oder allein in der Bundesverfassung.
+    version: 2
+    reasoning: Das Mietrecht ist im Obligationenrecht (Art. 253 ff. OR) geregelt, während die anderen
+      genannten Gesetze andere Bereiche betreffen.
   source:
     verdict: supported
-    note: 'Quelle 1 (Obligationenrecht, Fünfter Teil des ZGB) enthält die Mietvertragsbestimmungen (Mietvertrag,
-      Mietzins). Quelle 2 sagt ausdrücklich: «Das Obligationenrecht (OR) regelt den Mietvertrag.» Auch
-      der Hinweis, dass das OR der fünfte Teil des Zivilgesetzbuchs ist, steht in Quelle 1.'
+    note: 'Quelle 2 (Zürcher Broschüre) sagt ausdrücklich: «Das Obligationenrecht (OR) regelt den Mietvertrag»
+      und nennt den Mietvertrag unter den Verträgen des OR. Quelle 1 ist der OR-Text selbst mit Mietzins-
+      und Kündigungsbestimmungen für Wohnungen, passend zur Erklärung.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Formulierung «wie hoch der Mietzins sein darf» kann so verstanden werden, als lege
+        das OR einen festen Höchstbetrag fest; besser wäre «wann ein Mietzins missbräuchlich (zu hoch)
+        ist».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung stellt das ZGB dem OR gegenüber, obwohl das OR formell der fünfte Teil des
+        ZGB ist. Man könnte ergänzen: «Das OR gehört formell zum Zivilgesetzbuch, ist aber ein eigenes
+        Gesetzbuch.»'
+      - 'Klein: «wie hoch der Mietzins sein darf» ist etwas ungenau, denn das OR legt keine festen Höchstbeträge
+        fest. Besser wäre zum Beispiel «wann ein Mietzins zu hoch ist».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, im OR stehe, «wie hoch der Mietzins sein darf». Das ist stark vereinfacht,
+        denn das OR regelt nur den Schutz vor missbräuchlichen Mietzinsen. Besser: «wann ein Mietzins
+        als missbräuchlich gilt».'
+      - 'Klein: Die Frage sagt «in welchem Gesetz». Das Obligationenrecht ist formal der Fünfte Teil des
+        ZGB, wird aber im Alltag als eigenes Gesetz verstanden. Das macht die Frage nicht unklar, weil
+        das ZGB nicht als Antwort steht.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

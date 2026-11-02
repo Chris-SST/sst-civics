@@ -1,0 +1,30 @@
+id: franzoesische-besetzung-1798-alte-eidgenossenschaft
+lang: tr
+source_version: 1
+question: 1798 yılında Fransız birliklerinin İsviçre'ye girmesinin sonucu ne oldu?
+options:
+  a: İsviçre'yi Fransa'nın bir parçası haline getirdi
+  b: Eski kantonların gücünü pekiştirdi
+  c: 1848 federal devletinin kurulmasına yol açtı
+  d: Eski Eidgenossenschaft (Yemin Birliği) düzenine son verdi
+explanation: Fransa'nın işgaliyle eski Eidgenossenschaft (Yemin Birliği) çöktü. Onun yerine üniter devlet
+  olarak Helvetik Cumhuriyet kuruldu. Bugünkü federal devlet ancak 1848'de ortaya çıktı.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was war die Folge des Einmarsches französischer Truppen in die Schweiz im Jahr 1798?
+    options_de:
+      a: Er machte die Schweiz zu einem Teil Frankreichs
+      b: Er festigte die Macht der alten Kantone
+      c: Er führte zur Gründung des Bundesstaates von 1848
+      d: Er beendete die Ordnung der alten Eidgenossenschaft
+    explanation_de: Mit der Besetzung durch Frankreich brach die alte Eidgenossenschaft zusammen. An ihrer
+      Stelle wurde die Helvetische Republik als Einheitsstaat gegründet. Der heutige Bundesstaat entstand
+      erst 1848.

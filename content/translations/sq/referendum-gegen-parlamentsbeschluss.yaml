@@ -1,0 +1,31 @@
+id: referendum-gegen-parlamentsbeschluss
+lang: sq
+source_version: 1
+question: Kundër cilave vendime drejtohet një referendum në nivel federal (Konfederata)?
+options:
+  a: Kundër ligjeve që i kanë miratuar Këshilli Kombëtar (Nationalrat) dhe Këshilli i Shteteve (Ständerat)
+  b: Kundër vendimeve që i ka marrë Kancelaria Federale (Bundeskanzlei)
+  c: Kundër vendimeve gjyqësore që i ka dhënë Gjykata Federale (Bundesgericht)
+  d: Kundër urdhëresave që i kanë nxjerrë komuna të veçanta (Gemeinde)
+explanation: Një referendum drejtohet kundër ligjeve që i ka miratuar Parlamenti. Parlamenti përbëhet
+  nga Këshilli Kombëtar dhe Këshilli i Shteteve. Vendimet gjyqësore dhe vendimet e administratës nuk mund
+  të kundërshtohen me referendum.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen welche Beschlüsse richtet sich ein Referendum auf Bundesebene (Eidgenossenschaft)?
+    options_de:
+      a: Gegen Gesetze, die vom Nationalrat und vom Ständerat verabschiedet wurden
+      b: Gegen Beschlüsse, die von der Bundeskanzlei gefasst wurden
+      c: Gegen Gerichtsurteile, die vom Bundesgericht erlassen wurden
+      d: Gegen Verordnungen, die von einzelnen Gemeinden erlassen wurden
+    explanation_de: Ein Referendum richtet sich gegen Gesetze, die vom Parlament verabschiedet wurden.
+      Das Parlament besteht aus dem Nationalrat und dem Ständerat. Gerichtsurteile und Beschlüsse der
+      Verwaltung können nicht mit einem Referendum angefochten werden.

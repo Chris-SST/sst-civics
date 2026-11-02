@@ -1,0 +1,31 @@
+id: schweiz-ausdehnung-ost-west
+lang: tr
+source_version: 1
+question: İsviçre'nin en doğudaki noktası ile en batıdaki noktası arasındaki mesafe yaklaşık olarak ne
+  kadardır?
+options:
+  a: Yaklaşık 250 kilometre
+  b: Yaklaşık 350 kilometre
+  c: Yaklaşık 550 kilometre
+  d: Yaklaşık 150 kilometre
+explanation: İsviçre'nin doğudan batıya uzunluğu yaklaşık 350 kilometredir. Dolayısıyla İsviçre, doğu-batı
+  yönünde kuzey-güney yönünden daha uzun olan, oldukça küçük bir ülkedir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie gross ist ungefähr die Entfernung zwischen dem östlichsten Punkt und dem westlichsten
+      Punkt der Schweiz?
+    options_de:
+      a: Ungefähr 250 Kilometer
+      b: Ungefähr 350 Kilometer
+      c: Ungefähr 550 Kilometer
+      d: Ungefähr 150 Kilometer
+    explanation_de: Die Länge der Schweiz von Osten nach Westen beträgt ungefähr 350 Kilometer. Somit
+      ist die Schweiz ein ziemlich kleines Land, das in Ost-West-Richtung länger ist als in Nord-Süd-Richtung.

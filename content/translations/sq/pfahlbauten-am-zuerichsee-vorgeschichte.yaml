@@ -1,0 +1,30 @@
+id: pfahlbauten-am-zuerichsee-vorgeschichte
+lang: sq
+source_version: 1
+question: Si ishin ndërtuar vendbanimet parahistorike në Liqenin e Cyrihut?
+options:
+  a: Si shpella në shkëmb
+  b: Si ndërtesa mbi shtylla (Pfahlbauten), pra shtëpi mbi shtylla
+  c: Si shtëpi prej tulle në fshatra
+  d: Si kështjella mbi shkëmbinj
+explanation: Në bregun e Liqenit të Cyrihut, në kohët parahistorike, kishte ndërtesa mbi shtylla, domethënë
+  shtëpi mbi shtylla. Mbetjet e tyre ndodhen ende sot nën ujë dhe studiohen nga arkeologë nënujorë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie waren die prähistorischen Siedlungen am Zürichsee gebaut?
+    options_de:
+      a: Wie Höhlen im Fels
+      b: Als Bauten auf Pfählen, also Häuser auf Pfählen
+      c: Wie Backsteinhäuser in Dörfern
+      d: Wie Burgen auf Felsen
+    explanation_de: Am Ufer des Zürichsees gab es in prähistorischer Zeit Bauten auf Pfählen, das heisst
+      Häuser auf Pfählen. Ihre Überreste befinden sich noch heute unter Wasser und werden von Unterwasserarchäologen
+      untersucht.

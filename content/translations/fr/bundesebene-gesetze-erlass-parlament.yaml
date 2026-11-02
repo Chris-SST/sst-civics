@@ -1,0 +1,32 @@
+id: bundesebene-gesetze-erlass-parlament
+lang: fr
+source_version: 1
+question: Quelle autorité édicte les lois au niveau fédéral ?
+options:
+  a: L'Assemblée fédérale (Bundesversammlung), c'est-à-dire le Conseil national (Nationalrat) et le Conseil
+    des États (Ständerat)
+  b: La Banque nationale suisse
+  c: La Chancellerie fédérale (Bundeskanzlei)
+  d: La Conférence des gouvernements cantonaux
+explanation: L'Assemblée fédérale est le Parlement de la Confédération et se compose du Conseil national
+  et du Conseil des États. Elle est responsable de la législation. La Chancellerie fédérale, en revanche,
+  soutient le Conseil fédéral (Bundesrat) en tant qu'état-major.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde erlässt die Gesetze auf Bundesebene?
+    options_de:
+      a: Die Bundesversammlung, das heisst der Nationalrat und der Ständerat
+      b: Die Schweizerische Nationalbank
+      c: Die Bundeskanzlei
+      d: Die Konferenz der Kantonsregierungen
+    explanation_de: Die Bundesversammlung ist das Parlament der Eidgenossenschaft und besteht aus dem
+      Nationalrat und dem Ständerat. Sie ist für die Gesetzgebung zuständig. Die Bundeskanzlei hingegen
+      unterstützt den Bundesrat als Stabsstelle.

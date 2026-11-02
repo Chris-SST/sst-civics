@@ -1,0 +1,31 @@
+id: bundeshaus-bern-sitz-parlament
+lang: fr
+source_version: 1
+question: Quel bâtiment de Berne est le lieu de réunion du Parlement suisse ?
+options:
+  a: Le Kornhaus
+  b: L'Hôtel de Ville (Rathaus)
+  c: Le Tribunal administratif fédéral
+  d: Le Palais fédéral (Bundeshaus)
+explanation: Le Parlement suisse siège au Palais fédéral (Bundeshaus) à Berne. C'est là que le Conseil
+  national et le Conseil des États (Ständerat) se réunissent pour leurs sessions. L'Hôtel de Ville (Rathaus)
+  est un bâtiment du canton de Berne ou de la ville, et non du Parlement de la Confédération.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gebäude in Bern ist der Tagungsort des Schweizer Parlaments?
+    options_de:
+      a: Das Kornhaus
+      b: Das Rathaus
+      c: Das Bundesverwaltungsgericht
+      d: Das Bundeshaus
+    explanation_de: Das Schweizer Parlament tagt im Bundeshaus in Bern. Dort versammeln sich der Nationalrat
+      und der Ständerat zu ihren Sessionen. Das Rathaus ist ein Gebäude des Kantons Bern oder der Stadt
+      und nicht des Parlaments der Eidgenossenschaft.

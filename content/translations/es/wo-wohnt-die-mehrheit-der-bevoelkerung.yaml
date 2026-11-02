@@ -1,0 +1,31 @@
+id: wo-wohnt-die-mehrheit-der-bevoelkerung
+lang: es
+source_version: 2
+question: ¿En qué región de Suiza vive la mayoría de la población?
+options:
+  a: En los Alpes
+  b: En el Tesino
+  c: En el Mittelland (Meseta suiza)
+  d: En el Jura
+explanation: El Mittelland se encuentra entre el Jura y los Alpes. Allí están la mayoría de las grandes
+  ciudades y allí vive la mayor parte de la población. Los Alpes ocupan una superficie grande, pero están
+  poco poblados.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welcher Region der Schweiz lebt die Mehrheit der Bevölkerung?
+    options_de:
+      a: In den Alpen
+      b: Im Tessin
+      c: Im Mittelland
+      d: Im Jura
+    explanation_de: Das Mittelland liegt zwischen dem Jura und den Alpen. Dort befinden sich die meisten
+      grossen Städte und dort lebt der grösste Teil der Bevölkerung. Die Alpen nehmen eine grosse Fläche
+      ein, sind aber dünn besiedelt.

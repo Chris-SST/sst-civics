@@ -1,0 +1,30 @@
+id: ahv-erste-saeule-altersvorsorge
+lang: es
+source_version: 1
+question: ¿Qué institución constituye el primer pilar de la previsión para la vejez en Suiza?
+options:
+  a: El pilar 3a privado
+  b: El seguro de vejez y supervivencia (AHV) estatal
+  c: La caja de pensiones
+  d: La aseguradora de salud (Krankenkasse)
+explanation: El seguro de vejez y supervivencia es la previsión estatal y constituye el primer pilar.
+  La caja de pensiones es el segundo pilar y la previsión privada es el tercer pilar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Institution bildet die erste Säule der Altersvorsorge in der Schweiz?
+    options_de:
+      a: Die private Säule 3a
+      b: Die staatliche Alters- und Hinterlassenenversicherung (AHV)
+      c: Die Pensionskasse
+      d: Die Krankenkasse
+    explanation_de: Die Alters- und Hinterlassenenversicherung ist die staatliche Vorsorge und bildet
+      die erste Säule. Die Pensionskasse ist die zweite Säule und die private Vorsorge ist die dritte
+      Säule.

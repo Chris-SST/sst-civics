@@ -1,0 +1,32 @@
+id: einwohnerregister-fuehren-gemeinde-aufgabe
+lang: sq
+source_version: 1
+question: Cilën nga detyrat e mëposhtme e kryen zyra e banorëve (Einwohneramt) në komunat (Gemeinde) e
+  Zyrihut?
+options:
+  a: Ajo lëshon aktgjykime penale.
+  b: Ajo mban regjistrin e banorëve të komunës.
+  c: Ajo jep leje ndërtimi për rrugët e kantonit.
+  d: Ajo përcakton ligjet tatimore.
+explanation: Komuna mban regjistrin e personave që banojnë në të. Aty regjistroheni, çregjistroheni ose
+  ndryshoni adresën kur ndërroni vendbanimin. Aktgjykimet penale, ligjet tatimore dhe rrugët e kantonit
+  nuk janë pjesë e kësaj detyre.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aufgaben erfüllt das Einwohneramt in den Gemeinden des Kantons Zürich?
+    options_de:
+      a: Es erlässt Strafurteile.
+      b: Es führt das Einwohnerregister der Gemeinde.
+      c: Es erteilt Baubewilligungen für die Strassen des Kantons.
+      d: Es legt die Steuergesetze fest.
+    explanation_de: Die Gemeinde führt das Register der Personen, die in ihr wohnen. Dort meldet man sich
+      an, meldet sich ab oder ändert die Adresse, wenn man den Wohnort wechselt. Strafurteile, Steuergesetze
+      und die Strassen des Kantons gehören nicht zu dieser Aufgabe.

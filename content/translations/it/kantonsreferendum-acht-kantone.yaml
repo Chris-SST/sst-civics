@@ -1,0 +1,32 @@
+id: kantonsreferendum-acht-kantone
+lang: it
+source_version: 1
+question: Chi può chiedere un referendum facoltativo contro una legge federale, oltre a 50'000 aventi
+  diritto di voto?
+options:
+  a: Otto Cantoni
+  b: Tre grandi partiti insieme
+  c: Il Consiglio federale (Bundesrat)
+  d: Il Tribunale federale (Bundesgericht)
+explanation: Secondo la Costituzione federale, anche otto Cantoni possono chiedere una votazione popolare
+  su una legge federale. Questo si chiama referendum dei Cantoni. Viene utilizzato raramente, ma dimostra
+  che i Cantoni hanno diritti di partecipazione nello Stato federale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann ein fakultatives Referendum gegen ein Bundesgesetz verlangen, neben 50'000 Stimmberechtigten?
+    options_de:
+      a: Acht Kantone
+      b: Drei grosse Parteien zusammen
+      c: Der Bundesrat
+      d: Das Bundesgericht
+    explanation_de: Gemäss der Bundesverfassung können auch acht Kantone eine Volksabstimmung über ein
+      Bundesgesetz verlangen. Dies nennt man Kantonsreferendum. Es wird selten genutzt, zeigt aber, dass
+      die Kantone im Bundesstaat Mitwirkungsrechte haben.

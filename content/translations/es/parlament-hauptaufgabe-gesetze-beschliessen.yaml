@@ -1,0 +1,29 @@
+id: parlament-hauptaufgabe-gesetze-beschliessen
+lang: es
+source_version: 1
+question: ¿Cuál es la tarea más importante del Parlamento de la Confederación?
+options:
+  a: Dirigir la policía en todo el país
+  b: Decidir en los litigios entre personas
+  c: Debatir y aprobar leyes
+  d: Hacer cumplir las leyes en la vida cotidiana
+explanation: El Parlamento es el poder legislativo. Debate y aprueba las leyes de la Confederación. El
+  Gobierno las aplica y los tribunales dictan sentencia en los litigios.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die wichtigste Aufgabe des Parlaments des Bundes?
+    options_de:
+      a: Die Polizei im ganzen Land leiten
+      b: In Streitigkeiten zwischen Personen entscheiden
+      c: Gesetze beraten und verabschieden
+      d: Die Gesetze im Alltag durchsetzen
+    explanation_de: Das Parlament ist die gesetzgebende Gewalt. Es berät und verabschiedet die Gesetze
+      des Bundes. Die Regierung wendet sie an, und die Gerichte sprechen in Streitigkeiten Recht.

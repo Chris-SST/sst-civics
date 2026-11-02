@@ -1,0 +1,29 @@
+id: einsprache-gegen-steuerveranlagung-schriftlich
+lang: tr
+source_version: 1
+question: Vergi mükellefi bir kişi vergi tarhiyatını kabul etmiyor. Ne yapabilir?
+options:
+  a: Belediye halk toplantısında (Gemeindeversammlung) oylama yaptırabilir.
+  b: Başka hiçbir işlem yapmadan ödemeyi reddedebilir.
+  c: Vergi dairesine yazılı olarak itiraz edebilir.
+  d: Federal Konsey'e (Bundesrat) bir halk girişimi (Volksinitiative) sunabilir.
+explanation: Vergi tarhiyatına karşı itiraz yolu mevcuttur. İtiraz, vergi dairesine yazılı olarak ve belirli
+  bir süre içinde yapılmalıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine steuerpflichtige Person akzeptiert die Steuerveranlagung nicht. Was kann sie tun?
+    options_de:
+      a: Sie kann an der Gemeindeversammlung eine Abstimmung durchführen lassen.
+      b: Sie kann die Zahlung verweigern, ohne eine weitere Handlung vorzunehmen.
+      c: Sie kann beim Steueramt schriftlich Einsprache erheben.
+      d: Sie kann beim Bundesrat eine Volksinitiative einreichen.
+    explanation_de: Gegen die Steuerveranlagung gibt es einen Einspracheweg. Die Einsprache muss schriftlich
+      beim Steueramt und innerhalb einer bestimmten Frist erfolgen.

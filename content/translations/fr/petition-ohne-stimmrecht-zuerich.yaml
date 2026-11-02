@@ -1,0 +1,33 @@
+id: petition-ohne-stimmrecht-zuerich
+lang: fr
+source_version: 1
+question: Quelle possibilité politique les étrangères et les étrangers qui n'ont pas le droit de vote
+  ont-ils dans le canton de Zurich ?
+options:
+  a: Ils peuvent voter aux urnes sur des objets cantonaux.
+  b: Ils peuvent élire les membres du Conseil cantonal (Kantonsrat).
+  c: Ils peuvent s'adresser aux autorités par une pétition.
+  d: Ils peuvent déposer une initiative populaire (Volksinitiative) dans le canton.
+explanation: Le droit de pétition est ouvert à toutes les personnes, y compris à celles qui n'ont pas
+  le droit de vote. Elles peuvent ainsi communiquer par écrit aux autorités des préoccupations, des souhaits
+  ou des critiques. Seules les personnes ayant le droit de vote peuvent voter, élire et signer des initiatives.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche politische Möglichkeit haben Ausländerinnen und Ausländer, die nicht stimmberechtigt
+      sind, im Kanton Zürich?
+    options_de:
+      a: Sie können an der Urne über kantonale Vorlagen abstimmen.
+      b: Sie können die Mitglieder des Kantonsrats wählen.
+      c: Sie können sich mit einer Petition an die Behörden wenden.
+      d: Sie können im Kanton eine Volksinitiative einreichen.
+    explanation_de: Das Petitionsrecht steht allen Personen offen, auch denjenigen, die nicht stimmberechtigt
+      sind. Sie können den Behörden somit schriftlich Anliegen, Wünsche oder Kritik mitteilen. Nur stimmberechtigte
+      Personen können abstimmen, wählen und Initiativen unterschreiben.

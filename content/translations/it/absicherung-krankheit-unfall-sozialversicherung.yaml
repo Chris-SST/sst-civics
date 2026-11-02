@@ -1,0 +1,31 @@
+id: absicherung-krankheit-unfall-sozialversicherung
+lang: it
+source_version: 1
+question: Da quali rischi protegge, tra l'altro, il sistema delle assicurazioni sociali della Svizzera?
+options:
+  a: Dalle perdite negli investimenti finanziari privati
+  b: Dai danni all'automobile e alle suppellettili domestiche causati da furto
+  c: Dalle conseguenze di malattia e infortunio
+  d: Dagli aumenti dei prezzi degli affitti
+explanation: Le assicurazioni sociali proteggono le persone dalle conseguenze finanziarie di importanti
+  rischi della vita. Tra questi rientrano la malattia e l'infortunio. L'assicurazione malattie e l'assicurazione
+  contro gli infortuni ne sono esempi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Vor welchen Risiken schützt das Sozialversicherungssystem der Schweiz unter anderem?
+    options_de:
+      a: Vor Verlusten bei privaten Finanzanlagen
+      b: Vor Schäden am Auto und am Hausrat, die durch Diebstahl verursacht werden
+      c: Vor den Folgen von Krankheit und Unfall
+      d: Vor Erhöhungen der Mietpreise
+    explanation_de: Die Sozialversicherungen schützen die Menschen vor den finanziellen Folgen wichtiger
+      Lebensrisiken. Dazu gehören Krankheit und Unfall. Die Krankenversicherung und die Unfallversicherung
+      sind Beispiele dafür.

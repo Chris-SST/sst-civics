@@ -1,0 +1,29 @@
+id: primarschule-finanzierung-kanton-gemeinde
+lang: it
+source_version: 1
+question: Chi finanzia e organizza la scuola elementare nel Cantone di Zurigo?
+options:
+  a: Solo le parrocchie (Kirchgemeinden)
+  b: Solo i genitori degli alunni
+  c: Solo la Confederazione
+  d: Il Cantone e i Comuni (Gemeinden) insieme
+explanation: La scuola dell'obbligo nel Cantone di Zurigo è un compito comune del Cantone e dei Comuni.
+  Il Cantone stabilisce le basi, i Comuni gestiscono le scuole sul posto.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer finanziert und organisiert die Primarschule im Kanton Zürich?
+    options_de:
+      a: Nur die Kirchgemeinden
+      b: Nur die Eltern der Schülerinnen und Schüler
+      c: Nur der Bund
+      d: Der Kanton und die Gemeinden gemeinsam
+    explanation_de: Die obligatorische Schule im Kanton Zürich ist eine gemeinsame Aufgabe des Kantons
+      und der Gemeinden. Der Kanton legt die Grundlagen fest, die Gemeinden führen die Schulen vor Ort.

@@ -1,0 +1,31 @@
+id: groesster-kanton-nach-flaeche
+lang: tr
+source_version: 1
+question: İsviçre kantonları arasında hangi kantonun yüzölçümü en büyüktür?
+options:
+  a: Ticino
+  b: Valais
+  c: Bern
+  d: Graubünden
+explanation: Graubünden, yüzölçümü bakımından İsviçre'nin en büyük kantonudur. Tamamen Alpler'de yer alır
+  ve çok sayıda vadi ile dağa sahiptir. Valais, Bern ve Ticino da büyüktür, ancak Graubünden'den daha
+  küçüktür.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton hat unter den Schweizer Kantonen die grösste Fläche?
+    options_de:
+      a: Tessin
+      b: Wallis
+      c: Bern
+      d: Graubünden
+    explanation_de: Graubünden ist hinsichtlich der Fläche der grösste Kanton der Schweiz. Er liegt vollständig
+      in den Alpen und hat zahlreiche Täler und Berge. Wallis, Bern und Tessin sind ebenfalls gross, aber
+      kleiner als Graubünden.

@@ -1,0 +1,29 @@
+id: ahv-pflichtversicherung
+lang: es
+source_version: 1
+question: ¿Qué afirmación sobre el seguro de vejez y supervivencia (AHV) es correcta?
+options:
+  a: El seguro de vejez y supervivencia pertenece a los seguros obligatorios.
+  b: El seguro de vejez y supervivencia es un seguro voluntario para trabajadores autónomos.
+  c: El seguro de vejez y supervivencia solo se aplica a las personas con pasaporte suizo.
+  d: El seguro de vejez y supervivencia es un seguro privado de los empleadores.
+explanation: El seguro de vejez y supervivencia es obligatorio. En principio, quien vive o trabaja en
+  Suiza está asegurado y debe pagar cotizaciones.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage über die Alters- und Hinterlassenenversicherung (AHV) ist richtig?
+    options_de:
+      a: Die Alters- und Hinterlassenenversicherung gehört zu den obligatorischen Versicherungen.
+      b: Die Alters- und Hinterlassenenversicherung ist eine freiwillige Versicherung für Selbstständigerwerbende.
+      c: Die Alters- und Hinterlassenenversicherung gilt nur für Personen mit Schweizer Pass.
+      d: Die Alters- und Hinterlassenenversicherung ist eine private Versicherung der Arbeitgeber.
+    explanation_de: Die Alters- und Hinterlassenenversicherung ist obligatorisch. Grundsätzlich ist, wer
+      in der Schweiz lebt oder arbeitet, versichert und muss Beiträge bezahlen.

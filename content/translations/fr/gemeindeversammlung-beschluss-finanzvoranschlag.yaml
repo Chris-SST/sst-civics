@@ -1,0 +1,34 @@
+id: gemeindeversammlung-beschluss-finanzvoranschlag
+lang: fr
+source_version: 1
+question: Sur quel sujet les personnes ayant le droit de vote d'une commune (Gemeinde) zurichoise dotée
+  d'une assemblée communale (Gemeindeversammlung) se prononcent-elles chaque année lors de l'assemblée
+  ?
+options:
+  a: Sur le montant des impôts de la Confédération
+  b: Sur le droit pénal dans le canton
+  c: Sur le budget de la commune
+  d: Sur les plans d'études de l'école obligatoire
+explanation: Dans les communes dotées d'une assemblée communale, les personnes ayant le droit de vote
+  décident des affaires importantes, notamment du budget (Finanzvoranschlag) et du coefficient d'impôt.
+  Le droit pénal et les impôts de la Confédération ne relèvent pas de la compétence de la commune.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Über welches Thema entscheiden die Stimmberechtigten einer Zürcher Gemeinde mit Gemeindeversammlung
+      jedes Jahr an der Versammlung?
+    options_de:
+      a: Über die Höhe der Steuern des Bundes
+      b: Über das Strafrecht im Kanton
+      c: Über das Budget der Gemeinde
+      d: Über die Lehrpläne der obligatorischen Schule
+    explanation_de: In Gemeinden mit Gemeindeversammlung entscheiden die Stimmberechtigten über wichtige
+      Geschäfte, insbesondere über das Budget (Finanzvoranschlag) und den Steuerfuss. Das Strafrecht und
+      die Steuern des Bundes fallen nicht in die Zuständigkeit der Gemeinde.

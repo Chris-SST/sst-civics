@@ -11,6 +11,25 @@ options:
 explanation: Once a popular initiative has been formally submitted and validated, the Federal Council
   and Parliament take a position on it. Parliament recommends that voters accept or reject it. This recommendation
   is also included in the voting explanations, which voters receive before the vote.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: Frage und Antworten identisch; die Erklärung sagt dasselbe, «zustande
+      gekommen» wird nur als «eingereicht und für gültig erklärt» umschrieben.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer gibt den Stimmberechtigten vor der Abstimmung über eine eidgenössische Volksinitiative
+      eine Empfehlung ab, ob sie die Initiative annehmen oder ablehnen sollen?
+    options_de:
+      a: Der Bundesrat und das Parlament
+      b: Die Kantonsregierungen
+      c: Die Bundeskanzlei allein
+      d: Das Bundesgericht
+    explanation_de: Sobald eine Volksinitiative formell eingereicht und für gültig erklärt wurde, nehmen
+      der Bundesrat und das Parlament dazu Stellung. Das Parlament empfiehlt den Stimmberechtigten, sie
+      anzunehmen oder abzulehnen. Diese Empfehlung ist auch in den Abstimmungserläuterungen enthalten,
+      die die Stimmberechtigten vor der Abstimmung erhalten.

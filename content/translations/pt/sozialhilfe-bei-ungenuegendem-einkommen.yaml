@@ -1,0 +1,33 @@
+id: sozialhilfe-bei-ungenuegendem-einkommen
+lang: pt
+source_version: 1
+question: O que oferece a comuna (Gemeinde) quando o rendimento e o património de uma pessoa não são suficientes
+  para viver?
+options:
+  a: Apoio social
+  b: Uma licença de construção
+  c: Uma naturalização
+  d: Uma bolsa de estudo da escola obrigatória
+explanation: Quem não consegue pagar o seu sustento com meios próprios tem direito a apoio através da
+  assistência social. Esta é prestada pela comuna em que a pessoa reside. É a última rede da segurança
+  social.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bietet die Gemeinde an, wenn das Einkommen und das Vermögen einer Person nicht ausreichen,
+      um zu leben?
+    options_de:
+      a: Sozialhilfe
+      b: Eine Baubewilligung
+      c: Eine Einbürgerung
+      d: Ein Stipendium der obligatorischen Schule
+    explanation_de: Wer seinen Lebensunterhalt nicht mit eigenen Mitteln bezahlen kann, hat Anspruch auf
+      Unterstützung durch die Sozialhilfe. Diese wird von der Gemeinde geleistet, in der die Person wohnt.
+      Sie ist das letzte Netz der sozialen Sicherheit.

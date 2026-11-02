@@ -1,0 +1,31 @@
+id: pfahlbauten-am-zuerichsee-vorgeschichte
+lang: tr
+source_version: 1
+question: Zürih Gölü'ndeki tarih öncesi yerleşimler nasıl inşa edilmişti?
+options:
+  a: Kayalıklardaki mağaralar olarak
+  b: Kazıklı yapılar, yani kazıklar üzerine kurulmuş evler olarak
+  c: Köylerde tuğladan yapılmış evler olarak
+  d: Kayalıklar üzerindeki şatolar olarak
+explanation: Tarih öncesi dönemde Zürih Gölü'nün kıyısında kazıklı yapılar, yani kazıklar üzerine kurulmuş
+  evler bulunuyordu. Bunların kalıntıları bugün hâlâ suyun altında yer almaktadır ve sualtı arkeologları
+  tarafından incelenmektedir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie waren die prähistorischen Siedlungen am Zürichsee gebaut worden?
+    options_de:
+      a: Als Höhlen in den Felsen
+      b: Als Pfahlbauten, das heisst als auf Pfählen errichtete Häuser
+      c: Als aus Backstein gebaute Häuser in Dörfern
+      d: Als Burgen auf Felsen
+    explanation_de: In prähistorischer Zeit gab es am Ufer des Zürichsees Pfahlbauten, das heisst auf
+      Pfählen errichtete Häuser. Ihre Überreste befinden sich heute noch unter Wasser und werden von Unterwasserarchäologen
+      untersucht.

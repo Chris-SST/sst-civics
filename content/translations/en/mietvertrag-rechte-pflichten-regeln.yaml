@@ -10,6 +10,22 @@ options:
 explanation: The tenancy agreement governs the relationship between the person who lets the property and
   the person who rents it. This includes, for example, the rent and the duration of the tenancy. The Code
   of Obligations contains the statutory rules on this.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird in einem Mietvertrag festgehalten?
+    options_de:
+      a: Die Rechte der Nachbarn in der Liegenschaft
+      b: Die Höhe der Steuern, die von den Mieterinnen und Mietern bezahlt werden
+      c: Die Pflichten der Gemeinde gegenüber den Mieterinnen und Mietern
+      d: Die Rechte und Pflichten der Vermieter und der Mieter
+    explanation_de: Der Mietvertrag regelt das Verhältnis zwischen der Person, die die Liegenschaft vermietet,
+      und der Person, die sie mietet. Dazu gehören zum Beispiel der Mietzins und die Dauer des Mietverhältnisses.
+      Das Obligationenrecht enthält dazu die gesetzlichen Regeln.

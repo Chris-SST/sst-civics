@@ -22,7 +22,7 @@ glossary:
 - Gemeindepräsident
 - Gemeinderat
 - Gemeinde
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-125
@@ -46,3 +46,33 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung könnte «Gemeinderat» kurz erklärt werden, etwa «Sie oder er leitet den
+        Gemeinderat, also die Regierung der Gemeinde», denn in der Stadt Zürich ist der Gemeinderat das
+        Parlament.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «nach aussen vertreten» ist für Lernende auf Niveau B1 eher abstrakt; die Erklärung könnte
+        kurz ergänzen, was das heisst, etwa: «Sie oder er spricht für die Gemeinde, zum Beispiel gegenüber
+        dem Kanton, den Medien oder anderen Gemeinden.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Formulierung «nach aussen vertreten» ist etwas abstrakt; näher an der Quelle wäre
+        «Wer ist die höchste Repräsentantin oder der höchste Repräsentant einer kleineren Zürcher Gemeinde?».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

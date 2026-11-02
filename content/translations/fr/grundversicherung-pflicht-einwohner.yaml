@@ -1,0 +1,30 @@
+id: grundversicherung-pflicht-einwohner
+lang: fr
+source_version: 1
+question: Pour qui l'assurance de base obligatoire pour les traitements médicaux s'applique-t-elle en
+  Suisse ?
+options:
+  a: Uniquement pour les personnes ayant le droit de cité suisse (Bürgerrecht)
+  b: Uniquement pour les personnes actives percevant un salaire
+  c: Uniquement pour les personnes à faible revenu
+  d: Pour toutes les habitantes et tous les habitants de la Suisse
+explanation: L'assurance obligatoire des soins s'applique à toutes les personnes qui vivent en Suisse.
+  Le droit de cité, l'activité lucrative et le revenu n'ont aucune importance à cet égard.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für wen gilt in der Schweiz die obligatorische Grundversicherung für medizinische Behandlungen?
+    options_de:
+      a: Nur für Personen mit Schweizer Bürgerrecht
+      b: Nur für erwerbstätige Personen mit Lohn
+      c: Nur für Personen mit tiefem Einkommen
+      d: Für alle Einwohnerinnen und Einwohner der Schweiz
+    explanation_de: Die obligatorische Krankenpflegeversicherung gilt für alle Personen, die in der Schweiz
+      wohnen. Das Bürgerrecht, die Erwerbstätigkeit und das Einkommen spielen dabei keine Rolle.

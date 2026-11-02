@@ -21,7 +21,7 @@ glossary:
 - AHV
 - IV
 - Sozialversicherung
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-136
@@ -44,3 +44,41 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Alle drei falschen Antworten enthalten auffällige Signalwörter wie «nur» oder «ohne»,
+        und die richtige Antwort wiederholt fast wörtlich die Frage, sodass man sie ohne Wissen erraten
+        kann; besser wären plausiblere Ablenker, zum Beispiel «AHV und IV gehören zur privaten Vorsorge
+        (3. Säule)» oder «AHV und IV sind freiwillige Versicherungen».'
+      - 'Klein: Die Erklärung könnte ergänzen, dass AHV und IV die 1. Säule (staatliche Vorsorge) bilden
+        und von Ausgleichskassen der Kantone, des Bundes und der Verbände durchgeführt werden; so wird
+        auch klar, warum Antwort b falsch ist.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die richtige Antwort wiederholt fast wörtlich den Fragestamm, und die falschen Antworten
+        fallen durch absolute Wörter wie «nur» und «ohne» auf; plausiblere Ablenker wären besser, etwa
+        «AHV und IV sind freiwillig» oder «AHV und IV werden nur von den Kantonen bezahlt».'
+      - 'Klein: Die Erklärung könnte ergänzen, dass AHV und IV obligatorisch sind und für fast alle Personen
+        gelten, die in der Schweiz wohnen oder arbeiten; das würde Antwort d) direkt widerlegen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage ist sehr allgemein formuliert; besser wäre «Welche Aussage über AHV und IV stimmt?»,
+        weil sonst unklar ist, dass sich die Antworten nur auf AHV und IV beziehen.'
+      - 'Klein: Die Erklärung könnte erwähnen, dass AHV und IV die 1. Säule der Altersvorsorge bilden
+        und für die ganze Bevölkerung gelten, damit sie auch die falschen Antworten b) bis d) widerlegt.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

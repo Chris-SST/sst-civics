@@ -1,0 +1,29 @@
+id: schwarzenbach-initiative-ziel-auslaenderanteil
+lang: pt
+source_version: 1
+question: O que queria a iniciativa Schwarzenbach, sobre a qual se votou em 1970?
+options:
+  a: Queria facilitar a naturalização para todos os estrangeiros.
+  b: Queria proibir a imigração apenas da Itália.
+  c: Queria limitar a proporção de estrangeiros que vivem na Suíça.
+  d: Queria introduzir o direito de voto para os estrangeiros.
+explanation: A iniciativa exigia que se limitasse a proporção de estrangeiros na Suíça. Foi rejeitada
+  pelo povo em 1970. Mostra como a imigração era então muito debatida.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wollte die Schwarzenbach-Initiative, über die 1970 abgestimmt wurde?
+    options_de:
+      a: Sie wollte die Einbürgerung für alle Ausländer erleichtern.
+      b: Sie wollte nur die Einwanderung aus Italien verbieten.
+      c: Sie wollte den Anteil der in der Schweiz lebenden Ausländer begrenzen.
+      d: Sie wollte das Stimmrecht für Ausländer einführen.
+    explanation_de: Die Initiative forderte, dass der Anteil der Ausländer in der Schweiz begrenzt wird.
+      Sie wurde 1970 vom Volk abgelehnt. Sie zeigt, wie stark die Einwanderung damals diskutiert wurde.

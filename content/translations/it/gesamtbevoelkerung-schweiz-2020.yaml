@@ -1,0 +1,29 @@
+id: gesamtbevoelkerung-schweiz-2020
+lang: it
+source_version: 1
+question: Quanto era grande, approssimativamente, la popolazione totale della Svizzera nel 2020?
+options:
+  a: circa 6,2 milioni
+  b: circa 8,6 milioni
+  c: circa 10,1 milioni
+  d: circa 7,4 milioni
+explanation: Nel 2020 in Svizzera vivevano circa 8,6 milioni di persone. Negli ultimi decenni la popolazione
+  è cresciuta notevolmente. I dati aggiornati sono pubblicati dall'Ufficio federale di statistica.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie gross war die gesamte Bevölkerung der Schweiz im Jahr 2020 ungefähr?
+    options_de:
+      a: rund 6,2 Millionen
+      b: rund 8,6 Millionen
+      c: rund 10,1 Millionen
+      d: rund 7,4 Millionen
+    explanation_de: Im Jahr 2020 lebten in der Schweiz rund 8,6 Millionen Menschen. In den letzten Jahrzehnten
+      ist die Bevölkerung stark gewachsen. Die aktuellen Daten werden vom Bundesamt für Statistik veröffentlicht.

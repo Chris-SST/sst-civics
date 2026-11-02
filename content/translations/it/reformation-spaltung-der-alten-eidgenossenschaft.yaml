@@ -1,0 +1,31 @@
+id: reformation-spaltung-der-alten-eidgenossenschaft
+lang: it
+source_version: 1
+question: Quale conseguenza ebbe la Riforma per la Svizzera?
+options:
+  a: La Svizzera era divisa religiosamente in una parte riformata e una parte cattolica.
+  b: La Svizzera divenne parte del Sacro Romano Impero germanico.
+  c: La Chiesa perse ovunque qualsiasi influenza sulla politica.
+  d: Tutti i luoghi della Confederazione divennero riformati.
+explanation: Alcuni luoghi accolsero la Riforma, altri rimasero cattolici. Nacque così una contrapposizione
+  religiosa che pesò a lungo sulla Confederazione. Ci furono anche conflitti tra le confessioni.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort b: «Deutsches Reich» wird zu «Heiliges Römisches Reich Deutscher Nation», also ein
+      anderer Staat bzw. eine andere Epoche; die übrigen Stellen bedeuten dasselbe.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Welche Folge hatte die Reformation für die Schweiz?
+    options_de:
+      a: Die Schweiz war religiös in einen reformierten und einen katholischen Teil gespalten.
+      b: Die Schweiz wurde Teil des Heiligen Römischen Reiches Deutscher Nation.
+      c: Die Kirche verlor überall jeglichen Einfluss auf die Politik.
+      d: Alle Orte der Eidgenossenschaft wurden reformiert.
+    explanation_de: Einige Orte nahmen die Reformation an, andere blieben katholisch. So entstand ein
+      religiöser Gegensatz, der lange auf der Eidgenossenschaft lastete. Es gab auch Konflikte zwischen
+      den Konfessionen.

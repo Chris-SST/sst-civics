@@ -1,0 +1,29 @@
+id: rhein-muendung-nordsee
+lang: pt
+source_version: 1
+question: Em que mar desagua, no final, a água do Reno?
+options:
+  a: No Mar Mediterrâneo
+  b: No Mar Negro
+  c: No Mar do Norte
+  d: No Mar Báltico
+explanation: O Reno nasce nos Alpes suíços e atravessa a Alemanha e os Países Baixos. Desagua no Mar do
+  Norte.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welches Meer fliesst das Wasser des Rheins am Ende?
+    options_de:
+      a: Ins Mittelmeer
+      b: Ins Schwarze Meer
+      c: In die Nordsee
+      d: In die Ostsee
+    explanation_de: Der Rhein entspringt in den Schweizer Alpen und durchquert Deutschland und die Niederlande.
+      Er mündet in die Nordsee.

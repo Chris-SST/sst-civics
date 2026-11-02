@@ -1,0 +1,33 @@
+id: raumplanung-landschaften-ohne-bebauung
+lang: fr
+source_version: 2
+question: Quel est un objectif de l'aménagement du territoire en Suisse ?
+options:
+  a: Il doit protéger les paysages non bâtis et utiliser le sol avec parcimonie.
+  b: Il doit redéfinir régulièrement les frontières entre les cantons.
+  c: Il doit créer le plus grand nombre possible de nouvelles zones à bâtir.
+  d: Il doit fixer le prix des terrains à bâtir.
+explanation: L'aménagement du territoire détermine où l'on peut construire et où l'on ne le peut pas.
+  Il sépare le territoire à bâtir du territoire non constructible, afin de préserver les paysages et les
+  terres cultivées. Comme le sol est rare, il faut l'utiliser avec parcimonie et plutôt densifier les
+  zones urbanisées existantes que créer de nouvelles zones à bâtir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was ist ein Ziel der Raumplanung in der Schweiz?
+    options_de:
+      a: Sie soll die unbebauten Landschaften schützen und den Boden haushälterisch nutzen.
+      b: Sie soll die Grenzen zwischen den Kantonen regelmässig neu festlegen.
+      c: Sie soll möglichst viele neue Bauzonen schaffen.
+      d: Sie soll den Preis des Baulands festlegen.
+    explanation_de: Die Raumplanung bestimmt, wo gebaut werden darf und wo nicht. Sie trennt das Baugebiet
+      vom nicht bebaubaren Gebiet, um die Landschaften und das Kulturland zu erhalten. Da der Boden knapp
+      ist, muss er haushälterisch genutzt werden, und man soll eher die bestehenden überbauten Gebiete
+      verdichten, als neue Bauzonen zu schaffen.

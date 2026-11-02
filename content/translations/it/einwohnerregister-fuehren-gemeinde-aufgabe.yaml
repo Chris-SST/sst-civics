@@ -1,0 +1,32 @@
+id: einwohnerregister-fuehren-gemeinde-aufgabe
+lang: it
+source_version: 1
+question: Quale dei seguenti compiti svolge, nei Comuni (Gemeinde) zurighesi, l'ufficio controllo abitanti
+  (Einwohneramt)?
+options:
+  a: Emette sentenze penali.
+  b: Tiene il registro degli abitanti del Comune.
+  c: Rilascia permessi di costruzione per le strade cantonali.
+  d: Stabilisce le leggi fiscali.
+explanation: Il Comune tiene il registro delle persone che vi abitano. Lì Lei si annuncia, si annuncia
+  la partenza o comunica il cambiamento di indirizzo quando traslocate. Le sentenze penali, le leggi fiscali
+  e le strade cantonali non rientrano in questo compito.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aufgaben erfüllt in den Zürcher Gemeinden das Einwohneramt?
+    options_de:
+      a: Es fällt Strafurteile.
+      b: Es führt das Einwohnerregister der Gemeinde.
+      c: Es erteilt Baubewilligungen für die Kantonsstrassen.
+      d: Es legt die Steuergesetze fest.
+    explanation_de: Die Gemeinde führt das Register der Personen, die dort wohnen. Dort meldet man sich
+      an, meldet man den Wegzug oder teilt die Adressänderung mit, wenn ihr umzieht. Strafurteile, Steuergesetze
+      und Kantonsstrassen gehören nicht zu dieser Aufgabe.

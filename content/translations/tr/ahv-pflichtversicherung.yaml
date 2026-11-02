@@ -1,0 +1,29 @@
+id: ahv-pflichtversicherung
+lang: tr
+source_version: 1
+question: Yaşlılık ve dul-yetim sigortası (AHV) ile ilgili hangi ifade doğrudur?
+options:
+  a: Yaşlılık ve dul-yetim sigortası zorunlu sigortalar arasında yer alır.
+  b: Yaşlılık ve dul-yetim sigortası, serbest çalışanlar için isteğe bağlı bir sigortadır.
+  c: Yaşlılık ve dul-yetim sigortası yalnızca İsviçre pasaportuna sahip kişiler için geçerlidir.
+  d: Yaşlılık ve dul-yetim sigortası, işverenlerin özel bir sigortasıdır.
+explanation: Yaşlılık ve dul-yetim sigortası zorunludur. İsviçre'de ikamet eden veya çalışan herkes esas
+  olarak sigortalıdır ve prim ödemek zorundadır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage zur Alters- und Hinterlassenenversicherung (AHV) ist richtig?
+    options_de:
+      a: Die Alters- und Hinterlassenenversicherung gehört zu den obligatorischen Versicherungen.
+      b: Die Alters- und Hinterlassenenversicherung ist eine freiwillige Versicherung für Selbstständigerwerbende.
+      c: Die Alters- und Hinterlassenenversicherung gilt nur für Personen mit einem Schweizer Pass.
+      d: Die Alters- und Hinterlassenenversicherung ist eine private Versicherung der Arbeitgeber.
+    explanation_de: Die Alters- und Hinterlassenenversicherung ist obligatorisch. Alle Personen, die in
+      der Schweiz wohnen oder arbeiten, sind grundsätzlich versichert und müssen Beiträge bezahlen.

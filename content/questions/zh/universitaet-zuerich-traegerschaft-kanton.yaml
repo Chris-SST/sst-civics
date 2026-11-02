@@ -23,7 +23,7 @@ glossary:
 - Universität
 - Trägerschaft
 - Kanton
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-102
@@ -44,3 +44,41 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung könnte man ergänzen, dass die ETH Zürich im Gegensatz zur Universität
+        Zürich vom Bund getragen wird; so verstehen die Lernenden besser, warum «Der Bund» falsch ist.'
+      - 'Klein: Genauer wäre in der Erklärung: «Die Universität Zürich ist eine selbständige Anstalt des
+        Kantons. Der Kanton ist ihr Träger, finanziert sie und beaufsichtigt sie.» Denn die Universität
+        organisiert ihren Betrieb im Rahmen der Hochschulautonomie weitgehend selbst.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte zur Abgrenzung ergänzen, dass der Bund für die ETH Zürich zuständig
+        ist, z. B. «Die ETH Zürich gehört dagegen dem Bund.»; das hilft, die beiden Hochschulen nicht
+        zu verwechseln.'
+      - 'Klein: Die Universität ist eine selbständige öffentlich-rechtliche Anstalt des Kantons; die Erklärung
+        könnte deshalb genauer «Der Kanton Zürich ist Träger der Universität und finanziert sie zum grössten
+        Teil» sagen statt «betreibt sie».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, Stadt und Bund seien «nicht hauptverantwortlich». Klarer wäre: «Die
+        Stadt Zürich und der Bund sind nicht zuständig; der Bund ist nur für die ETH Zürich zuständig.»'
+      - 'Klein: Die Frage enthält «im Kanton Zürich» und die richtige Antwort «Der Kanton Zürich». Das
+        verrät die Lösung etwas. Besser wäre: «Wer ist für den Betrieb und die Trägerschaft der Universität
+        Zürich zuständig?»'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

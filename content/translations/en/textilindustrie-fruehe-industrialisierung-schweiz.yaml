@@ -10,6 +10,22 @@ options:
 explanation: During early industrialisation, the textile industry shaped the Swiss economy, for example
   with spinning mills, weaving mills and embroidery works. A well-known example is the St. Gallen embroidery,
   which was in demand all over the world. Other industries only became so important later.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Wirtschaftszweig war während der frühen Industrialisierung der Schweiz der wichtigste?
+    options_de:
+      a: Die Uhrenindustrie
+      b: Die Pharmaindustrie
+      c: Die Textilindustrie
+      d: Die Maschinenindustrie
+    explanation_de: Während der frühen Industrialisierung prägte die Textilindustrie die Schweizer Wirtschaft,
+      zum Beispiel mit Spinnereien, Webereien und Stickereibetrieben. Ein bekanntes Beispiel ist die St.
+      Galler Stickerei, die auf der ganzen Welt gefragt war. Andere Branchen wurden erst später so wichtig.

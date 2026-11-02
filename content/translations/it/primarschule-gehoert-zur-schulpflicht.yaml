@@ -1,0 +1,31 @@
+id: primarschule-gehoert-zur-schulpflicht
+lang: it
+source_version: 2
+question: Quale di questi livelli fa parte della scuola dell'obbligo in Svizzera?
+options:
+  a: La scuola universitaria
+  b: La scuola primaria
+  c: Il gruppo di gioco
+  d: La scuola professionale
+explanation: 'Nel Cantone Zurigo la scuola dell''obbligo dura undici anni: scuola dell''infanzia, scuola
+  primaria e scuola secondaria di primo grado. Il gruppo di gioco per i bambini piccoli è facoltativo.
+  La scuola professionale e la scuola universitaria si frequentano solo dopo la scuola dell''obbligo.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche dieser Stufen gehört in der Schweiz zur obligatorischen Schule?
+    options_de:
+      a: Die Hochschule
+      b: Die Primarschule
+      c: Die Spielgruppe
+      d: Die Berufsschule
+    explanation_de: 'Im Kanton Zürich dauert die obligatorische Schule elf Jahre: Kindergarten, Primarschule
+      und Sekundarstufe I. Die Spielgruppe für Kleinkinder ist freiwillig. Die Berufsschule und die Hochschule
+      besucht man erst nach der obligatorischen Schule.'

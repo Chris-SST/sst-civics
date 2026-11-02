@@ -1,14 +1,32 @@
 id: gewerkschaften-aufgabe-arbeitnehmende
 lang: en
-source_version: 1
+source_version: 2
 question: What is the role of trade unions in Switzerland?
 options:
   a: They stand up for the concerns of employees.
-  b: They pay daily allowances to unemployed people.
+  b: They grant foreign nationals permission to work.
   c: They set the tax rates for companies.
-  d: They represent the concerns of employers to the Confederation.
+  d: They represent the concerns of employers towards the Confederation.
 explanation: Trade unions are organisations of employees. They represent employees' interests, for example
-  regarding wages and working conditions, and are often involved in negotiating collective labour agreements.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  regarding wages and working conditions, and they often negotiate collective labour agreements with employers.
+  Work permits, on the other hand, are issued by the authorities, not by trade unions.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Rolle haben die Gewerkschaften in der Schweiz?
+    options_de:
+      a: Sie setzen sich für die Anliegen der Arbeitnehmenden ein.
+      b: Sie erteilen Ausländerinnen und Ausländern die Erlaubnis zu arbeiten.
+      c: Sie legen die Steuersätze für Unternehmen fest.
+      d: Sie vertreten die Anliegen der Arbeitgeber gegenüber dem Bund.
+    explanation_de: Gewerkschaften sind Organisationen von Arbeitnehmenden. Sie vertreten die Interessen
+      der Arbeitnehmenden, zum Beispiel in Bezug auf Löhne und Arbeitsbedingungen, und handeln oft Gesamtarbeitsverträge
+      mit den Arbeitgebern aus. Arbeitsbewilligungen hingegen werden von den Behörden erteilt, nicht von
+      den Gewerkschaften.

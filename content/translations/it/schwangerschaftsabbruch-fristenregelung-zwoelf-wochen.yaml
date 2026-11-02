@@ -1,0 +1,33 @@
+id: schwangerschaftsabbruch-fristenregelung-zwoelf-wochen
+lang: it
+source_version: 1
+question: Quale regolamentazione vige in Svizzera dal 2002 per l'interruzione di gravidanza nelle prime
+  dodici settimane?
+options:
+  a: In questo periodo l'interruzione è in linea di principio vietata.
+  b: La donna può decidere autonomamente sull'interruzione.
+  c: Il marito o il partner deve acconsentire all'interruzione.
+  d: Un tribunale deve autorizzare l'interruzione.
+explanation: Dal 2002 vige la cosiddetta regolamentazione dei termini. In base a essa, nelle prime dodici
+  settimane di gravidanza è la donna a decidere autonomamente. A tal fine deve far valere per iscritto
+  una situazione di emergenza.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Regelung gilt in der Schweiz seit 2002 für den Schwangerschaftsabbruch in den
+      ersten zwölf Wochen?
+    options_de:
+      a: In diesem Zeitraum ist der Abbruch grundsätzlich verboten.
+      b: Die Frau kann selbstständig über den Abbruch entscheiden.
+      c: Der Ehemann oder der Partner muss dem Abbruch zustimmen.
+      d: Ein Gericht muss den Abbruch bewilligen.
+    explanation_de: Seit 2002 gilt die sogenannte Fristenregelung. Gemäss dieser entscheidet in den ersten
+      zwölf Schwangerschaftswochen die Frau selbstständig. Dazu muss sie schriftlich eine Notlage geltend
+      machen.

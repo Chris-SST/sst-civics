@@ -1,0 +1,29 @@
+id: rhein-muendung-nordsee
+lang: tr
+source_version: 1
+question: Ren Nehri'nin suyu sonunda hangi denize akar?
+options:
+  a: Akdeniz'e
+  b: Karadeniz'e
+  c: Kuzey Denizi'ne
+  d: Baltık Denizi'ne
+explanation: Ren Nehri, İsviçre Alpleri'nde doğar ve Almanya ile Hollanda'dan geçerek akar. Kuzey Denizi'ne
+  dökülür.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welches Meer fliesst das Wasser des Rheins am Ende?
+    options_de:
+      a: Ins Mittelmeer
+      b: Ins Schwarze Meer
+      c: In die Nordsee
+      d: In die Ostsee
+    explanation_de: Der Rhein entspringt in den Schweizer Alpen und fliesst durch Deutschland und die
+      Niederlande. Er mündet in die Nordsee.

@@ -1,0 +1,31 @@
+id: zuerich-zwei-staenderaete
+lang: es
+source_version: 1
+question: ¿Cuántos representantes envía el cantón de Zúrich al Consejo de los Estados (Ständerat)?
+options:
+  a: Un representante
+  b: Cuatro representantes
+  c: Seis representantes
+  d: Dos representantes
+explanation: El cantón de Zúrich es un cantón completo y tiene dos escaños en el Consejo de los Estados.
+  Las consejeras y los consejeros de los Estados son elegidos por el electorado del cantón. Solo los semicantones
+  tienen un representante cada uno.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Vertreter schickt der Kanton Zürich in den Ständerat?
+    options_de:
+      a: Einen Vertreter
+      b: Vier Vertreter
+      c: Sechs Vertreter
+      d: Zwei Vertreter
+    explanation_de: Der Kanton Zürich ist ein Vollkanton und hat zwei Sitze im Ständerat. Die Ständerättinnen
+      und Ständeräte werden von den Stimmberechtigten des Kantons gewählt. Nur die Halbkantone haben je
+      einen Vertreter.

@@ -10,6 +10,22 @@ options:
 explanation: Under the separation of powers, the executive (government), the legislative (parliament)
   and the judiciary (courts) take on different tasks. This means that no single body can have too much
   power. The branches of state power check one another.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet das Prinzip der Gewaltenteilung in der Schweiz?
+    options_de:
+      a: Der Bund, die Kantone und die Gemeinden teilen die Steuereinnahmen untereinander auf.
+      b: Die Regierung, das Parlament und die Gerichte teilen sich die Staatsgewalt.
+      c: Die Macht im Staat liegt allein beim Bundesrat.
+      d: Das Volk und die Medien teilen sich die Staatsgewalt.
+    explanation_de: Bei der Gewaltenteilung übernehmen die Exekutive (Regierung), die Legislative (Parlament)
+      und die Judikative (Gerichte) unterschiedliche Aufgaben. Das bedeutet, dass keine einzelne Behörde
+      zu viel Macht haben kann. Die Staatsgewalten kontrollieren sich gegenseitig.

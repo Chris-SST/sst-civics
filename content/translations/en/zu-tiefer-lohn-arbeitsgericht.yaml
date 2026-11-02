@@ -9,6 +9,22 @@ options:
   d: The communal assembly (Gemeindeversammlung)
 explanation: In disputes arising from an employment relationship, for example because of too low a wage,
   the labour court is responsible. The RAV helps with looking for a job and not with wage disputes.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Angestellte wird ohne Begründung zu wenig bezahlt. An welche Stelle kann sie sich
+      wenden?
+    options_de:
+      a: Das Regionale Arbeitsvermittlungszentrum (RAV)
+      b: Das Bundesamt für Statistik
+      c: Das Arbeitsgericht
+      d: Die Gemeindeversammlung
+    explanation_de: Bei Streitigkeiten aus einem Arbeitsverhältnis, zum Beispiel wegen eines zu tiefen
+      Lohns, ist das Arbeitsgericht zuständig. Das RAV hilft bei der Stellensuche und nicht bei Lohnstreitigkeiten.

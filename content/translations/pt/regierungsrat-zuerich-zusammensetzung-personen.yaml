@@ -1,0 +1,29 @@
+id: regierungsrat-zuerich-zusammensetzung-personen
+lang: pt
+source_version: 1
+question: Qual afirmação sobre a composição do Conselho de Governo (Regierungsrat) de Zurique está correta?
+options:
+  a: É composto por três pessoas.
+  b: É composto por sete pessoas.
+  c: É composto por nove pessoas.
+  d: É composto por cinco pessoas.
+explanation: O Conselho de Governo de Zurique é um órgão composto por sete pessoas. Elas dirigem em conjunto
+  o cantão e cada uma chefia uma direção.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage über die Zusammensetzung des Regierungsrates des Kantons Zürich ist richtig?
+    options_de:
+      a: Er besteht aus drei Personen.
+      b: Er besteht aus sieben Personen.
+      c: Er besteht aus neun Personen.
+      d: Er besteht aus fünf Personen.
+    explanation_de: Der Regierungsrat des Kantons Zürich ist ein Gremium aus sieben Personen. Sie leiten
+      gemeinsam den Kanton und jede von ihnen steht einer Direktion vor.

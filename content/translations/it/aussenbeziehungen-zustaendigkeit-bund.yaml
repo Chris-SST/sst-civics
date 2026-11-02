@@ -1,0 +1,32 @@
+id: aussenbeziehungen-zustaendigkeit-bund
+lang: it
+source_version: 1
+question: Chi è in linea di principio competente in Svizzera per gestire le relazioni con gli altri Stati?
+options:
+  a: La Conferenza dei governi cantonali
+  b: La Confederazione
+  c: I Cantoni insieme
+  d: I Comuni (Gemeinden) al confine
+explanation: Secondo la Costituzione federale, la politica estera è di competenza della Confederazione.
+  I Cantoni possono collaborare con l'estero nei loro ambiti di competenza, ma la responsabilità generale
+  spetta alla Confederazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz grundsätzlich für die Pflege der Beziehungen zu anderen Staaten
+      zuständig?
+    options_de:
+      a: Die Konferenz der Kantonsregierungen
+      b: Der Bund
+      c: Die Kantone zusammen
+      d: Die Gemeinden an der Grenze
+    explanation_de: Gemäss der Bundesverfassung fällt die Aussenpolitik in die Zuständigkeit des Bundes.
+      Die Kantone können in ihren Zuständigkeitsbereichen mit dem Ausland zusammenarbeiten, aber die Gesamtverantwortung
+      liegt beim Bund.

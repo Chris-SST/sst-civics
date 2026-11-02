@@ -1,0 +1,33 @@
+id: unfallversicherung-spitalkosten-arbeitsunfall
+lang: sq
+source_version: 1
+question: Një punonjëse ka një aksident të rëndë në punë dhe duhet të shtrohet në spital. Cili sigurim
+  i mbulon shpenzimet e spitalit?
+options:
+  a: Sigurimi i papunësisë
+  b: Sigurimi kundër aksidenteve
+  c: Skema e kompensimit të të ardhurave (Erwerbsersatzordnung)
+  d: Sigurimi i pleqërisë dhe i të mbijetuarve
+explanation: Sigurimi i detyrueshëm kundër aksidenteve paguan shpenzimet e mjekimit në rast aksidentesh
+  në punë, pra për shembull shpenzimet e spitalit. Punëmarrësit janë të siguruar kundër tyre nëpërmjet
+  punëdhënësit. Sigurimet e tjera të përmendura mbulojnë risqe të tjera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Mitarbeiterin hat einen schweren Arbeitsunfall und muss ins Spital eingeliefert
+      werden. Welche Versicherung deckt die Spitalkosten?
+    options_de:
+      a: Die Arbeitslosenversicherung
+      b: Die Unfallversicherung
+      c: Die Erwerbsersatzordnung
+      d: Die Alters- und Hinterlassenenversicherung
+    explanation_de: Die obligatorische Unfallversicherung bezahlt die Behandlungskosten bei Arbeitsunfällen,
+      also zum Beispiel die Spitalkosten. Die Arbeitnehmer sind dagegen über den Arbeitgeber versichert.
+      Die anderen genannten Versicherungen decken andere Risiken ab.

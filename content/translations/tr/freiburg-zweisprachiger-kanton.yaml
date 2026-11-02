@@ -1,0 +1,30 @@
+id: freiburg-zweisprachiger-kanton
+lang: tr
+source_version: 1
+question: İki dilli Fribourg kantonunda hangi diller konuşulur?
+options:
+  a: Fransızca ve Romanşça
+  b: Fransızca ve İtalyanca
+  c: Fransızca ve Almanca
+  d: Almanca ve İtalyanca
+explanation: Fribourg, Fransızca ve Almancanın konuşulduğu iki dilli bir kantondur. Kanton, Almanca konuşulan
+  İsviçre ile Fransızca konuşulan İsviçre arasındaki sınırda yer alır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprachen werden im zweisprachigen Kanton Freiburg gesprochen?
+    options_de:
+      a: Französisch und Rätoromanisch
+      b: Französisch und Italienisch
+      c: Französisch und Deutsch
+      d: Deutsch und Italienisch
+    explanation_de: Freiburg ist ein zweisprachiger Kanton, in dem Französisch und Deutsch gesprochen
+      werden. Der Kanton liegt an der Grenze zwischen der deutschsprachigen Schweiz und der französischsprachigen
+      Schweiz.

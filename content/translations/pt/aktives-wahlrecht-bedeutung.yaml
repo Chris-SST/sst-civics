@@ -1,0 +1,31 @@
+id: aktives-wahlrecht-bedeutung
+lang: pt
+source_version: 3
+question: O que significa o direito de voto ativo?
+options:
+  a: O direito de fundar um partido
+  b: O direito de ser eleito para um cargo
+  c: O direito de apresentar iniciativas no Parlamento
+  d: O direito de participar em eleições e votações e de exprimir o seu próprio voto
+explanation: Quem tem o direito de voto ativo pode votar pessoalmente em eleições e votações, por exemplo
+  na eleição do Conselho Nacional (Nationalrat) ou numa votação popular. Já o direito de ser eleito para
+  um cargo chama-se direito de voto passivo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Was bedeutet das aktive Stimmrecht?
+    options_de:
+      a: Das Recht, eine Partei zu gründen
+      b: Das Recht, in ein Amt gewählt zu werden
+      c: Das Recht, im Parlament Initiativen einzureichen
+      d: Das Recht, an Wahlen und Abstimmungen teilzunehmen und seine eigene Stimme abzugeben
+    explanation_de: Wer das aktive Stimmrecht hat, kann persönlich bei Wahlen und Abstimmungen abstimmen,
+      zum Beispiel bei der Wahl des Nationalrats oder bei einer Volksabstimmung. Das Recht, in ein Amt
+      gewählt zu werden, nennt man hingegen passives Stimmrecht.

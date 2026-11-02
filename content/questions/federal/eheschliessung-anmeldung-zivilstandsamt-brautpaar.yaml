@@ -22,7 +22,7 @@ glossary:
 - Zivilstandsamt
 - Eheschliessung
 - Brautpaar
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-184
@@ -45,3 +45,33 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Fachbegriff «Ehevorbereitungsverfahren» in der Erklärung ist für Niveau B1 eher schwer.
+        Besser wäre eine einfachere Formulierung wie «Das Brautpaar meldet sich gemeinsam beim Zivilstandsamt
+        am Wohnort von einer der beiden Personen an (Gesuch um das Vorbereitungsverfahren)».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Ausdruck «Gesuch um Durchführung des Ehevorbereitungsverfahrens» in der Erklärung
+        ist für Niveau B1 schwer; besser einfacher schreiben, etwa «Das Brautpaar meldet die Heirat gemeinsam
+        beim Zivilstandsamt an (Ehevorbereitungsverfahren)».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Brautpaar», «Braut» und «Bräutigam» passen seit der Ehe für alle (2022) nicht mehr für
+        jedes Paar; besser wäre «die Verlobten» oder «das Paar», wie in Art. 98 ZGB.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

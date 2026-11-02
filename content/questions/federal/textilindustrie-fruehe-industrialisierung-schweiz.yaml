@@ -22,7 +22,7 @@ glossary:
 - Industrialisierung
 - Textilindustrie
 - Stickerei
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-219
@@ -44,3 +44,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der grosse Boom der St. Galler Stickerei kam erst in der zweiten Hälfte des 19. Jahrhunderts,
+        die frühe Industrialisierung begann mit den Baumwollspinnereien; die Erklärung könnte die Spinnereien
+        als erstes Beispiel nennen und die Stickerei als späteren, bekannten Teil der Textilindustrie
+        bezeichnen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Blütezeit der St. Galler Stickerei lag eher im späten 19. und frühen 20. Jahrhundert
+        und nicht in der frühen Industrialisierung. Besser wäre ein Beispiel aus der frühen Zeit, etwa
+        die mechanischen Baumwollspinnereien im Zürcher Oberland oder die Spinnerei Hard in Winterthur
+        (1802), oder man ergänzt «später auch die St. Galler Stickereien».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt «Andere Branchen wurden erst später so wichtig» ohne Beispiele; ein
+        Zusatz wie «zum Beispiel die Maschinen-, Uhren- und Pharmaindustrie» würde die falschen Antworten
+        direkt einordnen.'
+      - 'Klein: Die Maschinenindustrie war im 19. Jahrhundert ebenfalls bedeutend; die Frage könnte mit
+        «am wichtigsten» und dem Zusatz «im 19. Jahrhundert» oder «zu Beginn» noch klarer auf die frühe
+        Phase eingegrenzt werden.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

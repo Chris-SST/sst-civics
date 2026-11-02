@@ -1,0 +1,30 @@
+id: region-basel-pharmaunternehmen-bekannt
+lang: sq
+source_version: 1
+question: Cila rajon i Zvicrës është i njohur për kompanitë e mëdha farmaceutike që ndodhen aty?
+options:
+  a: Engadina
+  b: Rajoni i Bazelit
+  c: Tiçino
+  d: Vallisi
+explanation: Në rajonin e Bazelit kanë selinë qendrore disa kompani farmaceutike që veprojnë në mbarë
+  botën. Industria farmaceutike është aty një degë e rëndësishme ekonomike dhe ka rëndësi për eksportin.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Region der Schweiz ist für die grossen Pharmaunternehmen bekannt, die sich dort
+      befinden?
+    options_de:
+      a: Engadin
+      b: Region Basel
+      c: Tessin
+      d: Wallis
+    explanation_de: In der Region Basel haben mehrere weltweit tätige Pharmaunternehmen ihren Hauptsitz.
+      Die Pharmaindustrie ist dort ein wichtiger Wirtschaftszweig und hat Bedeutung für den Export.

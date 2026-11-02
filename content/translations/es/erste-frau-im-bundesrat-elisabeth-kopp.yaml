@@ -1,0 +1,29 @@
+id: erste-frau-im-bundesrat-elisabeth-kopp
+lang: es
+source_version: 1
+question: ¿Quién fue elegida como primera mujer para el Consejo Federal (Bundesrat) suizo?
+options:
+  a: Elisabeth Kopp
+  b: Doris Leuthard
+  c: Ruth Dreifuss
+  d: Micheline Calmy-Rey
+explanation: Elisabeth Kopp fue elegida en 1984 como primera mujer para el Consejo Federal. Las otras
+  mujeres mencionadas pasaron a ser consejeras federales solo más tarde.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wurde als erste Frau in den Schweizer Bundesrat gewählt?
+    options_de:
+      a: Elisabeth Kopp
+      b: Doris Leuthard
+      c: Ruth Dreifuss
+      d: Micheline Calmy-Rey
+    explanation_de: Elisabeth Kopp wurde 1984 als erste Frau in den Bundesrat gewählt. Die anderen genannten
+      Frauen wurden erst später Bundesrätinnen.

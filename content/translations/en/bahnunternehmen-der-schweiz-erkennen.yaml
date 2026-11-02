@@ -1,0 +1,33 @@
+id: bahnunternehmen-der-schweiz-erkennen
+lang: en
+source_version: 1
+question: Which of the following abbreviations all stand for railway companies in Switzerland?
+options:
+  a: SOB, SEM, BLS and SZU
+  b: SBB, BLS, SOB and SZU
+  c: SBB, SRF, SOB and SUVA
+  d: BLS, SZU, SNB and SBB
+explanation: SBB, BLS, SOB and SZU are railway companies that operate trains in Switzerland. The SBB is
+  the largest company; the others are smaller railways that often operate regionally. The other abbreviations
+  stand for organisations such as the National Bank (SNB), the State Secretariat for Migration (SEM) or
+  the accident insurance (SUVA).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Abkürzungen stehen alle für Eisenbahnunternehmen in der Schweiz?
+    options_de:
+      a: SOB, SEM, BLS und SZU
+      b: SBB, BLS, SOB und SZU
+      c: SBB, SRF, SOB und SUVA
+      d: BLS, SZU, SNB und SBB
+    explanation_de: SBB, BLS, SOB und SZU sind Eisenbahnunternehmen, die in der Schweiz Züge betreiben.
+      Die SBB ist das grösste Unternehmen; die anderen sind kleinere Bahnen, die oft regional verkehren.
+      Die anderen Abkürzungen stehen für Organisationen wie die Nationalbank (SNB), das Staatssekretariat
+      für Migration (SEM) oder die Unfallversicherung (SUVA).

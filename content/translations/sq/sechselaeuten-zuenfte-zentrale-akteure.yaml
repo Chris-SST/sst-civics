@@ -1,0 +1,29 @@
+id: sechselaeuten-zuenfte-zentrale-akteure
+lang: sq
+source_version: 1
+question: Kush merr pjesë si aktor qendror në festën pranverore të Cyrihut, Sechseläuten?
+options:
+  a: Klasat shkollore të Cyrihut
+  b: Esnafet e Cyrihut (Zünfte)
+  c: Kryetarët e komunave (Gemeinde) të kantonit
+  d: Anëtarët e Këshillit Kantonal (Kantonsrat)
+explanation: Gjatë Sechseläuten-it, esnafet (Zünfte) marshojnë nëpër qytet me kostume historike. Në mbrëmje
+  ata djegin Böögg-un. Ky event është një festë e njohur pranverore në Cyrih.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer nimmt als zentraler Akteur am Zürcher Frühlingsfest Sechseläuten teil?
+    options_de:
+      a: Die Schulklassen von Zürich
+      b: Die Zünfte von Zürich
+      c: Die Gemeindepräsidenten des Kantons
+      d: Die Mitglieder des Kantonsrats
+    explanation_de: Während des Sechseläutens marschieren die Zünfte in historischen Kostümen durch die
+      Stadt. Am Abend verbrennen sie den Böögg. Dieser Anlass ist ein bekanntes Frühlingsfest in Zürich.

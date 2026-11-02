@@ -1,0 +1,30 @@
+id: referendum-gegen-parlamentsbeschluss
+lang: tr
+source_version: 1
+question: Federal düzeyde bir referandum hangi kararlara karşı yapılır?
+options:
+  a: Ulusal Konsey (Nationalrat) ile Kantonlar Konseyi (Ständerat) tarafından kabul edilen yasalara karşı
+  b: Federal Kançılarya (Bundeskanzlei) tarafından alınan kararlara karşı
+  c: Federal Mahkeme (Bundesgericht) tarafından verilen hükümlere karşı
+  d: Münferit belediyeler (Gemeinde) tarafından çıkarılan yönetmeliklere karşı
+explanation: Bir referandum, parlamentonun kabul ettiği yasalara karşı yapılır. Parlamento, Ulusal Konsey
+  ve Kantonlar Konseyi'nden oluşur. Mahkeme hükümleri ve idari kararlar referandum yoluyla itiraz edilemez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen welche Beschlüsse wird auf Bundesebene ein Referendum ergriffen?
+    options_de:
+      a: Gegen Gesetze, die vom Nationalrat und vom Ständerat angenommen wurden
+      b: Gegen Beschlüsse der Bundeskanzlei
+      c: Gegen Urteile des Bundesgerichts
+      d: Gegen Verordnungen, die von einzelnen Gemeinden erlassen wurden
+    explanation_de: Ein Referendum wird gegen Gesetze ergriffen, die vom Parlament angenommen wurden.
+      Das Parlament besteht aus dem Nationalrat und dem Ständerat. Gerichtsurteile und Verwaltungsentscheide
+      können nicht per Referendum angefochten werden.

@@ -1,0 +1,33 @@
+id: primarschule-traegerschaft-gemeinde-zuerich
+lang: fr
+source_version: 2
+question: Qui exploite les écoles du niveau primaire dans le canton de Zurich ?
+options:
+  a: La Direction de l'instruction publique du canton
+  b: La Confédération
+  c: Les communes (Gemeinden)
+  d: Les districts
+explanation: Dans le canton de Zurich, ce sont les communes qui exploitent les écoles primaires. Selon
+  le lieu, il s'agit des communes politiques ou de communes scolaires distinctes, et la Schulpflege élue
+  est l'autorité scolaire locale. Le canton ne fixe que le cadre, par exemple le plan d'études, et surveille
+  l'école obligatoire.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer betreibt die Schulen der Primarstufe im Kanton Zürich?
+    options_de:
+      a: Die Bildungsdirektion des Kantons
+      b: Der Bund
+      c: Die Gemeinden
+      d: Die Bezirke
+    explanation_de: Im Kanton Zürich betreiben die Gemeinden die Primarschulen. Je nach Ort handelt es
+      sich um die politischen Gemeinden oder um eigene Schulgemeinden, und die gewählte Schulpflege ist
+      die örtliche Schulbehörde. Der Kanton legt nur den Rahmen fest, zum Beispiel den Lehrplan, und beaufsichtigt
+      die obligatorische Schule.

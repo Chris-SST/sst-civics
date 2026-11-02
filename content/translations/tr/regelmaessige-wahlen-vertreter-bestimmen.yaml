@@ -1,0 +1,31 @@
+id: regelmaessige-wahlen-vertreter-bestimmen
+lang: tr
+source_version: 1
+question: Bir demokraside düzenli seçimlerin önemi nedir?
+options:
+  a: Halk, kendisini kimin temsil edeceğini kendisi belirler.
+  b: Hükümet, halefini kendisi atar.
+  c: Partiler temsilciliği kendi aralarında belirler.
+  d: Mahkeme, kimin bir göreve geleceğini belirler.
+explanation: Seçimlerde oy hakkına sahip kişiler, parlamentoda veya hükümette kimin kendilerini temsil
+  edeceğine karar verir. Seçimler düzenli olarak yapıldığı için, bu kişileri görevlerinde onaylayabilir
+  veya yerlerine başkalarını seçebilirler. Böylece halk, siyaset üzerindeki etkisini korur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Bedeutung haben regelmässige Wahlen in einer Demokratie?
+    options_de:
+      a: Das Volk bestimmt selbst, wer es vertreten wird.
+      b: Die Regierung ernennt ihren Nachfolger selbst.
+      c: Die Parteien bestimmen die Vertretung untereinander.
+      d: Das Gericht bestimmt, wer ein Amt übernimmt.
+    explanation_de: Bei Wahlen entscheiden die Stimmberechtigten, wer sie im Parlament oder in der Regierung
+      vertreten wird. Weil die Wahlen regelmässig stattfinden, können sie diese Personen in ihren Ämtern
+      bestätigen oder an ihrer Stelle andere wählen. So behält das Volk seinen Einfluss auf die Politik.

@@ -9,6 +9,22 @@ options:
   d: Protestant Christianity
 explanation: The Reformation was a movement for renewal within the Church of the Middle Ages. Protestant
   Christianity emerged from it. In Zurich, Huldrych Zwingli was active in this movement.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche christliche Konfession ging im 16. Jahrhundert aus der Reformation hervor?
+    options_de:
+      a: Das koptische Christentum
+      b: Das römisch-katholische Christentum
+      c: Das orthodoxe Christentum
+      d: Das protestantische Christentum
+    explanation_de: Die Reformation war eine Erneuerungsbewegung innerhalb der Kirche des Mittelalters.
+      Daraus ging das protestantische Christentum hervor. In Zürich war Huldrych Zwingli in dieser Bewegung
+      tätig.

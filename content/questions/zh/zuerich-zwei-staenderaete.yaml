@@ -19,7 +19,7 @@ glossary:
 - Ständerat
 - Vollkanton
 - Halbkanton
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-109
@@ -40,3 +40,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Bundesverfassung verwendet die Begriffe «Vollkanton» und «Halbkanton» nicht mehr;
+        die Erklärung könnte ergänzen: «Die sechs Kantone mit halber Standesstimme (früher Halbkantone
+        genannt) haben je eine Vertretung.»'
+      - 'Klein: Die Antworten wären mit «Eine Person», «Zwei Personen» usw. natürlicher formuliert als
+        mit «Vertretungen», zum Beispiel «d) Zwei Personen».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Antworten passen sprachlich nicht ganz zur Frage («Wie viele Vertreterinnen und Vertreter»
+        und dann «Zwei Vertretungen»); besser einfach «Eine», «Zwei», «Vier», «Sechs» oder die Frage als
+        «Wie viele Sitze hat der Kanton Zürich im Ständerat?» formulieren.'
+      - 'Klein: Die Begriffe «Vollkanton» und «Halbkanton» sind seit der Bundesverfassung von 1999 nicht
+        mehr amtlich; in der Erklärung besser schreiben: «Die meisten Kantone haben zwei Sitze im Ständerat,
+        nur sechs Kantone (z. B. Basel-Stadt, Basel-Landschaft) haben je einen Sitz.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage spricht von «Vertreterinnen und Vertretern», die Antworten von «Vertretungen».
+        Einheitlicher wäre «Wie viele Personen vertreten den Kanton Zürich im Ständerat?» mit den Antworten
+        «Eine», «Zwei», «Vier», «Sechs».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

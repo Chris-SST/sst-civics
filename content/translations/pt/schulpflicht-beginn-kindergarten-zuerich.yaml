@@ -1,0 +1,31 @@
+id: schulpflicht-beginn-kindergarten-zuerich
+lang: pt
+source_version: 1
+question: Com que começa, no cantão de Zurique, a escolaridade obrigatória de uma criança?
+options:
+  a: Com a entrada no ensino secundário (Sekundarschule)
+  b: Com a entrada na escola primária (Primarschule)
+  c: Com a entrada no grupo de jogos (Spielgruppe)
+  d: Com a entrada no jardim de infância (Kindergarten)
+explanation: No cantão de Zurique, o jardim de infância faz parte da escola pública obrigatória (Volksschule).
+  Por isso, a escolaridade obrigatória começa já com a entrada no jardim de infância. O grupo de jogos
+  é facultativo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Womit beginnt im Kanton Zürich die obligatorische Schulzeit eines Kindes?
+    options_de:
+      a: Mit dem Eintritt in die Sekundarschule
+      b: Mit dem Eintritt in die Primarschule
+      c: Mit dem Eintritt in die Spielgruppe
+      d: Mit dem Eintritt in den Kindergarten
+    explanation_de: Im Kanton Zürich gehört der Kindergarten zur obligatorischen öffentlichen Schule (Volksschule).
+      Deshalb beginnt die obligatorische Schulzeit bereits mit dem Eintritt in den Kindergarten. Die Spielgruppe
+      ist freiwillig.

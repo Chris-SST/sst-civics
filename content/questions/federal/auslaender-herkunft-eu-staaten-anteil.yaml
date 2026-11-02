@@ -22,7 +22,7 @@ glossary:
 - Europäische Union
 - Ausländerin
 - Wohnbevölkerung
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-259
@@ -44,3 +44,38 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falschen Antworten sind sehr leicht auszuschliessen, weil Asien, Afrika und Amerika
+        offensichtlich nicht so grosse Anteile haben; als plausiblere Ablenkung könnte man zum Beispiel
+        «Aus Staaten der Europäischen Union, etwa ein Viertel» oder «Aus europäischen Staaten ausserhalb
+        der EU, etwa zwei Drittel» verwenden.'
+      - 'Klein: Der Anteil schwankt je nach Jahr und Statistik leicht um zwei Drittel; die Erklärung könnte
+        deshalb «etwa zwei Drittel» statt der genauen Zahl «66 Prozent» in den Vordergrund stellen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falschen Antworten wirken wenig plausibel, weil Afrika oder Asien als Herkunft der
+        Hälfte oder von zwei Dritteln der Ausländer leicht auszuschliessen ist; besser wäre ein plausiblerer
+        Ablenker wie «Aus Staaten ausserhalb Europas, etwa zwei Drittel».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falschen Antworten a), b) und d) nennen so hohe Anteile (Asien zwei Drittel, Afrika
+        die Hälfte), dass sie sich gegenseitig ausschliessen und leicht auszuschliessen sind. Plausiblere
+        Ablenker wären zum Beispiel «Aus anderen europäischen Staaten ausserhalb der EU, etwa zwei Drittel»
+        oder kleinere Anteile für Asien und Afrika.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

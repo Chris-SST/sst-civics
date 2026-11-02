@@ -1,0 +1,29 @@
+id: stadt-zuerich-regierung-heisst-stadtrat
+lang: fr
+source_version: 1
+question: Comment s'appelle le gouvernement de la ville de Zurich ?
+options:
+  a: Conseil municipal (Stadtrat)
+  b: Conseil de district (Bezirksrat)
+  c: Conseil communal (Gemeinderat)
+  d: Parlement de la ville (Stadtparlament)
+explanation: L'exécutif de la ville de Zurich s'appelle Conseil municipal. Le conseil communal, en revanche,
+  est le parlement de la ville.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Regierung der Stadt Zürich?
+    options_de:
+      a: Stadtrat
+      b: Bezirksrat
+      c: Gemeinderat
+      d: Stadtparlament
+    explanation_de: Die Exekutive der Stadt Zürich heisst Stadtrat. Der Gemeinderat hingegen ist das Parlament
+      der Stadt.

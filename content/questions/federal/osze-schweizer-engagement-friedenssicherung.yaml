@@ -20,12 +20,77 @@ sources:
 - url: https://www.eda.admin.ch/osze
   checked: *id001
 - url: https://www.eda.admin.ch/de/schweizer-osze-vorsitz-2026
-  checked: 2026-11-02
+  checked: *id001
 glossary:
 - OSZE
 - Friedenssicherung
-status: draft
+status: approved
 difficulty: 3
 covers:
 - zh-332
-checks: {}
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 2
+    reasoning: Die OSZE ist eine Sicherheitsorganisation, in der sich die Schweiz für Frieden, Sicherheit
+      und Stabilität in Europa einsetzt, etwa in Osteuropa und Zentralasien, während die übrigen Antworten
+      Aufgaben anderer Organisationen wie der EU oder der WTO betreffen.
+  source:
+    verdict: supported
+    note: Quelle 1 und 2 nennen Frieden und Sicherheit in Europa als Schweizer Einsatz in der OSZE. Quelle
+      1 erwähnt Feldoperationen in Südosteuropa, Osteuropa und Zentralasien, die Schweiz als Gründungsmitglied
+      und den Vorsitz 2026 (Quellen 2 und 3). Die anderen Antworten (Fördergelder, Währung, Zölle) kommen
+      nicht vor.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) ist deutlich länger und genauer als die drei falschen Antworten und verrät
+        sich dadurch; besser die falschen Antworten ähnlich lang formulieren, zum Beispiel «Für tiefere
+        Zölle im Welthandel zwischen Europa und Asien».'
+      - 'Klein: Das Wort «Feldmissionen» ist für Niveau B1 schwierig; besser kurz erklären, zum Beispiel
+        «mit Missionen vor Ort (Feldmissionen)».'
+      - 'Klein: Die Tatsache aus der Themenliste ist enger als der heutige Stand, denn laut EDA setzt
+        sich die Schweiz in der OSZE allgemein für Frieden und Sicherheit in Europa ein, auch in Südosteuropa
+        und im Südkaukasus; die Formulierung «zum Beispiel» in Antwort a) fängt das gut auf und sollte
+        so bleiben.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In Antwort a) wird Zentralasien als Beispiel für Europa genannt, obwohl Zentralasien nicht
+        zu Europa gehört; besser «Für Frieden und Sicherheit, zum Beispiel in Osteuropa und Zentralasien»
+        oder «… in Europa und Zentralasien».'
+      - 'Klein: Antwort a) ist deutlich länger und genauer als die falschen Antworten und verrät sich
+        dadurch; die Antworten sollten ähnlich lang sein, etwa durch Kürzen von a) oder durch eine kurze
+        Ergänzung bei den anderen Antworten.'
+      - 'Klein: Die Schweiz war Gründungsmitglied der KSZE (1975), aus der 1995 die OSZE wurde; die Erklärung
+        könnte das genauer sagen, etwa «Die Schweiz ist seit der Gründung der KSZE 1975 dabei, aus der
+        die OSZE entstanden ist».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) nennt «Europa» als Ganzes und «zum Beispiel» Osteuropa und Zentralasien. Das
+        deckt die Tatsache aus der Themenliste knapp ab. Der Schwerpunkt Osteuropa/Zentralasien könnte
+        in der Frage deutlicher stehen, etwa «Wo setzt sich die Schweiz in der OSZE besonders für Frieden
+        ein?».'
+      - 'Klein: Die Erklärung nennt «Ost- und Südosteuropa und Zentralasien» für die Feldmissionen, die
+        Antwort nur «Osteuropa und Zentralasien». Das ist kein Widerspruch, aber die Formulierung könnte
+        einheitlicher sein.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

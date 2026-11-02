@@ -1,0 +1,33 @@
+id: pensionskasse-zweiter-pfeiler-altersvorsorge
+lang: it
+source_version: 1
+question: La previdenza per la vecchiaia in Svizzera si basa su tre pilastri. Quale istituzione costituisce
+  il secondo pilastro?
+options:
+  a: Le prestazioni complementari all'assicurazione vecchiaia e superstiti (AHV)
+  b: L'AVS (assicurazione statale per la vecchiaia)
+  c: La cassa pensione (previdenza professionale)
+  d: Il conto di risparmio privato con deduzione fiscale (pilastro 3a)
+explanation: La cassa pensione fa parte della previdenza professionale e costituisce il secondo pilastro.
+  Integra l'AVS, affinché le persone in pensione possano mantenere in modo adeguato il loro tenore di
+  vita abituale. L'AVS è il primo pilastro, la previdenza privata è il terzo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Altersvorsorge in der Schweiz beruht auf drei Säulen. Welche Institution bildet die
+      zweite Säule?
+    options_de:
+      a: Die Ergänzungsleistungen zur Alters- und Hinterlassenenversicherung (AHV)
+      b: Die AHV (staatliche Altersversicherung)
+      c: Die Pensionskasse (berufliche Vorsorge)
+      d: Das private Sparkonto mit Steuerabzug (Säule 3a)
+    explanation_de: Die Pensionskasse gehört zur beruflichen Vorsorge und bildet die zweite Säule. Sie
+      ergänzt die AHV, damit pensionierte Personen ihren gewohnten Lebensstandard in angemessener Weise
+      beibehalten können. Die AHV ist die erste Säule, die private Vorsorge ist die dritte.

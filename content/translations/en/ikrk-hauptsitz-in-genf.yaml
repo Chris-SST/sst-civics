@@ -9,6 +9,21 @@ options:
   d: In Belgium
 explanation: The ICRC has its headquarters in Geneva, in Switzerland. It was founded in Geneva in 1863
   and protects victims of armed conflicts. Switzerland supports its work.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Land hat das Internationale Komitee vom Roten Kreuz (IKRK) seinen Hauptsitz?
+    options_de:
+      a: In den Niederlanden
+      b: In der Schweiz
+      c: In Österreich
+      d: In Belgien
+    explanation_de: Das IKRK hat seinen Hauptsitz in Genf, in der Schweiz. Es wurde 1863 in Genf gegründet
+      und schützt Opfer bewaffneter Konflikte. Die Schweiz unterstützt seine Arbeit.

@@ -1,0 +1,32 @@
+id: osze-schweizer-engagement-friedenssicherung
+lang: sq
+source_version: 2
+question: Për çfarë angazhohet Zvicra në Organizatën për Sigurinë dhe Bashkëpunimin në Evropë (OSBE)?
+options:
+  a: Për paqen dhe sigurinë në Evropë, për shembull në Evropën Lindore dhe në Azinë Qendrore
+  b: Për shpërndarjen e fondeve mbështetëse në Evropën Perëndimore
+  c: Për futjen e një monedhe të përbashkët
+  d: Për uljen e tarifave doganore në tregtinë botërore
+explanation: Zvicra është anëtare themeluese e OSBE-së dhe e shfrytëzon atë për të nxitur paqen dhe sigurinë
+  në Evropë. OSBE-ja është aktive me misione në terren veçanërisht në Evropën Lindore dhe Juglindore dhe
+  në Azinë Qendrore. Në vitin 2026 Zvicra ushtron kryesinë e OSBE-së.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür setzt sich die Schweiz in der Organisation für Sicherheit und Zusammenarbeit in
+      Europa (OSZE) ein?
+    options_de:
+      a: Für Frieden und Sicherheit in Europa, zum Beispiel in Osteuropa und in Zentralasien
+      b: Für die Verteilung von Unterstützungsgeldern in Westeuropa
+      c: Für die Einführung einer gemeinsamen Währung
+      d: Für die Senkung der Zollgebühren im Welthandel
+    explanation_de: Die Schweiz ist Gründungsmitglied der OSZE und nutzt sie, um Frieden und Sicherheit
+      in Europa zu fördern. Die OSZE ist mit Feldmissionen insbesondere in Osteuropa und Südosteuropa
+      und in Zentralasien aktiv. Im Jahr 2026 hat die Schweiz den Vorsitz der OSZE inne.

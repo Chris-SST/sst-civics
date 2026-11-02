@@ -1,0 +1,30 @@
+id: krankenversicherung-obligatorisch-einwohner
+lang: tr
+source_version: 1
+question: İsviçre'de kimlerin sağlık sigortası yaptırması gerekir?
+options:
+  a: Yalnızca İsviçre vatandaşlığına (Bürgerrecht) sahip kişiler
+  b: İsviçre'de ikamet eden tüm kişiler
+  c: Yalnızca 65 yaşın altındaki kişiler
+  d: Yalnızca çalışanlar
+explanation: Zorunlu sağlık sigortası, İsviçre'de ikametgâhı olan tüm kişileri kapsar. Vatandaşlık, çalışma
+  durumu ve yaş bu konuda rol oynamaz. Sigorta, İsviçre'ye taşınmanın ardından üç ay içinde yaptırılmalıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz eine Krankenversicherung abschliessen?
+    options_de:
+      a: Nur Personen mit Schweizer Bürgerrecht
+      b: Alle Personen, die in der Schweiz wohnen
+      c: Nur Personen unter 65 Jahren
+      d: Nur Erwerbstätige
+    explanation_de: Die obligatorische Krankenversicherung umfasst alle Personen, die ihren Wohnsitz in
+      der Schweiz haben. Das Bürgerrecht, der Erwerbsstatus und das Alter spielen dabei keine Rolle. Die
+      Versicherung muss innerhalb von drei Monaten nach dem Umzug in die Schweiz abgeschlossen werden.

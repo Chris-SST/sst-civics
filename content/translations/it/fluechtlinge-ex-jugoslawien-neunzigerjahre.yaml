@@ -1,0 +1,31 @@
+id: fluechtlinge-ex-jugoslawien-neunzigerjahre
+lang: it
+source_version: 1
+question: Per quale motivo negli anni Novanta molte persone provenienti dall'ex Jugoslavia hanno cercato
+  accoglienza in Svizzera?
+options:
+  a: Volevano studiare presso le università svizzere.
+  b: Fuggivano da una grande catastrofe naturale.
+  c: Fuggivano dalla guerra nel loro Paese d'origine.
+  d: Erano state reclutate da aziende svizzere come stagionali.
+explanation: La dissoluzione della Jugoslavia ha portato a guerre negli anni Novanta. Per questo molte
+  persone hanno cercato protezione in Svizzera. Una parte di loro è rimasta e oggi vive qui.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchem Grund haben in den Neunzigerjahren viele Menschen aus dem ehemaligen Jugoslawien
+      in der Schweiz Aufnahme gesucht?
+    options_de:
+      a: Sie wollten an Schweizer Universitäten studieren.
+      b: Sie flohen vor einer grossen Naturkatastrophe.
+      c: Sie flohen vor dem Krieg in ihrem Herkunftsland.
+      d: Sie waren von Schweizer Unternehmen als Saisonniers angeworben worden.
+    explanation_de: Der Zerfall Jugoslawiens führte in den Neunzigerjahren zu Kriegen. Deshalb suchten
+      viele Menschen Schutz in der Schweiz. Ein Teil von ihnen ist geblieben und lebt heute hier.

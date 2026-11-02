@@ -10,6 +10,22 @@ options:
 explanation: Military affairs are a matter for the Confederation. It regulates the army and its tasks
   in the Federal Constitution and in federal laws. The cantons help with implementation, for example with
   recruitment.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Ebene ist für die Armee zuständig?
+    options_de:
+      a: Die Kantone
+      b: Der Bund
+      c: Die Bezirke
+      d: Die Gemeinden
+    explanation_de: Das Militärwesen ist Sache des Bundes. Er regelt die Armee und ihre Aufgaben in der
+      Bundesverfassung und in Bundesgesetzen. Die Kantone helfen bei der Umsetzung mit, zum Beispiel bei
+      der Rekrutierung.

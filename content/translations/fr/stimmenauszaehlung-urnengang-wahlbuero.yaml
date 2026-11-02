@@ -1,0 +1,31 @@
+id: stimmenauszaehlung-urnengang-wahlbuero
+lang: fr
+source_version: 1
+question: Qui dépouille les suffrages exprimés lors des scrutins dans une commune (Gemeinde) zurichoise
+  ?
+options:
+  a: L'autorité d'aide sociale
+  b: Le bureau électoral
+  c: La secrétaire communale seule
+  d: Le ministère public
+explanation: Le bureau électoral établit les résultats de la commune lors des votations et des élections.
+  Il se compose de plusieurs personnes afin que le dépouillement se déroule de manière correcte et vérifiable.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zählt bei Abstimmungen und Wahlen in einer Zürcher Gemeinde die abgegebenen Stimmen
+      aus?
+    options_de:
+      a: Die Sozialbehörde
+      b: Das Wahlbüro
+      c: Die Gemeindeschreiberin allein
+      d: Die Staatsanwaltschaft
+    explanation_de: Das Wahlbüro ermittelt bei Abstimmungen und Wahlen die Ergebnisse der Gemeinde. Es
+      setzt sich aus mehreren Personen zusammen, damit die Auszählung korrekt und nachprüfbar abläuft.

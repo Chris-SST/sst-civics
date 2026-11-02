@@ -1,15 +1,31 @@
 id: zwingli-bekannt-fuer-reformation
 lang: en
-source_version: 1
-question: What is Ulrich Zwingli primarily known for in the history of Zurich?
+source_version: 2
+question: What is Huldrych (Ulrich) Zwingli chiefly known for in the history of Zurich?
 options:
   a: He built the first railway in the canton.
-  b: He founded the University of Zurich.
-  c: He introduced women's suffrage.
+  b: He was the first President of the Swiss Confederation (Bundespräsident).
+  c: He introduced women's right to vote.
   d: He was the leader of the Reformation in Zurich.
-explanation: Zwingli left a lasting mark on the Zurich Reformation and, with it, on the church and on
-  life in the city. The Zurich church became the Reformed church. The other answers have nothing to do
-  with him.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: In the 16th century, Huldrych (Ulrich) Zwingli led the Reformation in Zurich, and the Zurich
+  church became Reformed. The railway, the federal state with a President of the Swiss Confederation and
+  women's right to vote came only centuries later.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür ist Huldrych (Ulrich) Zwingli in der Geschichte Zürichs vor allem bekannt?
+    options_de:
+      a: Er baute die erste Eisenbahn im Kanton.
+      b: Er war der erste Präsident der Schweizerischen Eidgenossenschaft (Bundespräsident).
+      c: Er führte das Frauenstimmrecht ein.
+      d: Er war der Anführer der Reformation in Zürich.
+    explanation_de: Im 16. Jahrhundert führte Huldrych (Ulrich) Zwingli die Reformation in Zürich an,
+      und die Zürcher Kirche wurde reformiert. Die Eisenbahn, der Bundesstaat mit einem Präsidenten der
+      Schweizerischen Eidgenossenschaft und das Frauenstimmrecht kamen erst Jahrhunderte später.

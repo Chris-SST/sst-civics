@@ -1,0 +1,29 @@
+id: kanton-zuerich-nachbarkanton-thurgau
+lang: tr
+source_version: 1
+question: Aşağıdaki kantonlardan hangisi doğrudan Zürih kantonu ile sınırdaştır?
+options:
+  a: Graubünden
+  b: Thurgau
+  c: Uri
+  d: Vaud
+explanation: Thurgau kantonu, Zürih kantonunun kuzeydoğusunda yer alır ve doğrudan onunla sınırdaştır.
+  Graubünden, Vaud ve Uri kantonlarının Zürih ile ortak sınırı yoktur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher der folgenden Kantone grenzt direkt an den Kanton Zürich?
+    options_de:
+      a: Graubünden
+      b: Thurgau
+      c: Uri
+      d: Waadt
+    explanation_de: Der Kanton Thurgau liegt im Nordosten des Kantons Zürich und grenzt direkt an ihn.
+      Die Kantone Graubünden, Waadt und Uri haben keine gemeinsame Grenze mit Zürich.

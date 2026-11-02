@@ -1,0 +1,30 @@
+id: alv-beitraege-arbeitgeber-lohnabzug
+lang: fr
+source_version: 1
+question: Qui déduit du salaire les cotisations à l'assurance-chômage ?
+options:
+  a: La commune (Gemeinde) du lieu de domicile
+  b: La travailleuse ou le travailleur lui-même, par versement
+  c: L'Office régional de placement
+  d: L'employeur
+explanation: L'employeur déduit automatiquement les cotisations du salaire et les verse à l'organe compétent.
+  Les travailleurs n'ont pas à s'en occuper eux-mêmes. L'employeur paie également une partie des cotisations.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zieht die Beiträge an die Arbeitslosenversicherung vom Lohn ab?
+    options_de:
+      a: Die Gemeinde des Wohnorts
+      b: Die Arbeitnehmerin oder der Arbeitnehmer selbst, durch Einzahlung
+      c: Das Regionale Arbeitsvermittlungszentrum
+      d: Der Arbeitgeber
+    explanation_de: Der Arbeitgeber zieht die Beiträge automatisch vom Lohn ab und überweist sie an die
+      zuständige Stelle. Die Arbeitnehmenden müssen sich nicht selbst darum kümmern. Der Arbeitgeber bezahlt
+      ebenfalls einen Teil der Beiträge.

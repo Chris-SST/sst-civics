@@ -22,7 +22,7 @@ sources:
 glossary:
 - Wasserkraftwerk
 - Stromproduktion
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-281
@@ -44,3 +44,43 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die richtige Antwort lässt sich leicht erraten, weil nur sie das Wort «Wasser» enthält;
+        das ist bei dieser einfachen Tatsache vertretbar, man könnte die Frage aber zum Beispiel als «Mit
+        welcher Art von Kraftwerken nutzt die Schweiz ihr Wasser zur Stromproduktion?» formulieren.'
+      - 'Klein: «Ölraffinerien» produzieren keinen Strom und sind darum als falsche Antwort wenig plausibel;
+        besser wäre eine Kraftwerksart wie «In Windkraftanlagen» oder «In Solaranlagen».'
+      - 'Klein: Die Erklärung könnte mit einer Zahl aus der BFE-Quelle anschaulicher werden, etwa: «Rund
+        58 Prozent des Stroms aus der Schweiz stammen aus Wasserkraft.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die richtige Antwort lässt sich allein über das Wort «Wasser» in der Frage erraten; man
+        könnte fragen «Mit welcher Art von Kraftwerken produziert die Schweiz den grössten Teil ihres
+        Stroms?», ohne das Wasser in der Frage zu nennen.'
+      - 'Klein: «In Ölraffinerien» ist als Ablenker schwach, weil Raffinerien keinen Strom produzieren;
+        besser wäre eine plausiblere Antwort wie «In Kernkraftwerken» oder «In Windkraftanlagen».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage ist sehr leicht, weil Gaskraftwerke, Ölraffinerien und Kohlekraftwerke offensichtlich
+        nichts mit Wasser zu tun haben. Mögliche Verbesserung: Als falsche Antworten eine plausiblere
+        Alternative wie «In Kernkraftwerken» verwenden (auch dort wird Wasser zur Kühlung genutzt, aber
+        nicht zur Stromproduktion durch Wasserkraft), oder «In Solaranlagen».'
+      - 'Klein: Eine Ölraffinerie produziert keinen Strom und ist als Distraktor etwas unpassend. Besser
+        ein Kraftwerkstyp wie «In Windkraftwerken» oder «In Kernkraftwerken».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

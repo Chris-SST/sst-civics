@@ -1,0 +1,29 @@
+id: street-parade-zuerich-werte
+lang: pt
+source_version: 1
+question: Que valores a Street Parade em Zurique representa?
+options:
+  a: Pátria, fé, família, comunidade e lealdade
+  b: Tradição, ordem, aplicação, poupança e pontualidade
+  c: Desporto, saúde, desempenho, competição e fair play
+  d: Amor, paz, liberdade, generosidade e tolerância
+explanation: A Street Parade é um grande desfile de música techno em Zurique. Entende-se a si mesma como
+  uma manifestação a favor do amor, da paz, da liberdade, da generosidade e da tolerância.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für welche Werte steht die Street Parade in Zürich?
+    options_de:
+      a: Heimat, Glaube, Familie, Gemeinschaft und Loyalität
+      b: Tradition, Ordnung, Fleiss, Sparsamkeit und Pünktlichkeit
+      c: Sport, Gesundheit, Leistung, Wettkampf und Fairplay
+      d: Liebe, Frieden, Freiheit, Grosszügigkeit und Toleranz
+    explanation_de: Die Street Parade ist ein grosser Techno-Musikumzug in Zürich. Sie versteht sich selbst
+      als eine Kundgebung für die Liebe, den Frieden, die Freiheit, die Grosszügigkeit und die Toleranz.

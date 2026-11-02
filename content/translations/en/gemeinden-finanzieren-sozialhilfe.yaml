@@ -9,6 +9,21 @@ options:
   d: The communes (Gemeinden)
 explanation: In the canton of Zurich, the communes are responsible for social assistance and bear its
   costs. This can place a heavy burden on smaller communes. That is why there is fiscal equalisation.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer finanziert im Kanton Zürich die Sozialhilfe für bedürftige Menschen?
+    options_de:
+      a: Die Kirchen allein
+      b: Die Schweizerische Nationalbank
+      c: Die Arbeitgeberverbände
+      d: Die Gemeinden
+    explanation_de: Im Kanton Zürich sind die Gemeinden für die Sozialhilfe zuständig und tragen ihre
+      Kosten. Dies kann kleinere Gemeinden stark belasten. Deshalb gibt es den Finanzausgleich.

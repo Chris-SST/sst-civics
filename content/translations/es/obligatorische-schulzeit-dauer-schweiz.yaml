@@ -1,0 +1,35 @@
+id: obligatorische-schulzeit-dauer-schweiz
+lang: es
+source_version: 2
+question: ¿Cuántos años dura la escolaridad obligatoria en el cantón de Zúrich, si se cuenta el jardín
+  de infancia (Kindergarten)?
+options:
+  a: Once años
+  b: Diez años
+  c: Doce años
+  d: Nueve años
+explanation: 'En el cantón de Zúrich, todos los niños asisten obligatoriamente a la escuela durante once
+  años: dos años de jardín de infancia, seis años de escuela primaria y tres años de secundaria I (Sekundarstufe
+  I). La mayoría de los cantones han unificado esta duración mediante el concordato HarmoS. Sin embargo,
+  algunos cantones no se han adherido, y en ellos a veces solo es obligatorio un año de jardín de infancia.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie viele Jahre dauert die obligatorische Schulzeit im Kanton Zürich, wenn man den Kindergarten
+      mitzählt?
+    options_de:
+      a: Elf Jahre
+      b: Zehn Jahre
+      c: Zwölf Jahre
+      d: Neun Jahre
+    explanation_de: 'Im Kanton Zürich besuchen alle Kinder die Schule obligatorisch während elf Jahren:
+      zwei Jahre Kindergarten, sechs Jahre Primarschule und drei Jahre Sekundarstufe I. Die Mehrheit der
+      Kantone hat diese Dauer durch das HarmoS-Konkordat vereinheitlicht. Einige Kantone sind jedoch nicht
+      beigetreten, und in ihnen ist manchmal nur ein Jahr Kindergarten obligatorisch.'

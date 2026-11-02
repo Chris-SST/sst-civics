@@ -1,0 +1,31 @@
+id: wasserkraft-stromproduktion-schweiz
+lang: sq
+source_version: 1
+question: Zvicra ka ujë në bollëk. Si përdoret ai për prodhimin e energjisë elektrike?
+options:
+  a: Në centralet me gaz
+  b: Në rafineritë e naftës
+  c: Në centralet hidroelektrike
+  d: Në centralet me qymyr
+explanation: Uji i lumenjve dhe i liqeneve artificiale vë në lëvizje turbinat në centralet hidroelektrike.
+  Energjia ujore është në Zvicër një burim qendror vendas i energjisë elektrike.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Schweiz hat Wasser im Überfluss. Wie wird es zur Erzeugung von elektrischer Energie
+      genutzt?
+    options_de:
+      a: In Gaskraftwerken
+      b: In Erdölraffinerien
+      c: In Wasserkraftwerken
+      d: In Kohlekraftwerken
+    explanation_de: Das Wasser der Flüsse und der Stauseen setzt in den Wasserkraftwerken die Turbinen
+      in Bewegung. Die Wasserkraft ist in der Schweiz eine zentrale einheimische Quelle für elektrische
+      Energie.

@@ -1,0 +1,30 @@
+id: zweifraenkler-helvetia-symbolfigur
+lang: sq
+source_version: 1
+question: Cila figurë simbolike është e paraqitur në monedhën dyfrangëshe (Zweifränkler)?
+options:
+  a: Matterhorni
+  b: Helvetia
+  c: Wilhelm Tell
+  d: Një anëtar i Këshillit Federal (Bundesrat) zviceran
+explanation: Në monedhën zvicerane dyfrangëshe shihet Helvetia, figura simbolike femërore e Konfederatës.
+  Ajo përfaqëson Zvicrën si komb. Helvetia shfaqet edhe në monedha të tjera dhe në pulla postare.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche symbolische Figur ist auf der Zweifränkler-Münze dargestellt?
+    options_de:
+      a: Das Matterhorn
+      b: Helvetia
+      c: Wilhelm Tell
+      d: Ein Mitglied des schweizerischen Bundesrates
+    explanation_de: Auf der schweizerischen Zweifränkler-Münze ist Helvetia zu sehen, die weibliche symbolische
+      Figur der Eidgenossenschaft. Sie vertritt die Schweiz als Nation. Helvetia erscheint auch auf anderen
+      Münzen und auf Briefmarken.

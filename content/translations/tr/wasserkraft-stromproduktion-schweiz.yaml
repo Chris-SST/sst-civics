@@ -1,0 +1,31 @@
+id: wasserkraft-stromproduktion-schweiz
+lang: tr
+source_version: 1
+question: İsviçre'de su bol miktarda bulunmaktadır. Bu su elektrik üretimi için nasıl kullanılır?
+options:
+  a: Doğal gaz santrallerinde
+  b: Petrol rafinerilerinde
+  c: Hidroelektrik santrallerinde
+  d: Kömür santrallerinde
+explanation: Nehirlerden ve barajlardaki göllerden gelen su, hidroelektrik santrallerinde türbinleri döndürür.
+  Su gücü, İsviçre'de elektrik için yerli ve temel bir kaynaktır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In der Schweiz ist Wasser reichlich vorhanden. Wie wird dieses Wasser zur Stromerzeugung
+      genutzt?
+    options_de:
+      a: In Erdgaskraftwerken
+      b: In Erdölraffinerien
+      c: In Wasserkraftwerken
+      d: In Kohlekraftwerken
+    explanation_de: Das Wasser aus den Flüssen und aus den Seen in den Staudämmen treibt in den Wasserkraftwerken
+      die Turbinen an. Die Wasserkraft ist in der Schweiz eine einheimische und grundlegende Quelle für
+      Strom.

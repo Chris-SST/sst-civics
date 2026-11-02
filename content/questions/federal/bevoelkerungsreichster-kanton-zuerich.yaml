@@ -20,7 +20,51 @@ sources:
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: *id001
 glossary: []
-status: draft
+status: approved
 difficulty: 1
 covers:
 - zh-322
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Kanton Zürich ist mit rund 1,6 Millionen Einwohnerinnen und Einwohnern der bevölkerungsreichste
+      Kanton der Schweiz, vor Bern, Waadt und Aargau.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den Kanton Zürich mit 1,63 Millionen Einwohnenden den bevölkerungsreichsten Kanton
+      der Schweiz; Quelle 2 und die Broschüre (Quelle 3) sagen dasselbe. Die Reihenfolge Bern und Waadt
+      danach wird nicht belegt, ist aber für die richtige Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Broschüre zum Grundkenntnistest (März 2023) nennt noch «etwa 1,5 Millionen», die aktuelle
+        Seite des Kantons aber 1,63 Millionen; «rund 1,6 Millionen» in der Erklärung stimmt, man könnte
+        zur Klarheit «heute rund 1,6 Millionen» schreiben.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage könnte «Welcher Kanton der Schweiz hat die meisten Einwohnerinnen und Einwohner?»
+        lauten, damit sie ganz eindeutig ist.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues: []
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

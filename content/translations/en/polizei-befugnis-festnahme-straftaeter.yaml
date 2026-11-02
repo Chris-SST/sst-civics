@@ -1,15 +1,32 @@
 id: polizei-befugnis-festnahme-straftaeter
 lang: en
-source_version: 1
-question: Who has the authority to arrest suspected offenders?
+source_version: 2
+question: Which authority may arrest persons who are suspected of having committed a criminal offence?
 options:
   a: The school authority
   b: The police
   c: The parliament
   d: The tax office
-explanation: The police may arrest persons who are suspected of having committed a criminal offence, provided
-  the legal requirements are met. A court then decides on a conviction. Other authorities do not have
-  this power.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: The police may arrest persons who are suspected of a criminal offence, subject to the conditions
+  set out in law. Whether someone is guilty is then decided by a court. The school authority, the parliament
+  and the tax office do not have this power.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Behörde darf Personen festnehmen, die im Verdacht stehen, eine Straftat begangen
+      zu haben?
+    options_de:
+      a: Die Schulbehörde
+      b: Die Polizei
+      c: Das Parlament
+      d: Das Steueramt
+    explanation_de: Die Polizei darf Personen, die einer Straftat verdächtigt werden, unter den im Gesetz
+      festgelegten Voraussetzungen festnehmen. Ob jemand schuldig ist, entscheidet dann ein Gericht. Die
+      Schulbehörde, das Parlament und das Steueramt haben diese Befugnis nicht.

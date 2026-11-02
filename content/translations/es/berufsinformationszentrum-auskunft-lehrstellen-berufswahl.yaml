@@ -1,0 +1,32 @@
+id: berufsinformationszentrum-auskunft-lehrstellen-berufswahl
+lang: es
+source_version: 1
+question: ¿Dónde se puede obtener información sobre plazas de aprendizaje, elección de profesión y trabajo?
+options:
+  a: En el centro de información profesional
+  b: En el registro civil
+  c: En el jardín de infancia
+  d: En la oficina de cobros y quiebras
+explanation: El centro de información profesional (BIZ) informa y asesora sobre plazas de aprendizaje,
+  elección de profesión, formación continua y trabajo. La oferta está abierta a jóvenes y adultos. Los
+  demás organismos tienen otras funciones.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Betreibungs- und Konkursamt» ist nur eine ausführlichere Bezeichnung für
+      das Betreibungsamt, die falsche Antwort bleibt falsch.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo kann man Informationen über Lehrstellen, Berufswahl und Arbeit erhalten?
+    options_de:
+      a: Im Berufsinformationszentrum
+      b: Im Zivilstandsamt
+      c: Im Kindergarten
+      d: Im Betreibungs- und Konkursamt
+    explanation_de: Das Berufsinformationszentrum (BIZ) informiert und berät über Lehrstellen, Berufswahl,
+      Weiterbildung und Arbeit. Das Angebot steht Jugendlichen und Erwachsenen offen. Die übrigen Stellen
+      haben andere Aufgaben.

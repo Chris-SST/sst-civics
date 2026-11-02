@@ -1,0 +1,34 @@
+id: vereinigte-bundesversammlung-wahl-bundesrat-bundesgericht
+lang: fr
+source_version: 2
+question: Qui élit les membres du Conseil fédéral (Bundesrat) et du Tribunal fédéral (Bundesgericht) ?
+options:
+  a: Le peuple, dans les urnes
+  b: Les gouvernements cantonaux
+  c: Le Conseil national (Nationalrat) et le Conseil des États (Ständerat) ensemble
+  d: Les présidentes et les présidents des partis
+explanation: Pour ces élections, le Conseil national et le Conseil des États se réunissent. Ils forment
+  alors l'Assemblée fédérale (Bundesversammlung) réunie, appelée « Vereinigte Bundesversammlung », et
+  élisent les membres du Conseil fédéral et du Tribunal fédéral. Le peuple élit le Conseil national et,
+  selon les règles de son propre canton, également les membres du Conseil des États, mais pas le Conseil
+  fédéral.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer wählt die Mitglieder des Bundesrates und des Bundesgerichts?
+    options_de:
+      a: Das Volk an der Urne
+      b: Die Kantonsregierungen
+      c: Der Nationalrat und der Ständerat gemeinsam
+      d: Die Präsidentinnen und Präsidenten der Parteien
+    explanation_de: Für diese Wahlen versammeln sich der Nationalrat und der Ständerat. Sie bilden dann
+      die vereinigte Bundesversammlung, genannt «Vereinigte Bundesversammlung», und wählen die Mitglieder
+      des Bundesrates und des Bundesgerichts. Das Volk wählt den Nationalrat und, nach den Regeln seines
+      eigenen Kantons, ebenfalls die Mitglieder des Ständerates, aber nicht den Bundesrat.

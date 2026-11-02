@@ -18,7 +18,7 @@ sources:
 glossary:
 - Morgestraich
 - Basler Fasnacht
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-304
@@ -40,3 +40,35 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte zum besseren Verständnis ergänzen, dass die Stadt danach nur von
+        den Laternen der Fasnächtler beleuchtet wird, wie es die Quelle des BAK beschreibt.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Bürgermeister» ist in der Schweiz unüblich; besser in Antwort a) «Der Regierungspräsident
+        übergibt …» schreiben, damit die falsche Antwort zum Schweizer Kontext passt.'
+      - 'Klein: Die Erklärung könnte zum besseren Verständnis ergänzen, dass danach die Cliquen mit beleuchteten
+        Laternen durch die dunkle Stadt ziehen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In Antwort a) steht «Bürgermeister»; in der Schweiz ist «Stadtpräsident» oder «Regierungspräsident»
+        üblicher, doch als falsche Antwort stört das nicht.'
+      - 'Klein: Die Erklärung könnte kurz sagen, dass die Fasnächtler kleine Laternen auf dem Kopf tragen
+        und die Stadt nur durch Laternen beleuchtet ist, dann wird das Bild klarer.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

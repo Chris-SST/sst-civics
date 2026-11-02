@@ -1,0 +1,29 @@
+id: gotthard-basistunnel-laengster-eisenbahntunnel
+lang: fr
+source_version: 1
+question: Qu'est-ce qui distingue le tunnel de base du Gothard au niveau mondial ?
+options:
+  a: C'est le plus long tunnel ferroviaire du monde.
+  b: C'est le tunnel ferroviaire situé à la plus haute altitude du monde.
+  c: C'est le plus long tunnel routier du monde.
+  d: C'est le plus ancien tunnel ferroviaire d'Europe.
+explanation: Le tunnel de base du Gothard est le plus long tunnel ferroviaire du monde. Il relie le nord
+  de la Suisse au Tessin et constitue un élément important de l'axe nord-sud à travers les Alpes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was zeichnet den Gotthard-Basistunnel weltweit aus?
+    options_de:
+      a: Er ist der längste Eisenbahntunnel der Welt.
+      b: Er ist der Eisenbahntunnel, der auf der höchsten Höhe der Welt liegt.
+      c: Er ist der längste Strassentunnel der Welt.
+      d: Er ist der älteste Eisenbahntunnel Europas.
+    explanation_de: Der Gotthard-Basistunnel ist der längste Eisenbahntunnel der Welt. Er verbindet den
+      Norden der Schweiz mit dem Tessin und ist ein wichtiges Element der Nord-Süd-Achse durch die Alpen.

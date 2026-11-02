@@ -9,6 +9,22 @@ options:
   d: Starting kindergarten
 explanation: In the canton of Zurich, kindergarten is part of compulsory state schooling (Volksschule).
   Compulsory schooling therefore already begins when a child starts kindergarten. Playgroup is voluntary.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was markiert im Kanton Zürich den Beginn der obligatorischen Schulzeit eines Kindes?
+    options_de:
+      a: Der Eintritt in die Sekundarschule
+      b: Der Eintritt in die Primarschule
+      c: Der Eintritt in die Spielgruppe
+      d: Der Eintritt in den Kindergarten
+    explanation_de: Im Kanton Zürich ist der Kindergarten Teil der obligatorischen staatlichen Schulbildung
+      (Volksschule). Die obligatorische Schulzeit beginnt daher bereits, wenn ein Kind in den Kindergarten
+      eintritt. Die Spielgruppe ist freiwillig.

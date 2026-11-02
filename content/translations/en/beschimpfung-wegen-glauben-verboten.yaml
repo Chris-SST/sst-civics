@@ -10,6 +10,22 @@ options:
   d: It is always protected by freedom of expression.
 explanation: The Criminal Code prohibits the public denigration of people because of their race, ethnicity,
   religion or sexual orientation. Freedom of expression is not unlimited.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Person beschimpft öffentlich Menschen wegen ihres Glaubens oder ihrer Abstammung.
+      Wie ist dies in der Schweiz geregelt?
+    options_de:
+      a: Es ist nur in Schulen und an Arbeitsplätzen verboten.
+      b: Es ist verboten und kann bestraft werden.
+      c: Es ist nur verboten, wenn es in der Zeitung erscheint.
+      d: Es ist immer durch die Meinungsfreiheit geschützt.
+    explanation_de: Das Strafgesetzbuch verbietet die öffentliche Herabsetzung von Menschen wegen ihrer
+      Rasse, Ethnie, Religion oder sexuellen Orientierung. Die Meinungsfreiheit ist nicht unbegrenzt.

@@ -1,0 +1,33 @@
+id: demokratie-bevoelkerung-waehlt-parlament
+lang: tr
+source_version: 1
+question: Türkiye gibi değil, İsviçre gibi bir demokraside halkın haklarına ne dahildir?
+options:
+  a: Federal Mahkeme (Bundesgericht) hakimlerini kura ile atar.
+  b: Yasaları parlamento olmadan tek başına belirler.
+  c: Parlamentosunu seçimlerle belirler.
+  d: Ordu komutanlığını doğrudan seçer.
+explanation: Demokraside halk, temsilcilerini parlamentoya seçer. Konfederasyon düzeyinde bunlar Ulusal
+  Konsey (Nationalrat) ile Kantonlar Konseyi'dir (Ständerat). Parlamento daha sonra halk adına federal
+  yasaları çıkarır.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: Die Frage der Rückübersetzung enthält den Zusatz «nicht wie der Türkei», der im deutschen
+      Original fehlt; alle übrigen Stellen entsprechen sich.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Was gehört in einer Demokratie wie der Schweiz, nicht wie der Türkei, zu den Rechten
+      des Volkes?
+    options_de:
+      a: Es ernennt die Richter des Bundesgerichts per Los.
+      b: Es bestimmt die Gesetze allein, ohne Parlament.
+      c: Es bestimmt sein Parlament durch Wahlen.
+      d: Es wählt die Armeeführung direkt.
+    explanation_de: In der Demokratie wählt das Volk seine Vertreter ins Parlament. Auf Ebene der Eidgenossenschaft
+      sind dies der Nationalrat und der Rat der Kantone (Ständerat). Das Parlament erlässt danach im Namen
+      des Volkes die Bundesgesetze.

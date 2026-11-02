@@ -1,0 +1,31 @@
+id: groesster-kanton-nach-flaeche
+lang: it
+source_version: 1
+question: Quale Cantone ha la superficie più grande di tutti i Cantoni svizzeri?
+options:
+  a: Ticino
+  b: Vallese
+  c: Berna
+  d: Grigioni
+explanation: I Grigioni sono il Cantone più grande della Svizzera per superficie. Si trovano interamente
+  nelle Alpi e hanno molte valli e montagne. Anche il Vallese, Berna e il Ticino sono grandi, ma più piccoli
+  dei Grigioni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton hat die grösste Fläche aller Schweizer Kantone?
+    options_de:
+      a: Tessin
+      b: Wallis
+      c: Bern
+      d: Graubünden
+    explanation_de: Graubünden ist der flächenmässig grösste Kanton der Schweiz. Er liegt vollständig
+      in den Alpen und hat viele Täler und Berge. Auch das Wallis, Bern und das Tessin sind gross, aber
+      kleiner als Graubünden.

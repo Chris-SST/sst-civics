@@ -1,0 +1,29 @@
+id: regierungsgewalt-des-bundes-beim-bundesrat
+lang: fr
+source_version: 1
+question: Quelle autorité exerce le pouvoir gouvernemental suprême au niveau de la Confédération ?
+options:
+  a: Le Conseil fédéral (Bundesrat)
+  b: Le Conseil national (Nationalrat)
+  c: La Chancellerie fédérale (Bundeskanzlei)
+  d: Le Tribunal fédéral (Bundesgericht)
+explanation: Selon la Constitution fédérale, le Conseil fédéral est l'autorité directrice et exécutive
+  suprême de la Confédération. Le Parlement élabore les lois, le Tribunal fédéral rend la justice.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde übt auf Ebene des Bundes die oberste Regierungsgewalt aus?
+    options_de:
+      a: Der Bundesrat
+      b: Der Nationalrat
+      c: Die Bundeskanzlei
+      d: Das Bundesgericht
+    explanation_de: Nach der Bundesverfassung ist der Bundesrat die oberste leitende und vollziehende
+      Behörde des Bundes. Das Parlament erarbeitet die Gesetze, das Bundesgericht spricht Recht.

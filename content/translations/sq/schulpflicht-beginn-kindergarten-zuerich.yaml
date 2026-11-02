@@ -1,0 +1,30 @@
+id: schulpflicht-beginn-kindergarten-zuerich
+lang: sq
+source_version: 1
+question: Me çfarë fillon në kantonin Zürich detyrimi shkollor i një fëmije?
+options:
+  a: Me hyrjen në shkollën sekondare
+  b: Me hyrjen në shkollën fillore
+  c: Me hyrjen në grupin e lojërave
+  d: Me hyrjen në kopshtin e fëmijëve
+explanation: Në kantonin Zürich kopshti i fëmijëve është pjesë e shkollës publike të detyrueshme. Prandaj
+  detyrimi shkollor fillon që me hyrjen në kopshtin e fëmijëve. Grupi i lojërave është vullnetar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Womit beginnt im Kanton Zürich die Schulpflicht eines Kindes?
+    options_de:
+      a: Mit dem Eintritt in die Sekundarschule
+      b: Mit dem Eintritt in die Primarschule
+      c: Mit dem Eintritt in die Spielgruppe
+      d: Mit dem Eintritt in den Kindergarten
+    explanation_de: Im Kanton Zürich ist der Kindergarten Teil der obligatorischen öffentlichen Schule.
+      Deshalb beginnt die Schulpflicht bereits mit dem Eintritt in den Kindergarten. Die Spielgruppe ist
+      freiwillig.

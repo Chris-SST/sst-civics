@@ -1,0 +1,30 @@
+id: gesamtbevoelkerung-schweiz-2020
+lang: fr
+source_version: 1
+question: Quelle était approximativement la population totale de la Suisse en 2020 ?
+options:
+  a: environ 6,2 millions
+  b: environ 8,6 millions
+  c: environ 10,1 millions
+  d: environ 7,4 millions
+explanation: En 2020, la Suisse comptait environ 8,6 millions d'habitants. La population a fortement augmenté
+  au cours des dernières décennies. Les chiffres actuels sont publiés par l'Office fédéral de la statistique.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie hoch war ungefähr die Gesamtbevölkerung der Schweiz im Jahr 2020?
+    options_de:
+      a: etwa 6,2 Millionen
+      b: etwa 8,6 Millionen
+      c: etwa 10,1 Millionen
+      d: etwa 7,4 Millionen
+    explanation_de: Im Jahr 2020 zählte die Schweiz etwa 8,6 Millionen Einwohner. Die Bevölkerung ist
+      in den letzten Jahrzehnten stark gewachsen. Die aktuellen Zahlen werden vom Bundesamt für Statistik
+      veröffentlicht.

@@ -23,7 +23,7 @@ glossary:
 - Pfeiler
 - AHV
 - Ergänzungsleistungen
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-138
@@ -44,3 +44,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Frage und Erklärung wechseln zwischen «Säule» und «Pfeiler», was Lernende verwirren kann;
+        besser durchgehend «Säule» verwenden, etwa «Was bildet die zweite Säule?» und «Die AHV ist die
+        erste, die private Vorsorge die dritte Säule.»'
+      - 'Klein: In der Erklärung könnte man ergänzen, dass die Ergänzungsleistungen zur ersten Säule gehören,
+        damit klar ist, warum Antwort a) falsch ist.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Frage stehen «drei Säulen» und «zweiten Pfeiler» nebeneinander, was Lernende verwirren
+        kann; besser einheitlich «Säule» verwenden, etwa «Welche Einrichtung bildet die zweite Säule?»,
+        und in der Erklärung ebenfalls «Säule» schreiben.'
+      - 'Klein: Die Wendung «in angemessener Weise weiterführen» in der Erklärung ist für Niveau B1 etwas
+        schwer; einfacher wäre «damit Rentnerinnen und Rentner ungefähr so weiterleben können wie vorher».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage spricht von «Pfeiler», die Quelle von «Säule»; zur Vereinfachung könnte man
+        durchgehend «Säule» verwenden.'
+      - 'Klein: Antwort d) nennt «Säule 3a» und verrät damit die Zuordnung zur dritten Säule. Das ist
+        unproblematisch, aber die Antwort wirkt dadurch etwas leichter ausschliessbar.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

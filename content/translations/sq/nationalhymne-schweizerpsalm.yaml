@@ -1,0 +1,29 @@
+id: nationalhymne-schweizerpsalm
+lang: sq
+source_version: 1
+question: Si quhet himni kombëtar i Zvicrës?
+options:
+  a: Rufst du, mein Vaterland
+  b: Lueget vo Bärg und Tal
+  c: Vo Luzern gäg Weggis zue
+  d: Schweizerpsalm
+explanation: Himni kombëtar i Zvicrës është Schweizerpsalm. Këshilli Federal (Bundesrat) e shpalli përfundimisht
+  himn shtetëror në vitin 1981. Më parë këndohej shpesh «Rufst du, mein Vaterland».
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Landeshymne der Schweiz?
+    options_de:
+      a: Rufst du, mein Vaterland
+      b: Lueget vo Bärg und Tal
+      c: Vo Luzern gäg Weggis zue
+      d: Schweizerpsalm
+    explanation_de: Die Landeshymne der Schweiz ist der Schweizerpsalm. Der Bundesrat erklärte ihn im
+      Jahr 1981 definitiv zur Landeshymne. Früher wurde oft «Rufst du, mein Vaterland» gesungen.

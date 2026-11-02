@@ -1,0 +1,31 @@
+id: helvetier-roemische-zeit-schweiz
+lang: pt
+source_version: 1
+question: Que povo vivia, no tempo dos romanos, no território da atual Suíça?
+options:
+  a: Os hunos
+  b: Os vikings
+  c: Os godos
+  d: Os helvécios
+explanation: Os helvécios eram uma tribo celta do Planalto Suíço (Mittelland). Os romanos submeteram-nos
+  e o território passou a fazer parte do Império Romano. O nome latino Helvetia, usado para a Suíça, ainda
+  lembra esse povo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Volk lebte zur Zeit der Römer auf dem Gebiet der heutigen Schweiz?
+    options_de:
+      a: Die Hunnen
+      b: Die Wikinger
+      c: Die Goten
+      d: Die Helvetier
+    explanation_de: Die Helvetier waren ein keltischer Stamm des Schweizer Mittellandes. Die Römer unterwarfen
+      sie und das Gebiet wurde Teil des Römischen Reiches. Der lateinische Name Helvetia, der für die
+      Schweiz verwendet wird, erinnert noch heute an dieses Volk.

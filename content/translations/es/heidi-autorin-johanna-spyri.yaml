@@ -1,0 +1,29 @@
+id: heidi-autorin-johanna-spyri
+lang: es
+source_version: 1
+question: ¿Quién escribió las historias sobre la niña Heidi?
+options:
+  a: Sophie Taeuber-Arp
+  b: Johanna Spyri
+  c: Niki de Saint Phalle
+  d: Pipilotti Rist
+explanation: El personaje de Heidi procede de la autora suiza Johanna Spyri. Los libros sobre Heidi son
+  conocidos en todo el mundo. Las demás mujeres mencionadas son artistas plásticas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer hat die Geschichten über das Mädchen Heidi geschrieben?
+    options_de:
+      a: Sophie Taeuber-Arp
+      b: Johanna Spyri
+      c: Niki de Saint Phalle
+      d: Pipilotti Rist
+    explanation_de: Die Figur der Heidi stammt von der Schweizer Autorin Johanna Spyri. Die Bücher über
+      Heidi sind auf der ganzen Welt bekannt. Die anderen genannten Frauen sind bildende Künstlerinnen.

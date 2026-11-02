@@ -1,0 +1,31 @@
+id: bundesparlament-wahl-alle-vier-jahre
+lang: es
+source_version: 2
+question: ¿Con qué periodicidad elige el pueblo de nuevo el Parlamento de la Confederación?
+options:
+  a: Cada tres años
+  b: Cada cuatro años
+  c: Cada seis años
+  d: Cada dos años
+explanation: El pueblo elige de nuevo el Consejo Nacional (Nationalrat) cada cuatro años. Hoy en día,
+  también los miembros del Consejo de los Estados (Ständerat) son elegidos por cuatro años en todos los
+  cantones. Cada cantón determina por sí mismo cómo se realiza la elección y, en parte, también cuándo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welchem Abstand wählt das Volk das Parlament des Bundes neu?
+    options_de:
+      a: Alle drei Jahre
+      b: Alle vier Jahre
+      c: Alle sechs Jahre
+      d: Alle zwei Jahre
+    explanation_de: Das Volk wählt den Nationalrat alle vier Jahre neu. Heute werden in allen Kantonen
+      auch die Mitglieder des Ständerates für vier Jahre gewählt. Jeder Kanton bestimmt selbst, wie die
+      Wahl durchgeführt wird und teilweise auch, wann.

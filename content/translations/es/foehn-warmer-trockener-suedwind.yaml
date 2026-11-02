@@ -1,0 +1,29 @@
+id: foehn-warmer-trockener-suedwind
+lang: es
+source_version: 1
+question: ¿Qué es el Föhn?
+options:
+  a: Un viento frío y húmedo del norte
+  b: Un viento frío del este en invierno
+  c: Una lluvia fuerte en primavera
+  d: Un viento cálido y seco procedente del sur
+explanation: El Föhn es un viento descendente cálido y seco que sopla en los Alpes, sobre todo desde el
+  sur. Puede hacer que las temperaturas suban rápidamente y que la visibilidad sea muy nítida.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist der Föhn?
+    options_de:
+      a: Ein kalter und feuchter Wind aus dem Norden
+      b: Ein kalter Wind aus dem Osten im Winter
+      c: Ein starker Regen im Frühling
+      d: Ein warmer und trockener Wind aus dem Süden
+    explanation_de: Der Föhn ist ein warmer und trockener Fallwind, der in den Alpen weht, vor allem aus
+      dem Süden. Er kann dazu führen, dass die Temperaturen schnell steigen und die Sicht sehr klar ist.

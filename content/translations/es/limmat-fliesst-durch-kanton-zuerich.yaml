@@ -1,0 +1,33 @@
+id: limmat-fliesst-durch-kanton-zuerich
+lang: es
+source_version: 1
+question: ¿Qué río sale del lago de Zúrich, atraviesa la ciudad de Zúrich y continúa a través del territorio
+  del cantón?
+options:
+  a: El Thur
+  b: El Birs
+  c: El Reuss
+  d: El Limmat
+explanation: El Limmat nace en la salida del lago de Zúrich y atraviesa la ciudad de Zúrich y el valle
+  del Limmat. Después abandona el territorio del cantón en dirección a Argovia. El Reuss, el Thur y el
+  Birs no salen del lago de Zúrich.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Fluss fliesst aus dem Zürichsee, durchquert die Stadt Zürich und setzt sich durch
+      das Gebiet des Kantons fort?
+    options_de:
+      a: Die Thur
+      b: Die Birs
+      c: Die Reuss
+      d: Die Limmat
+    explanation_de: Die Limmat entspringt am Ausfluss des Zürichsees und durchquert die Stadt Zürich und
+      das Limmattal. Danach verlässt sie das Kantonsgebiet in Richtung Aargau. Die Reuss, die Thur und
+      die Birs fliessen nicht aus dem Zürichsee.

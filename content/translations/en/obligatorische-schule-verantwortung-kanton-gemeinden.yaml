@@ -9,6 +9,22 @@ options:
   d: The cantons and the communes (Gemeinden)
 explanation: Public schooling is a matter for the cantons and the communes. The canton sets the framework,
   and the communes run the schools locally. The Confederation plays only a small role in compulsory schooling.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz hauptsächlich für die öffentliche obligatorische Schule zuständig?
+    options_de:
+      a: Die Schulleitungen und die Eltern
+      b: Der Bund allein
+      c: Die Bezirke und die Kirchen
+      d: Die Kantone und die Gemeinden
+    explanation_de: Die öffentliche Schule ist Sache der Kantone und der Gemeinden. Der Kanton legt den
+      Rahmen fest, und die Gemeinden führen die Schulen vor Ort. Der Bund spielt bei der obligatorischen
+      Schule nur eine kleine Rolle.

@@ -1,0 +1,31 @@
+id: abkuerzung-mwst-bedeutung
+lang: tr
+source_version: 1
+question: Faturalarda ve makbuzlarda sıklıkla «MWST» kısaltması yer alır. Bu kısaltma ne anlama gelir?
+options:
+  a: Kiralık konut vergisi anlamına gelir (Mietwohnungssteuer)
+  b: Askerlik muafiyet vergisi anlamına gelir (Militärwehrsteuer)
+  c: Motorlu taşıt vergisi anlamına gelir (Motorwagensteuer)
+  d: Katma değer vergisi anlamına gelir (Mehrwertsteuer)
+explanation: MWST, Mehrwertsteuer, yani katma değer vergisi anlamına gelir. Bu vergi çoğu mal ve hizmetten
+  alınır ve fiyata dahildir. Konfederasyonun önemli bir gelir kaynağıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; die Rückübersetzung ergänzt in der Erklärung nur «die Steuer auf dem Mehrwert»,
+      was die Aussage nicht verändert
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Auf Rechnungen und Quittungen steht häufig die Abkürzung «MWST». Was bedeutet diese Abkürzung?
+    options_de:
+      a: Sie steht für Mietwohnungssteuer
+      b: Sie steht für Militärwehrsteuer
+      c: Sie steht für Motorwagensteuer
+      d: Sie steht für Mehrwertsteuer
+    explanation_de: MWST steht für Mehrwertsteuer, das heisst für die Steuer auf dem Mehrwert. Diese Steuer
+      wird auf die meisten Waren und Dienstleistungen erhoben und ist im Preis inbegriffen. Sie ist eine
+      wichtige Einnahmequelle des Bundes.

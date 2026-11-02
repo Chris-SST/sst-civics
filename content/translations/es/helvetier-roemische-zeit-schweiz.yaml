@@ -1,0 +1,31 @@
+id: helvetier-roemische-zeit-schweiz
+lang: es
+source_version: 1
+question: ¿Qué pueblo se asentaba en el territorio de la actual Suiza en la época de los romanos?
+options:
+  a: Los hunos
+  b: Los vikingos
+  c: Los godos
+  d: Los helvecios
+explanation: Los helvecios eran una tribu celta del Mittelland (la meseta suiza). Los romanos los sometieron
+  y el territorio pasó a formar parte del Imperio romano. El nombre latino Helvetia, que designa a Suiza,
+  aún los recuerda.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Volk liess sich zur Zeit der Römer auf dem Gebiet der heutigen Schweiz nieder?
+    options_de:
+      a: Die Hunnen
+      b: Die Wikinger
+      c: Die Goten
+      d: Die Helvetier
+    explanation_de: Die Helvetier waren ein keltischer Stamm des Mittellandes (der Schweizer Hochebene).
+      Die Römer unterwarfen sie, und das Gebiet wurde Teil des Römischen Reiches. Der lateinische Name
+      Helvetia, der die Schweiz bezeichnet, erinnert noch immer an sie.

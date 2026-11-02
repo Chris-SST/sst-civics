@@ -1,0 +1,30 @@
+id: auslaender-anzahl-schweiz-2020
+lang: fr
+source_version: 1
+question: Combien de personnes sans passeport suisse vivaient en permanence en Suisse en 2020, environ
+  ?
+options:
+  a: environ 2,1 millions
+  b: environ 0,8 million
+  c: environ 3,5 millions
+  d: environ 1,4 million
+explanation: Fin 2020, environ 2,1 millions d'étrangères et d'étrangers vivaient en Suisse. Ils font partie
+  de la population résidante permanente. Les chiffres sont publiés par l'Office fédéral de la statistique.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Personen ohne Schweizer Pass lebten 2020 ständig in der Schweiz, ungefähr?
+    options_de:
+      a: ungefähr 2,1 Millionen
+      b: ungefähr 0,8 Millionen
+      c: ungefähr 3,5 Millionen
+      d: ungefähr 1,4 Millionen
+    explanation_de: Ende 2020 lebten ungefähr 2,1 Millionen Ausländerinnen und Ausländer in der Schweiz.
+      Sie gehören zur ständigen Wohnbevölkerung. Die Zahlen werden vom Bundesamt für Statistik veröffentlicht.

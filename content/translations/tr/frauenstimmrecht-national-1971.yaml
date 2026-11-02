@@ -1,0 +1,36 @@
+id: frauenstimmrecht-national-1971
+lang: tr
+source_version: 2
+question: İsviçre'de kadınlar hangi yıldan beri Konfederasyon düzeyinde oy kullanabilir ve oylamalara
+  katılabilir?
+options:
+  a: '1959'
+  b: '1991'
+  c: '1948'
+  d: '1971'
+explanation: 1971 yılında İsviçreli erkekler, bir halk oylamasında Konfederasyon düzeyinde kadınların
+  oy hakkını kabul etti. O tarihten beri kadınlar ulusal düzeyde seçimlerde oy kullanabilir, oylamalara
+  katılabilir ve seçilebilir. Kantonlar kadınların oy hakkını farklı zamanlarda getirdi; bazıları 1971'den
+  önce, Appenzell Innerrhoden ise son kanton olarak ancak 1990'da getirdi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Seit welchem Jahr können Frauen auf Ebene des Bundes (der Konfederation) wählen und an
+      Abstimmungen teilnehmen?
+    options_de:
+      a: '1959'
+      b: '1991'
+      c: '1948'
+      d: '1971'
+    explanation_de: Im Jahr 1971 nahmen die Schweizer Männer in einer Volksabstimmung das Stimmrecht der
+      Frauen auf Bundesebene an. Seit diesem Datum können Frauen auf nationaler Ebene bei Wahlen wählen,
+      an Abstimmungen teilnehmen und gewählt werden. Die Kantone führten das Stimmrecht der Frauen zu
+      unterschiedlichen Zeitpunkten ein; einige vor 1971, Appenzell Innerrhoden als letzter Kanton erst
+      1990.

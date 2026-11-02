@@ -1,0 +1,29 @@
+id: rhone-endet-im-mittelmeer
+lang: it
+source_version: 1
+question: Dove termina il Rodano, che nasce nel Vallese?
+options:
+  a: Nel Mare del Nord
+  b: Nell'Oceano Atlantico
+  c: Nel Mar Mediterraneo
+  d: Nel Mar Nero
+explanation: Il Rodano attraversa il Lago Lemano e prosegue poi attraverso la Francia. Sfocia nel Mar
+  Mediterraneo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo endet die Rhone, die im Wallis entspringt?
+    options_de:
+      a: In der Nordsee
+      b: Im Atlantischen Ozean
+      c: Im Mittelmeer
+      d: Im Schwarzen Meer
+    explanation_de: Die Rhone durchfliesst den Genfersee und führt dann weiter durch Frankreich. Sie mündet
+      ins Mittelmeer.

@@ -1,0 +1,31 @@
+id: eheschliessung-anmeldung-zivilstandsamt-brautpaar
+lang: sq
+source_version: 1
+question: Kush e paraqet martesën e planifikuar pranë zyrës së gjendjes civile (Zivilstandsamt)?
+options:
+  a: Ddëshmitarët e martesës në emër të çiftit
+  b: Çifti që do të martohet, së bashku
+  c: Zyra e banorëve të komunës së vendbanimit, automatikisht
+  d: Prindërit e nuses ose të dhëndrrit
+explanation: Çifti që do të martohet e paraqet kërkesën për kryerjen e procedurës përgatitore të martesës
+  bashkërisht pranë zyrës së gjendjes civile. Persona të tjerë nuk mund ta bëjnë këtë në vend të tyre.
+  Pas kësaj, zyra kontrollon kushtet e martesës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer meldet die geplante Eheschliessung beim Zivilstandsamt an?
+    options_de:
+      a: Die Trauzeugen im Namen des Paares
+      b: Das Paar, das heiraten will, gemeinsam
+      c: Das Einwohneramt der Wohnsitzgemeinde, automatisch
+      d: Die Eltern der Braut oder des Bräutigams
+    explanation_de: Das Paar, das heiraten will, reicht den Antrag auf Durchführung des Ehevorbereitungsverfahrens
+      gemeinsam beim Zivilstandsamt ein. Andere Personen können dies nicht an ihrer Stelle tun. Danach
+      prüft das Amt die Voraussetzungen für die Ehe.

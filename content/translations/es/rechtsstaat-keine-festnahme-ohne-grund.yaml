@@ -1,0 +1,31 @@
+id: rechtsstaat-keine-festnahme-ohne-grund
+lang: es
+source_version: 1
+question: ¿Qué rige en un Estado de derecho en materia de detención y prisión?
+options:
+  a: El Estado no puede detener ni encarcelar a nadie sin motivo.
+  b: El Estado puede retener a las personas según su propio criterio.
+  c: El Gobierno puede encarcelar preventivamente a sus críticos.
+  d: Solo los extranjeros y las extranjeras pueden ser detenidos sin motivo.
+explanation: En un Estado de derecho, la actuación del Estado está sujeta al derecho. Una detención o
+  una privación de libertad requiere un motivo previsto por la ley. Esto protege la libertad de las personas
+  frente a la arbitrariedad.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in einem Rechtsstaat in Bezug auf Festnahme und Haft?
+    options_de:
+      a: Der Staat darf niemanden ohne Grund festnehmen oder inhaftieren.
+      b: Der Staat darf Personen nach eigenem Ermessen festhalten.
+      c: Die Regierung darf ihre Kritiker vorsorglich inhaftieren.
+      d: Nur Ausländer und Ausländerinnen dürfen ohne Grund festgenommen werden.
+    explanation_de: In einem Rechtsstaat ist das Handeln des Staates an das Recht gebunden. Eine Festnahme
+      oder ein Freiheitsentzug erfordert einen vom Gesetz vorgesehenen Grund. Dies schützt die Freiheit
+      der Menschen vor Willkür.

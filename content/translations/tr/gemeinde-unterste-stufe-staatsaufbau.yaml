@@ -1,0 +1,33 @@
+id: gemeinde-unterste-stufe-staatsaufbau
+lang: tr
+source_version: 2
+question: İsviçre'nin üç kademeli devlet yapısında en altta hangi kademe yer alır?
+options:
+  a: Belediye (Gemeinde)
+  b: Bölge
+  c: Kanton
+  d: Konfederasyon
+explanation: 'İsviçre üç kademeli olarak yapılanmıştır: Konfederasyon, kantonlar ve belediyeler. Belediye
+  en alt kademedir ve insanlara en yakın olan kademedir. Birçok görevi kendisi yerine getirir; örneğin
+  ilkokul, inşaat ruhsatları veya sosyal yardım.'
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: Antwort b) lautet im Original «Die Region», in der Rückübersetzung «Bezirk»; das ist eine
+      andere Verwaltungsebene. Alles andere ist gleichbedeutend («Eidgenossenschaft» für «Bund» ist ein
+      Synonym).
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 2
+    question_de: Welche Ebene befindet sich in der dreistufigen Staatsstruktur der Schweiz ganz unten?
+    options_de:
+      a: Gemeinde
+      b: Bezirk
+      c: Kanton
+      d: Eidgenossenschaft
+    explanation_de: 'Die Schweiz ist dreistufig aufgebaut: Eidgenossenschaft, Kantone und Gemeinden. Die
+      Gemeinde ist die unterste Ebene und die Ebene, die den Menschen am nächsten ist. Sie erfüllt viele
+      Aufgaben selbst; zum Beispiel die Primarschule, Baubewilligungen oder die Sozialhilfe.'

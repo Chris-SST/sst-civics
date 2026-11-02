@@ -1,0 +1,29 @@
+id: kanton-zuerich-anzahl-politische-gemeinden
+lang: sq
+source_version: 1
+question: Sa komuna politike (Gemeinde) ka përafërsisht në kantonin Zürich?
+options:
+  a: Rreth 60
+  b: Rreth 110
+  c: Rreth 250
+  d: Rreth 160
+explanation: Kantoni Zürich përbëhet nga rreth 160 komuna politike. Numri i saktë mund të ndryshojë paksa
+  për shkak të bashkimeve të komunave.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele politische Gemeinden gibt es ungefähr im Kanton Zürich?
+    options_de:
+      a: Etwa 60
+      b: Etwa 110
+      c: Etwa 250
+      d: Etwa 160
+    explanation_de: Der Kanton Zürich besteht aus etwa 160 politischen Gemeinden. Die genaue Zahl kann
+      sich aufgrund von Gemeindefusionen leicht ändern.

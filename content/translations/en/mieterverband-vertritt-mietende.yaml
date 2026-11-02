@@ -10,6 +10,22 @@ options:
 explanation: The tenants' association is an organisation that campaigns for the interests of tenants.
   For example, it advises its members on questions about tenancy law. The interests of homeowners are
   represented by other associations.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Rolle hat der Mieterverband?
+    options_de:
+      a: Er vertritt die Interessen der Hauseigentümer
+      b: Er legt die Mieten für alle Wohnungen fest
+      c: Er vermietet Wohnungen im Auftrag des Kantons
+      d: Er vertritt die Interessen der Mieter
+    explanation_de: Der Mieterverband ist eine Organisation, die sich für die Interessen der Mieter einsetzt.
+      Zum Beispiel berät er seine Mitglieder bei Fragen zum Mietrecht. Die Interessen der Hauseigentümer
+      werden von anderen Verbänden vertreten.

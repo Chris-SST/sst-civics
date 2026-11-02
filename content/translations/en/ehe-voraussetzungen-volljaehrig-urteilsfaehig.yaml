@@ -10,6 +10,22 @@ options:
 explanation: Anyone who is of full age and capable of judgement may marry. Being capable of judgement
   means being able to act rationally. Nationality, religion or a particular length of time living together
   are not requirements.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Voraussetzungen müssen Personen erfüllen, um in der Schweiz heiraten zu dürfen?
+    options_de:
+      a: Sie müssen das Schweizer Bürgerrecht besitzen und volljährig sein
+      b: Sie müssen volljährig und fähig sein, vernunftgemäss zu handeln
+      c: Sie müssen seit mindestens fünf Jahren zusammenleben
+      d: Sie müssen derselben Religion angehören
+    explanation_de: Wer volljährig und urteilsfähig ist, darf heiraten. Urteilsfähig zu sein bedeutet,
+      vernunftgemäss handeln zu können. Staatsangehörigkeit, Religion oder eine bestimmte Dauer des Zusammenlebens
+      sind keine Voraussetzungen.

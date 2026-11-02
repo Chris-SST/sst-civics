@@ -9,6 +9,21 @@ options:
   d: It wanted to introduce the right to vote for foreigners.
 explanation: The initiative demanded that the proportion of foreigners in Switzerland be limited. It was
   rejected by the people in 1970. It shows how intensely immigration was being debated at the time.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wollte die Schwarzenbach-Initiative, über die 1970 abgestimmt wurde?
+    options_de:
+      a: Sie wollte die Einbürgerung für alle Ausländer erleichtern.
+      b: Sie wollte nur die Einwanderung aus Italien verbieten.
+      c: Sie wollte den Anteil der in der Schweiz lebenden Ausländer begrenzen.
+      d: Sie wollte das Stimmrecht für Ausländer einführen.
+    explanation_de: Die Initiative forderte, dass der Anteil der Ausländer in der Schweiz begrenzt wird.
+      Sie wurde 1970 vom Volk abgelehnt. Sie zeigt, wie intensiv die Einwanderung damals diskutiert wurde.

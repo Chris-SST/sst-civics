@@ -1,0 +1,31 @@
+id: obligatorische-schule-verantwortung-kanton-gemeinden
+lang: tr
+source_version: 1
+question: İsviçre'de zorunlu devlet okulunun sorumluluğunu esas olarak kim taşır?
+options:
+  a: Okul yönetimleri ve veliler
+  b: Yalnızca Konfederasyon
+  c: İlçeler ve kiliseler
+  d: Kantonlar ve belediyeler (Gemeinde)
+explanation: Halk okulu (Volksschule) kantonların ve belediyelerin işidir. Kanton çerçeveyi belirler,
+  belediyeler okulları yerinde yönetir. Konfederasyon zorunlu okulda yalnızca küçük bir rol oynar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer trägt in der Schweiz hauptsächlich die Verantwortung für die obligatorische öffentliche
+      Schule?
+    options_de:
+      a: Die Schulleitungen und die Eltern
+      b: Nur der Bund
+      c: Die Bezirke und die Kirchen
+      d: Die Kantone und die Gemeinden
+    explanation_de: Die Volksschule ist Sache der Kantone und der Gemeinden. Der Kanton legt den Rahmen
+      fest, die Gemeinden führen die Schulen vor Ort. Der Bund spielt bei der obligatorischen Schule nur
+      eine kleine Rolle.

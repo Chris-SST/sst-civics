@@ -21,7 +21,7 @@ sources:
 glossary:
 - obligatorisches Referendum
 - Bundesverfassung
-status: in_review
+status: approved
 difficulty: 2
 checks:
   independent_answer:
@@ -42,3 +42,47 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «Bundesgesetze unterstehen nur dem fakultativen Referendum» ist nicht ganz genau,
+        denn dringlich erklärte Bundesgesetze ohne Verfassungsgrundlage mit einer Geltungsdauer von über
+        einem Jahr unterstehen nach Art. 140 BV dem obligatorischen Referendum; besser «Normale Bundesgesetze
+        unterstehen dem fakultativen Referendum: Es braucht 50 000 Unterschriften.»'
+      - 'Klein: Die Erklärung könnte auch kurz sagen, warum c) und d) falsch sind, etwa «Über Verordnungen
+        des Bundesrates und über das Budget des Bundes gibt es keine Volksabstimmung.»'
+      - 'Klein: Zur Frage ist keine Tatsache aus der Themenliste angegeben, deshalb lässt sich der Umfang
+        nicht prüfen; bitte die passende Tatsache (obligatorisches Referendum) ergänzen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «Bundesgesetze unterstehen nur dem fakultativen Referendum» ist zu absolut, denn
+        dringlich erklärte Bundesgesetze ohne Verfassungsgrundlage unterstehen dem obligatorischen Referendum;
+        besser: «Neue Bundesgesetze unterstehen in der Regel dem fakultativen Referendum: Eine Abstimmung
+        gibt es nur, wenn 50 000 Unterschriften gesammelt werden.»'
+      - 'Klein: «muss obligatorisch» ist doppelt gemoppelt; besser: «Über jede Änderung der Bundesverfassung
+        stimmen Volk und Kantone immer ab.»'
+      - 'Klein: Es ist keine Tatsache aus der Themenliste angegeben, deshalb lässt sich der Umfang nicht
+        prüfen; die passende Tatsache zum obligatorischen Referendum sollte ergänzt werden.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, Bundesgesetze unterstünden «nur» dem fakultativen Referendum. Dringlich
+        erklärte Bundesgesetze ohne Verfassungsgrundlage müssen aber auch obligatorisch zur Abstimmung
+        kommen. Besser: «Normale Bundesgesetze unterstehen dem fakultativen Referendum» oder «nur» streichen.'
+      - 'Klein: Es gibt keine Tatsache aus der Themenliste, die die Frage abdeckt. Der Inhalt (obligatorisches
+        Referendum) ist aber zentrales Grundwissen und wird von Art. 140 und 195 der Bundesverfassung
+        gestützt.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

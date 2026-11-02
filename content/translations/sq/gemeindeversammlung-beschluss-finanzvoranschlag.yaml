@@ -1,0 +1,34 @@
+id: gemeindeversammlung-beschluss-finanzvoranschlag
+lang: sq
+source_version: 1
+question: Për çfarë vendosin çdo vit të drejtën e votës ata që kanë të drejtë vote në një komunë (Gemeinde)
+  të Cyrihut me kuvend të komunës (Gemeindeversammlung) në mbledhje?
+options:
+  a: Për lartësinë e taksave të Konfederatës
+  b: Për të drejtën penale në kanton
+  c: Për parashikimin financiar të komunës
+  d: Për planet mësimore të shkollës fillore publike
+explanation: Në komunat me kuvend të komunës, personat me të drejtë vote vendosin për çështje të rëndësishme,
+  ndër të tjera për parashikimin financiar (buxhetin) dhe për masën e tatimit. E drejta penale dhe taksat
+  e Konfederatës nuk janë çështje e komunës.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort d: «Lehrpläne der Volksschule» wird zu «öffentlichen Primarschule», also nur die
+      Primarstufe statt der ganzen Volksschule; sonst gleiche Bedeutung.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Worüber entscheiden jedes Jahr die Stimmberechtigten in einer Zürcher Gemeinde mit Gemeindeversammlung
+      an der Versammlung durch ihr Stimmrecht?
+    options_de:
+      a: Über die Höhe der Steuern des Bundes
+      b: Über das Strafrecht im Kanton
+      c: Über den Finanzvoranschlag der Gemeinde
+      d: Über die Lehrpläne der öffentlichen Primarschule
+    explanation_de: In Gemeinden mit Gemeindeversammlung entscheiden die Stimmberechtigten unter anderem
+      über wichtige Angelegenheiten, unter anderem über den Finanzvoranschlag (das Budget) und über den
+      Steuerfuss. Das Strafrecht und die Steuern des Bundes sind keine Angelegenheit der Gemeinde.

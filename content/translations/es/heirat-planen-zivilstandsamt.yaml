@@ -1,0 +1,29 @@
+id: heirat-planen-zivilstandsamt
+lang: es
+source_version: 1
+question: ¿A qué oficina deben dirigirse las parejas que desean casarse?
+options:
+  a: A la Comisión escolar (Schulpflege)
+  b: A la oficina del Registro Civil
+  c: A la oficina de impuestos
+  d: A la oficina de cobro de deudas
+explanation: La oficina del Registro Civil prepara y celebra el matrimonio. También registra oficialmente
+  otros acontecimientos, como los nacimientos y las defunciones.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welche Stelle müssen sich Paare wenden, die heiraten möchten?
+    options_de:
+      a: An die Schulpflege
+      b: An das Zivilstandsamt
+      c: An das Steueramt
+      d: An das Betreibungsamt
+    explanation_de: Das Zivilstandsamt bereitet die Ehe vor und führt sie durch. Es registriert auch andere
+      Ereignisse amtlich, wie die Geburten und die Todesfälle.

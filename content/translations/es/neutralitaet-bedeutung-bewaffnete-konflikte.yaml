@@ -1,0 +1,31 @@
+id: neutralitaet-bedeutung-bewaffnete-konflikte
+lang: es
+source_version: 1
+question: ¿Qué significa la neutralidad de Suiza en los conflictos armados entre otros Estados?
+options:
+  a: Suiza envía tropas para el mantenimiento de la paz a cualquier zona de guerra.
+  b: Suiza rompe todas las relaciones con los Estados implicados.
+  c: Suiza no toma partido por ninguna de las partes en conflicto.
+  d: Suiza apoya siempre al bando más débil.
+explanation: Neutralidad significa que Suiza no se pone del lado de ninguna parte beligerante. De este
+  modo permanece al margen de los conflictos de otros Estados. Esto no excluye el diálogo ni la ayuda
+  humanitaria.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Neutralität der Schweiz in bewaffneten Konflikten zwischen anderen Staaten?
+    options_de:
+      a: Die Schweiz schickt Truppen zur Friedenssicherung in jedes Kriegsgebiet.
+      b: Die Schweiz bricht alle Beziehungen zu den beteiligten Staaten ab.
+      c: Die Schweiz ergreift für keine der Konfliktparteien Partei.
+      d: Die Schweiz unterstützt immer die schwächere Seite.
+    explanation_de: Neutralität bedeutet, dass sich die Schweiz auf die Seite keiner kriegführenden Partei
+      stellt. Auf diese Weise bleibt sie den Konflikten anderer Staaten fern. Dies schliesst weder den
+      Dialog noch die humanitäre Hilfe aus.

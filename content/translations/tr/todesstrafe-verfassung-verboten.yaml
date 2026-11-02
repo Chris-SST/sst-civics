@@ -1,0 +1,29 @@
+id: todesstrafe-verfassung-verboten
+lang: tr
+source_version: 1
+question: İsviçre'de Federal Anayasa'ya göre ölüm cezası için ne geçerlidir?
+options:
+  a: Yalnızca cinayet durumunda izin verilir.
+  b: Yalnızca savaş zamanında izin verilir.
+  c: Geçerli olup olmayacağına kantonlar karar verir.
+  d: Yasaktır.
+explanation: Federal Anayasa, 10. maddesinde yaşam hakkını korur. Ölüm cezası, ağır suçlar için bile açıkça
+  yasaklanmıştır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in der Schweiz gemäss der Bundesverfassung für die Todesstrafe?
+    options_de:
+      a: Sie ist nur im Fall von Mord erlaubt.
+      b: Sie ist nur in Kriegszeiten erlaubt.
+      c: Die Kantone entscheiden, ob sie gilt.
+      d: Sie ist verboten.
+    explanation_de: Die Bundesverfassung schützt in ihrem Artikel 10 das Recht auf Leben. Die Todesstrafe
+      ist auch für schwere Straftaten ausdrücklich verboten.

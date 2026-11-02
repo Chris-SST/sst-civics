@@ -1,0 +1,31 @@
+id: schwimmbad-zutritt-hautfarbe-diskriminierung
+lang: it
+source_version: 1
+question: Una piscina pubblica rifiuta l'ingresso a una persona a causa del colore della sua pelle. Quale
+  principio della Costituzione federale viene così violato?
+options:
+  a: La libertà economica
+  b: Il divieto di discriminazione
+  c: Il diritto di voto
+  d: Il diritto al matrimonio e alla famiglia
+explanation: La Costituzione federale vieta all'articolo 8 la discriminazione, ad esempio a causa dell'origine
+  o della razza. Per questo nessuno può essere trattato peggio degli altri.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ein öffentliches Schwimmbad verweigert einer Person wegen ihrer Hautfarbe den Eintritt.
+      Welcher Grundsatz der Bundesverfassung wird dadurch verletzt?
+    options_de:
+      a: Die Wirtschaftsfreiheit
+      b: Das Diskriminierungsverbot
+      c: Das Stimmrecht
+      d: Das Recht auf Ehe und Familie
+    explanation_de: Die Bundesverfassung verbietet in Artikel 8 die Diskriminierung, zum Beispiel wegen
+      der Herkunft oder der Rasse. Deshalb darf niemand schlechter behandelt werden als die anderen.

@@ -1,0 +1,31 @@
+id: landesfeiertag-erster-august-datum
+lang: sq
+source_version: 1
+question: Në cilën datë bie Festa Kombëtare e Konfederatës Zvicerane, festa kombëtare e Zvicrës?
+options:
+  a: 1 gushti
+  b: 26 dhjetori
+  c: 11 nëntori
+  d: 1 maji
+explanation: Festa kombëtare e Zvicrës është më 1 gusht. Me këtë rast përkujtohet Letra e Konfederatës
+  e vitit 1291. Në shumë vende festimet përfshijnë fishekzjarre, zjarre në lartësi dhe fjalime.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welchem Datum fällt der Nationalfeiertag der Schweizerischen Eidgenossenschaft, der
+      Nationalfeiertag der Schweiz?
+    options_de:
+      a: 1. August
+      b: 26. Dezember
+      c: 11. November
+      d: 1. Mai
+    explanation_de: Der Nationalfeiertag der Schweiz ist am 1. August. Bei dieser Gelegenheit wird des
+      Bundesbriefs von 1291 gedacht. An vielen Orten umfassen die Feierlichkeiten Feuerwerke, Höhenfeuer
+      und Reden.

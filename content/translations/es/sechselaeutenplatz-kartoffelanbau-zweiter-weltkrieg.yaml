@@ -1,0 +1,35 @@
+id: sechselaeutenplatz-kartoffelanbau-zweiter-weltkrieg
+lang: es
+source_version: 2
+question: ¿Cuál de estas plantas se cultivó en la plaza Sechseläutenplatz de Zúrich durante la Segunda
+  Guerra Mundial?
+options:
+  a: Tabaco
+  b: Vid
+  c: Algodón
+  d: Patatas
+explanation: Durante la Segunda Guerra Mundial, en Suiza había escasez de alimentos. Por eso, con la «batalla
+  de los cultivos» («Anbauschlacht») también se plantaron superficies en pleno centro de las ciudades,
+  por ejemplo la plaza Sechseläutenplatz de Zúrich, que se cultivó con patatas. Allí no se cultivaron
+  tabaco, vid ni algodón.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche dieser Pflanzen wurde während des Zweiten Weltkriegs auf dem Sechseläutenplatz
+      in Zürich angebaut?
+    options_de:
+      a: Tabak
+      b: Weinrebe
+      c: Baumwolle
+      d: Kartoffeln
+    explanation_de: Während des Zweiten Weltkriegs herrschte in der Schweiz Nahrungsmittelknappheit. Deshalb
+      wurden mit der «Anbauschlacht» auch mitten in den Stadtzentren Flächen bepflanzt, zum Beispiel der
+      Sechseläutenplatz in Zürich, der mit Kartoffeln bebaut wurde. Dort wurden weder Tabak, Weinrebe
+      noch Baumwolle angebaut.

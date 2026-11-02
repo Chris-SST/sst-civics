@@ -1,0 +1,29 @@
+id: anmeldung-wohngemeinde-bei-zuzug
+lang: sq
+source_version: 1
+question: Çfarë duhet të bëjnë personat që vendosen në një komunë (Gemeinde)?
+options:
+  a: Ata duhet të regjistrohen në komunën e vendbanimit.
+  b: Ata duhet të paraqiten në ushtri.
+  c: Ata duhet të paraqiten te Këshilli Federal (Bundesrat).
+  d: Ata duhet të paraqiten në administratën tatimore të Konfederatës.
+explanation: Kushdo që lëviz në një vend të ri duhet të regjistrohet në komunën e vendbanimit. Kjo bëhet
+  zakonisht në zyrën e kontrollit të banorëve. Kështu komuna është e informuar për banorët e saj.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was müssen Personen tun, die sich in einer Gemeinde niederlassen?
+    options_de:
+      a: Sie müssen sich in der Wohnsitzgemeinde anmelden.
+      b: Sie müssen sich bei der Armee melden.
+      c: Sie müssen sich beim Bundesrat melden.
+      d: Sie müssen sich bei der Steuerverwaltung des Bundes melden.
+    explanation_de: Wer an einen neuen Ort zieht, muss sich in der Wohnsitzgemeinde anmelden. Dies geschieht
+      in der Regel beim Einwohnerkontrollamt. So ist die Gemeinde über ihre Einwohner informiert.

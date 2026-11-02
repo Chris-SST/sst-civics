@@ -19,7 +19,7 @@ sources:
   checked: 2026-11-02
 glossary:
 - Sonntagszeitung
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-315
@@ -39,3 +39,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Quelle meint die bestimmte Zeitung «SonntagsZeitung», die Frage spricht allgemein
+        von «einer Sonntagszeitung»; die Erklärung könnte die SonntagsZeitung als Beispiel nennen, damit
+        der Bezug zur Liste der wichtigen Medien klar wird.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage ist sehr leicht, weil das Wort «Sonntag» die Antwort schon verrät; man könnte
+        sie mit Beispielen wie «SonntagsZeitung», «NZZ am Sonntag» oder «SonntagsBlick» etwas konkreter
+        machen.'
+      - 'Klein: Der letzte Satz der Erklärung ist sehr allgemein; besser wären konkrete Beispiele für
+        Schweizer Sonntagszeitungen oder der Hinweis, dass Tageszeitungen meist von Montag bis Samstag
+        erscheinen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, Tageszeitungen erschienen «an den meisten Tagen der Woche»; das ist
+        unnötig vage und könnte vereinfacht werden, etwa «Tageszeitungen erscheinen mehrmals pro Woche,
+        meist täglich ausser sonntags».'
+      - 'Klein: Der letzte Satz der Erklärung («Die Presse gehört zur Kultur und zur Meinungsbildung im
+        Land») hilft beim Verstehen der Antwort kaum und könnte gestrichen werden.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

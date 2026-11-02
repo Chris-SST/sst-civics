@@ -1,0 +1,31 @@
+id: einsprache-gegen-steuerveranlagung-schriftlich
+lang: sq
+source_version: 1
+question: Një person që paguan tatime nuk është dakord me vlerësimin e tatimit (Steuerveranlagung) të
+  tij. Çfarë mund të bëjë ai?
+options:
+  a: Ai mund të kërkojë që të votohet në kuvendin i komunës (Gemeindeversammlung).
+  b: Ai mund të refuzojë pagesën pa ndërmarrë asnjë hap tjetër.
+  c: Ai mund të paraqesë me shkrim një kundërshtim (Einsprache) te autoriteti tatimor.
+  d: Ai mund të paraqesë një nismë popullore (Volksinitiative) te Këshilli Federal (Bundesrat).
+explanation: Kundër vlerësimit të tatimit ekziston mjeti juridik i kundërshtimit (Einsprache). Ai duhet
+  të paraqitet me shkrim te autoriteti tatimor, dhe pikërisht brenda një afati.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Person, die Steuern zahlt, ist mit ihrer Steuerveranlagung nicht einverstanden.
+      Was kann sie tun?
+    options_de:
+      a: Sie kann verlangen, dass in der Gemeindeversammlung abgestimmt wird.
+      b: Sie kann die Zahlung verweigern, ohne weitere Schritte zu unternehmen.
+      c: Sie kann beim Steueramt schriftlich eine Einsprache einreichen.
+      d: Sie kann beim Bundesrat eine Volksinitiative einreichen.
+    explanation_de: Gegen die Steuerveranlagung gibt es das Rechtsmittel der Einsprache. Sie muss schriftlich
+      beim Steueramt eingereicht werden, und zwar innerhalb einer Frist.

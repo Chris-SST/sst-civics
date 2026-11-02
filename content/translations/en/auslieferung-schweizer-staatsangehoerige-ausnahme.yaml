@@ -1,0 +1,36 @@
+id: auslieferung-schweizer-staatsangehoerige-ausnahme
+lang: en
+source_version: 2
+question: What is the basic rule on the extradition of Swiss nationals abroad?
+options:
+  a: They are extradited at the request of any state.
+  b: They are not extradited to another state against their will. However, they can be surrendered to
+    an international court.
+  c: They are extradited only to states bordering Switzerland.
+  d: They are extradited if the Federal Council (Bundesrat) so wishes in an individual case.
+explanation: Under Article 25 of the Federal Constitution, Swiss citizens may not be expelled. They may
+  be extradited to another state only if they themselves consent. An international court, for example
+  the International Criminal Court, is not a foreign authority, so a federal act permits Swiss nationals
+  to be surrendered to it for proceedings.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was ist der Grundsatz bei der Auslieferung von Schweizer Staatsangehörigen ins Ausland?
+    options_de:
+      a: Sie werden auf Ersuchen jedes Staates ausgeliefert.
+      b: Sie werden nicht gegen ihren Willen an einen anderen Staat ausgeliefert. Sie können jedoch an
+        ein internationales Gericht überstellt werden.
+      c: Sie werden nur an Staaten ausgeliefert, die an die Schweiz grenzen.
+      d: Sie werden ausgeliefert, wenn der Bundesrat dies im Einzelfall wünscht.
+    explanation_de: Nach Artikel 25 der Bundesverfassung dürfen Schweizer Bürgerinnen und Bürger nicht
+      ausgewiesen werden. Sie dürfen nur dann an einen anderen Staat ausgeliefert werden, wenn sie selbst
+      zustimmen. Ein internationales Gericht, zum Beispiel der Internationale Strafgerichtshof, ist keine
+      ausländische Behörde, daher erlaubt ein Bundesgesetz, Schweizer Staatsangehörige für Verfahren an
+      dieses zu überstellen.

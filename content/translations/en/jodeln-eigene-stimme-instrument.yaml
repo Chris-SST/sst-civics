@@ -10,6 +10,23 @@ options:
 explanation: In yodelling, one sings without words, usually only with syllables, and switches quickly
   between chest voice and head voice. The voice itself is the instrument. Yodelling is part of Swiss folk
   tradition and is often associated with the alphorn or the Schwyzerörgeli.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: «Handorgel» und «Akkordeon» bezeichnen dasselbe Instrument, die übrigen
+      Antworten und die Erklärung stimmen inhaltlich überein.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was dient beim Jodeln als Instrument?
+    options_de:
+      a: Das Alphorn
+      b: Die eigene Stimme
+      c: Das Schwyzerörgeli
+      d: Das Akkordeon
+    explanation_de: Beim Jodeln singt man ohne Worte, meist nur mit Silben, und wechselt schnell zwischen
+      Bruststimme und Kopfstimme. Die Stimme selbst ist das Instrument. Das Jodeln gehört zur Schweizer
+      Volkstradition und wird oft mit dem Alphorn oder dem Schwyzerörgeli in Verbindung gebracht.

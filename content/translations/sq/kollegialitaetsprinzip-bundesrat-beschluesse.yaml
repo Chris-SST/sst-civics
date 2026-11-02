@@ -1,0 +1,30 @@
+id: kollegialitaetsprinzip-bundesrat-beschluesse
+lang: sq
+source_version: 1
+question: Çfarë do të thotë parimi i kolegjialitetit në Këshillin Federal (Bundesrat)?
+options:
+  a: Presidenti i Konfederatës (Bundespräsident) ose presidentja e Konfederatës vendos vetëm.
+  b: Anëtarët i mbrojnë vendimet e Këshillit Federal jashtë në mënyrë të njëtrajtshme.
+  c: Çdo anëtar vendos në departamentin e vet pa u konsultuar me të tjerët.
+  d: Anëtarët mund ta shprehin publikisht mendimin e tyre të ndryshëm.
+explanation: Këshilli Federal vendos si kolegj. Edhe ai që ka mbrojtur një mendim tjetër në Këshillin
+  Federal, e mbështet vendimin jashtë. Kështu qeveria del para publikut e bashkuar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet das Kollegialitätsprinzip im Bundesrat?
+    options_de:
+      a: Der Bundespräsident oder die Bundespräsidentin entscheidet allein.
+      b: Die Mitglieder vertreten die Entscheide des Bundesrates nach aussen einheitlich.
+      c: Jedes Mitglied entscheidet in seinem eigenen Departement, ohne sich mit den anderen zu beraten.
+      d: Die Mitglieder können ihre abweichende Meinung öffentlich äussern.
+    explanation_de: Der Bundesrat entscheidet als Kollegium. Auch wer im Bundesrat eine andere Meinung
+      vertreten hat, unterstützt den Entscheid nach aussen. So tritt die Regierung vor der Öffentlichkeit
+      geeint auf.

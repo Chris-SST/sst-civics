@@ -1,0 +1,30 @@
+id: schweiz-ausdehnung-ost-west
+lang: sq
+source_version: 1
+question: Sa është afërsisht largësia midis pikës më lindore dhe pikës më perëndimore të Zvicrës?
+options:
+  a: Rreth 250 kilometra
+  b: Rreth 350 kilometra
+  c: Rreth 550 kilometra
+  d: Rreth 150 kilometra
+explanation: Zvicra matet nga lindja në perëndim rreth 350 kilometra. Pra, është një vend mjaft i vogël,
+  që është më i gjatë në drejtimin lindje-perëndim sesa nga veriu në jug.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie gross ist ungefähr die Entfernung zwischen dem östlichsten und dem westlichsten Punkt
+      der Schweiz?
+    options_de:
+      a: Etwa 250 Kilometer
+      b: Etwa 350 Kilometer
+      c: Etwa 550 Kilometer
+      d: Etwa 150 Kilometer
+    explanation_de: Die Schweiz misst von Osten nach Westen etwa 350 Kilometer. Es ist also ein ziemlich
+      kleines Land, das in Ost-West-Richtung länger ist als von Norden nach Süden.

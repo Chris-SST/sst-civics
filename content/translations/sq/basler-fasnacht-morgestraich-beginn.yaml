@@ -1,0 +1,29 @@
+id: basler-fasnacht-morgestraich-beginn
+lang: sq
+source_version: 1
+question: Çfarë ndodh gjatë Morgestraich-it, fillimit të karnavalit të Bazelit (Basler Fasnacht)?
+options:
+  a: Kryetari i qytetit ia dorëzon çelësin e qytetit shoqërisë së karnavalit.
+  b: Rrugicat ndriçohen fort dhe fillojnë zjarret artificiale.
+  c: Dritat në rrugica fiken, pastaj fillojnë të bien fyelli dhe daullet.
+  d: Karnavalistët hedhin konfeti nga kulla e Münsterit dhe i bien të gjitha këmbanave të kishave.
+explanation: Morgestraich fillon të hënën pas të Mërkurës së Hirit, në orën katër të mëngjesit. Pastaj
+  fiken dritat në rrugica. Pas kësaj fillon muzika e fyellit dhe e daulleve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was geschieht beim Morgestraich, dem Beginn der Basler Fasnacht?
+    options_de:
+      a: Der Stadtpräsident übergibt der Fasnachtsgesellschaft den Schlüssel der Stadt.
+      b: Die Gassen werden hell beleuchtet und das Feuerwerk beginnt.
+      c: Die Lichter in den Gassen gehen aus, dann beginnen die Piccolos und Trommeln zu spielen.
+      d: Die Fasnächtler werfen Konfetti vom Münsterturm und läuten alle Kirchenglocken.
+    explanation_de: Der Morgestraich beginnt am Montag nach dem Aschermittwoch, um vier Uhr morgens. Dann
+      gehen die Lichter in den Gassen aus. Danach beginnt die Musik der Piccolos und Trommeln.

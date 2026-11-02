@@ -1,0 +1,33 @@
+id: kinder-familienname-ohne-gemeinsamen-namen
+lang: it
+source_version: 1
+question: Due coniugi non hanno stabilito un cognome di famiglia comune al momento del matrimonio. Chi
+  stabilisce allora il cognome dei loro figli comuni?
+options:
+  a: I figli ricevono automaticamente il cognome del padre.
+  b: L'ufficio dello stato civile decide in base all'ordine alfabetico dei cognomi.
+  c: I coniugi scelgono essi stessi il cognome dei loro figli.
+  d: I figli ricevono automaticamente il cognome della madre.
+explanation: Se i coniugi non hanno stabilito un cognome di famiglia comune, devono scegliere essi stessi
+  il cognome dei figli. La legge non lo stabilisce automaticamente. Le norme si trovano nel Codice civile
+  svizzero.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Zwei Ehegatten haben bei der Heirat keinen gemeinsamen Familiennamen bestimmt. Wer bestimmt
+      dann den Namen ihrer gemeinsamen Kinder?
+    options_de:
+      a: Die Kinder erhalten automatisch den Nachnamen des Vaters.
+      b: Das Zivilstandsamt entscheidet aufgrund der alphabetischen Reihenfolge der Nachnamen.
+      c: Die Ehegatten wählen selbst den Nachnamen ihrer Kinder.
+      d: Die Kinder erhalten automatisch den Nachnamen der Mutter.
+    explanation_de: Wenn die Ehegatten keinen gemeinsamen Familiennamen bestimmt haben, müssen sie selbst
+      den Nachnamen der Kinder wählen. Das Gesetz bestimmt ihn nicht automatisch. Die Regeln finden sich
+      im Schweizerischen Zivilgesetzbuch.

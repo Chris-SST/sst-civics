@@ -20,7 +20,7 @@ glossary:
 - Europäische Union
 - Aussenhandel
 - Handelspartner
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-262
@@ -41,3 +41,43 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «läuft über die EU-Staaten» kann nach Durchgangshandel klingen; besser «Ein grosser Teil
+        der Importe und Exporte findet mit den EU-Staaten statt (rund die Hälfte der Exporte und fast
+        zwei Drittel der Importe)».'
+      - 'Klein: Die Antwort «Mit den asiatischen Staaten» ist kein Wirtschaftsraum im engeren Sinn; zur
+        einheitlicheren Formulierung könnte man z. B. «Mit den Staaten Asiens» oder «Mit China» verwenden.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Ein grosser Teil der Importe und Exporte läuft über die EU-Staaten» ist ungenau, weil
+        «über» auch Transit bedeuten kann; besser: «Rund die Hälfte der Exporte und etwa zwei Drittel
+        der Importe der Schweiz entfallen auf die EU-Staaten.»'
+      - 'Klein: «Handel treiben» ist für Lernende auf Niveau B1 etwas gehoben; einfacher wäre «Mit welchem
+        Wirtschaftsraum handelt die Schweiz insgesamt am meisten?»'
+      - 'Klein: Die USA sind der grösste einzelne Exportmarkt der Schweiz; die Erklärung könnte das kurz
+        erwähnen («Die USA sind zwar das wichtigste einzelne Exportland, die EU als Ganzes ist aber viel
+        bedeutender»), damit die Antwort d) klar als falsch verstanden wird.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage nennt «Wirtschaftsraum», die Antworten mischen aber Staatengruppen und einen
+        Einzelstaat (USA); eine einheitlichere Formulierung wie «mit welchem Handelspartner» wäre sauberer.'
+      - 'Klein: Einzelne Länder wie die USA sind als einzelner Staat grösser als manche Gruppen; die Erklärung
+        könnte kurz sagen, dass die EU insgesamt (nicht einzelne Länder) der wichtigste Partner ist, z.
+        B. mit der Angabe, dass etwa die Hälfte bis zwei Drittel des Handels mit der EU stattfindet.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

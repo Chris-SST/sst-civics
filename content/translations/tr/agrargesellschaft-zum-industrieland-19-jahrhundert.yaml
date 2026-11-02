@@ -1,0 +1,30 @@
+id: agrargesellschaft-zum-industrieland-19-jahrhundert
+lang: tr
+source_version: 1
+question: İsviçre 19. yüzyılda ekonomik açıdan nasıl değişti?
+options:
+  a: Ağırlıklı olarak sömürgelerle yapılan ticaretle geçiniyordu.
+  b: 1900'e kadar neredeyse yalnızca bir çiftçi ülkesi olarak kaldı.
+  c: Bir sanayi ülkesinden tarım toplumuna dönüştü.
+  d: Bir tarım toplumundan sanayi ülkesine dönüştü.
+explanation: 19. yüzyılda iş gücü tarımdan fabrikalara kaydı. Demiryolu gibi yeni ulaşım yolları bu değişimi
+  destekledi. Böylece tarım ülkesi bir sanayi ülkesine dönüştü.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie veränderte sich die Schweiz im 19. Jahrhundert wirtschaftlich?
+    options_de:
+      a: Sie lebte hauptsächlich vom Handel mit den Kolonien.
+      b: Sie blieb bis 1900 fast ausschliesslich ein Bauernland.
+      c: Sie wandelte sich von einem Industrieland zu einer Agrargesellschaft.
+      d: Sie wandelte sich von einer Agrargesellschaft zu einem Industrieland.
+    explanation_de: Im 19. Jahrhundert verlagerte sich die Arbeitskraft von der Landwirtschaft in die
+      Fabriken. Neue Verkehrswege wie die Eisenbahn unterstützten diesen Wandel. So wandelte sich das
+      Agrarland zu einem Industrieland.

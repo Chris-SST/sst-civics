@@ -1,0 +1,31 @@
+id: rechtsstaat-staat-an-recht-gebunden
+lang: it
+source_version: 2
+question: Che cosa vale per le autorità e per il governo in uno Stato di diritto come la Svizzera?
+options:
+  a: Possono scegliere liberamente quali leggi rispettare.
+  b: Anche loro devono attenersi al diritto in vigore.
+  c: Si trovano al di sopra del diritto in vigore.
+  d: Devono attenersi soltanto alle decisioni dei media.
+explanation: In uno Stato di diritto non è solo la popolazione a dover rispettare il diritto, ma anche
+  lo Stato stesso. Le autorità e il governo possono agire soltanto nei limiti consentiti dal diritto.
+  In questo modo lo Stato di diritto protegge le persone dall'arbitrio.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt für die Behörden und für die Regierung in einem Rechtsstaat wie der Schweiz?
+    options_de:
+      a: Sie können frei wählen, welche Gesetze sie einhalten.
+      b: Auch sie müssen sich an das geltende Recht halten.
+      c: Sie stehen über dem geltenden Recht.
+      d: Sie müssen sich nur an die Entscheidungen der Medien halten.
+    explanation_de: In einem Rechtsstaat muss nicht nur die Bevölkerung das Recht einhalten, sondern auch
+      der Staat selbst. Die Behörden und die Regierung dürfen nur innerhalb der vom Recht erlaubten Grenzen
+      handeln. Auf diese Weise schützt der Rechtsstaat die Menschen vor Willkür.

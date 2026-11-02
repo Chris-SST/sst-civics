@@ -1,0 +1,29 @@
+id: steuererklaerung-finanzielle-verhaeltnisse-offenlegen
+lang: fr
+source_version: 1
+question: À quoi sert la déclaration d'impôt que les contribuables remplissent chaque année ?
+options:
+  a: Elle sert à l'enregistrement auprès du contrôle des habitants.
+  b: Elle est la demande d'assurance maladie.
+  c: Elle est l'inscription au service civil (Zivildienst).
+  d: Elle présente aux autorités fiscales la situation financière du contribuable.
+explanation: Avec la déclaration d'impôt, les contribuables indiquent leur revenu, leur fortune et leurs
+  déductions. C'est sur cette base que l'autorité fiscale calcule l'impôt.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient die Steuererklärung, die die Steuerpflichtigen jedes Jahr ausfüllen?
+    options_de:
+      a: Sie dient der Anmeldung bei der Einwohnerkontrolle.
+      b: Sie ist der Antrag auf Krankenversicherung.
+      c: Sie ist die Anmeldung für den Zivildienst.
+      d: Sie legt den Steuerbehörden die finanzielle Situation der steuerpflichtigen Person dar.
+    explanation_de: Mit der Steuererklärung geben die Steuerpflichtigen ihr Einkommen, ihr Vermögen und
+      ihre Abzüge an. Auf dieser Grundlage berechnet die Steuerbehörde die Steuer.

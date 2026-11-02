@@ -1,0 +1,31 @@
+id: hundehaltung-abgabe-hundesteuer
+lang: sq
+source_version: 2
+question: Çfarë vlen në kantonin Zürich për personat që mbajnë një qen?
+options:
+  a: Ata duhet t'i paguajnë çdo vit komunës (Gemeinde) një taksë për qenin.
+  b: Ata duhet të paguajnë vetëm një herë, gjatë blerjes së qenit, një tarifë te Konfederata.
+  c: Ata duhet të bëjnë çdo vit me qenin një provim te kantoni.
+  d: Ata duhet të paguajnë një taksë vetëm nëse fitojnë para me qenin.
+explanation: Kushdo që mban një qen në kantonin Zürich, paguan çdo vit një taksë për qenin, të ashtuquajturën
+  taksë për qentë (Hundesteuer). Paratë shkojnë te komuna e vendbanimit, jo te Konfederata. Taksa nuk
+  është e njëhershme dhe vlen edhe për qentë që mbahen vetëm privatisht.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt im Kanton Zürich für Personen, die einen Hund halten?
+    options_de:
+      a: Sie müssen jedes Jahr der Gemeinde eine Hundesteuer bezahlen.
+      b: Sie müssen nur einmal, beim Kauf des Hundes, eine Gebühr an den Bund bezahlen.
+      c: Sie müssen jedes Jahr mit dem Hund eine Prüfung beim Kanton ablegen.
+      d: Sie müssen nur dann eine Steuer bezahlen, wenn sie mit dem Hund Geld verdienen.
+    explanation_de: Wer im Kanton Zürich einen Hund hält, bezahlt jedes Jahr eine Steuer für den Hund,
+      die sogenannte Hundesteuer. Das Geld geht an die Wohngemeinde, nicht an den Bund. Die Steuer ist
+      nicht einmalig und gilt auch für Hunde, die nur privat gehalten werden.

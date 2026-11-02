@@ -1,0 +1,31 @@
+id: mietvertrag-rechte-pflichten-regeln
+lang: tr
+source_version: 1
+question: Bir kira sözleşmesinde neler belirlenir?
+options:
+  a: Binadaki komşuların hakları
+  b: Kiracıların vergilerinin tutarı
+  c: Belediyenin (Gemeinde) kiracılara karşı yükümlülükleri
+  d: Kiraya verenlerin ve kiracıların hak ve yükümlülükleri
+explanation: Kira sözleşmesi, kiraya veren kişi ile kiracı arasındaki ilişkiyi düzenler. Buna örneğin
+  kira bedeli ve kira süresi dahildir. Borçlar Kanunu (Obligationenrecht) bu konudaki yasal kuralları
+  içerir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird in einem Mietvertrag festgelegt?
+    options_de:
+      a: Die Rechte der Nachbarn im Gebäude
+      b: Die Höhe der Steuern der Mieter
+      c: Die Pflichten der Gemeinde gegenüber den Mietern
+      d: Die Rechte und Pflichten der Vermieter und der Mieter
+    explanation_de: Der Mietvertrag regelt das Verhältnis zwischen der vermietenden Person und dem Mieter.
+      Dazu gehören zum Beispiel der Mietzins und die Mietdauer. Das Obligationenrecht enthält die gesetzlichen
+      Regeln dazu.

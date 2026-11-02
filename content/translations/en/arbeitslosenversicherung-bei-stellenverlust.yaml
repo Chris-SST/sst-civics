@@ -9,6 +9,21 @@ options:
   d: Accident insurance
 explanation: Unemployment insurance pays compensation under certain conditions when someone loses their
   job. It also helps with the search for new work.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sozialversicherung kommt zum Tragen, wenn eine Person ihre Stelle verliert?
+    options_de:
+      a: Invalidenversicherung
+      b: Alters- und Hinterlassenenversicherung
+      c: Arbeitslosenversicherung
+      d: Unfallversicherung
+    explanation_de: Die Arbeitslosenversicherung zahlt unter bestimmten Bedingungen eine Entschädigung,
+      wenn jemand seine Stelle verliert. Sie hilft auch bei der Suche nach neuer Arbeit.

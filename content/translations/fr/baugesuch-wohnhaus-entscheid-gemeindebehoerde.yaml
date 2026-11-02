@@ -1,0 +1,32 @@
+id: baugesuch-wohnhaus-entscheid-gemeindebehoerde
+lang: fr
+source_version: 1
+question: Qui décide, en règle générale, dans le canton de Zurich de la demande de permis de construire
+  pour un nouvel immeuble d'habitation ?
+options:
+  a: Le Conseil d'État (Regierungsrat)
+  b: L'autorité de construction de la commune (Gemeinde)
+  c: Le tribunal de district
+  d: L'Office fédéral du développement territorial
+explanation: Les demandes de permis de construire pour des immeubles d'habitation se déposent auprès de
+  la commune. L'autorité communale de construction examine la demande et délivre le permis de construire
+  ou le refuse. Le canton n'intervient que dans des cas particuliers.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet im Kanton Zürich in der Regel über das Baugesuch für ein neues Wohnhaus?
+    options_de:
+      a: Der Regierungsrat
+      b: Die Baubehörde der Gemeinde
+      c: Das Bezirksgericht
+      d: Das Bundesamt für Raumentwicklung
+    explanation_de: Baugesuche für Wohnhäuser werden bei der Gemeinde eingereicht. Die kommunale Baubehörde
+      prüft das Gesuch und erteilt die Baubewilligung oder lehnt sie ab. Der Kanton greift nur in besonderen
+      Fällen ein.

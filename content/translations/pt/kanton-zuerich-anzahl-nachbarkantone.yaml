@@ -1,0 +1,29 @@
+id: kanton-zuerich-anzahl-nachbarkantone
+lang: pt
+source_version: 1
+question: Quantos cantões vizinhos tem o cantão de Zurique?
+options:
+  a: Quatro
+  b: Sete
+  c: Seis
+  d: Cinco
+explanation: 'O cantão de Zurique faz fronteira com seis cantões: Schaffhausen, Turgóvia, São Galo, Schwyz,
+  Zug e Argóvia. A norte, faz fronteira também com a Alemanha.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Nachbarkantone hat der Kanton Zürich?
+    options_de:
+      a: Vier
+      b: Sieben
+      c: Sechs
+      d: Fünf
+    explanation_de: 'Der Kanton Zürich grenzt an sechs Kantone: Schaffhausen, Thurgau, St. Gallen, Schwyz,
+      Zug und Aargau. Im Norden grenzt er auch an Deutschland.'

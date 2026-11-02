@@ -20,7 +20,7 @@ glossary:
 - Nationalrat
 - Ständerat
 - Bundeskanzlei
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-068
@@ -41,3 +41,36 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die richtige Antwort ist deutlich länger und genauer als die falschen Antworten und verrät
+        sich dadurch; besser einfach «Die Bundesversammlung» schreiben und National- und Ständerat nur
+        in der Erklärung nennen.'
+      - 'Klein: Die Erklärung könnte in einem kurzen Satz ergänzen, dass das Volk mit dem fakultativen
+        Referendum über ein Bundesgesetz abstimmen kann, wenn genug Unterschriften gesammelt werden.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) ist deutlich länger und ausführlicher als die anderen Antworten und verrät
+        sich dadurch leicht; besser «Die Bundesversammlung» schreiben und die Erklärung «also National-
+        und Ständerat» nur in der Erklärung bringen.'
+      - 'Klein: Die falschen Antworten sind recht leicht auszuschliessen; ein plausiblerer Ablenker wäre
+        etwa «Der Bundesrat», da dieser Gesetzesentwürfe ausarbeitet, aber nicht erlässt (die Erklärung
+        müsste dann kurz darauf eingehen).'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues: []
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

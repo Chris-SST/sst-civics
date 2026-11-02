@@ -1,0 +1,32 @@
+id: zuteilung-primarschulklasse-durch-schulbehoerde
+lang: fr
+source_version: 1
+question: Qui décide, dans le canton de Zurich, à quelle classe de l'école primaire un enfant est affecté
+  ?
+options:
+  a: Le conseil scolaire (Schulpflege) ou la direction de l'école
+  b: Le département de l'éducation de la Confédération
+  c: L'assemblée communale (Gemeindeversammlung)
+  d: Les parents de l'enfant
+explanation: Le conseil scolaire ou la direction de l'école affecte les enfants aux classes. Les parents
+  ne peuvent pas choisir librement la classe. L'école organise ainsi son fonctionnement et l'effectif
+  des classes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet im Kanton Zürich, welcher Klasse der Primarschule ein Kind zugeteilt
+      wird?
+    options_de:
+      a: Die Schulpflege oder die Schulleitung
+      b: Das Bildungsdepartement des Bundes
+      c: Die Gemeindeversammlung
+      d: Die Eltern des Kindes
+    explanation_de: Die Schulpflege oder die Schulleitung teilt die Kinder den Klassen zu. Die Eltern
+      können die Klasse nicht frei wählen. Die Schule organisiert so ihren Betrieb und die Klassengrösse.

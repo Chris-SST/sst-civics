@@ -1,0 +1,29 @@
+id: alpenuebergaenge-simplon-gotthard-st-bernhard
+lang: fr
+source_version: 1
+question: Qu'ont en commun le Simplon, le Gothard et le Grand-Saint-Bernard ?
+options:
+  a: Ce sont des cantons dans les Alpes.
+  b: Ce sont des fleuves qui se jettent dans la mer.
+  c: Ce sont des lacs du Plateau suisse.
+  d: Ce sont des passages à travers les Alpes.
+explanation: Le Simplon, le Gothard et le Grand-Saint-Bernard sont des cols célèbres qui traversent les
+  Alpes. Ils relient le versant nord des Alpes au versant sud des Alpes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was haben der Simplon, der Gotthard und der Grosse Sankt Bernhard gemeinsam?
+    options_de:
+      a: Es sind Kantone in den Alpen.
+      b: Es sind Flüsse, die ins Meer münden.
+      c: Es sind Seen im schweizerischen Mittelland.
+      d: Es sind Übergänge durch die Alpen.
+    explanation_de: Der Simplon, der Gotthard und der Grosse Sankt Bernhard sind berühmte Pässe, die die
+      Alpen durchqueren. Sie verbinden die Alpennordseite mit der Alpensüdseite.

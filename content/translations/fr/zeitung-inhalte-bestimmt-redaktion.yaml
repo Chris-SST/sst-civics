@@ -1,0 +1,30 @@
+id: zeitung-inhalte-bestimmt-redaktion
+lang: fr
+source_version: 1
+question: Qui décide, en Suisse, des contenus qui sont publiés dans un journal ?
+options:
+  a: Le Tribunal fédéral (Bundesgericht)
+  b: La commune (Gemeinde) dans laquelle paraît le journal
+  c: La rédaction du journal
+  d: Le Conseil fédéral (Bundesrat)
+explanation: La liberté des médias protège les journaux contre toute influence de l'État. La rédaction
+  décide elle-même de ce qu'elle publie. La Constitution fédérale interdit la censure.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet in der Schweiz über die Inhalte, die in einer Zeitung veröffentlicht
+      werden?
+    options_de:
+      a: Das Bundesgericht
+      b: Die Gemeinde, in der die Zeitung erscheint
+      c: Die Redaktion der Zeitung
+      d: Der Bundesrat
+    explanation_de: Die Medienfreiheit schützt die Zeitungen vor jeglichem Einfluss des Staates. Die Redaktion
+      entscheidet selbst darüber, was sie veröffentlicht. Die Bundesverfassung verbietet die Zensur.

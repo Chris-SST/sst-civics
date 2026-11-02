@@ -18,7 +18,7 @@ sources:
 glossary:
 - Kinderzulage
 - Familienzulage
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-144
@@ -40,3 +40,41 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «im Bundesgesetz» ist unklar, besser «im Bundesgesetz über die Familienzulagen (FamZG)
+        geregelt» schreiben und ergänzen, dass die Kinderzulage mindestens 215 Franken pro Monat beträgt
+        und die Kantone mehr zahlen können.'
+      - 'Klein: Kinderzulagen werden meist über den Arbeitgeber bzw. die Familienausgleichskasse ausbezahlt;
+        die Erklärung könnte das kurz erwähnen, damit «staatliche Leistung» richtig verstanden wird (gesetzlich
+        vorgeschrieben, nicht direkt vom Staat bezahlt).'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung sollte das Gesetz genau genannt werden, zum Beispiel «im Bundesgesetz
+        über die Familienzulagen (FamZG) geregelt», statt nur «im Bundesgesetz».'
+      - 'Klein: Die Erklärung könnte ergänzen, dass die Kinderzulagen meist über den Arbeitgeber oder
+        die Familienausgleichskasse ausbezahlt werden, damit klar ist, wie man sie erhält.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage könnte genauer lauten «Welche staatliche Leistung ist speziell für Familien
+        mit Kindern gedacht?», weil auch Familien mit Kindern Arbeitslosentaggeld oder eine Invalidenrente
+        erhalten können.'
+      - 'Klein: In der Erklärung könnte stehen, dass die Kinderzulagen in der Regel über den Arbeitgeber
+        oder die Familienausgleichskasse ausbezahlt werden und dass der Bund einen Mindestbetrag festlegt
+        (derzeit 215 Franken pro Monat), die Kantone aber höhere Beträge vorsehen können.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

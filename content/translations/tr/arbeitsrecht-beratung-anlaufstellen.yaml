@@ -1,0 +1,30 @@
+id: arbeitsrecht-beratung-anlaufstellen
+lang: tr
+source_version: 1
+question: İş hukuku ile ilgili sorularda kim yardımcı olur?
+options:
+  a: Okul kurulu (Schulpflege) ve kilise cemaati
+  b: Avukatlık, sendikalar ve iş mahkemeleri
+  c: Ulaşım işletmeleri ve postane
+  d: Nüfus kayıt daireleri ve ikamet kayıt dairesi
+explanation: İş hukuku ile ilgili sorularda başvurulabilecek birkaç merkez vardır. Bunlar arasında avukatlar,
+  sendikalar ve iş mahkemeleri yer alır. Diğer kurumlar başka görevlerden sorumludur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer hilft bei Fragen zum Arbeitsrecht?
+    options_de:
+      a: Die Schulpflege und die Kirchgemeinde
+      b: Anwaltschaft, Gewerkschaften und Arbeitsgerichte
+      c: Verkehrsbetriebe und Poststelle
+      d: Zivilstandsämter und das Einwohnermeldeamt
+    explanation_de: Bei Fragen zum Arbeitsrecht gibt es mehrere Anlaufstellen, an die man sich wenden
+      kann. Dazu gehören Anwälte, Gewerkschaften und Arbeitsgerichte. Die anderen Institutionen sind für
+      andere Aufgaben zuständig.

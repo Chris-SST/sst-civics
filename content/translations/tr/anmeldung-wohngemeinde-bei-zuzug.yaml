@@ -1,0 +1,31 @@
+id: anmeldung-wohngemeinde-bei-zuzug
+lang: tr
+source_version: 1
+question: Bir belediyeye (Gemeinde) yerleşen kişiler ne yapmak zorundadır?
+options:
+  a: İkamet ettikleri belediyeye kayıt yaptırmak zorundadırlar.
+  b: Orduya başvurmak zorundadırlar.
+  c: Federal Konsey'e (Bundesrat) başvurmak zorundadırlar.
+  d: Konfederasyonun vergi idaresine başvurmak zorundadırlar.
+explanation: Yeni bir yere taşınan kişi, ikamet ettiği belediyeye kayıt yaptırmak zorundadır. Bu işlem
+  genellikle nüfus kayıt dairesinde (Einwohnerkontrolle) yapılır. Böylece belediye, sakinleri hakkında
+  bilgi sahibi olur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was müssen Personen tun, die sich in einer Gemeinde niederlassen?
+    options_de:
+      a: Sie müssen sich bei der Gemeinde, in der sie wohnen, anmelden.
+      b: Sie müssen sich bei der Armee melden.
+      c: Sie müssen sich an den Bundesrat wenden.
+      d: Sie müssen sich an die Steuerverwaltung der Eidgenossenschaft wenden.
+    explanation_de: Wer an einen neuen Ort zieht, muss sich bei der Gemeinde, in der er wohnt, anmelden.
+      Dieser Vorgang wird in der Regel beim Einwohnerkontrolle-Amt (Einwohnerkontrolle) durchgeführt.
+      So hat die Gemeinde Informationen über ihre Einwohner.

@@ -1,28 +1,30 @@
 id: sirenen-ernstfall-radio-einschalten
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.kultur.feiertage_brauchtum
-question_de: Was sollen Sie tun, wenn im Ernstfall die Sirenen ertönen?
+question_de: Im Ernstfall ertönt der «Allgemeine Alarm» der Sirenen (ein auf- und absteigender Heulton).
+  Was sollen Sie tun?
 options_de:
-  a: Das Haus sofort verlassen
+  a: Sofort das Haus verlassen
   b: Die Feuerwehr anrufen
-  c: Das Radio einschalten
-  d: Das Auto nehmen und wegfahren
+  c: Radio hören und die Anweisungen der Behörden befolgen
+  d: Mit dem Auto wegfahren
 correct: c
-explanation_de: Bei einem Sirenenalarm gibt die Behörde über das Radio Informationen und Anweisungen durch.
-  Man soll also das Radio einschalten und den Anweisungen folgen. Die Notrufnummern sollen frei bleiben.
+explanation_de: Beim Allgemeinen Alarm informieren die Behörden über das Radio, was man tun soll. Informationen
+  gibt es auch in der App Alertswiss. Man soll den Anweisungen folgen und die Notrufnummern nicht unnötig
+  anrufen, damit sie für echte Notfälle frei bleiben.
 sources:
 - url: https://www.babs.admin.ch/de/alarmierung
   checked: &id001 2026-11-02
 - url: https://www.babs.admin.ch/de/sirenen
   checked: *id001
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: *id001
+  checked: 2026-11-02
 glossary:
 - Sirene
 - Alarm
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-309
@@ -32,16 +34,46 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Bei einem Sirenenalarm in der Schweiz gilt die Weisung der Behörden, das Radio einzuschalten
-      (z.B. SRF), auf Durchsagen zu achten und die Nachbarn zu informieren, nicht aber das Haus zu verlassen
-      oder die Notrufnummern zu blockieren.
+    version: 2
+    reasoning: Bei Sirenenalarm («Allgemeiner Alarm») soll die Bevölkerung Radio hören (z. B. SRF, Alertswiss),
+      die Anweisungen der Behörden befolgen und die Nachbarn informieren, nicht das Haus verlassen oder
+      die Feuerwehr anrufen.
   source:
     verdict: supported
-    note: 'Quelle 1 und 2 (BABS) sagen, dass der Allgemeine Alarm bedeutet: Radio hören oder Alertswiss
-      konsultieren und den Anweisungen der Behörden folgen. Quelle 3 bestätigt: «Bei Katastrophen ertönen
-      Alarmsirenen. In diesem Fall müssen alle Personen Radio hören.» Der Hinweis, dass die Notrufnummern
-      frei bleiben sollen, steht in den Quellen nicht, ist aber für die Antwort nicht entscheidend.'
+    note: 'Quelle 1 sagt ausdrücklich, das Sirenenzeichen «Allgemeiner Alarm» bedeute: Radio hören oder
+      Alertswiss konsultieren und die Anweisungen der Behörden befolgen. Quelle 2 bestätigt dies, ebenso
+      das auf- und absteigende Signal. Zum Hinweis, die Notrufnummern nicht unnötig anzurufen, steht in
+      den Quellen nichts, er ist aber nicht entscheidend für die richtige Antwort.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte ergänzen, dass man auch die Nachbarn informieren soll, wie es das
+        BABS empfiehlt, zum Beispiel mit dem Satz «Informieren Sie auch Ihre Nachbarn.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte ergänzen, dass man beim Allgemeinen Alarm auch die Nachbarn informieren
+        soll, wie es die offiziellen Verhaltensregeln empfehlen (zum Beispiel: «Radio hören, Anweisungen
+        befolgen und Nachbarn informieren»).'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz in der Erklärung, man solle die Notrufnummern nicht unnötig anrufen, steht nicht
+        in den vorgelegten Quellen. Er ist sinnvoll und allgemein bekannt, kann aber gestrichen oder durch
+        den Hinweis «Nachbarn informieren» ersetzt werden, der in der Quelle steht.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

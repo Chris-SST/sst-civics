@@ -1,0 +1,29 @@
+id: ahv-abkuerzung-bedeutung
+lang: pt
+source_version: 1
+question: O que significa a abreviatura AHV?
+options:
+  a: Seguro de velhice e sobrevivência (Alters- und Hinterlassenenversicherung)
+  b: Seguro oficial do agregado familiar (Amtliche Haushaltsversicherung)
+  c: Ajuda geral para segurados (Allgemeine Hilfe für Versicherte)
+  d: Seguro de desemprego e de tratamento médico (Arbeitslosen- und Heilungsversicherung)
+explanation: AHV significa seguro de velhice e sobrevivência (AVS). Paga pensões na velhice e aos sobreviventes,
+  por exemplo a viúvas, viúvos e órfãos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Abkürzung AHV?
+    options_de:
+      a: Alters- und Hinterlassenenversicherung
+      b: Amtliche Haushaltsversicherung
+      c: Allgemeine Hilfe für Versicherte
+      d: Arbeitslosen- und Heilungsversicherung
+    explanation_de: AHV bedeutet Alters- und Hinterlassenenversicherung (AHV). Sie zahlt Renten im Alter
+      und an Hinterlassene, zum Beispiel an Witwen, Witwer und Waisen.

@@ -1,0 +1,31 @@
+id: eu-wichtigster-handelspartner-der-schweiz
+lang: pt
+source_version: 1
+question: Com qual espaço económico a Suíça realiza, no total, mais comércio?
+options:
+  a: Com os Estados do Médio Oriente
+  b: Com os Estados asiáticos
+  c: Com a União Europeia
+  d: Com os Estados Unidos da América
+explanation: A União Europeia é o principal parceiro comercial da Suíça. Uma grande parte das importações
+  e exportações passa pelos Estados da UE. Por isso, as relações com a UE são muito importantes para a
+  economia suíça.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Mit welchem Wirtschaftsraum treibt die Schweiz insgesamt am meisten Handel?
+    options_de:
+      a: Mit den Staaten des Nahen Ostens
+      b: Mit den asiatischen Staaten
+      c: Mit der Europäischen Union
+      d: Mit den Vereinigten Staaten von Amerika
+    explanation_de: Die Europäische Union ist der wichtigste Handelspartner der Schweiz. Ein grosser Teil
+      der Importe und Exporte läuft über die EU-Staaten. Deshalb sind die Beziehungen zur EU für die Schweizer
+      Wirtschaft sehr wichtig.

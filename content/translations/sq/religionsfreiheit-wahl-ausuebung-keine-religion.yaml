@@ -1,0 +1,34 @@
+id: religionsfreiheit-wahl-ausuebung-keine-religion
+lang: sq
+source_version: 1
+question: Një grua vendoset në Zvicër dhe dëshiron ta zgjedhë vetë fenë e saj. Ajo mendon edhe të mos
+  i përkasë asnjë feje. Çfarë i garanton asaj Kushtetuta Federale në këtë drejtim?
+options:
+  a: Ajo mund t'i përkasë vetëm një feje që është e njohur publikisht-juridikisht në kanton.
+  b: Ajo mund ta zgjedhë lirisht fenë e saj, ta praktikojë atë ose të mos i përkasë asnjë feje.
+  c: Ajo mund ta zgjedhë fenë e saj privatisht, por nuk mund ta praktikojë askund së bashku me të tjerë.
+  d: Ajo duhet të vendosë pranë komunës (Gemeinde) për një fe të njohur.
+explanation: Liria e besimit dhe e ndërgjegjes është e garantuar në nenin 15 të Kushtetutës Federale.
+  Çdo person mund ta zgjedhë lirisht fenë e tij, ta praktikojë atë vetëm ose së bashku me të tjerë, ose
+  të mos i përkasë asnjë feje. Askush nuk mund të detyrohet t'i bashkohet një bashkësie fetare.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Frau lässt sich in der Schweiz nieder und möchte ihre Religion selbst wählen. Sie
+      denkt auch daran, keiner Religion anzugehören. Was garantiert ihr die Bundesverfassung in dieser
+      Hinsicht?
+    options_de:
+      a: Sie kann nur einer Religion angehören, die im Kanton öffentlich-rechtlich anerkannt ist.
+      b: Sie kann ihre Religion frei wählen, sie ausüben oder keiner Religion angehören.
+      c: Sie kann ihre Religion privat wählen, aber sie nirgends zusammen mit anderen ausüben.
+      d: Sie muss bei der Gemeinde über eine anerkannte Religion entscheiden.
+    explanation_de: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung garantiert.
+      Jede Person kann ihre Religion frei wählen, sie allein oder zusammen mit anderen ausüben oder keiner
+      Religion angehören. Niemand kann gezwungen werden, sich einer Religionsgemeinschaft anzuschliessen.

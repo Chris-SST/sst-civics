@@ -1,0 +1,29 @@
+id: gotthard-basistunnel-laengster-eisenbahntunnel
+lang: it
+source_version: 1
+question: Che cosa distingue la galleria di base del Gottardo nel confronto mondiale?
+options:
+  a: È la galleria ferroviaria più lunga del mondo.
+  b: È la galleria ferroviaria situata più in alto del mondo.
+  c: È la galleria stradale più lunga del mondo.
+  d: È la galleria ferroviaria più antica d'Europa.
+explanation: La galleria di base del Gottardo è la galleria ferroviaria più lunga del mondo. Collega la
+  Svizzera settentrionale con il Ticino ed è una parte importante dell'asse nord-sud attraverso le Alpi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was zeichnet den Gotthard-Basistunnel im weltweiten Vergleich aus?
+    options_de:
+      a: Er ist der längste Eisenbahntunnel der Welt.
+      b: Er ist der am höchsten gelegene Eisenbahntunnel der Welt.
+      c: Er ist der längste Strassentunnel der Welt.
+      d: Er ist der älteste Eisenbahntunnel Europas.
+    explanation_de: Der Gotthard-Basistunnel ist der längste Eisenbahntunnel der Welt. Er verbindet die
+      Nordschweiz mit dem Tessin und ist ein wichtiger Teil der Nord-Süd-Achse durch die Alpen.

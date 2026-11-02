@@ -1,0 +1,31 @@
+id: roemer-badekultur-in-zuerich
+lang: es
+source_version: 1
+question: ¿Qué novedad llevaron los romanos a Zúrich?
+options:
+  a: La imprenta
+  b: Los gremios
+  c: La cultura de los baños
+  d: La Reforma
+explanation: Los romanos introdujeron en Zúrich la cultura de los baños, es decir, baños públicos siguiendo
+  el modelo romano. Los gremios, la imprenta y la Reforma pertenecen solo a la Edad Media y a la primera
+  Edad Moderna.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Neuheit brachten die Römer nach Zürich?
+    options_de:
+      a: Den Buchdruck
+      b: Die Zünfte
+      c: Die Badekultur
+      d: Die Reformation
+    explanation_de: Die Römer führten in Zürich die Badekultur ein, das heisst öffentliche Bäder nach
+      römischem Vorbild. Die Zünfte, der Buchdruck und die Reformation gehören nur dem Mittelalter und
+      der frühen Neuzeit an.

@@ -1,0 +1,30 @@
+id: greifensee-zweitgroesster-see-zuerich
+lang: sq
+source_version: 1
+question: Cili liqen në kantonin e Cyrihut është i dyti më i madh pas Liqenit të Cyrihut?
+options:
+  a: Greifensee
+  b: Pfäffikersee
+  c: Türlersee
+  d: Katzensee
+explanation: Greifensee shtrihet midis Usterit dhe Dübendorfit dhe është, pas Liqenit të Cyrihut, liqeni
+  i dytë më i madh në kanton. Pfäffikersee është më i vogël. Türlersee dhe Katzensee janë ende dukshëm
+  më të vegjël.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher See im Kanton Zürich ist nach dem Zürichsee der zweitgrösste?
+    options_de:
+      a: Greifensee
+      b: Pfäffikersee
+      c: Türlersee
+      d: Katzensee
+    explanation_de: Der Greifensee liegt zwischen Uster und Dübendorf und ist nach dem Zürichsee der zweitgrösste
+      See im Kanton. Der Pfäffikersee ist kleiner. Türlersee und Katzensee sind noch deutlich kleiner.

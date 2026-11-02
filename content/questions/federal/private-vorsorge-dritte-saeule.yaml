@@ -19,7 +19,7 @@ glossary:
 - private Vorsorge
 - dritte Säule
 - Dreisäulensystem
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-139
@@ -40,3 +40,34 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Ausdruck «gebundenes Sparen» ist wenig geläufig; besser «zum Beispiel die Säule 3a
+        (gebundene Vorsorge) oder freies Sparen (Säule 3b)».'
+      - 'Klein: Die Quelle und der Alltag sprechen meist von «Säule» statt «Pfeiler»; die Erklärung könnte
+        ergänzen: «Der dritte Pfeiler wird auch 3. Säule genannt.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Ausdruck «gebundenes Sparen» ist ungenau; besser «die gebundene Vorsorge (Säule 3a)
+        oder freies Sparen (Säule 3b)» schreiben.'
+      - 'Klein: Die Erklärung wäre hilfreicher, wenn sie die ersten beiden Pfeiler kurz nennt, etwa: «Der
+        erste Pfeiler ist die AHV/IV mit den Ergänzungsleistungen, der zweite die Pensionskasse (berufliche
+        Vorsorge).»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues: []
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

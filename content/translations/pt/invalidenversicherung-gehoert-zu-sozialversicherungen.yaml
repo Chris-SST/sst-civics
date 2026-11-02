@@ -1,0 +1,32 @@
+id: invalidenversicherung-gehoert-zu-sozialversicherungen
+lang: pt
+source_version: 1
+question: Qual das seguintes instituições faz parte dos seguros sociais da Suíça?
+options:
+  a: O seguro de invalidez (Invalidenversicherung, IV)
+  b: O seguro de viagem
+  c: O seguro de protecção jurídica
+  d: O seguro do recheio da casa
+explanation: O seguro de invalidez (IV) é um seguro social regulamentado pelo Estado. Apoia as pessoas
+  que, devido a doença ou acidente, não podem trabalhar ou só podem trabalhar de forma limitada. Os seguros
+  do recheio da casa, de viagem e de protecção jurídica são seguros privados.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Institutionen gehört zu den Sozialversicherungen der Schweiz?
+    options_de:
+      a: Die Invalidenversicherung (IV)
+      b: Die Reiseversicherung
+      c: Die Rechtsschutzversicherung
+      d: Die Hausratversicherung
+    explanation_de: Die Invalidenversicherung (IV) ist eine vom Staat geregelte Sozialversicherung. Sie
+      unterstützt Personen, die wegen Krankheit oder Unfall nicht arbeiten können oder nur eingeschränkt
+      arbeiten können. Die Hausratversicherung, die Reiseversicherung und die Rechtsschutzversicherung
+      sind Privatversicherungen.

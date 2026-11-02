@@ -9,6 +9,22 @@ options:
   d: The glaciers are remaining unchanged.
 explanation: When temperatures rise, more ice melts than is replaced by snow. As a result, the Swiss glaciers
   are getting smaller. This also affects bodies of water and the landscape in the Alps.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Auswirkung hat die globale Erwärmung auf die Gletscher in den Schweizer Alpen?
+    options_de:
+      a: Die Gletscher schrumpfen.
+      b: Die Gletscher wandern nach Norden.
+      c: Die Gletscher wachsen schneller.
+      d: Die Gletscher bleiben unverändert.
+    explanation_de: Wenn die Temperaturen steigen, schmilzt mehr Eis, als durch Schnee ersetzt wird. Dadurch
+      werden die Schweizer Gletscher kleiner. Das wirkt sich auch auf die Gewässer und die Landschaft
+      in den Alpen aus.

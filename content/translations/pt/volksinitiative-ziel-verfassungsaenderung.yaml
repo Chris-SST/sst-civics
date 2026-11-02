@@ -1,0 +1,32 @@
+id: volksinitiative-ziel-verfassungsaenderung
+lang: pt
+source_version: 2
+question: O que podem exigir os eleitores com uma iniciativa popular (Volksinitiative) federal?
+options:
+  a: Que o Conselho Federal (Bundesrat) seja destituído
+  b: Que a Constituição Federal seja alterada
+  c: Que uma lei federal existente seja diretamente revogada
+  d: Que a constituição cantonal seja alterada
+explanation: Com uma iniciativa popular federal, os eleitores podem exigir uma alteração da Constituição
+  Federal. Com um referendo, por outro lado, o povo pode votar sobre uma nova lei que o Parlamento acabou
+  de aprovar. Uma lei já existente não pode ser abolida por essa via.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was können die Stimmberechtigten mit einer eidgenössischen Volksinitiative verlangen?
+    options_de:
+      a: Dass der Bundesrat abgesetzt wird
+      b: Dass die Bundesverfassung geändert wird
+      c: Dass ein bestehendes Bundesgesetz direkt aufgehoben wird
+      d: Dass die Kantonsverfassung geändert wird
+    explanation_de: Mit einer eidgenössischen Volksinitiative können die Stimmberechtigten eine Änderung
+      der Bundesverfassung verlangen. Mit einem Referendum hingegen kann das Volk über ein neues Gesetz
+      abstimmen, das das Parlament soeben verabschiedet hat. Ein bereits bestehendes Gesetz kann auf diesem
+      Weg nicht aufgehoben werden.

@@ -1,0 +1,31 @@
+id: neue-bundesgesetze-beschluss-kammern
+lang: fr
+source_version: 1
+question: Qui adopte la plupart des nouvelles lois fédérales ?
+options:
+  a: Le Tribunal fédéral (Bundesgericht)
+  b: Le Conseil fédéral (Bundesrat) seul
+  c: Les parlements cantonaux
+  d: Le Conseil national (Nationalrat) et le Conseil des États (Ständerat)
+explanation: La plupart des nouvelles lois fédérales sont adoptées par les deux chambres du Parlement.
+  Le Conseil fédéral prépare les projets, mais il ne décide pas seul. Le peuple peut lancer un référendum
+  contre une loi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer verabschiedet die meisten neuen Bundesgesetze?
+    options_de:
+      a: Das Bundesgericht
+      b: Der Bundesrat allein
+      c: Die kantonalen Parlamente
+      d: Der Nationalrat und der Ständerat
+    explanation_de: Die meisten neuen Bundesgesetze werden von den beiden Kammern des Parlaments verabschiedet.
+      Der Bundesrat bereitet die Entwürfe vor, aber er entscheidet nicht allein. Das Volk kann gegen ein
+      Gesetz das Referendum ergreifen.

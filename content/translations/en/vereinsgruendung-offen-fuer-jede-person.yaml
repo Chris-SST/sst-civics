@@ -9,6 +9,23 @@ options:
   d: Only persons with a settlement permit (C permit) (Niederlassungsbewilligung)
 explanation: In Switzerland, the founding of an association is open to any person. Freedom of association
   is guaranteed in the Federal Constitution. Nationality or residence status play no role in this.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Ausweis C» ist nur eine erläuternde Klammer zur Niederlassungsbewilligung,
+      alle Antworten und die Erklärung stimmen inhaltlich überein
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer darf in der Schweiz einen Verein gründen?
+    options_de:
+      a: Nur Personen, die in der Gemeinde wohnhaft sind
+      b: Jede Person
+      c: Nur Schweizer Staatsangehörige
+      d: Nur Personen mit einer Niederlassungsbewilligung (Ausweis C)
+    explanation_de: In der Schweiz steht die Gründung eines Vereins jeder Person offen. Die Vereinigungsfreiheit
+      ist in der Bundesverfassung gewährleistet. Die Staatsangehörigkeit oder der Aufenthaltsstatus spielen
+      dabei keine Rolle.

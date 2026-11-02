@@ -1,0 +1,32 @@
+id: militaerdienstpflicht-schweizer-maenner
+lang: fr
+source_version: 1
+question: Qui est soumis en Suisse à l'obligation d'accomplir le service militaire ou le service de remplacement
+  ?
+options:
+  a: Toutes les habitantes et tous les habitants dès l'âge de 18 ans
+  b: Les hommes possédant le droit de cité suisse (Bürgerrecht)
+  c: Tous les hommes qui habitent en Suisse
+  d: Uniquement les femmes possédant le droit de cité suisse
+explanation: Selon la Constitution fédérale, tout Suisse de sexe masculin est tenu d'accomplir le service
+  militaire. Celui qui ne peut pas concilier cela avec sa conscience effectue un service civil de remplacement.
+  Les étrangers ne sont pas soumis à l'obligation de servir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz zur Leistung des Militärdienstes oder des Ersatzdienstes verpflichtet?
+    options_de:
+      a: Alle Einwohnerinnen und Einwohner ab dem Alter von 18 Jahren
+      b: Die Männer mit Schweizer Bürgerrecht
+      c: Alle Männer, die in der Schweiz wohnen
+      d: Nur die Frauen mit Schweizer Bürgerrecht
+    explanation_de: Gemäss der Bundesverfassung ist jeder Schweizer männlichen Geschlechts verpflichtet,
+      Militärdienst zu leisten. Wer dies nicht mit seinem Gewissen vereinbaren kann, leistet einen zivilen
+      Ersatzdienst. Die Ausländer sind nicht dienstpflichtig.

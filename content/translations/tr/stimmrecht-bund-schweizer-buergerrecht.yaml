@@ -1,0 +1,33 @@
+id: stimmrecht-bund-schweizer-buergerrecht
+lang: tr
+source_version: 1
+question: Konfederasyon düzeyinde oy hakkı ve seçilme/seçme hakkı için aşağıdakilerden hangisi bir şarttır?
+options:
+  a: İsviçre vatandaşlığı (Bürgerrecht)
+  b: Bir siyasi partiye üyelik
+  c: İsviçre'de en az on yıl ikamet etmiş olmak
+  d: C yerleşim izni (Niederlassungsbewilligung)
+explanation: Konfederasyon düzeyinde yalnızca İsviçre vatandaşlığına sahip kişiler oy kullanabilir ve
+  seçime katılabilir. Yabancıların Konfederasyon düzeyinde oy ve seçme hakkı yoktur; yerleşim izni (C
+  izni) olsa bile bu hak tanınmaz. Bir partiye üye olmak gerekli değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Voraussetzungen gilt für das Stimm- und Wahlrecht (Wahl- und Wählbarkeitsrecht)
+      auf Ebene des Bundes?
+    options_de:
+      a: Das Schweizer Bürgerrecht
+      b: Die Mitgliedschaft in einer politischen Partei
+      c: Mindestens zehn Jahre in der Schweiz gewohnt zu haben
+      d: Die Niederlassungsbewilligung C
+    explanation_de: Auf Ebene des Bundes können nur Personen mit Schweizer Bürgerrecht abstimmen und an
+      Wahlen teilnehmen. Ausländer haben auf Ebene des Bundes kein Stimm- und Wahlrecht; dieses Recht
+      wird auch dann nicht gewährt, wenn eine Niederlassungsbewilligung (C-Bewilligung) vorhanden ist.
+      Es ist nicht erforderlich, Mitglied einer Partei zu sein.

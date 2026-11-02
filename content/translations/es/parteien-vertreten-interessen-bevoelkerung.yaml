@@ -1,0 +1,30 @@
+id: parteien-vertreten-interessen-bevoelkerung
+lang: es
+source_version: 1
+question: ¿Qué función tienen los partidos políticos en la democracia?
+options:
+  a: Dictan sentencia en caso de litigios
+  b: Representan los distintos intereses de la población
+  c: Llevan a cabo las votaciones federales
+  d: Hacen cumplir las leyes en la vida cotidiana
+explanation: Los partidos agrupan los diversos intereses y opiniones de la población y los trasladan a
+  la política. Hacer cumplir las leyes es tarea de las autoridades; dictar sentencia es tarea de los tribunales.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Funktion haben die politischen Parteien in der Demokratie?
+    options_de:
+      a: Sie fällen in Streitfällen das Urteil
+      b: Sie vertreten die verschiedenen Interessen der Bevölkerung
+      c: Sie führen die eidgenössischen Abstimmungen durch
+      d: Sie setzen die Gesetze im Alltag durch
+    explanation_de: Die Parteien bündeln die verschiedenen Interessen und Meinungen der Bevölkerung und
+      tragen sie in die Politik hinein. Die Gesetze durchzusetzen ist Aufgabe der Behörden; Urteile zu
+      fällen ist Aufgabe der Gerichte.

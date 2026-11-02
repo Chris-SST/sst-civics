@@ -1,0 +1,30 @@
+id: anmeldung-wohngemeinde-bei-zuzug
+lang: es
+source_version: 1
+question: ¿Qué deben hacer las personas que se establecen en un municipio (Gemeinde)?
+options:
+  a: Deben registrarse en el municipio de residencia.
+  b: Deben presentarse en el ejército.
+  c: Deben presentarse ante el Consejo Federal (Bundesrat).
+  d: Deben presentarse en la administración de impuestos de la Confederación.
+explanation: Quien se traslada a un nuevo lugar debe registrarse en el municipio de residencia. Por lo
+  general, esto se hace en la oficina de control de habitantes (Einwohnerkontrolle). De este modo, el
+  municipio está informado sobre sus habitantes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was müssen Personen tun, die sich in einer Gemeinde niederlassen?
+    options_de:
+      a: Sie müssen sich in der Wohngemeinde anmelden.
+      b: Sie müssen sich bei der Armee melden.
+      c: Sie müssen sich beim Bundesrat melden.
+      d: Sie müssen sich bei der Steuerverwaltung des Bundes melden.
+    explanation_de: Wer an einen neuen Ort zieht, muss sich in der Wohngemeinde anmelden. In der Regel
+      geschieht dies bei der Einwohnerkontrolle. So ist die Gemeinde über ihre Einwohner informiert.

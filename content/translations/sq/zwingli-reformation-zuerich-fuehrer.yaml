@@ -1,0 +1,29 @@
+id: zwingli-reformation-zuerich-fuehrer
+lang: sq
+source_version: 1
+question: Kush udhëhoqi Reformën në Cyrih në vitet 1520?
+options:
+  a: Heinrich Bullinger
+  b: Ulrich Zwingli
+  c: Martin Luther
+  d: Johannes Calvin
+explanation: Ulrich Zwingli ishte prift famullie (Leutpriester) në Grossmünster dhe e prezantoi Reformën
+  në Cyrih. Këshilli i qytetit e mbështeti në këtë. Calvini veproi në Gjenevë, Luteri në Gjermani.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer leitete in den 1520er Jahren die Reformation in Zürich?
+    options_de:
+      a: Heinrich Bullinger
+      b: Ulrich Zwingli
+      c: Martin Luther
+      d: Johannes Calvin
+    explanation_de: Ulrich Zwingli war Pfarrpriester (Leutpriester) am Grossmünster und führte die Reformation
+      in Zürich ein. Der Stadtrat unterstützte ihn dabei. Calvin wirkte in Genf, Luther in Deutschland.

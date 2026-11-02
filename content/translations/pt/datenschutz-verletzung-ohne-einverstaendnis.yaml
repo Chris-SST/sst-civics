@@ -1,0 +1,32 @@
+id: datenschutz-verletzung-ohne-einverstaendnis
+lang: pt
+source_version: 1
+question: Em que caso é violada a proteção de dados?
+options:
+  a: Informações privadas sobre uma pessoa são divulgadas sem o seu consentimento e sem base legal.
+  b: Uma autoridade armazena dados, conforme exigido por uma lei.
+  c: Uma pessoa fornece voluntariamente o seu próprio endereço.
+  d: Uma pessoa autoriza expressamente a publicação da sua fotografia.
+explanation: A proteção da esfera privada inclui a proteção contra o uso indevido de dados pessoais. As
+  informações privadas só podem ser divulgadas com o consentimento da pessoa ou com base numa lei. Se
+  não existir nenhum dos dois, há uma violação.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall wird der Datenschutz verletzt?
+    options_de:
+      a: Private Informationen über eine Person werden ohne ihre Einwilligung und ohne gesetzliche Grundlage
+        weitergegeben.
+      b: Eine Behörde speichert Daten, wie es ein Gesetz verlangt.
+      c: Eine Person gibt freiwillig ihre eigene Adresse an.
+      d: Eine Person erlaubt ausdrücklich die Veröffentlichung ihres Fotos.
+    explanation_de: Der Schutz der Privatsphäre umfasst den Schutz vor dem missbräuchlichen Gebrauch persönlicher
+      Daten. Private Informationen dürfen nur mit der Einwilligung der Person oder aufgrund eines Gesetzes
+      weitergegeben werden. Wenn keines von beidem vorliegt, liegt eine Verletzung vor.

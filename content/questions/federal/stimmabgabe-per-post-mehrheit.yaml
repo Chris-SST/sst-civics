@@ -24,7 +24,7 @@ glossary:
 - Stimmberechtigte
 - briefliche Stimmabgabe
 - Urne
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-050
@@ -48,3 +48,40 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte konkreter sein, etwa mit dem Zusatz «Heute werden über 90 Prozent
+        der Stimmen brieflich oder elektronisch abgegeben, fast alle davon per Post.»'
+      - 'Klein: Die Erklärung könnte erwähnen, dass man das Stimmcouvert auch selbst in den Briefkasten
+        der Gemeinde werfen kann; auch das gilt als briefliche Stimmabgabe.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte konkreter sein, zum Beispiel mit dem Hinweis, dass rund 90 Prozent
+        brieflich abstimmen und dass man das Stimmcouvert auch selbst in den Briefkasten der Gemeinde
+        werfen kann.'
+      - 'Klein: Die Erklärung könnte kurz erwähnen, warum d) falsch ist, etwa: «E-Voting gibt es nur in
+        einigen Kantonen und nur für wenige Stimmberechtigte.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c) sagt «an die Gemeinde». Die Stimmzettel gehen an die Gemeinde (Stimmrechtsausweis),
+        das ist korrekt, aber man könnte «per Post» betonen. Bei der Erklärung könnte man ergänzen, dass
+        über 90 Prozent brieflich abstimmen (laut aboutswitzerland.eda.admin.ch), um die Mehrheit zu verdeutlichen.'
+      - 'Klein: Die Frage sagt «Stimmen bei Abstimmungen und Wahlen», die Antwort d) «Internetseite des
+        Bundes» ist klar falsch, da E-Voting nur in Versuchen in einzelnen Kantonen läuft. Kein Handlungsbedarf,
+        nur zur Information.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

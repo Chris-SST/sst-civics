@@ -1,0 +1,31 @@
+id: gemeinde-unterste-stufe-staatsaufbau
+lang: sq
+source_version: 2
+question: Cili nivel gjendet në fund të poshtë në strukturën shtetërore trenivelëshe të Zvicrës?
+options:
+  a: Komuna (Gemeinde)
+  b: Regjioni
+  c: Kantoni
+  d: Konfederata
+explanation: 'Zvicra është e ndërtuar në tre nivele: Konfederata, kantonet dhe komunat. Komuna është niveli
+  më i ulët dhe më afër njerëzve. Ajo kryen vetë shumë detyra, për shembull shkollën fillore, lejet e
+  ndërtimit ose ndihmën sociale.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Ebene befindet sich ganz unten in der dreistufigen staatlichen Struktur der Schweiz?
+    options_de:
+      a: Die Gemeinde
+      b: Die Region
+      c: Der Kanton
+      d: Der Bund
+    explanation_de: 'Die Schweiz ist in drei Ebenen aufgebaut: Bund, Kantone und Gemeinden. Die Gemeinde
+      ist die unterste und den Menschen am nächsten stehende Ebene. Sie erfüllt selbst viele Aufgaben,
+      zum Beispiel die Primarschule, Baubewilligungen oder die Sozialhilfe.'

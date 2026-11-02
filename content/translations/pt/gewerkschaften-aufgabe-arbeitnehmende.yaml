@@ -1,0 +1,32 @@
+id: gewerkschaften-aufgabe-arbeitnehmende
+lang: pt
+source_version: 2
+question: Qual é a função dos sindicatos na Suíça?
+options:
+  a: Defendem as preocupações dos trabalhadores.
+  b: Concedem a estrangeiros a autorização para trabalhar.
+  c: Fixam as taxas de imposto para as empresas.
+  d: Representam os interesses dos empregadores perante a Confederação.
+explanation: Os sindicatos são organizações de trabalhadores. Representam os interesses destes, por exemplo
+  em matéria de salários e condições de trabalho, e muitas vezes negociam convenções coletivas de trabalho
+  com os empregadores. As autorizações de trabalho, pelo contrário, são emitidas pelas autoridades, não
+  pelos sindicatos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Aufgabe haben die Gewerkschaften in der Schweiz?
+    options_de:
+      a: Sie vertreten die Anliegen der Arbeitnehmer.
+      b: Sie erteilen Ausländern die Bewilligung zu arbeiten.
+      c: Sie legen die Steuersätze für die Unternehmen fest.
+      d: Sie vertreten die Interessen der Arbeitgeber gegenüber dem Bund.
+    explanation_de: Die Gewerkschaften sind Organisationen der Arbeitnehmer. Sie vertreten deren Interessen,
+      zum Beispiel in Bezug auf Löhne und Arbeitsbedingungen, und handeln oft mit den Arbeitgebern Gesamtarbeitsverträge
+      aus. Die Arbeitsbewilligungen hingegen werden von den Behörden ausgestellt, nicht von den Gewerkschaften.

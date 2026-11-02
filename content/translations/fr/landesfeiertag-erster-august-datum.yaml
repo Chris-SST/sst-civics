@@ -1,0 +1,31 @@
+id: landesfeiertag-erster-august-datum
+lang: fr
+source_version: 1
+question: À quelle date tombe la fête nationale suisse, le jour férié national de la Suisse ?
+options:
+  a: Le 1er août
+  b: Le 26 décembre
+  c: Le 11 novembre
+  d: Le 1er mai
+explanation: La fête nationale de la Suisse a lieu le 1er août. On commémore à cette occasion le Pacte
+  fédéral de 1291. Dans de nombreux endroits, les festivités comprennent des feux d'artifice, des feux
+  de joie en altitude et des discours.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welchem Datum fällt der Schweizer Nationalfeiertag, der nationale Feiertag der Schweiz?
+    options_de:
+      a: Am 1. August
+      b: Am 26. Dezember
+      c: Am 11. November
+      d: Am 1. Mai
+    explanation_de: Der Nationalfeiertag der Schweiz findet am 1. August statt. Bei dieser Gelegenheit
+      gedenkt man des Bundesbriefs von 1291. An vielen Orten umfassen die Feierlichkeiten Feuerwerke,
+      Höhenfeuer und Reden.

@@ -18,7 +18,7 @@ sources:
 glossary:
 - Kanton
 - Mediationsakte
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-251
@@ -42,3 +42,42 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Quelle spricht vom Jubiläum «200 Jahre moderner Kanton Zürich»; die Erklärung sollte
+        diesen Titel genau übernehmen, damit niemand meint, der Kanton Zürich habe vor 1803 gar nicht
+        existiert.'
+      - 'Klein: «In seiner heutigen Form» ist etwas unbestimmt; die Frage könnte präzisieren, dass das
+        Gebiet gemeint ist, etwa «In welchem Jahr erhielt der Kanton Zürich sein heutiges Gebiet?».'
+      - 'Klein: Die Erklärung könnte auch die anderen falschen Jahre kurz einordnen (1291 Bundesbrief,
+        1519 Beginn der Reformation mit Zwingli in Zürich), damit sie beim Lernen noch mehr hilft.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Antworten stehen nicht in zeitlicher Reihenfolge; besser wäre a) 1291, b) 1519, c)
+        1803, d) 1848, damit die Liste leichter zu lesen ist.'
+      - 'Klein: Die Erklärung könnte kurz sagen, wofür die anderen Jahre stehen, zum Beispiel «1291 steht
+        für den Bundesbrief, 1519 für den Beginn der Reformation in Zürich mit Zwingli».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte präziser sagen, dass 1803 das Staatsgebiet seine heutige Form erhielt
+        (u.a. mit Dietikon und Rheinau), statt dass der Kanton «geschaffen» wurde; der Kanton Zürich bestand
+        schon vorher.'
+      - 'Klein: Die Erklärung nennt «1848 entstand der heutige Bundesstaat», aber nicht, wofür 1291 und
+        1519 stehen; ein Hinweis auf die Gründungslegende der Eidgenossenschaft (1291) würde den Lerneffekt
+        erhöhen.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

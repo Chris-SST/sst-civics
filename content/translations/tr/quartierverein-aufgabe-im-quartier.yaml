@@ -1,0 +1,34 @@
+id: quartierverein-aufgabe-im-quartier
+lang: tr
+source_version: 1
+question: Zürich kantonundaki bir belediyede (Gemeinde) veya şehirde bir mahalle derneğinin (Quartierverein)
+  tipik görevi nedir?
+options:
+  a: Mahalle sakinlerinin taleplerini yetkililer nezdinde temsil eder ve birlikte yaşamayı destekler.
+  b: Mahalle için nüfus kayıt işlemlerini (Einwohnerkontrolle) yürütür.
+  c: Mahallenin sakinlerinden vergi toplar.
+  d: Mahalledeki inşaat başvurularına izin verir.
+explanation: Mahalle derneği, sakinlerin gönüllü olarak bir araya gelmesiyle oluşan bir birliktir. Mahallenin
+  taleplerini yetkililere iletir ve birlikte yaşamayı güçlendiren etkinlikler düzenler. Vergi, inşaat
+  ruhsatı veya nüfus kayıt işlemleri gibi kamu gücüne dayanan görevler belediyeye aittir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die typische Aufgabe eines Quartiervereins in einer Gemeinde oder Stadt im Kanton
+      Zürich?
+    options_de:
+      a: Er vertritt die Anliegen der Quartierbewohner gegenüber den Behörden und fördert das Zusammenleben.
+      b: Er führt die Einwohnerkontrolle für das Quartier.
+      c: Er erhebt Steuern von den Bewohnern des Quartiers.
+      d: Er erteilt die Bewilligung für Baugesuche im Quartier.
+    explanation_de: Der Quartierverein ist ein Verein, der durch den freiwilligen Zusammenschluss von
+      Bewohnern entsteht. Er leitet die Anliegen des Quartiers an die Behörden weiter und organisiert
+      Veranstaltungen, die das Zusammenleben stärken. Aufgaben, die auf öffentlicher Gewalt beruhen, wie
+      Steuern, Baubewilligungen oder Einwohnerkontrolle, gehören zur Gemeinde.

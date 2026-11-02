@@ -1,0 +1,30 @@
+id: kanton-zuerich-lage-grenze-deutschland
+lang: sq
+source_version: 1
+question: Ku ndodhet kantoni Zürich në Zvicër dhe me cilin shtet fqinj kufizohet?
+options:
+  a: Në perëndim të Zvicrës, kufizohet me Francën
+  b: Në veri të Zvicrës, kufizohet me Gjermaninë
+  c: Në lindje të Zvicrës, kufizohet me Austrinë
+  d: Në jug të Zvicrës, kufizohet me Italinë
+explanation: Kantoni Zürich ndodhet në veri të Zvicrës. Në veri, një pjesë e kufirit të tij përbën njëkohësisht
+  kufirin shtetëror me Gjermaninë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo befindet sich der Kanton Zürich in der Schweiz und mit welchem Nachbarstaat grenzt
+      er?
+    options_de:
+      a: Im Westen der Schweiz grenzt er an Frankreich
+      b: Im Norden der Schweiz grenzt er an Deutschland
+      c: Im Osten der Schweiz grenzt er an Österreich
+      d: Im Süden der Schweiz grenzt er an Italien
+    explanation_de: Der Kanton Zürich befindet sich im Norden der Schweiz. Im Norden bildet ein Teil seiner
+      Grenze zugleich die Staatsgrenze zu Deutschland.

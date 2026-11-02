@@ -1,0 +1,30 @@
+id: rechtsstaat-keine-festnahme-ohne-grund
+lang: sq
+source_version: 1
+question: Çfarë vlen në një shtet juridik (Rechtsstaat) për arrestimin dhe burgimin?
+options:
+  a: Shteti nuk lejohet të arrestojë dhe të burgosë askënd pa arsye.
+  b: Shteti lejohet t'i mbajë personat të privuar nga liria sipas gjykimit të vet.
+  c: Qeveria lejohet t'i marrë kritikët në paraburgim si masë paraprake.
+  d: Vetëm të huajt (burra dhe gra) lejohen të arrestohen pa arsye.
+explanation: Në një shtet juridik, veprimi i shtetit është i lidhur me ligjin. Një arrestim ose burgim
+  kërkon një arsye ligjore. Kjo e mbron lirinë e njerëzve nga arbitrariteti.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in einem Rechtsstaat für Verhaftung und Inhaftierung?
+    options_de:
+      a: Der Staat darf niemanden ohne Grund verhaften und einsperren.
+      b: Der Staat darf Personen nach eigenem Ermessen ihrer Freiheit berauben.
+      c: Die Regierung darf Kritiker vorsorglich in Untersuchungshaft nehmen.
+      d: Nur Ausländer (Männer und Frauen) dürfen ohne Grund verhaftet werden.
+    explanation_de: In einem Rechtsstaat ist das Handeln des Staates an das Gesetz gebunden. Eine Verhaftung
+      oder Inhaftierung erfordert einen gesetzlichen Grund. Dies schützt die Freiheit der Menschen vor
+      Willkür.

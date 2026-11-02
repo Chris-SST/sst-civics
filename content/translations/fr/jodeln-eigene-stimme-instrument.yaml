@@ -1,0 +1,33 @@
+id: jodeln-eigene-stimme-instrument
+lang: fr
+source_version: 1
+question: Quel est l'instrument utilisé pour le yodel ?
+options:
+  a: Le cor des Alpes
+  b: La propre voix
+  c: Le Schwyzerörgeli
+  d: L'accordéon
+explanation: Dans le yodel, on chante sans paroles, le plus souvent avec de simples syllabes, et l'on
+  passe rapidement de la voix de poitrine à la voix de tête. La voix elle-même est l'instrument. Le yodel
+  fait partie des traditions populaires de la Suisse et il est souvent associé au cor des Alpes ou au
+  Schwyzerörgeli.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Handorgel» und «Akkordeon» bezeichnen dasselbe Instrument, die übrigen
+      Unterschiede sind nur sprachlich
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches ist das Instrument, das für das Jodeln verwendet wird?
+    options_de:
+      a: Das Alphorn
+      b: Die eigene Stimme
+      c: Das Schwyzerörgeli
+      d: Das Akkordeon
+    explanation_de: Beim Jodeln singt man ohne Text, meist mit einfachen Silben, und man wechselt schnell
+      von der Bruststimme zur Kopfstimme. Die Stimme selbst ist das Instrument. Das Jodeln gehört zu den
+      Volkstraditionen der Schweiz und wird oft mit dem Alphorn oder dem Schwyzerörgeli verbunden.

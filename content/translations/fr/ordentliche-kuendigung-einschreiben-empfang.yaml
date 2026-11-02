@@ -1,0 +1,32 @@
+id: ordentliche-kuendigung-einschreiben-empfang
+lang: fr
+source_version: 1
+question: Comment une résiliation ordinaire d'un contrat de travail devrait-elle être remise afin de pouvoir
+  prouver sa réception ?
+options:
+  a: Par une communication à l'administration communale (Gemeindeverwaltung)
+  b: Par lettre recommandée, ou l'autre partie confirme la réception par écrit
+  c: Par simple courriel sans confirmation
+  d: Oralement, lors d'un entretien en tête-à-tête
+explanation: Une lettre recommandée ou un accusé de réception écrit permet de prouver que la résiliation
+  est bien arrivée. C'est important, car les délais de résiliation courent à partir de la réception.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie sollte eine ordentliche Kündigung eines Arbeitsvertrags übergeben werden, um ihren
+      Empfang nachweisen zu können?
+    options_de:
+      a: Durch eine Mitteilung an die Gemeindeverwaltung
+      b: Per Einschreiben, oder die andere Partei bestätigt den Empfang schriftlich
+      c: Per einfacher E-Mail ohne Bestätigung
+      d: Mündlich, bei einem persönlichen Gespräch unter vier Augen
+    explanation_de: Ein Einschreiben oder eine schriftliche Empfangsbestätigung ermöglicht es nachzuweisen,
+      dass die Kündigung tatsächlich angekommen ist. Das ist wichtig, denn die Kündigungsfristen laufen
+      ab dem Empfang.

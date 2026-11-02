@@ -11,6 +11,23 @@ options:
 explanation: Anyone who cannot pay for their living costs from their own means is entitled to support
   through social assistance. It is provided by the commune in which the person lives. It is the last safety
   net of social security.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bietet die Gemeinde an, wenn das Einkommen und das Vermögen einer Person nicht zum
+      Leben ausreichen?
+    options_de:
+      a: Sozialhilfe
+      b: Eine Baubewilligung
+      c: Eine Einbürgerung
+      d: Ein Stipendium für die obligatorische Schulzeit
+    explanation_de: Wer seine Lebenskosten nicht aus eigenen Mitteln bezahlen kann, hat Anspruch auf Unterstützung
+      durch die Sozialhilfe. Sie wird von der Gemeinde erbracht, in der die Person wohnt. Sie ist das
+      letzte Netz der sozialen Sicherheit.

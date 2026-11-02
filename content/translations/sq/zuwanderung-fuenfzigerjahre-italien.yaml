@@ -1,0 +1,32 @@
+id: zuwanderung-fuenfzigerjahre-italien
+lang: sq
+source_version: 1
+question: Nga cili vend vinte në vitet 1950 pjesa më e madhe e fuqisë punëtore që emigroi në Zvicër?
+options:
+  a: Nga Italia
+  b: Nga Turqia
+  c: Nga Portugalia
+  d: Nga Spanja
+explanation: Në vitet 1950 pjesa më e madhe e fuqisë punëtore të emigruar vinte nga Italia. Ekonomia kishte
+  atëherë nevojë për shumë fuqi punëtore, për shembull në ndërtim dhe në industri. Më vonë erdhën edhe
+  shumë njerëz nga vende të tjera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Woher kam in den 1950er-Jahren der grösste Teil der Arbeitskräfte, die in die Schweiz
+      einwanderten?
+    options_de:
+      a: Aus Italien
+      b: Aus der Türkei
+      c: Aus Portugal
+      d: Aus Spanien
+    explanation_de: In den 1950er-Jahren kam der grösste Teil der eingewanderten Arbeitskräfte aus Italien.
+      Die Wirtschaft brauchte damals viele Arbeitskräfte, zum Beispiel im Bau und in der Industrie. Später
+      kamen auch viele Menschen aus anderen Ländern.

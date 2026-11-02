@@ -1,0 +1,31 @@
+id: stimmrecht-bund-schweizer-buergerrecht
+lang: es
+source_version: 1
+question: ¿Cuál es un requisito para el derecho de voto y de elección a nivel de la Confederación?
+options:
+  a: La ciudadanía suiza (Bürgerrecht)
+  b: La afiliación a un partido político
+  c: Al menos diez años de residencia en Suiza
+  d: Un permiso de establecimiento (permiso C) (Niederlassungsbewilligung) C
+explanation: A nivel de la Confederación, solo las personas con ciudadanía suiza pueden votar y elegir.
+  Los extranjeros no tienen derecho de voto ni de elección a nivel de la Confederación, ni siquiera con
+  un permiso de establecimiento. No es necesario estar afiliado a un partido.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist eine Voraussetzung für das Stimm- und Wahlrecht auf Ebene des Bundes?
+    options_de:
+      a: Das Schweizer Bürgerrecht
+      b: Die Mitgliedschaft in einer politischen Partei
+      c: Mindestens zehn Jahre Wohnsitz in der Schweiz
+      d: Eine Niederlassungsbewilligung (Bewilligung C) Niederlassungsbewilligung C
+    explanation_de: Auf Ebene des Bundes dürfen nur Personen mit Schweizer Bürgerrecht abstimmen und wählen.
+      Ausländer haben auf Ebene des Bundes kein Stimm- und Wahlrecht, auch nicht mit einer Niederlassungsbewilligung.
+      Es ist nicht nötig, Mitglied einer Partei zu sein.

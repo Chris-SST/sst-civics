@@ -1,0 +1,30 @@
+id: juengster-kanton-der-schweiz
+lang: sq
+source_version: 1
+question: Cili kanton është kantoni më i ri i Zvicrës?
+options:
+  a: Jura
+  b: Appenzell Ausserrhoden
+  c: Basel-Landschaft
+  d: Neuenburg
+explanation: Kantoni Jura u themelua në vitin 1979. Ai u shkëput nga kantoni Bern dhe që atëherë është
+  më i riu ndër 26 kantonet. Kushtetuta Federale e përmend atë among kantoneve të Konfederatës Zvicerane.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton ist der jüngste Kanton der Schweiz?
+    options_de:
+      a: Jura
+      b: Appenzell Ausserrhoden
+      c: Basel-Landschaft
+      d: Neuenburg
+    explanation_de: Der Kanton Jura wurde im Jahr 1979 gegründet. Er trennte sich vom Kanton Bern und
+      ist seither der jüngste unter den 26 Kantonen. Die Bundesverfassung erwähnt ihn among den Kantonen
+      der Schweizerischen Eidgenossenschaft.

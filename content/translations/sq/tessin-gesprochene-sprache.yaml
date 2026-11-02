@@ -1,0 +1,30 @@
+id: tessin-gesprochene-sprache
+lang: sq
+source_version: 1
+question: Cila gjuhë flitet në kantonin Tiçino?
+options:
+  a: Retoromanisht
+  b: Frëngjisht
+  c: Italisht
+  d: Gjermanisht
+explanation: Në Tiçino, italishtja është gjuha e popullsisë dhe gjuha zyrtare e kantonit. Italishtja është
+  një nga katër gjuhët kombëtare të Zvicrës. Ajo flitet edhe në disa pjesë të Graubündenit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprache wird im Kanton Tessin gesprochen?
+    options_de:
+      a: Rätoromanisch
+      b: Französisch
+      c: Italienisch
+      d: Deutsch
+    explanation_de: Im Tessin ist Italienisch die Sprache der Bevölkerung und die Amtssprache des Kantons.
+      Italienisch ist eine der vier Landessprachen der Schweiz. Es wird auch in einigen Teilen Graubündens
+      gesprochen.

@@ -1,0 +1,31 @@
+id: mehrehe-in-schweiz-verboten
+lang: sq
+source_version: 1
+question: Çfarë vlen në Zvicër për martesën me disa partnerë ose partnere në të njëjtën kohë?
+options:
+  a: Është e lejuar nëse të gjithë pajtohen
+  b: Është e ndaluar
+  c: Është e lejuar nëse justifikohet me arsye fetare
+  d: Është e lejuar vetëm për persona me pasaportë të huaj
+explanation: Zvicra njeh vetëm martesën me një bashkëshort (monogaminë). Kush është tashmë i martuar ose
+  jeton në partneritet të regjistruar, nuk mund të lidhë një martesë tjetër. Kjo vlen pavarësisht nga
+  feja ose prejardhja.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in der Schweiz für die Ehe mit mehreren Partnern oder Partnerinnen gleichzeitig?
+    options_de:
+      a: Sie ist erlaubt, wenn alle einverstanden sind
+      b: Sie ist verboten
+      c: Sie ist erlaubt, wenn sie mit religiösen Gründen gerechtfertigt wird
+      d: Sie ist nur für Personen mit ausländischem Pass erlaubt
+    explanation_de: Die Schweiz kennt nur die Ehe mit einem Ehegatten (Monogamie). Wer bereits verheiratet
+      ist oder in eingetragener Partnerschaft lebt, kann keine weitere Ehe eingehen. Dies gilt unabhängig
+      von der Religion oder der Herkunft.

@@ -1,0 +1,32 @@
+id: gleichberechtigung-mann-frau-bundesverfassung-1981
+lang: fr
+source_version: 1
+question: Depuis quand l'égalité entre l'homme et la femme figure-t-elle dans la Constitution fédérale
+  suisse ?
+options:
+  a: Depuis 1999
+  b: Depuis 1971
+  c: Depuis 1981
+  d: Depuis 1848
+explanation: En 1981, l'article sur l'égalité a été inscrit dans la Constitution fédérale. Il oblige l'État
+  à garantir l'égalité dans la famille, la formation et le travail. Le droit de vote des femmes existait
+  déjà depuis 1971.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Seit wann steht die Gleichstellung von Mann und Frau in der Schweizerischen Bundesverfassung?
+    options_de:
+      a: Seit 1999
+      b: Seit 1971
+      c: Seit 1981
+      d: Seit 1848
+    explanation_de: 1981 wurde der Gleichstellungsartikel in die Bundesverfassung aufgenommen. Er verpflichtet
+      den Staat, die Gleichstellung in der Familie, in der Ausbildung und bei der Arbeit zu gewährleisten.
+      Das Stimmrecht der Frauen gab es bereits seit 1971.

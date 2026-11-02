@@ -1,0 +1,31 @@
+id: zuerich-huegelzuege-am-zuerichsee
+lang: es
+source_version: 2
+question: ¿Qué cadenas de colinas se encuentran a orillas del lago de Zúrich?
+options:
+  a: Uetliberg, Albis y Pfannenstiel
+  b: Lägern, Irchel y Kohlfirst
+  c: Hörnli, Bachtel y Allmann
+  d: Heitersberg, Gubrist y Randen
+explanation: El Uetliberg y el Albis se extienden a lo largo de la orilla izquierda del lago de Zúrich,
+  mientras que el Pfannenstiel se encuentra en la orilla derecha. Las demás elevaciones están más alejadas
+  del lago, por ejemplo en el Unterland, en el Weinland, en el Oberland zuriqués o en otros cantones.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Hügelketten befinden sich am Ufer des Zürichsees?
+    options_de:
+      a: Uetliberg, Albis und Pfannenstiel
+      b: Lägern, Irchel und Kohlfirst
+      c: Hörnli, Bachtel und Allmann
+      d: Heitersberg, Gubrist und Randen
+    explanation_de: Der Uetliberg und der Albis erstrecken sich entlang des linken Ufers des Zürichsees,
+      während sich der Pfannenstiel am rechten Ufer befindet. Die übrigen Erhebungen sind weiter vom See
+      entfernt, zum Beispiel im Unterland, im Weinland, im Zürcher Oberland oder in anderen Kantonen.

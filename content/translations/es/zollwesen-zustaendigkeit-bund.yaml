@@ -1,0 +1,31 @@
+id: zollwesen-zustaendigkeit-bund
+lang: es
+source_version: 1
+question: ¿Quién se encarga en Suiza de los asuntos aduaneros?
+options:
+  a: La Confederación
+  b: Los municipios (Gemeinden) situados en la frontera
+  c: Los cantones en los que se encuentran las fronteras
+  d: Los cantones y la Confederación, a partes iguales
+explanation: Según la Constitución Federal, los asuntos aduaneros son competencia de la Confederación.
+  Esta regula los aranceles y el control del tráfico de mercancías a través de la frontera. Los cantones
+  y los municipios no tienen competencia propia en esta materia.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz für das Zollwesen zuständig?
+    options_de:
+      a: Der Bund
+      b: Die Gemeinden an der Grenze
+      c: Die Kantone, in denen sich die Grenzen befinden
+      d: Die Kantone und der Bund, zu gleichen Teilen
+    explanation_de: Gemäss der Bundesverfassung fällt das Zollwesen in die Zuständigkeit des Bundes. Dieser
+      regelt die Zölle und die Kontrolle des Warenverkehrs über die Grenze. Die Kantone und die Gemeinden
+      haben in diesem Bereich keine eigene Zuständigkeit.

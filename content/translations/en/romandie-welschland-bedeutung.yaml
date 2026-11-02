@@ -9,6 +9,22 @@ options:
   d: The German-speaking part of Switzerland
 explanation: Romandie or Welschland refers to the areas of Switzerland where French is spoken. These include,
   for example, the cantons of Geneva and Vaud. The Italian-speaking part is mainly Ticino.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was versteht man unter dem Begriff «Romandie» oder «Welschland»?
+    options_de:
+      a: Den italienischsprachigen Teil der Schweiz
+      b: Den französischsprachigen Teil der Schweiz
+      c: Den rätoromanischsprachigen Teil der Schweiz
+      d: Den deutschsprachigen Teil der Schweiz
+    explanation_de: Romandie oder Welschland bezeichnet die Gebiete der Schweiz, in denen Französisch
+      gesprochen wird. Dazu gehören zum Beispiel die Kantone Genf und Waadt. Der italienischsprachige
+      Teil ist hauptsächlich das Tessin.

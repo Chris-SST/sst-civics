@@ -9,6 +9,21 @@ options:
   d: Seven members
 explanation: The cantonal government of the canton of Zurich consists of seven members. As a rule, each
   member heads a department of the administration.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Mitglieder hat die Zürcher Kantonsregierung?
+    options_de:
+      a: Fünf Mitglieder
+      b: Neun Mitglieder
+      c: Elf Mitglieder
+      d: Sieben Mitglieder
+    explanation_de: Die Kantonsregierung des Kantons Zürich besteht aus sieben Mitgliedern. In der Regel
+      leitet jedes Mitglied eine Direktion der Verwaltung.

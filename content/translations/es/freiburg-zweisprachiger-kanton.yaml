@@ -1,0 +1,29 @@
+id: freiburg-zweisprachiger-kanton
+lang: es
+source_version: 1
+question: ¿Qué idiomas se hablan en el cantón bilingüe de Friburgo?
+options:
+  a: Francés y romanche
+  b: Francés e italiano
+  c: Francés y alemán
+  d: Alemán e italiano
+explanation: Friburgo es un cantón bilingüe en el que se hablan francés y alemán. Está situado en la frontera
+  entre la Suiza alemana y la Suiza romanda.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprachen werden im zweisprachigen Kanton Freiburg gesprochen?
+    options_de:
+      a: Französisch und Rätoromanisch
+      b: Französisch und Italienisch
+      c: Französisch und Deutsch
+      d: Deutsch und Italienisch
+    explanation_de: Freiburg ist ein zweisprachiger Kanton, in dem Französisch und Deutsch gesprochen
+      werden. Er liegt an der Grenze zwischen der Deutschschweiz und der Romandie.

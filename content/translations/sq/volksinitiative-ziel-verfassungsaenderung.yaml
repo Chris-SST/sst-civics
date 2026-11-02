@@ -1,0 +1,33 @@
+id: volksinitiative-ziel-verfassungsaenderung
+lang: sq
+source_version: 2
+question: Çfarë mund të kërkojnë të drejtë vote me një nismë popullore (Volksinitiative) federale?
+options:
+  a: Që Këshilli Federal (Bundesrat) të shkarkohet me votim
+  b: Që Kushtetuta Federale të ndryshohet
+  c: Që një ligj federal ekzistues të shfuqizohet drejtpërdrejt
+  d: Që kushtetuta kantonale të ndryshohet
+explanation: Me një nismë popullore federale, ata që kanë të drejtë vote mund të kërkojnë një ndryshim
+  të Kushtetutës Federale. Me një referendum, në të kundërt, populli mund të votojë për një ligj të ri
+  që Parlamenti sapo e ka miratuar. Një ligj që ekziston tashmë nuk mund të shfuqizohet me të.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «abgewählt» und «durch eine Abstimmung abgesetzt» meinen dasselbe, die
+      übrigen Unterschiede sind nur sprachlich
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was können Stimmberechtigte mit einer eidgenössischen Volksinitiative verlangen?
+    options_de:
+      a: Dass der Bundesrat durch eine Abstimmung abgesetzt wird
+      b: Dass die Bundesverfassung geändert wird
+      c: Dass ein bestehendes Bundesgesetz direkt aufgehoben wird
+      d: Dass die Kantonsverfassung geändert wird
+    explanation_de: Mit einer eidgenössischen Volksinitiative können die Stimmberechtigten eine Änderung
+      der Bundesverfassung verlangen. Mit einem Referendum hingegen kann das Volk über ein neues Gesetz
+      abstimmen, das das Parlament soeben verabschiedet hat. Ein bereits bestehendes Gesetz kann damit
+      nicht aufgehoben werden.

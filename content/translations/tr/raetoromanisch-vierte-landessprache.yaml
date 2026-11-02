@@ -1,0 +1,29 @@
+id: raetoromanisch-vierte-landessprache
+lang: tr
+source_version: 1
+question: Almanca, Fransızca ve İtalyancanın yanı sıra hangi dil İsviçre'nin ulusal dillerinden biridir?
+options:
+  a: İspanyolca
+  b: Portekizce
+  c: İngilizce
+  d: Romanşça
+explanation: Romanşça, dördüncü ulusal dildir. Daha çok Graubünden kantonunda konuşulur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprache ist neben Deutsch, Französisch und Italienisch eine der Landessprachen
+      der Schweiz?
+    options_de:
+      a: Spanisch
+      b: Portugiesisch
+      c: Englisch
+      d: Rätoromanisch
+    explanation_de: Rätoromanisch ist die vierte Landessprache. Sie wird hauptsächlich im Kanton Graubünden
+      gesprochen.

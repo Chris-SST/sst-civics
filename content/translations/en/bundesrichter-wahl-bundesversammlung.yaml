@@ -1,0 +1,29 @@
+id: bundesrichter-wahl-bundesversammlung
+lang: en
+source_version: 1
+question: Who elects the judges of the Federal Supreme Court (Bundesgericht)?
+options:
+  a: The Federal Council (Bundesrat)
+  b: The people at the ballot box
+  c: The Federal Assembly (Bundesversammlung)
+  d: The governments of the cantons
+explanation: The Federal Assembly, that is the National Council (Nationalrat) and the Council of States
+  (Ständerat) together, elects the judges of the Federal Supreme Court. Their term of office is six years.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wählt die Richterinnen und Richter des Bundesgerichts?
+    options_de:
+      a: Der Bundesrat
+      b: Das Volk an der Urne
+      c: Die Bundesversammlung
+      d: Die Regierungen der Kantone
+    explanation_de: Die Bundesversammlung, das heisst der Nationalrat und der Ständerat gemeinsam, wählt
+      die Richterinnen und Richter des Bundesgerichts. Ihre Amtsdauer beträgt sechs Jahre.

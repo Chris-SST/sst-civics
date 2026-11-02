@@ -1,18 +1,18 @@
 id: raumplanung-landschaften-ohne-bebauung
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.geografie.landschaft
-question_de: Welches Ziel hat die Raumplanung in der Schweiz unter anderem?
+question_de: Was ist ein Ziel der Raumplanung in der Schweiz?
 options_de:
-  a: Sie soll Landschaften ohne Bebauung erhalten.
-  b: Sie soll die Kantonsgrenzen regelmässig neu ziehen.
-  c: Sie soll möglichst viel Land für Neubauten freigeben.
-  d: Sie soll die Preise für Bauland festlegen.
+  a: Sie soll unbebaute Landschaften schützen und den Boden sparsam nutzen.
+  b: Sie soll die Grenzen zwischen den Kantonen regelmässig neu festlegen.
+  c: Sie soll möglichst viele neue Bauzonen schaffen.
+  d: Sie soll den Preis für Bauland bestimmen.
 correct: a
-explanation_de: Die Raumplanung regelt, wie der Boden genutzt wird. Sie soll Siedlungen, Landwirtschaft
-  und Natur ausgewogen ordnen und unbebaute Landschaften schützen. Das Land ist knapp und soll haushälterisch
-  genutzt werden.
+explanation_de: Die Raumplanung bestimmt, wo gebaut werden darf und wo nicht. Sie trennt Baugebiet von
+  Nichtbaugebiet, damit Landschaften und Kulturland geschont werden. Weil der Boden knapp ist, soll man
+  sparsam damit umgehen und eher bestehende Siedlungen verdichten, statt neue Bauzonen zu schaffen.
 sources:
 - url: https://uvek.admin.ch/uvek/de/home/raumentwicklung/raumentwicklungspolitik.html
   checked: &id001 2026-11-02
@@ -23,7 +23,7 @@ sources:
 glossary:
 - Raumplanung
 - Landschaft
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-268
@@ -33,17 +33,46 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Die Raumplanung soll nach Art. 75 der Bundesverfassung und dem Raumplanungsgesetz den Boden
-      haushälterisch nutzen und die natürlichen Lebensgrundlagen wie unbebaute Landschaften schützen,
-      während die anderen Antworten nicht zu ihren Zielen gehören.
+    version: 2
+    reasoning: Nach Artikel 75 der Bundesverfassung und dem Raumplanungsgesetz soll die Raumplanung den
+      Boden haushälterisch nutzen und die natürlichen Lebensgrundlagen wie die Landschaft schützen, während
+      die anderen Antworten nicht zu ihren Zielen gehören.
   source:
     verdict: supported
-    note: 'Quelle 1 nennt als Hauptzweck die nachhaltige Nutzung des Bodens: weniger überbauen, um die
-      Landschaft zu schonen, und den Boden haushälterisch nutzen. Quelle 2 nennt den Schutz der Landschaft
-      als zentrale Aufgabe und das Ziel, die Zersiedelung zu stoppen sowie Natur- und Kulturlandschaften
-      zu erhalten. Das stützt Antwort a und die Erklärung. Die anderen Antworten werden durch die Texte
-      widerlegt oder kommen darin nicht vor.'
+    note: 'Quelle 1 nennt als Hauptzweck die nachhaltige Nutzung des Bodens: weniger Boden überbauen,
+      um die Landschaft zu schonen, und den Boden haushälterisch nutzen. Quelle 2 stützt dies mit Landschaftsschutz,
+      Verdichtung statt neuer Bauzonen und der Trennung von Baugebiet und Nichtbaugebiet. Die Antworten
+      b, c und d werden nicht gestützt.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) ist deutlich länger und ausführlicher als die falschen Antworten und fällt
+        deshalb auf; man könnte sie kürzen, zum Beispiel zu «Sie soll Landschaften ohne Bebauung erhalten.»,
+        oder die anderen Antworten etwas ausführlicher formulieren.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Antwort a) enthält zwei Aussagen (Landschaften schützen und Boden sparsam nutzen);
+        für mehr Klarheit könnte man sie auf «Sie soll unbebaute Landschaften erhalten» kürzen, passend
+        zur Tatsache der Themenliste.'
+      - 'Klein: Quelle 3 (Broschüre) enthält nichts zur Raumplanung; die Antwort stützt sich auf Quelle
+        1 und 2, was aber ausreicht.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

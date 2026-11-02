@@ -1,0 +1,29 @@
+id: gewerkschaften-vertreten-arbeitnehmende-interessen
+lang: sq
+source_version: 1
+question: Interesat e kujt i përfaqësojnë sindikatat?
+options:
+  a: Interesat e punëdhënësve
+  b: Interesat e komunave (Gemeinde)
+  c: Interesat e bankave
+  d: Interesat e punëmarrësve
+explanation: Sindikatat angazhohen për kërkesat e punëmarrësve, për shembull për pagat dhe kushtet e punës.
+  Ato negociojnë shpesh me punëdhënësit për kontratat kolektive të punës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wessen Interessen vertreten die Gewerkschaften?
+    options_de:
+      a: Die Interessen der Arbeitgeber
+      b: Die Interessen der Gemeinden
+      c: Die Interessen der Banken
+      d: Die Interessen der Arbeitnehmer
+    explanation_de: Die Gewerkschaften setzen sich für die Forderungen der Arbeitnehmer ein, zum Beispiel
+      für die Löhne und die Arbeitsbedingungen. Sie verhandeln oft mit den Arbeitgebern über die Gesamtarbeitsverträge.

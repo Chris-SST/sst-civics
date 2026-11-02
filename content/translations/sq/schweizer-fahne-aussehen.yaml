@@ -1,0 +1,31 @@
+id: schweizer-fahne-aussehen
+lang: sq
+source_version: 1
+question: Si duket flamuri zvicerian?
+options:
+  a: Një kryq i bardhë, i lirë (që nuk prek anët), mbi një katror të kuq
+  b: Një kryq i bardhë mbi sfond të kuq me një stemë në mes
+  c: Një kryq i bardhë që shtrihet deri në skajin e drejtkëndëshit të kuq
+  d: Një kryq i kuq, i lirë (që nuk prek anët), mbi një katror të bardhë
+explanation: Flamuri zvicerian është katror. Ai paraqet një kryq të bardhë mbi sfond të kuq, krahët e
+  të cilit nuk i prekin skajet. Së bashku me flamurin e Vatikanit, është një nga dy flamujt kombëtarë
+  katrorë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie sieht die Schweizer Flagge aus?
+    options_de:
+      a: Ein weisses, freistehendes Kreuz (das die Ränder nicht berührt) auf einem roten Quadrat
+      b: Ein weisses Kreuz auf rotem Hintergrund mit einem Wappen in der Mitte
+      c: Ein weisses Kreuz, das sich bis zum Rand des roten Rechtecks erstreckt
+      d: Ein rotes, freistehendes Kreuz (das die Ränder nicht berührt) auf einem weissen Quadrat
+    explanation_de: Die Schweizer Flagge ist quadratisch. Sie zeigt ein weisses Kreuz auf rotem Hintergrund,
+      dessen Arme die Ränder nicht berühren. Zusammen mit der Flagge des Vatikans ist sie eine der zwei
+      quadratischen Nationalflaggen.

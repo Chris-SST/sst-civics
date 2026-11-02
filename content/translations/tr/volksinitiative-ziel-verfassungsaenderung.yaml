@@ -1,0 +1,31 @@
+id: volksinitiative-ziel-verfassungsaenderung
+lang: tr
+source_version: 2
+question: Seçmenler, federal düzeydeki bir halk girişimi (Volksinitiative) ile ne talep edebilir?
+options:
+  a: Federal Konsey'in (Bundesrat) görevden alınmasını
+  b: Federal Anayasa'nın değiştirilmesini
+  c: Yürürlükteki bir federal yasanın doğrudan kaldırılmasını
+  d: kanton anayasasının değiştirilmesini
+explanation: Seçmenler, federal düzeydeki bir halk girişimi ile Federal Anayasa'nın değiştirilmesini talep
+  edebilir. Buna karşılık bir referandum ile halk, parlamentonun yeni kabul ettiği bir yasa hakkında oy
+  kullanabilir. Yürürlükte olan bir yasa bununla kaldırılamaz.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was können die Stimmberechtigten mit einer Volksinitiative auf Bundesebene verlangen?
+    options_de:
+      a: die Absetzung des Bundesrates
+      b: die Änderung der Bundesverfassung
+      c: die direkte Aufhebung eines geltenden Bundesgesetzes
+      d: die Änderung der Kantonsverfassung
+    explanation_de: Die Stimmberechtigten können mit einer Volksinitiative auf Bundesebene die Änderung
+      der Bundesverfassung verlangen. Mit einem Referendum hingegen kann das Volk über ein vom Parlament
+      neu verabschiedetes Gesetz abstimmen. Ein geltendes Gesetz kann dadurch nicht aufgehoben werden.

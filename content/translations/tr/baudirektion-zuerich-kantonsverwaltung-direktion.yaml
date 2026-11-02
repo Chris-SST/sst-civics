@@ -1,0 +1,30 @@
+id: baudirektion-zuerich-kantonsverwaltung-direktion
+lang: tr
+source_version: 1
+question: Aşağıdaki kurumlardan hangisi Zürih kantonu idaresinin bir müdürlüğüdür (Direktion)?
+options:
+  a: Belediye (Gemeinde) Müdürlüğü
+  b: İnşaat Müdürlüğü
+  c: Şehir Müdürlüğü
+  d: Konfederasyon Müdürlüğü
+explanation: İnşaat Müdürlüğü, Zürih kantonu idaresinin müdürlükleri arasında yer alır. Kanton idaresi,
+  her biri Hükümet Konseyi (Regierungsrat) üyelerinden biri tarafından yönetilen birkaç müdürlüğe ayrılmıştır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Einrichtungen ist eine Direktion der Verwaltung des Kantons Zürich?
+    options_de:
+      a: Direktion der Gemeinden
+      b: Baudirektion
+      c: Stadtdirektion
+      d: Direktion der Eidgenossenschaft
+    explanation_de: Die Baudirektion gehört zu den Direktionen der Verwaltung des Kantons Zürich. Die
+      Kantonsverwaltung ist in mehrere Direktionen unterteilt, die jeweils von einem der Mitglieder des
+      Regierungsrats geleitet werden.

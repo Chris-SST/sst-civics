@@ -9,6 +9,21 @@ options:
   d: Geneva
 explanation: Valais has many high Alpine peaks, including the Dufourspitze, the highest mountain in Switzerland.
   Thurgau, Basel-Stadt and Geneva are situated more in lowland areas or by lakes and rivers.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher dieser Kantone ist stark von Bergen geprägt?
+    options_de:
+      a: Basel-Stadt
+      b: Wallis
+      c: Thurgau
+      d: Genf
+    explanation_de: Das Wallis hat viele hohe Alpengipfel, darunter die Dufourspitze, den höchsten Berg
+      der Schweiz. Thurgau, Basel-Stadt und Genf liegen eher in Tieflandgebieten oder an Seen und Flüssen.

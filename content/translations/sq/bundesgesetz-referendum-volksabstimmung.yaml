@@ -1,0 +1,33 @@
+id: bundesgesetz-referendum-volksabstimmung
+lang: sq
+source_version: 1
+question: Çfarë vlen për një ligj federal që e kanë miratuar të dyja dhomat e Parlamentit?
+options:
+  a: Qytetarët me të drejtë vote mund të kërkojnë me një referendum që të mbahet një votim popullor për
+    të.
+  b: Këshilli Federal (Bundesrat) duhet ta paraqesë pastaj edhe te Gjykata Federale (Bundesgericht) për
+    miratim.
+  c: Ai hyn gjithmonë menjëherë në fuqi, pa pasur mundësi populli të ndikojë.
+  d: Qeveritë e kantoneve duhet ta miratojnë më parë secila veç e veç.
+explanation: Pas vendimit të të dyja dhomave, ligjet federale i nënshtrohen referendumit fakultativ. Nëse
+  ai realizohet, qytetarët me të drejtë vote vendosin për ligjin me votë në kuti.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für ein Bundesgesetz, das von beiden Kammern des Parlaments verabschiedet wurde?
+    options_de:
+      a: Die stimmberechtigten Bürger können mit einem Referendum verlangen, dass darüber eine Volksabstimmung
+        abgehalten wird.
+      b: Der Bundesrat muss es danach auch dem Bundesgericht zur Genehmigung vorlegen.
+      c: Es tritt immer sofort in Kraft, ohne dass das Volk die Möglichkeit hat, Einfluss zu nehmen.
+      d: Die Regierungen der Kantone müssen es zuvor jede einzeln genehmigen.
+    explanation_de: Nach dem Beschluss beider Kammern unterliegen die Bundesgesetze dem fakultativen Referendum.
+      Wenn es zustande kommt, entscheiden die stimmberechtigten Bürger mit ihrer Stimme an der Urne über
+      das Gesetz.

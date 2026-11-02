@@ -1,0 +1,29 @@
+id: kanton-zuerich-nachbarkanton-thurgau
+lang: es
+source_version: 1
+question: ¿Cuál de los siguientes cantones limita directamente con el cantón de Zúrich?
+options:
+  a: Graubünden
+  b: Turgovia
+  c: Uri
+  d: Vaud
+explanation: El cantón de Turgovia se encuentra al noreste del cantón de Zúrich y limita directamente
+  con él. Graubünden, Vaud y Uri no tienen frontera común con Zúrich.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher der folgenden Kantone grenzt direkt an den Kanton Zürich?
+    options_de:
+      a: Graubünden
+      b: Thurgau
+      c: Uri
+      d: Waadt
+    explanation_de: Der Kanton Thurgau liegt nordöstlich des Kantons Zürich und grenzt direkt an ihn.
+      Graubünden, Waadt und Uri haben keine gemeinsame Grenze mit Zürich.

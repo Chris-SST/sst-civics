@@ -9,6 +9,21 @@ options:
   d: Watchmaking
 explanation: Swiss watches are known throughout the world for their quality. Watchmaking has a long tradition
   in Switzerland and is still an important export sector today.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Wirtschaftszweig ist die Schweiz seit langem weltweit führend?
+    options_de:
+      a: Textilindustrie
+      b: Schiffbau
+      c: Automobilbau
+      d: Uhrenherstellung
+    explanation_de: Schweizer Uhren sind auf der ganzen Welt für ihre Qualität bekannt. Die Uhrenherstellung
+      hat in der Schweiz eine lange Tradition und ist auch heute noch ein wichtiger Exportzweig.

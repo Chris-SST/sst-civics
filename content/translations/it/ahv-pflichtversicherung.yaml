@@ -1,0 +1,29 @@
+id: ahv-pflichtversicherung
+lang: it
+source_version: 1
+question: Quale affermazione sull'assicurazione vecchiaia e superstiti (AHV) è corretta?
+options:
+  a: L'assicurazione vecchiaia e superstiti fa parte delle assicurazioni obbligatorie.
+  b: L'assicurazione vecchiaia e superstiti è un'assicurazione facoltativa per i lavoratori indipendenti.
+  c: L'assicurazione vecchiaia e superstiti vale solo per le persone con passaporto svizzero.
+  d: L'assicurazione vecchiaia e superstiti è un'assicurazione privata dei datori di lavoro.
+explanation: L'assicurazione vecchiaia e superstiti è obbligatoria. Chi abita o lavora in Svizzera è in
+  linea di principio assicurato e deve pagare i contributi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage zur Alters- und Hinterlassenenversicherung (AHV) ist richtig?
+    options_de:
+      a: Die Alters- und Hinterlassenenversicherung gehört zu den obligatorischen Versicherungen.
+      b: Die Alters- und Hinterlassenenversicherung ist eine freiwillige Versicherung für Selbstständigerwerbende.
+      c: Die Alters- und Hinterlassenenversicherung gilt nur für Personen mit Schweizer Pass.
+      d: Die Alters- und Hinterlassenenversicherung ist eine private Versicherung der Arbeitgeber.
+    explanation_de: Die Alters- und Hinterlassenenversicherung ist obligatorisch. Wer in der Schweiz wohnt
+      oder arbeitet, ist grundsätzlich versichert und muss die Beiträge bezahlen.

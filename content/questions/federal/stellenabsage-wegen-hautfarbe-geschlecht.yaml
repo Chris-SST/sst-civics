@@ -1,19 +1,20 @@
 id: stellenabsage-wegen-hautfarbe-geschlecht
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.grundrechte
-question_de: Eine Bewerberin wird für eine Stelle abgelehnt, nur wegen ihres Geschlechts. Welches Grundrecht
-  wird dadurch verletzt?
+question_de: Eine Frau bewirbt sich für eine Stelle. Sie wird nur abgelehnt, weil sie eine Frau ist. Welches
+  Grundrecht wird dadurch verletzt?
 options_de:
-  a: Das Recht auf Niederlassungsfreiheit
-  b: Das Recht auf Versammlungsfreiheit
-  c: Das Gebot der Rechtsgleichheit und das Diskriminierungsverbot
-  d: Das Recht auf Schutz der Privatsphäre
+  a: Die Niederlassungsfreiheit
+  b: Die Versammlungsfreiheit
+  c: Die Rechtsgleichheit und das Verbot der Diskriminierung
+  d: Der Schutz der Privatsphäre
 correct: c
-explanation_de: Artikel 8 der Bundesverfassung verbietet Diskriminierung, zum Beispiel wegen Herkunft,
-  Hautfarbe oder Geschlecht. Eine Ablehnung allein aus solchen Gründen ist deshalb nicht zulässig. Dasselbe
-  gilt für die Hautfarbe.
+explanation_de: Artikel 8 der Bundesverfassung sagt, dass alle Menschen vor dem Gesetz gleich sind und
+  dass Frau und Mann gleichberechtigt sind. Niemand darf diskriminiert werden, zum Beispiel wegen der
+  Herkunft, der Rasse oder des Geschlechts. Wer eine Bewerberin nur wegen ihres Geschlechts ablehnt, verletzt
+  deshalb die Rechtsgleichheit und das Diskriminierungsverbot.
 sources:
 - url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
   checked: &id001 2026-11-02
@@ -21,7 +22,7 @@ glossary:
 - Rechtsgleichheit
 - Diskriminierungsverbot
 - Grundrecht
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-081
@@ -31,14 +32,50 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Eine Ablehnung allein wegen des Geschlechts verletzt die Rechtsgleichheit und das Diskriminierungsverbot
-      nach Art. 8 der Bundesverfassung, der auch die Gleichstellung von Frau und Mann einschliesst.
+    version: 2
+    reasoning: Wird eine Frau nur wegen ihres Geschlechts abgelehnt, verletzt dies die Rechtsgleichheit
+      und das Diskriminierungsverbot nach Art. 8 der Bundesverfassung, das auch die Gleichstellung von
+      Frau und Mann umfasst.
   source:
     verdict: supported
-    note: 'Art. 8 Abs. 2 BV (Quelle 1) lautet: «Niemand darf diskriminiert werden, namentlich nicht wegen
-      der Herkunft, der Rasse, des Geschlechts …». Das stützt Antwort c und die Erklärung. Die «Hautfarbe»
-      steht nicht wörtlich im Text, wird aber als «Rasse» und «Herkunft» sinngemäss erfasst.'
+    note: Art. 8 BV in Quelle 1 nennt die Rechtsgleichheit, das Diskriminierungsverbot (ausdrücklich auch
+      wegen des Geschlechts) und die Gleichberechtigung von Mann und Frau, vor allem in der Arbeit. Das
+      deckt Antwort c und die Erklärung.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Bei privaten Arbeitgebern gilt Artikel 8 der Bundesverfassung nicht direkt, sondern über
+        das Gleichstellungsgesetz; die Erklärung könnte mit einem Satz ergänzt werden, etwa «Das Gleichstellungsgesetz
+        verbietet diese Diskriminierung auch bei privaten Arbeitgebern».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Grundrechte verpflichten in erster Linie den Staat, bei privaten Arbeitgebern gilt das
+        Gleichstellungsgesetz; die Erklärung könnte ergänzen: «Im Arbeitsleben verbietet zudem das Gleichstellungsgesetz,
+        jemanden wegen des Geschlechts zu benachteiligen.»'
+      - 'Klein: Der Satz «Sie wird nur abgelehnt, weil sie eine Frau ist» liest sich flüssiger als «Sie
+        wird nur deshalb abgelehnt, weil sie eine Frau ist».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung verwendet den Begriff «Rasse» aus dem Verfassungstext; zeitgemässer wäre
+        «Herkunft oder Hautfarbe», oder der Begriff könnte als Zitat aus Artikel 8 gekennzeichnet werden.'
+      - 'Klein: Die Erklärung nennt Artikel 8 der Bundesverfassung, aber der Quellenauszug zeigt die Artikelnummer
+        nicht; die Angabe ist allgemein bekannt und korrekt, es ist aber kein Mangel, der behoben werden
+        muss.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

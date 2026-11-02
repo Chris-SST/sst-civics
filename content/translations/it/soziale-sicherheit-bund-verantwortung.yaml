@@ -1,0 +1,34 @@
+id: soziale-sicherheit-bund-verantwortung
+lang: it
+source_version: 1
+question: Quale livello dello Stato in Svizzera ha la responsabilità di garantire la sicurezza sociale
+  della popolazione, ad esempio mediante la previdenza per la vecchiaia?
+options:
+  a: I distretti
+  b: Solo i Comuni (Gemeinden)
+  c: La Confederazione
+  d: Solo i Cantoni
+explanation: La Costituzione federale attribuisce alla Confederazione importanti compiti in materia di
+  sicurezza sociale. Ne fanno parte, ad esempio, l'assicurazione vecchiaia e superstiti (AVS) (Alters-
+  und Hinterlassenenversicherung, AHV) e l'assicurazione per l'invalidità. In questo modo vigono basi
+  uniformi per tutta la Svizzera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Ebene in der Schweiz ist dafür verantwortlich, die soziale Sicherheit
+      der Bevölkerung zu gewährleisten, zum Beispiel durch die Altersvorsorge?
+    options_de:
+      a: Die Bezirke
+      b: Nur die Gemeinden
+      c: Der Bund
+      d: Nur die Kantone
+    explanation_de: Die Bundesverfassung überträgt dem Bund wichtige Aufgaben im Bereich der sozialen
+      Sicherheit. Dazu gehören zum Beispiel die Alters- und Hinterlassenenversicherung (AHV) und die Invalidenversicherung.
+      Auf diese Weise gelten einheitliche Grundlagen für die ganze Schweiz.

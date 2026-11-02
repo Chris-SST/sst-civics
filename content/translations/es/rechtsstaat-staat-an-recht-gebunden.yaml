@@ -1,0 +1,31 @@
+id: rechtsstaat-staat-an-recht-gebunden
+lang: es
+source_version: 2
+question: ¿Qué rige para las autoridades y el gobierno en un Estado de derecho como Suiza?
+options:
+  a: Pueden elegir por sí mismos qué leyes cumplir.
+  b: Ellos también deben respetar el derecho vigente.
+  c: Están por encima del derecho vigente.
+  d: Solo deben guiarse por las decisiones de los medios de comunicación.
+explanation: En un Estado de derecho, no solo la población debe respetar el derecho, sino también el propio
+  Estado. Las autoridades y el gobierno solo pueden actuar de la manera que el derecho permite. Así, el
+  Estado de derecho protege a las personas de la arbitrariedad.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt für die Behörden und die Regierung in einem Rechtsstaat wie der Schweiz?
+    options_de:
+      a: Sie können selbst wählen, welche Gesetze sie befolgen.
+      b: Auch sie müssen das geltende Recht respektieren.
+      c: Sie stehen über dem geltenden Recht.
+      d: Sie müssen sich nur nach den Entscheidungen der Medien richten.
+    explanation_de: In einem Rechtsstaat muss nicht nur die Bevölkerung das Recht respektieren, sondern
+      auch der Staat selbst. Die Behörden und die Regierung können nur auf die Weise handeln, die das
+      Recht erlaubt. So schützt der Rechtsstaat die Menschen vor der Willkür.

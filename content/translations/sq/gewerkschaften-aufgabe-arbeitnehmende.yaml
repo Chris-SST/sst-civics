@@ -1,0 +1,31 @@
+id: gewerkschaften-aufgabe-arbeitnehmende
+lang: sq
+source_version: 2
+question: Cila është detyra e sindikatave në Zvicër?
+options:
+  a: Ato angazhohen për interesat e punëmarrësve.
+  b: Ato u japin të huajve lejen për të punuar.
+  c: Ato përcaktojnë normat e tatimit për ndërmarrjet.
+  d: Ato përfaqësojnë interesat e punëdhënësve përpara Konfederatës.
+explanation: Sindikatat janë organizata të punëmarrësve. Ato përfaqësojnë interesat e tyre, për shembull
+  në lidhje me pagat dhe kushtet e punës, dhe shpesh negociojnë me punëdhënësit kontrata kolektive pune.
+  Lejet e punës, përkundrazi, i lëshojnë autoritetet, jo sindikatat.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was ist die Aufgabe der Gewerkschaften in der Schweiz?
+    options_de:
+      a: Sie setzen sich für die Interessen der Arbeitnehmer ein.
+      b: Sie geben Ausländern die Erlaubnis zu arbeiten.
+      c: Sie legen die Steuersätze für die Unternehmen fest.
+      d: Sie vertreten die Interessen der Arbeitgeber gegenüber dem Bund.
+    explanation_de: Gewerkschaften sind Organisationen der Arbeitnehmer. Sie vertreten deren Interessen,
+      zum Beispiel in Bezug auf Löhne und Arbeitsbedingungen, und handeln oft mit den Arbeitgebern Gesamtarbeitsverträge
+      aus. Arbeitsbewilligungen hingegen werden von den Behörden erteilt, nicht von den Gewerkschaften.

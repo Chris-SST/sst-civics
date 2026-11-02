@@ -1,0 +1,32 @@
+id: familienzulage-fuer-eltern
+lang: it
+source_version: 1
+question: Quale prestazione statale ricevono in Svizzera i genitori che sono dipendenti o lavorano come
+  indipendenti e hanno figli?
+options:
+  a: La rendita d'invalidità
+  b: L'indennità di disoccupazione
+  c: La prestazione complementare all'assicurazione vecchiaia e superstiti (AHV)
+  d: L'assegno familiare
+explanation: Gli assegni familiari aiutano le famiglie a sostenere una parte dei costi per i figli. Comprendono
+  gli assegni per i figli e gli assegni di formazione. Anche i lavoratori indipendenti possono riceverli.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Leistung erhalten in der Schweiz Eltern, die angestellt sind oder selbstständig
+      erwerbend arbeiten und Kinder haben?
+    options_de:
+      a: Die Invalidenrente
+      b: Die Arbeitslosenentschädigung
+      c: Die Ergänzungsleistung zur Alters- und Hinterlassenenversicherung (AHV)
+      d: Die Familienzulage
+    explanation_de: Die Familienzulagen helfen den Familien, einen Teil der Kosten für die Kinder zu tragen.
+      Sie umfassen die Kinderzulagen und die Ausbildungszulagen. Auch selbstständig Erwerbende können
+      sie erhalten.

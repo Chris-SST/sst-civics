@@ -1,0 +1,32 @@
+id: einwohnerregister-fuehren-gemeinde-aufgabe
+lang: fr
+source_version: 1
+question: Laquelle des tâches suivantes le contrôle des habitants (Einwohneramt) remplit-il dans les communes
+  (Gemeinden) zurichoises ?
+options:
+  a: Il rend des jugements pénaux.
+  b: Il tient le registre des habitants de la commune.
+  c: Il délivre des permis de construire pour les routes cantonales.
+  d: Il fixe les lois fiscales.
+explanation: La commune tient le registre des personnes qui y habitent. C'est là que vous annoncez votre
+  arrivée, votre départ ou votre changement d'adresse lorsque vous déménagez. Les jugements pénaux, les
+  lois fiscales et les routes cantonales ne relèvent pas de cette tâche.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aufgaben erfüllt das Einwohneramt in den Zürcher Gemeinden?
+    options_de:
+      a: Es fällt Strafurteile.
+      b: Es führt das Einwohnerregister der Gemeinde.
+      c: Es erteilt Baubewilligungen für Kantonsstrassen.
+      d: Es legt die Steuergesetze fest.
+    explanation_de: Die Gemeinde führt das Register der Personen, die darin wohnen. Dort melden Sie Ihre
+      Ankunft, Ihren Wegzug oder Ihre Adressänderung, wenn Sie umziehen. Strafurteile, Steuergesetze und
+      Kantonsstrassen gehören nicht zu dieser Aufgabe.

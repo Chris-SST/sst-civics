@@ -1,0 +1,29 @@
+id: kanton-zuerich-einwohnerzahl-2020
+lang: tr
+source_version: 1
+question: Zürich kantonunun 2020 yılındaki nüfusu yaklaşık kaç kişiydi?
+options:
+  a: Yaklaşık 1,1 milyon
+  b: Yaklaşık 2,2 milyon
+  c: Yaklaşık 0,8 milyon
+  d: Yaklaşık 1,5 milyon
+explanation: 2020 yılında Zürich kantonunda yaklaşık 1,5 milyon kişi yaşıyordu. Böylece Zürich, İsviçre'nin
+  nüfusu en kalabalık kantonudur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Personen hatte der Kanton Zürich im Jahr 2020 ungefähr?
+    options_de:
+      a: Ungefähr 1,1 Millionen
+      b: Ungefähr 2,2 Millionen
+      c: Ungefähr 0,8 Millionen
+      d: Ungefähr 1,5 Millionen
+    explanation_de: Im Jahr 2020 lebten im Kanton Zürich ungefähr 1,5 Millionen Personen. Damit ist Zürich
+      der bevölkerungsreichste Kanton der Schweiz.

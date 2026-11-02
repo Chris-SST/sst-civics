@@ -1,0 +1,29 @@
+id: einwohnerreichste-stadt-der-schweiz
+lang: es
+source_version: 1
+question: ¿Qué ciudad tiene el mayor número de habitantes de Suiza?
+options:
+  a: Ginebra
+  b: Zúrich
+  c: Berna
+  d: Basilea
+explanation: Zúrich es la ciudad más grande de Suiza. Berna es, ciertamente, la ciudad federal (Bundesstadt),
+  pero tiene claramente menos habitantes. Ginebra y Basilea también son más pequeñas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Stadt hat die grösste Einwohnerzahl der Schweiz?
+    options_de:
+      a: Genf
+      b: Zürich
+      c: Bern
+      d: Basel
+    explanation_de: Zürich ist die grösste Stadt der Schweiz. Bern ist zwar die Bundesstadt, hat aber
+      deutlich weniger Einwohner. Genf und Basel sind ebenfalls kleiner.

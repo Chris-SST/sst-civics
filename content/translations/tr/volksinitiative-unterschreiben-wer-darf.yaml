@@ -1,0 +1,36 @@
+id: volksinitiative-unterschreiben-wer-darf
+lang: tr
+source_version: 2
+question: Federal bir halk girişimini (Volksinitiative) kimler imzalayabilir?
+options:
+  a: İsviçre'de ikamet eden 16 yaşını doldurmuş tüm kişiler
+  b: C yerleşim iznine (yerleşim izni, Niederlassungsbewilligung) sahip 18 yaşını doldurmuş tüm kişiler
+  c: Yalnızca bir siyasi partinin 18 yaşını doldurmuş üyeleri
+  d: 18 yaşını doldurmuş İsviçre vatandaşları
+explanation: Federal bir halk girişimini, Konfederasyon düzeyinde oy hakkı bulunan kişiler imzalayabilir.
+  Bunlar, 18 yaşını doldurmuş İsviçreli kadınlar ve erkeklerdir; yurt dışında yaşayanlar da seçmen kütüğüne
+  kayıtlıysa imzalayabilir. Yalnızca sürekli ayırt etme gücünden yoksun olmaları nedeniyle kapsamlı vesayet
+  altında bulunan veya bir vekalet görevlisi (vorsorgebeauftragte Person) tarafından temsil edilen kişiler
+  hariç tutulur; yabancıların Konfederasyon düzeyinde siyasi hakları yoktur, C izni olsa bile.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer kann eine eidgenössische Volksinitiative unterzeichnen?
+    options_de:
+      a: Alle Personen ab 16 Jahren, die in der Schweiz wohnhaft sind
+      b: Alle Personen ab 18 Jahren mit einer Niederlassungsbewilligung C
+      c: Nur die Mitglieder einer politischen Partei ab 18 Jahren
+      d: Schweizer Staatsangehörige ab 18 Jahren
+    explanation_de: Eine eidgenössische Volksinitiative können die Personen unterzeichnen, die auf Ebene
+      der Eidgenossenschaft stimmberechtigt sind. Das sind Schweizerinnen und Schweizer ab 18 Jahren;
+      auch im Ausland lebende Personen können unterzeichnen, wenn sie im Stimmregister eingetragen sind.
+      Ausgeschlossen sind nur Personen, die wegen dauernder Urteilsunfähigkeit unter umfassender Beistandschaft
+      stehen oder durch eine vorsorgebeauftragte Person vertreten werden; Ausländer haben auf Ebene der
+      Eidgenossenschaft keine politischen Rechte, auch nicht mit einer C-Bewilligung.

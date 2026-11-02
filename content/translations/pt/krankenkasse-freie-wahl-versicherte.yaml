@@ -1,0 +1,31 @@
+id: krankenkasse-freie-wahl-versicherte
+lang: pt
+source_version: 1
+question: Na Suíça, quem decide em qual seguradora de saúde (Krankenkasse) uma pessoa contrata o seguro
+  básico?
+options:
+  a: A comuna de residência determina a seguradora de saúde
+  b: A própria pessoa segurada escolhe a sua seguradora de saúde
+  c: O empregador determina a seguradora de saúde para todos os funcionários
+  d: O cantão de residência atribui uma seguradora de saúde a cada pessoa
+explanation: Na Suíça vigora a livre escolha da seguradora de saúde. As pessoas seguradas podem escolher
+  entre as seguradoras de saúde autorizadas e, sob determinadas condições, mudar de seguradora.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet in der Schweiz, bei welcher Krankenkasse eine Person die Grundversicherung
+      abschliesst?
+    options_de:
+      a: Die Wohngemeinde bestimmt die Krankenkasse
+      b: Die versicherte Person wählt ihre Krankenkasse selbst
+      c: Der Arbeitgeber bestimmt die Krankenkasse für alle Mitarbeitenden
+      d: Der Wohnkanton weist jeder Person eine Krankenkasse zu
+    explanation_de: In der Schweiz gilt die freie Wahl der Krankenkasse. Die versicherten Personen können
+      unter den zugelassenen Krankenkassen wählen und unter bestimmten Bedingungen die Krankenkasse wechseln.

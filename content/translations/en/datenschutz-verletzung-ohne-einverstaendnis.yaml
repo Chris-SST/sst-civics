@@ -10,6 +10,23 @@ options:
 explanation: The protection of privacy includes protection against the misuse of personal data. Private
   information may only be disclosed with the person's consent or on the basis of a law. If neither is
   present, there is a violation.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall wird der Datenschutz verletzt?
+    options_de:
+      a: Private Angaben über eine Person werden ohne deren Einwilligung und ohne gesetzliche Grundlage
+        bekannt gegeben.
+      b: Eine Behörde speichert Daten, wie es das Gesetz verlangt.
+      c: Eine Person gibt freiwillig ihre eigene Adresse an.
+      d: Eine Person erlaubt ausdrücklich die Veröffentlichung ihres Fotos.
+    explanation_de: Der Schutz der Privatsphäre umfasst den Schutz vor dem Missbrauch persönlicher Daten.
+      Private Informationen dürfen nur mit der Einwilligung der Person oder aufgrund eines Gesetzes bekannt
+      gegeben werden. Ist keines von beiden vorhanden, liegt eine Verletzung vor.

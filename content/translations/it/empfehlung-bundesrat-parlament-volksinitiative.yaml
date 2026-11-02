@@ -1,0 +1,35 @@
+id: empfehlung-bundesrat-parlament-volksinitiative
+lang: it
+source_version: 1
+question: Chi raccomanda agli aventi diritto di voto, prima della votazione su un'iniziativa popolare
+  (Volksinitiative) federale, se accettare o respingere l'iniziativa?
+options:
+  a: Il Consiglio federale (Bundesrat) e il Parlamento
+  b: I governi cantonali
+  c: La Cancelleria federale (Bundeskanzlei) da sola
+  d: Il Tribunale federale (Bundesgericht)
+explanation: Dopo che un'iniziativa popolare è riuscita, il Consiglio federale e il Parlamento prendono
+  posizione al riguardo. Il Parlamento raccomanda agli aventi diritto di voto di accettarla o di respingerla.
+  Questa raccomandazione figura anche nelle spiegazioni del voto, che gli aventi diritto di voto ricevono
+  prima della votazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer empfiehlt den Stimmberechtigten vor der Abstimmung über eine eidgenössische Volksinitiative,
+      die Initiative anzunehmen oder abzulehnen?
+    options_de:
+      a: Der Bundesrat und das Parlament
+      b: Die Kantonsregierungen
+      c: Die Bundeskanzlei allein
+      d: Das Bundesgericht
+    explanation_de: Nachdem eine Volksinitiative zustande gekommen ist, nehmen der Bundesrat und das Parlament
+      dazu Stellung. Das Parlament empfiehlt den Stimmberechtigten, sie anzunehmen oder abzulehnen. Diese
+      Empfehlung steht auch in den Abstimmungserläuterungen, die die Stimmberechtigten vor der Abstimmung
+      erhalten.

@@ -9,6 +9,22 @@ options:
   d: German and Italian
 explanation: Fribourg is a bilingual canton in which French and German are spoken. It lies on the border
   between German-speaking Switzerland and French-speaking Switzerland.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprachen werden im zweisprachigen Kanton Freiburg gesprochen?
+    options_de:
+      a: Französisch und Rätoromanisch
+      b: Französisch und Italienisch
+      c: Französisch und Deutsch
+      d: Deutsch und Italienisch
+    explanation_de: Freiburg ist ein zweisprachiger Kanton, in dem Französisch und Deutsch gesprochen
+      werden. Er liegt an der Grenze zwischen der deutschsprachigen Schweiz und der französischsprachigen
+      Schweiz.

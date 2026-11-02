@@ -1,0 +1,31 @@
+id: sozialhilfe-bei-ungenuegendem-einkommen
+lang: sq
+source_version: 1
+question: Çfarë ofron komuna (Gemeinde), kur të ardhurat dhe pasuria e një personi nuk mjaftojnë për jetesë?
+options:
+  a: Ndihmë sociale
+  b: Një leje ndërtimi
+  c: Një natyralizim
+  d: Një bursë e shkollës publike (Volksschule)
+explanation: Kush nuk mund ta paguajë vetë jetesën me mjetet e veta, ka të drejtë për mbështetje nga ndihma
+  sociale. Ajo ofrohet nga komuna ku banon personi. Ajo është rrjeti i fundit i sigurisë sociale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bietet die Gemeinde, wenn das Einkommen und das Vermögen einer Person nicht zum Leben
+      ausreichen?
+    options_de:
+      a: Sozialhilfe
+      b: Eine Baubewilligung
+      c: Eine Einbürgerung
+      d: Ein Stipendium der Volksschule
+    explanation_de: Wer seinen Lebensunterhalt nicht mit eigenen Mitteln bestreiten kann, hat Anspruch
+      auf Unterstützung durch die Sozialhilfe. Sie wird von der Gemeinde angeboten, in der die Person
+      wohnt. Sie ist das letzte Netz der sozialen Sicherheit.

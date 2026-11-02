@@ -23,7 +23,7 @@ glossary:
 - Ständerat
 - Nationalrat
 - Kanton
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-044
@@ -45,3 +45,42 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «Jeder Kanton schickt Vertreterinnen und Vertreter» kann so verstanden werden,
+        dass die Kantonsregierung die Mitglieder bestimmt und jeder Kanton mehrere hat; besser: «Das Volk
+        jedes Kantons wählt zwei Mitglieder in den Ständerat, sechs Kantone haben je ein Mitglied.»'
+      - 'Klein: Die Antworten a) und d) sind keine Parlamentskammern und darum leicht auszuschliessen;
+        als Alternative könnte z. B. «Die Vereinigte Bundesversammlung» als Ablenker dienen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Das Bundesgericht» ist keine Kammer des Parlaments und darum ein schwacher Ablenker;
+        besser eine näherliegende Antwort wählen, zum Beispiel «Der Regierungsrat» oder «Die Konferenz
+        der Kantonsregierungen».'
+      - 'Klein: Die Erklärung könnte konkreter sein, zum Beispiel: «Jeder Kanton wählt zwei Mitglieder
+        in den Ständerat, die Kantone Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden
+        und Appenzell Innerrhoden je eines (insgesamt 46).»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, jeder Kanton schicke Vertreterinnen und Vertreter in den Ständerat.
+        Das gilt auch für den Nationalrat. Besser wäre: «Jeder Kanton hat zwei Sitze im Ständerat, die
+        Halbkantone je einen.»'
+      - 'Klein: Bundesrat und Bundesgericht sind keine Parlamentskammern und daher sehr leicht auszuschliessen.
+        Als Ersatz würde sich zum Beispiel «Die Vereinigte Bundesversammlung» eignen, falls man die Frage
+        schwieriger machen will.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

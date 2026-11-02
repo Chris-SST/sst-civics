@@ -1,0 +1,29 @@
+id: bundesrat-wahl-durch-vereinigte-bundesversammlung
+lang: tr
+source_version: 1
+question: Federal Konsey (Bundesrat) üyelerinin yedisini kim seçer?
+options:
+  a: Halk, sandık başında yapılan bir seçimle
+  b: Kanton hükûmetleri
+  c: Federal Mahkeme (Bundesgericht)
+  d: Ulusal Konsey (Nationalrat) ve Kantonlar Konseyi (Ständerat) birlikte
+explanation: Parlamentonun iki meclisi, Birleşik Federal Meclis (Vereinigte Bundesversammlung) olarak
+  toplanır ve Federal Konsey üyelerini seçer. İsviçre'de halk Federal Konsey'i doğrudan seçmez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wählt die sieben Mitglieder des Bundesrates?
+    options_de:
+      a: Das Volk, in einer Wahl an der Urne
+      b: Die Kantonsregierungen
+      c: Das Bundesgericht
+      d: Der Nationalrat und der Ständerat gemeinsam
+    explanation_de: Die beiden Kammern des Parlaments treten als Vereinigte Bundesversammlung zusammen
+      und wählen die Mitglieder des Bundesrates. In der Schweiz wählt das Volk den Bundesrat nicht direkt.

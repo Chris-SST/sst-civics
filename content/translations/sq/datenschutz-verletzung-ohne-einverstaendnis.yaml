@@ -1,0 +1,31 @@
+id: datenschutz-verletzung-ohne-einverstaendnis
+lang: sq
+source_version: 1
+question: Në cilin rast cenohet mbrojtja e të dhënave?
+options:
+  a: Të dhëna private për një person bëhen publike pa pëlqimin e tij dhe pa bazë ligjore.
+  b: Një autoritet ruan të dhëna ashtu siç e kërkon një ligj.
+  c: Një person jep vullnetarisht adresën e vet.
+  d: Një person lejon shprehimisht publikimin e fotografisë së vet.
+explanation: Mbrojtja e jetës private përfshin mbrojtjen nga keqpërdorimi i të dhënave personale. Informacionet
+  private mund të bëhen publike vetëm me pëlqimin e personit ose në bazë të një ligji. Nëse mungojnë të
+  dyja, ka një cenim.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall wird der Datenschutz verletzt?
+    options_de:
+      a: Private Daten über eine Person werden ohne ihre Zustimmung und ohne gesetzliche Grundlage veröffentlicht.
+      b: Eine Behörde speichert Daten so, wie es ein Gesetz verlangt.
+      c: Eine Person gibt ihre Adresse freiwillig bekannt.
+      d: Eine Person erlaubt ausdrücklich die Veröffentlichung ihres Fotos.
+    explanation_de: Der Schutz des Privatlebens umfasst den Schutz vor dem Missbrauch persönlicher Daten.
+      Private Informationen dürfen nur mit der Zustimmung der Person oder auf der Grundlage eines Gesetzes
+      veröffentlicht werden. Fehlt beides, liegt eine Verletzung vor.

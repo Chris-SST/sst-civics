@@ -25,4 +25,22 @@ status: draft
 difficulty: 2
 covers:
 - zh-080
-checks: {}
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 2
+    reasoning: Wer wider besseres Wissen unwahre, ehrverletzende Tatsachen über eine Person verbreitet,
+      macht sich nach Art. 174 des Strafgesetzbuchs der Verleumdung strafbar, unabhängig vom Amt der Person,
+      vom Medium und von der Meinungsfreiheit.
+  source:
+    verdict: unclear
+    note: Die Quelle enthält nur Satzfragmente der Verleumdungsbestimmung ("wider besseres Wissen ...
+      Tatsachen, die geeignet sind, seinen Ruf zu schädigen, beschuldigt oder verdächtigt ... verbreitet").
+      Die Rechtsfolge (Strafe) und die Artikelnummer fehlen im gekürzten Text. Auch die Aussagen zum Strafantrag,
+      zum Internet und zur Meinungsfreiheit sind nicht belegt.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 2

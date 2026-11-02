@@ -1,0 +1,32 @@
+id: basler-fasnacht-morgestraich-beginn
+lang: es
+source_version: 1
+question: ¿Qué sucede en el Morgestraich, el comienzo del carnaval de Basilea?
+options:
+  a: El alcalde entrega la llave de la ciudad a la sociedad del carnaval.
+  b: Las callejuelas se iluminan con intensidad y comienza un espectáculo de fuegos artificiales.
+  c: Se apagan las luces de las callejuelas y luego empiezan a tocar los pífanos y los tambores.
+  d: Los participantes del carnaval lanzan confeti desde la torre de la catedral y hacen sonar todas las
+    campanas de las iglesias.
+explanation: El Morgestraich comienza el lunes siguiente al Miércoles de Ceniza, a las cuatro de la madrugada.
+  Entonces se apagan las luces de las callejuelas. Después empieza la música de pífanos y tambores.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: Bürgermeister/Stadtpräsident, Pfeifen/Piccolos und die übrigen Formulierungen
+      sind sinngleich, Fakten, Zeiten und Antworten stimmen überein.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was geschieht am Morgestraich, dem Beginn der Basler Fasnacht?
+    options_de:
+      a: Der Stadtpräsident übergibt der Fasnachtsgesellschaft den Schlüssel der Stadt.
+      b: Die Gassen werden hell beleuchtet und ein Feuerwerk beginnt.
+      c: Die Lichter der Gassen werden gelöscht und dann beginnen die Piccolos und die Trommeln zu spielen.
+      d: Die Fasnachtsteilnehmer werfen Konfetti vom Turm des Münsters und lassen alle Kirchenglocken
+        läuten.
+    explanation_de: Der Morgestraich beginnt am Montag nach dem Aschermittwoch um vier Uhr morgens. Dann
+      werden die Lichter der Gassen gelöscht. Danach beginnt die Musik der Piccolos und Trommeln.

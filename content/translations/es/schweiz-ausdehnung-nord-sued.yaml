@@ -1,0 +1,30 @@
+id: schweiz-ausdehnung-nord-sued
+lang: es
+source_version: 1
+question: ¿Cuál es aproximadamente la distancia en Suiza entre el punto más septentrional y el punto más
+  meridional?
+options:
+  a: unos 650 kilómetros
+  b: unos 220 kilómetros
+  c: unos 120 kilómetros
+  d: unos 450 kilómetros
+explanation: De norte a sur, Suiza mide unos 220 kilómetros. Por lo tanto, es un país pequeño.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie gross ist ungefähr die Entfernung in der Schweiz zwischen dem nördlichsten und dem
+      südlichsten Punkt?
+    options_de:
+      a: etwa 650 Kilometer
+      b: etwa 220 Kilometer
+      c: etwa 120 Kilometer
+      d: etwa 450 Kilometer
+    explanation_de: Von Norden nach Süden misst die Schweiz etwa 220 Kilometer. Daher ist sie ein kleines
+      Land.

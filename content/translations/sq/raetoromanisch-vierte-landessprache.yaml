@@ -1,0 +1,29 @@
+id: raetoromanisch-vierte-landessprache
+lang: sq
+source_version: 1
+question: Cila gjuhë, përveç gjermanishtes, frëngjishtes dhe italishtes, është gjuhë kombëtare e Zvicrës?
+options:
+  a: Spanjisht
+  b: Portugalisht
+  c: Anglisht
+  d: Retoromanisht
+explanation: Retoromanishtja është gjuha e katërt kombëtare. Ajo flitet kryesisht në kantonin Graubünden.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprache ist neben Deutsch, Französisch und Italienisch eine Landessprache der
+      Schweiz?
+    options_de:
+      a: Spanisch
+      b: Portugiesisch
+      c: Englisch
+      d: Rätoromanisch
+    explanation_de: Rätoromanisch ist die vierte Landessprache. Sie wird hauptsächlich im Kanton Graubünden
+      gesprochen.

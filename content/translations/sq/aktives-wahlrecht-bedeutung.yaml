@@ -1,0 +1,33 @@
+id: aktives-wahlrecht-bedeutung
+lang: sq
+source_version: 3
+question: Çfarë do të thotë e drejta aktive e votës?
+options:
+  a: E drejta për të themeluar një parti
+  b: E drejta për t'u zgjedhur vetë në një post
+  c: E drejta për të paraqitur në parlament nisma parlamentare
+  d: E drejta për të marrë pjesë në zgjedhje dhe votime dhe për të dhënë votën e vet
+explanation: Kush ka të drejtën aktive të votës, mund ta japë vetë votën në zgjedhje dhe votime, për shembull
+  gjatë zgjedhjes së Këshillit Kombëtar (Nationalrat) ose në një votim popullor. E drejta për t'u zgjedhur
+  vetë në një post quhet, përkundrazi, e drejtë pasive e votës.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: Antwort c) lautet in der Rückübersetzung «parlamentarische Initiativen einzureichen» statt
+      «Vorstösse einzureichen». Die parlamentarische Initiative ist nur eines von mehreren Vorstossinstrumenten,
+      also enger gefasst. Die übrigen Stellen sind gleichbedeutend.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 3
+    question_de: Was bedeutet das aktive Wahlrecht?
+    options_de:
+      a: Das Recht, eine Partei zu gründen
+      b: Das Recht, selbst in ein Amt gewählt zu werden
+      c: Das Recht, im Parlament parlamentarische Initiativen einzureichen
+      d: Das Recht, an Wahlen und Abstimmungen teilzunehmen und seine eigene Stimme abzugeben
+    explanation_de: Wer das aktive Wahlrecht hat, kann bei Wahlen und Abstimmungen selbst seine Stimme
+      abgeben, zum Beispiel bei der Wahl des Nationalrats oder bei einer Volksabstimmung. Das Recht, selbst
+      in ein Amt gewählt zu werden, nennt man hingegen passives Wahlrecht.

@@ -1,0 +1,30 @@
+id: roestigraben-kulturelle-unterschiede
+lang: sq
+source_version: 1
+question: Çfarë nënkuptohet në Zvicër me termin «Röstigraben»?
+options:
+  a: Alpet si vijë ndarëse midis veriut dhe jugut
+  b: Ndryshimet midis qytetit dhe fshatit
+  c: Kufiri midis Zvicrës dhe Gjermanisë
+  d: Ndryshimet kulturore midis Zvicrës gjermanofone dhe Romandisë
+explanation: Termi «Röstigraben» është një shprehje figurative. Ai përshkruan ndryshimet kulturore midis
+  Zvicrës gjermanofone dhe Romandisë frankofone. Këto ndryshime shfaqen ndonjëherë, për shembull, në votime.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was versteht man in der Schweiz unter dem Begriff «Röstigraben»?
+    options_de:
+      a: Die Alpen als Trennlinie zwischen dem Norden und dem Süden
+      b: Unterschiede zwischen Stadt und Land
+      c: Die Grenze zwischen der Schweiz und Deutschland
+      d: Kulturelle Unterschiede zwischen der deutschsprachigen Schweiz und der Romandie
+    explanation_de: Der Begriff «Röstigraben» ist ein bildlicher Ausdruck. Er beschreibt die kulturellen
+      Unterschiede zwischen der deutschsprachigen Schweiz und der französischsprachigen Romandie. Diese
+      Unterschiede zeigen sich manchmal zum Beispiel bei Abstimmungen.

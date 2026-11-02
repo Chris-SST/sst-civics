@@ -10,6 +10,22 @@ options:
   d: A famine
 explanation: In the early 17th century, almost half of the inhabitants of Zurich died of the plague. The
   plague was an infectious disease that spread several times through Europe at that time.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Katastrophe forderte im frühen 17. Jahrhundert fast die Hälfte der Bevölkerung
+      Zürichs das Leben?
+    options_de:
+      a: Ein Stadtbrand
+      b: Eine Pestepidemie
+      c: Eine Überschwemmung
+      d: Eine Hungersnot
+    explanation_de: Im frühen 17. Jahrhundert starb fast die Hälfte der Einwohner Zürichs an der Pest.
+      Die Pest war eine Infektionskrankheit, die sich zu dieser Zeit mehrmals durch Europa verbreitete.

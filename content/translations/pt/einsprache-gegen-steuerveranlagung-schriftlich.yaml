@@ -1,0 +1,30 @@
+id: einsprache-gegen-steuerveranlagung-schriftlich
+lang: pt
+source_version: 1
+question: Uma pessoa sujeita a imposto não concorda com a sua taxação fiscal. O que pode fazer?
+options:
+  a: Pode pedir que a assembleia municipal (Gemeindeversammlung) vote sobre o assunto.
+  b: Pode recusar o pagamento sem tomar mais nenhuma medida.
+  c: Pode apresentar uma reclamação por escrito junto da autoridade fiscal.
+  d: Pode apresentar uma iniciativa popular (Volksinitiative) ao Conselho Federal (Bundesrat).
+explanation: Contra a taxação existe o meio de recurso da reclamação. Esta deve ser apresentada por escrito
+  junto da autoridade fiscal, e isso dentro de um prazo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine steuerpflichtige Person ist mit ihrer Steuereinschätzung nicht einverstanden. Was
+      kann sie tun?
+    options_de:
+      a: Sie kann verlangen, dass die Gemeindeversammlung über die Angelegenheit abstimmt.
+      b: Sie kann die Zahlung verweigern, ohne weitere Massnahmen zu ergreifen.
+      c: Sie kann bei der Steuerbehörde schriftlich eine Einsprache einreichen.
+      d: Sie kann beim Bundesrat eine Volksinitiative einreichen.
+    explanation_de: Gegen die Einschätzung besteht das Rechtsmittel der Einsprache. Diese muss schriftlich
+      bei der Steuerbehörde eingereicht werden, und zwar innerhalb einer Frist.

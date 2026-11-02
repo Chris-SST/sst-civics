@@ -1,0 +1,30 @@
+id: freiburg-zweisprachiger-kanton
+lang: sq
+source_version: 1
+question: Cilat gjuhë flasin në kantonin dygjuhësh të Fribourgut?
+options:
+  a: Frëngjisht dhe retoromanisht
+  b: Frëngjisht dhe italisht
+  c: Frëngjisht dhe gjermanisht
+  d: Gjermanisht dhe italisht
+explanation: Fribourgu është një kanton dygjuhësh, ku flitet frëngjisht dhe gjermanisht. Ai ndodhet në
+  kufirin midis Zvicrës gjermanishtfolëse dhe Zvicrës frëngjishtfolëse.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprachen werden im zweisprachigen Kanton Freiburg gesprochen?
+    options_de:
+      a: Französisch und Rätoromanisch
+      b: Französisch und Italienisch
+      c: Französisch und Deutsch
+      d: Deutsch und Italienisch
+    explanation_de: Freiburg ist ein zweisprachiger Kanton, in dem Französisch und Deutsch gesprochen
+      wird. Er liegt an der Grenze zwischen der deutschsprachigen Schweiz und der französischsprachigen
+      Schweiz.

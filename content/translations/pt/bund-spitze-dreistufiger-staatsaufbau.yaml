@@ -1,0 +1,31 @@
+id: bund-spitze-dreistufiger-staatsaufbau
+lang: pt
+source_version: 2
+question: A Suíça está organizada em três níveis de Estado. Qual é o nível mais alto?
+options:
+  a: As comunas (Gemeinden)
+  b: A Confederação
+  c: Os cantões
+  d: Os distritos
+explanation: A Confederação é o mais alto dos três níveis de Estado. Abaixo dela vêm os cantões e, depois,
+  as comunas. Os distritos não constituem um nível de Estado próprio, sendo apenas, em alguns cantões,
+  unidades administrativas dentro do cantão.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Die Schweiz ist in drei Staatsebenen organisiert. Welches ist die höchste Ebene?
+    options_de:
+      a: Die Gemeinden
+      b: Der Bund
+      c: Die Kantone
+      d: Die Bezirke
+    explanation_de: Der Bund ist die höchste der drei Staatsebenen. Unter ihm kommen die Kantone und danach
+      die Gemeinden. Die Bezirke bilden keine eigene Staatsebene, sondern sind nur in einigen Kantonen
+      Verwaltungseinheiten innerhalb des Kantons.

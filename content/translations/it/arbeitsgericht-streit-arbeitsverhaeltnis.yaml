@@ -1,0 +1,33 @@
+id: arbeitsgericht-streit-arbeitsverhaeltnis
+lang: it
+source_version: 1
+question: Una lavoratrice ritiene che il proprio licenziamento sia infondato e vuole opporvisi. Quale
+  autorità tratta queste controversie derivanti dal rapporto di lavoro?
+options:
+  a: L'Ufficio regionale di collocamento (URC)
+  b: L'Ufficio della circolazione
+  c: Il Tribunale del lavoro
+  d: L'Ufficio di esecuzione
+explanation: Il Tribunale del lavoro è competente per le controversie tra datori di lavoro e lavoratori.
+  Ne fa parte anche la controversia relativa a un licenziamento. L'URC, invece, offre aiuto nella ricerca
+  di un impiego.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Arbeitnehmerin hält ihre Kündigung für unbegründet und will sich dagegen wehren.
+      Welche Behörde behandelt diese Streitigkeiten aus dem Arbeitsverhältnis?
+    options_de:
+      a: Das Regionale Arbeitsvermittlungszentrum (RAV)
+      b: Das Strassenverkehrsamt
+      c: Das Arbeitsgericht
+      d: Das Betreibungsamt
+    explanation_de: Das Arbeitsgericht ist für die Streitigkeiten zwischen Arbeitgebern und Arbeitnehmern
+      zuständig. Dazu gehört auch die Streitigkeit über eine Kündigung. Das RAV hingegen bietet Hilfe
+      bei der Stellensuche.

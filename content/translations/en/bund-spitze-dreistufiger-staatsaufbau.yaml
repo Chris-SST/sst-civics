@@ -1,15 +1,31 @@
 id: bund-spitze-dreistufiger-staatsaufbau
 lang: en
-source_version: 1
-question: Which level of government is at the top of Switzerland's three-tier state structure?
+source_version: 2
+question: Switzerland is structured on three levels of state. Which level is the highest?
 options:
-  a: The Confederation
-  b: The canton of Bern
-  c: The Federal Assembly (Bundesversammlung) alone
-  d: The association of communes (Gemeindeverband)
-explanation: The Confederation is at the top of the state structure. Below it come the cantons and then
-  the communes (Gemeinden). The Federal Constitution sets out which tasks lie with the Confederation and
-  which with the cantons.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: The communes (Gemeinden)
+  b: The Confederation
+  c: The cantons
+  d: The districts
+explanation: The Confederation is the highest of the three levels of state. Below it come the cantons
+  and then the communes. Districts are not a level of state in their own right, but in some cantons are
+  merely administrative units within the canton.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Die Schweiz ist auf drei Staatsebenen aufgebaut. Welche Ebene ist die höchste?
+    options_de:
+      a: Die Gemeinden
+      b: Der Bund
+      c: Die Kantone
+      d: Die Bezirke
+    explanation_de: Der Bund ist die höchste der drei Staatsebenen. Unter ihm kommen die Kantone und dann
+      die Gemeinden. Bezirke sind keine eigene Staatsebene, sondern in einigen Kantonen lediglich Verwaltungseinheiten
+      innerhalb des Kantons.

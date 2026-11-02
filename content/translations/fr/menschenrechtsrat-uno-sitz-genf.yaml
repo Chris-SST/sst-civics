@@ -1,0 +1,31 @@
+id: menschenrechtsrat-uno-sitz-genf
+lang: fr
+source_version: 1
+question: Dans quelle ville suisse le Conseil des droits de l'homme des Nations Unies (ONU) a-t-il son
+  siège ?
+options:
+  a: Lausanne
+  b: Genève
+  c: Berne
+  d: Bâle
+explanation: Le Conseil des droits de l'homme de l'ONU siège à Genève. Avec New York, Genève est l'un
+  des principaux sites de l'ONU et accueille le siège de nombreuses organisations internationales.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Schweizer Stadt hat der Menschenrechtsrat der Vereinten Nationen (UNO) seinen
+      Sitz?
+    options_de:
+      a: Lausanne
+      b: Genf
+      c: Bern
+      d: Basel
+    explanation_de: Der Menschenrechtsrat der UNO hat seinen Sitz in Genf. Zusammen mit New York ist Genf
+      einer der wichtigsten Standorte der UNO und beherbergt den Sitz zahlreicher internationaler Organisationen.

@@ -1,0 +1,32 @@
+id: familienzulage-fuer-eltern
+lang: tr
+source_version: 1
+question: İsviçre'de çalışan veya serbest meslek sahibi olarak gelir elde eden ve çocuğu olan ebeveynler
+  devletten hangi yardımı alır?
+options:
+  a: Malullük aylığı
+  b: İşsizlik tazminatı
+  c: Yaşlılık ve dul-yetim sigortasına (AHV) ek yardım
+  d: Aile ödeneği
+explanation: Aile ödenekleri, ailelerin çocuklarla ilgili giderlerin bir kısmını karşılamasına yardımcı
+  olur. Çocuk ödeneği ve eğitim ödeneğinden oluşurlar. Serbest meslek sahipleri de bu ödenekleri alabilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Leistung erhalten Eltern, die in der Schweiz erwerbstätig sind oder als Selbständigerwerbende
+      ein Einkommen erzielen und Kinder haben, vom Staat?
+    options_de:
+      a: Invalidenrente
+      b: Arbeitslosenentschädigung
+      c: Zusatzleistung zur Alters- und Hinterlassenenversicherung (AHV)
+      d: Familienzulage
+    explanation_de: Familienzulagen helfen Familien, einen Teil der Ausgaben für Kinder zu decken. Sie
+      bestehen aus der Kinderzulage und der Ausbildungszulage. Auch Selbständigerwerbende können diese
+      Zulagen erhalten.

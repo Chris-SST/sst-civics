@@ -10,6 +10,22 @@ options:
 explanation: The Building Directorate is one of the directorates of the Zurich cantonal administration.
   The cantonal administration is divided into several directorates, each headed by a member of the Executive
   Council (Regierungsrat).
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches der folgenden Organe ist eine Direktion der Zürcher Kantonsverwaltung?
+    options_de:
+      a: Die Gemeindedirektion
+      b: Die Baudirektion
+      c: Die Stadtdirektion
+      d: Die Direktion des Bundes
+    explanation_de: Die Baudirektion ist eine der Direktionen der Zürcher Kantonsverwaltung. Die Kantonsverwaltung
+      ist in mehrere Direktionen gegliedert, die jeweils von einem Mitglied des Regierungsrates geleitet
+      werden.

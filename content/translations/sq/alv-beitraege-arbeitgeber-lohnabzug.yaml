@@ -1,0 +1,30 @@
+id: alv-beitraege-arbeitgeber-lohnabzug
+lang: sq
+source_version: 1
+question: Kush i zbret nga paga kontributet për sigurimin kundër papunësisë?
+options:
+  a: Komuna (Gemeinde) e vendbanimit
+  b: Punëmarrësi ose punëmarrësja vetë përmes pagesës
+  c: Qendra rajonale e ndërmjetësimit të punës
+  d: Punëdhënësi
+explanation: Punëdhënësi i zbret kontributet automatikisht nga paga dhe i transferon ato te organi kompetent.
+  Punëmarrësit nuk duhet të merren vetë me këtë. Edhe punëdhënësi paguan një pjesë të kontributeve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zieht die Beiträge für die Arbeitslosenversicherung vom Lohn ab?
+    options_de:
+      a: Die Wohngemeinde
+      b: Der Arbeitnehmer oder die Arbeitnehmerin selbst durch Einzahlung
+      c: Das regionale Arbeitsvermittlungszentrum
+      d: Der Arbeitgeber
+    explanation_de: Der Arbeitgeber zieht die Beiträge automatisch vom Lohn ab und überweist sie an die
+      zuständige Stelle. Die Arbeitnehmenden müssen sich nicht selbst darum kümmern. Auch der Arbeitgeber
+      bezahlt einen Teil der Beiträge.

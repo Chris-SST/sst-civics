@@ -10,6 +10,23 @@ options:
 explanation: Niki de Saint Phalle, Sophie Taeuber-Arp and Pipilotti Rist are internationally acclaimed
   artists who are connected to Switzerland. The other groups name well-known artists without this Swiss
   connection.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Namen gehören zu weltberühmten Künstlerinnen und Künstlern mit einem Bezug zur
+      Schweiz?
+    options_de:
+      a: Vincent van Gogh, Paul Cézanne und Henri Matisse
+      b: Niki de Saint Phalle, Sophie Taeuber-Arp und Pipilotti Rist
+      c: Claude Monet, Edgar Degas und Auguste Renoir
+      d: Pablo Picasso, Frida Kahlo und Salvador Dalí
+    explanation_de: Niki de Saint Phalle, Sophie Taeuber-Arp und Pipilotti Rist sind international gefeierte
+      Künstlerinnen, die mit der Schweiz verbunden sind. Die anderen Gruppen nennen bekannte Künstler
+      ohne diesen Schweizer Bezug.

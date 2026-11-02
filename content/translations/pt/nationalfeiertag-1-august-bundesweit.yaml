@@ -1,0 +1,31 @@
+id: nationalfeiertag-1-august-bundesweit
+lang: pt
+source_version: 1
+question: Qual é o dia que, em toda a Suíça, é por lei um feriado não laborável?
+options:
+  a: 2 de janeiro (Berchtoldstag)
+  b: A segunda-feira de Carnaval (Fasnachtsmontag)
+  c: A Sexta-feira Santa
+  d: 1.º de agosto, o dia da festa nacional
+explanation: O 1.º de agosto é o dia da festa nacional e é feriado em todo o país. A maioria dos outros
+  feriados, como a Sexta-feira Santa ou o Berchtoldstag, é regulada pelos próprios cantões e nem em todo
+  o lado são dias livres.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Tag ist in der ganzen Schweiz gesetzlich ein arbeitsfreier Feiertag?
+    options_de:
+      a: 2. Januar (Berchtoldstag)
+      b: Der Fasnachtsmontag
+      c: Der Karfreitag
+      d: 1. August, der Nationalfeiertag
+    explanation_de: Der 1. August ist der Nationalfeiertag und ist im ganzen Land ein Feiertag. Die meisten
+      anderen Feiertage, wie der Karfreitag oder der Berchtoldstag, werden von den Kantonen selbst geregelt
+      und sind nicht überall arbeitsfreie Tage.

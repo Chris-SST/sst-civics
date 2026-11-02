@@ -10,6 +10,22 @@ options:
 explanation: The Criminal Code sets out which acts are punishable and which penalties are possible for
   them. These include monetary penalties and custodial sentences. A court decides on the penalty in each
   individual case.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Nach welchem Gesetz wird bestimmt, ob jemand eine Gefängnisstrafe absitzen muss?
+    options_de:
+      a: Nach dem Zivilgesetzbuch
+      b: Nach dem Obligationenrecht
+      c: Nach dem Mietrecht
+      d: Nach dem Strafgesetzbuch
+    explanation_de: Das Strafgesetzbuch legt fest, welche Handlungen strafbar sind und welche Strafen
+      dafür möglich sind. Dazu gehören Geldstrafen und Freiheitsstrafen. Ein Gericht entscheidet im Einzelfall
+      über die Strafe.

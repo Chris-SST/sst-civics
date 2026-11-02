@@ -1,0 +1,29 @@
+id: uhrmacherei-schweizer-spitzenbranche
+lang: it
+source_version: 1
+question: In quale settore economico la Svizzera è da lungo tempo ai vertici a livello internazionale?
+options:
+  a: Industria tessile
+  b: Costruzione navale
+  c: Industria automobilistica
+  d: Orologeria
+explanation: Gli orologi svizzeri sono noti in tutto il mondo per la loro qualità. L'orologeria ha una
+  lunga tradizione in Svizzera ed è ancora oggi un importante settore di esportazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Wirtschaftszweig gehört die Schweiz seit langer Zeit international zur Spitze?
+    options_de:
+      a: Textilindustrie
+      b: Schiffbau
+      c: Automobilindustrie
+      d: Uhrenindustrie
+    explanation_de: Schweizer Uhren sind auf der ganzen Welt für ihre Qualität bekannt. Die Uhrenindustrie
+      hat in der Schweiz eine lange Tradition und ist auch heute noch ein wichtiger Exportzweig.

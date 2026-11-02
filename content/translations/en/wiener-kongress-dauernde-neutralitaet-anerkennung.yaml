@@ -9,6 +9,21 @@ options:
   d: Switzerland held a popular vote on neutrality for the first time.
 explanation: At the Congress of Vienna in 1815, the European Great Powers recognised the permanent neutrality
   of Switzerland. This gave neutrality an international basis.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Ereignis des Jahres 1815 ist für die Schweizer Neutralität wichtig?
+    options_de:
+      a: Die Schweiz erklärte allen ihren Nachbarstaaten den Krieg.
+      b: Die Grossmächte anerkannten die dauernde Neutralität der Schweiz.
+      c: Die Schweiz trat dem Völkerbund bei.
+      d: Die Schweiz führte erstmals eine Volksabstimmung über die Neutralität durch.
+    explanation_de: Am Wiener Kongress 1815 anerkannten die europäischen Grossmächte die dauernde Neutralität
+      der Schweiz. Dadurch erhielt die Neutralität eine internationale Grundlage.

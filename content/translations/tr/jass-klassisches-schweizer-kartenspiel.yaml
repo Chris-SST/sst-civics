@@ -1,0 +1,31 @@
+id: jass-klassisches-schweizer-kartenspiel
+lang: tr
+source_version: 1
+question: İsviçre'de hangi kâğıt oyunu klasik yerel kâğıt oyunu olarak kabul edilir?
+options:
+  a: Bridge
+  b: Jass
+  c: Poker
+  d: Rommé
+explanation: Jass, tipik İsviçre kâğıt oyunu olarak kabul edilir. Genellikle dört kişiyle, iki takım hâlinde
+  oynanır ve çoğunlukla Fransız ya da Almanca konuşulan İsviçre kâğıtlarıyla oynanır. Birçok ailede ve
+  lokantada (Beiz) oynanır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Kartenspiel gilt in der Schweiz als klassisches einheimisches Kartenspiel?
+    options_de:
+      a: Bridge
+      b: Jass
+      c: Poker
+      d: Rommé
+    explanation_de: Jass gilt als typisch schweizerisches Kartenspiel. Es wird in der Regel zu viert,
+      in zwei Teams gespielt und meistens mit französischen oder deutschsprachigen Schweizer Karten gespielt.
+      Es wird in vielen Familien und in Gaststätten (Beiz) gespielt.

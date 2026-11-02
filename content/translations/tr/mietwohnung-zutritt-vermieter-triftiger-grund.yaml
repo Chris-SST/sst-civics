@@ -1,0 +1,33 @@
+id: mietwohnung-zutritt-vermieter-triftiger-grund
+lang: tr
+source_version: 1
+question: Hangi durumda kiracılar, kiraya veren tarafa daireye giriş izni vermek zorundadır?
+options:
+  a: Hiçbir zaman, daire her zaman korunmaktadır
+  b: Haklı bir neden olduğunda
+  c: Yalnızca kiraya veren talep ettiğinde, gerekçe göstermeksizin
+  d: Her zaman ve önceden haber vermeksizin
+explanation: Kiracılar, bunun için haklı bir neden bulunduğunda, örneğin acil bir onarım söz konusu olduğunda,
+  giriş izni vermek zorundadır. Ancak kiraya veren taraf ziyaretini zamanında bildirmek ve kiracıları
+  gözetmek zorundadır. Nedensiz giriş yapılmasına izin verilmez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall müssen Mieterinnen und Mieter der vermietenden Partei den Zutritt zur
+      Wohnung gewähren?
+    options_de:
+      a: Nie, die Wohnung ist immer geschützt
+      b: Wenn ein berechtigter Grund vorliegt
+      c: Nur wenn die vermietende Partei es verlangt, ohne Angabe von Gründen
+      d: Immer und ohne vorherige Ankündigung
+    explanation_de: Mieterinnen und Mieter müssen den Zutritt gewähren, wenn dafür ein berechtigter Grund
+      vorliegt, zum Beispiel wenn es um eine dringende Reparatur geht. Die vermietende Partei muss ihren
+      Besuch jedoch rechtzeitig ankündigen und auf die Mieterinnen und Mieter Rücksicht nehmen. Ein Zutritt
+      ohne Grund ist nicht erlaubt.

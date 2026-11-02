@@ -10,6 +10,21 @@ options:
   d: When the Federal Council (Bundesrat) and Parliament meet together
 explanation: The United Federal Assembly comes into being when both chambers meet together. It elects,
   for example, the members of the Federal Council.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wann spricht man von der Vereinigten Bundesversammlung?
+    options_de:
+      a: Wenn der Nationalrat und der Ständerat getrennt in ihren eigenen Kammern beraten
+      b: Wenn alle kantonalen Parlamente gleichzeitig zusammenkommen
+      c: Wenn die Mitglieder des Nationalrats und des Ständerats gemeinsam zusammenkommen
+      d: Wenn der Bundesrat und das Parlament gemeinsam zusammenkommen
+    explanation_de: Die Vereinigte Bundesversammlung entsteht, wenn beide Kammern gemeinsam zusammentreten.
+      Sie wählt zum Beispiel die Mitglieder des Bundesrates.

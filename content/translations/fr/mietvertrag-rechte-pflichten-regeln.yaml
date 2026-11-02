@@ -1,0 +1,31 @@
+id: mietvertrag-rechte-pflichten-regeln
+lang: fr
+source_version: 1
+question: Que est-ce qui est fixé dans un contrat de bail ?
+options:
+  a: Les droits des voisins dans l'immeuble
+  b: Le montant des impôts des locataires
+  c: Les obligations de la commune (Gemeinde) envers les locataires
+  d: Les droits et les obligations des bailleurs et des locataires
+explanation: Le contrat de bail règle les relations entre la personne qui loue son bien et la personne
+  qui le prend en location. Cela comprend par exemple le loyer et la durée du bail. Le Code des obligations
+  contient les règles légales à ce sujet.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist in einem Mietvertrag festgelegt?
+    options_de:
+      a: Die Rechte der Nachbarn im Gebäude
+      b: Die Höhe der Steuern der Mieter
+      c: Die Pflichten der Gemeinde gegenüber den Mietern
+      d: Die Rechte und Pflichten der Vermieter und der Mieter
+    explanation_de: Der Mietvertrag regelt die Beziehungen zwischen der Person, die ihr Gut vermietet,
+      und der Person, die es mietet. Das umfasst zum Beispiel den Mietzins und die Dauer des Mietverhältnisses.
+      Das Obligationenrecht enthält die gesetzlichen Regeln dazu.

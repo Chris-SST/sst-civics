@@ -1,0 +1,33 @@
+id: medien-vierte-staatsgewalt
+lang: fr
+source_version: 1
+question: Les médias sont souvent désignés par une expression particulière qui décrit leur rôle dans l'État.
+  De quelle expression s'agit-il ?
+options:
+  a: Deuxième pouvoir de l'État
+  b: Pouvoir suprême de l'État
+  c: Premier pouvoir de l'État
+  d: Quatrième pouvoir de l'État
+explanation: Les trois pouvoirs de l'État sont le pouvoir législatif, le pouvoir exécutif et le pouvoir
+  judiciaire. Les médias n'en font pas partie, mais ils contrôlent la politique et informent la population.
+  C'est pourquoi on les appelle souvent le quatrième pouvoir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Medien werden oft mit einem besonderen Ausdruck bezeichnet, der ihre Rolle im Staat
+      beschreibt. Um welchen Ausdruck handelt es sich?
+    options_de:
+      a: Zweite Gewalt im Staat
+      b: Oberste Gewalt im Staat
+      c: Erste Gewalt im Staat
+      d: Vierte Gewalt im Staat
+    explanation_de: Die drei Staatsgewalten sind die gesetzgebende Gewalt, die ausführende Gewalt und
+      die richterliche Gewalt. Die Medien gehören nicht dazu, aber sie kontrollieren die Politik und informieren
+      die Bevölkerung. Deshalb nennt man sie oft die vierte Gewalt.

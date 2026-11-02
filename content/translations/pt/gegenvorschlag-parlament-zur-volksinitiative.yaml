@@ -1,0 +1,31 @@
+id: gegenvorschlag-parlament-zur-volksinitiative
+lang: pt
+source_version: 1
+question: O que pode o Parlamento opor a uma iniciativa popular (Volksinitiative) federal?
+options:
+  a: Uma prorrogação do prazo de recolha de assinaturas por mais um ano
+  b: Uma contraproposta própria, que também será submetida a votação
+  c: Uma segunda recolha de assinaturas em todos os cantões
+  d: Uma proibição de submeter a iniciativa a votação
+explanation: O Parlamento pode opor a uma iniciativa popular uma contraproposta direta. Esta acolhe frequentemente
+  o pedido em parte, mas vai menos longe. Os eleitores votam então, no mesmo dia, sobre a iniciativa e
+  sobre a contraproposta.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was kann das Parlament einer eidgenössischen Volksinitiative entgegenstellen?
+    options_de:
+      a: Eine Verlängerung der Frist für die Unterschriftensammlung um ein weiteres Jahr
+      b: Einen eigenen Gegenvorschlag, der ebenfalls zur Abstimmung gebracht wird
+      c: Eine zweite Unterschriftensammlung in allen Kantonen
+      d: Ein Verbot, die Initiative zur Abstimmung zu bringen
+    explanation_de: Das Parlament kann einer Volksinitiative einen direkten Gegenvorschlag entgegenstellen.
+      Dieser nimmt das Anliegen häufig teilweise auf, geht aber weniger weit. Die Stimmberechtigten stimmen
+      dann am selben Tag über die Initiative und über den Gegenvorschlag ab.

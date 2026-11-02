@@ -1,0 +1,30 @@
+id: einzige-obligatorische-versicherung-krankenversicherung
+lang: tr
+source_version: 1
+question: Aşağıdaki sigortalardan hangisi İsviçre'de tüm sakinler için yasal olarak zorunludur?
+options:
+  a: Hukuki koruma sigortası
+  b: Sağlık sigortası
+  c: Seyahat sigortası
+  d: Ev eşyası sigortası
+explanation: Sağlık sigortası, İsviçre'de ikamet eden tüm kişiler için zorunludur. Ev eşyası, hukuki koruma
+  ve seyahat sigortaları ise isteğe bağlıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Versicherungen ist in der Schweiz für alle Einwohner gesetzlich
+      obligatorisch?
+    options_de:
+      a: Rechtsschutzversicherung
+      b: Krankenversicherung
+      c: Reiseversicherung
+      d: Hausratversicherung
+    explanation_de: Die Krankenversicherung ist für alle Personen, die in der Schweiz wohnhaft sind, obligatorisch.
+      Hausrat-, Rechtsschutz- und Reiseversicherungen hingegen sind freiwillig.

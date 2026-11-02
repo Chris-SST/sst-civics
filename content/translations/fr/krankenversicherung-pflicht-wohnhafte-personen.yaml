@@ -1,0 +1,32 @@
+id: krankenversicherung-pflicht-wohnhafte-personen
+lang: fr
+source_version: 1
+question: Que prévoit la loi pour les personnes qui vivent en Suisse en ce qui concerne l'assurance-maladie
+  ?
+options:
+  a: Elles doivent s'assurer uniquement si elles travaillent en Suisse
+  b: Elles ont l'obligation légale de conclure une assurance-maladie
+  c: Elles doivent s'assurer uniquement si elles ont plus de 50 ans
+  d: Elles peuvent décider librement si elles veulent s'assurer ou non
+explanation: La loi sur l'assurance-maladie oblige toute personne domiciliée en Suisse à s'assurer contre
+  la maladie. Il faut s'assurer dans les trois mois qui suivent la naissance ou l'établissement du domicile.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sieht das Gesetz für Personen vor, die in der Schweiz leben, was die Krankenversicherung
+      betrifft?
+    options_de:
+      a: Sie müssen sich nur versichern, wenn sie in der Schweiz arbeiten.
+      b: Sie sind gesetzlich verpflichtet, eine Krankenversicherung abzuschliessen.
+      c: Sie müssen sich nur versichern, wenn sie über 50 Jahre alt sind.
+      d: Sie können frei entscheiden, ob sie sich versichern wollen oder nicht.
+    explanation_de: Das Krankenversicherungsgesetz verpflichtet jede Person mit Wohnsitz in der Schweiz,
+      sich gegen Krankheit zu versichern. Man muss sich innerhalb von drei Monaten nach der Geburt oder
+      der Begründung des Wohnsitzes versichern.

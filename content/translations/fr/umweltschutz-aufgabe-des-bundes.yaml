@@ -1,0 +1,33 @@
+id: umweltschutz-aufgabe-des-bundes
+lang: fr
+source_version: 1
+question: Quel niveau est responsable, en Suisse, de la protection de l'environnement et de l'édiction
+  des prescriptions en la matière ?
+options:
+  a: La Confédération
+  b: Les organisations privées
+  c: Les communes (Gemeinden) seules
+  d: Les districts seuls
+explanation: La Constitution fédérale charge la Confédération de protéger l'être humain et son environnement
+  contre les atteintes nuisibles. Elle édicte à cet effet des lois, par exemple sur la protection des
+  eaux et de la nature. Les cantons mettent en œuvre beaucoup de ces prescriptions.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Ebene ist in der Schweiz für den Umweltschutz und den Erlass der entsprechenden
+      Vorschriften zuständig?
+    options_de:
+      a: Der Bund
+      b: Die privaten Organisationen
+      c: Allein die Gemeinden
+      d: Allein die Bezirke
+    explanation_de: Die Bundesverfassung beauftragt den Bund, den Menschen und seine Umwelt vor schädlichen
+      Einwirkungen zu schützen. Er erlässt zu diesem Zweck Gesetze, zum Beispiel über den Schutz der Gewässer
+      und der Natur. Die Kantone setzen viele dieser Vorschriften um.

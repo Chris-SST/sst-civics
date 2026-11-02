@@ -9,6 +9,22 @@ options:
   d: Swiss State Charter
 explanation: The Constitution of Switzerland is called the Federal Constitution, abbreviated to BV (Bundesverfassung).
   It is the highest legal foundation of the country. The version currently in force dates from 1999.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Verfassung der Schweiz?
+    options_de:
+      a: Bundesgrundgesetz
+      b: Bundesverfassung
+      c: Bundesordnung der Schweiz
+      d: Schweizerische Staatscharta
+    explanation_de: Die Verfassung der Schweiz heisst Bundesverfassung, abgekürzt BV (Bundesverfassung).
+      Sie ist die höchste rechtliche Grundlage des Landes. Die derzeit geltende Fassung stammt aus dem
+      Jahr 1999.

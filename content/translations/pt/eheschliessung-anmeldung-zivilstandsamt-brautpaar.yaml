@@ -1,0 +1,31 @@
+id: eheschliessung-anmeldung-zivilstandsamt-brautpaar
+lang: pt
+source_version: 1
+question: Quem comunica o casamento previsto ao registo civil (Zivilstandsamt)?
+options:
+  a: As testemunhas do casamento, em nome do casal
+  b: Os noivos em conjunto
+  c: O serviço de registo de residentes (Einwohneramt) do município de residência, automaticamente
+  d: Os pais da noiva ou do noivo
+explanation: Os noivos apresentam em conjunto ao registo civil o pedido de realização do processo preparatório
+  do casamento. Outras pessoas não o podem fazer em seu lugar. Depois, o serviço verifica os requisitos
+  do casamento.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer meldet die geplante Eheschliessung dem Zivilstandsamt?
+    options_de:
+      a: Die Trauzeugen im Namen des Paares
+      b: Die Verlobten gemeinsam
+      c: Das Einwohneramt der Wohngemeinde, automatisch
+      d: Die Eltern der Braut oder des Bräutigams
+    explanation_de: Die Verlobten stellen gemeinsam beim Zivilstandsamt den Antrag auf Durchführung des
+      Vorbereitungsverfahrens der Eheschliessung. Andere Personen können das nicht an ihrer Stelle tun.
+      Danach prüft die Stelle die Voraussetzungen für die Eheschliessung.

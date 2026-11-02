@@ -1,0 +1,33 @@
+id: fakultatives-referendum-unterschriften-frist
+lang: pt
+source_version: 1
+question: Quantas assinaturas são necessárias para que um referendo facultativo contra uma lei federal
+  seja validado, e em que prazo?
+options:
+  a: 50 000 assinaturas no prazo de 18 meses
+  b: 50 000 assinaturas no prazo de 100 dias
+  c: 100 000 assinaturas no prazo de 30 dias
+  d: 100 000 assinaturas no prazo de 100 dias
+explanation: Para um referendo facultativo são necessárias 50 000 assinaturas válidas no prazo de 100
+  dias após a publicação da lei na Folha Federal (Bundesblatt). Se o referendo for validado, o povo vota
+  sobre a lei.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Unterschriften sind erforderlich, damit ein fakultatives Referendum gegen ein
+      Bundesgesetz zustande kommt, und innerhalb welcher Frist?
+    options_de:
+      a: 50 000 Unterschriften innerhalb von 18 Monaten
+      b: 50 000 Unterschriften innerhalb von 100 Tagen
+      c: 100 000 Unterschriften innerhalb von 30 Tagen
+      d: 100 000 Unterschriften innerhalb von 100 Tagen
+    explanation_de: Für ein fakultatives Referendum sind 50 000 gültige Unterschriften innerhalb von 100
+      Tagen nach der Veröffentlichung des Gesetzes im Bundesblatt erforderlich. Kommt das Referendum zustande,
+      stimmt das Volk über das Gesetz ab.

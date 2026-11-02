@@ -1,0 +1,31 @@
+id: selbstjustiz-verbot-staat-bestraft
+lang: es
+source_version: 2
+question: ¿Qué se aplica en Suiza cuando alguien ha infringido una ley?
+options:
+  a: El vecindario decide conjuntamente sobre la pena.
+  b: El Estado persigue y castiga el delito; la justicia por mano propia está prohibida.
+  c: La víctima puede determinar y ejecutar la pena por sí misma.
+  d: La familia de la víctima puede castigar por sí misma a la autora o al autor del delito.
+explanation: En Suiza, solo el Estado tiene el derecho de perseguir y castigar los delitos. De ello se
+  encargan la policía, la fiscalía y los tribunales. Quien se toma la venganza por su cuenta, incluso
+  como víctima o como familia de la víctima, puede incurrir con ello en responsabilidad penal.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt in der Schweiz, wenn jemand ein Gesetz verletzt hat?
+    options_de:
+      a: Die Nachbarschaft entscheidet gemeinsam über die Strafe.
+      b: Der Staat verfolgt und bestraft die Straftat; Selbstjustiz ist verboten.
+      c: Das Opfer kann die Strafe selbst bestimmen und vollziehen.
+      d: Die Familie des Opfers kann die Täterin oder den Täter selbst bestrafen.
+    explanation_de: In der Schweiz hat nur der Staat das Recht, Straftaten zu verfolgen und zu bestrafen.
+      Dafür sind die Polizei, die Staatsanwaltschaft und die Gerichte zuständig. Wer die Rache selbst
+      in die Hand nimmt, auch als Opfer oder als Familie des Opfers, kann sich dadurch strafbar machen.

@@ -1,0 +1,33 @@
+id: primarschule-traegerschaft-gemeinde-zuerich
+lang: pt
+source_version: 2
+question: Quem gere, no cantão de Zurique, as escolas do ensino primário?
+options:
+  a: A Direção da Educação do cantão
+  b: A Confederação
+  c: As comunas (Gemeinden)
+  d: Os distritos
+explanation: No cantão de Zurique, as comunas gerem as escolas primárias. Dependendo da localidade, trata-se
+  das comunas políticas ou de comunas escolares próprias, e o conselho escolar eleito (Schulpflege) é
+  a autoridade escolar local. O cantão apenas define o quadro geral, por exemplo o plano de estudos, e
+  supervisiona a escola pública.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer führt im Kanton Zürich die Primarschulen?
+    options_de:
+      a: Die Bildungsdirektion des Kantons
+      b: Der Bund
+      c: Die Gemeinden
+      d: Die Bezirke
+    explanation_de: Im Kanton Zürich führen die Gemeinden die Primarschulen. Je nach Ortschaft handelt
+      es sich um die politischen Gemeinden oder um eigene Schulgemeinden, und die gewählte Schulpflege
+      ist die örtliche Schulbehörde. Der Kanton legt nur den allgemeinen Rahmen fest, zum Beispiel den
+      Lehrplan, und beaufsichtigt die öffentliche Schule.

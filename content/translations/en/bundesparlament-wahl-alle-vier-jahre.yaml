@@ -1,14 +1,31 @@
 id: bundesparlament-wahl-alle-vier-jahre
 lang: en
-source_version: 1
+source_version: 2
 question: How often do the people elect the federal parliament anew?
 options:
   a: Every three years
   b: Every four years
   c: Every six years
   d: Every two years
-explanation: The National Council (Nationalrat) is elected anew by the people every four years. The Council
-  of States (Ständerat) is also elected on the same cycle in most cantons; the cantons regulate this themselves.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: The people elect the National Council (Nationalrat) anew every four years. The members of
+  the Council of States are also now elected for four years in all cantons. How they are elected, and
+  in some cases also when, is determined by each canton itself.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie oft wählt das Volk das Bundesparlament neu?
+    options_de:
+      a: Alle drei Jahre
+      b: Alle vier Jahre
+      c: Alle sechs Jahre
+      d: Alle zwei Jahre
+    explanation_de: Das Volk wählt den Nationalrat alle vier Jahre neu. Die Mitglieder des Ständerats
+      werden inzwischen ebenfalls in allen Kantonen für vier Jahre gewählt. Wie sie gewählt werden und
+      teilweise auch wann, bestimmt jeder Kanton selbst.

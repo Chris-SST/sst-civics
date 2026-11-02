@@ -1,0 +1,30 @@
+id: referendum-gesetz-verhindern
+lang: sq
+source_version: 1
+question: Çfarë mund të arrijnë qytetarët me të drejtë vote me një referendum?
+options:
+  a: Ata mund të shkruajnë vetë një ligj të ri dhe ta vënë në fuqi.
+  b: Ata mund të pengojnë një ligj të miratuar nga parlamenti.
+  c: Ata mund t'i shkarkojnë anëtarët e Këshillit Federal (Bundesrat) me votë.
+  d: Ata mund ta shpërndajnë parlamentin dhe të kërkojnë zgjedhje të reja.
+explanation: Me një referendum, qytetarët me të drejtë vote mund të kërkojnë që një ligj i miratuar nga
+  parlamenti të vihet në votim. Nëse populli e refuzon ligjin, ai nuk hyn në fuqi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was können stimmberechtigte Bürgerinnen und Bürger mit einem Referendum erreichen?
+    options_de:
+      a: Sie können selbst ein neues Gesetz schreiben und es in Kraft setzen.
+      b: Sie können ein vom Parlament verabschiedetes Gesetz verhindern.
+      c: Sie können die Mitglieder des Bundesrates per Abstimmung absetzen.
+      d: Sie können das Parlament auflösen und Neuwahlen verlangen.
+    explanation_de: Mit einem Referendum können stimmberechtigte Bürgerinnen und Bürger verlangen, dass
+      ein vom Parlament verabschiedetes Gesetz zur Abstimmung gebracht wird. Wenn das Volk das Gesetz
+      ablehnt, tritt es nicht in Kraft.

@@ -1,0 +1,31 @@
+id: roger-federer-tennisprofi
+lang: pt
+source_version: 1
+question: Em que modalidade desportiva o suíço Roger Federer é mundialmente famoso?
+options:
+  a: Hóquei no gelo
+  b: Futebol
+  c: Corridas de esqui
+  d: Ténis
+explanation: Roger Federer é um famoso tenista profissional suíço. Ganhou muitos dos grandes torneios
+  e é considerado um dos jogadores mais bem-sucedidos da história. O ténis é uma das modalidades desportivas
+  em que a Suíça tem personalidades conhecidas internacionalmente.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Sportart ist der Schweizer Roger Federer weltweit berühmt?
+    options_de:
+      a: Eishockey
+      b: Fussball
+      c: Skirennen
+      d: Tennis
+    explanation_de: Roger Federer ist ein berühmter Schweizer Tennisprofi. Er hat viele der grossen Turniere
+      gewonnen und gilt als einer der erfolgreichsten Spieler der Geschichte. Tennis ist eine der Sportarten,
+      in denen die Schweiz international bekannte Persönlichkeiten hat.

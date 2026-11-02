@@ -23,7 +23,7 @@ glossary:
 - Vermieter
 - Mieter
 - Obligationenrecht
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-181
@@ -44,3 +44,33 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort d) ist deutlich länger als die anderen und wiederholt das Wort «Mietenden» aus
+        der Frage, was sie leicht erkennbar macht; die falschen Antworten könnten ähnlich lang formuliert
+        werden, etwa «Die Rechte und Pflichten der Nachbarn in der Liegenschaft».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort d ist als einzige deutlich länger und nennt als einzige beide Vertragsparteien,
+        sodass sie sehr leicht zu erraten ist; man könnte die falschen Antworten ähnlich lang formulieren,
+        etwa «Die Rechte und Pflichten von Gemeinde und Mietenden».'
+      - 'Klein: In der Erklärung könnte man «die Dauer der Miete» durch «die Kündigungsfristen» ergänzen,
+        weil viele Mietverträge unbefristet sind.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues: []
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

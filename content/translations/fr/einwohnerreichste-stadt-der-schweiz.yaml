@@ -1,0 +1,29 @@
+id: einwohnerreichste-stadt-der-schweiz
+lang: fr
+source_version: 1
+question: Quelle ville compte le plus grand nombre d'habitants en Suisse ?
+options:
+  a: Genève
+  b: Zurich
+  c: Berne
+  d: Bâle
+explanation: Zurich est la plus grande ville de Suisse. Berne est certes la ville fédérale, mais elle
+  compte nettement moins d'habitants. Genève et Bâle sont elles aussi plus petites.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Stadt hat in der Schweiz die grösste Einwohnerzahl?
+    options_de:
+      a: Genf
+      b: Zürich
+      c: Bern
+      d: Basel
+    explanation_de: Zürich ist die grösste Stadt der Schweiz. Bern ist zwar die Bundesstadt, hat aber
+      deutlich weniger Einwohner. Genf und Basel sind ebenfalls kleiner.

@@ -1,0 +1,29 @@
+id: wiener-kongress-dauernde-neutralitaet-anerkennung
+lang: sq
+source_version: 1
+question: Cili ngjarje e vitit 1815 është e rëndësishme për neutralitetin e Zvicrës?
+options:
+  a: Zvicra u shpalli luftë të gjitha shteteve fqinje.
+  b: Fuqitë e mëdha njohën neutralitetin e përhershëm të Zvicrës.
+  c: Zvicra iu bashkua Lidhjes së Kombeve.
+  d: Zvicra zhvilloi për herë të parë një votim popullor mbi neutralitetin.
+explanation: Në Kongresin e Vjenës në vitin 1815, fuqitë e mëdha evropiane njohën neutralitetin e përhershëm
+  të Zvicrës. Kjo i dha neutralitetit një bazë ndërkombëtare.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Ereignis des Jahres 1815 ist für die Neutralität der Schweiz wichtig?
+    options_de:
+      a: Die Schweiz erklärte allen Nachbarstaaten den Krieg.
+      b: Die Grossmächte anerkannten die dauernde Neutralität der Schweiz.
+      c: Die Schweiz trat dem Völkerbund bei.
+      d: Die Schweiz führte zum ersten Mal eine Volksabstimmung über die Neutralität durch.
+    explanation_de: Am Wiener Kongress im Jahr 1815 anerkannten die europäischen Grossmächte die dauernde
+      Neutralität der Schweiz. Dies gab der Neutralität eine internationale Grundlage.

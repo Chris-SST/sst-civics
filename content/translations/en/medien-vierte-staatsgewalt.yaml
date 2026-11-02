@@ -11,6 +11,23 @@ options:
 explanation: The three branches of state power are the legislature, the executive and the judiciary. The
   media are not part of them, but they monitor politics and inform the population. That is why they are
   often called the fourth branch of state power.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Medien werden oft mit einem besonderen Begriff beschrieben, der ihre Rolle im Staat
+      ausdrückt. Wie lautet dieser Begriff?
+    options_de:
+      a: Zweite Staatsgewalt
+      b: Oberste Staatsgewalt
+      c: Erste Staatsgewalt
+      d: Vierte Staatsgewalt
+    explanation_de: Die drei Staatsgewalten sind die Legislative, die Exekutive und die Judikative. Die
+      Medien gehören nicht dazu, aber sie überwachen die Politik und informieren die Bevölkerung. Deshalb
+      werden sie oft die vierte Staatsgewalt genannt.

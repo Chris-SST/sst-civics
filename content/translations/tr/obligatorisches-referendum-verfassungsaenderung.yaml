@@ -1,0 +1,31 @@
+id: obligatorisches-referendum-verfassungsaenderung
+lang: tr
+source_version: 1
+question: İsviçre'de imza toplanmasa bile hangi tasarı hakkında her zaman oylama yapılması gerekir?
+options:
+  a: Her yeni federal yasa hakkında
+  b: Federal Anayasa'nın her değişikliği hakkında
+  c: Federal Konsey (Bundesrat) tarafından çıkarılan her yönetmelik hakkında
+  d: Konfederasyonun her bütçesi hakkında
+explanation: Federal Anayasa'nın her değişikliği zorunlu olarak halkın ve kantonların oyuna sunulmalıdır.
+  Buna zorunlu referandum denir. Federal yasalar yalnızca isteğe bağlı referanduma tabidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Über welche Vorlage muss in der Schweiz immer abgestimmt werden, auch wenn keine Unterschriften
+      gesammelt werden?
+    options_de:
+      a: Über jedes neue Bundesgesetz
+      b: Über jede Änderung der Bundesverfassung
+      c: Über jede Verordnung, die vom Bundesrat erlassen wird
+      d: Über jedes Budget der Eidgenossenschaft
+    explanation_de: Jede Änderung der Bundesverfassung muss zwingend dem Volk und den Kantonen zur Abstimmung
+      vorgelegt werden. Dies nennt man obligatorisches Referendum. Bundesgesetze unterstehen nur dem fakultativen
+      Referendum.

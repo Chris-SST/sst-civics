@@ -1,0 +1,31 @@
+id: kleine-gemeinde-vertretung-gemeindepraesident
+lang: es
+source_version: 1
+question: ¿Quién representa hacia el exterior a un municipio (Gemeinde) zuriqués pequeño?
+options:
+  a: la presidenta o el presidente del municipio
+  b: la consejera o el consejero del distrito
+  c: la secretaria o el secretario del municipio
+  d: la directora o el director de la escuela
+explanation: En los municipios zuriqueses pequeños, la presidenta o el presidente del municipio representa
+  al municipio hacia el exterior. Esta persona dirige el consejo municipal (Gemeinderat). En la ciudad
+  de Zúrich, este cargo lo ocupa la presidenta o el presidente de la ciudad.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer vertritt eine kleine Zürcher Gemeinde nach aussen?
+    options_de:
+      a: die Gemeindepräsidentin oder der Gemeindepräsident
+      b: die Bezirksrätin oder der Bezirksrat
+      c: die Gemeindeschreiberin oder der Gemeindeschreiber
+      d: die Schuldirektorin oder der Schuldirektor
+    explanation_de: In kleinen Zürcher Gemeinden vertritt die Gemeindepräsidentin oder der Gemeindepräsident
+      die Gemeinde nach aussen. Diese Person leitet den Gemeinderat. In der Stadt Zürich wird dieses Amt
+      von der Stadtpräsidentin oder dem Stadtpräsidenten ausgeübt.

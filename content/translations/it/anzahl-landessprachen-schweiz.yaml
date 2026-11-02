@@ -1,0 +1,29 @@
+id: anzahl-landessprachen-schweiz
+lang: it
+source_version: 1
+question: Quante lingue nazionali ha la Svizzera?
+options:
+  a: Sei
+  b: Cinque
+  c: Tre
+  d: Quattro
+explanation: 'La Svizzera ha quattro lingue nazionali: tedesco, francese, italiano e romancio. La diversità
+  linguistica fa parte dell''identità del Paese.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Landessprachen hat die Schweiz?
+    options_de:
+      a: Sechs
+      b: Fünf
+      c: Drei
+      d: Vier
+    explanation_de: 'Die Schweiz hat vier Landessprachen: Deutsch, Französisch, Italienisch und Rätoromanisch.
+      Die sprachliche Vielfalt ist Teil der Identität des Landes.'

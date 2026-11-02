@@ -9,6 +9,21 @@ options:
   d: Unemployment daily allowance
 explanation: Families receive child allowances as a contribution towards the costs of maintaining their
   children. They are part of the family allowances, which are regulated in the law of the Confederation.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Leistung erhalten Familien mit Kindern in der Schweiz?
+    options_de:
+      a: Invalidenrente
+      b: Kinderzulagen
+      c: Wohneigentumsprämie
+      d: Arbeitslosentaggeld
+    explanation_de: Familien erhalten Kinderzulagen als Beitrag an die Kosten für den Unterhalt ihrer
+      Kinder. Sie sind Teil der Familienzulagen, die im Recht des Bundes geregelt sind.

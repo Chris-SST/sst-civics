@@ -1,0 +1,32 @@
+id: abkuerzung-mwst-bedeutung
+lang: sq
+source_version: 1
+question: Në fatura dhe në kuponë pagese shpesh shkruhet shkurtesa «MWST». Çfarë nënkupton ajo?
+options:
+  a: Tatimin mbi banesat me qira (Mietwohnungssteuer)
+  b: Tatimin ushtarak mbi mbrojtjen (Militärwehrsteuer)
+  c: Tatimin mbi automjetet me motor (Motorwagensteuer)
+  d: Tatimin mbi vlerën e shtuar (Mehrwertsteuer)
+explanation: MWST do të thotë tatim mbi vlerën e shtuar (Mehrwertsteuer). Ai zbatohet për pjesën më të
+  madhe të mallrave dhe shërbimeve dhe është i përfshirë në çmim. Ai është një burim i rëndësishëm të
+  ardhurash për Konfederatën.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Frage: «Quittungen» wird in der Rückübersetzung zu «Einzahlungsscheinen», das sind andere
+      Dokumente. Die Antworten und die Erklärung bedeuten sonst dasselbe.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Auf Rechnungen und Einzahlungsscheinen steht oft die Abkürzung «MWST». Was bedeutet sie?
+    options_de:
+      a: Die Steuer auf gemieteten Wohnungen (Mietwohnungssteuer)
+      b: Die militärische Schutzsteuer (Militärwehrsteuer)
+      c: Die Steuer auf Motorfahrzeuge (Motorwagensteuer)
+      d: Die Steuer auf den Mehrwert (Mehrwertsteuer)
+    explanation_de: MWST bedeutet Steuer auf den Mehrwert (Mehrwertsteuer). Sie wird auf den grössten
+      Teil der Waren und Dienstleistungen angewendet und ist im Preis inbegriffen. Sie ist eine wichtige
+      Einnahmequelle für den Bund.

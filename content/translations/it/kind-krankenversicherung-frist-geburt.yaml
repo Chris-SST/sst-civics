@@ -1,0 +1,32 @@
+id: kind-krankenversicherung-frist-geburt
+lang: it
+source_version: 1
+question: Entro quale termine dalla nascita deve essere stipulata un'assicurazione malattie per un bambino
+  domiciliato in Svizzera?
+options:
+  a: entro 12 mesi
+  b: entro 3 mesi
+  c: entro 14 giorni
+  d: entro 6 mesi
+explanation: I genitori devono stipulare un'assicurazione malattie per il bambino entro tre mesi dalla
+  nascita. Se il termine viene rispettato, la copertura assicurativa vale con effetto retroattivo dalla
+  nascita.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Innerhalb welcher Frist ab der Geburt muss für ein in der Schweiz wohnhaftes Kind eine
+      Krankenversicherung abgeschlossen werden?
+    options_de:
+      a: innerhalb von 12 Monaten
+      b: innerhalb von 3 Monaten
+      c: innerhalb von 14 Tagen
+      d: innerhalb von 6 Monaten
+    explanation_de: Die Eltern müssen für das Kind innerhalb von drei Monaten ab der Geburt eine Krankenversicherung
+      abschliessen. Wird die Frist eingehalten, gilt der Versicherungsschutz rückwirkend ab der Geburt.

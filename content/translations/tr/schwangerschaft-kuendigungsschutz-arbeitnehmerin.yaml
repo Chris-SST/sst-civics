@@ -1,0 +1,32 @@
+id: schwangerschaft-kuendigungsschutz-arbeitnehmerin
+lang: tr
+source_version: 1
+question: İsviçre'de hamile kadın çalışanlar için işten çıkarma (fesih) konusunda aşağıdakilerden hangisi
+  geçerlidir?
+options:
+  a: Yalnızca toplu iş sözleşmesi bulunan işyerlerinde fesih korumasına sahiptirler
+  b: Hamilelik süresince yasal fesih korumasından yararlanırlar
+  c: Hamileliklerini işverene hemen bildirmek zorundadırlar, aksi takdirde koruma sona erer
+  d: Herhangi bir zamanda, hiçbir kısıtlama olmaksızın işten çıkarılabilirler
+explanation: Kanun, kadınları hamilelik süresince işveren tarafından işten çıkarılmaya karşı korur. Bu
+  koruma işyerinden bağımsız olarak geçerlidir. Kadınların bu dönemde güvence altında olmasını amaçlar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aussagen gilt in der Schweiz für schwangere Arbeitnehmerinnen in
+      Bezug auf die Kündigung kündigung?
+    options_de:
+      a: Sie haben nur in Betrieben mit einem Gesamtarbeitsvertrag Kündigungsschutz
+      b: Sie geniessen während der Schwangerschaft den gesetzlichen Kündigungsschutz
+      c: Sie müssen ihre Schwangerschaft dem Arbeitgeber sofort mitteilen, sonst endet der Schutz
+      d: Sie können jederzeit und ohne jede Einschränkung entlassen werden
+    explanation_de: Das Gesetz schützt Frauen während der Schwangerschaft vor einer Kündigung durch den
+      Arbeitgeber. Dieser Schutz gilt unabhängig vom Arbeitsplatz. Er soll gewährleisten, dass Frauen
+      in dieser Zeit abgesichert sind.

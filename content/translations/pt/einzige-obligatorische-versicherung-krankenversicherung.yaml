@@ -1,0 +1,30 @@
+id: einzige-obligatorische-versicherung-krankenversicherung
+lang: pt
+source_version: 1
+question: Qual dos seguintes seguros é obrigatório por lei na Suíça para todos os habitantes?
+options:
+  a: O seguro de protecção jurídica
+  b: O seguro de saúde
+  c: O seguro de viagem
+  d: O seguro de recheio da habitação
+explanation: O seguro de saúde é obrigatório para todas as pessoas com domicílio na Suíça. Os seguros
+  de recheio da habitação, de protecção jurídica e de viagem são facultativos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Versicherungen ist in der Schweiz gesetzlich für alle Einwohner
+      obligatorisch?
+    options_de:
+      a: Die Rechtsschutzversicherung
+      b: Die Krankenversicherung
+      c: Die Reiseversicherung
+      d: Die Hausratversicherung
+    explanation_de: Die Krankenversicherung ist für alle Personen mit Wohnsitz in der Schweiz obligatorisch.
+      Die Hausratversicherung, die Rechtsschutzversicherung und die Reiseversicherung sind freiwillig.

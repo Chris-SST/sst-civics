@@ -1,15 +1,31 @@
 id: hoechster-gipfel-der-schweiz
 lang: en
-source_version: 1
-question: What is the name of the highest mountain peak that lies entirely on Swiss territory?
+source_version: 2
+question: What is the name of the highest mountain peak in Switzerland?
 options:
   a: Piz Bernina
   b: Matterhorn
   c: Dufourspitze
   d: Jungfrau
-explanation: At around 4,634 metres, the Dufourspitze in the Monte Rosa massif in the Valais is the highest
-  peak in Switzerland. The Matterhorn is better known, but lower. Piz Bernina is the highest peak in the
-  Eastern Alps.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: At around 4,634 metres, the Dufourspitze in the Monte Rosa massif in the canton of Valais
+  is the highest peak in Switzerland. The Matterhorn is better known, but lower. The Piz Bernina in Graubünden
+  is the highest peak in the Eastern Alps.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie heisst der höchste Berggipfel der Schweiz?
+    options_de:
+      a: Piz Bernina
+      b: Matterhorn
+      c: Dufourspitze
+      d: Jungfrau
+    explanation_de: Mit rund 4634 Metern ist die Dufourspitze im Monte-Rosa-Massiv im Kanton Wallis der
+      höchste Gipfel der Schweiz. Das Matterhorn ist bekannter, aber niedriger. Der Piz Bernina in Graubünden
+      ist der höchste Gipfel der Ostalpen.

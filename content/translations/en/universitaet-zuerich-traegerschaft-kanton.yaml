@@ -10,6 +10,22 @@ options:
   d: The district councils of the canton
 explanation: The University of Zurich is a cantonal university. The canton of Zurich sponsors it and operates
   it. The city of Zurich and the Confederation are not primarily responsible for it.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist im Kanton Zürich für den Betrieb und die Trägerschaft der Universität Zürich
+      verantwortlich?
+    options_de:
+      a: Der Bund
+      b: Die Stadt Zürich
+      c: Der Kanton Zürich
+      d: Die Bezirksräte des Kantons
+    explanation_de: Die Universität Zürich ist eine kantonale Universität. Der Kanton Zürich ist ihr Träger
+      und betreibt sie. Die Stadt Zürich und der Bund sind nicht in erster Linie dafür verantwortlich.

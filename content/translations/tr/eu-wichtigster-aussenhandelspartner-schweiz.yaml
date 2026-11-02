@@ -1,0 +1,29 @@
+id: eu-wichtigster-aussenhandelspartner-schweiz
+lang: tr
+source_version: 1
+question: İsviçre ekonomisi için dış ticaretteki en önemli ortak kimdir?
+options:
+  a: Çin
+  b: Japonya
+  c: Avrupa Birliği
+  d: Amerika Birleşik Devletleri
+explanation: İsviçre'nin yurt dışıyla yaptığı ticaretin büyük bölümü Avrupa Birliği ülkeleriyle gerçekleşir.
+  Bu nedenle İsviçre, AB ile çeşitli anlaşmalarla bağlıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist für die Schweizer Wirtschaft der wichtigste Partner im Aussenhandel?
+    options_de:
+      a: China
+      b: Japan
+      c: Die Europäische Union
+      d: Die Vereinigten Staaten von Amerika
+    explanation_de: Der grösste Teil des Handels der Schweiz mit dem Ausland findet mit den Ländern der
+      Europäischen Union statt. Deshalb ist die Schweiz durch verschiedene Abkommen mit der EU verbunden.

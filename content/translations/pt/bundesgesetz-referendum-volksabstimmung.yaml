@@ -1,0 +1,31 @@
+id: bundesgesetz-referendum-volksabstimmung
+lang: pt
+source_version: 1
+question: O que se aplica a uma lei federal que ambas as câmaras do Parlamento aprovaram?
+options:
+  a: Os eleitores podem exigir, por meio de um referendo, uma votação popular sobre a lei.
+  b: O Conselho Federal (Bundesrat) deve, em seguida, submetê-la ainda ao Tribunal Federal (Bundesgericht)
+    para aprovação.
+  c: Entra sempre em vigor imediatamente, sem que o povo possa se pronunciar.
+  d: Os governos dos cantões devem primeiro aprová-la individualmente.
+explanation: Após a decisão de ambas as câmaras, as leis federais estão sujeitas ao referendo facultativo.
+  Se o referendo for validamente requerido, os eleitores decidem sobre a lei nas urnas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für ein Bundesgesetz, das beide Kammern des Parlaments verabschiedet haben?
+    options_de:
+      a: Die Stimmberechtigten können mittels eines Referendums eine Volksabstimmung über das Gesetz verlangen.
+      b: Der Bundesrat muss es anschliessend noch dem Bundesgericht zur Genehmigung vorlegen.
+      c: Es tritt immer sofort in Kraft, ohne dass das Volk sich dazu äussern kann.
+      d: Die Regierungen der Kantone müssen es zuerst einzeln genehmigen.
+    explanation_de: Nach dem Beschluss beider Kammern unterliegen die Bundesgesetze dem fakultativen Referendum.
+      Wenn das Referendum gültig verlangt wird, entscheiden die Stimmberechtigten an der Urne über das
+      Gesetz.

@@ -1,0 +1,31 @@
+id: kanton-zuerich-heutige-form-1803
+lang: sq
+source_version: 1
+question: Në cilin vit u krijua kantoni i Cyrihut në formën e tij të sotme?
+options:
+  a: '1291'
+  b: '1519'
+  c: '1848'
+  d: '1803'
+explanation: Kantoni i Cyrihut u krijua në formën e tij të sotme në vitin 1803 me Aktin e Ndërmjetësimit.
+  Përvjetori u festua në vitin 2003 si 200 vjet të kantonit të Cyrihut. Në vitin 1848 u krijua shteti
+  federal i sotëm.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr wurde der Kanton Zürich in seiner heutigen Form geschaffen?
+    options_de:
+      a: '1291'
+      b: '1519'
+      c: '1848'
+      d: '1803'
+    explanation_de: Der Kanton Zürich wurde im Jahr 1803 mit der Mediationsakte in seiner heutigen Form
+      geschaffen. Das Jubiläum wurde im Jahr 2003 als 200 Jahre des Kantons Zürich gefeiert. Im Jahr 1848
+      wurde der heutige Bundesstaat geschaffen.

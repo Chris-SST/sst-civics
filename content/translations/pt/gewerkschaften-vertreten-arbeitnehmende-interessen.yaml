@@ -1,0 +1,29 @@
+id: gewerkschaften-vertreten-arbeitnehmende-interessen
+lang: pt
+source_version: 1
+question: Os interesses de quem os sindicatos representam?
+options:
+  a: Os interesses dos empregadores
+  b: Os interesses das comunas (Gemeinden)
+  c: Os interesses dos bancos
+  d: Os interesses dos trabalhadores
+explanation: Os sindicatos defendem as reivindicações dos trabalhadores, por exemplo em matéria de salários
+  e condições de trabalho. Frequentemente negociam com os empregadores convenções coletivas de trabalho.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Interessen wessen vertreten die Gewerkschaften?
+    options_de:
+      a: Die Interessen der Arbeitgeber
+      b: Die Interessen der Gemeinden
+      c: Die Interessen der Banken
+      d: Die Interessen der Arbeitnehmer
+    explanation_de: Die Gewerkschaften verteidigen die Forderungen der Arbeitnehmer, zum Beispiel in Bezug
+      auf Löhne und Arbeitsbedingungen. Häufig verhandeln sie mit den Arbeitgebern Gesamtarbeitsverträge.

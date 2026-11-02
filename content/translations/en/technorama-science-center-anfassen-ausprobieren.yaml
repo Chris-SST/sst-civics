@@ -10,6 +10,23 @@ options:
   d: At the Kunsthaus Zurich
 explanation: The Technorama in Winterthur is a science centre. Visitors experiment with the exhibits themselves
   there. The Kunsthaus, the National Museum and the Opera House show art, history and performances.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Institution im Kanton Zürich können Besucherinnen und Besucher wissenschaftliche
+      und technische Phänomene selbst berühren und ausprobieren?
+    options_de:
+      a: Im Opernhaus Zürich
+      b: Im Technorama in Winterthur
+      c: Im Schweizerischen Nationalmuseum in Zürich
+      d: Im Kunsthaus Zürich
+    explanation_de: Das Technorama in Winterthur ist ein Science Center. Dort experimentieren die Besucherinnen
+      und Besucher selbst mit den Exponaten. Das Kunsthaus, das Nationalmuseum und das Opernhaus zeigen
+      Kunst, Geschichte und Aufführungen.

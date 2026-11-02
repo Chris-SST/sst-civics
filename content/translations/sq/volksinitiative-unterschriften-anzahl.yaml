@@ -1,0 +1,31 @@
+id: volksinitiative-unterschriften-anzahl
+lang: sq
+source_version: 1
+question: Sa nënshkrime të personave me të drejtë vote i nevojiten një nisme popullore (Volksinitiative)
+  federale që ajo të realizohet?
+options:
+  a: 50 000 nënshkrime
+  b: 150 000 nënshkrime
+  c: 200 000 nënshkrime
+  d: 100 000 nënshkrime
+explanation: Për një nismë popullore federale nevojiten 100 000 nënshkrime të vlefshme. Ato duhet të mblidhen
+  brenda 18 muajve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Unterschriften von Stimmberechtigten braucht eine eidgenössische Volksinitiative,
+      damit sie zustande kommt?
+    options_de:
+      a: 50 000 Unterschriften
+      b: 150 000 Unterschriften
+      c: 200 000 Unterschriften
+      d: 100 000 Unterschriften
+    explanation_de: Für eine eidgenössische Volksinitiative braucht es 100 000 gültige Unterschriften.
+      Diese müssen innerhalb von 18 Monaten gesammelt werden.

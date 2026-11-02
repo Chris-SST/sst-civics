@@ -10,6 +10,22 @@ options:
 explanation: 1 August is the National Day and is a public holiday throughout the country. Most other public
   holidays, such as Good Friday or Berchtoldstag, are regulated by the cantons themselves and are not
   days off everywhere.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Tag ist in der ganzen Schweiz ein gesetzlicher Feiertag (arbeitsfreier Tag)?
+    options_de:
+      a: 2. Januar (Berchtoldstag)
+      b: Fasnachtsmontag
+      c: Karfreitag
+      d: 1. August, der Nationalfeiertag
+    explanation_de: Der 1. August ist der Nationalfeiertag und ist im ganzen Land ein Feiertag. Die meisten
+      anderen Feiertage, wie der Karfreitag oder der Berchtoldstag, werden von den Kantonen selbst geregelt
+      und sind nicht überall arbeitsfrei.

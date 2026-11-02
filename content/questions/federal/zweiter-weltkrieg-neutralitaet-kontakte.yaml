@@ -20,7 +20,7 @@ sources:
 glossary:
 - Neutralität
 - Zweiter Weltkrieg
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-218
@@ -44,3 +44,33 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c ist deutlich länger als die anderen und übernimmt wörtlich die Formulierung
+        der Themenliste, was sie leicht erkennbar macht; die falschen Antworten könnten etwas ausführlicher
+        formuliert werden, zum Beispiel d) «Sie trat dem Bündnis der Alliierten bei und schickte Soldaten
+        an die Front.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) ist mit «schloss die Grenzen vollständig» sehr extrem formuliert, was die Frage
+        aber nicht unfair macht.'
+      - 'Klein: Die Erklärung könnte kurz sagen, was «neutral» bedeutet (sich nicht an Kriegen beteiligen),
+        zum Beispiel: «Neutral heisst: Die Schweiz kämpfte in keinem Krieg mit.»'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

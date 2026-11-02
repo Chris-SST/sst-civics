@@ -1,0 +1,34 @@
+id: nutzungsplanung-ortsebene-gemeinden
+lang: sq
+source_version: 1
+question: Kush planifikon në kantonin e Cyrihut, në nivel vendor, se si përdoret toka, për shembull ku
+  ndodhen zonat e banimit dhe zonat e tregtisë e të zejtarisë?
+options:
+  a: Kuvendi Federal (Bundesversammlung) i Zvicrës
+  b: Policia kantonale
+  c: Komunat (Gemeinden)
+  d: Vetëm këshillat e rrethit
+explanation: Komunat nxjerrin planifikimin e përdorimit të tokës për territorin e tyre, për shembull rregulloren
+  e ndërtimit dhe të zonave. Gjatë kësaj ato respektojnë udhëzimet e Konfederatës dhe të kantonit. Kështu
+  ato bashkëvendosin se si zhvillohet vendi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Gewerbe- und Handwerkszonen» ist nur eine leicht erweiterte Wiedergabe
+      von «Gewerbezonen», sonst identisch.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer plant im Kanton Zürich auf lokaler Ebene, wie der Boden genutzt wird, zum Beispiel
+      wo sich die Wohnzonen und die Gewerbe- und Handwerkszonen befinden?
+    options_de:
+      a: Die Bundesversammlung der Schweiz
+      b: Die Kantonspolizei
+      c: Die Gemeinden
+      d: Nur die Bezirksräte
+    explanation_de: Die Gemeinden erlassen die Nutzungsplanung für ihr Gebiet, zum Beispiel die Bau- und
+      Zonenordnung. Dabei halten sie sich an die Vorgaben des Bundes und des Kantons. So bestimmen sie
+      mit, wie sich der Ort entwickelt.

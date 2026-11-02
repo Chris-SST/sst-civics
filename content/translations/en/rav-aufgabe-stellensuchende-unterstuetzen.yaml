@@ -9,6 +9,21 @@ options:
   d: It issues employment references for jobseekers
 explanation: The RAV is the regional point of contact for jobseekers. It advises them and finds them jobs.
   In the canton of Zurich, it is part of the Office for Employment.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die Aufgabe des Regionalen Arbeitsvermittlungszentrums (RAV)?
+    options_de:
+      a: Es kontrolliert die Löhne in den Betrieben
+      b: Es zahlt allen Einwohnern eine Rente
+      c: Es unterstützt Stellensuchende bei der Stellensuche und vermittelt ihnen Arbeitsstellen
+      d: Es stellt Stellensuchenden Arbeitszeugnisse aus
+    explanation_de: Das RAV ist die regionale Anlaufstelle für Stellensuchende. Es berät sie und vermittelt
+      ihnen Arbeitsstellen. Im Kanton Zürich gehört es zum Amt für Arbeit.

@@ -1,0 +1,33 @@
+id: zuwanderung-fuenfzigerjahre-italien
+lang: es
+source_version: 1
+question: ¿De qué país procedía en los años cincuenta la mayor parte de la mano de obra que inmigró a
+  Suiza?
+options:
+  a: De Italia
+  b: De Turquía
+  c: De Portugal
+  d: De España
+explanation: En los años cincuenta, la mayor parte de la mano de obra inmigrante procedía de Italia. En
+  aquella época, la economía necesitaba mucha mano de obra, por ejemplo en la construcción y en la industria.
+  Más tarde llegaron también muchas personas de otros países.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchem Land stammte in den Fünfzigerjahren der grösste Teil der Arbeitskräfte, die
+      in die Schweiz einwanderten?
+    options_de:
+      a: Aus Italien
+      b: Aus der Türkei
+      c: Aus Portugal
+      d: Aus Spanien
+    explanation_de: In den Fünfzigerjahren stammte der grösste Teil der eingewanderten Arbeitskräfte aus
+      Italien. Damals brauchte die Wirtschaft viele Arbeitskräfte, zum Beispiel im Baugewerbe und in der
+      Industrie. Später kamen auch viele Menschen aus anderen Ländern.

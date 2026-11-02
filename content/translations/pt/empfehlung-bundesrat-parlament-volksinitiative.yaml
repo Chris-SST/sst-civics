@@ -1,0 +1,34 @@
+id: empfehlung-bundesrat-parlament-volksinitiative
+lang: pt
+source_version: 1
+question: Quem recomenda aos eleitores, antes da votação sobre uma iniciativa popular (Volksinitiative)
+  federal, que aceitem ou rejeitem a iniciativa?
+options:
+  a: O Conselho Federal (Bundesrat) e o Parlamento
+  b: Os governos cantonais
+  c: A Chancelaria Federal (Bundeskanzlei) por si só
+  d: O Tribunal Federal (Bundesgericht)
+explanation: Depois de uma iniciativa popular ter sido formalmente aceite, o Conselho Federal e o Parlamento
+  tomam posição sobre ela. O Parlamento recomenda aos eleitores que aceitem ou rejeitem a iniciativa.
+  Esta recomendação consta também das explicações sobre a votação, que os eleitores recebem antes da votação.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer empfiehlt den Stimmberechtigten vor der Abstimmung über eine eidgenössische Volksinitiative,
+      die Initiative anzunehmen oder abzulehnen?
+    options_de:
+      a: Der Bundesrat und das Parlament
+      b: Die Kantonsregierungen
+      c: Die Bundeskanzlei allein
+      d: Das Bundesgericht
+    explanation_de: Nachdem eine Volksinitiative formell zustande gekommen ist, nehmen der Bundesrat und
+      das Parlament dazu Stellung. Das Parlament empfiehlt den Stimmberechtigten, die Initiative anzunehmen
+      oder abzulehnen. Diese Empfehlung steht auch in den Abstimmungserläuterungen, die die Stimmberechtigten
+      vor der Abstimmung erhalten.

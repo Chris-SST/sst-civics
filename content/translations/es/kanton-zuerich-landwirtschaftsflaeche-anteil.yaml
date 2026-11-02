@@ -1,0 +1,31 @@
+id: kanton-zuerich-landwirtschaftsflaeche-anteil
+lang: es
+source_version: 1
+question: ¿Cuál es aproximadamente la proporción de la superficie del cantón de Zúrich que se utiliza
+  para la agricultura?
+options:
+  a: Aproximadamente el 68 por ciento
+  b: Aproximadamente el 25 por ciento
+  c: Aproximadamente el 11 por ciento
+  d: Aproximadamente el 41 por ciento
+explanation: Aproximadamente el 41 por ciento de la superficie del cantón de Zúrich se dedica a la agricultura.
+  El resto está formado sobre todo por bosque, superficie urbanizada y aguas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie gross ist ungefähr der Anteil der Fläche des Kantons Zürich, der für die Landwirtschaft
+      genutzt wird?
+    options_de:
+      a: Ungefähr 68 Prozent
+      b: Ungefähr 25 Prozent
+      c: Ungefähr 11 Prozent
+      d: Ungefähr 41 Prozent
+    explanation_de: Ungefähr 41 Prozent der Fläche des Kantons Zürich werden für die Landwirtschaft verwendet.
+      Der Rest besteht vor allem aus Wald, überbauter Fläche und Gewässern.

@@ -1,0 +1,35 @@
+id: stellenabsage-wegen-hautfarbe-geschlecht
+lang: fr
+source_version: 2
+question: Une femme postule à un emploi. Sa candidature est refusée uniquement parce qu'elle est une femme.
+  Quel droit fondamental est ainsi violé ?
+options:
+  a: La liberté d'établissement
+  b: La liberté de réunion
+  c: L'égalité devant la loi et l'interdiction de la discrimination
+  d: La protection de la sphère privée
+explanation: L'article 8 de la Constitution fédérale dispose que tous les êtres humains sont égaux devant
+  la loi et que l'homme et la femme sont égaux en droits. Nul ne doit subir de discrimination, par exemple
+  du fait de son origine, de sa race ou de son sexe. Celui qui refuse une candidate uniquement en raison
+  de son sexe viole donc l'égalité devant la loi et l'interdiction de la discrimination.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Frau bewirbt sich um eine Stelle. Ihre Bewerbung wird allein deshalb abgelehnt,
+      weil sie eine Frau ist. Welches Grundrecht wird dadurch verletzt?
+    options_de:
+      a: Die Niederlassungsfreiheit
+      b: Die Versammlungsfreiheit
+      c: Die Gleichheit vor dem Gesetz und das Diskriminierungsverbot
+      d: Der Schutz der Privatsphäre
+    explanation_de: Artikel 8 der Bundesverfassung bestimmt, dass alle Menschen vor dem Gesetz gleich
+      sind und dass Mann und Frau gleichberechtigt sind. Niemand darf diskriminiert werden, zum Beispiel
+      wegen der Herkunft, der Rasse oder des Geschlechts. Wer eine Bewerberin allein wegen ihres Geschlechts
+      ablehnt, verletzt also die Gleichheit vor dem Gesetz und das Diskriminierungsverbot.

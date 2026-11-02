@@ -9,6 +9,21 @@ options:
   d: They clear the forests at low altitudes.
 explanation: Some tree species tolerate heat and drought poorly. Foresters therefore rely on other species
   that are better adapted to the warmer climate. This is intended to keep the forest stable.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie reagieren Förster in der Schweiz auf steigende Temperaturen?
+    options_de:
+      a: Sie pflanzen vermehrt andere Baumarten.
+      b: Sie pflanzen nur Bäume, die schon immer dort gestanden haben.
+      c: Sie geben die Pflege des Waldes ganz auf.
+      d: Sie roden die Wälder in tiefen Lagen.
+    explanation_de: Manche Baumarten vertragen Hitze und Trockenheit schlecht. Förster setzen deshalb
+      auf andere Arten, die besser an das wärmere Klima angepasst sind. Dadurch soll der Wald stabil bleiben.

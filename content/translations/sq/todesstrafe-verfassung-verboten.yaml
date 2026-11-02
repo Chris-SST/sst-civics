@@ -1,0 +1,29 @@
+id: todesstrafe-verfassung-verboten
+lang: sq
+source_version: 1
+question: Çfarë vlen në Zvicër sipas Kushtetutës Federale për dënimin me vdekje?
+options:
+  a: Ai lejohet vetëm në rast vrasjeje.
+  b: Ai lejohet vetëm në kohë lufte.
+  c: Kantonet vendosin nëse ai vlen.
+  d: Ai është i ndaluar.
+explanation: Kushtetuta Federale mbron të drejtën për jetën në nenin 10. Dënimi me vdekje është i ndaluar
+  shprehimisht, edhe për krime të rënda.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in der Schweiz gemäss der Bundesverfassung für die Todesstrafe?
+    options_de:
+      a: Sie ist nur im Fall von Mord erlaubt.
+      b: Sie ist nur in Kriegszeiten erlaubt.
+      c: Die Kantone entscheiden, ob sie gilt.
+      d: Sie ist verboten.
+    explanation_de: Die Bundesverfassung schützt das Recht auf Leben in Artikel 10. Die Todesstrafe ist
+      ausdrücklich verboten, auch für schwere Verbrechen.

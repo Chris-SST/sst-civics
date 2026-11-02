@@ -9,6 +9,21 @@ options:
   d: Families only pay value added tax.
 explanation: For example, families can claim deductions for children or for childcare. This reduces taxable
   income and therefore the amount of tax.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie werden Familien steuerlich entlastet?
+    options_de:
+      a: Familien zahlen keine Steuern.
+      b: Familien können bei ihren Steuern Abzüge geltend machen.
+      c: Familien müssen keine Steuererklärung ausfüllen.
+      d: Familien zahlen nur Mehrwertsteuer.
+    explanation_de: Zum Beispiel können Familien Abzüge für Kinder oder für die Kinderbetreuung geltend
+      machen. Dies verringert das steuerbare Einkommen und damit den Steuerbetrag.

@@ -9,6 +9,21 @@ options:
   d: Value added tax (Mehrwertsteuer)
 explanation: MWST means Mehrwertsteuer (value added tax). It is levied on most goods and services and
   is included in the price. It is an important source of revenue for the Confederation.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Abkürzung «MWST» steht oft auf Rechnungen und Quittungen. Wofür steht sie?
+    options_de:
+      a: Mietwohnungssteuer
+      b: Militärwehrsteuer
+      c: Motorwagensteuer
+      d: Mehrwertsteuer
+    explanation_de: MWST bedeutet Mehrwertsteuer. Sie wird auf die meisten Waren und Dienstleistungen
+      erhoben und ist im Preis enthalten. Sie ist eine wichtige Einnahmequelle für den Bund.

@@ -10,6 +10,22 @@ options:
 explanation: With a popular initiative, those entitled to vote can propose an amendment to the Federal
   Constitution. If it is successful, it is put to a vote. In this way, they can push through their own
   concerns even against the will of Parliament, if the people and the cantons agree.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient die Volksinitiative den Stimmberechtigten?
+    options_de:
+      a: Sie können damit einen Entscheid des Bundesgerichts ändern.
+      b: Sie können damit ihre eigenen Forderungen auf die politische Agenda setzen.
+      c: Sie können damit das Datum der nächsten Wahlen festlegen.
+      d: Sie können damit ein vom Parlament verabschiedetes Gesetz verhindern.
+    explanation_de: Mit einer Volksinitiative können die Stimmberechtigten eine Änderung der Bundesverfassung
+      vorschlagen. Kommt sie zustande, wird darüber abgestimmt. Auf diese Weise können sie ihre eigenen
+      Anliegen auch gegen den Willen des Parlaments durchsetzen, wenn Volk und Kantone zustimmen.

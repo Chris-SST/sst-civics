@@ -1,0 +1,35 @@
+id: auslandschweizer-stimmrecht-vom-ausland
+lang: fr
+source_version: 2
+question: Une Suissesse vit durablement à l'étranger. Comment peut-elle participer aux élections et aux
+  votations fédérales ?
+options:
+  a: Elle ne peut voter que si elle se rend en Suisse pour cela.
+  b: Elle peut uniquement participer aux élections, mais pas aux votations.
+  c: Elle peut voter et élire depuis son lieu de résidence à l'étranger, sans se rendre en Suisse.
+  d: Elle perd le droit de vote et d'éligibilité au niveau de la Confédération.
+explanation: Les Suisses et Suissesses de l'étranger peuvent voter et élire au niveau fédéral sans devoir
+  se rendre en Suisse. Pour cela, ils doivent être annoncés auprès de la représentation suisse compétente
+  à l'étranger et demander par son intermédiaire leur inscription au registre des électeurs. Leur commune
+  de vote leur envoie ensuite le matériel d'élection et de vote.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Schweizerin lebt dauerhaft im Ausland. Wie kann sie an den eidgenössischen Wahlen
+      und Abstimmungen teilnehmen?
+    options_de:
+      a: Sie kann nur abstimmen, wenn sie dafür in die Schweiz reist.
+      b: Sie kann nur an den Wahlen teilnehmen, aber nicht an den Abstimmungen.
+      c: Sie kann von ihrem Wohnort im Ausland aus abstimmen und wählen, ohne in die Schweiz zu reisen.
+      d: Sie verliert das Stimm- und Wahlrecht auf Ebene des Bundes.
+    explanation_de: Auslandschweizerinnen und Auslandschweizer können auf Bundesebene abstimmen und wählen,
+      ohne in die Schweiz reisen zu müssen. Dafür müssen sie bei der zuständigen schweizerischen Vertretung
+      im Ausland gemeldet sein und über diese ihre Eintragung in das Stimmregister beantragen. Ihre Stimmgemeinde
+      schickt ihnen anschliessend das Wahl- und Abstimmungsmaterial.

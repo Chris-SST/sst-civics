@@ -1,0 +1,32 @@
+id: zulassung-motorfahrzeuge-kantonales-strassenverkehrsamt
+lang: tr
+source_version: 1
+question: Zürih kantonunda bir motorlu aracı karayolu trafiğine kim kabul eder ve bunun için plakaları
+  kim verir?
+options:
+  a: Trafik kontrolü sırasında kanton polisi
+  b: Kantonun karayolu trafik dairesi (Strassenverkehrsamt)
+  c: İsviçre Touring Kulübü
+  d: İkamet yerindeki belediye (Gemeinde) idaresi
+explanation: Motorlu araçların trafiğe kabulü, kantonun karayolu trafik dairesinin görevidir. Plakaları
+  da bu daire verir. Belediye ve polis bu konuda yetkili değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer lässt im Kanton Zürich ein Motorfahrzeug zum Strassenverkehr zu und wer gibt dafür
+      die Kontrollschilder ab?
+    options_de:
+      a: Die Kantonspolizei während der Verkehrskontrolle
+      b: Das Strassenverkehrsamt des Kantons
+      c: Der Touring Club der Schweiz
+      d: Die Verwaltung der Wohnortsgemeinde (Gemeinde)
+    explanation_de: Die Zulassung von Motorfahrzeugen zum Verkehr ist Aufgabe des Strassenverkehrsamts
+      des Kantons. Dieses Amt gibt auch die Kontrollschilder ab. Die Gemeinde und die Polizei sind dafür
+      nicht zuständig.

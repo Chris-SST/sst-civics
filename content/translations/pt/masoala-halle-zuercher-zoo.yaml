@@ -1,0 +1,29 @@
+id: masoala-halle-zuercher-zoo
+lang: pt
+source_version: 1
+question: A que instituição em Zurique pertence o Pavilhão Masoala, com a floresta tropical de Madagáscar?
+options:
+  a: Ao Jardim Zoológico de Zurique
+  b: Ao Jardim Botânico da Universidade
+  c: Ao Museu de História Natural
+  d: Ao Technorama
+explanation: O Pavilhão Masoala faz parte do Jardim Zoológico de Zurique. Mostra uma floresta tropical
+  como a que cresce em Madagáscar. Aí vivem também animais dessa floresta tropical.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Zu welcher Institution in Zürich gehört die Masoala-Halle mit dem Regenwald von Madagaskar?
+    options_de:
+      a: Zum Zoo Zürich
+      b: Zum Botanischen Garten der Universität
+      c: Zum Naturhistorischen Museum
+      d: Zum Technorama
+    explanation_de: Die Masoala-Halle gehört zum Zoo Zürich. Sie zeigt einen Regenwald, wie er in Madagaskar
+      wächst. Dort leben auch Tiere dieses Regenwaldes.

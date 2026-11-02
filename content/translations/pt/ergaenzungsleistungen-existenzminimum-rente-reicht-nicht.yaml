@@ -1,0 +1,33 @@
+id: ergaenzungsleistungen-existenzminimum-rente-reicht-nicht
+lang: pt
+source_version: 1
+question: Quem pode receber prestações complementares na Suíça?
+options:
+  a: Pessoas que perderam o emprego e recebem subsídio de desemprego
+  b: Todas as pessoas com mais de 50 anos
+  c: Pessoas cuja pensão do seguro de velhice e sobrevivência (AHV) ou do seguro de invalidez (IV) não
+    cobre o mínimo existencial
+  d: Todas as pessoas que recebem assistência social
+explanation: As prestações complementares ajudam as pessoas cuja pensão do seguro de velhice e sobrevivência
+  (AHV) ou do seguro de invalidez e os demais rendimentos não são suficientes para viver. Constituem um
+  direito legal e não são assistência social. São pagas além da pensão.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann in der Schweiz Ergänzungsleistungen erhalten?
+    options_de:
+      a: Personen, die ihre Arbeit verloren haben und Arbeitslosengeld erhalten
+      b: Alle Personen über 50 Jahre
+      c: Personen, deren Rente der Alters- und Hinterlassenenversicherung (AHV) oder der Invalidenversicherung
+        (IV) das Existenzminimum nicht deckt
+      d: Alle Personen, die Sozialhilfe erhalten
+    explanation_de: Die Ergänzungsleistungen helfen Personen, deren Rente der Alters- und Hinterlassenenversicherung
+      (AHV) oder der Invalidenversicherung und die übrigen Einkünfte zum Leben nicht ausreichen. Sie sind
+      ein gesetzlicher Anspruch und keine Sozialhilfe. Sie werden zusätzlich zur Rente ausbezahlt.

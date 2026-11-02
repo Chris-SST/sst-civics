@@ -1,0 +1,29 @@
+id: nachbarland-im-westen-der-schweiz
+lang: tr
+source_version: 1
+question: Hangi ülke İsviçre'nin batısında yer alır ve İsviçre ile sınır komşusudur?
+options:
+  a: Almanya
+  b: İtalya
+  c: Fransa
+  d: Avusturya
+explanation: İsviçre, batıda ve kuzeybatıda Fransa ile komşudur. Almanya kuzeyde, Avusturya ve Lihtenştayn
+  doğuda, İtalya ise güneyde yer alır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Land liegt im Westen der Schweiz und ist ein Nachbarland der Schweiz?
+    options_de:
+      a: Deutschland
+      b: Italien
+      c: Frankreich
+      d: Österreich
+    explanation_de: Die Schweiz grenzt im Westen und Nordwesten an Frankreich. Deutschland liegt im Norden,
+      Österreich und Liechtenstein liegen im Osten, Italien liegt im Süden.

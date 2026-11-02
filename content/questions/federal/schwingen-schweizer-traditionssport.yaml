@@ -1,19 +1,19 @@
 id: schwingen-schweizer-traditionssport
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.kultur.feiertage_brauchtum
-question_de: Welche Sportart gilt in der Schweiz als traditioneller Nationalsport, bei dem zwei Männer
-  in Hosen aus Zwilch miteinander ringen?
+question_de: Welche traditionelle Sportart in der Schweiz ist eine Art Ringkampf?
 options_de:
   a: Hornussen
   b: Schwingen
   c: Curling
   d: Steinstossen
 correct: b
-explanation_de: Schwingen ist eine Form des Ringens und gilt als Schweizer Traditionssport. Gekämpft wird
-  auf einem Sägemehlring. Bekannt sind die Schwingfeste, zum Beispiel das Eidgenössische Schwing- und
-  Älplerfest.
+explanation_de: 'Schwingen ist ein Ringkampf zwischen zwei Personen auf einem runden Platz mit Sägemehl
+  und gilt als Schweizer Traditionssport. Hornussen und Steinstossen sind auch alte Schweizer Sportarten,
+  aber keine Ringkämpfe: Beim Hornussen schlägt man eine kleine Scheibe weit durch die Luft, beim Steinstossen
+  wirft man einen schweren Stein. Curling spielt man auf dem Eis, und es kommt ursprünglich aus Schottland.'
 sources:
 - url: https://www.aboutswitzerland.eda.admin.ch/de/traditionen
   checked: &id001 2026-11-02
@@ -22,7 +22,7 @@ sources:
 glossary:
 - Schwingen
 - Traditionssport
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-305
@@ -32,16 +32,47 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Schwingen ist der traditionelle Schweizer Nationalsport, bei dem zwei Schwinger in Zwilchhosen
-      miteinander ringen, während Hornussen, Curling und Steinstossen keine Ringkämpfe sind.
+    version: 2
+    reasoning: Schwingen ist der traditionelle Schweizer Ringkampf auf Sägemehl, während Hornussen, Curling
+      und Steinstossen keine Ringkämpfe sind.
   source:
     verdict: supported
-    note: Quelle 1 nennt Schwingen als «eine Art Ringen» und als einzigartigen Schweizer Brauch; sie erwähnt
-      auch das Eidgenössische Schwing- und Älplerfest. Quelle 2 beschreibt Schwingen (Hosenlupf) als Variante
-      des Freistilringens, Hornussen und Steinstossen sind andere Sportarten. Zwilchhosen, Sägemehlring
-      und die Bezeichnung «Nationalsport» für Schwingen werden nicht wörtlich bestätigt, die Kernaussage
-      ist aber gestützt.
+    note: Quelle 1 nennt Schwingen «eine Art Ringen», Quelle 2 «eine in der Schweiz beliebte Variante
+      des Freistilringens». Beide Quellen beschreiben Hornussen als Mischung aus Golf und Baseball und
+      Steinstossen als Wettkampf im Steinstossen, also nicht als Ringkampf. Sägemehl, den runden Platz
+      und die schottische Herkunft des Curlings erwähnen sie nicht, das ändert die Antwort aber nicht.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Beim Steinstossen wird der Stein gestossen und nicht im engeren Sinn geworfen; besser
+        wäre «beim Steinstossen stösst man einen schweren Stein möglichst weit».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung könnte es statt «beim Steinstossen wirft man einen schweren Stein» genauer
+        heissen «stösst man einen schweren Stein möglichst weit», damit das Wort zum Namen der Sportart
+        passt.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung steht, Schwingen werde «auf einem runden Platz mit Sägemehl» gekämpft.
+        Das stimmt, steht aber nicht in den Quellen. Man könnte es weglassen oder mit «in einem Sägemehlring»
+        einfacher formulieren.'
+      - 'Klein: Die Erklärung sagt, Curling komme ursprünglich aus Schottland. Das ist allgemein bekannt,
+        aber für die Frage nicht nötig. Der Satz könnte auf «Curling spielt man auf dem Eis» gekürzt werden.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

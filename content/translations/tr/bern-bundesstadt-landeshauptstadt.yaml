@@ -1,0 +1,32 @@
+id: bern-bundesstadt-landeshauptstadt
+lang: tr
+source_version: 1
+question: İsviçre'de başkent rolünü hangi şehir üstlenmektedir?
+options:
+  a: Bern
+  b: Cenevre
+  c: Lozan
+  d: Zürih
+explanation: Bern, Federal Konsey (Bundesrat) ile Federal Meclis (Bundesversammlung) merkezidir ve «Bundesstadt»
+  (Konfederasyon şehri) olarak adlandırılır. Federal Anayasa hiçbir şehri başkent olarak belirtmez, ancak
+  Bern bu rolü üstlenir. Zürih en büyük şehirdir, Lozan ise Federal Mahkeme (Bundesgericht) merkezidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Stadt übernimmt in der Schweiz die Rolle der Hauptstadt?
+    options_de:
+      a: Bern
+      b: Genf
+      c: Lausanne
+      d: Zürich
+    explanation_de: Bern ist der Sitz des Bundesrates und der Bundesversammlung und wird als «Bundesstadt»
+      (Stadt der Eidgenossenschaft) bezeichnet. Die Bundesverfassung nennt keine Stadt als Hauptstadt,
+      aber Bern übernimmt diese Rolle. Zürich ist die grösste Stadt, Lausanne hingegen ist der Sitz des
+      Bundesgerichts.

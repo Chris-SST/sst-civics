@@ -10,6 +10,22 @@ options:
 explanation: In a democracy, the population elects its representatives to Parliament. At the level of
   the Confederation, these are the National Council (Nationalrat) and the Council of States (Ständerat).
   Parliament then enacts the federal laws on behalf of the people.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches ist eines der Rechte der Bevölkerung in einer Demokratie wie der Schweiz?
+    options_de:
+      a: Sie bestimmt die Richterinnen und Richter des Bundesgerichts durch das Los.
+      b: Sie entscheidet allein über die Gesetze, ohne das Parlament.
+      c: Sie bestimmt ihr Parlament durch Wahlen.
+      d: Sie wählt die Armeeführung direkt.
+    explanation_de: In einer Demokratie wählt die Bevölkerung ihre Vertreterinnen und Vertreter ins Parlament.
+      Auf Ebene des Bundes sind dies der Nationalrat und der Ständerat. Das Parlament erlässt dann im
+      Namen des Volkes die Bundesgesetze.

@@ -1,0 +1,31 @@
+id: mitwirkung-gemeinde-urnengang-stimmabgabe
+lang: it
+source_version: 1
+question: In che modo le persone con diritto di voto partecipano politicamente nel loro Comune (Gemeinde)
+  alle votazioni alle urne?
+options:
+  a: Presiedono le sedute del consiglio comunale (Gemeinderat)
+  b: Attuano le decisioni del Comune
+  c: Esprimono il loro voto nelle elezioni e nelle votazioni
+  d: Emanano direttamente le leggi del Cantone
+explanation: Alle urne le persone con diritto di voto si pronunciano su progetti sottoposti a votazione
+  ed eleggono le autorità. L'attuazione delle decisioni è compito delle autorità e dell'amministrazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Auf welche Weise beteiligen sich die Stimmberechtigten in ihrer Gemeinde politisch an
+      den Urnenabstimmungen?
+    options_de:
+      a: Sie führen den Vorsitz bei den Sitzungen des Gemeinderats
+      b: Sie setzen die Beschlüsse der Gemeinde um
+      c: Sie geben ihre Stimme bei den Wahlen und Abstimmungen ab
+      d: Sie erlassen direkt die Gesetze des Kantons
+    explanation_de: An der Urne äussern sich die Stimmberechtigten zu Vorlagen, die zur Abstimmung unterbreitet
+      werden, und wählen die Behörden. Die Umsetzung der Beschlüsse ist Aufgabe der Behörden und der Verwaltung.

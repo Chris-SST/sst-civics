@@ -9,6 +9,21 @@ options:
   d: The civil registry offices and the residents' registration office
 explanation: There are several points of contact for questions about employment law. These include lawyers,
   trade unions and employment tribunals. The other bodies are responsible for other tasks.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann bei Fragen zum Arbeitsrecht helfen?
+    options_de:
+      a: Die Schulbehörde und die Kirchgemeinde
+      b: Rechtsanwälte, Gewerkschaften und Arbeitsgerichte
+      c: Die Verkehrsbetriebe und die Post
+      d: Die Zivilstandsämter und das Einwohneramt
+    explanation_de: Bei Fragen zum Arbeitsrecht gibt es mehrere Anlaufstellen. Dazu gehören Rechtsanwälte,
+      Gewerkschaften und Arbeitsgerichte. Die anderen Stellen sind für andere Aufgaben zuständig.

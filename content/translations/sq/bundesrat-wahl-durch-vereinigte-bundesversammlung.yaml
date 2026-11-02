@@ -1,0 +1,29 @@
+id: bundesrat-wahl-durch-vereinigte-bundesversammlung
+lang: sq
+source_version: 1
+question: Kush i zgjedh shtatë anëtarët e Këshillit Federal (Bundesrat)?
+options:
+  a: Populli, me votim në kutinë e votimit
+  b: Qeveritë e kantoneve
+  c: Gjykata Federale (Bundesgericht)
+  d: Këshilli Kombëtar (Nationalrat) dhe Këshilli i Shteteve (Ständerat) së bashku
+explanation: Të dyja dhomat e Parlamentit mblidhen si Kuvendi Federal i Bashkuar (Vereinigte Bundesversammlung)
+  dhe zgjedhin anëtarët e Këshillit Federal. Populli nuk e zgjedh drejtpërdrejt Këshillin Federal në Zvicër.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wählt die sieben Mitglieder des Bundesrates?
+    options_de:
+      a: Das Volk, mit der Abstimmung an der Urne
+      b: Die Regierungen der Kantone
+      c: Das Bundesgericht
+      d: Der Nationalrat und der Ständerat zusammen
+    explanation_de: Die beiden Kammern des Parlaments versammeln sich als Vereinigte Bundesversammlung
+      und wählen die Mitglieder des Bundesrates. Das Volk wählt den Bundesrat in der Schweiz nicht direkt.

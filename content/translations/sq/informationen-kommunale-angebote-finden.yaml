@@ -1,0 +1,32 @@
+id: informationen-kommunale-angebote-finden
+lang: sq
+source_version: 2
+question: Ku mund të gjenden informacione për ofertat dhe rregullat e komunës (Gemeinde) tuaj?
+options:
+  a: Në Fletoren Federale (Bundesblatt) të Konfederatës
+  b: Në gazetën lokale ose në faqen e internetit të komunës
+  c: Në ambasadën e vendit të origjinës
+  d: Te Këshilli Federal (Bundesrat) në Bernë
+explanation: Komuna informon për ofertat dhe rregullat e saj kryesisht në gazetën lokale dhe në faqen
+  e saj të internetit. Konfederata dhe Këshilli Federal janë përgjegjës për çështjet kombëtare, ndërsa
+  një ambasadë e huaj nuk është aspak përgjegjëse për komunën. Edhe administrata e komunës jep informacion.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wo können Informationen über die Angebote und Regeln Ihrer Gemeinde gefunden werden?
+    options_de:
+      a: Im Bundesblatt des Bundes
+      b: In der lokalen Zeitung oder auf der Website der Gemeinde
+      c: In der Botschaft des Herkunftslandes
+      d: Beim Bundesrat in Bern
+    explanation_de: Die Gemeinde informiert über ihre Angebote und Regeln hauptsächlich in der lokalen
+      Zeitung und auf ihrer Website. Der Bund und der Bundesrat sind für nationale Angelegenheiten zuständig,
+      während eine ausländische Botschaft überhaupt nicht für die Gemeinde zuständig ist. Auch die Gemeindeverwaltung
+      gibt Informationen.

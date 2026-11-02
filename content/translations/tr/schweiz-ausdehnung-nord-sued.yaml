@@ -1,0 +1,29 @@
+id: schweiz-ausdehnung-nord-sued
+lang: tr
+source_version: 1
+question: İsviçre'de en kuzey noktadan en güney noktaya kadar yaklaşık ne kadar mesafe vardır?
+options:
+  a: yaklaşık 650 kilometre
+  b: yaklaşık 220 kilometre
+  c: yaklaşık 120 kilometre
+  d: yaklaşık 450 kilometre
+explanation: İsviçre'nin kuzeyden güneye uzunluğu yaklaşık 220 kilometredir. Yani küçük bir ülkedir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie gross ist in der Schweiz ungefähr die Entfernung vom nördlichsten Punkt bis zum südlichsten
+      Punkt?
+    options_de:
+      a: ungefähr 650 Kilometer
+      b: ungefähr 220 Kilometer
+      c: ungefähr 120 Kilometer
+      d: ungefähr 450 Kilometer
+    explanation_de: Die Länge der Schweiz von Norden nach Süden beträgt ungefähr 220 Kilometer. Es ist
+      also ein kleines Land.

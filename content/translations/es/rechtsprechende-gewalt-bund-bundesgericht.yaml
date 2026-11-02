@@ -1,0 +1,31 @@
+id: rechtsprechende-gewalt-bund-bundesgericht
+lang: es
+source_version: 1
+question: ¿Qué autoridad es, a nivel de la Confederación, el órgano judicial supremo de Suiza?
+options:
+  a: La Cancillería Federal (Bundeskanzlei)
+  b: El Consejo Federal (Bundesrat)
+  c: La Asamblea Federal (Bundesversammlung)
+  d: El Tribunal Federal (Bundesgericht)
+explanation: La Constitución Federal atribuye el poder judicial de la Confederación al Tribunal Federal
+  (Bundesgericht). Es la autoridad judicial suprema de la Confederación. El Consejo Federal (Bundesrat)
+  y la Asamblea Federal (Bundesversammlung) ejercen respectivamente el poder ejecutivo y el poder legislativo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde ist auf Bundesebene das oberste Gericht der Schweiz?
+    options_de:
+      a: Die Bundeskanzlei
+      b: Der Bundesrat
+      c: Die Bundesversammlung
+      d: Das Bundesgericht
+    explanation_de: Die Bundesverfassung überträgt die richterliche Gewalt des Bundes dem Bundesgericht.
+      Es ist die oberste richterliche Behörde des Bundes. Der Bundesrat und die Bundesversammlung üben
+      jeweils die vollziehende Gewalt und die gesetzgebende Gewalt aus.

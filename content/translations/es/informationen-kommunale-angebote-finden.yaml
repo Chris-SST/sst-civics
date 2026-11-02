@@ -1,0 +1,35 @@
+id: informationen-kommunale-angebote-finden
+lang: es
+source_version: 2
+question: ¿Dónde se puede encontrar información sobre los servicios y las normas del propio municipio
+  (Gemeinde)?
+options:
+  a: En la Hoja Federal (Bundesblatt) de la Confederación Suiza
+  b: En el periódico local o en el sitio web del municipio
+  c: En la embajada del país de origen
+  d: En el Consejo Federal (Bundesrat) en Berna
+explanation: El municipio informa sobre sus servicios y normas sobre todo en el periódico local y en su
+  sitio web en internet. La Confederación y el Consejo Federal son competentes en temas nacionales; una
+  embajada extranjera no lo es en absoluto para el municipio. La administración municipal también ofrece
+  información.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wo kann man Informationen über die Dienstleistungen und die Regeln der eigenen Gemeinde
+      finden?
+    options_de:
+      a: Im Bundesblatt der Schweizerischen Eidgenossenschaft
+      b: In der lokalen Zeitung oder auf der Website der Gemeinde
+      c: In der Botschaft des Herkunftslandes
+      d: Beim Bundesrat in Bern
+    explanation_de: Die Gemeinde informiert über ihre Dienstleistungen und Regeln vor allem in der lokalen
+      Zeitung und auf ihrer Website im Internet. Der Bund und der Bundesrat sind für nationale Themen
+      zuständig; eine ausländische Botschaft ist für die Gemeinde überhaupt nicht zuständig. Auch die
+      Gemeindeverwaltung bietet Informationen an.

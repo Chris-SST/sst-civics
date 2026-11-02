@@ -1,0 +1,29 @@
+id: wallis-gebirgskanton-alpen
+lang: fr
+source_version: 1
+question: Lequel de ces cantons est fortement marqué par la montagne ?
+options:
+  a: Bâle-Ville
+  b: Valais
+  c: Thurgovie
+  d: Genève
+explanation: Le Valais compte de nombreux hauts sommets alpins, dont la pointe Dufour, la plus haute montagne
+  de Suisse. La Thurgovie, Bâle-Ville et Genève se situent plutôt en plaine ou au bord de lacs et de rivières.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher dieser Kantone ist stark von den Bergen geprägt?
+    options_de:
+      a: Basel-Stadt
+      b: Wallis
+      c: Thurgau
+      d: Genf
+    explanation_de: Das Wallis zählt viele hohe Alpengipfel, darunter die Dufourspitze, den höchsten Berg
+      der Schweiz. Der Thurgau, Basel-Stadt und Genf liegen eher in der Ebene oder an Seen und Flüssen.

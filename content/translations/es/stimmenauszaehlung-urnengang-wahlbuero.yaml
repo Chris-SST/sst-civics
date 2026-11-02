@@ -1,0 +1,31 @@
+id: stimmenauszaehlung-urnengang-wahlbuero
+lang: es
+source_version: 1
+question: ¿Quién cuenta los votos emitidos en las votaciones en las urnas en un municipio (Gemeinde) del
+  cantón de Zúrich?
+options:
+  a: La autoridad de asistencia social
+  b: La oficina electoral
+  c: La secretaria municipal por sí sola
+  d: La fiscalía
+explanation: La oficina electoral determina los resultados del municipio en las votaciones y en las elecciones.
+  Está formada por varias personas, para que el recuento se desarrolle de forma correcta y verificable.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zählt die bei Urnenabstimmungen abgegebenen Stimmen in einer Gemeinde des Kantons
+      Zürich?
+    options_de:
+      a: Die Sozialbehörde
+      b: Das Wahlbüro
+      c: Die Gemeindeschreiberin allein
+      d: Die Staatsanwaltschaft
+    explanation_de: Das Wahlbüro ermittelt die Ergebnisse der Gemeinde bei Abstimmungen und bei Wahlen.
+      Es besteht aus mehreren Personen, damit die Auszählung korrekt und nachprüfbar abläuft.

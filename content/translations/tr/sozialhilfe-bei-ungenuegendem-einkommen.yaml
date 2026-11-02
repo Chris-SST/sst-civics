@@ -1,0 +1,32 @@
+id: sozialhilfe-bei-ungenuegendem-einkommen
+lang: tr
+source_version: 1
+question: Bir kişinin geliri ve malvarlığı geçinmeye yetmediğinde belediye (Gemeinde) ne sunar?
+options:
+  a: Sosyal yardım
+  b: Bir inşaat ruhsatı
+  c: Bir vatandaşlığa kabul
+  d: Bir ilkokul bursu
+explanation: Geçimini kendi imkânlarıyla sağlayamayan kişi, sosyal yardımdan destek alma hakkına sahiptir.
+  Bu yardım, kişinin ikamet ettiği belediye tarafından verilir. Sosyal yardım, sosyal güvenliğin son ağıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Volksschule» und «Primarschule» sind hier als Schulstufe gleichwertig,
+      Frage, Antworten und Erklärung stimmen inhaltlich überein.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bietet die Gemeinde einer Person an, wenn deren Einkommen und Vermögen zum Lebensunterhalt
+      nicht ausreichen?
+    options_de:
+      a: Sozialhilfe
+      b: Eine Baubewilligung
+      c: Eine Einbürgerung
+      d: Ein Stipendium für die Primarschule
+    explanation_de: Eine Person, die ihren Lebensunterhalt nicht mit ihren eigenen Mitteln bestreiten
+      kann, hat das Recht, Unterstützung aus der Sozialhilfe zu erhalten. Diese Hilfe wird von der Gemeinde
+      geleistet, in der die Person wohnt. Die Sozialhilfe ist das letzte Netz der sozialen Sicherheit.

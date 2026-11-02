@@ -1,0 +1,29 @@
+id: street-parade-zuerich-werte
+lang: sq
+source_version: 1
+question: Për cilat vlera qëndron Street Parade në Zürich?
+options:
+  a: Vendlindja, besimi, familja, bashkësia dhe besnikëria
+  b: Tradita, rregulli, zellu në punë, kursimi dhe përpikmëria
+  c: Sporti, shëndeti, performanca, garimi dhe sjellja e ndershme sportive
+  d: Dashuria, paqja, liria, bujaria dhe toleranca
+explanation: Street Parade është një paradë e madhe tekno në Zürich. Ajo e kupton veten si demonstratë
+  për dashurinë, paqen, lirinë, bujarinë dhe tolerancën.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für welche Werte steht die Street Parade in Zürich?
+    options_de:
+      a: Heimat, Glaube, Familie, Gemeinschaft und Treue
+      b: Tradition, Ordnung, Fleiss, Sparsamkeit und Pünktlichkeit
+      c: Sport, Gesundheit, Leistung, Wettkampf und Fairness
+      d: Liebe, Frieden, Freiheit, Grosszügigkeit und Toleranz
+    explanation_de: Die Street Parade ist eine grosse Techno-Parade in Zürich. Sie versteht sich als Demonstration
+      für Liebe, Frieden, Freiheit, Grosszügigkeit und Toleranz.

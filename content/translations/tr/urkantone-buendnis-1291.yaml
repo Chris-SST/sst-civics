@@ -1,0 +1,32 @@
+id: urkantone-buendnis-1291
+lang: tr
+source_version: 1
+question: 1291 yılında hangi üç bölge ittifak kurdu ve sonraki Eski İsviçre Konfederasyonu'nun çekirdeği
+  sayılır?
+options:
+  a: Uri, Schwyz ve Unterwalden
+  b: Glarus, Zug ve Uri
+  c: Basel, Schaffhausen ve Appenzell
+  d: Zürih, Bern ve Luzern
+explanation: Uri, Schwyz ve Unterwalden 1291 yılında bir Konfederasyon kurdu. Bu tarih İsviçre'nin başlangıcı
+  sayılır ve 1 Ağustos'ta kutlanır. Diğer yerler Konfederasyon'a ancak daha sonra katıldı.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche drei Regionen schlossen sich im Jahr 1291 zu einem Bündnis zusammen und gelten
+      als Kern der späteren Alten Eidgenossenschaft?
+    options_de:
+      a: Uri, Schwyz und Unterwalden
+      b: Glarus, Zug und Uri
+      c: Basel, Schaffhausen und Appenzell
+      d: Zürich, Bern und Luzern
+    explanation_de: Uri, Schwyz und Unterwalden gründeten im Jahr 1291 eine Eidgenossenschaft. Dieses
+      Datum gilt als Beginn der Schweiz und wird am 1. August gefeiert. Die anderen Orte traten der Eidgenossenschaft
+      erst später bei.

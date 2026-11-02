@@ -1,0 +1,35 @@
+id: auslandschweizer-stimmrecht-vom-ausland
+lang: es
+source_version: 2
+question: Una ciudadana suiza vive de forma permanente en el extranjero. ¿Cómo puede participar en las
+  elecciones y votaciones federales?
+options:
+  a: Solo puede votar si viaja a Suiza para ello.
+  b: Solo puede participar en las elecciones, pero no en las votaciones.
+  c: Puede votar y elegir desde su lugar de residencia en el extranjero, sin viajar a Suiza.
+  d: Pierde el derecho de voto y de elección a nivel de la Confederación.
+explanation: Los suizos y las suizas residentes en el extranjero pueden elegir y votar a nivel de la Confederación
+  sin tener que viajar a Suiza. Para ello, deben estar registrados en la representación suiza competente
+  en el extranjero y solicitar a través de ella la inscripción en el registro electoral. Su municipio
+  de voto les enviará entonces la documentación para las elecciones y votaciones.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Schweizer Bürgerin lebt dauerhaft im Ausland. Wie kann sie an den eidgenössischen
+      Wahlen und Abstimmungen teilnehmen?
+    options_de:
+      a: Sie kann nur abstimmen, wenn sie dafür in die Schweiz reist.
+      b: Sie kann nur an den Wahlen teilnehmen, aber nicht an den Abstimmungen.
+      c: Sie kann von ihrem Wohnort im Ausland aus abstimmen und wählen, ohne in die Schweiz zu reisen.
+      d: Sie verliert das Stimm- und Wahlrecht auf Ebene des Bundes.
+    explanation_de: Die im Ausland wohnhaften Schweizerinnen und Schweizer können auf Ebene des Bundes
+      wählen und abstimmen, ohne in die Schweiz reisen zu müssen. Dafür müssen sie bei der zuständigen
+      schweizerischen Vertretung im Ausland registriert sein und über diese die Eintragung ins Stimmregister
+      beantragen. Ihre Stimmgemeinde schickt ihnen dann die Unterlagen für die Wahlen und Abstimmungen.

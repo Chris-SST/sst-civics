@@ -1,0 +1,29 @@
+id: foehn-warmer-trockener-suedwind
+lang: tr
+source_version: 1
+question: Föhn nedir?
+options:
+  a: Kuzeyden esen soğuk ve nemli bir rüzgâr
+  b: Kışın doğudan esen soğuk bir rüzgâr
+  c: İlkbaharda yağan şiddetli bir yağmur
+  d: Güney yönünden esen sıcak ve kuru bir rüzgâr
+explanation: Föhn, Alpler'de özellikle güneyden esen sıcak ve kuru bir alçalan rüzgârdır. Sıcaklıkların
+  hızla yükselmesine neden olabilir ve görüş mesafesini çok açık hâle getirebilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist der Föhn?
+    options_de:
+      a: Ein kalter und feuchter Wind, der aus dem Norden weht
+      b: Ein kalter Wind, der im Winter aus dem Osten weht
+      c: Ein heftiger Regen, der im Frühling fällt
+      d: Ein warmer und trockener Wind, der aus südlicher Richtung weht
+    explanation_de: Der Föhn ist ein warmer und trockener Fallwind, der in den Alpen besonders aus dem
+      Süden weht. Er kann die Temperaturen schnell ansteigen lassen und die Sicht sehr klar machen.

@@ -1,0 +1,32 @@
+id: eidgenoessische-abstimmungstermine-pro-jahr
+lang: it
+source_version: 1
+question: Quante volte all'anno si tengono normalmente in Svizzera le votazioni popolari federali?
+options:
+  a: Una volta
+  b: Solo ogni quattro anni
+  c: Fino a quattro volte
+  d: Ogni mese
+explanation: Per le votazioni popolari federali sono previste fino a quattro domeniche di votazione all'anno.
+  In una singola data si vota spesso su più oggetti contemporaneamente. Ogni quattro anni, invece, si
+  tengono le elezioni del Consiglio nazionale (Nationalrat), che non sono votazioni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie oft im Jahr finden in der Schweiz normalerweise eidgenössische Volksabstimmungen
+      statt?
+    options_de:
+      a: Einmal
+      b: Nur alle vier Jahre
+      c: Bis zu viermal
+      d: Jeden Monat
+    explanation_de: Für eidgenössische Volksabstimmungen sind bis zu vier Abstimmungssonntage pro Jahr
+      vorgesehen. An einem einzelnen Datum wird oft über mehrere Vorlagen gleichzeitig abgestimmt. Alle
+      vier Jahre hingegen finden die Wahlen des Nationalrats statt, die keine Abstimmungen sind.

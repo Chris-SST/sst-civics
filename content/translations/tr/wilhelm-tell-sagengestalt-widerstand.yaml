@@ -1,0 +1,30 @@
+id: wilhelm-tell-sagengestalt-widerstand
+lang: tr
+source_version: 1
+question: İç İsviçre'den efsanevi figür Wilhelm Tell neyi simgeler?
+options:
+  a: Yabancı hükümdarlara karşı direnişi
+  b: İsviçre'nin savaştaki tarafsızlığını
+  c: Reformun getirilmesini
+  d: İlk İsviçre bankasının kurulmasını
+explanation: Efsane, yabancı valilerin baskısına karşı koyan bir adamı anlatır. Bu nedenle Wilhelm Tell
+  özgürlüğün simgesi sayılır. Gerçekten yaşayıp yaşamadığı kanıtlanmamıştır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was symbolisiert die legendäre Figur Wilhelm Tell aus der Innerschweiz?
+    options_de:
+      a: Den Widerstand gegen fremde Herrscher
+      b: Die Neutralität der Schweiz im Krieg
+      c: Die Einführung der Reformation
+      d: Die Gründung der ersten Schweizer Bank
+    explanation_de: Die Sage erzählt von einem Mann, der sich gegen die Unterdrückung durch fremde Vögte
+      wehrte. Deshalb gilt Wilhelm Tell als Symbol der Freiheit. Ob er wirklich gelebt hat, ist nicht
+      bewiesen.

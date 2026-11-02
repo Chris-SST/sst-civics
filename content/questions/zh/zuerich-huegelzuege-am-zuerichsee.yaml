@@ -1,17 +1,18 @@
 id: zuerich-huegelzuege-am-zuerichsee
-version: 1
+version: 2
 scope: zh
 canton: zh
 topic: kanton.geografie.zuerich
-question_de: Welche Hügelzüge säumen den Zürichsee?
+question_de: Welche Hügelzüge liegen am Ufer des Zürichsees?
 options_de:
   a: Uetliberg, Albis und Pfannenstiel
-  b: Lägern, Irchel und Höhronen
+  b: Lägern, Irchel und Kohlfirst
   c: Hörnli, Bachtel und Allmann
-  d: Heitersberg, Üetliberg und Randen
+  d: Heitersberg, Gubrist und Randen
 correct: a
-explanation_de: Der Uetliberg und der Albis liegen am linken Seeufer, der Pfannenstiel am rechten Seeufer.
-  Lägern, Irchel, Bachtel und Hörnli sind andere Erhebungen im Kanton oder in der Region.
+explanation_de: Der Uetliberg und der Albis ziehen sich dem linken Ufer des Zürichsees entlang, der Pfannenstiel
+  liegt am rechten Ufer. Die anderen Erhebungen liegen weiter weg vom See, zum Beispiel im Unterland,
+  im Weinland, im Zürcher Oberland oder in anderen Kantonen.
 sources:
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: &id001 2026-11-02
@@ -22,7 +23,7 @@ glossary:
 - Uetliberg
 - Albis
 - Pfannenstiel
-status: in_review
+status: approved
 difficulty: 3
 covers:
 - zh-290
@@ -32,15 +33,53 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Uetliberg und Albis säumen den Zürichsee im Westen (Sihltal-Seite) und der Pfannenstiel
-      im Osten, während Lägern, Irchel, Hörnli, Bachtel, Allmann, Heitersberg und Randen nicht direkt
-      am Zürichsee liegen.
+    version: 2
+    reasoning: Uetliberg und Albis (Albiskette) liegen am linken Zürichseeufer und der Pfannenstiel am
+      rechten Ufer, während die Lägern, der Irchel, der Kohlfirst, das Hörnli, der Bachtel, der Allmann,
+      der Heitersberg, der Gubrist und der Randen nicht am Zürichsee liegen.
   source:
     verdict: supported
-    note: 'Quelle 1 (Broschüre, Seite 61) sagt ausdrücklich: «Der Zürichsee ist von drei Hügeln umgeben:
-      dem Uetliberg, dem Albis und dem Pfannenstiel.» Zur Lage am linken beziehungsweise rechten Seeufer
-      steht im Text nichts, aber die Antwort a) wird eindeutig gestützt.'
+    note: 'Quelle 1 (Broschüre, Seite 61) sagt: «Der Zürichsee ist von drei Hügeln umgeben: dem Uetliberg,
+      dem Albis und dem Pfannenstiel.» Das stützt Antwort a). Die Aufteilung auf linkes und rechtes Ufer
+      steht nicht im Text, die Karte zeigt die Hügel aber rund um den See.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Uetliberg und Albis liegen nicht direkt am Seeufer, denn dazwischen liegen das Sihltal
+        und der Zimmerberg. Die Frage sollte deshalb wie in der Broschüre lauten: «Welche Hügelzüge umgeben
+        den Zürichsee?».'
+      - 'Klein: In der Erklärung «ziehen sich dem linken Ufer des Zürichsees entlang» besser durch «liegen
+        auf der linken Seite des Zürichsees» ersetzen; das ist geografisch genauer und einfacher zu verstehen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «am Ufer» ist geografisch etwas ungenau, weil Uetliberg und Albis nicht direkt am Seeufer
+        liegen; besser wäre «Welche Hügelzüge liegen links und rechts vom Zürichsee?» oder «Welche Hügelzüge
+        säumen den Zürichsee?».'
+      - 'Klein: Die Erklärung könnte die Zuordnung der falschen Antworten konkreter machen, zum Beispiel
+        «Lägern und Irchel im Unterland, Kohlfirst im Weinland, Hörnli, Bachtel und Allmann im Oberland,
+        Heitersberg im Aargau, Randen in Schaffhausen».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung steht «Die anderen Erhebungen liegen weiter weg vom See». Das ist für
+        Lägern, Irchel, Kohlfirst, Bachtel und Heitersberg richtig, aber der Bachtel und der Allmann liegen
+        im Oberland, und das Hörnli liegt an der Grenze zum Thurgau. Ausserdem ist der Randen im Kanton
+        Schaffhausen. Die Erklärung könnte kürzer und genauer sein, zum Beispiel: «Die Hügel in den anderen
+        Antworten liegen im Unterland, im Zürcher Oberland oder in anderen Kantonen.»'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

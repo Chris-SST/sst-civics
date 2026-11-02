@@ -1,0 +1,33 @@
+id: gewerkschaften-aufgabe-arbeitnehmende
+lang: it
+source_version: 2
+question: Quale compito hanno i sindacati in Svizzera?
+options:
+  a: Si impegnano per le istanze dei lavoratori e delle lavoratrici.
+  b: Rilasciano alle straniere e agli stranieri il permesso di lavoro.
+  c: Stabiliscono le aliquote fiscali per le imprese.
+  d: Rappresentano le istanze dei datori di lavoro nei confronti della Confederazione.
+explanation: I sindacati sono organizzazioni dei lavoratori e delle lavoratrici. Rappresentano i loro
+  interessi, ad esempio in materia di salari e condizioni di lavoro, e spesso negoziano contratti collettivi
+  di lavoro con i datori di lavoro. I permessi di lavoro, invece, sono rilasciati dalle autorità, non
+  dai sindacati.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Aufgabe haben die Gewerkschaften in der Schweiz?
+    options_de:
+      a: Sie setzen sich für die Anliegen der Arbeitnehmer und Arbeitnehmerinnen ein.
+      b: Sie erteilen Ausländerinnen und Ausländern die Arbeitsbewilligung.
+      c: Sie legen die Steuersätze für die Unternehmen fest.
+      d: Sie vertreten die Anliegen der Arbeitgeber gegenüber dem Bund.
+    explanation_de: Die Gewerkschaften sind Organisationen der Arbeitnehmer und Arbeitnehmerinnen. Sie
+      vertreten deren Interessen, zum Beispiel in Bezug auf Löhne und Arbeitsbedingungen, und handeln
+      oft Gesamtarbeitsverträge mit den Arbeitgebern aus. Die Arbeitsbewilligungen hingegen werden von
+      den Behörden erteilt, nicht von den Gewerkschaften.

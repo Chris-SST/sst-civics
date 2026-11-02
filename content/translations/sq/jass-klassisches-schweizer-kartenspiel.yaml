@@ -1,0 +1,31 @@
+id: jass-klassisches-schweizer-kartenspiel
+lang: sq
+source_version: 1
+question: Cila lojë me letra konsiderohet në Zvicër si loja klasike me letra e vendit?
+options:
+  a: Bridge
+  b: Jass
+  c: Poker
+  d: Rommé
+explanation: Jass konsiderohet si loja tipike zvicerane me letra. Zakonisht luhet në katër persona, në
+  dy ekipe, shpesh me letra franceze ose me letra të Zvicrës gjermanishtfolëse. Luhet në shumë familje
+  dhe në shumë bufe e restorante të thjeshta (Beizen).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Kartenspiel gilt in der Schweiz als das klassische Kartenspiel des Landes?
+    options_de:
+      a: Bridge
+      b: Jass
+      c: Poker
+      d: Rommé
+    explanation_de: Jass gilt als das typische Schweizer Kartenspiel. Es wird gewöhnlich zu viert, in
+      zwei Teams gespielt, oft mit französischen Karten oder mit Karten der deutschsprachigen Schweiz.
+      Es wird in vielen Familien und in vielen einfachen Buffets und Restaurants (Beizen) gespielt.

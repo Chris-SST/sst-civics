@@ -1,0 +1,32 @@
+id: datenschutz-verletzung-ohne-einverstaendnis
+lang: tr
+source_version: 1
+question: Hangi durumda veri koruma ihlal edilmiş olur?
+options:
+  a: Bir kişiye ait özel bilgiler, kişinin rızası olmadan ve yasal bir dayanak bulunmadan açıklanır.
+  b: Bir makam, bir yasanın gerektirdiği şekilde verileri kaydeder.
+  c: Bir kişi kendi adresini gönüllü olarak verir.
+  d: Bir kişi, fotoğrafının yayımlanmasına açıkça izin verir.
+explanation: Özel hayatın gizliliğinin korunması, kişisel verilerin kötüye kullanılmasına karşı korunmayı
+  da kapsar. Özel bilgiler yalnızca ilgili kişinin rızasıyla veya bir yasaya dayanarak açıklanabilir.
+  İkisi de yoksa bir ihlal söz konusudur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall wird der Datenschutz verletzt?
+    options_de:
+      a: Private Informationen, die einer Person gehören, werden ohne die Einwilligung der Person und
+        ohne dass eine gesetzliche Grundlage vorhanden ist, offengelegt.
+      b: Eine Behörde erfasst Daten so, wie es ein Gesetz verlangt.
+      c: Eine Person gibt ihre eigene Adresse freiwillig an.
+      d: Eine Person erlaubt ausdrücklich die Veröffentlichung ihres Fotos.
+    explanation_de: Der Schutz der Privatsphäre umfasst auch den Schutz vor dem Missbrauch persönlicher
+      Daten. Private Informationen dürfen nur mit der Einwilligung der betroffenen Person oder aufgrund
+      eines Gesetzes offengelegt werden. Fehlt beides, liegt eine Verletzung vor.

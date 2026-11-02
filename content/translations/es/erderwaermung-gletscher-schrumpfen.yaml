@@ -1,0 +1,31 @@
+id: erderwaermung-gletscher-schrumpfen
+lang: es
+source_version: 1
+question: ¿Qué efecto tiene el calentamiento global en los glaciares de los Alpes suizos?
+options:
+  a: Los glaciares se reducen.
+  b: Los glaciares se desplazan hacia el norte.
+  c: Los glaciares crecen más rápido.
+  d: Los glaciares permanecen sin cambios.
+explanation: Cuando las temperaturas aumentan, se derrite más hielo del que se repone con la nieve. Por
+  eso los glaciares suizos se hacen más pequeños. Esto también afecta a las aguas y al paisaje de los
+  Alpes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Auswirkung hat die globale Erwärmung auf die Gletscher der Schweizer Alpen?
+    options_de:
+      a: Die Gletscher schrumpfen.
+      b: Die Gletscher verschieben sich nach Norden.
+      c: Die Gletscher wachsen schneller.
+      d: Die Gletscher bleiben unverändert.
+    explanation_de: Wenn die Temperaturen steigen, schmilzt mehr Eis, als durch den Schnee wieder aufgefüllt
+      wird. Deshalb werden die Schweizer Gletscher kleiner. Dies wirkt sich auch auf die Gewässer und
+      die Landschaft der Alpen aus.

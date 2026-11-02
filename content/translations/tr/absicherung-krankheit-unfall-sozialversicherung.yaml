@@ -1,0 +1,30 @@
+id: absicherung-krankheit-unfall-sozialversicherung
+lang: tr
+source_version: 1
+question: İsviçre'nin sosyal sigorta sistemi, diğer risklerin yanı sıra hangi risklere karşı güvence sağlar?
+options:
+  a: Özel para yatırımlarındaki kayıplara karşı
+  b: Hırsızlık nedeniyle araba ve ev eşyasında meydana gelen zararlara karşı
+  c: Hastalık ve kaza sonuçlarına karşı
+  d: Kira bedellerindeki fiyat artışlarına karşı
+explanation: Sosyal sigortalar, insanları önemli yaşam risklerinin mali sonuçlarına karşı korur. Hastalık
+  ve kaza da bunlara dahildir. Sağlık sigortası ve kaza sigortası bunlara örnektir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen welche Risiken bietet das Sozialversicherungssystem der Schweiz unter anderem Schutz?
+    options_de:
+      a: Gegen Verluste bei privaten Geldanlagen
+      b: Gegen Schäden an Auto und Hausrat durch Diebstahl
+      c: Gegen die Folgen von Krankheit und Unfall
+      d: Gegen Preiserhöhungen bei den Mietpreisen
+    explanation_de: Die Sozialversicherungen schützen die Menschen vor den finanziellen Folgen wichtiger
+      Lebensrisiken. Krankheit und Unfall gehören ebenfalls dazu. Die Krankenversicherung und die Unfallversicherung
+      sind Beispiele dafür.

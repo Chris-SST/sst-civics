@@ -1,0 +1,31 @@
+id: strafgesetzbuch-haftstrafe-entscheid
+lang: sq
+source_version: 1
+question: Sipas cilit ligji varet nëse dikush duhet të vuajë një dënim me burg?
+options:
+  a: Sipas Kodit Civil
+  b: Sipas Ligjit të Detyrimeve
+  c: Sipas së drejtës së qirasë
+  d: Sipas Kodit Penal
+explanation: Kodi Penal përcakton se cilat vepra janë të dënueshme dhe cilat dënime janë të mundshme për
+  to. Këtu përfshihen dënimet me gjobë dhe dënimet me heqje lirie. Për dënimin në çdo rast konkret vendos
+  një gjykatë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Nach welchem Gesetz richtet sich, ob jemand eine Gefängnisstrafe verbüssen muss?
+    options_de:
+      a: Nach dem Zivilgesetzbuch
+      b: Nach dem Obligationenrecht
+      c: Nach dem Mietrecht
+      d: Nach dem Strafgesetzbuch
+    explanation_de: Das Strafgesetzbuch legt fest, welche Taten strafbar sind und welche Strafen dafür
+      möglich sind. Dazu gehören Geldstrafen und Freiheitsstrafen. Über die Strafe in jedem konkreten
+      Fall entscheidet ein Gericht.

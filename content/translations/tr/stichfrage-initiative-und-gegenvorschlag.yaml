@@ -1,0 +1,33 @@
+id: stichfrage-initiative-und-gegenvorschlag
+lang: tr
+source_version: 1
+question: Bir halk girişimi (Volksinitiative) ve doğrudan karşı öneri hakkında yapılan oylamada bir belirleyici
+  soru bulunur. Bu sorunun amacı nedir?
+options:
+  a: Oylamanın tekrarlanıp tekrarlanmayacağına karar verir
+  b: Kantonların oylamaya hiç katılıp katılamayacağına karar verir
+  c: İkisi de kabul edilirse hangi tasarının geçerli olacağına karar verir
+  d: İmzaların bir kez daha kontrol edilip edilmeyeceğine karar verir
+explanation: Oy hakkı olan kişiler hem girişime hem de karşı öneriye evet diyebilir. Belirleyici soru
+  ile, ikisi de kabul edilirse hangi tasarının yürürlüğe girmesini istediklerini belirtirler. Böylece
+  birbirine benzeyen iki tasarı arasında oylar kaybolmaz.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Bei der Abstimmung über eine Volksinitiative und einen direkten Gegenvorschlag gibt es
+      eine Stichfrage. Was ist der Zweck dieser Frage?
+    options_de:
+      a: Sie entscheidet, ob die Abstimmung wiederholt wird oder nicht
+      b: Sie entscheidet, ob die Kantone überhaupt an der Abstimmung teilnehmen können oder nicht
+      c: Sie entscheidet, welche Vorlage gilt, wenn beide angenommen werden
+      d: Sie entscheidet, ob die Unterschriften noch einmal überprüft werden oder nicht
+    explanation_de: Die Stimmberechtigten können sowohl zur Initiative als auch zum Gegenvorschlag Ja
+      sagen. Mit der Stichfrage geben sie an, welche Vorlage sie in Kraft treten lassen möchten, wenn
+      beide angenommen werden. So gehen die Stimmen zwischen zwei einander ähnlichen Vorlagen nicht verloren.

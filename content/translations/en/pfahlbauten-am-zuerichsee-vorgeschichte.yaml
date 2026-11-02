@@ -9,6 +9,22 @@ options:
   d: As castles on rocks
 explanation: In prehistoric times, pile dwellings, that is, houses on stilts, stood on the shore of Lake
   Zurich. Remains of them still lie under water today and are studied by underwater archaeologists.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie wurden die prähistorischen Siedlungen am Zürichsee gebaut?
+    options_de:
+      a: Als Höhlen im Fels
+      b: Als Pfahlbauten, das heisst Häuser auf Stelzen
+      c: Als Backsteinhäuser in Dörfern
+      d: Als Burgen auf Felsen
+    explanation_de: In prähistorischer Zeit standen am Ufer des Zürichsees Pfahlbauten, das heisst Häuser
+      auf Stelzen. Überreste davon liegen heute noch unter Wasser und werden von Unterwasserarchäologen
+      erforscht.

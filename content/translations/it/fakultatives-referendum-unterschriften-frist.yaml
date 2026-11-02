@@ -1,0 +1,32 @@
+id: fakultatives-referendum-unterschriften-frist
+lang: it
+source_version: 1
+question: Quante firme sono necessarie affinché un referendum facoltativo contro una legge federale riesca,
+  e entro quale termine?
+options:
+  a: 50 000 firme entro 18 mesi
+  b: 50 000 firme entro 100 giorni
+  c: 100 000 firme entro 30 giorni
+  d: 100 000 firme entro 100 giorni
+explanation: Per un referendum facoltativo occorrono 50 000 firme valide entro 100 giorni dalla pubblicazione
+  della legge nel Foglio federale. Se il referendum riesce, il popolo vota sulla legge.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Unterschriften sind notwendig, damit ein fakultatives Referendum gegen ein
+      Bundesgesetz zustande kommt, und innert welcher Frist?
+    options_de:
+      a: 50 000 Unterschriften innert 18 Monaten
+      b: 50 000 Unterschriften innert 100 Tagen
+      c: 100 000 Unterschriften innert 30 Tagen
+      d: 100 000 Unterschriften innert 100 Tagen
+    explanation_de: Für ein fakultatives Referendum braucht es 50 000 gültige Unterschriften innert 100
+      Tagen seit der Veröffentlichung des Gesetzes im Bundesblatt. Kommt das Referendum zustande, stimmt
+      das Volk über das Gesetz ab.

@@ -10,6 +10,22 @@ options:
 explanation: Switzerland recognises only monogamous marriage. Anyone who is already married or living
   in a registered partnership cannot enter into another marriage. This applies regardless of religion
   or origin.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in der Schweiz bezüglich der Ehe mit mehreren Partnern gleichzeitig?
+    options_de:
+      a: Sie ist erlaubt, wenn alle einverstanden sind
+      b: Sie ist verboten
+      c: Sie ist erlaubt, wenn sie religiös begründet wird
+      d: Sie ist nur für Personen mit einem ausländischen Pass erlaubt
+    explanation_de: Die Schweiz anerkennt nur die monogame Ehe. Wer bereits verheiratet ist oder in einer
+      eingetragenen Partnerschaft lebt, kann keine weitere Ehe eingehen. Dies gilt unabhängig von Religion
+      oder Herkunft.

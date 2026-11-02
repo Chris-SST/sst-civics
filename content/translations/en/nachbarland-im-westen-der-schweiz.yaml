@@ -9,6 +9,21 @@ options:
   d: Austria
 explanation: To the west and north-west, Switzerland borders France. Germany lies to the north, Austria
   and Liechtenstein to the east, and Italy to the south.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Land grenzt im Westen an die Schweiz?
+    options_de:
+      a: Deutschland
+      b: Italien
+      c: Frankreich
+      d: Österreich
+    explanation_de: Im Westen und Nordwesten grenzt die Schweiz an Frankreich. Deutschland liegt im Norden,
+      Österreich und Liechtenstein im Osten und Italien im Süden.

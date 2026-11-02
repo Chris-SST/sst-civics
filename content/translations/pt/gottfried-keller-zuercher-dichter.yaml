@@ -1,0 +1,32 @@
+id: gottfried-keller-zuercher-dichter
+lang: pt
+source_version: 2
+question: Qual destes conhecidos poetas e escritores era natural de Zurique?
+options:
+  a: Robert Walser
+  b: Gottfried Keller
+  c: Friedrich Dürrenmatt
+  d: Jeremias Gotthelf
+explanation: Gottfried Keller nasceu em Zurique em 1819, escreveu, por exemplo, «O Henrique Verde» («Der
+  grüne Heinrich») e também trabalhou como secretário do governo (Staatsschreiber) do cantão de Zurique.
+  Robert Walser era natural de Biel, Friedrich Dürrenmatt de Konolfingen, no cantão de Berna, e Jeremias
+  Gotthelf atuou como pastor no cantão de Berna.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welcher dieser bekannten Dichter und Schriftsteller stammte aus Zürich?
+    options_de:
+      a: Robert Walser
+      b: Gottfried Keller
+      c: Friedrich Dürrenmatt
+      d: Jeremias Gotthelf
+    explanation_de: Gottfried Keller wurde 1819 in Zürich geboren, schrieb zum Beispiel «Der grüne Heinrich»
+      und arbeitete auch als Staatsschreiber des Kantons Zürich. Robert Walser stammte aus Biel, Friedrich
+      Dürrenmatt aus Konolfingen im Kanton Bern, und Jeremias Gotthelf wirkte als Pfarrer im Kanton Bern.

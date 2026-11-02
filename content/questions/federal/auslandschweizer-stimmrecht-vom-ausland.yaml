@@ -1,5 +1,5 @@
 id: auslandschweizer-stimmrecht-vom-ausland
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.wahlen
@@ -8,12 +8,13 @@ question_de: Eine Schweizer Bürgerin lebt dauerhaft im Ausland. Wie kann sie be
 options_de:
   a: Sie darf nur abstimmen, wenn sie dafür in die Schweiz reist.
   b: Sie darf nur an Wahlen teilnehmen, aber nicht an Abstimmungen.
-  c: Sie kann vom Wohnort im Ausland aus wählen und abstimmen, ohne in die Schweiz zu reisen.
+  c: Sie kann von ihrem Wohnort im Ausland aus wählen und abstimmen, ohne in die Schweiz zu reisen.
   d: Sie verliert das Stimm- und Wahlrecht auf Bundesebene.
 correct: c
-explanation_de: Auslandschweizerinnen und Auslandschweizer haben auf Bundesebene politische Rechte. Sie
-  können sie vom Ausland aus ausüben, ohne anzureisen. Sie müssen sich dafür bei ihrer Vertretung oder
-  Stimmgemeinde anmelden.
+explanation_de: Auslandschweizerinnen und Auslandschweizer dürfen auf Bundesebene wählen und abstimmen,
+  ohne dafür in die Schweiz zu reisen. Dazu müssen sie bei der zuständigen Schweizer Vertretung im Ausland
+  gemeldet sein und über diese die Eintragung ins Stimmregister beantragen. Die Wahl- und Abstimmungsunterlagen
+  schickt ihnen dann ihre Stimmgemeinde zu.
 sources:
 - url: https://www.eda.admin.ch/countries/liechtenstein/de/home/dienstleistungen/politische-rechte.html
   checked: &id001 2026-11-02
@@ -25,7 +26,7 @@ glossary:
 - Auslandschweizer
 - Stimmrecht
 - Wahlrecht
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-009
@@ -35,15 +36,51 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Auslandschweizerinnen und Auslandschweizer, die sich bei ihrer Stimmgemeinde in der Schweiz
-      registrieren lassen, können bei eidgenössischen Wahlen und Abstimmungen von ihrem Wohnort im Ausland
-      aus teilnehmen, ohne in die Schweiz zu reisen.
+    version: 2
+    reasoning: Auslandschweizerinnen und Auslandschweizer können sich in ihrer Stimmgemeinde ins Stimmregister
+      eintragen lassen und dann bei eidgenössischen Wahlen und Abstimmungen vom Ausland aus brieflich
+      oder elektronisch teilnehmen, ohne in die Schweiz zu reisen.
   source:
     verdict: supported
-    note: Quelle 1 (EDA) sagt, dass Auslandschweizer an eidgenössischen Volksabstimmungen und Nationalratswahlen
-      teilnehmen können, ohne in die Schweiz zu reisen, und beschreibt die Eintragung ins Stimmregister
-      über die Vertretung. Quelle 2 bestätigt, dass sie dafür nicht in die Schweiz reisen müssen.
+    note: Quelle 1 (EDA) sagt, dass Auslandschweizerinnen und Auslandschweizer brieflich an eidgenössischen
+      Abstimmungen und Nationalratswahlen teilnehmen können, ohne in die Schweiz zu reisen. Sie müssen
+      bei einer Vertretung angemeldet sein, sich dort ins Stimmregister eintragen lassen, und die Stimmgemeinde
+      schickt die Unterlagen. Quelle 2 bestätigt, dass keine Reise nötig ist.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte präzisieren, dass sich das Wahlrecht auf Bundesebene auf die Nationalratswahlen
+        bezieht und die Teilnahme an Ständeratswahlen vom Kanton abhängt, etwa mit dem Zusatz «bei den
+        Nationalratswahlen (Ständerat je nach Kanton)».'
+      - 'Klein: In der Erklärung könnte man ergänzen, dass die Person mindestens 18 Jahre alt sein muss,
+        wie es die EDA-Quelle als Bedingung nennt.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c) ist deutlich länger und genauer als die anderen Antworten und fällt dadurch
+        auf; die falschen Antworten könnten etwas ausführlicher formuliert werden, zum Beispiel a) «Sie
+        darf nur wählen und abstimmen, wenn sie dafür persönlich in die Schweiz reist.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt als Voraussetzung nur die Meldung bei der Schweizer Vertretung; Wohnsitz
+        im Ausland und Mindestalter 18 Jahre könnten zur Vollständigkeit ergänzt werden.'
+      - 'Klein: Die Erklärung sagt nicht, dass die Unterlagen in der Regel brieflich zugestellt werden
+        und die Stimme brieflich abgegeben wird; ein kurzer Hinweis darauf würde das «ohne Reise» besser
+        verständlich machen.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

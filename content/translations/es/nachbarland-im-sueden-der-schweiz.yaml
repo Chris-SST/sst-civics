@@ -1,0 +1,30 @@
+id: nachbarland-im-sueden-der-schweiz
+lang: es
+source_version: 1
+question: ¿Qué país se encuentra al sur de Suiza y hace frontera con ella?
+options:
+  a: España
+  b: Italia
+  c: Eslovenia
+  d: Francia
+explanation: Italia es el país vecino de Suiza al sur. La frontera atraviesa, entre otros, los Alpes,
+  así como el Tesino y los Grisones. España y Eslovenia no hacen frontera con Suiza.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Land liegt südlich der Schweiz und grenzt an sie?
+    options_de:
+      a: Spanien
+      b: Italien
+      c: Slowenien
+      d: Frankreich
+    explanation_de: Italien ist das südliche Nachbarland der Schweiz. Die Grenze verläuft unter anderem
+      durch die Alpen sowie durch das Tessin und Graubünden. Spanien und Slowenien grenzen nicht an die
+      Schweiz.

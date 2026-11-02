@@ -1,0 +1,33 @@
+id: zivilgesetzbuch-ehe-scheidung-regeln
+lang: it
+source_version: 1
+question: Quale legge disciplina, tra l'altro, come si celebra un matrimonio e come lo si scioglie con
+  il divorzio?
+options:
+  a: Il Codice civile
+  b: Il Codice penale
+  c: La legge sull'asilo
+  d: La legge sul Tribunale federale (Bundesgerichtsgesetz)
+explanation: Il Codice civile disciplina il diritto delle persone, il diritto di famiglia, il diritto
+  successorio e i diritti reali. Ne fanno parte anche la celebrazione del matrimonio e il divorzio. Il
+  Codice penale, invece, si occupa dei reati e delle pene.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gesetz regelt unter anderem, wie eine Ehe geschlossen und wie sie durch die Scheidung
+      aufgelöst wird?
+    options_de:
+      a: Das Zivilgesetzbuch
+      b: Das Strafgesetzbuch
+      c: Das Asylgesetz
+      d: Das Bundesgerichtsgesetz
+    explanation_de: Das Zivilgesetzbuch regelt das Personenrecht, das Familienrecht, das Erbrecht und
+      das Sachenrecht. Dazu gehören auch die Eheschliessung und die Scheidung. Das Strafgesetzbuch hingegen
+      befasst sich mit den Straftaten und den Strafen.

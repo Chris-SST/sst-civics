@@ -22,7 +22,7 @@ sources:
 glossary:
 - Kollegialitätsprinzip
 - Bundesrat
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-005
@@ -43,3 +43,27 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte das Wort «Kollegium» in einem Halbsatz kurz erklären (z. B. «eine
+        Gruppe gleichberechtigter Mitglieder»), weil es für B1-Lernende schwierig sein kann.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

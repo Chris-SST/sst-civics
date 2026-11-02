@@ -1,0 +1,31 @@
+id: stadtrat-zuerich-aufgabe-verwaltung-leitung
+lang: it
+source_version: 1
+question: Quale compito ha il Municipio (Stadtrat) della città di Zurigo?
+options:
+  a: Dirige l'amministrazione fiscale cantonale in città.
+  b: Emana le leggi cantonali per il territorio cittadino.
+  c: Giudica le controversie tra gli abitanti.
+  d: Guida l'amministrazione cittadina e stabilisce le linee direttive per l'azione della città.
+explanation: Il Municipio è l'esecutivo della città di Zurigo. Dirige l'amministrazione cittadina e determina
+  la direzione in cui la città si sviluppa. I tribunali giudicano e le leggi cantonali sono emanate dal
+  Consiglio cantonale (Kantonsrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe hat der Stadtrat der Stadt Zürich?
+    options_de:
+      a: Er leitet die kantonale Steuerverwaltung in der Stadt.
+      b: Er erlässt die kantonalen Gesetze für das Stadtgebiet.
+      c: Er beurteilt die Streitigkeiten zwischen den Einwohnern.
+      d: Er leitet die Stadtverwaltung und legt die Richtlinien für das Handeln der Stadt fest.
+    explanation_de: Der Stadtrat ist die Exekutive der Stadt Zürich. Er leitet die Stadtverwaltung und
+      bestimmt die Richtung, in die sich die Stadt entwickelt. Die Gerichte urteilen und die kantonalen
+      Gesetze werden vom Kantonsrat erlassen.

@@ -1,0 +1,31 @@
+id: armee-zustaendigkeit-bund
+lang: es
+source_version: 1
+question: ¿Qué nivel del Estado es competente en materia de ejército?
+options:
+  a: Los cantones
+  b: La Confederación
+  c: Los distritos
+  d: Los municipios (Gemeinden)
+explanation: Los asuntos militares son competencia de la Confederación. Esta regula el ejército y sus
+  tareas en la Constitución Federal y en las leyes federales. Los cantones participan en la ejecución,
+  por ejemplo, en el reclutamiento.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Staatsebene ist für das Militär zuständig?
+    options_de:
+      a: Die Kantone
+      b: Der Bund
+      c: Die Bezirke
+      d: Die Gemeinden
+    explanation_de: Die Militärangelegenheiten sind Sache des Bundes. Dieser regelt die Armee und ihre
+      Aufgaben in der Bundesverfassung und in den Bundesgesetzen. Die Kantone wirken bei der Durchführung
+      mit, zum Beispiel bei der Rekrutierung.

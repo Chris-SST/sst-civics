@@ -1,0 +1,31 @@
+id: sechselaeuten-boeoegg-kopf-sommer
+lang: tr
+source_version: 2
+question: Halk inanışına göre Sechseläuten'de Böögg'ün başı hızla yanarsa bu ne anlama gelir?
+options:
+  a: Gelecek yaz yağmurlu geçecek.
+  b: Gelecek kış özellikle soğuk olacak.
+  c: Gelecek yaz güzel olacak.
+  d: Sonbahardaki hasat kötü olacak.
+explanation: Böögg, Zürih'te Sechseläuten'de yakılan bir kardan adam figürüdür. Halk inanışına göre başı
+  ne kadar hızlı yanarsa veya patlarsa, gelecek yaz o kadar güzel olur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was bedeutet es nach dem Volksglauben, wenn am Sechseläuten der Kopf des Böögg schnell
+      brennt?
+    options_de:
+      a: Der nächste Sommer wird regnerisch sein.
+      b: Der nächste Winter wird besonders kalt sein.
+      c: Der nächste Sommer wird schön sein.
+      d: Die Ernte im Herbst wird schlecht sein.
+    explanation_de: 'Der Böögg ist eine Schneemannfigur, die in Zürich am Sechseläuten verbrannt wird.
+      Nach dem Volksglauben gilt: Je schneller sein Kopf brennt oder explodiert, desto schöner wird der
+      nächste Sommer.'

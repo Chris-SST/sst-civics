@@ -1,0 +1,31 @@
+id: ehe-verbot-nahe-blutsverwandtschaft
+lang: fr
+source_version: 1
+question: Qui n'a pas le droit de se marier en Suisse ?
+options:
+  a: Les personnes qui ont déjà été divorcées
+  b: Les personnes originaires de différents cantons
+  c: Les personnes qui sont proches parents par le sang
+  d: Les personnes qui habitent dans des communes (Gemeinden) différentes
+explanation: Le mariage entre proches parents par le sang est interdit, par exemple entre frères et sœurs
+  ou entre parents et enfants. En revanche, l'origine, le lieu de domicile et un divorce antérieur ne
+  constituent pas un empêchement au mariage.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer darf in der Schweiz nicht heiraten?
+    options_de:
+      a: Personen, die bereits geschieden waren
+      b: Personen, die aus verschiedenen Kantonen stammen
+      c: Personen, die nahe Blutsverwandte sind
+      d: Personen, die in verschiedenen Gemeinden wohnen
+    explanation_de: Die Ehe zwischen nahen Blutsverwandten ist verboten, zum Beispiel zwischen Geschwistern
+      oder zwischen Eltern und Kindern. Hingegen stellen die Herkunft, der Wohnort und eine frühere Scheidung
+      kein Ehehindernis dar.

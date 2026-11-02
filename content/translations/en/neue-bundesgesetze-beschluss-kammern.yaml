@@ -9,6 +9,22 @@ options:
   d: The National Council (Nationalrat) and the Council of States (Ständerat)
 explanation: Most new federal laws are adopted by both chambers of Parliament. The Federal Council prepares
   bills, but does not decide alone. The people can call a referendum against a law.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer beschliesst die meisten neuen Bundesgesetze?
+    options_de:
+      a: Das Bundesgericht
+      b: Der Bundesrat allein
+      c: Die kantonalen Parlamente
+      d: Der Nationalrat und der Ständerat
+    explanation_de: Die meisten neuen Bundesgesetze werden von beiden Kammern des Parlaments beschlossen.
+      Der Bundesrat bereitet Gesetzesentwürfe vor, entscheidet aber nicht allein. Das Volk kann gegen
+      ein Gesetz das Referendum ergreifen.

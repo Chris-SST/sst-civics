@@ -1,0 +1,29 @@
+id: ahv-erste-saeule-altersvorsorge
+lang: it
+source_version: 1
+question: Quale istituzione costituisce il primo pilastro della previdenza per la vecchiaia in Svizzera?
+options:
+  a: Il pilastro privato 3a
+  b: L'assicurazione vecchiaia e superstiti (AHV) statale
+  c: La cassa pensioni
+  d: La cassa malati (Krankenkasse)
+explanation: L'assicurazione vecchiaia e superstiti è la previdenza statale e costituisce il primo pilastro.
+  La cassa pensioni è il secondo pilastro, la previdenza privata il terzo pilastro.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Institution bildet die erste Säule der Altersvorsorge in der Schweiz?
+    options_de:
+      a: Die private Säule 3a
+      b: Die staatliche Alters- und Hinterlassenenversicherung (AHV)
+      c: Die Pensionskasse
+      d: Die Krankenkasse
+    explanation_de: Die Alters- und Hinterlassenenversicherung ist die staatliche Vorsorge und bildet
+      die erste Säule. Die Pensionskasse ist die zweite Säule, die private Vorsorge die dritte Säule.

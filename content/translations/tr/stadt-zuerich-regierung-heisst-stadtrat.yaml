@@ -1,0 +1,29 @@
+id: stadt-zuerich-regierung-heisst-stadtrat
+lang: tr
+source_version: 1
+question: Zürich şehrinin hükümetinin adı nedir?
+options:
+  a: Şehir Konseyi (Stadtrat)
+  b: İlçe konseyi (Bezirksrat)
+  c: Belediye konseyi (Gemeinderat)
+  d: Şehir parlamentosu (Stadtparlament)
+explanation: Zürich şehrinin yürütme organının adı Şehir Konseyi'dir. Belediye konseyi (Gemeinderat) ise
+  buna karşılık şehrin parlamentosudur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Regierung der Stadt Zürich?
+    options_de:
+      a: Stadtrat
+      b: Bezirksrat
+      c: Gemeinderat
+      d: Stadtparlament
+    explanation_de: Das Exekutivorgan der Stadt Zürich heisst Stadtrat. Der Gemeinderat hingegen ist das
+      Parlament der Stadt.

@@ -1,0 +1,33 @@
+id: finanzausgleich-hilfe-schwache-gemeinden
+lang: es
+source_version: 1
+question: ¿Para qué sirve la compensación financiera entre los municipios (Gemeinden) del cantón de Zúrich?
+options:
+  a: Reduce los impuestos en todos los municipios a un mismo tipo impositivo.
+  b: Paga a los municipios los costes de las asambleas municipales (Gemeindeversammlungen).
+  c: Ayuda a los municipios con pocos recursos financieros o gravados por elevados costes sociales a cumplir
+    sus tareas.
+  d: Distribuye el dinero de la Confederación por igual entre todos los habitantes.
+explanation: Los municipios tienen posibilidades financieras muy diferentes. La compensación financiera
+  equilibra en parte estas diferencias. Así, también los municipios con poca capacidad fiscal o con elevados
+  costes sociales pueden cumplir sus tareas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient der Finanzausgleich zwischen den Gemeinden des Kantons Zürich?
+    options_de:
+      a: Er senkt die Steuern in allen Gemeinden auf einen gleichen Steuersatz.
+      b: Er bezahlt den Gemeinden die Kosten der Gemeindeversammlungen.
+      c: Er hilft Gemeinden mit geringen finanziellen Mitteln oder mit hohen Sozialkosten belasteten Gemeinden,
+        ihre Aufgaben zu erfüllen.
+      d: Er verteilt das Geld des Bundes gleichmässig auf alle Einwohnerinnen und Einwohner.
+    explanation_de: Die Gemeinden haben sehr unterschiedliche finanzielle Möglichkeiten. Der Finanzausgleich
+      gleicht diese Unterschiede teilweise aus. So können auch Gemeinden mit geringer Steuerkraft oder
+      mit hohen Sozialkosten ihre Aufgaben erfüllen.

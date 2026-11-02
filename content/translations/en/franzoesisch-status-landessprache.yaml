@@ -9,6 +9,21 @@ options:
   d: French is a minority language with no official status.
 explanation: French is one of the national languages of Switzerland. It is spoken mainly in French-speaking
   Switzerland and is an official language at the level of the Confederation.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welchen Status hat Französisch in der Schweiz?
+    options_de:
+      a: Französisch ist nur eine Fremdsprache in der Schule.
+      b: Französisch ist nur eine regionale Verkehrssprache.
+      c: Französisch ist eine Landessprache.
+      d: Französisch ist eine Minderheitensprache ohne offiziellen Status.
+    explanation_de: Französisch ist eine der Landessprachen der Schweiz. Es wird hauptsächlich in der
+      französischsprachigen Schweiz gesprochen und ist auf der Ebene des Bundes eine Amtssprache.

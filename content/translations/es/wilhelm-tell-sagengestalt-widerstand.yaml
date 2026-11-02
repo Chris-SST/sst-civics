@@ -1,0 +1,31 @@
+id: wilhelm-tell-sagengestalt-widerstand
+lang: es
+source_version: 1
+question: ¿Qué representa el personaje legendario Guillermo Tell, originario de la Suiza central?
+options:
+  a: La resistencia contra los gobernantes extranjeros
+  b: La neutralidad de Suiza en la guerra
+  c: La introducción de la Reforma
+  d: La fundación del primer banco suizo
+explanation: La leyenda cuenta la historia de un hombre que se defiende de la opresión de los bailíos
+  extranjeros. Por eso, Guillermo Tell se considera un símbolo de la libertad. No está comprobado que
+  haya existido realmente.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür steht die legendäre Figur Wilhelm Tell, die aus der Zentralschweiz stammt?
+    options_de:
+      a: Der Widerstand gegen fremde Herrscher
+      b: Die Neutralität der Schweiz im Krieg
+      c: Die Einführung der Reformation
+      d: Die Gründung der ersten Schweizer Bank
+    explanation_de: Die Legende erzählt die Geschichte eines Mannes, der sich gegen die Unterdrückung
+      durch fremde Vögte wehrt. Deshalb gilt Wilhelm Tell als Symbol der Freiheit. Es ist nicht erwiesen,
+      dass er wirklich existiert hat.

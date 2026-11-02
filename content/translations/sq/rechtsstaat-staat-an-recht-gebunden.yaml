@@ -1,0 +1,31 @@
+id: rechtsstaat-staat-an-recht-gebunden
+lang: sq
+source_version: 2
+question: Çfarë vlen në një shtet juridik si Zvicra për autoritetet dhe për qeverinë?
+options:
+  a: Ato mund të zgjedhin vetë cilat ligje t'i zbatojnë.
+  b: Edhe ato duhet t'i përmbahen të drejtës në fuqi.
+  c: Ato qëndrojnë mbi të drejtën në fuqi.
+  d: Ato duhet të orientohen vetëm sipas vendimeve të medias.
+explanation: Në një shtet juridik nuk duhet t'i përmbahet të drejtës vetëm popullsia, por edhe vetë shteti.
+  Autoritetet dhe qeveria mund të veprojnë vetëm ashtu siç e lejon e drejta. Kështu shteti juridik i mbron
+  njerëzit nga arbitrariteti.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt in einem Rechtsstaat wie der Schweiz für die Behörden und für die Regierung?
+    options_de:
+      a: Sie können selbst wählen, welche Gesetze sie anwenden.
+      b: Auch sie müssen sich an das geltende Recht halten.
+      c: Sie stehen über dem geltenden Recht.
+      d: Sie müssen sich nur nach den Entscheidungen der Medien richten.
+    explanation_de: In einem Rechtsstaat muss nicht nur die Bevölkerung sich an das Recht halten, sondern
+      auch der Staat selbst. Die Behörden und die Regierung können nur so handeln, wie das Recht es erlaubt.
+      So schützt der Rechtsstaat die Menschen vor Willkür.

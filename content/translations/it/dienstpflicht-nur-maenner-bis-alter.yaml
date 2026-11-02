@@ -1,0 +1,31 @@
+id: dienstpflicht-nur-maenner-bis-alter
+lang: it
+source_version: 1
+question: Chi in Svizzera è tenuto a prestare il servizio militare o il servizio civile sostitutivo fino
+  a una determinata età?
+options:
+  a: Solo gli uomini
+  b: Donne e uomini in egual misura
+  c: Solo le persone con una formazione
+  d: Solo le persone che ricoprono una carica in un Comune (Gemeinde)
+explanation: In Svizzera l'obbligo di prestare servizio vale solo per gli uomini. Per le donne il servizio
+  militare è volontario. L'obbligo dura fino a un'età stabilita dalla legge.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer in der Schweiz ist verpflichtet, bis zu einem bestimmten Alter Militärdienst oder
+      zivilen Ersatzdienst zu leisten?
+    options_de:
+      a: Nur die Männer
+      b: Frauen und Männer in gleichem Mass
+      c: Nur Personen mit einer Ausbildung
+      d: Nur Personen, die in einer Gemeinde ein Amt bekleiden
+    explanation_de: In der Schweiz gilt die Dienstpflicht nur für die Männer. Für die Frauen ist der Militärdienst
+      freiwillig. Die Pflicht dauert bis zu einem gesetzlich festgelegten Alter.

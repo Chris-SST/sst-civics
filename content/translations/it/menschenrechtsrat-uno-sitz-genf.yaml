@@ -1,0 +1,30 @@
+id: menschenrechtsrat-uno-sitz-genf
+lang: it
+source_version: 1
+question: In quale città svizzera ha sede il Consiglio dei diritti umani delle Nazioni Unite (ONU)?
+options:
+  a: Losanna
+  b: Ginevra
+  c: Berna
+  d: Basilea
+explanation: Il Consiglio dei diritti umani dell'ONU si riunisce a Ginevra. Accanto a New York, Ginevra
+  è una delle sedi più importanti dell'ONU e ospita molte organizzazioni internazionali.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Schweizer Stadt hat der Menschenrechtsrat der Vereinten Nationen (UNO) seinen
+      Sitz?
+    options_de:
+      a: Lausanne
+      b: Genf
+      c: Bern
+      d: Basel
+    explanation_de: Der Menschenrechtsrat der UNO tagt in Genf. Neben New York ist Genf einer der wichtigsten
+      Standorte der UNO und beherbergt viele internationale Organisationen.

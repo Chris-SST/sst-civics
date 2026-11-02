@@ -1,0 +1,31 @@
+id: sihl-muendung-in-limmat
+lang: fr
+source_version: 1
+question: Dans quelle rivière la Sihl se jette-t-elle au milieu de la ville de Zurich ?
+options:
+  a: Dans la Töss
+  b: Dans la Limmat
+  c: Dans la Glatt
+  d: Dans l'Aar
+explanation: La Sihl traverse Zurich et se jette dans la Limmat au Platzspitz. La Glatt et la Töss sont
+  d'autres cours d'eau zurichois qui se jettent dans le Rhin. L'Aar ne reçoit la Limmat que plus en aval,
+  dans le canton d'Argovie.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchen Fluss mündet die Sihl mitten in der Stadt Zürich?
+    options_de:
+      a: In die Töss
+      b: In die Limmat
+      c: In die Glatt
+      d: In die Aare
+    explanation_de: Die Sihl durchquert Zürich und mündet beim Platzspitz in die Limmat. Die Glatt und
+      die Töss sind andere Zürcher Gewässer, die in den Rhein münden. Die Aare nimmt die Limmat erst weiter
+      flussabwärts im Kanton Aargau auf.

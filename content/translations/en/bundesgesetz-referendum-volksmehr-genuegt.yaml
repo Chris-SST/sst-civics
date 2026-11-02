@@ -12,6 +12,24 @@ explanation: In an optional referendum against a federal law, only the popular m
   that is, the majority of the valid votes throughout Switzerland. The majority of the cantons (Ständemehr)
   is additionally required only for amendments to the Federal Constitution and for certain international
   treaties.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen ein neues Bundesgesetz ist das fakultative Referendum ergriffen worden. Was ist
+      erforderlich, damit das Gesetz in der Volksabstimmung angenommen wird?
+    options_de:
+      a: Eine Mehrheit der Stimmenden in der ganzen Schweiz
+      b: Eine Zweidrittelmehrheit der Stimmenden
+      c: Allein eine Mehrheit der Kantone
+      d: Eine Mehrheit der Stimmenden und eine Mehrheit der Kantone
+    explanation_de: Beim fakultativen Referendum gegen ein Bundesgesetz zählt nur das Volksmehr, das heisst
+      die Mehrheit der gültigen Stimmen in der ganzen Schweiz. Das Ständemehr (die Mehrheit der Kantone)
+      ist zusätzlich nur bei Änderungen der Bundesverfassung und bei bestimmten völkerrechtlichen Verträgen
+      erforderlich.

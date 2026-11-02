@@ -1,0 +1,31 @@
+id: ruetli-zusammenschluss-der-urkantone
+lang: tr
+source_version: 1
+question: Rütli, İsviçre tarihinde neyi simgelemektedir?
+options:
+  a: İlk kantonların birleşmesini
+  b: Marignano Savaşı'ndaki zaferi
+  c: Reform hareketinin başlangıcını
+  d: 1848'de federal devletin kurulmasını
+explanation: Rivayete göre ilk kantonların temsilcileri Rütli'de ittifak kurmuştur. Bu nedenle Rütli,
+  İsviçre Konfederasyonu'nun (Eidgenossenschaft) başlangıcının simgesi olarak kabul edilir. Çayır, Vierwaldstättersee
+  (Dört Kanton Gölü) kıyısında yer almaktadır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was symbolisiert das Rütli in der Geschichte der Schweiz?
+    options_de:
+      a: Die Vereinigung der ersten Kantone
+      b: Den Sieg in der Schlacht von Marignano
+      c: Den Beginn der Reformationsbewegung
+      d: Die Gründung des Bundesstaates im Jahr 1848
+    explanation_de: Der Überlieferung nach schlossen die Vertreter der ersten Kantone auf dem Rütli ein
+      Bündnis. Deshalb gilt das Rütli als Symbol für den Beginn der Eidgenossenschaft. Die Wiese liegt
+      am Ufer des Vierwaldstättersees (See der vier Waldstätten).

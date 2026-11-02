@@ -1,0 +1,29 @@
+id: schulen-finanzierung-steuergelder
+lang: es
+source_version: 1
+question: ¿De dónde proviene principalmente el dinero para pagar las escuelas públicas en Suiza?
+options:
+  a: De las tasas escolares que los padres pagan cada mes
+  b: De los ingresos fiscales del cantón y de los municipios (Gemeinden)
+  c: De los ingresos de Correos y de los SBB
+  d: De las contribuciones de las aseguradoras de salud (Krankenkassen)
+explanation: Según la Constitución Federal, la escuela pública obligatoria es gratuita. Se financia con
+  ingresos fiscales, sobre todo de los cantones y de los municipios.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Woher stammt das Geld für die Bezahlung der öffentlichen Schulen in der Schweiz hauptsächlich?
+    options_de:
+      a: Aus den Schulgebühren, die die Eltern jeden Monat bezahlen
+      b: Aus den Steuereinnahmen des Kantons und der Gemeinden
+      c: Aus den Einnahmen der Post und der SBB
+      d: Aus den Beiträgen der Krankenkassen
+    explanation_de: Gemäss der Bundesverfassung ist die obligatorische öffentliche Schule unentgeltlich.
+      Sie wird durch Steuereinnahmen finanziert, vor allem der Kantone und der Gemeinden.

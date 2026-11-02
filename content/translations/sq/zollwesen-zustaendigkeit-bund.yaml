@@ -1,0 +1,31 @@
+id: zollwesen-zustaendigkeit-bund
+lang: sq
+source_version: 1
+question: Kush kujdeset në Zvicër për shërbimin doganor?
+options:
+  a: Konfederata
+  b: Komunat (Gemeinden) në kufi
+  c: Kantonet në të cilat shtrihen kufijtë
+  d: Kantonet dhe Konfederata, secila për gjysmën
+explanation: Sipas Kushtetutës Federale, shërbimi doganor është çështje e Konfederatës. Ajo rregullon
+  tarifat doganore dhe kontrollin e qarkullimit të mallrave përtej kufirit. Kantonet dhe komunat nuk kanë
+  për këtë kompetencë të veçantë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz für das Zollwesen zuständig?
+    options_de:
+      a: Der Bund
+      b: Die Gemeinden an der Grenze
+      c: Die Kantone, in denen die Grenzen verlaufen
+      d: Die Kantone und der Bund, je zur Hälfte
+    explanation_de: Gemäss der Bundesverfassung ist das Zollwesen Sache des Bundes. Er regelt die Zolltarife
+      und die Kontrolle des Warenverkehrs über die Grenze. Die Kantone und die Gemeinden haben dafür keine
+      besondere Zuständigkeit.

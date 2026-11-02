@@ -11,6 +11,22 @@ options:
 explanation: The number 144 is the emergency number for the ambulance service in medical emergencies.
   117 is for the police and 118 for the fire brigade. 145 is the number for Tox Info Suisse in cases of
   poisoning.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Telefonnummer wählt man in der Schweiz bei einem medizinischen Notfall, um den
+      Rettungsdienst zu rufen?
+    options_de:
+      a: '118'
+      b: '117'
+      c: '144'
+      d: '145'
+    explanation_de: Die Nummer 144 ist die Notrufnummer für den Rettungsdienst bei medizinischen Notfällen.
+      117 ist für die Polizei und 118 für die Feuerwehr. 145 ist die Nummer von Tox Info Suisse bei Vergiftungen.

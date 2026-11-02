@@ -1,0 +1,31 @@
+id: uno-beitritt-der-schweiz-jahr
+lang: sq
+source_version: 1
+question: Në cilin vit u bë Zvicra anëtare e Kombeve të Bashkuara (OKB)?
+options:
+  a: '2002'
+  b: '1945'
+  c: '1986'
+  d: '2010'
+explanation: Zvicra iu bashkua OKB-së në vitin 2002, pasi populli dhe kantonet e kishin miratuar anëtarësimin.
+  Kështu ajo ishte një nga vendet e fundit që u anëtarësuan. Megjithatë, shumë organizata të OKB-së kanë
+  qëndër në Gjenevë që prej kohësh.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr wurde die Schweiz Mitglied der Vereinten Nationen (UNO)?
+    options_de:
+      a: '2002'
+      b: '1945'
+      c: '1986'
+      d: '2010'
+    explanation_de: Die Schweiz trat der UNO im Jahr 2002 bei, nachdem das Volk und die Kantone den Beitritt
+      genehmigt hatten. Damit war sie eines der letzten Länder, die Mitglied wurden. Dennoch haben viele
+      UNO-Organisationen schon seit langem ihren Sitz in Genf.

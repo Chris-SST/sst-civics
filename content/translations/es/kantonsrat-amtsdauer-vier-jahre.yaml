@@ -1,0 +1,31 @@
+id: kantonsrat-amtsdauer-vier-jahre
+lang: es
+source_version: 1
+question: ¿Por cuántos años se elige a los miembros del Consejo Cantonal (Kantonsrat) de Zúrich?
+options:
+  a: Por dos años
+  b: Por tres años
+  c: Por seis años
+  d: Por cuatro años
+explanation: Los miembros del Consejo Cantonal de Zúrich se eligen para un mandato de cuatro años. Después
+  se celebran elecciones generales de renovación total. Entonces, las personas con derecho a voto pueden
+  decidir de nuevo quién ocupa un escaño en el Parlamento.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für wie viele Jahre werden die Mitglieder des Kantonsrats von Zürich gewählt?
+    options_de:
+      a: Für zwei Jahre
+      b: Für drei Jahre
+      c: Für sechs Jahre
+      d: Für vier Jahre
+    explanation_de: Die Mitglieder des Kantonsrats von Zürich werden für eine Amtsdauer von vier Jahren
+      gewählt. Danach finden allgemeine Gesamterneuerungswahlen statt. Dann können die Stimmberechtigten
+      erneut entscheiden, wer einen Sitz im Parlament innehat.

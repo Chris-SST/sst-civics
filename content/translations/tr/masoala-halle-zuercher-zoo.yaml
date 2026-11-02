@@ -1,0 +1,30 @@
+id: masoala-halle-zuercher-zoo
+lang: tr
+source_version: 1
+question: Zürih'teki Madagaskar yağmur ormanını barındıran Masoala Salonu hangi kuruma aittir?
+options:
+  a: Zürih Hayvanat Bahçesi'ne
+  b: Üniversitenin Botanik Bahçesi'ne
+  c: Doğa Tarihi Müzesi'ne
+  d: Technorama'ya
+explanation: Masoala Salonu, Zürih Hayvanat Bahçesi'nin bir parçasıdır. Madagaskar'da yetişen türden bir
+  yağmur ormanını gösterir. Orada bu yağmur ormanına ait hayvanlar da yaşar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Zu welcher Institution gehört die Masoala-Halle, die den Madagaskar-Regenwald in Zürich
+      beherbergt?
+    options_de:
+      a: Zum Zoo Zürich
+      b: Zum Botanischen Garten der Universität
+      c: Zum Naturhistorischen Museum
+      d: Zum Technorama
+    explanation_de: Die Masoala-Halle ist ein Teil des Zoos Zürich. Sie zeigt einen Regenwald von der
+      Art, die in Madagaskar wächst. Dort leben auch Tiere, die zu diesem Regenwald gehören.

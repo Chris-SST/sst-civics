@@ -1,0 +1,32 @@
+id: grenzgaenger-definition-wohnort-arbeitsort
+lang: sq
+source_version: 2
+question: Kush konsiderohet në Zvicër punëtor kufitar (Grenzgänger)?
+options:
+  a: Një person që punon në Zvicër, por ka vendbanimin jashtë vendit dhe kthehet rregullisht atje
+  b: Një person që punon në doganë dhe kontrollon kufirin shtetëror
+  c: Një person që kalon kufirin pa leje për të punuar këtu
+  d: Një person që banon në një kanton dhe punon çdo ditë në një kanton tjetër
+explanation: Punëtorët kufitarë e kanë vendin e punës në Zvicër, por banojnë në një vend tjetër. Ata kanë
+  nevojë për një leje për punëtorë kufitarë dhe kthehen rregullisht, të paktën një herë në javë, në vendbanimin
+  e tyre jashtë vendit. Ai që lëviz vetëm mes dy kantoneve nuk është punëtor kufitar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer gilt in der Schweiz als Grenzgänger?
+    options_de:
+      a: Eine Person, die in der Schweiz arbeitet, aber ihren Wohnsitz im Ausland hat und regelmässig
+        dorthin zurückkehrt
+      b: Eine Person, die beim Zoll arbeitet und die Staatsgrenze kontrolliert
+      c: Eine Person, die die Grenze ohne Bewilligung überquert, um hier zu arbeiten
+      d: Eine Person, die in einem Kanton wohnt und jeden Tag in einem anderen Kanton arbeitet
+    explanation_de: Grenzgänger haben ihren Arbeitsort in der Schweiz, wohnen aber in einem anderen Land.
+      Sie benötigen eine Grenzgängerbewilligung und kehren regelmässig, mindestens einmal pro Woche, an
+      ihren Wohnsitz im Ausland zurück. Wer sich nur zwischen zwei Kantonen bewegt, ist kein Grenzgänger.

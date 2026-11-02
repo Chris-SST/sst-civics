@@ -1,0 +1,33 @@
+id: vereinigte-bundesversammlung-wahl-bundesrat-bundesgericht
+lang: sq
+source_version: 2
+question: Kush i zgjedh anëtarët e Këshillit Federal (Bundesrat) dhe të Gjykatës Federale (Bundesgericht)?
+options:
+  a: Populli me votim në kuti
+  b: Qeveritë e kantoneve
+  c: Këshilli Kombëtar (Nationalrat) dhe Këshilli i Shteteve (Ständerat) së bashku
+  d: Kryetarët dhe kryetaret e partive
+explanation: Për këto zgjedhje mblidhen së bashku Këshilli Kombëtar dhe Këshilli i Shteteve. Ata formojnë
+  atëherë Kuvendin Federal (Bundesversammlung) të Bashkuar dhe zgjedhin anëtarët e Këshillit Federal dhe
+  të Gjykatës Federale. Populli zgjedh Këshillin Kombëtar dhe, sipas rregullave të kantonit përkatës,
+  edhe anëtarët e Këshillit të Shteteve, por jo Këshillin Federal.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer wählt die Mitglieder des Bundesrates und des Bundesgerichts?
+    options_de:
+      a: Das Volk an der Urne
+      b: Die Regierungen der Kantone
+      c: Der Nationalrat und der Ständerat zusammen
+      d: Die Präsidenten und Präsidentinnen der Parteien
+    explanation_de: Für diese Wahlen kommen der Nationalrat und der Ständerat zusammen. Sie bilden dann
+      die Vereinigte Bundesversammlung und wählen die Mitglieder des Bundesrates und des Bundesgerichts.
+      Das Volk wählt den Nationalrat und, nach den Regeln des jeweiligen Kantons, auch die Mitglieder
+      des Ständerates, aber nicht den Bundesrat.

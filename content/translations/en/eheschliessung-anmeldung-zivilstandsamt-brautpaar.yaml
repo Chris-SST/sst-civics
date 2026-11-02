@@ -10,6 +10,22 @@ options:
 explanation: The engaged couple jointly submits the application for the marriage preparation procedure
   to the civil registry office. Other people cannot do this in their place. The office then checks whether
   the requirements for marriage are met.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer meldet die geplante Eheschliessung beim Zivilstandsamt an?
+    options_de:
+      a: Die Trauzeugen im Auftrag des Paares
+      b: Das Brautpaar gemeinsam
+      c: Das Einwohneramt der Wohngemeinde, automatisch
+      d: Die Eltern der Braut oder des Bräutigams
+    explanation_de: Das Brautpaar reicht das Gesuch um Durchführung des Ehevorbereitungsverfahrens gemeinsam
+      beim Zivilstandsamt ein. Andere Personen können dies nicht an ihrer Stelle tun. Das Amt prüft anschliessend,
+      ob die Voraussetzungen für die Eheschliessung erfüllt sind.

@@ -24,7 +24,7 @@ glossary:
 - Gegenvorschlag
 - Stichfrage
 - Bundesversammlung
-status: in_review
+status: approved
 difficulty: 3
 checks:
   independent_answer:
@@ -44,3 +44,43 @@ checks:
     at: *id001
     model: claude-opus-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Bundesverfassung (Art. 139 und 139b) spricht von «Gegenentwurf»; schreiben Sie in
+        der Frage oder Erklärung einmal «Gegenvorschlag (Gegenentwurf)», damit beide Begriffe aus dem
+        Test bekannt sind.'
+      - 'Klein: Die Erklärung könnte ergänzen, dass bei Verfassungsvorlagen in der Stichfrage Volks- und
+        Ständemehr zählen, zum Beispiel: «Es gilt die Vorlage, die in der Stichfrage mehr Stimmen von
+        Volk und Kantonen erhält.»'
+      - 'Klein: Zur Frage ist keine Tatsache aus der Themenliste angegeben; ordnen Sie sie dem passenden
+        Thema zu, zum Beispiel «Volksinitiative» oder «Volksrechte auf Bundesebene».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Es ist keine Tatsache aus der Themenliste angegeben; die Frage sollte einer passenden
+        Tatsache zugeordnet werden, etwa zu den Volksrechten auf Bundesebene (Volksinitiative und Gegenvorschlag).'
+      - 'Klein: In der Erklärung könnte man präzisieren, dass beide Vorlagen von Volk und Ständen angenommen
+        sein müssen, damit die Stichfrage zählt, zum Beispiel: «falls beide von Volk und Ständen angenommen
+        werden».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Bundesverfassung (Art. 139 und 139b) spricht von «Gegenentwurf». Für die Frage und
+        die Erklärung wäre «direkter Gegenentwurf» oder «direkter Gegenvorschlag (Gegenentwurf)» näher
+        an der amtlichen Sprache.'
+      - 'Klein: Die Erklärung könnte ergänzen, dass bei der Stichfrage bei Uneinigkeit zwischen Volks-
+        und Standesmehr die Summe der prozentualen Anteile entscheidet. Das ist aber nicht nötig.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

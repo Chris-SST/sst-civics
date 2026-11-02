@@ -1,0 +1,31 @@
+id: bundesstaat-1848-neue-verfassung
+lang: tr
+source_version: 1
+question: İsviçre'de 1848 yılında ne ortaya çıktı?
+options:
+  a: Merkezi bir hükümete sahip Helvetik Cumhuriyeti
+  b: Fransız gözetimi altındaki devletler topluluğu
+  c: Yeni bir anayasaya sahip modern federal devlet
+  d: Üç kurucu kantonun Konfederasyonu
+explanation: 1848'de kantonlar kendilerine bir Federal Anayasa verdi ve modern federal devleti kurdu.
+  Bu devlet, Konfederasyonun ortak görevlerini kantonların özerkliğiyle birleştirdi. Bu anayasa, bugünkü
+  İsviçre'nin temelidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was entstand 1848 in der Schweiz?
+    options_de:
+      a: Die Helvetische Republik mit einer Zentralregierung
+      b: Ein Staatenbund unter französischer Aufsicht
+      c: Ein moderner Bundesstaat mit einer neuen Verfassung
+      d: Die Eidgenossenschaft der drei Gründerkantone
+    explanation_de: 1848 gaben sich die Kantone eine Bundesverfassung und gründeten den modernen Bundesstaat.
+      Dieser Staat verband die gemeinsamen Aufgaben der Eidgenossenschaft mit der Autonomie der Kantone.
+      Diese Verfassung ist die Grundlage der heutigen Schweiz.

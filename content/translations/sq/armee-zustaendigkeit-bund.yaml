@@ -1,0 +1,31 @@
+id: armee-zustaendigkeit-bund
+lang: sq
+source_version: 1
+question: Cili nivel shtetëror është përgjegjës për ushtrinë?
+options:
+  a: Kantonet
+  b: Konfederata
+  c: Rrethet
+  d: Komunat (Gemeinden)
+explanation: Çështjet ushtarake janë në kompetencë të Konfederatës. Ajo rregullon ushtrinë dhe detyrat
+  e saj në Kushtetutën Federale dhe në ligjet federale. Kantonet marrin pjesë në zbatim, për shembull
+  në rekrutim.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Ebene ist für die Armee zuständig?
+    options_de:
+      a: Die Kantone
+      b: Der Bund
+      c: Die Bezirke
+      d: Die Gemeinden
+    explanation_de: Militärische Angelegenheiten fallen in die Zuständigkeit des Bundes. Er regelt die
+      Armee und ihre Aufgaben in der Bundesverfassung und in den Bundesgesetzen. Die Kantone beteiligen
+      sich an der Umsetzung, zum Beispiel bei der Rekrutierung.

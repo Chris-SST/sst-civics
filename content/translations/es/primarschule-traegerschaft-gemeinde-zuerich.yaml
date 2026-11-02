@@ -1,0 +1,33 @@
+id: primarschule-traegerschaft-gemeinde-zuerich
+lang: es
+source_version: 2
+question: ¿Quién gestiona las escuelas de primaria en el cantón de Zúrich?
+options:
+  a: La Dirección de Educación del cantón
+  b: La Confederación
+  c: Los municipios (Gemeinden)
+  d: Los distritos
+explanation: En el cantón de Zúrich, los municipios gestionan las escuelas primarias. Según el lugar,
+  se trata de los municipios políticos o de municipios escolares propios, y la Schulpflege elegida es
+  la autoridad escolar local. El cantón solo establece el marco, por ejemplo el plan de estudios, y supervisa
+  la escuela obligatoria pública.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer führt im Kanton Zürich die Primarschulen?
+    options_de:
+      a: Die Bildungsdirektion des Kantons
+      b: Der Bund
+      c: Die Gemeinden
+      d: Die Bezirke
+    explanation_de: Im Kanton Zürich führen die Gemeinden die Primarschulen. Je nach Ort handelt es sich
+      um die politischen Gemeinden oder um eigene Schulgemeinden, und die gewählte Schulpflege ist die
+      örtliche Schulbehörde. Der Kanton legt nur den Rahmen fest, zum Beispiel den Lehrplan, und beaufsichtigt
+      die öffentliche obligatorische Schule.

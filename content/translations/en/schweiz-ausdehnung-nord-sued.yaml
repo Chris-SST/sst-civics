@@ -8,6 +8,21 @@ options:
   c: around 120 kilometres
   d: around 450 kilometres
 explanation: Switzerland measures around 220 kilometres from north to south. It is therefore a small country.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie weit ist es ungefähr vom nördlichsten bis zum südlichsten Punkt der Schweiz?
+    options_de:
+      a: rund 650 Kilometer
+      b: rund 220 Kilometer
+      c: rund 120 Kilometer
+      d: rund 450 Kilometer
+    explanation_de: Die Schweiz misst von Norden nach Süden rund 220 Kilometer. Sie ist somit ein kleines
+      Land.

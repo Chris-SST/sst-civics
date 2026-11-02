@@ -10,6 +10,22 @@ options:
   d: In Zürich
 explanation: The Technorama is the Swiss Science Center and is located in Winterthur. Visitors can experiment
   for themselves there and try out natural phenomena.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Stadt oder Ortschaft im Kanton Zürich befindet sich das Technorama, ein Museum
+      zum Experimentieren?
+    options_de:
+      a: In Uster
+      b: In Dübendorf
+      c: In Winterthur
+      d: In Zürich
+    explanation_de: Das Technorama ist das Swiss Science Center und befindet sich in Winterthur. Die Besucherinnen
+      und Besucher können dort selbst experimentieren und Naturphänomene ausprobieren.

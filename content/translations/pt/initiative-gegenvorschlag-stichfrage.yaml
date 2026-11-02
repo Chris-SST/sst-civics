@@ -1,0 +1,33 @@
+id: initiative-gegenvorschlag-stichfrage
+lang: pt
+source_version: 1
+question: Sobre uma iniciativa popular (Volksinitiative) e um contraprojeto direto da Assembleia Federal
+  (Bundesversammlung) vota-se ao mesmo tempo. Para que serve, neste caso, a pergunta decisiva?
+options:
+  a: Decide se a votação tem de ser repetida
+  b: Decide se a iniciativa é válida
+  c: Decide qual dos projetos vale se ambos forem aceites
+  d: Decide se os cantões podem participar na votação
+explanation: Os eleitores podem aprovar tanto a iniciativa como o contraprojeto. Com a pergunta decisiva,
+  indicam qual dos dois projetos deve entrar em vigor, caso ambos sejam aceites. Assim, nenhum voto a
+  favor de uma mudança se perde.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Über eine Volksinitiative und einen direkten Gegenentwurf der Bundesversammlung wird
+      gleichzeitig abgestimmt. Wozu dient in diesem Fall die Stichfrage?
+    options_de:
+      a: Sie entscheidet, ob die Abstimmung wiederholt werden muss
+      b: Sie entscheidet, ob die Initiative gültig ist
+      c: Sie entscheidet, welche der Vorlagen gilt, wenn beide angenommen werden
+      d: Sie entscheidet, ob die Kantone an der Abstimmung teilnehmen dürfen
+    explanation_de: Die Stimmberechtigten können sowohl die Initiative als auch den Gegenentwurf annehmen.
+      Mit der Stichfrage geben sie an, welche der beiden Vorlagen in Kraft treten soll, falls beide angenommen
+      werden. So geht keine Stimme für eine Änderung verloren.

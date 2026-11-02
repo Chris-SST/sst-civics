@@ -1,0 +1,31 @@
+id: mieterverband-vertritt-mietende
+lang: pt
+source_version: 1
+question: Qual é a função da associação de inquilinos (Mieterverband)?
+options:
+  a: Representa os interesses dos proprietários de imóveis
+  b: Fixa as rendas de todos os apartamentos
+  c: Arrenda apartamentos por conta do cantão
+  d: Representa os interesses dos inquilinos
+explanation: A associação de inquilinos é uma organização que defende os interesses dos inquilinos. Aconselha
+  os seus membros, por exemplo, em questões relacionadas com o direito do arrendamento. Os interesses
+  dos proprietários de imóveis são representados por outras associações.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Funktion hat der Mieterverband?
+    options_de:
+      a: Er vertritt die Interessen der Immobilieneigentümer
+      b: Er legt die Mieten aller Wohnungen fest
+      c: Er vermietet Wohnungen im Auftrag des Kantons
+      d: Er vertritt die Interessen der Mieter
+    explanation_de: Der Mieterverband ist eine Organisation, die die Interessen der Mieter verteidigt.
+      Er berät seine Mitglieder, zum Beispiel in Fragen im Zusammenhang mit dem Mietrecht. Die Interessen
+      der Immobilieneigentümer werden von anderen Verbänden vertreten.

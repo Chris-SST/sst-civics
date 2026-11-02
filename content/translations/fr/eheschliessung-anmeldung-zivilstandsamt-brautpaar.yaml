@@ -1,0 +1,31 @@
+id: eheschliessung-anmeldung-zivilstandsamt-brautpaar
+lang: fr
+source_version: 1
+question: Qui annonce le mariage prévu à l'office de l'état civil ?
+options:
+  a: Les témoins, au nom du couple
+  b: Les futurs époux ensemble
+  c: Le contrôle des habitants de la commune de domicile, automatiquement
+  d: Les parents de la future épouse ou du futur époux
+explanation: Les futurs époux déposent ensemble auprès de l'office de l'état civil la demande d'ouverture
+  de la procédure préparatoire du mariage. D'autres personnes ne peuvent pas le faire à leur place. Ensuite,
+  l'office vérifie si les conditions du mariage sont remplies.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer meldet die geplante Heirat beim Zivilstandsamt an?
+    options_de:
+      a: Die Trauzeugen im Namen des Paares
+      b: Die Brautleute gemeinsam
+      c: Die Einwohnerkontrolle der Wohngemeinde, automatisch
+      d: Die Eltern der zukünftigen Braut oder des zukünftigen Bräutigams
+    explanation_de: Die Brautleute reichen gemeinsam beim Zivilstandsamt das Gesuch um Eröffnung des Vorbereitungsverfahrens
+      der Eheschliessung ein. Andere Personen können dies nicht an ihrer Stelle tun. Anschliessend prüft
+      das Amt, ob die Voraussetzungen für die Eheschliessung erfüllt sind.

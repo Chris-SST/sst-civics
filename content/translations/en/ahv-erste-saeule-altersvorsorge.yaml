@@ -9,6 +9,21 @@ options:
   d: The health insurer (Krankenkasse)
 explanation: The OASI is the state provision and forms the first pillar. The pension fund is the second
   pillar, and private provision is the third pillar.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Institution bildet die erste Säule der Altersvorsorge in der Schweiz?
+    options_de:
+      a: Die private Säule 3a
+      b: Die staatliche Alters- und Hinterlassenenversicherung (AHV)
+      c: Die Pensionskasse
+      d: Die Krankenkasse
+    explanation_de: Die AHV ist die staatliche Vorsorge und bildet die erste Säule. Die Pensionskasse
+      ist die zweite Säule, und die private Vorsorge ist die dritte Säule.

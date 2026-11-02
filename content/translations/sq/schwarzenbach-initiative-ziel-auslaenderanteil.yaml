@@ -1,0 +1,30 @@
+id: schwarzenbach-initiative-ziel-auslaenderanteil
+lang: sq
+source_version: 1
+question: Çfarë kërkonte nisma Schwarzenbach, për të cilën u votua në vitin 1970?
+options:
+  a: Ajo kërkonte të lehtësohej natyralizimi për të gjithë të huajt.
+  b: Ajo kërkonte të ndalohej migrimi vetëm nga Italia.
+  c: Ajo kërkonte të kufizohej pjesa e të huajve që jetojnë në Zvicër.
+  d: Ajo kërkonte të futej e drejta e votës për të huajt.
+explanation: Nisma kërkonte të kufizohej pjesa e të huajve në Zvicër. Ajo u refuzua nga populli në vitin
+  1970. Ajo tregon se sa shumë diskutohej atëherë migrimi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was verlangte die Schwarzenbach-Initiative, über die im Jahr 1970 abgestimmt wurde?
+    options_de:
+      a: Sie verlangte, dass die Einbürgerung für alle Ausländer erleichtert wird.
+      b: Sie verlangte, dass nur die Migration aus Italien verboten wird.
+      c: Sie verlangte, dass der Anteil der in der Schweiz lebenden Ausländer begrenzt wird.
+      d: Sie verlangte, dass das Stimmrecht für Ausländer eingeführt wird.
+    explanation_de: Die Initiative verlangte, dass der Anteil der Ausländer in der Schweiz begrenzt wird.
+      Sie wurde im Jahr 1970 vom Volk abgelehnt. Sie zeigt, wie stark die Migration damals diskutiert
+      wurde.

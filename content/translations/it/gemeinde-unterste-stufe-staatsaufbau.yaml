@@ -1,0 +1,31 @@
+id: gemeinde-unterste-stufe-staatsaufbau
+lang: it
+source_version: 2
+question: Quale livello si trova in fondo alla struttura statale a tre livelli della Svizzera?
+options:
+  a: Il Comune (Gemeinde)
+  b: La regione
+  c: Il Cantone
+  d: La Confederazione
+explanation: 'La Svizzera è strutturata su tre livelli: Confederazione, Cantoni e Comuni. Il Comune è
+  il livello più basso e il più vicino alle persone. Svolge autonomamente molti compiti, per esempio la
+  scuola elementare, le licenze edilizie o l''aiuto sociale.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Ebene befindet sich am unteren Ende des dreistufigen Staatsaufbaus der Schweiz?
+    options_de:
+      a: Die Gemeinde
+      b: Die Region
+      c: Der Kanton
+      d: Der Bund
+    explanation_de: 'Die Schweiz ist auf drei Ebenen aufgebaut: Bund, Kantone und Gemeinden. Die Gemeinde
+      ist die unterste und den Menschen am nächsten stehende Ebene. Sie erfüllt selbstständig viele Aufgaben,
+      zum Beispiel die Primarschule, die Baubewilligungen oder die Sozialhilfe.'

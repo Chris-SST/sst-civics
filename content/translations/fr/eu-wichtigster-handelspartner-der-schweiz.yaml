@@ -1,0 +1,32 @@
+id: eu-wichtigster-handelspartner-der-schweiz
+lang: fr
+source_version: 1
+question: Avec quel espace économique la Suisse réalise-t-elle globalement le plus d'échanges commerciaux
+  ?
+options:
+  a: Avec les États du Proche-Orient
+  b: Avec les États asiatiques
+  c: Avec l'Union européenne
+  d: Avec les États-Unis d'Amérique
+explanation: L'Union européenne est le principal partenaire commercial de la Suisse. Une grande partie
+  des importations et des exportations passe par les États de l'UE. C'est pourquoi les relations avec
+  l'UE sont très importantes pour l'économie suisse.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Mit welchem Wirtschaftsraum treibt die Schweiz insgesamt am meisten Handel?
+    options_de:
+      a: Mit den Staaten des Nahen Ostens
+      b: Mit den asiatischen Staaten
+      c: Mit der Europäischen Union
+      d: Mit den Vereinigten Staaten von Amerika
+    explanation_de: Die Europäische Union ist der wichtigste Handelspartner der Schweiz. Ein grosser Teil
+      der Importe und der Exporte läuft über die EU-Staaten. Deshalb sind die Beziehungen zur EU für die
+      Schweizer Wirtschaft sehr wichtig.

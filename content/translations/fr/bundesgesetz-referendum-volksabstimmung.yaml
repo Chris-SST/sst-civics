@@ -1,0 +1,31 @@
+id: bundesgesetz-referendum-volksabstimmung
+lang: fr
+source_version: 1
+question: Que vaut-il pour une loi fédérale que les deux chambres du Parlement ont adoptée ?
+options:
+  a: Les ayants droit de vote peuvent exiger une votation populaire à ce sujet au moyen d'un référendum.
+  b: Le Conseil fédéral (Bundesrat) doit ensuite encore la soumettre au Tribunal fédéral (Bundesgericht)
+    pour approbation.
+  c: Elle entre toujours immédiatement en vigueur, sans que le peuple puisse se prononcer.
+  d: Les gouvernements des cantons doivent d'abord l'approuver un par un.
+explanation: Après la décision des deux chambres, les lois fédérales sont soumises au référendum facultatif.
+  Si le référendum aboutit, les ayants droit de vote décident de la loi dans les urnes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für ein Bundesgesetz, das die beiden Kammern des Parlaments angenommen haben?
+    options_de:
+      a: Die Stimmberechtigten können mittels eines Referendums eine Volksabstimmung darüber verlangen.
+      b: Der Bundesrat muss es anschliessend noch dem Bundesgericht zur Genehmigung vorlegen.
+      c: Es tritt immer sofort in Kraft, ohne dass sich das Volk dazu äussern kann.
+      d: Die Regierungen der Kantone müssen es zuerst einzeln genehmigen.
+    explanation_de: Nach dem Beschluss der beiden Kammern unterstehen die Bundesgesetze dem fakultativen
+      Referendum. Kommt das Referendum zustande, entscheiden die Stimmberechtigten an der Urne über das
+      Gesetz.

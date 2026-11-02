@@ -1,0 +1,31 @@
+id: krankenversicherung-obligatorisch-einwohner
+lang: fr
+source_version: 1
+question: Qui doit souscrire une assurance-maladie en Suisse ?
+options:
+  a: Uniquement les personnes ayant le droit de cité (Bürgerrecht) suisse
+  b: Toutes les personnes qui habitent en Suisse
+  c: Uniquement les personnes de moins de 65 ans
+  d: Uniquement les personnes exerçant une activité lucrative
+explanation: L'assurance obligatoire des soins s'applique à toutes les personnes domiciliées en Suisse.
+  Le droit de cité, l'exercice d'une activité lucrative et l'âge n'ont aucune importance. L'assurance
+  doit être souscrite dans un délai de trois mois après l'arrivée en Suisse.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz eine Krankenversicherung abschliessen?
+    options_de:
+      a: Nur Personen mit Schweizer Bürgerrecht
+      b: Alle Personen, die in der Schweiz wohnen
+      c: Nur Personen unter 65 Jahren
+      d: Nur Personen, die einer Erwerbstätigkeit nachgehen
+    explanation_de: Die obligatorische Krankenpflegeversicherung gilt für alle Personen mit Wohnsitz in
+      der Schweiz. Das Bürgerrecht, die Ausübung einer Erwerbstätigkeit und das Alter spielen keine Rolle.
+      Die Versicherung muss innerhalb von drei Monaten nach der Ankunft in der Schweiz abgeschlossen werden.

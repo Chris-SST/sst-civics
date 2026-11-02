@@ -1,0 +1,31 @@
+id: mietwohnung-zutritt-vermieter-triftiger-grund
+lang: it
+source_version: 1
+question: In quale caso gli inquilini devono consentire al locatore l'accesso all'abitazione?
+options:
+  a: Mai, l'abitazione è sempre protetta
+  b: Quando sussiste un motivo valido
+  c: Solo se il locatore lo richiede, senza motivazione
+  d: In qualsiasi momento e senza preavviso
+explanation: Gli inquilini devono consentire l'accesso se sussiste un motivo valido, ad esempio una riparazione
+  urgente. Il locatore deve però annunciare la visita per tempo e avere riguardo per gli inquilini. L'accesso
+  senza motivo non è consentito.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall müssen die Mieter dem Vermieter den Zutritt zur Wohnung gewähren?
+    options_de:
+      a: Nie, die Wohnung ist immer geschützt
+      b: Wenn ein triftiger Grund vorliegt
+      c: Nur wenn der Vermieter es verlangt, ohne Begründung
+      d: Jederzeit und ohne Vorankündigung
+    explanation_de: Die Mieter müssen den Zutritt gewähren, wenn ein triftiger Grund vorliegt, zum Beispiel
+      eine dringende Reparatur. Der Vermieter muss den Besuch jedoch rechtzeitig ankündigen und auf die
+      Mieter Rücksicht nehmen. Der Zutritt ohne Grund ist nicht erlaubt.

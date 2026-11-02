@@ -1,14 +1,32 @@
 id: beliebter-wintersport-schweiz-skifahren
 lang: en
-source_version: 1
-question: Which sport is particularly widespread in Switzerland in winter?
+source_version: 2
+question: Which sport do particularly many people do in Switzerland in winter?
 options:
   a: Water polo
   b: Skiing
-  c: Ice hockey on the sea
+  c: Rowing
   d: Beach volleyball
-explanation: Skiing is a very popular sport in Switzerland in winter. Many people ski in the mountains,
-  and children often learn it at school or in camps too.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: Skiing is very popular in Switzerland in winter, and many people go skiing in the mountains.
+  Children often learn to ski at an early age, for example at a school ski camp. Water polo, rowing and
+  beach volleyball, on the other hand, are sports that are done mainly in summer or in the water.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welchen Sport betreiben in der Schweiz im Winter besonders viele Menschen?
+    options_de:
+      a: Wasserball
+      b: Skifahren
+      c: Rudern
+      d: Beachvolleyball
+    explanation_de: Skifahren ist in der Schweiz im Winter sehr beliebt, und viele Menschen gehen in den
+      Bergen Ski fahren. Kinder lernen oft schon früh Ski fahren, zum Beispiel in einem Schulskilager.
+      Wasserball, Rudern und Beachvolleyball hingegen sind Sportarten, die hauptsächlich im Sommer oder
+      im Wasser betrieben werden.

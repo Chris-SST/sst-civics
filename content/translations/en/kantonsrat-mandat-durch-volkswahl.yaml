@@ -10,6 +10,22 @@ options:
 explanation: The members of the Cantonal Council are elected by the citizens entitled to vote in the canton
   in a popular election. The parliament is therefore determined directly by the people. Neither the government
   nor the Confederation appoints the members.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie erhalten die Mitglieder des Zürcher Kantonsrats ihren Sitz?
+    options_de:
+      a: Sie werden vom Volk gewählt.
+      b: Sie werden von den Gemeinderäten ernannt.
+      c: Sie werden vom Regierungsrat ernannt.
+      d: Sie werden vom Bundesrat eingesetzt.
+    explanation_de: Die Mitglieder des Kantonsrats werden von den stimmberechtigten Bürgerinnen und Bürgern
+      des Kantons in einer Volkswahl gewählt. Das Parlament wird also direkt vom Volk bestimmt. Weder
+      die Regierung noch der Bund ernennt die Mitglieder.

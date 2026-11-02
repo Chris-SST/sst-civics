@@ -1,0 +1,29 @@
+id: familien-steuerabzuege-entlastung
+lang: it
+source_version: 1
+question: In che modo le famiglie vengono alleggerite dal punto di vista fiscale?
+options:
+  a: Le famiglie non pagano imposte.
+  b: Le famiglie possono far valere deduzioni fiscali.
+  c: Le famiglie non devono compilare la dichiarazione d'imposta.
+  d: Le famiglie pagano soltanto l'imposta sul valore aggiunto.
+explanation: Le famiglie possono far valere, ad esempio, deduzioni per i figli o per la custodia dei figli.
+  In questo modo si riduce il reddito imponibile e, di conseguenza, anche l'imposta.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Auf welche Weise werden Familien steuerlich entlastet?
+    options_de:
+      a: Familien bezahlen keine Steuern.
+      b: Familien können Steuerabzüge geltend machen.
+      c: Familien müssen die Steuererklärung nicht ausfüllen.
+      d: Familien bezahlen nur die Mehrwertsteuer.
+    explanation_de: Familien können zum Beispiel Abzüge für Kinder oder für die Kinderbetreuung geltend
+      machen. Dadurch verringert sich das steuerbare Einkommen und folglich auch die Steuer.

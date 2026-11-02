@@ -1,0 +1,37 @@
+id: abstimmungsunterlagen-erlaeuterungen-bundesrat
+lang: sq
+source_version: 1
+question: Çfarë marrin qytetarët me të drejtë vote përpara një votimi federal së bashku me materialin
+  e votimit, që të mund të informohen për projektet?
+options:
+  a: Shpjegimet e Këshillit Federal (Bundesrat)
+  b: Një mendim i Gjykatës Federale (Bundesgericht)
+  c: Një ekspertizë e kantonit të vet
+  d: Lista zgjedhore e të gjitha partive
+explanation: Këshilli Federal shpjegon në shpjegimet, që shpesh quhen fletushka e votimit (Abstimmungsbüchlein),
+  se për çfarë bëhet fjalë në çdo projekt. Aty gjenden edhe argumentet e komitetit të iniciativës ose
+  të komitetit të referendumit, si dhe rekomandimi i Këshillit Federal dhe i Parlamentit. Kështu secili
+  mund të formojë mendimin e vet.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: Antwort b) lautet im Deutschen «Eine Stellungnahme des Bundesgerichts», in der Rückübersetzung
+      «Ein Gutachten des Bundesgerichts»; damit wird b) fast gleich wie c) (beide «Gutachten»), die Antwort
+      hat sich verändert.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Was erhalten Stimmberechtigte vor einer eidgenössischen Abstimmung zusammen mit dem Abstimmungsmaterial,
+      damit sie sich über die Vorlagen informieren können?
+    options_de:
+      a: Die Erläuterungen des Bundesrates
+      b: Ein Gutachten des Bundesgerichts
+      c: Ein Gutachten ihres eigenen Kantons
+      d: Die Wahlliste aller Parteien
+    explanation_de: Der Bundesrat erklärt in den Erläuterungen, die oft Abstimmungsbüchlein genannt werden,
+      worum es bei jeder Vorlage geht. Dort finden sich auch die Argumente des Initiativkomitees oder
+      des Referendumskomitees sowie die Empfehlung des Bundesrates und des Parlaments. So kann sich jeder
+      seine eigene Meinung bilden.

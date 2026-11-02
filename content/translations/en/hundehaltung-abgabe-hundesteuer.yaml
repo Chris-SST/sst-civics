@@ -1,14 +1,31 @@
 id: hundehaltung-abgabe-hundesteuer
 lang: en
-source_version: 1
-question: What else must a person in the canton of Zürich do if they keep a dog?
+source_version: 2
+question: What applies in the canton of Zürich to people who keep a dog?
 options:
-  a: They must pay an annual charge for it, the dog tax
-  b: They must report the dog to the Federal Council (Bundesrat) every two years
-  c: They do not have to pay value added tax on the dog food
-  d: They must perform a substitute for military service for it
-explanation: Dog owners pay an annual dog tax to the commune (Gemeinde). The dog must also be registered.
-  The charge is one of the obligations towards the state.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: They must pay an annual dog levy to the commune (Gemeinde).
+  b: They only have to pay a one-off fee to the Confederation when they buy the dog.
+  c: They must take a test with the dog every year at the canton.
+  d: They only have to pay a levy if they earn money with the dog.
+explanation: Anyone who keeps a dog in the canton of Zürich pays a levy for the dog every year, the so-called
+  dog tax. The money goes to the commune of residence, not to the Confederation. The levy is not a one-off
+  payment and also applies to dogs that are kept purely as private pets.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt im Kanton Zürich für Personen, die einen Hund halten?
+    options_de:
+      a: Sie müssen der Gemeinde jährlich eine Hundeabgabe bezahlen.
+      b: Sie müssen beim Kauf des Hundes nur einmalig eine Gebühr an den Bund bezahlen.
+      c: Sie müssen jedes Jahr beim Kanton mit dem Hund eine Prüfung ablegen.
+      d: Sie müssen nur dann eine Abgabe bezahlen, wenn sie mit dem Hund Geld verdienen.
+    explanation_de: Wer im Kanton Zürich einen Hund hält, bezahlt jedes Jahr eine Abgabe für den Hund,
+      die sogenannte Hundesteuer. Das Geld geht an die Wohngemeinde, nicht an den Bund. Die Abgabe ist
+      keine einmalige Zahlung und gilt auch für Hunde, die rein als private Haustiere gehalten werden.

@@ -9,6 +9,22 @@ options:
   d: A red, free-standing cross on a white square
 explanation: The Swiss flag is square. It shows a white cross on a red background, the arms of which do
   not touch the edge. Alongside the flag of the Vatican, it is one of the only two square national flags.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie sieht die Schweizer Flagge aus?
+    options_de:
+      a: Ein weisses, freistehendes Kreuz auf einem roten Quadrat
+      b: Ein weisses Kreuz auf rotem Hintergrund mit einem Wappen in der Mitte
+      c: Ein weisses Kreuz, das bis zum Rand des roten Rechtecks reicht
+      d: Ein rotes, freistehendes Kreuz auf einem weissen Quadrat
+    explanation_de: Die Schweizer Flagge ist quadratisch. Sie zeigt ein weisses Kreuz auf rotem Hintergrund,
+      dessen Arme den Rand nicht berühren. Neben der Flagge des Vatikans ist sie eine der einzigen zwei
+      quadratischen Nationalflaggen.

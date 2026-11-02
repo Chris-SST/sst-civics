@@ -9,6 +9,22 @@ options:
   d: They can submit a popular initiative (Volksinitiative) to the Federal Council (Bundesrat).
 explanation: The legal remedy against an assessment is the objection. It must be lodged in writing with
   the tax authority, and within a time limit.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine steuerpflichtige Person ist mit ihrer Steuerveranlagung nicht einverstanden. Was
+      kann sie tun?
+    options_de:
+      a: Sie kann an der Gemeindeversammlung darüber abstimmen lassen.
+      b: Sie kann sich weigern zu zahlen, ohne weitere Schritte zu unternehmen.
+      c: Sie kann bei der Steuerbehörde schriftlich Einsprache erheben.
+      d: Sie kann beim Bundesrat eine Volksinitiative einreichen.
+    explanation_de: Das Rechtsmittel gegen eine Veranlagung ist die Einsprache. Sie muss schriftlich bei
+      der Steuerbehörde und innerhalb einer Frist erhoben werden.

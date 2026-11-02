@@ -1,0 +1,29 @@
+id: heirat-planen-zivilstandsamt
+lang: it
+source_version: 1
+question: A quale ufficio si devono rivolgere le coppie che desiderano sposarsi?
+options:
+  a: Alla commissione scolastica (Schulpflege)
+  b: All'ufficio dello stato civile
+  c: All'ufficio delle imposte
+  d: All'ufficio di esecuzione
+explanation: L'ufficio dello stato civile prepara e celebra il matrimonio. Registra ufficialmente anche
+  altri eventi, come le nascite e i decessi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welches Amt müssen sich Paare wenden, die heiraten möchten?
+    options_de:
+      a: An die Schulpflege
+      b: An das Zivilstandsamt
+      c: An das Steueramt
+      d: An das Betreibungsamt
+    explanation_de: Das Zivilstandsamt bereitet die Eheschliessung vor und vollzieht sie. Es registriert
+      auch andere Ereignisse offiziell, wie die Geburten und die Todesfälle.

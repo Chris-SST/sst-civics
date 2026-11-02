@@ -1,0 +1,30 @@
+id: rechtsstaat-keine-festnahme-ohne-grund
+lang: it
+source_version: 1
+question: Che cosa vale per l'arresto e la detenzione in uno Stato di diritto?
+options:
+  a: Lo Stato non può arrestare né incarcerare nessuno senza un motivo.
+  b: Lo Stato può trattenere le persone a propria discrezione.
+  c: Il governo può mettere in carcere preventivamente i critici.
+  d: Solo gli stranieri e le straniere possono essere arrestati senza motivo.
+explanation: In uno Stato di diritto l'azione dello Stato è vincolata al diritto. Un arresto o una detenzione
+  richiede un motivo previsto dalla legge. Ciò protegge la libertà delle persone dall'arbitrio.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für die Verhaftung und die Haft in einem Rechtsstaat?
+    options_de:
+      a: Der Staat darf niemanden ohne Grund verhaften oder einsperren.
+      b: Der Staat darf Personen nach eigenem Ermessen festhalten.
+      c: Die Regierung darf Kritiker vorsorglich ins Gefängnis stecken.
+      d: Nur Ausländer und Ausländerinnen dürfen ohne Grund verhaftet werden.
+    explanation_de: In einem Rechtsstaat ist das Handeln des Staates an das Recht gebunden. Eine Verhaftung
+      oder eine Haft erfordert einen im Gesetz vorgesehenen Grund. Dies schützt die Freiheit der Personen
+      vor Willkür.

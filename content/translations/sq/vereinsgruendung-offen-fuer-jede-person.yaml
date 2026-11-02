@@ -1,0 +1,32 @@
+id: vereinsgruendung-offen-fuer-jede-person
+lang: sq
+source_version: 1
+question: Kush mund të krijojë një shoqatë në Zvicër?
+options:
+  a: Vetëm personat që kanë vendbanimin në komunën (Gemeinde)
+  b: Çdo person
+  c: Vetëm shtetasit zviceranë
+  d: Vetëm personat me leje vendosjeje (leja C) (Niederlassungsbewilligung)
+explanation: Krijimi i një shoqate është i hapur për çdo person në Zvicër. Liria e shoqërimit është e
+  garantuar në Kushtetutën Federale (Bundesverfassung). Shtetësia ose statusi i qëndrimit nuk luajnë asnjë
+  rol në këtë drejtim.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; der Zusatz «(Ausweis C)» bei d) ist nur eine Präzisierung der Niederlassungsbewilligung
+      und ändert die Aussage nicht
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann in der Schweiz einen Verein gründen?
+    options_de:
+      a: Nur Personen, die in der Gemeinde wohnhaft sind
+      b: Jede Person
+      c: Nur Schweizer Staatsangehörige
+      d: Nur Personen mit Niederlassungsbewilligung (Ausweis C)
+    explanation_de: Die Gründung eines Vereins steht in der Schweiz jeder Person offen. Die Vereinigungsfreiheit
+      ist in der Bundesverfassung garantiert. Die Staatsangehörigkeit oder der Aufenthaltsstatus spielen
+      in dieser Hinsicht keine Rolle.

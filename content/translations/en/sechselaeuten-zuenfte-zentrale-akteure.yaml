@@ -9,6 +9,21 @@ options:
   d: The members of the Cantonal Council (Kantonsrat)
 explanation: At Sechseläuten, the guilds parade through the city in historical costumes. In the evening,
   they burn the Böögg. The event is a well-known spring festival in Zurich.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer sind die zentralen Teilnehmer am Zürcher Frühlingsfest, dem Sechseläuten?
+    options_de:
+      a: Zürcher Schulklassen
+      b: Die Zürcher Zünfte
+      c: Die Gemeindepräsidenten des Kantons
+      d: Die Mitglieder des Kantonsrats
+    explanation_de: Am Sechseläuten ziehen die Zünfte in historischen Kostümen durch die Stadt. Am Abend
+      verbrennen sie den Böögg. Der Anlass ist ein bekanntes Frühlingsfest in Zürich.

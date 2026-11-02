@@ -1,0 +1,32 @@
+id: bundesverwaltung-justiz-und-polizeidepartement
+lang: tr
+source_version: 1
+question: Aşağıdaki birimlerden hangisi Konfederasyon idaresine aittir?
+options:
+  a: Ulusal Konsey (Nationalrat)
+  b: Federal Meclis (Bundesversammlung)
+  c: Federal Mahkeme (Bundesgericht)
+  d: Adalet ve Polis Departmanı
+explanation: Konfederasyon idaresi departmanlara ayrılmıştır. Adalet ve Polis Departmanı bunlardan biridir
+  ve Federal Konsey (Bundesrat) yönetimindeki idareye aittir. Ulusal Konsey ve Federal Meclis parlamentoya,
+  Federal Mahkeme ise yargıya aittir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Einheiten gehört zur Verwaltung der Eidgenossenschaft?
+    options_de:
+      a: Nationalrat
+      b: Bundesversammlung
+      c: Bundesgericht
+      d: Departement für Justiz und Polizei
+    explanation_de: Die Verwaltung der Eidgenossenschaft ist in Departemente unterteilt. Das Departement
+      für Justiz und Polizei ist eines davon und gehört zur Verwaltung unter der Leitung des Bundesrates.
+      Der Nationalrat und die Bundesversammlung gehören zum Parlament, das Bundesgericht hingegen zur
+      Justiz.

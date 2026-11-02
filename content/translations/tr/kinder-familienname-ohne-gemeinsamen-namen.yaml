@@ -1,0 +1,32 @@
+id: kinder-familienname-ohne-gemeinsamen-namen
+lang: tr
+source_version: 1
+question: İki eş evlilik sırasında ortak bir aile adı belirlememiştir. Bu durumda ortak çocuklarının soyadını
+  kim belirler?
+options:
+  a: Çocuklar otomatik olarak babanın soyadını alır.
+  b: Nüfus müdürlüğü (Zivilstandsamt), soyadlarının alfabetik sırasına göre karar verir.
+  c: Eşler çocuklarının soyadını kendileri seçer.
+  d: Çocuklar otomatik olarak annenin soyadını alır.
+explanation: Eşler ortak bir aile adı belirlememişse, çocukların soyadını kendileri seçmek zorundadır.
+  Kanun bunu otomatik olarak belirlemez. Kurallar İsviçre Medeni Kanunu'nda yer almaktadır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die beiden Ehegatten haben bei der Heirat keinen gemeinsamen Familiennamen bestimmt.
+      Wer bestimmt in diesem Fall den Familiennamen ihrer gemeinsamen Kinder?
+    options_de:
+      a: Die Kinder erhalten automatisch den Familiennamen des Vaters.
+      b: Das Zivilstandsamt entscheidet nach der alphabetischen Reihenfolge der Familiennamen.
+      c: Die Ehegatten wählen den Familiennamen ihrer Kinder selbst.
+      d: Die Kinder erhalten automatisch den Familiennamen der Mutter.
+    explanation_de: Wenn die Ehegatten keinen gemeinsamen Familiennamen bestimmt haben, müssen sie den
+      Familiennamen der Kinder selbst wählen. Das Gesetz bestimmt dies nicht automatisch. Die Regeln stehen
+      im Schweizerischen Zivilgesetzbuch.

@@ -1,0 +1,32 @@
+id: volksschule-leitung-vor-ort-schulleitung
+lang: it
+source_version: 2
+question: Chi dirige direttamente una scuola dell'obbligo (Volksschule) nel Cantone di Zurigo?
+options:
+  a: Il Consiglio cantonale (Kantonsrat)
+  b: La direzione scolastica
+  c: Il consiglio dei genitori
+  d: Il Consiglio di Stato (Regierungsrat)
+explanation: Ogni scuola dell'obbligo nel Cantone di Zurigo ha una direzione scolastica, che gestisce
+  e organizza il funzionamento direttamente nella scuola. Il Consiglio di Stato e il Consiglio cantonale
+  operano a livello del Cantone. Il consiglio dei genitori porta le richieste dei genitori, ma non dirige
+  la scuola.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer leitet im Kanton Zürich direkt eine Volksschule?
+    options_de:
+      a: Der Kantonsrat
+      b: Die Schulleitung
+      c: Der Elternrat
+      d: Der Regierungsrat
+    explanation_de: Jede Volksschule im Kanton Zürich hat eine Schulleitung, die den Betrieb direkt in
+      der Schule führt und organisiert. Der Regierungsrat und der Kantonsrat wirken auf der Ebene des
+      Kantons. Der Elternrat bringt die Anliegen der Eltern ein, leitet aber die Schule nicht.

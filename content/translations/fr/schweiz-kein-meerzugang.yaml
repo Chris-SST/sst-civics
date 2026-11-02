@@ -1,0 +1,31 @@
+id: schweiz-kein-meerzugang
+lang: fr
+source_version: 2
+question: Quelle affirmation sur la situation géographique de la Suisse est correcte ?
+options:
+  a: La Suisse n'a pas d'accès direct à la mer.
+  b: La Suisse est bordée à l'ouest par l'océan Atlantique.
+  c: La Suisse est bordée au sud par la mer Méditerranée.
+  d: La Suisse est bordée au nord par la mer du Nord.
+explanation: 'La Suisse est un pays enclavé : elle est entièrement entourée d''autres pays et n''a pas
+  de côte maritime. Certes, des bateaux naviguent sur le Rhin de Bâle jusqu''à la mer du Nord, mais aucune
+  mer ne borde directement la Suisse.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Aussage über die geografische Lage der Schweiz ist richtig?
+    options_de:
+      a: Die Schweiz hat keinen direkten Zugang zum Meer.
+      b: Die Schweiz grenzt im Westen an den Atlantischen Ozean.
+      c: Die Schweiz grenzt im Süden an das Mittelmeer.
+      d: Die Schweiz grenzt im Norden an die Nordsee.
+    explanation_de: 'Die Schweiz ist ein Binnenland: Sie ist vollständig von anderen Ländern umgeben und
+      hat keine Meeresküste. Zwar fahren Schiffe auf dem Rhein von Basel bis zur Nordsee, aber kein Meer
+      grenzt direkt an die Schweiz.'

@@ -1,0 +1,30 @@
+id: bundesverfassung-1848-bundesstaat-kantone
+lang: tr
+source_version: 1
+question: 1848 Federal Anayasa ile İsviçre için ne değişti?
+options:
+  a: Yeniden gevşek bir devletler birliği (Staatenbund) haline geldi
+  b: Bir kralın başında olduğu bir monarşi haline geldi
+  c: Kantonların bağımsız kaldığı bir federal devlet (Bundesstaat) haline geldi
+  d: Kantonların bulunmadığı üniter bir devlet haline geldi
+explanation: 1848'de ortak kurumlara sahip modern federal devlet (Bundesstaat) ortaya çıktı. Ancak kantonlar
+  kendi görevlerini ve kendi devlet niteliklerini korudu. Bu görev paylaşımı İsviçre'yi bugüne kadar şekillendirmiştir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was änderte sich für die Schweiz mit der Bundesverfassung von 1848?
+    options_de:
+      a: Sie wurde wieder zu einem losen Staatenbund
+      b: Sie wurde zu einer Monarchie mit einem König an der Spitze
+      c: Sie wurde zu einem Bundesstaat, in dem die Kantone unabhängig blieben
+      d: Sie wurde zu einem Einheitsstaat, in dem es keine Kantone gab
+    explanation_de: 1848 entstand der moderne Bundesstaat mit gemeinsamen Institutionen. Die Kantone behielten
+      jedoch ihre eigenen Aufgaben und ihre eigene Staatlichkeit. Diese Aufgabenteilung hat die Schweiz
+      bis heute geprägt.

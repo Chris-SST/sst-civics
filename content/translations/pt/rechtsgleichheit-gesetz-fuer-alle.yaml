@@ -1,0 +1,31 @@
+id: rechtsgleichheit-gesetz-fuer-alle
+lang: pt
+source_version: 1
+question: O que significa o princípio da igualdade perante a lei?
+options:
+  a: Todos os cantões têm as mesmas leis.
+  b: Todas as pessoas ocupam os mesmos cargos políticos.
+  c: Todas as pessoas têm o mesmo rendimento.
+  d: A lei aplica-se a todas as pessoas por igual.
+explanation: A igualdade perante a lei está prevista no artigo 8 da Constituição Federal. Todos os seres
+  humanos são iguais perante a lei e ninguém pode ser discriminado, por exemplo, em razão da origem ou
+  do sexo. Isso não significa que todos possuam a mesma quantidade de bens.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet der Grundsatz der Rechtsgleichheit (Gleichheit vor dem Gesetz)?
+    options_de:
+      a: Alle Kantone haben dieselben Gesetze.
+      b: Alle Personen bekleiden dieselben politischen Ämter.
+      c: Alle Personen haben dasselbe Einkommen.
+      d: Das Gesetz gilt für alle Personen gleichermassen.
+    explanation_de: Die Gleichheit vor dem Gesetz ist in Artikel 8 der Bundesverfassung vorgesehen. Alle
+      Menschen sind vor dem Gesetz gleich, und niemand darf zum Beispiel aufgrund der Herkunft oder des
+      Geschlechts diskriminiert werden. Das bedeutet nicht, dass alle die gleiche Menge an Gütern besitzen.

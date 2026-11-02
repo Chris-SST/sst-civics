@@ -1,0 +1,29 @@
+id: ahv-erste-saeule-altersvorsorge
+lang: fr
+source_version: 1
+question: Quelle institution constitue le premier pilier de la prévoyance vieillesse en Suisse ?
+options:
+  a: Le pilier privé 3a
+  b: L'assurance-vieillesse et survivants (AHV) de l'État
+  c: La caisse de pension
+  d: La caisse-maladie (Krankenkasse)
+explanation: L'assurance-vieillesse et survivants (AHV) est la prévoyance étatique et constitue le premier
+  pilier. La caisse de pension est le deuxième pilier, la prévoyance privée le troisième pilier.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Einrichtung bildet die erste Säule der Altersvorsorge in der Schweiz?
+    options_de:
+      a: Die private Säule 3a
+      b: Die Alters- und Hinterlassenenversicherung (AHV) des Staates
+      c: Die Pensionskasse
+      d: Die Krankenkasse
+    explanation_de: Die Alters- und Hinterlassenenversicherung (AHV) ist die staatliche Vorsorge und bildet
+      die erste Säule. Die Pensionskasse ist die zweite Säule, die private Vorsorge die dritte Säule.

@@ -1,0 +1,31 @@
+id: uhrmacherei-schweizer-spitzenbranche
+lang: fr
+source_version: 1
+question: Dans quelle branche économique la Suisse occupe-t-elle depuis longtemps une position de leader
+  au niveau international ?
+options:
+  a: L'industrie textile
+  b: La construction navale
+  c: La construction automobile
+  d: L'horlogerie
+explanation: Les montres suisses sont connues dans le monde entier pour leur qualité. L'horlogerie a une
+  longue tradition en Suisse et reste aujourd'hui encore une branche d'exportation importante.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Wirtschaftszweig nimmt die Schweiz seit langem eine führende Position auf
+      internationaler Ebene ein?
+    options_de:
+      a: Die Textilindustrie
+      b: Der Schiffbau
+      c: Der Automobilbau
+      d: Die Uhrenindustrie
+    explanation_de: Schweizer Uhren sind auf der ganzen Welt für ihre Qualität bekannt. Die Uhrenindustrie
+      hat in der Schweiz eine lange Tradition und ist auch heute noch ein wichtiger Exportzweig.

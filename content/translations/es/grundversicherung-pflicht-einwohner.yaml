@@ -1,0 +1,29 @@
+id: grundversicherung-pflicht-einwohner
+lang: es
+source_version: 1
+question: ¿Para quién rige en Suiza el seguro básico obligatorio para tratamientos médicos?
+options:
+  a: Solo para las personas con ciudadanía (Bürgerrecht) suiza
+  b: Solo para las personas con actividad laboral que perciben un salario
+  c: Solo para las personas con ingresos bajos
+  d: Para todos los habitantes de Suiza
+explanation: El seguro obligatorio de atención médica rige para todas las personas que residen en Suiza.
+  La ciudadanía, la actividad laboral y los ingresos no tienen ninguna importancia a este respecto.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für wen gilt in der Schweiz die obligatorische Grundversicherung für ärztliche Behandlungen?
+    options_de:
+      a: Nur für Personen mit schweizerischem Bürgerrecht
+      b: Nur für erwerbstätige Personen, die einen Lohn beziehen
+      c: Nur für Personen mit tiefem Einkommen
+      d: Für alle Einwohner der Schweiz
+    explanation_de: Die obligatorische Krankenpflegeversicherung gilt für alle Personen, die in der Schweiz
+      wohnen. Das Bürgerrecht, die Erwerbstätigkeit und das Einkommen spielen dabei keine Rolle.

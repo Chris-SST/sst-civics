@@ -1,0 +1,30 @@
+id: stimmrecht-bund-ab-18-geburtstag
+lang: sq
+source_version: 1
+question: Nga çfarë moshe mund të votojnë dhe të zgjedhin shtetasit zviceranë në nivel federal?
+options:
+  a: Nga ditëlindja e 20-të
+  b: Nga ditëlindja e 21-të
+  c: Nga ditëlindja e 16-të
+  d: Nga ditëlindja e 18-të
+explanation: E drejta e votës dhe e zgjedhjes në nivel të Konfederatës fillon me moshën madhore, pra me
+  ditëlindjen e 18-të. Kjo moshë vlen në të njëjtën mënyrë për zgjedhjet dhe për votimet e Konfederatës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ab welchem Alter können Schweizer Staatsangehörige auf Bundesebene abstimmen und wählen?
+    options_de:
+      a: Ab dem 20. Geburtstag
+      b: Ab dem 21. Geburtstag
+      c: Ab dem 16. Geburtstag
+      d: Ab dem 18. Geburtstag
+    explanation_de: Das Stimm- und Wahlrecht auf Ebene des Bundes beginnt mit der Volljährigkeit, also
+      mit dem 18. Geburtstag. Dieses Alter gilt gleichermassen für die Wahlen und für die Abstimmungen
+      des Bundes.

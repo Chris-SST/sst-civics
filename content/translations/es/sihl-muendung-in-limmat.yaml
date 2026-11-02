@@ -1,0 +1,31 @@
+id: sihl-muendung-in-limmat
+lang: es
+source_version: 1
+question: ¿En qué río desemboca el Sihl en pleno centro de la ciudad de Zúrich?
+options:
+  a: En el Töss
+  b: En el Limmat
+  c: En el Glatt
+  d: En el Aare
+explanation: El Sihl atraviesa Zúrich y desemboca en el Limmat en el Platzspitz. El Glatt y el Töss son
+  otros ríos zuriqueses que desembocan en el Rin. El Aare recibe las aguas del Limmat mucho más abajo,
+  en el cantón de Argovia.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchen Fluss mündet die Sihl mitten im Zentrum der Stadt Zürich?
+    options_de:
+      a: In die Töss
+      b: In die Limmat
+      c: In die Glatt
+      d: In die Aare
+    explanation_de: Die Sihl durchquert Zürich und mündet beim Platzspitz in die Limmat. Die Glatt und
+      die Töss sind andere Zürcher Flüsse, die in den Rhein münden. Die Aare nimmt das Wasser der Limmat
+      viel weiter unten auf, im Kanton Aargau.

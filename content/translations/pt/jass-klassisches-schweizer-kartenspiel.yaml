@@ -1,0 +1,32 @@
+id: jass-klassisches-schweizer-kartenspiel
+lang: pt
+source_version: 1
+question: Qual jogo de cartas é considerado na Suíça o jogo de cartas clássico e tradicional do país?
+options:
+  a: Bridge
+  b: Jass
+  c: Pôquer
+  d: Rummy
+explanation: O Jass é considerado o jogo de cartas típico da Suíça. Joga-se, em geral, a quatro, em duas
+  equipas, muitas vezes com cartas francesas ou com cartas da Suíça alemã. Joga-se em muitas famílias
+  e em muitos restaurantes e tabernas (Beizen).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Kartenspiel gilt in der Schweiz als das klassische und traditionelle Kartenspiel
+      des Landes?
+    options_de:
+      a: Bridge
+      b: Jass
+      c: Poker
+      d: Rummy
+    explanation_de: Der Jass gilt als das typische Kartenspiel der Schweiz. Er wird in der Regel zu viert
+      in zwei Teams gespielt, oft mit französischen Karten oder mit deutschschweizer Karten. Er wird in
+      vielen Familien und in vielen Restaurants und Wirtshäusern (Beizen) gespielt.

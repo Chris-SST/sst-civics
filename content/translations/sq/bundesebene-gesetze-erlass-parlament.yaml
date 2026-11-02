@@ -1,0 +1,33 @@
+id: bundesebene-gesetze-erlass-parlament
+lang: sq
+source_version: 1
+question: Cili autoritet nnnxjerr ligjet në nivel federal?
+options:
+  a: Kuvendi Federal (Bundesversammlung), pra Këshilli Kombëtar (Nationalrat) dhe Këshilli i Shteteve
+    (Ständerat)
+  b: Banka Kombëtare Zvicerane
+  c: Kancelaria Federale (Bundeskanzlei)
+  d: Konferenca e qeverive kantonale
+explanation: Kuvendi Federal është parlamenti i Konfederatës dhe përbëhet nga Këshilli Kombëtar dhe Këshilli
+  i Shteteve. Ai është përgjegjës për legjislacionin. Kancelaria Federale, në të kundërt, mbështet Këshillin
+  Federal (Bundesrat) si njësi shtabi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; das unverständliche Wort «nnnxjerr» steht an der Stelle von «erlässt»,
+      der Sinn der Frage bleibt erkennbar, Antworten und Erklärung stimmen inhaltlich überein
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde nnnxjerr die Gesetze auf Bundesebene?
+    options_de:
+      a: Die Bundesversammlung, also der Nationalrat und der Ständerat
+      b: Die Schweizerische Nationalbank
+      c: Die Bundeskanzlei
+      d: Die Konferenz der Kantonsregierungen
+    explanation_de: Die Bundesversammlung ist das Parlament der Eidgenossenschaft und besteht aus dem
+      Nationalrat und dem Ständerat. Sie ist für die Gesetzgebung zuständig. Die Bundeskanzlei hingegen
+      unterstützt den Bundesrat als Stabsstelle.

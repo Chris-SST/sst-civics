@@ -1,0 +1,32 @@
+id: waehlbar-in-bundesamt-voraussetzungen
+lang: en
+source_version: 2
+question: Who can be elected to the National Council (Nationalrat), the Federal Council (Bundesrat) or
+  the Federal Supreme Court (Bundesgericht)?
+options:
+  a: Only those who have completed a university degree
+  b: Only those who have lived in Switzerland for at least ten years
+  c: Only those who are members of a political party
+  d: All Swiss citizens aged 18 or over who have the right to vote
+explanation: According to the Federal Constitution, all persons entitled to vote are eligible for election.
+  Swiss citizens aged 18 or over are entitled to vote. Party membership or a particular education is not
+  required.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer kann in den Nationalrat, den Bundesrat oder das Bundesgericht gewählt werden?
+    options_de:
+      a: Nur wer ein Hochschulstudium abgeschlossen hat
+      b: Nur wer seit mindestens zehn Jahren in der Schweiz lebt
+      c: Nur wer Mitglied einer politischen Partei ist
+      d: Alle Schweizer Bürgerinnen und Bürger ab 18 Jahren, die stimmberechtigt sind
+    explanation_de: Gemäss der Bundesverfassung sind alle Stimmberechtigten wählbar. Schweizer Bürgerinnen
+      und Bürger ab 18 Jahren sind stimmberechtigt. Eine Parteimitgliedschaft oder eine bestimmte Ausbildung
+      ist nicht erforderlich.

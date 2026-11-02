@@ -1,0 +1,30 @@
+id: verbot-kinderarbeit-fabrik-schulunterricht
+lang: es
+source_version: 1
+question: ¿Qué debía garantizar sobre todo la prohibición del trabajo infantil en las fábricas de 1877?
+options:
+  a: Que las fábricas tuvieran que pagar salarios más bajos
+  b: Que los niños pudieran asistir a la escuela
+  c: Que los niños tuvieran que ayudar antes en las tareas del hogar
+  d: Que las fábricas trajeran más mano de obra del extranjero
+explanation: La ley federal sobre las fábricas de 1877 prohibió el trabajo de los niños en las fábricas.
+  Los niños debían asistir a clase en lugar de trabajar. La ley también protegía la salud de los trabajadores.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sollte das Verbot der Kinderarbeit in den Fabriken von 1877 vor allem gewährleisten?
+    options_de:
+      a: Dass die Fabriken niedrigere Löhne zahlen mussten
+      b: Dass die Kinder die Schule besuchen konnten
+      c: Dass die Kinder früher bei den Haushaltsarbeiten helfen mussten
+      d: Dass die Fabriken mehr Arbeitskräfte aus dem Ausland brachten
+    explanation_de: Das Bundesgesetz über die Fabriken von 1877 verbot die Arbeit von Kindern in den Fabriken.
+      Die Kinder sollten den Unterricht besuchen, anstatt zu arbeiten. Das Gesetz schützte auch die Gesundheit
+      der Arbeiter.

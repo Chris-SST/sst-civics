@@ -1,0 +1,31 @@
+id: zuteilung-primarschulklasse-durch-schulbehoerde
+lang: es
+source_version: 1
+question: ¿Quién decide en el cantón de Zúrich a qué clase de primaria se asigna a un niño?
+options:
+  a: La Schulpflege (comisión escolar) o la dirección de la escuela
+  b: El departamento de educación de la Confederación
+  c: La asamblea municipal (Gemeindeversammlung)
+  d: Los padres del niño
+explanation: La Schulpflege (comisión escolar) o la dirección de la escuela asigna a los niños a las clases.
+  Los padres no pueden elegir la clase libremente. De este modo, la escuela organiza su funcionamiento
+  y el tamaño de las clases.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet im Kanton Zürich, welcher Primarschulklasse ein Kind zugeteilt wird?
+    options_de:
+      a: Die Schulpflege oder die Schulleitung
+      b: Das Bildungsdepartement des Bundes
+      c: Die Gemeindeversammlung
+      d: Die Eltern des Kindes
+    explanation_de: Die Schulpflege oder die Schulleitung teilt die Kinder den Klassen zu. Die Eltern
+      können die Klasse nicht frei wählen. Auf diese Weise organisiert die Schule ihren Betrieb und die
+      Grösse der Klassen.

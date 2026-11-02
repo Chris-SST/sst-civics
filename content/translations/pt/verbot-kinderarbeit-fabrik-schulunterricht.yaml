@@ -1,0 +1,30 @@
+id: verbot-kinderarbeit-fabrik-schulunterricht
+lang: pt
+source_version: 1
+question: O que a proibição do trabalho infantil nas fábricas, em 1877, devia garantir sobretudo?
+options:
+  a: Que as fábricas pudessem pagar salários mais baixos
+  b: Que as crianças pudessem frequentar a escola
+  c: Que as crianças tivessem de ajudar mais cedo nas tarefas domésticas
+  d: Que as fábricas contratassem mais mão de obra do estrangeiro
+explanation: A Lei das Fábricas de 1877 proibiu o trabalho das crianças nas fábricas. Elas deviam frequentar
+  a escola em vez de trabalhar. A lei protegia também a saúde dos trabalhadores.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort a: Original «weniger Lohn zahlen mussten» (Pflicht), Rückübersetzung «niedrigere
+      Löhne zahlen konnten» (Möglichkeit); Modalverb und Bedeutung ändern sich.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Was sollte das Verbot der Kinderarbeit in den Fabriken im Jahr 1877 vor allem sicherstellen?
+    options_de:
+      a: Dass die Fabriken niedrigere Löhne zahlen konnten
+      b: Dass die Kinder die Schule besuchen konnten
+      c: Dass die Kinder früher bei den Hausarbeiten helfen mussten
+      d: Dass die Fabriken mehr Arbeitskräfte aus dem Ausland einstellten
+    explanation_de: Das Fabrikgesetz von 1877 verbot die Arbeit der Kinder in den Fabriken. Sie sollten
+      die Schule besuchen, statt zu arbeiten. Das Gesetz schützte auch die Gesundheit der Arbeiter.

@@ -1,0 +1,32 @@
+id: waehlbar-in-bundesamt-voraussetzungen
+lang: it
+source_version: 2
+question: Chi può essere eletto nel Consiglio nazionale (Nationalrat), nel Consiglio federale (Bundesrat)
+  o nel Tribunale federale (Bundesgericht)?
+options:
+  a: Solo chi ha concluso una formazione universitaria
+  b: Solo chi vive in Svizzera da almeno dieci anni
+  c: Solo chi è membro di un partito politico
+  d: Tutti gli svizzeri e le svizzere con diritto di voto a partire dai 18 anni
+explanation: Secondo la Costituzione federale, tutte le persone con diritto di voto sono eleggibili. Hanno
+  diritto di voto gli svizzeri e le svizzere a partire dai 18 anni. Non sono necessarie né l'appartenenza
+  a un partito né una determinata formazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer kann in den Nationalrat, in den Bundesrat oder in das Bundesgericht gewählt werden?
+    options_de:
+      a: Nur wer eine universitäre Ausbildung abgeschlossen hat
+      b: Nur wer seit mindestens zehn Jahren in der Schweiz lebt
+      c: Nur wer Mitglied einer politischen Partei ist
+      d: Alle Schweizerinnen und Schweizer mit Stimmrecht ab 18 Jahren
+    explanation_de: Gemäss der Bundesverfassung sind alle Personen mit Stimmrecht wählbar. Stimmberechtigt
+      sind die Schweizerinnen und Schweizer ab 18 Jahren. Weder die Zugehörigkeit zu einer Partei noch
+      eine bestimmte Ausbildung sind erforderlich.

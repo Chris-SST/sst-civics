@@ -1,0 +1,30 @@
+id: parlament-zwei-kammern-bund
+lang: fr
+source_version: 1
+question: De quelles deux chambres le Parlement suisse se compose-t-il au niveau fédéral ?
+options:
+  a: Du Conseil fédéral (Bundesrat) et du Conseil des États (Ständerat)
+  b: Du Conseil fédéral et du Conseil national (Nationalrat)
+  c: Du Conseil des États et du Tribunal fédéral (Bundesgericht)
+  d: Du Conseil national et du Conseil des États
+explanation: 'L''Assemblée fédérale (Bundesversammlung), le Parlement de la Confédération, se compose
+  de deux chambres : le Conseil national et le Conseil des États. Le Conseil fédéral est le gouvernement
+  et ne fait pas partie du Parlement.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchen zwei Kammern besteht das Schweizer Parlament auf Bundesebene?
+    options_de:
+      a: Aus dem Bundesrat und dem Ständerat
+      b: Aus dem Bundesrat und dem Nationalrat
+      c: Aus dem Ständerat und dem Bundesgericht
+      d: Aus dem Nationalrat und dem Ständerat
+    explanation_de: 'Die Bundesversammlung, das Parlament des Bundes, besteht aus zwei Kammern: dem Nationalrat
+      und dem Ständerat. Der Bundesrat ist die Regierung und gehört nicht zum Parlament.'

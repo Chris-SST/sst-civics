@@ -1,0 +1,33 @@
+id: meinungsaeusserung-verbreiten-grundrecht-bundesverfassung
+lang: tr
+source_version: 1
+question: Federal Anayasa tarafından güvence altına alınan hangi temel hak, kişinin kendi görüşünü özgürce
+  ifade etmesine ve yaymasına olanak tanır?
+options:
+  a: Düşünceyi ifade özgürlüğü
+  b: Oy hakkı
+  c: Mülkiyet güvencesi
+  d: Yerleşme özgürlüğü
+explanation: Düşünceyi ifade özgürlüğü, kişinin kendi düşüncesini özgürce ifade etmesine ve yaymasına
+  olanak tanır. Bu özgürlük, Federal Anayasa'nın 16. maddesinde yer almaktadır. Oy hakkı ise buna karşılık
+  seçimlere ve oylamalara katılımla ilgilidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches durch die Bundesverfassung gewährleistete Grundrecht ermöglicht es einer Person,
+      ihre eigene Meinung frei zu äussern und zu verbreiten?
+    options_de:
+      a: Meinungsäusserungsfreiheit
+      b: Stimmrecht
+      c: Eigentumsgarantie
+      d: Niederlassungsfreiheit
+    explanation_de: Die Meinungsäusserungsfreiheit ermöglicht es einer Person, ihre eigene Meinung frei
+      zu äussern und zu verbreiten. Diese Freiheit ist in Artikel 16 der Bundesverfassung enthalten. Das
+      Stimmrecht hingegen betrifft die Teilnahme an Wahlen und Abstimmungen.

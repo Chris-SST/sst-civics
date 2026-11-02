@@ -10,6 +10,22 @@ options:
 explanation: The Confederation ensures the country's security externally, for example with the army, and
   internal security. Schools, commune roads and residents' registers, on the other hand, are primarily
   the responsibility of the cantons and communes.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe gehört zu den zentralen Aufgaben des Bundes?
+    options_de:
+      a: Die Organisation der lokalen Schulen
+      b: Der Schutz des Landes nach innen und aussen
+      c: Der Betrieb der Gemeindestrassen
+      d: Die Führung der Einwohnerregister der Gemeinden
+    explanation_de: Der Bund sorgt für die Sicherheit des Landes nach aussen, zum Beispiel mit der Armee,
+      und für die innere Sicherheit. Schulen, Gemeindestrassen und Einwohnerregister hingegen fallen hauptsächlich
+      in die Zuständigkeit der Kantone und Gemeinden.

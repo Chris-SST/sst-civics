@@ -1,0 +1,31 @@
+id: kleine-gemeinde-vertretung-gemeindepraesident
+lang: tr
+source_version: 1
+question: Küçük bir Zürih belediyesini (Gemeinde) dışarıya karşı kim temsil eder?
+options:
+  a: belediye başkanı (Gemeindepräsidentin veya Gemeindepräsident)
+  b: ilçe konseyi üyesi (Bezirksrätin veya Bezirksrat)
+  c: belediye yazı işleri müdürü (Gemeindeschreiberin veya Gemeindeschreiber)
+  d: okul müdürü (Schulleiterin veya Schulleiter)
+explanation: Küçük Zürih belediyelerinde belediye başkanı, belediyeyi dışarıya karşı temsil eder. Belediye
+  başkanı, belediye konseyine (Gemeinderat) başkanlık eder. Zürih şehrinde bu görevi şehir başkanı (Stadtpräsidentin
+  veya Stadtpräsident) üstlenir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer vertritt eine kleine Zürcher Gemeinde nach aussen?
+    options_de:
+      a: die Gemeindepräsidentin oder der Gemeindepräsident
+      b: die Bezirksrätin oder der Bezirksrat
+      c: die Gemeindeschreiberin oder der Gemeindeschreiber
+      d: die Schulleiterin oder der Schulleiter
+    explanation_de: In kleinen Zürcher Gemeinden vertritt die Gemeindepräsidentin oder der Gemeindepräsident
+      die Gemeinde nach aussen. Die Gemeindepräsidentin oder der Gemeindepräsident führt den Vorsitz im
+      Gemeinderat. In der Stadt Zürich übernimmt diese Aufgabe die Stadtpräsidentin oder der Stadtpräsident.

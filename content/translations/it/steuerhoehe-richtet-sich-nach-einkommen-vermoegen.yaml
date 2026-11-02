@@ -1,0 +1,31 @@
+id: steuerhoehe-richtet-sich-nach-einkommen-vermoegen
+lang: it
+source_version: 1
+question: Da che cosa dipende principalmente l'importo dell'imposta sul reddito e sulla sostanza che una
+  persona paga nel Cantone di Zurigo?
+options:
+  a: Dal reddito e dalla sostanza imponibili
+  b: Dalla professione della persona
+  c: Dalla durata del domicilio nel Comune (Gemeinde)
+  d: Dal numero di volte in cui si è esercitato il diritto di voto
+explanation: L'imposta viene calcolata sul reddito e sulla sostanza imponibili. Chi guadagna o possiede
+  di più paga, di regola, più imposte.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wovon hängt hauptsächlich die Höhe der Einkommens- und Vermögenssteuer ab, die eine Person
+      im Kanton Zürich bezahlt?
+    options_de:
+      a: Vom steuerbaren Einkommen und Vermögen
+      b: Vom Beruf der Person
+      c: Von der Dauer des Wohnsitzes in der Gemeinde
+      d: Von der Anzahl der Male, in denen das Stimmrecht ausgeübt wurde
+    explanation_de: Die Steuer wird auf dem steuerbaren Einkommen und Vermögen berechnet. Wer mehr verdient
+      oder besitzt, bezahlt in der Regel mehr Steuern.

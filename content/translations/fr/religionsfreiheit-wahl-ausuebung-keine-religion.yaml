@@ -1,0 +1,33 @@
+id: religionsfreiheit-wahl-ausuebung-keine-religion
+lang: fr
+source_version: 1
+question: Une femme s'installe en Suisse et souhaite choisir elle-même sa religion. Elle envisage aussi
+  de n'appartenir à aucune religion. Que lui garantit la Constitution fédérale à cet égard ?
+options:
+  a: Elle ne peut appartenir qu'à une religion reconnue de droit public dans le canton.
+  b: Elle peut choisir librement sa religion, la pratiquer ou n'appartenir à aucune religion.
+  c: Elle peut choisir sa religion à titre privé, mais ne peut la pratiquer nulle part avec d'autres personnes.
+  d: Elle doit se décider auprès de la commune (Gemeinde) pour une religion reconnue.
+explanation: La liberté de conscience et de croyance est garantie à l'article 15 de la Constitution fédérale.
+  Chaque personne peut choisir librement sa religion, la pratiquer seule ou avec d'autres, ou n'appartenir
+  à aucune religion. Nul ne peut être contraint d'adhérer à une communauté religieuse.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Frau zieht in die Schweiz und möchte ihre Religion selbst wählen. Sie zieht auch
+      in Betracht, keiner Religion anzugehören. Was garantiert ihr die Bundesverfassung in dieser Hinsicht?
+    options_de:
+      a: Sie kann nur einer im Kanton öffentlich-rechtlich anerkannten Religion angehören.
+      b: Sie kann ihre Religion frei wählen, sie ausüben oder keiner Religion angehören.
+      c: Sie kann ihre Religion privat wählen, kann sie aber nirgends mit anderen Personen ausüben.
+      d: Sie muss sich bei der Gemeinde für eine anerkannte Religion entscheiden.
+    explanation_de: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung garantiert.
+      Jede Person kann ihre Religion frei wählen, sie allein oder mit anderen ausüben oder keiner Religion
+      angehören. Niemand darf gezwungen werden, einer Religionsgemeinschaft beizutreten.

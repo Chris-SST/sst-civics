@@ -10,6 +10,22 @@ options:
 explanation: Invalidity insurance (IV) is a social insurance scheme regulated by the state. It supports
   people who cannot work, or can only work to a limited extent, because of illness or accident. Household
   contents insurance, travel insurance and legal expenses insurance are private insurance policies.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Institutionen gehört zum Sozialversicherungssystem der Schweiz?
+    options_de:
+      a: Invalidenversicherung (IV)
+      b: Reiseversicherung
+      c: Rechtsschutzversicherung
+      d: Hausratversicherung
+    explanation_de: Die Invalidenversicherung (IV) ist eine staatlich geregelte Sozialversicherung. Sie
+      unterstützt Menschen, die wegen Krankheit oder Unfall nicht oder nur eingeschränkt arbeiten können.
+      Hausratversicherung, Reiseversicherung und Rechtsschutzversicherung sind private Versicherungen.

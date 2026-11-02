@@ -1,0 +1,30 @@
+id: kanton-zuerich-heutige-form-1803
+lang: pt
+source_version: 1
+question: Em que ano surgiu o cantão de Zurique na sua forma atual?
+options:
+  a: '1291'
+  b: '1519'
+  c: '1848'
+  d: '1803'
+explanation: O cantão de Zurique foi criado na sua forma atual em 1803, com o Ato de Mediação. O jubileu
+  foi celebrado em 2003 como os 200 anos do cantão de Zurique. Em 1848 surgiu o atual Estado federal.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr entstand der Kanton Zürich in seiner heutigen Form?
+    options_de:
+      a: '1291'
+      b: '1519'
+      c: '1848'
+      d: '1803'
+    explanation_de: Der Kanton Zürich wurde 1803 mit der Mediationsakte in seiner heutigen Form geschaffen.
+      Das Jubiläum wurde 2003 als die 200 Jahre des Kantons Zürich gefeiert. 1848 entstand der heutige
+      Bundesstaat.

@@ -15,15 +15,15 @@ explanation_de: Die Limmat beginnt am Ausfluss des Zürichsees und durchquert di
   aus dem Zürichsee.
 sources:
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: 2026-11-02
-- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/organisation/baudirektion/awel/seeregulierung_zuerichsee_merkblatt.pdf
   checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/organisation/baudirektion/awel/seeregulierung_zuerichsee_merkblatt.pdf
+  checked: *id001
 - url: https://www.bafu.admin.ch/de/newnsb/AhGAmdNkdNPt
   checked: *id001
 glossary:
 - Limmat
 - Zürichsee
-status: draft
+status: approved
 difficulty: 1
 covers:
 - zh-295
@@ -34,5 +34,43 @@ checks:
     model: claude-sonnet-5-5
     at: 2026-11-02
     version: 1
-    reasoning: Die Limmat entspringt dem Zürichsee, fliesst durch die Stadt Zürich und weiter durch den
-      Kanton Zürich Richtung Aargau, während Thur, Birs und Reuss andere Einzugsgebiete haben.
+    reasoning: Die Limmat entspringt dem Zürichsee, fliesst durch die Stadt Zürich und weiter durch das
+      Kantonsgebiet, während Thur, Birs und Reuss andere Flusssysteme betreffen.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, die Limmat fliesse durch Zürich und ende im Kanton Aargau in der Aare, und nennt
+      den Zürichsee als Gewässer. Quelle 2 beschreibt den Ausfluss aus dem Zürichsee in die Limmat (Regulierwehr
+      Letten, Limmattal), und Quelle 3 spricht vom Abfluss aus dem Zürichsee in die Limmat. Dass Reuss,
+      Thur und Birs nicht aus dem Zürichsee fliessen, folgt daraus.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte zur besseren Orientierung ergänzen, dass die Limmat im Kanton Aargau
+        in die Aare mündet (so steht es in der Broschüre des Kantons) und dass die Reuss aus dem Vierwaldstättersee
+        kommt, zum Beispiel: «Im Kanton Aargau fliesst die Limmat in die Aare.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage ist sehr leicht, weil nur die Limmat aus dem Zürichsee fliesst. Das ist bei
+        einer Grundkenntnisfrage aber vertretbar.'
+      - 'Klein: In der Erklärung steht, die Limmat durchquere «das Limmattal». Einfacher wäre: «Sie fliesst
+        durch die Stadt Zürich und weiter Richtung Aargau, wo sie in die Aare mündet.»'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,31 @@
+id: hundehaltung-abgabe-hundesteuer
+lang: fr
+source_version: 2
+question: Que prévaut-il dans le canton de Zurich pour les personnes qui possèdent un chien ?
+options:
+  a: Elles doivent payer chaque année une taxe sur les chiens à la commune (Gemeinde).
+  b: Elles doivent payer une seule fois, lors de l'achat du chien, une redevance à la Confédération.
+  c: Elles doivent passer chaque année un examen avec leur chien auprès du canton.
+  d: Elles ne doivent payer une taxe que si elles gagnent de l'argent avec le chien.
+explanation: Dans le canton de Zurich, la personne qui possède un chien paie chaque année une taxe pour
+  son chien, appelée impôt sur les chiens. L'argent va à la commune de domicile, et non à la Confédération.
+  La taxe n'est pas unique et s'applique aussi aux chiens détenus uniquement à titre privé.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt im Kanton Zürich für Personen, die einen Hund besitzen?
+    options_de:
+      a: Sie müssen jedes Jahr eine Hundesteuer an die Gemeinde bezahlen.
+      b: Sie müssen einmalig beim Kauf des Hundes eine Gebühr an den Bund bezahlen.
+      c: Sie müssen jedes Jahr mit ihrem Hund eine Prüfung beim Kanton ablegen.
+      d: Sie müssen nur dann eine Steuer bezahlen, wenn sie mit dem Hund Geld verdienen.
+    explanation_de: Im Kanton Zürich bezahlt die Person, die einen Hund besitzt, jedes Jahr eine Abgabe
+      für ihren Hund, die Hundesteuer genannt wird. Das Geld geht an die Wohngemeinde und nicht an den
+      Bund. Die Abgabe ist nicht einmalig und gilt auch für Hunde, die nur privat gehalten werden.

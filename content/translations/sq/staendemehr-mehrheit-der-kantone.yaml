@@ -1,0 +1,31 @@
+id: staendemehr-mehrheit-der-kantone
+lang: sq
+source_version: 1
+question: Çfarë do të thotë termi «shumica e kantoneve» (Ständemehr) te votimet federale?
+options:
+  a: Shumica e kantoneve duhet të miratojë projektin.
+  b: Shumica e komunave (Gemeinde) duhet të miratojë projektin.
+  c: Shumica e partive duhet të miratojë projektin.
+  d: Shumica e anëtarëve të Këshillit të Shteteve (Ständerat) duhet të jetë e pranishme.
+explanation: Shumica e kantoneve kërkon që shumica e kantoneve të miratojë një projekt. Vota e një kantoni
+  numërohet sipas rezultatit të votimit në atë kanton. Për ndryshimet e kushtetutës nevojitet, përveç
+  shumicës së popullit (Volksmehr), edhe shumica e kantoneve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet der Begriff «Ständemehr» bei eidgenössischen Abstimmungen?
+    options_de:
+      a: Die Mehrheit der Kantone muss die Vorlage annehmen.
+      b: Die Mehrheit der Gemeinden muss die Vorlage annehmen.
+      c: Die Mehrheit der Parteien muss die Vorlage annehmen.
+      d: Die Mehrheit der Mitglieder des Ständerats muss anwesend sein.
+    explanation_de: Das Ständemehr verlangt, dass die Mehrheit der Kantone eine Vorlage annimmt. Die Stimme
+      eines Kantons wird nach dem Abstimmungsergebnis in diesem Kanton gezählt. Für Verfassungsänderungen
+      braucht es neben dem Volksmehr auch das Ständemehr.

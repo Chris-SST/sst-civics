@@ -1,0 +1,31 @@
+id: landesschutz-innen-aussen-bund
+lang: sq
+source_version: 1
+question: Cila detyrë bën pjesë në detyrat qendrore të Konfederatës?
+options:
+  a: Organizimi i shkollave vendore
+  b: Mbrojtja e vendit nga brenda dhe nga jashtë
+  c: Mirëmbajtja dhe funksionimi i rrugëve të komunës (Gemeinde)
+  d: Administrimi i regjistrave të banorëve të komunave
+explanation: Konfederata kujdeset për sigurinë e vendit nga jashtë, për shembull me ushtrinë, si dhe për
+  sigurinë e brendshme. Shkollat, rrugët e komunës dhe regjistrat e banorëve, përkundrazi, janë kryesisht
+  çështje e kantoneve dhe e komunave.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe gehört zu den zentralen Aufgaben des Bundes?
+    options_de:
+      a: Organisation der örtlichen Schulen
+      b: Verteidigung des Landes nach innen und nach aussen
+      c: Unterhalt und Betrieb der Strassen der Gemeinde
+      d: Verwaltung der Einwohnerregister der Gemeinden
+    explanation_de: Der Bund sorgt für die Sicherheit des Landes nach aussen, zum Beispiel mit der Armee,
+      sowie für die innere Sicherheit. Die Schulen, die Gemeindestrassen und die Einwohnerregister hingegen
+      sind hauptsächlich Sache der Kantone und der Gemeinden.

@@ -1,0 +1,33 @@
+id: gewaltmonopol-des-staates
+lang: it
+source_version: 2
+question: Chi può, in linea di principio, usare la violenza fisica in Svizzera?
+options:
+  a: Le società di sicurezza private su incarico di associazioni
+  b: Ogni persona che si sente minacciata
+  c: Solo lo Stato
+  d: Ogni Comune (Gemeinde) con proprie milizie civiche
+explanation: 'In Svizzera lo Stato detiene il monopolio della forza: in linea di principio solo lo Stato
+  può usare la violenza fisica, ad esempio tramite la polizia o l''esercito. Un''eccezione è la legittima
+  difesa: chi viene aggredito illegalmente può difendersi in modo adeguato, ma il semplice sentimento
+  di essere minacciati non basta.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer darf in der Schweiz grundsätzlich körperliche Gewalt anwenden?
+    options_de:
+      a: Private Sicherheitsfirmen im Auftrag von Vereinen
+      b: Jede Person, die sich bedroht fühlt
+      c: Nur der Staat
+      d: Jede Gemeinde mit eigenen Bürgerwehren
+    explanation_de: 'In der Schweiz hat der Staat das Gewaltmonopol: Grundsätzlich darf nur der Staat
+      körperliche Gewalt anwenden, zum Beispiel durch die Polizei oder die Armee. Eine Ausnahme ist die
+      Notwehr: Wer rechtswidrig angegriffen wird, kann sich angemessen verteidigen, aber das blosse Gefühl,
+      bedroht zu sein, genügt nicht.'

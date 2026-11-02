@@ -1,0 +1,29 @@
+id: stadtzuericher-parlament-direkt-gewaehlt
+lang: sq
+source_version: 1
+question: Si zgjidhet parlamenti i qytetit të Cyrihut, këshilli komunal (Gemeinderat)?
+options:
+  a: E emëron Këshilli Qeveritar (Regierungsrat) i kantonit
+  b: Këshilli i Qytetit (Stadtrat) i përcakton vetë anëtarët
+  c: Partitë i shortojnë vendet mes tyre
+  d: Popullsia e zgjedh drejtpërdrejt me votim në kuti
+explanation: Qytetarët me të drejtë vote të qytetit të Cyrihut e zgjedhin këshillin komunal në zgjedhje
+  të përgjithshme. Ai është parlamenti i qytetit dhe zëvendëson kuvendin e komunës (Gemeindeversammlung).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie wird das Parlament der Stadt Zürich, der Gemeinderat, gewählt?
+    options_de:
+      a: Der Regierungsrat des Kantons ernennt es
+      b: Der Stadtrat bestimmt die Mitglieder selbst
+      c: Die Parteien losen die Sitze untereinander aus
+      d: Die Bevölkerung wählt es direkt an der Urne
+    explanation_de: Die stimmberechtigten Bürgerinnen und Bürger der Stadt Zürich wählen den Gemeinderat
+      in allgemeinen Wahlen. Er ist das Parlament der Stadt und ersetzt die Gemeindeversammlung.

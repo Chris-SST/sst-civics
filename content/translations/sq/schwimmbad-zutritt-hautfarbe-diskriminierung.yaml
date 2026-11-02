@@ -1,0 +1,31 @@
+id: schwimmbad-zutritt-hautfarbe-diskriminierung
+lang: sq
+source_version: 1
+question: Një pishinë publike i refuzon një personi hyrjen për shkak të ngjyrës së lëkurës. Cili parim
+  i Kushtetutës Federale cenohet me këtë?
+options:
+  a: Liria ekonomike
+  b: Ndalimi i diskriminimit
+  c: E drejta e votës
+  d: E drejta për martesë dhe familje
+explanation: Kushtetuta Federale në nenin 8 ndalon diskriminimin, për shembull për shkak të prejardhjes
+  ose racës. Prandaj askush nuk duhet të trajtohet më keq se të tjerët.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ein öffentliches Schwimmbad verweigert einer Person wegen der Hautfarbe den Eintritt.
+      Welcher Grundsatz der Bundesverfassung wird dadurch verletzt?
+    options_de:
+      a: Die Wirtschaftsfreiheit
+      b: Das Diskriminierungsverbot
+      c: Das Stimmrecht
+      d: Das Recht auf Ehe und Familie
+    explanation_de: Die Bundesverfassung verbietet in Artikel 8 die Diskriminierung, zum Beispiel wegen
+      der Herkunft oder der Rasse. Deshalb darf niemand schlechter behandelt werden als andere.

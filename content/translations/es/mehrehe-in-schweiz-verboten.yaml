@@ -1,0 +1,30 @@
+id: mehrehe-in-schweiz-verboten
+lang: es
+source_version: 1
+question: ¿Qué rige en Suiza respecto al matrimonio con varias parejas al mismo tiempo?
+options:
+  a: Está permitido si todas las personas están de acuerdo
+  b: Está prohibido
+  c: Está permitido si tiene una justificación religiosa
+  d: Solo está permitido para personas con pasaporte extranjero
+explanation: Suiza solo reconoce el matrimonio monógamo. Quien ya está casado o vive en una unión registrada
+  no puede contraer otro matrimonio. Esto se aplica independientemente de la religión o del origen.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in der Schweiz in Bezug auf die Ehe mit mehreren Partnern gleichzeitig?
+    options_de:
+      a: Sie ist erlaubt, wenn alle Personen einverstanden sind
+      b: Sie ist verboten
+      c: Sie ist erlaubt, wenn sie eine religiöse Rechtfertigung hat
+      d: Sie ist nur für Personen mit ausländischem Pass erlaubt
+    explanation_de: Die Schweiz anerkennt nur die monogame Ehe. Wer bereits verheiratet ist oder in einer
+      eingetragenen Partnerschaft lebt, kann keine weitere Ehe eingehen. Dies gilt unabhängig von der
+      Religion oder der Herkunft.

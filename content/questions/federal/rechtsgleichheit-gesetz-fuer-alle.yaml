@@ -20,7 +20,7 @@ glossary:
 - Rechtsgleichheit
 - Gesetz
 - Bundesverfassung
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-019
@@ -43,3 +43,34 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Antwort b) «Alle Personen haben dieselben politischen Ämter» wirkt sprachlich unnatürlich
+        und wenig plausibel; besser wäre eine glaubwürdigere falsche Antwort wie «Alle Personen müssen
+        gleich viel Steuern bezahlen».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort b) «Alle Personen haben dieselben politischen Ämter» ist sprachlich unlogisch
+        und wirkt dadurch wenig plausibel; besser wäre etwa «Alle Personen erhalten dieselbe Arbeitsstelle
+        beim Staat.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte klarer sagen, dass Art. 8 Absatz 1 die Rechtsgleichheit festhält
+        und Absatz 2 das Diskriminierungsverbot, zum Beispiel: «Art. 8 Absatz 1 der Bundesverfassung:
+        Alle Menschen sind vor dem Gesetz gleich. Absatz 2 verbietet Diskriminierung.»'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

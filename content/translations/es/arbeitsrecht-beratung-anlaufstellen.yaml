@@ -1,0 +1,31 @@
+id: arbeitsrecht-beratung-anlaufstellen
+lang: es
+source_version: 1
+question: ¿Quién ayuda con las preguntas sobre el derecho laboral?
+options:
+  a: La junta escolar (Schulpflege) y la parroquia (Kirchgemeinde)
+  b: La abogacía, los sindicatos y los tribunales laborales
+  c: Las empresas de transporte público y el servicio de correos
+  d: Los registros del estado civil y el control de habitantes
+explanation: Para las preguntas sobre el derecho laboral existen varios puntos de contacto. Entre ellos
+  se encuentran las abogadas y los abogados, los sindicatos y los tribunales laborales. Los demás organismos
+  son competentes para otras tareas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer hilft bei Fragen zum Arbeitsrecht?
+    options_de:
+      a: Die Schulpflege und die Kirchgemeinde
+      b: Die Anwaltschaft, die Gewerkschaften und die Arbeitsgerichte
+      c: Die Unternehmen des öffentlichen Verkehrs und der Postdienst
+      d: Die Zivilstandsämter und die Einwohnerkontrolle
+    explanation_de: Für Fragen zum Arbeitsrecht gibt es verschiedene Anlaufstellen. Dazu gehören die Anwältinnen
+      und Anwälte, die Gewerkschaften und die Arbeitsgerichte. Die übrigen Stellen sind für andere Aufgaben
+      zuständig.

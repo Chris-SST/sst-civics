@@ -1,0 +1,31 @@
+id: suchard-lindt-schokolade-betriebe
+lang: fr
+source_version: 1
+question: Que fabriquaient Philippe Suchard et Rudolph Lindt dans leurs entreprises ?
+options:
+  a: Du chocolat
+  b: Des machines
+  c: Des montres
+  d: Des textiles
+explanation: Philippe Suchard et Rudolph Lindt ont fondé des entreprises pour la fabrication de chocolat.
+  Le chocolat est ainsi devenu un produit suisse célèbre. L'industrie a également joué un rôle important
+  dans l'histoire économique zurichoise.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was stellten Philippe Suchard und Rudolph Lindt in ihren Unternehmen her?
+    options_de:
+      a: Schokolade
+      b: Maschinen
+      c: Uhren
+      d: Textilien
+    explanation_de: Philippe Suchard und Rudolph Lindt gründeten Unternehmen für die Herstellung von Schokolade.
+      Schokolade wurde so zu einem berühmten Schweizer Produkt. Die Industrie spielte ausserdem eine wichtige
+      Rolle in der zürcherischen Wirtschaftsgeschichte.

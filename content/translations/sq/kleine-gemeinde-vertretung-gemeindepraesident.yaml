@@ -1,0 +1,31 @@
+id: kleine-gemeinde-vertretung-gemeindepraesident
+lang: sq
+source_version: 1
+question: Kush përfaqëson jashtë një komunë (Gemeinde) më të vogël të Cyrihut?
+options:
+  a: kryetarja ose kryetari i komunës
+  b: anëtarja ose anëtari i këshillit të rrethit
+  c: sekretarja ose sekretari i komunës
+  d: drejtoresha ose drejtori i shkollës
+explanation: Në komunat më të vogla të Cyrihut, kryetarja ose kryetari i komunës përfaqëson komunën jashtë.
+  Ajo ose ai drejton këshillin komunal (Gemeinderat). Në qytetin e Cyrihut këtë rol e merr kryetarja ose
+  kryetari i qytetit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer vertritt eine kleinere Gemeinde des Kantons Zürich nach aussen?
+    options_de:
+      a: die Gemeindepräsidentin oder der Gemeindepräsident
+      b: das Mitglied des Bezirksrates
+      c: die Gemeindeschreiberin oder der Gemeindeschreiber
+      d: die Schulleiterin oder der Schulleiter
+    explanation_de: In kleineren Gemeinden des Kantons Zürich vertritt die Gemeindepräsidentin oder der
+      Gemeindepräsident die Gemeinde nach aussen. Sie oder er leitet den Gemeinderat. In der Stadt Zürich
+      übernimmt die Stadtpräsidentin oder der Stadtpräsident diese Rolle.

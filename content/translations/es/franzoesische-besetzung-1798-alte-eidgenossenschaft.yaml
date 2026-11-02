@@ -1,0 +1,31 @@
+id: franzoesische-besetzung-1798-alte-eidgenossenschaft
+lang: es
+source_version: 1
+question: ¿Qué consecuencia tuvo la entrada de las tropas francesas en Suiza en 1798?
+options:
+  a: Convirtió a Suiza en una parte de Francia
+  b: Reforzó el poder de los antiguos cantones
+  c: Condujo a la fundación del Estado federal de 1848
+  d: Puso fin al antiguo orden de la antigua Confederación
+explanation: Con la ocupación francesa se derrumbó la antigua Confederación. En su lugar surgió la República
+  Helvética como Estado unitario. El actual Estado federal no nació hasta 1848.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: «alte Orte» und «alte Kantone» bezeichnen hier dasselbe, die übrigen Stellen
+      sind sinngleich.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Folge hatte der Einmarsch der französischen Truppen in die Schweiz im Jahr 1798?
+    options_de:
+      a: Er machte die Schweiz zu einem Teil Frankreichs
+      b: Er stärkte die Macht der alten Kantone
+      c: Er führte zur Gründung des Bundesstaates von 1848
+      d: Er beendete die alte Ordnung der alten Eidgenossenschaft
+    explanation_de: Mit der französischen Besetzung brach die alte Eidgenossenschaft zusammen. An ihrer
+      Stelle entstand die Helvetische Republik als Einheitsstaat. Der heutige Bundesstaat entstand erst
+      1848.

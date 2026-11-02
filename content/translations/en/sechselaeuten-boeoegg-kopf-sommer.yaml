@@ -1,15 +1,31 @@
 id: sechselaeuten-boeoegg-kopf-sommer
 lang: en
-source_version: 1
-question: According to popular belief, what does it say about the summer if the head of the Böögg burns
-  quickly at Sechseläuten?
+source_version: 2
+question: According to popular belief, what does it mean if the Böögg's head burns quickly at the Sechseläuten?
 options:
-  a: The following summer will be rainy.
-  b: The following winter will be cold.
-  c: The following autumn will begin early.
-  d: The following summer will be fine.
-explanation: According to popular belief, the faster the head of the Böögg explodes or burns, the better
-  the summer will be. The Böögg is a snowman figure that is burned at Sechseläuten.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: The coming summer will be rainy.
+  b: The coming winter will be particularly cold.
+  c: The coming summer will be fine.
+  d: The harvest in autumn will be poor.
+explanation: 'The Böögg is a snowman figure that is burnt at the Sechseläuten in Zurich. Popular belief
+  says: the faster its head burns or explodes, the finer the coming summer will be.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was bedeutet es nach dem Volksglauben, wenn der Kopf des Böögg am Sechseläuten schnell
+      brennt?
+    options_de:
+      a: Der kommende Sommer wird regnerisch.
+      b: Der kommende Winter wird besonders kalt.
+      c: Der kommende Sommer wird schön.
+      d: Die Ernte im Herbst wird schlecht.
+    explanation_de: 'Der Böögg ist eine Schneemannfigur, die am Sechseläuten in Zürich verbrannt wird.
+      Der Volksglaube besagt: Je schneller sein Kopf brennt oder explodiert, desto schöner wird der kommende
+      Sommer.'

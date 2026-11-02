@@ -1,0 +1,33 @@
+id: auslaenderanteil-wohnbevoelkerung-2020
+lang: sq
+source_version: 2
+question: Sa ishte përafërsisht në vitin 2020 pesha e të huajve në popullsinë e përhershme rezidente të
+  Zvicrës?
+options:
+  a: rreth tre të pestat
+  b: rreth një e dhjeta
+  c: rreth gjysma
+  d: rreth një e katërta
+explanation: Në vitin 2020, rreth një e katërta e popullsisë së përhershme rezidente nuk kishte pasaportë
+  zvicerane. Në fund të vitit 2020 ishin rreth 2,2 milionë persona nga 8,7 milionë gjithsej, pra rreth
+  25 përqind. Krahasuar me vendet e tjera në Evropë, kjo pjesë është e lartë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie hoch war ungefähr im Jahr 2020 der Anteil der Ausländer an der ständigen Wohnbevölkerung
+      der Schweiz?
+    options_de:
+      a: rund drei Fünftel
+      b: rund ein Zehntel
+      c: rund die Hälfte
+      d: rund ein Viertel
+    explanation_de: Im Jahr 2020 hatte rund ein Viertel der ständigen Wohnbevölkerung keinen Schweizer
+      Pass. Ende 2020 waren es rund 2,2 Millionen Personen von insgesamt 8,7 Millionen, also rund 25 Prozent.
+      Verglichen mit anderen Ländern in Europa ist dieser Anteil hoch.

@@ -1,0 +1,31 @@
+id: regierungsrat-zuerich-wahl-durch-volk
+lang: es
+source_version: 1
+question: ¿Quién determina en el cantón de Zúrich quién forma parte del Consejo de Gobierno (Regierungsrat)?
+options:
+  a: La Asamblea Federal (Bundesversammlung) elige a los miembros del Consejo de Gobierno.
+  b: El Consejo Cantonal (Kantonsrat) elige a los miembros de entre sus propias filas.
+  c: Los presidentes y las presidentas de los municipios (Gemeinde) eligen a los miembros.
+  d: La población del cantón con derecho a voto elige directamente a los miembros.
+explanation: En el cantón de Zúrich, el pueblo elige directamente el Consejo de Gobierno en las urnas.
+  El Consejo Cantonal es el parlamento y no elige al gobierno. Esto distingue al cantón de la Confederación,
+  donde la Asamblea Federal elige al Consejo Federal (Bundesrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer bestimmt im Kanton Zürich, wer dem Regierungsrat angehört?
+    options_de:
+      a: Die Bundesversammlung wählt die Mitglieder des Regierungsrates.
+      b: Der Kantonsrat wählt die Mitglieder aus seinen eigenen Reihen.
+      c: Die Gemeindepräsidenten und Gemeindepräsidentinnen wählen die Mitglieder.
+      d: Die stimmberechtigte Bevölkerung des Kantons wählt die Mitglieder direkt.
+    explanation_de: Im Kanton Zürich wählt das Volk den Regierungsrat direkt an der Urne. Der Kantonsrat
+      ist das Parlament und wählt die Regierung nicht. Dies unterscheidet den Kanton vom Bund, wo die
+      Bundesversammlung den Bundesrat wählt.

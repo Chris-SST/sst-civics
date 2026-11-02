@@ -1,0 +1,31 @@
+id: hundehaltung-abgabe-hundesteuer
+lang: it
+source_version: 2
+question: Che cosa vale nel Cantone di Zurigo per le persone che possiedono un cane?
+options:
+  a: Devono pagare ogni anno una tassa sui cani al Comune (Gemeinde).
+  b: Devono pagare una tassa alla Confederazione solo una volta, al momento dell'acquisto del cane.
+  c: Devono sostenere ogni anno un esame con il cane presso il Cantone.
+  d: Devono pagare una tassa solo se con il cane guadagnano denaro.
+explanation: Chi possiede un cane nel Cantone di Zurigo paga ogni anno una tassa per il cane, la cosiddetta
+  imposta sui cani (Hundesteuer). Il denaro va al Comune di residenza, non alla Confederazione. La tassa
+  non è unica e vale anche per i cani che si tengono solo a titolo privato.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt im Kanton Zürich für Personen, die einen Hund besitzen?
+    options_de:
+      a: Sie müssen jedes Jahr eine Hundetaxe an die Gemeinde bezahlen.
+      b: Sie müssen nur einmal, beim Kauf des Hundes, eine Gebühr an den Bund bezahlen.
+      c: Sie müssen jedes Jahr mit dem Hund eine Prüfung beim Kanton ablegen.
+      d: Sie müssen nur dann eine Gebühr bezahlen, wenn sie mit dem Hund Geld verdienen.
+    explanation_de: Wer im Kanton Zürich einen Hund besitzt, bezahlt jedes Jahr eine Gebühr für den Hund,
+      die sogenannte Hundesteuer. Das Geld geht an die Wohngemeinde, nicht an den Bund. Die Gebühr ist
+      nicht einmalig und gilt auch für Hunde, die nur privat gehalten werden.

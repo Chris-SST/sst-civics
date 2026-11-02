@@ -1,0 +1,32 @@
+id: arbeitsvertrag-inhalt-lohnhoehe
+lang: pt
+source_version: 1
+question: O que é definido, entre outras coisas, no contrato de trabalho entre o empregador e a trabalhadora?
+options:
+  a: O montante do salário
+  b: O montante da pensão do seguro de velhice e sobrevivência (AHV)
+  c: O montante do imposto sobre o valor acrescentado
+  d: O montante do prémio da seguradora de saúde (Krankenkasse)
+explanation: No contrato de trabalho são acordadas as condições mais importantes do trabalho, por exemplo
+  a atividade, o horário de trabalho e o salário. A pensão do seguro de velhice e sobrevivência, o imposto
+  sobre o valor acrescentado e o prémio da seguradora de saúde não são determinados no contrato de trabalho.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird unter anderem im Arbeitsvertrag zwischen dem Arbeitgeber und der Arbeitnehmerin
+      festgelegt?
+    options_de:
+      a: Die Höhe des Lohns
+      b: Die Höhe der Rente der Alters- und Hinterlassenenversicherung (AHV)
+      c: Die Höhe der Mehrwertsteuer
+      d: Die Höhe der Prämie der Krankenversicherung (Krankenkasse)
+    explanation_de: Im Arbeitsvertrag werden die wichtigsten Arbeitsbedingungen vereinbart, zum Beispiel
+      die Tätigkeit, die Arbeitszeit und der Lohn. Die Rente der Alters- und Hinterlassenenversicherung,
+      die Mehrwertsteuer und die Prämie der Krankenversicherung werden nicht im Arbeitsvertrag festgelegt.

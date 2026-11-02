@@ -1,0 +1,31 @@
+id: steuerhoehe-richtet-sich-nach-einkommen-vermoegen
+lang: es
+source_version: 1
+question: ¿De qué depende principalmente cuánto impuesto sobre la renta y el patrimonio paga una persona
+  en el cantón de Zúrich?
+options:
+  a: De la renta y el patrimonio imponibles
+  b: De la profesión de la persona
+  c: Del tiempo de residencia en el municipio (Gemeinde)
+  d: Del número de veces que se ha ejercido el derecho de voto
+explanation: El impuesto se calcula sobre la renta y el patrimonio imponibles. Quien gana o posee más
+  paga, por lo general, más impuestos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wovon hängt hauptsächlich ab, wie viel Einkommens- und Vermögenssteuer eine Person im
+      Kanton Zürich bezahlt?
+    options_de:
+      a: Vom steuerbaren Einkommen und Vermögen
+      b: Vom Beruf der Person
+      c: Von der Aufenthaltsdauer in der Gemeinde
+      d: Von der Anzahl der Male, die das Stimmrecht ausgeübt wurde
+    explanation_de: Die Steuer wird auf dem steuerbaren Einkommen und Vermögen berechnet. Wer mehr verdient
+      oder besitzt, bezahlt in der Regel mehr Steuern.

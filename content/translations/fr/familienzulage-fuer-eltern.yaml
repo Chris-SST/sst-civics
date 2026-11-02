@@ -1,0 +1,33 @@
+id: familienzulage-fuer-eltern
+lang: fr
+source_version: 1
+question: Quelle prestation de l'État les parents reçoivent-ils en Suisse lorsqu'ils exercent une activité
+  salariée ou indépendante et ont des enfants ?
+options:
+  a: La rente d'invalidité
+  b: L'indemnité de chômage
+  c: La prestation complémentaire à l'assurance-vieillesse et survivants (AHV)
+  d: L'allocation familiale
+explanation: Les allocations familiales aident les familles à assumer une partie des coûts liés aux enfants.
+  Elles comprennent les allocations pour enfant et les allocations de formation. Les personnes exerçant
+  une activité indépendante peuvent aussi les recevoir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Leistung erhalten Eltern in der Schweiz, wenn sie einer unselbstständigen
+      oder selbstständigen Erwerbstätigkeit nachgehen und Kinder haben?
+    options_de:
+      a: Die Invalidenrente
+      b: Die Arbeitslosenentschädigung
+      c: Die Ergänzungsleistung zur Alters- und Hinterlassenenversicherung (AHV)
+      d: Die Familienzulage
+    explanation_de: Die Familienzulagen helfen den Familien, einen Teil der Kosten zu tragen, die mit
+      den Kindern verbunden sind. Sie umfassen die Kinderzulagen und die Ausbildungszulagen. Auch Personen,
+      die eine selbstständige Erwerbstätigkeit ausüben, können sie erhalten.

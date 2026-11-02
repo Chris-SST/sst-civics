@@ -9,6 +9,21 @@ options:
   d: France
 explanation: Italy is Switzerland's southern neighbour. The border runs, among other places, through the
   Alps and along Ticino and Graubünden. Spain and Slovenia do not border Switzerland.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Land liegt südlich der Schweiz und grenzt an sie?
+    options_de:
+      a: Spanien
+      b: Italien
+      c: Slowenien
+      d: Frankreich
+    explanation_de: Italien ist der südliche Nachbar der Schweiz. Die Grenze verläuft unter anderem durch
+      die Alpen und entlang des Tessins und Graubündens. Spanien und Slowenien grenzen nicht an die Schweiz.

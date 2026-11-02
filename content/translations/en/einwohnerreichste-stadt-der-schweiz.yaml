@@ -9,6 +9,21 @@ options:
   d: Basel
 explanation: Zurich is the largest city in Switzerland. Bern is indeed the Confederation's city (Bundesstadt),
   but it has significantly fewer inhabitants. Geneva and Basel are also smaller.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Stadt in der Schweiz hat die grösste Bevölkerung?
+    options_de:
+      a: Genf
+      b: Zürich
+      c: Bern
+      d: Basel
+    explanation_de: Zürich ist die grösste Stadt der Schweiz. Bern ist tatsächlich die Bundesstadt, hat
+      aber deutlich weniger Einwohner. Genf und Basel sind ebenfalls kleiner.

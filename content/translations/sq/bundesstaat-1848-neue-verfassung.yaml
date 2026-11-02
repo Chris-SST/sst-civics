@@ -1,0 +1,31 @@
+id: bundesstaat-1848-neue-verfassung
+lang: sq
+source_version: 1
+question: Çfarë u krijua në Zvicër në vitin 1848?
+options:
+  a: Republika Helvetike me një qeveri qendrore
+  b: Lidhja e shteteve nën mbikëqyrjen franceze
+  c: Shteti modern federal me një kushtetutë të re
+  d: Konfederata e tre kantoneve themeluese
+explanation: Në vitin 1848 kantonet i dhanë vetes një Kushtetutë Federale dhe themeluan shtetin modern
+  federal. Ai bashkoi detyrat e përbashkëta të Konfederatës me autonominë e kantoneve. Kjo kushtetutë
+  është baza e Zvicrës së sotme.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wurde 1848 in der Schweiz geschaffen?
+    options_de:
+      a: Die Helvetische Republik mit einer Zentralregierung
+      b: Der Bund der Staaten unter französischer Aufsicht
+      c: Der moderne Bundesstaat mit einer neuen Verfassung
+      d: Die Eidgenossenschaft der drei Gründerkantone
+    explanation_de: Im Jahr 1848 gaben sich die Kantone eine Bundesverfassung und gründeten den modernen
+      Bundesstaat. Er vereinte die gemeinsamen Aufgaben des Bundes mit der Autonomie der Kantone. Diese
+      Verfassung ist die Grundlage der heutigen Schweiz.

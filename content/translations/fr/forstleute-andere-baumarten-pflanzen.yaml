@@ -1,0 +1,30 @@
+id: forstleute-andere-baumarten-pflanzen
+lang: fr
+source_version: 1
+question: Comment les forestiers en Suisse réagissent-ils à la hausse des températures ?
+options:
+  a: Ils plantent de plus en plus d'autres essences d'arbres.
+  b: Ils ne plantent plus que des arbres qui ont toujours été présents sur place.
+  c: Ils renoncent complètement à l'entretien de la forêt.
+  d: Ils défrichent les forêts situées à basse altitude.
+explanation: Certaines essences d'arbres supportent mal la chaleur et la sécheresse. Les forestiers misent
+  donc sur d'autres essences, mieux adaptées au climat plus chaud. L'objectif est que la forêt reste stable.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie reagieren die Försterinnen und Förster in der Schweiz auf den Anstieg der Temperaturen?
+    options_de:
+      a: Sie pflanzen immer mehr andere Baumarten.
+      b: Sie pflanzen nur noch Bäume, die schon immer vor Ort vorhanden waren.
+      c: Sie verzichten vollständig auf die Pflege des Waldes.
+      d: Sie roden die Wälder in tiefen Lagen.
+    explanation_de: Gewisse Baumarten vertragen Hitze und Trockenheit schlecht. Die Förster setzen daher
+      auf andere Baumarten, die dem wärmeren Klima besser angepasst sind. Das Ziel ist, dass der Wald
+      stabil bleibt.

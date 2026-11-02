@@ -1,0 +1,31 @@
+id: juengster-kanton-der-schweiz
+lang: fr
+source_version: 1
+question: Quel canton est le plus jeune canton de la Suisse ?
+options:
+  a: Jura
+  b: Appenzell Rhodes-Extérieures
+  c: Bâle-Campagne
+  d: Neuchâtel
+explanation: Le canton du Jura a été créé en 1979. Il s'est séparé du canton de Berne et est depuis lors
+  le plus jeune des 26 cantons. La Constitution fédérale le mentionne parmi les cantons de la Confédération
+  suisse.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton ist der jüngste Kanton der Schweiz?
+    options_de:
+      a: Jura
+      b: Appenzell Ausserrhoden
+      c: Basel-Landschaft
+      d: Neuenburg
+    explanation_de: Der Kanton Jura wurde 1979 geschaffen. Er hat sich vom Kanton Bern abgetrennt und
+      ist seither der jüngste der 26 Kantone. Die Bundesverfassung führt ihn unter den Kantonen der Schweizerischen
+      Eidgenossenschaft auf.

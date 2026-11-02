@@ -1,0 +1,33 @@
+id: arbeitsvertrag-inhalt-lohnhoehe
+lang: tr
+source_version: 1
+question: İşveren ile çalışan (kadın) arasındaki iş sözleşmesinde, diğer hususların yanı sıra, aşağıdakilerden
+  hangisi belirlenir?
+options:
+  a: Maaşın tutarı
+  b: Yaşlılık ve dul-yetim sigortası (AHV) aylığının tutarı
+  c: Katma değer vergisinin oranı
+  d: Sağlık sigortası şirketi (Krankenkasse) primi tutarı
+explanation: İş sözleşmesinde işin en önemli koşulları kararlaştırılır; örneğin görev, çalışma süresi
+  ve maaş. Yaşlılık ve dul-yetim sigortası aylığı, katma değer vergisi ve sağlık sigortası şirketi primi
+  iş sözleşmesinde belirlenmez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird im Arbeitsvertrag zwischen dem Arbeitgeber und der Arbeitnehmerin unter anderem
+      festgelegt?
+    options_de:
+      a: Die Höhe des Lohns
+      b: Die Höhe der Rente der Alters- und Hinterlassenenversicherung (AHV)
+      c: Der Satz der Mehrwertsteuer
+      d: Die Höhe der Prämie der Krankenkasse
+    explanation_de: Im Arbeitsvertrag werden die wichtigsten Bedingungen der Arbeit vereinbart; zum Beispiel
+      die Aufgabe, die Arbeitszeit und der Lohn. Die Rente der Alters- und Hinterlassenenversicherung,
+      die Mehrwertsteuer und die Prämie der Krankenkasse werden nicht im Arbeitsvertrag festgelegt.

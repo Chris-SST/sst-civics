@@ -1,0 +1,30 @@
+id: krankenversicherung-pflicht-wohnhafte-personen
+lang: sq
+source_version: 1
+question: Çfarë vlen për personat që banojnë në Zvicër në lidhje me sigurimin shëndetësor?
+options:
+  a: Ata duhet të sigurohen vetëm nëse punojnë në Zvicër
+  b: Ata janë të detyruar me ligj të lidhin një sigurim shëndetësor
+  c: Ata duhet të sigurohen vetëm nëse janë më të vjetër se 50 vjeç
+  d: Ata mund të vendosin lirisht nëse duan të sigurohen
+explanation: Ligji për sigurimin shëndetësor e detyron çdo person me vendbanim në Zvicër të ketë sigurim
+  shëndetësor. Duhet të sigurohet brenda tre muajve pas lindjes ose pas vendosjes së vendbanimit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für Personen, die in der Schweiz wohnen, in Bezug auf die Krankenversicherung?
+    options_de:
+      a: Sie müssen nur versichert sein, wenn sie in der Schweiz arbeiten
+      b: Sie sind gesetzlich verpflichtet, eine Krankenversicherung abzuschliessen
+      c: Sie müssen nur versichert sein, wenn sie älter als 50 Jahre sind
+      d: Sie können frei entscheiden, ob sie sich versichern wollen
+    explanation_de: Das Krankenversicherungsgesetz verpflichtet jede Person mit Wohnsitz in der Schweiz,
+      eine Krankenversicherung zu haben. Man muss sich innerhalb von drei Monaten nach der Geburt oder
+      nach der Wohnsitznahme versichern.

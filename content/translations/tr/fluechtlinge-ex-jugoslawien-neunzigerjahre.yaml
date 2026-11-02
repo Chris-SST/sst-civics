@@ -1,0 +1,30 @@
+id: fluechtlinge-ex-jugoslawien-neunzigerjahre
+lang: tr
+source_version: 1
+question: 1990'lı yıllarda eski Yugoslavya'dan pek çok insan hangi nedenle İsviçre'ye sığınmak istedi?
+options:
+  a: İsviçre'deki yükseköğretim kurumlarında okumak istiyorlardı.
+  b: Büyük bir doğal afetten kaçtılar.
+  c: Ülkelerindeki savaştan kaçtılar.
+  d: İsviçreli şirketler tarafından mevsimlik işçi (Saisonnier) olarak işe alındılar.
+explanation: Yugoslavya'nın dağılması 1990'lı yıllarda savaşlara yol açtı. Bu nedenle pek çok insan İsviçre'de
+  korunma aradı. Bunların bir kısmı kaldı ve bugün burada yaşıyor.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchem Grund wollten in den 1990er-Jahren viele Menschen aus dem ehemaligen Jugoslawien
+      in der Schweiz Zuflucht suchen?
+    options_de:
+      a: Sie wollten an den Hochschulen in der Schweiz studieren.
+      b: Sie flohen vor einer grossen Naturkatastrophe.
+      c: Sie flohen vor dem Krieg in ihrem Land.
+      d: Sie wurden von Schweizer Unternehmen als Saisonniers angestellt.
+    explanation_de: Der Zerfall Jugoslawiens führte in den 1990er-Jahren zu Kriegen. Deshalb suchten viele
+      Menschen in der Schweiz Schutz. Ein Teil von ihnen blieb und lebt heute hier.

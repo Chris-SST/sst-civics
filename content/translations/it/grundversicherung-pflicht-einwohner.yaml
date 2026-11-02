@@ -1,0 +1,30 @@
+id: grundversicherung-pflicht-einwohner
+lang: it
+source_version: 1
+question: Per chi vale in Svizzera l'assicurazione di base obbligatoria per le cure mediche?
+options:
+  a: Solo per le persone con cittadinanza (Bürgerrecht) svizzera
+  b: Solo per le persone che esercitano un'attività lucrativa e percepiscono un salario
+  c: Solo per le persone con un reddito basso
+  d: Per tutti gli abitanti della Svizzera
+explanation: L'assicurazione obbligatoria delle cure medico-sanitarie vale per tutte le persone che vivono
+  in Svizzera. La cittadinanza, l'attività lucrativa e il reddito non hanno alcuna importanza al riguardo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für wen gilt in der Schweiz die obligatorische Grundversicherung für die medizinische
+      Behandlung?
+    options_de:
+      a: Nur für Personen mit schweizerischem Bürgerrecht
+      b: Nur für Personen, die eine Erwerbstätigkeit ausüben und einen Lohn beziehen
+      c: Nur für Personen mit einem tiefen Einkommen
+      d: Für alle Einwohner der Schweiz
+    explanation_de: Die obligatorische Krankenpflegeversicherung gilt für alle Personen, die in der Schweiz
+      leben. Das Bürgerrecht, die Erwerbstätigkeit und das Einkommen spielen dabei keine Rolle.

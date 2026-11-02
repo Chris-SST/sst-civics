@@ -1,0 +1,29 @@
+id: franzoesisch-status-landessprache
+lang: es
+source_version: 1
+question: ¿Qué estatus tiene el francés en Suiza?
+options:
+  a: El francés es solo una lengua extranjera en la escuela.
+  b: El francés es solo una lengua de comunicación regional.
+  c: El francés es una lengua nacional.
+  d: El francés es una lengua minoritaria sin estatus oficial.
+explanation: El francés es una de las lenguas nacionales de Suiza. Se habla sobre todo en la Suiza occidental
+  y es una lengua oficial a nivel de la Confederación.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welchen Status hat das Französische in der Schweiz?
+    options_de:
+      a: Französisch ist nur eine Fremdsprache in der Schule.
+      b: Französisch ist nur eine regionale Verkehrssprache.
+      c: Französisch ist eine Landessprache.
+      d: Französisch ist eine Minderheitensprache ohne offiziellen Status.
+    explanation_de: Französisch ist eine der Landessprachen der Schweiz. Es wird vor allem in der Westschweiz
+      gesprochen und ist auf Ebene des Bundes eine Amtssprache.

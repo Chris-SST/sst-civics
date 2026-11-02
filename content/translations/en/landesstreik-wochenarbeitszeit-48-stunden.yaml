@@ -10,6 +10,22 @@ options:
 explanation: The national strike of 1918 was a general strike by the workers. One of the demands that
   were implemented afterwards was the 48-hour week. Before that, significantly longer working hours were
   common.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie lang war die Arbeitswoche in der Schweiz nach dem Landesstreik von 1918?
+    options_de:
+      a: 48 Stunden
+      b: 54 Stunden
+      c: 60 Stunden
+      d: 40 Stunden
+    explanation_de: Der Landesstreik von 1918 war ein Generalstreik der Arbeiterinnen und Arbeiter. Eine
+      der Forderungen, die danach umgesetzt wurden, war die 48-Stunden-Woche. Davor waren deutlich längere
+      Arbeitszeiten üblich.

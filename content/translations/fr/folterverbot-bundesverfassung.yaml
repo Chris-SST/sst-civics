@@ -1,0 +1,31 @@
+id: folterverbot-bundesverfassung
+lang: fr
+source_version: 1
+question: Que dit la Constitution fédérale au sujet de la torture ?
+options:
+  a: La torture est interdite uniquement à l'égard des délinquants.
+  b: La torture est autorisée pour la police en situation d'urgence.
+  c: La torture est autorisée si un tribunal y consent.
+  d: Nul ne peut être soumis à la torture.
+explanation: L'article 10 de la Constitution fédérale interdit la torture et tout autre traitement cruel,
+  inhumain ou dégradant. Cette interdiction s'applique à toutes les personnes sans exception. L'État non
+  plus ne peut faire aucune exception.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sagt die Bundesverfassung zum Thema Folter?
+    options_de:
+      a: Folter ist nur gegenüber Straftätern verboten.
+      b: Folter ist für die Polizei in einer Notsituation erlaubt.
+      c: Folter ist erlaubt, wenn ein Gericht zustimmt.
+      d: Niemand darf der Folter unterworfen werden.
+    explanation_de: Artikel 10 der Bundesverfassung verbietet die Folter und jede andere grausame, unmenschliche
+      oder erniedrigende Behandlung. Dieses Verbot gilt für alle Personen ohne Ausnahme. Auch der Staat
+      kann keine Ausnahme machen.

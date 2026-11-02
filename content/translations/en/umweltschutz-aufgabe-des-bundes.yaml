@@ -11,6 +11,23 @@ options:
 explanation: The Federal Constitution instructs the Confederation to protect people and the environment
   from harmful effects. To this end, it enacts laws, for example on the protection of water and nature.
   The cantons implement many of these regulations.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Ebene in der Schweiz ist für den Schutz der Umwelt und den Erlass von Vorschriften
+      zu diesem Zweck zuständig?
+    options_de:
+      a: Der Bund
+      b: Private Organisationen
+      c: Die Gemeinden allein
+      d: Die Bezirke allein
+    explanation_de: Die Bundesverfassung beauftragt den Bund, den Menschen und die Umwelt vor schädlichen
+      Einwirkungen zu schützen. Zu diesem Zweck erlässt er Gesetze, zum Beispiel zum Schutz der Gewässer
+      und der Natur. Die Kantone setzen viele dieser Vorschriften um.

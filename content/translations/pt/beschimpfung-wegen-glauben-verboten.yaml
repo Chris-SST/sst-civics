@@ -1,0 +1,31 @@
+id: beschimpfung-wegen-glauben-verboten
+lang: pt
+source_version: 1
+question: Uma pessoa insulta publicamente outras pessoas por causa da sua fé ou da sua origem. Como é
+  que isso está regulado na Suíça?
+options:
+  a: Só é proibido nas escolas e nas empresas.
+  b: É proibido e pode ser punido.
+  c: Só é proibido se for publicado no jornal.
+  d: Está sempre protegido pela liberdade de expressão.
+explanation: O Código Penal proíbe a discriminação pública de pessoas por causa da sua raça, etnia, religião
+  ou orientação sexual. A liberdade de expressão não é ilimitada.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Person beleidigt öffentlich andere Personen wegen ihres Glaubens oder ihrer Herkunft.
+      Wie ist das in der Schweiz geregelt?
+    options_de:
+      a: Es ist nur in Schulen und in Unternehmen verboten.
+      b: Es ist verboten und kann bestraft werden.
+      c: Es ist nur verboten, wenn es in der Zeitung veröffentlicht wird.
+      d: Es ist immer durch die Meinungsfreiheit geschützt.
+    explanation_de: Das Strafgesetzbuch verbietet die öffentliche Diskriminierung von Personen wegen ihrer
+      Rasse, Ethnie, Religion oder sexuellen Orientierung. Die Meinungsfreiheit ist nicht unbegrenzt.

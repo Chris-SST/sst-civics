@@ -1,0 +1,35 @@
+id: auslieferung-schweizer-staatsangehoerige-ausnahme
+lang: fr
+source_version: 2
+question: Que prévaut-il en principe pour l'extradition de ressortissants suisses à l'étranger ?
+options:
+  a: Ils sont extradés à la demande de n'importe quel État.
+  b: Ils ne sont pas extradés vers un autre État contre leur gré. Ils peuvent toutefois être remis à un
+    tribunal international.
+  c: Ils ne sont extradés qu'à des États voisins de la Suisse.
+  d: Ils sont extradés si le Conseil fédéral (Bundesrat) le souhaite dans un cas particulier.
+explanation: Selon l'article 25 de la Constitution fédérale, les Suisses et les Suissesses ne peuvent
+  pas être expulsés. Ils ne peuvent être extradés vers un autre État que s'ils y consentent eux-mêmes.
+  Un tribunal international, par exemple la Cour pénale internationale, n'est pas une autorité étrangère
+  ; c'est pourquoi une loi fédérale permet de lui remettre des ressortissants suisses pour une procédure.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt grundsätzlich für die Auslieferung von Schweizer Staatsangehörigen ins Ausland?
+    options_de:
+      a: Sie werden auf Ersuchen eines beliebigen Staates ausgeliefert.
+      b: Sie werden nicht gegen ihren Willen an einen anderen Staat ausgeliefert. Sie können jedoch einem
+        internationalen Gericht übergeben werden.
+      c: Sie werden nur an Nachbarstaaten der Schweiz ausgeliefert.
+      d: Sie werden ausgeliefert, wenn der Bundesrat dies in einem Einzelfall wünscht.
+    explanation_de: Nach Artikel 25 der Bundesverfassung dürfen Schweizerinnen und Schweizer nicht ausgewiesen
+      werden. Sie dürfen nur dann an einen anderen Staat ausgeliefert werden, wenn sie selbst zustimmen.
+      Ein internationales Gericht, zum Beispiel der Internationale Strafgerichtshof, ist keine ausländische
+      Behörde; deshalb erlaubt ein Bundesgesetz, ihm Schweizer Staatsangehörige für ein Verfahren zu übergeben.

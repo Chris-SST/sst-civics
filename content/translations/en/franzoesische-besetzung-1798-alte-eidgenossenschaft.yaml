@@ -9,6 +9,22 @@ options:
   d: It ended the old order of the Old Swiss Confederacy
 explanation: With the French occupation, the old Swiss Confederacy collapsed. It was replaced by the Helvetic
   Republic as a unitary state. The present-day federal state did not come into being until 1848.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Wirkung hatte der Einmarsch französischer Truppen in der Schweiz im Jahr 1798?
+    options_de:
+      a: Er machte die Schweiz zu einem Teil Frankreichs
+      b: Er stärkte die Macht der alten Kantone
+      c: Er führte zur Gründung des Bundesstaates von 1848
+      d: Er beendete die alte Ordnung der Alten Eidgenossenschaft
+    explanation_de: Mit der französischen Besetzung brach die alte Eidgenossenschaft zusammen. Sie wurde
+      durch die Helvetische Republik als Einheitsstaat ersetzt. Der heutige Bundesstaat entstand erst
+      1848.

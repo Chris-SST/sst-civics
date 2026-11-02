@@ -1,0 +1,31 @@
+id: mitwirkung-gemeinde-urnengang-stimmabgabe
+lang: es
+source_version: 1
+question: ¿Cómo participan políticamente los ciudadanos con derecho a voto en su municipio (Gemeinde)
+  en las votaciones en las urnas?
+options:
+  a: Dirigen las sesiones del consejo municipal (Gemeinderat)
+  b: Ponen en práctica las decisiones del municipio
+  c: Emiten su voto en elecciones y votaciones
+  d: Promulgan ellos mismos las leyes del cantón
+explanation: En las votaciones en las urnas, las personas con derecho a voto votan sobre proyectos y eligen
+  a las autoridades. La puesta en práctica de las decisiones es tarea de las autoridades y de la administración.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie beteiligen sich die stimmberechtigten Bürgerinnen und Bürger in ihrer Gemeinde politisch
+      an den Urnenabstimmungen?
+    options_de:
+      a: Sie leiten die Sitzungen des Gemeinderats
+      b: Sie setzen die Beschlüsse der Gemeinde um
+      c: Sie geben ihre Stimme bei Wahlen und Abstimmungen ab
+      d: Sie erlassen die Gesetze des Kantons selbst
+    explanation_de: Bei Urnenabstimmungen stimmen die Stimmberechtigten über Vorlagen ab und wählen die
+      Behörden. Die Umsetzung der Beschlüsse ist Aufgabe der Behörden und der Verwaltung.

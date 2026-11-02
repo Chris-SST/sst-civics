@@ -11,6 +11,23 @@ options:
 explanation: An optional referendum requires 50,000 valid signatures within 100 days of the publication
   of the act in the Federal Gazette (Bundesblatt). If the referendum succeeds, the people vote on the
   act.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Unterschriften sind erforderlich, damit ein fakultatives Referendum gegen ein
+      Bundesgesetz zustande kommt, und innerhalb welcher Frist?
+    options_de:
+      a: 50 000 Unterschriften innerhalb von 18 Monaten
+      b: 50 000 Unterschriften innerhalb von 100 Tagen
+      c: 100 000 Unterschriften innerhalb von 30 Tagen
+      d: 100 000 Unterschriften innerhalb von 100 Tagen
+    explanation_de: Ein fakultatives Referendum erfordert 50 000 gültige Unterschriften innerhalb von
+      100 Tagen nach der Veröffentlichung des Erlasses im Bundesblatt. Kommt das Referendum zustande,
+      stimmt das Volk über den Erlass ab.

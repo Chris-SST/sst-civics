@@ -1,0 +1,31 @@
+id: sonntagszeitung-erscheint-woechentlich
+lang: sq
+source_version: 1
+question: Sa shpesh del një gazetë e së dielës në Zvicër?
+options:
+  a: Një herë në javë
+  b: Dy herë në javë
+  c: Një herë në muaj
+  d: Çdo ditë
+explanation: Një gazetë e së dielës del vetëm një herë në javë, të dielën. Gazetat ditore, në të kundërt,
+  dalin në pjesën më të madhe të ditëve të javës. Shtypi është pjesë e kulturës dhe e formimit të opinionit
+  në vend.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie oft erscheint in der Schweiz eine Sonntagszeitung?
+    options_de:
+      a: Einmal pro Woche
+      b: Zweimal pro Woche
+      c: Einmal pro Monat
+      d: Jeden Tag
+    explanation_de: Eine Sonntagszeitung erscheint nur einmal pro Woche, am Sonntag. Die Tageszeitungen
+      hingegen erscheinen an den meisten Tagen der Woche. Die Presse ist Teil der Kultur und der Meinungsbildung
+      im Land.

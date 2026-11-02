@@ -1,0 +1,33 @@
+id: einwohnerregister-fuehren-gemeinde-aufgabe
+lang: pt
+source_version: 1
+question: Qual das seguintes tarefas é cumprida, nas comunas (Gemeinde) de Zurique, pelo Einwohneramt
+  (serviço de registo de habitantes)?
+options:
+  a: Emite sentenças penais.
+  b: Mantém o registo de habitantes da comuna.
+  c: Concede licenças de construção para estradas cantonais.
+  d: Define as leis fiscais.
+explanation: A comuna mantém o registo das pessoas que nela residem. É lá que você se regista, cancela
+  o registo ou comunica uma mudança de morada quando se muda. Sentenças penais, leis fiscais e estradas
+  cantonais não fazem parte desta tarefa.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aufgaben wird in den Gemeinden des Kantons Zürich vom Einwohneramt
+      erfüllt?
+    options_de:
+      a: Es erlässt Strafurteile.
+      b: Es führt das Einwohnerregister der Gemeinde.
+      c: Es erteilt Baubewilligungen für Kantonsstrassen.
+      d: Es legt die Steuergesetze fest.
+    explanation_de: Die Gemeinde führt das Register der Personen, die in ihr wohnen. Dort meldet man sich
+      an, ab oder teilt bei einem Umzug eine Adressänderung mit. Strafurteile, Steuergesetze und Kantonsstrassen
+      gehören nicht zu dieser Aufgabe.

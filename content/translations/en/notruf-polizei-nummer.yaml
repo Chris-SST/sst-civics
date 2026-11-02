@@ -10,6 +10,23 @@ options:
 explanation: The police can be reached throughout Switzerland on the number 117. The fire brigade has
   118, and the ambulance service has 144. The number 143 is the helpline of Die Dargebotene Hand (a telephone
   support service) for people in crisis.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Telefonnummer wählt man in der Schweiz, wenn man in einem Notfall die Polizei
+      braucht?
+    options_de:
+      a: '143'
+      b: '118'
+      c: '144'
+      d: '117'
+    explanation_de: Die Polizei ist in der ganzen Schweiz unter der Nummer 117 erreichbar. Die Feuerwehr
+      hat die 118, und der Rettungsdienst hat die 144. Die Nummer 143 ist die Hilfsnummer der Dargebotenen
+      Hand (ein telefonischer Beratungsdienst) für Menschen in Krisen.

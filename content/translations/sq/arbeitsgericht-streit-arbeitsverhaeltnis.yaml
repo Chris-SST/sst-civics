@@ -1,0 +1,31 @@
+id: arbeitsgericht-streit-arbeitsverhaeltnis
+lang: sq
+source_version: 1
+question: Një punonjëse e konsideron shkarkimin e saj të pabazuar dhe dëshiron të veprojë kundër tij.
+  Cili organ merret me konflikte të tilla që dalin nga marrëdhënia e punës?
+options:
+  a: Qendra rajonale e ndërmjetësimit të punës (RAV)
+  b: Zyra e qarkullimit rrugor
+  c: Gjykata e punës
+  d: Zyra e përmbarimit
+explanation: Gjykata e punës është kompetente për konfliktet midis punëdhënësve dhe punëmarrësve. Kjo
+  përfshin edhe mosmarrëveshjen për një shkarkim. RAV-i, në të kundërt, ndihmon në kërkimin e punës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Angestellte hält ihre Kündigung für unbegründet und möchte dagegen vorgehen. Welches
+      Organ befasst sich mit solchen Konflikten, die aus dem Arbeitsverhältnis entstehen?
+    options_de:
+      a: Das regionale Arbeitsvermittlungszentrum (RAV)
+      b: Das Strassenverkehrsamt
+      c: Das Arbeitsgericht
+      d: Das Betreibungsamt
+    explanation_de: Das Arbeitsgericht ist für Konflikte zwischen Arbeitgebern und Arbeitnehmern zuständig.
+      Dies umfasst auch den Streit über eine Kündigung. Das RAV hingegen hilft bei der Arbeitssuche.

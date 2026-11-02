@@ -1,0 +1,31 @@
+id: referendum-gegen-parlamentsbeschluss
+lang: it
+source_version: 1
+question: Contro quali decisioni è diretto un referendum a livello federale?
+options:
+  a: Contro le leggi approvate dal Consiglio nazionale (Nationalrat) e dal Consiglio degli Stati (Ständerat)
+  b: Contro le decisioni prese dalla Cancelleria federale (Bundeskanzlei)
+  c: Contro le sentenze emesse dal Tribunale federale (Bundesgericht)
+  d: Contro le ordinanze emanate dai singoli Comuni (Gemeinden)
+explanation: Un referendum è diretto contro le leggi approvate dal Parlamento. Il Parlamento è composto
+  dal Consiglio nazionale e dal Consiglio degli Stati. Le sentenze dei tribunali e le decisioni dell'amministrazione
+  non possono essere impugnate con un referendum.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen welche Beschlüsse richtet sich ein Referendum auf Bundesebene?
+    options_de:
+      a: Gegen die Gesetze, die vom Nationalrat und vom Ständerat verabschiedet wurden
+      b: Gegen die Entscheide der Bundeskanzlei
+      c: Gegen die Urteile des Bundesgerichts
+      d: Gegen die Verordnungen, die von den einzelnen Gemeinden erlassen wurden
+    explanation_de: Ein Referendum richtet sich gegen die vom Parlament verabschiedeten Gesetze. Das Parlament
+      besteht aus dem Nationalrat und dem Ständerat. Die Urteile der Gerichte und die Entscheide der Verwaltung
+      können nicht mit einem Referendum angefochten werden.

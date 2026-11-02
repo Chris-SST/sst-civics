@@ -1,0 +1,31 @@
+id: krankenkasse-freie-wahl-versicherte
+lang: sq
+source_version: 1
+question: Kush vendos në Zvicër se te cila arkë e sigurimit shëndetësor (Krankenkasse) lidh një person
+  sigurimin bazë?
+options:
+  a: Komuna e vendbanimit përcakton arkën e sigurimit shëndetësor
+  b: Personi i siguruar e zgjedh vetë arkën e tij të sigurimit shëndetësor
+  c: Punëdhënësi përcakton arkën e sigurimit shëndetësor për të gjithë punonjësit
+  d: Kantoni i vendbanimit i cakton çdo personi një arkë sigurimi shëndetësor
+explanation: Në Zvicër vlen zgjedhja e lirë e arkës së sigurimit shëndetësor. Të siguruarit mund të zgjedhin
+  mes arkave të sigurimit shëndetësor të miratuara dhe, nën kushte të caktuara, mund ta ndërrojnë arkën.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet in der Schweiz, bei welcher Krankenkasse eine Person die Grundversicherung
+      abschliesst?
+    options_de:
+      a: Die Wohngemeinde bestimmt die Krankenkasse
+      b: Die versicherte Person wählt ihre Krankenkasse selbst
+      c: Der Arbeitgeber bestimmt die Krankenkasse für alle Mitarbeitenden
+      d: Der Wohnkanton weist jeder Person eine Krankenkasse zu
+    explanation_de: In der Schweiz gilt die freie Wahl der Krankenkasse. Die Versicherten können unter
+      den zugelassenen Krankenkassen wählen und können unter bestimmten Bedingungen die Kasse wechseln.

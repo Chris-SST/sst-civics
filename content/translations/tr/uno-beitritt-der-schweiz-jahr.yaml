@@ -1,0 +1,30 @@
+id: uno-beitritt-der-schweiz-jahr
+lang: tr
+source_version: 1
+question: İsviçre hangi yıl Birleşmiş Milletler'e (BM) üye oldu?
+options:
+  a: '2002'
+  b: '1945'
+  c: '1986'
+  d: '2010'
+explanation: İsviçre, halk ve kantonlar onay verdikten sonra 2002 yılında BM'ye katıldı. Böylece katılan
+  son ülkelerden biri oldu. Ancak birçok BM kuruluşunun merkezi uzun zamandır Cenevre'dedir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr wurde die Schweiz Mitglied der Vereinten Nationen (UNO)?
+    options_de:
+      a: '2002'
+      b: '1945'
+      c: '1986'
+      d: '2010'
+    explanation_de: Die Schweiz trat 2002 der UNO bei, nachdem das Volk und die Kantone zugestimmt hatten.
+      Damit wurde sie eines der letzten beigetretenen Länder. Der Sitz vieler UNO-Organisationen ist jedoch
+      seit langem in Genf.

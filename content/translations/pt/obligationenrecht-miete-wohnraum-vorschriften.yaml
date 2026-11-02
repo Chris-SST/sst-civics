@@ -1,0 +1,33 @@
+id: obligationenrecht-miete-wohnraum-vorschriften
+lang: pt
+source_version: 2
+question: Em que lei estão estabelecidas as regras para o arrendamento de uma habitação?
+options:
+  a: No Código das Obrigações
+  b: Na Lei do Trabalho
+  c: No Código Penal
+  d: Na Lei da Circulação Rodoviária
+explanation: As regras sobre o arrendamento de habitações encontram-se no Código das Obrigações (OR).
+  Aí estabelece-se, por exemplo, o que vale no contrato de arrendamento, qual pode ser o valor da renda
+  e como se pode rescindir o contrato. O Código Civil (ZGB), por sua vez, regula sobretudo temas como
+  a família, o casamento e a herança.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welchem Gesetz sind die Regeln für die Miete einer Wohnung festgelegt?
+    options_de:
+      a: Im Obligationenrecht
+      b: Im Arbeitsgesetz
+      c: Im Strafgesetzbuch
+      d: Im Strassenverkehrsgesetz
+    explanation_de: Die Regeln über die Miete von Wohnungen finden sich im Obligationenrecht (OR). Dort
+      wird zum Beispiel festgelegt, was im Mietvertrag gilt, wie hoch der Mietzins sein darf und wie man
+      den Vertrag kündigen kann. Das Zivilgesetzbuch (ZGB) regelt demgegenüber vor allem Themen wie Familie,
+      Ehe und Erbschaft.

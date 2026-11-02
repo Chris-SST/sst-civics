@@ -1,0 +1,30 @@
+id: arbeitszeugnis-bedeutung
+lang: fr
+source_version: 1
+question: Qu'est-ce qu'un certificat de travail ?
+options:
+  a: Une attestation du médecin certifiant que l'on ne peut pas travailler
+  b: Un document de l'employeur qui évalue les prestations et le comportement de la personne employée
+  c: L'autorisation de l'office des migrations de travailler en Suisse
+  d: Le certificat de salaire annuel pour la déclaration d'impôt
+explanation: Un certificat de travail est établi par l'employeur. Il décrit la nature et la durée du travail
+  et évalue les prestations et le comportement. Les employés peuvent le demander à tout moment.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist ein Arbeitszeugnis?
+    options_de:
+      a: Eine Bescheinigung des Arztes, die bestätigt, dass man nicht arbeiten kann
+      b: Ein Dokument des Arbeitgebers, das die Leistungen und das Verhalten der angestellten Person beurteilt
+      c: Die Bewilligung des Migrationsamtes, in der Schweiz zu arbeiten
+      d: Der jährliche Lohnausweis für die Steuererklärung
+    explanation_de: Ein Arbeitszeugnis wird vom Arbeitgeber ausgestellt. Es beschreibt die Art und die
+      Dauer der Arbeit und beurteilt die Leistungen und das Verhalten. Die Angestellten können es jederzeit
+      verlangen.

@@ -1,0 +1,31 @@
+id: roger-federer-tennisprofi
+lang: tr
+source_version: 1
+question: İsviçreli Roger Federer hangi spor dalıyla dünyaca ünlüdür?
+options:
+  a: Buz hokeyi
+  b: Futbol
+  c: Kayak yarışları
+  d: Tenis
+explanation: Roger Federer, ünlü bir İsviçreli profesyonel tenisçidir. Birçok büyük turnuvayı kazanmıştır
+  ve tarihin en başarılı oyuncularından biri olarak kabul edilir. Tenis, İsviçre'nin uluslararası alanda
+  tanınmış isimlere sahip olduğu spor dallarından biridir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Mit welcher Sportart ist der Schweizer Roger Federer weltberühmt?
+    options_de:
+      a: Eishockey
+      b: Fussball
+      c: Skirennen
+      d: Tennis
+    explanation_de: Roger Federer ist ein berühmter Schweizer Tennisprofi. Er hat viele grosse Turniere
+      gewonnen und gilt als einer der erfolgreichsten Spieler der Geschichte. Tennis ist eine der Sportarten,
+      in denen die Schweiz international bekannte Namen hat.

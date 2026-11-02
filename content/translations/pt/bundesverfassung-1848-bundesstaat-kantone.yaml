@@ -1,0 +1,31 @@
+id: bundesverfassung-1848-bundesstaat-kantone
+lang: pt
+source_version: 1
+question: O que mudou para a Suíça com a Constituição Federal de 1848?
+options:
+  a: Voltou a ser uma confederação de Estados pouco coesa
+  b: Tornou-se uma monarquia com um rei
+  c: Tornou-se um Estado federal, no qual os cantões continuam a ser autónomos
+  d: Tornou-se um Estado unitário sem cantões
+explanation: Em 1848 surgiu o Estado federal moderno, com instituições comuns. Os cantões mantiveram,
+  porém, atribuições próprias e uma estatalidade própria. Esta repartição marca a Suíça até hoje.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: «lose» wird als «wenig zusammenhaltend» umschrieben, «eigenständig» als
+      «autonom», «Aufgaben» als «Zuständigkeiten»; Fakten und Antwortzuordnung bleiben gleich.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was änderte sich für die Schweiz mit der Bundesverfassung von 1848?
+    options_de:
+      a: Sie wurde wieder ein wenig zusammenhaltender Staatenbund
+      b: Sie wurde eine Monarchie mit einem König
+      c: Sie wurde ein Bundesstaat, in dem die Kantone weiterhin autonom bleiben
+      d: Sie wurde ein Einheitsstaat ohne Kantone
+    explanation_de: Im Jahr 1848 entstand der moderne Bundesstaat mit gemeinsamen Institutionen. Die Kantone
+      behielten jedoch eigene Zuständigkeiten und eine eigene Staatlichkeit. Diese Aufteilung prägt die
+      Schweiz bis heute.

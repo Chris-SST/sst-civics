@@ -1,0 +1,30 @@
+id: gesamtbevoelkerung-schweiz-2020
+lang: sq
+source_version: 1
+question: Sa banorë ishte afërsisht popullsia totale e Zvicrës në vitin 2020?
+options:
+  a: rreth 6,2 milionë
+  b: rreth 8,6 milionë
+  c: rreth 10,1 milionë
+  d: rreth 7,4 milionë
+explanation: Në vitin 2020 në Zvicër jetonin rreth 8,6 milionë njerëz. Popullsia është rritur shumë gjatë
+  dekadave të fundit. Shifrat më të reja i publikon Zyra Federale e Statistikës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Einwohner hatte die Schweiz im Jahr 2020 ungefähr insgesamt?
+    options_de:
+      a: rund 6,2 Millionen
+      b: rund 8,6 Millionen
+      c: rund 10,1 Millionen
+      d: rund 7,4 Millionen
+    explanation_de: Im Jahr 2020 lebten in der Schweiz rund 8,6 Millionen Menschen. Die Bevölkerung ist
+      in den letzten Jahrzehnten stark gewachsen. Die neuesten Zahlen veröffentlicht das Bundesamt für
+      Statistik.

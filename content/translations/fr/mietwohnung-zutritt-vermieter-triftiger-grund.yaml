@@ -1,0 +1,32 @@
+id: mietwohnung-zutritt-vermieter-triftiger-grund
+lang: fr
+source_version: 1
+question: Dans quel cas les locataires doivent-ils permettre au bailleur d'accéder au logement ?
+options:
+  a: Jamais, le logement est toujours protégé
+  b: Lorsqu'il existe un motif sérieux
+  c: Uniquement si le bailleur l'exige, sans justification
+  d: À tout moment et sans préavis
+explanation: Les locataires doivent permettre l'accès lorsqu'il existe un motif sérieux, par exemple une
+  réparation urgente. Toutefois, le bailleur doit annoncer sa visite en temps utile et tenir compte des
+  locataires. Un accès sans motif n'est pas autorisé.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall müssen die Mieterinnen und Mieter dem Vermieter den Zutritt zur Wohnung
+      gewähren?
+    options_de:
+      a: Nie, die Wohnung ist immer geschützt
+      b: Wenn ein wichtiger Grund vorliegt
+      c: Nur wenn der Vermieter es verlangt, ohne Begründung
+      d: Jederzeit und ohne Vorankündigung
+    explanation_de: Die Mieterinnen und Mieter müssen den Zutritt gewähren, wenn ein wichtiger Grund vorliegt,
+      zum Beispiel eine dringende Reparatur. Der Vermieter muss jedoch seinen Besuch rechtzeitig ankündigen
+      und auf die Mieterinnen und Mieter Rücksicht nehmen. Ein Zutritt ohne Grund ist nicht erlaubt.

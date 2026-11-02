@@ -1,0 +1,30 @@
+id: parlament-zwei-kammern-bund
+lang: it
+source_version: 1
+question: Da quali due camere è composto il Parlamento svizzero a livello federale?
+options:
+  a: Dal Consiglio federale (Bundesrat) e dal Consiglio degli Stati (Ständerat)
+  b: Dal Consiglio federale (Bundesrat) e dal Consiglio nazionale (Nationalrat)
+  c: Dal Consiglio degli Stati (Ständerat) e dal Tribunale federale (Bundesgericht)
+  d: Dal Consiglio nazionale (Nationalrat) e dal Consiglio degli Stati (Ständerat)
+explanation: 'L''Assemblea federale (Bundesversammlung), il Parlamento della Confederazione, è composta
+  da due camere: il Consiglio nazionale e il Consiglio degli Stati. Il Consiglio federale è il Governo
+  e non fa parte del Parlamento.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchen zwei Kammern besteht das Schweizer Parlament auf Bundesebene?
+    options_de:
+      a: Aus dem Bundesrat und dem Ständerat
+      b: Aus dem Bundesrat und dem Nationalrat
+      c: Aus dem Ständerat und dem Bundesgericht
+      d: Aus dem Nationalrat und dem Ständerat
+    explanation_de: 'Die Bundesversammlung, das Parlament der Eidgenossenschaft, besteht aus zwei Kammern:
+      dem Nationalrat und dem Ständerat. Der Bundesrat ist die Regierung und gehört nicht zum Parlament.'

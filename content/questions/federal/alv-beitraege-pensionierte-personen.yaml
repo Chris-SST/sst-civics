@@ -24,7 +24,7 @@ glossary:
 - Arbeitslosenversicherung
 - AHV
 - Rentenalter
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-174
@@ -48,3 +48,47 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «Wer pensioniert ist, bezahlt auf einem allfälligen Lohn keine ALV-Beiträge mehr»
+        stimmt für Frühpensionierte nicht, denn sie bezahlen bis zum Referenzalter weiter ALV-Beiträge,
+        wenn sie angestellt arbeiten; besser: «Wer das ordentliche AHV-Rentenalter (Referenzalter) erreicht
+        hat und weiterarbeitet, bezahlt auf seinem Lohn keine ALV-Beiträge mehr.»'
+      - 'Klein: Die Tatsache aus der Themenliste spricht ungenau von «Pensionierten»; gemeint sind Personen
+        ab dem ordentlichen AHV-Rentenalter, wie es die Frage richtig formuliert.'
+      - 'Klein: Die Erklärung könnte kurz auch Antwort d) erwähnen, zum Beispiel: «Ob man früher arbeitslos
+        war, spielt für die Beitragspflicht keine Rolle.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Seit der Reform AHV 21 spricht man offiziell vom «Referenzalter»; besser «Personen, die
+        das AHV-Referenzalter (Rentenalter) erreicht haben» schreiben, damit beide Begriffe bekannt sind.'
+      - 'Klein: Der Satz «Wer pensioniert ist, bezahlt auf einem allfälligen Lohn keine ALV-Beiträge mehr»
+        ist ungenau, weil Frühpensionierte mit Lohn bis zum Referenzalter weiter ALV-Beiträge zahlen;
+        besser «Wer das Referenzalter erreicht hat und weiterarbeitet, bezahlt auf dem Lohn keine ALV-Beiträge
+        mehr».'
+      - 'Klein: Das Wort «allfällig» ist für Niveau B1 schwierig; besser «auf einem Lohn» oder «wenn er
+        noch Lohn bekommt» schreiben.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage sagt «keine Beiträge mehr» und die Erklärung «endet mit dem Erreichen des AHV-Rentenalters».
+        Für den Test genügt das. Genauer wäre aber «ab dem ordentlichen AHV-Rentenalter», weil die ALV-Beitragspflicht
+        gesetzlich mit dem Erreichen des Rentenalters endet und nicht erst mit der Pensionierung.'
+      - 'Klein: Die Erklärung sagt «Wer pensioniert ist». Das kann missverstanden werden, weil eine Frühpensionierung
+        die ALV-Beitragspflicht nicht beendet. Besser wäre «Wer das ordentliche AHV-Rentenalter erreicht
+        hat».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

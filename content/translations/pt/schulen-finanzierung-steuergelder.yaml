@@ -1,0 +1,29 @@
+id: schulen-finanzierung-steuergelder
+lang: pt
+source_version: 1
+question: Com que dinheiro são principalmente pagas as escolas públicas na Suíça?
+options:
+  a: Com as propinas que os pais pagam todos os meses
+  b: Com o dinheiro dos impostos do cantão e das comunas (Gemeinden)
+  c: Com as receitas dos Correios e dos SBB
+  d: Com as contribuições das seguradoras de saúde (Krankenkassen)
+explanation: Segundo a Constituição Federal, a escola pública obrigatória é gratuita. É financiada com
+  dinheiro dos impostos, sobretudo dos cantões e das comunas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Mit welchem Geld werden die öffentlichen Schulen in der Schweiz hauptsächlich bezahlt?
+    options_de:
+      a: Mit dem Schulgeld, das die Eltern jeden Monat bezahlen
+      b: Mit dem Steuergeld des Kantons und der Gemeinden
+      c: Mit den Einnahmen der Post und der SBB
+      d: Mit den Beiträgen der Krankenkassen
+    explanation_de: Gemäss der Bundesverfassung ist die obligatorische öffentliche Schule unentgeltlich.
+      Sie wird mit Steuergeldern finanziert, vor allem von den Kantonen und den Gemeinden.

@@ -1,17 +1,18 @@
 id: parlamentsmitglieder-direkt-gewaehlt-volk
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.parlament
-question_de: Wer bestimmt die Mitglieder des Nationalrats?
+question_de: Wer wählt die Mitglieder des Nationalrats?
 options_de:
   a: Der Bundesrat ernennt sie.
   b: Die Parteien bestimmen sie ohne Wahl.
   c: Das Bundesgericht wählt sie aus.
   d: Die wahlberechtigten Bürgerinnen und Bürger wählen sie direkt.
 correct: d
-explanation_de: Die Mitglieder des Nationalrats werden vom Volk direkt gewählt, und zwar alle vier Jahre.
-  Auch die Ständerätinnen und Ständeräte werden in fast allen Kantonen vom Volk gewählt.
+explanation_de: Die Mitglieder des Nationalrats werden alle vier Jahre direkt von den Stimmberechtigten
+  gewählt. Auch die Mitglieder des Ständerats wählt heute in allen Kantonen das Volk, nach den Regeln
+  des jeweiligen Kantons; in Appenzell Innerrhoden geschieht das an der Landsgemeinde.
 sources:
 - url: https://www.aboutswitzerland.eda.admin.ch/de/bundesversammlung-parlament
   checked: &id001 2026-11-02
@@ -23,7 +24,7 @@ glossary:
 - Nationalrat
 - Ständerat
 - Wahl
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-035
@@ -33,15 +34,46 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Die Mitglieder des Nationalrats werden vom Volk, also von den wahlberechtigten Bürgerinnen
-      und Bürgern, in den Kantonen direkt im Proporzverfahren gewählt.
+    version: 2
+    reasoning: Die Mitglieder des Nationalrats werden alle vier Jahre vom Volk, also von den wahlberechtigten
+      Schweizer Bürgerinnen und Bürgern, direkt im Proporzverfahren gewählt.
   source:
     verdict: supported
-    note: Quelle 1 sagt, dass die Abgeordneten beider Räte alle 4 Jahre vom Volk gewählt werden, den Nationalrat
-      mit Proporzwahl, und den Ständerat mit Majorzwahl. Quelle 3 bestätigt, dass das Volk Nationalrat
-      und Ständerat wählt. Das stützt Antwort d und die Erklärung. Dass die Ständeräte in fast allen Kantonen
-      vom Volk gewählt werden, steht nicht ausdrücklich dort, ist aber für die Antwort nicht entscheidend.
+    note: 'Quelle 1 sagt, die Abgeordneten beider Räte würden alle 4 Jahre vom Volk gewählt, den Nationalrat
+      mit Proporzwahl. Quelle 3 bestätigt, dass das Volk Nationalrat und Ständerat wählt. Die Angabe zu
+      Appenzell Innerrhoden in der Erklärung stützt Quelle 2 nur allgemein: Dort finden Wahlen an der
+      Landsgemeinde statt, ohne dass der Ständerat genannt wird.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz zu Appenzell Innerrhoden und der Landsgemeinde ist zwar richtig, geht aber über
+        die Tatsache hinaus und macht die Erklärung für Niveau B1 schwerer; besser einfach schreiben:
+        «Auch die Mitglieder des Ständerats wählt das Volk.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort d ist deutlich länger und genauer als die anderen Antworten und fällt dadurch
+        auf; die falschen Antworten könnten etwas ausführlicher formuliert werden, zum Beispiel «Der Bundesrat
+        ernennt sie nach jeder Legislatur.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung erwähnt die Landsgemeinde in Appenzell Innerrhoden beim Ständerat; das ist
+        für die Frage unnötiges Detailwissen. Vorschlag: Den Satz kürzen, zum Beispiel «Auch die Mitglieder
+        des Ständerats wählt das Volk.»'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

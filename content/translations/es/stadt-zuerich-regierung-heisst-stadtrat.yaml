@@ -1,0 +1,29 @@
+id: stadt-zuerich-regierung-heisst-stadtrat
+lang: es
+source_version: 1
+question: ¿Cómo se llama el gobierno de la ciudad de Zúrich?
+options:
+  a: Consejo de la Ciudad (Stadtrat)
+  b: Consejo de distrito (Bezirksrat)
+  c: Consejo municipal (Gemeinderat)
+  d: Parlamento de la ciudad (Stadtparlament)
+explanation: El poder ejecutivo de la ciudad de Zúrich se llama Consejo de la Ciudad. El consejo municipal,
+  en cambio, es el parlamento de la ciudad.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Regierung der Stadt Zürich?
+    options_de:
+      a: Stadtrat
+      b: Bezirksrat
+      c: Gemeinderat
+      d: Stadtparlament
+    explanation_de: Die Exekutive der Stadt Zürich heisst Stadtrat. Der Gemeinderat hingegen ist das Parlament
+      der Stadt.

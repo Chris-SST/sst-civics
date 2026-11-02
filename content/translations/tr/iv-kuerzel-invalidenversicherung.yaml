@@ -1,0 +1,32 @@
+id: iv-kuerzel-invalidenversicherung
+lang: tr
+source_version: 1
+question: İsviçre sosyal sigorta sisteminde «IV» kısaltması neyi ifade eder?
+options:
+  a: Inlandversicherung (iç sigorta)
+  b: Invalidenversicherung (malullük sigortası)
+  c: Integrationsversicherung (entegrasyon sigortası)
+  d: Individualversicherung (bireysel sigorta)
+explanation: IV, malullük sigortası (Invalidenversicherung) anlamına gelir. Yaşlılık güvencesinin birinci
+  sütununa dahildir ve sağlık sorunları nedeniyle kısıtlılığı olan kişilere, örneğin topluma ve çalışma
+  hayatına yeniden uyum önlemleriyle veya aylıklarla yardımcı olur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Abkürzung «IV» im schweizerischen Sozialversicherungssystem?
+    options_de:
+      a: Inlandversicherung (Inlandsversicherung)
+      b: Invalidenversicherung (Versicherung bei Erwerbsunfähigkeit)
+      c: Integrationsversicherung (Integrationsversicherung)
+      d: Individualversicherung (individuelle Versicherung)
+    explanation_de: IV bedeutet Invalidenversicherung (Invalidenversicherung). Sie gehört zur ersten Säule
+      der Altersvorsorge und hilft Personen, die aufgrund gesundheitlicher Probleme eingeschränkt sind,
+      zum Beispiel mit Massnahmen zur Wiedereingliederung in die Gesellschaft und ins Arbeitsleben oder
+      mit Renten.

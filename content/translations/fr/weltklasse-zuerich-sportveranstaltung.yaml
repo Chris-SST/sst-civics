@@ -1,0 +1,29 @@
+id: weltklasse-zuerich-sportveranstaltung
+lang: fr
+source_version: 1
+question: Qu'est-ce que Weltklasse Zürich ?
+options:
+  a: Une fête de printemps avec un cortège des corporations
+  b: Un festival de musique au bord du lac de Zurich
+  c: Une manifestation sportive connue de la ville de Zurich
+  d: Un salon des sciences et des techniques
+explanation: Weltklasse Zürich est un meeting international d'athlétisme. Il fait partie des manifestations
+  sportives connues de la ville de Zurich.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist Weltklasse Zürich?
+    options_de:
+      a: Ein Frühlingsfest mit einem Umzug der Zünfte
+      b: Ein Musikfestival am Zürichsee
+      c: Eine bekannte Sportveranstaltung der Stadt Zürich
+      d: Eine Messe für Wissenschaft und Technik
+    explanation_de: Weltklasse Zürich ist ein internationales Leichtathletik-Meeting. Es gehört zu den
+      bekannten Sportveranstaltungen der Stadt Zürich.

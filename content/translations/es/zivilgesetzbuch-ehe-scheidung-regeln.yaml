@@ -1,0 +1,33 @@
+id: zivilgesetzbuch-ehe-scheidung-regeln
+lang: es
+source_version: 1
+question: ¿Qué ley regula, entre otras cosas, cómo se contrae matrimonio y cómo se disuelve mediante el
+  divorcio?
+options:
+  a: El Código Civil
+  b: El Código Penal
+  c: La Ley de Asilo
+  d: La Ley del Tribunal Federal
+explanation: El Código Civil regula el derecho de las personas, el derecho de familia, el derecho sucesorio
+  y los derechos reales. Esto incluye también la celebración del matrimonio y el divorcio. El Código Penal,
+  en cambio, se ocupa de los delitos y las penas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gesetz regelt unter anderem, wie die Ehe geschlossen und wie sie durch die Scheidung
+      aufgelöst wird?
+    options_de:
+      a: Das Zivilgesetzbuch
+      b: Das Strafgesetzbuch
+      c: Das Asylgesetz
+      d: Das Bundesgerichtsgesetz
+    explanation_de: Das Zivilgesetzbuch regelt das Personenrecht, das Familienrecht, das Erbrecht und
+      das Sachenrecht. Dazu gehören auch die Eheschliessung und die Scheidung. Das Strafgesetzbuch hingegen
+      befasst sich mit den Straftaten und den Strafen.

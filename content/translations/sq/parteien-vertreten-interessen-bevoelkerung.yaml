@@ -1,0 +1,30 @@
+id: parteien-vertreten-interessen-bevoelkerung
+lang: sq
+source_version: 1
+question: Çfarë detyre kanë partitë politike në demokraci?
+options:
+  a: Ato gjykojnë në raste mosmarrëveshjesh
+  b: Ato përfaqësojnë interesat e ndryshme të popullsisë
+  c: Ato zhvillojnë votimet federale
+  d: Ato zbatojnë ligjet në jetën e përditshme
+explanation: Partitë bashkojnë interesat dhe mendimet e ndryshme të popullsisë dhe i çojnë ato në politikë.
+  Zbatimi i ligjeve është çështje e autoriteteve, ndërsa gjykimi është çështje e gjykatave.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe haben politische Parteien in der Demokratie?
+    options_de:
+      a: Sie urteilen in Streitfällen
+      b: Sie vertreten die unterschiedlichen Interessen der Bevölkerung
+      c: Sie führen die eidgenössischen Abstimmungen durch
+      d: Sie setzen die Gesetze im Alltag um
+    explanation_de: Die Parteien bündeln die unterschiedlichen Interessen und Meinungen der Bevölkerung
+      und bringen sie in die Politik ein. Die Umsetzung der Gesetze ist Sache der Behörden, das Urteilen
+      hingegen ist Sache der Gerichte.

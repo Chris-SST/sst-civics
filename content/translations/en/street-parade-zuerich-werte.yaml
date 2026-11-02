@@ -9,6 +9,21 @@ options:
   d: Love, peace, freedom, generosity and tolerance
 explanation: The Street Parade is a large techno parade in Zürich. It sees itself as a demonstration for
   love, peace, freedom, generosity and tolerance.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für welche Werte steht die Street Parade in Zürich?
+    options_de:
+      a: Heimat, Glaube, Familie, Gemeinschaft und Treue
+      b: Tradition, Ordnung, Fleiss, Sparsamkeit und Pünktlichkeit
+      c: Sport, Gesundheit, Leistung, Wettkampf und Fairness
+      d: Liebe, Frieden, Freiheit, Grosszügigkeit und Toleranz
+    explanation_de: Die Street Parade ist eine grosse Techno-Parade in Zürich. Sie versteht sich als Demonstration
+      für Liebe, Frieden, Freiheit, Grosszügigkeit und Toleranz.

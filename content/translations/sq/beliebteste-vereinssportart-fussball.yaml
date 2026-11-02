@@ -1,0 +1,30 @@
+id: beliebteste-vereinssportart-fussball
+lang: sq
+source_version: 2
+question: Cili sport praktikohet më shpesh në klube në Zvicër?
+options:
+  a: Hokej në akull
+  b: Notim
+  c: Skijim
+  d: Futboll
+explanation: Futbolli është sporti më i dashur në klube në Zvicër. Federata Zvicerane e Futbollit numëron
+  rreth 300 000 anëtarë në mbi 1300 klube. Çdo fundjavë në të gjithë vendin zhvillohen mijëra ndeshje.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Sportart wird in der Schweiz am häufigsten in Vereinen ausgeübt?
+    options_de:
+      a: Eishockey
+      b: Schwimmen
+      c: Skifahren
+      d: Fussball
+    explanation_de: Fussball ist die beliebteste Sportart in Vereinen in der Schweiz. Der Schweizerische
+      Fussballverband zählt rund 300 000 Mitglieder in über 1300 Vereinen. Jedes Wochenende werden im
+      ganzen Land Tausende von Spielen ausgetragen.

@@ -1,0 +1,32 @@
+id: obligatorische-schule-verantwortung-kanton-gemeinden
+lang: sq
+source_version: 1
+question: Kush mban kryesisht përgjegjësinë në Zvicër për shkollën publike të detyrueshme?
+options:
+  a: Drejtimet e shkollave dhe prindërit
+  b: Vetëm Konfederata
+  c: Rrethet dhe kishat
+  d: Kantonet dhe komunat (Gemeinden)
+explanation: Shkolla publike (Volksschule) është çështje e kantoneve dhe e komunave. Kantoni përcakton
+  kornizën, ndërsa komunat drejtojnë shkollat në vend. Konfederata luan vetëm një rol të vogël në shkollën
+  e detyrueshme.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer trägt in der Schweiz hauptsächlich die Verantwortung für die obligatorische öffentliche
+      Schule?
+    options_de:
+      a: Die Schulleitungen und die Eltern
+      b: Nur der Bund
+      c: Die Bezirke und die Kirchen
+      d: Die Kantone und die Gemeinden
+    explanation_de: Die Volksschule ist Sache der Kantone und der Gemeinden. Der Kanton legt den Rahmen
+      fest, während die Gemeinden die Schulen vor Ort leiten. Der Bund spielt in der obligatorischen Schule
+      nur eine kleine Rolle.

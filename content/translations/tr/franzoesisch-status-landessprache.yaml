@@ -1,0 +1,29 @@
+id: franzoesisch-status-landessprache
+lang: tr
+source_version: 1
+question: İsviçre'de Fransızcanın statüsü nedir?
+options:
+  a: Fransızca, okulda yalnızca bir yabancı dildir.
+  b: Fransızca, yalnızca bölgesel bir iletişim dilidir.
+  c: Fransızca, bir ulusal dildir.
+  d: Fransızca, resmî statüsü olmayan bir azınlık dilidir.
+explanation: Fransızca, İsviçre'nin ulusal dillerinden biridir. Özellikle İsviçre'nin batısında (Romandiya)
+  konuşulur ve Konfederasyon düzeyinde resmî bir dildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welchen Status hat Französisch in der Schweiz?
+    options_de:
+      a: Französisch ist in der Schule nur eine Fremdsprache.
+      b: Französisch ist nur eine regionale Verkehrssprache.
+      c: Französisch ist eine Landessprache.
+      d: Französisch ist eine Minderheitensprache ohne offiziellen Status.
+    explanation_de: Französisch ist eine der Landessprachen der Schweiz. Es wird besonders im Westen der
+      Schweiz (Romandie) gesprochen und ist auf Ebene der Eidgenossenschaft eine Amtssprache.

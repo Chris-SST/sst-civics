@@ -1,0 +1,31 @@
+id: schulpflicht-beginn-kindergarten-zuerich
+lang: es
+source_version: 1
+question: ¿Con qué comienza la escolaridad obligatoria de un niño en el cantón de Zúrich?
+options:
+  a: Con el ingreso en la escuela secundaria (Sekundarschule)
+  b: Con el ingreso en la escuela primaria (Primarschule)
+  c: Con el ingreso en el grupo de juego (Spielgruppe)
+  d: Con el ingreso en el jardín de infancia (Kindergarten)
+explanation: En el cantón de Zúrich, el jardín de infancia forma parte de la escuela pública obligatoria
+  (Volksschule). Por eso, la escolaridad obligatoria comienza ya con el ingreso en el jardín de infancia.
+  El grupo de juego es voluntario.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Womit beginnt die obligatorische Schulpflicht eines Kindes im Kanton Zürich?
+    options_de:
+      a: Mit dem Eintritt in die Sekundarschule
+      b: Mit dem Eintritt in die Primarschule
+      c: Mit dem Eintritt in die Spielgruppe
+      d: Mit dem Eintritt in den Kindergarten
+    explanation_de: Im Kanton Zürich ist der Kindergarten Teil der obligatorischen Volksschule. Deshalb
+      beginnt die obligatorische Schulpflicht bereits mit dem Eintritt in den Kindergarten. Die Spielgruppe
+      ist freiwillig.

@@ -1,0 +1,31 @@
+id: vereinsgruendung-offen-fuer-jede-person
+lang: pt
+source_version: 1
+question: Quem pode fundar uma associação na Suíça?
+options:
+  a: Apenas pessoas com domicílio na comuna (Gemeinde)
+  b: Qualquer pessoa
+  c: Apenas cidadãos suíços
+  d: Apenas pessoas com autorização de estabelecimento (Niederlassungsbewilligung) (autorização C)
+explanation: Na Suíça, a fundação de uma associação está aberta a qualquer pessoa. A liberdade de associação
+  está garantida na Constituição Federal. A nacionalidade ou o estatuto de residência não têm qualquer
+  importância a este respeito.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann in der Schweiz einen Verein gründen?
+    options_de:
+      a: Nur Personen mit Wohnsitz in der Gemeinde
+      b: Jede Person
+      c: Nur Schweizer Bürger
+      d: Nur Personen mit Niederlassungsbewilligung (Bewilligung C)
+    explanation_de: In der Schweiz steht die Gründung eines Vereins jeder Person offen. Die Vereinigungsfreiheit
+      ist in der Bundesverfassung garantiert. Die Staatsangehörigkeit oder der Aufenthaltsstatus haben
+      dabei keinerlei Bedeutung.

@@ -1,0 +1,32 @@
+id: stimmenauszaehlung-urnengang-wahlbuero
+lang: sq
+source_version: 1
+question: Kush numëron votat e hedhura gjatë votimeve me urnë në një komunë (Gemeinde) të kantonit të
+  Cyrihut?
+options:
+  a: Autoriteti i mirëqenies sociale
+  b: Zyra zgjedhore
+  c: Sekretarja e komunës vetëm
+  d: Prokuroria publike
+explanation: Zyra zgjedhore përcakton rezultatet e komunës gjatë votimeve dhe zgjedhjeve. Ajo përbëhet
+  nga disa persona, në mënyrë që numërimi i votave të kryhet saktë dhe në mënyrë të gjurmueshme.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zählt die abgegebenen Stimmen bei Urnenabstimmungen in einer Gemeinde des Kantons
+      Zürich?
+    options_de:
+      a: Die Sozialbehörde
+      b: Das Wahlbüro
+      c: Nur die Gemeindeschreiberin
+      d: Die Staatsanwaltschaft
+    explanation_de: Das Wahlbüro legt die Ergebnisse der Gemeinde bei Abstimmungen und Wahlen fest. Es
+      besteht aus mehreren Personen, damit die Auszählung der Stimmen korrekt und nachvollziehbar durchgeführt
+      wird.

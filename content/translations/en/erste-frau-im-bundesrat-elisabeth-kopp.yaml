@@ -9,6 +9,21 @@ options:
   d: Micheline Calmy-Rey
 explanation: Elisabeth Kopp was elected as the first woman to the Federal Council in 1984. The other women
   mentioned only became members of the Federal Council later.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wurde als erste Frau in den Schweizerischen Bundesrat gewählt?
+    options_de:
+      a: Elisabeth Kopp
+      b: Doris Leuthard
+      c: Ruth Dreifuss
+      d: Micheline Calmy-Rey
+    explanation_de: Elisabeth Kopp wurde 1984 als erste Frau in den Bundesrat gewählt. Die anderen genannten
+      Frauen wurden erst später Mitglieder des Bundesrates.

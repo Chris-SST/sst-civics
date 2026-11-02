@@ -1,0 +1,31 @@
+id: mietwohnung-zutritt-vermieter-triftiger-grund
+lang: es
+source_version: 1
+question: ¿En qué caso deben los inquilinos permitir el acceso a la vivienda a la parte arrendadora?
+options:
+  a: Nunca, la vivienda está siempre protegida
+  b: Cuando existe un motivo justificado
+  c: Solo cuando el arrendador lo exige, sin motivo alguno
+  d: En cualquier momento y sin previo aviso
+explanation: Los inquilinos deben permitir el acceso cuando existe un motivo justificado para ello, por
+  ejemplo, una reparación urgente. Sin embargo, la parte arrendadora debe anunciar la visita con la debida
+  antelación y tener consideración con los inquilinos. No se permite el acceso sin motivo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall müssen die Mieter der Vermieterseite den Zutritt zur Wohnung gewähren?
+    options_de:
+      a: Nie, die Wohnung ist immer geschützt
+      b: Wenn ein berechtigter Grund vorliegt
+      c: Nur wenn der Vermieter es verlangt, ohne jeden Grund
+      d: Jederzeit und ohne Vorankündigung
+    explanation_de: Die Mieter müssen den Zutritt gewähren, wenn ein berechtigter Grund dafür vorliegt,
+      zum Beispiel eine dringende Reparatur. Die Vermieterseite muss den Besuch jedoch rechtzeitig ankündigen
+      und auf die Mieter Rücksicht nehmen. Der Zutritt ohne Grund ist nicht erlaubt.

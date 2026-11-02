@@ -10,6 +10,22 @@ options:
 explanation: The city of Zürich is the capital of the canton and has the same name. The Cantonal Council
   (Kantonsrat) and the Executive Council (Regierungsrat) are located there, among other institutions.
   Winterthur is the second-largest city in the canton.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Stadt ist die Hauptstadt des Kantons Zürich?
+    options_de:
+      a: Uster
+      b: Die Stadt Zürich
+      c: Winterthur
+      d: Dübendorf
+    explanation_de: Die Stadt Zürich ist die Hauptstadt des Kantons und trägt denselben Namen. Dort befinden
+      sich unter anderem der Kantonsrat und der Regierungsrat. Winterthur ist die zweitgrösste Stadt des
+      Kantons.

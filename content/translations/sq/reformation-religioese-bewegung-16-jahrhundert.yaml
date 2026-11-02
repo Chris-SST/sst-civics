@@ -1,0 +1,32 @@
+id: reformation-religioese-bewegung-16-jahrhundert
+lang: sq
+source_version: 1
+question: Cila lëvizje e rëndësishme fetare la gjurmë në Evropë dhe edhe në Zvicër në shekullin e 16-të?
+options:
+  a: Reformacioni
+  b: Iluminizmi
+  c: Regjenerimi
+  d: Helvetika
+explanation: Reformacioni e ndau kishën në Evropë në shekullin e 16-të. Në Zvicër, për shembull, Huldrych
+  Zwingli në Cyrih dhe Johannes Calvin në Gjenevë ishin të rëndësishëm. Konceptet e tjera përshkruajnë
+  zhvillime të mëvonshme.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche bedeutende religiöse Bewegung hinterliess im 16. Jahrhundert Spuren in Europa
+      und auch in der Schweiz?
+    options_de:
+      a: Die Reformation
+      b: Die Aufklärung
+      c: Die Regeneration
+      d: Die Helvetik
+    explanation_de: Die Reformation spaltete im 16. Jahrhundert die Kirche in Europa. In der Schweiz waren
+      zum Beispiel Huldrych Zwingli in Zürich und Johannes Calvin in Genf bedeutend. Die anderen Begriffe
+      beschreiben spätere Entwicklungen.

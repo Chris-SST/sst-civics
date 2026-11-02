@@ -1,0 +1,35 @@
+id: ungueltigkeit-volksinitiative-bundesversammlung
+lang: sq
+source_version: 1
+question: Cili autoritet mund ta shpallë të pavlefshme një nismë popullore (Volksinitiative) federale,
+  për shembull kur ajo cenon unitetin e lëndës?
+options:
+  a: Këshilli Federal (Bundesrat)
+  b: Gjykata Federale (Bundesgericht)
+  c: Kuvendi Federal (Bundesversammlung)
+  d: Kancelaria Federale (Bundeskanzlei)
+explanation: Sipas Kushtetutës Federale, Kuvendi Federal e shpall një nismë popullore tërësisht ose pjesërisht
+  të pavlefshme, nëse ajo cenon unitetin e formës, unitetin e lëndës ose dispozitat detyruese të së drejtës
+  ndërkombëtare. Kancelaria Federale, në të kundërt, kontrollon kryesisht pikat formale, për shembull
+  nëse janë dorëzuar mjaftueshëm nënshkrime të vlefshme.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde kann eine eidgenössische Volksinitiative für ungültig erklären, zum Beispiel
+      wenn sie die Einheit der Materie verletzt?
+    options_de:
+      a: Der Bundesrat
+      b: Das Bundesgericht
+      c: Die Bundesversammlung
+      d: Die Bundeskanzlei
+    explanation_de: Gemäss der Bundesverfassung erklärt die Bundesversammlung eine Volksinitiative ganz
+      oder teilweise für ungültig, wenn sie die Einheit der Form, die Einheit der Materie oder zwingende
+      Bestimmungen des Völkerrechts verletzt. Die Bundeskanzlei hingegen prüft hauptsächlich die formalen
+      Punkte, zum Beispiel ob genügend gültige Unterschriften eingereicht wurden.

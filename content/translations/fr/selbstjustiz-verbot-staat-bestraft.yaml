@@ -1,0 +1,31 @@
+id: selbstjustiz-verbot-staat-bestraft
+lang: fr
+source_version: 2
+question: Que prévaut-il en Suisse lorsque quelqu'un a enfreint une loi ?
+options:
+  a: Le voisinage décide collectivement de la sanction.
+  b: L'État poursuit et sanctionne l'acte ; la justice privée est interdite.
+  c: La victime peut elle-même fixer et exécuter la sanction.
+  d: La famille de la victime peut elle-même punir l'auteur ou l'autrice de l'acte.
+explanation: En Suisse, seul l'État a le droit de poursuivre et de punir les infractions. La police, le
+  ministère public et les tribunaux en sont chargés. Celui qui se venge lui-même, même en tant que victime
+  ou en tant que famille de la victime, peut alors se rendre lui-même punissable.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt in der Schweiz, wenn jemand ein Gesetz übertreten hat?
+    options_de:
+      a: Die Nachbarschaft entscheidet gemeinsam über die Strafe.
+      b: Der Staat verfolgt und bestraft die Tat; Selbstjustiz ist verboten.
+      c: Das Opfer kann die Strafe selbst festlegen und vollstrecken.
+      d: Die Familie des Opfers kann den Täter oder die Täterin der Tat selbst bestrafen.
+    explanation_de: In der Schweiz hat nur der Staat das Recht, Straftaten zu verfolgen und zu bestrafen.
+      Die Polizei, die Staatsanwaltschaft und die Gerichte sind damit beauftragt. Wer sich selbst rächt,
+      auch als Opfer oder als Familie des Opfers, kann sich dann selbst strafbar machen.

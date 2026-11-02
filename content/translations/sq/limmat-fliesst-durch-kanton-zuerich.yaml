@@ -1,0 +1,33 @@
+id: limmat-fliesst-durch-kanton-zuerich
+lang: sq
+source_version: 1
+question: Cili lumë rrjedh nga Liqeni i Cyrihut përmes qytetit të Cyrihut dhe më tej përmes territorit
+  të kantonit?
+options:
+  a: Thur
+  b: Birs
+  c: Reuss
+  d: Limmat
+explanation: Limmat fillon te shkarkimi i Liqenit të Cyrihut dhe kalon përmes qytetit të Cyrihut dhe luginës
+  së Limmatit (Limmattal). Pas kësaj e lë territorin e kantonit në drejtim të Aargau-t. Reuss, Thur dhe
+  Birs nuk rrjedhin nga Liqeni i Cyrihut.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Fluss fliesst aus dem Zürichsee durch die Stadt Zürich und weiter durch das Gebiet
+      des Kantons?
+    options_de:
+      a: Thur
+      b: Birs
+      c: Reuss
+      d: Limmat
+    explanation_de: Die Limmat beginnt am Abfluss des Zürichsees und fliesst durch die Stadt Zürich und
+      das Limmattal. Danach verlässt sie das Gebiet des Kantons in Richtung Aargau. Reuss, Thur und Birs
+      fliessen nicht aus dem Zürichsee.

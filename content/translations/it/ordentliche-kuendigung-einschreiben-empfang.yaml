@@ -1,0 +1,32 @@
+id: ordentliche-kuendigung-einschreiben-empfang
+lang: it
+source_version: 1
+question: Come dovrebbe essere recapitata una disdetta ordinaria di un rapporto di lavoro, in modo da
+  poterne dimostrare la ricezione?
+options:
+  a: Tramite una comunicazione all'amministrazione del Comune (Gemeinde)
+  b: Per raccomandata, oppure l'altra parte conferma la ricezione per iscritto
+  c: Per semplice e-mail senza conferma
+  d: Oralmente, in un colloquio a quattr'occhi
+explanation: Con una raccomandata o una conferma scritta di ricezione si può dimostrare che la disdetta
+  è arrivata. Questo è importante perché i termini di disdetta decorrono dalla ricezione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie sollte eine ordentliche Kündigung eines Arbeitsverhältnisses zugestellt werden, damit
+      der Empfang nachgewiesen werden kann?
+    options_de:
+      a: Durch eine Mitteilung an die Gemeindeverwaltung
+      b: Per Einschreiben, oder die andere Partei bestätigt den Empfang schriftlich
+      c: Per einfache E-Mail ohne Bestätigung
+      d: Mündlich, in einem Gespräch unter vier Augen
+    explanation_de: Mit einem Einschreiben oder einer schriftlichen Empfangsbestätigung kann nachgewiesen
+      werden, dass die Kündigung angekommen ist. Das ist wichtig, weil die Kündigungsfristen ab dem Empfang
+      laufen.

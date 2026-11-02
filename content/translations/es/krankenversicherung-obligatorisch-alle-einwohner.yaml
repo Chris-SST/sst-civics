@@ -1,0 +1,31 @@
+id: krankenversicherung-obligatorisch-alle-einwohner
+lang: es
+source_version: 1
+question: ¿Quién debe tener en Suiza un seguro básico en una aseguradora de salud (Krankenkasse)?
+options:
+  a: todas las personas que viven en Suiza
+  b: solo las personas con ingresos bajos
+  c: solo las personas con ciudadanía (Bürgerrecht) suiza
+  d: solo las personas que ejercen una actividad laboral
+explanation: El seguro de enfermedad es obligatorio para todas las personas con domicilio en Suiza. Esto
+  es válido independientemente de la nacionalidad, la edad o la actividad laboral. Las aseguradoras de
+  salud deben admitir a todas las personas en el seguro básico.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz bei einer Krankenkasse eine Grundversicherung haben?
+    options_de:
+      a: alle Personen, die in der Schweiz leben
+      b: nur Personen mit niedrigem Einkommen
+      c: nur Personen mit Schweizer Bürgerrecht
+      d: nur Personen, die einer Erwerbstätigkeit nachgehen
+    explanation_de: Die Krankenversicherung ist für alle Personen mit Wohnsitz in der Schweiz obligatorisch.
+      Dies gilt unabhängig von der Staatsangehörigkeit, dem Alter oder der Erwerbstätigkeit. Die Krankenkassen
+      müssen alle Personen in die Grundversicherung aufnehmen.

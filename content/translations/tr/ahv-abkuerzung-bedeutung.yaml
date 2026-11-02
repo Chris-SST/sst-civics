@@ -1,0 +1,30 @@
+id: ahv-abkuerzung-bedeutung
+lang: tr
+source_version: 1
+question: AHV kısaltması neyi ifade eder?
+options:
+  a: Yaşlılık ve dul-yetim sigortası (Alters- und Hinterlassenenversicherung)
+  b: Resmî hane sigortası (Amtliche Haushaltsversicherung)
+  c: Sigortalılar için genel yardım (Allgemeine Hilfe für Versicherte)
+  d: İşsizlik ve tedavi sigortası (Arbeitslosen- und Heilungsversicherung)
+explanation: AHV, yaşlılık ve dul-yetim sigortası (AHV) anlamına gelir. Yaşlılıkta ve geride kalanlara,
+  örneğin dul kadınlara, dul erkeklere ve yetimlere gelir öder.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: Frage und Antworten identisch; in der Erklärung steht «Einkommen» statt
+      «Renten», was dasselbe meint.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür steht die Abkürzung AHV?
+    options_de:
+      a: Alters- und Hinterlassenenversicherung
+      b: Amtliche Haushaltsversicherung
+      c: Allgemeine Hilfe für Versicherte
+      d: Arbeitslosen- und Heilungsversicherung
+    explanation_de: AHV steht für Alters- und Hinterlassenenversicherung (AHV). Sie zahlt im Alter und
+      an die Hinterbliebenen, zum Beispiel Witwen, Witwer und Waisen, ein Einkommen.

@@ -1,0 +1,33 @@
+id: alfred-escher-eth-eisenbahn-bank
+lang: es
+source_version: 2
+question: ¿Por qué es conocido el político y empresario zuriqués Alfred Escher?
+options:
+  a: Dirigió a las tropas suizas en la guerra del Sonderbund.
+  b: Redactó él solo la primera Constitución Federal.
+  c: Fundó la Cruz Roja en Ginebra.
+  d: Impulsó la ETH y la construcción del ferrocarril y fundó el banco del que surgió Credit Suisse.
+explanation: En el siglo XIX, Alfred Escher se comprometió con la fundación de la ETH de Zúrich y con
+  la construcción de ferrocarriles, sobre todo del ferrocarril del Gotardo. En 1856 fundó el Schweizerische
+  Kreditanstalt (Banco Suizo de Crédito), la posterior Credit Suisse. Este banco fue adquirido por UBS
+  en 2023.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür ist der Zürcher Politiker und Unternehmer Alfred Escher bekannt?
+    options_de:
+      a: Er führte die Schweizer Truppen im Sonderbundskrieg an.
+      b: Er verfasste allein die erste Bundesverfassung.
+      c: Er gründete das Rote Kreuz in Genf.
+      d: Er förderte die ETH und den Bau der Eisenbahn und gründete die Bank, aus der die Credit Suisse
+        hervorging.
+    explanation_de: Im 19. Jahrhundert setzte sich Alfred Escher für die Gründung der ETH Zürich und für
+      den Bau von Eisenbahnen ein, vor allem der Gotthardbahn. 1856 gründete er die Schweizerische Kreditanstalt
+      (Schweizerische Kreditbank), die spätere Credit Suisse. Diese Bank wurde 2023 von der UBS übernommen.

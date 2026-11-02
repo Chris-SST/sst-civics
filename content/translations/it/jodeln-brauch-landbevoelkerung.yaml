@@ -1,0 +1,33 @@
+id: jodeln-brauch-landbevoelkerung
+lang: it
+source_version: 2
+question: Quale tradizione tramandata della popolazione rurale svizzera è un modo di cantare in cui la
+  voce passa rapidamente dalla voce di petto alla voce di testa?
+options:
+  a: Suonare il corno delle Alpi
+  b: Jodel (canto jodel)
+  c: Hornussen
+  d: Lancio della bandiera
+explanation: Nello jodel la voce passa rapidamente dalla voce di petto alla voce di testa. Lo jodel è
+  una tradizione tramandata della popolazione rurale svizzera. Lo jodel naturale non ha parole, ma molti
+  canti jodel hanno un testo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche überlieferte Tradition der Schweizer Landbevölkerung ist eine Gesangsart, bei
+      der die Stimme schnell von der Bruststimme in die Kopfstimme wechselt?
+    options_de:
+      a: Alphorn spielen
+      b: Jodel (Jodelgesang)
+      c: Hornussen
+      d: Fahnenschwingen
+    explanation_de: Beim Jodeln wechselt die Stimme schnell von der Bruststimme in die Kopfstimme. Das
+      Jodeln ist eine überlieferte Tradition der Schweizer Landbevölkerung. Der Naturjodel hat keine Worte,
+      aber viele Jodellieder haben einen Text.

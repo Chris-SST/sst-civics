@@ -1,0 +1,33 @@
+id: zuwanderung-fuenfzigerjahre-italien
+lang: fr
+source_version: 1
+question: De quel pays provenaient, dans les années 1950, la plupart des travailleurs qui ont immigré
+  en Suisse ?
+options:
+  a: D'Italie
+  b: De Turquie
+  c: Du Portugal
+  d: D'Espagne
+explanation: Dans les années 1950, la plupart des travailleurs immigrés venaient d'Italie. L'économie
+  avait alors besoin de beaucoup de main-d'œuvre, par exemple dans la construction et dans l'industrie.
+  Plus tard, de nombreuses personnes sont également venues d'autres pays.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchem Land stammten in den 1950er-Jahren die meisten Arbeitskräfte, die in die
+      Schweiz eingewandert sind?
+    options_de:
+      a: Aus Italien
+      b: Aus der Türkei
+      c: Aus Portugal
+      d: Aus Spanien
+    explanation_de: In den 1950er-Jahren kamen die meisten eingewanderten Arbeitskräfte aus Italien. Die
+      Wirtschaft brauchte damals viele Arbeitskräfte, zum Beispiel im Baugewerbe und in der Industrie.
+      Später kamen auch viele Menschen aus anderen Ländern.

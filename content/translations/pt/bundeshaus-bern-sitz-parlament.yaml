@@ -1,0 +1,31 @@
+id: bundeshaus-bern-sitz-parlament
+lang: pt
+source_version: 1
+question: Qual edifício em Berna é o local de reunião do Parlamento suíço?
+options:
+  a: O Kornhaus
+  b: O Rathaus (câmara municipal)
+  c: O Tribunal Administrativo Federal
+  d: O Bundeshaus (Palácio Federal)
+explanation: O Parlamento suíço reúne-se no Bundeshaus, em Berna. Aí encontram-se o Conselho Nacional
+  e o Conselho dos Estados (Ständerat) para as suas sessões. O Rathaus é um edifício do cantão de Berna
+  ou da cidade, não do Parlamento da Confederação.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gebäude in Bern ist der Tagungsort des Schweizer Parlaments?
+    options_de:
+      a: Das Kornhaus
+      b: Das Rathaus
+      c: Das Bundesverwaltungsgericht
+      d: Das Bundeshaus
+    explanation_de: Das Schweizer Parlament tagt im Bundeshaus in Bern. Dort kommen der Nationalrat und
+      der Ständerat zu ihren Sessionen zusammen. Das Rathaus ist ein Gebäude des Kantons Bern oder der
+      Stadt, nicht des Parlaments der Eidgenossenschaft.

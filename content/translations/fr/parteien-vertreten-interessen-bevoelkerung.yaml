@@ -1,0 +1,30 @@
+id: parteien-vertreten-interessen-bevoelkerung
+lang: fr
+source_version: 1
+question: Quel est le rôle des partis politiques dans une démocratie ?
+options:
+  a: Ils rendent la justice dans les litiges
+  b: Ils représentent les différents intérêts de la population
+  c: Ils organisent les votations fédérales
+  d: Ils font appliquer les lois au quotidien
+explanation: Les partis rassemblent les différents intérêts et opinions de la population et les font entrer
+  dans la politique. Faire appliquer les lois relève des autorités, rendre la justice relève des tribunaux.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Rolle haben die politischen Parteien in einer Demokratie?
+    options_de:
+      a: Sie sprechen in Streitfällen Recht.
+      b: Sie vertreten die verschiedenen Interessen der Bevölkerung.
+      c: Sie organisieren die eidgenössischen Abstimmungen.
+      d: Sie sorgen im Alltag für die Anwendung der Gesetze.
+    explanation_de: Die Parteien bündeln die verschiedenen Interessen und Meinungen der Bevölkerung und
+      bringen sie in die Politik ein. Die Anwendung der Gesetze ist Sache der Behörden, die Rechtsprechung
+      ist Sache der Gerichte.

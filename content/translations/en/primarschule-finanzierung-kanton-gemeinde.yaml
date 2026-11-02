@@ -9,6 +9,22 @@ options:
   d: The canton and the communes (Gemeinden) together
 explanation: Compulsory public schooling (Volksschule) in the canton of Zürich is a shared responsibility
   of the canton and the communes. The canton sets the framework, while the communes run the schools locally.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer finanziert und organisiert die Primarschule im Kanton Zürich?
+    options_de:
+      a: Nur die Kirchgemeinden
+      b: Nur die Eltern der Schulkinder
+      c: Nur der Bund
+      d: Der Kanton und die Gemeinden gemeinsam
+    explanation_de: Die obligatorische öffentliche Schule (Volksschule) im Kanton Zürich ist eine gemeinsame
+      Aufgabe des Kantons und der Gemeinden. Der Kanton legt den Rahmen fest, während die Gemeinden die
+      Schulen vor Ort führen.

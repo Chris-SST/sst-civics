@@ -1,0 +1,30 @@
+id: regierungsgewalt-des-bundes-beim-bundesrat
+lang: tr
+source_version: 1
+question: Konfederasyon düzeyinde en yüksek hükümet yetkisini hangi makam kullanır?
+options:
+  a: Federal Konsey (Bundesrat)
+  b: Ulusal Konsey (Nationalrat)
+  c: Federal Kançılarya (Bundeskanzlei)
+  d: Federal Mahkeme (Bundesgericht)
+explanation: Federal Anayasa'ya göre Federal Konsey, Konfederasyonun en yüksek yönetici ve yürütücü makamıdır.
+  Parlamento yasaları yapar, Federal Mahkeme ise yargılama yapar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde übt auf Ebene der Eidgenossenschaft die höchste Regierungsgewalt aus?
+    options_de:
+      a: Bundesrat
+      b: Nationalrat
+      c: Bundeskanzlei
+      d: Bundesgericht
+    explanation_de: Gemäss der Bundesverfassung ist der Bundesrat die oberste leitende und vollziehende
+      Behörde der Eidgenossenschaft. Das Parlament macht die Gesetze, das Bundesgericht hingegen spricht
+      Recht.

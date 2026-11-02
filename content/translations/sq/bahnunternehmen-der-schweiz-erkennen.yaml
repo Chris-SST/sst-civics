@@ -1,0 +1,33 @@
+id: bahnunternehmen-der-schweiz-erkennen
+lang: sq
+source_version: 1
+question: Cilat nga shkurtesat e mëposhtme përfaqësojnë të gjitha ndërmarrje hekurudhore të Zvicrës?
+options:
+  a: SOB, SEM, BLS dhe SZU
+  b: SBB, BLS, SOB dhe SZU
+  c: SBB, SRF, SOB dhe SUVA
+  d: BLS, SZU, SNB dhe SBB
+explanation: SBB, BLS, SOB dhe SZU janë ndërmarrje hekurudhore që operojnë trena në Zvicër. SBB është
+  ndërmarrja më e madhe, të tjerat janë hekurudha më të vogla, që shpesh qarkullojnë në nivel rajonal.
+  Shkurtesat e tjera përfaqësojnë organizata si Banka Kombëtare (SNB), Sekretariati i Shtetit për Migracionin
+  (SEM) ose sigurimi kundër aksidenteve (SUVA).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Abkürzungen stehen alle für Eisenbahnunternehmen der Schweiz?
+    options_de:
+      a: SOB, SEM, BLS und SZU
+      b: SBB, BLS, SOB und SZU
+      c: SBB, SRF, SOB und SUVA
+      d: BLS, SZU, SNB und SBB
+    explanation_de: SBB, BLS, SOB und SZU sind Eisenbahnunternehmen, die Züge in der Schweiz betreiben.
+      Die SBB ist das grösste Unternehmen, die anderen sind kleinere Bahnen, die oft auf regionaler Ebene
+      verkehren. Die anderen Abkürzungen stehen für Organisationen wie die Nationalbank (SNB), das Staatssekretariat
+      für Migration (SEM) oder die Unfallversicherung (SUVA).

@@ -1,0 +1,31 @@
+id: gewaltenteilung-bedeutung-staatsgewalten
+lang: sq
+source_version: 1
+question: Çfarë do të thotë parimi i ndarjes së pushteteve (Gewaltenteilung) në Zvicër?
+options:
+  a: Konfederata, kantonet dhe komunat (Gemeinden) i ndajnë mes tyre të ardhurat nga taksat.
+  b: Qeveria, parlamenti dhe gjykatat e ndajnë mes tyre pushtetin shtetëror.
+  c: Pushteti në shtet i takon vetëm Këshillit Federal (Bundesrat).
+  d: Populli dhe mediat e ndajnë mes tyre pushtetin shtetëror.
+explanation: Në ndarjen e pushteteve, ekzekutivi (qeveria), legjislativi (parlamenti) dhe gjyqësori (gjykatat)
+  kryejnë detyra të ndryshme. Kështu asnjë institucion nuk mund të ketë vetëm për vete shumë pushtet.
+  Pushtetet shtetërore kontrollojnë njëra-tjetrën.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet das Prinzip der Gewaltenteilung in der Schweiz?
+    options_de:
+      a: Der Bund, die Kantone und die Gemeinden teilen die Steuereinnahmen untereinander auf.
+      b: Die Regierung, das Parlament und die Gerichte teilen die Staatsgewalt untereinander auf.
+      c: Die Macht im Staat steht allein dem Bundesrat zu.
+      d: Das Volk und die Medien teilen die Staatsgewalt untereinander auf.
+    explanation_de: Bei der Gewaltenteilung erfüllen die Exekutive (die Regierung), die Legislative (das
+      Parlament) und die Judikative (die Gerichte) unterschiedliche Aufgaben. So kann keine Institution
+      allein zu viel Macht haben. Die Staatsgewalten kontrollieren sich gegenseitig.

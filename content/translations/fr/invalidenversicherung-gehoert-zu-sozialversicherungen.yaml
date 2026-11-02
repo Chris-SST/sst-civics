@@ -1,0 +1,31 @@
+id: invalidenversicherung-gehoert-zu-sozialversicherungen
+lang: fr
+source_version: 1
+question: Laquelle des institutions suivantes fait partie des assurances sociales de la Suisse ?
+options:
+  a: L'assurance-invalidité (IV)
+  b: L'assurance voyage
+  c: L'assurance protection juridique
+  d: L'assurance ménage
+explanation: L'assurance-invalidité (AI) est une assurance sociale réglementée par l'État. Elle soutient
+  les personnes qui ne peuvent pas travailler, ou seulement de manière limitée, en raison d'une maladie
+  ou d'un accident. Les assurances ménage, voyage et protection juridique sont des assurances privées.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Einrichtungen gehört zu den Sozialversicherungen der Schweiz?
+    options_de:
+      a: Die Invalidenversicherung (IV)
+      b: Die Reiseversicherung
+      c: Die Rechtsschutzversicherung
+      d: Die Hausratversicherung
+    explanation_de: Die Invalidenversicherung (IV) ist eine staatlich geregelte Sozialversicherung. Sie
+      unterstützt Personen, die wegen einer Krankheit oder eines Unfalls nicht oder nur eingeschränkt
+      arbeiten können. Die Hausrat-, Reise- und Rechtsschutzversicherungen sind private Versicherungen.

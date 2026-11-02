@@ -1,0 +1,33 @@
+id: bund-entscheid-volksinitiativen-referenden-stimmberechtigte
+lang: tr
+source_version: 1
+question: Konfederasyon düzeyinde bir oylamada, bir halk girişiminin (Volksinitiative) veya bir referandumun
+  kabul edilip edilmeyeceğine nihai olarak kim karar verir?
+options:
+  a: Her iki meclisin ortak oturumunda Federal Meclis (Bundesversammlung)
+  b: Kanton hükümetlerinin görüşü alındıktan sonra Federal Konsey (Bundesrat)
+  c: Tasarının hukuki incelemesinden sonra Federal Mahkeme (Bundesgericht)
+  d: Sandıkta veya posta yoluyla oy kullanan oy hakkı sahipleri
+explanation: Halk girişimlerinde ve referandumlarda son söz oy hakkı sahiplerine aittir. Bunlar, halk
+  oylamasında (sandıkta) karar verir; İsviçre'de posta yoluyla oy kullanmak da mümkündür. Federal Konsey,
+  Parlamento ve Federal Mahkeme sonucun yerine geçemez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet bei einer Abstimmung auf Ebene der Eidgenossenschaft letztlich darüber,
+      ob eine Volksinitiative oder ein Referendum angenommen wird?
+    options_de:
+      a: Die Bundesversammlung in der gemeinsamen Sitzung beider Räte
+      b: Der Bundesrat nach Anhörung der Kantonsregierungen
+      c: Das Bundesgericht nach der rechtlichen Prüfung der Vorlage
+      d: Die Stimmberechtigten, die an der Urne oder auf dem Postweg abstimmen
+    explanation_de: Bei Volksinitiativen und Referenden haben die Stimmberechtigten das letzte Wort. Sie
+      entscheiden in der Volksabstimmung (an der Urne); in der Schweiz ist es auch möglich, auf dem Postweg
+      abzustimmen. Der Bundesrat, das Parlament und das Bundesgericht können das Ergebnis nicht ersetzen.

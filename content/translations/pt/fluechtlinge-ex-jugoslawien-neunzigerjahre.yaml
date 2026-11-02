@@ -1,0 +1,31 @@
+id: fluechtlinge-ex-jugoslawien-neunzigerjahre
+lang: pt
+source_version: 1
+question: Por que motivo, nos anos 1990, muitas pessoas da antiga Jugoslávia procuraram acolhimento na
+  Suíça?
+options:
+  a: Queriam estudar em universidades suíças.
+  b: Fugiam de uma grande catástrofe natural.
+  c: Fugiam da guerra no seu país de origem.
+  d: Foram recrutadas por empresas suíças como trabalhadores sazonais.
+explanation: A desintegração da Jugoslávia levou a guerras nos anos 1990. Por isso, muitas pessoas procuraram
+  proteção na Suíça. Uma parte delas ficou e vive hoje aqui.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchem Grund suchten in den 1990er-Jahren viele Menschen aus dem ehemaligen Jugoslawien
+      Aufnahme in der Schweiz?
+    options_de:
+      a: Sie wollten an Schweizer Universitäten studieren.
+      b: Sie flohen vor einer grossen Naturkatastrophe.
+      c: Sie flohen vor dem Krieg in ihrem Herkunftsland.
+      d: Sie wurden von Schweizer Unternehmen als Saisonarbeiter angeworben.
+    explanation_de: Der Zerfall Jugoslawiens führte in den 1990er-Jahren zu Kriegen. Deshalb suchten viele
+      Menschen Schutz in der Schweiz. Ein Teil von ihnen blieb und lebt heute hier.

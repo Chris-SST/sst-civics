@@ -1,0 +1,32 @@
+id: kantone-eigene-verwaltung-und-recht
+lang: tr
+source_version: 2
+question: Aşağıdakilerden hangisi kantonların görevleri arasındadır?
+options:
+  a: İsviçre'nin dış politikasını ve para birimini belirlerler.
+  b: Tüm ülke için geçerli yasaları çıkarırlar.
+  c: Orduyu yönetirler ve gümrük vergilerini belirlerler.
+  d: Kendi idarelerini yönetirler ve kantonal hukuku çıkarırlar.
+explanation: Her kantonun kendi hükümeti, kendi parlamentosu ve kendi idaresi vardır. Kanton, yalnızca
+  kendi sınırları içinde geçerli olan kendi yasalarını çıkarır; örneğin okullar veya polis için. Dış politika,
+  para birimi, ordu, gümrük vergileri ve tüm İsviçre için geçerli yasalar Konfederasyon'un işidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche der folgenden Aufgaben gehört zu den Aufgaben der Kantone?
+    options_de:
+      a: Sie bestimmen die Aussenpolitik und die Währung der Schweiz.
+      b: Sie erlassen Gesetze, die für das ganze Land gelten.
+      c: Sie führen die Armee und legen die Zölle fest.
+      d: Sie führen ihre eigene Verwaltung und erlassen kantonales Recht.
+    explanation_de: Jeder Kanton hat seine eigene Regierung, sein eigenes Parlament und seine eigene Verwaltung.
+      Der Kanton erlässt seine eigenen Gesetze, die nur innerhalb seiner eigenen Grenzen gelten; zum Beispiel
+      für Schulen oder die Polizei. Aussenpolitik, Währung, Armee, Zölle und Gesetze, die für die ganze
+      Schweiz gelten, sind Sache des Bundes.

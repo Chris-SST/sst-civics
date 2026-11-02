@@ -1,0 +1,30 @@
+id: schweizer-fahne-aussehen
+lang: tr
+source_version: 1
+question: İsviçre bayrağı nasıl görünür?
+options:
+  a: Kırmızı kare zemin üzerinde beyaz, serbest duran bir haç
+  b: Kırmızı zemin üzerinde, ortasında bir arma bulunan beyaz bir haç
+  c: Kırmızı dikdörtgenin kenarına kadar uzanan beyaz bir haç
+  d: Beyaz kare zemin üzerinde kırmızı, serbest duran bir haç
+explanation: İsviçre bayrağı karedir. Kırmızı zemin üzerinde, kolları kenarlara değmeyen beyaz bir haç
+  gösterir. Vatikan bayrağının yanı sıra, kare biçimli iki ulusal bayraktan biridir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie sieht die Schweizer Flagge aus?
+    options_de:
+      a: Ein weisses, freistehendes Kreuz auf rotem quadratischem Grund
+      b: Ein weisses Kreuz auf rotem Grund, in dessen Mitte sich ein Wappen befindet
+      c: Ein weisses Kreuz, das bis an den Rand des roten Rechtecks reicht
+      d: Ein rotes, freistehendes Kreuz auf weissem quadratischem Grund
+    explanation_de: Die Schweizer Flagge ist quadratisch. Sie zeigt auf rotem Grund ein weisses Kreuz,
+      dessen Arme die Ränder nicht berühren. Neben der Flagge des Vatikans ist sie eine der beiden quadratischen
+      Nationalflaggen.

@@ -1,0 +1,30 @@
+id: kanton-zuerich-heutige-form-1803
+lang: tr
+source_version: 1
+question: Zürich kantonu bugünkü biçimiyle hangi yılda ortaya çıktı?
+options:
+  a: '1291'
+  b: '1519'
+  c: '1848'
+  d: '1803'
+explanation: Zürich kantonu bugünkü biçimiyle 1803 yılında Mediation Yasası (Mediationsakte) ile oluşturuldu.
+  Bu yıldönümü 2003'te «Zürich kantonunun 200. yılı» olarak kutlandı. 1848'de bugünkü federal devlet kuruldu.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr entstand der Kanton Zürich in seiner heutigen Form?
+    options_de:
+      a: '1291'
+      b: '1519'
+      c: '1848'
+      d: '1803'
+    explanation_de: Der Kanton Zürich wurde in seiner heutigen Form im Jahr 1803 durch die Mediationsakte
+      geschaffen. Dieses Jubiläum wurde 2003 als «200 Jahre Kanton Zürich» gefeiert. 1848 wurde der heutige
+      Bundesstaat gegründet.

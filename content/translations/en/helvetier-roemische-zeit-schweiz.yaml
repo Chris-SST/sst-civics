@@ -10,6 +10,22 @@ options:
 explanation: The Helvetii were a Celtic tribe in the Mittelland (the Swiss Plateau). The Romans subjugated
   them and the territory became part of the Roman Empire. The Latin name Helvetia for Switzerland still
   recalls them.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Volk siedelte zur Zeit der Römer im Gebiet der heutigen Schweiz?
+    options_de:
+      a: Die Hunnen
+      b: Die Wikinger
+      c: Die Goten
+      d: Die Helvetier
+    explanation_de: Die Helvetier waren ein keltischer Stamm im Mittelland. Die Römer unterwarfen sie
+      und das Gebiet wurde Teil des Römischen Reiches. Der lateinische Name Helvetia für die Schweiz erinnert
+      noch heute an sie.

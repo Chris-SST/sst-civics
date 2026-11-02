@@ -1,0 +1,29 @@
+id: regierungsrat-zuerich-zusammensetzung-personen
+lang: sq
+source_version: 1
+question: Cili deklaratë për përbërjen e Këshillit Qeveritar (Regierungsrat) të Cyrihut është e saktë?
+options:
+  a: Ai përbëhet nga tre persona.
+  b: Ai përbëhet nga shtatë persona.
+  c: Ai përbëhet nga nëntë persona.
+  d: Ai përbëhet nga pesë persona.
+explanation: Këshilli Qeveritar i Cyrihut është një organ me shtatë persona. Ata drejtojnë së bashku kantonin
+  dhe secili prej tyre udhëheq një drejtori.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage zur Zusammensetzung des Regierungsrates des Kantons Zürich ist richtig?
+    options_de:
+      a: Er besteht aus drei Personen.
+      b: Er besteht aus sieben Personen.
+      c: Er besteht aus neun Personen.
+      d: Er besteht aus fünf Personen.
+    explanation_de: Der Regierungsrat des Kantons Zürich ist ein Gremium mit sieben Personen. Sie leiten
+      gemeinsam den Kanton und jede von ihnen führt eine Direktion.

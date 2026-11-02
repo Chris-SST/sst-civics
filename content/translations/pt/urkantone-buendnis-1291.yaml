@@ -1,0 +1,32 @@
+id: urkantone-buendnis-1291
+lang: pt
+source_version: 1
+question: Quais três territórios se aliaram em 1291 e são considerados o núcleo da futura Confederação
+  Helvética?
+options:
+  a: Uri, Schwyz e Unterwalden
+  b: Glarus, Zug e Uri
+  c: Basileia, Schaffhausen e Appenzell
+  d: Zurique, Berna e Lucerna
+explanation: Uri, Schwyz e Unterwalden formaram em 1291 uma Confederação. Esta data é considerada a origem
+  da Suíça e é celebrada a 1 de agosto. Os outros cantões só aderiram mais tarde à Confederação.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche drei Gebiete verbündeten sich 1291 und gelten als Kern der künftigen Schweizerischen
+      Eidgenossenschaft?
+    options_de:
+      a: Uri, Schwyz und Unterwalden
+      b: Glarus, Zug und Uri
+      c: Basel, Schaffhausen und Appenzell
+      d: Zürich, Bern und Luzern
+    explanation_de: Uri, Schwyz und Unterwalden bildeten 1291 eine Eidgenossenschaft. Dieses Datum gilt
+      als Ursprung der Schweiz und wird am 1. August gefeiert. Die anderen Kantone traten der Eidgenossenschaft
+      erst später bei.

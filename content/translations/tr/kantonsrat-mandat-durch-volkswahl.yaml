@@ -1,0 +1,33 @@
+id: kantonsrat-mandat-durch-volkswahl
+lang: tr
+source_version: 1
+question: Zürih Kanton Konseyi (Kantonsrat) üyeleri görevlerine nasıl gelir?
+options:
+  a: Halk tarafından seçilirler.
+  b: Belediye (Gemeinde) meclisleri tarafından belirlenirler.
+  c: Hükümet Konseyi (Regierungsrat) tarafından atanırlar.
+  d: Federal Konsey (Bundesrat) tarafından görevlendirilirler.
+explanation: Kanton Konseyi üyeleri, kantonun oy hakkına sahip kişileri tarafından halk seçimiyle seçilir.
+  Parlamento bu şekilde doğrudan halk tarafından belirlenir. Ne hükümet ne de Konfederasyon üyeleri göreve
+  getirir.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: In der Erklärung steht statt «der Bund» nun «die Mitglieder der Eidgenossenschaft»; das ist
+      nicht dasselbe wie die Ebene Bund (die Behörde). Antwort d ist mit «beauftragt» statt «eingesetzt»
+      zudem leicht verändert.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wie kommen die Mitglieder des Zürcher Kantonsrats (Kantonsrat) in ihr Amt?
+    options_de:
+      a: Sie werden vom Volk gewählt.
+      b: Sie werden von den Gemeinderäten der Gemeinden bestimmt.
+      c: Sie werden vom Regierungsrat ernannt.
+      d: Sie werden vom Bundesrat beauftragt.
+    explanation_de: Die Mitglieder des Kantonsrats werden von den stimmberechtigten Personen des Kantons
+      in einer Volkswahl gewählt. Das Parlament wird auf diese Weise direkt vom Volk bestimmt. Weder die
+      Regierung noch die Mitglieder der Eidgenossenschaft setzen sie in ihr Amt ein.

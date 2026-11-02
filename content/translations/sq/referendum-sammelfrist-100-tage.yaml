@@ -1,0 +1,31 @@
+id: referendum-sammelfrist-100-tage
+lang: sq
+source_version: 1
+question: Sa kohë kanë komitetet e referendumit për të mbledhur nënshkrimet për një referendum fakultativ
+  kundër një ligji të Konfederatës?
+options:
+  a: 60 ditë
+  b: 18 muaj
+  c: 100 ditë
+  d: 30 ditë
+explanation: Afati është 100 ditë nga publikimi zyrtar i aktit. Ndërkohë, 18 muajt vlejnë për mbledhjen
+  e nënshkrimeve për një nismë popullore (Volksinitiative).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viel Zeit haben die Referendumskomitees, um die Unterschriften für ein fakultatives
+      Referendum gegen ein Bundesgesetz zu sammeln?
+    options_de:
+      a: 60 Tage
+      b: 18 Monate
+      c: 100 Tage
+      d: 30 Tage
+    explanation_de: Die Frist beträgt 100 Tage ab der amtlichen Veröffentlichung des Erlasses. Die 18
+      Monate hingegen gelten für das Sammeln der Unterschriften für eine Volksinitiative.

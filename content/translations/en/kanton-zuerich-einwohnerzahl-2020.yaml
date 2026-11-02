@@ -9,6 +9,21 @@ options:
   d: About 1.5 million
 explanation: In 2020, approximately 1.5 million people lived in the canton of Zurich. It is therefore
   the most populous canton in Switzerland.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Einwohnerinnen und Einwohner hatte der Kanton Zürich im Jahr 2020 ungefähr?
+    options_de:
+      a: Etwa 1,1 Millionen
+      b: Etwa 2,2 Millionen
+      c: Etwa 0,8 Millionen
+      d: Etwa 1,5 Millionen
+    explanation_de: Im Jahr 2020 lebten im Kanton Zürich ungefähr 1,5 Millionen Menschen. Er ist damit
+      der bevölkerungsreichste Kanton der Schweiz.

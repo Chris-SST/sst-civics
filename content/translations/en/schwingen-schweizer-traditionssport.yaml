@@ -1,16 +1,34 @@
 id: schwingen-schweizer-traditionssport
 lang: en
-source_version: 1
-question: Which sport is regarded in Switzerland as a traditional national sport in which two men wrestle
-  each other wearing trousers made of Zwilch (a coarse linen fabric)?
+source_version: 2
+question: Which traditional sport in Switzerland is a type of wrestling?
 options:
   a: Hornussen
   b: Schwingen
   c: Curling
   d: Steinstossen
-explanation: Schwingen is a form of wrestling and is regarded as a traditional Swiss sport. The bouts
-  take place in a sawdust ring. Well known are the Schwingen festivals, for example the Federal Schwingen
-  and Alpine Festival (Eidgenössisches Schwing- und Älplerfest).
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: 'Schwingen is a wrestling match between two people in a round ring covered with sawdust and
+  is regarded as a traditional Swiss sport. Hornussen and Steinstossen are also old Swiss sports, but
+  they are not wrestling: in Hornussen, a small disc is struck far through the air, and in Steinstossen,
+  a heavy stone is thrown. Curling is played on ice and originally comes from Scotland.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche traditionelle Sportart in der Schweiz ist eine Form des Ringkampfs?
+    options_de:
+      a: Hornussen
+      b: Schwingen
+      c: Curling
+      d: Steinstossen
+    explanation_de: 'Schwingen ist ein Ringkampf zwischen zwei Personen in einem runden Ring, der mit
+      Sägemehl bedeckt ist, und gilt als traditioneller Schweizer Sport. Hornussen und Steinstossen sind
+      ebenfalls alte Schweizer Sportarten, aber sie sind kein Ringkampf: Beim Hornussen wird eine kleine
+      Scheibe weit durch die Luft geschlagen, und beim Steinstossen wird ein schwerer Stein geworfen.
+      Curling wird auf Eis gespielt und stammt ursprünglich aus Schottland.'

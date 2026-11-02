@@ -1,0 +1,29 @@
+id: nachbarland-im-westen-der-schweiz
+lang: it
+source_version: 1
+question: Quale Paese confina a ovest con la Svizzera?
+options:
+  a: Germania
+  b: Italia
+  c: Francia
+  d: Austria
+explanation: A ovest e a nord-ovest la Svizzera confina con la Francia. La Germania si trova a nord, l'Austria
+  e il Liechtenstein a est, l'Italia a sud.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Land grenzt im Westen an die Schweiz?
+    options_de:
+      a: Deutschland
+      b: Italien
+      c: Frankreich
+      d: Österreich
+    explanation_de: Im Westen und im Nordwesten grenzt die Schweiz an Frankreich. Deutschland liegt im
+      Norden, Österreich und Liechtenstein im Osten, Italien im Süden.

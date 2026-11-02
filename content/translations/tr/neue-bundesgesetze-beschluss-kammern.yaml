@@ -1,0 +1,30 @@
+id: neue-bundesgesetze-beschluss-kammern
+lang: tr
+source_version: 1
+question: Yeni federal yasaların çoğuna kim karar verir?
+options:
+  a: Federal Mahkeme (Bundesgericht)
+  b: Yalnızca Federal Konsey (Bundesrat)
+  c: Kanton parlamentoları
+  d: Ulusal Konsey (Nationalrat) ve Kantonlar Konseyi (Ständerat)
+explanation: Yeni federal yasaların çoğuna parlamentonun her iki meclisi karar verir. Federal Konsey taslakları
+  hazırlar, ancak tek başına karar vermez. Halk, bir yasaya karşı referandum başlatabilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet über die meisten neuen Bundesgesetze?
+    options_de:
+      a: Das Bundesgericht
+      b: Nur der Bundesrat
+      c: Die Kantonsparlamente
+      d: Der Nationalrat und der Ständerat
+    explanation_de: Über die meisten neuen Bundesgesetze entscheiden beide Kammern des Parlaments. Der
+      Bundesrat bereitet die Entwürfe vor, entscheidet aber nicht allein. Das Volk kann gegen ein Gesetz
+      ein Referendum ergreifen.

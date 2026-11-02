@@ -1,0 +1,33 @@
+id: pensionskasse-zweiter-pfeiler-altersvorsorge
+lang: fr
+source_version: 1
+question: La prévoyance vieillesse en Suisse repose sur trois piliers. Quelle institution constitue le
+  deuxième pilier ?
+options:
+  a: Les prestations complémentaires à l'assurance-vieillesse et survivants (AHV)
+  b: L'AVS (assurance de rente de l'État)
+  c: La caisse de pension (prévoyance professionnelle)
+  d: Le compte d'épargne privé avec déduction fiscale (pilier 3a)
+explanation: La caisse de pension fait partie de la prévoyance professionnelle et constitue le deuxième
+  pilier. Elle complète l'AVS afin que les retraités puissent continuer à maintenir de manière appropriée
+  leur niveau de vie habituel. L'AVS est le premier pilier, la prévoyance privée le troisième.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Altersvorsorge in der Schweiz beruht auf drei Säulen. Welche Einrichtung bildet die
+      zweite Säule?
+    options_de:
+      a: Die Ergänzungsleistungen zur Alters- und Hinterlassenenversicherung (AHV)
+      b: Die AHV (staatliche Rentenversicherung)
+      c: Die Pensionskasse (berufliche Vorsorge)
+      d: Das private Sparkonto mit Steuerabzug (Säule 3a)
+    explanation_de: Die Pensionskasse gehört zur beruflichen Vorsorge und bildet die zweite Säule. Sie
+      ergänzt die AHV, damit die Rentnerinnen und Rentner ihren gewohnten Lebensstandard weiterhin angemessen
+      aufrechterhalten können. Die AHV ist die erste Säule, die private Vorsorge die dritte.

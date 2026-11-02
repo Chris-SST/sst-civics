@@ -1,0 +1,32 @@
+id: vereinigte-bundesversammlung-gemeinsame-sitzung
+lang: sq
+source_version: 1
+question: Kur flitet për Kuvendin Federal të Bashkuar (Bundesversammlung)?
+options:
+  a: Kur Këshilli Kombëtar (Nationalrat) dhe Këshilli i Shteteve (Ständerat) diskutojnë veçmas në sallat
+    e tyre
+  b: Kur të gjitha parlamentet kantonale mblidhen në të njëjtën kohë
+  c: Kur anëtarët e Këshillit Kombëtar dhe të Këshillit të Shteteve mblidhen së bashku
+  d: Kur Këshilli Federal (Bundesrat) dhe parlamenti mblidhen së bashku
+explanation: Kuvendi Federal i Bashkuar krijohet kur të dyja dhomat mblidhen së bashku. Ai zgjedh, për
+  shembull, anëtarët e Këshillit Federal.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: In den Antworten c und d sowie in der Erklärung fehlt in der Rückübersetzung «gemeinsam»;
+      «zusammenkommen» kann auch getrenntes Tagen bedeuten, sodass c nicht mehr eindeutig die gemeinsame
+      Sitzung beschreibt und d ungenau wird.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wann spricht man von der Vereinigten Bundesversammlung?
+    options_de:
+      a: Wenn der Nationalrat und der Ständerat getrennt in ihren Sälen beraten
+      b: Wenn alle Kantonsparlamente gleichzeitig zusammenkommen
+      c: Wenn die Mitglieder des Nationalrats und des Ständerats zusammenkommen
+      d: Wenn der Bundesrat und das Parlament zusammenkommen
+    explanation_de: Die Vereinigte Bundesversammlung entsteht, wenn beide Kammern zusammenkommen. Sie
+      wählt zum Beispiel die Mitglieder des Bundesrates.

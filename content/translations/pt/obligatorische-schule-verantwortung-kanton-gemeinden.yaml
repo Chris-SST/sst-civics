@@ -1,0 +1,32 @@
+id: obligatorische-schule-verantwortung-kanton-gemeinden
+lang: pt
+source_version: 1
+question: Quem assume, na Suíça, principalmente a responsabilidade pela escola pública obrigatória?
+options:
+  a: As direções das escolas e os pais
+  b: Apenas a Confederação
+  c: Os distritos e as igrejas
+  d: Os cantões e as comunas (Gemeinden)
+explanation: A escola pública (Volksschule) é da competência dos cantões e das comunas. O cantão define
+  o quadro geral, e as comunas gerem as escolas no local. A Confederação desempenha apenas um papel pequeno
+  na escolaridade obrigatória.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer trägt in der Schweiz hauptsächlich die Verantwortung für die obligatorische öffentliche
+      Schule?
+    options_de:
+      a: Die Schulleitungen und die Eltern
+      b: Nur der Bund
+      c: Die Bezirke und die Kirchen
+      d: Die Kantone und die Gemeinden
+    explanation_de: Die öffentliche Schule (Volksschule) liegt in der Zuständigkeit der Kantone und der
+      Gemeinden. Der Kanton legt den allgemeinen Rahmen fest, und die Gemeinden führen die Schulen vor
+      Ort. Der Bund spielt in der obligatorischen Schulzeit nur eine kleine Rolle.

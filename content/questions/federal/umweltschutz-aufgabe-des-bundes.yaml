@@ -21,7 +21,7 @@ glossary:
 - Umweltschutz
 - Bund
 - Kanton
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-054
@@ -44,3 +44,47 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Im Beispiel der Erklärung ist «Naturschutz» ungenau, denn nach Art. 78 BV sind für den
+        Natur- und Heimatschutz grundsätzlich die Kantone zuständig; besser «zum Beispiel zum Gewässerschutz,
+        zur Luftreinhaltung und zum Lärmschutz» schreiben.'
+      - 'Klein: «Private Organisationen» ist keine staatliche Ebene und passt nicht zur Frage «Welche
+        Ebene»; besser eine echte Ebene als Ablenker nehmen, etwa «Allein die Kantone».'
+      - 'Klein: Das Wort «Allein» in zwei Ablenkern verrät die richtige Antwort leicht; besser ohne «Allein»
+        formulieren, zum Beispiel «Die Gemeinden» und «Die Bezirke».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Beispiel «Naturschutz» in der Erklärung ist ungenau, weil laut Bundesverfassung (Art.
+        78) vor allem die Kantone für den Natur- und Heimatschutz zuständig sind; besser «zum Beispiel
+        zum Gewässerschutz, zur Luftreinhaltung oder zum Lärmschutz» schreiben.'
+      - 'Klein: Das Wort «Allein» in den Antworten c) und d) verrät, dass diese Antworten falsch sind;
+        besser «Die Bezirke» ohne «Allein» verwenden und für c) eine andere klar falsche Antwort wählen,
+        zum Beispiel «Die Kirchgemeinden».'
+      - 'Klein: «Private Organisationen» ist keine staatliche Ebene und als falsche Antwort wenig plausibel;
+        besser eine staatliche Stelle nennen, die klar nicht zuständig ist, zum Beispiel «Die Bürgergemeinden».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage könnte genauer sein, etwa «Wer erlässt in der Schweiz die Vorschriften zum Schutz
+        der Umwelt?», weil Bund und Kantone beim Umweltschutz zusammenarbeiten und «Ebene» für B1-Lernende
+        etwas abstrakt ist.'
+      - 'Klein: Die Antwort b) «Private Organisationen» ist keine staatliche Ebene und deshalb als falsche
+        Antwort weniger plausibel; besser wäre zum Beispiel «Die Kantone allein» oder «Die Bezirke».'
+      - 'Klein: Die Erklärung könnte den Artikel der Bundesverfassung (Art. 74) nennen. Die Aussage, dass
+        die Kantone den Vollzug übernehmen, ist durch die Quelle (Art. 74 Abs. 3) gestützt.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

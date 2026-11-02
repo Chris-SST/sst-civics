@@ -9,6 +9,22 @@ options:
   d: They can be dismissed at any time without restriction
 explanation: The law protects women from dismissal by the employer during pregnancy. The protection applies
   regardless of the company. It is intended to give women security during this period.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in der Schweiz für schwangere Arbeitnehmerinnen in Bezug auf die Kündigung?
+    options_de:
+      a: Sie haben nur in Betrieben mit einem Gesamtarbeitsvertrag Kündigungsschutz
+      b: Sie geniessen während der Schwangerschaft einen gesetzlichen Kündigungsschutz
+      c: Sie müssen ihrem Arbeitgeber ihre Schwangerschaft sofort mitteilen, sonst erlischt der Schutz
+      d: Sie können jederzeit ohne Einschränkung gekündigt werden
+    explanation_de: Das Gesetz schützt Frauen während der Schwangerschaft vor einer Kündigung durch den
+      Arbeitgeber. Der Schutz gilt unabhängig vom Betrieb. Er soll den Frauen in dieser Zeit Sicherheit
+      geben.

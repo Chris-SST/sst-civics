@@ -9,6 +9,21 @@ options:
   d: Pipilotti Rist
 explanation: The character Heidi was created by the Swiss author Johanna Spyri. The books about Heidi
   are known all over the world. The other women mentioned are visual artists.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer hat die Geschichten über das Mädchen Heidi geschrieben?
+    options_de:
+      a: Sophie Taeuber-Arp
+      b: Johanna Spyri
+      c: Niki de Saint Phalle
+      d: Pipilotti Rist
+    explanation_de: Die Figur Heidi wurde von der Schweizer Autorin Johanna Spyri geschaffen. Die Bücher
+      über Heidi sind auf der ganzen Welt bekannt. Die anderen genannten Frauen sind bildende Künstlerinnen.

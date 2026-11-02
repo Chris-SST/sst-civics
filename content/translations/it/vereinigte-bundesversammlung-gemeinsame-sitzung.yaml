@@ -1,0 +1,30 @@
+id: vereinigte-bundesversammlung-gemeinsame-sitzung
+lang: it
+source_version: 1
+question: Quando si parla di Assemblea federale (Bundesversammlung) riunita?
+options:
+  a: Quando il Consiglio nazionale (Nationalrat) e il Consiglio degli Stati (Ständerat) deliberano separatamente
+    nelle rispettive aule
+  b: Quando tutti i parlamenti cantonali si riuniscono contemporaneamente
+  c: Quando i membri del Consiglio nazionale e del Consiglio degli Stati si riuniscono insieme
+  d: Quando il Consiglio federale (Bundesrat) e il Parlamento si riuniscono insieme
+explanation: L'Assemblea federale riunita si costituisce quando le due Camere si riuniscono insieme. Essa
+  elegge, ad esempio, i membri del Consiglio federale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wann spricht man von der Vereinigten Bundesversammlung?
+    options_de:
+      a: Wenn der Nationalrat und der Ständerat getrennt in ihren jeweiligen Sälen beraten
+      b: Wenn alle kantonalen Parlamente gleichzeitig zusammenkommen
+      c: Wenn die Mitglieder des Nationalrats und des Ständerats gemeinsam zusammenkommen
+      d: Wenn der Bundesrat und das Parlament gemeinsam zusammenkommen
+    explanation_de: Die Vereinigte Bundesversammlung konstituiert sich, wenn die beiden Kammern gemeinsam
+      zusammenkommen. Sie wählt zum Beispiel die Mitglieder des Bundesrates.

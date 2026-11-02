@@ -1,0 +1,31 @@
+id: schweiz-staatsform-demokratie
+lang: it
+source_version: 1
+question: Che forma di Stato ha la Svizzera?
+options:
+  a: È una dittatura con un solo partito.
+  b: È una monarchia con un re eletto.
+  c: È uno Stato democratico.
+  d: È uno Stato governato da una famiglia nobile.
+explanation: La Svizzera è una democrazia. La popolazione partecipa alle decisioni politiche attraverso
+  le elezioni e le votazioni. La Costituzione federale sancisce questo principio come fondamento dello
+  Stato.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Staatsform hat die Schweiz?
+    options_de:
+      a: Sie ist eine Diktatur mit nur einer Partei.
+      b: Sie ist eine Monarchie mit einem gewählten König.
+      c: Sie ist ein demokratischer Staat.
+      d: Sie ist ein Staat, der von einer adligen Familie regiert wird.
+    explanation_de: Die Schweiz ist eine Demokratie. Die Bevölkerung nimmt durch Wahlen und Abstimmungen
+      an den politischen Entscheidungen teil. Die Bundesverfassung verankert dieses Prinzip als Grundlage
+      des Staates.

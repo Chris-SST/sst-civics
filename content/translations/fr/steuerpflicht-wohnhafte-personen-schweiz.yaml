@@ -1,0 +1,30 @@
+id: steuerpflicht-wohnhafte-personen-schweiz
+lang: fr
+source_version: 1
+question: Qui est en principe tenu de payer des impôts en Suisse ?
+options:
+  a: Les personnes qui habitent en Suisse
+  b: Uniquement les personnes qui dirigent une entreprise
+  c: Uniquement les personnes ayant le droit de cité suisse (Bürgerrecht)
+  d: Uniquement les personnes qui ont le droit de vote
+explanation: L'assujettissement à l'impôt dépend du domicile et non du droit de cité. Les étrangères et
+  les étrangers qui habitent en Suisse paient eux aussi des impôts. Le droit de vote ne joue aucun rôle
+  à cet égard.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz grundsätzlich verpflichtet, Steuern zu zahlen?
+    options_de:
+      a: Personen, die in der Schweiz wohnen
+      b: Nur Personen, die ein Unternehmen leiten
+      c: Nur Personen mit Schweizer Bürgerrecht
+      d: Nur Personen, die das Stimmrecht haben
+    explanation_de: Die Steuerpflicht hängt vom Wohnsitz ab und nicht vom Bürgerrecht. Auch Ausländerinnen
+      und Ausländer, die in der Schweiz wohnen, zahlen Steuern. Das Stimmrecht spielt dabei keine Rolle.

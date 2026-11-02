@@ -1,0 +1,30 @@
+id: kollegialitaetsprinzip-bundesrat-beschluesse
+lang: fr
+source_version: 1
+question: Que signifie le principe de collégialité au sein du Conseil fédéral (Bundesrat) ?
+options:
+  a: La présidente ou le président de la Confédération (Bundespräsident) décide seul.
+  b: Les membres défendent de manière uniforme, à l'extérieur, les décisions du Conseil fédéral.
+  c: Chaque membre décide dans son département sans se concerter avec les autres.
+  d: Les membres peuvent exprimer publiquement leur opinion divergente.
+explanation: Le Conseil fédéral décide en tant que collège. Même celui ou celle qui a défendu une autre
+  opinion au sein du Conseil fédéral soutient la décision à l'extérieur. Ainsi, le gouvernement se présente
+  de manière unie.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet das Kollegialitätsprinzip innerhalb des Bundesrates?
+    options_de:
+      a: Die Bundespräsidentin oder der Bundespräsident entscheidet allein.
+      b: Die Mitglieder vertreten die Entscheide des Bundesrates nach aussen einheitlich.
+      c: Jedes Mitglied entscheidet in seinem Departement, ohne sich mit den anderen abzusprechen.
+      d: Die Mitglieder dürfen ihre abweichende Meinung öffentlich äussern.
+    explanation_de: Der Bundesrat entscheidet als Kollegium. Auch wer im Bundesrat eine andere Meinung
+      vertreten hat, unterstützt den Entscheid nach aussen. So tritt die Regierung geschlossen auf.

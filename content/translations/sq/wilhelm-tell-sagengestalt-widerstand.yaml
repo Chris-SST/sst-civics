@@ -1,0 +1,30 @@
+id: wilhelm-tell-sagengestalt-widerstand
+lang: sq
+source_version: 1
+question: Çfarë simbolizon figura legjendare e Wilhelm Tellit nga Zvicra Qendrore?
+options:
+  a: Rezistencën ndaj sundimtarëve të huaj
+  b: Neutralitetin e Zvicrës në kohë lufte
+  c: Futjen e Reformës
+  d: Themelimin e bankës së parë zvicerane
+explanation: Legjenda tregon për një burrë që i reziston shtypjes nga ana e administratorëve të huaj (Vögte).
+  Prandaj Wilhelm Telli konsiderohet simbol i lirisë. Nuk është e provuar nëse ai ka jetuar vërtet.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was symbolisiert die legendäre Figur des Wilhelm Tell aus der Zentralschweiz?
+    options_de:
+      a: Den Widerstand gegen fremde Herrscher
+      b: Die Neutralität der Schweiz in Kriegszeiten
+      c: Die Einführung der Reformation
+      d: Die Gründung der ersten schweizerischen Bank
+    explanation_de: Die Legende erzählt von einem Mann, der sich der Unterdrückung durch fremde Verwalter
+      (Vögte) widersetzt. Deshalb gilt Wilhelm Tell als Symbol der Freiheit. Es ist nicht erwiesen, ob
+      er wirklich gelebt hat.

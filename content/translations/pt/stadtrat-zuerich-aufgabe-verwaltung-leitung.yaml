@@ -1,0 +1,31 @@
+id: stadtrat-zuerich-aufgabe-verwaltung-leitung
+lang: pt
+source_version: 1
+question: Qual é a função da Câmara Municipal (Stadtrat) da cidade de Zurique?
+options:
+  a: Dirige a administração fiscal cantonal na cidade.
+  b: Promulga as leis cantonais para o território da cidade.
+  c: Faz justiça em litígios entre os habitantes.
+  d: Dirige a administração municipal e define as diretrizes da actuação da cidade.
+explanation: A Câmara Municipal é o poder executivo da cidade de Zurique. Dirige a administração municipal
+  e determina a direção em que a cidade se desenvolve. Os tribunais fazem justiça, e as leis cantonais
+  são promulgadas pelo Conselho Cantonal (Kantonsrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe hat der Stadtrat der Stadt Zürich?
+    options_de:
+      a: Er leitet die kantonale Steuerverwaltung in der Stadt.
+      b: Er erlässt die kantonalen Gesetze für das Stadtgebiet.
+      c: Er spricht Recht bei Streitigkeiten zwischen den Einwohnern.
+      d: Er leitet die Stadtverwaltung und legt die Richtlinien für das Handeln der Stadt fest.
+    explanation_de: Der Stadtrat ist die Exekutive der Stadt Zürich. Er leitet die Stadtverwaltung und
+      bestimmt die Richtung, in die sich die Stadt entwickelt. Die Gerichte sprechen Recht, und die kantonalen
+      Gesetze werden vom Kantonsrat erlassen.

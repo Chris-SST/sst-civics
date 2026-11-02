@@ -1,0 +1,29 @@
+id: foehn-warmer-trockener-suedwind
+lang: it
+source_version: 1
+question: Che cos'è il favonio (Föhn)?
+options:
+  a: Un vento freddo e umido proveniente da nord
+  b: Un vento freddo proveniente da est in inverno
+  c: Una pioggia forte in primavera
+  d: Un vento caldo e secco proveniente da sud
+explanation: Il favonio (Föhn) è un vento discendente caldo e secco che nelle Alpi soffia soprattutto
+  da sud. Può far salire rapidamente le temperature e rendere la visibilità molto nitida.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist der Föhn?
+    options_de:
+      a: Ein kalter und feuchter Wind aus Norden
+      b: Ein kalter Wind aus Osten im Winter
+      c: Ein starker Regen im Frühling
+      d: Ein warmer und trockener Wind aus Süden
+    explanation_de: Der Föhn ist ein warmer und trockener Fallwind, der in den Alpen vor allem aus Süden
+      weht. Er kann die Temperaturen rasch ansteigen lassen und die Sicht sehr klar machen.

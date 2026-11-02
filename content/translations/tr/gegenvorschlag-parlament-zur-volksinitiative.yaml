@@ -1,0 +1,31 @@
+id: gegenvorschlag-parlament-zur-volksinitiative
+lang: tr
+source_version: 1
+question: Parlamento, federal düzeydeki bir halk girişimine (Volksinitiative) karşı ne ortaya koyabilir?
+options:
+  a: Imza toplama süresinin bir yıl daha uzatılması
+  b: Kendi karşı önerisi; bu öneri hakkında da oylama yapılır
+  c: Tüm kantonlarda ikinci bir imza toplama
+  d: Girişimin oylamaya sunulmasının yasaklanması
+explanation: Parlamento, bir halk girişimine karşı doğrudan bir karşı öneri ortaya koyabilir. Bu öneri,
+  çoğu zaman talebi kısmen kabul eder ancak o kadar ileri gitmez. Oy hakkına sahip kişiler daha sonra
+  girişim ve karşı öneri hakkında aynı gün oy kullanır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was kann das Parlament einer Volksinitiative auf Bundesebene entgegensetzen?
+    options_de:
+      a: Eine Verlängerung der Unterschriftensammlungsfrist um ein weiteres Jahr
+      b: Einen eigenen Gegenvorschlag; über diesen Vorschlag wird ebenfalls abgestimmt
+      c: Eine zweite Unterschriftensammlung in allen Kantonen
+      d: Das Verbot, die Initiative zur Abstimmung zu bringen
+    explanation_de: Das Parlament kann einer Volksinitiative direkt einen Gegenvorschlag entgegensetzen.
+      Dieser Vorschlag nimmt die Forderung oft teilweise auf, geht aber nicht so weit. Die Stimmberechtigten
+      stimmen dann am selben Tag über die Initiative und den Gegenvorschlag ab.

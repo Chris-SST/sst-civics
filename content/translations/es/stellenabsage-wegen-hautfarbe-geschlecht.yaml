@@ -1,0 +1,35 @@
+id: stellenabsage-wegen-hautfarbe-geschlecht
+lang: es
+source_version: 2
+question: Una mujer se postula para un puesto de trabajo. Es rechazada únicamente por ser mujer. ¿Qué
+  derecho fundamental se vulnera con ello?
+options:
+  a: La libertad de establecimiento
+  b: La libertad de reunión
+  c: La igualdad ante la ley y la prohibición de discriminación
+  d: La protección de la esfera privada
+explanation: El artículo 8 de la Constitución Federal establece que todas las personas son iguales ante
+  la ley y que la mujer y el hombre tienen los mismos derechos. Nadie puede ser discriminado, por ejemplo,
+  por su origen, su raza o su sexo. Por ello, quien rechaza a una candidata únicamente por su sexo vulnera
+  la igualdad ante la ley y la prohibición de discriminación.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Frau bewirbt sich um eine Arbeitsstelle. Sie wird einzig deshalb abgelehnt, weil
+      sie eine Frau ist. Welches Grundrecht wird dadurch verletzt?
+    options_de:
+      a: Die Niederlassungsfreiheit
+      b: Die Versammlungsfreiheit
+      c: Die Rechtsgleichheit und das Diskriminierungsverbot
+      d: Der Schutz der Privatsphäre
+    explanation_de: Artikel 8 der Bundesverfassung legt fest, dass alle Menschen vor dem Gesetz gleich
+      sind und dass Frau und Mann gleiche Rechte haben. Niemand darf zum Beispiel wegen seiner Herkunft,
+      seiner Rasse oder seines Geschlechts diskriminiert werden. Daher verletzt, wer eine Bewerberin einzig
+      wegen ihres Geschlechts ablehnt, die Rechtsgleichheit und das Diskriminierungsverbot.

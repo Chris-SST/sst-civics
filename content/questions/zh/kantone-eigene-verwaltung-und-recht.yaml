@@ -1,18 +1,18 @@
 id: kantone-eigene-verwaltung-und-recht
-version: 1
+version: 2
 scope: zh
 canton: zh
 topic: kanton.demokratie.verfassung
-question_de: Welche Aufgabe haben die Kantone in der Schweiz hauptsächlich?
+question_de: Was gehört zu den Aufgaben der Kantone?
 options_de:
   a: Sie bestimmen die Aussenpolitik und die Währung der Schweiz.
-  b: Sie erlassen das Recht für das ganze Land und überwachen die Gemeinden nicht.
-  c: Sie schliessen Verträge mit anderen Staaten ab und führen die Armee.
+  b: Sie erlassen die Gesetze für das ganze Land.
+  c: Sie führen die Armee und bestimmen die Zölle.
   d: Sie führen ihre eigene Verwaltung und erlassen kantonales Recht.
 correct: d
-explanation_de: Die Schweiz ist ein Bundesstaat. Die Kantone sind selbstständig, soweit ihre Souveränität
-  nicht durch die Bundesverfassung beschränkt ist. Sie organisieren ihre Verwaltung und erlassen eigenes
-  kantonales Recht, zum Beispiel ihre Kantonsverfassung und Gesetze.
+explanation_de: Jeder Kanton hat eine eigene Regierung, ein eigenes Parlament und eine eigene Verwaltung.
+  Er macht eigene Gesetze, die nur im Kanton gelten, zum Beispiel für Schulen oder die Polizei. Aussenpolitik,
+  Währung, Armee, Zölle und die Gesetze für die ganze Schweiz sind Sache des Bundes.
 sources:
 - url: https://www.aboutswitzerland.eda.admin.ch/de/foederalismus
   checked: &id001 2026-11-02
@@ -25,7 +25,7 @@ glossary:
 - Kantonales Recht
 - Verwaltung
 - Bundesstaat
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-106
@@ -35,16 +35,47 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Die Kantone sind nach der Bundesverfassung souverän, soweit ihre Souveränität nicht durch
-      die Bundesverfassung beschränkt ist, und führen deshalb ihre eigene Verwaltung und erlassen kantonales
-      Recht, während Aussenpolitik, Währung und Armee hauptsächlich Sache des Bundes sind.
+    version: 2
+    reasoning: Die Kantone sind nach der Bundesverfassung souverän, soweit ihre Souveränität nicht beschränkt
+      ist, und führen daher ihre eigene Verwaltung und erlassen kantonales Recht, während Aussenpolitik,
+      Währung, Zölle und die Armee Sache des Bundes sind.
   source:
     verdict: supported
-    note: Quelle 1 sagt, dass Kantone als Gliedstaaten über eigene Verfassung, Parlament, Regierung und
-      Gerichte verfügen und übergeordnete Aufgaben wie Schul- und Polizeiwesen übernehmen; Aussenpolitik
-      und Landesverteidigung liegen beim Bund. Quelle 2 bestätigt, dass die Kantone souverän sind und
-      eigene Gesetze bestimmen dürfen.
+    note: Quelle 1 nennt, dass Kantone eigene Verfassung, Parlament, Regierung und Gerichte haben und
+      übergeordnete Aufgaben wie Schul- und Polizeiwesen übernehmen, während der Bund Landesverteidigung
+      und Aussenpolitik übernimmt. Quelle 2 bestätigt, dass Kantone eigene Gesetze bestimmen und der Bund
+      die Armee organisiert.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Armee» ist in der Erklärung etwas vereinfacht, weil die Kantone beim Militär einzelne
+        Vollzugsaufgaben haben (zum Beispiel kantonale Militärverwaltung); man könnte «Armee» durch «Landesverteidigung»
+        ersetzen, wie es die EDA-Quelle formuliert.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort d) enthält als einzige das Wort «kantonal» und ist dadurch leicht zu erraten;
+        man könnte eine falsche Antwort ähnlich formulieren, etwa «Sie erlassen kantonale Regeln für die
+        Landesverteidigung».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt Schulen und Polizei als Beispiele für kantonale Gesetze; das passt
+        zur Quelle, könnte aber ergänzen, dass auch Gemeinden einen Teil der Aufgaben übernehmen (z. B.
+        Volksschulführung), damit keine Verwirrung entsteht.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

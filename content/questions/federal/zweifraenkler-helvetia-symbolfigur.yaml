@@ -23,7 +23,7 @@ sources:
 glossary:
 - Helvetia
 - Zweifränkler
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-319
@@ -44,3 +44,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Auf heutigen Briefmarken steht meist nur der Name «Helvetia», die Figur selbst ist selten
+        abgebildet; besser so formulieren: «Helvetia ist auch auf den 50-Rappen- und 1-Franken-Münzen
+        abgebildet, und auf Briefmarken steht der Name ‹Helvetia›.»'
+      - 'Klein: Das Matterhorn ist keine Figur und darum eine schwache falsche Antwort; besser eine andere
+        Symbolfigur oder Person nehmen, zum Beispiel «Ein Alphirt» oder «Henri Dunant».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Matterhorn ist ein Berg und keine «Symbolfigur», deshalb fällt diese Antwort schon
+        durch die Fragestellung weg; besser wäre eine plausiblere Figur wie «Ein Alphirte» oder «Ein Schweizer
+        Soldat».'
+      - 'Klein: Für Lernende ohne Schweizer Hintergrund könnte die Frage den Begriff erklären, etwa «auf
+        dem Zweifränkler (der 2-Franken-Münze)».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage ist leicht zweideutig, weil auch Wilhelm Tell eine Symbolfigur der Schweiz ist;
+        die Frage könnte genauer lauten: «Welche weibliche Symbolfigur ist auf dem Zweifränkler abgebildet?»'
+      - 'Klein: Die Erklärung sagt, Helvetia erscheine auch auf anderen Münzen und Briefmarken; genauer
+        wäre: «auf den 50-Rappen-, 1-Franken- und 2-Franken-Münzen und mit dem Namen «Helvetia» auf Briefmarken».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

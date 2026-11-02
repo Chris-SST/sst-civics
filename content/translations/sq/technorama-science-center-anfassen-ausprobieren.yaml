@@ -1,0 +1,33 @@
+id: technorama-science-center-anfassen-ausprobieren
+lang: sq
+source_version: 1
+question: Në cilën institucion në kantonin e Cyrihut mund t'i prekin dhe t'i provojnë vetë vizitorët ddukuritë
+  shkencore natyrore dhe teknike?
+options:
+  a: Në Operën e Cyrihut (Opernhaus Zürich)
+  b: Në Technorama në Winterthur
+  c: Në Muzeun Kombëtar të Cyrihut (Landesmuseum Zürich)
+  d: Në Shtëpinë e Artit të Cyrihut (Kunsthaus Zürich)
+explanation: Technorama në Winterthur është një qendër shkencore (Science Center). Vizitorët eksperimentojnë
+  vetë në objektet e ekspozuara. Kunsthaus, Landesmuseum dhe Opernhaus shfaqin art, histori dhe shfaqje
+  skenike.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Institution im Kanton Zürich können Besucher die naturwissenschaftlichen und
+      technischen Phänomene selbst anfassen und ausprobieren?
+    options_de:
+      a: Im Opernhaus Zürich
+      b: Im Technorama in Winterthur
+      c: Im Landesmuseum Zürich
+      d: Im Kunsthaus Zürich
+    explanation_de: Das Technorama in Winterthur ist ein Science Center. Die Besucher experimentieren
+      selbst an den ausgestellten Objekten. Das Kunsthaus, das Landesmuseum und das Opernhaus zeigen Kunst,
+      Geschichte und Bühnenaufführungen.

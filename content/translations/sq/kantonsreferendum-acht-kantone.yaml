@@ -1,0 +1,33 @@
+id: kantonsreferendum-acht-kantone
+lang: sq
+source_version: 1
+question: Kush mund të kërkojë, përveç 50'000 shtetasve me të drejtë vote, gjithashtu një referendum fakultativ
+  kundër një ligji federal?
+options:
+  a: Tetë kantone
+  b: Tri parti të mëdha së bashku
+  c: Këshilli Federal (Bundesrat)
+  d: Gjykata Federale (Bundesgericht)
+explanation: Sipas Kushtetutës Federale, edhe tetë kantone mund të kërkojnë një votim popullor mbi një
+  ligj federal. Kjo quhet referendum i kantoneve. Përdoret rrallë, por tregon se kantonet kanë të drejta
+  pjesëmarrjeje në shtetin federal.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann ausser 50'000 stimmberechtigten Bürgerinnen und Bürgern ebenfalls ein fakultatives
+      Referendum gegen ein Bundesgesetz verlangen?
+    options_de:
+      a: Acht Kantone
+      b: Drei grosse Parteien zusammen
+      c: Der Bundesrat
+      d: Das Bundesgericht
+    explanation_de: Gemäss der Bundesverfassung können auch acht Kantone eine Volksabstimmung über ein
+      Bundesgesetz verlangen. Dies wird Kantonsreferendum genannt. Es wird selten genutzt, zeigt aber,
+      dass die Kantone im Bundesstaat Mitwirkungsrechte haben.

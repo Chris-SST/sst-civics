@@ -1,15 +1,33 @@
 id: raumplanung-landschaften-ohne-bebauung
 lang: en
-source_version: 1
-question: What is one of the aims of spatial planning in Switzerland?
+source_version: 2
+question: What is one aim of spatial planning in Switzerland?
 options:
-  a: It is meant to preserve landscapes without buildings.
-  b: It is meant to redraw the canton boundaries regularly.
-  c: It is meant to release as much land as possible for new buildings.
-  d: It is meant to set the prices for building land.
-explanation: Spatial planning regulates how land is used. It is meant to organise settlements, agriculture
-  and nature in a balanced way and to protect undeveloped landscapes. Land is scarce and should be used
-  sparingly.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: It is meant to protect undeveloped landscapes and to use land sparingly.
+  b: It is meant to redefine the borders between the cantons on a regular basis.
+  c: It is meant to create as many new building zones as possible.
+  d: It is meant to determine the price of building land.
+explanation: Spatial planning determines where building is permitted and where it is not. It separates
+  built-up areas from areas where building is not allowed, so that landscapes and farmland are protected.
+  Because land is scarce, it should be used sparingly, and existing settlements should preferably be made
+  denser rather than creating new building zones.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was ist ein Ziel der Raumplanung in der Schweiz?
+    options_de:
+      a: Sie soll unbebaute Landschaften schützen und den Boden sparsam nutzen.
+      b: Sie soll die Grenzen zwischen den Kantonen regelmässig neu festlegen.
+      c: Sie soll möglichst viele neue Bauzonen schaffen.
+      d: Sie soll den Preis von Bauland bestimmen.
+    explanation_de: Die Raumplanung legt fest, wo gebaut werden darf und wo nicht. Sie trennt überbaute
+      Gebiete von Gebieten, in denen nicht gebaut werden darf, damit Landschaften und Landwirtschaftsland
+      geschützt werden. Weil der Boden knapp ist, soll er sparsam genutzt werden, und bestehende Siedlungen
+      sollen vorzugsweise verdichtet werden, anstatt neue Bauzonen zu schaffen.

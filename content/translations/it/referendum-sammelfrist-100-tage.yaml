@@ -1,0 +1,31 @@
+id: referendum-sammelfrist-100-tage
+lang: it
+source_version: 1
+question: Di quanto tempo dispongono i comitati referendari per raccogliere le firme per un referendum
+  facoltativo contro una legge federale?
+options:
+  a: 60 giorni
+  b: 18 mesi
+  c: 100 giorni
+  d: 30 giorni
+explanation: Il termine è di 100 giorni dalla pubblicazione ufficiale dell'atto. I 18 mesi valgono invece
+  per la raccolta delle firme per un'iniziativa popolare (Volksinitiative).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viel Zeit haben die Referendumskomitees, um die Unterschriften für ein fakultatives
+      Referendum gegen ein Bundesgesetz zu sammeln?
+    options_de:
+      a: 60 Tage
+      b: 18 Monate
+      c: 100 Tage
+      d: 30 Tage
+    explanation_de: Die Frist beträgt 100 Tage ab der amtlichen Veröffentlichung des Erlasses. Die 18
+      Monate gelten hingegen für die Sammlung der Unterschriften für eine Volksinitiative.

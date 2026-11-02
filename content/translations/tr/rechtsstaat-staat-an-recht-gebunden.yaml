@@ -1,0 +1,31 @@
+id: rechtsstaat-staat-an-recht-gebunden
+lang: tr
+source_version: 2
+question: İsviçre gibi bir hukuk devletinde makamlar ve hükümet için ne geçerlidir?
+options:
+  a: Hangi yasalara uyacaklarını kendileri seçebilirler.
+  b: Onlar da yürürlükteki hukuka uymak zorundadır.
+  c: Yürürlükteki hukukun üzerinde yer alırlar.
+  d: Yalnızca medyanın kararlarına göre hareket etmek zorundadırlar.
+explanation: Bir hukuk devletinde yalnızca halkın değil, devletin kendisinin de hukuka uyması gerekir.
+  Makamlar ve hükümet yalnızca hukukun izin verdiği şekilde hareket edebilir. Hukuk devleti, insanları
+  böylece keyfîlikten korur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt in einem Rechtsstaat wie der Schweiz für die Behörden und die Regierung?
+    options_de:
+      a: Sie können selbst wählen, welche Gesetze sie befolgen.
+      b: Auch sie müssen das geltende Recht befolgen.
+      c: Sie stehen über dem geltenden Recht.
+      d: Sie müssen nur nach den Entscheidungen der Medien handeln.
+    explanation_de: In einem Rechtsstaat muss nicht nur das Volk, sondern auch der Staat selbst das Recht
+      befolgen. Die Behörden und die Regierung können nur so handeln, wie es das Recht erlaubt. Der Rechtsstaat
+      schützt die Menschen so vor Willkür.

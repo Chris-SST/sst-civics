@@ -1,14 +1,31 @@
 id: kanton-zuerich-lage-mittelland
 lang: en
-source_version: 1
-question: In which major geographical region of Switzerland is the canton of Zürich located?
+source_version: 2
+question: Which of Switzerland's major landscape regions does the canton of Zurich belong to?
 options:
-  a: In the Pre-Alps
-  b: In the Jura
-  c: In the Central Plateau (Mittelland)
-  d: In the Central Alps
-explanation: The canton of Zürich is located in the Swiss Central Plateau, the densely populated area
-  between the Jura and the Alps. Most of the people in Switzerland live there.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: The Southern Alps
+  b: The Jura
+  c: The Central Plateau (Mittelland)
+  d: The Central Alps
+explanation: The canton of Zurich belongs to the Central Plateau, that is, the flatter area between the
+  Jura in the north-west and the Alps in the south. The Central Plateau is the most densely populated
+  part of Switzerland.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Zu welcher der grossen Landschaftsregionen der Schweiz gehört der Kanton Zürich?
+    options_de:
+      a: Die Südalpen
+      b: Der Jura
+      c: Das Mittelland
+      d: Die Zentralalpen
+    explanation_de: Der Kanton Zürich gehört zum Mittelland, das heisst zum flacheren Gebiet zwischen
+      dem Jura im Nordwesten und den Alpen im Süden. Das Mittelland ist der am dichtesten besiedelte Teil
+      der Schweiz.

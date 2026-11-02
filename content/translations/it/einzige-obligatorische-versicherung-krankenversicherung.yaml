@@ -1,0 +1,30 @@
+id: einzige-obligatorische-versicherung-krankenversicherung
+lang: it
+source_version: 1
+question: Quale delle seguenti assicurazioni è obbligatoria per legge in Svizzera per tutti gli abitanti?
+options:
+  a: L'assicurazione di protezione giuridica
+  b: L'assicurazione malattie
+  c: L'assicurazione di viaggio
+  d: L'assicurazione di economia domestica
+explanation: L'assicurazione malattie è obbligatoria per tutte le persone domiciliate in Svizzera. Le
+  assicurazioni di economia domestica, di protezione giuridica e di viaggio sono facoltative.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Versicherungen ist in der Schweiz für alle Einwohner gesetzlich
+      obligatorisch?
+    options_de:
+      a: Die Rechtsschutzversicherung
+      b: Die Krankenversicherung
+      c: Die Reiseversicherung
+      d: Die Haushaltsversicherung
+    explanation_de: Die Krankenversicherung ist für alle in der Schweiz wohnhaften Personen obligatorisch.
+      Die Haushaltsversicherung, die Rechtsschutzversicherung und die Reiseversicherung sind freiwillig.

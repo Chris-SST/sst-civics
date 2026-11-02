@@ -1,0 +1,31 @@
+id: schweiz-kein-meerzugang
+lang: tr
+source_version: 2
+question: İsviçre'nin coğrafi konumuyla ilgili hangi ifade doğrudur?
+options:
+  a: İsviçre'nin denize doğrudan erişimi yoktur.
+  b: İsviçre'nin batısında Atlas Okyanusu ile sınırı vardır.
+  c: İsviçre'nin güneyinde Akdeniz ile sınırı vardır.
+  d: İsviçre'nin kuzeyinde Kuzey Denizi ile sınırı vardır.
+explanation: 'İsviçre denize kıyısı olmayan bir ülkedir: Her yanı başka ülkelerle çevrilidir ve deniz
+  kıyısı yoktur. Ren Nehri üzerinde gemiler Basel''den Kuzey Denizi''ne kadar gidebilse de hiçbir deniz
+  İsviçre ile doğrudan sınır oluşturmaz.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Aussage zur geografischen Lage der Schweiz ist richtig?
+    options_de:
+      a: Die Schweiz hat keinen direkten Zugang zum Meer.
+      b: Die Schweiz grenzt im Westen an den Atlantischen Ozean.
+      c: Die Schweiz grenzt im Süden an das Mittelmeer.
+      d: Die Schweiz grenzt im Norden an die Nordsee.
+    explanation_de: 'Die Schweiz ist ein Land ohne Meeresküste: Sie ist ringsum von anderen Ländern umgeben
+      und hat keine Meeresküste. Auch wenn Schiffe auf dem Rhein von Basel bis zur Nordsee fahren können,
+      bildet kein Meer eine direkte Grenze zur Schweiz.'

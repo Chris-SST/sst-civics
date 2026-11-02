@@ -1,0 +1,31 @@
+id: ahv-pflichtversicherung
+lang: sq
+source_version: 1
+question: Cila deklaratë për sigurimin e pleqërisë dhe të të mbijetuarve (AHV) është e saktë?
+options:
+  a: Sigurimi i pleqërisë dhe i të mbijetuarve bën pjesë among sigurimet e detyrueshme.
+  b: Sigurimi i pleqërisë dhe i të mbijetuarve është një sigurim vullnetar për persona që punojnë në mënyrë
+    të pavarur.
+  c: Sigurimi i pleqërisë dhe i të mbijetuarve vlen vetëm për personat me pasaportë zvicerane.
+  d: Sigurimi i pleqërisë dhe i të mbijetuarve është një sigurim privat i punëdhënësve.
+explanation: Sigurimi i pleqërisë dhe i të mbijetuarve është i detyrueshëm. Kushdo që banon ose punon
+  në Zvicër është në parim i siguruar dhe duhet të paguajë kontribute.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage zur Alters- und Hinterlassenenversicherung (AHV) ist richtig?
+    options_de:
+      a: Die Alters- und Hinterlassenenversicherung gehört zu den obligatorischen Versicherungen.
+      b: Die Alters- und Hinterlassenenversicherung ist eine freiwillige Versicherung für selbstständig
+        erwerbende Personen.
+      c: Die Alters- und Hinterlassenenversicherung gilt nur für Personen mit Schweizer Pass.
+      d: Die Alters- und Hinterlassenenversicherung ist eine private Versicherung der Arbeitgeber.
+    explanation_de: Die Alters- und Hinterlassenenversicherung ist obligatorisch. Wer in der Schweiz wohnt
+      oder arbeitet, ist grundsätzlich versichert und muss Beiträge bezahlen.

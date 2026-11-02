@@ -1,0 +1,31 @@
+id: glaubensfreiheit-religion-ueberzeugung-leben
+lang: sq
+source_version: 1
+question: Çfarë përfshihet sipas Kushtetutës Federale në lirinë e besimit dhe të ndërgjegjes?
+options:
+  a: E drejta për të pasur një besim dhe një bindje dhe për të jetuar sipas tyre
+  b: Vetëm anëtarësimi në një kishë kantonale të njohur
+  c: Detyrimi për të ruajtur besimin e prindërve
+  d: E drejta për t'i detyruar të tjerët të pranojnë besimin e vet
+explanation: Çdo person ka të drejtë ta zgjedhë lirisht fenë dhe bindjen e vet botëkuptimore dhe të jetojë
+  sipas tyre. Mund edhe ta ndërrojë besimin ose të mos ketë asnjë. Askush nuk lejohet të detyrohet të
+  ketë një besim.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was umfasst gemäss der Bundesverfassung die Glaubens- und Gewissensfreiheit?
+    options_de:
+      a: Das Recht, einen Glauben und eine Überzeugung zu haben und gemäss ihnen zu leben
+      b: Nur die Mitgliedschaft in einer anerkannten Kantonalkirche
+      c: Die Pflicht, den Glauben der Eltern beizubehalten
+      d: Das Recht, andere zu zwingen, den eigenen Glauben anzunehmen
+    explanation_de: Jede Person hat das Recht, ihre Religion und ihre weltanschauliche Überzeugung frei
+      zu wählen und gemäss ihnen zu leben. Sie kann auch den Glauben wechseln oder keinen haben. Niemand
+      darf gezwungen werden, einen Glauben zu haben.

@@ -1,0 +1,31 @@
+id: schwimmbad-zutritt-hautfarbe-diskriminierung
+lang: tr
+source_version: 1
+question: Bir kamu yüzme havuzu, bir kişinin cilt rengi nedeniyle havuza girişini reddetmektedir. Bu durum
+  Federal Anayasa'nın hangi ilkesini ihlal eder?
+options:
+  a: Ekonomik özgürlük
+  b: Ayrımcılık yasağı
+  c: Oy hakkı
+  d: Evlilik ve aile hakkı
+explanation: Federal Anayasa 8. maddesinde, örneğin kökeni veya ırkı nedeniyle ayrımcılığı yasaklar. Bu
+  nedenle hiç kimseye daha kötü davranılamaz.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ein öffentliches Schwimmbad verweigert einer Person wegen ihrer Hautfarbe den Zutritt
+      zum Bad. Gegen welchen Grundsatz der Bundesverfassung verstösst dies?
+    options_de:
+      a: Wirtschaftsfreiheit
+      b: Diskriminierungsverbot
+      c: Stimmrecht
+      d: Recht auf Ehe und Familie
+    explanation_de: Die Bundesverfassung verbietet in Artikel 8 die Diskriminierung, zum Beispiel wegen
+      der Herkunft oder der Rasse. Deshalb darf niemand schlechter behandelt werden.

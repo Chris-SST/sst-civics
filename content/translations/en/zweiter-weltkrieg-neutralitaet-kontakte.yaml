@@ -10,6 +10,23 @@ options:
 explanation: Switzerland did not become a party to the war during the Second World War. However, it maintained
   political and economic contacts with the warring parties. This stance is still debated by historians
   today.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «von Historikern diskutiert» statt «historisch diskutiert» ist nur eine
+      sprachliche Variante
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie verhielt sich die Schweiz während des Zweiten Weltkriegs?
+    options_de:
+      a: Sie brach alle Kontakte zu den Kriegsparteien ab und schloss ihre Grenzen vollständig.
+      b: Sie schloss sich Deutschland an und stellte Truppen zur Verfügung.
+      c: Sie blieb neutral und pflegte politische und wirtschaftliche Kontakte zu den Kriegsparteien.
+      d: Sie schloss sich dem Bündnis der Alliierten an und kämpfte an deren Seite.
+    explanation_de: Die Schweiz wurde während des Zweiten Weltkriegs nicht zur Kriegspartei. Sie unterhielt
+      jedoch politische und wirtschaftliche Kontakte zu den Kriegsparteien. Diese Haltung wird von Historikern
+      bis heute diskutiert.

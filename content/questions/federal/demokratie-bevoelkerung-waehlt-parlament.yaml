@@ -22,7 +22,7 @@ glossary:
 - Demokratie
 - Parlament
 - Wahl
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-022
@@ -44,3 +44,40 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt nur, dass das Parlament die Bundesgesetze erlässt. Vorschlag: einen
+        Halbsatz ergänzen, etwa «… gegen die das Volk mit dem fakultativen Referendum eine Abstimmung
+        verlangen kann». So passt die Erklärung besser zu Quelle 2, wonach Parlament und Volk gemeinsam
+        Gesetzgeber sind.'
+      - 'Klein: «Bevölkerung» ist ungenau, weil nur die stimmberechtigten Schweizerinnen und Schweizer
+        wählen dürfen. Vorschlag: In der Erklärung einmal «die Stimmberechtigten» erwähnen, etwa «Die
+        Stimmberechtigten wählen ihre Vertreterinnen und Vertreter ins Parlament».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Pronomen «Sie» am Anfang jeder Antwort könnte für Lernende auch als Höflichkeitsform
+        missverstanden werden; besser wäre in den Antworten «Die Bevölkerung …» oder eine Frage wie «Was
+        darf die Bevölkerung in einer Demokratie wie der Schweiz tun?».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, das Parlament erlasse die Gesetze «im Namen des Volkes». Besser wäre
+        «als vom Volk gewählte Vertretung», weil das Volk mit dem Referendum zusätzlich mitbestimmt.'
+      - 'Klein: Antwort b) ist etwas missverständlich, weil das Volk mit Initiative und Referendum tatsächlich
+        an der Gesetzgebung mitwirkt. Klarer wäre «Sie bestimmt die Bundesgesetze allein, das Parlament
+        hat nichts zu sagen» oder «Sie ersetzt das Parlament».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,31 @@
+id: helvetische-republik-zentralstaat-1798
+lang: tr
+source_version: 1
+question: 1798'de Napolyon Bonapart'ın etkisi altında İsviçre'ye ne oldu?
+options:
+  a: Alman İmparatorluğu'nun bir parçası oldu.
+  b: Kendi kralı olan bir monarşi oldu.
+  c: Kalıcı olarak iki devlete bölündü.
+  d: Geçici olarak merkezi bir devlet, yani Helvetik Cumhuriyeti oldu.
+explanation: 1798'de Fransız birliklerinin işgalinden sonra Helvetik Cumhuriyeti kuruldu. Merkezden yönetilen
+  üniter bir devletti ve eski Eidgenossenschaft'ın (Eski İsviçre Konfederasyonu) yerini geçici olarak
+  aldı. Kantonların kendilerine ait neredeyse hiçbir hakkı yoktu.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was geschah 1798 unter dem Einfluss von Napoleon Bonaparte mit der Schweiz?
+    options_de:
+      a: Sie wurde ein Teil des Deutschen Reiches.
+      b: Sie wurde eine Monarchie mit einem eigenen König.
+      c: Sie wurde dauerhaft in zwei Staaten geteilt.
+      d: Sie wurde vorübergehend ein zentraler Staat, nämlich die Helvetische Republik.
+    explanation_de: 1798 wurde nach der Besetzung durch französische Truppen die Helvetische Republik
+      gegründet. Sie war ein zentral regierter Einheitsstaat und ersetzte vorübergehend die alte Eidgenossenschaft
+      (die Alte Schweizerische Konföderation). Die Kantone hatten fast keine eigenen Rechte.

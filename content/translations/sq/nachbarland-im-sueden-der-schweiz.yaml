@@ -1,0 +1,29 @@
+id: nachbarland-im-sueden-der-schweiz
+lang: sq
+source_version: 1
+question: Cili shtet ndodhet në jug të Zvicrës dhe kufizohet me të?
+options:
+  a: Spanja
+  b: Italia
+  c: Sllovenia
+  d: Franca
+explanation: Italia është fqinji jugor i Zvicrës. Kufiri kalon, ndër të tjera, nëpër Alpet dhe përmes
+  Tiçinos (Tessin) dhe Graubündenit. Spanja dhe Sllovenia nuk kufizohen me Zvicrën.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Staat liegt im Süden der Schweiz und grenzt an sie?
+    options_de:
+      a: Spanien
+      b: Italien
+      c: Slowenien
+      d: Frankreich
+    explanation_de: Italien ist der südliche Nachbar der Schweiz. Die Grenze verläuft unter anderem durch
+      die Alpen und durch das Tessin und Graubünden. Spanien und Slowenien grenzen nicht an die Schweiz.

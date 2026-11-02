@@ -1,0 +1,35 @@
+id: stellenabsage-wegen-hautfarbe-geschlecht
+lang: sq
+source_version: 2
+question: Një grua aplikon për një vend pune. Ajo refuzohet vetëm për shkak se është grua. Cila e drejtë
+  themelore cenohet me këtë?
+options:
+  a: Liria e vendosjes
+  b: Liria e tubimit
+  c: Barazia para ligjit dhe ndalimi i diskriminimit
+  d: Mbrojtja e jetës private
+explanation: Neni 8 i Kushtetutës Federale thotë se të gjithë njerëzit janë të barabartë para ligjit dhe
+  se gruaja dhe burri kanë të drejta të barabarta. Askush nuk duhet të diskriminohet, për shembull për
+  shkak të origjinës, të racës ose të gjinisë. Kush e refuzon një kandidate vetëm për shkak të gjinisë
+  së saj, cenon prandaj barazinë para ligjit dhe ndalimin e diskriminimit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Frau bewirbt sich um eine Arbeitsstelle. Sie wird nur deshalb abgelehnt, weil sie
+      eine Frau ist. Welches Grundrecht wird dadurch verletzt?
+    options_de:
+      a: Die Niederlassungsfreiheit
+      b: Die Versammlungsfreiheit
+      c: Die Gleichheit vor dem Gesetz und das Diskriminierungsverbot
+      d: Der Schutz der Privatsphäre
+    explanation_de: Artikel 8 der Bundesverfassung besagt, dass alle Menschen vor dem Gesetz gleich sind
+      und dass Frau und Mann gleichberechtigt sind. Niemand darf diskriminiert werden, zum Beispiel wegen
+      der Herkunft, der Rasse oder des Geschlechts. Wer eine Bewerberin nur wegen ihres Geschlechts ablehnt,
+      verletzt daher die Gleichheit vor dem Gesetz und das Diskriminierungsverbot.

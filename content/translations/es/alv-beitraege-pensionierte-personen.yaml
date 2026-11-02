@@ -1,0 +1,33 @@
+id: alv-beitraege-pensionierte-personen
+lang: es
+source_version: 1
+question: ¿Quién deja de tener que pagar cotizaciones al seguro de desempleo (ALV) en Suiza?
+options:
+  a: Las personas con una relación laboral de duración indefinida
+  b: Las personas que han alcanzado la edad ordinaria de jubilación del seguro de vejez y supervivencia
+    (AHV)
+  c: Las personas que trabajan a tiempo parcial
+  d: Las personas que no han estado nunca en situación de desempleo en los últimos dos años
+explanation: La obligación de cotizar al seguro de desempleo termina al alcanzar la edad de jubilación
+  del AVS. Quien está jubilado ya no paga cotizaciones a la ALV sobre un posible salario. En cambio, los
+  empleados a tiempo parcial y a tiempo completo sí pagan cotizaciones.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz keine Beiträge mehr an die Arbeitslosenversicherung (ALV) bezahlen?
+    options_de:
+      a: Personen mit einem unbefristeten Arbeitsverhältnis
+      b: Personen, die das ordentliche Rentenalter der Alters- und Hinterlassenenversicherung (AHV) erreicht
+        haben
+      c: Personen, die in Teilzeit arbeiten
+      d: Personen, die in den letzten zwei Jahren nie arbeitslos waren
+    explanation_de: Die Beitragspflicht zur Arbeitslosenversicherung endet mit dem Erreichen des AHV-Rentenalters.
+      Wer pensioniert ist, bezahlt auf einen allfälligen Lohn keine Beiträge mehr an die ALV. Dagegen
+      bezahlen Teilzeitangestellte und Vollzeitangestellte sehr wohl Beiträge.

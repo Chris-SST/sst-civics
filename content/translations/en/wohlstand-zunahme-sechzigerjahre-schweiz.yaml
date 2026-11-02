@@ -1,0 +1,33 @@
+id: wohlstand-zunahme-sechzigerjahre-schweiz
+lang: en
+source_version: 2
+question: How was Switzerland doing economically in the decades after the Second World War, for example
+  in the 1960s?
+options:
+  a: 'It was doing better and better: there was plenty of work and the prosperity of many people increased.'
+  b: The economy shrank sharply and many people became unemployed.
+  c: Switzerland became a member of the European Union.
+  d: Switzerland no longer needed workers from abroad.
+explanation: After the Second World War, the Swiss economy grew strongly. There was plenty of work, and
+  many people could afford more. Companies therefore brought in many workers from abroad, at first mainly
+  from Italy.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie ging es der Schweiz in den Jahrzehnten nach dem Zweiten Weltkrieg wirtschaftlich,
+      zum Beispiel in den 1960er-Jahren?
+    options_de:
+      a: 'Es ging ihr immer besser: Es gab viel Arbeit und der Wohlstand vieler Menschen nahm zu.'
+      b: Die Wirtschaft schrumpfte stark und viele Menschen wurden arbeitslos.
+      c: Die Schweiz wurde Mitglied der Europäischen Union.
+      d: Die Schweiz brauchte keine Arbeitskräfte aus dem Ausland mehr.
+    explanation_de: Nach dem Zweiten Weltkrieg wuchs die Schweizer Wirtschaft stark. Es gab viel Arbeit,
+      und viele Menschen konnten sich mehr leisten. Die Unternehmen holten deshalb viele Arbeitskräfte
+      aus dem Ausland, zuerst vor allem aus Italien.

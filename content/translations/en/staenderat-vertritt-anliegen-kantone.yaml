@@ -9,6 +9,21 @@ options:
   d: The Federal Supreme Court (Bundesgericht)
 explanation: The Council of States represents mainly the cantons. Each canton sends representatives to
   this chamber. The National Council, by contrast, represents the people.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Kammer des Parlaments vertritt hauptsächlich die Interessen der Kantone?
+    options_de:
+      a: Der Bundesrat
+      b: Der Nationalrat
+      c: Der Ständerat
+      d: Das Bundesgericht
+    explanation_de: Der Ständerat vertritt hauptsächlich die Kantone. Jeder Kanton entsendet Vertreter
+      in diese Kammer. Der Nationalrat hingegen vertritt das Volk.

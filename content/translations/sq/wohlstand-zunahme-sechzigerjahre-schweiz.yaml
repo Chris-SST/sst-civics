@@ -1,0 +1,34 @@
+id: wohlstand-zunahme-sechzigerjahre-schweiz
+lang: sq
+source_version: 2
+question: Si ishte gjendja ekonomike e Zvicrës në dekadat pas Luftës së Dytë Botërore, për shembull në
+  vitet 1960?
+options:
+  a: 'Gjendja po përmirësohej vazhdimisht: kishte shumë punë dhe mirëqenia e shumë njerëzve po rritej.'
+  b: Ekonomia u tkurr fort dhe shumë njerëz mbetën pa punë.
+  c: Zvicra u bë anëtare e Bashkimit Evropian.
+  d: Zvicra nuk kishte më nevojë për fuqi punëtore nga jashtë.
+explanation: Pas Luftës së Dytë Botërore ekonomia zvicerane u rrit fuqishëm. Kishte shumë punë dhe shumë
+  njerëz mund t'i lejonin vetes më shumë. Prandaj kompanitë sollën shumë fuqi punëtore nga jashtë, në
+  fillim kryesisht nga Italia.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie war die wirtschaftliche Lage der Schweiz in den Jahrzehnten nach dem Zweiten Weltkrieg,
+      zum Beispiel in den 1960er Jahren?
+    options_de:
+      a: 'Die Lage verbesserte sich stetig: Es gab viel Arbeit und der Wohlstand vieler Menschen nahm
+        zu.'
+      b: Die Wirtschaft schrumpfte stark und viele Menschen blieben ohne Arbeit.
+      c: Die Schweiz wurde Mitglied der Europäischen Union.
+      d: Die Schweiz brauchte keine Arbeitskräfte mehr von aussen.
+    explanation_de: Nach dem Zweiten Weltkrieg wuchs die Schweizer Wirtschaft kräftig. Es gab viel Arbeit
+      und viele Menschen konnten sich mehr leisten. Deshalb holten die Unternehmen viele Arbeitskräfte
+      aus dem Ausland, anfangs vor allem aus Italien.

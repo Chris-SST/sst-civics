@@ -1,0 +1,31 @@
+id: grundrecht-glaubens-gewissensfreiheit-schweiz
+lang: es
+source_version: 1
+question: ¿Qué derecho fundamental está protegido en Suiza por la Constitución Federal?
+options:
+  a: El derecho a recibir unos ingresos del Estado
+  b: El derecho a tener un coche
+  c: El derecho a un puesto de trabajo
+  d: La libertad de creencias y de conciencia
+explanation: La libertad de creencias y de conciencia figura en el artículo 15 de la Constitución Federal.
+  El Estado no puede obligar a nadie a profesar una creencia. Como derecho fundamental no existe un derecho
+  a un puesto de trabajo ni a unos ingresos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht ist in der Schweiz durch die Bundesverfassung geschützt?
+    options_de:
+      a: Das Recht, vom Staat ein Einkommen zu erhalten
+      b: Das Recht, ein Auto zu besitzen
+      c: Das Recht auf eine Arbeitsstelle
+      d: Die Glaubens- und Gewissensfreiheit
+    explanation_de: Die Glaubens- und Gewissensfreiheit steht in Artikel 15 der Bundesverfassung. Der
+      Staat kann niemanden dazu zwingen, einen Glauben zu bekennen. Als Grundrecht gibt es kein Recht
+      auf eine Arbeitsstelle und auch keines auf ein Einkommen.

@@ -1,0 +1,32 @@
+id: kind-krankenversicherung-frist-geburt
+lang: pt
+source_version: 1
+question: Em que prazo, a contar do nascimento, deve existir um seguro de saúde para uma criança residente
+  na Suíça?
+options:
+  a: no prazo de 12 meses
+  b: no prazo de 3 meses
+  c: no prazo de 14 dias
+  d: no prazo de 6 meses
+explanation: Os pais devem contratar um seguro de saúde para a criança no prazo de três meses após o nascimento.
+  Se o prazo for respeitado, a cobertura do seguro vigora retroativamente a partir do nascimento.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Innerhalb welcher Frist, gerechnet ab der Geburt, muss für ein in der Schweiz wohnhaftes
+      Kind eine Krankenversicherung bestehen?
+    options_de:
+      a: innerhalb von 12 Monaten
+      b: innerhalb von 3 Monaten
+      c: innerhalb von 14 Tagen
+      d: innerhalb von 6 Monaten
+    explanation_de: Die Eltern müssen innerhalb von drei Monaten nach der Geburt eine Krankenversicherung
+      für das Kind abschliessen. Wird die Frist eingehalten, gilt der Versicherungsschutz rückwirkend
+      ab der Geburt.

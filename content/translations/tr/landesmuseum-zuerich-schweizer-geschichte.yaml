@@ -1,0 +1,29 @@
+id: landesmuseum-zuerich-schweizer-geschichte
+lang: tr
+source_version: 1
+question: Zürih'teki Ulusal Müze'de (Landesmuseum) neler sergilenir?
+options:
+  a: İsviçre'nin tarihi
+  b: Demiryolunun tarihi
+  c: Alplerin doğa bilimi ve hayvan âlemi
+  d: Dünyanın dört bir yanından modern sanat
+explanation: Zürih Ulusal Müzesi, İsviçre'nin geçmişini ve kültür tarihini sergiler. İsviçre Ulusal Müzesi'ne
+  bağlıdır. Zürih Ana Garı'nın yanında yer alır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird im Landesmuseum in Zürich ausgestellt?
+    options_de:
+      a: Die Geschichte der Schweiz
+      b: Die Geschichte der Eisenbahn
+      c: Die Naturwissenschaft und die Tierwelt der Alpen
+      d: Moderne Kunst aus der ganzen Welt
+    explanation_de: Das Landesmuseum Zürich stellt die Vergangenheit und die Kulturgeschichte der Schweiz
+      aus. Es gehört zum Schweizerischen Nationalmuseum. Es befindet sich neben dem Zürcher Hauptbahnhof.

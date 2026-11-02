@@ -1,0 +1,31 @@
+id: bundesverwaltung-justiz-und-polizeidepartement
+lang: sq
+source_version: 1
+question: Cila nga njësitë e mëposhtme i përket administratës federale (Bundesverwaltung)?
+options:
+  a: Këshilli Kombëtar (Nationalrat)
+  b: Kuvendi Federal (Bundesversammlung)
+  c: Gjykata Federale (Bundesgericht)
+  d: Departamenti i Drejtësisë dhe i Policisë
+explanation: Administrata federale është e ndarë në departamente. Departamenti i Drejtësisë dhe i Policisë
+  është një prej tyre dhe i përket administratës që drejtohet nga Këshilli Federal (Bundesrat). Këshilli
+  Kombëtar dhe Kuvendi Federal i përkasin Parlamentit, ndërsa Gjykata Federale i përket gjyqësorit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Einheiten gehört zur Bundesverwaltung?
+    options_de:
+      a: Nationalrat
+      b: Bundesversammlung
+      c: Bundesgericht
+      d: Departement für Justiz und Polizei
+    explanation_de: Die Bundesverwaltung ist in Departemente gegliedert. Das Departement für Justiz und
+      Polizei ist eines davon und gehört zur Verwaltung, die vom Bundesrat geleitet wird. Der Nationalrat
+      und die Bundesversammlung gehören zum Parlament, während das Bundesgericht zur Justiz gehört.

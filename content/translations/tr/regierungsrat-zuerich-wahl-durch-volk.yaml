@@ -1,0 +1,33 @@
+id: regierungsrat-zuerich-wahl-durch-volk
+lang: tr
+source_version: 1
+question: 'Zürich kantonunda Hükümet Konseyi (Regierungsrat) üyelerini kimin belirlediği nasıl belirlenir?
+  Başka bir deyişle: Zürich kantonunda Hükümet Konseyi''nde kimin yer alacağına kim karar verir?'
+options:
+  a: Federal Meclis (Bundesversammlung), Hükümet Konseyi üyelerini seçer.
+  b: Kanton Konseyi (Kantonsrat), üyeleri kendi içinden seçer.
+  c: Belediye (Gemeinde) başkanları üyeleri seçer.
+  d: Kantonun oy hakkına sahip nüfusu üyeleri doğrudan seçer.
+explanation: Zürich kantonunda halk, Hükümet Konseyi'ni sandıkta doğrudan seçer. Kanton Konseyi parlamentodur
+  ve hükümeti seçmez. Bu durum kantonu, Federal Meclis'in Federal Konsey (Bundesrat) üyelerini seçtiği
+  Konfederasyon'dan ayırır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: 'Wie wird im Kanton Zürich bestimmt, wer die Mitglieder des Regierungsrates bestimmt?
+      Mit anderen Worten: Wer entscheidet im Kanton Zürich darüber, wer im Regierungsrat sitzen wird?'
+    options_de:
+      a: Die Bundesversammlung wählt die Mitglieder des Regierungsrates.
+      b: Der Kantonsrat wählt die Mitglieder aus seiner eigenen Mitte.
+      c: Die Gemeindepräsidenten wählen die Mitglieder.
+      d: Die stimmberechtigte Bevölkerung des Kantons wählt die Mitglieder direkt.
+    explanation_de: Im Kanton Zürich wählt das Volk den Regierungsrat an der Urne direkt. Der Kantonsrat
+      ist das Parlament und wählt die Regierung nicht. Dies unterscheidet den Kanton vom Bund, wo die
+      Bundesversammlung die Mitglieder des Bundesrates wählt.

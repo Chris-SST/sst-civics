@@ -1,0 +1,31 @@
+id: armee-zustaendigkeit-bund
+lang: it
+source_version: 1
+question: Quale livello dello Stato è competente per l'esercito?
+options:
+  a: I Cantoni
+  b: La Confederazione
+  c: I distretti
+  d: I Comuni (Gemeinden)
+explanation: Il settore militare è di competenza della Confederazione. Essa disciplina l'esercito e i
+  suoi compiti nella Costituzione federale e nelle leggi federali. I Cantoni collaborano all'esecuzione,
+  ad esempio nel reclutamento.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Staatsebene ist für die Armee zuständig?
+    options_de:
+      a: Die Kantone
+      b: Der Bund
+      c: Die Bezirke
+      d: Die Gemeinden
+    explanation_de: Das Militärwesen fällt in die Zuständigkeit des Bundes. Er regelt die Armee und ihre
+      Aufgaben in der Bundesverfassung und in den Bundesgesetzen. Die Kantone wirken beim Vollzug mit,
+      zum Beispiel bei der Rekrutierung.

@@ -1,0 +1,29 @@
+id: rav-aufgabe-stellensuchende-unterstuetzen
+lang: tr
+source_version: 1
+question: Bölgesel İş Bulma Merkezi'nin (RAV) görevi nedir?
+options:
+  a: İşletmelerdeki ücretleri denetler
+  b: Tüm sakinlere emekli maaşı öder
+  c: İş arayanlara iş aramada destek olur ve iş bulma aracılığı yapar
+  d: İş arayanlar için çalışma belgesi düzenler
+explanation: RAV, iş arayanlar için bölgesel başvuru merkezidir. Onlara danışmanlık sağlar ve iş bulma
+  aracılığı yapar. Zürih kantonunda Çalışma Dairesi'ne (Amt für Arbeit) bağlıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die Aufgabe des Regionalen Arbeitsvermittlungszentrums (RAV)?
+    options_de:
+      a: Es kontrolliert die Löhne in den Betrieben
+      b: Es zahlt allen Einwohnern eine Rente
+      c: Es unterstützt Stellensuchende bei der Stellensuche und vermittelt Arbeit
+      d: Es stellt für Stellensuchende eine Arbeitsbescheinigung aus
+    explanation_de: Das RAV ist die regionale Anlaufstelle für Stellensuchende. Es berät sie und vermittelt
+      Arbeit. Im Kanton Zürich ist es dem Amt für Arbeit unterstellt.

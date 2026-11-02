@@ -1,0 +1,35 @@
+id: obligatorische-schulzeit-dauer-schweiz
+lang: tr
+source_version: 2
+question: Zürich kantonunda anaokulu da sayıldığında zorunlu eğitim süresi kaç yıldır?
+options:
+  a: On bir yıl
+  b: On yıl
+  c: On iki yıl
+  d: Dokuz yıl
+explanation: 'Zürich kantonunda tüm çocuklar on bir yıl boyunca zorunlu olarak okula gider: iki yıl anaokulu,
+  altı yıl ilkokul (Primarschule) ve üç yıl ortaokul (Sekundarstufe I). Çoğu kanton bu süreyi HarmoS Konkordatosu
+  ile birleştirmiştir. Ancak bazı kantonlar konkordatoya katılmamıştır ve oralarda anaokulu kısmen yalnızca
+  bir yıl zorunludur.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie viele Jahre dauert die Schulpflicht im Kanton Zürich, wenn der Kindergarten mitgezählt
+      wird?
+    options_de:
+      a: Elf Jahre
+      b: Zehn Jahre
+      c: Zwölf Jahre
+      d: Neun Jahre
+    explanation_de: 'Im Kanton Zürich gehen alle Kinder während elf Jahren obligatorisch zur Schule: zwei
+      Jahre Kindergarten, sechs Jahre Primarschule (Primarschule) und drei Jahre Sekundarstufe (Sekundarstufe
+      I). Die meisten Kantone haben diese Dauer mit dem HarmoS-Konkordat vereinheitlicht. Einige Kantone
+      sind dem Konkordat jedoch nicht beigetreten, und dort ist der Kindergarten teilweise nur ein Jahr
+      obligatorisch.'

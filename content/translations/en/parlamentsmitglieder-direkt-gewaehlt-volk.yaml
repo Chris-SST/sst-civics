@@ -1,14 +1,33 @@
 id: parlamentsmitglieder-direkt-gewaehlt-volk
 lang: en
-source_version: 1
-question: Who determines the members of the National Council (Nationalrat)?
+source_version: 2
+question: Who elects the members of the National Council (Nationalrat)?
 options:
   a: The Federal Council (Bundesrat) appoints them.
-  b: The parties determine them without an election.
+  b: The parties decide on them without an election.
   c: The Federal Supreme Court (Bundesgericht) selects them.
-  d: Citizens who are entitled to vote elect them directly.
-explanation: The members of the National Council are elected directly by the people, every four years.
-  The members of the Council of States (Ständerat) are also elected by the people in almost all cantons.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  d: The citizens entitled to vote elect them directly.
+explanation: The members of the National Council are elected directly by the citizens entitled to vote
+  every four years. The members of the Council of States (Ständerat) are also elected by the people today
+  in all cantons, according to the rules of the respective canton; in Appenzell Innerrhoden, this takes
+  place at the Landsgemeinde.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer wählt die Mitglieder des Nationalrats?
+    options_de:
+      a: Der Bundesrat ernennt sie.
+      b: Die Parteien bestimmen sie ohne Wahl.
+      c: Das Bundesgericht wählt sie aus.
+      d: Die stimmberechtigten Bürgerinnen und Bürger wählen sie direkt.
+    explanation_de: Die Mitglieder des Nationalrats werden alle vier Jahre direkt von den stimmberechtigten
+      Bürgerinnen und Bürgern gewählt. Auch die Mitglieder des Ständerats werden heute in allen Kantonen
+      vom Volk gewählt, nach den Regeln des jeweiligen Kantons; in Appenzell Innerrhoden findet dies an
+      der Landsgemeinde statt.

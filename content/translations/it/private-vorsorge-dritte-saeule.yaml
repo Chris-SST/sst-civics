@@ -1,0 +1,29 @@
+id: private-vorsorge-dritte-saeule
+lang: it
+source_version: 1
+question: Che cosa costituisce in Svizzera il terzo pilastro della previdenza per la vecchiaia?
+options:
+  a: L'assicurazione obbligatoria contro gli infortuni
+  b: La previdenza privata
+  c: La cassa pensioni del datore di lavoro
+  d: Le prestazioni complementari
+explanation: Il terzo pilastro è la previdenza privata, ad esempio il risparmio vincolato. È facoltativa
+  e integra i primi due pilastri.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bildet in der Schweiz die dritte Säule der Altersvorsorge?
+    options_de:
+      a: Die obligatorische Unfallversicherung
+      b: Die private Vorsorge
+      c: Die Pensionskasse des Arbeitgebers
+      d: Die Ergänzungsleistungen
+    explanation_de: Die dritte Säule ist die private Vorsorge, zum Beispiel das gebundene Sparen. Sie
+      ist freiwillig und ergänzt die ersten beiden Säulen.

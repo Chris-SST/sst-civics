@@ -1,0 +1,33 @@
+id: bilaterale-eins-basis-eu-beziehungen
+lang: pt
+source_version: 1
+question: Quais tratados, aprovados pelo povo em 2000, constituem a base das relações actuais da Suíça
+  com a UE?
+options:
+  a: Os Acordos Bilaterais I
+  b: O tratado do EEE
+  c: O tratado de Schengen isoladamente
+  d: O tratado de adesão à UE
+explanation: O eleitorado aprovou os Acordos Bilaterais I em 2000. Estes regulam o acesso a determinados
+  sectores do mercado interno, por exemplo a livre circulação de pessoas e os transportes terrestres.
+  O povo não tinha aprovado o EEE em 1992.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Verträge, die 2000 vom Volk angenommen wurden, bilden die Grundlage der aktuellen
+      Beziehungen der Schweiz zur EU?
+    options_de:
+      a: Die Bilateralen Abkommen I
+      b: Der EWR-Vertrag
+      c: Der Schengen-Vertrag allein
+      d: Der Vertrag über den Beitritt zur EU
+    explanation_de: Die Stimmberechtigten haben die Bilateralen Abkommen I im Jahr 2000 angenommen. Diese
+      regeln den Zugang zu bestimmten Sektoren des Binnenmarkts, zum Beispiel die Personenfreizügigkeit
+      und den Landverkehr. Das Volk hatte den EWR 1992 nicht angenommen.

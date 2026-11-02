@@ -10,6 +10,22 @@ options:
 explanation: The canton of Zürich is a full canton and has two seats in the Council of States. The members
   of the Council of States are elected by the voters of the canton. Only the half-cantons have one representative
   each.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Vertreter schickt der Kanton Zürich in den Ständerat?
+    options_de:
+      a: Einen Vertreter
+      b: Vier Vertreter
+      c: Sechs Vertreter
+      d: Zwei Vertreter
+    explanation_de: Der Kanton Zürich ist ein Vollkanton und hat zwei Sitze im Ständerat. Die Mitglieder
+      des Ständerats werden von den Stimmberechtigten des Kantons gewählt. Nur die Halbkantone haben je
+      einen Vertreter.

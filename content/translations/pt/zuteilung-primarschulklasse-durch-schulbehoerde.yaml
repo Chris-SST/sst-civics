@@ -1,0 +1,31 @@
+id: zuteilung-primarschulklasse-durch-schulbehoerde
+lang: pt
+source_version: 1
+question: Quem decide, no cantão de Zurique, a que turma do ensino primário uma criança é atribuída?
+options:
+  a: O conselho escolar (Schulpflege) ou a direção da escola
+  b: O departamento da educação da Confederação
+  c: A assembleia municipal (Gemeindeversammlung)
+  d: Os pais da criança
+explanation: O conselho escolar ou a direção da escola atribui as crianças às turmas. Os pais não podem
+  escolher livremente a turma. Assim, a escola organiza o seu funcionamento e o tamanho das turmas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet im Kanton Zürich, welcher Klasse der Primarschule ein Kind zugeteilt
+      wird?
+    options_de:
+      a: Die Schulpflege oder die Schulleitung
+      b: Das Bildungsdepartement des Bundes
+      c: Die Gemeindeversammlung
+      d: Die Eltern des Kindes
+    explanation_de: Die Schulpflege oder die Schulleitung teilt die Kinder den Klassen zu. Die Eltern
+      können die Klasse nicht frei wählen. So organisiert die Schule ihren Betrieb und die Grösse der
+      Klassen.

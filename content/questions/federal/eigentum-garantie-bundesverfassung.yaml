@@ -21,7 +21,7 @@ glossary:
 - Eigentumsgarantie
 - Grundrecht
 - Bundesverfassung
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-085
@@ -43,3 +43,34 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte zusätzlich Artikel 36 nennen, damit klar ist, woher die Regel zur
+        gesetzlichen Grundlage stammt, zum Beispiel: «Nach Artikel 36 braucht jede Einschränkung eine
+        gesetzliche Grundlage.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Wort «Vermögenswerte» ist für Niveau B1 eher schwierig; man könnte stattdessen «Häuser,
+        Land und anderen Besitz» schreiben.'
+      - 'Klein: Die Erklärung könnte zusätzlich nennen, dass eine Einschränkung im öffentlichen Interesse
+        liegen und verhältnismässig sein muss (Art. 36 BV); so werden die Voraussetzungen vollständiger.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Wort «Vermögenswerte» ist für Niveau B1 etwas schwierig; einfacher wäre «Häuser, Grundstücke
+        und anderes Eigentum von Privatpersonen».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

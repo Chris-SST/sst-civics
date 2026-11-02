@@ -1,15 +1,33 @@
 id: alfred-escher-eth-eisenbahn-bank
 lang: en
-source_version: 1
+source_version: 2
 question: What is the Zurich politician and entrepreneur Alfred Escher known for?
 options:
   a: He led the Swiss troops in the Sonderbund War.
-  b: He wrote the first Federal Constitution on his own.
+  b: He wrote the first Federal Constitution entirely on his own.
   c: He founded the Red Cross in Geneva.
-  d: He was involved in the ETH, the building of the railways and the founding of Credit Suisse.
-explanation: In the 19th century, Alfred Escher promoted the founding of ETH Zurich and the building of
-  the railways, especially the Gotthard Railway. He also founded the Swiss Credit Institution (Schweizerische
-  Kreditanstalt), today's Credit Suisse. He is regarded as a visionary of modern Switzerland.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  d: He promoted the ETH and the construction of the railways, and founded the bank that became Credit
+    Suisse.
+explanation: In the 19th century, Alfred Escher campaigned for the founding of ETH Zurich and for the
+  construction of railways, above all the Gotthard railway. In 1856 he founded the Schweizerische Kreditanstalt
+  (Swiss Credit Institution), which later became Credit Suisse. This bank was taken over by UBS in 2023.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür ist der Zürcher Politiker und Unternehmer Alfred Escher bekannt?
+    options_de:
+      a: Er führte die Schweizer Truppen im Sonderbundskrieg an.
+      b: Er schrieb die erste Bundesverfassung ganz allein.
+      c: Er gründete das Rote Kreuz in Genf.
+      d: Er förderte die ETH und den Bau der Eisenbahnen und gründete die Bank, aus der die Credit Suisse
+        wurde.
+    explanation_de: Im 19. Jahrhundert setzte sich Alfred Escher für die Gründung der ETH Zürich und für
+      den Bau von Eisenbahnen ein, vor allem der Gotthardbahn. 1856 gründete er die Schweizerische Kreditanstalt,
+      die später zur Credit Suisse wurde. Diese Bank wurde 2023 von der UBS übernommen.

@@ -1,0 +1,32 @@
+id: eigentum-garantie-bundesverfassung
+lang: tr
+source_version: 1
+question: İsviçre'de özel kişilerin evlerini, arazilerini ve diğer mal varlıklarını hangi temel hak korur?
+options:
+  a: Mülkiyet güvencesi
+  b: İnanç ve vicdan özgürlüğü
+  c: İskân özgürlüğü (yerleşme özgürlüğü)
+  d: Toplanma özgürlüğü
+explanation: Federal Anayasa (Bundesverfassung), mülkiyeti 26. maddede güvence altına alır. Devlet mülkiyeti
+  yalnızca belirli koşullar altında sınırlandırabilir; örneğin kamulaştırma durumunda yasal bir dayanak
+  ve tam tazminat gereklidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht schützt in der Schweiz die Häuser, das Land und das übrige Vermögen
+      von Privatpersonen?
+    options_de:
+      a: Eigentumsgarantie
+      b: Glaubens- und Gewissensfreiheit
+      c: Niederlassungsfreiheit
+      d: Versammlungsfreiheit
+    explanation_de: Die Bundesverfassung gewährleistet das Eigentum in Artikel 26. Der Staat darf das
+      Eigentum nur unter bestimmten Bedingungen einschränken; zum Beispiel sind im Fall einer Enteignung
+      eine gesetzliche Grundlage und volle Entschädigung erforderlich.

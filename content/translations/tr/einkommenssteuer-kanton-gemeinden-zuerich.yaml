@@ -1,0 +1,32 @@
+id: einkommenssteuer-kanton-gemeinden-zuerich
+lang: tr
+source_version: 1
+question: Zürich kantonu ve belediyeleri (Gemeinde), kişilerin maaşı ve diğer gelirleri üzerinden hangi
+  önemli vergiyi alır?
+options:
+  a: Gelir vergisi
+  b: Miras vergisi
+  c: Köpek vergisi
+  d: Motorlu taşıt vergisi
+explanation: Gelir vergisi, kanton ve belediyelerin en önemli vergilerinden biridir. Gerçek kişilerin
+  geliri üzerinden alınır. Diğer vergiler daha az önemlidir veya başka bir şeyi kapsar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche wichtige Steuer erhebt der Kanton Zürich und seine Gemeinden auf das Gehalt und
+      andere Einkünfte von Personen?
+    options_de:
+      a: Einkommenssteuer
+      b: Erbschaftssteuer
+      c: Hundesteuer
+      d: Motorfahrzeugsteuer
+    explanation_de: Die Einkommenssteuer ist eine der wichtigsten Steuern der Kantone und Gemeinden. Sie
+      wird auf das Einkommen natürlicher Personen erhoben. Die anderen Steuern sind weniger wichtig oder
+      betreffen etwas anderes.

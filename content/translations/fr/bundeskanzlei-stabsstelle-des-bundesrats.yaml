@@ -1,0 +1,32 @@
+id: bundeskanzlei-stabsstelle-des-bundesrats
+lang: fr
+source_version: 1
+question: Quelle est la tâche de la Chancellerie fédérale (Bundeskanzlei) pour le Conseil fédéral (Bundesrat)
+  ?
+options:
+  a: Elle est l'état-major du Conseil fédéral.
+  b: Elle examine les décisions du Conseil fédéral en tant que tribunal.
+  c: Elle dirige le Département des finances.
+  d: Elle élit les membres du Conseil fédéral.
+explanation: La Chancellerie fédérale soutient le Conseil fédéral dans son travail, par exemple dans la
+  préparation des séances. Elle est placée sous la direction de la chancelière ou du chancelier de la
+  Confédération. Le Conseil fédéral est élu par l'Assemblée fédérale (Bundesversammlung).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die Aufgabe der Bundeskanzlei für den Bundesrat?
+    options_de:
+      a: Sie ist der Stab des Bundesrates.
+      b: Sie prüft die Entscheide des Bundesrates als Gericht.
+      c: Sie leitet das Finanzdepartement.
+      d: Sie wählt die Mitglieder des Bundesrates.
+    explanation_de: Die Bundeskanzlei unterstützt den Bundesrat bei seiner Arbeit, zum Beispiel bei der
+      Vorbereitung der Sitzungen. Sie steht unter der Leitung der Bundeskanzlerin oder des Bundeskanzlers.
+      Der Bundesrat wird von der Bundesversammlung gewählt.

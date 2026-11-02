@@ -1,0 +1,32 @@
+id: zulassung-motorfahrzeuge-kantonales-strassenverkehrsamt
+lang: es
+source_version: 1
+question: ¿Quién autoriza en el cantón de Zúrich la circulación de un vehículo de motor por la vía pública
+  y entrega para ello las placas de matrícula?
+options:
+  a: La policía cantonal durante un control de tráfico
+  b: La oficina de tráfico vial del cantón
+  c: El Touring Club Suiza
+  d: La administración del municipio (Gemeinde) del lugar de residencia
+explanation: La autorización de los vehículos de motor es competencia de la oficina cantonal de tráfico
+  vial. Esta también entrega las placas de matrícula. El municipio y la policía no son competentes para
+  ello.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer lässt im Kanton Zürich den Verkehr eines Motorfahrzeugs auf der öffentlichen Strasse
+      zu und gibt dafür die Kontrollschilder ab?
+    options_de:
+      a: Die Kantonspolizei bei einer Verkehrskontrolle
+      b: Das Strassenverkehrsamt des Kantons
+      c: Der Touring Club Schweiz
+      d: Die Verwaltung der Gemeinde des Wohnorts
+    explanation_de: Die Zulassung von Motorfahrzeugen ist Aufgabe des kantonalen Strassenverkehrsamts.
+      Dieses gibt auch die Kontrollschilder ab. Die Gemeinde und die Polizei sind dafür nicht zuständig.

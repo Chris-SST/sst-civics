@@ -9,6 +9,21 @@ options:
   d: The carnival participants throw confetti from the Minster tower and ring all the church bells.
 explanation: The Morgestraich begins on the Monday after Ash Wednesday at four o'clock in the morning.
   The lights in the streets are then put out. After that, the playing of piccolos and drums begins.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was geschieht beim Morgestraich, dem Beginn der Basler Fasnacht?
+    options_de:
+      a: Der Stadtpräsident übergibt der Fasnachtsgesellschaft den Schlüssel zur Stadt.
+      b: Die Strassen werden hell beleuchtet und ein Feuerwerk beginnt.
+      c: Die Lichter in den Strassen gehen aus, dann beginnen Piccolos und Trommeln zu spielen.
+      d: Die Fasnachtsteilnehmer werfen vom Münsterturm Konfetti und läuten alle Kirchenglocken.
+    explanation_de: Der Morgestraich beginnt am Montag nach Aschermittwoch um vier Uhr morgens. Die Lichter
+      in den Strassen werden dann gelöscht. Danach beginnt das Spielen von Piccolos und Trommeln.

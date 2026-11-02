@@ -1,0 +1,30 @@
+id: reformation-neue-christliche-richtung
+lang: sq
+source_version: 1
+question: Cili drejtim i krishterimit lindi nga Reformacioni në shekullin e 16-të?
+options:
+  a: Krishterimi koptik
+  b: Krishterimi romako-katolik
+  c: Krishterimi ortodoks
+  d: Krishterimi protestant
+explanation: Reformacioni ishte një lëvizje ripërtëritjeje brenda Kishës së Mesjetës. Prej tij lindi krishterimi
+  protestant. Në Cyrih veproi në këtë kontekst Huldrych Zwingli.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Richtung des Christentums entstand aus der Reformation im 16. Jahrhundert?
+    options_de:
+      a: Das koptische Christentum
+      b: Das römisch-katholische Christentum
+      c: Das orthodoxe Christentum
+      d: Das protestantische Christentum
+    explanation_de: Die Reformation war eine Erneuerungsbewegung innerhalb der Kirche des Mittelalters.
+      Aus ihr entstand das protestantische Christentum. In Zürich wirkte in diesem Zusammenhang Huldrych
+      Zwingli.

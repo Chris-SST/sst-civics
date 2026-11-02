@@ -1,0 +1,31 @@
+id: bund-spitze-dreistufiger-staatsaufbau
+lang: es
+source_version: 2
+question: Suiza está organizada en tres niveles estatales. ¿Cuál es el nivel superior?
+options:
+  a: Los municipios (Gemeinden)
+  b: La Confederación
+  c: Los cantones
+  d: Los distritos
+explanation: La Confederación es el nivel superior de los tres niveles estatales. Por debajo están los
+  cantones y después los municipios. Los distritos no son un nivel estatal propio, sino que en algunos
+  cantones son únicamente unidades administrativas dentro del cantón.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Die Schweiz ist in drei staatliche Ebenen gegliedert. Welches ist die oberste Ebene?
+    options_de:
+      a: Die Gemeinden
+      b: Der Bund
+      c: Die Kantone
+      d: Die Bezirke
+    explanation_de: Der Bund ist die oberste der drei staatlichen Ebenen. Darunter befinden sich die Kantone
+      und danach die Gemeinden. Die Bezirke sind keine eigene staatliche Ebene, sondern in einigen Kantonen
+      lediglich Verwaltungseinheiten innerhalb des Kantons.

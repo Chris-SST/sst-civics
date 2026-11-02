@@ -1,0 +1,31 @@
+id: bundeshaus-bern-sitz-parlament
+lang: sq
+source_version: 1
+question: Cila ndërtesë në Bernë është vendi i mbledhjeve të Parlamentit të Zvicrës?
+options:
+  a: Kornhaus
+  b: Rathaus (Bashkia)
+  c: Gjykata Administrative e Konfederatës
+  d: Bundeshaus (Pallati Federal)
+explanation: Parlamenti i Zvicrës mblidhet në Bundeshaus në Bernë. Aty takohen Këshilli Kombëtar dhe Këshilli
+  i Shteteve (Ständerat) për sesionet e tyre. Rathaus është një ndërtesë e kantonit të Bernës ose e qytetit,
+  jo e parlamentit të Konfederatës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gebäude in Bern ist der Sitzungsort des Schweizer Parlaments?
+    options_de:
+      a: Kornhaus
+      b: Rathaus
+      c: Bundesverwaltungsgericht
+      d: Bundeshaus
+    explanation_de: Das Schweizer Parlament tagt im Bundeshaus in Bern. Dort treffen sich der Nationalrat
+      und der Ständerat zu ihren Sessionen. Das Rathaus ist ein Gebäude des Kantons Bern oder der Stadt,
+      nicht des Parlaments der Eidgenossenschaft.

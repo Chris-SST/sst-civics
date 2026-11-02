@@ -1,0 +1,32 @@
+id: rechtsgleichheit-gesetz-fuer-alle
+lang: tr
+source_version: 1
+question: Hukuki eşitlik ilkesi ne anlama gelir?
+options:
+  a: Tüm kantonlar aynı yasalara sahiptir.
+  b: Tüm kişiler aynı siyasi görevlere sahiptir.
+  c: Tüm kişiler aynı gelire sahiptir.
+  d: Yasa tüm kişiler için eşit şekilde geçerlidir.
+explanation: Hukuki eşitlik, Federal Anayasa'nın (Bundesverfassung) 8. maddesinde yer alır. Tüm insanlar
+  yasa önünde eşittir ve hiç kimse örneğin kökeni veya cinsiyeti nedeniyle ayrımcılığa uğratılamaz. Bu,
+  herkesin aynı miktarda mal varlığına sahip olduğu anlamına gelmez.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort b: «politischen Ämter» wurde zu «politischen Aufgaben», das ist eine andere Bedeutung.
+      Die übrigen Stellen sind gleich.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Was bedeutet der Grundsatz der Rechtsgleichheit?
+    options_de:
+      a: Alle Kantone haben dieselben Gesetze.
+      b: Alle Personen haben dieselben politischen Aufgaben.
+      c: Alle Personen haben dasselbe Einkommen.
+      d: Das Gesetz gilt für alle Personen gleichermassen.
+    explanation_de: Die Rechtsgleichheit ist in Artikel 8 der Bundesverfassung verankert. Alle Menschen
+      sind vor dem Gesetz gleich, und niemand darf zum Beispiel wegen der Herkunft oder des Geschlechts
+      diskriminiert werden. Das bedeutet nicht, dass alle gleich viel Vermögen haben.

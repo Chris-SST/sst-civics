@@ -1,0 +1,31 @@
+id: schwangerschaft-kuendigungsschutz-arbeitnehmerin
+lang: es
+source_version: 1
+question: ¿Qué se aplica a las trabajadoras embarazadas en Suiza en caso de despido?
+options:
+  a: Solo tienen protección contra el despido en las empresas con convenio colectivo de trabajo
+  b: Gozan de protección legal contra el despido durante el embarazo
+  c: Deben comunicar su embarazo al empleador de inmediato; de lo contrario, la protección caduca
+  d: Pueden ser despedidas en cualquier momento y sin ninguna restricción
+explanation: La ley protege a las mujeres contra el despido por parte del empleador durante el embarazo.
+  La protección se aplica independientemente de la empresa. Su objetivo es dar seguridad a las mujeres
+  en ese período.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in der Schweiz für schwangere Arbeitnehmerinnen im Falle einer Kündigung?
+    options_de:
+      a: Sie haben nur in Betrieben mit Gesamtarbeitsvertrag Kündigungsschutz
+      b: Sie geniessen während der Schwangerschaft gesetzlichen Schutz vor Kündigung
+      c: Sie müssen ihre Schwangerschaft dem Arbeitgeber sofort mitteilen; andernfalls erlischt der Schutz
+      d: Sie können jederzeit und ohne jede Einschränkung entlassen werden
+    explanation_de: Das Gesetz schützt Frauen während der Schwangerschaft vor der Kündigung durch den
+      Arbeitgeber. Der Schutz gilt unabhängig vom Betrieb. Sein Ziel ist es, den Frauen in dieser Zeit
+      Sicherheit zu geben.

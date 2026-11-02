@@ -1,0 +1,29 @@
+id: uhrmacherei-schweizer-spitzenbranche
+lang: tr
+source_version: 1
+question: İsviçre uzun zamandır hangi ekonomi sektöründe uluslararası alanda ilk sıralarda yer almaktadır?
+options:
+  a: Tekstil sanayii
+  b: Gemi inşası
+  c: Otomobil üretimi
+  d: Saatçilik
+explanation: İsviçre saatleri kalitesiyle dünya çapında tanınır. Saatçilik İsviçre'de uzun bir geleneğe
+  sahiptir ve bugün de önemli bir ihracat sektörüdür.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Wirtschaftssektor gehört die Schweiz seit langem international zu den Spitzenreitern?
+    options_de:
+      a: Textilindustrie
+      b: Schiffbau
+      c: Automobilproduktion
+      d: Uhrenindustrie
+    explanation_de: Schweizer Uhren sind weltweit für ihre Qualität bekannt. Die Uhrmacherei hat in der
+      Schweiz eine lange Tradition und ist auch heute ein wichtiger Exportsektor.

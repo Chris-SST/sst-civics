@@ -23,7 +23,7 @@ glossary:
 - Primarschule
 - Volksschule
 - Gemeinde
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-203
@@ -47,3 +47,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung spricht von der «Volksschule», die Frage aber von der «Primarschule»; besser
+        einen kurzen Satz ergänzen wie «Die Primarschule gehört zur Volksschule.»'
+      - 'Klein: Die drei falschen Antworten beginnen alle mit «Nur» und die richtige nicht, das verrät
+        die Lösung leicht; zum Beispiel könnte man eine falsche Antwort wie «Der Bund und der Kanton gemeinsam»
+        verwenden.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Drei falsche Antworten beginnen mit «Nur», die richtige nicht; dieses Muster verrät die
+        Lösung, daher «Nur» weglassen oder auch eine falsche Antwort mit zwei Trägern formulieren, etwa
+        «Der Bund und die Kantone gemeinsam».'
+      - 'Klein: Die Erklärung sagt nichts zur Finanzierung, obwohl die Frage danach fragt; ergänzen, zum
+        Beispiel: «Kanton und Gemeinden teilen sich auch die Kosten, etwa für die Löhne der Lehrpersonen.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte mit einem konkreten Beispiel noch hilfreicher sein, etwa: Der Kanton
+        zahlt 20 Prozent der Löhne der Lehrpersonen, die Gemeinden tragen den Rest und führen die Schulen.'
+      - 'Klein: Die Frage sagt «Primarschule», die Erklärung spricht von «Volksschule». Ein kurzer Hinweis,
+        dass die Primarschule zur Volksschule gehört, würde Lernenden helfen.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

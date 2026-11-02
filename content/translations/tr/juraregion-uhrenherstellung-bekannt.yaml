@@ -1,0 +1,29 @@
+id: juraregion-uhrenherstellung-bekannt
+lang: tr
+source_version: 1
+question: İsviçre'deki Jura bölgesi ekonomik açıdan neyle ünlüdür?
+options:
+  a: İlaç sanayisiyle
+  b: Büyük bankalarla
+  c: Zürih Gölü kıyısındaki bağcılıkla
+  d: Saat üretimiyle
+explanation: Jura Yayı'nda birçok tanınmış saat firmasının merkezi ve atölyeleri bulunmaktadır. Bu nedenle
+  bölge, İsviçre saat sanayisinin bir merkezidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür ist die Region Jura in der Schweiz wirtschaftlich berühmt?
+    options_de:
+      a: Für die Pharmaindustrie
+      b: Für die Grossbanken
+      c: Für den Weinbau am Ufer des Zürichsees
+      d: Für die Uhrenproduktion
+    explanation_de: Im Jurabogen befinden sich die Hauptsitze und Werkstätten vieler bekannter Uhrenfirmen.
+      Deshalb ist die Region ein Zentrum der Schweizer Uhrenindustrie.

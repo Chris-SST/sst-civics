@@ -19,7 +19,7 @@ glossary:
 - AHV
 - Dreisäulensystem
 - Pensionskasse
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-137
@@ -41,3 +41,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage spricht vom «Pfeiler», die Erklärung aber von der «Säule»; ergänzen Sie in der
+        Erklärung zum Beispiel «Die AHV bildet die erste Säule (den ersten Pfeiler)», damit Lernende die
+        beiden Begriffe verbinden können.'
+      - 'Klein: Laut BSV gehört neben der AHV auch die IV zur ersten Säule; die Erklärung könnte ergänzen:
+        «Zur ersten Säule gehören die AHV und die IV.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage spricht vom «ersten Pfeiler», die Erklärung von der «ersten Säule»; besser in
+        der Erklärung einmal sagen, dass beide Wörter dasselbe meinen, z. B. «Die AHV bildet die erste
+        Säule (der erste Pfeiler) …».'
+      - 'Klein: Das Wort «staatliche» in Antwort b verrät die Lösung leicht; man könnte einfach «Die AHV»
+        schreiben.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage verwendet «Pfeiler», die Erklärung dagegen «Säule»; für Lernende ist es besser,
+        beide Begriffe zu nennen, zum Beispiel «erste Säule (erster Pfeiler)».'
+      - 'Klein: Die Erklärung könnte erwähnen, dass zur ersten Säule auch die IV gehört, damit klar ist,
+        dass «staatlich» mehr als nur die AHV meint.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

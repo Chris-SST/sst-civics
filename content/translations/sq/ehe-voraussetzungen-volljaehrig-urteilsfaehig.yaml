@@ -1,0 +1,31 @@
+id: ehe-voraussetzungen-volljaehrig-urteilsfaehig
+lang: sq
+source_version: 1
+question: Cilat kushte duhet të plotësojnë personat që të mund të martohen në Zvicër?
+options:
+  a: Ata duhet të kenë shtetësinë zvicerane (Bürgerrecht) dhe të jenë madhorë
+  b: Ata duhet të jenë madhorë dhe të jenë në gjendje të veprojnë me arsye
+  c: Ata duhet të jetojnë së bashku për të paktën pesë vjet
+  d: Ata duhet t'i përkasin së njëjtës fe
+explanation: Mund të martohet ai që është madhor dhe i aftë për të gjykuar. I aftë për të gjykuar do të
+  thotë që person mund të veprojë me arsye. Shtetësia, feja ose një kohëzgjatje e caktuar e jetesës së
+  përbashkët nuk janë kusht.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Voraussetzungen müssen Personen erfüllen, damit sie in der Schweiz heiraten können?
+    options_de:
+      a: Sie müssen das Schweizer Bürgerrecht haben und volljährig sein
+      b: Sie müssen volljährig sein und vernunftgemäss handeln können
+      c: Sie müssen mindestens fünf Jahre zusammenleben
+      d: Sie müssen derselben Religion angehören
+    explanation_de: Heiraten kann, wer volljährig und urteilsfähig ist. Urteilsfähig bedeutet, dass die
+      Person vernunftgemäss handeln kann. Die Staatsangehörigkeit, die Religion oder eine bestimmte Dauer
+      des Zusammenlebens sind keine Voraussetzung.

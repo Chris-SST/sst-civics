@@ -1,0 +1,32 @@
+id: textilindustrie-fruehe-industrialisierung-schweiz
+lang: es
+source_version: 1
+question: ¿Qué sector económico fue el más importante durante la primera industrialización de Suiza?
+options:
+  a: La industria relojera
+  b: La industria farmacéutica
+  c: La industria textil
+  d: La industria de maquinaria
+explanation: En la primera industrialización, la industria textil marcó la economía suiza, por ejemplo
+  con hilanderías, tejedurías y bordados. Un ejemplo conocido son los bordados de San Galo, que eran muy
+  demandados en todo el mundo. Otros sectores no adquirieron tanta importancia hasta más tarde.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Wirtschaftssektor war während der ersten Industrialisierung der Schweiz der wichtigste?
+    options_de:
+      a: Die Uhrenindustrie
+      b: Die pharmazeutische Industrie
+      c: Die Textilindustrie
+      d: Die Maschinenindustrie
+    explanation_de: In der ersten Industrialisierung prägte die Textilindustrie die Schweizer Wirtschaft,
+      zum Beispiel mit Spinnereien, Webereien und Stickereien. Ein bekanntes Beispiel sind die St. Galler
+      Stickereien, die auf der ganzen Welt sehr gefragt waren. Andere Sektoren erlangten erst später so
+      grosse Bedeutung.

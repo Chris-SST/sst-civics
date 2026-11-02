@@ -1,0 +1,33 @@
+id: gewaltmonopol-des-staates
+lang: sq
+source_version: 2
+question: Kush ka të drejtë, në parim, të përdorë forcë fizike në Zvicër?
+options:
+  a: Firmat private të sigurisë me porosi të shoqatave
+  b: Çdo person që ndihet i kërcënuar
+  c: Vetëm shteti
+  d: Çdo komunë (Gemeinde) me milici qytetare të veta
+explanation: 'Në Zvicër shteti ka monopolin e dhunës: në parim vetëm ai ka të drejtë të përdorë forcë
+  fizike, për shembull nëpërmjet policisë ose ushtrisë. Një përjashtim është vetëmbrojtja: kush sulmohet
+  në mënyrë të kundraligjshme, ka të drejtë të mbrohet në mënyrë të përshtatshme, por vetëm ndjenja e
+  të qenit i kërcënuar nuk mjafton për këtë.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer hat in der Schweiz grundsätzlich das Recht, körperliche Gewalt anzuwenden?
+    options_de:
+      a: Private Sicherheitsfirmen im Auftrag von Vereinen
+      b: Jede Person, die sich bedroht fühlt
+      c: Nur der Staat
+      d: Jede Gemeinde mit eigenen Bürgermilizen
+    explanation_de: 'In der Schweiz hat der Staat das Gewaltmonopol: Grundsätzlich hat nur er das Recht,
+      körperliche Gewalt anzuwenden, zum Beispiel durch die Polizei oder die Armee. Eine Ausnahme ist
+      die Selbstverteidigung: Wer widerrechtlich angegriffen wird, hat das Recht, sich angemessen zu verteidigen,
+      aber das blosse Gefühl, bedroht zu sein, genügt dafür nicht.'

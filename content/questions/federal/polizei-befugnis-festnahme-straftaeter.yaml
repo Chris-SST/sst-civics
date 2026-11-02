@@ -1,18 +1,19 @@
 id: polizei-befugnis-festnahme-straftaeter
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.gerichte
-question_de: Wer ist befugt, mutmassliche Straftäter festzunehmen?
+question_de: Welche Stelle darf Personen festnehmen, die verdächtigt werden, eine Straftat begangen zu
+  haben?
 options_de:
   a: Die Schulbehörde
   b: Die Polizei
   c: Das Parlament
   d: Das Steueramt
 correct: b
-explanation_de: Die Polizei darf Personen, die verdächtigt werden, eine Straftat begangen zu haben, unter
-  den gesetzlichen Voraussetzungen festnehmen. Über eine Verurteilung entscheidet danach ein Gericht.
-  Andere Behörden haben diese Befugnis nicht.
+explanation_de: Die Polizei darf Personen, die einer Straftat verdächtigt werden, unter den gesetzlichen
+  Voraussetzungen festnehmen. Ob jemand schuldig ist, entscheidet danach ein Gericht. Die Schulbehörde,
+  das Parlament und das Steueramt haben diese Befugnis nicht.
 sources:
 - url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2010/267/20250401/de/html/fedlex-data-admin-ch-eli-cc-2010-267-20250401-de-html-4.html
   checked: &id001 2026-11-02
@@ -24,7 +25,7 @@ glossary:
 - Polizei
 - Festnahme
 - Straftäter
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-073
@@ -34,15 +35,47 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Die Polizei ist als Strafverfolgungsbehörde befugt, mutmassliche Straftäter vorläufig festzunehmen,
-      während Schulbehörde, Parlament und Steueramt dafür keine Befugnis haben.
+    version: 2
+    reasoning: Die Polizei ist die staatliche Stelle, die nach der Strafprozessordnung Tatverdächtige
+      vorläufig festnehmen darf, während Schulbehörde, Parlament und Steueramt dazu keine Befugnis haben.
   source:
     verdict: supported
-    note: 'Quelle 1 (StPO) sagt: «Die Polizei stellt nach der Festnahme unverzüglich die Identität der
-      festgenommenen Person fest … informiert die Staatsanwaltschaft», also nimmt die Polizei Personen
-      fest. Private dürfen nur vorläufig festnehmen, wenn polizeiliche Hilfe nicht rechtzeitig erlangt
-      werden kann. Quelle 2 bestätigt, dass nur das Gericht bestraft.'
+    note: 'Quelle 1 (StPO) nennt die Polizei als Strafbehörde und regelt ihre Befugnisse bei Festnahmen:
+      Sie informiert nach der Festnahme die festgenommene Person über die Gründe und meldet sie der Staatsanwaltschaft.
+      Quelle 2 stützt den Gerichtsteil der Erklärung (nur das Gericht bestraft). Schulbehörde, Parlament
+      und Steueramt haben nach den Quellen keine solche Befugnis.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falschen Antworten (Schulbehörde, Parlament, Steueramt) sind sehr leicht als falsch
+        zu erkennen; eine plausiblere Antwort wie «Die Gemeindeverwaltung» würde die Frage etwas anspruchsvoller
+        machen, ohne sie mehrdeutig zu machen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falschen Antworten sind sehr leicht auszuschliessen; als plausiblere Ablenker könnten
+        etwa «Das Betreibungsamt» oder «Der Gemeinderat» dienen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte den Satz «Ob jemand schuldig ist, entscheidet danach ein Gericht»
+        noch mit der Broschüre verbinden (nur das Gericht darf bestrafen), das ist aber nicht nötig.'
+      - 'Klein: Streng genommen darf nach der Strafprozessordnung auch die Staatsanwaltschaft Personen
+        festnehmen, doch von den vier Antworten kommt nur die Polizei in Frage, deshalb ist die Frage
+        eindeutig.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

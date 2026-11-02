@@ -1,0 +1,31 @@
+id: glaubensfreiheit-religion-ueberzeugung-leben
+lang: es
+source_version: 1
+question: ¿Qué comprende la libertad de creencia y de conciencia según la Constitución Federal?
+options:
+  a: El derecho a tener una creencia y una convicción y a vivir de acuerdo con ellas
+  b: Únicamente la pertenencia a una Iglesia cantonal reconocida
+  c: La obligación de mantener la fe de los padres
+  d: El derecho a obligar a otras personas a adoptar la propia creencia
+explanation: Toda persona puede elegir libremente su religión y su convicción filosófica o ideológica,
+  y vivir de acuerdo con ellas. También se puede cambiar de creencia o no tener ninguna. Nadie puede ser
+  obligado a adoptar una creencia.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was umfasst die Glaubens- und Gewissensfreiheit gemäss der Bundesverfassung?
+    options_de:
+      a: Das Recht, einen Glauben und eine Überzeugung zu haben und entsprechend diesen zu leben
+      b: Ausschliesslich die Zugehörigkeit zu einer anerkannten kantonalen Kirche
+      c: Die Pflicht, den Glauben der Eltern beizubehalten
+      d: Das Recht, andere Personen zu zwingen, den eigenen Glauben anzunehmen
+    explanation_de: Jede Person kann ihre Religion und ihre philosophische oder weltanschauliche Überzeugung
+      frei wählen und entsprechend diesen leben. Man kann auch den Glauben wechseln oder keinen haben.
+      Niemand kann gezwungen werden, einen Glauben anzunehmen.

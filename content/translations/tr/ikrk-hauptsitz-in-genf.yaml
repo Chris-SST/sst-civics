@@ -1,0 +1,31 @@
+id: ikrk-hauptsitz-in-genf
+lang: tr
+source_version: 1
+question: Uluslararası Kızılhaç Komitesi'nin (ICRC/IKRK) merkezi hangi ülkededir?
+options:
+  a: Hollanda'da
+  b: İsviçre'de
+  c: Avusturya'da
+  d: Belçika'da
+explanation: Uluslararası Kızılhaç Komitesi'nin merkezi İsviçre'de, Cenevre'dedir. Komite 1863 yılında
+  Cenevre'de kurulmuştur ve silahlı çatışmaların mağdurlarını korur. İsviçre, komitenin çalışmalarını
+  destekler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Land befindet sich der Sitz des Internationalen Komitees vom Roten Kreuz (ICRC/IKRK)?
+    options_de:
+      a: In den Niederlanden
+      b: In der Schweiz
+      c: In Österreich
+      d: In Belgien
+    explanation_de: Der Sitz des Internationalen Komitees vom Roten Kreuz befindet sich in der Schweiz,
+      in Genf. Das Komitee wurde 1863 in Genf gegründet und schützt die Opfer bewaffneter Konflikte. Die
+      Schweiz unterstützt die Arbeit des Komitees.

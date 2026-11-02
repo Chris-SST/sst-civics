@@ -1,0 +1,29 @@
+id: arbeitslosenversicherung-bei-stellenverlust
+lang: fr
+source_version: 1
+question: Quelle assurance sociale intervient lorsqu'une personne perd son emploi ?
+options:
+  a: L'assurance-invalidité
+  b: L'assurance-vieillesse et survivants
+  c: L'assurance-chômage
+  d: L'assurance-accidents
+explanation: L'assurance-chômage verse, sous certaines conditions, une indemnité lorsqu'une personne perd
+  son emploi. Elle aide aussi à chercher un nouveau travail.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sozialversicherung greift ein, wenn eine Person ihre Stelle verliert?
+    options_de:
+      a: Die Invalidenversicherung
+      b: Die Alters- und Hinterlassenenversicherung
+      c: Die Arbeitslosenversicherung
+      d: Die Unfallversicherung
+    explanation_de: Die Arbeitslosenversicherung zahlt unter bestimmten Bedingungen eine Entschädigung,
+      wenn eine Person ihre Stelle verliert. Sie hilft auch bei der Suche nach einer neuen Arbeit.

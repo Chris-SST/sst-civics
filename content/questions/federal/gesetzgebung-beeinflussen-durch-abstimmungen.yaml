@@ -23,7 +23,7 @@ glossary:
 - Initiative
 - Referendum
 - Stimmberechtigte
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-031
@@ -46,3 +46,43 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Auf Bundesebene verlangt eine Volksinitiative eine Änderung der Bundesverfassung und nicht
+        eines Gesetzes (Quelle 1); die Erklärung könnte das kurz ergänzen, etwa: «Mit einer Volksinitiative
+        verlangen sie eine Änderung der Bundesverfassung, mit dem Referendum stimmen sie über Gesetze
+        des Parlaments ab.»'
+      - 'Klein: Die meisten Stimmberechtigten stimmen brieflich ab; statt «an der Urne» könnte Antwort
+        a) genauer «in Volksabstimmungen» heissen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In Antwort d) wäre «in der Bundesversammlung» statt «an der Bundesversammlung» die üblichere
+        und klarere Formulierung.'
+      - 'Klein: Eidgenössische Volksinitiativen ändern die Verfassung und nicht direkt Gesetze; die Erklärung
+        könnte kurz ergänzen, dass «Gesetzgebung» hier im weiten Sinn gemeint ist, etwa so: «über Änderungen
+        der Verfassung (Initiativen) und über Gesetze (Referenden)».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage sagt "direkt die Gesetzgebung", obwohl Volksinitiativen die Verfassung ändern;
+        die Formulierung ist aber für den Test üblich und die Antwort bleibt eindeutig richtig.'
+      - 'Klein: Antwort a) ist sehr nah an der Tatsache formuliert und die falschen Antworten sind leicht
+        auszuschliessen; plausiblere falsche Antworten (z. B. "Sie wählen das Parlament, das die Gesetze
+        beschliesst" wäre allerdings indirekt) sind nicht nötig.'
+      - 'Klein: Die Erklärung könnte kurz sagen, dass Initiativen eine Verfassungsänderung verlangen und
+        das Referendum eine Abstimmung über ein Gesetz des Parlaments ermöglicht.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

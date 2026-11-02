@@ -1,0 +1,29 @@
+id: rav-aufgabe-stellensuchende-unterstuetzen
+lang: it
+source_version: 1
+question: Quale compito ha l'Ufficio regionale di collocamento (URC)?
+options:
+  a: Controlla i salari nelle aziende
+  b: Versa una rendita a tutti gli abitanti
+  c: Sostiene le persone in cerca di impiego nella ricerca di lavoro e media posti di lavoro
+  d: Rilascia certificati di lavoro alle persone in cerca di impiego
+explanation: L'URC è il punto di contatto regionale per le persone in cerca di impiego. Le consiglia e
+  media loro posti di lavoro. Nel Cantone di Zurigo fa parte dell'Ufficio del lavoro.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe hat das Regionale Arbeitsvermittlungszentrum (RAV)?
+    options_de:
+      a: Es kontrolliert die Löhne in den Unternehmen
+      b: Es zahlt allen Einwohnerinnen und Einwohnern eine Rente aus
+      c: Es unterstützt Stellensuchende bei der Arbeitssuche und vermittelt Arbeitsstellen
+      d: Es stellt Stellensuchenden Arbeitszeugnisse aus
+    explanation_de: Das RAV ist die regionale Anlaufstelle für Stellensuchende. Es berät sie und vermittelt
+      ihnen Arbeitsstellen. Im Kanton Zürich ist es Teil des Amtes für Arbeit.

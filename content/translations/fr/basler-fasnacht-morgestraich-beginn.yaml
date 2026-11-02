@@ -1,0 +1,30 @@
+id: basler-fasnacht-morgestraich-beginn
+lang: fr
+source_version: 1
+question: Que se passe-t-il lors du Morgestraich, le début du carnaval de Bâle (Basler Fasnacht) ?
+options:
+  a: Le maire remet la clé de la ville à la société du carnaval.
+  b: Les ruelles sont brillamment éclairées et un feu d'artifice commence.
+  c: Les lumières des ruelles s'éteignent, puis les fifres et les tambours commencent à jouer.
+  d: Les carnavaliers lancent des confettis depuis la tour de la cathédrale et sonnent toutes les cloches
+    des églises.
+explanation: Le Morgestraich commence le lundi après le mercredi des Cendres, à quatre heures du matin.
+  Les lumières des ruelles sont alors éteintes. Ensuite, le jeu des fifres et des tambours commence.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was geschieht beim Morgestraich, dem Beginn der Basler Fasnacht?
+    options_de:
+      a: Der Stadtpräsident übergibt den Schlüssel der Stadt an die Fasnachtsgesellschaft.
+      b: Die Gassen werden hell erleuchtet und ein Feuerwerk beginnt.
+      c: Die Lichter der Gassen gehen aus, dann beginnen die Pfeifer und die Trommler zu spielen.
+      d: Die Fasnächtler werfen Konfetti vom Turm des Münsters und läuten alle Kirchenglocken.
+    explanation_de: Der Morgestraich beginnt am Montag nach dem Aschermittwoch um vier Uhr morgens. Die
+      Lichter der Gassen werden dann gelöscht. Danach beginnt das Spiel der Pfeifen und der Trommeln.

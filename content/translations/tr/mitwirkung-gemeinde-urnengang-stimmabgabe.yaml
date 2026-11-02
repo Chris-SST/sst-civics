@@ -1,0 +1,31 @@
+id: mitwirkung-gemeinde-urnengang-stimmabgabe
+lang: tr
+source_version: 1
+question: Seçmenler, sandık başına gidilen oylamalarda belediyelerinde (Gemeinde) siyasi olarak nasıl
+  söz sahibi olur?
+options:
+  a: Belediye konseyinin (Gemeinderat) toplantılarına başkanlık ederler
+  b: Belediyenin kararlarını uygularlar
+  c: Seçimlerde ve oylamalarda oylarını kullanırlar
+  d: Kantonun yasalarını kendileri çıkarırlar
+explanation: Sandık başına gidilen oylamalarda seçmenler, sunulan tasarılar hakkında oy verir ve makamları
+  seçer. Kararların uygulanması makamların ve idarenin görevidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie haben die Stimmberechtigten bei Urnenabstimmungen politisch in ihrer Gemeinde ein
+      Mitspracherecht?
+    options_de:
+      a: Sie führen den Vorsitz bei den Sitzungen des Gemeinderats
+      b: Sie setzen die Beschlüsse der Gemeinde um
+      c: Sie geben bei Wahlen und Abstimmungen ihre Stimme ab
+      d: Sie erlassen die Gesetze des Kantons selbst
+    explanation_de: Bei Urnenabstimmungen stimmen die Stimmberechtigten über die vorgelegten Vorlagen
+      ab und wählen die Behörden. Die Umsetzung der Beschlüsse ist die Aufgabe der Behörden und der Verwaltung.

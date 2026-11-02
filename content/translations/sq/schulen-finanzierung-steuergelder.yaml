@@ -1,0 +1,29 @@
+id: schulen-finanzierung-steuergelder
+lang: sq
+source_version: 1
+question: Nga çfarë paguhen kryesisht shkollat publike në Zvicër?
+options:
+  a: Nga tarifat shkollore që prindërit i paguajnë çdo muaj
+  b: Nga paratë e taksave të kantonit dhe të komunave (Gemeinden)
+  c: Nga të ardhurat e Postës dhe të SBB-së
+  d: Nga kontributet e arkave të sigurimit shëndetësor (Krankenkassen)
+explanation: Shkolla publike e detyrueshme është falas sipas Kushtetutës Federale. Ajo financohet nga
+  paratë e taksave, kryesisht nga kantonet dhe komunat.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wovon werden die öffentlichen Schulen in der Schweiz hauptsächlich bezahlt?
+    options_de:
+      a: Von den Schulgebühren, die die Eltern jeden Monat bezahlen
+      b: Von den Steuergeldern des Kantons und der Gemeinden
+      c: Von den Einnahmen der Post und der SBB
+      d: Von den Beiträgen der Krankenkassen
+    explanation_de: Die obligatorische öffentliche Schule ist gemäss der Bundesverfassung unentgeltlich.
+      Sie wird aus Steuergeldern finanziert, hauptsächlich von den Kantonen und den Gemeinden.

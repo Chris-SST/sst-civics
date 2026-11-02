@@ -1,0 +1,29 @@
+id: wohnortswechsel-anmeldung-einwohnerkontrolle
+lang: it
+source_version: 1
+question: Dove deve registrarsi se si trasferisce in un altro Comune (Gemeinde) del Cantone di Zurigo?
+options:
+  a: Presso il tribunale distrettuale
+  b: Presso l'Ufficio federale di statistica
+  c: Presso la polizia cantonale
+  d: Presso il controllo abitanti del nuovo Comune di domicilio
+explanation: La registrazione avviene presso il controllo abitanti, chiamato anche ufficio di controllo
+  degli abitanti. Esso tiene il registro degli abitanti del Comune.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo muss man sich anmelden, wenn man in eine andere Gemeinde des Kantons Zürich umzieht?
+    options_de:
+      a: Beim Bezirksgericht
+      b: Beim Bundesamt für Statistik
+      c: Bei der Kantonspolizei
+      d: Beim Einwohnerkontrolle der neuen Wohngemeinde
+    explanation_de: Die Anmeldung erfolgt bei der Einwohnerkontrolle, auch Einwohnerkontrollstelle genannt.
+      Sie führt das Einwohnerregister der Gemeinde.

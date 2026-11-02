@@ -1,17 +1,19 @@
 id: gewaltmonopol-des-staates
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.staatsprinzipien
-question_de: Wer darf in der Schweiz physische Gewalt anwenden, zum Beispiel durch Polizei und Armee?
+question_de: Wer darf in der Schweiz grundsätzlich physische Gewalt anwenden?
 options_de:
   a: Private Sicherheitsfirmen im Auftrag von Vereinen
   b: Jede Person, die sich bedroht fühlt
   c: Nur der Staat
   d: Jede Gemeinde mit eigenen Bürgerwehren
 correct: c
-explanation_de: Der Staat hat das Gewaltmonopol. Nur er darf zum Schutz der Ordnung physische Gewalt einsetzen,
-  etwa durch Polizei und Armee. So sollen Streitigkeiten nicht mit Selbstjustiz gelöst werden.
+explanation_de: 'In der Schweiz hat der Staat das Gewaltmonopol: Grundsätzlich darf nur er physische Gewalt
+  einsetzen, zum Beispiel durch die Polizei oder die Armee. Eine Ausnahme ist die Notwehr: Wer rechtswidrig
+  angegriffen wird, darf sich angemessen verteidigen, aber das blosse Gefühl, bedroht zu sein, genügt
+  dafür nicht.'
 sources:
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: &id001 2026-11-02
@@ -21,7 +23,7 @@ glossary:
 - Gewaltmonopol
 - Polizei
 - Armee
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-066
@@ -31,15 +33,47 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: In der Schweiz besitzt der Staat das Gewaltmonopol, weshalb physische Gewalt grundsätzlich
-      nur durch staatliche Organe wie Polizei und Armee angewendet werden darf (ausser in eng begrenzten
-      Fällen wie Notwehr).
+    version: 2
+    reasoning: In der Schweiz gilt das staatliche Gewaltmonopol, wonach grundsätzlich nur der Staat (zum
+      Beispiel die Polizei) physische Gewalt anwenden darf, während Private nur in engen Ausnahmen wie
+      Notwehr handeln dürfen.
   source:
     verdict: supported
-    note: 'Quelle 1 (Seite «Die Politik in der Schweiz») sagt: «In einem Rechtsstaat hat der Staat das
-      Gewaltmonopol. Das heisst, nur der Staat darf Gewalt gegen Personen und Sachen anwenden, sonst niemand»,
-      und nennt dafür Polizei und Militär. Quelle 2 behandelt ein anderes Thema.'
+    note: Quelle 1 (Seite 14) sagt, dass der Staat in einem Rechtsstaat das Gewaltmonopol hat und nur
+      er Gewalt gegen Personen und Sachen anwenden darf, dafür gibt es Polizei und Militär. Die Notwehr-Ausnahme
+      aus der Erklärung steht nicht in den Quellen, widerspricht ihnen aber auch nicht; Quelle 2 behandelt
+      das Thema nicht.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Nach Art. 15 StGB gilt Notwehr nicht nur bei einem rechtswidrigen Angriff, sondern auch
+        bei einer unmittelbaren Bedrohung mit einem Angriff; die Erklärung könnte lauten: «Wer rechtswidrig
+        angegriffen oder unmittelbar mit einem Angriff bedroht wird, darf sich angemessen verteidigen.»'
+      - 'Klein: Weil auch die Gemeinde Teil des Staates ist (z. B. mit einer Gemeindepolizei), könnte
+        Antwort d) kurz verwirren; die Erklärung könnte ergänzen, dass Bürgerwehren private Gruppen sind
+        und keine Gewalt anwenden dürfen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort d) kann verwirren, weil Gemeinden selbst Teil des Staates sind und eine eigene
+        Gemeindepolizei haben dürfen; besser «Freiwillige Bürgerwehren aus der Bevölkerung» als falsche
+        Antwort verwenden.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues: []
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

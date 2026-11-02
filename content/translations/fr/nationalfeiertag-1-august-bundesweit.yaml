@@ -1,0 +1,31 @@
+id: nationalfeiertag-1-august-bundesweit
+lang: fr
+source_version: 1
+question: Quel jour est un jour férié légal chômé dans toute la Suisse ?
+options:
+  a: Le 2 janvier (Berchtoldstag)
+  b: Le lundi du carnaval (Fasnachtsmontag)
+  c: Le Vendredi saint
+  d: Le 1er août, la fête nationale
+explanation: Le 1er août est la fête nationale et il est considéré comme jour férié dans tout le pays.
+  La plupart des autres jours fériés, comme le Vendredi saint ou le Berchtoldstag, sont réglés par les
+  cantons eux-mêmes et ne sont pas chômés partout.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Tag ist in der ganzen Schweiz ein gesetzlicher arbeitsfreier Feiertag?
+    options_de:
+      a: Der 2. Januar (Berchtoldstag)
+      b: Der Fasnachtsmontag
+      c: Der Karfreitag
+      d: Der 1. August, der Nationalfeiertag
+    explanation_de: Der 1. August ist der Nationalfeiertag und gilt im ganzen Land als Feiertag. Die meisten
+      anderen Feiertage, wie der Karfreitag oder der Berchtoldstag, werden von den Kantonen selbst geregelt
+      und sind nicht überall arbeitsfrei.

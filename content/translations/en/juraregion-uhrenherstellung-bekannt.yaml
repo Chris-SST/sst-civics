@@ -9,6 +9,21 @@ options:
   d: For the manufacture of watches
 explanation: Many well-known watch companies have their headquarters and workshops in the Jura Arc. The
   region is therefore a centre of the Swiss watchmaking industry.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür ist die Region Jura in der Schweiz wirtschaftlich berühmt?
+    options_de:
+      a: Für die Pharmaindustrie
+      b: Für grosse Banken
+      c: Für den Weinbau am Zürichsee
+      d: Für die Herstellung von Uhren
+    explanation_de: Viele bekannte Uhrenunternehmen haben ihren Hauptsitz und ihre Werkstätten im Jurabogen.
+      Die Region ist daher ein Zentrum der Schweizer Uhrenindustrie.

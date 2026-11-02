@@ -1,0 +1,31 @@
+id: ehe-verbot-nahe-blutsverwandtschaft
+lang: tr
+source_version: 1
+question: İsviçre'de kimler evlenemez?
+options:
+  a: Daha önce boşanmış olan kişiler
+  b: Farklı kantonlardan gelen kişiler
+  c: Yakın kan bağı olan kişiler
+  d: Farklı belediyelerde (Gemeinde) oturan kişiler
+explanation: Yakın kan bağı olan kişiler arasındaki evlilik yasaktır, örneğin kardeşler arasında veya
+  anne babalar ile çocuklar arasında. Buna karşılık kökeni, ikamet yeri ve önceki bir boşanma evliliğe
+  engel değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer darf in der Schweiz nicht heiraten?
+    options_de:
+      a: Personen, die zuvor geschieden wurden
+      b: Personen aus verschiedenen Kantonen
+      c: Personen, die nahe blutsverwandt sind
+      d: Personen, die in verschiedenen Gemeinden wohnen
+    explanation_de: Die Ehe zwischen nahe blutsverwandten Personen ist verboten, zum Beispiel zwischen
+      Geschwistern oder zwischen Eltern und Kindern. Dagegen sind die Herkunft, der Wohnort und eine frühere
+      Scheidung kein Hindernis für die Ehe.

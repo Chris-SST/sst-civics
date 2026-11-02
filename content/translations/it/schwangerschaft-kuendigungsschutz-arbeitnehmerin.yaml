@@ -1,0 +1,30 @@
+id: schwangerschaft-kuendigungsschutz-arbeitnehmerin
+lang: it
+source_version: 1
+question: Cosa vale per le lavoratrici incinte in Svizzera in caso di disdetta?
+options:
+  a: Hanno una protezione contro la disdetta solo nelle aziende con un contratto collettivo di lavoro
+  b: Durante la gravidanza godono della protezione legale contro la disdetta
+  c: Devono comunicare subito la gravidanza al datore di lavoro, altrimenti la protezione decade
+  d: Possono essere licenziate in qualsiasi momento senza alcuna restrizione
+explanation: La legge protegge le donne durante la gravidanza dalla disdetta da parte del datore di lavoro.
+  La protezione vale indipendentemente dall'azienda. Serve a tutelare le donne in questo periodo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für schwangere Arbeitnehmerinnen in der Schweiz im Falle einer Kündigung?
+    options_de:
+      a: Sie haben nur in Betrieben mit einem Gesamtarbeitsvertrag einen Kündigungsschutz
+      b: Während der Schwangerschaft geniessen sie den gesetzlichen Kündigungsschutz
+      c: Sie müssen die Schwangerschaft dem Arbeitgeber sofort mitteilen, sonst entfällt der Schutz
+      d: Sie können jederzeit ohne jede Einschränkung entlassen werden
+    explanation_de: Das Gesetz schützt Frauen während der Schwangerschaft vor der Kündigung durch den
+      Arbeitgeber. Der Schutz gilt unabhängig vom Betrieb. Er dient dazu, die Frauen in dieser Zeit zu
+      schützen.

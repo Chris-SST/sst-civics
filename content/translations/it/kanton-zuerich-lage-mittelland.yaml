@@ -1,0 +1,30 @@
+id: kanton-zuerich-lage-mittelland
+lang: it
+source_version: 2
+question: A quale grande regione paesaggistica della Svizzera appartiene il Cantone di Zurigo?
+options:
+  a: Alle Alpi meridionali
+  b: Al Giura
+  c: All'Altopiano
+  d: Alle Alpi centrali
+explanation: Il Cantone di Zurigo appartiene all'Altopiano, ossia alla zona più pianeggiante situata tra
+  il Giura a nord-ovest e le Alpi a sud. L'Altopiano è la parte più densamente popolata della Svizzera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Zu welcher grossen Landschaftsregion der Schweiz gehört der Kanton Zürich?
+    options_de:
+      a: Zu den Südalpen
+      b: Zum Jura
+      c: Zum Mittelland
+      d: Zu den Zentralalpen
+    explanation_de: Der Kanton Zürich gehört zum Mittelland, das heisst zum flacheren Gebiet, das zwischen
+      dem Jura im Nordwesten und den Alpen im Süden liegt. Das Mittelland ist der am dichtesten besiedelte
+      Teil der Schweiz.

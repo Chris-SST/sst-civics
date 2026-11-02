@@ -1,0 +1,30 @@
+id: polizei-auftrag-gesetzesverstoesse-verfolgen
+lang: sq
+source_version: 1
+question: Cila detyrë bën pjesë në misionin e policisë?
+options:
+  a: Ndjekja e shkeljeve të ligjit
+  b: Zhvillimi i votimeve popullore
+  c: Nxjerrja e ligjeve për vendin
+  d: Dhënia e vendimeve gjyqësore për kryerësit e veprave penale
+explanation: Policia kujdeset për sigurinë dhe rendin dhe ndjek shkeljet e ligjit. Ajo heton veprat penale
+  dhe i përcjell rezultatet më tej. Ligjet i nxjerr parlamenti, ndërsa vendimet gjyqësore i marrin gjykatat.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe gehört zum Auftrag der Polizei?
+    options_de:
+      a: Die Verfolgung von Gesetzesverstössen
+      b: Die Durchführung von Volksabstimmungen
+      c: Das Erlassen von Gesetzen für das Land
+      d: Das Fällen von Gerichtsentscheiden gegen die Täter von Straftaten
+    explanation_de: Die Polizei sorgt für Sicherheit und Ordnung und verfolgt Gesetzesverstösse. Sie ermittelt
+      bei Straftaten und leitet die Ergebnisse weiter. Die Gesetze erlässt das Parlament, während die
+      Gerichtsentscheide von den Gerichten getroffen werden.

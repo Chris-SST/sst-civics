@@ -9,6 +9,21 @@ options:
   d: The Glatt
 explanation: The Töss flows through Winterthur and later joins the Rhine. The Sihl and the Limmat flow
   through the city of Zurich, and the Glatt flows through the Glatt Valley (Glattal).
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Fluss fliesst durch die Stadt Winterthur?
+    options_de:
+      a: Die Limmat
+      b: Die Töss
+      c: Die Sihl
+      d: Die Glatt
+    explanation_de: Die Töss fliesst durch Winterthur und mündet später in den Rhein. Die Sihl und die
+      Limmat fliessen durch die Stadt Zürich, und die Glatt fliesst durch das Glattal.

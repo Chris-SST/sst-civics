@@ -1,0 +1,33 @@
+id: sirenen-ernstfall-radio-einschalten
+lang: tr
+source_version: 2
+question: Acil durumda sirenlerden «Genel Alarm» sesi duyulur (alçalıp yükselen bir uğultu sesi). Ne yapmalısınız?
+options:
+  a: Hemen evi terk etmek
+  b: İtfaiyeyi aramak
+  c: Radyo dinlemek ve yetkililerin talimatlarına uymak
+  d: Arabayla uzaklaşmak
+explanation: Genel Alarm durumunda yetkililer, ne yapılması gerektiği konusunda radyo aracılığıyla bilgi
+  verir. Bilgiler Alertswiss uygulamasında da bulunur. Talimatlara uymalı ve acil durum numaralarını gereksiz
+  yere aramamalısınız; böylece bu numaralar gerçek acil durumlar için boş kalır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Im Notfall ertönt aus den Sirenen das Signal «Allgemeiner Alarm» (ein auf- und abschwellender
+      Heulton). Was müssen Sie tun?
+    options_de:
+      a: Sofort das Haus verlassen
+      b: Die Feuerwehr anrufen
+      c: Radio hören und den Anweisungen der Behörden folgen
+      d: Mit dem Auto wegfahren
+    explanation_de: Im Fall eines Allgemeinen Alarms informieren die Behörden per Radio darüber, was zu
+      tun ist. Die Informationen sind auch in der Alertswiss-App zu finden. Sie müssen den Anweisungen
+      folgen und dürfen die Notrufnummern nicht unnötig anrufen; so bleiben diese Nummern für echte Notfälle
+      frei.

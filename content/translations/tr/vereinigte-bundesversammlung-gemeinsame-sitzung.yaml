@@ -1,0 +1,29 @@
+id: vereinigte-bundesversammlung-gemeinsame-sitzung
+lang: tr
+source_version: 1
+question: Hangi durumda Birleşik Federal Meclis (Vereinigte Bundesversammlung) söz konusudur?
+options:
+  a: Ulusal Konsey (Nationalrat) ile Kantonlar Konseyi (Ständerat) kendi salonlarında ayrı ayrı görüştüğünde
+  b: Tüm kanton parlamentoları aynı anda toplandığında
+  c: Ulusal Konsey ile Kantonlar Konseyi üyeleri birlikte toplandığında
+  d: Federal Konsey (Bundesrat) ile parlamento birlikte toplandığında
+explanation: Birleşik Federal Meclis, her iki kamara birlikte toplandığında oluşur. Örneğin Federal Konsey
+  üyelerini seçer.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall handelt es sich um die Vereinigte Bundesversammlung?
+    options_de:
+      a: Wenn der Nationalrat und der Ständerat in ihren eigenen Sälen getrennt beraten
+      b: Wenn alle Kantonsparlamente gleichzeitig zusammenkommen
+      c: Wenn die Mitglieder des Nationalrats und des Ständerats gemeinsam zusammenkommen
+      d: Wenn der Bundesrat und das Parlament gemeinsam zusammenkommen
+    explanation_de: Die Vereinigte Bundesversammlung entsteht, wenn beide Kammern gemeinsam zusammenkommen.
+      Sie wählt zum Beispiel die Mitglieder des Bundesrats.

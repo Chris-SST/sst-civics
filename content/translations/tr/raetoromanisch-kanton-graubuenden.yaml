@@ -1,0 +1,29 @@
+id: raetoromanisch-kanton-graubuenden
+lang: tr
+source_version: 1
+question: Romanşça hangi kantonda konuşulur?
+options:
+  a: Fribourg kantonunda
+  b: Ticino kantonunda
+  c: Valais kantonunda
+  d: Graubünden kantonunda
+explanation: Romanşça, İsviçre'nin dördüncü ulusal dilidir. Graubünden kantonunda konuşulur. Graubünden,
+  İsviçre'nin üç dilli tek kantonudur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Kanton wird Rätoromanisch gesprochen?
+    options_de:
+      a: Im Kanton Freiburg
+      b: Im Kanton Tessin
+      c: Im Kanton Wallis
+      d: Im Kanton Graubünden
+    explanation_de: Rätoromanisch ist die vierte Landessprache der Schweiz. Es wird im Kanton Graubünden
+      gesprochen. Graubünden ist der einzige dreisprachige Kanton der Schweiz.

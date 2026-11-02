@@ -1,0 +1,32 @@
+id: sbb-abkuerzung-bedeutung-bundesbahnen
+lang: sq
+source_version: 1
+question: Çfarë do të thotë shkurtesa «SBB», të cilën e shihni në trena dhe në stacionet e trenave në
+  Zvicër?
+options:
+  a: Shoqëritë zvicerane të autobusëve
+  b: Hekurudhat Federale Zvicerane (Schweizerische Bundesbahnen)
+  c: Shoqëritë zvicerane të hekurudhave dhe të autobusëve
+  d: Hekurudhat zvicerane malore
+explanation: SBB do të thotë Hekurudhat Federale Zvicerane (Schweizerische Bundesbahnen). Ndërmarrja operon
+  një pjesë të madhe të rrjetit hekurudhor zviceran dhe i përket Konfederatës (Bund). Përveç saj ka edhe
+  ndërmarrje të tjera hekurudhore, për shembull BLS ose Hekurudha Retike (Rhätische Bahn).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Abkürzung «SBB», die Sie auf Zügen und an Bahnhöfen in der Schweiz sehen?
+    options_de:
+      a: Schweizerische Busgesellschaften
+      b: Schweizerische Bundesbahnen
+      c: Schweizerische Eisenbahn- und Busgesellschaften
+      d: Schweizerische Bergbahnen
+    explanation_de: SBB bedeutet Schweizerische Bundesbahnen. Das Unternehmen betreibt einen grossen Teil
+      des schweizerischen Eisenbahnnetzes und gehört dem Bund. Ausser ihm gibt es auch andere Eisenbahnunternehmen,
+      zum Beispiel die BLS oder die Rhätische Bahn.

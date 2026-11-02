@@ -1,0 +1,31 @@
+id: regierungsrat-zuerich-wahl-durch-volk
+lang: sq
+source_version: 1
+question: Kush përcakton në kantonin Zürich se kush ulet në Këshillin Qeveritar (Regierungsrat)?
+options:
+  a: Kuvendi Federal (Bundesversammlung) zgjedh anëtarët e Këshillit Qeveritar.
+  b: Këshilli Kantonal (Kantonsrat) zgjedh anëtarët nga radhët e veta.
+  c: Presidentët dhe presidentet e komunave (Gemeinde) zgjedhin anëtarët.
+  d: Popullsia e kantonit me të drejtë vote i zgjedh anëtarët drejtpërdrejt.
+explanation: Në kantonin Zürich populli e zgjedh drejtpërdrejt Këshillin Qeveritar me votim në kuti. Këshilli
+  Kantonal është parlamenti dhe nuk e zgjedh qeverinë. Kjo e dallon kantonin nga Konfederata, ku Kuvendi
+  Federal zgjedh Këshillin Federal (Bundesrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer bestimmt im Kanton Zürich, wer im Regierungsrat sitzt?
+    options_de:
+      a: Die Bundesversammlung wählt die Mitglieder des Regierungsrates.
+      b: Der Kantonsrat wählt die Mitglieder aus den eigenen Reihen.
+      c: Die Gemeindepräsidenten und Gemeindepräsidentinnen wählen die Mitglieder.
+      d: Die stimmberechtigte Bevölkerung des Kantons wählt die Mitglieder direkt.
+    explanation_de: Im Kanton Zürich wählt das Volk den Regierungsrat direkt an der Urne. Der Kantonsrat
+      ist das Parlament und wählt die Regierung nicht. Dies unterscheidet den Kanton vom Bund, wo die
+      Bundesversammlung den Bundesrat wählt.

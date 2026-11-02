@@ -1,0 +1,32 @@
+id: zweiter-weltkrieg-neutralitaet-kontakte
+lang: fr
+source_version: 1
+question: Comment la Suisse s'est-elle comportée pendant la Seconde Guerre mondiale ?
+options:
+  a: Elle a rompu tous les contacts avec les parties au conflit et a complètement fermé ses frontières.
+  b: Elle s'est alliée à l'Allemagne et lui a fourni des troupes.
+  c: Elle est restée neutre et a entretenu des contacts politiques et économiques avec les parties au
+    conflit.
+  d: Elle a rejoint l'alliance des Alliés et a combattu à leurs côtés.
+explanation: Pendant la Seconde Guerre mondiale, la Suisse n'est pas devenue partie au conflit. Elle a
+  toutefois maintenu des contacts politiques et économiques avec les parties au conflit. Cette attitude
+  fait encore l'objet de discussions historiques aujourd'hui.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie hat sich die Schweiz während des Zweiten Weltkriegs verhalten?
+    options_de:
+      a: Sie hat alle Kontakte zu den Konfliktparteien abgebrochen und ihre Grenzen vollständig geschlossen.
+      b: Sie hat sich mit Deutschland verbündet und ihm Truppen geliefert.
+      c: Sie blieb neutral und pflegte politische und wirtschaftliche Kontakte zu den Konfliktparteien.
+      d: Sie ist dem Bündnis der Alliierten beigetreten und hat an ihrer Seite gekämpft.
+    explanation_de: Während des Zweiten Weltkriegs wurde die Schweiz nicht zur Konfliktpartei. Sie hat
+      jedoch politische und wirtschaftliche Kontakte zu den Konfliktparteien aufrechterhalten. Dieses
+      Verhalten ist auch heute noch Gegenstand historischer Diskussionen.

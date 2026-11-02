@@ -1,0 +1,29 @@
+id: primarschule-finanzierung-kanton-gemeinde
+lang: sq
+source_version: 1
+question: Kush e financon dhe e organizon shkollën fillore (Primarschule) në kantonin e Cyrihut?
+options:
+  a: Vetëm famullitë kishtare (Kirchgemeinden)
+  b: Vetëm prindërit e nxënësve
+  c: Vetëm Konfederata
+  d: Kantoni dhe komunat (Gemeinden) së bashku
+explanation: Shkolla publike (Volksschule) në kantonin e Cyrihut është një detyrë e përbashkët e kantonit
+  dhe e komunave. Kantoni përcakton bazat, ndërsa komunat i drejtojnë shkollat në vend.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer finanziert und organisiert die Primarschule im Kanton Zürich?
+    options_de:
+      a: Nur die Kirchgemeinden
+      b: Nur die Eltern der Schüler
+      c: Nur der Bund
+      d: Der Kanton und die Gemeinden gemeinsam
+    explanation_de: Die Volksschule im Kanton Zürich ist eine gemeinsame Aufgabe des Kantons und der Gemeinden.
+      Der Kanton legt die Grundlagen fest, während die Gemeinden die Schulen vor Ort leiten.

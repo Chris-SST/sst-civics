@@ -1,0 +1,29 @@
+id: foehn-warmer-trockener-suedwind
+lang: sq
+source_version: 1
+question: Çfarë është Föhn-i?
+options:
+  a: Një erë e ftohtë dhe e lagësht nga veriu
+  b: Një erë e ftohtë nga lindja në dimër
+  c: Një shi i fortë në pranverë
+  d: Një erë e ngrohtë dhe e thatë nga drejtimi jugor
+explanation: Föhn-i është një erë zbritëse e ngrohtë dhe e thatë, që në Alpe fryn kryesisht nga jugu.
+  Ai mund t'i bëjë temperaturat të rriten shpejt dhe e bën pamjen shumë të qartë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist der Föhn?
+    options_de:
+      a: Ein kalter und feuchter Wind aus dem Norden
+      b: Ein kalter Wind aus dem Osten im Winter
+      c: Ein starker Regen im Frühling
+      d: Ein warmer und trockener Wind aus südlicher Richtung
+    explanation_de: Der Föhn ist ein warmer und trockener Fallwind, der in den Alpen hauptsächlich aus
+      dem Süden weht. Er kann die Temperaturen schnell ansteigen lassen und macht die Sicht sehr klar.

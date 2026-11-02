@@ -1,0 +1,31 @@
+id: zollwesen-zustaendigkeit-bund
+lang: it
+source_version: 1
+question: Chi si occupa in Svizzera del settore doganale?
+options:
+  a: La Confederazione
+  b: I Comuni (Gemeinden) situati al confine
+  c: I Cantoni in cui si trovano i confini
+  d: I Cantoni e la Confederazione, ciascuno per metà
+explanation: Secondo la Costituzione federale, il settore doganale è di competenza della Confederazione.
+  Essa disciplina i dazi e il controllo del traffico di merci attraverso il confine. I Cantoni e i Comuni
+  non hanno in questo ambito alcuna competenza propria.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer befasst sich in der Schweiz mit dem Zollwesen?
+    options_de:
+      a: Der Bund
+      b: Die Gemeinden an der Grenze
+      c: Die Kantone, in denen sich die Grenzen befinden
+      d: Die Kantone und der Bund, jeweils zur Hälfte
+    explanation_de: Gemäss der Bundesverfassung fällt das Zollwesen in die Zuständigkeit des Bundes. Er
+      regelt die Zölle und die Kontrolle des Warenverkehrs über die Grenze. Die Kantone und die Gemeinden
+      haben in diesem Bereich keine eigene Zuständigkeit.

@@ -1,15 +1,34 @@
 id: volksinitiative-doppeltes-mehr
 lang: en
-source_version: 1
-question: What does a popular initiative (Volksinitiative) need in order to be accepted in a vote?
+source_version: 2
+question: What does a federal popular initiative (Volksinitiative) need in order to be accepted in the
+  vote?
 options:
-  a: The approval of two thirds of those voting
-  b: The approval of the Federal Council (Bundesrat) and of the majority of those voting
-  c: The approval of the majority of those voting and of the majority of the cantons
-  d: Only the approval of the majority of those voting
-explanation: 'A popular initiative calls for an amendment to the Federal Constitution. For this reason,
-  a double majority is required: the majority of those voting and the majority of the cantons (majority
-  of the cantons (Ständemehr)).'
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: The yes vote of two thirds of those voting
+  b: The yes vote of the Federal Council (Bundesrat) and the majority of those voting
+  c: The yes vote of the majority of those voting and the majority of the cantons
+  d: Only the yes vote of the majority of those voting
+explanation: 'A federal popular initiative aims to amend the Federal Constitution. It therefore requires
+  a double majority: the majority of those voting (popular majority (Volksmehr)) and the majority of the
+  cantons (majority of the cantons (Ständemehr)) must vote yes. By contrast, for a cantonal initiative
+  in the canton of Zürich, the majority of those voting is sufficient.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was braucht eine eidgenössische Volksinitiative, um in der Abstimmung angenommen zu werden?
+    options_de:
+      a: Das Ja von zwei Dritteln der Stimmenden
+      b: Das Ja des Bundesrates und der Mehrheit der Stimmenden
+      c: Das Ja der Mehrheit der Stimmenden und der Mehrheit der Kantone
+      d: Nur das Ja der Mehrheit der Stimmenden
+    explanation_de: 'Eine eidgenössische Volksinitiative zielt darauf ab, die Bundesverfassung zu ändern.
+      Sie erfordert daher ein doppeltes Mehr: Die Mehrheit der Stimmenden (Volksmehr) und die Mehrheit
+      der Kantone (Ständemehr) müssen mit Ja stimmen. Dagegen genügt bei einer kantonalen Initiative im
+      Kanton Zürich die Mehrheit der Stimmenden.'

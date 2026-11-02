@@ -1,0 +1,31 @@
+id: krankenkasse-freie-wahl-versicherte
+lang: fr
+source_version: 1
+question: Qui décide, en Suisse, auprès de quelle caisse-maladie (Krankenkasse) une personne conclut l'assurance
+  de base ?
+options:
+  a: La commune de domicile détermine la caisse-maladie
+  b: La personne assurée choisit elle-même sa caisse-maladie
+  c: L'employeur détermine la caisse-maladie pour tous les employés
+  d: Le canton de domicile attribue une caisse-maladie à chaque personne
+explanation: En Suisse, le libre choix de la caisse-maladie s'applique. Les personnes assurées peuvent
+  choisir parmi les caisses-maladie autorisées et changer de caisse sous certaines conditions.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet in der Schweiz, bei welcher Krankenkasse eine Person die Grundversicherung
+      abschliesst?
+    options_de:
+      a: Die Wohngemeinde bestimmt die Krankenkasse
+      b: Die versicherte Person wählt ihre Krankenkasse selbst
+      c: Der Arbeitgeber bestimmt die Krankenkasse für alle Angestellten
+      d: Der Wohnkanton weist jeder Person eine Krankenkasse zu
+    explanation_de: In der Schweiz gilt die freie Wahl der Krankenkasse. Die versicherten Personen können
+      unter den zugelassenen Krankenkassen wählen und unter bestimmten Bedingungen die Kasse wechseln.

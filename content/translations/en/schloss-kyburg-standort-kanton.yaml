@@ -9,6 +9,21 @@ options:
   d: In the canton of Thurgau
 explanation: Kyburg Castle is located in the canton of Zurich, on a hill above the River Töss. It is one
   of the canton's well-known cultural heritage sites and is a museum.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Kanton befindet sich das Schloss Kyburg?
+    options_de:
+      a: Im Kanton Aargau
+      b: Im Kanton St. Gallen
+      c: Im Kanton Zürich
+      d: Im Kanton Thurgau
+    explanation_de: Das Schloss Kyburg befindet sich im Kanton Zürich, auf einem Hügel über der Töss.
+      Es ist eine der bekannten Kulturstätten des Kantons und ist ein Museum.

@@ -1,0 +1,33 @@
+id: parlamentsmitglieder-direkt-gewaehlt-volk
+lang: tr
+source_version: 2
+question: Ulusal Konsey (Nationalrat) üyelerini kim seçer?
+options:
+  a: Onları Federal Konsey (Bundesrat) atar.
+  b: Onları seçim yapılmaksızın partiler belirler.
+  c: Onları Federal Mahkeme (Bundesgericht) seçer.
+  d: Oy kullanma hakkına sahip vatandaşlar onları doğrudan seçer.
+explanation: Ulusal Konsey üyeleri her dört yılda bir oy hakkına sahip kişiler tarafından doğrudan seçilir.
+  Kantonlar Konseyi (Ständerat) üyelerini de bugün tüm kantonlarda halk seçer; bu, ilgili kantonun kurallarına
+  göre yapılır. Appenzell Innerrhoden'de bu seçim açık hava halk meclisinde (Landsgemeinde) gerçekleşir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; die Rückübersetzung fügt nur «unter freiem Himmel» hinzu, das ist eine
+      unwesentliche Ergänzung ohne Änderung der Aussage
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer wählt die Mitglieder des Nationalrats?
+    options_de:
+      a: Der Bundesrat ernennt sie.
+      b: Die Parteien bestimmen sie ohne Wahl.
+      c: Das Bundesgericht wählt sie.
+      d: Die stimmberechtigten Bürgerinnen und Bürger wählen sie direkt.
+    explanation_de: Die Mitglieder des Nationalrats werden alle vier Jahre von den stimmberechtigten Personen
+      direkt gewählt. Die Mitglieder des Ständerats (Ständerat) wählt heute in allen Kantonen ebenfalls
+      das Volk; dies geschieht nach den Regeln des jeweiligen Kantons. In Appenzell Innerrhoden findet
+      diese Wahl an der Landsgemeinde unter freiem Himmel statt.

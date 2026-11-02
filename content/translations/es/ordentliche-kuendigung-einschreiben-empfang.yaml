@@ -1,0 +1,33 @@
+id: ordentliche-kuendigung-einschreiben-empfang
+lang: es
+source_version: 1
+question: ¿Cómo debería notificarse una rescisión ordinaria de una relación laboral para poder demostrar
+  su recepción?
+options:
+  a: Mediante un aviso a la administración del municipio (Gemeinde)
+  b: Por correo certificado, o bien la otra parte confirma la recepción por escrito
+  c: Por correo electrónico simple, sin confirmación
+  d: De forma oral, en una conversación a solas
+explanation: Con un correo certificado o una confirmación de recepción por escrito se puede demostrar
+  que la rescisión ha llegado. Esto es importante porque los plazos de preaviso corren a partir de la
+  recepción.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie sollte eine ordentliche Kündigung eines Arbeitsverhältnisses zugestellt werden, um
+      ihren Empfang nachweisen zu können?
+    options_de:
+      a: Durch eine Mitteilung an die Gemeindeverwaltung
+      b: Per eingeschriebenem Brief, oder die andere Partei bestätigt den Empfang schriftlich
+      c: Per einfacher E-Mail, ohne Bestätigung
+      d: Mündlich, in einem Gespräch unter vier Augen
+    explanation_de: Mit einem eingeschriebenen Brief oder einer schriftlichen Empfangsbestätigung kann
+      nachgewiesen werden, dass die Kündigung angekommen ist. Das ist wichtig, weil die Kündigungsfristen
+      ab dem Empfang laufen.

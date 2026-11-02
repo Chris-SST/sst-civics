@@ -1,0 +1,31 @@
+id: jodeln-eigene-stimme-instrument
+lang: sq
+source_version: 1
+question: Çfarë shërben si instrument gjatë jodlimit?
+options:
+  a: Alphorni (Alphorn)
+  b: Zëri i vet
+  c: Schwyzerörgeli (harmonika e vogël zvicerane)
+  d: Harmonika me dorë (Handorgel)
+explanation: Gjatë jodlimit këndohet pa fjalë, zakonisht vetëm me rrokje, dhe kalohet shpejt mes zërit
+  të gjoksit dhe zërit të kokës. Vetë zëri është instrumenti. Jodlimi është pjesë e traditave të Zvicrës
+  dhe shpesh lidhet me alphornin ose me Schwyzerörgelin.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was dient beim Jodeln als Instrument?
+    options_de:
+      a: Alphorn
+      b: Die eigene Stimme
+      c: Schwyzerörgeli
+      d: Handorgel
+    explanation_de: Beim Jodeln wird ohne Worte gesungen, meistens nur mit Silben, und es wird schnell
+      zwischen Bruststimme und Kopfstimme gewechselt. Die Stimme selbst ist das Instrument. Das Jodeln
+      gehört zu den Traditionen der Schweiz und wird oft mit dem Alphorn oder mit dem Schwyzerörgeli verbunden.

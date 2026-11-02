@@ -1,0 +1,31 @@
+id: zuercher-parlament-bezeichnung-kantonsrat
+lang: fr
+source_version: 1
+question: Comment s'appelle le parlement du canton de Zurich ?
+options:
+  a: Grand Conseil
+  b: Landrat
+  c: conseil communal (Gemeinderat)
+  d: Conseil cantonal (Kantonsrat)
+explanation: Le parlement du canton de Zurich s'appelle Conseil cantonal. D'autres cantons utilisent d'autres
+  appellations, par exemple Grand Conseil ou Landrat. Le conseil communal est en revanche une autorité
+  au niveau de la commune (Gemeinde).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst das Parlament des Kantons Zürich?
+    options_de:
+      a: Grosser Rat
+      b: Landrat
+      c: Gemeinderat
+      d: Kantonsrat
+    explanation_de: Das Parlament des Kantons Zürich heisst Kantonsrat. Andere Kantone verwenden andere
+      Bezeichnungen, zum Beispiel Grosser Rat oder Landrat. Der Gemeinderat hingegen ist eine Behörde
+      auf Ebene der Gemeinde.

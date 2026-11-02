@@ -1,0 +1,33 @@
+id: unfallversicherung-spitalkosten-arbeitsunfall
+lang: pt
+source_version: 1
+question: Uma trabalhadora sofre um acidente grave no trabalho e tem de ser internada no hospital. Qual
+  seguro cobre as despesas hospitalares?
+options:
+  a: O seguro de desemprego
+  b: O seguro de acidentes
+  c: O regime de compensação de perda de rendimento (Erwerbsersatzordnung)
+  d: O seguro de velhice e sobrevivência
+explanation: O seguro de acidentes obrigatório paga, em caso de acidentes profissionais, os custos de
+  tratamento, ou seja, por exemplo, as despesas hospitalares. Os trabalhadores estão segurados contra
+  esse risco através da entidade empregadora. Os outros seguros mencionados cobrem outros riscos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Arbeitnehmerin erleidet bei der Arbeit einen schweren Unfall und muss ins Spital
+      eingewiesen werden. Welche Versicherung deckt die Spitalkosten?
+    options_de:
+      a: Die Arbeitslosenversicherung
+      b: Die Unfallversicherung
+      c: Die Erwerbsersatzordnung
+      d: Die Alters- und Hinterlassenenversicherung
+    explanation_de: Die obligatorische Unfallversicherung bezahlt bei Berufsunfällen die Behandlungskosten,
+      das heisst zum Beispiel die Spitalkosten. Die Arbeitnehmer sind über die Arbeitgeberin gegen dieses
+      Risiko versichert. Die anderen genannten Versicherungen decken andere Risiken.

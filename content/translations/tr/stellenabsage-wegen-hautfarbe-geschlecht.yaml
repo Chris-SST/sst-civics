@@ -1,0 +1,35 @@
+id: stellenabsage-wegen-hautfarbe-geschlecht
+lang: tr
+source_version: 2
+question: Bir kadın bir iş için başvuruyor. Yalnızca kadın olduğu için reddediliyor. Bu durum hangi temel
+  hakkı ihlal etmektedir?
+options:
+  a: İskân özgürlüğü
+  b: Toplanma özgürlüğü
+  c: Hukuk önünde eşitlik ve ayrımcılık yasağı
+  d: Özel hayatın korunması
+explanation: Federal Anayasa'nın 8. maddesi, bütün insanların kanun önünde eşit olduğunu ve kadın ile
+  erkeğin eşit haklara sahip olduğunu belirtir. Hiç kimse, örneğin kökeni, ırkı veya cinsiyeti nedeniyle
+  ayrımcılığa uğratılamaz. Bu nedenle bir kadın başvurucuyu yalnızca cinsiyeti yüzünden reddeden kişi,
+  hukuk önünde eşitliği ve ayrımcılık yasağını ihlal eder.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Frau bewirbt sich um eine Stelle. Sie wird nur deshalb abgelehnt, weil sie eine
+      Frau ist. Welches Grundrecht verletzt dieser Vorgang?
+    options_de:
+      a: Niederlassungsfreiheit
+      b: Versammlungsfreiheit
+      c: Rechtsgleichheit und Diskriminierungsverbot
+      d: Schutz des Privatlebens
+    explanation_de: Artikel 8 der Bundesverfassung besagt, dass alle Menschen vor dem Gesetz gleich sind
+      und dass Frau und Mann gleiche Rechte haben. Niemand darf zum Beispiel wegen der Herkunft, der Rasse
+      oder des Geschlechts diskriminiert werden. Deshalb verletzt jemand, der eine Bewerberin nur wegen
+      ihres Geschlechts ablehnt, die Rechtsgleichheit und das Diskriminierungsverbot.

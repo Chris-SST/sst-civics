@@ -7,8 +7,25 @@ options:
   b: The electoral office
   c: The commune clerk alone
   d: The public prosecutor's office
-explanation: The electoral office determines the results of the commune for referendums and elections.
-  It consists of several people so that the counting is carried out correctly and transparently.
-status: draft
+explanation: The electoral office determines the results of the commune for votes and elections. It consists
+  of several people so that the counting is carried out correctly and transparently.
+status: flagged
 reviewed_by: null
 reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Frage: «bei Urnengängen» (Abstimmungen und Wahlen) wird in der Rückübersetzung zu «bei Abstimmungen»
+      eingeschränkt, Wahlen fehlen; die Erklärung nennt dagegen beides. Sonst nur Synonyme (Gemeindeschreiber/-in,
+      nachvollziehbar/transparent).'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wer zählt in einer Zürcher Gemeinde die bei Abstimmungen abgegebenen Stimmen aus?
+    options_de:
+      a: Die Sozialbehörde
+      b: Das Wahlbüro
+      c: Der Gemeindeschreiber allein
+      d: Die Staatsanwaltschaft
+    explanation_de: Das Wahlbüro ermittelt die Ergebnisse der Gemeinde bei Abstimmungen und Wahlen. Es
+      besteht aus mehreren Personen, damit die Auszählung korrekt und transparent durchgeführt wird.

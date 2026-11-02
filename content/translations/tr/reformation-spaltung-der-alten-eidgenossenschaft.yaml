@@ -1,0 +1,31 @@
+id: reformation-spaltung-der-alten-eidgenossenschaft
+lang: tr
+source_version: 1
+question: Reform hareketinin (Reformasyon) İsviçre için sonucu ne oldu?
+options:
+  a: İsviçre dinî bakımdan Reform kiliseli (Protestan) ve Katolik olmak üzere iki kesime bölündü.
+  b: İsviçre, Alman İmparatorluğu'nun bir parçası oldu.
+  c: Kilise her yerde siyaset üzerindeki bütün etkisini kaybetti.
+  d: Eidgenossenschaft'ın (İsviçre Konfederasyonu) bütün yerleri Reform kiliseli oldu.
+explanation: Bazı yerler Reformasyon'u kabul etti, diğerleri Katolik kaldı. Böylece Konfederasyon'u uzun
+  süre zorlayan dinî bir karşıtlık ortaya çıktı. Mezhepler arasında çatışmalar da yaşandı.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was war das Ergebnis der Reformbewegung (Reformation) für die Schweiz?
+    options_de:
+      a: 'Die Schweiz wurde in religiöser Hinsicht in zwei Lager gespalten: reformiert (protestantisch)
+        und katholisch.'
+      b: Die Schweiz wurde ein Teil des Deutschen Reiches.
+      c: Die Kirche verlor überall ihren gesamten Einfluss auf die Politik.
+      d: Alle Orte der Eidgenossenschaft (Schweizerische Konföderation) wurden reformiert.
+    explanation_de: Einige Orte nahmen die Reformation an, andere blieben katholisch. So entstand ein
+      religiöser Gegensatz, der die Eidgenossenschaft lange herausforderte. Zwischen den Konfessionen
+      kam es auch zu Konflikten.

@@ -1,0 +1,29 @@
+id: parlament-hauptaufgabe-gesetze-beschliessen
+lang: fr
+source_version: 1
+question: Quelle est la tâche la plus importante du Parlement fédéral ?
+options:
+  a: Diriger la police dans tout le pays
+  b: Trancher les litiges entre des personnes
+  c: Délibérer sur les lois et les adopter
+  d: Faire appliquer les lois au quotidien
+explanation: Le Parlement est le pouvoir législatif. Il délibère sur les lois de la Confédération et les
+  adopte. Le gouvernement les met en œuvre, et les tribunaux statuent dans les litiges.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die wichtigste Aufgabe des Bundesparlaments?
+    options_de:
+      a: Die Polizei im ganzen Land leiten
+      b: Streitigkeiten zwischen Personen entscheiden
+      c: Über die Gesetze beraten und sie verabschieden
+      d: Die Gesetze im Alltag durchsetzen
+    explanation_de: Das Parlament ist die gesetzgebende Gewalt. Es berät über die Gesetze des Bundes und
+      verabschiedet sie. Die Regierung setzt sie um, und die Gerichte entscheiden in Streitfällen.

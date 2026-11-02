@@ -10,6 +10,22 @@ options:
 explanation: In 1848, the cantons gave themselves a Federal Constitution and founded the modern federal
   state. It combined shared tasks of the Confederation with the autonomy of the cantons. This constitution
   is the foundation of present-day Switzerland.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was entstand 1848 in der Schweiz?
+    options_de:
+      a: Die Helvetische Republik mit einer zentralen Regierung
+      b: Der Staatenbund unter französischer Aufsicht
+      c: Der moderne Bundesstaat mit einer neuen Verfassung
+      d: Die Eidgenossenschaft der drei Urkantone
+    explanation_de: 1848 gaben sich die Kantone eine Bundesverfassung und gründeten den modernen Bundesstaat.
+      Er verband gemeinsame Aufgaben des Bundes mit der Autonomie der Kantone. Diese Verfassung ist die
+      Grundlage der heutigen Schweiz.

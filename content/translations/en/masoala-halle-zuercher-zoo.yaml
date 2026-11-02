@@ -10,6 +10,21 @@ options:
   d: The Technorama
 explanation: The Masoala Hall is part of Zurich Zoo. It shows a rainforest as it grows in Madagascar.
   Animals from this rainforest also live there.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Zu welcher Institution in Zürich gehört die Masoala-Halle mit ihrem Regenwald aus Madagaskar?
+    options_de:
+      a: Zoo Zürich
+      b: Der Botanische Garten der Universität
+      c: Das Naturhistorische Museum
+      d: Das Technorama
+    explanation_de: Die Masoala-Halle ist Teil des Zoos Zürich. Sie zeigt einen Regenwald, wie er in Madagaskar
+      wächst. Auch Tiere aus diesem Regenwald leben dort.

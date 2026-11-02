@@ -1,0 +1,31 @@
+id: frauenstimmrecht-bund-seit-1971
+lang: it
+source_version: 1
+question: Da quando le donne in Svizzera possono votare ed eleggere a livello nazionale?
+options:
+  a: Dal 1918
+  b: Dal 1848
+  c: Dal 1971
+  d: Dal 1991
+explanation: A livello di Confederazione il diritto di voto alle donne è stato introdotto nel 1971. Alcuni
+  Cantoni e Comuni (Gemeinden) lo conoscevano già prima, mentre altri lo introdussero solo più tardi.
+  L'ultimo Cantone a seguire fu Appenzello Interno nel 1990.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Seit wann können Frauen in der Schweiz auf nationaler Ebene abstimmen und wählen?
+    options_de:
+      a: Seit 1918
+      b: Seit 1848
+      c: Seit 1971
+      d: Seit 1991
+    explanation_de: Auf Ebene des Bundes wurde das Stimmrecht für Frauen 1971 eingeführt. Einige Kantone
+      und Gemeinden kannten es schon früher, andere führten es erst später ein. Der letzte Kanton, der
+      folgte, war Appenzell Innerrhoden im Jahr 1990.

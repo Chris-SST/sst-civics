@@ -1,0 +1,31 @@
+id: mietvertrag-rechte-pflichten-regeln
+lang: sq
+source_version: 1
+question: Çfarë përcaktohet në një kontratë qiraje?
+options:
+  a: Të drejtat e fqinjëve në ndërtesë
+  b: Lartësia e taksave të qiramarrësve
+  c: Detyrimet e komunës (Gemeinde) ndaj qiramarrësve
+  d: Të drejtat dhe detyrimet e qiradhënësve dhe të qiramarrësve
+explanation: Kontrata e qirasë rregullon marrëdhënien mes personit që jep me qira dhe personit që merr
+  me qira. Kjo përfshin, për shembull, qiranë dhe kohëzgjatjen e qirasë. Ligji i detyrimeve (Obligationenrecht)
+  përmban rregullat ligjore për këtë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird in einem Mietvertrag festgelegt?
+    options_de:
+      a: Die Rechte der Nachbarn im Gebäude
+      b: Die Höhe der Steuern der Mieter
+      c: Die Pflichten der Gemeinde gegenüber den Mietern
+      d: Die Rechte und Pflichten der Vermieter und der Mieter
+    explanation_de: Der Mietvertrag regelt das Verhältnis zwischen der Person, die vermietet, und der
+      Person, die mietet. Dazu gehören zum Beispiel der Mietzins und die Dauer der Miete. Das Obligationenrecht
+      enthält die gesetzlichen Regeln dafür.

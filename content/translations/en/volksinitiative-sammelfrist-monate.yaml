@@ -10,6 +10,23 @@ options:
 explanation: The collection period is 18 months from publication in the Federal Gazette (Bundesblatt).
   If they do not manage to collect the required 100,000 signatures within this time, the initiative does
   not come about.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie lange haben die Initianten Zeit, um die Unterschriften für eine eidgenössische Volksinitiative
+      zu sammeln?
+    options_de:
+      a: 6 Monate
+      b: 12 Monate
+      c: 18 Monate
+      d: 36 Monate
+    explanation_de: Die Sammelfrist beträgt 18 Monate ab der Veröffentlichung im Bundesblatt. Gelingt
+      es ihnen nicht, innerhalb dieser Zeit die erforderlichen 100 000 Unterschriften zu sammeln, kommt
+      die Initiative nicht zustande.

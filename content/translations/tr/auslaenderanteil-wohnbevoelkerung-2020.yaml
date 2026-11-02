@@ -1,0 +1,33 @@
+id: auslaenderanteil-wohnbevoelkerung-2020
+lang: tr
+source_version: 2
+question: 2020 yılında yabancıların İsviçre'nin daimi yerleşik nüfusu içindeki oranı yaklaşık olarak ne
+  kadardı?
+options:
+  a: yaklaşık beşte üç
+  b: yaklaşık onda bir
+  c: yaklaşık yarısı
+  d: yaklaşık dörtte bir
+explanation: 2020 yılında daimi yerleşik nüfusun yaklaşık dörtte biri İsviçre pasaportuna sahip değildi.
+  2020 sonunda 8,7 milyon kişiden yaklaşık 2,2 milyonu yabancıydı, yani yaklaşık yüzde 25. Avrupa'daki
+  diğer ülkelerle karşılaştırıldığında bu oran yüksektir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie hoch war im Jahr 2020 ungefähr der Anteil der Ausländer an der ständigen Wohnbevölkerung
+      der Schweiz?
+    options_de:
+      a: ungefähr drei Fünftel
+      b: ungefähr ein Zehntel
+      c: ungefähr die Hälfte
+      d: ungefähr ein Viertel
+    explanation_de: Im Jahr 2020 besass ungefähr ein Viertel der ständigen Wohnbevölkerung keinen Schweizer
+      Pass. Ende 2020 waren von 8,7 Millionen Personen ungefähr 2,2 Millionen Ausländer, also ungefähr
+      25 Prozent. Im Vergleich zu anderen Ländern in Europa ist dieser Anteil hoch.

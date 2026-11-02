@@ -1,0 +1,29 @@
+id: rav-aufgabe-stellensuchende-unterstuetzen
+lang: es
+source_version: 1
+question: ¿Qué función tiene el Centro Regional de Colocación (RAV)?
+options:
+  a: Controla los salarios en las empresas
+  b: Paga una pensión a todos los habitantes
+  c: Apoya a las personas que buscan empleo en su búsqueda de trabajo y les intermedia puestos de trabajo
+  d: Expide certificados de trabajo a las personas que buscan empleo
+explanation: El RAV es el punto de contacto regional para las personas que buscan empleo. Las asesora
+  y les intermedia puestos de trabajo. En el cantón de Zúrich forma parte de la Oficina de Trabajo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Funktion hat das Regionale Arbeitsvermittlungszentrum (RAV)?
+    options_de:
+      a: Es kontrolliert die Löhne in den Unternehmen
+      b: Es zahlt allen Einwohnern eine Rente
+      c: Es unterstützt Stellensuchende bei ihrer Arbeitssuche und vermittelt ihnen Arbeitsstellen
+      d: Es stellt Stellensuchenden Arbeitszeugnisse aus
+    explanation_de: Das RAV ist die regionale Anlaufstelle für Stellensuchende. Es berät sie und vermittelt
+      ihnen Arbeitsstellen. Im Kanton Zürich ist es Teil des Amts für Arbeit.

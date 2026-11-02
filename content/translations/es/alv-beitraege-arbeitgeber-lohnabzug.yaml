@@ -1,0 +1,31 @@
+id: alv-beitraege-arbeitgeber-lohnabzug
+lang: es
+source_version: 1
+question: ¿Quién deduce del salario las cotizaciones al seguro de desempleo?
+options:
+  a: El municipio (Gemeinde) del lugar de residencia
+  b: La trabajadora o el trabajador mismo, mediante un pago
+  c: El Centro Regional de Colocación (Regionales Arbeitsvermittlungszentrum)
+  d: El empleador
+explanation: El empleador deduce las cotizaciones automáticamente del salario y las transfiere al organismo
+  competente. Los trabajadores no tienen que ocuparse de ello personalmente. El empleador también paga
+  una parte de las cotizaciones.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zieht die Beiträge an die Arbeitslosenversicherung vom Lohn ab?
+    options_de:
+      a: Die Gemeinde des Wohnorts
+      b: Die Arbeitnehmerin oder der Arbeitnehmer selbst, durch eine Zahlung
+      c: Das Regionale Arbeitsvermittlungszentrum
+      d: Der Arbeitgeber
+    explanation_de: Der Arbeitgeber zieht die Beiträge automatisch vom Lohn ab und überweist sie an die
+      zuständige Stelle. Die Arbeitnehmenden müssen sich nicht persönlich darum kümmern. Der Arbeitgeber
+      bezahlt auch einen Teil der Beiträge.

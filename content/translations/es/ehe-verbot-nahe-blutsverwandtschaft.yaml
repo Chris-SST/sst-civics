@@ -1,0 +1,31 @@
+id: ehe-verbot-nahe-blutsverwandtschaft
+lang: es
+source_version: 1
+question: ¿Quién no puede casarse en Suiza?
+options:
+  a: Las personas que ya se han divorciado alguna vez
+  b: Las personas que proceden de distintos cantones
+  c: Las personas que son parientes consanguíneos cercanos
+  d: Las personas que viven en distintos municipios (Gemeinden)
+explanation: El matrimonio entre parientes consanguíneos cercanos está prohibido, por ejemplo entre hermanos
+  o entre padres e hijos. En cambio, el origen, el lugar de residencia y un divorcio anterior no son un
+  impedimento para contraer matrimonio.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer darf in der Schweiz nicht heiraten?
+    options_de:
+      a: Personen, die sich schon einmal scheiden liessen
+      b: Personen, die aus verschiedenen Kantonen stammen
+      c: Personen, die nahe Blutsverwandte sind
+      d: Personen, die in verschiedenen Gemeinden wohnen
+    explanation_de: Die Ehe zwischen nahen Blutsverwandten ist verboten, zum Beispiel zwischen Geschwistern
+      oder zwischen Eltern und Kindern. Hingegen sind die Herkunft, der Wohnort und eine frühere Scheidung
+      kein Hindernis für die Eheschliessung.

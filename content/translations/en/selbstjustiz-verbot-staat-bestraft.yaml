@@ -1,15 +1,31 @@
 id: selbstjustiz-verbot-staat-bestraft
 lang: en
-source_version: 1
+source_version: 2
 question: What applies in Switzerland when someone has broken the law?
 options:
   a: The neighbourhood decides together on the punishment.
   b: The state prosecutes and punishes the offence; taking the law into one's own hands is prohibited.
   c: The victim may determine and carry out the punishment themselves.
-  d: The offence goes unpunished if the victim defended themselves.
-explanation: The state holds the monopoly on the use of force. Only the police, the public prosecutor's
-  office and the courts may prosecute criminal offences and impose penalties. Anyone who takes revenge
-  themselves may, in certain circumstances, be committing a criminal offence themselves.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  d: The victim's family may punish the offender themselves.
+explanation: In Switzerland, only the state has the right to prosecute and punish criminal offences. The
+  police, the public prosecutor's office and the courts are responsible for this. Anyone who takes revenge
+  themselves, including as a victim or as the victim's family, may thereby commit a criminal offence themselves.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt in der Schweiz, wenn jemand gegen das Gesetz verstossen hat?
+    options_de:
+      a: Die Nachbarschaft entscheidet gemeinsam über die Strafe.
+      b: Der Staat verfolgt und bestraft die Straftat; Selbstjustiz ist verboten.
+      c: Das Opfer darf die Strafe selbst festlegen und vollziehen.
+      d: Die Familie des Opfers darf den Täter selbst bestrafen.
+    explanation_de: In der Schweiz hat nur der Staat das Recht, Straftaten zu verfolgen und zu bestrafen.
+      Dafür sind die Polizei, die Staatsanwaltschaft und die Gerichte zuständig. Wer sich selbst rächt,
+      auch als Opfer oder als Familie des Opfers, kann sich dadurch selbst strafbar machen.

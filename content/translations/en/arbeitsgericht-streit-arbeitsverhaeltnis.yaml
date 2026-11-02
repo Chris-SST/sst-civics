@@ -1,0 +1,31 @@
+id: arbeitsgericht-streit-arbeitsverhaeltnis
+lang: en
+source_version: 1
+question: An employee considers her dismissal to be unjustified and wants to challenge it. Which body
+  deals with such disputes arising from the employment relationship?
+options:
+  a: The Regional Employment Centre (RAV)
+  b: The Road Traffic Office
+  c: The Employment Tribunal
+  d: The Debt Enforcement Office
+explanation: The Employment Tribunal is responsible for disputes between employers and employees. This
+  also includes a dispute over a dismissal. The RAV, by contrast, helps with the search for a job.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Arbeitnehmerin hält ihre Kündigung für ungerechtfertigt und möchte sie anfechten.
+      Welche Stelle behandelt solche Streitigkeiten aus dem Arbeitsverhältnis?
+    options_de:
+      a: Das Regionale Arbeitsvermittlungszentrum (RAV)
+      b: Das Strassenverkehrsamt
+      c: Das Arbeitsgericht
+      d: Das Betreibungsamt
+    explanation_de: Das Arbeitsgericht ist für Streitigkeiten zwischen Arbeitgebern und Arbeitnehmern
+      zuständig. Dazu gehört auch ein Streit über eine Kündigung. Das RAV hingegen hilft bei der Stellensuche.

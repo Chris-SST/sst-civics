@@ -1,0 +1,31 @@
+id: bund-spitze-dreistufiger-staatsaufbau
+lang: it
+source_version: 2
+question: La Svizzera è strutturata in tre livelli statali. Quale livello è il più alto?
+options:
+  a: I Comuni (Gemeinden)
+  b: La Confederazione
+  c: I Cantoni
+  d: I distretti
+explanation: La Confederazione è il più alto dei tre livelli statali. Al di sotto vengono i Cantoni e
+  poi i Comuni. I distretti non sono un livello statale a sé stante, ma in alcuni Cantoni sono soltanto
+  unità amministrative all'interno del Cantone.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Die Schweiz ist in drei staatliche Ebenen gegliedert. Welche Ebene ist die höchste?
+    options_de:
+      a: Die Gemeinden
+      b: Der Bund
+      c: Die Kantone
+      d: Die Bezirke
+    explanation_de: Der Bund ist die höchste der drei staatlichen Ebenen. Darunter kommen die Kantone
+      und dann die Gemeinden. Die Bezirke sind keine eigenständige staatliche Ebene, sondern in einigen
+      Kantonen lediglich Verwaltungseinheiten innerhalb des Kantons.

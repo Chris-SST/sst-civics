@@ -1,0 +1,29 @@
+id: fasnacht-umzuege-mit-masken
+lang: sq
+source_version: 1
+question: Çfarë është tipike për Fasnachtin zviceran?
+options:
+  a: Parada në të cilat pjesëmarrësit mbajnë maska
+  b: Zbukurimi i pemëve të gjelbra (bredhave) në sheshin e fshatit
+  c: Fishekzjarret në mesnatë më 1 gusht
+  d: Ndezja e qirinjve të mëdhenj në kisha
+explanation: Gjatë Fasnachtit, grupe kalojnë nëpër rrugë në parada dhe mbajnë maska e kostume. Fasnachti
+  i Bazelit është një shembull i njohur i kësaj tradite.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist typisch für die Schweizer Fasnacht?
+    options_de:
+      a: Umzüge, bei denen die Teilnehmenden Masken tragen
+      b: Das Schmücken von grünen Bäumen (Tannen) auf dem Dorfplatz
+      c: Das Feuerwerk um Mitternacht am 1. August
+      d: Das Anzünden grosser Kerzen in den Kirchen
+    explanation_de: Während der Fasnacht ziehen Gruppen in Umzügen durch die Strassen und tragen Masken
+      und Kostüme. Die Basler Fasnacht ist ein bekanntes Beispiel für diese Tradition.

@@ -1,0 +1,30 @@
+id: ikrk-gruendung-genf-1863
+lang: sq
+source_version: 1
+question: Cila organizatë e njohur humanitare u themelua në vitin 1863 në Gjenevë?
+options:
+  a: Kombet e Bashkuara (OKB)
+  b: Organizata Botërore e Shëndetësisë (OBSH)
+  c: Programi Botëror i Ushqimit (WFP)
+  d: Komiteti Ndërkombëtar i Kryqit të Kuq (ICRC)
+explanation: ICRC u krijua në vitin 1863 në Gjenevë, ndër të tjera me nismën e Henry Dunant. Ai përfaqëson
+  traditën humanitare të Zvicrës. Organizatat e tjera u themeluan më vonë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche bekannte humanitäre Organisation wurde im Jahr 1863 in Genf gegründet?
+    options_de:
+      a: Die Vereinten Nationen (UNO)
+      b: Die Weltgesundheitsorganisation (WHO)
+      c: Das Welternährungsprogramm (WFP)
+      d: Das Internationale Komitee vom Roten Kreuz (IKRK)
+    explanation_de: Das IKRK wurde im Jahr 1863 in Genf gegründet, unter anderem auf die Initiative von
+      Henry Dunant. Es verkörpert die humanitäre Tradition der Schweiz. Die anderen Organisationen wurden
+      später gegründet.

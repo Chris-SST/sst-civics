@@ -1,0 +1,31 @@
+id: anzahl-kantone-und-halbkantone-schweiz
+lang: es
+source_version: 1
+question: ¿Cuántos cantones tiene Suiza y cuántos de ellos son semicantones?
+options:
+  a: 26 cantones, de los cuales 6 son semicantones
+  b: 26 cantones, de los cuales 3 son semicantones
+  c: 23 cantones, de los cuales 6 son semicantones
+  d: 20 cantones, de los cuales 6 son semicantones
+explanation: 'Suiza tiene 26 cantones. Seis de ellos son semicantones: Obwalden, Nidwalden, Basilea Ciudad,
+  Basilea Campiña, Appenzell Rodas Exteriores y Appenzell Rodas Interiores. En el Consejo de los Estados
+  (Ständerat) tienen un voto cada uno en lugar de dos.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Kantone hat die Schweiz und wie viele davon sind Halbkantone?
+    options_de:
+      a: 26 Kantone, davon 6 Halbkantone
+      b: 26 Kantone, davon 3 Halbkantone
+      c: 23 Kantone, davon 6 Halbkantone
+      d: 20 Kantone, davon 6 Halbkantone
+    explanation_de: 'Die Schweiz hat 26 Kantone. Sechs davon sind Halbkantone: Obwalden, Nidwalden, Basel-Stadt,
+      Basel-Landschaft, Appenzell Ausserrhoden und Appenzell Innerrhoden. Im Ständerat haben sie je eine
+      Stimme statt zwei.'

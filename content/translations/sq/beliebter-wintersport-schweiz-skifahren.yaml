@@ -1,0 +1,34 @@
+id: beliebter-wintersport-schweiz-skifahren
+lang: sq
+source_version: 2
+question: Cilën sport e praktikojnë veçanërisht shumë njerëz në Zvicër gjatë dimrit?
+options:
+  a: Vaterpolo
+  b: Skijimi
+  c: Kanotazhi
+  d: Volejbolli në plazh
+explanation: Skijimi është shumë i dashur në Zvicër gjatë dimrit dhe shumë njerëz skijojnë në male. Shpesh
+  edhe fëmijët mësojnë të skijojnë që herët, për shembull në një kamp skijimi të shkollës. Vaterpolo,
+  kanotazhi dhe volejbolli në plazh, përkundrazi, janë sporte që praktikohen kryesisht në verë ose në
+  ujë.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort c und die Erklärung: «Rudern» wird in der Rückübersetzung zu «Kanufahren», das ist
+      eine andere Sportart.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 2
+    question_de: Welche Sportart betreiben in der Schweiz im Winter besonders viele Menschen?
+    options_de:
+      a: Wasserball
+      b: Skifahren
+      c: Kanufahren
+      d: Beachvolleyball
+    explanation_de: Skifahren ist in der Schweiz im Winter sehr beliebt und viele Menschen fahren in den
+      Bergen Ski. Oft lernen schon die Kinder früh Ski fahren, zum Beispiel in einem Skilager der Schule.
+      Wasserball, Kanufahren und Beachvolleyball hingegen sind Sportarten, die hauptsächlich im Sommer
+      oder im Wasser betrieben werden.

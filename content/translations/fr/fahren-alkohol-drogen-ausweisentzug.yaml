@@ -1,0 +1,32 @@
+id: fahren-alkohol-drogen-ausweisentzug
+lang: fr
+source_version: 1
+question: Que risque une personne qui conduit une voiture en état d'ébriété ou sous l'influence de drogues
+  ?
+options:
+  a: La perte du droit de vote
+  b: L'expulsion de la commune de résidence
+  c: La résiliation de l'assurance maladie
+  d: Le retrait du permis de conduire
+explanation: Une personne qui n'est pas en état de conduire met en danger les autres usagers de la route.
+  C'est pourquoi l'autorité peut retirer le permis de conduire. Des amendes ou d'autres sanctions peuvent
+  s'y ajouter.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was riskiert eine Person, die in angetrunkenem Zustand oder unter dem Einfluss von Drogen
+      ein Auto fährt?
+    options_de:
+      a: Den Verlust des Stimmrechts
+      b: Die Ausweisung aus der Wohngemeinde
+      c: Die Kündigung der Krankenversicherung
+      d: Den Entzug des Führerausweises
+    explanation_de: Eine Person, die nicht fahrfähig ist, gefährdet die anderen Verkehrsteilnehmer. Deshalb
+      kann die Behörde den Führerausweis entziehen. Dazu können Bussen oder andere Sanktionen kommen.

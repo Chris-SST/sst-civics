@@ -1,0 +1,29 @@
+id: alpenuebergaenge-simplon-gotthard-st-bernhard
+lang: it
+source_version: 1
+question: Che cosa hanno in comune il Sempione, il San Gottardo e il Gran San Bernardo?
+options:
+  a: Sono Cantoni nelle Alpi.
+  b: Sono fiumi che sfociano nel mare.
+  c: Sono laghi dell'Altopiano svizzero.
+  d: Sono valichi attraverso le Alpi.
+explanation: Il Sempione, il San Gottardo e il Gran San Bernardo sono passi noti che attraversano le Alpi.
+  Collegano il versante nord delle Alpi con il versante sud delle Alpi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was haben der Simplon, der Gotthard und der Grosse Sankt Bernhard gemeinsam?
+    options_de:
+      a: Sie sind Kantone in den Alpen.
+      b: Sie sind Flüsse, die ins Meer münden.
+      c: Sie sind Seen des Schweizer Mittellands.
+      d: Sie sind Übergänge durch die Alpen.
+    explanation_de: Der Simplon, der Gotthard und der Grosse Sankt Bernhard sind bekannte Pässe, die die
+      Alpen überqueren. Sie verbinden die Alpennordseite mit der Alpensüdseite.

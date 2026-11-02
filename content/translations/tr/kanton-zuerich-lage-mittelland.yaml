@@ -1,0 +1,29 @@
+id: kanton-zuerich-lage-mittelland
+lang: tr
+source_version: 2
+question: Zürich kantonu İsviçre'nin hangi büyük coğrafi bölgesine aittir?
+options:
+  a: Güney Alpler'e
+  b: Jura'ya
+  c: Orta Bölge'ye (Mittelland)
+  d: Orta Alpler'e
+explanation: Zürich kantonu, Kuzeybatıdaki Jura ile güneydeki Alpler arasında yer alan daha düz bölge
+  olan Orta Bölge'ye (Mittelland) aittir. Orta Bölge, İsviçre'nin en yoğun nüfuslu kesimidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Zu welcher grossen geografischen Region der Schweiz gehört der Kanton Zürich?
+    options_de:
+      a: Zu den Südalpen
+      b: Zum Jura
+      c: Zum Mittelland
+      d: Zu den Zentralalpen
+    explanation_de: Der Kanton Zürich gehört zum Mittelland, der flacheren Region zwischen dem Jura im
+      Nordwesten und den Alpen im Süden. Das Mittelland ist der am dichtesten besiedelte Teil der Schweiz.

@@ -1,0 +1,36 @@
+id: empfehlung-bundesrat-parlament-volksinitiative
+lang: fr
+source_version: 1
+question: Qui donne aux personnes ayant le droit de vote, avant le scrutin sur une initiative populaire
+  (Volksinitiative) fédérale, une recommandation d'accepter ou de rejeter l'initiative ?
+options:
+  a: Le Conseil fédéral (Bundesrat) et le Parlement
+  b: Les gouvernements cantonaux
+  c: La Chancellerie fédérale (Bundeskanzlei) seule
+  d: Le Tribunal fédéral (Bundesgericht)
+explanation: Lorsqu'une initiative populaire a abouti, le Conseil fédéral et le Parlement prennent position
+  à son sujet. Le Parlement recommande aux personnes ayant le droit de vote d'accepter ou de rejeter l'initiative.
+  Cette recommandation figure aussi dans les explications du Conseil fédéral relatives au scrutin, que
+  les personnes ayant le droit de vote reçoivent avant la votation.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Erklärung: Die Abstimmungserläuterungen werden in der Rückübersetzung ausdrücklich als «Erläuterungen
+      des Bundesrates» bezeichnet, in der deutschen Fassung ohne Urheber; sonst gleiche Bedeutung.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wer gibt den Stimmberechtigten vor der Abstimmung über eine eidgenössische Volksinitiative
+      eine Empfehlung, die Initiative anzunehmen oder abzulehnen?
+    options_de:
+      a: Der Bundesrat und das Parlament
+      b: Die Kantonsregierungen
+      c: Die Bundeskanzlei allein
+      d: Das Bundesgericht
+    explanation_de: Wenn eine Volksinitiative zustande gekommen ist, nehmen der Bundesrat und das Parlament
+      dazu Stellung. Das Parlament empfiehlt den Stimmberechtigten, die Initiative anzunehmen oder abzulehnen.
+      Diese Empfehlung steht auch in den Erläuterungen des Bundesrates zur Abstimmung, die die Stimmberechtigten
+      vor der Abstimmung erhalten.

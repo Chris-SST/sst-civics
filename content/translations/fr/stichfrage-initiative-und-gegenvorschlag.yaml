@@ -1,0 +1,33 @@
+id: stichfrage-initiative-und-gegenvorschlag
+lang: fr
+source_version: 1
+question: Lors d'une votation sur une initiative populaire (Volksinitiative) et un contre-projet direct,
+  il y a une question subsidiaire. À quoi sert-elle ?
+options:
+  a: Elle décide si la votation doit être répétée
+  b: Elle décide si les cantons ont le droit de participer au vote
+  c: Elle décide quel texte s'applique si les deux sont acceptés
+  d: Elle décide si les signatures doivent être vérifiées une nouvelle fois
+explanation: Les personnes disposant du droit de vote peuvent approuver à la fois l'initiative et le contre-projet.
+  Avec la question subsidiaire, elles indiquent quel texte doit entrer en vigueur si les deux sont acceptés.
+  Ainsi, les voix ne peuvent pas se perdre entre deux textes similaires.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Bei einer Abstimmung über eine Volksinitiative und einen direkten Gegenentwurf gibt es
+      eine Stichfrage. Wozu dient sie?
+    options_de:
+      a: Sie entscheidet, ob die Abstimmung wiederholt werden muss
+      b: Sie entscheidet, ob die Kantone das Recht haben, an der Abstimmung teilzunehmen
+      c: Sie entscheidet, welcher Text gilt, wenn beide angenommen werden
+      d: Sie entscheidet, ob die Unterschriften noch einmal überprüft werden müssen
+    explanation_de: Die Stimmberechtigten können sowohl der Initiative als auch dem Gegenentwurf zustimmen.
+      Mit der Stichfrage geben sie an, welcher Text in Kraft treten soll, wenn beide angenommen werden.
+      So können die Stimmen zwischen zwei ähnlichen Texten nicht verloren gehen.

@@ -1,0 +1,31 @@
+id: volksinitiative-eigene-forderungen-durchsetzen
+lang: sq
+source_version: 1
+question: Për çfarë u shërben nisma popullore (Volksinitiative) personave me të drejtë vote?
+options:
+  a: Me anë të saj ata mund të ndryshojnë një vendim të Gjykatës Federale (Bundesgericht).
+  b: Me anë të saj ata mund t'i vendosin kërkesat e veta në axhendën politike.
+  c: Me anë të saj ata mund të caktojnë datën e zgjedhjeve të ardhshme.
+  d: Me anë të saj ata mund të pengojnë një ligj të miratuar nga parlamenti.
+explanation: Me një nismë popullore, personat me të drejtë vote mund të propozojnë një ndryshim të Kushtetutës
+  Federale. Nëse nisma realizohet, mbi të votohet. Kështu ata mund t'i zbatojnë kërkesat e veta edhe kundër
+  dëshirës së parlamentit, nëse populli dhe kantonet e miratojnë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient die Volksinitiative den Stimmberechtigten?
+    options_de:
+      a: Mit ihr können sie einen Entscheid des Bundesgerichts ändern.
+      b: Mit ihr können sie ihre eigenen Anliegen auf die politische Agenda setzen.
+      c: Mit ihr können sie das Datum der nächsten Wahlen festlegen.
+      d: Mit ihr können sie ein vom Parlament verabschiedetes Gesetz verhindern.
+    explanation_de: Mit einer Volksinitiative können die Stimmberechtigten eine Änderung der Bundesverfassung
+      vorschlagen. Wenn die Initiative zustande kommt, wird darüber abgestimmt. So können sie ihre eigenen
+      Anliegen auch gegen den Willen des Parlaments umsetzen, wenn das Volk und die Kantone sie annehmen.

@@ -1,0 +1,30 @@
+id: fahrausweis-personenwagen-strassenverkehrsamt-zuerich
+lang: tr
+source_version: 1
+question: Zürih kantonunda binek otomobiller için sürücü belgesini hangi makam verir?
+options:
+  a: İlçe mahkemesi
+  b: Kantonun karayolu trafik dairesi (Strassenverkehrsamt)
+  c: İkamet edilen belediyenin (Gemeinde) şehir polisi
+  d: Federal Yol İdaresi
+explanation: Zürih kantonunda sürücü belgelerinden karayolu trafik dairesi sorumludur. Bu daire Güvenlik
+  Müdürlüğü'ne bağlıdır. Belediyeler (Gemeinden) ve Konfederasyon sürücü belgesi vermez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde stellt im Kanton Zürich den Führerausweis für Personenwagen aus?
+    options_de:
+      a: Das Bezirksgericht
+      b: Das Strassenverkehrsamt des Kantons
+      c: Die Stadtpolizei der Wohngemeinde
+      d: Das Bundesamt für Strassen
+    explanation_de: Im Kanton Zürich ist das Strassenverkehrsamt für die Führerausweise zuständig. Dieses
+      Amt untersteht der Sicherheitsdirektion. Die Gemeinden und der Bund stellen keine Führerausweise
+      aus.

@@ -1,0 +1,34 @@
+id: volksinitiative-doppeltes-mehr
+lang: fr
+source_version: 2
+question: De quoi une initiative populaire (Volksinitiative) fédérale a-t-elle besoin pour être acceptée
+  lors de la votation ?
+options:
+  a: Le oui des deux tiers des votants
+  b: Le oui du Conseil fédéral (Bundesrat) et de la majorité des votants
+  c: Le oui de la majorité des votants et de la majorité des cantons
+  d: Seulement le oui de la majorité des votants
+explanation: 'Une initiative populaire fédérale vise à modifier la Constitution fédérale. Elle requiert
+  donc la double majorité : la majorité des votants (majorité du peuple, Volksmehr) et la majorité des
+  cantons (majorité des cantons, Ständemehr) doivent dire oui. En revanche, pour une initiative cantonale
+  dans le canton de Zurich, la majorité des votants suffit.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was braucht eine eidgenössische Volksinitiative, um in der Abstimmung angenommen zu werden?
+    options_de:
+      a: Das Ja von zwei Dritteln der Stimmenden
+      b: Das Ja des Bundesrates und der Mehrheit der Stimmenden
+      c: Das Ja der Mehrheit der Stimmenden und der Mehrheit der Kantone
+      d: Nur das Ja der Mehrheit der Stimmenden
+    explanation_de: 'Eine eidgenössische Volksinitiative zielt darauf ab, die Bundesverfassung zu ändern.
+      Sie erfordert daher das doppelte Mehr: Die Mehrheit der Stimmenden (Volksmehr) und die Mehrheit
+      der Kantone (Ständemehr) müssen Ja sagen. Hingegen genügt bei einer kantonalen Initiative im Kanton
+      Zürich die Mehrheit der Stimmenden.'

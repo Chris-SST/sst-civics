@@ -1,0 +1,32 @@
+id: osze-schweizer-engagement-friedenssicherung
+lang: tr
+source_version: 2
+question: İsviçre, Avrupa Güvenlik ve İşbirliği Teşkilatı'nda (AGİT) ne için çaba göstermektedir?
+options:
+  a: Avrupa'da barış ve güvenlik için, örneğin Doğu Avrupa'da ve Orta Asya'da
+  b: Batı Avrupa'da destek fonlarının dağıtımı için
+  c: Ortak bir para biriminin getirilmesi için
+  d: Dünya ticaretinde gümrük vergilerinin düşürülmesi için
+explanation: İsviçre, AGİT'in kurucu üyesidir ve AGİT'ten Avrupa'da barışı ve güvenliği desteklemek için
+  yararlanır. AGİT, saha misyonlarıyla özellikle Doğu ve Güneydoğu Avrupa'da ve Orta Asya'da faaliyet
+  göstermektedir. İsviçre, 2026 yılında AGİT'in dönem başkanlığını yürütmektedir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür setzt sich die Schweiz in der Organisation für Sicherheit und Zusammenarbeit in
+      Europa (OSZE) ein?
+    options_de:
+      a: Für Frieden und Sicherheit in Europa, zum Beispiel in Osteuropa und in Zentralasien
+      b: Für die Verteilung von Fördergeldern in Westeuropa
+      c: Für die Einführung einer gemeinsamen Währung
+      d: Für die Senkung der Zölle im Welthandel
+    explanation_de: Die Schweiz ist Gründungsmitglied der OSZE und nutzt die OSZE, um Frieden und Sicherheit
+      in Europa zu fördern. Die OSZE ist mit ihren Feldmissionen insbesondere in Ost- und Südosteuropa
+      und in Zentralasien tätig. Die Schweiz hat im Jahr 2026 den Vorsitz der OSZE inne.

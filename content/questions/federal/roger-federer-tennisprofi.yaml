@@ -18,7 +18,7 @@ sources:
   checked: &id001 2026-11-02
 glossary:
 - Tennis
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-317
@@ -39,3 +39,37 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Roger Federer hat seine Karriere 2022 beendet, darum sollte die Erklärung «ist ein berühmter
+        ehemaliger Schweizer Tennisprofi» oder «war ein Tennisprofi» schreiben statt «ist ein berühmter
+        Schweizer Tennisprofi».'
+      - 'Klein: Die Erklärung könnte mit einer konkreten Zahl aus der Quelle helfen, zum Beispiel «Er
+        gewann 20 Grand-Slam-Titel».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Roger Federer ist seit 2022 zurückgetreten; in der Erklärung besser «ein berühmter ehemaliger
+        Schweizer Tennisprofi» schreiben.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, Federer sei ein berühmter Tennisprofi, ohne zu erwähnen, dass er seine
+        Karriere beendet hat; besser wäre «ehemaliger Tennisprofi», wie es die Quelle formuliert.'
+      - 'Klein: Der letzte Satz der Erklärung («Tennis ist eine der Sportarten, in denen die Schweiz ...»)
+        ist allgemein und hilft kaum beim Verstehen; er könnte weggelassen oder durch die Zahl der Grand-Slam-Titel
+        (20) ersetzt werden.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

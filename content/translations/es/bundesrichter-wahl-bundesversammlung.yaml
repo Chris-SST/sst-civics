@@ -1,0 +1,30 @@
+id: bundesrichter-wahl-bundesversammlung
+lang: es
+source_version: 1
+question: ¿Quién elige a las juezas y los jueces del Tribunal Federal (Bundesgericht)?
+options:
+  a: El Consejo Federal (Bundesrat)
+  b: El pueblo en las urnas
+  c: La Asamblea Federal (Bundesversammlung)
+  d: Los gobiernos de los cantones
+explanation: La Asamblea Federal (Bundesversammlung), es decir, el Consejo Nacional (Nationalrat) y el
+  Consejo de los Estados (Ständerat) reunidos, elige a las juezas y los jueces del Tribunal Federal. Su
+  mandato dura seis años.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wählt die Richterinnen und Richter des Bundesgerichts?
+    options_de:
+      a: Der Bundesrat
+      b: Das Volk an der Urne
+      c: Die Bundesversammlung
+      d: Die Regierungen der Kantone
+    explanation_de: Die Bundesversammlung, das heisst der Nationalrat und der Ständerat gemeinsam, wählt
+      die Richterinnen und Richter des Bundesgerichts. Ihre Amtszeit dauert sechs Jahre.

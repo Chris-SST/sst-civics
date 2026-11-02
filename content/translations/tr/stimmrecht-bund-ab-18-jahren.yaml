@@ -1,0 +1,34 @@
+id: stimmrecht-bund-ab-18-jahren
+lang: tr
+source_version: 2
+question: Konfederasyon düzeyinde kimler oy kullanabilir ve seçim yapabilir?
+options:
+  a: 20 yaşından itibaren İsviçre vatandaşları
+  b: 18 yaşından itibaren yerleşim izni (Niederlassungsbewilligung) (C izni) sahibi tüm kişiler
+  c: 18 yaşından itibaren İsviçre vatandaşları
+  d: 16 yaşından itibaren İsviçre'de ikamet eden tüm kişiler
+explanation: Konfederasyonda İsviçreli kadınlar ve erkekler 18. doğum gününden itibaren oy kullanabilir
+  ve seçimlerde oy verebilir. Yabancılar, yerleşim izni (C izni) olsa bile Konfederasyon düzeyinde bu
+  hakka sahip değildir. Yurt dışında yaşayan İsviçre vatandaşları da seçmen kütüğüne kaydolmaları halinde
+  katılabilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; der Zusatz «Ausweis C» erklärt nur die Niederlassungsbewilligung, Fragen,
+      Antworten und Erklärung stimmen sachlich überein.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer kann auf Bundesebene abstimmen und wählen?
+    options_de:
+      a: Schweizer Staatsbürger ab 20 Jahren
+      b: Alle Personen mit einer Niederlassungsbewilligung (Ausweis C) ab 18 Jahren
+      c: Schweizer Staatsbürger ab 18 Jahren
+      d: Alle in der Schweiz wohnhaften Personen ab 16 Jahren
+    explanation_de: Auf Bundesebene können Schweizerinnen und Schweizer ab ihrem 18. Geburtstag abstimmen
+      und wählen. Ausländer haben dieses Recht auf Bundesebene nicht, auch nicht mit einer Niederlassungsbewilligung
+      (Ausweis C). Auch im Ausland lebende Schweizer Staatsbürger können teilnehmen, wenn sie sich ins
+      Stimmregister eintragen lassen.

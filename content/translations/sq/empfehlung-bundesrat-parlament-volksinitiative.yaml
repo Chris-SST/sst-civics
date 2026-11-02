@@ -1,0 +1,35 @@
+id: empfehlung-bundesrat-parlament-volksinitiative
+lang: sq
+source_version: 1
+question: Kush u jep qytetarëve me të drejtë vote, para votimit mbi një nismë popullore (Volksinitiative)
+  federale, një rekomandim nëse duhet ta miratojnë apo ta refuzojnë nismën?
+options:
+  a: Këshilli Federal (Bundesrat) dhe Parlamenti
+  b: Qeveritë e kantoneve
+  c: Kancelaria Federale (Bundeskanzlei) vetëm
+  d: Gjykata Federale (Bundesgericht)
+explanation: Pasi një nismë popullore ka arritur të realizohet, Këshilli Federal dhe Parlamenti marrin
+  qëndrim ndaj saj. Parlamenti u rekomandon qytetarëve me të drejtë vote miratimin ose refuzimin. Ky rekomandim
+  gjendet edhe në broshurën shpjeguese të votimit, të cilën qytetarët me të drejtë vote e marrin para
+  votimit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer gab den Stimmberechtigten vor der Abstimmung über eine eidgenössische Volksinitiative
+      eine Empfehlung, ob sie die Initiative annehmen oder ablehnen sollen?
+    options_de:
+      a: Der Bundesrat und das Parlament
+      b: Die Kantonsregierungen
+      c: Nur die Bundeskanzlei
+      d: Das Bundesgericht
+    explanation_de: Nachdem eine Volksinitiative zustande gekommen ist, nehmen der Bundesrat und das Parlament
+      dazu Stellung. Das Parlament empfiehlt den Stimmberechtigten die Annahme oder die Ablehnung. Diese
+      Empfehlung steht auch in der erläuternden Abstimmungsbroschüre, die die Stimmberechtigten vor der
+      Abstimmung erhalten.

@@ -1,0 +1,34 @@
+id: raumplanung-landschaften-ohne-bebauung
+lang: pt
+source_version: 2
+question: Qual é um objetivo do ordenamento do território na Suíça?
+options:
+  a: Deve proteger as paisagens não edificadas e utilizar o solo de forma económica.
+  b: Deve redefinir regularmente as fronteiras entre os cantões.
+  c: Deve criar o maior número possível de novas zonas de construção.
+  d: Deve determinar o preço dos terrenos para construção.
+explanation: O ordenamento do território determina onde se pode construir e onde não. Separa a zona edificável
+  da zona não edificável, para que as paisagens e os terrenos agrícolas sejam preservados. Como o solo
+  é escasso, deve utilizar-se de forma económica e, de preferência, densificar os aglomerados existentes,
+  em vez de criar novas zonas de construção.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: Frage und Antworten stimmen überein, die Erklärung unterscheidet sich
+      nur in Wortwahl (Kulturland/Landwirtschaftsland, sparsam/haushälterisch).'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was ist ein Ziel der Raumplanung in der Schweiz?
+    options_de:
+      a: Sie soll die unbebauten Landschaften schützen und den Boden haushälterisch nutzen.
+      b: Sie soll die Grenzen zwischen den Kantonen regelmässig neu festlegen.
+      c: Sie soll möglichst viele neue Bauzonen schaffen.
+      d: Sie soll den Preis des Baulandes bestimmen.
+    explanation_de: Die Raumplanung bestimmt, wo gebaut werden darf und wo nicht. Sie trennt die Bauzone
+      von der Nichtbauzone, damit die Landschaften und das Landwirtschaftsland erhalten bleiben. Da der
+      Boden knapp ist, soll er haushälterisch genutzt werden und es sollen vorzugsweise die bestehenden
+      Siedlungen verdichtet werden, anstatt neue Bauzonen zu schaffen.

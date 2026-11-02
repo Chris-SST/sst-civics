@@ -1,0 +1,30 @@
+id: fahren-alkohol-drogen-ausweisentzug
+lang: sq
+source_version: 1
+question: Çfarë rrezikon një person që drejton makinë nën ndikimin e alkoolit ose të drogës?
+options:
+  a: Humbjen e të drejtës së votës
+  b: Dëbimin nga komuna e banimit
+  c: Heqjen e sigurimit shëndetësor
+  d: Heqjen e lejes së drejtimit
+explanation: Kush nuk është në gjendje të drejtojë mjet, vë në rrezik të tjerët në trafikun rrugor. Prandaj
+  autoriteti mund të heqë lejen e drejtimit. Mund të shtohen edhe gjoba ose dënime të tjera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was riskiert eine Person, die unter Einfluss von Alkohol oder Drogen Auto fährt?
+    options_de:
+      a: Den Verlust des Stimmrechts
+      b: Die Ausweisung aus der Wohngemeinde
+      c: Den Entzug der Krankenversicherung
+      d: Den Entzug des Führerausweises
+    explanation_de: Wer nicht in der Lage ist, ein Fahrzeug zu führen, gefährdet andere im Strassenverkehr.
+      Deshalb kann die Behörde den Führerausweis entziehen. Es können auch Bussen oder andere Strafen
+      hinzukommen.

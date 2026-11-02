@@ -1,5 +1,5 @@
 id: selbstjustiz-verbot-staat-bestraft
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.gerichte
@@ -8,11 +8,11 @@ options_de:
   a: Die Nachbarschaft entscheidet gemeinsam über die Strafe.
   b: Der Staat verfolgt und bestraft die Tat; Selbstjustiz ist verboten.
   c: Das Opfer darf die Strafe selbst bestimmen und vollziehen.
-  d: Die Tat bleibt straflos, wenn das Opfer sich selbst gewehrt hat.
+  d: Die Familie des Opfers darf die Täterin oder den Täter selbst bestrafen.
 correct: b
-explanation_de: Das Gewaltmonopol liegt beim Staat. Nur Polizei, Staatsanwaltschaft und Gerichte dürfen
-  Straftaten verfolgen und Strafen verhängen. Wer selbst Rache übt, macht sich unter Umständen selbst
-  strafbar.
+explanation_de: In der Schweiz hat nur der Staat das Recht, Straftaten zu verfolgen und zu bestrafen.
+  Dafür sind Polizei, Staatsanwaltschaft und Gerichte zuständig. Wer sich selbst rächt, auch als Opfer
+  oder als Familie des Opfers, kann sich dabei selbst strafbar machen.
 sources:
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: &id001 2026-11-02
@@ -20,7 +20,7 @@ glossary:
 - Selbstjustiz
 - Gewaltmonopol
 - Rechtsstaat
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-091
@@ -30,15 +30,47 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
+    version: 2
     reasoning: In der Schweiz hat der Staat das Gewaltmonopol, verfolgt und bestraft Straftaten durch
-      Strafbehörden und Gerichte, und Selbstjustiz ist verboten.
+      Polizei, Staatsanwaltschaft und Gerichte, und Selbstjustiz ist verboten.
   source:
     verdict: supported
-    note: Die Broschüre sagt, der Staat habe das Gewaltmonopol und nur er dürfe Gewalt anwenden, und dass
-      nur das Gericht eine Person bestrafen darf, die sich nicht an das Gesetz hält. Das stützt Antwort
-      b und die Erklärung; der Hinweis auf eine mögliche eigene Strafbarkeit bei Rache steht nicht ausdrücklich
-      da, folgt aber aus dem Verbot von Gewalt.
+    note: Quelle 1 sagt, dass nur der Staat Gewalt anwenden darf (Gewaltmonopol) und dass nur das Gericht
+      eine Person bestrafen darf, die sich nicht ans Gesetz hält. Damit sind Selbstjustiz durch Opfer,
+      Familie oder Nachbarschaft ausgeschlossen. Die Aufgabenverteilung von Polizei, Staatsanwaltschaft
+      und Gerichten sowie die Strafbarkeit der Rache werden nicht ausdrücklich genannt, die Kernaussage
+      ist aber gedeckt.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Wort «vollziehen» in Antwort c ist für Niveau B1 eher schwierig; besser «Das Opfer
+        darf die Strafe selbst bestimmen und durchführen.»'
+      - 'Klein: Antwort b ist als einzige deutlich länger und hat zwei Teile, was die Lösung verraten
+        kann; man könnte die falschen Antworten etwas ausbauen, zum Beispiel «Die Nachbarschaft entscheidet
+        gemeinsam über die Strafe; der Staat greift nicht ein.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte den Begriff «Gewaltmonopol des Staates» kurz nennen, weil er in der
+        Broschüre vorkommt und im Test vorkommen kann.'
+      - 'Klein: Die Frage ist etwas allgemein formuliert; «Wer in der Schweiz ein Gesetz bricht, was passiert
+        dann?» wäre noch einfacher, aber die jetzige Fassung ist verständlich und eindeutig.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

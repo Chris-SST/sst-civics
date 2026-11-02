@@ -1,0 +1,33 @@
+id: umweltschutz-aufgabe-des-bundes
+lang: sq
+source_version: 1
+question: Cili nivel në Zvicër është përgjegjës për mbrojtjen e mjedisit dhe për nxjerrjen e rregulloreve
+  në këtë fushë?
+options:
+  a: Konfederata
+  b: Organizatat private
+  c: Vetëm komunat (Gemeinden)
+  d: Vetëm rrethet
+explanation: Kushtetuta Federale ia ngarkon Konfederatës detyrën që të mbrojë njeriun dhe mjedisin nga
+  ndikimet e dëmshme. Për këtë qëllim ajo nxjerr ligje, për shembull për mbrojtjen e ujërave dhe të natyrës.
+  Kantonet zbatojnë shumë nga këto rregullore.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Ebene in der Schweiz ist für den Umweltschutz und für den Erlass von Vorschriften
+      in diesem Bereich zuständig?
+    options_de:
+      a: Der Bund
+      b: Private Organisationen
+      c: Nur die Gemeinden
+      d: Nur die Bezirke
+    explanation_de: Die Bundesverfassung überträgt dem Bund die Aufgabe, den Menschen und die Umwelt vor
+      schädlichen Einwirkungen zu schützen. Zu diesem Zweck erlässt er Gesetze, zum Beispiel zum Schutz
+      der Gewässer und der Natur. Die Kantone setzen viele dieser Vorschriften um.

@@ -1,0 +1,31 @@
+id: alv-beitraege-arbeitgeber-lohnabzug
+lang: pt
+source_version: 1
+question: Quem desconta do salário as contribuições para o seguro de desemprego?
+options:
+  a: A comuna (Gemeinde) do local de residência
+  b: O próprio trabalhador ou a própria trabalhadora, mediante pagamento
+  c: O Centro Regional de Colocação (Regionales Arbeitsvermittlungszentrum)
+  d: O empregador
+explanation: O empregador desconta automaticamente as contribuições do salário e transfere-as para o organismo
+  competente. Os trabalhadores não têm de se ocupar disso pessoalmente. O empregador também paga uma parte
+  das contribuições.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zieht die Beiträge für die Arbeitslosenversicherung vom Lohn ab?
+    options_de:
+      a: Die Gemeinde des Wohnorts
+      b: Der Arbeitnehmer oder die Arbeitnehmerin selbst, durch Zahlung
+      c: Das Regionale Arbeitsvermittlungszentrum
+      d: Der Arbeitgeber
+    explanation_de: Der Arbeitgeber zieht die Beiträge automatisch vom Lohn ab und überweist sie an die
+      zuständige Stelle. Die Arbeitnehmenden müssen sich nicht persönlich darum kümmern. Der Arbeitgeber
+      zahlt auch einen Teil der Beiträge.

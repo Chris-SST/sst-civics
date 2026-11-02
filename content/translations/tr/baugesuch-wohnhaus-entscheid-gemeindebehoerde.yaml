@@ -1,0 +1,33 @@
+id: baugesuch-wohnhaus-entscheid-gemeindebehoerde
+lang: tr
+source_version: 1
+question: Zürich kantonunda, yeni bir konut için yapılan inşaat başvurusuna kural olarak kim karar verir?
+options:
+  a: Hükümet Konseyi (Regierungsrat)
+  b: Belediyenin (Gemeinde) inşaat makamı
+  c: İlçe mahkemesi
+  d: Konfederasyonun Mekânsal Gelişim Federal Dairesi
+explanation: Konutlar için inşaat başvuruları belediyeye (Gemeinde) yapılır. Belediyenin inşaat makamı
+  başvuruyu inceler ve inşaat ruhsatını verir ya da reddeder. Kanton yalnızca özel durumlarda sürece dahil
+  olur.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: Frage und Erklärung sprechen in der Rückübersetzung von einer «Wohnung» bzw. «Wohnungen» statt
+      von einem «Wohnhaus» bzw. «Wohnhäusern», das ist ein anderes Bauobjekt. Die übrigen Stellen stimmen
+      sinngemäss überein.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wer entscheidet im Kanton Zürich in der Regel über ein Baugesuch für eine neue Wohnung?
+    options_de:
+      a: Der Regierungsrat
+      b: Die Baubehörde der Gemeinde
+      c: Das Bezirksgericht
+      d: Das Bundesamt für Raumentwicklung des Bundes
+    explanation_de: Baugesuche für Wohnungen werden bei der Gemeinde eingereicht. Die Baubehörde der Gemeinde
+      prüft das Gesuch und erteilt die Baubewilligung oder lehnt sie ab. Der Kanton wird nur in besonderen
+      Fällen in das Verfahren einbezogen.

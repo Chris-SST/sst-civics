@@ -1,0 +1,35 @@
+id: abstimmungsunterlagen-erlaeuterungen-bundesrat
+lang: fr
+source_version: 1
+question: Que reçoivent les personnes ayant le droit de vote avant une votation fédérale, avec le matériel
+  de vote, afin de pouvoir s'informer sur les objets soumis au vote ?
+options:
+  a: Les explications du Conseil fédéral (Bundesrat)
+  b: Une prise de position du Tribunal fédéral (Bundesgericht)
+  c: Une expertise de leur propre canton
+  d: La liste électorale de tous les partis
+explanation: Le Conseil fédéral explique dans les explications, souvent appelées brochure de votation,
+  de quoi il s'agit pour chaque objet. On y trouve aussi les arguments du comité d'initiative ou de référendum,
+  ainsi que la recommandation du Conseil fédéral et du Parlement. Ainsi, chacun peut se forger sa propre
+  opinion.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was erhalten die Stimmberechtigten vor einer eidgenössischen Abstimmung mit dem Abstimmungsmaterial,
+      um sich über die Abstimmungsvorlagen informieren zu können?
+    options_de:
+      a: Die Erläuterungen des Bundesrates
+      b: Eine Stellungnahme des Bundesgerichts
+      c: Ein Gutachten ihres eigenen Kantons
+      d: Die Wahlliste aller Parteien
+    explanation_de: Der Bundesrat erklärt in den Erläuterungen, die oft als Abstimmungsbüchlein bezeichnet
+      werden, worum es bei jeder Vorlage geht. Man findet dort auch die Argumente des Initiativ- oder
+      Referendumskomitees sowie die Empfehlung des Bundesrates und des Parlaments. So kann sich jeder
+      seine eigene Meinung bilden.

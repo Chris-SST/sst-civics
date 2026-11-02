@@ -1,0 +1,32 @@
+id: waehlbar-in-bundesamt-voraussetzungen
+lang: sq
+source_version: 2
+question: Kush mund të zgjidhet në Këshillin Kombëtar (Nationalrat), në Këshillin Federal (Bundesrat)
+  ose në Gjykatën Federale (Bundesgericht)?
+options:
+  a: Vetëm ai që ka përfunduar një shkollë të lartë
+  b: Vetëm ai që jeton në Zvicër prej të paktën dhjetë vitesh
+  c: Vetëm ai që është anëtar i një partie politike
+  d: Të gjithë shtetasit zviceranë me të drejtë vote, nga mosha 18 vjeç
+explanation: Sipas Kushtetutës Federale, të gjithë personat me të drejtë vote mund të zgjidhen. Me të
+  drejtë vote janë shtetasit zviceranë nga mosha 18 vjeç. Nuk kërkohet anëtarësim në parti dhe as një
+  arsim i caktuar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer kann in den Nationalrat, in den Bundesrat oder in das Bundesgericht gewählt werden?
+    options_de:
+      a: Nur wer eine Hochschule abgeschlossen hat
+      b: Nur wer seit mindestens zehn Jahren in der Schweiz lebt
+      c: Nur wer Mitglied einer politischen Partei ist
+      d: Alle stimmberechtigten Schweizer Staatsangehörigen ab 18 Jahren
+    explanation_de: Gemäss der Bundesverfassung können alle stimmberechtigten Personen gewählt werden.
+      Stimmberechtigt sind Schweizer Staatsangehörige ab 18 Jahren. Eine Parteimitgliedschaft wird nicht
+      verlangt, ebenso wenig eine bestimmte Ausbildung.

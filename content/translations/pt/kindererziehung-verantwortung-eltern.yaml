@@ -1,0 +1,31 @@
+id: kindererziehung-verantwortung-eltern
+lang: pt
+source_version: 1
+question: Quem é o principal responsável pela educação das crianças na Suíça?
+options:
+  a: A comuna (Gemeinde)
+  b: Os pais
+  c: A escola
+  d: O cantão
+explanation: Segundo o Código Civil, os pais zelam pelo bem-estar da criança e dirigem a sua educação.
+  A escola complementa esta tarefa com o ensino. O Estado só intervém quando o bem-estar da criança está
+  em risco.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz hauptverantwortlich für die Erziehung der Kinder?
+    options_de:
+      a: Die Gemeinde
+      b: Die Eltern
+      c: Die Schule
+      d: Der Kanton
+    explanation_de: Gemäss dem Zivilgesetzbuch sorgen die Eltern für das Wohl des Kindes und leiten seine
+      Erziehung. Die Schule ergänzt diese Aufgabe durch den Unterricht. Der Staat greift nur ein, wenn
+      das Wohl des Kindes gefährdet ist.

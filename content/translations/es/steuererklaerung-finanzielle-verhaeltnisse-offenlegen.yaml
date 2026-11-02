@@ -1,0 +1,29 @@
+id: steuererklaerung-finanzielle-verhaeltnisse-offenlegen
+lang: es
+source_version: 1
+question: ¿Para qué sirve la declaración de impuestos que los contribuyentes rellenan cada año?
+options:
+  a: Sirve para el registro en la oficina de control de habitantes.
+  b: Es la solicitud de un seguro de enfermedad.
+  c: Es la inscripción para el servicio civil (Zivildienst).
+  d: Revela la situación financiera ante las autoridades fiscales.
+explanation: Con la declaración de impuestos, los contribuyentes indican sus ingresos, su patrimonio y
+  sus deducciones. Sobre esta base, la autoridad fiscal calcula el impuesto.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient die Steuererklärung, die die Steuerpflichtigen jedes Jahr ausfüllen?
+    options_de:
+      a: Sie dient der Anmeldung beim Einwohnerkontrollamt.
+      b: Sie ist der Antrag auf eine Krankenversicherung.
+      c: Sie ist die Anmeldung für den Zivildienst.
+      d: Sie legt die finanzielle Situation gegenüber den Steuerbehörden offen.
+    explanation_de: Mit der Steuererklärung geben die Steuerpflichtigen ihr Einkommen, ihr Vermögen und
+      ihre Abzüge an. Auf dieser Grundlage berechnet die Steuerbehörde die Steuer.

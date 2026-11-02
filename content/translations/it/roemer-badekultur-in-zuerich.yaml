@@ -1,0 +1,32 @@
+id: roemer-badekultur-in-zuerich
+lang: it
+source_version: 1
+question: Quale novità portarono i Romani a Zurigo?
+options:
+  a: La stampa a caratteri mobili
+  b: Le corporazioni
+  c: La cultura dei bagni
+  d: La Riforma
+explanation: I Romani introdussero a Zurigo la cultura dei bagni, cioè i bagni pubblici sul modello romano.
+  Le corporazioni, la stampa a caratteri mobili e la Riforma appartengono solo al Medioevo e alla prima
+  età moderna.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: «mit beweglichen Lettern» präzisiert den Buchdruck nur, ändert aber weder
+      Antwort noch Aussage; «nur» statt «erst» ist ein vergleichbarer Zeitbezug.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Neuheit brachten die Römer nach Zürich?
+    options_de:
+      a: Den Buchdruck mit beweglichen Lettern
+      b: Die Zünfte
+      c: Die Badekultur
+      d: Die Reformation
+    explanation_de: Die Römer führten in Zürich die Badekultur ein, das heisst die öffentlichen Bäder
+      nach römischem Vorbild. Die Zünfte, der Buchdruck mit beweglichen Lettern und die Reformation gehören
+      nur ins Mittelalter und in die frühe Neuzeit.

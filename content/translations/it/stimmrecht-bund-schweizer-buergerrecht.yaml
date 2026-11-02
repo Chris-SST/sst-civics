@@ -1,0 +1,31 @@
+id: stimmrecht-bund-schweizer-buergerrecht
+lang: it
+source_version: 1
+question: Qual è un requisito per il diritto di voto e di eleggibilità a livello federale?
+options:
+  a: La cittadinanza (Bürgerrecht) svizzera
+  b: L'appartenenza a un partito politico
+  c: Almeno dieci anni di domicilio in Svizzera
+  d: Un permesso di domicilio (permesso C) (Niederlassungsbewilligung) C
+explanation: A livello federale possono votare ed eleggere solo le persone con la cittadinanza svizzera.
+  Le straniere e gli stranieri non hanno il diritto di voto e di elezione a livello federale, nemmeno
+  con un permesso di domicilio. Non è necessario essere membri di un partito.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist eine Voraussetzung für das Stimm- und Wahlrecht auf Bundesebene?
+    options_de:
+      a: Das Schweizer Bürgerrecht
+      b: Die Zugehörigkeit zu einer politischen Partei
+      c: Mindestens zehn Jahre Wohnsitz in der Schweiz
+      d: Eine Niederlassungsbewilligung C
+    explanation_de: Auf Bundesebene dürfen nur Personen mit Schweizer Bürgerrecht abstimmen und wählen.
+      Ausländerinnen und Ausländer haben auf Bundesebene kein Stimm- und Wahlrecht, auch nicht mit einer
+      Niederlassungsbewilligung. Es ist nicht nötig, Mitglied einer Partei zu sein.

@@ -1,0 +1,31 @@
+id: abkuerzung-mwst-bedeutung
+lang: it
+source_version: 1
+question: Su fatture e ricevute compare spesso l'abbreviazione «MWST». Che cosa significa?
+options:
+  a: Imposta sugli appartamenti in affitto (Mietwohnungssteuer)
+  b: Imposta militare di difesa (Militärwehrsteuer)
+  c: Imposta sugli autoveicoli (Motorwagensteuer)
+  d: Imposta sul valore aggiunto (Mehrwertsteuer)
+explanation: MWST significa Mehrwertsteuer, cioè imposta sul valore aggiunto. Viene riscossa sulla maggior
+  parte dei beni e dei servizi ed è compresa nel prezzo. Rappresenta un'importante fonte di entrate della
+  Confederazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Auf Rechnungen und Quittungen steht oft die Abkürzung «MWST». Was bedeutet sie?
+    options_de:
+      a: Steuer auf vermietete Wohnungen (Mietwohnungssteuer)
+      b: Militärische Verteidigungssteuer (Militärwehrsteuer)
+      c: Steuer auf Motorfahrzeuge (Motorwagensteuer)
+      d: Mehrwertsteuer
+    explanation_de: MWST bedeutet Mehrwertsteuer, das heisst Steuer auf dem Mehrwert. Sie wird auf den
+      meisten Gütern und Dienstleistungen erhoben und ist im Preis enthalten. Sie stellt eine wichtige
+      Einnahmequelle des Bundes dar.

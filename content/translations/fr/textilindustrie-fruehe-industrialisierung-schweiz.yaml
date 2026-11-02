@@ -1,0 +1,34 @@
+id: textilindustrie-fruehe-industrialisierung-schweiz
+lang: fr
+source_version: 1
+question: Quelle branche économique était la plus importante au début de l'industrialisation de la Suisse
+  ?
+options:
+  a: L'industrie horlogère
+  b: L'industrie pharmaceutique
+  c: L'industrie textile
+  d: L'industrie des machines
+explanation: Au début de l'industrialisation, l'industrie textile a marqué l'économie suisse, par exemple
+  avec les filatures, les tissages et les broderies. Un exemple bien connu est celui des broderies de
+  Saint-Gall, très recherchées dans le monde entier. D'autres branches ne sont devenues aussi importantes
+  que plus tard.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Wirtschaftszweig war am Anfang der Industrialisierung der Schweiz am wichtigsten?
+    options_de:
+      a: Die Uhrenindustrie
+      b: Die Pharmaindustrie
+      c: Die Textilindustrie
+      d: Die Maschinenindustrie
+    explanation_de: Zu Beginn der Industrialisierung prägte die Textilindustrie die Schweizer Wirtschaft,
+      zum Beispiel mit den Spinnereien, den Webereien und den Stickereien. Ein bekanntes Beispiel sind
+      die St. Galler Stickereien, die auf der ganzen Welt sehr gefragt waren. Andere Branchen wurden erst
+      später so wichtig.

@@ -1,0 +1,32 @@
+id: volksinitiative-eigene-forderungen-durchsetzen
+lang: es
+source_version: 1
+question: ¿Para qué sirve una iniciativa popular (Volksinitiative) a las personas con derecho a voto?
+options:
+  a: Con ella pueden modificar una sentencia del Tribunal Federal (Bundesgericht).
+  b: Con ella pueden poner sus propias demandas en la agenda política.
+  c: Con ella pueden fijar la fecha de las próximas elecciones.
+  d: Con ella pueden impedir una ley del Parlamento.
+explanation: Con una iniciativa popular, las personas con derecho a voto pueden proponer una modificación
+  de la Constitución Federal. Si la iniciativa prospera, se somete a votación. Así pueden imponer sus
+  propias reivindicaciones incluso contra la voluntad del Parlamento, si el pueblo y los cantones la aprueban.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient eine Volksinitiative den Stimmberechtigten?
+    options_de:
+      a: Damit können sie ein Urteil des Bundesgerichts ändern.
+      b: Damit können sie ihre eigenen Forderungen auf die politische Agenda setzen.
+      c: Damit können sie das Datum der nächsten Wahlen festlegen.
+      d: Damit können sie ein Gesetz des Parlaments verhindern.
+    explanation_de: Mit einer Volksinitiative können die Stimmberechtigten eine Änderung der Bundesverfassung
+      vorschlagen. Kommt die Initiative zustande, wird sie zur Abstimmung vorgelegt. So können sie ihre
+      eigenen Forderungen auch gegen den Willen des Parlaments durchsetzen, wenn das Volk und die Kantone
+      sie annehmen.

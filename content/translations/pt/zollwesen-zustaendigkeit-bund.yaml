@@ -1,0 +1,31 @@
+id: zollwesen-zustaendigkeit-bund
+lang: pt
+source_version: 1
+question: Quem se encarrega, na Suíça, da administração aduaneira?
+options:
+  a: A Confederação
+  b: As comunas (Gemeinden) na fronteira
+  c: Os cantões em cujo território se situam as fronteiras
+  d: Os cantões e a Confederação, cada um em metade
+explanation: Segundo a Constituição Federal, a administração aduaneira é da competência da Confederação.
+  Ela regula as taxas aduaneiras e o controlo da circulação de mercadorias através da fronteira. Os cantões
+  e as comunas não têm competência própria nesta matéria.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz für das Zollwesen zuständig?
+    options_de:
+      a: Der Bund
+      b: Die Gemeinden an der Grenze
+      c: Die Kantone, auf deren Gebiet die Grenzen liegen
+      d: Die Kantone und der Bund, jeweils zur Hälfte
+    explanation_de: Gemäss der Bundesverfassung fällt das Zollwesen in die Zuständigkeit des Bundes. Er
+      regelt die Zollabgaben und die Kontrolle des Warenverkehrs über die Grenze. Die Kantone und die
+      Gemeinden haben in dieser Angelegenheit keine eigene Zuständigkeit.

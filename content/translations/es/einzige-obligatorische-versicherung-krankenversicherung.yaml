@@ -1,0 +1,30 @@
+id: einzige-obligatorische-versicherung-krankenversicherung
+lang: es
+source_version: 1
+question: ¿Cuál de los siguientes seguros es obligatorio por ley en Suiza para todos los habitantes?
+options:
+  a: El seguro de protección jurídica
+  b: El seguro de enfermedad
+  c: El seguro de viaje
+  d: El seguro de hogar
+explanation: El seguro de enfermedad es obligatorio para todas las personas con domicilio en Suiza. Los
+  seguros de hogar, de protección jurídica y de viaje son voluntarios.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Versicherungen ist in der Schweiz gesetzlich für alle Einwohner
+      obligatorisch?
+    options_de:
+      a: Die Rechtsschutzversicherung
+      b: Die Krankenversicherung
+      c: Die Reiseversicherung
+      d: Die Hausratversicherung
+    explanation_de: Die Krankenversicherung ist für alle Personen mit Wohnsitz in der Schweiz obligatorisch.
+      Die Hausrat-, Rechtsschutz- und Reiseversicherungen sind freiwillig.

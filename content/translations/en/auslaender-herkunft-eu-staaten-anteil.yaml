@@ -10,6 +10,22 @@ options:
 explanation: About 66 per cent of the foreign resident population come from EU countries, that is, around
   two thirds. The rest come from other European countries and from the rest of the world. The figure may
   change slightly over time.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Woher kommen die meisten in der Schweiz lebenden Ausländerinnen und Ausländer?
+    options_de:
+      a: Aus asiatischen Ländern, etwa zwei Drittel
+      b: Aus afrikanischen Ländern, etwa die Hälfte
+      c: Aus Ländern der Europäischen Union, etwa zwei Drittel
+      d: Aus Ländern des amerikanischen Kontinents, etwa ein Drittel
+    explanation_de: Etwa 66 Prozent der ausländischen Wohnbevölkerung stammen aus EU-Ländern, das heisst
+      rund zwei Drittel. Der Rest stammt aus anderen europäischen Ländern und aus dem Rest der Welt. Die
+      Zahl kann sich im Laufe der Zeit leicht ändern.

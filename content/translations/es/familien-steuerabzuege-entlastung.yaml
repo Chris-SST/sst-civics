@@ -1,0 +1,29 @@
+id: familien-steuerabzuege-entlastung
+lang: es
+source_version: 1
+question: ¿Cómo se alivia la carga fiscal de las familias en materia de impuestos?
+options:
+  a: Las familias no pagan impuestos.
+  b: Las familias pueden hacer valer deducciones en los impuestos.
+  c: Las familias no tienen que rellenar una declaración de impuestos.
+  d: Las familias solo pagan el impuesto sobre el valor añadido.
+explanation: Las familias pueden hacer valer, por ejemplo, deducciones por los hijos o por el cuidado
+  de los hijos. Con ello disminuye la renta imponible y, por tanto, el impuesto.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie wird die steuerliche Belastung der Familien im Bereich der Steuern gemildert?
+    options_de:
+      a: Familien zahlen keine Steuern.
+      b: Familien können bei den Steuern Abzüge geltend machen.
+      c: Familien müssen keine Steuererklärung ausfüllen.
+      d: Familien zahlen nur die Mehrwertsteuer.
+    explanation_de: Familien können zum Beispiel Abzüge für die Kinder oder für die Kinderbetreuung geltend
+      machen. Dadurch sinkt das steuerbare Einkommen und somit die Steuer.

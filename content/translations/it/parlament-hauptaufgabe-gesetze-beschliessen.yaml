@@ -1,0 +1,29 @@
+id: parlament-hauptaufgabe-gesetze-beschliessen
+lang: it
+source_version: 1
+question: Qual è il compito più importante del Parlamento federale?
+options:
+  a: Dirigere la polizia in tutto il Paese
+  b: Decidere nelle controversie tra persone
+  c: Discutere e approvare le leggi
+  d: Far applicare le leggi nella vita quotidiana
+explanation: Il Parlamento è il potere legislativo. Esso discute e adotta le leggi federali. Il Governo
+  le attua e i tribunali giudicano nelle controversie.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die wichtigste Aufgabe des Bundesparlaments?
+    options_de:
+      a: Die Polizei im ganzen Land leiten
+      b: In Streitigkeiten zwischen Personen entscheiden
+      c: Gesetze diskutieren und verabschieden
+      d: Die Gesetze im Alltag durchsetzen
+    explanation_de: Das Parlament ist die gesetzgebende Gewalt. Es diskutiert und verabschiedet die Bundesgesetze.
+      Die Regierung setzt sie um und die Gerichte urteilen in Streitigkeiten.

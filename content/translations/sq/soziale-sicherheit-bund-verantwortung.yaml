@@ -1,0 +1,33 @@
+id: soziale-sicherheit-bund-verantwortung
+lang: sq
+source_version: 1
+question: Cili nivel shtetëror në Zvicër mbart përgjegjësinë për ta siguruar shoqërisht popullsinë, për
+  shembull përmes parashikimit për pleqëri?
+options:
+  a: Rrethet
+  b: Vetëm komunat (Gemeinden)
+  c: Konfederata
+  d: Vetëm kantonet
+explanation: Kushtetuta Federale i cakton Konfederatës detyra të rëndësishme të sigurisë shoqërore. Këtu
+  përfshihen, për shembull, sigurimi i pleqërisë dhe i të mbijetuarve (AHV) dhe sigurimi i invaliditetit.
+  Kështu, për të gjithë Zvicrën vlejnë baza të njëjta.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Ebene in der Schweiz trägt die Verantwortung dafür, die Bevölkerung
+      sozial abzusichern, zum Beispiel durch die Altersvorsorge?
+    options_de:
+      a: Die Bezirke
+      b: Nur die Gemeinden
+      c: Der Bund
+      d: Nur die Kantone
+    explanation_de: Die Bundesverfassung weist dem Bund wichtige Aufgaben der sozialen Sicherheit zu.
+      Dazu gehören zum Beispiel die Alters- und Hinterlassenenversicherung (AHV) und die Invalidenversicherung.
+      So gelten für die ganze Schweiz die gleichen Grundlagen.

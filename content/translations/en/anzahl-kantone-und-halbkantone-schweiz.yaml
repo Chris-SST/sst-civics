@@ -10,6 +10,22 @@ options:
 explanation: 'Switzerland has 26 cantons. Six of them are half-cantons: Obwalden, Nidwalden, Basel-Stadt,
   Basel-Landschaft, Appenzell Ausserrhoden and Appenzell Innerrhoden. In the Council of States (Ständerat),
   they each have one vote instead of two.'
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Kantone hat die Schweiz, und wie viele davon sind Halbkantone?
+    options_de:
+      a: 26 Kantone, davon 6 Halbkantone
+      b: 26 Kantone, davon 3 Halbkantone
+      c: 23 Kantone, davon 6 Halbkantone
+      d: 20 Kantone, davon 6 Halbkantone
+    explanation_de: 'Die Schweiz hat 26 Kantone. Sechs davon sind Halbkantone: Obwalden, Nidwalden, Basel-Stadt,
+      Basel-Landschaft, Appenzell Ausserrhoden und Appenzell Innerrhoden. Im Ständerat haben sie jeweils
+      eine Stimme statt zwei.'

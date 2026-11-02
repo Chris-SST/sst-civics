@@ -10,6 +10,24 @@ options:
 explanation: Up to four voting Sundays per year are scheduled for federal popular votes. On one date,
   voters are often asked to decide on several proposals at the same time. By contrast, the elections to
   the National Council (Nationalrat) take place every four years, and these are not votes on proposals.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie oft pro Jahr finden in der Schweiz normalerweise eidgenössische Volksabstimmungen
+      statt?
+    options_de:
+      a: Einmal
+      b: Nur alle vier Jahre
+      c: Bis zu viermal
+      d: Jeden Monat
+    explanation_de: Für eidgenössische Volksabstimmungen sind pro Jahr bis zu vier Abstimmungssonntage
+      angesetzt. An einem Termin werden die Stimmberechtigten oft gefragt, über mehrere Vorlagen gleichzeitig
+      zu entscheiden. Dagegen finden die Wahlen zum Nationalrat alle vier Jahre statt, und dies sind keine
+      Abstimmungen über Vorlagen.

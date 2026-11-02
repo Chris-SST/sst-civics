@@ -1,0 +1,34 @@
+id: abstimmungsunterlagen-erlaeuterungen-bundesrat
+lang: tr
+source_version: 1
+question: Federal bir oylamadan önce oy hakkı olan kişiler, oylanacak konular hakkında bilgi edinebilmeleri
+  için oy materyaliyle birlikte ne alır?
+options:
+  a: Federal Konsey'in (Bundesrat) açıklamaları
+  b: Federal Mahkeme'nin (Bundesgericht) bir görüş bildirimi
+  c: Kişinin kendi kantonunun bir bilirkişi raporu
+  d: Tüm partilerin seçim listesi
+explanation: Federal Konsey, genellikle oylama kitapçığı olarak adlandırılan açıklamalarda her bir konunun
+  ne ile ilgili olduğunu açıklar. Bu kitapçıkta ayrıca girişim veya referandum komitesinin argümanları
+  ile Federal Konsey'in ve Parlamento'nun tavsiyesi de yer alır. Böylece herkes kendi fikrini oluşturabilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was erhalten Stimmberechtigte vor einer eidgenössischen Abstimmung zusammen mit dem Abstimmungsmaterial,
+      damit sie sich über die Abstimmungsgegenstände informieren können?
+    options_de:
+      a: Die Erläuterungen des Bundesrates
+      b: Eine Stellungnahme des Bundesgerichts
+      c: Ein Gutachten des eigenen Kantons der Person
+      d: Die Wahlliste aller Parteien
+    explanation_de: Der Bundesrat erklärt in den Erläuterungen, die allgemein als Abstimmungsbüchlein
+      bezeichnet werden, worum es bei jedem Gegenstand geht. In diesem Büchlein finden sich auch die Argumente
+      des Initiativ- oder Referendumskomitees sowie die Empfehlung des Bundesrates und des Parlaments.
+      So kann sich jeder seine eigene Meinung bilden.

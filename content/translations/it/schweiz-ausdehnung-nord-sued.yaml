@@ -1,0 +1,28 @@
+id: schweiz-ausdehnung-nord-sued
+lang: it
+source_version: 1
+question: Quanto dista, all'incirca, il punto più a nord dal punto più a sud della Svizzera?
+options:
+  a: circa 650 chilometri
+  b: circa 220 chilometri
+  c: circa 120 chilometri
+  d: circa 450 chilometri
+explanation: La Svizzera misura circa 220 chilometri da nord a sud. È quindi un paese piccolo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie weit liegt ungefähr der nördlichste Punkt vom südlichsten Punkt der Schweiz entfernt?
+    options_de:
+      a: etwa 650 Kilometer
+      b: etwa 220 Kilometer
+      c: etwa 120 Kilometer
+      d: etwa 450 Kilometer
+    explanation_de: Die Schweiz misst von Norden nach Süden etwa 220 Kilometer. Sie ist also ein kleines
+      Land.

@@ -1,17 +1,18 @@
 id: dampfmaschine-industrialisierung-schweiz
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.sozial.wirtschaft_arbeit
-question_de: Welche Erfindung prägte im 18. Jahrhundert den industriellen Umbruch in der Schweiz?
+question_de: Welche Erfindung hat im 19. Jahrhundert die Industrialisierung in der Schweiz stark geprägt?
 options_de:
-  a: Die Dampfmaschine
-  b: Der Computer
-  c: Das Fliessband
-  d: Das Auto
-correct: a
-explanation_de: Mit der Dampfmaschine begann die Industrialisierung, und die Arbeit verlagerte sich zunehmend
-  in Fabriken. Computer, Fliessband und Auto kamen erst viel später.
+  a: Das Flugzeug
+  b: Die Dampfmaschine
+  c: Der Computer
+  d: Das Fliessband
+correct: b
+explanation_de: Im 19. Jahrhundert wurde die Dampfmaschine in der Schweiz wichtig. Sie trieb Maschinen
+  in Fabriken und später auch Eisenbahnen an, und immer mehr Menschen arbeiteten in Fabriken. Flugzeug,
+  Fliessband und Computer wurden erst im 20. Jahrhundert wichtig.
 sources:
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: &id001 2026-11-02
@@ -20,26 +21,62 @@ sources:
 glossary:
 - Dampfmaschine
 - Industrialisierung
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-235
 checks:
   independent_answer:
-    option: a
+    option: b
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Die Dampfmaschine wurde im 18. Jahrhundert entwickelt und prägte die frühe Industrialisierung
-      (auch in der Schweiz, wo zudem mechanische Spinnmaschinen wichtig waren), während Computer, Fliessband
-      und Auto erst im 19. und 20. Jahrhundert aufkamen.
+    version: 2
+    reasoning: Die Dampfmaschine prägte im 19. Jahrhundert die Industrialisierung der Schweiz stark, während
+      Flugzeug, Computer und Fliessband erst im 20. Jahrhundert wichtig wurden.
   source:
     verdict: supported
-    note: Quelle 1 (Broschüre, Seite 12) sagt, die Industrialisierung habe mit der Erfindung der Dampfmaschine
-      begonnen und die Schweizer Industrie stark verändert. Die Quelle nennt allerdings das 19. Jahrhundert
-      statt des 18. in der Frage; die Antwort a) wird dennoch gestützt, weil die anderen Optionen nicht
-      als Auslöser genannt werden.
+    note: Quelle 1 (Seite 12) sagt, die Industrialisierung habe im 19. Jahrhundert mit der Erfindung der
+      Dampfmaschine begonnen und die Schweizer Industrie stark verändert; auch der Eisenbahnbau wird dort
+      genannt. Dass Flugzeug, Fliessband und Computer erst im 20. Jahrhundert wichtig wurden, steht nicht
+      im Text, ist aber für die richtige Antwort nicht entscheidend.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Tatsache aus der Themenliste nennt das 18. Jahrhundert, die Broschüre des Kantons
+        Zürich (S. 12) aber das 19. Jahrhundert; die Frage verwendet richtig das 19. Jahrhundert, die
+        Tatsache in der Themenliste sollte auf «19. Jahrhundert» korrigiert werden.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Tatsache aus der Themenliste nennt das 18. Jahrhundert, aber die Industrialisierung
+        in der Schweiz und der Einsatz der Dampfmaschine fallen vor allem ins 19. Jahrhundert; die Frage
+        ist daher richtig formuliert, und die Themenliste sollte entsprechend korrigiert werden.'
+      - 'Klein: In der Schweiz trieb anfangs vor allem die Wasserkraft die Fabriken an; die Erklärung
+        könnte ergänzen, dass die Dampfmaschine besonders für die Eisenbahn (ab 1847) und später für Fabriken
+        wichtig wurde, damit kein überzeichnetes Bild entsteht.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Tatsache in der Themenliste nennt das 18. Jahrhundert, die amtliche Broschüre aber
+        das 19. Jahrhundert; die Frage folgt richtig der Broschüre, die Tatsache sollte auf «19. Jahrhundert»
+        korrigiert werden.'
+      - 'Klein: «Welche Erfindung hat im 19. Jahrhundert ... geprägt» könnte so gelesen werden, als sei
+        die Dampfmaschine erst im 19. Jahrhundert erfunden worden; besser wäre «Welche Technik hat im
+        19. Jahrhundert die Industrialisierung in der Schweiz stark geprägt?».'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

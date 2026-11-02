@@ -1,0 +1,30 @@
+id: agrargesellschaft-zum-industrieland-19-jahrhundert
+lang: it
+source_version: 1
+question: Come è cambiata economicamente la Svizzera nel XIX secolo?
+options:
+  a: Viveva soprattutto del commercio con le colonie.
+  b: Fino al 1900 è rimasta quasi esclusivamente un paese di contadini.
+  c: Si è trasformata da paese industriale a società agraria.
+  d: Si è trasformata da società agraria a paese industriale.
+explanation: Nel XIX secolo il lavoro si spostò dall'agricoltura alle fabbriche. Nuove vie di comunicazione
+  come la ferrovia sostennero questo cambiamento. Così il paese agricolo divenne un paese industriale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie hat sich die Schweiz im 19. Jahrhundert wirtschaftlich verändert?
+    options_de:
+      a: Sie lebte vor allem vom Handel mit den Kolonien.
+      b: Bis 1900 blieb sie fast ausschliesslich ein Bauernland.
+      c: Sie wandelte sich von einem Industrieland zu einer Agrargesellschaft.
+      d: Sie wandelte sich von einer Agrargesellschaft zu einem Industrieland.
+    explanation_de: Im 19. Jahrhundert verlagerte sich die Arbeit von der Landwirtschaft in die Fabriken.
+      Neue Verkehrswege wie die Eisenbahn unterstützten diese Veränderung. So wurde das Agrarland zu einem
+      Industrieland.

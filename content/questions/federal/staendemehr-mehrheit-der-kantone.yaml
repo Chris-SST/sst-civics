@@ -22,7 +22,7 @@ glossary:
 - Ständemehr
 - Kanton
 - Volksabstimmung
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-008
@@ -44,3 +44,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «Die Stimmen eines Kantons zählen dabei nach dem Ergebnis der Abstimmung in diesem
+        Kanton» ist etwas unklar; besser: «Jeder Kanton hat eine Standesstimme (sechs Kantone je eine
+        halbe). Sie richtet sich nach dem Ergebnis der Volksabstimmung in diesem Kanton.»'
+      - 'Klein: Die mitgelieferten Quellen erklären den Begriff Ständemehr nicht direkt; als Beleg wäre
+        Art. 142 BV (Volks- und Ständemehr) passender, die Aussage ist aber gesichertes Grundwissen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «Die Stimmen eines Kantons zählen dabei nach dem Ergebnis der Abstimmung in diesem
+        Kanton» ist unklar; besser: «Jeder Kanton hat eine Standesstimme. Sie richtet sich nach dem Ergebnis
+        der Volksabstimmung in diesem Kanton (sechs Kantone haben je eine halbe Standesstimme).»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der zweite Satz der Erklärung ist unklar formuliert; besser: «Jeder Kanton hat eine Standesstimme,
+        und diese folgt dem Ergebnis der Abstimmung im Kanton (Mehrheit der Stimmenden).»'
+      - 'Klein: Die Erklärung könnte erwähnen, dass es insgesamt 23 Standesstimmen gibt, weil sechs Kantone
+        (frühere Halbkantone) nur eine halbe Stimme haben; so wird «Mehrheit der Kantone» genauer.'
+      - 'Klein: Die Quellen nennen das Ständemehr nur indirekt («Volk und Ständen», «Standesstimmen»);
+        die Antwort ist aber sicheres Allgemeinwissen, daher kein Hindernis.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

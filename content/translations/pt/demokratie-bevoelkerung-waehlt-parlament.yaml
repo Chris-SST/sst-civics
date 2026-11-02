@@ -1,0 +1,31 @@
+id: demokratie-bevoelkerung-waehlt-parlament
+lang: pt
+source_version: 1
+question: Numa democracia como a Suíça, o que faz parte dos direitos da população?
+options:
+  a: Ela nomeia por sorteio os juízes do Tribunal Federal (Bundesgericht).
+  b: Ela determina sozinha as leis, sem o Parlamento.
+  c: Ela determina o seu Parlamento através de eleições.
+  d: Ela elege diretamente a chefia do exército.
+explanation: Na democracia, a população elege os seus representantes para o Parlamento. A nível da Confederação,
+  estes são o Conselho Nacional (Nationalrat) e o Conselho dos Estados (Ständerat). O Parlamento aprova
+  então, em nome do povo, as leis federais.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gehört in einer Demokratie wie der Schweiz zu den Rechten der Bevölkerung?
+    options_de:
+      a: Sie ernennt die Richter des Bundesgerichts durch Losentscheid.
+      b: Sie bestimmt die Gesetze allein, ohne das Parlament.
+      c: Sie bestimmt ihr Parlament durch Wahlen.
+      d: Sie wählt die Führung der Armee direkt.
+    explanation_de: In der Demokratie wählt die Bevölkerung ihre Vertreter ins Parlament. Auf Ebene des
+      Bundes sind dies der Nationalrat und der Ständerat. Das Parlament verabschiedet dann im Namen des
+      Volkes die Bundesgesetze.

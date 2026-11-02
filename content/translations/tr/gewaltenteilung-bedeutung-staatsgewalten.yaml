@@ -1,0 +1,31 @@
+id: gewaltenteilung-bedeutung-staatsgewalten
+lang: tr
+source_version: 1
+question: İsviçre'de kuvvetler ayrılığı ilkesi ne anlama gelir?
+options:
+  a: Konfederasyon, kantonlar ve belediyeler (Gemeinden) vergi gelirlerini kendi aralarında paylaşır.
+  b: Hükümet, parlamento ve mahkemeler devlet gücünü paylaşır.
+  c: Devletteki güç yalnızca Federal Konsey'de (Bundesrat) bulunur.
+  d: Halk ve medya devlet gücünü paylaşır.
+explanation: Kuvvetler ayrılığında yürütme (hükümet), yasama (parlamento) ve yargı (mahkemeler) farklı
+  görevleri üstlenir. Böylece hiçbir kurum tek başına çok fazla güce sahip olamaz. Devlet güçleri birbirlerini
+  karşılıklı olarak denetler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet das Prinzip der Gewaltenteilung in der Schweiz?
+    options_de:
+      a: Der Bund, die Kantone und die Gemeinden teilen die Steuereinnahmen untereinander auf.
+      b: Die Regierung, das Parlament und die Gerichte teilen die Staatsgewalt unter sich auf.
+      c: Die Macht im Staat liegt ausschliesslich beim Bundesrat.
+      d: Das Volk und die Medien teilen die Staatsgewalt unter sich auf.
+    explanation_de: Bei der Gewaltenteilung übernehmen die Exekutive (Regierung), die Legislative (Parlament)
+      und die Judikative (Gerichte) unterschiedliche Aufgaben. So kann keine Institution allein zu viel
+      Macht haben. Die Staatsgewalten kontrollieren sich gegenseitig.

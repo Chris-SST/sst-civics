@@ -1,17 +1,18 @@
 id: gewerkschaften-aufgabe-arbeitnehmende
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.sozial.wirtschaft_arbeit
 question_de: Welche Aufgabe haben Gewerkschaften in der Schweiz?
 options_de:
   a: Sie setzen sich für die Anliegen der Arbeitnehmenden ein.
-  b: Sie zahlen Arbeitslosen das Taggeld aus.
+  b: Sie erteilen Ausländerinnen und Ausländern die Bewilligung zum Arbeiten.
   c: Sie legen die Steuersätze für Unternehmen fest.
   d: Sie vertreten die Anliegen der Arbeitgeber gegenüber dem Bund.
 correct: a
 explanation_de: Gewerkschaften sind Organisationen der Arbeitnehmenden. Sie vertreten deren Interessen,
-  zum Beispiel bei Löhnen und Arbeitsbedingungen, und verhandeln oft Gesamtarbeitsverträge mit.
+  zum Beispiel bei Löhnen und Arbeitsbedingungen, und handeln oft Gesamtarbeitsverträge mit den Arbeitgebern
+  aus. Arbeitsbewilligungen stellen hingegen die Behörden aus, nicht die Gewerkschaften.
 sources:
 - url: https://www.kmu.admin.ch/de/gewerkschaftliche-vertretung-eine-bruecke-zwischen-arbeitgeber-und-arbeitnehmer
   checked: &id001 2026-11-02
@@ -23,7 +24,7 @@ glossary:
 - Gewerkschaft
 - Arbeitnehmende
 - Gesamtarbeitsvertrag
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-164
@@ -33,16 +34,47 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
+    version: 2
     reasoning: Gewerkschaften sind Organisationen der Arbeitnehmenden, die deren Interessen vertreten,
-      etwa bei Löhnen und Arbeitsbedingungen und in Gesamtarbeitsverträgen, während Taggelder von den
-      Arbeitslosenkassen ausgezahlt, Steuersätze von Bund, Kantonen und Gemeinden festgelegt und Arbeitgeberanliegen
-      von Arbeitgeberverbänden vertreten werden.
+      etwa bei Löhnen und Arbeitsbedingungen und in Gesamtarbeitsverträgen, während Arbeitsbewilligungen
+      von Behörden erteilt, Steuersätze vom Gesetzgeber festgelegt und Arbeitgeberanliegen von Arbeitgeberverbänden
+      vertreten werden.
   source:
     verdict: supported
-    note: Quelle 1 sagt, Gewerkschaften seien Verbände von Arbeitnehmenden, die ihre Rechte verteidigen
-      und bei Lohn und Arbeitsbedingungen verhandeln. Quelle 2 und 3 stützen dies, auch die Gesamtarbeitsverträge
-      (Quelle 2) und die Interessenvertretung (Quelle 3).
+    note: Quelle 1 nennt Gewerkschaften Verbände von Arbeitnehmenden, die deren Rechte verteidigen, und
+      Gesprächspartner bei Lohn und Arbeitsbedingungen; Quelle 2 beschreibt Gesamtarbeitsverträge mit
+      Arbeitgebenden; Quelle 3 sagt ausdrücklich, Gewerkschaften setzen sich für die Rechte und Interessen
+      von Arbeitnehmenden ein. Die Aussage zu Arbeitsbewilligungen steht nicht ausdrücklich in den Quellen,
+      widerspricht ihnen aber nicht.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte zur Abgrenzung von Antwort d) kurz ergänzen, dass die Anliegen der
+        Arbeitgeber von den Arbeitgeberverbänden vertreten werden, etwa mit dem Satz «Die Anliegen der
+        Arbeitgeber vertreten die Arbeitgeberverbände.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort d) ist nur knapp falsch, weil Arbeitgeberverbände und nicht Gewerkschaften die
+        Arbeitgeber vertreten. Das ist für Lernende klar genug; zur Schärfung könnte man «Sie vertreten
+        die Anliegen der Arbeitgeber gegenüber dem Bund» durch «Sie vertreten die Anliegen der Arbeitgeber»
+        ersetzen, nötig ist es aber nicht.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

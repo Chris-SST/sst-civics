@@ -24,7 +24,7 @@ glossary:
 - Kündigung
 - Einschreiben
 - Kündigungsfrist
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-167
@@ -46,3 +46,49 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «weil Kündigungsfristen ab dem Empfang laufen» ist etwas ungenau, denn die Kündigung
+        muss vor Beginn der Frist (meist auf Ende Monat) ankommen; besser: «Das ist wichtig, weil die
+        Kündigung erst gilt, wenn die andere Seite sie erhalten hat.»'
+      - 'Klein: Die Erklärung könnte ergänzen, dass eine mündliche Kündigung zwar gültig ist, aber schwer
+        zu beweisen; so wird klar, warum Antwort d) falsch ist, etwa mit «Eine mündliche Kündigung ist
+        zwar gültig, man kann sie aber schlecht beweisen.»'
+      - 'Klein: Die Tatsache aus der Themenliste klingt wie eine gesetzliche Pflicht («erfolgt per Einschreiben»),
+        dabei ist es nur eine Empfehlung zum Beweis; die Frage formuliert das zu Recht so, die Tatsache
+        sollte entsprechend angepasst werden, etwa mit «Eine ordentliche Kündigung sollte per Einschreiben
+        erfolgen, …».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «weil Kündigungsfristen ab dem Empfang laufen» ist etwas ungenau, weil die Kündigung
+        meist auf ein Monatsende wirkt; besser wäre «weil die Kündigung rechtzeitig vor Beginn der Kündigungsfrist
+        ankommen muss».'
+      - 'Klein: Antwort a) (Mitteilung an die Gemeindeverwaltung) ist wenig plausibel; sie könnte durch
+        eine glaubwürdigere falsche Antwort ersetzt werden, etwa «Per SMS oder Chat-Nachricht».'
+      - 'Klein: Die Erklärung könnte kurz erwähnen, dass eine Kündigung gesetzlich oft auch ohne Form
+        gültig ist, man aber ohne Nachweis den Empfang nicht beweisen kann; das hilft, die Fragestellung
+        «damit man den Empfang nachweisen kann» zu verstehen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage sagt «ordentliche Kündigung», die Quelle (KMU-Portal) sagt dagegen, dass eine
+        Kündigung auch mündlich möglich ist und das Einschreiben nur der Beweissicherung dient. Die Erklärung
+        könnte ergänzen, dass das Einschreiben empfohlen wird, damit man den Empfang beweisen kann, und
+        nicht gesetzlich vorgeschrieben ist.'
+      - 'Klein: Antwort b) enthält zwei Möglichkeiten («oder»), das ist etwas sperrig. Die Formulierung
+        entspricht aber der Themenliste und ist für B1 noch verständlich.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

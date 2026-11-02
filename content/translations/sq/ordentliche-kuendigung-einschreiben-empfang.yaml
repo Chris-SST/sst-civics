@@ -1,0 +1,33 @@
+id: ordentliche-kuendigung-einschreiben-empfang
+lang: sq
+source_version: 1
+question: Si duhet t'i dorëzohet një shkëputje e rregullt e marrëdhënies së punës (Kündigung), që të mund
+  të provohet pranimi?
+options:
+  a: Përmes një njoftimi te administrata e komunës (Gemeinde)
+  b: Me letër rekomande, ose pala tjetër e konfirmon pranimin me shkrim
+  c: Me një e-mail të thjeshtë pa konfirmim
+  d: Me gojë, në një bisedë mes katër syve
+explanation: Me një letër rekomande ose me një konfirmim me shkrim të pranimit mund të provohet se shkëputja
+  e marrëdhënies së punës ka arritur te marrësi. Kjo është e rëndësishme, sepse afatet e njoftimit fillojnë
+  nga momenti i pranimit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie muss eine ordentliche Kündigung des Arbeitsverhältnisses zugestellt werden, damit
+      der Empfang bewiesen werden kann?
+    options_de:
+      a: Durch eine Mitteilung bei der Gemeindeverwaltung
+      b: Mit eingeschriebenem Brief, oder die andere Partei bestätigt den Empfang schriftlich
+      c: Mit einer einfachen E-Mail ohne Bestätigung
+      d: Mündlich, in einem Gespräch unter vier Augen
+    explanation_de: Mit einem eingeschriebenen Brief oder mit einer schriftlichen Bestätigung des Empfangs
+      kann bewiesen werden, dass die Kündigung des Arbeitsverhältnisses beim Empfänger angekommen ist.
+      Das ist wichtig, weil die Kündigungsfristen ab dem Zeitpunkt des Empfangs beginnen.

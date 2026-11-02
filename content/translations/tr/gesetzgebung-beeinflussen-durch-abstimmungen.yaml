@@ -1,0 +1,32 @@
+id: gesetzgebung-beeinflussen-durch-abstimmungen
+lang: tr
+source_version: 1
+question: İsviçre'de oy hakkı olan vatandaşlar Konfederasyon'un yasama sürecini doğrudan nasıl etkiler?
+options:
+  a: Sandıkta girişimler ve referandumlar hakkında oy kullanırlar.
+  b: Yeni yasalara karar veren yargıçları seçerler.
+  c: Yeni yasaları çıkaran Federal Konsey üyelerini atarlar.
+  d: Yasalara Federal Meclis (Bundesversammlung) toplantısında bizzat karar verirler.
+explanation: Oy hakkı olan vatandaşlar girişimler ve referandumlar hakkında yapılan halk oylamalarına
+  katılır ve orada karar sürecine katkıda bulunur. Böylece seçimler arasındaki dönemde de yasama sürecine
+  doğrudan katılırlar. Bu, doğrudan demokrasinin bir özelliğidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie beeinflussen stimmberechtigte Bürgerinnen und Bürger in der Schweiz den Gesetzgebungsprozess
+      des Bundes direkt?
+    options_de:
+      a: Sie stimmen an der Urne über Initiativen und Referenden ab.
+      b: Sie wählen die Richter, die über neue Gesetze entscheiden.
+      c: Sie ernennen die Mitglieder des Bundesrates, die die neuen Gesetze erlassen.
+      d: Sie entscheiden in der Sitzung der Bundesversammlung persönlich über die Gesetze.
+    explanation_de: Stimmberechtigte Bürgerinnen und Bürger nehmen an Volksabstimmungen über Initiativen
+      und Referenden teil und tragen dort zum Entscheidungsprozess bei. So beteiligen sie sich auch in
+      der Zeit zwischen den Wahlen direkt am Gesetzgebungsprozess. Dies ist ein Merkmal der direkten Demokratie.

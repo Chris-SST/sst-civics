@@ -1,0 +1,31 @@
+id: neutralitaet-bedeutung-bewaffnete-konflikte
+lang: tr
+source_version: 1
+question: İsviçre'nin tarafsızlığı, diğer devletler arasındaki silahlı çatışmalarda ne anlama gelir?
+options:
+  a: İsviçre, barışın korunması için her savaş bölgesine asker gönderir.
+  b: İsviçre, çatışmaya taraf olan devletlerle tüm ilişkilerini keser.
+  c: İsviçre, çatışan taraflardan hiçbirinin yanında yer almaz.
+  d: İsviçre her zaman daha zayıf tarafı destekler.
+explanation: Tarafsızlık, İsviçre'nin savaşan taraflardan birinin yanında yer almaması demektir. Böylece
+  İsviçre, diğer devletlerin çatışmalarının dışında kalır. Bu, görüşmeleri ve insani yardımı engellemez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Neutralität der Schweiz bei bewaffneten Konflikten zwischen anderen
+      Staaten?
+    options_de:
+      a: Die Schweiz schickt zur Wahrung des Friedens Soldaten in jedes Kriegsgebiet.
+      b: Die Schweiz bricht alle ihre Beziehungen zu den am Konflikt beteiligten Staaten ab.
+      c: Die Schweiz stellt sich auf die Seite keiner der Konfliktparteien.
+      d: Die Schweiz unterstützt immer die schwächere Seite.
+    explanation_de: Neutralität bedeutet, dass die Schweiz sich nicht auf die Seite einer der Kriegsparteien
+      stellt. So bleibt die Schweiz aus den Konflikten anderer Staaten heraus. Dies verhindert weder Verhandlungen
+      noch humanitäre Hilfe.

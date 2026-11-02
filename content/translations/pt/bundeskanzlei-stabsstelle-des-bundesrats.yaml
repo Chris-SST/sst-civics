@@ -1,0 +1,31 @@
+id: bundeskanzlei-stabsstelle-des-bundesrats
+lang: pt
+source_version: 1
+question: Qual é a função da Chancelaria Federal (Bundeskanzlei) para o Conselho Federal (Bundesrat)?
+options:
+  a: É o órgão de apoio do Conselho Federal.
+  b: Examina, como tribunal, as decisões do Conselho Federal.
+  c: Dirige o Departamento das Finanças.
+  d: Elege os membros do Conselho Federal.
+explanation: A Chancelaria Federal apoia o Conselho Federal no seu trabalho, por exemplo na preparação
+  das sessões. Está sob a direção da chanceler federal ou do chanceler federal. O Conselho Federal é eleito
+  pela Assembleia Federal (Bundesversammlung).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Funktion hat die Bundeskanzlei für den Bundesrat?
+    options_de:
+      a: Sie ist das Stabsorgan des Bundesrates.
+      b: Sie prüft als Gericht die Entscheidungen des Bundesrates.
+      c: Sie leitet das Finanzdepartement.
+      d: Sie wählt die Mitglieder des Bundesrates.
+    explanation_de: Die Bundeskanzlei unterstützt den Bundesrat bei seiner Arbeit, zum Beispiel bei der
+      Vorbereitung der Sitzungen. Sie steht unter der Leitung der Bundeskanzlerin oder des Bundeskanzlers.
+      Der Bundesrat wird von der Bundesversammlung gewählt.

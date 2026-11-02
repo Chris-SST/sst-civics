@@ -9,6 +9,22 @@ options:
   d: Graubünden
 explanation: Graubünden is the largest canton in Switzerland by area. It lies entirely in the Alps and
   has many valleys and mountains. Valais, Bern and Ticino are also large, but they are smaller than Graubünden.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton hat die grösste Fläche aller Schweizer Kantone?
+    options_de:
+      a: Tessin
+      b: Wallis
+      c: Bern
+      d: Graubünden
+    explanation_de: Graubünden ist flächenmässig der grösste Kanton der Schweiz. Er liegt vollständig
+      in den Alpen und hat viele Täler und Berge. Wallis, Bern und Tessin sind ebenfalls gross, aber sie
+      sind kleiner als Graubünden.

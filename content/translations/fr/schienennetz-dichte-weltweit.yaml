@@ -1,0 +1,32 @@
+id: schienennetz-dichte-weltweit
+lang: fr
+source_version: 1
+question: Pour quelle caractéristique le réseau ferroviaire suisse est-il connu au niveau international
+  ?
+options:
+  a: C'est le réseau ferroviaire le plus dense du monde.
+  b: C'est le seul réseau ferroviaire qui passe entièrement par des tunnels.
+  c: C'est le plus long réseau ferroviaire d'Europe.
+  d: C'est le plus ancien réseau ferroviaire du monde.
+explanation: Sur une petite superficie, il y a de très nombreuses lignes de chemin de fer et gares. C'est
+  pourquoi le réseau suisse est considéré comme le plus dense du monde. Toutefois, la densité ne dit rien
+  de la longueur absolue.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für welche Eigenschaft ist das Schweizer Eisenbahnnetz international bekannt?
+    options_de:
+      a: Es ist das dichteste Eisenbahnnetz der Welt.
+      b: Es ist das einzige Eisenbahnnetz, das vollständig durch Tunnel führt.
+      c: Es ist das längste Eisenbahnnetz Europas.
+      d: Es ist das älteste Eisenbahnnetz der Welt.
+    explanation_de: Auf einer kleinen Fläche gibt es sehr viele Eisenbahnlinien und Bahnhöfe. Deshalb
+      gilt das Schweizer Netz als das dichteste der Welt. Die Dichte sagt jedoch nichts über die absolute
+      Länge aus.

@@ -5,11 +5,30 @@ question: What changed for Switzerland with the Federal Constitution of 1848?
 options:
   a: It became a loose confederation of states again
   b: It became a monarchy with a king
-  c: It became a federal state in which the cantons remain autonomous
+  c: It became a federal state in which the cantons remain independent
   d: It became a unitary state without cantons
-explanation: In 1848, the modern federal state with common institutions was created. However, the cantons
+explanation: In 1848, the modern federal state was created, with shared institutions. However, the cantons
   kept their own responsibilities and their own statehood. This division of powers still shapes Switzerland
   today.
-status: draft
+status: flagged
 reviewed_by: null
 reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: In der Erklärung steht in der Rückübersetzung «Gewaltenteilung» statt «Aufteilung» (der Aufgaben
+      zwischen Bund und Kantonen); das ist ein anderer Begriff (Gewaltenteilung meint Legislative/Exekutive/Judikative).
+      Zudem sind «eigenständig» und «unabhängig» in Antwort c nicht ganz gleich, da die Kantone nicht
+      unabhängig, sondern souverän im Rahmen des Bundes sind.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Was änderte sich für die Schweiz mit der Bundesverfassung von 1848?
+    options_de:
+      a: Sie wurde wieder ein loser Staatenbund
+      b: Sie wurde eine Monarchie mit einem König
+      c: Sie wurde ein Bundesstaat, in dem die Kantone unabhängig bleiben
+      d: Sie wurde ein Einheitsstaat ohne Kantone
+    explanation_de: 1848 wurde der moderne Bundesstaat geschaffen, mit gemeinsamen Institutionen. Die
+      Kantone behielten jedoch ihre eigenen Zuständigkeiten und ihre eigene Staatlichkeit. Diese Gewaltenteilung
+      prägt die Schweiz bis heute.

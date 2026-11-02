@@ -1,0 +1,31 @@
+id: schweiz-kein-meerzugang
+lang: sq
+source_version: 2
+question: Cila deklaratë për pozitën gjeografike të Zvicrës është e saktë?
+options:
+  a: Zvicra nuk ka dalje të drejtpërdrejtë në det.
+  b: Zvicra kufizohet në perëndim me Oqeanin Atlantik.
+  c: Zvicra kufizohet në jug me Detin Mesdhe.
+  d: Zvicra kufizohet në veri me Detin e Veriut.
+explanation: 'Zvicra është një vend pa dalje në det: ajo është e rrethuar tërësisht nga vende të tjera
+  dhe nuk ka bregdet. Në Rhein lundrojnë ndonëse anije nga Basel deri në Detin e Veriut, por asnjë det
+  nuk kufizohet drejtpërdrejt me Zvicrën.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Aussage über die geografische Lage der Schweiz ist richtig?
+    options_de:
+      a: Die Schweiz hat keinen direkten Zugang zum Meer.
+      b: Die Schweiz grenzt im Westen an den Atlantischen Ozean.
+      c: Die Schweiz grenzt im Süden an das Mittelmeer.
+      d: Die Schweiz grenzt im Norden an die Nordsee.
+    explanation_de: 'Die Schweiz ist ein Land ohne Zugang zum Meer: Sie ist vollständig von anderen Ländern
+      umgeben und hat keine Küste. Auf dem Rhein fahren zwar Schiffe von Basel bis zur Nordsee, aber kein
+      Meer grenzt direkt an die Schweiz.'

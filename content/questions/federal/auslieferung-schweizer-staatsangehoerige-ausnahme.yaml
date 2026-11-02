@@ -1,28 +1,30 @@
 id: auslieferung-schweizer-staatsangehoerige-ausnahme
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.grundrechte
 question_de: Was gilt grundsätzlich für die Auslieferung von Schweizer Staatsangehörigen ins Ausland?
 options_de:
   a: Sie werden auf Verlangen jedes Staates ausgeliefert.
-  b: Sie werden nicht ausgeliefert, ausser an ein internationales Gericht.
+  b: Sie werden nicht gegen ihren Willen an einen anderen Staat ausgeliefert. An ein internationales Gericht
+    können sie aber übergeben werden.
   c: Sie werden nur an Nachbarstaaten der Schweiz ausgeliefert.
   d: Sie werden ausgeliefert, wenn der Bundesrat dies im Einzelfall will.
 correct: b
-explanation_de: Artikel 25 der Bundesverfassung schützt Schweizerinnen und Schweizer vor Ausweisung und
-  Auslieferung. Eine Auslieferung an ein internationales Gericht ist nur dann möglich, wenn dieses dort
-  ein Verfahren führt.
+explanation_de: Nach Artikel 25 der Bundesverfassung dürfen Schweizerinnen und Schweizer nicht ausgewiesen
+  werden. An einen anderen Staat dürfen sie nur ausgeliefert werden, wenn sie selbst einverstanden sind.
+  Ein internationales Gericht, zum Beispiel der Internationale Strafgerichtshof, ist keine ausländische
+  Behörde, deshalb erlaubt ein Bundesgesetz, Schweizer Staatsangehörige für ein Verfahren dorthin zu übergeben.
 sources:
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: 2026-11-02
 - url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
-  checked: 2026-11-02
+  checked: &id001 2026-11-02
 glossary:
 - Auslieferung
 - Staatsangehörigkeit
 - Bundesverfassung
-status: needs_fix
+status: approved
 difficulty: 2
 covers:
 - zh-097
@@ -32,18 +34,52 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
+    version: 2
     reasoning: Nach Art. 25 Abs. 1 der Bundesverfassung dürfen Schweizer Bürgerinnen und Bürger nicht
-      aus der Schweiz ausgewiesen werden und dürfen nur mit ihrer Zustimmung einer ausländischen Behörde
-      überstellt werden; da Antwort b die Nichtauslieferung als Grundsatz mit der Ausnahme eines internationalen
-      Gerichts nennt, ist sie die beste Antwort, wobei die Frage vereinfacht ist (das Gesetz kennt auch
-      die Zustimmung der betroffenen Person).
+      gegen ihren Willen aus der Schweiz ausgewiesen oder an eine ausländische Behörde ausgeliefert werden,
+      wobei die Übergabe an ein internationales Gericht möglich ist.
   source:
-    verdict: not_supported
-    note: Quelle 2 (Art. 25 Abs. 1 BV) sagt, Schweizerinnen und Schweizer dürfen nur mit ihrem Einverständnis
-      an eine ausländische Behörde ausgeliefert werden. Von einer Ausnahme für internationale Gerichte
-      steht dort nichts, und die Aussage der Erklärung zu einem Verfahren vor Ort ist nicht belegt. Quelle
-      1 behandelt das Thema nicht.
-    at: 2026-11-02
+    verdict: supported
+    note: Quelle 2 (Bundesverfassung, Art. 25 Abs. 1) sagt, dass Schweizerinnen und Schweizer nur mit
+      ihrem Einverständnis an eine ausländische Behörde ausgeliefert werden dürfen. Das stützt den ersten
+      Teil der Antwort und der Erklärung. Die Übergabe an ein internationales Gericht steht in den Quellen
+      nicht ausdrücklich, folgt aber aus dem Wortlaut «ausländische Behörde».
+    at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort b ist deutlich länger und genauer als die drei falschen Antworten und fällt dadurch
+        auf; die falschen Antworten könnten etwas ausführlicher formuliert werden, zum Beispiel d) «Sie
+        werden ausgeliefert, wenn der Bundesrat dies im Einzelfall beschliesst, auch ohne ihr Einverständnis.»'
+      - 'Klein: Die Quellen stützen nur den ersten Teil (Art. 25 Abs. 1 BV); für die Übergabe an internationale
+        Gerichte könnte die Erklärung das Gesetz nennen, zum Beispiel «das Bundesgesetz über die Zusammenarbeit
+        mit dem Internationalen Strafgerichtshof».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort b) ist deutlich länger und differenzierter als die drei falschen Antworten und
+        verrät sich dadurch; die falschen Antworten sollten ähnlich lang formuliert werden, zum Beispiel
+        c) «Sie werden nur an Nachbarstaaten ausgeliefert, an andere Staaten nur mit Bewilligung des Bundesgerichts.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die richtige Antwort b) ist deutlich länger als die anderen und fällt dadurch auf; die
+        falschen Antworten könnten etwas ausführlicher formuliert werden.'
+      - 'Klein: Die Erklärung nennt das Bundesgesetz für die Übergabe an internationale Gerichte nicht;
+        sie könnte es nennen (Bundesgesetz über die Zusammenarbeit mit dem Internationalen Strafgerichtshof)
+        und «ausländische Behörde» wie in Art. 25 BV statt «anderer Staat» verwenden.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

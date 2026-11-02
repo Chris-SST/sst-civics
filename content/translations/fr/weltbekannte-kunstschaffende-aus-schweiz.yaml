@@ -1,0 +1,31 @@
+id: weltbekannte-kunstschaffende-aus-schweiz
+lang: fr
+source_version: 1
+question: Quels noms figurent parmi les artistes de renommée mondiale ayant un lien avec la Suisse ?
+options:
+  a: Vincent van Gogh, Paul Cézanne et Henri Matisse
+  b: Niki de Saint Phalle, Sophie Taeuber-Arp et Pipilotti Rist
+  c: Claude Monet, Edgar Degas et Auguste Renoir
+  d: Pablo Picasso, Frida Kahlo et Salvador Dalí
+explanation: Niki de Saint Phalle, Sophie Taeuber-Arp et Pipilotti Rist sont des artistes reconnues sur
+  le plan international, qui sont liées à la Suisse. Les autres groupes citent des artistes célèbres sans
+  ce lien avec la Suisse.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Namen gehören zu den weltberühmten Künstlern mit einem Bezug zur Schweiz?
+    options_de:
+      a: Vincent van Gogh, Paul Cézanne und Henri Matisse
+      b: Niki de Saint Phalle, Sophie Taeuber-Arp und Pipilotti Rist
+      c: Claude Monet, Edgar Degas und Auguste Renoir
+      d: Pablo Picasso, Frida Kahlo und Salvador Dalí
+    explanation_de: Niki de Saint Phalle, Sophie Taeuber-Arp und Pipilotti Rist sind international anerkannte
+      Künstlerinnen, die mit der Schweiz verbunden sind. Die anderen Gruppen nennen berühmte Künstler
+      ohne diesen Bezug zur Schweiz.

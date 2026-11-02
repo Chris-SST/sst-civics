@@ -1,0 +1,33 @@
+id: ahv-einfuehrung-jahr-1948
+lang: sq
+source_version: 1
+question: Në cilin vit u prezantua sigurimi i pleqërisë dhe i të mbijetuarve (AHV), sigurimi shtetëror
+  i pensionit për pleqëri dhe për të mbijetuarit?
+options:
+  a: '1975'
+  b: '1918'
+  c: '1930'
+  d: '1948'
+explanation: Sigurimi i pleqërisë dhe i të mbijetuarve filloi veprimtarinë e tij në vitin 1948, pasi populli
+  e kishte miratuar ligjin në vitin 1947. Ai përbën shtyllën e parë të sistemit zviceran me tri shtylla.
+  Ai siguron ekzistencën në pleqëri dhe për të mbijetuarit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr wurde die Alters- und Hinterlassenenversicherung (AHV), die staatliche
+      Rentenversicherung für das Alter und für die Hinterlassenen, eingeführt?
+    options_de:
+      a: '1975'
+      b: '1918'
+      c: '1930'
+      d: '1948'
+    explanation_de: Die Alters- und Hinterlassenenversicherung nahm ihre Tätigkeit im Jahr 1948 auf, nachdem
+      das Volk das Gesetz im Jahr 1947 angenommen hatte. Sie bildet die erste Säule des Schweizer Systems
+      mit drei Säulen. Sie sichert die Existenz im Alter und für die Hinterlassenen.

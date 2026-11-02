@@ -1,0 +1,31 @@
+id: zuercher-parlament-bezeichnung-kantonsrat
+lang: tr
+source_version: 1
+question: Zürih kantonunun parlamentosunun adı nedir?
+options:
+  a: Grosser Rat
+  b: Landrat
+  c: belediye konseyi (Gemeinderat)
+  d: Kanton Konseyi (Kantonsrat)
+explanation: Zürih kantonunun parlamentosunun adı Kanton Konseyi'dir (Kantonsrat). Diğer kantonlar farklı
+  adlar kullanır, örneğin Grosser Rat veya Landrat. Belediye konseyi ise belediye (Gemeinde) düzeyinde
+  bir makamdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst das Parlament des Kantons Zürich?
+    options_de:
+      a: Grosser Rat
+      b: Landrat
+      c: Gemeinderat
+      d: Kantonsrat
+    explanation_de: Das Parlament des Kantons Zürich heisst Kantonsrat. Andere Kantone verwenden andere
+      Namen, zum Beispiel Grosser Rat oder Landrat. Der Gemeinderat hingegen ist eine Behörde auf Ebene
+      der Gemeinde.

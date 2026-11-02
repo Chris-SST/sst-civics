@@ -1,0 +1,33 @@
+id: auslaenderanteil-wohnbevoelkerung-2020
+lang: fr
+source_version: 2
+question: Quelle était approximativement la proportion d'étrangères et d'étrangers dans la population
+  résidante permanente de la Suisse en 2020 ?
+options:
+  a: environ trois cinquièmes
+  b: environ un dixième
+  c: environ la moitié
+  d: environ un quart
+explanation: En 2020, environ un quart de la population résidante permanente n'avait pas de passeport
+  suisse. À la fin de 2020, cela représentait environ 2,2 millions de personnes sur 8,7 millions, soit
+  environ 25 pour cent. En comparaison avec d'autres pays d'Europe, cette proportion est élevée.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie hoch war ungefähr der Anteil der Ausländerinnen und Ausländer an der ständigen Wohnbevölkerung
+      der Schweiz im Jahr 2020?
+    options_de:
+      a: etwa drei Fünftel
+      b: etwa ein Zehntel
+      c: etwa die Hälfte
+      d: etwa ein Viertel
+    explanation_de: Im Jahr 2020 besass etwa ein Viertel der ständigen Wohnbevölkerung keinen Schweizer
+      Pass. Ende 2020 waren das etwa 2,2 Millionen Personen von 8,7 Millionen, also etwa 25 Prozent. Im
+      Vergleich mit anderen Ländern Europas ist dieser Anteil hoch.

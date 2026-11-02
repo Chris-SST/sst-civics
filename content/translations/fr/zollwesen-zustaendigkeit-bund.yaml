@@ -1,0 +1,31 @@
+id: zollwesen-zustaendigkeit-bund
+lang: fr
+source_version: 1
+question: Qui s'occupe des douanes en Suisse ?
+options:
+  a: La Confédération
+  b: Les communes (Gemeinden) situées à la frontière
+  c: Les cantons dans lesquels se trouvent les frontières
+  d: Les cantons et la Confédération, chacun pour moitié
+explanation: Selon la Constitution fédérale, les douanes relèvent de la Confédération. Celle-ci règle
+  les droits de douane et le contrôle de la circulation des marchandises à travers la frontière. Les cantons
+  et les communes n'ont aucune compétence propre en la matière.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz für das Zollwesen zuständig?
+    options_de:
+      a: Der Bund
+      b: Die Gemeinden an der Grenze
+      c: Die Kantone, in denen sich die Grenzen befinden
+      d: Die Kantone und der Bund, jeweils zur Hälfte
+    explanation_de: Nach der Bundesverfassung ist das Zollwesen Sache des Bundes. Dieser regelt die Zölle
+      und die Kontrolle des Warenverkehrs über die Grenze. Die Kantone und die Gemeinden haben in diesem
+      Bereich keine eigene Zuständigkeit.

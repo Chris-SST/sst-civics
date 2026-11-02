@@ -1,0 +1,30 @@
+id: name-der-schweizer-verfassung
+lang: sq
+source_version: 1
+question: Si quhet kushtetuta e Zvicrës?
+options:
+  a: Ligji themelor federal
+  b: Kushtetuta Federale
+  c: Rendi federal i Zvicrës
+  d: Karta shtetërore zvicerane
+explanation: Kushtetuta e Zvicrës quhet Kushtetuta Federale, shkurt BV. Ajo është baza më e lartë juridike
+  e vendit. Versioni në fuqi daton nga viti 1999.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: Antwort a «Bundesgrundgesetz» statt «Eidgenössisches Grundgesetz» ist
+      nur eine andere Formulierung und bleibt falsch, die übrigen Stellen sind inhaltlich identisch'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Verfassung der Schweiz?
+    options_de:
+      a: Bundesgrundgesetz
+      b: Bundesverfassung
+      c: Bundesordnung der Schweiz
+      d: Schweizerische Staatscharta
+    explanation_de: Die Verfassung der Schweiz heisst Bundesverfassung, kurz BV. Sie ist die höchste Rechtsgrundlage
+      des Landes. Die geltende Fassung stammt aus dem Jahr 1999.

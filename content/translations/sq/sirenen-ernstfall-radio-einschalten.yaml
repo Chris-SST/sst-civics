@@ -1,0 +1,33 @@
+id: sirenen-ernstfall-radio-einschalten
+lang: sq
+source_version: 2
+question: Në rast emergjence dëgjohet «Alarmi i përgjithshëm» i sirenave (një ulërimë që ngrihet dhe zbret).
+  Çfarë duhet të bëni?
+options:
+  a: Të largoheni menjëherë nga shtëpia
+  b: Të telefononi zjarrfikësit
+  c: Të dëgjoni radion dhe të ndiqni udhëzimet e autoriteteve
+  d: Të largoheni me makinë
+explanation: Gjatë Alarmit të përgjithshëm, autoritetet informojnë përmes radios se çfarë duhet bërë.
+  Informacione ka edhe në aplikacionin Alertswiss. Duhet të ndiqen udhëzimet dhe numrat e urgjencës të
+  mos thirren pa nevojë, që të mbeten të lirë për emergjenca të vërteta.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Im Notfall ertönt der «Allgemeine Alarm» der Sirenen (ein auf- und abschwellender Heulton).
+      Was müssen Sie tun?
+    options_de:
+      a: Das Haus sofort verlassen
+      b: Die Feuerwehr anrufen
+      c: Radio hören und den Anweisungen der Behörden folgen
+      d: Mit dem Auto wegfahren
+    explanation_de: Während des Allgemeinen Alarms informieren die Behörden über das Radio, was zu tun
+      ist. Informationen gibt es auch in der App Alertswiss. Man muss die Anweisungen befolgen und die
+      Notrufnummern nicht unnötig anrufen, damit sie für echte Notfälle frei bleiben.

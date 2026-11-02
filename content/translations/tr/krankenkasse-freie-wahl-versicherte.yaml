@@ -1,0 +1,33 @@
+id: krankenkasse-freie-wahl-versicherte
+lang: tr
+source_version: 1
+question: İsviçre'de bir kişinin temel sigortasını hangi sağlık sigortası şirketinde (Krankenkasse) yaptıracağına
+  kim karar verir?
+options:
+  a: Oturduğu belediye sağlık sigortası şirketini belirler
+  b: Sigortalı kişi sağlık sigortası şirketini kendisi seçer
+  c: İşveren tüm çalışanlar için sağlık sigortası şirketini belirler
+  d: Oturduğu kanton her kişiye bir sağlık sigortası şirketi atar
+explanation: İsviçre'de sağlık sigortası şirketini serbestçe seçme hakkı geçerlidir. Sigortalılar, yetkili
+  sağlık sigortası şirketleri arasından seçim yapabilir ve belirli koşullar altında sigortalarını başka
+  bir şirkete geçirebilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet in der Schweiz, bei welcher Krankenkasse eine Person ihre Grundversicherung
+      abschliesst?
+    options_de:
+      a: Die Wohngemeinde bestimmt die Krankenkasse
+      b: Die versicherte Person wählt die Krankenkasse selbst
+      c: Der Arbeitgeber bestimmt die Krankenkasse für alle Angestellten
+      d: Der Wohnkanton weist jeder Person eine Krankenkasse zu
+    explanation_de: In der Schweiz gilt die freie Wahl der Krankenkasse. Die Versicherten können unter
+      den zugelassenen Krankenkassen auswählen und unter bestimmten Bedingungen ihre Versicherung zu einer
+      anderen Kasse wechseln.

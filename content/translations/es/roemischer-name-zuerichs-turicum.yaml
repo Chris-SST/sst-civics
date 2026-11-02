@@ -1,0 +1,31 @@
+id: roemischer-name-zuerichs-turicum
+lang: es
+source_version: 1
+question: ¿Cuál era el nombre romano de Zúrich?
+options:
+  a: Turicum
+  b: Augusta Raurica
+  c: Vindonissa
+  d: Aventicum
+explanation: 'Los romanos llamaron Turicum a su asentamiento y puesto aduanero junto al río Limmat. De
+  ahí se desarrolló más tarde el nombre de Zúrich. Los otros nombres corresponden a lugares romanos situados
+  en la actual Suiza: Windisch, Augst y Avenches.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie lautete der römische Name von Zürich?
+    options_de:
+      a: Turicum
+      b: Augusta Raurica
+      c: Vindonissa
+      d: Aventicum
+    explanation_de: 'Die Römer nannten ihre Siedlung und Zollstation am Fluss Limmat Turicum. Daraus entwickelte
+      sich später der Name Zürich. Die anderen Namen entsprechen römischen Orten in der heutigen Schweiz:
+      Windisch, Augst und Avenches.'

@@ -1,5 +1,5 @@
 id: bundesparlament-wahl-alle-vier-jahre
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.wahlen
@@ -10,8 +10,9 @@ options_de:
   c: Alle sechs Jahre
   d: Alle zwei Jahre
 correct: b
-explanation_de: Der Nationalrat wird alle vier Jahre vom Volk neu gewählt. Auch der Ständerat wird in
-  den meisten Kantonen im selben Rhythmus gewählt, die Kantone regeln das selbst.
+explanation_de: Das Volk wählt den Nationalrat alle vier Jahre neu. Auch die Mitglieder des Ständerats
+  werden heute in allen Kantonen für vier Jahre gewählt. Wie gewählt wird und teilweise auch wann, bestimmt
+  jeder Kanton selbst.
 sources:
 - url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
   checked: &id001 2026-11-02
@@ -21,7 +22,7 @@ glossary:
 - Bundesparlament
 - Nationalrat
 - Ständerat
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-034
@@ -31,15 +32,45 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Der Nationalrat wird vom Volk alle vier Jahre neu gewählt (Gesamterneuerungswahlen), und
-      auch die Ständeratsmitglieder werden in den meisten Kantonen gleichzeitig für vier Jahre gewählt.
+    version: 2
+    reasoning: Der Nationalrat wird in der Schweiz alle vier Jahre vom Volk neu gewählt (Gesamterneuerungswahlen),
+      und auch der Ständerat wird in den meisten Kantonen im gleichen Rhythmus bestellt.
   source:
     verdict: supported
-    note: 'Quelle 1 (Bundesverfassung) sagt zum Nationalrat: «Alle vier Jahre findet eine Gesamterneuerung
-      statt», und die Abgeordneten werden vom Volk direkt gewählt. Dass der Ständerat von den Kantonen
-      geregelt wird, steht dort ebenfalls («Die Wahl in den Ständerat wird vom Kanton geregelt»). Quelle
-      2 ist für die Frage nicht relevant.'
+    note: 'Quelle 1 (Bundesverfassung) sagt: «Alle vier Jahre findet eine Gesamterneuerung statt» und
+      die Mitglieder des Nationalrates werden auf vier Jahre gewählt. Die Wahl in den Ständerat regelt
+      der Kanton. Dass heute alle Kantone den Ständerat für vier Jahre wählen, steht nicht ausdrücklich
+      im Text, ist aber für die Antwort nicht entscheidend. Quelle 2 betrifft Volksabstimmungen und stützt
+      die Antwort nicht.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Dass die Ständeratsmitglieder heute in allen Kantonen für vier Jahre gewählt werden, steht
+        nicht in den Quellen; die Aussage ist aber richtig, und als Beleg könnte ein Hinweis auf die kantonalen
+        Regelungen oder die Website des Parlaments ergänzt werden.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «In welchem Rhythmus» ist für Niveau B1 etwas schwer; besser einfacher fragen: «Wie oft
+        wählt das Volk das Bundesparlament neu?»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Wort «Rhythmus» ist für B1 etwas anspruchsvoll. Einfacher wäre: «Wie oft wählt das
+        Volk das Bundesparlament neu?» mit den Antworten «Alle vier Jahre» usw.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

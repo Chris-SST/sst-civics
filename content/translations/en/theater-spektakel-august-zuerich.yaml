@@ -9,6 +9,22 @@ options:
   d: The Zürcher Theater Spektakel
 explanation: The Zürcher Theater Spektakel is an international festival of the performing arts. It takes
   place every year in August and presents productions from many countries.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Anlass in Zürich im August präsentiert darstellende Künste, Tanz und Musik aus
+      der ganzen Welt?
+    options_de:
+      a: Das Sechseläuten
+      b: Weltklasse Zürich
+      c: Das Knabenschiessen
+      d: Das Zürcher Theater Spektakel
+    explanation_de: Das Zürcher Theater Spektakel ist ein internationales Festival der darstellenden Künste.
+      Es findet jedes Jahr im August statt und präsentiert Produktionen aus vielen Ländern.

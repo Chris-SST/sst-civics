@@ -1,0 +1,29 @@
+id: bevoelkerungsreichster-kanton-zuerich
+lang: fr
+source_version: 1
+question: Quel canton compte le plus grand nombre d'habitantes et d'habitants ?
+options:
+  a: Berne
+  b: Zurich
+  c: Vaud
+  d: Argovie
+explanation: Le canton de Zurich compte le plus grand nombre d'habitantes et d'habitants de Suisse, environ
+  1,6 million. Viennent ensuite les cantons de Berne et de Vaud.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton hat die grösste Anzahl an Einwohnerinnen und Einwohnern?
+    options_de:
+      a: Bern
+      b: Zürich
+      c: Waadt
+      d: Aargau
+    explanation_de: Der Kanton Zürich hat mit rund 1,6 Millionen die grösste Anzahl an Einwohnerinnen
+      und Einwohnern der Schweiz. Danach folgen die Kantone Bern und Waadt.

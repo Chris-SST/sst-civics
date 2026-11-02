@@ -1,0 +1,31 @@
+id: wilhelm-tell-sagengestalt-widerstand
+lang: fr
+source_version: 1
+question: Que symbolise le personnage légendaire de Guillaume Tell, originaire de la Suisse centrale ?
+options:
+  a: La résistance contre les dirigeants étrangers
+  b: La neutralité de la Suisse en temps de guerre
+  c: L'introduction de la Réforme
+  d: La fondation de la première banque suisse
+explanation: La légende raconte l'histoire d'un homme qui se défend contre l'oppression exercée par des
+  baillis étrangers. Guillaume Tell est donc considéré comme un symbole de liberté. Il n'est pas prouvé
+  qu'il ait réellement existé.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was symbolisiert die legendäre Figur Wilhelm Tell, die aus der Zentralschweiz stammt?
+    options_de:
+      a: Den Widerstand gegen fremde Herrscher
+      b: Die Neutralität der Schweiz in Kriegszeiten
+      c: Die Einführung der Reformation
+      d: Die Gründung der ersten Schweizer Bank
+    explanation_de: Die Legende erzählt die Geschichte eines Mannes, der sich gegen die Unterdrückung
+      durch fremde Vögte wehrt. Wilhelm Tell gilt daher als Symbol der Freiheit. Es ist nicht bewiesen,
+      dass er wirklich gelebt hat.

@@ -1,0 +1,31 @@
+id: name-der-schweizer-verfassung
+lang: fr
+source_version: 1
+question: Comment s'appelle la constitution de la Suisse ?
+options:
+  a: Loi fondamentale fédérale
+  b: Constitution fédérale
+  c: Règlement fédéral de la Suisse
+  d: Charte d'État suisse
+explanation: La constitution de la Suisse s'appelle Constitution fédérale, en abrégé Cst. Elle est la
+  base juridique suprême du pays. La version actuellement en vigueur date de 1999.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: Antwort c) lautet im Deutschen «Bundesordnung der Schweiz», in der Rückübersetzung «Eidgenössisches
+      Reglement der Schweiz»; das ist ein anderer Begriff. Frage, übrige Antworten und Erklärung bedeuten
+      dasselbe.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wie heisst die Verfassung der Schweiz?
+    options_de:
+      a: Eidgenössisches Grundgesetz
+      b: Bundesverfassung
+      c: Eidgenössisches Reglement der Schweiz
+      d: Schweizerische Staatscharta
+    explanation_de: Die Verfassung der Schweiz heisst Bundesverfassung, abgekürzt BV. Sie ist die oberste
+      Rechtsgrundlage des Landes. Die aktuell geltende Fassung stammt aus dem Jahr 1999.

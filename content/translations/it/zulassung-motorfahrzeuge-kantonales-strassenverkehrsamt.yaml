@@ -1,0 +1,33 @@
+id: zulassung-motorfahrzeuge-kantonales-strassenverkehrsamt
+lang: it
+source_version: 1
+question: Chi ammette un veicolo a motore alla circolazione stradale nel Cantone di Zurigo e rilascia
+  a tal fine le targhe di controllo?
+options:
+  a: La polizia cantonale durante un controllo del traffico
+  b: L'Ufficio della circolazione stradale del Cantone
+  c: Il Touring Club Svizzero
+  d: L'amministrazione del Comune (Gemeinde) del luogo di domicilio
+explanation: L'ammissione dei veicoli a motore è un compito dell'Ufficio cantonale della circolazione
+  stradale. Anche le targhe di controllo vengono rilasciate da questo ufficio. Il Comune e la polizia
+  non sono competenti in materia.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer lässt im Kanton Zürich ein Motorfahrzeug zum Strassenverkehr zu und gibt dafür die
+      Kontrollschilder aus?
+    options_de:
+      a: Die Kantonspolizei bei einer Verkehrskontrolle
+      b: Das Strassenverkehrsamt des Kantons
+      c: Der Touring Club Schweiz
+      d: Die Verwaltung der Gemeinde des Wohnorts
+    explanation_de: Die Zulassung von Motorfahrzeugen ist eine Aufgabe des kantonalen Strassenverkehrsamts.
+      Auch die Kontrollschilder werden von diesem Amt ausgegeben. Die Gemeinde und die Polizei sind dafür
+      nicht zuständig.

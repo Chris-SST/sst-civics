@@ -1,0 +1,31 @@
+id: bundeshaus-bern-sitz-parlament
+lang: tr
+source_version: 1
+question: Bern'de bulunan hangi bina İsviçre Parlamentosu'nun toplantı yeridir?
+options:
+  a: Kornhaus (Tahıl Ambarı)
+  b: Belediye Sarayı (Rathaus)
+  c: Federal İdari Mahkeme
+  d: Federal Saray (Bundeshaus)
+explanation: İsviçre Parlamentosu, Bern'deki Federal Saray'da (Bundeshaus) toplanır. Millet Konseyi ile
+  Kantonlar Konseyi (Ständerat) oturum dönemlerinde orada bir araya gelir. Belediye Sarayı, Bern kantonuna
+  ya da şehre ait bir binadır; Konfederasyon Parlamentosuna ait değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gebäude in Bern ist der Tagungsort des Schweizer Parlaments?
+    options_de:
+      a: Kornhaus
+      b: Rathaus
+      c: Bundesverwaltungsgericht
+      d: Bundeshaus
+    explanation_de: Das Schweizer Parlament tagt im Bundeshaus in Bern. Der Nationalrat und der Ständerat
+      kommen dort während der Sessionen zusammen. Das Rathaus ist ein Gebäude, das zum Kanton Bern bzw.
+      zur Stadt gehört; es gehört nicht zum Parlament der Eidgenossenschaft.

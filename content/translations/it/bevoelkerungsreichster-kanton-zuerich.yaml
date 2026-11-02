@@ -1,0 +1,29 @@
+id: bevoelkerungsreichster-kanton-zuerich
+lang: it
+source_version: 1
+question: Quale Cantone ha il maggior numero di abitanti?
+options:
+  a: Berna
+  b: Zurigo
+  c: Vaud
+  d: Argovia
+explanation: Il Cantone di Zurigo ha il maggior numero di abitanti della Svizzera, circa 1,6 milioni.
+  Seguono i Cantoni di Berna e Vaud.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton hat die meisten Einwohner?
+    options_de:
+      a: Bern
+      b: Zürich
+      c: Waadt
+      d: Aargau
+    explanation_de: Der Kanton Zürich hat die meisten Einwohner der Schweiz, rund 1,6 Millionen. Es folgen
+      die Kantone Bern und Waadt.

@@ -1,0 +1,29 @@
+id: nachbarland-im-westen-der-schweiz
+lang: fr
+source_version: 1
+question: Quel pays est limitrophe de la Suisse à l'ouest ?
+options:
+  a: L'Allemagne
+  b: L'Italie
+  c: La France
+  d: L'Autriche
+explanation: À l'ouest et au nord-ouest, la Suisse est limitrophe de la France. L'Allemagne se trouve
+  au nord, l'Autriche et le Liechtenstein à l'est, l'Italie au sud.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Land grenzt im Westen an die Schweiz?
+    options_de:
+      a: Deutschland
+      b: Italien
+      c: Frankreich
+      d: Österreich
+    explanation_de: Im Westen und im Nordwesten grenzt die Schweiz an Frankreich. Deutschland liegt im
+      Norden, Österreich und Liechtenstein im Osten, Italien im Süden.

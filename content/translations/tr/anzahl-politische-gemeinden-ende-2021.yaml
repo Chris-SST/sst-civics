@@ -1,0 +1,29 @@
+id: anzahl-politische-gemeinden-ende-2021
+lang: tr
+source_version: 1
+question: 2021 sonunda İsviçre'de yaklaşık kaç siyasi belediye (Gemeinde) vardı?
+options:
+  a: Yaklaşık 1200
+  b: Yaklaşık 800
+  c: Yaklaşık 2200
+  d: Yaklaşık 4200
+explanation: 2021 sonunda İsviçre'de yaklaşık 2200 siyasi belediye vardı. Belediyeler sürekli birleştiği
+  için sayıları yavaş yavaş azalıyor. Bu nedenle güncel durum önemlidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele politische Gemeinden gab es Ende 2021 in der Schweiz ungefähr?
+    options_de:
+      a: Ungefähr 1200
+      b: Ungefähr 800
+      c: Ungefähr 2200
+      d: Ungefähr 4200
+    explanation_de: Ende 2021 gab es in der Schweiz ungefähr 2200 politische Gemeinden. Da die Gemeinden
+      sich ständig zusammenschliessen, nimmt ihre Zahl langsam ab. Deshalb ist der aktuelle Stand wichtig.

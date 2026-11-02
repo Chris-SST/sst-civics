@@ -10,6 +10,22 @@ options:
 explanation: Switzerland joined the UN in 2002, after the people and the cantons had approved it. It was
   thus one of the last countries to join. However, many UN organisations have had a seat in Geneva for
   a long time.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Jahr wurde die Schweiz Mitglied der Vereinten Nationen (UNO)?
+    options_de:
+      a: '2002'
+      b: '1945'
+      c: '1986'
+      d: '2010'
+    explanation_de: Die Schweiz trat 2002 der UNO bei, nachdem das Volk und die Kantone zugestimmt hatten.
+      Sie war damit eines der letzten Länder, die beitraten. Viele UNO-Organisationen haben jedoch seit
+      langem einen Sitz in Genf.

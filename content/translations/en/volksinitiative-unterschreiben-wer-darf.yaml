@@ -1,15 +1,37 @@
 id: volksinitiative-unterschreiben-wer-darf
 lang: en
-source_version: 1
+source_version: 2
 question: Who may sign a federal popular initiative (Volksinitiative)?
 options:
   a: All persons aged 16 or over who are resident in Switzerland
-  b: All persons aged 18 or over with a settlement permit (C permit) (Niederlassungsbewilligung)
+  b: All persons aged 18 or over with a settlement permit (C permit)
   c: Only members of a political party aged 18 or over
-  d: Swiss citizens aged 18 or over who are entitled to vote
-explanation: Only persons who are entitled to vote at federal level may sign a federal popular initiative.
-  These are Swiss citizens aged 18 or over, including those who live abroad. Foreign nationals have no
-  political rights at federal level, not even with a settlement permit.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  d: Swiss citizens aged 18 or over
+explanation: Anyone who is entitled to vote at Confederation level may sign a federal popular initiative.
+  These are Swiss men and women aged 18 or over, including those living abroad, provided they are entered
+  in the electoral register. The only people excluded are those who, owing to permanent incapacity of
+  judgement, are under a comprehensive deputyship or are represented by a person appointed under a power
+  of attorney for incapacity; foreign nationals have no political rights at Confederation level, not even
+  with a C permit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer darf eine eidgenössische Volksinitiative unterschreiben?
+    options_de:
+      a: Alle Personen ab 16 Jahren, die in der Schweiz wohnhaft sind
+      b: Alle Personen ab 18 Jahren mit einer Niederlassungsbewilligung (Ausweis C)
+      c: Nur Mitglieder einer politischen Partei ab 18 Jahren
+      d: Schweizer Bürgerinnen und Bürger ab 18 Jahren
+    explanation_de: Wer auf Bundesebene stimmberechtigt ist, darf eine eidgenössische Volksinitiative
+      unterschreiben. Das sind Schweizer Männer und Frauen ab 18 Jahren, einschliesslich der im Ausland
+      lebenden, sofern sie im Stimmregister eingetragen sind. Ausgeschlossen sind nur jene Personen, die
+      wegen dauernder Urteilsunfähigkeit unter umfassender Beistandschaft stehen oder durch eine vorsorgebeauftragte
+      Person vertreten werden; Ausländerinnen und Ausländer haben auf Bundesebene keine politischen Rechte,
+      auch nicht mit Ausweis C.

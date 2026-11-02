@@ -1,0 +1,30 @@
+id: armee-zustaendigkeit-bund
+lang: pt
+source_version: 1
+question: Qual nível do Estado é responsável pelo exército?
+options:
+  a: Os cantões
+  b: A Confederação
+  c: Os distritos
+  d: As comunas (Gemeinden)
+explanation: A defesa militar é da competência da Confederação. Ela regula o exército e as suas funções
+  na Constituição Federal e em leis federais. Os cantões participam na execução, por exemplo no recrutamento.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Ebene ist für die Armee zuständig?
+    options_de:
+      a: Die Kantone
+      b: Der Bund
+      c: Die Bezirke
+      d: Die Gemeinden
+    explanation_de: Die militärische Verteidigung liegt in der Zuständigkeit des Bundes. Er regelt die
+      Armee und ihre Aufgaben in der Bundesverfassung und in Bundesgesetzen. Die Kantone beteiligen sich
+      am Vollzug, zum Beispiel bei der Rekrutierung.

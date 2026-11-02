@@ -1,0 +1,33 @@
+id: gewerkschaften-aufgabe-arbeitnehmende
+lang: fr
+source_version: 2
+question: Quel est le rôle des syndicats en Suisse ?
+options:
+  a: Ils défendent les intérêts des travailleurs.
+  b: Ils délivrent aux étrangères et aux étrangers l'autorisation de travailler.
+  c: Ils fixent les taux d'imposition des entreprises.
+  d: Ils représentent les intérêts des employeurs auprès de la Confédération.
+explanation: Les syndicats sont des organisations de travailleurs. Ils défendent leurs intérêts, par exemple
+  en matière de salaires et de conditions de travail, et négocient souvent des conventions collectives
+  de travail avec les employeurs. Les autorisations de travail, en revanche, sont délivrées par les autorités,
+  et non par les syndicats.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Rolle haben die Gewerkschaften in der Schweiz?
+    options_de:
+      a: Sie vertreten die Interessen der Arbeitnehmenden.
+      b: Sie erteilen den Ausländerinnen und Ausländern die Arbeitsbewilligung.
+      c: Sie legen die Steuersätze der Unternehmen fest.
+      d: Sie vertreten die Interessen der Arbeitgeber gegenüber dem Bund.
+    explanation_de: Die Gewerkschaften sind Organisationen der Arbeitnehmenden. Sie vertreten deren Interessen,
+      zum Beispiel in Bezug auf Löhne und Arbeitsbedingungen, und handeln oft Gesamtarbeitsverträge mit
+      den Arbeitgebern aus. Die Arbeitsbewilligungen hingegen werden von den Behörden erteilt und nicht
+      von den Gewerkschaften.

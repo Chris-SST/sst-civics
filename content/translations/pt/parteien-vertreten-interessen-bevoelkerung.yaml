@@ -1,0 +1,30 @@
+id: parteien-vertreten-interessen-bevoelkerung
+lang: pt
+source_version: 1
+question: Qual é a função dos partidos políticos na democracia?
+options:
+  a: Eles julgam os litígios
+  b: Eles representam os diferentes interesses da população
+  c: Eles realizam as votações federais
+  d: Eles aplicam as leis no dia a dia
+explanation: Os partidos reúnem os diversos interesses e opiniões da população e levam-nos para a política.
+  Fazer cumprir as leis é tarefa das autoridades, e julgar é tarefa dos tribunais.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Funktion haben die politischen Parteien in der Demokratie?
+    options_de:
+      a: Sie urteilen über Streitigkeiten
+      b: Sie vertreten die verschiedenen Interessen der Bevölkerung
+      c: Sie führen die eidgenössischen Abstimmungen durch
+      d: Sie wenden die Gesetze im Alltag an
+    explanation_de: Die Parteien bündeln die verschiedenen Interessen und Meinungen der Bevölkerung und
+      tragen sie in die Politik. Die Gesetze durchzusetzen ist Aufgabe der Behörden, und Recht zu sprechen
+      ist Aufgabe der Gerichte.

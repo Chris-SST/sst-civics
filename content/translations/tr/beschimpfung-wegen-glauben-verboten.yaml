@@ -1,0 +1,32 @@
+id: beschimpfung-wegen-glauben-verboten
+lang: tr
+source_version: 1
+question: Bir kişi, insanlara inançları veya soy kökenleri nedeniyle alenen hakaret ediyor. İsviçre'de
+  bu durum nasıl düzenlenmiştir?
+options:
+  a: Yalnızca okullarda ve iş yerlerinde yasaktır.
+  b: Yasaktır ve cezalandırılabilir.
+  c: Yalnızca gazetede yayımlanırsa yasaktır.
+  d: İfade özgürlüğü nedeniyle her zaman korunur.
+explanation: Ceza Kanunu, insanların ırkları, etnik kökenleri, dinleri veya cinsel yönelimleri nedeniyle
+  alenen aşağılanmasını yasaklar. İfade özgürlüğü sınırsız değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Person beleidigt Menschen öffentlich wegen ihres Glaubens oder ihrer Abstammung.
+      Wie ist dies in der Schweiz geregelt?
+    options_de:
+      a: Es ist nur in Schulen und an Arbeitsplätzen verboten.
+      b: Es ist verboten und strafbar.
+      c: Es ist nur verboten, wenn es in der Zeitung veröffentlicht wird.
+      d: Es ist wegen der Meinungsfreiheit immer geschützt.
+    explanation_de: Das Strafgesetzbuch verbietet die öffentliche Herabsetzung von Menschen wegen ihrer
+      Rasse, ihrer ethnischen Herkunft, ihrer Religion oder ihrer sexuellen Orientierung. Die Meinungsfreiheit
+      ist nicht unbegrenzt.

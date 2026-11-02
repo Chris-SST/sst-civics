@@ -1,0 +1,30 @@
+id: kanton-zuerich-anzahl-politische-gemeinden
+lang: fr
+source_version: 1
+question: Combien y a-t-il approximativement de communes politiques (politische Gemeinden) dans le canton
+  de Zurich ?
+options:
+  a: Environ 60
+  b: Environ 110
+  c: Environ 250
+  d: Environ 160
+explanation: Le canton de Zurich compte environ 160 communes politiques. Le nombre exact peut légèrement
+  changer en raison de fusions de communes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele politische Gemeinden gibt es ungefähr im Kanton Zürich?
+    options_de:
+      a: Etwa 60
+      b: Etwa 110
+      c: Etwa 250
+      d: Etwa 160
+    explanation_de: Der Kanton Zürich zählt etwa 160 politische Gemeinden. Die genaue Zahl kann sich aufgrund
+      von Gemeindefusionen leicht ändern.

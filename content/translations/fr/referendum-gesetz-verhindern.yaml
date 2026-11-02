@@ -1,0 +1,30 @@
+id: referendum-gesetz-verhindern
+lang: fr
+source_version: 1
+question: Que peuvent obtenir les personnes ayant le droit de vote avec un référendum ?
+options:
+  a: Elles peuvent rédiger elles-mêmes une nouvelle loi et la mettre en vigueur.
+  b: Elles peuvent empêcher une loi adoptée par le Parlement.
+  c: Elles peuvent révoquer les membres du Conseil fédéral (Bundesrat).
+  d: Elles peuvent dissoudre le Parlement et exiger de nouvelles élections.
+explanation: Avec un référendum, les personnes ayant le droit de vote peuvent exiger qu'une loi adoptée
+  par le Parlement soit soumise au vote. Si le peuple rejette la loi, celle-ci n'entre pas en vigueur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was können stimmberechtigte Personen mit einem Referendum erreichen?
+    options_de:
+      a: Sie können selbst ein neues Gesetz verfassen und in Kraft setzen.
+      b: Sie können ein vom Parlament beschlossenes Gesetz verhindern.
+      c: Sie können die Mitglieder des Bundesrates abwählen.
+      d: Sie können das Parlament auflösen und Neuwahlen verlangen.
+    explanation_de: Mit einem Referendum können die stimmberechtigten Personen verlangen, dass ein vom
+      Parlament beschlossenes Gesetz zur Abstimmung gebracht wird. Wenn das Volk das Gesetz ablehnt, tritt
+      dieses nicht in Kraft.

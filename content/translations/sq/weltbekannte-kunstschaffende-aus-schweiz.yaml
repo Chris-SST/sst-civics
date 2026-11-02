@@ -1,0 +1,30 @@
+id: weltbekannte-kunstschaffende-aus-schweiz
+lang: sq
+source_version: 1
+question: Cilat emra u përkasin artistëve të vlerësuar në mbarë botën me lidhje me Zvicrën?
+options:
+  a: Vincent van Gogh, Paul Cézanne dhe Henri Matisse
+  b: Niki de Saint Phalle, Sophie Taeuber-Arp dhe Pipilotti Rist
+  c: Claude Monet, Edgar Degas dhe Auguste Renoir
+  d: Pablo Picasso, Frida Kahlo dhe Salvador Dalí
+explanation: Niki de Saint Phalle, Sophie Taeuber-Arp dhe Pipilotti Rist janë artiste të njohura ndërkombëtarisht,
+  që lidhen me Zvicrën. Grupet e tjera përmendin artistë të njohur pa këtë lidhje me Zvicrën.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Namen gehören zu weltweit geschätzten Künstlern mit Verbindung zur Schweiz?
+    options_de:
+      a: Vincent van Gogh, Paul Cézanne und Henri Matisse
+      b: Niki de Saint Phalle, Sophie Taeuber-Arp und Pipilotti Rist
+      c: Claude Monet, Edgar Degas und Auguste Renoir
+      d: Pablo Picasso, Frida Kahlo und Salvador Dalí
+    explanation_de: Niki de Saint Phalle, Sophie Taeuber-Arp und Pipilotti Rist sind international bekannte
+      Künstlerinnen, die mit der Schweiz verbunden sind. Die anderen Gruppen nennen bekannte Künstler
+      ohne diese Verbindung zur Schweiz.

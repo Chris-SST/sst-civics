@@ -1,0 +1,30 @@
+id: landesmuseum-zuerich-schweizer-geschichte
+lang: sq
+source_version: 1
+question: Çfarë shfaqet në Muzeun Kombëtar të Cyrihut (Landesmuseum Zürich)?
+options:
+  a: Historia e Zvicrës
+  b: Historia e hekurudhës
+  c: Shkencat natyrore dhe bota shtazore e Alpeve
+  d: Arti modern nga e gjithë bota
+explanation: Muzeu Kombëtar i Cyrihut shfaq të kaluarën zvicerane dhe historinë kulturore të vendit. Ai
+  është pjesë e Muzeut Kombëtar Zvicerak. Ndodhet pranë stacionit kryesor hekurudhor të Cyrihut.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird im Nationalmuseum Zürich (Landesmuseum Zürich) gezeigt?
+    options_de:
+      a: Die Geschichte der Schweiz
+      b: Die Geschichte der Eisenbahn
+      c: Naturwissenschaften und die Tierwelt der Alpen
+      d: Moderne Kunst aus der ganzen Welt
+    explanation_de: Das Nationalmuseum Zürich zeigt die schweizerische Vergangenheit und die Kulturgeschichte
+      des Landes. Es ist Teil des Schweizerischen Nationalmuseums. Es befindet sich neben dem Zürcher
+      Hauptbahnhof.

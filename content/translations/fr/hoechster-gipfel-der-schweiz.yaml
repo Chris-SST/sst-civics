@@ -1,0 +1,31 @@
+id: hoechster-gipfel-der-schweiz
+lang: fr
+source_version: 2
+question: Comment s'appelle le plus haut sommet de Suisse ?
+options:
+  a: Piz Bernina
+  b: Cervin
+  c: Pointe Dufour
+  d: Jungfrau
+explanation: La pointe Dufour, dans le massif du Mont Rose en Valais, est avec environ 4634 mètres le
+  plus haut sommet de Suisse. Le Cervin est plus connu, mais moins élevé. Le Piz Bernina, dans les Grisons,
+  est le plus haut sommet des Alpes orientales.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie heisst der höchste Gipfel der Schweiz?
+    options_de:
+      a: Piz Bernina
+      b: Matterhorn
+      c: Dufourspitze
+      d: Jungfrau
+    explanation_de: Die Dufourspitze im Monte-Rosa-Massiv im Wallis ist mit etwa 4634 Metern der höchste
+      Gipfel der Schweiz. Das Matterhorn ist bekannter, aber weniger hoch. Der Piz Bernina in Graubünden
+      ist der höchste Gipfel der Ostalpen.

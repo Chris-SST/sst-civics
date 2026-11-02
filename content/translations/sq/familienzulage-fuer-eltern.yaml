@@ -1,0 +1,32 @@
+id: familienzulage-fuer-eltern
+lang: sq
+source_version: 1
+question: Çfarë shërbimi shtetëror marrin prindërit në Zvicër, nëse janë të punësuar ose punojnë si të
+  vetëpunësuar dhe kanë fëmijë?
+options:
+  a: Pensioni i invaliditetit
+  b: Kompensimi i papunësisë
+  c: Prestacioni plotësues për sigurimin i pleqërisë dhe i të mbijetuarve (AHV)
+  d: Shtesa familjare
+explanation: Shtesat familjare i ndihmojnë familjet të mbulojnë një pjesë të shpenzimeve për fëmijët.
+  Ato përbëhen nga shtesat për fëmijë dhe shtesat për formim. Edhe të vetëpunësuarit mund t'i marrin ato.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Leistung erhalten Eltern in der Schweiz, wenn sie angestellt sind oder
+      selbstständig erwerbend arbeiten und Kinder haben?
+    options_de:
+      a: Die Invalidenrente
+      b: Die Arbeitslosenentschädigung
+      c: Die Ergänzungsleistung zur Alters- und Hinterlassenenversicherung (AHV)
+      d: Die Familienzulagen
+    explanation_de: Die Familienzulagen helfen den Familien, einen Teil der Ausgaben für die Kinder zu
+      decken. Sie bestehen aus den Kinderzulagen und den Ausbildungszulagen. Auch Selbstständigerwerbende
+      können sie erhalten.

@@ -1,0 +1,31 @@
+id: anzahl-kantone-und-halbkantone-schweiz
+lang: tr
+source_version: 1
+question: İsviçre'de kaç kanton vardır ve bunların kaçı yarım kantondur?
+options:
+  a: 26 kanton, bunların 6'sı yarım kanton
+  b: 26 kanton, bunların 3'ü yarım kanton
+  c: 23 kanton, bunların 6'sı yarım kanton
+  d: 20 kanton, bunların 6'sı yarım kanton
+explanation: 'İsviçre''de 26 kanton vardır. Bunların altısı yarım kantondur: Obwalden, Nidwalden, Basel-Stadt,
+  Basel-Landschaft, Appenzell Ausserrhoden ve Appenzell Innerrhoden. Bu kantonların Kantonlar Konseyi''nde
+  (Ständerat) iki yerine birer oyu vardır.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Kantone gibt es in der Schweiz und wie viele davon sind Halbkantone?
+    options_de:
+      a: 26 Kantone, davon 6 Halbkantone
+      b: 26 Kantone, davon 3 Halbkantone
+      c: 23 Kantone, davon 6 Halbkantone
+      d: 20 Kantone, davon 6 Halbkantone
+    explanation_de: 'In der Schweiz gibt es 26 Kantone. Sechs davon sind Halbkantone: Obwalden, Nidwalden,
+      Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden und Appenzell Innerrhoden. Diese Kantone haben
+      im Ständerat statt zwei nur je eine Stimme.'

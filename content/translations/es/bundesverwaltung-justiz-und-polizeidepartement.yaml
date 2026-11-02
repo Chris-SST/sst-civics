@@ -1,0 +1,32 @@
+id: bundesverwaltung-justiz-und-polizeidepartement
+lang: es
+source_version: 1
+question: ¿Cuál de las siguientes entidades forma parte de la administración de la Confederación (Bundesverwaltung)?
+options:
+  a: El Consejo Nacional (Nationalrat)
+  b: La Asamblea Federal (Bundesversammlung)
+  c: El Tribunal Federal (Bundesgericht)
+  d: El Departamento de Justicia y Policía
+explanation: La administración de la Confederación está organizada en departamentos. El Departamento de
+  Justicia y Policía es uno de ellos y forma parte de la administración bajo la dirección del Consejo
+  Federal (Bundesrat). El Consejo Nacional y la Asamblea Federal pertenecen al Parlamento, y el Tribunal
+  Federal pertenece al poder judicial.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Einrichtungen gehört zur Bundesverwaltung?
+    options_de:
+      a: Der Nationalrat
+      b: Die Bundesversammlung
+      c: Das Bundesgericht
+      d: Das Justiz- und Polizeidepartement
+    explanation_de: Die Bundesverwaltung ist in Departemente gegliedert. Das Justiz- und Polizeidepartement
+      ist eines davon und gehört unter der Leitung des Bundesrates zur Verwaltung. Der Nationalrat und
+      die Bundesversammlung gehören zum Parlament, und das Bundesgericht gehört zur Judikative.

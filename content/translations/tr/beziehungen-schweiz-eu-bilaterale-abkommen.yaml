@@ -1,0 +1,31 @@
+id: beziehungen-schweiz-eu-bilaterale-abkommen
+lang: tr
+source_version: 1
+question: İsviçre ile Avrupa Birliği (AB) arasındaki ilişkiler esas olarak neye dayanmaktadır?
+options:
+  a: İkili anlaşmalardan oluşan bir pakete
+  b: Ortak bir hükümete
+  c: İsviçre'nin AB üyeliğine
+  d: Ortak bir anayasaya
+explanation: İsviçre, AB üyesi değildir. İsviçre'nin AB ile ilişkilerini birçok ikili anlaşma düzenler;
+  bunlar iki taraf arasında yapılan sözleşmelerdir. Bu anlaşmalar örneğin ticareti ve kişilerin serbest
+  dolaşımını kapsar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Worauf beruhen die Beziehungen zwischen der Schweiz und der Europäischen Union (EU) hauptsächlich?
+    options_de:
+      a: Auf einem Paket aus bilateralen Abkommen
+      b: Auf einer gemeinsamen Regierung
+      c: Auf der EU-Mitgliedschaft der Schweiz
+      d: Auf einer gemeinsamen Verfassung
+    explanation_de: Die Schweiz ist kein EU-Mitglied. Die Beziehungen der Schweiz zur EU werden durch
+      viele bilaterale Abkommen geregelt; das sind Verträge, die zwischen zwei Parteien geschlossen werden.
+      Diese Abkommen umfassen zum Beispiel den Handel und die Personenfreizügigkeit.

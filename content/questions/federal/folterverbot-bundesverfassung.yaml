@@ -20,7 +20,7 @@ glossary:
 - Folter
 - Bundesverfassung
 - Menschenwürde
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-084
@@ -42,3 +42,37 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung gibt Artikel 10 Absatz 3 nicht ganz vollständig wieder; besser «Artikel
+        10 Absatz 3 der Bundesverfassung verbietet Folter und jede andere Art grausamer, unmenschlicher
+        oder erniedrigender Behandlung oder Bestrafung» schreiben.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) ist unlogisch formuliert («nur bei Straftätern verboten» würde heissen, dass
+        Folter bei anderen Menschen erlaubt ist); besser als plausible falsche Antwort: «Folter ist bei
+        schweren Straftätern erlaubt.»'
+      - 'Klein: Artikel 10 Absatz 3 BV verbietet auch grausame, unmenschliche oder erniedrigende «Bestrafung»;
+        die Erklärung könnte «Behandlung oder Bestrafung» schreiben und den Absatz 3 nennen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt «Artikel 10», im Quellentext fehlt die Artikelnummer; sie stimmt aber
+        (Art. 10 Abs. 3 BV verbietet Folter). Man könnte «Artikel 10 Absatz 3» schreiben.'
+      - 'Klein: Der letzte Satz der Erklärung («Auch der Staat darf keine Ausnahmen machen») wiederholt
+        den vorherigen Satz und könnte weggelassen oder klarer formuliert werden.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

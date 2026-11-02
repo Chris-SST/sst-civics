@@ -1,0 +1,32 @@
+id: mutterschaftsurlaub-anspruch-erwerbstaetige-frauen
+lang: tr
+source_version: 1
+question: İsviçre'de bir çocuğun doğumundan sonra kimin doğum izni (Mutterschaftsurlaub) hakkı kanunen
+  vardır?
+options:
+  a: Yalnızca 50'den fazla çalışanı olan bir işletmede çalışan kadınlar
+  b: Çocuk doğuran her çalışan kadın
+  c: Yalnızca evli olan kadınlar
+  d: Yalnızca İsviçre vatandaşlığı (Bürgerrecht) olan kadınlar
+explanation: Kanun, çalışan anneler için doğum izni hakkı ve bir ödenek öngörmektedir. İşletmenin büyüklüğü,
+  vatandaşlık ve medeni durum bu konuda rol oynamaz. Ödenek, gelir kaybı tazminat sistemi (Erwerbsersatzordnung)
+  aracılığıyla finanse edilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer hat in der Schweiz nach der Geburt eines Kindes gesetzlich Anspruch auf Mutterschaftsurlaub?
+    options_de:
+      a: Nur Frauen, die in einem Betrieb mit mehr als 50 Angestellten arbeiten
+      b: Jede berufstätige Frau, die ein Kind zur Welt bringt
+      c: Nur verheiratete Frauen
+      d: Nur Frauen mit Schweizer Bürgerrecht
+    explanation_de: Das Gesetz sieht für berufstätige Mütter einen Anspruch auf Mutterschaftsurlaub und
+      eine Entschädigung vor. Die Grösse des Betriebs, die Staatsangehörigkeit und der Zivilstand spielen
+      dabei keine Rolle. Die Entschädigung wird über die Erwerbsersatzordnung finanziert.

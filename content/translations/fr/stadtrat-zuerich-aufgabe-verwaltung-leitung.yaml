@@ -1,0 +1,31 @@
+id: stadtrat-zuerich-aufgabe-verwaltung-leitung
+lang: fr
+source_version: 1
+question: Quelle est la tâche du Conseil municipal (Stadtrat) de la ville de Zurich ?
+options:
+  a: Il dirige l'administration fiscale cantonale dans la ville.
+  b: Il édicte les lois cantonales pour le territoire de la ville.
+  c: Il rend la justice dans les litiges entre les habitantes et les habitants.
+  d: Il pilote l'administration municipale et fixe les lignes directrices de l'action de la ville.
+explanation: Le Conseil municipal est l'exécutif de la ville de Zurich. Il dirige l'administration municipale
+  et détermine dans quelle direction la ville se développe. Les tribunaux rendent la justice, et les lois
+  cantonales sont édictées par le Conseil cantonal (Kantonsrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die Aufgabe des Stadtrats der Stadt Zürich?
+    options_de:
+      a: Er leitet die kantonale Steuerverwaltung in der Stadt.
+      b: Er erlässt die kantonalen Gesetze für das Gebiet der Stadt.
+      c: Er spricht Recht bei Streitigkeiten zwischen den Einwohnerinnen und Einwohnern.
+      d: Er steuert die städtische Verwaltung und legt die Leitlinien des Handelns der Stadt fest.
+    explanation_de: Der Stadtrat ist die Exekutive der Stadt Zürich. Er leitet die städtische Verwaltung
+      und bestimmt, in welche Richtung sich die Stadt entwickelt. Die Gerichte sprechen Recht, und die
+      kantonalen Gesetze werden vom Kantonsrat erlassen.

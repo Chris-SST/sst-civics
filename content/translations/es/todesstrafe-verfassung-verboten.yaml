@@ -1,0 +1,29 @@
+id: todesstrafe-verfassung-verboten
+lang: es
+source_version: 1
+question: ¿Qué se aplica en Suiza a la pena de muerte según la Constitución Federal?
+options:
+  a: Solo está permitida en caso de asesinato.
+  b: Solo está permitida en tiempo de guerra.
+  c: Los cantones deciden si se aplica.
+  d: Está prohibida.
+explanation: La Constitución Federal protege el derecho a la vida en el artículo 10. La pena de muerte
+  está expresamente prohibida, incluso para delitos graves.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in der Schweiz gemäss der Bundesverfassung für die Todesstrafe?
+    options_de:
+      a: Sie ist nur im Fall von Mord erlaubt.
+      b: Sie ist nur in Kriegszeiten erlaubt.
+      c: Die Kantone entscheiden, ob sie angewendet wird.
+      d: Sie ist verboten.
+    explanation_de: Die Bundesverfassung schützt das Recht auf Leben in Artikel 10. Die Todesstrafe ist
+      ausdrücklich verboten, auch für schwere Straftaten.

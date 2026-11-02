@@ -1,0 +1,33 @@
+id: bilaterale-eins-basis-eu-beziehungen
+lang: it
+source_version: 1
+question: Quali accordi, approvati dal popolo nel 2000, costituiscono la base delle attuali relazioni
+  della Svizzera con l'UE?
+options:
+  a: I Bilaterali I
+  b: L'accordo SEE
+  c: Il solo accordo di Schengen
+  d: Il trattato di adesione all'UE
+explanation: Il corpo elettorale approvò i Bilaterali I nel 2000. Essi disciplinano l'accesso a determinati
+  settori del mercato interno, ad esempio la libera circolazione delle persone e i trasporti terrestri.
+  Il popolo non aveva approvato il SEE nel 1992.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Abkommen, die vom Volk im Jahr 2000 angenommen wurden, bilden die Grundlage der
+      aktuellen Beziehungen der Schweiz zur EU?
+    options_de:
+      a: Die Bilateralen I
+      b: Das EWR-Abkommen
+      c: Nur das Schengen-Abkommen
+      d: Der Beitrittsvertrag zur EU
+    explanation_de: Die Stimmberechtigten nahmen die Bilateralen I im Jahr 2000 an. Sie regeln den Zugang
+      zu bestimmten Bereichen des Binnenmarkts, zum Beispiel die Personenfreizügigkeit und den Landverkehr.
+      Das Volk hatte den EWR 1992 nicht angenommen.

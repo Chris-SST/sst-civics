@@ -1,0 +1,28 @@
+id: rhone-endet-im-mittelmeer
+lang: es
+source_version: 1
+question: ¿Dónde desemboca el Ródano, que nace en el Valais?
+options:
+  a: En el Mar del Norte
+  b: En el océano Atlántico
+  c: En el mar Mediterráneo
+  d: En el mar Negro
+explanation: El Ródano atraviesa el lago Lemán y continúa por Francia. Desemboca en el mar Mediterráneo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo mündet die Rhone, die im Wallis entspringt?
+    options_de:
+      a: In die Nordsee
+      b: In den Atlantischen Ozean
+      c: In das Mittelmeer
+      d: In das Schwarze Meer
+    explanation_de: Die Rhone durchfliesst den Genfersee und setzt ihren Lauf durch Frankreich fort. Sie
+      mündet ins Mittelmeer.

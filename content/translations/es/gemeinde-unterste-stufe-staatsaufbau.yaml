@@ -1,0 +1,32 @@
+id: gemeinde-unterste-stufe-staatsaufbau
+lang: es
+source_version: 2
+question: ¿Qué nivel se encuentra en la parte más baja de la estructura estatal de tres niveles de Suiza?
+options:
+  a: El municipio (Gemeinde)
+  b: La región
+  c: El cantón
+  d: La Confederación
+explanation: 'Suiza está organizada en tres niveles: la Confederación, los cantones y los municipios.
+  El municipio es el nivel más bajo y el más cercano a las personas. Se encarga por sí mismo de muchas
+  tareas, por ejemplo, la escuela primaria, los permisos de construcción o la ayuda social.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Ebene befindet sich auf der untersten Stufe des dreistufigen Staatsaufbaus der
+      Schweiz?
+    options_de:
+      a: Die Gemeinde
+      b: Die Region
+      c: Der Kanton
+      d: Der Bund
+    explanation_de: 'Die Schweiz ist in drei Ebenen organisiert: den Bund, die Kantone und die Gemeinden.
+      Die Gemeinde ist die unterste Ebene und diejenige, die den Menschen am nächsten ist. Sie erledigt
+      selbst viele Aufgaben, zum Beispiel die Primarschule, die Baubewilligungen oder die Sozialhilfe.'

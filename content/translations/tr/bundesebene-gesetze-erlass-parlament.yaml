@@ -1,0 +1,31 @@
+id: bundesebene-gesetze-erlass-parlament
+lang: tr
+source_version: 1
+question: Konfederasyon düzeyinde yasaları hangi makam çıkarır?
+options:
+  a: Federal Meclis (Bundesversammlung), yani Ulusal Konsey (Nationalrat) ve Kantonlar Konseyi (Ständerat)
+  b: İsviçre Ulusal Bankası
+  c: Federal Kançılarya (Bundeskanzlei)
+  d: Kanton hükümetleri konferansı
+explanation: Federal Meclis, Konfederasyonun parlamentosudur ve Ulusal Konsey ile Kantonlar Konseyi'nden
+  oluşur. Yasama görevi Federal Meclis'e aittir. Federal Kançılarya ise buna karşılık, bir kurmay birimi
+  olarak Federal Konsey'e (Bundesrat) destek verir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde erlässt auf Ebene der Eidgenossenschaft die Gesetze?
+    options_de:
+      a: Die Bundesversammlung, also der Nationalrat und der Ständerat
+      b: Die Schweizerische Nationalbank
+      c: Die Bundeskanzlei
+      d: Die Konferenz der Kantonsregierungen
+    explanation_de: Die Bundesversammlung ist das Parlament der Eidgenossenschaft und besteht aus dem
+      Nationalrat und dem Ständerat. Die Gesetzgebungsaufgabe gehört zur Bundesversammlung. Die Bundeskanzlei
+      hingegen unterstützt als Stabsstelle den Bundesrat.

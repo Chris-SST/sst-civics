@@ -1,0 +1,29 @@
+id: rhein-muendung-nordsee
+lang: it
+source_version: 1
+question: In quale mare confluisce alla fine l'acqua del Reno?
+options:
+  a: Nel Mar Mediterraneo
+  b: Nel Mar Nero
+  c: Nel Mare del Nord
+  d: Nel Mar Baltico
+explanation: Il Reno nasce nelle Alpi svizzere e scorre attraverso la Germania e i Paesi Bassi. Sfocia
+  nel Mare del Nord.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welches Meer fliesst das Wasser des Rheins am Ende?
+    options_de:
+      a: Ins Mittelmeer
+      b: Ins Schwarze Meer
+      c: In die Nordsee
+      d: In die Ostsee
+    explanation_de: Der Rhein entspringt in den Schweizer Alpen und fliesst durch Deutschland und die
+      Niederlande. Er mündet in die Nordsee.

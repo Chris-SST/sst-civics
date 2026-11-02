@@ -1,0 +1,30 @@
+id: pfahlbauten-am-zuerichsee-vorgeschichte
+lang: it
+source_version: 1
+question: Come erano costruiti gli insediamenti preistorici sul lago di Zurigo?
+options:
+  a: Come grotte nella roccia
+  b: Come palafitte, cioè case su pali
+  c: Come case di mattoni nei villaggi
+  d: Come castelli sulle rocce
+explanation: In epoca preistorica, sulle rive del lago di Zurigo sorgevano palafitte, cioè case su pali.
+  Resti di queste costruzioni si trovano ancora oggi sott'acqua e vengono studiati da archeologi subacquei.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie waren die prähistorischen Siedlungen am Zürichsee gebaut?
+    options_de:
+      a: Wie Höhlen im Fels
+      b: Als Pfahlbauten, das heisst Häuser auf Pfählen
+      c: Wie Backsteinhäuser in Dörfern
+      d: Wie Burgen auf Felsen
+    explanation_de: In prähistorischer Zeit standen am Ufer des Zürichsees Pfahlbauten, das heisst Häuser
+      auf Pfählen. Reste dieser Bauten befinden sich noch heute unter Wasser und werden von Unterwasserarchäologen
+      erforscht.

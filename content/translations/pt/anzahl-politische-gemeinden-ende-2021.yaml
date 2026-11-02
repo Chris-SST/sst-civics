@@ -1,0 +1,29 @@
+id: anzahl-politische-gemeinden-ende-2021
+lang: pt
+source_version: 1
+question: Quantas comunas (Gemeinden) políticas existiam aproximadamente na Suíça no final de 2021?
+options:
+  a: Cerca de 1200
+  b: Cerca de 800
+  c: Cerca de 2200
+  d: Cerca de 4200
+explanation: No final de 2021, a Suíça contava cerca de 2200 comunas políticas. O seu número diminui lentamente,
+  porque as comunas se fundem repetidamente. Por isso, a data de referência é importante.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele politische Gemeinden gab es Ende 2021 in der Schweiz ungefähr?
+    options_de:
+      a: Etwa 1200
+      b: Etwa 800
+      c: Etwa 2200
+      d: Etwa 4200
+    explanation_de: Ende 2021 zählte die Schweiz etwa 2200 politische Gemeinden. Ihre Zahl nimmt langsam
+      ab, weil Gemeinden immer wieder fusionieren. Deshalb ist das Stichdatum wichtig.

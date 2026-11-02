@@ -1,0 +1,29 @@
+id: juraregion-uhrenherstellung-bekannt
+lang: it
+source_version: 1
+question: Per che cosa è economicamente famosa la regione del Giura in Svizzera?
+options:
+  a: Per l'industria farmaceutica
+  b: Per le grandi banche
+  c: Per la viticoltura sul lago di Zurigo
+  d: Per la produzione di orologi
+explanation: Nell'Arco giurassiano hanno la loro sede e i loro laboratori molte note aziende orologiere.
+  La regione è quindi un centro dell'industria orologiera svizzera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür ist die Region Jura in der Schweiz wirtschaftlich berühmt?
+    options_de:
+      a: Für die Pharmaindustrie
+      b: Für die Grossbanken
+      c: Für den Weinbau am Zürichsee
+      d: Für die Uhrenherstellung
+    explanation_de: Im Jurabogen haben viele bekannte Uhrenunternehmen ihren Sitz und ihre Werkstätten.
+      Die Region ist daher ein Zentrum der Schweizer Uhrenindustrie.

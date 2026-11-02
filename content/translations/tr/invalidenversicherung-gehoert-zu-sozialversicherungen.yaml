@@ -1,0 +1,32 @@
+id: invalidenversicherung-gehoert-zu-sozialversicherungen
+lang: tr
+source_version: 1
+question: Aşağıdaki kurumlardan hangisi İsviçre'deki sosyal sigortalar arasında yer alır?
+options:
+  a: Malullük sigortası (Invalidenversicherung)
+  b: Seyahat sigortası
+  c: Hukuki koruma sigortası
+  d: Ev eşyası sigortası
+explanation: Malullük sigortası (IV), devlet tarafından düzenlenen bir sosyal sigortadır. Hastalık veya
+  kaza nedeniyle çalışamayan ya da yalnızca sınırlı ölçüde çalışabilen kişileri destekler. Ev eşyası sigortaları,
+  seyahat sigortaları ve hukuki koruma sigortaları özel sigortalardır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Einrichtungen gehört in der Schweiz zu den Sozialversicherungen?
+    options_de:
+      a: Invalidenversicherung
+      b: Reiseversicherung
+      c: Rechtsschutzversicherung
+      d: Hausratversicherung
+    explanation_de: Die Invalidenversicherung (IV) ist eine vom Staat geregelte Sozialversicherung. Sie
+      unterstützt Personen, die wegen Krankheit oder Unfall nicht arbeiten können oder nur in begrenztem
+      Mass arbeiten können. Hausratversicherungen, Reiseversicherungen und Rechtsschutzversicherungen
+      sind private Versicherungen.

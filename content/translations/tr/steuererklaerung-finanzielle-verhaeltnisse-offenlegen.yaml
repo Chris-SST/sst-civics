@@ -1,0 +1,29 @@
+id: steuererklaerung-finanzielle-verhaeltnisse-offenlegen
+lang: tr
+source_version: 1
+question: Vergi mükelleflerinin her yıl doldurduğu vergi beyannamesi ne işe yarar?
+options:
+  a: Nüfus ve ikamet dairesine (Einwohneramt) kayıt için kullanılır.
+  b: Sağlık sigortası başvurusudur.
+  c: Sivil hizmet (Zivildienst) için yapılan kayıttır.
+  d: Vergi makamlarına karşı mali durumu açıklar.
+explanation: Vergi mükellefleri vergi beyannamesi ile gelirlerini, servetlerini ve indirimlerini bildirir.
+  Vergi makamı vergiyi bu esasa göre hesaplar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient die Steuererklärung, die Steuerpflichtige jedes Jahr ausfüllen?
+    options_de:
+      a: Sie wird für die Anmeldung beim Einwohneramt verwendet.
+      b: Sie ist ein Antrag auf Krankenversicherung.
+      c: Sie ist die Anmeldung für den Zivildienst.
+      d: Sie legt gegenüber den Steuerbehörden die finanzielle Situation dar.
+    explanation_de: Steuerpflichtige geben mit der Steuererklärung ihre Einkommen, ihr Vermögen und ihre
+      Abzüge an. Die Steuerbehörde berechnet die Steuer auf dieser Grundlage.

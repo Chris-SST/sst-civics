@@ -1,0 +1,31 @@
+id: politische-partei-aehnliche-ziele
+lang: sq
+source_version: 1
+question: Çfarë e përshkruan më mirë një parti politike?
+options:
+  a: Një gjykatë që vendos për mosmarrëveshje politike
+  b: Një bashkim personash me qëllime politike të ngjashme
+  c: Një grup komunash (Gemeinde) që kryejnë detyra së bashku
+  d: Një autoritet që organizon zgjedhjet dhe votimet
+explanation: Në një parti bashkohen njerëz që ndjekin qëllime politike të ngjashme. Partitë paraqesin
+  kandidatë në zgjedhje dhe shprehin qëndrimin e tyre për projektet që votohen. Ato nuk janë autoritete
+  shtetërore.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was beschreibt eine politische Partei am besten?
+    options_de:
+      a: Ein Gericht, das über politische Streitigkeiten entscheidet
+      b: Ein Zusammenschluss von Personen mit ähnlichen politischen Zielen
+      c: Eine Gruppe von Gemeinden, die gemeinsam Aufgaben erfüllen
+      d: Eine Behörde, die die Wahlen und Abstimmungen organisiert
+    explanation_de: In einer Partei schliessen sich Menschen zusammen, die ähnliche politische Ziele verfolgen.
+      Die Parteien stellen Kandidaten für Wahlen auf und äussern ihre Haltung zu den Vorlagen, über die
+      abgestimmt wird. Sie sind keine staatlichen Behörden.

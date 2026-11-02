@@ -1,0 +1,32 @@
+id: berufsinformationszentrum-auskunft-lehrstellen-berufswahl
+lang: fr
+source_version: 1
+question: Où peut-on obtenir des renseignements sur les places d'apprentissage, le choix d'une profession
+  et le travail ?
+options:
+  a: Dans un centre d'information sur les professions
+  b: À l'office de l'état civil
+  c: À l'école enfantine
+  d: À l'office des poursuites
+explanation: Le centre d'information sur les professions (BIZ) informe et conseille sur les places d'apprentissage,
+  le choix d'une profession, la formation continue et le travail. Son offre est ouverte aux jeunes et
+  aux adultes. Les autres services ont d'autres tâches.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo kann man Auskünfte über Lehrstellen, die Berufswahl und die Arbeit erhalten?
+    options_de:
+      a: In einem Berufsinformationszentrum
+      b: Beim Zivilstandsamt
+      c: Im Kindergarten
+      d: Beim Betreibungsamt
+    explanation_de: Das Berufsinformationszentrum (BIZ) informiert und berät über Lehrstellen, die Berufswahl,
+      die Weiterbildung und die Arbeit. Sein Angebot steht Jugendlichen und Erwachsenen offen. Die anderen
+      Stellen haben andere Aufgaben.

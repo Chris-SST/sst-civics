@@ -1,0 +1,33 @@
+id: petition-ohne-stimmrecht-zuerich
+lang: tr
+source_version: 1
+question: Zürich kantonunda oy hakkı olmayan yabancıların hangi siyasi imkânı vardır?
+options:
+  a: Sandıkta kantona ait düzenlemeler hakkında oy kullanabilirler.
+  b: Kanton Konseyi (Kantonsrat) üyelerini seçebilirler.
+  c: Dilekçe ile yetkili makamlara başvurabilirler.
+  d: Kantonda bir halk girişimi (Volksinitiative) sunabilirler.
+explanation: Dilekçe hakkı, oy hakkı olmayan kişiler de dahil olmak üzere herkese açıktır. Bu yolla yetkili
+  makamlara taleplerini, isteklerini veya eleştirilerini yazılı olarak iletebilirler. Oy kullanma, seçim
+  yapma ve girişimleri imzalama hakkı yalnızca oy hakkına sahip kişilere aittir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche politische Möglichkeit haben Ausländerinnen und Ausländer, die im Kanton Zürich
+      kein Stimmrecht haben?
+    options_de:
+      a: Sie können an der Urne über kantonale Vorlagen abstimmen.
+      b: Sie können die Mitglieder des Kantonsrats wählen.
+      c: Sie können sich mit einer Petition an die zuständigen Behörden wenden.
+      d: Sie können im Kanton eine Volksinitiative einreichen.
+    explanation_de: Das Petitionsrecht steht allen offen, auch Personen ohne Stimmrecht. Auf diesem Weg
+      können sie den zuständigen Behörden ihre Forderungen, Wünsche oder Kritik schriftlich übermitteln.
+      Das Recht, abzustimmen, zu wählen und Initiativen zu unterzeichnen, steht nur Personen mit Stimmrecht
+      zu.

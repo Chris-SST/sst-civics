@@ -1,0 +1,33 @@
+id: volksschule-leitung-vor-ort-schulleitung
+lang: tr
+source_version: 2
+question: Zürich kantonunda bir ilkokul (Volksschule) doğrudan okulda kim tarafından yönetilir?
+options:
+  a: Kanton Konseyi (Kantonsrat)
+  b: Okul yönetimi
+  c: Veli konseyi
+  d: Hükümet Konseyi (Regierungsrat)
+explanation: Zürich kantonundaki her ilkokulun (Volksschule), okulun işleyişini doğrudan okulda yöneten
+  ve düzenleyen bir okul yönetimi vardır. Hükümet Konseyi ve Kanton Konseyi kanton düzeyinde çalışır.
+  Veli konseyi velilerin taleplerini iletir, ancak okulu yönetmez.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: In der Rückübersetzung wird «Volksschule» zu «Primarschule (Volksschule)» eingeengt; die Primarschule
+      ist nur eine Stufe der Volksschule (Frage und Erklärung), das ist eine andere Schulstufe.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 2
+    question_de: Von wem wird eine Primarschule (Volksschule) im Kanton Zürich direkt vor Ort in der Schule
+      geleitet?
+    options_de:
+      a: Kantonsrat
+      b: Schulleitung
+      c: Elternrat
+      d: Regierungsrat
+    explanation_de: Jede Primarschule (Volksschule) im Kanton Zürich hat eine Schulleitung, die den Betrieb
+      der Schule direkt vor Ort leitet und regelt. Der Regierungsrat und der Kantonsrat arbeiten auf kantonaler
+      Ebene. Der Elternrat übermittelt die Anliegen der Eltern, leitet die Schule aber nicht.

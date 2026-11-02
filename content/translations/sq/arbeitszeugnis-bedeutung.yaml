@@ -1,0 +1,30 @@
+id: arbeitszeugnis-bedeutung
+lang: sq
+source_version: 1
+question: Çfarë është një certifikatë pune (Arbeitszeugnis)?
+options:
+  a: Një vërtetim i mjekut ose i mjekes se personi nuk mund të punojë
+  b: Një dokument i punëdhënësit që vlerëson performancën dhe sjelljen e personit të punësuar
+  c: Leja e zyrës së migracionit për të punuar në Zvicër
+  d: Vërtetimi vjetor i pagës për deklaratën tatimore
+explanation: Certifikatën e punës e lëshon punëdhënësi. Ajo përshkruan llojin dhe kohëzgjatjen e punës
+  dhe vlerëson performancën dhe sjelljen. Të punësuarit mund ta kërkojnë në çdo kohë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist ein Arbeitszeugnis?
+    options_de:
+      a: Eine Bescheinigung des Arztes oder der Ärztin, dass die Person nicht arbeiten kann
+      b: Ein Dokument des Arbeitgebers, das die Leistung und das Verhalten der angestellten Person beurteilt
+      c: Die Bewilligung des Migrationsamtes, in der Schweiz zu arbeiten
+      d: Die jährliche Lohnbescheinigung für die Steuererklärung
+    explanation_de: Das Arbeitszeugnis wird vom Arbeitgeber ausgestellt. Es beschreibt die Art und die
+      Dauer der Arbeit und beurteilt die Leistung und das Verhalten. Die Angestellten können es jederzeit
+      verlangen.

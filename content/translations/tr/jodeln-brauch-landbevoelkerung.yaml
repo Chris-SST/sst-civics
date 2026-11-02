@@ -1,0 +1,33 @@
+id: jodeln-brauch-landbevoelkerung
+lang: tr
+source_version: 2
+question: İsviçre kırsal kesiminin geleneksel göreneklerinden hangisi, sesin göğüs sesi ile baş sesi arasında
+  hızla değiştiği bir şarkı söyleme biçimidir?
+options:
+  a: Alp borusu çalmak
+  b: Yodel söylemek
+  c: Hornussen oynamak
+  d: Bayrak sallamak
+explanation: Yodel söylerken ses, göğüs sesi ile baş sesi arasında hızla değişir. Yodel, İsviçre kırsal
+  kesiminin geleneksel göreneklerinden biridir. Doğal yodel sözsüz icra edilir, ancak birçok yodel şarkısının
+  sözleri vardır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welcher der traditionellen Bräuche der Schweizer Landbevölkerung ist eine Gesangsart,
+      bei der die Stimme schnell zwischen Bruststimme und Kopfstimme wechselt?
+    options_de:
+      a: Alphorn spielen
+      b: Jodeln
+      c: Hornussen spielen
+      d: Fahnenschwingen
+    explanation_de: Beim Jodeln wechselt die Stimme schnell zwischen Bruststimme und Kopfstimme. Das Jodeln
+      ist einer der traditionellen Bräuche der Schweizer Landbevölkerung. Der Naturjodel wird ohne Text
+      vorgetragen, aber viele Jodellieder haben Texte.

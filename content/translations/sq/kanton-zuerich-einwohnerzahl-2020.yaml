@@ -1,0 +1,29 @@
+id: kanton-zuerich-einwohnerzahl-2020
+lang: sq
+source_version: 1
+question: Sa banorë numëronte përafërsisht kantoni i Zyrihut në vitin 2020?
+options:
+  a: Rreth 1,1 milionë
+  b: Rreth 2,2 milionë
+  c: Rreth 0,8 milionë
+  d: Rreth 1,5 milionë
+explanation: Në vitin 2020 në kantonin e Zyrihut jetonin përafërsisht 1,5 milionë njerëz. Kështu ai është
+  kantoni me popullsinë më të madhe në Zvicër.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Einwohner zählte der Kanton Zürich im Jahr 2020 ungefähr?
+    options_de:
+      a: Rund 1,1 Millionen
+      b: Rund 2,2 Millionen
+      c: Rund 0,8 Millionen
+      d: Rund 1,5 Millionen
+    explanation_de: Im Jahr 2020 lebten im Kanton Zürich ungefähr 1,5 Millionen Menschen. Somit ist er
+      der Kanton mit der grössten Bevölkerung in der Schweiz.

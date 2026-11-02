@@ -1,0 +1,32 @@
+id: volksinitiative-unterschriften-sammelfrist
+lang: sq
+source_version: 1
+question: Sa nënshkrime i nevojiten një nisme popullore (Volksinitiative) federale dhe sa kohë mund të
+  mblidhen ato?
+options:
+  a: 100 000 nënshkrime brenda 100 ditëve
+  b: 50 000 nënshkrime brenda 100 ditëve
+  c: 50 000 nënshkrime brenda 18 muajve
+  d: 100 000 nënshkrime brenda 18 muajve
+explanation: Një nismë popullore federale ka nevojë për 100 000 nënshkrime të vlefshme brenda 18 muajve.
+  Ndërsa referendumi fakultativ ka nevojë për 50 000 nënshkrime brenda 100 ditëve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Unterschriften braucht eine eidgenössische Volksinitiative und wie lange können
+      sie gesammelt werden?
+    options_de:
+      a: 100 000 Unterschriften innerhalb von 100 Tagen
+      b: 50 000 Unterschriften innerhalb von 100 Tagen
+      c: 50 000 Unterschriften innerhalb von 18 Monaten
+      d: 100 000 Unterschriften innerhalb von 18 Monaten
+    explanation_de: Eine eidgenössische Volksinitiative braucht 100 000 gültige Unterschriften innerhalb
+      von 18 Monaten. Das fakultative Referendum hingegen braucht 50 000 Unterschriften innerhalb von
+      100 Tagen.

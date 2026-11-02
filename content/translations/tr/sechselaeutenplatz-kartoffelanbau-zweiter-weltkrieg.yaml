@@ -1,0 +1,33 @@
+id: sechselaeutenplatz-kartoffelanbau-zweiter-weltkrieg
+lang: tr
+source_version: 2
+question: Bu bitkilerden hangisi İkinci Dünya Savaşı sırasında Zürih'teki Sechseläutenplatz'ta yetiştirilmiştir?
+options:
+  a: Tütün
+  b: Asma (üzüm bağı)
+  c: Pamuk
+  d: Patates
+explanation: İkinci Dünya Savaşı sırasında İsviçre'de yeterli gıda yoktu. Bu nedenle «Anbauschlacht» (tarım
+  seferberliği) kapsamında şehirlerin tam ortasındaki alanlarda da ekim yapıldı; örneğin Zürih'teki Sechseläutenplatz'a
+  patates ekildi. Orada tütün, asma ve pamuk yetiştirilmedi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche dieser Pflanzen wurde während des Zweiten Weltkriegs auf dem Sechseläutenplatz
+      in Zürich angebaut?
+    options_de:
+      a: Tabak
+      b: Weinrebe (Weinberg)
+      c: Baumwolle
+      d: Kartoffel
+    explanation_de: Während des Zweiten Weltkriegs gab es in der Schweiz nicht genügend Nahrungsmittel.
+      Deshalb wurde im Rahmen der «Anbauschlacht» (Mobilisierung des Anbaus) auch auf Flächen mitten in
+      den Städten angepflanzt; zum Beispiel wurden auf dem Sechseläutenplatz in Zürich Kartoffeln gepflanzt.
+      Dort wurden weder Tabak, noch Weinrebe, noch Baumwolle angebaut.

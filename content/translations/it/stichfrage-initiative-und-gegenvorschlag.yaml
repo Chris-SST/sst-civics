@@ -1,0 +1,33 @@
+id: stichfrage-initiative-und-gegenvorschlag
+lang: it
+source_version: 1
+question: In una votazione su un'iniziativa popolare (Volksinitiative) e un controprogetto diretto è prevista
+  una domanda risolutiva. A che cosa serve?
+options:
+  a: Decide se la votazione deve essere ripetuta
+  b: Decide se i Cantoni possono partecipare al voto
+  c: Decide quale progetto è valido se entrambi vengono accettati
+  d: Decide se le firme devono essere verificate ancora una volta
+explanation: Gli aventi diritto di voto possono approvare sia l'iniziativa sia il controprogetto. Con
+  la domanda risolutiva indicano quale progetto deve entrare in vigore nel caso in cui entrambi vengano
+  accettati. In questo modo i voti non vanno persi tra due progetti simili.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Bei einer Abstimmung über eine Volksinitiative und einen direkten Gegenentwurf ist eine
+      Stichfrage vorgesehen. Wozu dient sie?
+    options_de:
+      a: Sie entscheidet, ob die Abstimmung wiederholt werden muss
+      b: Sie entscheidet, ob die Kantone an der Abstimmung teilnehmen können
+      c: Sie entscheidet, welche Vorlage gültig ist, wenn beide angenommen werden
+      d: Sie entscheidet, ob die Unterschriften noch einmal überprüft werden müssen
+    explanation_de: Die Stimmberechtigten können sowohl die Initiative als auch den Gegenentwurf annehmen.
+      Mit der Stichfrage geben sie an, welche Vorlage in Kraft treten soll, falls beide angenommen werden.
+      Auf diese Weise gehen die Stimmen zwischen zwei ähnlichen Vorlagen nicht verloren.

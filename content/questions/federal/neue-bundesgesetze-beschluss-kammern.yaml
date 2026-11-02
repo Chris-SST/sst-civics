@@ -20,7 +20,7 @@ glossary:
 - Bundesgesetz
 - Nationalrat
 - Ständerat
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-047
@@ -42,3 +42,37 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Formulierung «die meisten» kann verwirren, weil die Bundesversammlung alle Bundesgesetze
+        beschliesst; die Erklärung könnte ergänzen, dass das Volk ein Gesetz nur nachträglich per Referendum
+        ablehnen kann.'
+      - 'Klein: Die Erklärung könnte präzisieren, dass für ein fakultatives Referendum 50''000 Unterschriften
+        innert 100 Tagen nötig sind, damit der Satz zum Referendum konkreter wird.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Formulierung «die meisten» lässt vermuten, dass einige Bundesgesetze von jemand anderem
+        beschlossen werden; die Erklärung könnte kurz ergänzen, dass das Volk bei einem Referendum das
+        letzte Wort hat, zum Beispiel: «Ergreift das Volk das Referendum, entscheidet es an der Urne über
+        das Gesetz.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «die meisten» in Frage und Erklärung ist sachlich ungenau, denn alle Bundesgesetze werden
+        vom Parlament beschlossen und das Volk kann nur per Referendum eingreifen; besser wäre «Wer beschliesst
+        neue Bundesgesetze?» und in der Erklärung «werden vom Parlament beschlossen (Nationalrat und Ständerat)».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

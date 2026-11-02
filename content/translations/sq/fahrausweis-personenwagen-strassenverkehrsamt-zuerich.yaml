@@ -1,0 +1,29 @@
+id: fahrausweis-personenwagen-strassenverkehrsamt-zuerich
+lang: sq
+source_version: 1
+question: Cili organ në kantonin Zürich lëshon lejen e drejtimit për automjete personale?
+options:
+  a: Gjykata e rrethit (Bezirksgericht)
+  b: Zyra e qarkullimit rrugor e kantonit
+  c: Policia e qytetit e komunës ku banoni
+  d: Zyra Federale e Rrugëve
+explanation: Në kantonin Zürich, për lejet e drejtimit është përgjegjëse Zyra e qarkullimit rrugor. Ajo
+  i takon Drejtorisë së Sigurisë. Komunat (Gemeinden) dhe Konfederata nuk lëshojnë leje drejtimi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde im Kanton Zürich stellt den Führerausweis für Personenwagen aus?
+    options_de:
+      a: Das Bezirksgericht
+      b: Das Strassenverkehrsamt des Kantons
+      c: Die Stadtpolizei der Wohngemeinde
+      d: Das Bundesamt für Strassen
+    explanation_de: Im Kanton Zürich ist für die Führerausweise das Strassenverkehrsamt zuständig. Es
+      gehört zur Sicherheitsdirektion. Die Gemeinden und der Bund stellen keine Führerausweise aus.

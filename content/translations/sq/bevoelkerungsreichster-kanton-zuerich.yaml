@@ -1,0 +1,30 @@
+id: bevoelkerungsreichster-kanton-zuerich
+lang: sq
+source_version: 1
+question: Cili kanton ka më shumë banorë?
+options:
+  a: Bern
+  b: Cyrih
+  c: Vaud
+  d: Aargau
+explanation: Kantoni i Cyrihut ka më shumë banorë në Zvicër, rreth 1,6 milionë. Pas tij vijnë kantonet
+  Bern dhe Vaud.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: Die Frage lautet in der Rückübersetzung «mehr Einwohner» (Komparativ, ohne Bezugsgrösse) statt
+      «die meisten» (Superlativ); das ändert die Bedeutung der Frage. Antworten und Erklärung sind gleich.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Welcher Kanton hat mehr Einwohner?
+    options_de:
+      a: Bern
+      b: Zürich
+      c: Waadt
+      d: Aargau
+    explanation_de: Der Kanton Zürich hat in der Schweiz am meisten Einwohner, rund 1,6 Millionen. Nach
+      ihm kommen die Kantone Bern und Waadt.

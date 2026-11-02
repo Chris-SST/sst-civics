@@ -1,0 +1,31 @@
+id: steuerpflicht-wohnhafte-personen-schweiz
+lang: it
+source_version: 1
+question: Chi in Svizzera è in linea di principio tenuto a pagare le imposte?
+options:
+  a: Le persone che risiedono in Svizzera
+  b: Solo le persone che gestiscono un'impresa
+  c: Solo le persone con cittadinanza (Bürgerrecht) svizzera
+  d: Solo le persone che hanno il diritto di voto
+explanation: L'obbligo fiscale dipende dal domicilio e non dalla cittadinanza. Anche le straniere e gli
+  stranieri che risiedono in Svizzera pagano le imposte. Il diritto di voto non ha alcun ruolo in questo
+  contesto.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz grundsätzlich steuerpflichtig?
+    options_de:
+      a: Die Personen, die in der Schweiz wohnen
+      b: Nur die Personen, die ein Unternehmen führen
+      c: Nur die Personen mit schweizerischem Bürgerrecht
+      d: Nur die Personen, die das Stimmrecht haben
+    explanation_de: Die Steuerpflicht hängt vom Wohnsitz ab und nicht vom Bürgerrecht. Auch Ausländerinnen
+      und Ausländer, die in der Schweiz wohnen, zahlen Steuern. Das Stimmrecht spielt in diesem Zusammenhang
+      keine Rolle.

@@ -10,6 +10,22 @@ options:
 explanation: The members of the Zurich Cantonal Council are elected for a term of office of four years.
   After that, general elections take place. The citizens entitled to vote can then decide afresh who sits
   in the parliament.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für wie viele Jahre werden die Mitglieder des Zürcher Kantonsrats gewählt?
+    options_de:
+      a: Für zwei Jahre
+      b: Für drei Jahre
+      c: Für sechs Jahre
+      d: Für vier Jahre
+    explanation_de: Die Mitglieder des Zürcher Kantonsrats werden für eine Amtsdauer von vier Jahren gewählt.
+      Danach finden Gesamterneuerungswahlen statt. Die stimmberechtigten Bürgerinnen und Bürger können
+      dann erneut entscheiden, wer im Parlament sitzt.

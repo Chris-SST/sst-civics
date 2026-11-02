@@ -9,6 +9,21 @@ options:
   d: The Federal Roads Office
 explanation: In the canton of Zürich, the road traffic office is responsible for driving licences. It
   belongs to the Security Directorate. The communes and the Confederation do not issue driving licences.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde stellt im Kanton Zürich Führerausweise für Personenwagen aus?
+    options_de:
+      a: Das Bezirksgericht
+      b: Das kantonale Strassenverkehrsamt
+      c: Die Stadtpolizei der Wohngemeinde
+      d: Das Bundesamt für Strassen
+    explanation_de: Im Kanton Zürich ist das Strassenverkehrsamt für die Führerausweise zuständig. Es
+      gehört zur Sicherheitsdirektion. Die Gemeinden und der Bund stellen keine Führerausweise aus.

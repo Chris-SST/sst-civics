@@ -1,0 +1,31 @@
+id: volksinitiative-eigene-forderungen-durchsetzen
+lang: fr
+source_version: 1
+question: À quoi sert une initiative populaire (Volksinitiative) aux titulaires du droit de vote ?
+options:
+  a: Elle leur permet de modifier un arrêt du Tribunal fédéral (Bundesgericht).
+  b: Elle leur permet de mettre leurs propres revendications à l'agenda politique.
+  c: Elle leur permet de fixer la date des prochaines élections.
+  d: Elle leur permet d'empêcher l'adoption d'une loi du Parlement.
+explanation: Avec une initiative populaire, les titulaires du droit de vote peuvent proposer une modification
+  de la Constitution fédérale. Si elle aboutit, elle est soumise au vote. Ils peuvent ainsi faire aboutir
+  leurs propres demandes, même contre la volonté du Parlement, si le peuple et les cantons l'acceptent.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient eine Volksinitiative den Stimmberechtigten?
+    options_de:
+      a: Sie ermöglicht es ihnen, ein Urteil des Bundesgerichts zu ändern.
+      b: Sie ermöglicht es ihnen, ihre eigenen Forderungen auf die politische Agenda zu setzen.
+      c: Sie ermöglicht es ihnen, das Datum der nächsten Wahlen festzulegen.
+      d: Sie ermöglicht es ihnen, die Annahme eines Gesetzes des Parlaments zu verhindern.
+    explanation_de: Mit einer Volksinitiative können die Stimmberechtigten eine Änderung der Bundesverfassung
+      vorschlagen. Kommt sie zustande, wird sie zur Abstimmung vorgelegt. So können sie ihre eigenen Anliegen
+      durchsetzen, auch gegen den Willen des Parlaments, wenn das Volk und die Kantone sie annehmen.

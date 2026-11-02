@@ -1,0 +1,33 @@
+id: vereinigte-bundesversammlung-wahl-bundesrat-bundesgericht
+lang: tr
+source_version: 2
+question: Federal Konsey (Bundesrat) ve Federal Mahkeme (Bundesgericht) üyelerini kim seçer?
+options:
+  a: Halk, sandıkta
+  b: Kanton hükümetleri
+  c: Ulusal Konsey (Nationalrat) ve Kantonlar Konseyi (Ständerat) birlikte
+  d: Parti başkanları
+explanation: Bu seçimler için Ulusal Konsey ve Kantonlar Konseyi bir araya gelir. Bu durumda Birleşik
+  Federal Meclis'i (Vereinigte Bundesversammlung) oluştururlar ve Federal Konsey ile Federal Mahkeme üyelerini
+  seçerler. Halk, Ulusal Konsey'i seçer ve kendi kantonunun kurallarına göre Kantonlar Konseyi üyelerini
+  de seçer, ancak Federal Konsey'i seçmez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer wählt die Mitglieder des Bundesrates und des Bundesgerichts?
+    options_de:
+      a: Das Volk an der Urne
+      b: Die Kantonsregierungen
+      c: Der Nationalrat und der Ständerat gemeinsam
+      d: Die Parteipräsidenten
+    explanation_de: Für diese Wahlen kommen der Nationalrat und der Ständerat zusammen. In diesem Fall
+      bilden sie die Vereinigte Bundesversammlung und wählen die Mitglieder des Bundesrates und des Bundesgerichts.
+      Das Volk wählt den Nationalrat und wählt nach den Regeln seines eigenen Kantons auch die Mitglieder
+      des Ständerates, wählt aber den Bundesrat nicht.

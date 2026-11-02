@@ -1,0 +1,33 @@
+id: alv-beitraege-pensionierte-personen
+lang: fr
+source_version: 1
+question: Qui, en Suisse, n'a plus à payer de cotisations à l'assurance-chômage (AC) ?
+options:
+  a: Les personnes qui ont un contrat de travail de durée indéterminée
+  b: Les personnes qui ont atteint l'âge ordinaire de la retraite de l'assurance-vieillesse et survivants
+    (AHV)
+  c: Les personnes qui travaillent à temps partiel
+  d: Les personnes qui n'ont jamais été au chômage au cours des deux dernières années
+explanation: L'obligation de cotiser à l'assurance-chômage prend fin lorsque l'on atteint l'âge de la
+  retraite de l'AVS. Les personnes retraitées ne paient plus de cotisations AC sur un éventuel salaire.
+  En revanche, les employés à temps partiel et à plein temps paient des cotisations.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer in der Schweiz muss keine Beiträge mehr an die Arbeitslosenversicherung (ALV) bezahlen?
+    options_de:
+      a: Personen, die einen unbefristeten Arbeitsvertrag haben
+      b: Personen, die das ordentliche Rentenalter der Alters- und Hinterlassenenversicherung (AHV) erreicht
+        haben
+      c: Personen, die in Teilzeit arbeiten
+      d: Personen, die in den letzten zwei Jahren nie arbeitslos waren
+    explanation_de: Die Beitragspflicht an die Arbeitslosenversicherung endet, wenn man das Rentenalter
+      der AHV erreicht. Pensionierte Personen bezahlen auf einem allfälligen Lohn keine ALV-Beiträge mehr.
+      Hingegen bezahlen Teilzeit- und Vollzeitangestellte Beiträge.

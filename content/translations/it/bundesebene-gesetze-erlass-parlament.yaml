@@ -1,0 +1,32 @@
+id: bundesebene-gesetze-erlass-parlament
+lang: it
+source_version: 1
+question: Quale autorità emana le leggi a livello federale?
+options:
+  a: L'Assemblea federale (Bundesversammlung), ovvero il Consiglio nazionale (Nationalrat) e il Consiglio
+    degli Stati (Ständerat)
+  b: La Banca nazionale svizzera
+  c: La Cancelleria federale (Bundeskanzlei)
+  d: La Conferenza dei governi cantonali
+explanation: L'Assemblea federale è il Parlamento della Confederazione e si compone del Consiglio nazionale
+  e del Consiglio degli Stati. È competente per la legislazione. La Cancelleria federale, invece, sostiene
+  il Consiglio federale (Bundesrat) come organo di stato maggiore.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde erlässt die Gesetze auf Bundesebene?
+    options_de:
+      a: Die Bundesversammlung, das heisst der Nationalrat und der Ständerat
+      b: Die Schweizerische Nationalbank
+      c: Die Bundeskanzlei
+      d: Die Konferenz der Kantonsregierungen
+    explanation_de: Die Bundesversammlung ist das Parlament der Eidgenossenschaft und setzt sich aus dem
+      Nationalrat und dem Ständerat zusammen. Sie ist für die Gesetzgebung zuständig. Die Bundeskanzlei
+      hingegen unterstützt den Bundesrat als Stabsorgan.

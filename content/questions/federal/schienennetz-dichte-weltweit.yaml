@@ -17,7 +17,7 @@ sources:
   checked: &id001 2026-11-02
 glossary:
 - Schienennetz
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-261
@@ -39,3 +39,44 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Wort «engmaschig» ist für Niveau B1 eher schwierig; in Antwort a) könnte man «das
+        dichteste Schienennetz der Welt» schreiben und «engmaschig» in der Erklärung kurz erklären.'
+      - 'Klein: Antwort b) («vollständig durch Tunnel») ist kaum plausibel; besser wäre eine glaubwürdigere
+        falsche Antwort, etwa «Es ist das schnellste Schienennetz der Welt.»'
+      - 'Klein: Die Quelle spricht vom «dichtesten Verkehrsnetz der Welt» und nennt die Schweiz «eines
+        der ausgedehntesten Schienennetze Europas»; die Erklärung könnte kurz festhalten, dass es mit
+        rund 5300 Kilometern nicht das längste Netz ist, damit Antwort c) klar abgegrenzt ist.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Antwort a) sagt «Es ist», die Erklärung und die Themenliste sagen aber «gilt als»;
+        besser wäre in a) «Es gilt als das weltweit am engmaschigsten ausgebaute Schienennetz.», damit
+        Antwort und Erklärung gleich vorsichtig formuliert sind.'
+      - 'Klein: Das Wort «engmaschig» ist für Niveau B1 schwer; die Erklärung könnte kurz sagen, dass
+        es «sehr dicht» bedeutet, zum Beispiel: «Engmaschig heisst: Das Netz ist sehr dicht.»'
+      - 'Klein: Antwort b) («vollständig durch Tunnel») ist sehr unplausibel und leicht auszuschliessen;
+        eine glaubwürdigere Alternative wäre zum Beispiel «Es ist das einzige Schienennetz in Europa,
+        das ganz elektrifiziert ist.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Antwort a) sagt «weltweit am engmaschigsten ausgebaut» im Superlativ, obwohl die Quelle
+        nur von «dichtestem Verkehrsnetz» spricht; der Wortlaut folgt aber der Themenliste und ist vertretbar.'
+      - 'Klein: Der Begriff «engmaschig» ist für B1-Lernende eher schwierig; man könnte in der Erklärung
+        ergänzen «engmaschig = dicht, mit vielen Linien und Bahnhöfen auf kleiner Fläche».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

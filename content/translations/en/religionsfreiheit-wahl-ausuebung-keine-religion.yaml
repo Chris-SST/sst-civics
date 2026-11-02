@@ -11,6 +11,24 @@ options:
 explanation: Freedom of belief and conscience is guaranteed in Article 15 of the Federal Constitution.
   Every person may freely choose their religion, practise it alone or with others, or not belong to any
   religion. No one may be forced to join a religious community.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Frau zieht in die Schweiz und möchte ihre Religion selbst wählen. Sie erwägt auch,
+      überhaupt keiner Religion anzugehören. Was garantiert ihr die Bundesverfassung in dieser Hinsicht?
+    options_de:
+      a: Sie darf nur einer Religion angehören, die im Kanton öffentlich-rechtlich offiziell anerkannt
+        ist.
+      b: Sie darf ihre Religion frei wählen, sie ausüben oder keiner Religion angehören.
+      c: Sie darf ihre Religion privat wählen, darf sie aber nirgends gemeinsam mit anderen ausüben.
+      d: Sie muss sich bei der Gemeinde für eine anerkannte Religion entscheiden.
+    explanation_de: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung garantiert.
+      Jede Person darf ihre Religion frei wählen, sie allein oder mit anderen ausüben oder keiner Religion
+      angehören. Niemand darf gezwungen werden, einer Religionsgemeinschaft beizutreten.

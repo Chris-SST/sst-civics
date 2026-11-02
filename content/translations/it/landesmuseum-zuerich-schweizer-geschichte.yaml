@@ -1,0 +1,29 @@
+id: landesmuseum-zuerich-schweizer-geschichte
+lang: it
+source_version: 1
+question: Che cosa viene esposto al Museo nazionale di Zurigo?
+options:
+  a: La storia della Svizzera
+  b: La storia della ferrovia
+  c: La storia naturale e la fauna delle Alpi
+  d: L'arte moderna di tutto il mondo
+explanation: Il Museo nazionale di Zurigo presenta il passato e la storia culturale della Svizzera. Fa
+  parte del Museo nazionale svizzero. Si trova vicino alla stazione centrale di Zurigo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird im Landesmuseum Zürich ausgestellt?
+    options_de:
+      a: Die Geschichte der Schweiz
+      b: Die Geschichte der Eisenbahn
+      c: Die Naturgeschichte und die Tierwelt der Alpen
+      d: Die moderne Kunst aus der ganzen Welt
+    explanation_de: Das Landesmuseum Zürich zeigt die Vergangenheit und die Kulturgeschichte der Schweiz.
+      Es ist Teil des Schweizerischen Nationalmuseums. Es befindet sich in der Nähe des Zürcher Hauptbahnhofs.

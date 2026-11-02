@@ -1,0 +1,31 @@
+id: dampfmaschine-industrialisierung-schweiz
+lang: es
+source_version: 2
+question: ¿Qué invento marcó con fuerza la industrialización en Suiza en el siglo XIX?
+options:
+  a: El avión
+  b: La máquina de vapor
+  c: El ordenador
+  d: La cadena de montaje
+explanation: En el siglo XIX, la máquina de vapor adquirió importancia en Suiza. Hacía funcionar las máquinas
+  en las fábricas y, más tarde, también los ferrocarriles, y cada vez más personas trabajaban en fábricas.
+  El avión, la cadena de montaje y el ordenador no adquirieron importancia hasta el siglo XX.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Erfindung prägte die Industrialisierung in der Schweiz im 19. Jahrhundert stark?
+    options_de:
+      a: Das Flugzeug
+      b: Die Dampfmaschine
+      c: Der Computer
+      d: Das Fliessband
+    explanation_de: Im 19. Jahrhundert gewann die Dampfmaschine in der Schweiz an Bedeutung. Sie trieb
+      die Maschinen in den Fabriken und später auch die Eisenbahnen an, und immer mehr Menschen arbeiteten
+      in Fabriken. Das Flugzeug, das Fliessband und der Computer erlangten erst im 20. Jahrhundert Bedeutung.

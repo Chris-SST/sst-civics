@@ -9,6 +9,21 @@ options:
   d: about 7.4 million
 explanation: In 2020, around 8.6 million people lived in Switzerland. The population has grown strongly
   over recent decades. Current figures are published by the Federal Statistical Office.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie gross war die Gesamtbevölkerung der Schweiz im Jahr 2020ungefähr?
+    options_de:
+      a: etwa 6,2 Millionen
+      b: etwa 8,6 Millionen
+      c: etwa 10,1 Millionen
+      d: etwa 7,4 Millionen
+    explanation_de: Im Jahr 2020 lebten rund 8,6 Millionen Menschen in der Schweiz. Die Bevölkerung ist
+      in den letzten Jahrzehnten stark gewachsen. Aktuelle Zahlen werden vom Bundesamt für Statistik veröffentlicht.

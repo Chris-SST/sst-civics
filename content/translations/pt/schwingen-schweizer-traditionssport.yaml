@@ -1,0 +1,35 @@
+id: schwingen-schweizer-traditionssport
+lang: pt
+source_version: 2
+question: Qual desporto tradicional na Suíça é uma espécie de luta livre?
+options:
+  a: Hornussen
+  b: Schwingen
+  c: Curling
+  d: Steinstossen (lançamento da pedra)
+explanation: 'O Schwingen é uma luta entre duas pessoas numa arena redonda coberta de serradura e é considerado
+  um desporto tradicional suíço. O Hornussen e o Steinstossen também são desportos suíços antigos, mas
+  não são lutas: no Hornussen, bate-se num pequeno disco que voa longe pelo ar; no Steinstossen, lança-se
+  uma pedra pesada. O curling joga-se no gelo e é originário da Escócia.'
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Frage: «Ringkampf» wird zu «Freistilringen», eine spezifischere Ringkampfart; Erklärung:
+      «Ringkampf» wird zu «Kampf», und «keine Ringkämpfe» wird zu «keine Kämpfe», was die Bedeutung verändert.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 2
+    question_de: Welcher traditionelle Sport in der Schweiz ist eine Art Freistilringen?
+    options_de:
+      a: Hornussen
+      b: Schwingen
+      c: Curling
+      d: Steinstossen
+    explanation_de: 'Das Schwingen ist ein Kampf zwischen zwei Personen in einer runden, mit Sägemehl
+      bedeckten Arena und gilt als traditioneller Schweizer Sport. Das Hornussen und das Steinstossen
+      sind ebenfalls alte Schweizer Sportarten, aber keine Kämpfe: Beim Hornussen schlägt man eine kleine
+      Scheibe, die weit durch die Luft fliegt; beim Steinstossen wirft man einen schweren Stein. Curling
+      wird auf dem Eis gespielt und stammt ursprünglich aus Schottland.'

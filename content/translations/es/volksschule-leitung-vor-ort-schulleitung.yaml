@@ -1,0 +1,32 @@
+id: volksschule-leitung-vor-ort-schulleitung
+lang: es
+source_version: 2
+question: ¿Quién dirige directamente en el propio centro una escuela pública (Volksschule) del cantón
+  de Zúrich?
+options:
+  a: El Consejo Cantonal (Kantonsrat)
+  b: La dirección escolar
+  c: El consejo de padres
+  d: El Consejo de Gobierno (Regierungsrat)
+explanation: Cada escuela pública del cantón de Zúrich tiene una dirección escolar, que dirige y organiza
+  el funcionamiento directamente en el centro. El Consejo de Gobierno y el Consejo Cantonal trabajan a
+  nivel del cantón. El consejo de padres presenta las inquietudes de los padres, pero no dirige la escuela.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer leitet eine Volksschule des Kantons Zürich direkt vor Ort im eigenen Schulhaus?
+    options_de:
+      a: Der Kantonsrat
+      b: Die Schulleitung
+      c: Der Elternrat
+      d: Der Regierungsrat
+    explanation_de: Jede Volksschule des Kantons Zürich hat eine Schulleitung, die den Betrieb direkt
+      vor Ort leitet und organisiert. Der Regierungsrat und der Kantonsrat arbeiten auf kantonaler Ebene.
+      Der Elternrat bringt die Anliegen der Eltern vor, leitet die Schule aber nicht.

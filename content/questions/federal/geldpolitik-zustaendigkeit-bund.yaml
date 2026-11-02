@@ -21,7 +21,7 @@ glossary:
 - Bund
 - Kanton
 - Gemeinde
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-012
@@ -44,3 +44,44 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «im Auftrag des Bundes» kann so verstanden werden, als gebe der Bundesrat der Nationalbank
+        Weisungen; besser wäre: «Die Schweizerische Nationalbank führt die Geldpolitik als unabhängige
+        Zentralbank, wie es die Bundesverfassung (Art. 99) vorsieht.»'
+      - 'Klein: Die Erklärung könnte erwähnen, dass dieses Recht allein dem Bund zusteht («nur der Bund
+        darf Münzen und Banknoten ausgeben»), damit klarer wird, warum die Kantone und die Kantonalbanken
+        falsch sind.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «im Auftrag des Bundes» und «unabhängig» wirken nebeneinander etwas widersprüchlich; besser
+        wäre: «Die Schweizerische Nationalbank führt die Geldpolitik als unabhängige Zentralbank, so wie
+        es die Bundesverfassung vorsieht.»'
+      - 'Klein: Der Satz über Münzen und Banknoten wäre genauer mit «Nur der Bund hat das Recht, Münzen
+        und Banknoten auszugeben.», denn genau das sagt die Bundesverfassung (Art. 99).'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, die Nationalbank führe die Geldpolitik «im Auftrag des Bundes» aus.
+        Art. 99 BV nennt sie eine unabhängige Zentralbank, die unter Mitwirkung und Aufsicht des Bundes
+        verwaltet wird. Besser wäre: «Die Schweizerische Nationalbank führt als unabhängige Zentralbank
+        die Geldpolitik; der Bund wirkt bei ihrer Verwaltung mit und beaufsichtigt sie.»'
+      - 'Klein: Die Frage nennt «Geldpolitik», aber Art. 99 BV spricht von «Geld- und Währungspolitik».
+        Zusätzlich könnte man festhalten, dass die Nationalbank die Geldpolitik praktisch umsetzt. Das
+        macht Antwort a) nicht zweifelhaft, könnte aber zu Verwirrung führen, weil die Nationalbank nicht
+        als Antwort steht.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

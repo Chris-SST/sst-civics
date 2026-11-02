@@ -1,0 +1,31 @@
+id: bern-bundesstadt-landeshauptstadt
+lang: sq
+source_version: 1
+question: Cili qytet në Zvicër merr rolin e kryeqytetit të vendit?
+options:
+  a: Bernë
+  b: Gjenevë
+  c: Lozanë
+  d: Cyrih
+explanation: Berna është selia e Këshillit Federal (Bundesrat) dhe e Kuvendit Federal (Bundesversammlung)
+  dhe quhet «qytet federal». Kushtetuta Federale nuk përmend asnjë kryeqytet, por Berna e merr këtë rol.
+  Cyrihu është qyteti më i madh, Lozana është selia e Gjykatës Federale (Bundesgericht).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Stadt in der Schweiz übernimmt die Rolle der Hauptstadt des Landes?
+    options_de:
+      a: Bern
+      b: Genf
+      c: Lausanne
+      d: Zürich
+    explanation_de: Bern ist der Sitz des Bundesrates und der Bundesversammlung und wird «Bundesstadt»
+      genannt. Die Bundesverfassung erwähnt keine Hauptstadt, aber Bern übernimmt diese Rolle. Zürich
+      ist die grösste Stadt, Lausanne ist der Sitz des Bundesgerichts.

@@ -1,0 +1,31 @@
+id: richter-sprechen-urteile-gerichtsverfahren
+lang: es
+source_version: 1
+question: ¿Quién dicta la sentencia en un proceso judicial?
+options:
+  a: La jueza o el juez
+  b: La policía o el policía
+  c: La presidenta o el presidente del municipio (Gemeinde)
+  d: La fiscal o el fiscal
+explanation: Las juezas y los jueces deciden de forma independiente en los procesos judiciales y dictan
+  la sentencia. La fiscalía dirige la investigación y presenta la acusación. La policía investiga, pero
+  no dicta sentencia.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer fällt in einem Gerichtsverfahren das Urteil?
+    options_de:
+      a: Die Richterin oder der Richter
+      b: Die Polizistin oder der Polizist
+      c: Die Präsidentin oder der Präsident der Gemeinde
+      d: Die Staatsanwältin oder der Staatsanwalt
+    explanation_de: Die Richterinnen und Richter entscheiden in Gerichtsverfahren unabhängig und fällen
+      das Urteil. Die Staatsanwaltschaft leitet die Untersuchung und erhebt die Anklage. Die Polizei ermittelt,
+      fällt aber kein Urteil.

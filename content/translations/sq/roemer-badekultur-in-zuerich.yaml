@@ -1,0 +1,30 @@
+id: roemer-badekultur-in-zuerich
+lang: sq
+source_version: 1
+question: Çfarë risie sollën romakët në Cyrih?
+options:
+  a: Shtypjen e librave
+  b: Esnafet (Zünfte)
+  c: Kulturën e banjave
+  d: Reformacionin
+explanation: Romakët sollën në Cyrih kulturën e banjave, pra banjat publike sipas modelit romak. Esnafet
+  (Zünfte), shtypja e librave dhe reformacioni i përkasin vetëm Mesjetës dhe epokës së hershme moderne.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Neuheit brachten die Römer nach Zürich?
+    options_de:
+      a: Den Buchdruck
+      b: Die Zünfte
+      c: Die Badekultur
+      d: Die Reformation
+    explanation_de: Die Römer brachten die Badekultur nach Zürich, also die öffentlichen Bäder nach römischem
+      Vorbild. Die Zünfte, der Buchdruck und die Reformation gehören nur dem Mittelalter und der frühen
+      Neuzeit an.

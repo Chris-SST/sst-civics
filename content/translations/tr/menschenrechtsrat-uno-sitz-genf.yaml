@@ -1,0 +1,30 @@
+id: menschenrechtsrat-uno-sitz-genf
+lang: tr
+source_version: 1
+question: Birleşmiş Milletler (BM) İnsan Hakları Konseyi hangi İsviçre şehrinde bulunmaktadır?
+options:
+  a: Lozan
+  b: Cenevre
+  c: Bern
+  d: Basel
+explanation: BM İnsan Hakları Konseyi Cenevre'de toplanır. Cenevre, New York'un yanı sıra BM'nin en önemli
+  merkezlerinden biridir ve birçok uluslararası kuruluşun da merkezidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Schweizer Stadt befindet sich der Menschenrechtsrat der Vereinten Nationen
+      (UNO)?
+    options_de:
+      a: Lausanne
+      b: Genf
+      c: Bern
+      d: Basel
+    explanation_de: Der UNO-Menschenrechtsrat tritt in Genf zusammen. Genf ist neben New York eines der
+      wichtigsten Zentren der UNO und auch der Sitz vieler internationaler Organisationen.

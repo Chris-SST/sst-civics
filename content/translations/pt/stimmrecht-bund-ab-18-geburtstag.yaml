@@ -1,0 +1,31 @@
+id: stimmrecht-bund-ab-18-geburtstag
+lang: pt
+source_version: 1
+question: A partir de que idade os cidadãos suíços podem votar e eleger a nível federal?
+options:
+  a: A partir do 20.º aniversário
+  b: A partir do 21.º aniversário
+  c: A partir do 16.º aniversário
+  d: A partir do 18.º aniversário
+explanation: O direito de voto e de eleição a nível da Confederação começa com a maioridade, ou seja,
+  com o 18.º aniversário. Esta idade aplica-se da mesma forma às eleições e às votações da Confederação.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ab welchem Alter können Schweizer Bürgerinnen und Bürger auf Bundesebene abstimmen und
+      wählen?
+    options_de:
+      a: Ab dem 20. Geburtstag
+      b: Ab dem 21. Geburtstag
+      c: Ab dem 16. Geburtstag
+      d: Ab dem 18. Geburtstag
+    explanation_de: Das Stimm- und Wahlrecht auf Ebene des Bundes beginnt mit der Volljährigkeit, das
+      heisst mit dem 18. Geburtstag. Dieses Alter gilt in gleicher Weise für die Wahlen und die Abstimmungen
+      des Bundes.

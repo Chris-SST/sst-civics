@@ -1,0 +1,33 @@
+id: polizei-befugnis-festnahme-straftaeter
+lang: pt
+source_version: 2
+question: Que entidade pode deter pessoas suspeitas de terem cometido uma infração penal?
+options:
+  a: A autoridade escolar
+  b: A polícia
+  c: O parlamento
+  d: A repartição de finanças
+explanation: A polícia pode deter pessoas suspeitas de uma infração penal, desde que estejam reunidas
+  as condições previstas na lei. Se alguém é culpado ou não, é depois decidido por um tribunal. A autoridade
+  escolar, o parlamento e a repartição de finanças não têm esse poder.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Stelle kann Personen festnehmen, die verdächtigt werden, eine Straftat begangen
+      zu haben?
+    options_de:
+      a: Die Schulbehörde
+      b: Die Polizei
+      c: Das Parlament
+      d: Das Finanzamt
+    explanation_de: Die Polizei kann Personen festnehmen, die einer Straftat verdächtigt werden, sofern
+      die im Gesetz vorgesehenen Bedingungen erfüllt sind. Ob jemand schuldig ist oder nicht, wird danach
+      von einem Gericht entschieden. Die Schulbehörde, das Parlament und das Finanzamt haben diese Befugnis
+      nicht.

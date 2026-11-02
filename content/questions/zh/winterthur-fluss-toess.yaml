@@ -22,7 +22,7 @@ sources:
 glossary:
 - Töss
 - Winterthur
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-296
@@ -45,3 +45,33 @@ checks:
     at: *id002
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «die Glatt durch das Glattal» erklärt wenig; besser wäre zum Beispiel «die Glatt
+        fliesst vom Greifensee durch das Glattal, etwa durch Dübendorf und Bülach, in den Rhein».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte präziser sein, denn die Glatt fliesst nicht nur durch das Glattal,
+        sondern mündet bei Rheinsfelden in den Rhein; ein Zusatz wie «Die Glatt fliesst vom Greifensee
+        Richtung Rhein und nicht durch Winterthur» wäre klarer.'
+      - 'Klein: Die Erklärung sagt, die Töss münde «später» in den Rhein; besser wäre «Die Töss fliesst
+        durch Winterthur und mündet bei Rüdlingen-Eglisau in den Rhein» oder einfach «mündet in den Rhein»,
+        wie es die Broschüre formuliert.'
+    round: 1
+    at: &id003 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id003

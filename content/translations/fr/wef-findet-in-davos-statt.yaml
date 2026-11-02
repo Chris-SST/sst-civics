@@ -1,0 +1,32 @@
+id: wef-findet-in-davos-statt
+lang: fr
+source_version: 1
+question: Dans quelle localité suisse la réunion annuelle du Forum économique mondial (WEF) a-t-elle lieu
+  régulièrement ?
+options:
+  a: À Davos
+  b: À Lucerne
+  c: À Montreux
+  d: À Interlaken
+explanation: Le Forum économique mondial se réunit régulièrement à Davos, dans le canton des Grisons.
+  Des spécialistes de la politique et de l'économie s'y retrouvent. La Confédération soutient la sécurité
+  de la réunion.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Schweizer Ortschaft findet das jährliche Treffen des Weltwirtschaftsforums
+      (WEF) regelmässig statt?
+    options_de:
+      a: In Davos
+      b: In Luzern
+      c: In Montreux
+      d: In Interlaken
+    explanation_de: Das Weltwirtschaftsforum trifft sich regelmässig in Davos, im Kanton Graubünden. Fachleute
+      aus Politik und Wirtschaft kommen dort zusammen. Der Bund unterstützt die Sicherheit des Treffens.

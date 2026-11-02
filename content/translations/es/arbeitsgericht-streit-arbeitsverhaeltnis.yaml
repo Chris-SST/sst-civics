@@ -1,0 +1,31 @@
+id: arbeitsgericht-streit-arbeitsverhaeltnis
+lang: es
+source_version: 1
+question: Una trabajadora considera que su despido es improcedente y quiere impugnarlo. ¿Qué organismo
+  se ocupa de este tipo de litigios derivados de la relación laboral?
+options:
+  a: El Centro Regional de Colocación (RAV)
+  b: La Oficina de Tráfico (Strassenverkehrsamt)
+  c: El Tribunal de Trabajo (Arbeitsgericht)
+  d: La Oficina de Cobros (Betreibungsamt)
+explanation: El Tribunal de Trabajo es competente para los litigios entre empleadores y trabajadores.
+  Esto incluye también la disputa por un despido. El RAV, en cambio, ayuda en la búsqueda de empleo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Arbeitnehmerin hält ihre Kündigung für ungerechtfertigt und möchte sie anfechten.
+      Welche Stelle befasst sich mit dieser Art von Streitigkeiten aus dem Arbeitsverhältnis?
+    options_de:
+      a: Das Regionale Arbeitsvermittlungszentrum (RAV)
+      b: Das Strassenverkehrsamt
+      c: Das Arbeitsgericht
+      d: Das Betreibungsamt
+    explanation_de: Das Arbeitsgericht ist für die Streitigkeiten zwischen Arbeitgebern und Arbeitnehmern
+      zuständig. Dazu gehört auch der Streit um eine Kündigung. Das RAV hingegen hilft bei der Stellensuche.

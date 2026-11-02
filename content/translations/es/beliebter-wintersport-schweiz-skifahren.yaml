@@ -1,0 +1,32 @@
+id: beliebter-wintersport-schweiz-skifahren
+lang: es
+source_version: 2
+question: ¿Qué deporte practican especialmente muchas personas en Suiza en invierno?
+options:
+  a: Waterpolo
+  b: Esquí
+  c: Remo
+  d: Vóley playa
+explanation: El esquí es muy popular en Suiza en invierno, y mucha gente esquía en las montañas. A menudo
+  los niños ya aprenden a esquiar, por ejemplo en un campamento de esquí de la escuela. El waterpolo,
+  el remo y el vóley playa, en cambio, son deportes que se practican sobre todo en verano o en el agua.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welchen Sport betreiben in der Schweiz im Winter besonders viele Menschen?
+    options_de:
+      a: Wasserball
+      b: Skifahren
+      c: Rudern
+      d: Beachvolleyball
+    explanation_de: Skifahren ist in der Schweiz im Winter sehr beliebt, und viele Leute fahren in den
+      Bergen Ski. Oft lernen schon die Kinder Skifahren, zum Beispiel in einem Skilager der Schule. Wasserball,
+      Rudern und Beachvolleyball sind dagegen Sportarten, die vor allem im Sommer oder im Wasser betrieben
+      werden.

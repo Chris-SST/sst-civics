@@ -19,7 +19,7 @@ glossary:
 - Reformation
 - Eidgenossenschaft
 - Konfession
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-230
@@ -43,3 +43,37 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte konkreter sein, etwa mit dem Hinweis, dass Zürich unter Zwingli reformiert
+        wurde und die Innerschweizer Orte katholisch blieben, und dass es zu den Kappelerkriegen kam.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die richtige Antwort beschreibt mit «war … gespalten» einen Zustand statt einer Folge;
+        besser passt «Die Schweiz wurde religiös in einen reformierten und einen katholischen Teil gespalten.»'
+      - 'Klein: Der Begriff «Orte» ist für Lernende auf Niveau B1 vielleicht unklar; in der Erklärung
+        könnte man kurz ergänzen «Orte (heute: Kantone)».'
+      - 'Klein: Die Erklärung könnte ein konkretes Beispiel nennen, etwa Zürich mit Zwingli als reformierten
+        Ort und die Innerschweiz als katholischen Teil, oder die Kappelerkriege als Konflikt.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Antwort a) ist im Imperfekt formuliert («war ... gespalten»), was einen Zustand beschreibt.
+        Besser wäre «wurde ... gespalten», weil die Frage nach der Folge der Reformation fragt.'
+      - 'Klein: Die Erklärung könnte einen konkreten Bezug nennen, zum Beispiel Zürich (Zwingli) und Genf
+        (Calvin) als reformierte Zentren. Das würde das Verständnis erleichtern.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

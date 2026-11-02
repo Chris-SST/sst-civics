@@ -7,9 +7,25 @@ options:
   b: Between the liberal forces and the Catholic cantons
   c: Between urban and rural cantons over taxes
   d: Between Switzerland and France
-explanation: Several Catholic-conservative cantons had joined together in the Sonderbund. The liberal
-  forces wanted a stronger Confederation. The short war ended with the victory of the liberal side and
-  paved the way for the federal state of 1848.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: Several Catholic-conservative cantons had joined together in the Sonderbund (Separate League).
+  The liberal forces wanted a stronger Confederation. The short war ended with the victory of the liberal
+  side and paved the way for the federal state of 1848.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Zwischen wem wurde 1847 in der Schweiz der Sonderbundskrieg ausgetragen?
+    options_de:
+      a: Zwischen den deutschsprachigen und den französischsprachigen Kantonen
+      b: Zwischen den liberalen Kräften und den katholischen Kantonen
+      c: Zwischen städtischen und ländlichen Kantonen wegen Steuern
+      d: Zwischen der Schweiz und Frankreich
+    explanation_de: Mehrere katholisch-konservative Kantone hatten sich im Sonderbund zusammengeschlossen.
+      Die liberalen Kräfte wollten eine stärkere Eidgenossenschaft. Der kurze Krieg endete mit dem Sieg
+      der liberalen Seite und ebnete den Weg für den Bundesstaat von 1848.

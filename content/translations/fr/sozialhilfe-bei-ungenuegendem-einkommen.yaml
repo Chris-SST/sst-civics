@@ -1,0 +1,33 @@
+id: sozialhilfe-bei-ungenuegendem-einkommen
+lang: fr
+source_version: 1
+question: Que propose la commune (Gemeinde) lorsque le revenu et la fortune d'une personne ne suffisent
+  pas pour vivre ?
+options:
+  a: L'aide sociale
+  b: Un permis de construire
+  c: Une naturalisation
+  d: Une bourse d'études de l'école obligatoire
+explanation: Celui ou celle qui ne peut pas assurer son entretien avec ses propres moyens a droit à un
+  soutien de l'aide sociale. Celle-ci est fournie par la commune dans laquelle la personne habite. Elle
+  constitue le dernier filet de la sécurité sociale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bietet die Gemeinde an, wenn das Einkommen und das Vermögen einer Person nicht zum
+      Leben ausreichen?
+    options_de:
+      a: Die Sozialhilfe
+      b: Eine Baubewilligung
+      c: Eine Einbürgerung
+      d: Ein Stipendium für die obligatorische Schule
+    explanation_de: Wer seinen Lebensunterhalt nicht mit den eigenen Mitteln sichern kann, hat Anspruch
+      auf Unterstützung durch die Sozialhilfe. Diese wird von der Gemeinde erbracht, in der die Person
+      wohnt. Sie bildet das letzte Netz der sozialen Sicherheit.

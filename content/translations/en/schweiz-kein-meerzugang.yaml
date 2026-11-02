@@ -1,14 +1,31 @@
 id: schweiz-kein-meerzugang
 lang: en
-source_version: 1
+source_version: 2
 question: Which statement about the geographical location of Switzerland is correct?
 options:
   a: Switzerland has no direct access to the sea.
-  b: Switzerland has its own access to the sea via the Rhine.
+  b: Switzerland borders the Atlantic Ocean in the west.
   c: Switzerland borders the Mediterranean Sea in the south.
   d: Switzerland borders the North Sea in the north.
-explanation: Switzerland is a landlocked country and does not lie on the sea. However, its rivers, such
-  as the Rhine and the Rhone, flow into seas.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: 'Switzerland is a landlocked country: it is entirely surrounded by other countries and has
+  no sea coast. Ships do sail on the Rhine from Basel to the North Sea, but no sea borders Switzerland
+  directly.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Aussage über die geografische Lage der Schweiz ist richtig?
+    options_de:
+      a: Die Schweiz hat keinen direkten Zugang zum Meer.
+      b: Die Schweiz grenzt im Westen an den Atlantischen Ozean.
+      c: Die Schweiz grenzt im Süden an das Mittelmeer.
+      d: Die Schweiz grenzt im Norden an die Nordsee.
+    explanation_de: 'Die Schweiz ist ein Binnenland: Sie ist vollständig von anderen Ländern umgeben und
+      hat keine Meeresküste. Auf dem Rhein fahren zwar Schiffe von Basel zur Nordsee, aber kein Meer grenzt
+      direkt an die Schweiz.'

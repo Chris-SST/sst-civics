@@ -1,0 +1,31 @@
+id: dampfmaschine-industrialisierung-schweiz
+lang: sq
+source_version: 2
+question: Cila shpikje e ka ndikuar fuqishëm industrializimin në Zvicër në shekullin e 19-të?
+options:
+  a: Aeroplani
+  b: Makina me avull
+  c: Kompjuteri
+  d: Linja e montimit
+explanation: Në shekullin e 19-të, makina me avull u bë e rëndësishme në Zvicër. Ajo vinte në lëvizje
+  makinat në fabrika dhe më vonë edhe trenat, dhe gjithnjë e më shumë njerëz punonin në fabrika. Aeroplani,
+  linja e montimit dhe kompjuteri u bënë të rëndësishëm vetëm në shekullin e 20-të.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Erfindung hat die Industrialisierung in der Schweiz im 19. Jahrhundert stark beeinflusst?
+    options_de:
+      a: Das Flugzeug
+      b: Die Dampfmaschine
+      c: Der Computer
+      d: Das Fliessband
+    explanation_de: Im 19. Jahrhundert wurde die Dampfmaschine in der Schweiz wichtig. Sie setzte die
+      Maschinen in den Fabriken und später auch die Züge in Bewegung, und immer mehr Menschen arbeiteten
+      in Fabriken. Das Flugzeug, das Fliessband und der Computer wurden erst im 20. Jahrhundert wichtig.

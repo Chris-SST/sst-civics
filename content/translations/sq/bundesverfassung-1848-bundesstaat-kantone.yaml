@@ -1,0 +1,32 @@
+id: bundesverfassung-1848-bundesstaat-kantone
+lang: sq
+source_version: 1
+question: Çfarë ndryshoi për Zvicrën me Kushtetutën Federale të vitit 1848?
+options:
+  a: Ajo u kthye përsëri në një lidhje të lirshme shtetesh
+  b: Ajo u bë monarki me një mbret
+  c: Ajo u bë shtet federal, ku kantonet mbeten të pavarura
+  d: Ajo u bë shtet unitar pa kantone
+explanation: Në vitin 1848 lindi shteti modern federal me institucione të përbashkëta. Kantonet megjithatë
+  ruajtën detyra të veta dhe një shtetësi të vetën. Ky ndarje karakterizon Zvicrën deri në ditët e sotme.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: In der Erklärung steht statt «eigene Staatlichkeit» in der Rückübersetzung «eigene Staatsbürgerschaft»,
+      das ist eine andere Sache; zudem heisst «eigenständig» in Antwort c leicht abweichend «unabhängig»,
+      was aber weniger ins Gewicht fällt.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Was änderte sich für die Schweiz mit der Bundesverfassung von 1848?
+    options_de:
+      a: Sie kehrte wieder zu einem lockeren Bund von Staaten zurück
+      b: Sie wurde eine Monarchie mit einem König
+      c: Sie wurde ein Bundesstaat, in dem die Kantone unabhängig bleiben
+      d: Sie wurde ein Einheitsstaat ohne Kantone
+    explanation_de: Im Jahr 1848 entstand der moderne Bundesstaat mit gemeinsamen Institutionen. Die Kantone
+      behielten jedoch eigene Aufgaben und eine eigene Staatsbürgerschaft. Diese Aufteilung prägt die
+      Schweiz bis heute.

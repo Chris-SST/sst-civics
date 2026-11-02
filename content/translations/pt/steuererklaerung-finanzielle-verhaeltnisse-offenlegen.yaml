@@ -1,0 +1,29 @@
+id: steuererklaerung-finanzielle-verhaeltnisse-offenlegen
+lang: pt
+source_version: 1
+question: Para que serve a declaração de impostos que os contribuintes preenchem todos os anos?
+options:
+  a: Serve para o registo no serviço de registo de residentes.
+  b: É o pedido de um seguro de saúde.
+  c: É a inscrição para o serviço civil (Zivildienst).
+  d: Serve para revelar às autoridades fiscais a situação financeira.
+explanation: Com a declaração de impostos, os contribuintes indicam o rendimento, o património e as deduções.
+  Com base nesses dados, a autoridade fiscal calcula o imposto.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient die Steuererklärung, die die Steuerpflichtigen jedes Jahr ausfüllen?
+    options_de:
+      a: Sie dient der Anmeldung beim Einwohnerregister.
+      b: Sie ist der Antrag auf eine Krankenversicherung.
+      c: Sie ist die Anmeldung für den Zivildienst.
+      d: Sie dient dazu, den Steuerbehörden die finanzielle Situation offenzulegen.
+    explanation_de: Mit der Steuererklärung geben die Steuerpflichtigen das Einkommen, das Vermögen und
+      die Abzüge an. Auf der Grundlage dieser Angaben berechnet die Steuerbehörde die Steuer.

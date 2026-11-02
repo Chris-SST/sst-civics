@@ -1,0 +1,33 @@
+id: universitaet-zuerich-traegerschaft-kanton
+lang: tr
+source_version: 1
+question: Zürih kantonunda Zürih Üniversitesi'nin işletilmesinden ve sorumluluğunun (kurucu kuruluş olmasının)
+  üstlenilmesinden kim sorumludur?
+options:
+  a: Konfederasyon
+  b: Zürih şehri
+  c: Zürih kantonu
+  d: Kantonun ilçe konseyleri
+explanation: Zürih Üniversitesi bir kanton yüksekokuludur. Zürih kantonu üniversitenin kurucu kuruluşudur
+  ve onu işletir. Zürih şehri ile Konfederasyon bu konuda esas sorumlu değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: «Eidgenossenschaft» entspricht «Bund», Trägerschaft und Betrieb liegen
+      in beiden Fassungen beim Kanton Zürich.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist im Kanton Zürich für den Betrieb der Universität Zürich und die Übernahme der
+      Verantwortung (als Trägerschaft) zuständig?
+    options_de:
+      a: Die Eidgenossenschaft
+      b: Die Stadt Zürich
+      c: Der Kanton Zürich
+      d: Die Bezirksräte des Kantons
+    explanation_de: Die Universität Zürich ist eine kantonale Hochschule. Der Kanton Zürich ist die Trägerschaft
+      der Universität und betreibt sie. Die Stadt Zürich und die Eidgenossenschaft sind hierfür nicht
+      hauptverantwortlich.

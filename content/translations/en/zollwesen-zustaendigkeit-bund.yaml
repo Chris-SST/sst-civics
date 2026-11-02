@@ -10,6 +10,22 @@ options:
 explanation: Under the Federal Constitution, customs is a matter for the Confederation. It regulates customs
   duties and the control of goods crossing the border. The cantons and communes have no responsibility
   of their own for this.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz für das Zollwesen zuständig?
+    options_de:
+      a: Der Bund
+      b: Die Gemeinden entlang der Grenze
+      c: Die Kantone, in denen die Grenzen liegen
+      d: Die Kantone und der Bund, je zur Hälfte
+    explanation_de: Nach der Bundesverfassung ist das Zollwesen Sache des Bundes. Er regelt die Zollabgaben
+      und die Kontrolle der Waren, die die Grenze überqueren. Die Kantone und Gemeinden haben dafür keine
+      eigene Zuständigkeit.

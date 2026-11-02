@@ -1,0 +1,33 @@
+id: initiative-gegenvorschlag-stichfrage
+lang: fr
+source_version: 1
+question: Il est voté en même temps sur une initiative populaire (Volksinitiative) et sur un contre-projet
+  direct de l'Assemblée fédérale (Bundesversammlung). À quoi sert alors la question subsidiaire ?
+options:
+  a: Elle décide si le vote doit être répété
+  b: Elle décide si l'initiative est valable
+  c: Elle décide quel projet s'applique si les deux sont acceptés
+  d: Elle décide si les cantons peuvent participer au vote
+explanation: Les citoyens ayant le droit de vote peuvent accepter aussi bien l'initiative que le contre-projet.
+  Avec la question subsidiaire, ils indiquent lequel des deux projets doit entrer en vigueur si les deux
+  sont acceptés. Ainsi, aucune voix en faveur d'un changement n'est perdue.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Es wird gleichzeitig über eine Volksinitiative und über einen direkten Gegenentwurf der
+      Bundesversammlung abgestimmt. Wozu dient dann die Stichfrage?
+    options_de:
+      a: Sie entscheidet, ob die Abstimmung wiederholt werden muss
+      b: Sie entscheidet, ob die Initiative gültig ist
+      c: Sie entscheidet, welche Vorlage gilt, wenn beide angenommen werden
+      d: Sie entscheidet, ob die Kantone an der Abstimmung teilnehmen können
+    explanation_de: Die stimmberechtigten Bürgerinnen und Bürger können sowohl die Initiative als auch
+      den Gegenentwurf annehmen. Mit der Stichfrage geben sie an, welche der beiden Vorlagen in Kraft
+      treten soll, wenn beide angenommen werden. So geht keine Stimme zugunsten einer Änderung verloren.

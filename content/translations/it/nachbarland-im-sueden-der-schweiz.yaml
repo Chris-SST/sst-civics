@@ -1,0 +1,30 @@
+id: nachbarland-im-sueden-der-schweiz
+lang: it
+source_version: 1
+question: Quale Paese si trova a sud della Svizzera e confina con essa?
+options:
+  a: Spagna
+  b: Italia
+  c: Slovenia
+  d: Francia
+explanation: L'Italia è il vicino meridionale della Svizzera. Il confine attraversa, tra l'altro, le Alpi
+  e passa attraverso il Ticino e i Grigioni. La Spagna e la Slovenia non confinano con la Svizzera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Land liegt südlich der Schweiz und grenzt an sie?
+    options_de:
+      a: Spanien
+      b: Italien
+      c: Slowenien
+      d: Frankreich
+    explanation_de: Italien ist der südliche Nachbar der Schweiz. Die Grenze verläuft unter anderem durch
+      die Alpen und führt durch das Tessin und Graubünden. Spanien und Slowenien grenzen nicht an die
+      Schweiz.

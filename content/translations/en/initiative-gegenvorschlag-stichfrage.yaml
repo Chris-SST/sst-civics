@@ -11,6 +11,23 @@ options:
 explanation: Eligible voters can approve both the initiative and the counter-proposal. With the tie-breaker
   question, they indicate which of the two proposals should enter into force if both are accepted. In
   this way, no vote in favour of a change is lost.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Über eine Volksinitiative und einen direkten Gegenentwurf der Bundesversammlung wird
+      gleichzeitig abgestimmt. Welchen Zweck hat die Stichfrage?
+    options_de:
+      a: Sie entscheidet, ob die Abstimmung wiederholt werden muss
+      b: Sie entscheidet, ob die Initiative gültig ist
+      c: Sie entscheidet, welche Vorlage gilt, wenn beide angenommen werden
+      d: Sie entscheidet, ob die Kantone an der Abstimmung teilnehmen dürfen
+    explanation_de: Die Stimmberechtigten können sowohl die Initiative als auch den Gegenentwurf annehmen.
+      Mit der Stichfrage geben sie an, welche der beiden Vorlagen in Kraft treten soll, wenn beide angenommen
+      werden. Auf diese Weise geht keine Stimme für eine Änderung verloren.

@@ -1,0 +1,33 @@
+id: unfallversicherung-spitalkosten-arbeitsunfall
+lang: es
+source_version: 1
+question: Una trabajadora sufre un accidente grave en el trabajo y debe ser ingresada en el hospital.
+  ¿Qué seguro se hace cargo de los gastos hospitalarios?
+options:
+  a: El seguro de desempleo
+  b: El seguro de accidentes
+  c: El régimen de compensación por pérdida de ingresos
+  d: El seguro de vejez y de supervivientes
+explanation: El seguro obligatorio de accidentes paga, en caso de accidentes laborales, los gastos de
+  tratamiento, es decir, por ejemplo, los gastos hospitalarios. Los trabajadores están asegurados contra
+  ello a través del empleador. Los demás seguros mencionados cubren otros riesgos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Arbeitnehmerin erleidet bei der Arbeit einen schweren Unfall und muss ins Spital
+      eingeliefert werden. Welche Versicherung übernimmt die Spitalkosten?
+    options_de:
+      a: Die Arbeitslosenversicherung
+      b: Die Unfallversicherung
+      c: Die Erwerbsersatzordnung
+      d: Die Alters- und Hinterlassenenversicherung
+    explanation_de: Die obligatorische Unfallversicherung bezahlt bei Arbeitsunfällen die Behandlungskosten,
+      das heisst zum Beispiel die Spitalkosten. Die Arbeitnehmer sind dafür über den Arbeitgeber versichert.
+      Die anderen genannten Versicherungen decken andere Risiken ab.

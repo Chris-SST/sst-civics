@@ -1,0 +1,29 @@
+id: fasnacht-umzuege-mit-masken
+lang: fr
+source_version: 1
+question: Qu'est-ce qui fait typiquement partie du carnaval suisse (Fasnacht) ?
+options:
+  a: Des cortèges dans lesquels les participants portent des masques
+  b: La décoration de sapins sur la place du village
+  c: Un feu d'artifice à minuit le 1er août
+  d: L'allumage de grands cierges dans les églises
+explanation: Pendant le carnaval, des groupes défilent dans les rues en cortèges et portent à cette occasion
+  des masques et des costumes. Le carnaval de Bâle est un exemple connu de cette coutume.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gehört typischerweise zur Schweizer Fasnacht?
+    options_de:
+      a: Umzüge, in denen die Teilnehmenden Masken tragen
+      b: Das Schmücken von Tannenbäumen auf dem Dorfplatz
+      c: Ein Feuerwerk um Mitternacht am 1. August
+      d: Das Anzünden grosser Kerzen in den Kirchen
+    explanation_de: Während der Fasnacht ziehen Gruppen in Umzügen durch die Strassen und tragen dabei
+      Masken und Kostüme. Die Basler Fasnacht ist ein bekanntes Beispiel für diesen Brauch.

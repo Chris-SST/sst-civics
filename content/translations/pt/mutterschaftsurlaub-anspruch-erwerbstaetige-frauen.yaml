@@ -1,0 +1,32 @@
+id: mutterschaftsurlaub-anspruch-erwerbstaetige-frauen
+lang: pt
+source_version: 1
+question: Quem tem, na Suíça, direito legal à licença de maternidade após o nascimento de um filho?
+options:
+  a: Apenas as mulheres que trabalham numa empresa com mais de 50 empregados
+  b: Toda mulher com atividade profissional que dá à luz um filho
+  c: Apenas as mulheres que são casadas
+  d: Apenas as mulheres com cidadania (Bürgerrecht) suíça
+explanation: A lei prevê, para as mães com atividade profissional, o direito à licença de maternidade
+  e a uma indemnização. O tamanho da empresa, a nacionalidade e o estado civil não têm qualquer importância
+  para esse efeito. A indemnização é financiada através do regime de compensação por perda de rendimentos
+  (Erwerbsersatzordnung).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer hat in der Schweiz nach der Geburt eines Kindes einen gesetzlichen Anspruch auf Mutterschaftsurlaub?
+    options_de:
+      a: Nur Frauen, die in einem Unternehmen mit mehr als 50 Angestellten arbeiten
+      b: Jede erwerbstätige Frau, die ein Kind zur Welt bringt
+      c: Nur Frauen, die verheiratet sind
+      d: Nur Frauen mit schweizerischem Bürgerrecht
+    explanation_de: Das Gesetz sieht für erwerbstätige Mütter den Anspruch auf Mutterschaftsurlaub und
+      auf eine Entschädigung vor. Die Grösse des Unternehmens, die Staatsangehörigkeit und der Zivilstand
+      spielen dafür keine Rolle. Die Entschädigung wird über die Erwerbsersatzordnung finanziert.

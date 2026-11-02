@@ -1,0 +1,31 @@
+id: henry-dunant-gruender-rotes-kreuz
+lang: fr
+source_version: 2
+question: Qui est considéré comme le fondateur de la Croix-Rouge à Genève ?
+options:
+  a: Alfred Escher
+  b: Johann Heinrich Pestalozzi
+  c: Huldrych Zwingli
+  d: Henry Dunant
+explanation: Le Genevois Henry Dunant vit en 1859, après la bataille de Solferino, combien de blessés
+  restaient sans secours. Il s'engagea donc pour qu'ils soient soignés, et la Croix-Rouge fut fondée à
+  Genève en 1863. Pour cela, Dunant reçut en 1901, avec Frédéric Passy, le premier prix Nobel de la paix.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer gilt als Gründer des Roten Kreuzes in Genf?
+    options_de:
+      a: Alfred Escher
+      b: Johann Heinrich Pestalozzi
+      c: Huldrych Zwingli
+      d: Henry Dunant
+    explanation_de: Der Genfer Henry Dunant sah 1859 nach der Schlacht von Solferino, wie viele Verwundete
+      ohne Hilfe blieben. Er setzte sich daher dafür ein, dass sie gepflegt wurden, und das Rote Kreuz
+      wurde 1863 in Genf gegründet. Dafür erhielt Dunant 1901 zusammen mit Frédéric Passy den ersten Friedensnobelpreis.

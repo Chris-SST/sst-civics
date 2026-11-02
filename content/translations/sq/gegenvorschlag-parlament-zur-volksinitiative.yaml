@@ -1,0 +1,32 @@
+id: gegenvorschlag-parlament-zur-volksinitiative
+lang: sq
+source_version: 1
+question: Çfarë mund t'i kundërvërë Parlamenti një nisme popullore (Volksinitiative) federale?
+options:
+  a: Një zgjatje të afatit të mbledhjes së nënshkrimeve me edhe një vit
+  b: Një kundërpropozim të vetin, mbi të cilin votohet gjithashtu
+  c: Një mbledhje të dytë nënshkrimesh në të gjithë kantonet
+  d: Një ndalim për ta çuar nismën në votim
+explanation: Parlamenti mund t'i kundërvërë një nisme popullore një kundërpropozim të drejtpërdrejtë.
+  Ky shpesh e merr në konsideratë pjesërisht kërkesën, por shkon më pak larg. Shtetasit me të drejtë vote
+  votojnë pastaj në të njëjtën ditë mbi nismën dhe mbi kundërpropozimin.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was kann das Parlament einer eidgenössischen Volksinitiative entgegenstellen?
+    options_de:
+      a: Eine Verlängerung der Frist für die Sammlung der Unterschriften um ein weiteres Jahr
+      b: Einen eigenen Gegenvorschlag, über den ebenfalls abgestimmt wird
+      c: Eine zweite Unterschriftensammlung in allen Kantonen
+      d: Ein Verbot, die Initiative zur Abstimmung zu bringen
+    explanation_de: Das Parlament kann einer Volksinitiative einen direkten Gegenvorschlag entgegenstellen.
+      Dieser berücksichtigt das Anliegen oft teilweise, geht aber weniger weit. Die stimmberechtigten
+      Bürgerinnen und Bürger stimmen dann am selben Tag über die Initiative und über den Gegenvorschlag
+      ab.

@@ -1,0 +1,31 @@
+id: regierungsrat-zuerich-wahl-durch-volk
+lang: it
+source_version: 1
+question: Chi determina, nel Cantone di Zurigo, chi siede nel Consiglio di Stato (Regierungsrat)?
+options:
+  a: L'Assemblea federale (Bundesversammlung) elegge i membri del Consiglio di Stato.
+  b: Il Consiglio cantonale (Kantonsrat) elegge i membri tra i propri ranghi.
+  c: I presidenti e le presidentesse dei Comuni (Gemeinde) eleggono i membri.
+  d: La popolazione avente diritto di voto del Cantone elegge direttamente i membri.
+explanation: Nel Cantone di Zurigo il popolo elegge direttamente il Consiglio di Stato alle urne. Il Consiglio
+  cantonale è il parlamento e non elegge il governo. Questo distingue il Cantone dalla Confederazione,
+  dove l'Assemblea federale elegge il Consiglio federale (Bundesrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer bestimmt im Kanton Zürich, wer im Regierungsrat sitzt?
+    options_de:
+      a: Die Bundesversammlung wählt die Mitglieder des Regierungsrates.
+      b: Der Kantonsrat wählt die Mitglieder aus den eigenen Reihen.
+      c: Die Gemeindepräsidenten und Gemeindepräsidentinnen wählen die Mitglieder.
+      d: Die stimmberechtigte Bevölkerung des Kantons wählt die Mitglieder direkt.
+    explanation_de: Im Kanton Zürich wählt das Volk den Regierungsrat direkt an der Urne. Der Kantonsrat
+      ist das Parlament und wählt die Regierung nicht. Dies unterscheidet den Kanton vom Bund, wo die
+      Bundesversammlung den Bundesrat wählt.

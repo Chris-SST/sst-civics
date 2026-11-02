@@ -1,0 +1,33 @@
+id: frauenstimmrecht-national-1971
+lang: sq
+source_version: 2
+question: Që nga cili vit lejojnë gratë në Zvicër të zgjedhin dhe të votojnë në nivel të Konfederatës?
+options:
+  a: '1959'
+  b: '1991'
+  c: '1948'
+  d: '1971'
+explanation: Në vitin 1971 burrat zviceranë miratuan në një votim popullor të drejtën e votës për gratë
+  në nivel të Konfederatës. Që atëherë gratë mund të zgjedhin, të votojnë dhe të zgjidhen në nivel kombëtar.
+  Kantonet e futën të drejtën e votës për gratë në kohë të ndryshme, disa që para vitit 1971, ndërsa Appenzell
+  Innerrhoden, si kantoni i fundit, vetëm në vitin 1990.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Seit welchem Jahr dürfen Frauen in der Schweiz auf Ebene des Bundes wählen und abstimmen?
+    options_de:
+      a: '1959'
+      b: '1991'
+      c: '1948'
+      d: '1971'
+    explanation_de: Im Jahr 1971 nahmen die Schweizer Männer in einer Volksabstimmung das Stimmrecht für
+      Frauen auf Ebene des Bundes an. Seither können Frauen auf nationaler Ebene wählen, abstimmen und
+      gewählt werden. Die Kantone führten das Stimmrecht für Frauen zu unterschiedlichen Zeiten ein, einige
+      schon vor 1971, während Appenzell Innerrhoden als letzter Kanton es erst im Jahr 1990 einführte.

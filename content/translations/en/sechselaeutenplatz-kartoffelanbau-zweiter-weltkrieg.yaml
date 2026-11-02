@@ -1,0 +1,36 @@
+id: sechselaeutenplatz-kartoffelanbau-zweiter-weltkrieg
+lang: en
+source_version: 2
+question: Which of these plants was grown on the Sechseläutenplatz in Zurich during the Second World War?
+options:
+  a: Tobacco
+  b: Grapevines
+  c: Cotton
+  d: Potatoes
+explanation: During the Second World War, Switzerland did not have enough food. For this reason, the "Anbauschlacht"
+  (the "Battle of the Plough", a national campaign to grow more food) led to land in the middle of towns
+  and cities being planted as well, for example the Sechseläutenplatz in Zurich, which was planted with
+  potatoes. Tobacco, grapevines and cotton were not grown there.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; die Rückübersetzung ergänzt nur eine Erläuterung zur «Anbauschlacht» und
+      «Dörfern und Städten», was die Aussage nicht ändert.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche dieser Pflanzen wurde während des Zweiten Weltkriegs auf dem Sechseläutenplatz
+      in Zürich angebaut?
+    options_de:
+      a: Tabak
+      b: Reben
+      c: Baumwolle
+      d: Kartoffeln
+    explanation_de: Während des Zweiten Weltkriegs hatte die Schweiz nicht genug Nahrungsmittel. Aus diesem
+      Grund führte die «Anbauschlacht» (die «Schlacht des Pflugs», eine nationale Kampagne zum Anbau von
+      mehr Nahrungsmitteln) dazu, dass auch Land mitten in Dörfern und Städten bepflanzt wurde, zum Beispiel
+      der Sechseläutenplatz in Zürich, der mit Kartoffeln bepflanzt wurde. Tabak, Reben und Baumwolle
+      wurden dort nicht angebaut.

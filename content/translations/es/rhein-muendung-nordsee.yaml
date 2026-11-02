@@ -1,0 +1,29 @@
+id: rhein-muendung-nordsee
+lang: es
+source_version: 1
+question: ¿En qué mar desemboca finalmente el agua del Rin?
+options:
+  a: En el mar Mediterráneo
+  b: En el mar Negro
+  c: En el mar del Norte
+  d: En el mar Báltico
+explanation: El Rin nace en los Alpes suizos y fluye por Alemania y los Países Bajos. Desemboca en el
+  mar del Norte.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welches Meer mündet das Wasser des Rheins schliesslich?
+    options_de:
+      a: Ins Mittelmeer
+      b: Ins Schwarze Meer
+      c: In die Nordsee
+      d: In die Ostsee
+    explanation_de: Der Rhein entspringt in den Schweizer Alpen und fliesst durch Deutschland und die
+      Niederlande. Er mündet in die Nordsee.

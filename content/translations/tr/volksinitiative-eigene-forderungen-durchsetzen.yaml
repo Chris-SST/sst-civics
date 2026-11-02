@@ -1,0 +1,32 @@
+id: volksinitiative-eigene-forderungen-durchsetzen
+lang: tr
+source_version: 1
+question: Bir halk girişimi (Volksinitiative) oy hakkına sahip kişilere ne işe yarar?
+options:
+  a: Bununla Federal Mahkeme'nin (Bundesgericht) bir kararını değiştirebilirler.
+  b: Bununla kendi taleplerini siyasi gündeme taşıyabilirler.
+  c: Bununla bir sonraki seçimlerin tarihini belirleyebilirler.
+  d: Bununla parlamentonun bir yasasını engelleyebilirler.
+explanation: Bir halk girişimi ile oy hakkına sahip kişiler, Federal Anayasa'da bir değişiklik önerebilir.
+  Girişim gerekli koşulları sağlarsa, bu konuda oylama yapılır. Böylece halk ve kantonlar kabul ederse,
+  kendi taleplerini parlamentonun iradesine karşı bile hayata geçirebilirler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient eine Volksinitiative den Stimmberechtigten?
+    options_de:
+      a: Damit können sie einen Entscheid des Bundesgerichts ändern.
+      b: Damit können sie ihre eigenen Forderungen auf die politische Agenda bringen.
+      c: Damit können sie das Datum der nächsten Wahlen bestimmen.
+      d: Damit können sie ein Gesetz des Parlaments verhindern.
+    explanation_de: Mit einer Volksinitiative können die Stimmberechtigten eine Änderung der Bundesverfassung
+      vorschlagen. Wenn die Initiative die erforderlichen Bedingungen erfüllt, wird darüber abgestimmt.
+      Wenn das Volk und die Kantone sie so annehmen, können sie ihre eigenen Forderungen sogar gegen den
+      Willen des Parlaments verwirklichen.

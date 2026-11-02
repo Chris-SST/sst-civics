@@ -9,6 +9,22 @@ options:
   d: Basel
 explanation: The UN Human Rights Council meets in Geneva. Alongside New York, Geneva is one of the most
   important UN locations and is the seat of many international organisations.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Schweizer Stadt befindet sich der Sitz des Menschenrechtsrats der Vereinten
+      Nationen (UNO)?
+    options_de:
+      a: Lausanne
+      b: Genf
+      c: Bern
+      d: Basel
+    explanation_de: Der Menschenrechtsrat der UNO tagt in Genf. Neben New York ist Genf einer der wichtigsten
+      UNO-Standorte und der Sitz vieler internationaler Organisationen.

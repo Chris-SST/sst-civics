@@ -1,0 +1,29 @@
+id: familien-steuerabzuege-entlastung
+lang: pt
+source_version: 1
+question: Como as famílias são aliviadas em matéria de impostos?
+options:
+  a: As famílias não pagam impostos.
+  b: As famílias podem fazer deduções nos impostos.
+  c: As famílias não precisam preencher a declaração de impostos.
+  d: As famílias pagam apenas o imposto sobre o valor acrescentado.
+explanation: As famílias podem, por exemplo, fazer deduções para os filhos ou para o acolhimento de crianças.
+  Desse modo, o rendimento tributável diminui e, com ele, o imposto.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie werden Familien steuerlich entlastet?
+    options_de:
+      a: Familien zahlen keine Steuern.
+      b: Familien können Abzüge bei den Steuern vornehmen.
+      c: Familien müssen die Steuererklärung nicht ausfüllen.
+      d: Familien zahlen nur die Mehrwertsteuer.
+    explanation_de: Familien können zum Beispiel Abzüge für die Kinder oder für die Kinderbetreuung vornehmen.
+      Auf diese Weise sinkt das steuerbare Einkommen und mit ihm die Steuer.

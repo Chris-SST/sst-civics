@@ -1,0 +1,35 @@
+id: bundesgesetz-referendum-volksmehr-genuegt
+lang: tr
+source_version: 1
+question: Yeni bir federal yasaya karşı isteğe bağlı referandum başlatıldı. Yasanın halk oylamasında kabul
+  edilmesi için ne gerekir?
+options:
+  a: Tüm İsviçre genelinde oy verenlerin çoğunluğu
+  b: Oy verenlerin üçte iki çoğunluğu
+  c: Yalnızca kantonların çoğunluğu
+  d: Oy verenlerin çoğunluğu ve kantonların çoğunluğu
+explanation: Bir federal yasaya karşı yapılan isteğe bağlı referandumda yalnızca halk çoğunluğu (Volksmehr)
+  yeterlidir; yani tüm İsviçre genelinde geçerli oyların çoğunluğu. Kantonlar çoğunluğu (Ständemehr),
+  yani kantonların çoğunluğu, ek olarak yalnızca Federal Anayasa değişikliklerinde ve bazı devletlerarası
+  antlaşmalarda gerekir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen ein neues Bundesgesetz wurde ein fakultatives Referendum ergriffen. Was ist erforderlich,
+      damit das Gesetz in der Volksabstimmung angenommen wird?
+    options_de:
+      a: Die Mehrheit der Stimmenden in der ganzen Schweiz
+      b: Eine Zweidrittelmehrheit der Stimmenden
+      c: Nur die Mehrheit der Kantone
+      d: Die Mehrheit der Stimmenden und die Mehrheit der Kantone
+    explanation_de: Beim fakultativen Referendum gegen ein Bundesgesetz genügt nur das Volksmehr; das
+      heisst die Mehrheit der gültigen Stimmen in der ganzen Schweiz. Das Ständemehr, das heisst die Mehrheit
+      der Kantone, ist zusätzlich nur bei Änderungen der Bundesverfassung und bei einigen zwischenstaatlichen
+      Verträgen erforderlich.

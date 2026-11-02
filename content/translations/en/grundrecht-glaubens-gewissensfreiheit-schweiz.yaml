@@ -10,6 +10,22 @@ options:
 explanation: Freedom of belief and conscience is set out in Article 15 of the Federal Constitution. The
   state may not force anyone to hold a particular belief. There is no fundamental right to a job or an
   income.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht wird in der Schweiz durch die Bundesverfassung geschützt?
+    options_de:
+      a: Das Recht auf ein Einkommen vom Staat
+      b: Das Recht auf ein Auto
+      c: Das Recht auf eine Arbeitsstelle
+      d: Glaubens- und Gewissensfreiheit
+    explanation_de: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung festgelegt.
+      Der Staat darf niemanden zwingen, einen bestimmten Glauben zu haben. Es gibt kein Grundrecht auf
+      eine Arbeitsstelle oder ein Einkommen.

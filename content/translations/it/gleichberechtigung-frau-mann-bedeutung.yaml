@@ -1,0 +1,32 @@
+id: gleichberechtigung-frau-mann-bedeutung
+lang: it
+source_version: 1
+question: Che cosa significa in linea di principio la parità di diritti tra donna e uomo?
+options:
+  a: In linea di principio, donne e uomini hanno gli stessi diritti.
+  b: In ogni ambito della vita, donne e uomini hanno gli stessi doveri, ma diritti diversi.
+  c: In ogni professione, donne e uomini guadagnano esattamente lo stesso.
+  d: Donne e uomini devono dividersi in parti uguali tutti i compiti in famiglia.
+explanation: Parità di diritti significa che, in linea di principio, entrambi i sessi possiedono gli stessi
+  diritti. Essa è sancita nella Costituzione federale. Il principio non dice nulla su come le famiglie
+  ripartiscano i loro compiti nei dettagli.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Gleichberechtigung von Frau und Mann grundsätzlich?
+    options_de:
+      a: Grundsätzlich haben Frauen und Männer die gleichen Rechte.
+      b: In jedem Lebensbereich haben Frauen und Männer die gleichen Pflichten, aber unterschiedliche
+        Rechte.
+      c: In jedem Beruf verdienen Frauen und Männer genau gleich viel.
+      d: Frauen und Männer müssen alle Aufgaben in der Familie zu gleichen Teilen untereinander aufteilen.
+    explanation_de: Gleichberechtigung bedeutet, dass grundsätzlich beide Geschlechter die gleichen Rechte
+      besitzen. Sie ist in der Bundesverfassung verankert. Das Prinzip sagt nichts darüber aus, wie die
+      Familien ihre Aufgaben im Einzelnen aufteilen.

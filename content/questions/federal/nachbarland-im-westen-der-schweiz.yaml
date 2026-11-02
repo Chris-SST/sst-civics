@@ -17,7 +17,7 @@ sources:
   checked: &id001 2026-11-02
 glossary:
 - Nachbarland
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-272
@@ -39,3 +39,28 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt Liechtenstein, das in den Antworten nicht vorkommt; das ist korrekt
+        und hilfreich, könnte aber für B1-Lernende gekürzt werden, etwa «Deutschland liegt im Norden,
+        Österreich im Osten, Italien im Süden».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

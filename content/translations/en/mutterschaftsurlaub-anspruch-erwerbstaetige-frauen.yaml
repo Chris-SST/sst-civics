@@ -10,6 +10,22 @@ options:
 explanation: The law provides working mothers with an entitlement to maternity leave and an allowance.
   The size of the company, nationality and marital status are irrelevant in this respect. The allowance
   is financed through the loss of earnings compensation scheme (Erwerbsersatzordnung).
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer hat in der Schweiz nach der Geburt eines Kindes einen gesetzlichen Anspruch auf Mutterschaftsurlaub?
+    options_de:
+      a: Nur Frauen, die für ein Unternehmen mit mehr als 50 Angestellten arbeiten
+      b: Jede erwerbstätige Frau, die ein Kind zur Welt bringt
+      c: Nur Frauen, die verheiratet sind
+      d: Nur Frauen mit Schweizer Bürgerrecht
+    explanation_de: Das Gesetz gibt erwerbstätigen Müttern einen Anspruch auf Mutterschaftsurlaub und
+      eine Entschädigung. Die Grösse des Unternehmens, die Staatsangehörigkeit und der Zivilstand spielen
+      dabei keine Rolle. Die Entschädigung wird über die Erwerbsersatzordnung finanziert.

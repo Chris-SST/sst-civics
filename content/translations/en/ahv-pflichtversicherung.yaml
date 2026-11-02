@@ -9,6 +9,21 @@ options:
   d: The OASI is a private insurance provided by employers.
 explanation: The OASI is compulsory. Anyone who lives or works in Switzerland is in principle insured
   and must pay contributions.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage zur Alters- und Hinterlassenenversicherung (AHV) ist richtig?
+    options_de:
+      a: Die AHV gehört zu den obligatorischen Versicherungen.
+      b: Die AHV ist eine freiwillige Versicherung für Selbstständigerwerbende.
+      c: Die AHV gilt nur für Personen mit einem Schweizer Pass.
+      d: Die AHV ist eine private Versicherung, die von Arbeitgebern angeboten wird.
+    explanation_de: Die AHV ist obligatorisch. Wer in der Schweiz wohnt oder arbeitet, ist grundsätzlich
+      versichert und muss Beiträge bezahlen.

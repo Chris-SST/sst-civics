@@ -19,7 +19,7 @@ sources:
 glossary:
 - Gleichberechtigung
 - Bundesverfassung
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-079
@@ -42,3 +42,44 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) wiederholt wörtlich die Formulierung «im Grundsatz» aus der Frage und ist dadurch
+        leicht zu erraten; besser die Frage z. B. als «Was bedeutet die Gleichberechtigung von Frau und
+        Mann?» stellen oder die Antwort als «Frauen und Männer haben die gleichen Rechte» formulieren.'
+      - 'Klein: Die Erklärung könnte die genaue Stelle nennen (Art. 8 Abs. 3 BV: «Mann und Frau sind gleichberechtigt»)
+        und ergänzen, dass die Verfassung gleichen Lohn für gleichwertige Arbeit verlangt; so wird klar,
+        warum c) mit «in jedem Beruf genau gleich viel» trotzdem falsch ist.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Wendung «im Grundsatz» steht in der Frage und nur in Antwort a, was die richtige Antwort
+        verrät; besser in der Frage weglassen, zum Beispiel «Was bedeutet die Gleichberechtigung von Frau
+        und Mann?».'
+      - 'Klein: Antwort b widerspricht sich selbst und ist darum wenig plausibel; besser eine glaubwürdigere
+        falsche Antwort wählen, etwa «Frauen und Männer müssen in allen Bereichen genau die gleichen Pflichten
+        erfüllen.».'
+      - 'Klein: Die Erklärung geht nicht auf Antwort c ein; ein Satz wie «Die Bundesverfassung (Art. 8
+        Abs. 3) gibt Frauen und Männern Anspruch auf gleichen Lohn für gleichwertige Arbeit, nicht auf
+        gleichen Lohn in jedem Beruf.» würde helfen, die Antwort sauber abzugrenzen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte die Quelle genauer nennen (Art. 8 Abs. 3 der Bundesverfassung: «Mann
+        und Frau sind gleichberechtigt.») und erwähnen, dass das Gesetz auch für tatsächliche Gleichstellung
+        sorgt, etwa beim Anspruch auf gleichen Lohn für gleichwertige Arbeit. Das würde Antwort c) noch
+        besser einordnen.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

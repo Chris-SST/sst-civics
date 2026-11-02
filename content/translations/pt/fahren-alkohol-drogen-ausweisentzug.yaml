@@ -1,0 +1,31 @@
+id: fahren-alkohol-drogen-ausweisentzug
+lang: pt
+source_version: 1
+question: O que arrisca uma pessoa que conduz um automóvel sob o efeito de álcool ou de drogas?
+options:
+  a: A perda do direito de voto
+  b: A expulsão do município de residência
+  c: A retirada do seguro de saúde
+  d: A apreensão da carta de condução
+explanation: Quem não está apto a conduzir coloca outras pessoas em perigo no trânsito rodoviário. Por
+  isso, a autoridade pode retirar a carta de condução. A isso podem somar-se também multas ou outras penas.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: Antwort d) lautet im Original «Entzug des Führerausweises», in der Rückübersetzung «Beschlagnahmung
+      des Führerausweises»; das ist rechtlich etwas anderes als ein Entzug, und die Erklärung nennt weiterhin
+      den Entzug.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Was riskiert eine Person, die ein Auto unter Alkohol- oder Drogeneinfluss lenkt?
+    options_de:
+      a: Den Verlust des Stimmrechts
+      b: Die Ausweisung aus der Wohngemeinde
+      c: Den Entzug der Krankenversicherung
+      d: Die Beschlagnahmung des Führerausweises
+    explanation_de: Wer nicht fahrfähig ist, gefährdet andere Personen im Strassenverkehr. Deshalb kann
+      die Behörde den Führerausweis entziehen. Dazu können auch Bussen oder andere Strafen kommen.

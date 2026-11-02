@@ -1,5 +1,5 @@
 id: volksinitiative-unterschreiben-wer-darf
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.volksrechte
@@ -8,40 +8,75 @@ options_de:
   a: Alle Personen ab 16 Jahren mit Wohnsitz in der Schweiz
   b: Alle Personen ab 18 Jahren mit Niederlassungsbewilligung C
   c: Nur Mitglieder einer politischen Partei ab 18 Jahren
-  d: Stimmberechtigte Schweizerinnen und Schweizer ab 18 Jahren
+  d: Schweizer Bürgerinnen und Bürger ab 18 Jahren
 correct: d
-explanation_de: Eine eidgenössische Volksinitiative unterschreiben dürfen nur Personen, die auf Bundesebene
-  stimmberechtigt sind. Das sind Schweizerinnen und Schweizer ab 18 Jahren, auch jene, die im Ausland
-  leben. Ausländerinnen und Ausländer haben auf Bundesebene keine politischen Rechte, auch nicht mit einer
-  Niederlassungsbewilligung.
+explanation_de: Eine eidgenössische Volksinitiative unterschreiben darf, wer auf Bundesebene stimmberechtigt
+  ist. Das sind Schweizerinnen und Schweizer ab 18 Jahren, auch jene im Ausland, wenn sie im Stimmregister
+  eingetragen sind. Ausgeschlossen sind nur Personen, die wegen dauernder Urteilsunfähigkeit unter umfassender
+  Beistandschaft stehen oder durch eine vorsorgebeauftragte Person vertreten werden; Ausländerinnen und
+  Ausländer haben auf Bundesebene keine politischen Rechte, auch nicht mit Ausweis C.
 sources:
 - url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
-  checked: &id001 2026-11-02
+  checked: 2026-11-02
 - url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
-  checked: *id001
+  checked: &id001 2026-11-02
 glossary:
 - Volksinitiative
 - Stimmberechtigung
 - Unterschrift
-status: in_review
+status: approved
 difficulty: 1
 checks:
   independent_answer:
     option: d
     agrees: true
-    model: claude-opus-5-5
+    model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Eine eidgenössische Volksinitiative dürfen nur in eidgenössischen Angelegenheiten stimmberechtigte
-      Schweizerinnen und Schweizer ab 18 Jahren unterschreiben, auch Auslandschweizer, nicht aber Ausländerinnen
-      und Ausländer oder Jugendliche unter 18 Jahren.
+    version: 2
+    reasoning: Eine eidgenössische Volksinitiative dürfen nur Stimmberechtigte unterschreiben, also Schweizer
+      Bürgerinnen und Bürger ab 18 Jahren, unabhängig von einer Parteimitgliedschaft.
   source:
     verdict: supported
-    note: Quelle 2 (Art. 136 Abs. 1 BV) hält fest, dass die politischen Rechte in Bundessachen allen Schweizerinnen
-      und Schweizern ab dem 18. Altersjahr zustehen. Quelle 1 ergänzt, dass die Stimmbürgerinnen und Stimmbürger
-      mit einer Volksinitiative eine Verfassungsänderung verlangen können. Ausdrücklich, dass die Unterschrift
-      unter eine Initiative zu diesen Rechten gehört (Art. 136 Abs. 2), steht im gekürzten Text allerdings
-      nicht.
+    note: Quelle 2 (Bundesverfassung) hält fest, dass die politischen Rechte in Bundessachen allen Schweizerinnen
+      und Schweizern ab 18 Jahren zustehen. Die Quelle nennt die damalige Formulierung zum Ausschluss
+      (Entmündigung), nicht die neuere der Erklärung, und Quelle 1 sagt nichts zur Unterschriftsberechtigung.
+      Für die richtige Antwort d) genügt das.
     at: *id001
-    model: claude-opus-5-5
-    version: 1
+    model: claude-sonnet-5-5
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz über die Ausnahmen (umfassende Beistandschaft, vorsorgebeauftragte Person) ist
+        für Niveau B1 schwer verständlich; er könnte vereinfacht werden, etwa: «Ausgeschlossen sind nur
+        Personen, die dauernd urteilsunfähig sind und deshalb rechtlich vertreten werden.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz über den Ausschluss («wegen dauernder Urteilsunfähigkeit unter umfassender Beistandschaft
+        … vorsorgebeauftragte Person») ist für Niveau B1 schwer; besser vereinfachen, etwa: «Ausgeschlossen
+        sind nur Personen, die wegen einer dauernden schweren geistigen Beeinträchtigung nicht selbst
+        entscheiden können.»'
+      - 'Klein: Zur Frage ist keine Tatsache aus der Themenliste angegeben; das Thema politische Rechte
+        gehört aber klar zum Test, deshalb die passende Tatsache aus der Themenliste nachtragen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung ist im Satz über den Ausschluss (umfassende Beistandschaft, Vorsorgeauftrag)
+        für Niveau B1 recht schwer; sie könnte vereinfacht werden, etwa so: «Ausgenommen sind Personen,
+        die dauernd urteilsunfähig sind und deshalb umfassend betreut werden.»'
+      - 'Klein: Die Themenliste enthält keine Tatsache zu dieser Frage; die Frage sollte einer konkreten
+        Tatsache (z. B. «Stimmrecht auf Bundesebene ab 18, nur Schweizer Bürger») zugeordnet werden.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

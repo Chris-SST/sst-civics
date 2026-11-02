@@ -1,0 +1,31 @@
+id: mieterverband-vertritt-mietende
+lang: sq
+source_version: 1
+question: Cila është detyra e Shoqatës së Qiramarrësve?
+options:
+  a: Ajo përfaqëson interesat e pronarëve të shtëpive
+  b: Ajo përcakton qiratë për të gjitha banesat
+  c: Ajo jep banesa me qira me porosi të kantonit
+  d: Ajo përfaqëson interesat e qiramarrësve
+explanation: Shoqata e Qiramarrësve është një organizatë që angazhohet për interesat e qiramarrësve. Ajo
+  këshillon anëtarët e saj, për shembull, për pyetje rreth së drejtës së qirasë. Interesat e pronarëve
+  të shtëpive i përfaqësojnë shoqata të tjera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die Aufgabe des Mieterverbands?
+    options_de:
+      a: Er vertritt die Interessen der Hauseigentümer
+      b: Er legt die Mieten für alle Wohnungen fest
+      c: Er vermietet im Auftrag des Kantons Wohnungen
+      d: Er vertritt die Interessen der Mieter
+    explanation_de: Der Mieterverband ist eine Organisation, die sich für die Interessen der Mieter einsetzt.
+      Er berät seine Mitglieder, zum Beispiel bei Fragen zum Mietrecht. Die Interessen der Hauseigentümer
+      vertreten andere Verbände.

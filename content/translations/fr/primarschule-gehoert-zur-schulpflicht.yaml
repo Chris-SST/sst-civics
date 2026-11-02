@@ -1,0 +1,32 @@
+id: primarschule-gehoert-zur-schulpflicht
+lang: fr
+source_version: 2
+question: Lequel de ces niveaux fait partie de la scolarité obligatoire en Suisse ?
+options:
+  a: La haute école
+  b: L'école primaire
+  c: Le groupe de jeu
+  d: L'école professionnelle
+explanation: 'Dans le canton de Zurich, la scolarité obligatoire dure onze ans : l''école enfantine, l''école
+  primaire et le degré secondaire I. Le groupe de jeu pour les jeunes enfants est facultatif. On ne fréquente
+  l''école professionnelle et la haute école qu''après la scolarité obligatoire.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Berufsschule» und «Berufsfachschule» bezeichnen dasselbe, alle Antworten
+      und die Erklärung stimmen inhaltlich überein.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche dieser Stufen gehört in der Schweiz zur obligatorischen Schulzeit?
+    options_de:
+      a: Die Hochschule
+      b: Die Primarschule
+      c: Die Spielgruppe
+      d: Die Berufsschule
+    explanation_de: 'Im Kanton Zürich dauert die obligatorische Schulzeit elf Jahre: der Kindergarten,
+      die Primarschule und die Sekundarstufe I. Die Spielgruppe für kleine Kinder ist freiwillig. Die
+      Berufsschule und die Hochschule besucht man erst nach der obligatorischen Schulzeit.'

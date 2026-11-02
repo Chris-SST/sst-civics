@@ -1,0 +1,38 @@
+id: ahv-iv-sozialversicherungen-schweiz
+lang: es
+source_version: 1
+question: ¿Qué afirmación sobre los seguros sociales de Suiza es correcta?
+options:
+  a: El seguro de vejez y supervivencia (AVS) y el seguro de invalidez (IV) forman parte de los seguros
+    sociales de Suiza.
+  b: El seguro de vejez y supervivencia y el seguro de invalidez son gestionados únicamente por los municipios
+    (Gemeinden).
+  c: El seguro de vejez y supervivencia y el seguro de invalidez son seguros privados sin base legal.
+  d: El seguro de vejez y supervivencia y el seguro de invalidez están pensados solo para los trabajadores
+    autónomos.
+explanation: AHV significa seguro de vejez y supervivencia (Alters- und Hinterlassenenversicherung) e
+  IV significa seguro de invalidez (Invalidenversicherung). Ambos están regulados en el derecho de la
+  Confederación y forman parte del sistema estatal de seguros sociales.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage über die Sozialversicherungen der Schweiz ist richtig?
+    options_de:
+      a: Die Alters- und Hinterlassenenversicherung (AHV) und die Invalidenversicherung (IV) gehören zu
+        den Sozialversicherungen der Schweiz.
+      b: Die Alters- und Hinterlassenenversicherung und die Invalidenversicherung werden ausschliesslich
+        von den Gemeinden verwaltet.
+      c: Die Alters- und Hinterlassenenversicherung und die Invalidenversicherung sind private Versicherungen
+        ohne gesetzliche Grundlage.
+      d: Die Alters- und Hinterlassenenversicherung und die Invalidenversicherung sind nur für Selbstständigerwerbende
+        gedacht.
+    explanation_de: AHV bedeutet Alters- und Hinterlassenenversicherung (Alters- und Hinterlassenenversicherung)
+      und IV bedeutet Invalidenversicherung (Invalidenversicherung). Beide sind im Recht des Bundes geregelt
+      und gehören zum staatlichen System der Sozialversicherungen.

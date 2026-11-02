@@ -1,0 +1,32 @@
+id: zuwanderung-fuenfzigerjahre-italien
+lang: tr
+source_version: 1
+question: 1950'li yıllarda İsviçre'ye göç eden işgücünün çoğu hangi ülkeden geliyordu?
+options:
+  a: İtalya'dan
+  b: Türkiye'den
+  c: Portekiz'den
+  d: İspanya'dan
+explanation: 1950'li yıllarda göç eden işgücünün çoğu İtalya'dan geldi. Ekonomi o dönemde, örneğin inşaat
+  sektöründe ve sanayide, çok sayıda işgücüne ihtiyaç duyuyordu. Daha sonra başka ülkelerden de birçok
+  insan geldi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchem Land kam in den 1950er-Jahren der grösste Teil der in die Schweiz eingewanderten
+      Arbeitskräfte?
+    options_de:
+      a: Aus Italien
+      b: Aus der Türkei
+      c: Aus Portugal
+      d: Aus Spanien
+    explanation_de: In den 1950er-Jahren kam der grösste Teil der eingewanderten Arbeitskräfte aus Italien.
+      Die Wirtschaft brauchte damals zum Beispiel im Baugewerbe und in der Industrie viele Arbeitskräfte.
+      Später kamen auch aus anderen Ländern viele Menschen.

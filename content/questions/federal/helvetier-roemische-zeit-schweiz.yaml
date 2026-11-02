@@ -22,7 +22,7 @@ sources:
   checked: 2026-11-02
 glossary:
 - Helvetier
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-225
@@ -45,3 +45,37 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Ostgoten beherrschten um 500 n. Chr. Teile der heutigen Schweiz, etwa das Tessin;
+        um jeden Zweifel auszuschliessen, könnte man «Die Goten» durch eine eindeutig falsche Antwort
+        wie «Die Mongolen» ersetzen.'
+      - 'Klein: Neben den Helvetiern lebten in römischer Zeit im Osten auch die Räter; die Erklärung könnte
+        mit dem Satz «Die Helvetier waren das bekannteste Volk» präzisiert werden, damit die Frage nicht
+        so wirkt, als hätten nur sie dort gelebt.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage sagt «zur Zeit der Römer», die Erklärung sollte genauer sein: Die Helvetier
+        lebten vor und während der Römerzeit im Mittelland (Zeitstrahl: um 58 v. Chr.). Der Satz «Die
+        Römer unterwarfen sie» ist vereinfacht und könnte zu «Das Gebiet wurde Teil des Römischen Reichs»
+        gekürzt werden.'
+      - 'Klein: Der Satz «Der lateinische Name Helvetia … erinnert noch an sie» ist richtig, steht aber
+        nicht wörtlich in den Quellen. Er ist allgemein bekanntes Wissen und deshalb vertretbar.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,31 @@
+id: bundeskanzlei-stabsstelle-des-bundesrats
+lang: tr
+source_version: 1
+question: Federal Kançılarya (Bundeskanzlei), Federal Konsey (Bundesrat) için hangi görevi üstlenir?
+options:
+  a: Federal Konsey'in kurmay birimidir.
+  b: Mahkeme olarak Federal Konsey kararlarını denetler.
+  c: Maliye Departmanı'nı yönetir.
+  d: Federal Konsey üyelerini seçer.
+explanation: Federal Kançılarya, Federal Konsey'e çalışmalarında destek olur; örneğin toplantıların hazırlanmasında.
+  Federal Kançılarya, Federal Şansölye'nin yönetimi altındadır. Federal Konsey, Federal Meclis (Bundesversammlung)
+  tarafından seçilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe übernimmt die Bundeskanzlei für den Bundesrat?
+    options_de:
+      a: Sie ist die Stabsstelle des Bundesrates.
+      b: Sie überprüft als Gericht die Entscheide des Bundesrates.
+      c: Sie leitet das Finanzdepartement.
+      d: Sie wählt die Mitglieder des Bundesrates.
+    explanation_de: Die Bundeskanzlei unterstützt den Bundesrat bei seiner Arbeit, zum Beispiel bei der
+      Vorbereitung der Sitzungen. Die Bundeskanzlei steht unter der Leitung des Bundeskanzlers. Der Bundesrat
+      wird von der Bundesversammlung gewählt.

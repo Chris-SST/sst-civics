@@ -1,0 +1,29 @@
+id: zeitung-inhalte-bestimmt-redaktion
+lang: es
+source_version: 1
+question: ¿Quién decide en Suiza qué contenidos se publican en un periódico?
+options:
+  a: El Tribunal Federal (Bundesgericht)
+  b: El municipio (Gemeinde) en el que se publica el periódico
+  c: La redacción del periódico
+  d: El Consejo Federal (Bundesrat)
+explanation: La libertad de los medios de comunicación protege a los periódicos frente a la injerencia
+  del Estado. La redacción decide por sí misma qué publica. La Constitución Federal prohíbe la censura.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet in der Schweiz, welche Inhalte in einer Zeitung veröffentlicht werden?
+    options_de:
+      a: Das Bundesgericht
+      b: Die Gemeinde, in der die Zeitung veröffentlicht wird
+      c: Die Redaktion der Zeitung
+      d: Der Bundesrat
+    explanation_de: Die Freiheit der Medien schützt die Zeitungen vor staatlicher Einmischung. Die Redaktion
+      entscheidet selbst, was sie veröffentlicht. Die Bundesverfassung verbietet die Zensur.

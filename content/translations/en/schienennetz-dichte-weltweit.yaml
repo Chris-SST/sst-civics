@@ -10,6 +10,22 @@ options:
 explanation: In a small area there are a very large number of railway lines and stations. For this reason,
   the Swiss network is regarded as the densest in the world. However, density says nothing about absolute
   length.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür ist das Schweizer Eisenbahnnetz im internationalen Vergleich bekannt?
+    options_de:
+      a: Es ist das dichteste ausgebaute Eisenbahnnetz der Welt.
+      b: Es ist das einzige Eisenbahnnetz, das vollständig durch Tunnel führt.
+      c: Es ist das längste Eisenbahnnetz in Europa.
+      d: Es ist das älteste Eisenbahnnetz der Welt.
+    explanation_de: Auf einer kleinen Fläche gibt es sehr viele Bahnlinien und Bahnhöfe. Aus diesem Grund
+      gilt das Schweizer Netz als das dichteste der Welt. Die Dichte sagt jedoch nichts über die absolute
+      Länge aus.

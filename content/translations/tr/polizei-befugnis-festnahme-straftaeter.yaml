@@ -1,0 +1,32 @@
+id: polizei-befugnis-festnahme-straftaeter
+lang: tr
+source_version: 2
+question: Hangi makam, bir suç işlediğinden şüphelenilen kişileri gözaltına alabilir?
+options:
+  a: Okul makamı
+  b: Polis
+  c: Parlamento
+  d: Vergi dairesi
+explanation: Polis, bir suç işlediğinden şüphelenilen kişileri yasal koşullar çerçevesinde gözaltına alabilir.
+  Kişinin suçlu olup olmadığına bundan sonra bir mahkeme karar verir. Okul makamı, parlamento ve vergi
+  dairesi bu yetkiye sahip değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Behörde kann Personen festnehmen, die verdächtigt werden, eine Straftat begangen
+      zu haben?
+    options_de:
+      a: Die Schulbehörde
+      b: Die Polizei
+      c: Das Parlament
+      d: Das Steueramt
+    explanation_de: Die Polizei kann Personen, die verdächtigt werden, eine Straftat begangen zu haben,
+      im Rahmen der gesetzlichen Voraussetzungen festnehmen. Ob die Person schuldig ist, entscheidet danach
+      ein Gericht. Die Schulbehörde, das Parlament und das Steueramt haben diese Befugnis nicht.

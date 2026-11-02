@@ -1,0 +1,33 @@
+id: raumplanung-landschaften-ohne-bebauung
+lang: it
+source_version: 2
+question: Qual è uno degli obiettivi della pianificazione del territorio in Svizzera?
+options:
+  a: Deve proteggere i paesaggi non edificati e utilizzare il suolo in modo parsimonioso.
+  b: Deve ridefinire regolarmente i confini tra i Cantoni.
+  c: Deve creare il maggior numero possibile di nuove zone edificabili.
+  d: Deve stabilire il prezzo dei terreni edificabili.
+explanation: La pianificazione del territorio stabilisce dove si può costruire e dove no. Separa la zona
+  edificabile dalla zona non edificabile, affinché i paesaggi e i terreni agricoli vengano preservati.
+  Poiché il suolo è scarso, bisogna utilizzarlo in modo parsimonioso e piuttosto densificare gli insediamenti
+  esistenti, invece di creare nuove zone edificabili.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was ist eines der Ziele der Raumplanung in der Schweiz?
+    options_de:
+      a: Sie muss unbebaute Landschaften schützen und den Boden haushälterisch nutzen.
+      b: Sie muss die Grenzen zwischen den Kantonen regelmässig neu festlegen.
+      c: Sie muss möglichst viele neue Bauzonen schaffen.
+      d: Sie muss den Preis des Baulands festlegen.
+    explanation_de: Die Raumplanung legt fest, wo gebaut werden darf und wo nicht. Sie trennt die Bauzone
+      von der Nichtbauzone, damit die Landschaften und das Landwirtschaftsland erhalten bleiben. Da der
+      Boden knapp ist, muss man ihn haushälterisch nutzen und die bestehenden Siedlungen eher verdichten,
+      anstatt neue Bauzonen zu schaffen.

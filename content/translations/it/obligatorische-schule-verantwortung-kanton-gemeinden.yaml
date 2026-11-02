@@ -1,0 +1,31 @@
+id: obligatorische-schule-verantwortung-kanton-gemeinden
+lang: it
+source_version: 1
+question: Chi è il principale responsabile della scuola pubblica obbligatoria in Svizzera?
+options:
+  a: Le direzioni scolastiche e i genitori
+  b: La Confederazione da sola
+  c: I distretti e le Chiese
+  d: I Cantoni e i Comuni (Gemeinden)
+explanation: La scuola dell'obbligo pubblica è di competenza dei Cantoni e dei Comuni. Il Cantone stabilisce
+  il quadro generale, mentre i Comuni gestiscono le scuole a livello locale. La Confederazione svolge
+  un ruolo soltanto marginale nella scuola obbligatoria.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist hauptverantwortlich für die obligatorische öffentliche Schule in der Schweiz?
+    options_de:
+      a: Die Schulleitungen und die Eltern
+      b: Der Bund allein
+      c: Die Bezirke und die Kirchen
+      d: Die Kantone und die Gemeinden
+    explanation_de: Die öffentliche obligatorische Schule fällt in die Zuständigkeit der Kantone und der
+      Gemeinden. Der Kanton legt den allgemeinen Rahmen fest, während die Gemeinden die Schulen auf lokaler
+      Ebene führen. Der Bund spielt in der obligatorischen Schule nur eine marginale Rolle.

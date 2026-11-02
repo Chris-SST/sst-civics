@@ -1,0 +1,31 @@
+id: kleine-gemeinde-vertretung-gemeindepraesident
+lang: pt
+source_version: 1
+question: Quem representa para o exterior uma comuna (Gemeinde) zuriquenha de menor dimensão?
+options:
+  a: a presidente ou o presidente da comuna
+  b: a conselheira distrital ou o conselheiro distrital
+  c: a secretária ou o secretário da comuna
+  d: a diretora ou o diretor da escola
+explanation: Nas comunas zuriquenhas de menor dimensão, a presidente ou o presidente da comuna representa
+  a comuna para o exterior. Ela ou ele preside o conselho municipal (Gemeinderat). Na cidade de Zurique,
+  esse papel cabe à presidente ou ao presidente da cidade.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer vertritt eine kleinere Zürcher Gemeinde nach aussen?
+    options_de:
+      a: die Gemeindepräsidentin oder der Gemeindepräsident
+      b: die Bezirksrätin oder der Bezirksrat
+      c: die Gemeindeschreiberin oder der Gemeindeschreiber
+      d: die Schulleiterin oder der Schulleiter
+    explanation_de: In kleineren Zürcher Gemeinden vertritt die Gemeindepräsidentin oder der Gemeindepräsident
+      die Gemeinde nach aussen. Sie oder er leitet den Gemeinderat. In der Stadt Zürich kommt diese Rolle
+      der Stadtpräsidentin oder dem Stadtpräsidenten zu.

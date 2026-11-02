@@ -1,0 +1,30 @@
+id: gesamtbevoelkerung-schweiz-2020
+lang: tr
+source_version: 1
+question: İsviçre'nin 2020 yılındaki toplam nüfusu yaklaşık olarak ne kadardı?
+options:
+  a: yaklaşık 6,2 milyon
+  b: yaklaşık 8,6 milyon
+  c: yaklaşık 10,1 milyon
+  d: yaklaşık 7,4 milyon
+explanation: 2020 yılında İsviçre'de yaklaşık 8,6 milyon kişi yaşıyordu. Nüfus son on yıllarda önemli
+  ölçüde arttı. Güncel rakamları Federal İstatistik Ofisi yayımlamaktadır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie hoch war die Gesamtbevölkerung der Schweiz im Jahr 2020 ungefähr?
+    options_de:
+      a: ungefähr 6,2 Millionen
+      b: ungefähr 8,6 Millionen
+      c: ungefähr 10,1 Millionen
+      d: ungefähr 7,4 Millionen
+    explanation_de: Im Jahr 2020 lebten in der Schweiz ungefähr 8,6 Millionen Menschen. Die Bevölkerung
+      ist in den letzten Jahrzehnten erheblich gewachsen. Aktuelle Zahlen veröffentlicht das Bundesamt
+      für Statistik.

@@ -1,0 +1,33 @@
+id: limmat-fliesst-durch-kanton-zuerich
+lang: it
+source_version: 1
+question: Quale fiume esce dal lago di Zurigo, attraversa la città di Zurigo e prosegue poi attraverso
+  il territorio del Cantone?
+options:
+  a: La Thur
+  b: La Birs
+  c: La Reuss
+  d: La Limmat
+explanation: La Limmat nasce dallo sbocco del lago di Zurigo e attraversa la città di Zurigo e la valle
+  della Limmat (Limmattal). Lascia poi il territorio del Cantone in direzione dell'Argovia. La Reuss,
+  la Thur e la Birs non escono dal lago di Zurigo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Fluss tritt aus dem Zürichsee aus, durchquert die Stadt Zürich und fliesst dann
+      weiter durch das Gebiet des Kantons?
+    options_de:
+      a: Die Thur
+      b: Die Birs
+      c: Die Reuss
+      d: Die Limmat
+    explanation_de: Die Limmat entspringt dem Ausfluss des Zürichsees und durchquert die Stadt Zürich
+      und das Limmattal. Dann verlässt sie das Gebiet des Kantons in Richtung Aargau. Die Reuss, die Thur
+      und die Birs treten nicht aus dem Zürichsee aus.

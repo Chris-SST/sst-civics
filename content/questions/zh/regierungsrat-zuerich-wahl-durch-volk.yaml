@@ -20,7 +20,7 @@ glossary:
 - Regierungsrat
 - Kantonsrat
 - Stimmberechtigte
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-111
@@ -41,3 +41,30 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte mit dem Hinweis aus der Quelle ergänzt werden, dass das Volk die
+        sieben Mitglieder alle vier Jahre im Majorzverfahren wählt, zum Beispiel: «Das Volk wählt die
+        sieben Mitglieder alle vier Jahre direkt an der Urne.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage ist im Wortlaut leicht mehrdeutig («bestimmt»); ein klareres «Wer wählt die
+        Mitglieder des Regierungsrats im Kanton Zürich?» wäre einfacher für B1-Lernende.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

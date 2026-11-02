@@ -1,0 +1,29 @@
+id: landesfeiertag-erster-august-datum
+lang: es
+source_version: 1
+question: ¿En qué fecha cae la fiesta federal suiza, la fiesta nacional de Suiza?
+options:
+  a: El 1 de agosto
+  b: El 26 de diciembre
+  c: El 11 de noviembre
+  d: El 1 de mayo
+explanation: La fiesta nacional de Suiza es el 1 de agosto. Ese día se conmemora el Pacto Federal de 1291.
+  En muchos lugares, la celebración incluye fuegos artificiales, hogueras en las alturas y discursos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Auf welches Datum fällt der Schweizer Bundesfeiertag, der Nationalfeiertag der Schweiz?
+    options_de:
+      a: Am 1. August
+      b: Am 26. Dezember
+      c: Am 11. November
+      d: Am 1. Mai
+    explanation_de: Der Nationalfeiertag der Schweiz ist am 1. August. An diesem Tag wird des Bundesbriefs
+      von 1291 gedacht. An vielen Orten umfasst die Feier Feuerwerk, Höhenfeuer und Reden.

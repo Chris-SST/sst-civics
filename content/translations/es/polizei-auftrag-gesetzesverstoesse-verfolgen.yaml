@@ -1,0 +1,31 @@
+id: polizei-auftrag-gesetzesverstoesse-verfolgen
+lang: es
+source_version: 1
+question: ¿Cuál de las siguientes tareas forma parte del mandato de la policía?
+options:
+  a: Perseguir las infracciones de la ley
+  b: Llevar a cabo votaciones populares
+  c: Promulgar leyes para el país
+  d: Dictar sentencias judiciales sobre los delincuentes
+explanation: La policía garantiza la seguridad y el orden y persigue las infracciones de la ley. Investiga
+  los delitos y transmite los resultados. Las leyes las promulga el Parlamento y las sentencias las dictan
+  los tribunales.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aufgaben gehört zum Auftrag der Polizei?
+    options_de:
+      a: Gesetzesverstösse verfolgen
+      b: Volksabstimmungen durchführen
+      c: Gesetze für das Land erlassen
+      d: Gerichtsurteile über die Straftäter fällen
+    explanation_de: Die Polizei gewährleistet die Sicherheit und Ordnung und verfolgt die Gesetzesverstösse.
+      Sie untersucht die Straftaten und übermittelt die Ergebnisse. Die Gesetze werden vom Parlament erlassen
+      und die Urteile werden von den Gerichten gefällt.

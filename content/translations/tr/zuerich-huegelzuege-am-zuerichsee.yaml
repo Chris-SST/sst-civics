@@ -1,0 +1,31 @@
+id: zuerich-huegelzuege-am-zuerichsee
+lang: tr
+source_version: 2
+question: Zürich Gölü'nün kıyısında hangi tepe sıraları bulunur?
+options:
+  a: Uetliberg, Albis ve Pfannenstiel
+  b: Lägern, Irchel ve Kohlfirst
+  c: Hörnli, Bachtel ve Allmann
+  d: Heitersberg, Gubrist ve Randen
+explanation: Uetliberg ve Albis, Zürich Gölü'nün sol kıyısı boyunca uzanır; Pfannenstiel ise sağ kıyıda
+  yer alır. Diğer yükseltiler gölden daha uzaktadır; örneğin Unterland'da, Weinland'da, Zürcher Oberland'da
+  veya başka kantonlarda bulunur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Hügelzüge befinden sich am Ufer des Zürichsees?
+    options_de:
+      a: Uetliberg, Albis und Pfannenstiel
+      b: Lägern, Irchel und Kohlfirst
+      c: Hörnli, Bachtel und Allmann
+      d: Heitersberg, Gubrist und Randen
+    explanation_de: Uetliberg und Albis erstrecken sich entlang des linken Ufers des Zürichsees; der Pfannenstiel
+      hingegen liegt am rechten Ufer. Die anderen Erhebungen sind weiter vom See entfernt; sie befinden
+      sich zum Beispiel im Unterland, im Weinland, im Zürcher Oberland oder in anderen Kantonen.

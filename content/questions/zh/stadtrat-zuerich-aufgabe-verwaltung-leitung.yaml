@@ -20,7 +20,7 @@ glossary:
 - Stadtrat
 - Stadtverwaltung
 - Exekutive
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-122
@@ -43,3 +43,41 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung geht nicht auf Antwort a) ein; ergänzen, dass die kantonale Steuerverwaltung
+        Sache des Kantons ist und nicht vom Stadtrat geführt wird.'
+      - 'Klein: Antwort d) ist deutlich länger als die anderen und verrät sich dadurch; die falschen Antworten
+        etwas ausführlicher formulieren oder d) kürzen, etwa «Er leitet die Stadtverwaltung und plant
+        die Entwicklung der Stadt».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung geht nicht auf Antwort a) ein; ergänzen Sie einen kurzen Satz wie «Die kantonalen
+        Steuern verwaltet der Kanton, nicht der Stadtrat.»'
+      - 'Klein: Antwort d) ist deutlich länger als die anderen und übernimmt wörtlich den Satz aus der
+        Themenliste, sodass man sie leicht erraten kann; formulieren Sie die falschen Antworten ähnlich
+        lang oder kürzen Sie d), etwa zu «Er leitet die Stadtverwaltung und bestimmt die Ziele der Stadt.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort d) ist fast wörtlich die Formulierung aus der Themenliste, daher lässt sie sich
+        leicht erkennen; man könnte sie etwas umformulieren, zum Beispiel «Er leitet die Stadtverwaltung
+        und bestimmt die Ziele der Stadt».'
+      - 'Klein: Die Erklärung könnte erwähnen, dass der Stadtrat von den Stimmberechtigten gewählt wird
+        und neun Mitglieder hat, und dass der Gemeinderat (das Stadtparlament) die Gesetzgebung der Stadt
+        übernimmt.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

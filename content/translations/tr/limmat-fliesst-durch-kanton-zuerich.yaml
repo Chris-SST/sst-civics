@@ -1,0 +1,33 @@
+id: limmat-fliesst-durch-kanton-zuerich
+lang: tr
+source_version: 1
+question: Hangi nehir Zürich Gölü'nden çıkar, Zürich şehrinin içinden geçer ve kanton topraklarında akmaya
+  devam eder?
+options:
+  a: Thur
+  b: Birs
+  c: Reuss
+  d: Limmat
+explanation: Limmat, Zürich Gölü'nün çıkışında başlar ve Zürich şehrini ile Limmat Vadisi'ni (Limmattal)
+  boydan boya geçer. Ardından Aargau yönünde kanton topraklarından ayrılır. Reuss, Thur ve Birs Zürich
+  Gölü'nden çıkmaz.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Fluss fliesst aus dem Zürichsee, durchquert die Stadt Zürich und fliesst weiter
+      auf dem Gebiet des Kantons?
+    options_de:
+      a: Thur
+      b: Birs
+      c: Reuss
+      d: Limmat
+    explanation_de: Die Limmat beginnt am Ausfluss des Zürichsees und durchquert die Stadt Zürich und
+      das Limmattal (Limmattal) der Länge nach. Danach verlässt sie das Kantonsgebiet in Richtung Aargau.
+      Reuss, Thur und Birs fliessen nicht aus dem Zürichsee.

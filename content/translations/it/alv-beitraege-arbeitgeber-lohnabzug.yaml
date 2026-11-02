@@ -1,0 +1,31 @@
+id: alv-beitraege-arbeitgeber-lohnabzug
+lang: it
+source_version: 1
+question: Chi trattiene dal salario i contributi all'assicurazione contro la disoccupazione?
+options:
+  a: Il Comune (Gemeinde) di domicilio
+  b: La lavoratrice o il lavoratore stesso, tramite versamento
+  c: L'Ufficio regionale di collocamento
+  d: Il datore di lavoro
+explanation: Il datore di lavoro trattiene automaticamente i contributi dal salario e li trasferisce all'organismo
+  competente. I lavoratori non devono occuparsene personalmente. Anche il datore di lavoro versa una parte
+  dei contributi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zieht die Beiträge an die Arbeitslosenversicherung vom Lohn ab?
+    options_de:
+      a: Die Wohngemeinde
+      b: Die Arbeitnehmerin oder der Arbeitnehmer selbst, durch Einzahlung
+      c: Das Regionale Arbeitsvermittlungszentrum
+      d: Der Arbeitgeber
+    explanation_de: Der Arbeitgeber zieht die Beiträge automatisch vom Lohn ab und überweist sie an die
+      zuständige Stelle. Die Arbeitnehmenden müssen sich nicht persönlich darum kümmern. Auch der Arbeitgeber
+      zahlt einen Teil der Beiträge.

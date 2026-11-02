@@ -1,0 +1,31 @@
+id: mieterverband-vertritt-mietende
+lang: fr
+source_version: 1
+question: Quelle est la mission de l'association des locataires ?
+options:
+  a: Elle défend les intérêts des propriétaires immobiliers
+  b: Elle fixe les loyers de tous les logements
+  c: Elle loue des logements pour le compte du canton
+  d: Elle défend les intérêts des locataires
+explanation: L'association des locataires est une organisation qui s'engage pour les intérêts des locataires.
+  Elle conseille ses membres, par exemple pour des questions relatives au droit du bail. Les intérêts
+  des propriétaires immobiliers sont défendus par d'autres associations.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die Aufgabe des Mieterverbands?
+    options_de:
+      a: Er vertritt die Interessen der Immobilieneigentümer
+      b: Er legt die Mietzinse aller Wohnungen fest
+      c: Er vermietet Wohnungen im Auftrag des Kantons
+      d: Er vertritt die Interessen der Mieterinnen und Mieter
+    explanation_de: Der Mieterverband ist eine Organisation, die sich für die Interessen der Mieterinnen
+      und Mieter einsetzt. Er berät seine Mitglieder, zum Beispiel bei Fragen zum Mietrecht. Die Interessen
+      der Immobilieneigentümer werden von anderen Verbänden vertreten.

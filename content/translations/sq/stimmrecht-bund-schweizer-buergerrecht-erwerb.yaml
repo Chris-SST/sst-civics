@@ -1,0 +1,35 @@
+id: stimmrecht-bund-schweizer-buergerrecht-erwerb
+lang: sq
+source_version: 1
+question: Nga cili moment një person nga jashtë vendit merr të drejtën e votës dhe të zgjedhjes në nivel
+  të Konfederatës?
+options:
+  a: Sapo ka jetuar dhjetë vjet në Zvicër.
+  b: Sapo merr një leje vendosjeje (leja C).
+  c: Sapo paguan taksa dhe punon në Zvicër.
+  d: Sapo ka shtetësinë zvicerane (Bürgerrecht) dhe është madhor.
+explanation: E drejta e votës dhe e zgjedhjes në nivel të Konfederatës është e lidhur me shtetësinë zvicerane.
+  Një leje vendosjeje (Niederlassungsbewilligung), një kohëzgjatje e caktuar qëndrimi ose pagesa e taksave
+  nuk mjaftojnë për këtë. Kush merr shtetësinë dhe është madhor, mund të marrë pjesë në zgjedhjet dhe
+  votimet federale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ab welchem Zeitpunkt erhält eine Person aus dem Ausland das Stimm- und Wahlrecht auf
+      Ebene des Bundes?
+    options_de:
+      a: Sobald sie zehn Jahre in der Schweiz gelebt hat.
+      b: Sobald sie eine Niederlassungsbewilligung (Bewilligung C) erhält.
+      c: Sobald sie Steuern zahlt und in der Schweiz arbeitet.
+      d: Sobald sie das Schweizer Bürgerrecht hat und volljährig ist.
+    explanation_de: Das Stimm- und Wahlrecht auf Ebene des Bundes ist an das Schweizer Bürgerrecht gebunden.
+      Eine Niederlassungsbewilligung, eine bestimmte Aufenthaltsdauer oder das Zahlen von Steuern genügen
+      dafür nicht. Wer das Bürgerrecht erhält und volljährig ist, kann an den eidgenössischen Wahlen und
+      Abstimmungen teilnehmen.

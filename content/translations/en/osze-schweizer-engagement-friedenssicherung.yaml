@@ -1,0 +1,32 @@
+id: osze-schweizer-engagement-friedenssicherung
+lang: en
+source_version: 2
+question: What does Switzerland work for in the Organization for Security and Co-operation in Europe (OSCE)?
+options:
+  a: For peace and security in Europe, for example in Eastern Europe and Central Asia
+  b: For the distribution of development funding in Western Europe
+  c: For the introduction of a common currency
+  d: For the reduction of customs duties in world trade
+explanation: Switzerland is a founding member of the OSCE and uses it to promote peace and security in
+  Europe. The OSCE is active with field missions, particularly in Eastern and South-Eastern Europe and
+  in Central Asia. In 2026, Switzerland holds the chairmanship of the OSCE.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür setzt sich die Schweiz in der Organisation für Sicherheit und Zusammenarbeit in
+      Europa (OSZE) ein?
+    options_de:
+      a: Für Frieden und Sicherheit in Europa, zum Beispiel in Osteuropa und Zentralasien
+      b: Für die Verteilung von Entwicklungsgeldern in Westeuropa
+      c: Für die Einführung einer gemeinsamen Währung
+      d: Für die Senkung der Zölle im Welthandel
+    explanation_de: Die Schweiz ist Gründungsmitglied der OSZE und nutzt sie, um Frieden und Sicherheit
+      in Europa zu fördern. Die OSZE ist mit Feldmissionen aktiv, insbesondere in Osteuropa und Südosteuropa
+      sowie in Zentralasien. Im Jahr 2026 hat die Schweiz den Vorsitz der OSZE inne.

@@ -1,0 +1,32 @@
+id: bund-spitze-dreistufiger-staatsaufbau
+lang: tr
+source_version: 2
+question: İsviçre üç devlet kademesinden oluşmaktadır. Bunlardan hangisi en üst kademedir?
+options:
+  a: Belediyeler (Gemeinden)
+  b: Konfederasyon
+  c: Kantonlar
+  d: İlçeler
+explanation: Konfederasyon, üç devlet kademesinin en üstte olanıdır. Onun altında kantonlar, ardından
+  belediyeler gelir. İlçeler ayrı bir devlet kademesi değildir; yalnızca bazı kantonlarda kanton içindeki
+  idari birimlerdir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Konföderation» steht für den Bund, alle Antworten und die Erklärung stimmen
+      inhaltlich überein.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Die Schweiz besteht aus drei Staatsebenen. Welche davon ist die oberste Ebene?
+    options_de:
+      a: Gemeinden
+      b: Konföderation
+      c: Kantone
+      d: Bezirke
+    explanation_de: Die Konföderation ist die oberste der drei Staatsebenen. Unter ihr kommen die Kantone,
+      danach die Gemeinden. Die Bezirke sind keine eigene Staatsebene; sie sind nur in einigen Kantonen
+      Verwaltungseinheiten innerhalb des Kantons.

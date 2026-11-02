@@ -1,0 +1,29 @@
+id: heirat-planen-zivilstandsamt
+lang: pt
+source_version: 1
+question: A que serviço se dirigem os casais que desejam casar-se?
+options:
+  a: À comissão escolar (Schulpflege)
+  b: Ao registo civil (Zivilstandsamt)
+  c: À repartição de finanças (Steueramt)
+  d: Ao serviço de cobrança de dívidas (Betreibungsamt)
+explanation: O registo civil prepara o casamento e realiza-o. Também regista oficialmente outros acontecimentos,
+  como nascimentos e óbitos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welche Stelle wenden sich Paare, die heiraten möchten?
+    options_de:
+      a: An die Schulpflege
+      b: An das Zivilstandsamt
+      c: An das Steueramt
+      d: An das Betreibungsamt
+    explanation_de: Das Zivilstandsamt bereitet die Eheschliessung vor und führt sie durch. Es registriert
+      auch andere Ereignisse amtlich, wie Geburten und Todesfälle.

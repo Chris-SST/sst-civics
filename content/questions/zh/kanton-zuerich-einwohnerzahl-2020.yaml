@@ -22,7 +22,7 @@ sources:
 glossary:
 - Einwohnerzahl
 - Kanton
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-299
@@ -43,3 +43,35 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Ende 2020 waren es genau rund 1''551''300 Einwohnerinnen und Einwohner, heute (2026) sind
+        es deutlich mehr; die Erklärung könnte das ergänzen, etwa mit dem Satz «Ende 2020 waren es rund
+        1,55 Millionen; seither ist die Bevölkerung weiter gewachsen.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Frage steht «ungefähr» und in jeder Antwort «Etwa», das ist doppelt; besser «ungefähr»
+        in der Frage streichen oder «Etwa» bei den Antworten weglassen.'
+      - 'Klein: Die Erklärung könnte ergänzen, dass die Bevölkerung seither weiter gewachsen ist und heute
+        bei über 1,6 Millionen liegt, damit Lernende die Zahl richtig einordnen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Antwort d) ist als «etwa 1,5 Millionen» richtig (Ende 2020 rund 1’551’300 Einwohner);
+        die Erklärung könnte ergänzend erwähnen, dass die Zahl gerundet ist, damit klar ist, warum «etwa»
+        gilt.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

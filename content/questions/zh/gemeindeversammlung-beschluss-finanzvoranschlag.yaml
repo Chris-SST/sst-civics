@@ -25,7 +25,7 @@ glossary:
 - Gemeindeversammlung
 - Finanzvoranschlag
 - Stimmberechtigte
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-115
@@ -48,3 +48,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung begründet nicht, warum Antwort d) falsch ist; ergänzen Sie zum Beispiel:
+        «Die Lehrpläne der Volksschule legt der Kanton fest (Bildungsrat), nicht die Gemeindeversammlung.»'
+      - 'Klein: Antwort b) «Über das Strafrecht im Kanton» ist etwas ungenau, weil das Strafrecht Sache
+        des Bundes ist; besser wäre «Über das Strafgesetzbuch», und in der Erklärung der Satz «Das Strafrecht
+        ist Sache des Bundes.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt nichts zu den Lehrplänen der Volksschule; man könnte ergänzen: «Die
+        Lehrpläne der Volksschule legt der Kanton fest (im Kanton Zürich der Bildungsrat).»'
+      - 'Klein: Die Antwort «Über das Strafrecht im Kanton» ist etwas ungenau, weil das Strafrecht Sache
+        des Bundes ist; besser wäre «Über das Strafrecht», und die Erklärung könnte kurz sagen, dass der
+        Bund dafür zuständig ist.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der amtliche Begriff im heutigen Gemeindegesetz und auf zh.ch ist «Budget»; die Frage
+        und Antwort c) könnten «Budget (Finanzvoranschlag)» nennen, damit Lernende beide Begriffe kennen.'
+      - 'Klein: Die Erklärung sagt nichts zur Antwort d) (Lehrpläne der Volksschule); ein Satz, dass der
+        Kanton die Lehrpläne festlegt, würde alle falschen Antworten abdecken.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

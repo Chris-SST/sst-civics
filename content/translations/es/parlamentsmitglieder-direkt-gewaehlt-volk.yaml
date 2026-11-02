@@ -1,0 +1,32 @@
+id: parlamentsmitglieder-direkt-gewaehlt-volk
+lang: es
+source_version: 2
+question: ¿Quién elige a los miembros del Consejo Nacional (Nationalrat)?
+options:
+  a: El Consejo Federal (Bundesrat) los nombra.
+  b: Los partidos los designan sin elecciones.
+  c: El Tribunal Federal (Bundesgericht) los selecciona.
+  d: Los ciudadanos con derecho a voto los eligen directamente.
+explanation: Los miembros del Consejo Nacional se eligen cada cuatro años directamente por las personas
+  con derecho a voto. Hoy en día, en todos los cantones también es el pueblo quien elige a los miembros
+  del Consejo de los Estados (Ständerat), según las normas de cada cantón; en Appenzell Rodas Interiores
+  esto se hace en la Landsgemeinde.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer wählt die Mitglieder des Nationalrats?
+    options_de:
+      a: Der Bundesrat ernennt sie.
+      b: Die Parteien bestimmen sie ohne Wahlen.
+      c: Das Bundesgericht wählt sie aus.
+      d: Die stimmberechtigten Bürger wählen sie direkt.
+    explanation_de: Die Mitglieder des Nationalrats werden alle vier Jahre direkt von den stimmberechtigten
+      Personen gewählt. Heute ist es in allen Kantonen auch das Volk, das die Mitglieder des Ständerats
+      wählt, nach den Regeln jedes Kantons; in Appenzell Innerrhoden geschieht dies an der Landsgemeinde.

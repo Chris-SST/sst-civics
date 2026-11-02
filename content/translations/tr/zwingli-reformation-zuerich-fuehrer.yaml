@@ -1,0 +1,29 @@
+id: zwingli-reformation-zuerich-fuehrer
+lang: tr
+source_version: 1
+question: 1520'li yıllarda Zürih'te Reform hareketine kim önderlik etti?
+options:
+  a: Heinrich Bullinger
+  b: Ulrich Zwingli
+  c: Martin Luther
+  d: Johannes Calvin
+explanation: Ulrich Zwingli, Grossmünster'de halk rahibiydi (Leutpriester) ve Zürih'te Reform'u başlattı.
+  Şehir meclisi bu konuda onu destekledi. Calvin Cenevre'de, Luther ise Almanya'da faaliyet gösterdi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer führte in den 1520er Jahren die Reformationsbewegung in Zürich an?
+    options_de:
+      a: Heinrich Bullinger
+      b: Ulrich Zwingli
+      c: Martin Luther
+      d: Johannes Calvin
+    explanation_de: Ulrich Zwingli war Leutpriester am Grossmünster und begann die Reformation in Zürich.
+      Der Stadtrat unterstützte ihn dabei. Calvin wirkte in Genf, Luther hingegen in Deutschland.

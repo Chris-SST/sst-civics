@@ -1,0 +1,34 @@
+id: alv-beitraege-pensionierte-personen
+lang: it
+source_version: 1
+question: Chi in Svizzera non deve più pagare i contributi all'assicurazione contro la disoccupazione
+  (AD)?
+options:
+  a: Le persone con un rapporto di lavoro a tempo indeterminato
+  b: Le persone che hanno raggiunto l'età ordinaria di pensionamento dell'assicurazione vecchiaia e superstiti
+    (AHV)
+  c: Le persone che lavorano a tempo parziale
+  d: Le persone che negli ultimi due anni non sono mai state disoccupate
+explanation: L'obbligo di pagare i contributi all'assicurazione contro la disoccupazione termina al raggiungimento
+  dell'età di pensionamento dell'AHV. Chi è pensionato non paga più contributi AD sull'eventuale salario.
+  I dipendenti a tempo parziale e a tempo pieno pagano invece i contributi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz keine Beiträge mehr an die Arbeitslosenversicherung (ALV) bezahlen?
+    options_de:
+      a: Personen mit einem unbefristeten Arbeitsverhältnis
+      b: Personen, die das ordentliche Rentenalter der Alters- und Hinterlassenenversicherung (AHV) erreicht
+        haben
+      c: Personen, die Teilzeit arbeiten
+      d: Personen, die in den letzten zwei Jahren nie arbeitslos waren
+    explanation_de: Die Pflicht, Beiträge an die Arbeitslosenversicherung zu bezahlen, endet mit dem Erreichen
+      des AHV-Rentenalters. Wer pensioniert ist, bezahlt auf dem allfälligen Lohn keine ALV-Beiträge mehr.
+      Teilzeitangestellte und Vollzeitangestellte bezahlen hingegen Beiträge.

@@ -1,0 +1,30 @@
+id: eu-wichtigster-handelspartner-der-schweiz
+lang: tr
+source_version: 1
+question: İsviçre toplamda hangi ekonomik bölgeyle en çok ticaret yapmaktadır?
+options:
+  a: Orta Doğu ülkeleriyle
+  b: Asya ülkeleriyle
+  c: Avrupa Birliği ile
+  d: Amerika Birleşik Devletleri ile
+explanation: Avrupa Birliği, İsviçre'nin en önemli ticaret ortağıdır. İthalat ve ihracatın büyük bir bölümü
+  AB ülkeleri üzerinden gerçekleşir. Bu nedenle AB ile olan ilişkiler İsviçre ekonomisi için çok önemlidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Mit welchem Wirtschaftsraum treibt die Schweiz insgesamt am meisten Handel?
+    options_de:
+      a: Mit den Ländern des Nahen Ostens
+      b: Mit den asiatischen Ländern
+      c: Mit der Europäischen Union
+      d: Mit den Vereinigten Staaten von Amerika
+    explanation_de: Die Europäische Union ist der wichtigste Handelspartner der Schweiz. Ein grosser Teil
+      der Importe und Exporte läuft über die EU-Länder. Deshalb sind die Beziehungen zur EU für die Schweizer
+      Wirtschaft sehr wichtig.

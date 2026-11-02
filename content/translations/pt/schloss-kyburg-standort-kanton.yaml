@@ -1,0 +1,29 @@
+id: schloss-kyburg-standort-kanton
+lang: pt
+source_version: 1
+question: Em que cantão fica o castelo de Kyburg?
+options:
+  a: No cantão de Argóvia
+  b: No cantão de São Galo
+  c: No cantão de Zurique
+  d: No cantão de Turgóvia
+explanation: O castelo de Kyburg fica no cantão de Zurique, numa colina acima do rio Töss. É um dos bens
+  culturais conhecidos do cantão e é um museu.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Kanton befindet sich das Schloss Kyburg?
+    options_de:
+      a: Im Kanton Aargau
+      b: Im Kanton St. Gallen
+      c: Im Kanton Zürich
+      d: Im Kanton Thurgau
+    explanation_de: Das Schloss Kyburg befindet sich im Kanton Zürich, auf einem Hügel über dem Fluss
+      Töss. Es ist eines der bekannten Kulturgüter des Kantons und ist ein Museum.

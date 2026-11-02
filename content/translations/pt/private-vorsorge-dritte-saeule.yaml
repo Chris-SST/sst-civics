@@ -1,0 +1,29 @@
+id: private-vorsorge-dritte-saeule
+lang: pt
+source_version: 1
+question: O que constitui, na Suíça, o terceiro pilar da previdência para a velhice?
+options:
+  a: O seguro obrigatório contra acidentes
+  b: A previdência privada
+  c: A caixa de pensões da entidade patronal
+  d: As prestações complementares
+explanation: O terceiro pilar é a previdência privada, por exemplo a poupança vinculada. É facultativa
+  e complementa os dois primeiros pilares.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bildet in der Schweiz die dritte Säule der Altersvorsorge?
+    options_de:
+      a: Die obligatorische Unfallversicherung
+      b: Die private Vorsorge
+      c: Die Pensionskasse des Arbeitgebers
+      d: Die Ergänzungsleistungen
+    explanation_de: Die dritte Säule ist die private Vorsorge, zum Beispiel das gebundene Sparen. Sie
+      ist freiwillig und ergänzt die beiden ersten Säulen.

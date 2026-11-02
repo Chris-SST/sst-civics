@@ -1,14 +1,33 @@
 id: volksschule-leitung-vor-ort-schulleitung
 lang: en
-source_version: 1
-question: Who is responsible for managing a Zurich public primary and lower secondary school on site?
+source_version: 2
+question: Who directly manages a public primary and lower secondary school (Volksschule) in the canton
+  of Zurich at the school itself?
 options:
-  a: The cantonal police
-  b: The parents' council alone
-  c: The Statistical Office
-  d: The school management
-explanation: Every school has a school management team that runs the school on site. It is responsible
-  for the organisation and the quality of the school.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: The Cantonal Council (Kantonsrat)
+  b: The school management
+  c: The parents' council
+  d: The Executive Council (Regierungsrat)
+explanation: Every public primary and lower secondary school in the canton of Zurich has a school management,
+  which runs and organises the day-to-day operation directly at the school. The Executive Council and
+  the Cantonal Council work at cantonal level. The parents' council raises parents' concerns, but does
+  not manage the school.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer leitet eine öffentliche Volksschule im Kanton Zürich direkt vor Ort an der Schule?
+    options_de:
+      a: Der Kantonsrat
+      b: Die Schulleitung
+      c: Der Elternrat
+      d: Der Regierungsrat
+    explanation_de: Jede öffentliche Volksschule im Kanton Zürich hat eine Schulleitung, die den Alltagsbetrieb
+      direkt an der Schule führt und organisiert. Der Regierungsrat und der Kantonsrat arbeiten auf kantonaler
+      Ebene. Der Elternrat bringt die Anliegen der Eltern vor, leitet die Schule aber nicht.

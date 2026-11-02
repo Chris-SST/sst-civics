@@ -1,0 +1,29 @@
+id: regierungsrat-zuerich-zusammensetzung-personen
+lang: it
+source_version: 1
+question: Quale affermazione sulla composizione del Consiglio di Stato (Regierungsrat) zurighese è corretta?
+options:
+  a: È composto da tre persone.
+  b: È composto da sette persone.
+  c: È composto da nove persone.
+  d: È composto da cinque persone.
+explanation: Il Consiglio di Stato zurighese è un organo composto da sette persone. Esse dirigono insieme
+  il Cantone e ciascuna è a capo di una Direzione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage zur Zusammensetzung des Zürcher Regierungsrates ist richtig?
+    options_de:
+      a: Er besteht aus drei Personen.
+      b: Er besteht aus sieben Personen.
+      c: Er besteht aus neun Personen.
+      d: Er besteht aus fünf Personen.
+    explanation_de: Der Zürcher Regierungsrat ist ein Organ, das aus sieben Personen besteht. Sie leiten
+      gemeinsam den Kanton und jede von ihnen steht einer Direktion vor.

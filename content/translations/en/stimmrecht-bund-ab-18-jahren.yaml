@@ -1,14 +1,32 @@
 id: stimmrecht-bund-ab-18-jahren
 lang: en
-source_version: 1
-question: Who has the right to vote and to stand for election at federal level?
+source_version: 2
+question: Who is allowed to vote in elections and referendums at federal level?
 options:
-  a: Swiss citizens who are 20 years old
+  a: Swiss nationals aged 20 or over
   b: All persons with a settlement permit (C permit) (Niederlassungsbewilligung) aged 18 or over
-  c: Swiss citizens who are 18 years old
+  c: Swiss nationals aged 18 or over
   d: All persons resident in Switzerland aged 16 or over
-explanation: At federal level, Swiss citizens have the right to vote and to vote in elections from the
-  completed age of 18. Nationality is just as necessary as age. Residence in Switzerland does not matter.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: In the Confederation, Swiss men and women may vote and elect from their 18th birthday. Foreign
+  nationals do not have this right at federal level, even with a settlement permit. Swiss citizens living
+  abroad may also take part if they have themselves entered in the electoral register.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer darf auf Bundesebene an Wahlen und Abstimmungen teilnehmen?
+    options_de:
+      a: Schweizer Staatsangehörige ab 20 Jahren
+      b: Alle Personen mit einer Niederlassungsbewilligung (Niederlassungsbewilligung C) ab 18 Jahren
+      c: Schweizer Staatsangehörige ab 18 Jahren
+      d: Alle in der Schweiz wohnhaften Personen ab 16 Jahren
+    explanation_de: Im Bund dürfen Schweizer Männer und Frauen ab ihrem 18. Geburtstag abstimmen und wählen.
+      Ausländische Staatsangehörige haben dieses Recht auf Bundesebene nicht, auch nicht mit einer Niederlassungsbewilligung.
+      Auch im Ausland lebende Schweizer Bürgerinnen und Bürger können teilnehmen, wenn sie sich selbst
+      ins Stimmregister eintragen lassen.

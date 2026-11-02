@@ -20,7 +20,7 @@ sources:
 glossary:
 - Bundesfeiertag
 - Landesfeiertag
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-323
@@ -41,3 +41,34 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage nennt zweimal dasselbe («Bundesfeiertag, der Landesfeiertag»); einfacher wäre:
+        «An welchem Datum ist der Schweizer Bundesfeiertag?»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage nennt den Feiertag doppelt («Bundesfeiertag, der Landesfeiertag der Schweiz»);
+        einfacher wäre: «An welchem Datum ist der Schweizer Nationalfeiertag (Bundesfeiertag)?»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt als Anlass den Bundesbrief von 1291; ergänzend könnte stehen, dass
+        der 1. August seit 1899 gefeiert wird und seit 1994 ein arbeitsfreier Feiertag ist, falls eine
+        Ergänzung gewünscht ist (nicht zwingend).'
+      - 'Klein: Die Frage ist sprachlich leicht doppelt («Bundesfeiertag, der Landesfeiertag»); einfacher
+        wäre: «Auf welches Datum fällt der Schweizer Nationalfeiertag?».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

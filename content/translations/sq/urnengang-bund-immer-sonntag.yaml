@@ -1,0 +1,32 @@
+id: urnengang-bund-immer-sonntag
+lang: sq
+source_version: 1
+question: Në cilën ditë të javës mbahen në Zvicër votimet dhe zgjedhjet federale?
+options:
+  a: Gjithmonë të dielën
+  b: Gjithmonë të shtunën
+  c: Gjithmonë të premten
+  d: Në një ditë të javës që çdo kanton e zgjedh vetë
+explanation: Votimet në nivel të Konfederatës mbahen gjithmonë të dielën. Kështu mund të marrin pjesë
+  sa më shumë persona me të drejtë vote, dhe data është e njëjtë për të gjithë.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Erklärung: Im Original steht «Urnengänge auf Bundesebene» (Abstimmungen und Wahlen), in der
+      Rückübersetzung nur «Abstimmungen auf Ebene des Bundes», Wahlen fehlen. Frage und Antworten sind
+      gleich.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: An welchem Wochentag finden in der Schweiz die eidgenössischen Abstimmungen und Wahlen
+      statt?
+    options_de:
+      a: Immer am Sonntag
+      b: Immer am Samstag
+      c: Immer am Freitag
+      d: An einem Wochentag, den jeder Kanton selbst wählt
+    explanation_de: Abstimmungen auf Ebene des Bundes finden immer am Sonntag statt. So können möglichst
+      viele Stimmberechtigte teilnehmen, und das Datum ist für alle dasselbe.

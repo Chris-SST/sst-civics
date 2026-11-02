@@ -1,0 +1,30 @@
+id: bundesrat-ist-regierung-der-schweiz
+lang: tr
+source_version: 1
+question: İsviçre'de Federal Konsey (Bundesrat) hangi role sahiptir?
+options:
+  a: İsviçre'nin hükümetidir.
+  b: Ülkenin en yüksek mahkemesidir.
+  c: Konfederasyonun parlamentosudur.
+  d: Kantonların temsilcisidir.
+explanation: Federal Konsey, Konfederasyonun en üst düzeydeki yönetici ve yürütücü makamıdır, yani hükümettir.
+  Yedi üyesi vardır. Parlamento ve Federal Mahkeme (Bundesgericht) başka erklerdir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Rolle hat der Bundesrat in der Schweiz?
+    options_de:
+      a: Er ist die Regierung der Schweiz.
+      b: Er ist das höchste Gericht des Landes.
+      c: Er ist das Parlament der Eidgenossenschaft.
+      d: Er ist der Vertreter der Kantone.
+    explanation_de: Der Bundesrat ist die oberste leitende und vollziehende Behörde der Eidgenossenschaft,
+      das heisst die Regierung. Er hat sieben Mitglieder. Das Parlament und das Bundesgericht sind andere
+      Gewalten.

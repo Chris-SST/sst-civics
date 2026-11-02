@@ -1,0 +1,31 @@
+id: parlamentsmitglieder-direkt-gewaehlt-volk
+lang: sq
+source_version: 2
+question: Kush i zgjedh anëtarët e Këshillit Kombëtar (Nationalrat)?
+options:
+  a: Këshilli Federal (Bundesrat) i emëron ata.
+  b: Partitë i caktojnë ata pa zgjedhje.
+  c: Gjykata Federale (Bundesgericht) i përzgjedh ata.
+  d: Qytetarët me të drejtë vote i zgjedhin ata drejtpërdrejt.
+explanation: Anëtarët e Këshillit Kombëtar zgjidhen çdo katër vjet drejtpërdrejt nga qytetarët me të drejtë
+  vote. Edhe anëtarët e Këshillit të Shteteve (Ständerat) sot në të gjitha kantonet i zgjedh populli,
+  sipas rregullave të kantonit përkatës; në Appenzell Innerrhoden kjo ndodh në Landsgemeinde.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer wählt die Mitglieder des Nationalrats?
+    options_de:
+      a: Der Bundesrat ernennt sie.
+      b: Die Parteien bestimmen sie ohne Wahl.
+      c: Das Bundesgericht wählt sie aus.
+      d: Die stimmberechtigten Bürger wählen sie direkt.
+    explanation_de: Die Mitglieder des Nationalrats werden alle vier Jahre direkt von den stimmberechtigten
+      Bürgern gewählt. Auch die Mitglieder des Ständerats werden heute in allen Kantonen vom Volk gewählt,
+      nach den Regeln des jeweiligen Kantons; in Appenzell Innerrhoden geschieht dies an der Landsgemeinde.

@@ -1,0 +1,30 @@
+id: mehrehe-in-schweiz-verboten
+lang: tr
+source_version: 1
+question: İsviçre'de aynı anda birden fazla eşle evlilik konusunda ne geçerlidir?
+options:
+  a: Herkes onay verirse serbesttir
+  b: Yasaktır
+  c: Dini bir gerekçeye dayanıyorsa serbesttir
+  d: Yalnızca yabancı pasaportu olan kişiler için serbesttir
+explanation: İsviçre yalnızca tek eşli evliliği tanır. Zaten evli olan veya kayıtlı birliktelik içinde
+  yaşayan kişi, bir evlilik daha yapamaz. Bu, din veya kökenden bağımsız olarak geçerlidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in der Schweiz bezüglich der Ehe mit mehreren Ehepartnern gleichzeitig?
+    options_de:
+      a: Sie ist erlaubt, wenn alle zustimmen
+      b: Sie ist verboten
+      c: Sie ist erlaubt, wenn sie auf einer religiösen Begründung beruht
+      d: Sie ist nur für Personen mit einem ausländischen Pass erlaubt
+    explanation_de: Die Schweiz anerkennt nur die Einehe. Eine Person, die bereits verheiratet ist oder
+      in einer eingetragenen Partnerschaft lebt, kann keine weitere Ehe eingehen. Dies gilt unabhängig
+      von Religion oder Herkunft.

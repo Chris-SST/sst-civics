@@ -1,0 +1,31 @@
+id: kindererziehung-verantwortung-eltern
+lang: tr
+source_version: 1
+question: İsviçre'de çocukların eğitiminden ve yetiştirilmesinden esas olarak kim sorumludur?
+options:
+  a: Belediye (Gemeinde)
+  b: Ebeveynler
+  c: Okul
+  d: Kanton
+explanation: Medeni Kanun'a göre ebeveynler çocuğun iyiliğini gözetir ve çocuğun yetiştirilmesini yönetir.
+  Okul, öğretimle bu görevi tamamlar. Devlet yalnızca çocuğun iyiliği tehlikedeyse müdahale eder.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Frage: Die Rückübersetzung fragt nach «Bildung und Erziehung», das Original nur nach «Erziehung».
+      Damit wird die Schule als Antwort c plausibler, die Frage hat sich inhaltlich erweitert.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wer ist in der Schweiz hauptsächlich für die Bildung und Erziehung der Kinder verantwortlich?
+    options_de:
+      a: Die Gemeinde
+      b: Die Eltern
+      c: Die Schule
+      d: Der Kanton
+    explanation_de: Gemäss dem Zivilgesetzbuch wahren die Eltern das Wohl des Kindes und leiten dessen
+      Erziehung. Die Schule ergänzt diese Aufgabe durch den Unterricht. Der Staat greift nur ein, wenn
+      das Wohl des Kindes gefährdet ist.

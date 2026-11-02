@@ -1,0 +1,32 @@
+id: notruf-polizei-nummer
+lang: tr
+source_version: 1
+question: İsviçre'de acil bir durumda polise ihtiyaç duyulduğunda hangi telefon numarası aranır?
+options:
+  a: '143'
+  b: '118'
+  c: '144'
+  d: '117'
+explanation: Polise İsviçre'nin her yerinde 117 numaralı telefondan ulaşılır. İtfaiyenin numarası 118,
+  sağlık ekiplerinin (ambulans) numarası ise 144'tür. 143, krizdeki insanlar için hizmet veren "Dargebotene
+  Hand" (Uzatılmış El) kuruluşunun numarasıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Telefonnummer wird in der Schweiz in einem Notfall angerufen, wenn man die Polizei
+      braucht?
+    options_de:
+      a: '143'
+      b: '118'
+      c: '144'
+      d: '117'
+    explanation_de: Die Polizei ist in der ganzen Schweiz unter der Telefonnummer 117 erreichbar. Die
+      Nummer der Feuerwehr ist 118, die Nummer der Sanitätsteams (Ambulanz) ist 144. 143 ist die Nummer
+      der Organisation «Dargebotene Hand» (Ausgestreckte Hand), die für Menschen in Krisen da ist.

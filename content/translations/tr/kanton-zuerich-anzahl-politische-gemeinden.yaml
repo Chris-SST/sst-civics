@@ -1,0 +1,29 @@
+id: kanton-zuerich-anzahl-politische-gemeinden
+lang: tr
+source_version: 1
+question: Zürich kantonunda yaklaşık kaç siyasi belediye (Gemeinde) vardır?
+options:
+  a: Yaklaşık 60
+  b: Yaklaşık 110
+  c: Yaklaşık 250
+  d: Yaklaşık 160
+explanation: Zürich kantonu yaklaşık 160 siyasi belediyeden oluşmaktadır. Kesin sayı, belediye birleşmeleri
+  nedeniyle hafifçe değişebilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele politische Gemeinden gibt es ungefähr im Kanton Zürich?
+    options_de:
+      a: Ungefähr 60
+      b: Ungefähr 110
+      c: Ungefähr 250
+      d: Ungefähr 160
+    explanation_de: Der Kanton Zürich besteht aus ungefähr 160 politischen Gemeinden. Die genaue Zahl
+      kann sich aufgrund von Gemeindefusionen leicht ändern.

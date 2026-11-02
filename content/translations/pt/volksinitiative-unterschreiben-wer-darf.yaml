@@ -1,0 +1,37 @@
+id: volksinitiative-unterschreiben-wer-darf
+lang: pt
+source_version: 2
+question: Quem pode assinar uma iniciativa popular (Volksinitiative) federal?
+options:
+  a: Todas as pessoas com 16 anos ou mais domiciliadas na Suíça
+  b: Todas as pessoas com 18 anos ou mais com autorização de estabelecimento (autorização C) (Niederlassungsbewilligung)
+  c: Apenas membros de um partido político com 18 anos ou mais
+  d: Cidadãs e cidadãos suíços com 18 anos ou mais
+explanation: Pode assinar uma iniciativa popular federal quem tem direito de voto a nível da Confederação.
+  Trata-se das suíças e dos suíços com 18 anos ou mais, incluindo os que vivem no estrangeiro, desde que
+  estejam inscritos no registo eleitoral. Só estão excluídas as pessoas que, por incapacidade de discernimento
+  permanente, se encontram sob curatela geral ou são representadas por uma pessoa designada por mandato
+  por razões de incapacidade; as estrangeiras e os estrangeiros não têm direitos políticos a nível da
+  Confederação, nem mesmo com autorização C.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer kann eine eidgenössische Volksinitiative unterschreiben?
+    options_de:
+      a: Alle Personen ab 16 Jahren mit Wohnsitz in der Schweiz
+      b: Alle Personen ab 18 Jahren mit Niederlassungsbewilligung (Bewilligung C)
+      c: Nur Mitglieder einer politischen Partei ab 18 Jahren
+      d: Schweizer Bürgerinnen und Bürger ab 18 Jahren
+    explanation_de: Eine eidgenössische Volksinitiative kann unterschreiben, wer auf Bundesebene stimmberechtigt
+      ist. Es handelt sich um Schweizerinnen und Schweizer ab 18 Jahren, einschliesslich derjenigen, die
+      im Ausland leben, sofern sie im Stimmregister eingetragen sind. Ausgeschlossen sind nur Personen,
+      die wegen dauernder Urteilsunfähigkeit unter umfassender Beistandschaft stehen oder durch eine vorsorgebeauftragte
+      Person wegen Urteilsunfähigkeit vertreten werden; Ausländerinnen und Ausländer haben auf Bundesebene
+      keine politischen Rechte, nicht einmal mit Bewilligung C.

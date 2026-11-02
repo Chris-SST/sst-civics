@@ -1,0 +1,32 @@
+id: kantone-eigene-verwaltung-und-recht
+lang: sq
+source_version: 2
+question: Çfarë përfshihet në detyrat e kantoneve?
+options:
+  a: Ata përcaktojnë politikën e jashtme dhe monedhën e Zvicrës.
+  b: Ata nxjerrin ligjet për të gjithë vendin.
+  c: Ata udhëheqin ushtrinë dhe përcaktojnë tarifat doganore.
+  d: Ata drejtojnë administratën e tyre dhe nxjerrin të drejtën kantonale.
+explanation: Çdo kanton ka qeverinë e vet, parlamentin e vet dhe administratën e vet. Ai bën ligjet e
+  veta, që vlejnë vetëm në kanton, për shembull për shkollat ose policinë. Politika e jashtme, monedha,
+  ushtria, tarifat doganore dhe ligjet për të gjithë Zvicrën janë çështje e Konfederatës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gehört zu den Aufgaben der Kantone?
+    options_de:
+      a: Sie bestimmen die Aussenpolitik und die Währung der Schweiz.
+      b: Sie erlassen die Gesetze für das ganze Land.
+      c: Sie führen die Armee und bestimmen die Zolltarife.
+      d: Sie leiten ihre eigene Verwaltung und erlassen das kantonale Recht.
+    explanation_de: Jeder Kanton hat seine eigene Regierung, sein eigenes Parlament und seine eigene Verwaltung.
+      Er macht seine eigenen Gesetze, die nur im Kanton gelten, zum Beispiel für die Schulen oder die
+      Polizei. Die Aussenpolitik, die Währung, die Armee, die Zolltarife und die Gesetze für die ganze
+      Schweiz sind Sache des Bundes.

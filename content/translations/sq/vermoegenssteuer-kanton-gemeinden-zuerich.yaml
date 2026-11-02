@@ -1,0 +1,31 @@
+id: vermoegenssteuer-kanton-gemeinden-zuerich
+lang: sq
+source_version: 1
+question: Cilat nga këto tatime vendosin kantoni i Cyrihut dhe komunat (Gemeinde) mbi pasurinë e një personi,
+  për shembull mbi depozitat bankare dhe letrat me vlerë?
+options:
+  a: Tatimi parandalues
+  b: Tatimi mbi vlerën e shtuar
+  c: Tatimi mbi pasurinë
+  d: Tatimi mbi vajrat minerale
+explanation: Kantoni dhe komunat tatojnë pasurinë e personave fizikë. Tatimi mbi vlerën e shtuar, tatimi
+  parandalues dhe tatimi mbi vajrat minerale janë tatime të Konfederatës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche dieser Steuern erheben der Kanton Zürich und die Gemeinden auf das Vermögen einer
+      Person, zum Beispiel auf Bankguthaben und Wertpapiere?
+    options_de:
+      a: Verrechnungssteuer
+      b: Mehrwertsteuer
+      c: Vermögenssteuer
+      d: Mineralölsteuer
+    explanation_de: Der Kanton und die Gemeinden besteuern das Vermögen natürlicher Personen. Die Mehrwertsteuer,
+      die Verrechnungssteuer und die Mineralölsteuer sind Steuern des Bundes.

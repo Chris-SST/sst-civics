@@ -1,0 +1,37 @@
+id: volksinitiative-unterschreiben-wer-darf
+lang: fr
+source_version: 2
+question: Qui a le droit de signer une initiative populaire (Volksinitiative) fédérale ?
+options:
+  a: Toutes les personnes de 16 ans et plus domiciliées en Suisse
+  b: Toutes les personnes de 18 ans et plus titulaires d'une autorisation d'établissement (permis C) C
+  c: Uniquement les membres d'un parti politique âgés de 18 ans et plus
+  d: Les citoyennes et citoyens suisses de 18 ans et plus
+explanation: Peut signer une initiative populaire fédérale toute personne qui a le droit de vote au niveau
+  fédéral. Il s'agit des Suissesses et des Suisses de 18 ans et plus, y compris ceux qui vivent à l'étranger,
+  s'ils sont inscrits au registre des électeurs. Sont exclues uniquement les personnes qui, en raison
+  d'une incapacité durable de discernement, sont sous curatelle de portée générale ou sont représentées
+  par une personne mandatée par un mandat pour cause d'inaptitude ; les étrangères et les étrangers n'ont
+  pas de droits politiques au niveau fédéral, pas même avec un permis C.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer darf eine eidgenössische Volksinitiative unterschreiben?
+    options_de:
+      a: Alle Personen ab 16 Jahren, die in der Schweiz wohnhaft sind
+      b: Alle Personen ab 18 Jahren, die eine Niederlassungsbewilligung (Ausweis C) C besitzen
+      c: Nur Mitglieder einer politischen Partei ab 18 Jahren
+      d: Die Schweizer Bürgerinnen und Bürger ab 18 Jahren
+    explanation_de: Eine eidgenössische Volksinitiative kann jede Person unterschreiben, die auf Bundesebene
+      stimmberechtigt ist. Es handelt sich um die Schweizerinnen und Schweizer ab 18 Jahren, einschliesslich
+      derjenigen, die im Ausland leben, sofern sie im Stimmregister eingetragen sind. Ausgeschlossen sind
+      nur Personen, die wegen dauernder Urteilsunfähigkeit unter umfassender Beistandschaft stehen oder
+      durch eine Person, die mit einem Vorsorgeauftrag beauftragt wurde, vertreten werden; Ausländerinnen
+      und Ausländer haben auf Bundesebene keine politischen Rechte, nicht einmal mit einem Ausweis C.

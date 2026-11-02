@@ -9,6 +9,22 @@ options:
   d: Household contents insurance
 explanation: Health insurance is compulsory for all persons residing in Switzerland. Household contents
   insurance, legal expenses insurance and travel insurance are voluntary.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Versicherungsarten ist für alle Einwohnerinnen und Einwohner der
+      Schweiz gesetzlich vorgeschrieben?
+    options_de:
+      a: Rechtsschutzversicherung
+      b: Krankenversicherung
+      c: Reiseversicherung
+      d: Hausratversicherung
+    explanation_de: Die Krankenversicherung ist für alle Personen, die in der Schweiz wohnen, obligatorisch.
+      Die Hausratversicherung, die Rechtsschutzversicherung und die Reiseversicherung sind freiwillig.

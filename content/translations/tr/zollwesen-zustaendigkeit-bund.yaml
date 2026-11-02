@@ -1,0 +1,31 @@
+id: zollwesen-zustaendigkeit-bund
+lang: tr
+source_version: 1
+question: İsviçre'de gümrük işlerini kim yürütür?
+options:
+  a: Konfederasyon
+  b: Sınırdaki belediyeler (Gemeinden)
+  c: Sınırların bulunduğu kantonlar
+  d: Kantonlar ve Konfederasyon yarı yarıya
+explanation: Federal Anayasa'ya göre gümrük işleri Konfederasyonun görevidir. Konfederasyon, gümrük vergilerini
+  ve sınır ötesi mal trafiğinde yapılan kontrolü düzenler. Kantonların ve belediyelerin bu konuda kendilerine
+  ait bir yetkisi yoktur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer führt in der Schweiz die Zollangelegenheiten?
+    options_de:
+      a: Der Bund
+      b: Die Gemeinden an der Grenze
+      c: Die Kantone, in denen die Grenzen liegen
+      d: Die Kantone und der Bund je zur Hälfte
+    explanation_de: Gemäss der Bundesverfassung sind die Zollangelegenheiten Aufgabe des Bundes. Der Bund
+      regelt die Zölle und die Kontrolle im grenzüberschreitenden Warenverkehr. Die Kantone und die Gemeinden
+      haben in diesem Bereich keine eigene Zuständigkeit.

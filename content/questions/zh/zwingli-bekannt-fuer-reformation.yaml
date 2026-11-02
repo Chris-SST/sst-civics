@@ -1,25 +1,25 @@
 id: zwingli-bekannt-fuer-reformation
-version: 1
+version: 2
 scope: zh
 canton: zh
 topic: kanton.geschichte.zuerich
-question_de: Wofür ist Ulrich Zwingli in der Geschichte Zürichs vor allem bekannt?
+question_de: Wofür ist Huldrych (Ulrich) Zwingli in der Geschichte Zürichs vor allem bekannt?
 options_de:
   a: Er baute die erste Eisenbahn im Kanton.
-  b: Er gründete die Universität Zürich.
+  b: Er war der erste Bundespräsident der Schweiz.
   c: Er führte das Frauenstimmrecht ein.
   d: Er war der Anführer der Reformation in Zürich.
 correct: d
-explanation_de: Zwingli prägte die Zürcher Reformation und damit die Kirche und das Leben in der Stadt
-  nachhaltig. Die Zürcher Kirche wurde zur reformierten Kirche. Die anderen Antworten haben mit ihm nichts
-  zu tun.
+explanation_de: Huldrych (Ulrich) Zwingli führte im 16. Jahrhundert die Reformation in Zürich an, und
+  die Zürcher Kirche wurde reformiert. Die Eisenbahn, der Bundesstaat mit einem Bundespräsidenten und
+  das Frauenstimmrecht kamen erst Jahrhunderte später.
 sources:
 - url: https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html
   checked: &id001 2026-11-02
 glossary:
 - Reformation
 - Ulrich Zwingli
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-252
@@ -29,14 +29,42 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Ulrich Zwingli war ab 1519 Leutpriester am Grossmünster und der Anführer der Reformation
-      in Zürich, während die anderen Antworten nichts mit ihm zu tun haben.
+    version: 2
+    reasoning: Huldrych Zwingli war im 16. Jahrhundert der führende Reformator in Zürich, während die
+      anderen Antworten historisch nicht auf ihn zutreffen.
   source:
     verdict: supported
-    note: Quelle 1 sagt, dass Huldrych Zwingli mit Unterstützung des Rates die Reformation in Zürich in
-      wenigen Jahren durchsetzte, und beschreibt ihn als treibende Kraft der Reformation. Die anderen
-      Antworten (Eisenbahn, Universität, Frauenstimmrecht) kommen nicht vor.
+    note: Quelle 1 beschreibt, dass Zwingli mit Unterstützung des Rates die Reformation in Zürich in wenigen
+      Jahren durchsetzte und dabei die treibende Kraft war. Die Aussagen zu Eisenbahn, Bundespräsident
+      und Frauenstimmrecht werden nicht behandelt, sind für die Antwort d) aber auch nicht nötig.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falschen Antworten sind wegen der grossen zeitlichen Unterschiede sehr leicht auszuschliessen;
+        plausiblere Ablenker aus derselben Zeit wären besser, etwa «Er gründete die Universität Zürich»
+        oder «Er führte die Zürcher Truppen in der Schlacht bei Marignano an».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falschen Antworten sind zeitlich so offensichtlich unpassend (Eisenbahn, Bundespräsident,
+        Frauenstimmrecht), dass die Frage sehr leicht ist. Das ist für eine Übungsfrage zu dieser Tatsache
+        aber vertretbar.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

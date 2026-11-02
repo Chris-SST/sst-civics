@@ -1,0 +1,33 @@
+id: gottfried-keller-zuercher-dichter
+lang: tr
+source_version: 2
+question: Aşağıdaki ünlü şairlerden ve yazarlardan hangisi Zürih'ten gelmektedir?
+options:
+  a: Robert Walser
+  b: Gottfried Keller
+  c: Friedrich Dürrenmatt
+  d: Jeremias Gotthelf
+explanation: Gottfried Keller 1819'da Zürih'te dünyaya geldi, örneğin «Der grüne Heinrich» (Yeşil Heinrich)
+  adlı eseri yazdı ve aynı zamanda Zürih kantonunun devlet yazmanı (Staatsschreiber) olarak çalıştı. Robert
+  Walser Biel'liydi, Friedrich Dürrenmatt Bern kantonundaki Konolfingen'denti ve Jeremias Gotthelf Bern
+  kantonunda papaz olarak görev yaptı.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welcher der folgenden berühmten Dichter und Schriftsteller stammt aus Zürich?
+    options_de:
+      a: Robert Walser
+      b: Gottfried Keller
+      c: Friedrich Dürrenmatt
+      d: Jeremias Gotthelf
+    explanation_de: Gottfried Keller wurde 1819 in Zürich geboren, schrieb zum Beispiel das Werk «Der
+      grüne Heinrich» und arbeitete zugleich als Staatsschreiber des Kantons Zürich. Robert Walser war
+      aus Biel, Friedrich Dürrenmatt stammte aus Konolfingen im Kanton Bern, und Jeremias Gotthelf wirkte
+      im Kanton Bern als Pfarrer.

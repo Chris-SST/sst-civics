@@ -9,6 +9,22 @@ options:
   d: The founding of the first Swiss bank
 explanation: The legend tells of a man who defends himself against oppression by foreign bailiffs. William
   Tell is therefore regarded as a symbol of freedom. Whether he really lived has not been proven.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür steht die legendäre Figur Wilhelm Tell aus der Zentralschweiz?
+    options_de:
+      a: Widerstand gegen fremde Herrscher
+      b: Die Neutralität der Schweiz im Krieg
+      c: Die Einführung der Reformation
+      d: Die Gründung der ersten Schweizer Bank
+    explanation_de: Die Legende erzählt von einem Mann, der sich gegen die Unterdrückung durch fremde
+      Vögte wehrt. Wilhelm Tell gilt deshalb als Symbol der Freiheit. Ob er wirklich gelebt hat, ist nicht
+      bewiesen.

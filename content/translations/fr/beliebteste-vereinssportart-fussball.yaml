@@ -1,0 +1,31 @@
+id: beliebteste-vereinssportart-fussball
+lang: fr
+source_version: 2
+question: Quel sport est le plus pratiqué dans des clubs en Suisse ?
+options:
+  a: Le hockey sur glace
+  b: La natation
+  c: Le ski
+  d: Le football
+explanation: Le football est le sport le plus populaire dans les clubs en Suisse. L'Association suisse
+  de football compte environ 300 000 membres répartis dans plus de 1300 clubs. Chaque week-end, des milliers
+  de matchs ont lieu dans tout le pays.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Sportart wird in der Schweiz am meisten in Vereinen betrieben?
+    options_de:
+      a: Eishockey
+      b: Schwimmen
+      c: Skifahren
+      d: Fussball
+    explanation_de: Fussball ist die beliebteste Sportart in den Vereinen in der Schweiz. Der Schweizerische
+      Fussballverband zählt rund 300 000 Mitglieder, die auf mehr als 1300 Vereine verteilt sind. Jedes
+      Wochenende finden im ganzen Land Tausende von Spielen statt.

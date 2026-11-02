@@ -1,0 +1,33 @@
+id: bilaterale-eins-basis-eu-beziehungen
+lang: tr
+source_version: 1
+question: Halk tarafından 2000 yılında kabul edilen hangi anlaşmalar, İsviçre'nin AB ile bugünkü ilişkilerinin
+  temelini oluşturmaktadır?
+options:
+  a: İkili Anlaşmalar I (Bilaterale I)
+  b: AEA Anlaşması (EWR-Vertrag)
+  c: Tek başına Schengen Anlaşması
+  d: AB'ye Katılım Anlaşması
+explanation: Seçmenler İkili Anlaşmalar I'i 2000 yılında kabul etti. Bu anlaşmalar, iç pazarın belirli
+  alanlarına erişimi düzenlemektedir; örneğin kişilerin serbest dolaşımı ve kara taşımacılığı. Halk, AEA'ya
+  1992'de onay vermemişti.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Abkommen, die 2000 vom Volk angenommen wurden, bilden die Grundlage der heutigen
+      Beziehungen der Schweiz zur EU?
+    options_de:
+      a: Bilaterale Abkommen I
+      b: EWR-Abkommen
+      c: Das Schengen-Abkommen allein
+      d: Das Beitrittsabkommen zur EU
+    explanation_de: Die Stimmberechtigten haben die Bilateralen Abkommen I im Jahr 2000 angenommen. Diese
+      Abkommen regeln den Zugang zu bestimmten Bereichen des Binnenmarktes, zum Beispiel die Personenfreizügigkeit
+      und den Landverkehr. Das Volk hatte dem EWR 1992 nicht zugestimmt.

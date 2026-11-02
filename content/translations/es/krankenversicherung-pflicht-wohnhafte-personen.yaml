@@ -1,0 +1,31 @@
+id: krankenversicherung-pflicht-wohnhafte-personen
+lang: es
+source_version: 1
+question: ¿Qué se aplica a las personas que residen en Suiza en relación con el seguro de enfermedad?
+options:
+  a: Solo tienen que asegurarse si trabajan en Suiza
+  b: Están obligadas por ley a contratar un seguro de enfermedad
+  c: Solo tienen que asegurarse si tienen más de 50 años
+  d: Pueden decidir libremente si desean asegurarse
+explanation: La Ley del Seguro de Enfermedad obliga a toda persona con domicilio en Suiza a tener un seguro
+  de enfermedad. Hay que asegurarse dentro de los tres meses siguientes al nacimiento o a la fijación
+  del domicilio.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für Personen, die in der Schweiz wohnen, in Bezug auf die Krankenversicherung?
+    options_de:
+      a: Sie müssen sich nur versichern, wenn sie in der Schweiz arbeiten
+      b: Sie sind gesetzlich verpflichtet, eine Krankenversicherung abzuschliessen
+      c: Sie müssen sich nur versichern, wenn sie über 50 Jahre alt sind
+      d: Sie können frei entscheiden, ob sie sich versichern wollen
+    explanation_de: Das Krankenversicherungsgesetz verpflichtet jede Person mit Wohnsitz in der Schweiz,
+      eine Krankenversicherung zu haben. Man muss sich innerhalb von drei Monaten nach der Geburt oder
+      nach der Begründung des Wohnsitzes versichern.

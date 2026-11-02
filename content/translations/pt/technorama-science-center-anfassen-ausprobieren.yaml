@@ -1,0 +1,32 @@
+id: technorama-science-center-anfassen-ausprobieren
+lang: pt
+source_version: 1
+question: Em que instituição do cantão de Zurique os visitantes podem tocar e experimentar eles próprios
+  fenómenos científicos e técnicos?
+options:
+  a: Na Ópera de Zurique (Opernhaus Zürich)
+  b: No Technorama de Winterthur
+  c: No Museu Nacional Suíço de Zurique (Landesmuseum Zürich)
+  d: No Kunsthaus de Zurique
+explanation: O Technorama de Winterthur é um centro de ciência. Aí, os visitantes experimentam eles próprios
+  nos objetos expostos. O Kunsthaus, o Museu Nacional Suíço e a Ópera mostram arte, história e espetáculos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Institution des Kantons Zürich können Besucher wissenschaftliche und technische
+      Phänomene selbst anfassen und ausprobieren?
+    options_de:
+      a: In der Oper Zürich (Opernhaus Zürich)
+      b: Im Technorama in Winterthur
+      c: Im Schweizerischen Nationalmuseum in Zürich (Landesmuseum Zürich)
+      d: Im Kunsthaus Zürich
+    explanation_de: Das Technorama in Winterthur ist ein Science-Center. Dort experimentieren die Besucher
+      selbst an den ausgestellten Objekten. Das Kunsthaus, das Schweizerische Nationalmuseum und die Oper
+      zeigen Kunst, Geschichte und Aufführungen.

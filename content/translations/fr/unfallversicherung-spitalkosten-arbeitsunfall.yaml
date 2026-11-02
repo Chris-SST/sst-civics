@@ -1,0 +1,33 @@
+id: unfallversicherung-spitalkosten-arbeitsunfall
+lang: fr
+source_version: 1
+question: Une employée a un grave accident au travail et doit être hospitalisée. Quelle assurance prend
+  en charge les frais d'hôpital ?
+options:
+  a: L'assurance-chômage
+  b: L'assurance-accidents
+  c: Le régime des allocations pour perte de gain
+  d: L'assurance-vieillesse et survivants
+explanation: L'assurance-accidents obligatoire paie les frais de guérison en cas d'accident professionnel,
+  par exemple les frais d'hôpital. Les employés y sont assurés par l'intermédiaire de leur employeur.
+  Les autres assurances mentionnées couvrent d'autres risques.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Angestellte hat einen schweren Unfall bei der Arbeit und muss ins Spital eingeliefert
+      werden. Welche Versicherung übernimmt die Spitalkosten?
+    options_de:
+      a: Die Arbeitslosenversicherung
+      b: Die Unfallversicherung
+      c: Die Erwerbsersatzordnung
+      d: Die Alters- und Hinterlassenenversicherung
+    explanation_de: Die obligatorische Unfallversicherung bezahlt bei einem Berufsunfall die Heilungskosten,
+      zum Beispiel die Spitalkosten. Die Angestellten sind dort über ihren Arbeitgeber versichert. Die
+      anderen genannten Versicherungen decken andere Risiken ab.

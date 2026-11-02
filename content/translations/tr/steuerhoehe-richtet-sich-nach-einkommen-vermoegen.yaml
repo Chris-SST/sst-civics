@@ -1,0 +1,30 @@
+id: steuerhoehe-richtet-sich-nach-einkommen-vermoegen
+lang: tr
+source_version: 1
+question: Zürich kantonunda bir kişinin ne kadar gelir ve servet vergisi ödeyeceği esas olarak neye bağlıdır?
+options:
+  a: Vergiye tabi gelire ve servete
+  b: Kişinin mesleğine
+  c: Belediye (Gemeinde) içindeki ikamet süresine
+  d: Oy hakkının kullanılma sayısına
+explanation: Vergi, vergiye tabi gelir ve servet üzerinden hesaplanır. Daha fazla kazanan veya daha fazla
+  mal varlığına sahip olan kişi, kural olarak daha fazla vergi öder.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wovon hängt es im Kanton Zürich hauptsächlich ab, wie viel Einkommens- und Vermögenssteuer
+      eine Person bezahlt?
+    options_de:
+      a: Vom steuerbaren Einkommen und Vermögen
+      b: Vom Beruf der Person
+      c: Von der Dauer des Wohnsitzes in der Gemeinde
+      d: Von der Anzahl der Ausübungen des Stimmrechts
+    explanation_de: Die Steuer wird auf dem steuerbaren Einkommen und Vermögen berechnet. Eine Person,
+      die mehr verdient oder mehr Vermögen besitzt, bezahlt in der Regel mehr Steuern.

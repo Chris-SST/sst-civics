@@ -1,0 +1,33 @@
+id: region-basel-pharmaunternehmen-bekannt
+lang: fr
+source_version: 1
+question: Quelle région de Suisse est connue pour les grandes entreprises pharmaceutiques qui y sont établies
+  ?
+options:
+  a: L'Engadine
+  b: La région de Bâle
+  c: Le Tessin
+  d: Le Valais
+explanation: Plusieurs entreprises pharmaceutiques actives dans le monde entier ont leur siège principal
+  dans la région de Bâle. L'industrie pharmaceutique y est une branche économique importante et revêt
+  une grande importance pour les exportations.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Region der Schweiz ist für die grossen Pharmaunternehmen bekannt, die dort angesiedelt
+      sind?
+    options_de:
+      a: Das Engadin
+      b: Die Region Basel
+      c: Das Tessin
+      d: Das Wallis
+    explanation_de: Mehrere weltweit tätige Pharmaunternehmen haben ihren Hauptsitz in der Region Basel.
+      Die Pharmaindustrie ist dort ein wichtiger Wirtschaftszweig und hat eine grosse Bedeutung für die
+      Exporte.

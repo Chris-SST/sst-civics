@@ -10,6 +10,22 @@ options:
 explanation: Article 10 of the Federal Constitution prohibits torture and any other form of cruel, inhuman
   or degrading treatment. This prohibition applies to all people without exception. The state, too, may
   not make any exceptions.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sagt die Bundesverfassung über die Folter?
+    options_de:
+      a: Folter ist nur bei Straftätern verboten.
+      b: Folter ist für die Polizei in Notfällen erlaubt.
+      c: Folter ist erlaubt, wenn ein Gericht zustimmt.
+      d: Niemand darf gefoltert werden.
+    explanation_de: Artikel 10 der Bundesverfassung verbietet die Folter und jede andere Form grausamer,
+      unmenschlicher oder erniedrigender Behandlung. Dieses Verbot gilt für alle Menschen ohne Ausnahme.
+      Auch der Staat darf keine Ausnahmen machen.

@@ -1,0 +1,32 @@
+id: volksinitiative-doppeltes-mehr
+lang: tr
+source_version: 2
+question: Federal bir halk girişimi (Volksinitiative) oylamada kabul edilmek için neye ihtiyaç duyar?
+options:
+  a: Oy kullananların üçte ikisinin evet oyu
+  b: Federal Konsey'in (Bundesrat) ve oy kullananların çoğunluğunun evet oyu
+  c: Oy kullananların çoğunluğunun ve kantonların çoğunluğunun evet oyu
+  d: Yalnızca oy kullananların çoğunluğunun evet oyu
+explanation: 'Federal bir halk girişimi (Volksinitiative) Federal Anayasa''yı (Bundesverfassung) değiştirmek
+  ister. Bu nedenle çifte çoğunluğa ihtiyaç duyar: Oy kullananların çoğunluğu (halk çoğunluğu (Volksmehr))
+  ile kantonların çoğunluğu (kantonlar çoğunluğu (Ständemehr)) evet demelidir. Buna karşılık Zürich kantonundaki
+  bir kanton girişiminde oy kullananların çoğunluğu yeterlidir.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was braucht eine eidgenössische Volksinitiative, um in der Abstimmung angenommen zu werden?
+    options_de:
+      a: Zwei Drittel der Stimmenden müssen Ja sagen
+      b: Ja-Stimmen des Bundesrates und der Mehrheit der Stimmenden
+      c: Ja-Stimmen der Mehrheit der Stimmenden und der Mehrheit der Kantone
+      d: Nur die Ja-Stimmen der Mehrheit der Stimmenden
+    explanation_de: 'Eine eidgenössische Volksinitiative will die Bundesverfassung ändern. Deshalb braucht
+      sie das doppelte Mehr: Die Mehrheit der Stimmenden (Volksmehr) und die Mehrheit der Kantone (Ständemehr)
+      müssen Ja sagen. Bei einer Kantonsinitiative im Kanton Zürich hingegen genügt die Mehrheit der Stimmenden.'

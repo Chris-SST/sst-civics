@@ -10,6 +10,22 @@ options:
 explanation: In 1798, after French troops invaded, the Helvetic Republic was established. It was a centrally
   governed unitary state and temporarily replaced the old Confederation. The cantons had hardly any rights
   of their own.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was geschah 1798 unter dem Einfluss von Napoleon Bonaparte mit der Schweiz?
+    options_de:
+      a: Sie wurde Teil des Deutschen Reiches.
+      b: Sie wurde eine Monarchie mit einem eigenen König.
+      c: Sie wurde dauerhaft in zwei Staaten geteilt.
+      d: Sie wurde vorübergehend ein zentralisierter Staat, die Helvetische Republik.
+    explanation_de: Nach dem Einmarsch französischer Truppen wurde 1798 die Helvetische Republik errichtet.
+      Sie war ein zentral regierter Einheitsstaat und ersetzte vorübergehend die alte Eidgenossenschaft.
+      Die Kantone hatten kaum eigene Rechte.

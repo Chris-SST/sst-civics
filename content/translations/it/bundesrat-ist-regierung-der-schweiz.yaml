@@ -1,0 +1,32 @@
+id: bundesrat-ist-regierung-der-schweiz
+lang: it
+source_version: 1
+question: Quale ruolo ha il Consiglio federale (Bundesrat) in Svizzera?
+options:
+  a: È il governo della Svizzera.
+  b: È il tribunale supremo del Paese.
+  c: È il Parlamento della Confederazione.
+  d: È la rappresentanza dei Cantoni.
+explanation: Il Consiglio federale è la suprema autorità direttiva ed esecutiva della Confederazione,
+  ovvero il governo. Ha sette membri. Il Parlamento e il Tribunale federale (Bundesgericht) sono altri
+  poteri.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: «Bund» und «Eidgenossenschaft» bezeichnen dieselbe Ebene, alle Antworten
+      und die Erklärung stimmen inhaltlich überein.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Rolle hat der Bundesrat in der Schweiz?
+    options_de:
+      a: Er ist die Regierung der Schweiz.
+      b: Er ist das oberste Gericht des Landes.
+      c: Er ist das Parlament der Eidgenossenschaft.
+      d: Er ist die Vertretung der Kantone.
+    explanation_de: Der Bundesrat ist die oberste leitende und vollziehende Behörde der Eidgenossenschaft,
+      das heisst die Regierung. Er hat sieben Mitglieder. Das Parlament und das Bundesgericht sind andere
+      Gewalten.

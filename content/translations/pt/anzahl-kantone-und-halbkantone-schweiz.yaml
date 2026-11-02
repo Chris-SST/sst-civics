@@ -1,0 +1,31 @@
+id: anzahl-kantone-und-halbkantone-schweiz
+lang: pt
+source_version: 1
+question: Quantos cantões tem a Suíça e quantos deles são meios-cantões?
+options:
+  a: 26 cantões, dos quais 6 são meios-cantões
+  b: 26 cantões, dos quais 3 são meios-cantões
+  c: 23 cantões, dos quais 6 são meios-cantões
+  d: 20 cantões, dos quais 6 são meios-cantões
+explanation: 'A Suíça tem 26 cantões. Seis deles são meios-cantões: Obwalden, Nidwalden, Basileia-Cidade,
+  Basileia-Campo, Appenzell Rodes Exteriores e Appenzell Rodes Interiores. No Conselho dos Estados (Ständerat),
+  cada um deles tem um voto em vez de dois.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Kantone hat die Schweiz und wie viele davon sind Halbkantone?
+    options_de:
+      a: 26 Kantone, davon sind 6 Halbkantone
+      b: 26 Kantone, davon sind 3 Halbkantone
+      c: 23 Kantone, davon sind 6 Halbkantone
+      d: 20 Kantone, davon sind 6 Halbkantone
+    explanation_de: 'Die Schweiz hat 26 Kantone. Sechs davon sind Halbkantone: Obwalden, Nidwalden, Basel-Stadt,
+      Basel-Landschaft, Appenzell Ausserrhoden und Appenzell Innerrhoden. Im Ständerat hat jeder von ihnen
+      eine Stimme statt zwei.'

@@ -1,0 +1,31 @@
+id: frauenstimmrecht-bund-seit-1971
+lang: tr
+source_version: 1
+question: Kadınlar İsviçre'de ulusal düzeyde ne zamandan beri seçme ve oy kullanma hakkına sahiptir?
+options:
+  a: 1918'den beri
+  b: 1848'den beri
+  c: 1971'den beri
+  d: 1991'den beri
+explanation: Konfederasyon düzeyinde kadınların oy hakkı 1971'de getirildi. Bazı kantonlar ve belediyeler
+  (Gemeinden) bu hakkı daha erken tanımıştı, diğerleri ise ancak daha sonra getirdi. En son kanton olarak
+  1990'da Appenzell Innerrhoden izledi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Seit wann haben Frauen in der Schweiz auf nationaler Ebene das Wahl- und Stimmrecht?
+    options_de:
+      a: Seit 1918
+      b: Seit 1848
+      c: Seit 1971
+      d: Seit 1991
+    explanation_de: Auf Ebene des Bundes wurde das Stimmrecht der Frauen 1971 eingeführt. Einige Kantone
+      und Gemeinden hatten dieses Recht früher anerkannt, andere führten es erst später ein. Als letzter
+      Kanton folgte 1990 Appenzell Innerrhoden.

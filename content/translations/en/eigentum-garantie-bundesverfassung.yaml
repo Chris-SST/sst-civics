@@ -10,6 +10,23 @@ options:
   d: Freedom of assembly
 explanation: The Federal Constitution guarantees property in Article 26. The state may restrict property
   only under certain conditions, for example with a legal basis and full compensation in the case of expropriation.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht schützt Häuser, Land und andere Vermögenswerte, die Privatpersonen
+      in der Schweiz gehören?
+    options_de:
+      a: Die Eigentumsgarantie
+      b: Die Glaubens- und Gewissensfreiheit
+      c: Die Niederlassungsfreiheit
+      d: Die Versammlungsfreiheit
+    explanation_de: Die Bundesverfassung garantiert das Eigentum in Artikel 26. Der Staat darf das Eigentum
+      nur unter bestimmten Bedingungen einschränken, zum Beispiel mit einer gesetzlichen Grundlage und
+      voller Entschädigung im Fall einer Enteignung.

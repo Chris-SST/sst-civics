@@ -20,7 +20,7 @@ sources:
 glossary:
 - Sechseläuten
 - Zunft
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-346
@@ -41,3 +41,41 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, die Zünfte verbrennen den Böögg, die Quelle sagt aber nur, dass der
+        Böögg nach dem Umzug verbrannt wird; besser: «Am Montagabend um 18 Uhr wird der Böögg verbrannt,
+        und die Reiter der Zünfte reiten um das Feuer.»'
+      - 'Klein: Weil am Sonntag auch rund 3000 Kinder am Kinderumzug teilnehmen, könnte Antwort a) kurz
+        verwirren; die Erklärung könnte ergänzen, dass der Kinderumzug zwar dazugehört, die Zünfte aber
+        im Mittelpunkt stehen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, die Zünfte verbrennen den Böögg; genauer wäre: «Um 18 Uhr wird auf
+        dem Sechseläutenplatz der Böögg verbrannt, und die Zünfter reiten um das Feuer.»'
+      - 'Klein: «zentrale Akteure» ist für Niveau B1 eher abstrakt; einfacher wäre zum Beispiel: «Wer
+        spielt beim Zürcher Frühlingsfest Sechseläuten die wichtigste Rolle?»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Beim Kinderumzug am Sonntag nehmen rund 3000 Kinder teil, daher ist «Die Zürcher Schulklassen»
+        nicht ganz abwegig; die Frage wäre eindeutiger mit «Am Montag im Umzug und bei der Verbrennung
+        des Bööggs: Wer steht im Mittelpunkt?» oder die Erklärung könnte den Kinderumzug kurz als Auftakt
+        erwähnen.'
+      - 'Klein: Das Wort «Akteure» ist für B1 eher schwierig; einfacher wäre «Wer steht beim Sechseläuten
+        im Mittelpunkt?» oder «Wer nimmt beim Sechseläuten hauptsächlich teil?».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

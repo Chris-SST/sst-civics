@@ -1,0 +1,35 @@
+id: stellenabsage-wegen-hautfarbe-geschlecht
+lang: it
+source_version: 2
+question: Una donna si candida per un posto di lavoro. Viene respinta soltanto perché è una donna. Quale
+  diritto fondamentale viene così violato?
+options:
+  a: La libertà di domicilio
+  b: La libertà di riunione
+  c: La parità giuridica e il divieto di discriminazione
+  d: La protezione della sfera privata
+explanation: L'articolo 8 della Costituzione federale stabilisce che tutti gli esseri umani sono uguali
+  davanti alla legge e che donna e uomo hanno gli stessi diritti. Nessuno può essere discriminato, ad
+  esempio a causa dell'origine, della razza o del sesso. Chi respinge una candidata soltanto a causa del
+  suo sesso viola quindi la parità giuridica e il divieto di discriminazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Frau bewirbt sich um eine Arbeitsstelle. Sie wird nur deshalb abgelehnt, weil sie
+      eine Frau ist. Welches Grundrecht wird dadurch verletzt?
+    options_de:
+      a: Die Niederlassungsfreiheit
+      b: Die Versammlungsfreiheit
+      c: Die Rechtsgleichheit und das Diskriminierungsverbot
+      d: Der Schutz der Privatsphäre
+    explanation_de: Artikel 8 der Bundesverfassung legt fest, dass alle Menschen vor dem Gesetz gleich
+      sind und dass Frau und Mann gleiche Rechte haben. Niemand darf diskriminiert werden, zum Beispiel
+      wegen der Herkunft, der Rasse oder des Geschlechts. Wer eine Bewerberin nur wegen ihres Geschlechts
+      ablehnt, verletzt somit die Rechtsgleichheit und das Diskriminierungsverbot.

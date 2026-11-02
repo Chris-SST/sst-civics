@@ -1,14 +1,31 @@
 id: zuerich-huegelzuege-am-zuerichsee
 lang: en
-source_version: 1
-question: Which ranges of hills line Lake Zurich?
+source_version: 2
+question: Which ranges of hills lie on the shore of Lake Zurich?
 options:
   a: Uetliberg, Albis and Pfannenstiel
-  b: Lägern, Irchel and Höhronen
+  b: Lägern, Irchel and Kohlfirst
   c: Hörnli, Bachtel and Allmann
-  d: Heitersberg, Üetliberg and Randen
-explanation: The Uetliberg and the Albis are on the left shore of the lake, the Pfannenstiel on the right
-  shore. Lägern, Irchel, Bachtel and Hörnli are other elevations in the canton or in the region.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  d: Heitersberg, Gubrist and Randen
+explanation: The Uetliberg and the Albis extend along the left shore of Lake Zurich, while the Pfannenstiel
+  lies on the right shore. The other hills lie further away from the lake, for example in the Unterland,
+  in the Weinland, in the Zürcher Oberland or in other cantons.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Hügelzüge liegen am Ufer des Zürichsees?
+    options_de:
+      a: Uetliberg, Albis und Pfannenstiel
+      b: Lägern, Irchel und Kohlfirst
+      c: Hörnli, Bachtel und Allmann
+      d: Heitersberg, Gubrist und Randen
+    explanation_de: Der Uetliberg und die Albis erstrecken sich entlang des linken Zürichseeufers, während
+      der Pfannenstiel am rechten Ufer liegt. Die anderen Hügel liegen weiter vom See entfernt, zum Beispiel
+      im Unterland, im Weinland, im Zürcher Oberland oder in anderen Kantonen.

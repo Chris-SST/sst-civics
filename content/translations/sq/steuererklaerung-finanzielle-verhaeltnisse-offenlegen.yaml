@@ -1,0 +1,29 @@
+id: steuererklaerung-finanzielle-verhaeltnisse-offenlegen
+lang: sq
+source_version: 1
+question: Për çfarë shërben deklarata tatimore që tatimpaguesit e plotësojnë çdo vit?
+options:
+  a: Shërben për regjistrimin në zyrën e banorëve.
+  b: Është kërkesa për një sigurim shëndetësor.
+  c: Është regjistrimi për shërbimin civil (Zivildienst).
+  d: Ajo i bën të ditura autoriteteve tatimore gjendjen financiare.
+explanation: Me deklaratën tatimore, tatimpaguesit tregojnë të ardhurat, pasurinë dhe zbritjet. Mbi këtë
+  bazë autoriteti tatimor llogarit tatimin.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient die Steuererklärung, die Steuerzahler jedes Jahr ausfüllen?
+    options_de:
+      a: Sie dient zur Anmeldung beim Einwohneramt.
+      b: Sie ist der Antrag auf eine Krankenversicherung.
+      c: Sie ist die Anmeldung für den Zivildienst.
+      d: Sie macht den Steuerbehörden die finanzielle Lage bekannt.
+    explanation_de: Mit der Steuererklärung geben die Steuerzahler das Einkommen, das Vermögen und die
+      Abzüge an. Auf dieser Grundlage berechnet die Steuerbehörde die Steuer.

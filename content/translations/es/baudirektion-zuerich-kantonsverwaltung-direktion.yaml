@@ -1,0 +1,31 @@
+id: baudirektion-zuerich-kantonsverwaltung-direktion
+lang: es
+source_version: 1
+question: ¿Cuál de los siguientes organismos es una dirección de la administración del cantón de Zúrich?
+options:
+  a: La Dirección del municipio (Gemeinde)
+  b: La Dirección de Obras Públicas (Baudirektion)
+  c: La Dirección de la ciudad
+  d: La Dirección de la Confederación
+explanation: La Dirección de Obras Públicas pertenece a las direcciones de la administración del cantón
+  de Zúrich. La administración cantonal se divide en varias direcciones, cada una de las cuales está dirigida
+  por un miembro del Consejo de Gobierno (Regierungsrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Stellen ist eine Direktion der Verwaltung des Kantons Zürich?
+    options_de:
+      a: Die Direktion der Gemeinde
+      b: Die Baudirektion
+      c: Die Direktion der Stadt
+      d: Die Direktion der Eidgenossenschaft
+    explanation_de: Die Baudirektion gehört zu den Direktionen der Verwaltung des Kantons Zürich. Die
+      Kantonsverwaltung ist in mehrere Direktionen gegliedert, von denen jede von einem Mitglied des Regierungsrates
+      geleitet wird.

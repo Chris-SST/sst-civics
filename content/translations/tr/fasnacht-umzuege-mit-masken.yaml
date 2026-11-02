@@ -1,0 +1,29 @@
+id: fasnacht-umzuege-mit-masken
+lang: tr
+source_version: 1
+question: İsviçre Fasnacht'ına (karnaval) tipik olarak ne ait olur?
+options:
+  a: Katılımcıların maske taktığı geçit törenleri
+  b: Köy meydanında köknar ağaçlarının süslenmesi
+  c: 1 Ağustos'ta gece yarısı havai fişek gösterisi
+  d: Kiliselerde büyük mumların yakılması
+explanation: Fasnacht sırasında gruplar geçit törenleriyle sokaklarda yürür ve bu sırada maske ve kostüm
+  giyer. Basel Fasnacht'ı bu geleneğin bilinen bir örneğidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gehört typischerweise zur Schweizer Fasnacht (Karneval)?
+    options_de:
+      a: Umzüge, bei denen die Teilnehmenden Masken tragen
+      b: Das Schmücken von Tannenbäumen auf dem Dorfplatz
+      c: Ein Feuerwerk um Mitternacht am 1. August
+      d: Das Anzünden grosser Kerzen in Kirchen
+    explanation_de: Während der Fasnacht ziehen Gruppen in Umzügen durch die Strassen und tragen dabei
+      Masken und Kostüme. Die Basler Fasnacht ist ein bekanntes Beispiel für diese Tradition.

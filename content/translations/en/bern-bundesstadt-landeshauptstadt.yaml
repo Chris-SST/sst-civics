@@ -11,6 +11,22 @@ explanation: Bern is the seat of the Federal Council (Bundesrat) and the Federal
   and is referred to as the federal city. The Federal Constitution does not name a capital city, but Bern
   assumes this role. Zurich is the largest city, and Lausanne is the seat of the Federal Supreme Court
   (Bundesgericht).
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Stadt übernimmt in der Schweiz die Rolle der Hauptstadt?
+    options_de:
+      a: Bern
+      b: Genf
+      c: Lausanne
+      d: Zürich
+    explanation_de: Bern ist der Sitz des Bundesrates und der Bundesversammlung und wird als Bundesstadt
+      bezeichnet. Die Bundesverfassung nennt keine Hauptstadt, aber Bern übernimmt diese Rolle. Zürich
+      ist die grösste Stadt, und Lausanne ist der Sitz des Bundesgerichts.

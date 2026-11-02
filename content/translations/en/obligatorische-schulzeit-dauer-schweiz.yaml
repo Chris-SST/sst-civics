@@ -1,16 +1,34 @@
 id: obligatorische-schulzeit-dauer-schweiz
 lang: en
-source_version: 1
-question: How many years does compulsory schooling last in Switzerland, that is, the school attendance
-  required by law?
+source_version: 2
+question: How many years does compulsory schooling last in the canton of Zurich, if kindergarten is included?
 options:
   a: Eleven years
   b: Ten years
   c: Twelve years
   d: Nine years
-explanation: Compulsory schooling in Switzerland lasts eleven years. It begins with kindergarten (two
-  years) and includes primary school and lower secondary school. The cantons regulate schooling, but its
-  duration is harmonised across Switzerland.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: 'In the canton of Zurich, all children attend school on a compulsory basis for eleven years:
+  two years of kindergarten, six years of primary school and three years of lower secondary school (Sekundarstufe
+  I). Most cantons have standardised this duration through the HarmoS Concordat. However, some cantons
+  have not joined, and in some of them only one year of kindergarten is compulsory.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie viele Jahre dauert die obligatorische Schulzeit im Kanton Zürich, wenn der Kindergarten
+      eingerechnet wird?
+    options_de:
+      a: Elf Jahre
+      b: Zehn Jahre
+      c: Zwölf Jahre
+      d: Neun Jahre
+    explanation_de: 'Im Kanton Zürich besuchen alle Kinder die Schule obligatorisch während elf Jahren:
+      zwei Jahre Kindergarten, sechs Jahre Primarschule und drei Jahre Sekundarstufe I. Die meisten Kantone
+      haben diese Dauer durch das HarmoS-Konkordat vereinheitlicht. Einige Kantone sind jedoch nicht beigetreten,
+      und in einigen davon ist nur ein Jahr Kindergarten obligatorisch.'

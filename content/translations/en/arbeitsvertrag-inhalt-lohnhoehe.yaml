@@ -10,6 +10,22 @@ options:
 explanation: The employment contract sets out the most important conditions of the work, for example the
   duties, the working hours and the salary. The old-age and survivors' insurance (OASI) pension, value
   added tax and the health insurer premium are not determined in the employment contract.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird unter anderem im Arbeitsvertrag zwischen Arbeitgeber und Arbeitnehmer festgelegt?
+    options_de:
+      a: Die Höhe des Lohns
+      b: Die Höhe der AHV-Rente
+      c: Die Höhe der Mehrwertsteuer
+      d: Die Höhe der Krankenkassenprämie
+    explanation_de: Der Arbeitsvertrag legt die wichtigsten Bedingungen der Arbeit fest, zum Beispiel
+      die Aufgaben, die Arbeitszeiten und den Lohn. Die AHV-Rente, die Mehrwertsteuer und die Krankenkassenprämie
+      werden nicht im Arbeitsvertrag bestimmt.

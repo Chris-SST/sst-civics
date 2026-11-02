@@ -1,0 +1,30 @@
+id: roemer-badekultur-in-zuerich
+lang: tr
+source_version: 1
+question: Romalılar Zürih'e hangi yeniliği getirdi?
+options:
+  a: Matbaayı
+  b: Loncaları (Zünfte)
+  c: Hamam kültürünü
+  d: Reform hareketini
+explanation: Romalılar Zürih'e hamam kültürünü, yani Roma örneğine göre yapılmış kamusal hamamları getirdi.
+  Loncalar, matbaa ve Reform hareketi ise ancak Orta Çağ'a ve erken Yeni Çağ'a aittir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Neuerung brachten die Römer nach Zürich?
+    options_de:
+      a: Die Druckerei
+      b: Die Zünfte
+      c: Die Badekultur
+      d: Die Reformationsbewegung
+    explanation_de: Die Römer brachten die Badekultur nach Zürich, das heisst öffentliche Bäder, die nach
+      römischem Vorbild gebaut wurden. Die Zünfte, die Druckerei und die Reformationsbewegung gehören
+      hingegen erst ins Mittelalter und in die frühe Neuzeit.

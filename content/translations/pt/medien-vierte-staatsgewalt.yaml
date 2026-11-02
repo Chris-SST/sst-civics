@@ -1,0 +1,33 @@
+id: medien-vierte-staatsgewalt
+lang: pt
+source_version: 1
+question: Os meios de comunicação social são frequentemente designados por uma expressão especial que
+  descreve o seu papel no Estado. Que expressão é essa?
+options:
+  a: Segundo poder do Estado
+  b: Poder supremo do Estado
+  c: Primeiro poder do Estado
+  d: Quarto poder do Estado
+explanation: Os três poderes do Estado são o legislativo, o executivo e o judicial. Os meios de comunicação
+  social não fazem parte deles, mas fiscalizam a política e informam a população. Por isso, são frequentemente
+  chamados de quarto poder do Estado.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Medien werden oft mit einem besonderen Ausdruck bezeichnet, der ihre Rolle im Staat
+      beschreibt. Welcher Ausdruck ist das?
+    options_de:
+      a: Zweite Staatsgewalt
+      b: Oberste Staatsgewalt
+      c: Erste Staatsgewalt
+      d: Vierte Staatsgewalt
+    explanation_de: Die drei Staatsgewalten sind die gesetzgebende, die ausführende und die richterliche.
+      Die Medien gehören nicht dazu, aber sie kontrollieren die Politik und informieren die Bevölkerung.
+      Deshalb werden sie oft als vierte Staatsgewalt bezeichnet.

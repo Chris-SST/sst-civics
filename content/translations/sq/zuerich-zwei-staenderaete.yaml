@@ -1,0 +1,30 @@
+id: zuerich-zwei-staenderaete
+lang: sq
+source_version: 1
+question: Sa përfaqësues dërgon kantoni i Zyrihut në Këshillin e Shteteve (Ständerat)?
+options:
+  a: Një përfaqësues
+  b: Katër përfaqësues
+  c: Gjashtë përfaqësues
+  d: Dy përfaqësues
+explanation: Kantoni i Zyrihut është kanton i plotë dhe ka dy vende në Këshillin e Shteteve. Anëtarët
+  e Këshillit të Shteteve zgjidhen nga votuesit e kantonit. Vetëm gjysmëkantonet kanë nga një përfaqësues.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Vertreter schickt der Kanton Zürich in den Ständerat?
+    options_de:
+      a: Einen Vertreter
+      b: Vier Vertreter
+      c: Sechs Vertreter
+      d: Zwei Vertreter
+    explanation_de: Der Kanton Zürich ist ein Vollkanton und hat zwei Sitze im Ständerat. Die Mitglieder
+      des Ständerats werden von den Stimmberechtigten des Kantons gewählt. Nur Halbkantone haben je einen
+      Vertreter.

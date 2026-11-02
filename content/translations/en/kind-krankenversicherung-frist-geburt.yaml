@@ -9,6 +9,22 @@ options:
   d: within 6 months
 explanation: Parents must take out health insurance for a child within three months of the birth. If this
   deadline is met, insurance cover applies retroactively from the date of birth.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Innerhalb welcher Frist ab der Geburt muss für ein in der Schweiz lebendes Kind eine
+      Krankenversicherung bestehen?
+    options_de:
+      a: innerhalb von 12 Monaten
+      b: innerhalb von 3 Monaten
+      c: innerhalb von 14 Tagen
+      d: innerhalb von 6 Monaten
+    explanation_de: Eltern müssen für ein Kind innerhalb von drei Monaten nach der Geburt eine Krankenversicherung
+      abschliessen. Wird diese Frist eingehalten, gilt der Versicherungsschutz rückwirkend ab dem Geburtsdatum.

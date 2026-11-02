@@ -1,0 +1,29 @@
+id: kantonsregierung-zuerich-name-regierungsrat
+lang: pt
+source_version: 1
+question: Como se chama o governo do cantão de Zurique?
+options:
+  a: Obergericht
+  b: Conselho Cantonal (Kantonsrat)
+  c: Conselho Federal (Bundesrat)
+  d: Conselho de Governo (Regierungsrat)
+explanation: O governo do cantão de Zurique chama-se Conselho de Governo. O Conselho Cantonal é o parlamento;
+  o Obergericht pertence ao poder judicial.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Regierung des Kantons Zürich?
+    options_de:
+      a: Obergericht
+      b: Kantonsrat
+      c: Bundesrat
+      d: Regierungsrat
+    explanation_de: Die Regierung des Kantons Zürich heisst Regierungsrat. Der Kantonsrat ist das Parlament;
+      das Obergericht gehört zur richterlichen Gewalt.

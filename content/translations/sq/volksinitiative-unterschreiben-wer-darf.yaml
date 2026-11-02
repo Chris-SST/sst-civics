@@ -1,0 +1,36 @@
+id: volksinitiative-unterschreiben-wer-darf
+lang: sq
+source_version: 2
+question: Kush mund të nënshkruajë një nismë popullore (Volksinitiative) federale?
+options:
+  a: Të gjitha personat nga mosha 16 vjeç me vendbanim në Zvicër
+  b: Të gjitha personat nga mosha 18 vjeç me leje vendosjeje (leja C) (Niederlassungsbewilligung)
+  c: Vetëm anëtarët e një partie politike nga mosha 18 vjeç
+  d: Qytetarët zviceranë dhe qytetaret zvicerane nga mosha 18 vjeç
+explanation: Një nismë popullore federale mund ta nënshkruajë ai që ka të drejtë vote në nivel të Konfederatës.
+  Këta janë zviceranët dhe zvicerankat nga mosha 18 vjeç, edhe ata që jetojnë jashtë vendit, nëse janë
+  regjistruar në regjistrin zgjedhor. Përjashtohen vetëm personat që për shkak të paaftësisë së përhershme
+  për gjykim janë nën kujdestari gjithëpërfshirëse ose përfaqësohen nga një person i caktuar me mandat
+  kujdesi paraprak; të huajt nuk kanë të drejta politike në nivel të Konfederatës, as me lejen C.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer kann eine eidgenössische Volksinitiative unterschreiben?
+    options_de:
+      a: Alle Personen ab 16 Jahren mit Wohnsitz in der Schweiz
+      b: Alle Personen ab 18 Jahren mit Niederlassungsbewilligung (Bewilligung C)
+      c: Nur Mitglieder einer politischen Partei ab 18 Jahren
+      d: Schweizer Bürger und Schweizer Bürgerinnen ab 18 Jahren
+    explanation_de: Eine eidgenössische Volksinitiative kann unterschreiben, wer auf Ebene des Bundes
+      stimmberechtigt ist. Das sind die Schweizer und Schweizerinnen ab 18 Jahren, auch jene, die im Ausland
+      leben, wenn sie im Stimmregister eingetragen sind. Ausgeschlossen sind nur Personen, die wegen dauernder
+      Urteilsunfähigkeit unter umfassender Beistandschaft stehen oder durch eine von ihnen mit einem Vorsorgeauftrag
+      beauftragte Person vertreten werden; Ausländer haben auf Ebene des Bundes keine politischen Rechte,
+      auch nicht mit der Bewilligung C.

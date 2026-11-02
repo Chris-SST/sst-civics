@@ -22,7 +22,7 @@ sources:
 glossary:
 - Uhrmacherei
 - Wirtschaftszweig
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-243
@@ -44,3 +44,40 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt nicht ausdrücklich, dass die Schweiz an der Spitze steht; ergänzen:
+        «Die Schweiz ist wertmässig das grösste Uhrenexportland der Welt.»'
+      - 'Klein: Die Textilindustrie war früher in der Schweiz wichtig (etwa die St. Galler Stickerei);
+        falls das verwirren könnte, «Textilindustrie» durch eine klar falsche Antwort wie «Flugzeugbau»
+        ersetzen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Textilindustrie (z. B. St. Galler Stickerei) war früher international führend; die
+        Erklärung könnte kurz sagen, dass sie heute nicht mehr an der Spitze steht, damit die Abgrenzung
+        klar ist.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage lautet «seit langer Zeit international an der Spitze»; das ist leicht vage,
+        zumal die Schweiz auch in Pharma oder Schokolade stark ist. Die falschen Antworten (Textil, Schiffbau,
+        Automobilbau) sind aber klar falsch. Zur Präzisierung könnte man ergänzen: «bei Armbanduhren und
+        Luxusuhren».'
+      - 'Klein: Die Quelle 1 stützt die Aussage klar (wertmässig grösster Uhrenexporteur der Welt); die
+        Erklärung könnte dies kurz nennen, etwa «Die Schweiz ist wertmässig das grösste Uhrenexportland
+        der Welt».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

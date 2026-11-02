@@ -1,0 +1,31 @@
+id: helvetier-roemische-zeit-schweiz
+lang: it
+source_version: 1
+question: Quale popolo abitava, al tempo dei Romani, il territorio dell'odierna Svizzera?
+options:
+  a: Gli Unni
+  b: I Vichinghi
+  c: I Goti
+  d: Gli Elvezi
+explanation: Gli Elvezi erano una tribù celtica dell'Altopiano svizzero. I Romani li sottomisero e il
+  territorio divenne parte dell'Impero romano. Il nome latino Helvetia, con cui si designa la Svizzera,
+  ricorda ancora oggi questo popolo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Volk bewohnte zur Zeit der Römer das Gebiet der heutigen Schweiz?
+    options_de:
+      a: Die Hunnen
+      b: Die Wikinger
+      c: Die Goten
+      d: Die Helvetier
+    explanation_de: Die Helvetier waren ein keltischer Stamm des Schweizer Mittellandes. Die Römer unterwarfen
+      sie und das Gebiet wurde Teil des Römischen Reiches. Der lateinische Name Helvetia, mit dem die
+      Schweiz bezeichnet wird, erinnert noch heute an dieses Volk.

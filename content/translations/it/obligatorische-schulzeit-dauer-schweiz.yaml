@@ -1,0 +1,35 @@
+id: obligatorische-schulzeit-dauer-schweiz
+lang: it
+source_version: 2
+question: Quanti anni dura nel Cantone di Zurigo la scuola dell'obbligo, se si conta anche la scuola dell'infanzia?
+options:
+  a: Undici anni
+  b: Dieci anni
+  c: Dodici anni
+  d: Nove anni
+explanation: 'Nel Cantone di Zurigo tutti i bambini frequentano la scuola per undici anni in modo obbligatorio:
+  due anni di scuola dell''infanzia, sei anni di scuola elementare (Primarschule) e tre anni di scuola
+  secondaria di primo grado. La maggior parte dei Cantoni ha uniformato questa durata con il Concordato
+  HarmoS. Alcuni Cantoni, tuttavia, non vi hanno aderito e in alcuni di essi è obbligatorio solo un anno
+  di scuola dell''infanzia.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie viele Jahre dauert im Kanton Zürich die obligatorische Schule, wenn man auch den
+      Kindergarten mitzählt?
+    options_de:
+      a: Elf Jahre
+      b: Zehn Jahre
+      c: Zwölf Jahre
+      d: Neun Jahre
+    explanation_de: 'Im Kanton Zürich besuchen alle Kinder die Schule elf Jahre lang obligatorisch: zwei
+      Jahre Kindergarten, sechs Jahre Primarschule und drei Jahre Sekundarstufe I. Die Mehrheit der Kantone
+      hat diese Dauer mit dem HarmoS-Konkordat vereinheitlicht. Einige Kantone sind ihm jedoch nicht beigetreten,
+      und in einigen von ihnen ist nur ein Jahr Kindergarten obligatorisch.'

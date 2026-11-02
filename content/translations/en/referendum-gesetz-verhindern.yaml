@@ -9,6 +9,21 @@ options:
   d: They can dissolve Parliament and demand new elections.
 explanation: With a referendum, citizens entitled to vote can demand that a vote be held on a law passed
   by Parliament. If the people reject the law, it does not come into force.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was können Stimmberechtigte mit einem Referendum erreichen?
+    options_de:
+      a: Sie können selbst ein neues Gesetz schreiben und in Kraft setzen.
+      b: Sie können ein vom Parlament beschlossenes Gesetz verhindern.
+      c: Sie können die Mitglieder des Bundesrates aus dem Amt entfernen.
+      d: Sie können das Parlament auflösen und Neuwahlen verlangen.
+    explanation_de: Mit einem Referendum können Stimmberechtigte verlangen, dass über ein vom Parlament
+      beschlossenes Gesetz abgestimmt wird. Lehnt das Volk das Gesetz ab, tritt es nicht in Kraft.

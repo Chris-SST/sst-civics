@@ -1,0 +1,31 @@
+id: beliebteste-vereinssportart-fussball
+lang: pt
+source_version: 2
+question: Qual é o desporto mais praticado em clubes na Suíça?
+options:
+  a: Hóquei no gelo
+  b: Natação
+  c: Esqui
+  d: Futebol
+explanation: O futebol é o desporto mais popular em clubes na Suíça. A Associação Suíça de Futebol conta
+  com cerca de 300 000 membros em mais de 1300 clubes. Todos os fins de semana realizam-se milhares de
+  jogos em todo o país.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche ist die am meisten in Vereinen betriebene Sportart in der Schweiz?
+    options_de:
+      a: Eishockey
+      b: Schwimmen
+      c: Skifahren
+      d: Fussball
+    explanation_de: Fussball ist die beliebteste Sportart in Vereinen in der Schweiz. Der Schweizerische
+      Fussballverband zählt rund 300 000 Mitglieder in mehr als 1300 Vereinen. Jedes Wochenende finden
+      im ganzen Land Tausende von Spielen statt.

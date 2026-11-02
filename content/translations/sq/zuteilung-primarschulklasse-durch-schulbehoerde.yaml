@@ -1,0 +1,31 @@
+id: zuteilung-primarschulklasse-durch-schulbehoerde
+lang: sq
+source_version: 1
+question: Kush vendos në kantonin e Cyrihut se cilës klasë të shkollës fillore do t'i caktohet një fëmijë?
+options:
+  a: Bordi i shkollës (Schulpflege) ose drejtimi i shkollës
+  b: Departamenti i arsimit i Konfederatës
+  c: Kuvendi i komunës (Gemeindeversammlung)
+  d: Prindërit e fëmijës
+explanation: Bordi i shkollës ose drejtimi i shkollës i cakton fëmijët nëpër klasa. Prindërit nuk mund
+  ta zgjedhin lirisht klasën. Në këtë mënyrë shkolla organizon punën e saj dhe madhësinë e klasave.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet im Kanton Zürich, welcher Klasse der Primarschule ein Kind zugeteilt
+      wird?
+    options_de:
+      a: Die Schulpflege oder die Schulleitung
+      b: Das Bildungsdepartement des Bundes
+      c: Die Gemeindeversammlung
+      d: Die Eltern des Kindes
+    explanation_de: Die Schulpflege oder die Schulleitung teilt die Kinder den Klassen zu. Die Eltern
+      können die Klasse nicht frei wählen. Auf diese Weise organisiert die Schule ihre Arbeit und die
+      Grösse der Klassen.

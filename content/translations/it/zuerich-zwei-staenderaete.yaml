@@ -1,0 +1,31 @@
+id: zuerich-zwei-staenderaete
+lang: it
+source_version: 1
+question: Quanti rappresentanti e rappresentanti invia il Cantone di Zurigo al Consiglio degli Stati (Ständerat)?
+options:
+  a: Un rappresentante
+  b: Quattro rappresentanti
+  c: Sei rappresentanti
+  d: Due rappresentanti
+explanation: Il Cantone di Zurigo è un Cantone intero e ha due seggi nel Consiglio degli Stati. Le consigliere
+  e i consiglieri agli Stati sono eletti dall'elettorato del Cantone. Solo i semicantoni hanno un solo
+  rappresentante ciascuno.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Vertreterinnen und Vertreter entsendet der Kanton Zürich in den Ständerat?
+    options_de:
+      a: Einen Vertreter
+      b: Vier Vertreter
+      c: Sechs Vertreter
+      d: Zwei Vertreter
+    explanation_de: Der Kanton Zürich ist ein ganzer Kanton und hat zwei Sitze im Ständerat. Die Ständerätinnen
+      und Ständeräte werden von der Wählerschaft des Kantons gewählt. Nur die Halbkantone haben je einen
+      einzigen Vertreter.

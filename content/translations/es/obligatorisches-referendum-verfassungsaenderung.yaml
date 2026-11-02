@@ -1,0 +1,32 @@
+id: obligatorisches-referendum-verfassungsaenderung
+lang: es
+source_version: 1
+question: ¿Sobre qué proyecto se debe votar siempre en Suiza, incluso si no se recogen firmas?
+options:
+  a: Sobre cada nueva ley federal
+  b: Sobre cada modificación de la Constitución Federal
+  c: Sobre cada ordenanza del Consejo Federal (Bundesrat)
+  d: Sobre cada presupuesto de la Confederación
+explanation: Toda modificación de la Constitución Federal debe someterse obligatoriamente al pueblo y
+  a los cantones. Esto se llama referéndum obligatorio. Las leyes federales solo están sujetas al referéndum
+  facultativo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Über welches Vorhaben muss in der Schweiz immer abgestimmt werden, auch wenn keine Unterschriften
+      gesammelt werden?
+    options_de:
+      a: Über jedes neue Bundesgesetz
+      b: Über jede Änderung der Bundesverfassung
+      c: Über jede Verordnung des Bundesrates
+      d: Über jedes Budget des Bundes
+    explanation_de: Jede Änderung der Bundesverfassung muss obligatorisch dem Volk und den Kantonen unterbreitet
+      werden. Dies nennt man obligatorisches Referendum. Die Bundesgesetze unterstehen nur dem fakultativen
+      Referendum.

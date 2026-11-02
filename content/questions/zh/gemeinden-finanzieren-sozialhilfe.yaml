@@ -23,7 +23,7 @@ glossary:
 - Sozialhilfe
 - Gemeinde
 - Notlage
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-202
@@ -45,3 +45,47 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt absolut, dass die Gemeinden die Kosten «tragen», obwohl der Kanton
+        laut Quelle Staatsbeiträge zahlt und die Kosten für bestimmte Gruppen übernimmt; besser: «Die
+        Gemeinden sind grundsätzlich für die Sozialhilfe zuständig und bezahlen sie. Der Kanton unterstützt
+        sie mit Beiträgen.»'
+      - 'Klein: Die Broschüre nennt als Grund für den Finanzausgleich ärmere Gemeinden oder Gemeinden
+        mit hohen Sozialausgaben, nicht kleinere Gemeinden; besser: «Das kann Gemeinden mit hohen Sozialausgaben
+        stark belasten.»'
+      - 'Klein: Das Wort «allein» in Antwort a) macht diese Antwort sehr leicht als falsch erkennbar;
+        besser einfach «Die Kirchen» schreiben.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, die Gemeinden «tragen deren Kosten», doch der Kanton beteiligt sich
+        an einem Teil der Kosten (etwa für bestimmte Personengruppen), darum besser: «Sie tragen den grössten
+        Teil der Kosten.»'
+      - 'Klein: Der Finanzausgleich ist nicht speziell für die Sozialhilfe da, sondern gleicht allgemein
+        Unterschiede zwischen den Gemeinden aus; besser: «Der Finanzausgleich hilft Gemeinden mit hohen
+        Lasten.»'
+      - 'Klein: Das Wort «allein» in Antwort a) macht diese Antwort sehr leicht als falsch erkennbar;
+        besser einfach «Die Kirchen» oder eine andere plausible Antwort wie «Der Bund».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, die Gemeinden «tragen deren Kosten». Das ist vereinfacht, denn der
+        Kanton zahlt Staatsbeiträge und übernimmt einzelne Fälle. Besser wäre: «Die Gemeinden tragen grundsätzlich
+        die Kosten; der Kanton unterstützt sie mit Beiträgen.»'
+      - 'Klein: Der Satz «Darum gibt es den Finanzausgleich» ist etwas verkürzt. Besser wäre: «Der Finanzausgleich
+        unterstützt unter anderem Gemeinden mit hohen Sozialausgaben.»'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

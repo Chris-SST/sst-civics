@@ -1,0 +1,33 @@
+id: bilaterale-eins-basis-eu-beziehungen
+lang: sq
+source_version: 1
+question: Cilat marrëveshje, të miratuara nga populli në vitin 2000, përbëjnë bazën e marrëdhënieve të
+  sotme të Zvicrës me BE-në?
+options:
+  a: Marrëveshjet dypalëshe I (Bilaterale I)
+  b: Marrëveshja për EEA-në
+  c: Marrëveshja e Shengenit vetëm
+  d: Marrëveshja e anëtarësimit në BE
+explanation: Populli votues miratoi Marrëveshjet dypalëshe I në vitin 2000. Ato rregullojnë qasjen në
+  disa fusha të tregut të brendshëm, për shembull lirinë e lëvizjes së personave dhe transportin tokësor.
+  Marrëveshjen për EEA-në populli nuk e miratoi në vitin 1992.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Abkommen, die 2000 vom Volk angenommen wurden, bilden die Grundlage der heutigen
+      Beziehungen der Schweiz zur EU?
+    options_de:
+      a: Die Bilateralen Abkommen I
+      b: Das EWR-Abkommen
+      c: Nur das Schengen-Abkommen
+      d: Das EU-Beitrittsabkommen
+    explanation_de: Das stimmberechtigte Volk hat die Bilateralen Abkommen I im Jahr 2000 angenommen.
+      Sie regeln den Zugang in mehreren Bereichen des Binnenmarktes, zum Beispiel die Personenfreizügigkeit
+      und den Landverkehr. Das EWR-Abkommen hat das Volk 1992 nicht angenommen.

@@ -1,0 +1,31 @@
+id: aussenbeziehungen-zustaendigkeit-bund
+lang: tr
+source_version: 1
+question: İsviçre'de diğer devletlerle ilişkileri düzenlemekten esas olarak kim sorumludur?
+options:
+  a: Kanton Hükümetleri Konferansı
+  b: Konfederasyon
+  c: Kantonlar birlikte
+  d: Sınırdaki belediyeler (Gemeinden)
+explanation: Federal Anayasa'ya (Bundesverfassung) göre dış politika Konfederasyonun görevidir. Kantonlar
+  kendi yetki alanlarında yabancı ülkelerle iş birliği yapabilir, ancak genel sorumluluk Konfederasyondadır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz hauptsächlich für die Regelung der Beziehungen zu anderen Staaten
+      zuständig?
+    options_de:
+      a: Konferenz der Kantonsregierungen
+      b: Der Bund
+      c: Die Kantone gemeinsam
+      d: Die Grenzgemeinden
+    explanation_de: Gemäss der Bundesverfassung ist die Aussenpolitik Aufgabe des Bundes. Die Kantone
+      können in ihren eigenen Zuständigkeitsbereichen mit dem Ausland zusammenarbeiten, aber die Gesamtverantwortung
+      liegt beim Bund.

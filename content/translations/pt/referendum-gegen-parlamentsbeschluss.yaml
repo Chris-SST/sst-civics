@@ -1,0 +1,31 @@
+id: referendum-gegen-parlamentsbeschluss
+lang: pt
+source_version: 1
+question: Contra que decisões se dirige um referendo a nível federal?
+options:
+  a: Contra leis aprovadas pelo Conselho Nacional (Nationalrat) e pelo Conselho dos Estados (Ständerat)
+  b: Contra decisões tomadas pela Chancelaria Federal (Bundeskanzlei)
+  c: Contra sentenças proferidas pelo Tribunal Federal (Bundesgericht)
+  d: Contra regulamentos emitidos por comunas (Gemeinden) individuais
+explanation: Um referendo dirige-se contra leis aprovadas pelo Parlamento. O Parlamento é composto pelo
+  Conselho Nacional e pelo Conselho dos Estados. As sentenças judiciais e as decisões administrativas
+  não podem ser contestadas por meio de um referendo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen welche Entscheide richtet sich ein Referendum auf Bundesebene?
+    options_de:
+      a: Gegen Gesetze, die vom Nationalrat und vom Ständerat verabschiedet wurden
+      b: Gegen Entscheide, die von der Bundeskanzlei getroffen wurden
+      c: Gegen Urteile, die vom Bundesgericht gefällt wurden
+      d: Gegen Verordnungen, die von einzelnen Gemeinden erlassen wurden
+    explanation_de: Ein Referendum richtet sich gegen Gesetze, die vom Parlament verabschiedet wurden.
+      Das Parlament besteht aus dem Nationalrat und dem Ständerat. Gerichtsurteile und Verwaltungsentscheide
+      können nicht mittels eines Referendums angefochten werden.

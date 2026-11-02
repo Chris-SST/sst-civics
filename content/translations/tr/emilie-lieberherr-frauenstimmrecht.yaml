@@ -1,0 +1,29 @@
+id: emilie-lieberherr-frauenstimmrecht
+lang: tr
+source_version: 1
+question: Zürihli siyasetçi Emilie Lieberherr hangi konuda mücadele etti?
+options:
+  a: Zürih Havalimanı'nın inşası için
+  b: İsviçre'nin BM'ye katılması için
+  c: Kadınların oy ve seçilme hakkı için
+  d: belediye halk toplantısının (Gemeindeversammlung) kaldırılması için
+explanation: Emilie Lieberherr 1960'lı yıllarda kadınların oy ve seçilme hakkı için mücadele etti. Konfederasyon
+  düzeyinde bu hak 1971'de getirildi. Zürih kantonunda ise 1970'ten beri geçerlidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für was hat die Zürcher Politikerin Emilie Lieberherr gekämpft?
+    options_de:
+      a: für den Bau des Flughafens Zürich
+      b: für den Beitritt der Schweiz zur UNO
+      c: für das Stimm- und Wahlrecht der Frauen
+      d: für die Abschaffung der Gemeindeversammlung
+    explanation_de: Emilie Lieberherr hat in den 1960er-Jahren für das Stimm- und Wahlrecht der Frauen
+      gekämpft. Auf Bundesebene wurde dieses Recht 1971 eingeführt. Im Kanton Zürich gilt es seit 1970.

@@ -1,0 +1,33 @@
+id: gemeindeversammlung-beschluss-finanzvoranschlag
+lang: it
+source_version: 1
+question: Su che cosa decidono ogni anno, durante l'assemblea, gli aventi diritto di voto in un Comune
+  (Gemeinde) zurighese con assemblea comunale (Gemeindeversammlung)?
+options:
+  a: Sull'importo delle imposte della Confederazione
+  b: Sul diritto penale nel Cantone
+  c: Sul preventivo finanziario del Comune
+  d: Sui piani di studio della scuola dell'obbligo
+explanation: Nei Comuni con assemblea comunale gli aventi diritto di voto decidono su affari importanti,
+  tra cui il preventivo finanziario (budget) e il moltiplicatore d'imposta. Il diritto penale e le imposte
+  della Confederazione non sono di competenza del Comune.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Worüber entscheiden die Stimmberechtigten in einer Zürcher Gemeinde mit Gemeindeversammlung
+      jedes Jahr an der Versammlung?
+    options_de:
+      a: Über die Höhe der Bundessteuern
+      b: Über das Strafrecht im Kanton
+      c: Über das Budget der Gemeinde
+      d: Über die Lehrpläne der obligatorischen Schule
+    explanation_de: In den Gemeinden mit Gemeindeversammlung entscheiden die Stimmberechtigten über wichtige
+      Geschäfte, darunter das Budget (den Voranschlag) und den Steuerfuss. Das Strafrecht und die Bundessteuern
+      fallen nicht in die Zuständigkeit der Gemeinde.

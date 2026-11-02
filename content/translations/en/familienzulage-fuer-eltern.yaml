@@ -10,6 +10,22 @@ options:
   d: The family allowance
 explanation: Family allowances help families to bear part of the cost of children. They consist of child
   allowances and training allowances. Self-employed people can also receive them.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Leistung erhalten Eltern in der Schweiz, wenn sie angestellt oder selbstständig
+      erwerbstätig sind und Kinder haben?
+    options_de:
+      a: Die Invalidenrente
+      b: Das Arbeitslosengeld
+      c: Die Ergänzungsleistung zur Alters- und Hinterlassenenversicherung (AHV)
+      d: Die Familienzulage
+    explanation_de: Familienzulagen helfen Familien, einen Teil der Kosten für Kinder zu tragen. Sie bestehen
+      aus Kinderzulagen und Ausbildungszulagen. Auch Selbstständigerwerbende können sie erhalten.

@@ -1,0 +1,31 @@
+id: aktives-wahlrecht-bedeutung
+lang: en
+source_version: 3
+question: What does the active right to vote mean?
+options:
+  a: The right to found a political party
+  b: The right to be elected to an office yourself
+  c: The right to submit parliamentary proposals in Parliament
+  d: The right to take part in elections and votes and to cast your own vote
+explanation: Anyone who has the active right to vote may cast their own vote in elections and votes, for
+  example in the election of the National Council (Nationalrat) or in a popular vote. The right to be
+  elected to an office yourself, on the other hand, is called the passive right to vote.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Was bedeutet das aktive Wahlrecht?
+    options_de:
+      a: Das Recht, eine politische Partei zu gründen
+      b: Das Recht, selbst in ein Amt gewählt zu werden
+      c: Das Recht, im Parlament parlamentarische Vorstösse einzureichen
+      d: Das Recht, an Wahlen und Abstimmungen teilzunehmen und die eigene Stimme abzugeben
+    explanation_de: Wer das aktive Wahlrecht hat, darf bei Wahlen und Abstimmungen die eigene Stimme abgeben,
+      zum Beispiel bei der Wahl des Nationalrats oder bei einer Volksabstimmung. Das Recht, selbst in
+      ein Amt gewählt zu werden, nennt man dagegen das passive Wahlrecht.

@@ -1,0 +1,28 @@
+id: rhone-endet-im-mittelmeer
+lang: tr
+source_version: 1
+question: Valais kantonunda doğan Rhône nehri nerede sona erer?
+options:
+  a: Kuzey Denizi'nde
+  b: Atlas Okyanusu'nda
+  c: Akdeniz'de
+  d: Karadeniz'de
+explanation: Rhône nehri Cenevre Gölü'nden geçer ve Fransa üzerinden akmaya devam eder. Akdeniz'e dökülür.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo mündet die Rhone, die im Kanton Wallis entspringt?
+    options_de:
+      a: In der Nordsee
+      b: Im Atlantischen Ozean
+      c: Im Mittelmeer
+      d: Im Schwarzen Meer
+    explanation_de: Die Rhone fliesst durch den Genfersee und fliesst weiter über Frankreich. Sie mündet
+      ins Mittelmeer.

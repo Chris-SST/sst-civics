@@ -10,6 +10,22 @@ options:
 explanation: The Romans introduced bathing culture to Zurich, that is, public baths modelled on Roman
   examples. Guilds, book printing and the Reformation belong only to the Middle Ages and the early modern
   period.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Neuerung brachten die Römer nach Zürich?
+    options_de:
+      a: Den Buchdruck
+      b: Die Zünfte
+      c: Die Badekultur
+      d: Die Reformation
+    explanation_de: Die Römer führten in Zürich die Badekultur ein, das heisst öffentliche Bäder nach
+      römischem Vorbild. Zünfte, Buchdruck und Reformation gehören erst dem Mittelalter und der frühen
+      Neuzeit an.

@@ -1,0 +1,33 @@
+id: gemeindeversammlung-beschluss-finanzvoranschlag
+lang: pt
+source_version: 1
+question: Sobre o que decidem anualmente os cidadãos com direito de voto numa comuna (Gemeinde) zuriquense
+  com assembleia municipal (Gemeindeversammlung) na assembleia?
+options:
+  a: Sobre o montante dos impostos da Confederação
+  b: Sobre o direito penal no cantão
+  c: Sobre o orçamento financeiro da comuna
+  d: Sobre os planos de estudos da escola obrigatória
+explanation: Nas comunas com assembleia municipal, os cidadãos com direito de voto decidem sobre assuntos
+  importantes, entre eles o orçamento financeiro (budget) e a taxa de imposto. O direito penal e os impostos
+  da Confederação não são da competência da comuna.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Worüber entscheiden die Stimmberechtigten in einer Zürcher Gemeinde mit Gemeindeversammlung
+      jährlich an der Versammlung?
+    options_de:
+      a: Über die Höhe der Steuern des Bundes
+      b: Über das Strafrecht im Kanton
+      c: Über den Finanzhaushalt der Gemeinde
+      d: Über die Lehrpläne der obligatorischen Schule
+    explanation_de: In Gemeinden mit Gemeindeversammlung entscheiden die Stimmberechtigten über wichtige
+      Angelegenheiten, darunter den Finanzhaushalt (Budget) und den Steuersatz. Das Strafrecht und die
+      Steuern des Bundes fallen nicht in die Zuständigkeit der Gemeinde.

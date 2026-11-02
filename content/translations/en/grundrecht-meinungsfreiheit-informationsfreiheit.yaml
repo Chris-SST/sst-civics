@@ -11,6 +11,23 @@ options:
 explanation: The Federal Constitution protects freedom of opinion and information in Article 16. Every
   person may freely obtain information from generally accessible sources. This is an important foundation
   of democracy.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht schützt die Freiheit, sich seine eigene Meinung zu bilden und sich
+      aus allgemein zugänglichen Quellen zu informieren?
+    options_de:
+      a: Niederlassungsfreiheit
+      b: Meinungs- und Informationsfreiheit
+      c: Wirtschaftsfreiheit
+      d: Versammlungsfreiheit
+    explanation_de: Die Bundesverfassung schützt die Meinungs- und Informationsfreiheit in Artikel 16.
+      Jede Person darf sich frei aus allgemein zugänglichen Quellen informieren. Dies ist eine wichtige
+      Grundlage der Demokratie.

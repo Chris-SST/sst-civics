@@ -23,7 +23,7 @@ sources:
 glossary:
 - Pfäffikersee
 - Kanton
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-292
@@ -44,3 +44,41 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt «grenzen teils an Zürich», obwohl Thurgau, St. Gallen und Zug alle
+        an den Kanton Zürich grenzen; besser: «Die anderen genannten Kantone grenzen an Zürich, der See
+        liegt aber nicht in ihrem Gebiet.»'
+      - 'Klein: Statt «einer der grösseren Seen» sollte die Erklärung genauer sein, wie es die Broschüre
+        des Kantons ist: «Er ist nach dem Zürichsee und dem Greifensee der drittgrösste See im Kanton
+        Zürich.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung ist «grenzen teils an Zürich» ungenau, denn Thurgau, St. Gallen und Zug
+        grenzen alle an den Kanton Zürich; besser: «Die anderen genannten Kantone grenzen zwar an Zürich,
+        der See liegt aber nicht auf ihrem Gebiet.»'
+      - 'Klein: Die Erklärung könnte konkreter sein, etwa: «Er ist nach dem Zürichsee und dem Greifensee
+        der drittgrösste See im Kanton.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, der Pfäffikersee sei «einer der grösseren Seen» im Kanton; genauer
+        und mit der Broschüre übereinstimmend wäre «der drittgrösste See im Kanton Zürich».'
+      - 'Klein: Die Aussage, die anderen Kantone grenzten «teils» an Zürich, ist ungenau, denn Thurgau,
+        St. Gallen und Zug grenzen alle an Zürich; besser wäre «Die anderen Kantone grenzen zwar an Zürich,
+        der See liegt aber nicht dort».'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

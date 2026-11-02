@@ -1,0 +1,30 @@
+id: reformation-neue-christliche-richtung
+lang: pt
+source_version: 1
+question: Qual corrente cristã surgiu da Reforma no século XVI?
+options:
+  a: O cristianismo copta
+  b: O cristianismo católico romano
+  c: O cristianismo ortodoxo
+  d: O cristianismo protestante
+explanation: A Reforma foi um movimento de renovação no seio da Igreja da Idade Média. Dela surgiu o cristianismo
+  protestante. Em Zurique, atuou nesse contexto Huldrych Zwingli.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche christliche Strömung ging im 16. Jahrhundert aus der Reformation hervor?
+    options_de:
+      a: Das koptische Christentum
+      b: Das römisch-katholische Christentum
+      c: Das orthodoxe Christentum
+      d: Das protestantische Christentum
+    explanation_de: Die Reformation war eine Erneuerungsbewegung innerhalb der Kirche des Mittelalters.
+      Aus ihr ging das protestantische Christentum hervor. In Zürich wirkte in diesem Zusammenhang Huldrych
+      Zwingli.

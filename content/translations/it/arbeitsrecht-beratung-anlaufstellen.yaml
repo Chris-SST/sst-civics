@@ -1,0 +1,31 @@
+id: arbeitsrecht-beratung-anlaufstellen
+lang: it
+source_version: 1
+question: Chi può aiutare in caso di domande sul diritto del lavoro?
+options:
+  a: La commissione scolastica (Schulpflege) e la parrocchia
+  b: Gli avvocati, i sindacati e i tribunali del lavoro
+  c: Le aziende di trasporto pubblico e la Posta
+  d: Gli uffici dello stato civile e il controllo degli abitanti
+explanation: In caso di domande sul diritto del lavoro ci sono diversi punti di riferimento. Tra questi
+  vi sono gli avvocati e le avvocate, i sindacati e i tribunali del lavoro. Gli altri servizi sono competenti
+  per altri compiti.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann bei Fragen zum Arbeitsrecht helfen?
+    options_de:
+      a: Die Schulpflege und die Kirchgemeinde
+      b: Die Anwälte, die Gewerkschaften und die Arbeitsgerichte
+      c: Die Unternehmen des öffentlichen Verkehrs und die Post
+      d: Die Zivilstandsämter und die Einwohnerkontrolle
+    explanation_de: Bei Fragen zum Arbeitsrecht gibt es verschiedene Anlaufstellen. Dazu gehören die Anwältinnen
+      und Anwälte, die Gewerkschaften und die Arbeitsgerichte. Die anderen Stellen sind für andere Aufgaben
+      zuständig.

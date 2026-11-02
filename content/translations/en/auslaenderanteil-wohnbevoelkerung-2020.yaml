@@ -1,16 +1,33 @@
 id: auslaenderanteil-wohnbevoelkerung-2020
 lang: en
-source_version: 1
-question: Approximately what proportion of Switzerland's permanent resident population did foreign nationals
-  make up in 2020?
+source_version: 2
+question: Approximately what proportion of the permanent resident population of Switzerland did foreign
+  nationals make up in 2020?
 options:
   a: about three fifths
   b: about one tenth
   c: about half
   d: about a quarter
-explanation: In 2020, around a quarter of the permanent resident population was of foreign nationality.
-  This corresponds to about 2.1 million out of 8.6 million people. Compared with other European countries,
-  Switzerland therefore has a high proportion of foreign nationals.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: In 2020, around a quarter of the permanent resident population did not hold a Swiss passport.
+  At the end of 2020, this was around 2.2 million out of 8.7 million people, so about 25 per cent. Compared
+  with other countries in Europe, this proportion is high.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welchen ungefähren Anteil an der ständigen Wohnbevölkerung der Schweiz machten Ausländerinnen
+      und Ausländer im Jahr 2020 aus?
+    options_de:
+      a: etwa drei Fünftel
+      b: etwa ein Zehntel
+      c: etwa die Hälfte
+      d: etwa ein Viertel
+    explanation_de: Im Jahr 2020 besass rund ein Viertel der ständigen Wohnbevölkerung keinen Schweizer
+      Pass. Ende 2020 waren das rund 2,2 Millionen von 8,7 Millionen Personen, also etwa 25 Prozent. Im
+      Vergleich zu anderen Ländern in Europa ist dieser Anteil hoch.

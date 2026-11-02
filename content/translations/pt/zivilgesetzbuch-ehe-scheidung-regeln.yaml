@@ -1,0 +1,33 @@
+id: zivilgesetzbuch-ehe-scheidung-regeln
+lang: pt
+source_version: 1
+question: Qual lei regula, entre outras matérias, como um casamento é celebrado e como é dissolvido por
+  divórcio?
+options:
+  a: O Código Civil
+  b: O Código Penal
+  c: A Lei do Asilo
+  d: A Lei do Tribunal Federal (Bundesgerichtsgesetz)
+explanation: O Código Civil regula o direito das pessoas, o direito da família, o direito das sucessões
+  e os direitos reais. Isso inclui também a celebração do casamento e o divórcio. O Código Penal, por
+  sua vez, trata das infrações penais e das penas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gesetz regelt unter anderem, wie eine Ehe geschlossen und wie sie durch Scheidung
+      aufgelöst wird?
+    options_de:
+      a: Das Zivilgesetzbuch
+      b: Das Strafgesetzbuch
+      c: Das Asylgesetz
+      d: Das Bundesgerichtsgesetz
+    explanation_de: Das Zivilgesetzbuch regelt das Personenrecht, das Familienrecht, das Erbrecht und
+      das Sachenrecht. Dazu gehören auch die Eheschliessung und die Scheidung. Das Strafgesetzbuch hingegen
+      behandelt die Straftaten und die Strafen.

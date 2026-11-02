@@ -18,7 +18,7 @@ sources:
   checked: &id001 2026-11-02
 glossary:
 - Neutralität
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-001
@@ -39,3 +39,35 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «Das schliesst Gespräche und humanitäre Hilfe nicht aus» könnte konkreter auf
+        die «guten Dienste» der Schweiz verweisen, die in der Quelle genannt werden, etwa: «Die Schweiz
+        kann trotzdem vermitteln (gute Dienste) und humanitäre Hilfe leisten.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Wendung «ergreift nicht Partei für eine der Konfliktparteien» wiederholt das Wort
+        «Partei»; einfacher wäre «Die Schweiz stellt sich auf keine Seite der Konfliktparteien».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung könnte «Kriegspartei» zu «Konfliktpartei» angepasst werden, damit sie
+        zur Frage und zur Antwort c) passt.'
+      - 'Klein: Antwort a) ist für Lernende deutlich falsch, weil sie mit «jedes Kriegsgebiet» übertreibt.
+        Das schadet der Eindeutigkeit nicht, die Frage könnte aber mit einer weniger offensichtlichen
+        Alternative etwas besser unterscheiden.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

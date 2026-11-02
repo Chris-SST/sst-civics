@@ -18,7 +18,7 @@ sources:
 glossary:
 - Kantonsregierung
 - Regierungsrat
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-099
@@ -38,3 +38,36 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sollte den Fachbegriff «Regierungsrat» nennen und ergänzen, dass die sieben
+        Mitglieder alle vier Jahre vom Volk gewählt werden, zum Beispiel: «Die Zürcher Kantonsregierung
+        heisst Regierungsrat und hat sieben Mitglieder, die alle vier Jahre vom Volk gewählt werden.»'
+      - 'Klein: «in der Regel» ist unnötig, denn laut Quelle steht jedes der sieben Mitglieder einer der
+        sieben Direktionen vor; besser: «Jedes Mitglied leitet eine der sieben Direktionen der kantonalen
+        Verwaltung.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt den amtlichen Namen der Kantonsregierung nicht; ergänzen Sie zum Beispiel
+        «Die Kantonsregierung heisst Regierungsrat», weil dieser Begriff auch im Test vorkommt.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, jedes Mitglied leite «in der Regel» eine Direktion. Laut Quelle stehen
+        die sieben Mitglieder den sieben Direktionen vor, also genau eine pro Mitglied. Man könnte «in
+        der Regel» streichen oder die Zahl der sieben Direktionen nennen.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

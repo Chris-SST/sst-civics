@@ -1,0 +1,35 @@
+id: pensionskasse-zweiter-pfeiler-altersvorsorge
+lang: pt
+source_version: 1
+question: A previdência para a velhice na Suíça assenta em três pilares. Que instituição constitui o segundo
+  pilar?
+options:
+  a: As prestações complementares ao seguro de velhice e sobrevivência (AHV)
+  b: O seguro de velhice e sobrevivência (AHV) (seguro estatal de pensões)
+  c: A caixa de pensões (Pensionskasse) (previdência profissional)
+  d: A conta de poupança privada com dedução fiscal (pilar 3a)
+explanation: A caixa de pensões pertence à previdência profissional e constitui o segundo pilar. Complementa
+  o seguro de velhice e sobrevivência, para que os reformados possam manter de forma adequada o seu padrão
+  de vida habitual. O seguro de velhice e sobrevivência é o primeiro pilar, a previdência privada é o
+  terceiro pilar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Altersvorsorge in der Schweiz beruht auf drei Säulen. Welche Einrichtung bildet die
+      zweite Säule?
+    options_de:
+      a: Die Ergänzungsleistungen zur Alters- und Hinterlassenenversicherung (AHV)
+      b: Die Alters- und Hinterlassenenversicherung (AHV) (staatliche Rentenversicherung)
+      c: Die Pensionskasse (berufliche Vorsorge)
+      d: Das private Sparkonto mit Steuerabzug (Säule 3a)
+    explanation_de: Die Pensionskasse gehört zur beruflichen Vorsorge und bildet die zweite Säule. Sie
+      ergänzt die Alters- und Hinterlassenenversicherung, damit die Rentner ihren gewohnten Lebensstandard
+      angemessen beibehalten können. Die Alters- und Hinterlassenenversicherung ist die erste Säule, die
+      private Vorsorge ist die dritte Säule.

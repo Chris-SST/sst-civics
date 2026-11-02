@@ -1,0 +1,30 @@
+id: rechtsstaat-keine-festnahme-ohne-grund
+lang: pt
+source_version: 1
+question: O que vale num Estado de direito em matéria de detenção e prisão?
+options:
+  a: O Estado não pode deter nem prender ninguém sem motivo.
+  b: O Estado pode manter pessoas detidas segundo o seu próprio critério.
+  c: O governo pode colocar críticos em prisão preventiva por precaução.
+  d: Só os estrangeiros e as estrangeiras podem ser detidos sem motivo.
+explanation: Num Estado de direito, a atuação do Estado está vinculada ao direito. Uma detenção ou prisão
+  requer um motivo previsto na lei. Isto protege a liberdade das pessoas contra a arbitrariedade.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in einem Rechtsstaat in Bezug auf Festnahme und Haft?
+    options_de:
+      a: Der Staat darf niemanden ohne Grund festnehmen oder inhaftieren.
+      b: Der Staat darf Personen nach eigenem Ermessen in Haft halten.
+      c: Die Regierung darf Kritiker vorsorglich in Untersuchungshaft nehmen.
+      d: Nur Ausländer und Ausländerinnen dürfen ohne Grund festgenommen werden.
+    explanation_de: In einem Rechtsstaat ist das Handeln des Staates an das Recht gebunden. Eine Festnahme
+      oder Haft erfordert einen im Gesetz vorgesehenen Grund. Dies schützt die Freiheit der Menschen vor
+      Willkür.

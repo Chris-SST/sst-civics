@@ -1,0 +1,31 @@
+id: baudirektion-zuerich-kantonsverwaltung-direktion
+lang: fr
+source_version: 1
+question: Lequel des services suivants est une direction de l'administration du canton de Zurich ?
+options:
+  a: La direction des communes (Gemeindedirektion)
+  b: La direction des travaux publics (Baudirektion)
+  c: La direction de la ville (Stadtdirektion)
+  d: La direction de la Confédération (Bundesdirektion)
+explanation: La direction des travaux publics (Baudirektion) fait partie des directions de l'administration
+  du canton de Zurich. L'administration cantonale est divisée en plusieurs directions, dirigées chacune
+  par un membre du Conseil d'État (Regierungsrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Stellen ist eine Direktion der Verwaltung des Kantons Zürich?
+    options_de:
+      a: Die Direktion der Gemeinden (Gemeindedirektion)
+      b: Die Direktion der öffentlichen Bauten (Baudirektion)
+      c: Die Direktion der Stadt (Stadtdirektion)
+      d: Die Direktion des Bundes (Bundesdirektion)
+    explanation_de: Die Direktion der öffentlichen Bauten (Baudirektion) gehört zu den Direktionen der
+      Verwaltung des Kantons Zürich. Die Kantonsverwaltung ist in mehrere Direktionen gegliedert, die
+      jeweils von einem Mitglied des Regierungsrates geleitet werden.

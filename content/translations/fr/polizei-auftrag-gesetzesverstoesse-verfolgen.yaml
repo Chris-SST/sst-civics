@@ -1,0 +1,31 @@
+id: polizei-auftrag-gesetzesverstoesse-verfolgen
+lang: fr
+source_version: 1
+question: Laquelle de ces tâches fait partie de la mission de la police ?
+options:
+  a: Poursuivre les infractions à la loi
+  b: Organiser des votations populaires
+  c: Adopter les lois du pays
+  d: Prononcer des jugements contre les auteurs d'infractions
+explanation: La police veille à la sécurité et à l'ordre public et poursuit les infractions à la loi.
+  Elle élucide les infractions pénales et transmet les résultats. Les lois sont adoptées par le Parlement,
+  les jugements sont rendus par les tribunaux.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche dieser Aufgaben gehört zum Auftrag der Polizei?
+    options_de:
+      a: Gesetzesverstösse verfolgen
+      b: Volksabstimmungen organisieren
+      c: Die Gesetze des Landes erlassen
+      d: Urteile gegen die Täter von Straftaten aussprechen
+    explanation_de: Die Polizei sorgt für die Sicherheit und die öffentliche Ordnung und verfolgt Gesetzesverstösse.
+      Sie klärt Straftaten auf und übermittelt die Ergebnisse. Die Gesetze werden vom Parlament erlassen,
+      die Urteile werden von den Gerichten gefällt.

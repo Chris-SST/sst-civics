@@ -9,6 +9,22 @@ options:
   d: They must report to the tax administration of the Confederation.
 explanation: Anyone who moves to a new place must register with the commune where they live. This is usually
   done at the residents' registration office. In this way, the commune is informed about its residents.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was müssen Personen tun, die sich in einer Gemeinde niederlassen?
+    options_de:
+      a: Sie müssen sich bei der Gemeinde anmelden, in der sie wohnen.
+      b: Sie müssen sich bei der Armee melden.
+      c: Sie müssen sich beim Bundesrat melden.
+      d: Sie müssen sich bei der Steuerverwaltung des Bundes melden.
+    explanation_de: Wer an einen neuen Ort zieht, muss sich bei der Gemeinde anmelden, in der er wohnt.
+      Dies geschieht in der Regel beim Einwohneramt. Auf diese Weise ist die Gemeinde über ihre Einwohnerinnen
+      und Einwohner informiert.

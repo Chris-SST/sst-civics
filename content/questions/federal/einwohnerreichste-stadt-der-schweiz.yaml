@@ -22,7 +22,7 @@ sources:
 glossary:
 - Bundesstadt
 - Einwohnerzahl
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-274
@@ -43,3 +43,33 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Begriff «Bundesstadt» ist korrekt, kann für Lernende auf Niveau B1 aber neu sein;
+        die Erklärung könnte ergänzen: «Bern ist zwar die Bundesstadt (Sitz von Regierung und Parlament)».'
+      - 'Klein: Die Erklärung könnte eine ungefähre Einwohnerzahl nennen, etwa «In der Stadt Zürich leben
+        über 400 000 Menschen». Diese Angabe stimmt mit beiden Quellen überein (rund 420 000 bzw. fast
+        450 000).'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Brochure nennt «fast 450 000» Einwohnende, die Kantonsseite «rund 420 000». Die Frage
+        und die Erklärung nennen keine Zahl, daher ist das unproblematisch. Man sollte in der Erklärung
+        auch weiterhin keine Einwohnerzahl nennen.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

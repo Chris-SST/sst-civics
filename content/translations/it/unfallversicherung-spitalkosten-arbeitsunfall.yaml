@@ -1,0 +1,33 @@
+id: unfallversicherung-spitalkosten-arbeitsunfall
+lang: it
+source_version: 1
+question: Una lavoratrice ha un grave infortunio sul lavoro e deve essere ricoverata in ospedale. Quale
+  assicurazione si assume i costi dell'ospedale?
+options:
+  a: L'assicurazione contro la disoccupazione
+  b: L'assicurazione contro gli infortuni
+  c: L'indennità per perdita di guadagno
+  d: L'assicurazione per la vecchiaia e per i superstiti
+explanation: L'assicurazione obbligatoria contro gli infortuni paga le spese di cura in caso di infortuni
+  professionali, quindi ad esempio i costi dell'ospedale. I lavoratori sono assicurati tramite il datore
+  di lavoro. Le altre assicurazioni menzionate coprono altri rischi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Arbeitnehmerin hat einen schweren Unfall bei der Arbeit und muss ins Spital eingeliefert
+      werden. Welche Versicherung übernimmt die Kosten des Spitals?
+    options_de:
+      a: Die Arbeitslosenversicherung
+      b: Die Unfallversicherung
+      c: Die Erwerbsersatzordnung
+      d: Die Alters- und Hinterlassenenversicherung
+    explanation_de: Die obligatorische Unfallversicherung bezahlt die Heilungskosten bei Berufsunfällen,
+      also zum Beispiel die Kosten des Spitals. Die Arbeitnehmer sind über den Arbeitgeber versichert.
+      Die anderen genannten Versicherungen decken andere Risiken ab.

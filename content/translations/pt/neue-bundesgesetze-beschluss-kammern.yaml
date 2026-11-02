@@ -1,0 +1,30 @@
+id: neue-bundesgesetze-beschluss-kammern
+lang: pt
+source_version: 1
+question: Quem aprova a maioria das novas leis federais?
+options:
+  a: O Tribunal Federal (Bundesgericht)
+  b: Apenas o Conselho Federal (Bundesrat)
+  c: Os parlamentos cantonais
+  d: O Conselho Nacional (Nationalrat) e o Conselho dos Estados (Ständerat)
+explanation: A maioria das novas leis federais é aprovada pelas duas câmaras do Parlamento. O Conselho
+  Federal prepara os projetos, mas não decide sozinho. Contra uma lei, o povo pode lançar um referendo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer verabschiedet die Mehrheit der neuen Bundesgesetze?
+    options_de:
+      a: Das Bundesgericht
+      b: Nur der Bundesrat
+      c: Die kantonalen Parlamente
+      d: Der Nationalrat und der Ständerat
+    explanation_de: Die Mehrheit der neuen Bundesgesetze wird von den beiden Kammern des Parlaments verabschiedet.
+      Der Bundesrat bereitet die Vorlagen vor, entscheidet aber nicht allein. Gegen ein Gesetz kann das
+      Volk ein Referendum ergreifen.

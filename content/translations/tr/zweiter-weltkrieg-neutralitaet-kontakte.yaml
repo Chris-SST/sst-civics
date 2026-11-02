@@ -1,0 +1,31 @@
+id: zweiter-weltkrieg-neutralitaet-kontakte
+lang: tr
+source_version: 1
+question: İsviçre İkinci Dünya Savaşı'nda nasıl bir tutum sergiledi?
+options:
+  a: Savaşan taraflarla tüm bağlantılarını kesti ve sınırları tamamen kapattı.
+  b: Almanya'ya katıldı ve asker gönderdi.
+  c: Tarafsız kaldı ve savaşan taraflarla siyasi ve ekonomik ilişkilerini sürdürdü.
+  d: Müttefiklerin ittifakına katıldı ve savaştı.
+explanation: İsviçre, İkinci Dünya Savaşı'nda savaşan taraf olmadı. Ancak savaşan taraflarla siyasi ve
+  ekonomik ilişkilerini sürdürdü. Bu tutum, tarihsel açıdan bugüne kadar tartışılmaktadır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Haltung nahm die Schweiz im Zweiten Weltkrieg ein?
+    options_de:
+      a: Sie brach alle Verbindungen zu den kriegführenden Parteien ab und schloss die Grenzen vollständig.
+      b: Sie schloss sich Deutschland an und schickte Soldaten.
+      c: Sie blieb neutral und pflegte weiterhin politische und wirtschaftliche Beziehungen zu den kriegführenden
+        Parteien.
+      d: Sie trat dem Bündnis der Alliierten bei und kämpfte.
+    explanation_de: Die Schweiz war im Zweiten Weltkrieg keine kriegführende Partei. Sie pflegte jedoch
+      weiterhin politische und wirtschaftliche Beziehungen zu den kriegführenden Parteien. Diese Haltung
+      wird aus historischer Sicht bis heute diskutiert.

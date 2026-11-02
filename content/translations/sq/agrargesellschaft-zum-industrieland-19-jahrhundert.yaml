@@ -1,0 +1,30 @@
+id: agrargesellschaft-zum-industrieland-19-jahrhundert
+lang: sq
+source_version: 1
+question: Si ndryshoi Zvicra ekonomikisht në shekullin e 19-të?
+options:
+  a: Ajo jetonte kryesisht nga tregtia me kolonitë.
+  b: Ajo mbeti deri në vitin 1900 pothuajse vetëm një vend fshatar bujqësor.
+  c: Ajo u zhvillua nga një vend industrial në një shoqëri agrare.
+  d: Ajo u zhvillua nga një shoqëri agrare në një vend industrial.
+explanation: Në shekullin e 19-të puna kaloi nga bujqësia në fabrika. Rrugët e reja të komunikacionit,
+  si hekurudha, e mbështetën këtë ndryshim. Kështu vendi bujqësor u bë vend industrial.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie veränderte sich die Schweiz im 19. Jahrhundert wirtschaftlich?
+    options_de:
+      a: Sie lebte hauptsächlich vom Handel mit den Kolonien.
+      b: Sie blieb bis zum Jahr 1900 fast nur ein bäuerliches Agrarland.
+      c: Sie entwickelte sich von einem Industrieland zu einer Agrargesellschaft.
+      d: Sie entwickelte sich von einer Agrargesellschaft zu einem Industrieland.
+    explanation_de: Im 19. Jahrhundert ging die Arbeit von der Landwirtschaft in die Fabriken über. Neue
+      Verkehrswege, wie die Eisenbahn, unterstützten diese Veränderung. So wurde das Agrarland zu einem
+      Industrieland.

@@ -1,0 +1,35 @@
+id: volksinitiative-doppeltes-mehr
+lang: it
+source_version: 2
+question: Che cosa serve affinché un'iniziativa popolare federale (Volksinitiative) venga accettata in
+  votazione?
+options:
+  a: Il sì dei due terzi dei votanti
+  b: Il sì del Consiglio federale (Bundesrat) e della maggioranza dei votanti
+  c: Il sì della maggioranza dei votanti e della maggioranza dei Cantoni
+  d: Solo il sì della maggioranza dei votanti
+explanation: 'Un''iniziativa popolare federale vuole modificare la Costituzione federale. Per questo richiede
+  la doppia maggioranza: la maggioranza dei votanti (maggioranza del popolo, Volksmehr) e la maggioranza
+  dei Cantoni (maggioranza dei Cantoni, Ständemehr) devono dire sì. Per un''iniziativa cantonale nel Cantone
+  di Zurigo, invece, è sufficiente la maggioranza dei votanti.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was braucht es, damit eine eidgenössische Volksinitiative in der Abstimmung angenommen
+      wird?
+    options_de:
+      a: Das Ja von zwei Dritteln der Stimmenden
+      b: Das Ja des Bundesrates und der Mehrheit der Stimmenden
+      c: Das Ja der Mehrheit der Stimmenden und der Mehrheit der Kantone
+      d: Nur das Ja der Mehrheit der Stimmenden
+    explanation_de: 'Eine eidgenössische Volksinitiative will die Bundesverfassung ändern. Dafür braucht
+      es das doppelte Mehr: Die Mehrheit der Stimmenden (Volksmehr) und die Mehrheit der Kantone (Ständemehr)
+      müssen Ja sagen. Bei einer kantonalen Initiative im Kanton Zürich hingegen genügt die Mehrheit der
+      Stimmenden.'

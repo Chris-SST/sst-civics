@@ -1,0 +1,31 @@
+id: hoechster-gipfel-der-schweiz
+lang: pt
+source_version: 2
+question: Qual é o nome do cume mais alto da Suíça?
+options:
+  a: Piz Bernina
+  b: Matterhorn
+  c: Dufourspitze
+  d: Jungfrau
+explanation: A Dufourspitze, no maciço do Monte Rosa, no Valais, é, com cerca de 4634 metros, o cume mais
+  alto da Suíça. O Matterhorn é mais conhecido, mas mais baixo. O Piz Bernina, nos Grisões, é o cume mais
+  alto dos Alpes Orientais.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie heisst der höchste Gipfel der Schweiz?
+    options_de:
+      a: Piz Bernina
+      b: Matterhorn
+      c: Dufourspitze
+      d: Jungfrau
+    explanation_de: Die Dufourspitze im Monte-Rosa-Massiv im Wallis ist mit rund 4634 Metern der höchste
+      Gipfel der Schweiz. Das Matterhorn ist bekannter, aber niedriger. Der Piz Bernina in Graubünden
+      ist der höchste Gipfel der Ostalpen.

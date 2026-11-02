@@ -1,0 +1,31 @@
+id: ruetli-zusammenschluss-der-urkantone
+lang: pt
+source_version: 1
+question: O que representa o Rütli na história suíça?
+options:
+  a: A união dos cantões primitivos
+  b: A vitória na batalha de Marignano
+  c: O início da Reforma
+  d: A fundação do Estado federal em 1848
+explanation: Segundo a tradição, representantes dos cantões primitivos terão feito uma aliança no Rütli.
+  Por isso, o local é considerado um símbolo das origens da Confederação. O prado situa-se junto ao Lago
+  dos Quatro Cantões.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was stellt das Rütli in der Schweizer Geschichte dar?
+    options_de:
+      a: Die Vereinigung der Urkantone
+      b: Der Sieg in der Schlacht von Marignano
+      c: Der Beginn der Reformation
+      d: Die Gründung des Bundesstaates im Jahr 1848
+    explanation_de: Gemäss der Überlieferung sollen Vertreter der Urkantone auf dem Rütli ein Bündnis
+      geschlossen haben. Deshalb gilt der Ort als Symbol für die Ursprünge der Eidgenossenschaft. Die
+      Wiese liegt am Vierwaldstättersee.

@@ -1,0 +1,32 @@
+id: jodeln-eigene-stimme-instrument
+lang: it
+source_version: 1
+question: Che cosa funge da strumento nello jodel?
+options:
+  a: Il corno delle Alpi
+  b: La propria voce
+  c: Lo Schwyzerörgeli (piccola fisarmonica diatonica svizzera)
+  d: La fisarmonica
+explanation: Nello jodel si canta senza parole, per lo più solo con sillabe, passando rapidamente dalla
+  voce di petto alla voce di testa. La voce stessa è lo strumento. Lo jodel fa parte delle tradizioni
+  popolari della Svizzera e viene spesso associato al corno delle Alpi o allo Schwyzerörgeli.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: «Handorgel» und «Akkordeon» bezeichnen dasselbe Instrument, die übrigen
+      Antworten und die Erklärung stimmen inhaltlich überein.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was dient beim Jodeln als Instrument?
+    options_de:
+      a: Das Alphorn
+      b: Die eigene Stimme
+      c: Das Schwyzerörgeli
+      d: Das Akkordeon
+    explanation_de: Beim Jodeln singt man ohne Worte, meist nur mit Silben, und wechselt schnell von der
+      Bruststimme in die Kopfstimme. Die Stimme selbst ist das Instrument. Das Jodeln gehört zu den Volkstraditionen
+      der Schweiz und wird oft mit dem Alphorn oder dem Schwyzerörgeli in Verbindung gebracht.

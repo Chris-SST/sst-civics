@@ -1,0 +1,31 @@
+id: dienstpflicht-nur-maenner-bis-alter
+lang: sq
+source_version: 1
+question: Kush është i detyruar në Zvicër të kryejë shërbim ushtarak ose shërbim zëvendësues deri në një
+  moshë të caktuar?
+options:
+  a: Vetëm meshkujt
+  b: Gratë dhe meshkujt në mënyrë të barabartë
+  c: Vetëm personat me arsim ose formim profesional
+  d: Vetëm personat që kanë një detyrë zyrtare në një komunë (Gemeinde)
+explanation: Detyrimi për shërbim vlen në Zvicër vetëm për meshkujt. Për gratë shërbimi ushtarak është
+  vullnetar. Detyrimi zgjat deri në një moshë të përcaktuar me ligj.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz verpflichtet, bis zu einem bestimmten Alter Militärdienst oder
+      Ersatzdienst zu leisten?
+    options_de:
+      a: Nur die Männer
+      b: Frauen und Männer gleichermassen
+      c: Nur Personen mit Schul- oder Berufsbildung
+      d: Nur Personen, die in einer Gemeinde ein Amt ausüben
+    explanation_de: Die Dienstpflicht gilt in der Schweiz nur für die Männer. Für die Frauen ist der Militärdienst
+      freiwillig. Die Pflicht dauert bis zu einem gesetzlich festgelegten Alter.

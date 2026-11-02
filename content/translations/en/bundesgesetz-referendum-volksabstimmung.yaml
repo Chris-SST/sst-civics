@@ -10,6 +10,23 @@ options:
   d: The cantonal governments must first approve it individually.
 explanation: Once both chambers have passed it, federal acts are subject to the optional referendum. If
   a referendum is successfully called, the citizens entitled to vote decide on the act at the ballot box.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für ein Bundesgesetz, dem beide Räte des Parlaments zugestimmt haben?
+    options_de:
+      a: Die stimmberechtigten Bürgerinnen und Bürger können mittels Referendum eine Volksabstimmung darüber
+        verlangen.
+      b: Der Bundesrat muss es danach noch dem Bundesgericht zur Genehmigung vorlegen.
+      c: Es tritt immer sofort in Kraft, ohne dass das Volk etwas dazu zu sagen hat.
+      d: Die Kantonsregierungen müssen ihm zuerst einzeln zustimmen.
+    explanation_de: Nachdem beide Räte zugestimmt haben, unterliegen Bundesgesetze dem fakultativen Referendum.
+      Kommt ein Referendum erfolgreich zustande, entscheiden die stimmberechtigten Bürgerinnen und Bürger
+      an der Urne über das Gesetz.

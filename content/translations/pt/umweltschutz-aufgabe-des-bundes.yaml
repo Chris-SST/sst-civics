@@ -1,0 +1,32 @@
+id: umweltschutz-aufgabe-des-bundes
+lang: pt
+source_version: 1
+question: Que nível é responsável, na Suíça, por proteger o ambiente e por emitir normas para esse fim?
+options:
+  a: A Confederação
+  b: As organizações privadas
+  c: Apenas as comunas (Gemeinde)
+  d: Apenas os distritos
+explanation: A Constituição Federal encarrega a Confederação de proteger o ser humano e o ambiente contra
+  efeitos nocivos. Para isso, ela emite leis, por exemplo sobre a proteção das águas e da natureza. Os
+  cantões aplicam muitas dessas normas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Ebene ist in der Schweiz für den Schutz der Umwelt und für den Erlass von Vorschriften
+      dazu zuständig?
+    options_de:
+      a: Der Bund
+      b: Die privaten Organisationen
+      c: Nur die Gemeinden
+      d: Nur die Bezirke
+    explanation_de: Die Bundesverfassung beauftragt den Bund, den Menschen und die Umwelt vor schädlichen
+      Einwirkungen zu schützen. Dafür erlässt er Gesetze, zum Beispiel über den Schutz der Gewässer und
+      der Natur. Die Kantone setzen viele dieser Vorschriften um.

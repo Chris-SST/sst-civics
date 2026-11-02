@@ -1,0 +1,37 @@
+id: abstimmungsunterlagen-erlaeuterungen-bundesrat
+lang: pt
+source_version: 1
+question: O que recebem os eleitores, juntamente com o material de voto, antes de uma votação federal,
+  para poderem informar-se sobre os objetos submetidos a votação?
+options:
+  a: As explicações do Conselho Federal (Bundesrat)
+  b: Um parecer do Tribunal Federal (Bundesgericht)
+  c: Um parecer do próprio cantão
+  d: A lista eleitoral de todos os partidos
+explanation: O Conselho Federal explica, nas explicações, muitas vezes chamadas de brochura de votação,
+  do que trata cada objeto submetido a votação. Nelas constam também os argumentos do comité da iniciativa
+  ou do referendo, bem como a recomendação do Conselho Federal e do Parlamento. Assim, todos podem formar
+  a sua própria opinião.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: Antwort b) lautet im Original «Eine Stellungnahme des Bundesgerichts», in der Rückübersetzung
+      «Ein Gutachten des Bundesgerichts», und wird damit gleich wie Antwort c) (Gutachten); der Rest stimmt
+      inhaltlich überein.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Was erhalten die Stimmberechtigten vor einer eidgenössischen Abstimmung zusammen mit
+      dem Stimmmaterial, um sich über die Abstimmungsvorlagen informieren zu können?
+    options_de:
+      a: Die Erläuterungen des Bundesrates
+      b: Ein Gutachten des Bundesgerichts
+      c: Ein Gutachten des eigenen Kantons
+      d: Die Wahlliste aller Parteien
+    explanation_de: Der Bundesrat erläutert in den Erläuterungen, die oft Abstimmungsbüchlein genannt
+      werden, worum es bei jeder Abstimmungsvorlage geht. Darin stehen auch die Argumente des Initiativ-
+      oder Referendumskomitees sowie die Empfehlung des Bundesrates und des Parlaments. So kann sich jeder
+      seine eigene Meinung bilden.

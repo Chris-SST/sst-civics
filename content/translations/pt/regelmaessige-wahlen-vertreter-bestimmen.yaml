@@ -1,0 +1,31 @@
+id: regelmaessige-wahlen-vertreter-bestimmen
+lang: pt
+source_version: 1
+question: Que importância têm as eleições regulares numa democracia?
+options:
+  a: A população decide por si própria quem a representa.
+  b: O governo nomeia ele próprio os seus sucessores.
+  c: Os partidos definem a representação entre si.
+  d: O tribunal decide quem assume um cargo.
+explanation: Nas eleições, os eleitores decidem quem os representa no parlamento ou no governo. Como as
+  eleições se realizam regularmente, podem confirmar determinadas pessoas ou substituí-las por outras.
+  Assim, a população mantém influência sobre a política.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Bedeutung haben regelmässige Wahlen in einer Demokratie?
+    options_de:
+      a: Die Bevölkerung entscheidet selbst, wer sie vertritt.
+      b: Die Regierung ernennt selbst ihre Nachfolger.
+      c: Die Parteien legen die Vertretung untereinander fest.
+      d: Das Gericht entscheidet, wer ein Amt übernimmt.
+    explanation_de: Bei den Wahlen entscheiden die Wählerinnen und Wähler, wer sie im Parlament oder in
+      der Regierung vertritt. Da die Wahlen regelmässig stattfinden, können sie bestimmte Personen bestätigen
+      oder durch andere ersetzen. So behält die Bevölkerung Einfluss auf die Politik.

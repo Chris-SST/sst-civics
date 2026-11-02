@@ -9,6 +9,22 @@ options:
   d: An authority that conducts elections and votes
 explanation: A party brings together people who pursue similar political aims. Parties put forward candidates
   at elections and take positions on proposals put to a vote. They are not state authorities.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aussagen beschreibt eine politische Partei am besten?
+    options_de:
+      a: Ein Gericht, das über politische Streitigkeiten entscheidet
+      b: Ein Zusammenschluss von Personen mit ähnlichen politischen Zielen
+      c: Eine Gruppe von Gemeinden, die gemeinsam Aufgaben erfüllen
+      d: Eine Behörde, die Wahlen und Abstimmungen durchführt
+    explanation_de: Eine Partei bringt Personen zusammen, die ähnliche politische Ziele verfolgen. Parteien
+      stellen bei Wahlen Kandidierende auf und beziehen Stellung zu Vorlagen, über die abgestimmt wird.
+      Sie sind keine staatlichen Behörden.

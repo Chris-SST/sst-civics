@@ -1,0 +1,34 @@
+id: pensionskasse-zweiter-pfeiler-altersvorsorge
+lang: tr
+source_version: 1
+question: İsviçre'de yaşlılık güvencesi üç sütuna dayanır. İkinci sütunu hangi kurum oluşturur?
+options:
+  a: Yaşlılık ve dul-yetim sigortasına (AHV) ek yardımlar
+  b: Yaşlılık ve dul-yetim sigortası (AHV) (devlet emeklilik sigortası)
+  c: Emeklilik sandığı (mesleki yaşlılık güvencesi)
+  d: Vergi indirimi sağlayan özel tasarruf hesabı (3a sütunu)
+explanation: Emeklilik sandığı mesleki yaşlılık güvencesine aittir ve ikinci sütunu oluşturur. Emekli
+  olan kişilerin alışkın oldukları yaşam standardını makul ölçüde sürdürebilmeleri için yaşlılık ve dul-yetim
+  sigortasını (AHV) tamamlar. Yaşlılık ve dul-yetim sigortası birinci sütundur, özel yaşlılık güvencesi
+  ise üçüncü sütundur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In der Schweiz beruht die Altersvorsorge auf drei Säulen. Welche Institution bildet die
+      zweite Säule?
+    options_de:
+      a: Ergänzungsleistungen zur Alters- und Hinterlassenenversicherung (AHV)
+      b: Alters- und Hinterlassenenversicherung (AHV) (staatliche Rentenversicherung)
+      c: Pensionskasse (berufliche Altersvorsorge)
+      d: Privates Sparkonto mit Steuerabzug (Säule 3a)
+    explanation_de: Die Pensionskasse gehört zur beruflichen Altersvorsorge und bildet die zweite Säule.
+      Sie ergänzt die Alters- und Hinterlassenenversicherung (AHV), damit Personen, die in Rente gehen,
+      ihren gewohnten Lebensstandard in angemessenem Rahmen weiterführen können. Die Alters- und Hinterlassenenversicherung
+      ist die erste Säule, die private Altersvorsorge hingegen die dritte Säule.

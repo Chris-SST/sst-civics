@@ -1,0 +1,34 @@
+id: bahnunternehmen-der-schweiz-erkennen
+lang: pt
+source_version: 1
+question: Qual das seguintes abreviaturas designa, em todos os casos, empresas ferroviárias da Suíça?
+options:
+  a: SOB, SEM, BLS e SZU
+  b: SBB, BLS, SOB e SZU
+  c: SBB, SRF, SOB e SUVA
+  d: BLS, SZU, SNB e SBB
+explanation: SBB, BLS, SOB e SZU são empresas ferroviárias que operam comboios na Suíça. A SBB é a maior
+  empresa; as outras são ferrovias mais pequenas, que circulam frequentemente a nível regional. As outras
+  abreviaturas designam organizações como o Banco Nacional (SNB), a Secretaria de Estado da Migração (SEM)
+  ou o seguro de acidentes (SUVA).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Abkürzungen bezeichnet in allen Fällen Eisenbahnunternehmen der
+      Schweiz?
+    options_de:
+      a: SOB, SEM, BLS und SZU
+      b: SBB, BLS, SOB und SZU
+      c: SBB, SRF, SOB und SUVA
+      d: BLS, SZU, SNB und SBB
+    explanation_de: SBB, BLS, SOB und SZU sind Eisenbahnunternehmen, die in der Schweiz Züge betreiben.
+      Die SBB ist das grösste Unternehmen; die anderen sind kleinere Bahnen, die häufig auf regionaler
+      Ebene verkehren. Die anderen Abkürzungen bezeichnen Organisationen wie die Nationalbank (SNB), das
+      Staatssekretariat für Migration (SEM) oder die Unfallversicherung (SUVA).

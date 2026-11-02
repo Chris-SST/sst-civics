@@ -1,0 +1,29 @@
+id: parlament-hauptaufgabe-gesetze-beschliessen
+lang: tr
+source_version: 1
+question: Konfederasyon Parlamentosu'nun en önemli görevi nedir?
+options:
+  a: Ülke genelinde polisi yönetmek
+  b: Kişiler arasındaki uyuşmazlıklara karar vermek
+  c: Kanunları görüşmek ve kabul etmek
+  d: Kanunları günlük yaşamda uygulamak
+explanation: Parlamento yasama gücüdür. Konfederasyon kanunlarını görüşür ve karara bağlar. Hükümet bunları
+  uygular, mahkemeler ise uyuşmazlıklarda karar verir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die wichtigste Aufgabe des Parlaments der Eidgenossenschaft?
+    options_de:
+      a: Die Polizei im ganzen Land leiten
+      b: Über Streitigkeiten zwischen Personen entscheiden
+      c: Gesetze beraten und verabschieden
+      d: Gesetze im Alltag anwenden
+    explanation_de: Das Parlament ist die gesetzgebende Gewalt. Es berät die Gesetze der Eidgenossenschaft
+      und beschliesst sie. Die Regierung setzt sie um, die Gerichte entscheiden bei Streitigkeiten.

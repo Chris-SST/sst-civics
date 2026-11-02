@@ -1,0 +1,32 @@
+id: auswanderung-19-jahrhundert-grund-not
+lang: tr
+source_version: 1
+question: 19. yüzyılda birçok insan İsviçre'yi terk etti ve örneğin Amerika'ya göç etti. Bunun önemli
+  bir nedeni neydi?
+options:
+  a: Yoksulluk ve iş eksikliği geçimlerini tehdit ediyordu.
+  b: Konfederasyon, İsviçre'de yaşamalarını yasaklamıştı.
+  c: İsviçre'de fabrikalar için yeterli yer yoktu.
+  d: Yurt dışında yeni gelenlerden vergi alınmıyordu.
+explanation: 19. yüzyılda İsviçre henüz bir göç veren ülkeydi. Kıtlıklar, yoksulluk ve iş eksikliği birçok
+  insanı yurt dışında yeni bir hayat aramaya itti. İsviçre ancak daha sonra göç alan bir ülke haline geldi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Im 19. Jahrhundert verliessen viele Menschen die Schweiz und wanderten zum Beispiel nach
+      Amerika aus. Was war ein wichtiger Grund dafür?
+    options_de:
+      a: Armut und Arbeitsmangel bedrohten ihre Existenz.
+      b: Die Eidgenossenschaft hatte ihnen verboten, in der Schweiz zu leben.
+      c: In der Schweiz gab es nicht genug Platz für Fabriken.
+      d: Im Ausland wurden von Neuankömmlingen keine Steuern erhoben.
+    explanation_de: Im 19. Jahrhundert war die Schweiz noch ein Auswanderungsland. Hungersnöte, Armut
+      und Arbeitsmangel drängten viele Menschen dazu, im Ausland ein neues Leben zu suchen. Erst später
+      wurde die Schweiz zu einem Einwanderungsland.

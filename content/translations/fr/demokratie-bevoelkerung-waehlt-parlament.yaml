@@ -1,0 +1,31 @@
+id: demokratie-bevoelkerung-waehlt-parlament
+lang: fr
+source_version: 1
+question: Parmi les droits de la population, lequel existe dans une démocratie comme la Suisse ?
+options:
+  a: Elle nomme par tirage au sort les juges du Tribunal fédéral (Bundesgericht).
+  b: Elle fixe seule les lois, sans le Parlement.
+  c: Elle détermine son Parlement par des élections.
+  d: Elle élit directement le commandement de l'armée.
+explanation: Dans une démocratie, la population élit ses représentantes et ses représentants au Parlement.
+  Au niveau de la Confédération, il s'agit du Conseil national (Nationalrat) et du Conseil des États (Ständerat).
+  Le Parlement adopte ensuite les lois fédérales au nom du peuple.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches der Rechte der Bevölkerung besteht in einer Demokratie wie der Schweiz?
+    options_de:
+      a: Sie bestimmt die Richterinnen und Richter des Bundesgerichts durch Losentscheid.
+      b: Sie legt die Gesetze allein fest, ohne das Parlament.
+      c: Sie bestimmt ihr Parlament durch Wahlen.
+      d: Sie wählt die Armeeführung direkt.
+    explanation_de: In einer Demokratie wählt die Bevölkerung ihre Vertreterinnen und Vertreter ins Parlament.
+      Auf Ebene des Bundes sind dies der Nationalrat und der Ständerat. Das Parlament verabschiedet danach
+      im Namen des Volkes die Bundesgesetze.

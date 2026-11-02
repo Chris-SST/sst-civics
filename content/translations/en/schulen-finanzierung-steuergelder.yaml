@@ -1,0 +1,29 @@
+id: schulen-finanzierung-steuergelder
+lang: en
+source_version: 1
+question: What are public schools in Switzerland mainly paid for from?
+options:
+  a: From the school fees that parents pay every month
+  b: From the tax revenue of the canton and the communes (Gemeinden)
+  c: From the revenue of the Post Office and the SBB
+  d: From the contributions of the health insurers (Krankenkassen)
+explanation: Under the Federal Constitution, compulsory public schooling is free of charge. It is financed
+  from tax revenue, mainly from the cantons and communes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Woraus werden die öffentlichen Schulen in der Schweiz hauptsächlich bezahlt?
+    options_de:
+      a: Aus dem Schulgeld, das die Eltern jeden Monat bezahlen
+      b: Aus den Steuereinnahmen des Kantons und der Gemeinden
+      c: Aus den Einnahmen der Post und der SBB
+      d: Aus den Beiträgen der Krankenkassen
+    explanation_de: Gemäss der Bundesverfassung ist der obligatorische öffentliche Schulunterricht unentgeltlich.
+      Er wird aus Steuereinnahmen finanziert, hauptsächlich von den Kantonen und Gemeinden.

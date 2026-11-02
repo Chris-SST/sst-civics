@@ -1,0 +1,31 @@
+id: glaubensfreiheit-religion-ueberzeugung-leben
+lang: tr
+source_version: 1
+question: Federal Anayasa'ya göre inanç ve vicdan özgürlüğüne neler dahildir?
+options:
+  a: Bir inanca ve bir kanaate sahip olma ve buna göre yaşama hakkı
+  b: Yalnızca tanınmış bir kanton kilisesine üyelik
+  c: Anne babanın inancını sürdürme yükümlülüğü
+  d: Başkalarını kendi inancına zorlama hakkı
+explanation: Herkes dinini ve dünya görüşüne dayalı kanaatini özgürce seçebilir ve buna göre yaşayabilir.
+  İnanç değiştirmek ya da hiçbir inanca sahip olmamak da mümkündür. Hiç kimse bir inanca zorlanamaz.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Landeskirche» und «Kantonskirche» bezeichnen hier dieselbe kantonal anerkannte
+      Kirche, die übrigen Unterschiede sind nur sprachlich.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gehört gemäss der Bundesverfassung zur Glaubens- und Gewissensfreiheit?
+    options_de:
+      a: Das Recht, einen Glauben und eine Überzeugung zu haben und entsprechend zu leben
+      b: Nur die Mitgliedschaft in einer anerkannten Kantonskirche
+      c: Die Pflicht, den Glauben der Eltern fortzuführen
+      d: Das Recht, andere zu seinem eigenen Glauben zu zwingen
+    explanation_de: Jede Person kann ihre Religion und ihre auf einer Weltanschauung beruhende Überzeugung
+      frei wählen und entsprechend leben. Es ist auch möglich, den Glauben zu wechseln oder keinen Glauben
+      zu haben. Niemand kann zu einem Glauben gezwungen werden.

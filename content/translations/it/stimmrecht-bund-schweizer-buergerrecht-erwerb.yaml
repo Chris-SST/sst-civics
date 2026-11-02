@@ -1,0 +1,35 @@
+id: stimmrecht-bund-schweizer-buergerrecht-erwerb
+lang: it
+source_version: 1
+question: Da quale momento una persona proveniente dall'estero ottiene il diritto di voto e di eleggibilità
+  a livello federale?
+options:
+  a: Non appena ha vissuto per dieci anni in Svizzera.
+  b: Non appena ottiene un permesso di domicilio (Niederlassungsbewilligung) (permesso C).
+  c: Non appena paga le imposte e lavora in Svizzera.
+  d: Non appena ha la cittadinanza (Bürgerrecht) svizzera ed è maggiorenne.
+explanation: Il diritto di voto e di elezione a livello federale è legato alla cittadinanza svizzera.
+  Un permesso di domicilio, una determinata durata del soggiorno o il pagamento delle imposte non bastano
+  a tal fine. Chi viene naturalizzato ed è maggiorenne può partecipare alle elezioni e alle votazioni
+  federali.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ab welchem Zeitpunkt erhält eine Person aus dem Ausland auf Bundesebene das Stimm- und
+      Wahlrecht?
+    options_de:
+      a: Sobald sie zehn Jahre in der Schweiz gelebt hat.
+      b: Sobald sie eine Niederlassungsbewilligung (Niederlassungsbewilligung) (Bewilligung C) erhält.
+      c: Sobald sie in der Schweiz Steuern zahlt und arbeitet.
+      d: Sobald sie das Schweizer Bürgerrecht (Bürgerrecht) hat und volljährig ist.
+    explanation_de: Das Stimm- und Wahlrecht auf Bundesebene ist an das Schweizer Bürgerrecht gebunden.
+      Eine Niederlassungsbewilligung, eine bestimmte Aufenthaltsdauer oder die Zahlung von Steuern reichen
+      dafür nicht aus. Wer eingebürgert wird und volljährig ist, kann an den eidgenössischen Wahlen und
+      Abstimmungen teilnehmen.

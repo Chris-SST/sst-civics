@@ -1,16 +1,33 @@
 id: jodeln-brauch-landbevoelkerung
 lang: en
-source_version: 1
-question: Which traditional custom of the Swiss rural population is a form of singing without words, in
-  which the voice switches rapidly between chest voice and head voice?
+source_version: 2
+question: Which traditional custom of the Swiss rural population is a way of singing in which the voice
+  switches rapidly between chest voice and head voice?
 options:
   a: Alphorn blowing
   b: Yodelling
-  c: Silvesterchlausen
-  d: Flag throwing
-explanation: Yodelling is one of the traditional customs of the Swiss rural population. It is typically
-  characterised by switching between chest voice and head voice. There are yodelling clubs and yodelling
-  festivals throughout the country.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  c: Hornussen
+  d: Flag swinging
+explanation: In yodelling, the voice switches rapidly between chest voice and head voice. Yodelling is
+  a traditional custom of the Swiss rural population. The natural yodel (Naturjodel) does without words,
+  but many yodel songs do have lyrics.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welcher traditionelle Brauch der Schweizer Landbevölkerung ist eine Gesangsart, bei der
+      die Stimme schnell zwischen Bruststimme und Kopfstimme wechselt?
+    options_de:
+      a: Alphornblasen
+      b: Jodeln
+      c: Hornussen
+      d: Fahnenschwingen
+    explanation_de: Beim Jodeln wechselt die Stimme schnell zwischen Bruststimme und Kopfstimme. Das Jodeln
+      ist ein traditioneller Brauch der Schweizer Landbevölkerung. Der Naturjodel verzichtet auf Worte,
+      aber viele Jodellieder haben durchaus einen Text.

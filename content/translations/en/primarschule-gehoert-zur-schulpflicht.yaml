@@ -1,15 +1,31 @@
 id: primarschule-gehoert-zur-schulpflicht
 lang: en
-source_version: 1
-question: Which level of schooling is part of compulsory schooling required by law in Switzerland?
+source_version: 2
+question: Which of these stages is part of compulsory schooling in Switzerland?
 options:
-  a: The university
-  b: The primary school
-  c: The grammar school (Gymnasium)
-  d: The vocational school
-explanation: Compulsory schooling comprises the mandatory school years. This includes primary school,
-  which all children must attend. Grammar school (Gymnasium), vocational school and university are voluntary
-  forms of education taken after the compulsory school years.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: University (Hochschule)
+  b: Primary school
+  c: Playgroup
+  d: Vocational school
+explanation: 'In the canton of Zurich, compulsory schooling lasts eleven years: kindergarten, primary
+  school and lower secondary level. Playgroup for young children is voluntary. Vocational school and university
+  are attended only after compulsory schooling.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche dieser Stufen gehört in der Schweiz zur obligatorischen Schule?
+    options_de:
+      a: Hochschule
+      b: Primarschule
+      c: Spielgruppe
+      d: Berufsschule
+    explanation_de: 'Im Kanton Zürich dauert die obligatorische Schulzeit elf Jahre: Kindergarten, Primarschule
+      und Sekundarstufe I. Die Spielgruppe für kleine Kinder ist freiwillig. Die Berufsschule und die
+      Hochschule werden erst nach der obligatorischen Schulzeit besucht.'

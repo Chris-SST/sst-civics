@@ -1,0 +1,31 @@
+id: strafgesetzbuch-haftstrafe-entscheid
+lang: tr
+source_version: 1
+question: Bir kişinin hapis cezası çekip çekmeyeceği hangi kanuna göre belirlenir?
+options:
+  a: Medeni Kanun'a göre
+  b: Borçlar Hukuku'na göre
+  c: Kira Hukuku'na göre
+  d: Ceza Kanunu'na göre
+explanation: Ceza Kanunu, hangi fiillerin suç oluşturduğunu ve bunlar için hangi cezaların verilebileceğini
+  belirler. Bunlar arasında para cezaları ve özgürlüğü bağlayıcı cezalar yer alır. Somut olayda verilecek
+  cezaya ise bir mahkeme karar verir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Nach welchem Gesetz wird bestimmt, ob eine Person eine Freiheitsstrafe verbüssen wird?
+    options_de:
+      a: Nach dem Zivilgesetzbuch
+      b: Nach dem Obligationenrecht
+      c: Nach dem Mietrecht
+      d: Nach dem Strafgesetzbuch
+    explanation_de: Das Strafgesetzbuch bestimmt, welche Handlungen eine Straftat darstellen und welche
+      Strafen dafür verhängt werden können. Dazu gehören Geldstrafen und freiheitsentziehende Strafen.
+      Über die im konkreten Fall zu verhängende Strafe entscheidet ein Gericht.

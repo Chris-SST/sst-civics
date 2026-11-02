@@ -10,6 +10,23 @@ options:
 explanation: Every amendment to the Federal Constitution must compulsorily be submitted to the people
   and the cantons. This is called a compulsory referendum. Federal laws are subject only to the optional
   referendum.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Vorlage muss in der Schweiz immer zur Abstimmung gebracht werden, auch wenn keine
+      Unterschriften gesammelt werden?
+    options_de:
+      a: Jedes neue Bundesgesetz
+      b: Jede Änderung der Bundesverfassung
+      c: Jede Verordnung des Bundesrates
+      d: Jedes Budget des Bundes
+    explanation_de: Jede Änderung der Bundesverfassung muss zwingend dem Volk und den Kantonen vorgelegt
+      werden. Das nennt man obligatorisches Referendum. Bundesgesetze unterstehen nur dem fakultativen
+      Referendum.

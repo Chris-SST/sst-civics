@@ -1,0 +1,31 @@
+id: vermoegenssteuer-kanton-gemeinden-zuerich
+lang: pt
+source_version: 1
+question: Qual destes impostos o cantão de Zurique e as comunas (Gemeinden) cobram sobre o património
+  de uma pessoa, por exemplo sobre depósitos bancários e valores mobiliários?
+options:
+  a: O imposto antecipado
+  b: O imposto sobre o valor acrescentado
+  c: O imposto sobre o património
+  d: O imposto sobre os óleos minerais
+explanation: O cantão e as comunas tributam o património das pessoas singulares. O imposto sobre o valor
+  acrescentado, o imposto antecipado e o imposto sobre os óleos minerais são impostos da Confederação.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche dieser Steuern erheben der Kanton Zürich und die Gemeinden auf das Vermögen einer
+      Person, zum Beispiel auf Bankguthaben und Wertpapiere?
+    options_de:
+      a: Die Verrechnungssteuer
+      b: Die Mehrwertsteuer
+      c: Die Vermögenssteuer
+      d: Die Mineralölsteuer
+    explanation_de: Der Kanton und die Gemeinden besteuern das Vermögen der natürlichen Personen. Die
+      Mehrwertsteuer, die Verrechnungssteuer und die Mineralölsteuer sind Steuern des Bundes.

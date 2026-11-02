@@ -1,0 +1,29 @@
+id: sechselaeuten-zuenfte-zentrale-akteure
+lang: tr
+source_version: 1
+question: Zürih'in bahar bayramı Sechseläuten'de merkezi rolü kimler üstlenir?
+options:
+  a: Zürih okul sınıfları
+  b: Zürih loncaları (Zünfte)
+  c: Kantonun belediye (Gemeinde) başkanlıkları
+  d: Kanton Konseyi (Kantonsrat) üyeleri
+explanation: Sechseläuten sırasında loncalar tarihî kostümlerle kentin içinden geçer. Akşam Böögg'ü yakarlar.
+  Bu etkinlik, Zürih'te tanınmış bir bahar bayramıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer übernimmt die zentrale Rolle am Zürcher Frühlingsfest Sechseläuten?
+    options_de:
+      a: Zürcher Schulklassen
+      b: Die Zürcher Zünfte
+      c: Die Gemeindepräsidien des Kantons
+      d: Die Mitglieder des Kantonsrats
+    explanation_de: Während des Sechseläutens ziehen die Zünfte in historischen Kostümen durch die Stadt.
+      Am Abend verbrennen sie den Böögg. Dieser Anlass ist ein bekanntes Frühlingsfest in Zürich.

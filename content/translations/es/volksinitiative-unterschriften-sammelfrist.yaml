@@ -1,0 +1,31 @@
+id: volksinitiative-unterschriften-sammelfrist
+lang: es
+source_version: 1
+question: ¿Cuántas firmas necesita una iniciativa popular (Volksinitiative) federal y durante cuánto tiempo
+  se pueden recoger?
+options:
+  a: 100 000 firmas en 100 días
+  b: 50 000 firmas en 100 días
+  c: 50 000 firmas en 18 meses
+  d: 100 000 firmas en 18 meses
+explanation: Una iniciativa popular federal necesita 100 000 firmas válidas en un plazo de 18 meses. El
+  referéndum facultativo, en cambio, necesita 50 000 firmas en 100 días.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Unterschriften braucht eine eidgenössische Volksinitiative und wie lange können
+      sie gesammelt werden?
+    options_de:
+      a: 100 000 Unterschriften in 100 Tagen
+      b: 50 000 Unterschriften in 100 Tagen
+      c: 50 000 Unterschriften in 18 Monaten
+      d: 100 000 Unterschriften in 18 Monaten
+    explanation_de: Eine eidgenössische Volksinitiative braucht 100 000 gültige Unterschriften innerhalb
+      von 18 Monaten. Das fakultative Referendum braucht dagegen 50 000 Unterschriften in 100 Tagen.

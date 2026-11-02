@@ -1,0 +1,32 @@
+id: ahv-iv-sozialversicherungen-schweiz
+lang: it
+source_version: 1
+question: Quale affermazione sulle assicurazioni sociali della Svizzera è corretta?
+options:
+  a: L'assicurazione vecchiaia e superstiti (AHV) e l'assicurazione per l'invalidità (IV) fanno parte
+    delle assicurazioni sociali della Svizzera.
+  b: L'AVS e l'AI sono gestite soltanto dai Comuni (Gemeinden).
+  c: L'AVS e l'AI sono assicurazioni private senza base legale.
+  d: L'AVS e l'AI sono pensate solo per i lavoratori indipendenti.
+explanation: AVS sta per assicurazione vecchiaia e superstiti, AI per assicurazione per l'invalidità.
+  Entrambe sono disciplinate dal diritto federale e fanno parte del sistema statale delle assicurazioni
+  sociali.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage über die Sozialversicherungen der Schweiz ist richtig?
+    options_de:
+      a: Die Alters- und Hinterlassenenversicherung (AHV) und die Invalidenversicherung (IV) gehören zu
+        den Sozialversicherungen der Schweiz.
+      b: Die AHV und die IV werden nur von den Gemeinden geführt.
+      c: Die AHV und die IV sind private Versicherungen ohne gesetzliche Grundlage.
+      d: Die AHV und die IV sind nur für Selbstständigerwerbende gedacht.
+    explanation_de: AHV steht für Alters- und Hinterlassenenversicherung, IV für Invalidenversicherung.
+      Beide sind im Bundesrecht geregelt und gehören zum staatlichen System der Sozialversicherungen.

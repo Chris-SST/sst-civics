@@ -1,15 +1,32 @@
 id: rechtsstaat-staat-an-recht-gebunden
 lang: en
-source_version: 1
+source_version: 2
 question: What applies to the authorities and the government in a state governed by the rule of law such
   as Switzerland?
 options:
-  a: In an emergency, they may act without a legal basis.
-  b: They are themselves bound by the law in force.
+  a: They may choose for themselves which laws they obey.
+  b: They too must comply with the law in force.
   c: They stand above the law in force.
-  d: They are bound only by decisions of the media.
-explanation: 'The Federal Constitution states: the law is the basis and the limit of all state action.
-  This also applies to the authorities and the government. In this way, arbitrary action is prevented.'
-status: draft
-reviewed_by: null
-reviewed_at: null
+  d: They only have to follow the decisions of the media.
+explanation: In a state governed by the rule of law, it is not only the population that must comply with
+  the law, but also the state itself. The authorities and the government may only act as the law permits.
+  In this way, the rule of law protects people from arbitrary treatment.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt für die Behörden und die Regierung in einem Rechtsstaat wie der Schweiz?
+    options_de:
+      a: Sie dürfen selbst wählen, welche Gesetze sie befolgen.
+      b: Auch sie müssen sich an das geltende Recht halten.
+      c: Sie stehen über dem geltenden Recht.
+      d: Sie müssen nur den Entscheidungen der Medien folgen.
+    explanation_de: In einem Rechtsstaat muss nicht nur die Bevölkerung das Gesetz befolgen, sondern auch
+      der Staat selbst. Die Behörden und die Regierung dürfen nur so handeln, wie es das Gesetz erlaubt.
+      Auf diese Weise schützt der Rechtsstaat die Menschen vor willkürlicher Behandlung.

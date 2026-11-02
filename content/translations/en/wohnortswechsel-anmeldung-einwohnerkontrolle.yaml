@@ -9,6 +9,21 @@ options:
   d: At the residents' registration office of your new commune of residence
 explanation: Registration takes place at the residents' registration office (Einwohnerkontrolle), also
   called the Einwohneramt. It keeps the register of the inhabitants of the commune.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo müssen Sie sich anmelden, wenn Sie in eine andere Zürcher Gemeinde umziehen?
+    options_de:
+      a: Beim Bezirksgericht
+      b: Beim Bundesamt für Statistik
+      c: Bei der Kantonspolizei
+      d: Bei der Einwohnerkontrolle Ihrer neuen Wohngemeinde
+    explanation_de: Die Anmeldung erfolgt bei der Einwohnerkontrolle, auch Einwohneramt genannt. Sie führt
+      das Register der Einwohnerinnen und Einwohner der Gemeinde.

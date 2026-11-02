@@ -9,6 +9,21 @@ options:
   d: The Central Plateau, the Pre-Alps and Ticino
 explanation: The Jura lies in the north-west, and the Alps take up the largest part of the area. Between
   them lies the Central Plateau, where most people live.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welche drei grossen Landschaftsregionen ist die Schweiz geografisch unterteilt?
+    options_de:
+      a: Der Jura, das Mittelland und die Alpen
+      b: Der Jura, der Bodensee und die Alpen
+      c: Der Schwarzwald, das Mittelland und die Alpen
+      d: Das Mittelland, die Voralpen und das Tessin
+    explanation_de: Der Jura liegt im Nordwesten, und die Alpen nehmen den grössten Teil der Fläche ein.
+      Dazwischen liegt das Mittelland, wo die meisten Menschen leben.

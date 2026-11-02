@@ -1,0 +1,32 @@
+id: beliebter-wintersport-schweiz-skifahren
+lang: tr
+source_version: 2
+question: İsviçre'de kışın özellikle çok sayıda insan hangi sporu yapar?
+options:
+  a: Sutopu
+  b: Kayak
+  c: Kürek sporu
+  d: Plaj voleybolu
+explanation: Kayak, İsviçre'de kışın çok sevilir ve birçok kişi dağlarda kayak yapar. Çocuklar çoğu zaman
+  daha küçük yaşta kayak yapmayı öğrenir, örneğin okulun düzenlediği bir kayak kampında. Sutopu, kürek
+  sporu ve plaj voleybolu ise daha çok yazın veya suda yapılan spor dallarıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welchen Sport betreiben in der Schweiz im Winter besonders viele Menschen?
+    options_de:
+      a: Wasserball
+      b: Skifahren
+      c: Rudern
+      d: Beachvolleyball
+    explanation_de: Skifahren ist in der Schweiz im Winter sehr beliebt und viele Menschen fahren in den
+      Bergen Ski. Kinder lernen oft in jüngeren Jahren Skifahren, zum Beispiel in einem von der Schule
+      organisierten Skilager. Wasserball, Rudern und Beachvolleyball sind hingegen eher Sportarten, die
+      im Sommer oder im Wasser betrieben werden.

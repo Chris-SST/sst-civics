@@ -9,6 +9,21 @@ options:
   d: A trade fair for science and technology
 explanation: Weltklasse Zürich is an international athletics meeting. It is one of the well-known sporting
   events in the city of Zurich.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist Weltklasse Zürich?
+    options_de:
+      a: Ein Frühlingsfest mit einem Umzug der Zünfte
+      b: Ein Musikfestival am Zürichsee
+      c: Ein bekannter Sportanlass in der Stadt Zürich
+      d: Eine Messe für Wissenschaft und Technik
+    explanation_de: Weltklasse Zürich ist ein internationales Leichtathletikmeeting. Es ist einer der
+      bekannten Sportanlässe in der Stadt Zürich.

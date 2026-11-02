@@ -1,0 +1,31 @@
+id: kantonsrat-mandat-durch-volkswahl
+lang: sq
+source_version: 1
+question: Si e marrin mandatin e tyre anëtarët e Këshillit Kantonal (Kantonsrat) të Cyrihut?
+options:
+  a: Ata zgjidhen nga populli.
+  b: Ata caktohen nga këshillat e komunës (Gemeinde).
+  c: Ata emërohen nga Këshilli Qeveritar (Regierungsrat).
+  d: Ata vendosen në detyrë nga Këshilli Federal (Bundesrat).
+explanation: Anëtarët e Këshillit Kantonal zgjidhen nga qytetarët me të drejtë vote të kantonit në një
+  zgjedhje popullore. Parlamenti përcaktohet kështu drejtpërdrejt nga populli. As qeveria, as Konfederata
+  nuk i vendos anëtarët në detyrë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie erhalten die Mitglieder des Kantonsrates von Zürich ihr Mandat?
+    options_de:
+      a: Sie werden vom Volk gewählt.
+      b: Sie werden von den Gemeinderäten der Gemeinde bestimmt.
+      c: Sie werden vom Regierungsrat ernannt.
+      d: Sie werden vom Bundesrat in ihr Amt eingesetzt.
+    explanation_de: Die Mitglieder des Kantonsrates werden von den stimmberechtigten Bürgerinnen und Bürgern
+      des Kantons in einer Volkswahl gewählt. Das Parlament wird somit direkt vom Volk bestimmt. Weder
+      die Regierung noch der Bund setzt die Mitglieder in ihr Amt ein.

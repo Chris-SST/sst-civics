@@ -1,0 +1,33 @@
+id: stichfrage-initiative-und-gegenvorschlag
+lang: es
+source_version: 1
+question: En una votación sobre una iniciativa popular (Volksinitiative) y un contraproyecto directo hay
+  una pregunta de desempate. ¿Para qué sirve?
+options:
+  a: Decide si la votación debe repetirse
+  b: Decide si los cantones pueden siquiera participar en la votación
+  c: Decide qué proyecto se aplica si se aprueban ambos
+  d: Decide si las firmas se vuelven a comprobar
+explanation: Las personas con derecho a voto pueden aprobar tanto la iniciativa como el contraproyecto.
+  Con la pregunta de desempate indican qué proyecto debe entrar en vigor en caso de que se aprueben ambos.
+  Así, los votos no se pierden entre dos proyectos similares.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Bei einer Abstimmung über eine Volksinitiative und einen direkten Gegenentwurf gibt es
+      eine Stichfrage. Wozu dient sie?
+    options_de:
+      a: Sie entscheidet, ob die Abstimmung wiederholt werden muss
+      b: Sie entscheidet, ob die Kantone überhaupt an der Abstimmung teilnehmen können
+      c: Sie entscheidet, welche Vorlage gilt, wenn beide angenommen werden
+      d: Sie entscheidet, ob die Unterschriften erneut überprüft werden
+    explanation_de: Die Stimmberechtigten können sowohl der Initiative als auch dem Gegenentwurf zustimmen.
+      Mit der Stichfrage geben sie an, welche Vorlage in Kraft treten soll, falls beide angenommen werden.
+      So gehen die Stimmen nicht zwischen zwei ähnlichen Vorlagen verloren.

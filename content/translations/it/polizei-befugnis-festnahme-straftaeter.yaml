@@ -1,0 +1,32 @@
+id: polizei-befugnis-festnahme-straftaeter
+lang: it
+source_version: 2
+question: Quale autorità può arrestare le persone sospettate di aver commesso un reato?
+options:
+  a: L'autorità scolastica
+  b: La polizia
+  c: Il Parlamento
+  d: L'ufficio delle imposte
+explanation: La polizia può arrestare le persone sospettate di un reato alle condizioni previste dalla
+  legge. Se una persona sia colpevole lo decide poi un tribunale. L'autorità scolastica, il Parlamento
+  e l'ufficio delle imposte non hanno questa facoltà.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Behörde kann Personen festnehmen, die verdächtigt werden, eine Straftat begangen
+      zu haben?
+    options_de:
+      a: Die Schulbehörde
+      b: Die Polizei
+      c: Das Parlament
+      d: Das Steueramt
+    explanation_de: Die Polizei kann Personen, die einer Straftat verdächtigt werden, unter den vom Gesetz
+      vorgesehenen Bedingungen festnehmen. Ob eine Person schuldig ist, entscheidet danach ein Gericht.
+      Die Schulbehörde, das Parlament und das Steueramt haben diese Befugnis nicht.

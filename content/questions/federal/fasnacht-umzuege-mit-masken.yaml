@@ -20,7 +20,7 @@ sources:
 glossary:
 - Fasnacht
 - Umzug
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-326
@@ -41,3 +41,35 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falschen Antworten sind sehr leicht als falsch zu erkennen, vor allem c) mit dem 1.
+        August; ein näherliegender Ablenker wie «Umzüge mit geschmückten Kühen von der Alp ins Tal» würde
+        die Frage etwas anspruchsvoller machen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c) stellt den 1. August ungenau dar, weil das Feuerwerk am Nationalfeiertag meist
+        am Abend und nicht um Mitternacht stattfindet; besser «Feuerwerk am Abend des 1. August» schreiben.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c) nennt «Feuerwerk um Mitternacht am 1. August»; die Quelle erwähnt Feuerwerk
+        zum Nationalfeiertag, aber nicht «um Mitternacht». Das ist unproblematisch, weil klar ein anderes
+        Fest gemeint ist. Zur Klarheit könnte man einfach «Feuerwerk am 1. August» schreiben.'
+      - 'Klein: Die Erklärung könnte kurz sagen, warum die anderen Antworten nicht passen (Tannenbäume
+        gehören zu Weihnachten, Feuerwerk zum Nationalfeiertag, Kerzen in Kirchen zu religiösen Feiern).'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

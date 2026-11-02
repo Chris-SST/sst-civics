@@ -1,0 +1,29 @@
+id: fahren-alkohol-drogen-ausweisentzug
+lang: en
+source_version: 1
+question: What does a person risk who drives a car while under the influence of alcohol or drugs?
+options:
+  a: Loss of the right to vote
+  b: Expulsion from their municipality of residence
+  c: Withdrawal of their health insurance
+  d: Withdrawal of their driving licence
+explanation: Anyone who is unfit to drive endangers others on the road. For this reason, the authorities
+  can withdraw the driving licence. Fines or further penalties may also be imposed.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was riskiert eine Person, die unter Alkohol- oder Drogeneinfluss ein Auto fährt?
+    options_de:
+      a: Den Verlust des Stimmrechts
+      b: Die Ausweisung aus ihrer Wohngemeinde
+      c: Den Entzug ihrer Krankenversicherung
+      d: Den Entzug ihres Führerausweises
+    explanation_de: Wer nicht fahrfähig ist, gefährdet andere im Strassenverkehr. Aus diesem Grund können
+      die Behörden den Führerausweis entziehen. Es können auch Bussen oder weitere Strafen verhängt werden.

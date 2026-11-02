@@ -1,0 +1,31 @@
+id: geldpolitik-zustaendigkeit-bund
+lang: tr
+source_version: 1
+question: İsviçre'de para politikasından kim sorumludur?
+options:
+  a: Konfederasyon
+  b: Belediyeler (Gemeinden)
+  c: Kanton bankaları
+  d: Kantonlar ortaklaşa
+explanation: Para ve döviz politikası, Federal Anayasa'ya göre Konfederasyonun görevidir. Konfederasyon,
+  madeni para ve banknot basma hakkına sahiptir. İsviçre Ulusal Bankası, para politikasını Konfederasyon
+  adına yürütür ve bunu yaparken bağımsızdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz für die Geldpolitik verantwortlich?
+    options_de:
+      a: Die Eidgenossenschaft
+      b: Die Gemeinden
+      c: Die Kantonalbanken
+      d: Die Kantone gemeinsam
+    explanation_de: Die Geld- und Währungspolitik ist gemäss der Bundesverfassung Aufgabe der Eidgenossenschaft.
+      Die Eidgenossenschaft hat das Recht, Münzen und Banknoten zu prägen bzw. zu drucken. Die Schweizerische
+      Nationalbank führt die Geldpolitik im Namen der Eidgenossenschaft durch und ist dabei unabhängig.

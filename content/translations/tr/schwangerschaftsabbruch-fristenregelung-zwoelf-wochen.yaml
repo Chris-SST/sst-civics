@@ -1,0 +1,32 @@
+id: schwangerschaftsabbruch-fristenregelung-zwoelf-wochen
+lang: tr
+source_version: 1
+question: İsviçre'de 2002'den beri ilk on iki haftada gebeliğin sonlandırılması için hangi düzenleme geçerlidir?
+options:
+  a: Bu süre içinde gebeliğin sonlandırılması esas olarak yasaktır.
+  b: Kadın, gebeliğin sonlandırılmasına kendisi karar verebilir.
+  c: Eş veya partner, gebeliğin sonlandırılmasına onay vermek zorundadır.
+  d: Gebeliğin sonlandırılmasına bir mahkeme izin vermek zorundadır.
+explanation: 2002'den beri sözde süre çözümü (Fristenregelung) geçerlidir. Buna göre kadın, gebeliğin
+  ilk on iki haftasında kendisi karar verir. Bunun için yazılı olarak bir sıkıntı durumu içinde olduğunu
+  beyan etmesi gerekir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Regelung gilt in der Schweiz seit 2002 für den Schwangerschaftsabbruch in den
+      ersten zwölf Wochen?
+    options_de:
+      a: Der Schwangerschaftsabbruch ist in dieser Zeit grundsätzlich verboten.
+      b: Die Frau kann selbst über den Schwangerschaftsabbruch entscheiden.
+      c: Der Ehepartner oder Partner muss dem Schwangerschaftsabbruch zustimmen.
+      d: Ein Gericht muss den Schwangerschaftsabbruch bewilligen.
+    explanation_de: Seit 2002 gilt die sogenannte Fristenregelung. Demnach entscheidet die Frau in den
+      ersten zwölf Wochen der Schwangerschaft selbst. Dafür muss sie schriftlich erklären, dass sie sich
+      in einer Notlage befindet.

@@ -1,0 +1,31 @@
+id: beliebteste-vereinssportart-fussball
+lang: tr
+source_version: 2
+question: İsviçre'de kulüplerde en çok yapılan spor dalı hangisidir?
+options:
+  a: Buz hokeyi
+  b: Yüzme
+  c: Kayak
+  d: Futbol
+explanation: Futbol, İsviçre'de kulüplerde en çok sevilen spor dalıdır. İsviçre Futbol Federasyonu'nun
+  1300'den fazla kulüpte yaklaşık 300 000 üyesi bulunmaktadır. Her hafta sonu ülkenin dört bir yanında
+  binlerce maç oynanır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Sportart wird in der Schweiz am häufigsten in Vereinen betrieben?
+    options_de:
+      a: Eishockey
+      b: Schwimmen
+      c: Skifahren
+      d: Fussball
+    explanation_de: Fussball ist in der Schweiz die beliebteste Sportart in Vereinen. Der Schweizerische
+      Fussballverband hat in mehr als 1300 Vereinen rund 300 000 Mitglieder. Jedes Wochenende werden im
+      ganzen Land Tausende von Spielen ausgetragen.

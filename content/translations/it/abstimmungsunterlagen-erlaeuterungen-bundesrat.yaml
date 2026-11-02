@@ -1,0 +1,35 @@
+id: abstimmungsunterlagen-erlaeuterungen-bundesrat
+lang: it
+source_version: 1
+question: Che cosa ricevono gli aventi diritto di voto, insieme al materiale di voto, prima di una votazione
+  federale per potersi informare sugli oggetti in votazione?
+options:
+  a: Le spiegazioni del Consiglio federale (Bundesrat)
+  b: Una presa di posizione del Tribunale federale (Bundesgericht)
+  c: Una perizia del proprio Cantone
+  d: La lista elettorale di tutti i partiti
+explanation: Nelle spiegazioni, spesso chiamate opuscolo di voto, il Consiglio federale illustra di che
+  cosa tratta ciascun oggetto in votazione. Vi si trovano anche gli argomenti del comitato d'iniziativa
+  o del comitato referendario, nonché la raccomandazione del Consiglio federale e del Parlamento. In questo
+  modo tutti possono formarsi una propria opinione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was erhalten die Stimmberechtigten zusammen mit dem Stimmmaterial vor einer eidgenössischen
+      Abstimmung, um sich über die Abstimmungsvorlagen informieren zu können?
+    options_de:
+      a: Die Erläuterungen des Bundesrates
+      b: Eine Stellungnahme des Bundesgerichts
+      c: Ein Gutachten des eigenen Kantons
+      d: Die Wahlliste aller Parteien
+    explanation_de: In den Erläuterungen, oft Abstimmungsbüchlein genannt, legt der Bundesrat dar, worum
+      es bei jeder Abstimmungsvorlage geht. Darin finden sich auch die Argumente des Initiativkomitees
+      oder des Referendumskomitees sowie die Empfehlung des Bundesrates und des Parlaments. So kann sich
+      jede und jeder eine eigene Meinung bilden.

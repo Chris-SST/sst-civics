@@ -1,0 +1,32 @@
+id: reformation-religioese-bewegung-16-jahrhundert
+lang: tr
+source_version: 1
+question: 16. yüzyılda Avrupa'yı ve İsviçre'yi de şekillendiren önemli dinî hareket hangisidir?
+options:
+  a: Reform (Reformation)
+  b: Aydınlanma
+  c: Yenilenme (Regeneration)
+  d: Helvetik Cumhuriyet (Helvetik)
+explanation: Reform hareketi, 16. yüzyılda Avrupa'da kiliseyi ikiye böldü. İsviçre'de örneğin Zürih'te
+  Huldrych Zwingli ve Cenevre'de Johannes Calvin önemliydi. Diğer kavramlar daha sonraki gelişmeleri ifade
+  eder.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches ist die wichtige religiöse Bewegung, die im 16. Jahrhundert Europa und auch die
+      Schweiz prägte?
+    options_de:
+      a: Reformation
+      b: Aufklärung
+      c: Regeneration
+      d: Helvetische Republik
+    explanation_de: Die Reformationsbewegung spaltete im 16. Jahrhundert in Europa die Kirche in zwei.
+      In der Schweiz waren zum Beispiel Huldrych Zwingli in Zürich und Johannes Calvin in Genf wichtig.
+      Die anderen Begriffe bezeichnen spätere Entwicklungen.

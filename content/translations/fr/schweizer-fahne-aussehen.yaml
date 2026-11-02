@@ -1,0 +1,30 @@
+id: schweizer-fahne-aussehen
+lang: fr
+source_version: 1
+question: À quoi ressemble le drapeau suisse ?
+options:
+  a: Une croix blanche isolée sur un carré rouge
+  b: Une croix blanche sur fond rouge avec un blason au centre
+  c: Une croix blanche qui s'étend jusqu'au bord du rectangle rouge
+  d: Une croix rouge isolée sur un carré blanc
+explanation: Le drapeau suisse est carré. Il montre une croix blanche sur fond rouge, dont les bras ne
+  touchent pas le bord. Avec le drapeau du Vatican, c'est l'un des deux drapeaux nationaux carrés.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie sieht die Schweizer Flagge aus?
+    options_de:
+      a: Ein freistehendes weisses Kreuz auf einem roten Quadrat
+      b: Ein weisses Kreuz auf rotem Grund mit einem Wappen in der Mitte
+      c: Ein weisses Kreuz, das sich bis zum Rand des roten Rechtecks erstreckt
+      d: Ein freistehendes rotes Kreuz auf einem weissen Quadrat
+    explanation_de: Die Schweizer Flagge ist quadratisch. Sie zeigt ein weisses Kreuz auf rotem Grund,
+      dessen Arme den Rand nicht berühren. Zusammen mit der Flagge des Vatikans ist sie eine der zwei
+      quadratischen Nationalflaggen.

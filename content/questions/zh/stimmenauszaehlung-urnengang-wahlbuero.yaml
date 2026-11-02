@@ -23,7 +23,7 @@ glossary:
 - Wahlbüro
 - Urnengang
 - Gemeinde
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-120
@@ -46,3 +46,33 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte ergänzen, dass die Verantwortung für die Auszählung auch beim neuen
+        elektronischen Auszählen («E-Counting», ab Juni 2026 in einigen Gemeinden) beim Wahlbüro der Gemeinde
+        bleibt, zum Beispiel mit dem Satz «Auch wenn Stimmzettel elektronisch gezählt werden, ist das
+        Wahlbüro dafür verantwortlich.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Begriff «Urnengänge» ist für Lernende auf Niveau B1 eher schwierig; die Erklärung
+        könnte kurz ergänzen, dass damit Abstimmungen und Wahlen gemeint sind.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In Antwort c) ist «allein» ein Hinweis, der die Antwort leicht ausschliessbar macht; unproblematisch,
+        aber «Der Gemeindepräsident» wäre ein etwas gleichwertigerer Ablenker.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

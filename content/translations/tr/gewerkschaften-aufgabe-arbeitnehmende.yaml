@@ -1,0 +1,32 @@
+id: gewerkschaften-aufgabe-arbeitnehmende
+lang: tr
+source_version: 2
+question: İsviçre'de sendikaların görevi nedir?
+options:
+  a: Çalışanların taleplerini ve çıkarlarını savunurlar.
+  b: Yabancılara çalışma izni verirler.
+  c: Şirketler için vergi oranlarını belirlerler.
+  d: İşverenlerin taleplerini Konfederasyon nezdinde temsil ederler.
+explanation: Sendikalar çalışanların örgütleridir. Örneğin ücretler ve çalışma koşulları gibi konularda
+  çalışanların çıkarlarını temsil ederler ve çoğu zaman işverenlerle toplu iş sözleşmeleri müzakere ederler.
+  Çalışma izinlerini ise sendikalar değil, yetkili makamlar verir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was ist die Aufgabe der Gewerkschaften in der Schweiz?
+    options_de:
+      a: Sie verteidigen die Forderungen und Interessen der Arbeitnehmenden.
+      b: Sie erteilen Ausländern Arbeitsbewilligungen.
+      c: Sie legen die Steuersätze für Unternehmen fest.
+      d: Sie vertreten die Forderungen der Arbeitgeber gegenüber dem Bund.
+    explanation_de: Gewerkschaften sind Organisationen der Arbeitnehmenden. Sie vertreten die Interessen
+      der Arbeitnehmenden zum Beispiel bei Themen wie Löhnen und Arbeitsbedingungen und verhandeln oft
+      mit den Arbeitgebern Gesamtarbeitsverträge. Arbeitsbewilligungen hingegen erteilen nicht die Gewerkschaften,
+      sondern die zuständigen Behörden.

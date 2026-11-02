@@ -1,0 +1,30 @@
+id: grundversicherung-pflicht-einwohner
+lang: tr
+source_version: 1
+question: İsviçre'de tıbbi tedaviler için zorunlu temel sigorta kimleri kapsar?
+options:
+  a: Yalnızca İsviçre vatandaşlığına (Bürgerrecht) sahip kişileri
+  b: Yalnızca maaşlı çalışan kişileri
+  c: Yalnızca düşük gelirli kişileri
+  d: İsviçre'de yaşayan tüm kişileri
+explanation: Zorunlu sağlık sigortası, İsviçre'de ikamet eden tüm kişiler için geçerlidir. Vatandaşlık,
+  çalışma durumu ve gelir bu konuda hiçbir rol oynamaz.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer wird in der Schweiz von der obligatorischen Grundversicherung für medizinische Behandlungen
+      erfasst?
+    options_de:
+      a: Nur Personen mit dem Schweizer Bürgerrecht
+      b: Nur lohnabhängig erwerbstätige Personen
+      c: Nur Personen mit niedrigem Einkommen
+      d: Alle Personen, die in der Schweiz leben
+    explanation_de: Die obligatorische Krankenversicherung gilt für alle Personen, die in der Schweiz
+      ihren Wohnsitz haben. Staatsbürgerschaft, Erwerbsstatus und Einkommen spielen dabei keine Rolle.

@@ -1,0 +1,30 @@
+id: kantonsrat-amtsdauer-vier-jahre
+lang: sq
+source_version: 1
+question: Për sa vite zgjidhen anëtarët e Këshillit Kantonal të Cyrihut (Kantonsrat)?
+options:
+  a: Për dy vite
+  b: Për tre vite
+  c: Për gjashtë vite
+  d: Për katër vite
+explanation: Anëtarët e Këshillit Kantonal të Cyrihut zgjidhen për një mandat prej katër vitesh. Pas kësaj
+  mbahen zgjedhje për rinovimin e plotë. Atëherë votuesit mund të vendosin përsëri se kush ulet në parlament.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für wie viele Jahre werden die Mitglieder des Zürcher Kantonsrats gewählt?
+    options_de:
+      a: Für zwei Jahre
+      b: Für drei Jahre
+      c: Für sechs Jahre
+      d: Für vier Jahre
+    explanation_de: Die Mitglieder des Zürcher Kantonsrats werden für eine Amtszeit von vier Jahren gewählt.
+      Danach finden Wahlen zur Gesamterneuerung statt. Dann können die Wählerinnen und Wähler erneut entscheiden,
+      wer im Parlament sitzt.

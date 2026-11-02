@@ -1,15 +1,31 @@
 id: grenzgaenger-definition-wohnort-arbeitsort
 lang: en
-source_version: 1
-question: What is meant by a cross-border commuter in Switzerland?
+source_version: 2
+question: Who is considered a cross-border commuter in Switzerland?
 options:
-  a: A person who works in Switzerland but lives abroad, near the border
-  b: A person who works for customs at the national border
-  c: A person who crosses the border without a permit in order to work
-  d: A person who lives in Switzerland but works abroad every day
-explanation: Cross-border commuters have their place of work in Switzerland but live on the other side
-  of the national border. They need a special permit to do so. They come, for example, from Germany, France,
-  Italy or Austria.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: A person who works in Switzerland but lives abroad and returns there regularly
+  b: A person who works for customs and checks the national border
+  c: A person who crosses the border without a permit in order to work here
+  d: A person who lives in one canton and works in a different canton every day
+explanation: Cross-border commuters work in Switzerland but live in another country. They need a cross-border
+  commuter permit and return regularly, at least once a week, to their place of residence abroad. Anyone
+  who only commutes between two cantons is not a cross-border commuter.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer gilt in der Schweiz als Grenzgänger?
+    options_de:
+      a: Eine Person, die in der Schweiz arbeitet, aber im Ausland wohnt und regelmässig dorthin zurückkehrt
+      b: Eine Person, die für den Zoll arbeitet und die Landesgrenze kontrolliert
+      c: Eine Person, die die Grenze ohne Bewilligung überquert, um hier zu arbeiten
+      d: Eine Person, die in einem Kanton wohnt und jeden Tag in einem anderen Kanton arbeitet
+    explanation_de: Grenzgänger arbeiten in der Schweiz, wohnen aber in einem anderen Land. Sie benötigen
+      eine Grenzgängerbewilligung und kehren regelmässig, mindestens einmal pro Woche, an ihren Wohnort
+      im Ausland zurück. Wer nur zwischen zwei Kantonen pendelt, ist kein Grenzgänger.

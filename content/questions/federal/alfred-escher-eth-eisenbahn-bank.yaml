@@ -1,18 +1,18 @@
 id: alfred-escher-eth-eisenbahn-bank
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.geschichte.bundesstaat
 question_de: Wofür ist der Zürcher Politiker und Unternehmer Alfred Escher bekannt?
 options_de:
-  a: Er führte die Schweizer Truppen im Sonderbundskrieg.
-  b: Er schrieb die erste Bundesverfassung allein.
-  c: Er gründete das Rote Kreuz in Genf.
-  d: Er war an ETH, Eisenbahnbau und der Gründung der Credit Suisse beteiligt.
+  a: Er führte die Schweizer Truppen im Sonderbundskrieg an.
+  b: Er schrieb die erste Bundesverfassung ganz allein.
+  c: Er gründete in Genf das Rote Kreuz.
+  d: Er förderte die ETH und den Eisenbahnbau und gründete die Bank, aus der die Credit Suisse wurde.
 correct: d
-explanation_de: Alfred Escher förderte im 19. Jahrhundert die Gründung der ETH Zürich und den Bau der
-  Eisenbahn, besonders der Gotthardbahn. Zudem gründete er die Schweizerische Kreditanstalt, die heutige
-  Credit Suisse. Er gilt als Visionär der modernen Schweiz.
+explanation_de: Alfred Escher setzte sich im 19. Jahrhundert für die Gründung der ETH Zürich und für den
+  Bau von Eisenbahnen ein, vor allem für die Gotthardbahn. 1856 gründete er die Schweizerische Kreditanstalt,
+  die spätere Credit Suisse. Diese Bank wurde 2023 von der UBS übernommen.
 sources:
 - url: https://www.aboutswitzerland.eda.admin.ch/de/alfred-escher-ein-visionaer-der-modernen-schweiz
   checked: &id001 2026-11-02
@@ -21,7 +21,7 @@ glossary:
 - ETH
 - Eisenbahnbau
 - Credit Suisse
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-208
@@ -31,15 +31,53 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Alfred Escher war Gründer der Schweizerischen Kreditanstalt (Credit Suisse), förderte die
-      Gründung der ETH Zürich und trieb den Eisenbahnbau (Nordostbahn, Gotthardbahn) voran, während die
-      anderen Aussagen auf Dufour, die Verfassungskommission bzw. Henri Dunant zutreffen.
+    version: 2
+    reasoning: Alfred Escher gründete die Schweizerische Kreditanstalt (später Credit Suisse), förderte
+      die Gründung der ETH Zürich und trieb den Eisenbahnbau, namentlich die Gotthardbahn, voran, während
+      die anderen Antworten auf Dufour, die Verfassungskommission und Henri Dunant zutreffen.
   source:
     verdict: supported
-    note: Die Seite nennt Eschers Einsatz für das Polytechnikum (heute ETH Zürich), den Eisenbahnbau (Nordostbahn,
-      Gotthardbahn) und die Gründung der Schweizerischen Kreditanstalt (später Credit Suisse) im Jahr
-      1856. Damit sind Antwort d und die Erklärung gedeckt.
+    note: 'Die Seite bestätigt alle Punkte: Escher setzte sich für das Polytechnikum (heute ETH Zürich)
+      und den Eisenbahnbau ein, auch für die Gotthardbahn. Er gründete 1856 die Schweizerische Kreditanstalt,
+      die spätere Credit Suisse, die 2023 von der UBS übernommen wurde.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort d) ist deutlich länger und detaillierter als die anderen Antworten und verrät
+        sich dadurch; die falschen Antworten könnten etwas ausführlicher formuliert werden, zum Beispiel
+        «Er führte als General die Schweizer Truppen im Sonderbundskrieg gegen die katholischen Kantone
+        an.»'
+      - 'Klein: Antwort b) ist durch «ganz allein» leicht als falsch zu erkennen; plausibler wäre etwa
+        «Er war der erste Bundespräsident der Schweiz.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort d ist deutlich länger und detaillierter als die anderen Antworten und verrät sich
+        dadurch; die Ablenker könnten etwas ausführlicher formuliert werden, etwa a) «Er führte als General
+        die eidgenössischen Truppen im Sonderbundskrieg von 1847 an.»'
+      - 'Klein: Die Formulierung «die Bank, aus der die Credit Suisse wurde» ist sprachlich etwas holprig;
+        besser wäre «die Bank, die später zur Credit Suisse wurde».'
+      - 'Klein: Das «ganz allein» in Antwort b macht den Ablenker leicht durchschaubar; ein plausiblerer
+        Ablenker wäre z. B. «Er war der erste Bundespräsident der Schweiz.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die richtige Antwort d) ist deutlich länger und detaillierter als die falschen Antworten
+        und fällt dadurch auf. Kürze sie, etwa zu «Er förderte die ETH und den Eisenbahnbau und gründete
+        die Schweizerische Kreditanstalt», oder verlängere die falschen Antworten.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

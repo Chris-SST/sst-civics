@@ -1,0 +1,33 @@
+id: baugesuch-wohnhaus-entscheid-gemeindebehoerde
+lang: es
+source_version: 1
+question: ¿Quién decide, por regla general, en el cantón de Zúrich sobre la solicitud de licencia de construcción
+  de una nueva vivienda?
+options:
+  a: El Consejo de Gobierno (Regierungsrat)
+  b: La autoridad de construcción del municipio (Gemeinde)
+  c: El tribunal de distrito
+  d: La Oficina Federal de Desarrollo Territorial
+explanation: Las solicitudes de licencia de construcción para viviendas se presentan en el municipio.
+  La autoridad municipal de construcción examina la solicitud y concede o deniega la licencia de construcción.
+  El cantón solo interviene en casos especiales.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Frage und Erklärung: «Wohnhaus» (ganzes Gebäude) wird in der Rückübersetzung zu «Wohnung»
+      (einzelne Einheit); das ist ein anderer Bauvorhaben-Gegenstand.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wer entscheidet im Kanton Zürich in der Regel über das Baugesuch für eine neue Wohnung?
+    options_de:
+      a: Der Regierungsrat
+      b: Die Baubehörde der Gemeinde
+      c: Das Bezirksgericht
+      d: Das Bundesamt für Raumentwicklung
+    explanation_de: Baugesuche für Wohnungen werden bei der Gemeinde eingereicht. Die kommunale Baubehörde
+      prüft das Gesuch und erteilt oder verweigert die Baubewilligung. Der Kanton greift nur in besonderen
+      Fällen ein.

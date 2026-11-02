@@ -1,0 +1,30 @@
+id: zu-tiefer-lohn-arbeitsgericht
+lang: tr
+source_version: 1
+question: Bir kadın çalışana haksız yere çok düşük maaş ödeniyor. Hangi kuruma başvurabilir?
+options:
+  a: Bölgesel İş Bulma Merkezi (RAV)
+  b: Konfederasyon İstatistik Dairesi
+  c: İş mahkemesi
+  d: Belediye halk toplantısı (Gemeindeversammlung)
+explanation: İş ilişkisinden kaynaklanan uyuşmazlıklarda, örneğin çok düşük maaş nedeniyle, iş mahkemesi
+  yetkilidir. RAV iş aramada yardımcı olur, maaş uyuşmazlıklarında yardımcı olmaz.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Einer Arbeitnehmerin wird zu Unrecht ein sehr niedriger Lohn bezahlt. An welche Stelle
+      kann sie sich wenden?
+    options_de:
+      a: Regionales Arbeitsvermittlungszentrum (RAV)
+      b: Bundesamt für Statistik
+      c: Arbeitsgericht
+      d: Gemeindeversammlung
+    explanation_de: Bei Streitigkeiten aus dem Arbeitsverhältnis, zum Beispiel wegen eines zu niedrigen
+      Lohns, ist das Arbeitsgericht zuständig. Das RAV hilft bei der Stellensuche, nicht bei Lohnstreitigkeiten.

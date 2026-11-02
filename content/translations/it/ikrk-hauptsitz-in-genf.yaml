@@ -1,0 +1,29 @@
+id: ikrk-hauptsitz-in-genf
+lang: it
+source_version: 1
+question: In quale Paese ha la sede principale il Comitato internazionale della Croce Rossa (CICR)?
+options:
+  a: Nei Paesi Bassi
+  b: In Svizzera
+  c: In Austria
+  d: In Belgio
+explanation: Il CICR ha la sede principale a Ginevra, in Svizzera. È stato fondato a Ginevra nel 1863
+  e protegge le vittime dei conflitti armati. La Svizzera sostiene il suo lavoro.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Land hat das Internationale Komitee vom Roten Kreuz (IKRK) seinen Hauptsitz?
+    options_de:
+      a: In den Niederlanden
+      b: In der Schweiz
+      c: In Österreich
+      d: In Belgien
+    explanation_de: Das IKRK hat seinen Hauptsitz in Genf, in der Schweiz. Es wurde 1863 in Genf gegründet
+      und schützt die Opfer bewaffneter Konflikte. Die Schweiz unterstützt seine Arbeit.

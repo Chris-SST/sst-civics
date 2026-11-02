@@ -1,0 +1,31 @@
+id: notruf-144-rettungsdienst
+lang: tr
+source_version: 1
+question: İsviçre'de tıbbi bir acil durumda ambulans hizmetini çağırmak için hangi telefon numarası aranır?
+options:
+  a: '118'
+  b: '117'
+  c: '144'
+  d: '145'
+explanation: 144 numarası, tıbbi acil durumlarda ambulans hizmeti için acil çağrı numarasıdır. 117 polis
+  için, 118 ise itfaiye için geçerlidir. 145, zehirlenme durumlarında Tox Info Suisse'in numarasıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Telefonnummer wird in der Schweiz in einem medizinischen Notfall gewählt, um den
+      Rettungsdienst (Ambulanz) zu rufen?
+    options_de:
+      a: '118'
+      b: '117'
+      c: '144'
+      d: '145'
+    explanation_de: Die Nummer 144 ist die Notrufnummer für den Rettungsdienst (Ambulanz) bei medizinischen
+      Notfällen. 117 gilt für die Polizei und 118 für die Feuerwehr. 145 ist die Nummer von Tox Info Suisse
+      bei Vergiftungen.

@@ -11,6 +11,22 @@ options:
 explanation: AHV stands for Alters- und Hinterlassenenversicherung (old-age and survivors' insurance),
   IV for Invalidenversicherung (invalidity insurance). Both are regulated by federal law and are part
   of the state social insurance system.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage über die Sozialversicherungen in der Schweiz ist richtig?
+    options_de:
+      a: Die Alters- und Hinterlassenenversicherung (AHV) und die Invalidenversicherung (IV) sind Teil
+        des Sozialversicherungssystems der Schweiz.
+      b: Die AHV und die IV werden nur von den Gemeinden geführt.
+      c: Die AHV und die IV sind private Versicherungen ohne gesetzliche Grundlage.
+      d: Die AHV und die IV sind nur für Selbstständige gedacht.
+    explanation_de: AHV steht für Alters- und Hinterlassenenversicherung, IV für Invalidenversicherung.
+      Beide sind im Bundesrecht geregelt und Teil des staatlichen Sozialversicherungssystems.

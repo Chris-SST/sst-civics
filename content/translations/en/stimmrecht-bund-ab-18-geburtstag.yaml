@@ -9,6 +9,23 @@ options:
   d: From their 18th birthday
 explanation: The right to vote and to elect at Confederation level begins at the age of majority, that
   is, on one's 18th birthday. This age applies equally to elections and votes held by the Confederation.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ab welchem Alter dürfen Schweizer Bürgerinnen und Bürger auf Bundesebene abstimmen und
+      wählen?
+    options_de:
+      a: Ab ihrem 20. Geburtstag
+      b: Ab ihrem 21. Geburtstag
+      c: Ab ihrem 16. Geburtstag
+      d: Ab ihrem 18. Geburtstag
+    explanation_de: Das Stimm- und Wahlrecht auf Ebene des Bundes beginnt mit dem Erreichen der Volljährigkeit,
+      das heisst am 18. Geburtstag. Dieses Alter gilt gleichermassen für Wahlen und Abstimmungen, die
+      vom Bund durchgeführt werden.

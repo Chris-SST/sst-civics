@@ -1,0 +1,31 @@
+id: urkantone-buendnis-1291
+lang: es
+source_version: 1
+question: ¿Qué tres territorios se aliaron en 1291 y se consideran el núcleo de la posterior Antigua Confederación
+  Suiza?
+options:
+  a: Uri, Schwyz y Unterwalden
+  b: Glarus, Zug y Uri
+  c: Basilea, Schaffhausen y Appenzell
+  d: Zúrich, Berna y Lucerna
+explanation: Uri, Schwyz y Unterwalden concluyeron en 1291 una Confederación. Esta fecha se considera
+  el origen de Suiza y se celebra el 1 de agosto. Los demás lugares se incorporaron a la Confederación
+  solo más tarde.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche drei Gebiete verbündeten sich 1291 und gelten als Kern der späteren Alten Eidgenossenschaft?
+    options_de:
+      a: Uri, Schwyz und Unterwalden
+      b: Glarus, Zug und Uri
+      c: Basel, Schaffhausen und Appenzell
+      d: Zürich, Bern und Luzern
+    explanation_de: Uri, Schwyz und Unterwalden schlossen 1291 einen Bund. Dieses Datum gilt als Ursprung
+      der Schweiz und wird am 1. August gefeiert. Die übrigen Orte traten dem Bund erst später bei.

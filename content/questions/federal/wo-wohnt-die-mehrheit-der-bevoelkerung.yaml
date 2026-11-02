@@ -1,17 +1,18 @@
 id: wo-wohnt-die-mehrheit-der-bevoelkerung
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.geografie.landschaft
-question_de: In welcher Grossregion der Schweiz wohnt die Mehrheit der Bevölkerung?
+question_de: In welchem Gebiet der Schweiz wohnt die Mehrheit der Bevölkerung?
 options_de:
   a: In den Alpen
   b: Im Tessin
   c: Im Mittelland
   d: Im Jura
 correct: c
-explanation_de: Im Mittelland zwischen Jura und Alpen liegen die meisten grossen Städte. Dort lebt der
-  grösste Teil der Bevölkerung. Die Alpen sind zwar gross, aber dünn besiedelt.
+explanation_de: Das Mittelland liegt zwischen dem Jura und den Alpen. Dort befinden sich die meisten grossen
+  Städte, und dort lebt der grösste Teil der Bevölkerung. Die Alpen bedecken zwar eine grosse Fläche,
+  sind aber nur dünn besiedelt.
 sources:
 - url: https://www.aboutswitzerland.eda.admin.ch/de/geografie
   checked: &id001 2026-11-02
@@ -19,7 +20,7 @@ glossary:
 - Mittelland
 - Jura
 - Alpen
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-275
@@ -29,14 +30,45 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Im Mittelland, das nur etwa ein Drittel der Landesfläche ausmacht, wohnt mit rund zwei
-      Dritteln der Bevölkerung die Mehrheit der Schweizerinnen und Schweizer.
+    version: 2
+    reasoning: Die Mehrheit der Schweizer Bevölkerung lebt im Mittelland, dem dicht besiedelten Gebiet
+      zwischen Jura und Alpen mit den grössten Städten wie Zürich, Bern und Basel am Rand.
   source:
     verdict: supported
     note: Quelle 1 nennt das Mittelland die am dichtesten besiedelte Region mit den meisten Agglomerationen.
       Die vorwiegend im Mittelland gelegenen urbanen Gebiete umfassen die Mehrheit der Bevölkerung, während
-      die Alpen nur einen kleinen Teil der Bevölkerung beherbergen und der Jura dünn besiedelt ist.
+      die Alpen nur einen kleinen Teil beherbergen und der Jura dünn besiedelt ist.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Tessin» ist ein Kanton und liegt grösstenteils in den Alpen, während die anderen Antworten
+        die drei geografischen Grossregionen nennen; besser wäre eine gleichartige Antwort wie «In den
+        Voralpen» oder «In den grossen Tälern der Alpen».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Im Tessin» ist ein Kanton, die anderen Antworten sind grosse Landschaftsräume; besser
+        wäre eine Antwort derselben Art, zum Beispiel «In den Voralpen» oder «Im Rheintal».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, im Mittelland lebe «der grösste Teil» der Bevölkerung. Die Quelle
+        spricht von urbanen Gebieten, die vorwiegend im Mittelland liegen, und nennt das Mittelland die
+        am dichtesten besiedelte Region. Besser wäre «die meisten Menschen» oder «mehr als die Hälfte»,
+        dann ist die Aussage eindeutig durch die Quelle gedeckt.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

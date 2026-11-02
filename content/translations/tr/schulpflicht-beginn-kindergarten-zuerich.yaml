@@ -1,0 +1,29 @@
+id: schulpflicht-beginn-kindergarten-zuerich
+lang: tr
+source_version: 1
+question: Zürich kantonunda bir çocuğun okul zorunluluğu nasıl başlar?
+options:
+  a: Ortaokula (Sekundarschule) girişle
+  b: İlkokula (Primarschule) girişle
+  c: Oyun grubuna (Spielgruppe) girişle
+  d: Anaokuluna (Kindergarten) girişle
+explanation: Zürich kantonunda anaokulu, zorunlu halk okulunun (Volksschule) bir parçasıdır. Bu nedenle
+  okul zorunluluğu, anaokuluna girişle birlikte başlar. Oyun grubu ise isteğe bağlıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie beginnt die Schulpflicht eines Kindes im Kanton Zürich?
+    options_de:
+      a: Mit dem Eintritt in die Sekundarschule
+      b: Mit dem Eintritt in die Primarschule
+      c: Mit dem Eintritt in die Spielgruppe
+      d: Mit dem Eintritt in den Kindergarten
+    explanation_de: Im Kanton Zürich ist der Kindergarten ein Teil der obligatorischen Volksschule. Deshalb
+      beginnt die Schulpflicht mit dem Eintritt in den Kindergarten. Die Spielgruppe hingegen ist freiwillig.

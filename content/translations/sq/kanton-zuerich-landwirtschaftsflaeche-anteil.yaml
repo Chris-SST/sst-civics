@@ -1,0 +1,30 @@
+id: kanton-zuerich-landwirtschaftsflaeche-anteil
+lang: sq
+source_version: 1
+question: Sa është përafërsisht pjesa e sipërfaqes së kantonit të Cyrihut që përdoret për bujqësi?
+options:
+  a: Rreth 68 për qind
+  b: Rreth 25 për qind
+  c: Rreth 11 për qind
+  d: Rreth 41 për qind
+explanation: Rreth 41 për qind e sipërfaqes së kantonit të Cyrihut shërben për bujqësi. Pjesa tjetër përbëhet
+  kryesisht nga pyje, zona banimi dhe trupa ujorë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie gross ist ungefähr der Anteil der Fläche des Kantons Zürich, der für die Landwirtschaft
+      genutzt wird?
+    options_de:
+      a: Etwa 68 Prozent
+      b: Etwa 25 Prozent
+      c: Etwa 11 Prozent
+      d: Etwa 41 Prozent
+    explanation_de: Etwa 41 Prozent der Fläche des Kantons Zürich dienen der Landwirtschaft. Der Rest
+      besteht hauptsächlich aus Wäldern, Wohngebieten und Gewässern.

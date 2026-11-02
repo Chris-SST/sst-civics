@@ -1,0 +1,29 @@
+id: bag-zustaendig-gesundheitsfragen-bund
+lang: it
+source_version: 1
+question: Quale autorità federale è competente per le questioni di sanità?
+options:
+  a: L'Ufficio federale dell'ambiente (UFAM)
+  b: La Segreteria di Stato della migrazione (SEM)
+  c: L'Ufficio federale di statistica (UST)
+  d: L'Ufficio federale della sanità pubblica (UFSP)
+explanation: L'Ufficio federale della sanità pubblica (UFSP) è l'autorità federale competente per le questioni
+  di sanità. Esso vigila, per esempio, sull'assicurazione malattie sociale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Bundesbehörde ist für Gesundheitsfragen zuständig?
+    options_de:
+      a: Das Bundesamt für Umwelt (BAFU)
+      b: Das Staatssekretariat für Migration (SEM)
+      c: Das Bundesamt für Statistik (BFS)
+      d: Das Bundesamt für Gesundheit (BAG)
+    explanation_de: Das Bundesamt für Gesundheit (BAG) ist die für Gesundheitsfragen zuständige Bundesbehörde.
+      Es beaufsichtigt zum Beispiel die soziale Krankenversicherung.

@@ -1,0 +1,35 @@
+id: finanzausgleich-hilfe-schwache-gemeinden
+lang: sq
+source_version: 1
+question: Për çfarë shërben barazimi financiar (Finanzausgleich) mes komunave (Gemeinde) në kantonin e
+  Cyrihut?
+options:
+  a: Ai i ul taksat në të gjitha komunat në të njëjtën shkallë.
+  b: Ai u paguan komunave kostot e kuvendeve të komunës (Gemeindeversammlung).
+  c: Ai i ndihmon komunat me fuqi të dobët financiare ose të ngarkuara nga kostot e larta sociale që t'i
+    përmbushin detyrat e tyre.
+  d: Ai shpërndan paratë e Konfederatës në mënyrë të barabartë te të gjithë banorët dhe banoret.
+explanation: Komunat kanë mundësi financiare shumë të ndryshme. Barazimi financiar i zbut pjesërisht këto
+  dallime. Kështu edhe komunat me pak fuqi tatimore ose me kosto të larta sociale mund t'i përmbushin
+  detyrat e tyre.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort a): Im Original werden die Steuern auf denselben Satz gesenkt, in der Rückübersetzung
+      «im gleichen Ausmass» gesenkt, also um denselben Betrag oder Anteil statt auf denselben Steuersatz.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wozu dient der Finanzausgleich zwischen den Gemeinden im Kanton Zürich?
+    options_de:
+      a: Er senkt die Steuern in allen Gemeinden im gleichen Ausmass.
+      b: Er bezahlt den Gemeinden die Kosten der Gemeindeversammlungen.
+      c: Er hilft Gemeinden mit schwacher Finanzkraft oder mit hohen Sozialkosten belasteten Gemeinden,
+        ihre Aufgaben zu erfüllen.
+      d: Er verteilt das Geld des Bundes gleichmässig auf alle Einwohner und Einwohnerinnen.
+    explanation_de: Die Gemeinden haben sehr unterschiedliche finanzielle Möglichkeiten. Der Finanzausgleich
+      mildert diese Unterschiede teilweise. So können auch Gemeinden mit wenig Steuerkraft oder mit hohen
+      Sozialkosten ihre Aufgaben erfüllen.

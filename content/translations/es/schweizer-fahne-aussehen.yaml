@@ -1,0 +1,30 @@
+id: schweizer-fahne-aussehen
+lang: es
+source_version: 1
+question: ¿Cómo es la bandera suiza?
+options:
+  a: Una cruz blanca aislada sobre un cuadrado rojo
+  b: Una cruz blanca sobre fondo rojo con un escudo de armas en el centro
+  c: Una cruz blanca que llega hasta el borde del rectángulo rojo
+  d: Una cruz roja aislada sobre un cuadrado blanco
+explanation: La bandera suiza es cuadrada. Muestra una cruz blanca sobre fondo rojo, cuyos brazos no tocan
+  el borde. Junto con la bandera del Vaticano, es una de las dos banderas nacionales cuadradas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie sieht die Schweizer Flagge aus?
+    options_de:
+      a: Ein freistehendes weisses Kreuz auf einem roten Quadrat
+      b: Ein weisses Kreuz auf rotem Grund mit einem Wappen in der Mitte
+      c: Ein weisses Kreuz, das bis zum Rand des roten Rechtecks reicht
+      d: Ein freistehendes rotes Kreuz auf einem weissen Quadrat
+    explanation_de: Die Schweizer Flagge ist quadratisch. Sie zeigt ein weisses Kreuz auf rotem Grund,
+      dessen Arme den Rand nicht berühren. Zusammen mit der Flagge des Vatikans ist sie eine der beiden
+      quadratischen Nationalflaggen.

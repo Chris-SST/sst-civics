@@ -22,7 +22,7 @@ sources:
 glossary:
 - Schweizer Fahne
 - Wappen
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-348
@@ -44,3 +44,35 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung kann sich «dessen Arme» grammatikalisch auf «Grund» oder auf «Kreuz»
+        beziehen; einfacher und klarer wäre: «Die Arme des Kreuzes berühren den Rand nicht.»'
+      - 'Klein: Die Erklärung könnte kurz sagen, dass Antwort d) die Fahne des Roten Kreuzes beschreibt
+        (Farben umgekehrt); das hilft beim Lernen, weil diese Verwechslung häufig ist.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c) ist knapp unterscheidbar von a), weil sie nur das Gegenteil von «freistehend»
+        beschreibt; das ist fair, aber «roten Rechtecks» statt «Quadrats» könnte als zusätzliches Unterscheidungsmerkmal
+        verwirren. Vorschlag: «auf rotem Grund» in beiden Antworten gleich formulieren.'
+      - 'Klein: Die Erklärung sagt «eine der beiden quadratischen Landesflaggen»; das ist korrekt, aber
+        der Satz «Sie ist neben der Fahne des Vatikans …» ist für B1 etwas lang. Vorschlag: «Nur die Fahne
+        des Vatikans ist auch quadratisch.»'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

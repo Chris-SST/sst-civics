@@ -1,0 +1,33 @@
+id: einkommenssteuer-kanton-gemeinden-zuerich
+lang: es
+source_version: 1
+question: ¿Qué impuesto importante cobran el cantón de Zúrich y los municipios (Gemeinden) sobre el salario
+  y otros ingresos de las personas?
+options:
+  a: El impuesto sobre la renta
+  b: El impuesto sobre sucesiones
+  c: El impuesto sobre los perros
+  d: El impuesto sobre los vehículos de motor
+explanation: El impuesto sobre la renta es uno de los impuestos más importantes del cantón y de los municipios.
+  Se cobra sobre los ingresos de las personas físicas. Los demás impuestos son menos importantes o gravan
+  otra cosa.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche wichtige Steuer erheben der Kanton Zürich und die Gemeinden auf den Lohn und andere
+      Einkommen der Personen?
+    options_de:
+      a: Die Einkommenssteuer
+      b: Die Erbschaftssteuer
+      c: Die Hundesteuer
+      d: Die Motorfahrzeugsteuer
+    explanation_de: Die Einkommenssteuer ist eine der wichtigsten Steuern des Kantons und der Gemeinden.
+      Sie wird auf das Einkommen der natürlichen Personen erhoben. Die übrigen Steuern sind weniger wichtig
+      oder belasten etwas anderes.

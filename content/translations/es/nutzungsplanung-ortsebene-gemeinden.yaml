@@ -1,0 +1,33 @@
+id: nutzungsplanung-ortsebene-gemeinden
+lang: es
+source_version: 1
+question: ¿Quién planifica en el cantón de Zúrich, a nivel local, cómo se utiliza el suelo, por ejemplo
+  dónde se encuentran las zonas residenciales y las zonas comerciales?
+options:
+  a: La Asamblea Federal (Bundesversammlung) de Suiza
+  b: La policía cantonal
+  c: Los municipios (Gemeinden)
+  d: Solo los consejos de distrito
+explanation: Los municipios elaboran la planificación del uso del suelo para su territorio, por ejemplo
+  el reglamento de construcción y zonificación. Para ello tienen en cuenta las disposiciones de la Confederación
+  y del cantón. Así participan en decidir cómo se desarrolla la localidad.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer plant im Kanton Zürich auf lokaler Ebene, wie der Boden genutzt wird, zum Beispiel
+      wo sich die Wohnzonen und die Gewerbezonen befinden?
+    options_de:
+      a: Die Bundesversammlung der Schweiz
+      b: Die Kantonspolizei
+      c: Die Gemeinden
+      d: Nur die Bezirksräte
+    explanation_de: Die Gemeinden erarbeiten die Nutzungsplanung für ihr Gebiet, zum Beispiel die Bau-
+      und Zonenordnung. Dabei berücksichtigen sie die Vorgaben des Bundes und des Kantons. So wirken sie
+      mit, zu entscheiden, wie sich der Ort entwickelt.

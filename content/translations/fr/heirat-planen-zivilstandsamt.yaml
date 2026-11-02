@@ -1,0 +1,29 @@
+id: heirat-planen-zivilstandsamt
+lang: fr
+source_version: 1
+question: À quel service les couples qui souhaitent se marier doivent-ils s'adresser ?
+options:
+  a: À l'autorité scolaire (Schulpflege)
+  b: À l'office de l'état civil
+  c: À l'office des impôts
+  d: À l'office des poursuites
+explanation: L'office de l'état civil prépare le mariage et le célèbre. Il enregistre également d'autres
+  événements, comme les naissances et les décès.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welche Stelle müssen sich Paare wenden, die heiraten möchten?
+    options_de:
+      a: An die Schulpflege
+      b: An das Zivilstandsamt
+      c: An das Steueramt
+      d: An das Betreibungsamt
+    explanation_de: Das Zivilstandsamt bereitet die Eheschliessung vor und führt sie durch. Es registriert
+      auch andere Ereignisse, wie Geburten und Todesfälle.

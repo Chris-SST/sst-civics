@@ -1,0 +1,33 @@
+id: soziale-sicherheit-bund-verantwortung
+lang: tr
+source_version: 1
+question: İsviçre'de, örneğin yaşlılık sigortası gibi yollarla nüfusun sosyal açıdan güvence altına alınması
+  sorumluluğunu hangi devlet kademesi üstlenir?
+options:
+  a: İlçeler
+  b: Yalnızca belediyeler (Gemeinden)
+  c: Konfederasyon
+  d: Yalnızca kantonlar
+explanation: Federal Anayasa, sosyal güvenliğe ilişkin önemli görevleri Konfederasyona verir. Bunlara
+  örneğin yaşlılık ve dul-yetim sigortası (AHV) ile malullük sigortası dahildir. Böylece tüm İsviçre için
+  tek tip temel ilkeler geçerlidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Staatsebene übernimmt in der Schweiz die Verantwortung dafür, die Bevölkerung
+      sozial abzusichern, zum Beispiel durch die Altersversicherung?
+    options_de:
+      a: Die Bezirke
+      b: Nur die Gemeinden
+      c: Die Konföderation
+      d: Nur die Kantone
+    explanation_de: Die Bundesverfassung überträgt dem Bund wichtige Aufgaben im Bereich der sozialen
+      Sicherheit. Dazu gehören zum Beispiel die Alters- und Hinterlassenenversicherung (AHV) sowie die
+      Invalidenversicherung. So gelten für die ganze Schweiz einheitliche Grundsätze.

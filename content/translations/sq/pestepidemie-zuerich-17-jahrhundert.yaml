@@ -1,0 +1,31 @@
+id: pestepidemie-zuerich-17-jahrhundert
+lang: sq
+source_version: 1
+question: Cila katastrofë në fillim të shekullit të 17-të i kushtoi jetën gati gjysmës së popullsisë së
+  Cyrihut?
+options:
+  a: Një zjarr i qytetit
+  b: Një epidemi e murtajës
+  c: Një përmbytje
+  d: Një zi buke
+explanation: Në fillim të shekullit të 17-të, gati gjysma e banorëve të Cyrihut vdiq nga murtaja. Murtaja
+  ishte një sëmundjengjitëse, e cila në atë kohë u përhap disa herë në Evropë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Katastrophe kostete zu Beginn des 17. Jahrhunderts fast der Hälfte der Bevölkerung
+      Zürichs das Leben?
+    options_de:
+      a: Ein Stadtbrand
+      b: Eine Pestepidemie
+      c: Eine Überschwemmung
+      d: Eine Hungersnot
+    explanation_de: Zu Beginn des 17. Jahrhunderts starb fast die Hälfte der Einwohner Zürichs an der
+      Pest. Die Pest war eine ansteckende Krankheit, die sich damals mehrmals in Europa ausbreitete.

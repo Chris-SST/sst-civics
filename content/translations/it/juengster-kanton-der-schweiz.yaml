@@ -1,0 +1,31 @@
+id: juengster-kanton-der-schweiz
+lang: it
+source_version: 1
+question: Quale Cantone è il più giovane della Svizzera?
+options:
+  a: Giura
+  b: Appenzello Esterno
+  c: Basilea Campagna
+  d: Neuchâtel
+explanation: Il Cantone Giura è stato fondato nel 1979. Si è separato dal Cantone Berna e da allora è
+  il più giovane dei 26 Cantoni. La Costituzione federale lo menziona tra i Cantoni della Confederazione
+  Svizzera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton ist der jüngste der Schweiz?
+    options_de:
+      a: Jura
+      b: Appenzell Ausserrhoden
+      c: Basel-Landschaft
+      d: Neuenburg
+    explanation_de: Der Kanton Jura wurde 1979 gegründet. Er hat sich vom Kanton Bern getrennt und ist
+      seither der jüngste der 26 Kantone. Die Bundesverfassung erwähnt ihn unter den Kantonen der Schweizerischen
+      Eidgenossenschaft.

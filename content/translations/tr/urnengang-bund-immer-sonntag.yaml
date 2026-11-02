@@ -1,0 +1,29 @@
+id: urnengang-bund-immer-sonntag
+lang: tr
+source_version: 1
+question: İsviçre'de federal oylamalar ve seçimler haftanın hangi gününde yapılır?
+options:
+  a: Her zaman bir pazar günü
+  b: Her zaman bir cumartesi günü
+  c: Her zaman bir cuma günü
+  d: Her kantonun kendisinin seçtiği bir hafta günü
+explanation: Konfederasyon düzeyindeki sandık başı oylamaları her zaman pazar günü yapılır. Böylece mümkün
+  olduğunca çok oy hakkı sahibi katılabilir ve tarih herkes için aynıdır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welchem Wochentag finden in der Schweiz eidgenössische Abstimmungen und Wahlen statt?
+    options_de:
+      a: Immer an einem Sonntag
+      b: Immer an einem Samstag
+      c: Immer an einem Freitag
+      d: An einem Wochentag, den jeder Kanton selbst wählt
+    explanation_de: Die Urnenabstimmungen auf Ebene der Eidgenossenschaft finden immer sonntags statt.
+      So können möglichst viele Stimmberechtigte teilnehmen und das Datum ist für alle gleich.

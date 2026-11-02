@@ -1,0 +1,31 @@
+id: forstleute-andere-baumarten-pflanzen
+lang: sq
+source_version: 1
+question: Si reagojnë pyjepunuesit në Zvicër ndaj rritjes së temperaturave?
+options:
+  a: Ata mbjellin më shumë lloje të tjera pemësh.
+  b: Ata mbjellin vetëm pemë që kanë qenë gjithmonë atje.
+  c: Ata heqin dorë tërësisht nga kujdesi për pyllin.
+  d: Ata shpyllëzojnë pyjet në zonat e ulëta.
+explanation: Disa lloje pemësh e durojnë keq të nxehtit dhe thatësirën. Prandaj pyjepunuesit mbështeten
+  te lloje të tjera, që janë përshtatur më mirë me klimën më të ngrohtë. Kështu pyllit duhet t'i mbetet
+  qëndrueshmëria.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie reagieren die Waldbewirtschafter in der Schweiz auf den Anstieg der Temperaturen?
+    options_de:
+      a: Sie pflanzen mehr andere Baumarten.
+      b: Sie pflanzen nur Bäume, die schon immer dort waren.
+      c: Sie verzichten vollständig auf die Pflege des Waldes.
+      d: Sie roden die Wälder in den tiefen Lagen.
+    explanation_de: Einige Baumarten vertragen die Hitze und die Trockenheit schlecht. Deshalb setzen
+      die Waldbewirtschafter auf andere Arten, die besser an das wärmere Klima angepasst sind. So soll
+      dem Wald seine Stabilität erhalten bleiben.

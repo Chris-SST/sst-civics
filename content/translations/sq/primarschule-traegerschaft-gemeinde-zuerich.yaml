@@ -1,0 +1,33 @@
+id: primarschule-traegerschaft-gemeinde-zuerich
+lang: sq
+source_version: 2
+question: Kush i drejton shkollat e shkallës fillore (Primarstufe) në kantonin Zürich?
+options:
+  a: Drejtoria e Arsimit e kantonit
+  b: Konfederata
+  c: Komunat (Gemeinden)
+  d: Rrethet
+explanation: Në kantonin Zürich, shkollat fillore i drejtojnë komunat. Këto janë, sipas vendit, komunat
+  politike ose komuna të veçanta shkollore, dhe Këshilli i zgjedhur i shkollës (Schulpflege) është autoriteti
+  shkollor në vend. Kantoni përcakton vetëm kornizën, për shembull planprogramin mësimor, dhe mbikëqyr
+  shkollën publike.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer leitet die Primarschulen im Kanton Zürich?
+    options_de:
+      a: Die Bildungsdirektion des Kantons
+      b: Der Bund
+      c: Die Gemeinden
+      d: Die Bezirke
+    explanation_de: Im Kanton Zürich werden die Primarschulen von den Gemeinden geleitet. Diese sind,
+      je nach Ort, politische Gemeinden oder besondere Schulgemeinden, und die gewählte Schulpflege ist
+      die örtliche Schulbehörde. Der Kanton legt nur den Rahmen fest, zum Beispiel den Lehrplan, und beaufsichtigt
+      die öffentliche Schule.

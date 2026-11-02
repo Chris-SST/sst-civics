@@ -1,0 +1,33 @@
+id: sozialhilfe-bei-ungenuegendem-einkommen
+lang: it
+source_version: 1
+question: Che cosa offre il Comune (Gemeinde) se il reddito e il patrimonio di una persona non bastano
+  per vivere?
+options:
+  a: L'aiuto sociale
+  b: Un permesso di costruzione
+  c: Una naturalizzazione
+  d: Una borsa di studio della scuola dell'obbligo
+explanation: Chi non può pagare il proprio sostentamento con mezzi propri ha diritto a un sostegno tramite
+  l'aiuto sociale. Questo è fornito dal Comune in cui la persona risiede. È l'ultima rete della sicurezza
+  sociale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bietet die Gemeinde, wenn das Einkommen und das Vermögen einer Person nicht zum Leben
+      ausreichen?
+    options_de:
+      a: Die Sozialhilfe
+      b: Eine Baubewilligung
+      c: Eine Einbürgerung
+      d: Ein Stipendium der obligatorischen Schule
+    explanation_de: Wer seinen Lebensunterhalt nicht mit eigenen Mitteln bezahlen kann, hat Anspruch auf
+      Unterstützung durch die Sozialhilfe. Diese wird von der Gemeinde erbracht, in der die Person wohnt.
+      Sie ist das letzte Netz der sozialen Sicherheit.

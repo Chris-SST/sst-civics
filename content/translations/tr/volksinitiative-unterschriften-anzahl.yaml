@@ -1,0 +1,31 @@
+id: volksinitiative-unterschriften-anzahl
+lang: tr
+source_version: 1
+question: Bir federal halk girişiminin (Volksinitiative) gerçekleşebilmesi için oy hakkına sahip kaç kişinin
+  imzası gerekir?
+options:
+  a: 50 000 imza
+  b: 150 000 imza
+  c: 200 000 imza
+  d: 100 000 imza
+explanation: Bir federal halk girişimi için 100 000 geçerli imza gerekir. Bu imzaların 18 ay içinde toplanması
+  gerekir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele stimmberechtigte Personen müssen unterschreiben, damit eine eidgenössische
+      Volksinitiative zustande kommen kann?
+    options_de:
+      a: 50 000 Unterschriften
+      b: 150 000 Unterschriften
+      c: 200 000 Unterschriften
+      d: 100 000 Unterschriften
+    explanation_de: Für eine eidgenössische Volksinitiative sind 100 000 gültige Unterschriften erforderlich.
+      Diese Unterschriften müssen innerhalb von 18 Monaten gesammelt werden.

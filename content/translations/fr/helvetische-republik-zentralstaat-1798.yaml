@@ -1,0 +1,31 @@
+id: helvetische-republik-zentralstaat-1798
+lang: fr
+source_version: 1
+question: Que s'est-il passé en 1798 en Suisse sous l'influence de Napoléon Bonaparte ?
+options:
+  a: Elle est devenue une partie de l'Empire allemand.
+  b: Elle est devenue une monarchie avec son propre roi.
+  c: Elle a été divisée durablement en deux États.
+  d: Elle est devenue temporairement un État centralisé, la République helvétique.
+explanation: En 1798, après l'invasion des troupes françaises, la République helvétique a été créée. C'était
+  un État unitaire gouverné de manière centralisée, qui a remplacé temporairement l'ancienne Confédération.
+  Les cantons n'avaient presque aucun droit propre.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was geschah 1798 in der Schweiz unter dem Einfluss von Napoleon Bonaparte?
+    options_de:
+      a: Sie wurde Teil des Deutschen Reiches.
+      b: Sie wurde eine Monarchie mit einem eigenen König.
+      c: Sie wurde dauerhaft in zwei Staaten geteilt.
+      d: Sie wurde vorübergehend ein zentralisierter Staat, die Helvetische Republik.
+    explanation_de: Im Jahr 1798 wurde nach dem Einmarsch der französischen Truppen die Helvetische Republik
+      geschaffen. Sie war ein zentral regierter Einheitsstaat, der vorübergehend die alte Eidgenossenschaft
+      ersetzte. Die Kantone hatten fast keine eigenen Rechte.

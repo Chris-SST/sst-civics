@@ -1,0 +1,31 @@
+id: bund-spitze-dreistufiger-staatsaufbau
+lang: sq
+source_version: 2
+question: Zvicra është e ndërtuar mbi tre nivele shtetërore. Cili nivel është më i larti?
+options:
+  a: Komunat (Gemeinden)
+  b: Konfederata
+  c: Kantonet
+  d: Rrethet
+explanation: Konfederata është niveli më i lartë i tre niveleve shtetërore. Poshtë saj vijnë kantonet
+  dhe pastaj komunat. Rrethet nuk janë nivel më vete shtetëror, por në disa kantone janë vetëm njësi administrative
+  brenda kantonit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Die Schweiz ist auf drei staatlichen Ebenen aufgebaut. Welche Ebene ist die höchste?
+    options_de:
+      a: Die Gemeinden
+      b: Der Bund
+      c: Die Kantone
+      d: Die Bezirke
+    explanation_de: Der Bund ist die höchste der drei staatlichen Ebenen. Darunter kommen die Kantone
+      und dann die Gemeinden. Die Bezirke sind keine eigene staatliche Ebene, sondern in einigen Kantonen
+      nur Verwaltungseinheiten innerhalb des Kantons.

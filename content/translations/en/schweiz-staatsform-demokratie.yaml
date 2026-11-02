@@ -9,6 +9,21 @@ options:
   d: It is a state that is ruled by a noble family.
 explanation: Switzerland is a democracy. The population takes part in political decisions through elections
   and votes. The Federal Constitution establishes this as the foundation of the state.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Staatsform hat die Schweiz?
+    options_de:
+      a: Sie ist eine Diktatur mit einer einzigen Partei.
+      b: Sie ist eine Monarchie mit einem gewählten König.
+      c: Sie ist ein demokratischer Staat.
+      d: Sie ist ein Staat, der von einer adligen Familie regiert wird.
+    explanation_de: Die Schweiz ist eine Demokratie. Die Bevölkerung wirkt durch Wahlen und Abstimmungen
+      an politischen Entscheidungen mit. Die Bundesverfassung legt dies als Grundlage des Staates fest.

@@ -1,0 +1,32 @@
+id: vermoegenssteuer-kanton-gemeinden-zuerich
+lang: es
+source_version: 1
+question: ¿Cuál de estos impuestos recaudan el cantón de Zúrich y los municipios (Gemeinden) sobre el
+  patrimonio de una persona, por ejemplo sobre los depósitos bancarios y los valores?
+options:
+  a: El impuesto anticipado
+  b: El impuesto sobre el valor añadido
+  c: El impuesto sobre el patrimonio
+  d: El impuesto sobre los aceites minerales
+explanation: El cantón y los municipios gravan el patrimonio de las personas físicas. El impuesto sobre
+  el valor añadido, el impuesto anticipado y el impuesto sobre los aceites minerales son impuestos de
+  la Confederación.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche dieser Steuern erheben der Kanton Zürich und die Gemeinden auf das Vermögen einer
+      Person, zum Beispiel auf Bankguthaben und Wertschriften?
+    options_de:
+      a: Die Verrechnungssteuer
+      b: Die Mehrwertsteuer
+      c: Die Vermögenssteuer
+      d: Die Mineralölsteuer
+    explanation_de: Der Kanton und die Gemeinden besteuern das Vermögen der natürlichen Personen. Die
+      Mehrwertsteuer, die Verrechnungssteuer und die Mineralölsteuer sind Steuern des Bundes.

@@ -1,0 +1,31 @@
+id: politische-partei-aehnliche-ziele
+lang: it
+source_version: 1
+question: Che cosa descrive meglio un partito politico?
+options:
+  a: Un tribunale che decide su controversie politiche
+  b: Un'associazione di persone con obiettivi politici simili
+  c: Un gruppo di Comuni (Gemeinden) che svolgono compiti insieme
+  d: Un'autorità che organizza elezioni e votazioni
+explanation: In un partito si uniscono persone che perseguono obiettivi politici simili. Alle elezioni
+  i partiti presentano candidate e candidati e si esprimono sugli oggetti in votazione. I partiti non
+  sono autorità statali.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was beschreibt eine politische Partei am besten?
+    options_de:
+      a: Ein Gericht, das über politische Streitigkeiten entscheidet
+      b: Ein Zusammenschluss von Personen mit ähnlichen politischen Zielen
+      c: Eine Gruppe von Gemeinden, die gemeinsam Aufgaben erfüllen
+      d: Eine Behörde, die Wahlen und Abstimmungen organisiert
+    explanation_de: In einer Partei schliessen sich Personen zusammen, die ähnliche politische Ziele verfolgen.
+      Bei Wahlen stellen die Parteien Kandidatinnen und Kandidaten auf und äussern sich zu den Abstimmungsvorlagen.
+      Parteien sind keine staatlichen Behörden.

@@ -1,0 +1,32 @@
+id: einwohnerregister-fuehren-gemeinde-aufgabe
+lang: es
+source_version: 1
+question: ¿Cuál de las siguientes tareas cumple la oficina de registro de habitantes (Einwohneramt) en
+  los municipios (Gemeinde) de Zúrich?
+options:
+  a: Dicta sentencias penales.
+  b: Lleva el registro de habitantes del municipio.
+  c: Concede permisos de construcción para carreteras cantonales.
+  d: Establece las leyes fiscales.
+explanation: El municipio lleva el registro de las personas que residen en él. Allí usted se da de alta,
+  de baja o comunica un cambio de domicilio cuando se muda. Las sentencias penales, las leyes fiscales
+  y las carreteras cantonales no forman parte de esta tarea.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aufgaben erfüllt das Einwohneramt in den Gemeinden des Kantons Zürich?
+    options_de:
+      a: Es fällt Strafurteile.
+      b: Es führt das Einwohnerregister der Gemeinde.
+      c: Es erteilt Baubewilligungen für Kantonsstrassen.
+      d: Es erlässt die Steuergesetze.
+    explanation_de: Die Gemeinde führt das Register der Personen, die in ihr wohnen. Dort melden Sie sich
+      an, ab oder teilen einen Wohnortswechsel mit, wenn Sie umziehen. Strafurteile, Steuergesetze und
+      Kantonsstrassen gehören nicht zu dieser Aufgabe.

@@ -1,0 +1,33 @@
+id: raumplanung-landschaften-ohne-bebauung
+lang: sq
+source_version: 2
+question: Cili është një objektiv i planifikimit hapësinor në Zvicër?
+options:
+  a: Ai duhet të mbrojë peizazhet e pandërtuara dhe ta përdorë tokën me kursim.
+  b: Ai duhet t'i caktojë rregullisht nga e para kufijtë mes kantoneve.
+  c: Ai duhet të krijojë sa më shumë zona të reja ndërtimi.
+  d: Ai duhet të përcaktojë çmimin e tokës për ndërtim.
+explanation: Planifikimi hapësinor përcakton se ku lejohet të ndërtohet dhe ku jo. Ai ndan zonën e ndërtimit
+  nga zona jashtë ndërtimit, në mënyrë që peizazhet dhe toka bujqësore të mbrohen. Meqenëse toka është
+  e kufizuar, ajo duhet të përdoret me kursim dhe, në vend që të krijohen zona të reja ndërtimi, duhet
+  të shtohet më shumë dendësia e vendbanimeve ekzistuese.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was ist ein Ziel der Raumplanung in der Schweiz?
+    options_de:
+      a: Sie soll unbebaute Landschaften schützen und den Boden sparsam nutzen.
+      b: Sie soll die Grenzen zwischen den Kantonen regelmässig neu festlegen.
+      c: Sie soll möglichst viele neue Bauzonen schaffen.
+      d: Sie soll den Preis des Baulandes festlegen.
+    explanation_de: Die Raumplanung legt fest, wo gebaut werden darf und wo nicht. Sie trennt das Baugebiet
+      vom Nichtbaugebiet, damit die Landschaften und das Landwirtschaftsland geschützt werden. Da der
+      Boden begrenzt ist, soll er sparsam genutzt werden, und anstatt neue Bauzonen zu schaffen, soll
+      die Dichte der bestehenden Siedlungen weiter erhöht werden.

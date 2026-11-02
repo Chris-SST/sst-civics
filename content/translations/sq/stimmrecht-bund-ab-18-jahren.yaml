@@ -1,0 +1,33 @@
+id: stimmrecht-bund-ab-18-jahren
+lang: sq
+source_version: 2
+question: Kush ka të drejtë të votojë dhe të zgjedhë në nivel Konfederate?
+options:
+  a: Shtetasit zviceranë nga mosha 20 vjeç
+  b: Të gjitha personat me leje vendosjeje (Niederlassungsbewilligung) (leja C) nga mosha 18 vjeç
+  c: Shtetasit zviceranë nga mosha 18 vjeç
+  d: Të gjitha personat me banim në Zvicër nga mosha 16 vjeç
+explanation: Në Konfederatë, zviceranët dhe zviceranet kanë të drejtë të votojnë dhe të zgjedhin nga ditëlindja
+  e 18-të. Të huajt nuk e kanë këtë të drejtë në nivel Konfederate, as me leje vendosjeje (leja C). Edhe
+  zviceranët dhe zviceranet që jetojnë jashtë vendit mund të marrin pjesë, nëse regjistrohen në regjistrin
+  zgjedhor.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer hat auf Bundesebene das Stimm- und Wahlrecht?
+    options_de:
+      a: Schweizer Staatsangehörige ab 20 Jahren
+      b: Alle Personen mit Niederlassungsbewilligung (C-Bewilligung) ab 18 Jahren
+      c: Schweizer Staatsangehörige ab 18 Jahren
+      d: Alle in der Schweiz wohnhaften Personen ab 16 Jahren
+    explanation_de: Auf Bundesebene haben Schweizerinnen und Schweizer ab dem 18. Geburtstag das Stimm-
+      und Wahlrecht. Ausländerinnen und Ausländer haben dieses Recht auf Bundesebene nicht, auch nicht
+      mit Niederlassungsbewilligung (C-Bewilligung). Auch im Ausland lebende Schweizerinnen und Schweizer
+      können teilnehmen, wenn sie sich im Stimmregister eintragen lassen.

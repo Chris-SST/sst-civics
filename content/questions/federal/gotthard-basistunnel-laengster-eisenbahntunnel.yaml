@@ -22,7 +22,7 @@ sources:
 glossary:
 - Gotthard-Basistunnel
 - Eisenbahntunnel
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-255
@@ -43,3 +43,35 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, der Tunnel verbinde die «Nordschweiz» mit dem Tessin, er führt aber
+        von Erstfeld im Kanton Uri (Zentralschweiz) nach Bodio im Tessin; besser «Er verbindet den Kanton
+        Uri mit dem Kanton Tessin» oder «den Norden mit dem Süden der Schweiz».'
+      - 'Klein: Die Erklärung könnte die Länge von rund 57 Kilometern nennen und erwähnen, dass er seit
+        2016 in Betrieb ist; das hilft beim Lernen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «verbindet die Nordschweiz mit dem Tessin» ist ungenau, denn der Tunnel führt von Erstfeld
+        im Kanton Uri (Zentralschweiz) nach Bodio im Tessin; besser: «Er verbindet den Kanton Uri mit
+        dem Tessin».'
+      - 'Klein: Die Erklärung würde mit der Länge (rund 57 km) und dem Eröffnungsjahr 2016 mehr beim Verstehen
+        helfen, zum Beispiel: «Er ist rund 57 km lang und wurde 2016 eröffnet.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues: []
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

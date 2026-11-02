@@ -1,0 +1,31 @@
+id: anzahl-kantone-und-halbkantone-schweiz
+lang: fr
+source_version: 1
+question: Combien de cantons la Suisse compte-t-elle et combien d'entre eux sont des demi-cantons ?
+options:
+  a: 26 cantons, dont 6 demi-cantons
+  b: 26 cantons, dont 3 demi-cantons
+  c: 23 cantons, dont 6 demi-cantons
+  d: 20 cantons, dont 6 demi-cantons
+explanation: 'La Suisse compte 26 cantons. Six d''entre eux sont des demi-cantons : Obwald, Nidwald, Bâle-Ville,
+  Bâle-Campagne, Appenzell Rhodes-Extérieures et Appenzell Rhodes-Intérieures. Au Conseil des États (Ständerat),
+  ils ont chacun une voix au lieu de deux.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Kantone zählt die Schweiz und wie viele davon sind Halbkantone?
+    options_de:
+      a: 26 Kantone, davon 6 Halbkantone
+      b: 26 Kantone, davon 3 Halbkantone
+      c: 23 Kantone, davon 6 Halbkantone
+      d: 20 Kantone, davon 6 Halbkantone
+    explanation_de: 'Die Schweiz zählt 26 Kantone. Sechs davon sind Halbkantone: Obwalden, Nidwalden,
+      Basel-Stadt, Basel-Landschaft, Appenzell Ausserrhoden und Appenzell Innerrhoden. Im Ständerat haben
+      sie je eine Stimme statt zwei.'

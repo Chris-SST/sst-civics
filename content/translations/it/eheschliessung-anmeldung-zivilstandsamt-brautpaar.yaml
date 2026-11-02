@@ -1,0 +1,31 @@
+id: eheschliessung-anmeldung-zivilstandsamt-brautpaar
+lang: it
+source_version: 1
+question: Chi annuncia all'ufficio dello stato civile il matrimonio previsto?
+options:
+  a: I testimoni di nozze a nome della coppia
+  b: I fidanzati insieme
+  c: L'ufficio controllo abitanti del comune di domicilio, automaticamente
+  d: I genitori della sposa o dello sposo
+explanation: I fidanzati presentano insieme all'ufficio dello stato civile la richiesta di avvio della
+  procedura preparatoria del matrimonio. Altre persone non possono farlo al loro posto. In seguito l'ufficio
+  verifica i requisiti per il matrimonio.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer meldet dem Zivilstandsamt die geplante Heirat an?
+    options_de:
+      a: Die Trauzeugen im Namen des Paares
+      b: Die Verlobten gemeinsam
+      c: Das Einwohnerkontrollamt der Wohngemeinde, automatisch
+      d: Die Eltern der Braut oder des Bräutigams
+    explanation_de: Die Verlobten reichen beim Zivilstandsamt gemeinsam das Gesuch um Einleitung des Vorbereitungsverfahrens
+      der Eheschliessung ein. Andere Personen können dies nicht an ihrer Stelle tun. Anschliessend prüft
+      das Amt die Voraussetzungen für die Eheschliessung.

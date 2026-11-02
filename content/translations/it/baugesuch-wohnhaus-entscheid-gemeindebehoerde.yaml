@@ -1,0 +1,32 @@
+id: baugesuch-wohnhaus-entscheid-gemeindebehoerde
+lang: it
+source_version: 1
+question: Chi decide, di regola, nel Cantone di Zurigo sulla domanda di costruzione per una nuova casa
+  d'abitazione?
+options:
+  a: Il Consiglio di Stato (Regierungsrat)
+  b: L'autorità edilizia del Comune (Gemeinde)
+  c: Il tribunale distrettuale
+  d: L'Ufficio federale dello sviluppo territoriale
+explanation: Le domande di costruzione per case d'abitazione si presentano al Comune. L'autorità edilizia
+  comunale esamina la domanda e rilascia il permesso di costruzione oppure lo nega. Il Cantone è coinvolto
+  solo in casi particolari.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet in der Regel im Kanton Zürich über das Baugesuch für ein neues Wohnhaus?
+    options_de:
+      a: Der Regierungsrat
+      b: Die Baubehörde der Gemeinde
+      c: Das Bezirksgericht
+      d: Das Bundesamt für Raumentwicklung
+    explanation_de: Baugesuche für Wohnhäuser werden bei der Gemeinde eingereicht. Die kommunale Baubehörde
+      prüft das Gesuch und erteilt die Baubewilligung oder verweigert sie. Der Kanton ist nur in besonderen
+      Fällen beteiligt.

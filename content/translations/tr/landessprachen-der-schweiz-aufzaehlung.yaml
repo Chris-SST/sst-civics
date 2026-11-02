@@ -1,0 +1,29 @@
+id: landessprachen-der-schweiz-aufzaehlung
+lang: tr
+source_version: 1
+question: İsviçre'de hangi diller ulusal dildir?
+options:
+  a: Almanca, Fransızca, Romanşça ve İspanyolca
+  b: Almanca, Fransızca, İtalyanca ve Romanşça
+  c: Almanca, Fransızca, İtalyanca ve İngilizce
+  d: Almanca, Fransızca ve İtalyanca
+explanation: Federal Anayasa (Bundesverfassung), Almanca, Fransızca, İtalyanca ve Romanşça dillerini ulusal
+  dil olarak belirtir. İngilizce ulusal dil değildir, ancak çoğu zaman anlaşma dili olarak kullanılır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprachen sind in der Schweiz Landessprachen?
+    options_de:
+      a: Deutsch, Französisch, Rätoromanisch und Spanisch
+      b: Deutsch, Französisch, Italienisch und Rätoromanisch
+      c: Deutsch, Französisch, Italienisch und Englisch
+      d: Deutsch, Französisch und Italienisch
+    explanation_de: Die Bundesverfassung bezeichnet Deutsch, Französisch, Italienisch und Rätoromanisch
+      als Landessprachen. Englisch ist keine Landessprache, wird aber oft als Verständigungssprache verwendet.

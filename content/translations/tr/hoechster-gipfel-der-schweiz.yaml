@@ -1,0 +1,31 @@
+id: hoechster-gipfel-der-schweiz
+lang: tr
+source_version: 2
+question: İsviçre'nin en yüksek dağ zirvesinin adı nedir?
+options:
+  a: Piz Bernina
+  b: Matterhorn
+  c: Dufourspitze
+  d: Jungfrau
+explanation: Valais kantonundaki Monte Rosa Dağ Kütlesi'nde yer alan Dufourspitze, yaklaşık 4634 metre
+  ile İsviçre'nin en yüksek zirvesidir. Matterhorn daha ünlüdür, ancak daha alçaktır. Graubünden kantonundaki
+  Piz Bernina ise Doğu Alpler'in en yüksek zirvesidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie heisst der höchste Berggipfel der Schweiz?
+    options_de:
+      a: Piz Bernina
+      b: Matterhorn
+      c: Dufourspitze
+      d: Jungfrau
+    explanation_de: Die Dufourspitze im Monte-Rosa-Massiv im Kanton Wallis ist mit etwa 4634 Metern der
+      höchste Gipfel der Schweiz. Das Matterhorn ist berühmter, aber niedriger. Der Piz Bernina im Kanton
+      Graubünden ist hingegen der höchste Gipfel der Ostalpen.

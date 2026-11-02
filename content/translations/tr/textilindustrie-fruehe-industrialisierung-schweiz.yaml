@@ -1,0 +1,34 @@
+id: textilindustrie-fruehe-industrialisierung-schweiz
+lang: tr
+source_version: 1
+question: İsviçre'nin erken sanayileşme döneminde hangi ekonomi sektörü en önemli sektördü?
+options:
+  a: Saat sanayii
+  b: İlaç sanayii
+  c: Tekstil sanayii
+  d: Makine sanayii
+explanation: Erken sanayileşme döneminde İsviçre ekonomisine tekstil sanayii damgasını vurdu; örneğin
+  iplik fabrikaları, dokuma atölyeleri ve nakış işletmeleri bu sektörün parçasıydı. Bilinen bir örnek,
+  dünya çapında çok aranan St. Gallen nakışlarıdır. Diğer sektörler ancak daha sonra bu kadar önemli hale
+  geldi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Wirtschaftssektor war in der Zeit der frühen Industrialisierung der Schweiz der
+      wichtigste Sektor?
+    options_de:
+      a: Uhrenindustrie
+      b: Pharmaindustrie
+      c: Textilindustrie
+      d: Maschinenindustrie
+    explanation_de: In der Zeit der frühen Industrialisierung prägte die Textilindustrie die Schweizer
+      Wirtschaft; zum Beispiel gehörten Spinnereien, Webereien und Stickereibetriebe zu diesem Sektor.
+      Ein bekanntes Beispiel sind die weltweit sehr gefragten St. Galler Stickereien. Andere Sektoren
+      wurden erst später so wichtig.

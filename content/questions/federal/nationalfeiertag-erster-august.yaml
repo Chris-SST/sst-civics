@@ -20,7 +20,7 @@ sources:
 glossary:
 - Nationalfeiertag
 - Bundesbrief
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-306
@@ -41,3 +41,31 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Quelle 2 (ch.ch) zeigt nur eine Fehlerseite (404) und stützt nichts; sie sollte durch
+        eine passende Seite ersetzt oder entfernt werden, etwa durch die EDA-Seite «Nationalfeiertag und
+        Nationalhymne».'
+      - 'Klein: Die Erklärung könnte zusätzlich den amtlichen Begriff «Bundesfeiertag» nennen, z. B. «Der
+        1. August ist der Nationalfeiertag (Bundesfeiertag) der Schweiz.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «mit Feuern» ist etwas unklar; besser «mit Höhenfeuern (grossen Feuern auf Hügeln)» schreiben.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues: []
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

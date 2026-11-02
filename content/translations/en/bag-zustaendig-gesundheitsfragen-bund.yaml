@@ -9,6 +9,21 @@ options:
   d: The Federal Office of Public Health (FOPH)
 explanation: The Federal Office of Public Health (FOPH) is the competent federal authority for health
   matters. For example, it supervises social health insurance.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Bundesbehörde ist für Gesundheitsfragen zuständig?
+    options_de:
+      a: Das Bundesamt für Umwelt (BAFU)
+      b: Das Staatssekretariat für Migration (SEM)
+      c: Das Bundesamt für Statistik (BFS)
+      d: Das Bundesamt für Gesundheit (BAG)
+    explanation_de: Das Bundesamt für Gesundheit (BAG) ist die zuständige Bundesbehörde für Gesundheitsfragen.
+      Zum Beispiel beaufsichtigt es die soziale Krankenversicherung.

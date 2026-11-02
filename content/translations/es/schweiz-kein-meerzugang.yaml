@@ -1,0 +1,31 @@
+id: schweiz-kein-meerzugang
+lang: es
+source_version: 2
+question: ¿Qué afirmación sobre la situación geográfica de Suiza es correcta?
+options:
+  a: Suiza no tiene acceso directo al mar.
+  b: Suiza limita al oeste con el océano Atlántico.
+  c: Suiza limita al sur con el mar Mediterráneo.
+  d: Suiza limita al norte con el mar del Norte.
+explanation: 'Suiza es un país sin litoral: está completamente rodeada por otros países y no tiene costa
+  marítima. Es cierto que por el Rin navegan barcos desde Basilea hasta el mar del Norte, pero ningún
+  mar limita directamente con Suiza.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Aussage über die geografische Lage der Schweiz ist richtig?
+    options_de:
+      a: Die Schweiz hat keinen direkten Zugang zum Meer.
+      b: Die Schweiz grenzt im Westen an den Atlantischen Ozean.
+      c: Die Schweiz grenzt im Süden an das Mittelmeer.
+      d: Die Schweiz grenzt im Norden an die Nordsee.
+    explanation_de: 'Die Schweiz ist ein Binnenland: Sie ist vollständig von anderen Ländern umgeben und
+      hat keine Meeresküste. Es stimmt zwar, dass auf dem Rhein Schiffe von Basel bis zur Nordsee fahren,
+      aber kein Meer grenzt direkt an die Schweiz.'

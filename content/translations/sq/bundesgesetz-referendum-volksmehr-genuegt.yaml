@@ -1,0 +1,33 @@
+id: bundesgesetz-referendum-volksmehr-genuegt
+lang: sq
+source_version: 1
+question: Kundër një ligji të ri federal është ngritur referendumi fakultativ. Çfarë nevojitet që ligji
+  të miratohet në votimin popullor?
+options:
+  a: Shumica e votuesve në të gjithë Zvicrën
+  b: Një shumicë prej dy të tretave e votuesve
+  c: Shumica e kantoneve vetëm
+  d: Shumica e votuesve dhe shumica e kantoneve
+explanation: Në rastin e një referendumi fakultativ kundër një ligji federal vlen vetëm shumica e popullit
+  (Volksmehr), pra shumica e votave të vlefshme në të gjithë Zvicrën. Shumica e kantoneve (Ständemehr)
+  nevojitet shtesë vetëm për ndryshimet e Kushtetutës Federale dhe për disa traktate shtetërore.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen ein neues Bundesgesetz wurde das fakultative Referendum ergriffen. Was ist nötig,
+      damit das Gesetz in der Volksabstimmung angenommen wird?
+    options_de:
+      a: Die Mehrheit der Stimmenden in der ganzen Schweiz
+      b: Eine Zweidrittelmehrheit der Stimmenden
+      c: Nur die Mehrheit der Kantone
+      d: Die Mehrheit der Stimmenden und die Mehrheit der Kantone
+    explanation_de: Bei einem fakultativen Referendum gegen ein Bundesgesetz gilt nur das Volksmehr, also
+      die Mehrheit der gültigen Stimmen in der ganzen Schweiz. Das Ständemehr (Mehrheit der Kantone) ist
+      zusätzlich nur für Änderungen der Bundesverfassung und für einige Staatsverträge nötig.

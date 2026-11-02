@@ -1,0 +1,31 @@
+id: referendum-gegen-parlamentsbeschluss
+lang: fr
+source_version: 1
+question: Contre quelles décisions un référendum au niveau de la Confédération est-il dirigé ?
+options:
+  a: Contre les lois adoptées par le Conseil national (Nationalrat) et le Conseil des États (Ständerat)
+  b: Contre les décisions prises par la Chancellerie fédérale (Bundeskanzlei)
+  c: Contre les jugements rendus par le Tribunal fédéral (Bundesgericht)
+  d: Contre les ordonnances édictées par certaines communes (Gemeinden)
+explanation: Un référendum est dirigé contre les lois que le Parlement a adoptées. Le Parlement se compose
+  du Conseil national et du Conseil des États. Les jugements des tribunaux et les décisions de l'administration
+  ne peuvent pas être contestés par un référendum.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen welche Beschlüsse richtet sich ein Referendum auf Ebene des Bundes?
+    options_de:
+      a: Gegen die Gesetze, die vom Nationalrat und vom Ständerat verabschiedet wurden
+      b: Gegen die Entscheide der Bundeskanzlei
+      c: Gegen die Urteile des Bundesgerichts
+      d: Gegen die Verordnungen, die von einigen Gemeinden erlassen wurden
+    explanation_de: Ein Referendum richtet sich gegen die Gesetze, die das Parlament verabschiedet hat.
+      Das Parlament besteht aus dem Nationalrat und dem Ständerat. Die Urteile der Gerichte und die Entscheide
+      der Verwaltung können nicht durch ein Referendum angefochten werden.

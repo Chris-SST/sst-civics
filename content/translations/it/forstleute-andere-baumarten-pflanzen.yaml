@@ -1,0 +1,30 @@
+id: forstleute-andere-baumarten-pflanzen
+lang: it
+source_version: 1
+question: Come reagiscono i forestali in Svizzera all'aumento delle temperature?
+options:
+  a: Piantano sempre più spesso altre specie di alberi.
+  b: Piantano soltanto alberi che sono sempre stati presenti in quel luogo.
+  c: Rinunciano completamente alla cura del bosco.
+  d: Disboscano le foreste a bassa quota.
+explanation: Alcune specie di alberi sopportano male il caldo e la siccità. Per questo i forestali puntano
+  su altre specie, più adatte al clima più caldo. In questo modo il bosco dovrebbe rimanere stabile.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie reagieren die Förster in der Schweiz auf den Anstieg der Temperaturen?
+    options_de:
+      a: Sie pflanzen immer häufiger andere Baumarten.
+      b: Sie pflanzen nur Bäume, die an diesem Ort schon immer vorhanden waren.
+      c: Sie verzichten vollständig auf die Pflege des Waldes.
+      d: Sie roden die Wälder in tiefen Lagen.
+    explanation_de: Einige Baumarten vertragen Hitze und Trockenheit schlecht. Deshalb setzen die Förster
+      auf andere Arten, die besser an das wärmere Klima angepasst sind. Auf diese Weise sollte der Wald
+      stabil bleiben.

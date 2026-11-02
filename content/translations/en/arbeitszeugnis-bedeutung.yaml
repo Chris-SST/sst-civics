@@ -1,0 +1,29 @@
+id: arbeitszeugnis-bedeutung
+lang: en
+source_version: 1
+question: What is an employment reference (Arbeitszeugnis)?
+options:
+  a: A confirmation from a doctor that a person cannot work
+  b: A document from the employer that assesses the performance and conduct of the employee
+  c: The permit from the migration office to work in Switzerland
+  d: The annual salary statement for the tax return
+explanation: An employment reference (Arbeitszeugnis) is issued by the employer. It describes the type
+  and duration of the work and assesses performance and conduct. Employees can request it at any time.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist ein Arbeitszeugnis?
+    options_de:
+      a: Eine Bestätigung von einem Arzt, dass eine Person nicht arbeiten kann
+      b: Ein Dokument des Arbeitgebers, das die Leistung und das Verhalten des Arbeitnehmers beurteilt
+      c: Die Bewilligung des Migrationsamts, in der Schweiz zu arbeiten
+      d: Der jährliche Lohnausweis für die Steuererklärung
+    explanation_de: Ein Arbeitszeugnis wird vom Arbeitgeber ausgestellt. Es beschreibt die Art und Dauer
+      der Arbeit und beurteilt Leistung und Verhalten. Arbeitnehmende können es jederzeit verlangen.

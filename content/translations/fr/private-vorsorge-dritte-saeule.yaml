@@ -1,0 +1,29 @@
+id: private-vorsorge-dritte-saeule
+lang: fr
+source_version: 1
+question: Qu'est-ce qui constitue le troisième pilier de la prévoyance vieillesse en Suisse ?
+options:
+  a: L'assurance-accidents obligatoire
+  b: La prévoyance privée
+  c: La caisse de pension de l'employeur
+  d: Les prestations complémentaires
+explanation: Le troisième pilier est la prévoyance privée, par exemple l'épargne liée. Elle est facultative
+  et complète les deux premiers piliers.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bildet die dritte Säule der Altersvorsorge in der Schweiz?
+    options_de:
+      a: Die obligatorische Unfallversicherung
+      b: Die private Vorsorge
+      c: Die Pensionskasse des Arbeitgebers
+      d: Die Ergänzungsleistungen
+    explanation_de: Die dritte Säule ist die private Vorsorge, zum Beispiel das gebundene Sparen. Sie
+      ist freiwillig und ergänzt die beiden ersten Säulen.

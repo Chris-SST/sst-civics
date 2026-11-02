@@ -1,0 +1,31 @@
+id: frauenstimmrecht-bund-seit-1971
+lang: sq
+source_version: 1
+question: Që nga kur lejohen gratë në Zvicër të zgjedhin dhe të votojnë në nivel kombëtar?
+options:
+  a: Që nga viti 1918
+  b: Që nga viti 1848
+  c: Që nga viti 1971
+  d: Që nga viti 1991
+explanation: Në nivel të Konfederatës, e drejta e votës për gratë u prezantua në vitin 1971. Disa kantone
+  dhe komuna (Gemeinden) e njihnin më herët, ndërsa të tjerat e prezantuan vetëm më vonë. Si kantoni i
+  fundit pasoi Appenzell Innerrhoden në vitin 1990.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Seit wann dürfen Frauen in der Schweiz auf nationaler Ebene wählen und abstimmen?
+    options_de:
+      a: Seit dem Jahr 1918
+      b: Seit dem Jahr 1848
+      c: Seit dem Jahr 1971
+      d: Seit dem Jahr 1991
+    explanation_de: Auf Ebene des Bundes wurde das Stimmrecht für Frauen im Jahr 1971 eingeführt. Einige
+      Kantone und Gemeinden kannten es früher, während andere es erst später einführten. Als letzter Kanton
+      folgte Appenzell Innerrhoden im Jahr 1990.

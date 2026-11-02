@@ -1,0 +1,31 @@
+id: zweiter-weltkrieg-neutralitaet-kontakte
+lang: es
+source_version: 1
+question: ¿Cómo se comportó Suiza durante la Segunda Guerra Mundial?
+options:
+  a: Rompió todos los contactos con las partes beligerantes y cerró por completo las fronteras.
+  b: Se alió con Alemania y le suministró tropas.
+  c: Permaneció neutral y mantuvo contactos políticos y económicos con las partes beligerantes.
+  d: Se unió a la alianza de los Aliados y combatió junto a ellos.
+explanation: Durante la Segunda Guerra Mundial, Suiza no se convirtió en parte beligerante. Sin embargo,
+  mantuvo contactos políticos y económicos con las partes beligerantes. Esta actitud sigue siendo objeto
+  de debate histórico hasta hoy.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie verhielt sich die Schweiz während des Zweiten Weltkriegs?
+    options_de:
+      a: Sie brach alle Kontakte zu den Kriegsparteien ab und schloss die Grenzen vollständig.
+      b: Sie verbündete sich mit Deutschland und lieferte ihm Truppen.
+      c: Sie blieb neutral und unterhielt politische und wirtschaftliche Kontakte zu den Kriegsparteien.
+      d: Sie schloss sich dem Bündnis der Alliierten an und kämpfte an ihrer Seite.
+    explanation_de: Während des Zweiten Weltkriegs wurde die Schweiz nicht zur Kriegspartei. Dennoch unterhielt
+      sie politische und wirtschaftliche Kontakte zu den Kriegsparteien. Diese Haltung ist bis heute Gegenstand
+      historischer Debatten.

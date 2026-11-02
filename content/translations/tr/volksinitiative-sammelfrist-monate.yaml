@@ -1,0 +1,32 @@
+id: volksinitiative-sammelfrist-monate
+lang: tr
+source_version: 1
+question: Girişim sahiplerinin federal bir halk girişimi (Volksinitiative) için imza toplamak üzere ne
+  kadar süresi vardır?
+options:
+  a: 6 ay
+  b: 12 ay
+  c: 18 ay
+  d: 36 ay
+explanation: İmza toplama süresi, Federal Gazete'de (Bundesblatt) yayımlanma tarihinden itibaren 18 aydır.
+  Girişim sahipleri bu süre içinde gerekli 100.000 imzayı toplayamazsa girişim gerçekleşmez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viel Zeit haben die Initianten, um für eine eidgenössische Volksinitiative Unterschriften
+      zu sammeln?
+    options_de:
+      a: 6 Monate
+      b: 12 Monate
+      c: 18 Monate
+      d: 36 Monate
+    explanation_de: Die Frist für die Unterschriftensammlung beträgt 18 Monate ab dem Datum der Veröffentlichung
+      im Bundesblatt. Wenn die Initianten innerhalb dieser Frist die erforderlichen 100 000 Unterschriften
+      nicht sammeln können, kommt die Initiative nicht zustande.

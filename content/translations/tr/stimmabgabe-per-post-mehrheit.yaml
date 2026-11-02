@@ -1,0 +1,30 @@
+id: stimmabgabe-per-post-mehrheit
+lang: tr
+source_version: 1
+question: İsviçre'de seçmenlerin çoğu bugün oylamalarda ve seçimlerde oylarını nasıl kullanıyor?
+options:
+  a: Oylarını oylama pazarı günü belediye halk toplantısında (Gemeindeversammlung) kullanırlar.
+  b: Oylarını oylama pazarı günü bizzat sandığa atarlar.
+  c: Oylarını posta yoluyla belediyeye (Gemeinde) gönderirler.
+  d: Oylarını Konfederasyonun bir internet sitesi üzerinden kullanırlar.
+explanation: Seçmenlerin çoğunluğu mektupla, yani posta yoluyla oy kullanır. Oylama pazarı günü sandığa
+  gitmek bugün çoğu kişi için artık yaygın değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie geben die meisten Stimmberechtigten in der Schweiz heute bei Abstimmungen und Wahlen
+      ihre Stimme ab?
+    options_de:
+      a: Sie geben ihre Stimme am Abstimmungssonntag an der Gemeindeversammlung ab.
+      b: Sie werfen ihre Stimme am Abstimmungssonntag persönlich in die Urne.
+      c: Sie senden ihre Stimme auf dem Postweg an die Gemeinde.
+      d: Sie geben ihre Stimme über eine Internetseite der Eidgenossenschaft ab.
+    explanation_de: Die Mehrheit der Stimmberechtigten stimmt brieflich, das heisst auf dem Postweg, ab.
+      Der Gang an die Urne am Abstimmungssonntag ist heute für die meisten Leute nicht mehr üblich.

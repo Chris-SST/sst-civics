@@ -1,0 +1,30 @@
+id: folterverbot-bundesverfassung
+lang: sq
+source_version: 1
+question: Çfarë thotë Kushtetuta Federale për torturën?
+options:
+  a: Tortura është e ndaluar vetëm për autorët e veprave penale.
+  b: Tortura është e lejuar për policinë në raste urgjence.
+  c: Tortura është e lejuar nëse e miraton një gjykatë.
+  d: Askush nuk mund të torturohet.
+explanation: Neni 10 i Kushtetutës Federale ndalon torturën dhe çdo lloj tjetër trajtimi mizor, çnjerëzor
+  ose poshtërues. Ky ndalim vlen për të gjithë njerëzit pa përjashtim. Edhe shteti nuk mund të bëjë përjashtime.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sagt die Bundesverfassung über die Folter?
+    options_de:
+      a: Die Folter ist nur für die Täter von Straftaten verboten.
+      b: Die Folter ist für die Polizei in dringenden Fällen erlaubt.
+      c: Die Folter ist erlaubt, wenn ein Gericht sie genehmigt.
+      d: Niemand darf gefoltert werden.
+    explanation_de: Artikel 10 der Bundesverfassung verbietet die Folter und jede andere Art grausamer,
+      unmenschlicher oder erniedrigender Behandlung. Dieses Verbot gilt für alle Menschen ohne Ausnahme.
+      Auch der Staat kann keine Ausnahmen machen.

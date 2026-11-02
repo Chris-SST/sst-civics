@@ -1,0 +1,31 @@
+id: baudirektion-zuerich-kantonsverwaltung-direktion
+lang: it
+source_version: 1
+question: Quale dei seguenti uffici è una direzione dell'amministrazione del Cantone di Zurigo?
+options:
+  a: La direzione del Comune (Gemeinde)
+  b: La Direzione delle costruzioni
+  c: La direzione della città
+  d: La direzione della Confederazione
+explanation: La Direzione delle costruzioni è una delle direzioni dell'amministrazione del Cantone di
+  Zurigo. L'amministrazione cantonale è suddivisa in diverse direzioni, ciascuna delle quali è diretta
+  da un membro del Consiglio di Stato (Regierungsrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches der folgenden Ämter ist eine Direktion der Verwaltung des Kantons Zürich?
+    options_de:
+      a: Die Gemeindedirektion
+      b: Die Baudirektion
+      c: Die Stadtdirektion
+      d: Die Direktion des Bundes
+    explanation_de: Die Baudirektion ist eine der Direktionen der Verwaltung des Kantons Zürich. Die Kantonsverwaltung
+      ist in mehrere Direktionen gegliedert, von denen jede von einem Mitglied des Regierungsrates geleitet
+      wird.

@@ -11,6 +11,22 @@ options:
 explanation: The Federal Assembly is the parliament of the Confederation and consists of the National
   Council and the Council of States. It is responsible for legislation. The Federal Chancellery, by contrast,
   supports the Federal Council (Bundesrat) as a staff unit.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde erlässt auf Bundesebene Gesetze?
+    options_de:
+      a: Die Bundesversammlung, das heisst der Nationalrat und der Ständerat
+      b: Die Schweizerische Nationalbank
+      c: Die Bundeskanzlei
+      d: Die Konferenz der Kantonsregierungen
+    explanation_de: Die Bundesversammlung ist das Parlament des Bundes und besteht aus dem Nationalrat
+      und dem Ständerat. Sie ist für die Gesetzgebung zuständig. Die Bundeskanzlei hingegen unterstützt
+      den Bundesrat als Stabsstelle.

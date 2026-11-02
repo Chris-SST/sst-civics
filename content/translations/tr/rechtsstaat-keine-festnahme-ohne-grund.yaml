@@ -1,0 +1,29 @@
+id: rechtsstaat-keine-festnahme-ohne-grund
+lang: tr
+source_version: 1
+question: Bir hukuk devletinde gözaltı ve tutukluluk için ne geçerlidir?
+options:
+  a: Devlet, hiç kimseyi sebepsiz yere gözaltına alamaz ve tutuklayamaz.
+  b: Devlet, kişileri kendi takdirine göre alıkoyabilir.
+  c: Hükümet, eleştirenleri önlem olarak tutuklayabilir.
+  d: Sadece yabancılar sebepsiz yere gözaltına alınabilir.
+explanation: Bir hukuk devletinde devletin eylemleri hukuka bağlıdır. Gözaltı veya tutukluluk için yasal
+  bir sebep gerekir. Bu, insanların özgürlüğünü keyfîliğe karşı korur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt in einem Rechtsstaat für Gewahrsam und Haft?
+    options_de:
+      a: Der Staat darf niemanden ohne Grund in Gewahrsam nehmen und verhaften.
+      b: Der Staat darf Personen nach eigenem Ermessen festhalten.
+      c: Die Regierung darf Kritiker vorsorglich verhaften.
+      d: Nur Ausländer dürfen ohne Grund in Gewahrsam genommen werden.
+    explanation_de: In einem Rechtsstaat ist das Handeln des Staates an das Recht gebunden. Für Gewahrsam
+      oder Haft ist ein gesetzlicher Grund erforderlich. Dies schützt die Freiheit der Menschen vor Willkür.

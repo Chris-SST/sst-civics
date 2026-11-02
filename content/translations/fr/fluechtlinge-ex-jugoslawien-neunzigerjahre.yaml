@@ -1,0 +1,32 @@
+id: fluechtlinge-ex-jugoslawien-neunzigerjahre
+lang: fr
+source_version: 1
+question: Pour quelle raison de nombreuses personnes originaires de l'ex-Yougoslavie ont-elles cherché
+  refuge en Suisse dans les années 1990 ?
+options:
+  a: Elles voulaient étudier dans des hautes écoles suisses.
+  b: Elles fuyaient une grande catastrophe naturelle.
+  c: Elles fuyaient la guerre dans leur pays d'origine.
+  d: Elles avaient été recrutées par des entreprises suisses comme saisonniers.
+explanation: L'éclatement de la Yougoslavie a entraîné des guerres dans les années 1990. C'est pourquoi
+  de nombreuses personnes ont cherché une protection en Suisse. Une partie d'entre elles est restée et
+  vit aujourd'hui ici.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Aus welchem Grund haben viele Personen aus dem ehemaligen Jugoslawien in den 1990er-Jahren
+      in der Schweiz Zuflucht gesucht?
+    options_de:
+      a: Sie wollten an Schweizer Hochschulen studieren.
+      b: Sie flohen vor einer grossen Naturkatastrophe.
+      c: Sie flohen vor dem Krieg in ihrem Herkunftsland.
+      d: Sie waren von Schweizer Unternehmen als Saisonniers angeworben worden.
+    explanation_de: Der Zerfall Jugoslawiens führte in den 1990er-Jahren zu Kriegen. Deshalb suchten viele
+      Personen in der Schweiz Schutz. Ein Teil von ihnen ist geblieben und lebt heute hier.

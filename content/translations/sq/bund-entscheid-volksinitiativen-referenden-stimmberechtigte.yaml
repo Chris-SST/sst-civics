@@ -1,0 +1,33 @@
+id: bund-entscheid-volksinitiativen-referenden-stimmberechtigte
+lang: sq
+source_version: 1
+question: Kush vendos përfundimisht në nivel federal, në një votim, nëse një nismë popullore (Volksinitiative)
+  ose një referendum miratohet?
+options:
+  a: Kuvendi Federal (Bundesversammlung) në një seancë të përbashkët të të dy dhomave
+  b: Këshilli Federal (Bundesrat) pas dëgjimit të qeverive të kantoneve
+  c: Gjykata Federale (Bundesgericht) pas një shqyrtimi juridik të projektit
+  d: Qytetarët me të drejtë vote, të cilët votojnë në kuti votimi ose me postë
+explanation: Në rastin e nismave popullore dhe të referendumeve, fjalën e fundit e kanë qytetarët me të
+  drejtë vote. Ata vendosin në votimin popullor në kutinë e votimit, që në Zvicër është i mundur edhe
+  me postë. Këshilli Federal, parlamenti dhe Gjykata Federale nuk mund ta zëvendësojnë rezultatin.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet auf Bundesebene in einer Abstimmung endgültig, ob eine Volksinitiative
+      oder ein Referendum angenommen wird?
+    options_de:
+      a: Die Bundesversammlung in einer gemeinsamen Sitzung der beiden Räte
+      b: Der Bundesrat nach Anhörung der Kantonsregierungen
+      c: Das Bundesgericht nach einer juristischen Prüfung der Vorlage
+      d: Die stimmberechtigten Bürgerinnen und Bürger, die an der Urne oder per Post abstimmen
+    explanation_de: Bei Volksinitiativen und Referenden haben die stimmberechtigten Bürgerinnen und Bürger
+      das letzte Wort. Sie entscheiden in der Volksabstimmung an der Urne, was in der Schweiz auch per
+      Post möglich ist. Der Bundesrat, das Parlament und das Bundesgericht können das Ergebnis nicht ersetzen.

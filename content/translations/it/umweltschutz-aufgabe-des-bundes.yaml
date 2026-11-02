@@ -1,0 +1,32 @@
+id: umweltschutz-aufgabe-des-bundes
+lang: it
+source_version: 1
+question: Quale livello è competente in Svizzera per proteggere l'ambiente ed emanare le relative disposizioni?
+options:
+  a: La Confederazione
+  b: Le organizzazioni private
+  c: Soltanto i Comuni (Gemeinden)
+  d: Soltanto i distretti
+explanation: La Costituzione federale incarica la Confederazione di proteggere l'essere umano e l'ambiente
+  dagli effetti dannosi. A tal fine la Confederazione emana leggi, ad esempio sulla protezione delle acque
+  e della natura. I Cantoni attuano molte di queste disposizioni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Ebene ist in der Schweiz zuständig, die Umwelt zu schützen und die entsprechenden
+      Vorschriften zu erlassen?
+    options_de:
+      a: Der Bund
+      b: Die privaten Organisationen
+      c: Nur die Gemeinden
+      d: Nur die Bezirke
+    explanation_de: Die Bundesverfassung beauftragt den Bund, den Menschen und die Umwelt vor schädlichen
+      Einwirkungen zu schützen. Zu diesem Zweck erlässt der Bund Gesetze, zum Beispiel zum Schutz der
+      Gewässer und der Natur. Die Kantone setzen viele dieser Vorschriften um.

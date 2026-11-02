@@ -1,0 +1,31 @@
+id: wilhelm-tell-sagengestalt-widerstand
+lang: pt
+source_version: 1
+question: O que representa a figura lendária Guilherme Tell, da Suíça Central?
+options:
+  a: A resistência contra governantes estrangeiros
+  b: A neutralidade da Suíça em tempo de guerra
+  c: A introdução da Reforma
+  d: A fundação do primeiro banco suíço
+explanation: A lenda conta a história de um homem que se defende da opressão exercida por bailios estrangeiros.
+  Por isso, Guilherme Tell é considerado um símbolo da liberdade. Não está comprovado que ele tenha realmente
+  existido.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was verkörpert die legendäre Figur Wilhelm Tell aus der Zentralschweiz?
+    options_de:
+      a: Den Widerstand gegen fremde Herrscher
+      b: Die Neutralität der Schweiz in Kriegszeiten
+      c: Die Einführung der Reformation
+      d: Die Gründung der ersten Schweizer Bank
+    explanation_de: Die Legende erzählt die Geschichte eines Mannes, der sich gegen die Unterdrückung
+      durch fremde Vögte wehrt. Deshalb gilt Wilhelm Tell als Symbol der Freiheit. Es ist nicht belegt,
+      dass er tatsächlich existiert hat.

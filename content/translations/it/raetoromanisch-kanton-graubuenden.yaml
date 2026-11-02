@@ -1,0 +1,29 @@
+id: raetoromanisch-kanton-graubuenden
+lang: it
+source_version: 1
+question: In quale Cantone si parla il romancio?
+options:
+  a: Nel Cantone di Friburgo
+  b: Nel Cantone Ticino
+  c: Nel Cantone Vallese
+  d: Nel Cantone dei Grigioni
+explanation: Il romancio è la quarta lingua nazionale della Svizzera. Si parla nel Cantone dei Grigioni.
+  I Grigioni sono l'unico Cantone trilingue della Svizzera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Kanton spricht man Rätoromanisch?
+    options_de:
+      a: Im Kanton Freiburg
+      b: Im Kanton Tessin
+      c: Im Kanton Wallis
+      d: Im Kanton Graubünden
+    explanation_de: Rätoromanisch ist die vierte Landessprache der Schweiz. Es wird im Kanton Graubünden
+      gesprochen. Graubünden ist der einzige dreisprachige Kanton der Schweiz.

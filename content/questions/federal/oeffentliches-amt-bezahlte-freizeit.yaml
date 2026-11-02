@@ -1,18 +1,18 @@
 id: oeffentliches-amt-bezahlte-freizeit
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.sozial.wirtschaft_arbeit
-question_de: Eine Person übt neben ihrer Arbeit ein öffentliches Amt aus. Was erhält sie dafür in der
-  Regel von der Arbeitgeberseite?
+question_de: Ein Angestellter hat ein öffentliches Amt, zum Beispiel in der Schulbehörde seiner Gemeinde.
+  Was bekommt er dafür normalerweise von seinem Arbeitgeber?
 options_de:
-  a: Eine Kündigung
-  b: Bezahlte Freizeit
-  c: Eine Lohnkürzung
-  d: Ein zusätzliches Ferienverbot
-correct: b
-explanation_de: Wer ein öffentliches Amt ausübt, zum Beispiel in einer Behörde, erhält dafür von der Arbeitgeberseite
-  bezahlte Freizeit. So wird das Engagement für die Allgemeinheit unterstützt.
+  a: Einen Bonus zum Lohn
+  b: Eine Beförderung
+  c: Bezahlte Freizeit
+  d: Nichts, er muss das Amt in seinen Ferien erledigen
+correct: c
+explanation_de: Wer ein öffentliches Amt ausübt, bekommt vom Arbeitgeber dafür in der Regel bezahlte Freizeit.
+  Er muss dafür also keine Ferien nehmen. Einen Bonus oder eine Beförderung gibt es dafür nicht.
 sources:
 - url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
   checked: &id001 2026-11-02
@@ -23,27 +23,73 @@ sources:
 glossary:
 - öffentliches Amt
 - Arbeitgeber
-status: in_review
+status: needs_fix
 difficulty: 2
 covers:
 - zh-177
 checks:
   independent_answer:
-    option: b
+    option: c
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: In der Schweiz wird das Milizsystem unterstützt, indem Arbeitgebende Personen mit einem
-      öffentlichen Amt in der Regel bezahlte oder zumindest bewilligte Freizeit gewähren, während Kündigung,
-      Lohnkürzung oder Ferienverbot nicht üblich sind; die Frage ist leicht vereinfacht, aber b ist die
-      beste Antwort.
+    version: 2
+    reasoning: Wer ein öffentliches Amt wie ein Schulbehördenmandat ausübt, erhält von seinem Arbeitgeber
+      normalerweise die dafür nötige Zeit als bezahlte Freizeit bzw. Urlaub, während ein Bonus, eine Beförderung
+      oder der Bezug von Ferien nicht üblich sind.
   source:
     verdict: supported
-    note: Quelle 2 (ZH-Broschüre, Arbeit und Beruf) sagt ausdrücklich, dass man bei einem öffentlichen
-      Amt als Arbeitnehmende ein Recht auf bezahlte Zeit dafür hat. Quelle 1 (OR, Lohnfortzahlung bei
-      Verhinderung durch Ausübung eines öffentlichen Amtes) stützt dies ebenfalls; Quelle 3 ist für die
-      Frage nicht relevant.
+    note: 'Quelle 2 (Zürcher Broschüre) sagt ausdrücklich: Wer ein öffentliches Amt hat, hat als Arbeitnehmende
+      ein Recht auf bezahlte Zeit dafür. Quelle 1 (OR) stützt dies: Bei Verhinderung durch ein öffentliches
+      Amt zahlt der Arbeitgeber den Lohn, und die Ferien dürfen deswegen nicht gekürzt werden.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: fix
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Nach Art. 324a OR wird der Lohn bei der Ausübung eines öffentlichen Amtes nur für eine
+        beschränkte Zeit weiterbezahlt; die Erklärung könnte das mit «in einem gewissen Umfang» oder «für
+        eine beschränkte Zeit» ergänzen, damit nicht der Eindruck einer unbegrenzten Freistellung entsteht.'
+      - 'Klein: Die Quelle 1 zeigt nur Art. 329b Abs. 2 OR (keine Kürzung der Ferien); als direktere Stütze
+        für die bezahlte Freizeit wäre Art. 324a OR (Lohnfortzahlung bei Ausübung eines öffentlichen Amtes)
+        zu ergänzen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte erwähnen, dass der Lohn nach Obligationenrecht (Art. 324a OR) nur
+        für eine beschränkte Zeit weiterbezahlt wird, zum Beispiel mit dem Satz «Das ist im Obligationenrecht
+        geregelt, gilt aber nur für eine beschränkte Zeit».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: fix
+      issues:
+      - 'Die Antwort c) ist rechtlich zu pauschal: Nach Art. 324a OR gilt bezahlte Freizeit für ein öffentliches
+        Amt nicht überall (Lohnfortzahlung nur bei Verhinderung ohne Verschulden und je nach Dauer). Ob
+        und wie viel bezahlte Freizeit es gibt, hängt oft vom Arbeitsvertrag, einem GAV oder dem Reglement
+        der Gemeinde ab. Das «normalerweise» in der Frage ist gut, aber die Erklärung sollte den Zusatz
+        «je nach Vertrag oder Regelung» enthalten, damit sie nicht absolut klingt.'
+      - 'Die Quellen stützen die Antwort nur indirekt: Art. 329a Abs. 2 (Ferienkürzung) erwähnt das öffentliche
+        Amt nur als Grund, weshalb Ferien nicht gekürzt werden dürfen. Die Broschüre und die Seite des
+        Kantons sagen nichts zu bezahlter Freizeit. Die Antwort ist wegen der Themenliste vertretbar,
+        aber die Erklärung sollte nicht mehr behaupten als die Themenliste («in der Regel»).'
+      - 'Die Antwort d) ist als falsche Antwort etwas zu extrem, aber klar falsch. Klein: Die Frage ist
+        mit «Ein Angestellter hat ein öffentliches Amt» etwas holprig, besser wäre «Eine Angestellte oder
+        ein Angestellter übt ein öffentliches Amt aus, zum Beispiel in der Schulbehörde.»'
+      - 'Klein: Das Wort «Arbeitgeber» in der Frage ist unproblematisch, aber «Bonus» ist ein Fremdwort
+        für B1-Lernende. Besser wäre «eine Prämie» oder «Zusatzlohn».'
+    round: 2
+    at: 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: 'Rewritten: Beide Beanstandungen sind berechtigt. Die Strafen (Kündigung, Lohnkürzung) und das
+    unklare «zusätzliche Ferienverbot» wurden durch plausible, aber klar falsche Antworten ersetzt: Bonus,
+    Beförderung und Amt in den Ferien. Die richtige Antwort steht neu bei c. Frage und Erklärung sind
+    neu formuliert.'
+  at: 2026-11-02

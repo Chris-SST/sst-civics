@@ -1,0 +1,33 @@
+id: jodeln-brauch-landbevoelkerung
+lang: es
+source_version: 2
+question: ¿Qué costumbre tradicional de la población rural suiza es una forma de cantar en la que la voz
+  cambia rápidamente entre la voz de pecho y la voz de cabeza?
+options:
+  a: Tocar el alphorn
+  b: Cantar yodel
+  c: Hornussen
+  d: Lanzar la bandera
+explanation: En el yodel, la voz cambia rápidamente entre la voz de pecho y la voz de cabeza. El yodel
+  es una costumbre tradicional de la población rural suiza. El yodel natural no necesita palabras, pero
+  muchas canciones de yodel tienen letra.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welcher traditionelle Brauch der Schweizer Landbevölkerung ist eine Gesangsform, bei
+      der die Stimme schnell zwischen der Bruststimme und der Kopfstimme wechselt?
+    options_de:
+      a: Alphorn spielen
+      b: Jodeln
+      c: Hornussen
+      d: Fahnenschwingen
+    explanation_de: Beim Jodeln wechselt die Stimme schnell zwischen der Bruststimme und der Kopfstimme.
+      Das Jodeln ist ein traditioneller Brauch der Schweizer Landbevölkerung. Der Naturjodel braucht keine
+      Worte, aber viele Jodellieder haben einen Text.

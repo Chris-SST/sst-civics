@@ -1,0 +1,31 @@
+id: folterverbot-bundesverfassung
+lang: es
+source_version: 1
+question: ¿Qué dice la Constitución Federal sobre la tortura?
+options:
+  a: La tortura solo está prohibida para los delincuentes.
+  b: La tortura está permitida para la policía en situaciones de emergencia.
+  c: La tortura está permitida si un tribunal lo aprueba.
+  d: Nadie puede ser sometido a tortura.
+explanation: El artículo 10 de la Constitución Federal prohíbe la tortura y cualquier otro tipo de trato
+  cruel, inhumano o degradante. Esta prohibición se aplica a todas las personas sin excepción. Tampoco
+  el Estado puede hacer excepciones.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was sagt die Bundesverfassung zur Folter?
+    options_de:
+      a: Die Folter ist nur für Straftäter verboten.
+      b: Die Folter ist für die Polizei in Notsituationen erlaubt.
+      c: Die Folter ist erlaubt, wenn ein Gericht sie genehmigt.
+      d: Niemand darf der Folter unterworfen werden.
+    explanation_de: Artikel 10 der Bundesverfassung verbietet die Folter und jede andere Art grausamer,
+      unmenschlicher oder erniedrigender Behandlung. Dieses Verbot gilt für alle Personen ohne Ausnahme.
+      Auch der Staat darf keine Ausnahmen machen.

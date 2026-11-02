@@ -1,0 +1,31 @@
+id: armee-zustaendigkeit-bund
+lang: fr
+source_version: 1
+question: Quel niveau de l'État est responsable de l'armée ?
+options:
+  a: Les cantons
+  b: La Confédération
+  c: Les districts
+  d: Les communes (Gemeinden)
+explanation: Les affaires militaires relèvent de la Confédération. Elle règle l'armée et ses tâches dans
+  la Constitution fédérale et dans les lois fédérales. Les cantons participent à l'exécution, par exemple
+  lors du recrutement.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Ebene ist für die Armee zuständig?
+    options_de:
+      a: Die Kantone
+      b: Der Bund
+      c: Die Bezirke
+      d: Die Gemeinden
+    explanation_de: Das Militärwesen fällt in die Zuständigkeit des Bundes. Er regelt die Armee und ihre
+      Aufgaben in der Bundesverfassung und in den Bundesgesetzen. Die Kantone wirken beim Vollzug mit,
+      zum Beispiel bei der Rekrutierung.

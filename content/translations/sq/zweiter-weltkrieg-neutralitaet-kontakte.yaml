@@ -1,0 +1,30 @@
+id: zweiter-weltkrieg-neutralitaet-kontakte
+lang: sq
+source_version: 1
+question: Si u sjell Zvicra gjatë Luftës së Dytë Botërore?
+options:
+  a: Ajo ndërpreu të gjitha kontaktet me palët në luftë dhe mbylli plotësisht kufijtë.
+  b: Ajo iu bashkua Gjermanisë dhe i furnizoi asaj trupa.
+  c: Ajo mbeti neutrale dhe mbajti kontakte politike dhe ekonomike me palët në luftë.
+  d: Ajo iu bashkua aleancës së Aleatëve dhe luftoi së bashku me ta.
+explanation: Zvicra nuk u bë palë në luftë gjatë Luftës së Dytë Botërore. Megjithatë, ajo ruajti kontakte
+  politike dhe ekonomike me palët në luftë. Ky qëndrim diskutohet historikisht edhe sot e kësaj dite.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie verhielt sich die Schweiz während des Zweiten Weltkriegs?
+    options_de:
+      a: Sie brach alle Kontakte zu den Kriegsparteien ab und schloss die Grenzen vollständig.
+      b: Sie schloss sich Deutschland an und lieferte ihm Truppen.
+      c: Sie blieb neutral und unterhielt politische und wirtschaftliche Kontakte zu den Kriegsparteien.
+      d: Sie schloss sich dem Bündnis der Alliierten an und kämpfte gemeinsam mit ihnen.
+    explanation_de: Die Schweiz wurde während des Zweiten Weltkriegs keine Kriegspartei. Dennoch unterhielt
+      sie politische und wirtschaftliche Kontakte zu den Kriegsparteien. Diese Haltung wird historisch
+      bis heute diskutiert.

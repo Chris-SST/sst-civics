@@ -1,0 +1,30 @@
+id: kollegialitaetsprinzip-bundesrat-beschluesse
+lang: tr
+source_version: 1
+question: Federal Konsey (Bundesrat) içinde ortaklık ilkesi (Kollegialitätsprinzip) ne anlama gelir?
+options:
+  a: Konfederasyon Başkanı (Bundespräsident) tek başına karar verir.
+  b: Üyeler, Federal Konsey'in kararlarını dışarıya karşı tek ses olarak savunur.
+  c: Her üye, kendi bakanlığında diğer üyelerle görüşmeden karar verir.
+  d: Üyeler, farklı görüşlerini kamuoyu önünde savunabilir.
+explanation: Federal Konsey, kurul olarak karar verir. Federal Konsey içinde farklı bir görüşü savunmuş
+  olan kişi bile kararı dışarıya karşı birlikte destekler. Böylece hükümet birlik içinde hareket eder.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet das Kollegialitätsprinzip im Bundesrat?
+    options_de:
+      a: Der Bundespräsident entscheidet allein.
+      b: Die Mitglieder vertreten die Beschlüsse des Bundesrates nach aussen mit einer Stimme.
+      c: Jedes Mitglied entscheidet in seinem eigenen Departement, ohne sich mit den anderen Mitgliedern
+        zu besprechen.
+      d: Die Mitglieder dürfen ihre unterschiedlichen Ansichten öffentlich vertreten.
+    explanation_de: Der Bundesrat entscheidet als Kollegium. Auch wer im Bundesrat eine andere Meinung
+      vertreten hat, unterstützt den Beschluss nach aussen gemeinsam. So handelt die Regierung geschlossen.

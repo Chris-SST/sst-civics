@@ -1,0 +1,32 @@
+id: zu-tiefer-lohn-arbeitsgericht
+lang: fr
+source_version: 1
+question: Une employée reçoit un salaire injustement trop bas. À quelle instance peut-elle s'adresser
+  ?
+options:
+  a: L'Office régional de placement (ORP)
+  b: L'Office fédéral de la statistique
+  c: Le tribunal des prud'hommes
+  d: L'assemblée communale (Gemeindeversammlung)
+explanation: En cas de litige découlant des rapports de travail, par exemple en raison d'un salaire trop
+  bas, le tribunal des prud'hommes est compétent. L'ORP aide à la recherche d'emploi et non pour les litiges
+  salariaux.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Angestellte erhält einen ungerechtfertigt zu tiefen Lohn. An welche Instanz kann
+      sie sich wenden?
+    options_de:
+      a: Das Regionale Arbeitsvermittlungszentrum (RAV)
+      b: Das Bundesamt für Statistik
+      c: Das Arbeitsgericht
+      d: Die Gemeindeversammlung
+    explanation_de: Bei einem Streit aus dem Arbeitsverhältnis, zum Beispiel wegen eines zu tiefen Lohns,
+      ist das Arbeitsgericht zuständig. Das RAV hilft bei der Stellensuche und nicht bei Lohnstreitigkeiten.

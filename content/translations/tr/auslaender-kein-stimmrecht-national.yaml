@@ -1,0 +1,30 @@
+id: auslaender-kein-stimmrecht-national
+lang: tr
+source_version: 1
+question: Birkaç yıldır İsviçre'de yaşayan yabancılar federal oylamalara katılabilir mi?
+options:
+  a: Evet, ancak yalnızca oylamalara katılabilirler, seçimlere katılamazlar.
+  b: Evet, yerleşim izni (C izni) (Niederlassungsbewilligung) varsa.
+  c: Evet, vergi ödüyorlarsa.
+  d: Hayır, ulusal düzeyde oy hakkına sahip değillerdir.
+explanation: Ulusal düzeydeki oy hakkı, İsviçre vatandaşlığına (Bürgerrecht) bağlıdır. Yabancılar bu hakkı
+  ancak vatandaşlığa kabul edildikten sonra kullanabilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Können Ausländerinnen und Ausländer, die seit einigen Jahren in der Schweiz leben, an
+      eidgenössischen Abstimmungen teilnehmen?
+    options_de:
+      a: Ja, aber sie können nur an Abstimmungen teilnehmen, nicht an Wahlen.
+      b: Ja, wenn sie eine Niederlassungsbewilligung (Ausweis C) haben.
+      c: Ja, wenn sie Steuern zahlen.
+      d: Nein, sie haben auf nationaler Ebene kein Stimmrecht.
+    explanation_de: Das Stimm- und Wahlrecht auf nationaler Ebene ist an das Schweizer Bürgerrecht gebunden.
+      Ausländerinnen und Ausländer können dieses Recht erst ausüben, nachdem sie eingebürgert wurden.

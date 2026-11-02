@@ -1,26 +1,26 @@
 id: auslaenderanteil-wohnbevoelkerung-2020
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.alltag
-question_de: Welchen Anteil an der ständigen Wohnbevölkerung der Schweiz machten Ausländerinnen und Ausländer
-  im Jahr 2020 ungefähr aus?
+question_de: Wie gross war im Jahr 2020 ungefähr der Anteil der Ausländerinnen und Ausländer an der ständigen
+  Wohnbevölkerung der Schweiz?
 options_de:
   a: etwa drei Fünftel
   b: etwa ein Zehntel
   c: etwa die Hälfte
   d: etwa ein Viertel
 correct: d
-explanation_de: 2020 war rund ein Viertel der ständigen Wohnbevölkerung ausländischer Nationalität. Das
-  entspricht etwa 2,1 von 8,6 Millionen Personen. Die Schweiz hat damit im europäischen Vergleich einen
-  hohen Ausländeranteil.
+explanation_de: Im Jahr 2020 hatte rund ein Viertel der ständigen Wohnbevölkerung keinen Schweizer Pass.
+  Ende 2020 waren es rund 2,2 von 8,7 Millionen Personen, also etwa 25 Prozent. Im Vergleich mit anderen
+  Ländern in Europa ist dieser Anteil hoch.
 sources:
 - url: https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/stand-entwicklung.html
   checked: &id001 2026-11-02
 glossary:
 - Wohnbevölkerung
 - Ausländeranteil
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-280
@@ -30,16 +30,47 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
+    version: 2
     reasoning: Ende 2020 lag der Ausländeranteil an der ständigen Wohnbevölkerung der Schweiz bei rund
       25 Prozent, also etwa einem Viertel.
   source:
     verdict: supported
-    note: Quelle 1 hält fest, dass rund ein Viertel der Bevölkerung eine ausländische Staatsbürgerschaft
-      hat und der Anteil der ständigen ausländischen Wohnbevölkerung etwas mehr als ein Viertel ausmacht.
-      Eine Angabe speziell für 2020 fehlt (die Seite nennt nur die Gesamtbevölkerung 2020 mit 8 670 300),
-      aber die Grössenordnung stimmt mit Antwort d) überein; die 2,1 Millionen werden nicht ausdrücklich
-      genannt.
+    note: Quelle 1 nennt rund ein Viertel der Bevölkerung mit ausländischer Staatsbürgerschaft und einen
+      Anteil der ständigen ausländischen Wohnbevölkerung von etwas mehr als einem Viertel. Sie nennt für
+      Ende 2020 eine Gesamtbevölkerung von 8 670 300. Die Zahl von 2,2 Millionen Ausländern und der europäische
+      Vergleich stehen nicht im Text, das Jahr 2020 wird nur für die Gesamtzahl genannt.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «keinen Schweizer Pass» ist umgangssprachlich; besser «keine Schweizer Staatsangehörigkeit»,
+        wie im Test und in der BFS-Quelle.'
+      - 'Klein: Die Zahl von rund 2,2 Millionen ausländischen Personen steht nicht im Quellentext, stimmt
+        aber (Ende 2020 rund 2,21 Millionen, etwa 25,5 Prozent); eine Quellenangabe dafür oder der Verzicht
+        auf die genaue Zahl würde die Erklärung absichern.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Bruchzahlen wie «drei Fünftel» sind für manche Lernende auf Niveau B1 schwer verständlich;
+        ergänzen Sie die Antworten mit Prozentangaben, zum Beispiel «etwa drei Fünftel (60 Prozent)» und
+        «etwa ein Viertel (25 Prozent)».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz zum Vergleich mit anderen Ländern in Europa wird von der angegebenen Quelle nicht
+        belegt; er könnte gestrichen oder mit einer Quelle gestützt werden.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

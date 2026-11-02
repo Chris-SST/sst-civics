@@ -1,0 +1,35 @@
+id: beziehungen-schweiz-eu-bilaterale-abkommen
+lang: fr
+source_version: 1
+question: Sur quoi reposent, pour l'essentiel, les relations entre la Suisse et l'Union européenne (UE)
+  ?
+options:
+  a: Sur un ensemble d'accords bilatéraux
+  b: Sur un gouvernement commun
+  c: Sur l'adhésion de la Suisse à l'UE
+  d: Sur une constitution commune
+explanation: La Suisse n'est pas membre de l'UE. Ses relations sont réglées par de nombreux accords bilatéraux,
+  c'est-à-dire des traités entre deux partenaires. Ils concernent par exemple le commerce et la libre
+  circulation des personnes.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort c: «Mitgliedschaft der Schweiz in der EU» (bestehender Zustand) wird zu «Beitritt
+      der Schweiz zur EU» (Vorgang des Beitretens), das ist nicht dasselbe. Erklärung: «Personenverkehr»
+      wird zu «Personenfreizügigkeit», was enger und inhaltlich anders ist.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Worauf beruhen die Beziehungen zwischen der Schweiz und der Europäischen Union (EU) im
+      Wesentlichen?
+    options_de:
+      a: Auf einem Bündel bilateraler Abkommen
+      b: Auf einer gemeinsamen Regierung
+      c: Auf dem Beitritt der Schweiz zur EU
+      d: Auf einer gemeinsamen Verfassung
+    explanation_de: Die Schweiz ist kein Mitglied der EU. Ihre Beziehungen sind durch zahlreiche bilaterale
+      Abkommen geregelt, das heisst durch Verträge zwischen zwei Partnern. Sie betreffen zum Beispiel
+      den Handel und die Personenfreizügigkeit.

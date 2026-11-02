@@ -1,0 +1,32 @@
+id: stimmabgabe-per-post-mehrheit
+lang: fr
+source_version: 1
+question: Comment la plupart des personnes ayant le droit de vote en Suisse expriment-elles aujourd'hui
+  leur voix lors des votations et des élections ?
+options:
+  a: Elles l'expriment le dimanche de la votation à l'assemblée communale (Gemeindeversammlung).
+  b: Elles la déposent personnellement dans l'urne le dimanche de la votation.
+  c: Elles l'envoient par la poste à la commune (Gemeinde).
+  d: Elles l'expriment sur un site internet de la Confédération.
+explanation: La majorité des personnes ayant le droit de vote votent par correspondance, c'est-à-dire
+  par voie postale. Se rendre aux urnes le dimanche de la votation n'est aujourd'hui plus habituel pour
+  la plupart d'entre elles.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie geben die meisten Stimmberechtigten in der Schweiz heute ihre Stimme bei Abstimmungen
+      und Wahlen ab?
+    options_de:
+      a: Sie geben sie am Abstimmungssonntag an der Gemeindeversammlung ab.
+      b: Sie legen sie am Abstimmungssonntag persönlich in die Urne.
+      c: Sie schicken sie per Post an die Gemeinde.
+      d: Sie geben sie auf einer Internetseite des Bundes ab.
+    explanation_de: Die Mehrheit der Stimmberechtigten stimmt brieflich ab, das heisst auf dem Postweg.
+      Am Abstimmungssonntag an die Urne zu gehen, ist heute für die meisten von ihnen nicht mehr üblich.

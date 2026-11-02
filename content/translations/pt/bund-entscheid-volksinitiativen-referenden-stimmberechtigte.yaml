@@ -1,0 +1,34 @@
+id: bund-entscheid-volksinitiativen-referenden-stimmberechtigte
+lang: pt
+source_version: 1
+question: Quem decide em última instância, a nível da Confederação, numa votação, se uma iniciativa popular
+  (Volksinitiative) ou um referendo é aceite?
+options:
+  a: A Assembleia Federal (Bundesversammlung) numa sessão conjunta das duas câmaras
+  b: O Conselho Federal (Bundesrat) após audição dos governos dos cantões
+  c: O Tribunal Federal (Bundesgericht) após uma análise jurídica do projeto
+  d: Os cidadãos com direito de voto, que votam na urna ou por correspondência
+explanation: Nas iniciativas populares e nos referendos, os cidadãos com direito de voto têm a última
+  palavra. Decidem na votação popular, na urna, que na Suíça também é possível por correspondência. O
+  Conselho Federal, o Parlamento e o Tribunal Federal não podem substituir o resultado.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet auf Ebene des Bundes in letzter Instanz in einer Abstimmung, ob eine
+      Volksinitiative oder ein Referendum angenommen wird?
+    options_de:
+      a: Die Bundesversammlung in einer gemeinsamen Sitzung der beiden Kammern
+      b: Der Bundesrat nach Anhörung der Kantonsregierungen
+      c: Das Bundesgericht nach einer rechtlichen Prüfung der Vorlage
+      d: Die stimmberechtigten Bürgerinnen und Bürger, die an der Urne oder auf dem Korrespondenzweg abstimmen
+    explanation_de: Bei Volksinitiativen und Referenden haben die stimmberechtigten Bürgerinnen und Bürger
+      das letzte Wort. Sie entscheiden in der Volksabstimmung an der Urne, was in der Schweiz auch auf
+      dem Korrespondenzweg möglich ist. Der Bundesrat, das Parlament und das Bundesgericht können das
+      Ergebnis nicht ersetzen.

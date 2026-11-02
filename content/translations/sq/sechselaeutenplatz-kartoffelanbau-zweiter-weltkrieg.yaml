@@ -1,0 +1,33 @@
+id: sechselaeutenplatz-kartoffelanbau-zweiter-weltkrieg
+lang: sq
+source_version: 2
+question: Cila nga këto bimë u kultivua në Sechseläutenplatz në Cyrih gjatë Luftës së Dytë Botërore?
+options:
+  a: Duhani
+  b: Hardhia e rrushit
+  c: Pambuku
+  d: Patatet
+explanation: Gjatë Luftës së Dytë Botërore në Zvicër kishte shumë pak ushqime. Prandaj, me «betejën e
+  kultivimit» (Anbauschlacht) u mbollën edhe sipërfaqe në qendër të qyteteve, për shembull Sechseläutenplatz
+  në Cyrih u mbollë me patate. Duhani, hardhia e rrushit dhe pambuku nuk u kultivuan atje.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche dieser Pflanzen wurde während des Zweiten Weltkriegs auf dem Sechseläutenplatz
+      in Zürich angebaut?
+    options_de:
+      a: Tabak
+      b: Die Weinrebe
+      c: Baumwolle
+      d: Kartoffeln
+    explanation_de: Während des Zweiten Weltkriegs gab es in der Schweiz sehr wenig Lebensmittel. Deshalb
+      wurden mit der «Anbauschlacht» auch Flächen im Zentrum der Städte bepflanzt, zum Beispiel wurde
+      der Sechseläutenplatz in Zürich mit Kartoffeln bepflanzt. Tabak, Weinrebe und Baumwolle wurden dort
+      nicht angebaut.

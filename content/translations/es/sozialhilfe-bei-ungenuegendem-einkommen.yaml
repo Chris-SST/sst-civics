@@ -1,0 +1,33 @@
+id: sozialhilfe-bei-ungenuegendem-einkommen
+lang: es
+source_version: 1
+question: ¿Qué ofrece el municipio (Gemeinde) cuando los ingresos y el patrimonio de una persona no son
+  suficientes para vivir?
+options:
+  a: Asistencia social
+  b: Un permiso de construcción
+  c: Una naturalización
+  d: Una beca de la escuela obligatoria
+explanation: Quien no puede pagar su sustento con sus propios medios tiene derecho a recibir apoyo de
+  la asistencia social. Esta la presta el municipio en el que vive la persona. Es la última red de la
+  seguridad social.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bietet die Gemeinde an, wenn das Einkommen und das Vermögen einer Person nicht ausreichen,
+      um zu leben?
+    options_de:
+      a: Sozialhilfe
+      b: Eine Baubewilligung
+      c: Eine Einbürgerung
+      d: Ein Stipendium der obligatorischen Schule
+    explanation_de: Wer seinen Lebensunterhalt nicht mit eigenen Mitteln bezahlen kann, hat Anspruch auf
+      Unterstützung durch die Sozialhilfe. Diese wird von der Gemeinde geleistet, in der die Person wohnt.
+      Sie ist das letzte Netz der sozialen Sicherheit.

@@ -10,6 +10,21 @@ options:
 explanation: 'The Federal Assembly (Bundesversammlung), the Parliament of the Confederation, consists
   of two chambers: the National Council and the Council of States. The Federal Council is the government
   and is not part of Parliament.'
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche zwei Kammern bilden das Schweizer Parlament auf Bundesebene?
+    options_de:
+      a: Der Bundesrat und der Ständerat
+      b: Der Bundesrat und der Nationalrat
+      c: Der Ständerat und das Bundesgericht
+      d: Der Nationalrat und der Ständerat
+    explanation_de: 'Die Bundesversammlung, das Parlament der Eidgenossenschaft, besteht aus zwei Kammern:
+      dem Nationalrat und dem Ständerat. Der Bundesrat ist die Regierung und gehört nicht zum Parlament.'

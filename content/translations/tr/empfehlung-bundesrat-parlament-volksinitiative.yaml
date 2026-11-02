@@ -1,0 +1,35 @@
+id: empfehlung-bundesrat-parlament-volksinitiative
+lang: tr
+source_version: 1
+question: Federal düzeydeki bir halk girişimi (Volksinitiative) oylamasından önce, oy hakkı olan kişilere
+  girişimi kabul etmeleri veya reddetmeleri yönünde kim tavsiyede bulunur?
+options:
+  a: Federal Konsey (Bundesrat) ve Parlamento
+  b: Kanton hükümetleri
+  c: Yalnızca Federal Kançılarya (Bundeskanzlei)
+  d: Federal Mahkeme (Bundesgericht)
+explanation: Bir halk girişimi geçerli biçimde oluştuktan sonra Federal Konsey ve Parlamento bu konuda
+  görüş bildirir. Parlamento, oy hakkı olan kişilere girişimin kabul edilmesini veya reddedilmesini tavsiye
+  eder. Bu tavsiye, oy hakkı olan kişilerin oylamadan önce aldığı oylama açıklama broşüründe (Abstimmungserläuterungen)
+  de yer alır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer empfiehlt den Stimmberechtigten vor einer Abstimmung über eine Volksinitiative auf
+      Bundesebene, die Initiative anzunehmen oder abzulehnen?
+    options_de:
+      a: Der Bundesrat und das Parlament
+      b: Die Kantonsregierungen
+      c: Nur die Bundeskanzlei
+      d: Das Bundesgericht
+    explanation_de: Nachdem eine Volksinitiative gültig zustande gekommen ist, nehmen der Bundesrat und
+      das Parlament dazu Stellung. Das Parlament empfiehlt den Stimmberechtigten, die Initiative anzunehmen
+      oder abzulehnen. Diese Empfehlung ist auch in den Abstimmungserläuterungen (Abstimmungsbüchlein)
+      enthalten, die die Stimmberechtigten vor der Abstimmung erhalten.

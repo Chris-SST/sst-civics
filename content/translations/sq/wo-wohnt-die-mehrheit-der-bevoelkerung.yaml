@@ -1,0 +1,31 @@
+id: wo-wohnt-die-mehrheit-der-bevoelkerung
+lang: sq
+source_version: 2
+question: Në cilën zonë të Zvicrës jeton shumica e popullsisë?
+options:
+  a: Në Alpe
+  b: Në Tiçino
+  c: Në Mittelland (rrafshnalta zvicerane)
+  d: Në Jura
+explanation: Mittelland ndodhet mes Jurasë dhe Alpeve. Aty ndodhen shumica e qyteteve të mëdha dhe aty
+  jeton pjesa më e madhe e popullsisë. Alpet mbulojnë, është e vërtetë, një sipërfaqe të madhe, por janë
+  të populluara vetëm pak.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welcher Region der Schweiz lebt die Mehrheit der Bevölkerung?
+    options_de:
+      a: In den Alpen
+      b: Im Tessin
+      c: Im Mittelland
+      d: Im Jura
+    explanation_de: Das Mittelland liegt zwischen dem Jura und den Alpen. Dort befinden sich die meisten
+      grossen Städte und dort lebt der grösste Teil der Bevölkerung. Die Alpen bedecken zwar eine grosse
+      Fläche, sind aber nur wenig besiedelt.

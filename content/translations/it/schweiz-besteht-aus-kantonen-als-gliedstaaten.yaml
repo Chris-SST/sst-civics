@@ -1,0 +1,30 @@
+id: schweiz-besteht-aus-kantonen-als-gliedstaaten
+lang: it
+source_version: 1
+question: Da che cosa è composta la Svizzera come Stato federale?
+options:
+  a: Da distretti come Stati membri
+  b: Da regioni linguistiche come Stati membri
+  c: Da Cantoni come Stati membri
+  d: Da regioni come Stati membri
+explanation: La Svizzera è uno Stato federale. I Cantoni sono i suoi Stati membri e hanno una propria
+  costituzione, un proprio parlamento e un proprio governo. I distretti e le regioni non sono Stati membri.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Woraus besteht die Schweiz als Bundesstaat?
+    options_de:
+      a: Aus Bezirken als Gliedstaaten
+      b: Aus Sprachregionen als Gliedstaaten
+      c: Aus Kantonen als Gliedstaaten
+      d: Aus Regionen als Gliedstaaten
+    explanation_de: Die Schweiz ist ein Bundesstaat. Die Kantone sind ihre Gliedstaaten und haben eine
+      eigene Verfassung, ein eigenes Parlament und eine eigene Regierung. Die Bezirke und die Regionen
+      sind keine Gliedstaaten.

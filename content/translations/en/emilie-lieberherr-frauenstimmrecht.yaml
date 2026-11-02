@@ -9,6 +9,21 @@ options:
   d: For the abolition of the communal assembly (Gemeindeversammlung)
 explanation: In the 1960s, Emilie Lieberherr campaigned for women's right to vote and to stand for election.
   At Confederation level, it was introduced in 1971. In the canton of Zurich, it has applied since 1970.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür setzte sich die Zürcher Politikerin Emilie Lieberherr ein?
+    options_de:
+      a: Für den Bau des Flughafens Zürich
+      b: Für den Beitritt der Schweiz zur UNO
+      c: Für das Stimm- und Wahlrecht der Frauen
+      d: Für die Abschaffung der Gemeindeversammlung
+    explanation_de: In den 1960er-Jahren setzte sich Emilie Lieberherr für das Stimm- und Wahlrecht der
+      Frauen ein. Auf Ebene des Bundes wurde es 1971 eingeführt. Im Kanton Zürich gilt es seit 1970.

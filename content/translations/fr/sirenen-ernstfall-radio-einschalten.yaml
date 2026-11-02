@@ -1,0 +1,33 @@
+id: sirenen-ernstfall-radio-einschalten
+lang: fr
+source_version: 2
+question: En cas d'urgence, les sirènes font retentir l'« Alarme générale » (un son hurlant, montant et
+  descendant). Que devez-vous faire ?
+options:
+  a: Quitter immédiatement la maison
+  b: Appeler les pompiers
+  c: Écouter la radio et suivre les instructions des autorités
+  d: Partir en voiture
+explanation: Lors de l'alarme générale, les autorités informent par la radio de ce qu'il faut faire. Des
+  informations sont aussi disponibles dans l'application Alertswiss. Il faut suivre les instructions et
+  ne pas appeler inutilement les numéros d'urgence, afin qu'ils restent libres pour les véritables urgences.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Im Notfall lassen die Sirenen den «Allgemeinen Alarm» ertönen (ein heulender, an- und
+      abschwellender Ton). Was müssen Sie tun?
+    options_de:
+      a: Sofort das Haus verlassen
+      b: Die Feuerwehr anrufen
+      c: Radio hören und den Anweisungen der Behörden folgen
+      d: Mit dem Auto wegfahren
+    explanation_de: Beim Allgemeinen Alarm informieren die Behörden über das Radio darüber, was zu tun
+      ist. Informationen sind auch in der Alertswiss-App verfügbar. Man muss den Anweisungen folgen und
+      die Notrufnummern nicht unnötig anrufen, damit sie für die echten Notfälle frei bleiben.

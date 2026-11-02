@@ -1,0 +1,29 @@
+id: bag-zustaendig-gesundheitsfragen-bund
+lang: tr
+source_version: 1
+question: Sağlık konularından hangi Konfederasyon makamı sorumludur?
+options:
+  a: Federal Çevre Dairesi (BAFU)
+  b: Göç Devlet Sekreterliği (SEM)
+  c: Federal İstatistik Dairesi (BFS)
+  d: Federal Halk Sağlığı Dairesi (BAG)
+explanation: Federal Halk Sağlığı Dairesi (BAG), sağlık konularından sorumlu Konfederasyon makamıdır.
+  Örneğin sosyal sağlık sigortasını denetler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Amt des Bundes ist für Gesundheitsfragen zuständig?
+    options_de:
+      a: Bundesamt für Umwelt
+      b: Staatssekretariat für Migration
+      c: Bundesamt für Statistik
+      d: Bundesamt für Gesundheit
+    explanation_de: Das Bundesamt für Gesundheit ist die Behörde des Bundes, die für Gesundheitsfragen
+      zuständig ist. Es beaufsichtigt zum Beispiel die soziale Krankenversicherung.

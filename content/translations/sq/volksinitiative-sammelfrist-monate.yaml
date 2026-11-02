@@ -1,0 +1,32 @@
+id: volksinitiative-sammelfrist-monate
+lang: sq
+source_version: 1
+question: Sa kohë kanë nismëtarët në dispozicion për të mbledhur nënshkrimet për një nismë popullore (Volksinitiative)
+  federale?
+options:
+  a: 6 muaj
+  b: 12 muaj
+  c: 18 muaj
+  d: 36 muaj
+explanation: Afati i mbledhjes është 18 muaj nga publikimi në Fletën Federale (Bundesblatt). Nëse ata
+  nuk arrijnë të mbledhin brenda kësaj kohe 100 000 nënshkrimet e nevojshme, nisma nuk realizohet.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viel Zeit haben die Initianten zur Verfügung, um die Unterschriften für eine eidgenössische
+      Volksinitiative zu sammeln?
+    options_de:
+      a: 6 Monate
+      b: 12 Monate
+      c: 18 Monate
+      d: 36 Monate
+    explanation_de: Die Sammelfrist beträgt 18 Monate ab der Veröffentlichung im Bundesblatt. Wenn es
+      ihnen nicht gelingt, innerhalb dieser Zeit die erforderlichen 100 000 Unterschriften zu sammeln,
+      kommt die Initiative nicht zustande.

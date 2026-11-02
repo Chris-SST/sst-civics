@@ -1,0 +1,35 @@
+id: quartierverein-aufgabe-im-quartier
+lang: es
+source_version: 1
+question: ¿Cuál es una tarea típica de una asociación de barrio (Quartierverein) en un municipio (Gemeinde)
+  o ciudad del cantón de Zúrich?
+options:
+  a: Representa los intereses de la población del barrio ante las autoridades y fomenta la convivencia.
+  b: Lleva el registro de habitantes del barrio.
+  c: Cobra impuestos a los habitantes del barrio.
+  d: Autoriza las solicitudes de construcción en el barrio.
+explanation: Una asociación de barrio es una agrupación voluntaria de habitantes. Presenta ante las autoridades
+  las inquietudes del barrio y organiza actos que refuerzan la convivencia. Las tareas de autoridad, como
+  los impuestos, los permisos de construcción o el registro de habitantes, corresponden al municipio.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist eine typische Aufgabe eines Quartiervereins in einer Gemeinde oder Stadt des
+      Kantons Zürich?
+    options_de:
+      a: Er vertritt die Interessen der Bevölkerung des Quartiers gegenüber den Behörden und fördert das
+        Zusammenleben.
+      b: Er führt das Einwohnerregister des Quartiers.
+      c: Er erhebt Steuern bei den Einwohnerinnen und Einwohnern des Quartiers.
+      d: Er bewilligt die Baugesuche im Quartier.
+    explanation_de: Ein Quartierverein ist ein freiwilliger Zusammenschluss von Einwohnerinnen und Einwohnern.
+      Er bringt die Anliegen des Quartiers bei den Behörden vor und organisiert Veranstaltungen, die das
+      Zusammenleben stärken. Behördliche Aufgaben wie Steuern, Baubewilligungen oder das Einwohnerregister
+      sind Sache der Gemeinde.

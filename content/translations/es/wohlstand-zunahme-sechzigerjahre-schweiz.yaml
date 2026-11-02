@@ -1,0 +1,33 @@
+id: wohlstand-zunahme-sechzigerjahre-schweiz
+lang: es
+source_version: 2
+question: ¿Cómo le fue a Suiza económicamente en las décadas posteriores a la Segunda Guerra Mundial,
+  por ejemplo en los años sesenta?
+options:
+  a: 'Le fue cada vez mejor: había mucho trabajo y el bienestar de muchas personas aumentó.'
+  b: La economía se contrajo con fuerza y muchas personas se quedaron sin trabajo.
+  c: Suiza se convirtió en miembro de la Unión Europea.
+  d: Suiza ya no necesitaba trabajadores del extranjero.
+explanation: Después de la Segunda Guerra Mundial, la economía suiza creció con fuerza. Había mucho trabajo
+  y muchas personas podían permitirse más cosas. Por eso, las empresas contrataron a muchos trabajadores
+  del extranjero, al principio sobre todo de Italia.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie erging es der Schweiz wirtschaftlich in den Jahrzehnten nach dem Zweiten Weltkrieg,
+      zum Beispiel in den Sechzigerjahren?
+    options_de:
+      a: 'Es erging ihr immer besser: Es gab viel Arbeit und der Wohlstand vieler Menschen nahm zu.'
+      b: Die Wirtschaft schrumpfte stark und viele Menschen blieben ohne Arbeit.
+      c: Die Schweiz wurde Mitglied der Europäischen Union.
+      d: Die Schweiz brauchte keine Arbeitskräfte aus dem Ausland mehr.
+    explanation_de: Nach dem Zweiten Weltkrieg wuchs die Schweizer Wirtschaft stark. Es gab viel Arbeit
+      und viele Menschen konnten sich mehr Dinge leisten. Deshalb stellten die Unternehmen viele Arbeitskräfte
+      aus dem Ausland ein, zu Beginn vor allem aus Italien.

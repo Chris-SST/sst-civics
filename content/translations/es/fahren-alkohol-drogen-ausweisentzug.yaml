@@ -1,0 +1,32 @@
+id: fahren-alkohol-drogen-ausweisentzug
+lang: es
+source_version: 1
+question: ¿Qué riesgo corre una persona que conduce un coche bajo los efectos del alcohol o de las drogas?
+options:
+  a: La pérdida del derecho de voto
+  b: La expulsión del municipio de residencia
+  c: La retirada del seguro de enfermedad
+  d: La retirada del permiso de conducir
+explanation: Quien no está en condiciones de conducir pone en peligro a otras personas en la circulación
+  vial. Por eso, la autoridad puede retirar el permiso de conducir. Además, pueden añadirse multas u otras
+  sanciones.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Risiko geht eine Person ein, die unter Alkohol- oder Drogeneinfluss ein Auto
+      fährt?
+    options_de:
+      a: Der Verlust des Stimmrechts
+      b: Die Ausweisung aus der Wohngemeinde
+      c: Der Entzug der Krankenversicherung
+      d: Der Entzug des Führerausweises
+    explanation_de: Wer nicht in der Lage ist, ein Fahrzeug zu führen, gefährdet andere Personen im Strassenverkehr.
+      Deshalb kann die Behörde den Führerausweis entziehen. Zusätzlich können Bussen oder andere Sanktionen
+      hinzukommen.

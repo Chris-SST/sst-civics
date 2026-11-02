@@ -1,0 +1,31 @@
+id: gleichberechtigung-mann-frau-bundesverfassung-1981
+lang: tr
+source_version: 1
+question: Kadın ve erkek eşitliği İsviçre Federal Anayasası'nda ne zamandan beri yer almaktadır?
+options:
+  a: 1999'dan beri
+  b: 1971'den beri
+  c: 1981'den beri
+  d: 1848'den beri
+explanation: Eşitlik maddesi 1981'de Federal Anayasa'ya eklendi. Bu madde, devleti aile, eğitim ve çalışma
+  hayatında eşitliği güvence altına almakla yükümlü kılar. Kadınların oy hakkı ise 1971'den beri mevcuttu.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Seit wann ist die Gleichstellung von Frau und Mann in der Schweizerischen Bundesverfassung
+      verankert?
+    options_de:
+      a: Seit 1999
+      b: Seit 1971
+      c: Seit 1981
+      d: Seit 1848
+    explanation_de: Der Gleichstellungsartikel wurde 1981 in die Bundesverfassung aufgenommen. Dieser
+      Artikel verpflichtet den Staat, die Gleichstellung in Familie, Ausbildung und Arbeitsleben zu gewährleisten.
+      Das Stimmrecht der Frauen bestand hingegen bereits seit 1971.

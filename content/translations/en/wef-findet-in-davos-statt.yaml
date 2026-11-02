@@ -10,6 +10,22 @@ options:
   d: In Interlaken
 explanation: The World Economic Forum meets regularly in Davos in the canton of Graubünden. Experts from
   politics and business come together there. The Confederation supports the security of the meeting.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Schweizer Stadt findet die jährliche Versammlung des World Economic Forum
+      (WEF) regelmässig statt?
+    options_de:
+      a: In Davos
+      b: In Luzern
+      c: In Montreux
+      d: In Interlaken
+    explanation_de: Das World Economic Forum trifft sich regelmässig in Davos im Kanton Graubünden. Dort
+      kommen Fachleute aus Politik und Wirtschaft zusammen. Der Bund unterstützt die Sicherheit der Versammlung.

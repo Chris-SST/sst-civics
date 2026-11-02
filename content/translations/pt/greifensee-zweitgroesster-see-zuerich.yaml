@@ -1,0 +1,30 @@
+id: greifensee-zweitgroesster-see-zuerich
+lang: pt
+source_version: 1
+question: Qual é o segundo maior lago do cantão de Zurique, depois do lago de Zurique?
+options:
+  a: Greifensee
+  b: Pfäffikersee
+  c: Türlersee
+  d: Katzensee
+explanation: O Greifensee situa-se entre Uster e Dübendorf e é, depois do lago de Zurique, o segundo maior
+  lago do cantão. O Pfäffikersee é menor. O Türlersee e o Katzensee são ainda claramente menores.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher ist der zweitgrösste See des Kantons Zürich, nach dem Zürichsee?
+    options_de:
+      a: Greifensee
+      b: Pfäffikersee
+      c: Türlersee
+      d: Katzensee
+    explanation_de: Der Greifensee liegt zwischen Uster und Dübendorf und ist, nach dem Zürichsee, der
+      zweitgrösste See des Kantons. Der Pfäffikersee ist kleiner. Der Türlersee und der Katzensee sind
+      noch deutlich kleiner.

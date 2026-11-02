@@ -20,7 +20,7 @@ sources:
 glossary:
 - Partei
 - Demokratie
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-042
@@ -44,3 +44,36 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung begründet nicht, warum Antwort c) falsch ist; ergänzen: «Die eidgenössischen
+        Abstimmungen führen die Bundeskanzlei, die Kantone und die Gemeinden durch.»'
+      - 'Klein: Das Wort «bündeln» ist für Niveau B1 eher schwierig; einfacher wäre: «Parteien sammeln
+        die verschiedenen Interessen und Meinungen der Bevölkerung und bringen sie in die Politik ein.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt nichts zu Antwort c; ergänzen: «Die Abstimmungen führen Bund, Kantone
+        und Gemeinden durch; die Parteien machen dazu Abstimmungsempfehlungen.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c) könnte noch genauer sein, denn die Bundeskanzlei stellt die korrekte Durchführung
+        eidgenössischer Abstimmungen sicher; die Antwort ist aber für Parteien klar falsch, daher kein
+        Änderungsbedarf.'
+      - 'Klein: In der Frage ist «in der Demokratie» etwas allgemein; man könnte «in der Schweizer Demokratie»
+        schreiben, das ist aber optional.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,32 @@
+id: technorama-standort-winterthur
+lang: fr
+source_version: 1
+question: Dans quelle ville du canton de Zurich se trouve le Technorama, un musée où l'on peut expérimenter
+  ?
+options:
+  a: À Uster
+  b: À Dübendorf
+  c: À Winterthour
+  d: À Zurich
+explanation: Le Technorama est le centre suisse des sciences (Swiss Science Center) et se trouve à Winterthour.
+  Les visiteuses et les visiteurs peuvent y expérimenter eux-mêmes et essayer des phénomènes naturels.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welcher Stadt im Kanton Zürich befindet sich das Technorama, ein Museum, in dem man
+      experimentieren kann?
+    options_de:
+      a: In Uster
+      b: In Dübendorf
+      c: In Winterthur
+      d: In Zürich
+    explanation_de: Das Technorama ist das Schweizer Science Center (Swiss Science Center) und befindet
+      sich in Winterthur. Die Besucherinnen und Besucher können dort selbst experimentieren und Naturphänomene
+      ausprobieren.

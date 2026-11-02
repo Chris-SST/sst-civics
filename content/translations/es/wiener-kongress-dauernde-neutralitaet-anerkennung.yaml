@@ -1,0 +1,29 @@
+id: wiener-kongress-dauernde-neutralitaet-anerkennung
+lang: es
+source_version: 1
+question: ¿Qué acontecimiento de 1815 es importante para la neutralidad de Suiza?
+options:
+  a: Suiza declaró la guerra a todos los Estados vecinos.
+  b: Las grandes potencias reconocieron la neutralidad perpetua de Suiza.
+  c: Suiza ingresó en la Sociedad de Naciones.
+  d: Suiza celebró por primera vez una votación popular sobre la neutralidad.
+explanation: En el Congreso de Viena de 1815, las grandes potencias europeas reconocieron la neutralidad
+  perpetua de Suiza. Esto dio a la neutralidad una base internacional.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Ereignis von 1815 ist wichtig für die Neutralität der Schweiz?
+    options_de:
+      a: Die Schweiz erklärte allen Nachbarstaaten den Krieg.
+      b: Die Grossmächte anerkannten die immerwährende Neutralität der Schweiz.
+      c: Die Schweiz trat dem Völkerbund bei.
+      d: Die Schweiz führte zum ersten Mal eine Volksabstimmung über die Neutralität durch.
+    explanation_de: Am Wiener Kongress von 1815 anerkannten die europäischen Grossmächte die immerwährende
+      Neutralität der Schweiz. Das gab der Neutralität eine internationale Grundlage.

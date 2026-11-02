@@ -1,0 +1,31 @@
+id: mietwohnung-zutritt-vermieter-triftiger-grund
+lang: pt
+source_version: 1
+question: Em que caso os inquilinos devem permitir o acesso ao apartamento por parte do senhorio?
+options:
+  a: Nunca, o apartamento está sempre protegido
+  b: Quando existe um motivo justificado
+  c: Apenas quando o senhorio o exige, sem justificação
+  d: A qualquer momento e sem aviso prévio
+explanation: Os inquilinos devem permitir o acesso quando existe um motivo justificado, por exemplo, uma
+  reparação urgente. No entanto, o senhorio deve anunciar a visita com antecedência e ter consideração
+  pelos inquilinos. Não é permitido o acesso sem motivo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall müssen die Mieter dem Vermieter den Zugang zur Wohnung gestatten?
+    options_de:
+      a: Nie, die Wohnung ist immer geschützt
+      b: Wenn ein gerechtfertigter Grund vorliegt
+      c: Nur wenn der Vermieter es verlangt, ohne Begründung
+      d: Jederzeit und ohne vorherige Ankündigung
+    explanation_de: Die Mieter müssen den Zugang gestatten, wenn ein gerechtfertigter Grund vorliegt,
+      zum Beispiel eine dringende Reparatur. Der Vermieter muss den Besuch jedoch im Voraus ankündigen
+      und auf die Mieter Rücksicht nehmen. Der Zugang ohne Grund ist nicht erlaubt.

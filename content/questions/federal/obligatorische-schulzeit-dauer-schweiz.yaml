@@ -1,19 +1,20 @@
 id: obligatorische-schulzeit-dauer-schweiz
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.sozial.bildung
-question_de: Wie viele Jahre dauert die obligatorische Schulzeit in der Schweiz, also der gesetzlich vorgeschriebene
-  Schulbesuch?
+question_de: Wie viele Jahre dauert im Kanton Zürich die obligatorische Schulzeit, wenn man den Kindergarten
+  mitzählt?
 options_de:
   a: Elf Jahre
   b: Zehn Jahre
   c: Zwölf Jahre
   d: Neun Jahre
 correct: a
-explanation_de: Die obligatorische Schulzeit umfasst in der Schweiz elf Jahre. Sie beginnt mit dem Kindergarten
-  (zwei Jahre) und schliesst die Primarschule und die Sekundarstufe I ein. Die Kantone regeln die Schule,
-  aber die Dauer ist gesamtschweizerisch harmonisiert.
+explanation_de: 'Im Kanton Zürich besuchen alle Kinder elf Jahre lang obligatorisch die Schule: zwei Jahre
+  Kindergarten, sechs Jahre Primarschule und drei Jahre Sekundarstufe I. Die meisten Kantone haben diese
+  Dauer mit dem HarmoS-Konkordat vereinheitlicht. Einige Kantone sind aber nicht beigetreten, und dort
+  ist teilweise nur ein Jahr Kindergarten obligatorisch.'
 sources:
 - url: https://www.zh.ch/de/bildung/schulen/volksschule.html
   checked: &id001 2026-11-02
@@ -23,7 +24,7 @@ glossary:
 - Schulpflicht
 - Volksschule
 - Kindergarten
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-159
@@ -33,15 +34,49 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Nach dem HarmoS-Konkordat und Art. 62 der Bundesverfassung dauert die obligatorische Schulzeit
-      in der Schweiz elf Jahre (zwei Jahre Kindergarten bzw. Eingangsstufe, sechs Jahre Primarstufe und
-      drei Jahre Sekundarstufe I).
+    version: 2
+    reasoning: Im Kanton Zürich dauert die obligatorische Schulzeit elf Jahre, nämlich zwei Jahre Kindergarten,
+      sechs Jahre Primarstufe und drei Jahre Sekundarstufe.
   source:
     verdict: supported
-    note: Quelle 1 (Kanton Zürich, Volksschule) sagt ausdrücklich, die Volksschule umfasse Kindergarten-,
-      Primar- und Sekundarstufe und dauere elf Jahre. Die gesamtschweizerische Harmonisierung und die
-      zwei Kindergartenjahre werden nicht erwähnt; Quelle 2 ist eine Fehlerseite ohne Inhalt.
+    note: Quelle 1 (zh.ch) sagt ausdrücklich, die Volksschule umfasse Kindergarten-, Primar- und Sekundarstufe
+      und dauere elf Jahre. Die Aufteilung (2/6/3) und die Angaben zu HarmoS und anderen Kantonen stehen
+      nicht im Text, Quelle 2 ist eine Fehlerseite ohne Inhalt.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Tatsache aus der Themenliste gilt so nicht für die ganze Schweiz, weil nicht alle
+        Kantone dem HarmoS-Konkordat beigetreten sind; die Frage löst das richtig, indem sie sich auf
+        den Kanton Zürich beschränkt.'
+      - 'Klein: Der Satz über die Kantone ohne HarmoS ist richtig, geht aber über die Frage hinaus; er
+        könnte kürzer lauten: «In einigen anderen Kantonen kann die Dauer etwas anders sein.»'
+      - 'Klein: Quelle 2 (ch.ch) zeigt nur eine Fehlerseite (404) und stützt nichts; sie sollte durch
+        eine gültige Seite ersetzt werden, zum Beispiel durch die ch.ch-Seite zur obligatorischen Schule.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Tatsache aus der Themenliste gilt nicht in allen Kantonen gleich, weil nicht alle
+        dem HarmoS-Konkordat beigetreten sind; die Frage löst das richtig, indem sie nach dem Kanton Zürich
+        fragt, und diese Einschränkung sollte auch in der Themenliste stehen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der letzte Teil der Erklärung (nicht beigetretene Kantone, teilweise nur ein obligatorisches
+        Kindergartenjahr) ist nicht durch die Quellen belegt und für die Frage unnötig; am besten streichen
+        oder auf «Die Dauer von elf Jahren gilt dank dem HarmoS-Konkordat in den meisten Kantonen» kürzen.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

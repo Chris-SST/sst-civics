@@ -1,0 +1,31 @@
+id: primarschule-finanzierung-kanton-gemeinde
+lang: es
+source_version: 1
+question: ¿Quién financia y organiza la escuela primaria en el cantón de Zúrich?
+options:
+  a: Solo las Kirchgemeinden (municipios eclesiásticos)
+  b: Solo los padres de los alumnos
+  c: Solo la Confederación
+  d: El cantón y los municipios (Gemeinden) conjuntamente
+explanation: La escuela obligatoria (Volksschule) en el cantón de Zúrich es una tarea compartida entre
+  el cantón y los municipios. El cantón establece las bases y los municipios dirigen las escuelas en el
+  lugar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer finanziert und organisiert die Primarschule im Kanton Zürich?
+    options_de:
+      a: Nur die Kirchgemeinden
+      b: Nur die Eltern der Schülerinnen und Schüler
+      c: Nur der Bund
+      d: Der Kanton und die Gemeinden gemeinsam
+    explanation_de: Die obligatorische Schule (Volksschule) im Kanton Zürich ist eine gemeinsame Aufgabe
+      von Kanton und Gemeinden. Der Kanton legt die Grundlagen fest und die Gemeinden leiten die Schulen
+      vor Ort.

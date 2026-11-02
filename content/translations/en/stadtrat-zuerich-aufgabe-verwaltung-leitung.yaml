@@ -10,6 +10,22 @@ options:
 explanation: The City Council is the executive of the City of Zurich. It heads the city administration
   and determines the direction in which the city develops. Courts administer justice, and cantonal laws
   are enacted by the Cantonal Council (Kantonsrat).
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe hat der Stadtrat der Stadt Zürich?
+    options_de:
+      a: Er führt die kantonale Steuerverwaltung in der Stadt.
+      b: Er erlässt kantonale Gesetze für das städtische Gebiet.
+      c: Er spricht Recht bei Streitigkeiten zwischen Einwohnerinnen und Einwohnern.
+      d: Er leitet die Stadtverwaltung und legt die Richtlinien für das Handeln der Stadt fest.
+    explanation_de: Der Stadtrat ist die Exekutive der Stadt Zürich. Er steht der Stadtverwaltung vor
+      und bestimmt die Richtung, in die sich die Stadt entwickelt. Gerichte sprechen Recht, und kantonale
+      Gesetze werden vom Kantonsrat erlassen.

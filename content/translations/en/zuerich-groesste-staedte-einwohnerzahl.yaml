@@ -9,6 +9,21 @@ options:
   d: Zürich, Winterthur and Dübendorf
 explanation: Zürich is by far the largest city, followed by Winterthur and Uster. Dübendorf, Dietikon
   and Wetzikon are also fairly large towns, but they have fewer inhabitants than Uster.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche drei Städte im Kanton Zürich haben die grösste Bevölkerung?
+    options_de:
+      a: Zürich, Uster und Wetzikon
+      b: Zürich, Dietikon und Winterthur
+      c: Zürich, Winterthur und Uster
+      d: Zürich, Winterthur und Dübendorf
+    explanation_de: Zürich ist mit Abstand die grösste Stadt, gefolgt von Winterthur und Uster. Dübendorf,
+      Dietikon und Wetzikon sind ebenfalls recht grosse Städte, aber sie haben weniger Einwohner als Uster.

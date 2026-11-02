@@ -1,0 +1,31 @@
+id: hundehaltung-abgabe-hundesteuer
+lang: tr
+source_version: 2
+question: Zürich kantonunda köpek besleyen kişiler için ne geçerlidir?
+options:
+  a: Her yıl belediyeye (Gemeinde) köpek vergisi ödemek zorundadırlar.
+  b: Yalnızca köpeği satın alırken bir kez Konfederasyona harç ödemek zorundadırlar.
+  c: Köpekle birlikte her yıl kantonda bir sınava girmek zorundadırlar.
+  d: Yalnızca köpekle para kazandıkları takdirde vergi ödemek zorundadırlar.
+explanation: Zürich kantonunda köpek besleyen kişi, her yıl köpek için bir vergi öder; buna köpek vergisi
+  (Hundesteuer) denir. Bu para Konfederasyona değil, ikamet edilen belediyeye gider. Bu vergi tek seferlik
+  değildir ve köpeği yalnızca özel olarak besleyenler için de geçerlidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt für Personen, die im Kanton Zürich einen Hund halten?
+    options_de:
+      a: Sie müssen jedes Jahr der Gemeinde eine Hundesteuer bezahlen.
+      b: Sie müssen nur beim Kauf des Hundes einmalig eine Gebühr an den Bund bezahlen.
+      c: Sie müssen mit dem Hund jedes Jahr im Kanton eine Prüfung ablegen.
+      d: Sie müssen nur dann Steuern bezahlen, wenn sie mit dem Hund Geld verdienen.
+    explanation_de: Eine Person, die im Kanton Zürich einen Hund hält, bezahlt jedes Jahr eine Steuer
+      für den Hund; diese heisst Hundesteuer. Dieses Geld geht nicht an den Bund, sondern an die Wohngemeinde.
+      Diese Steuer ist nicht einmalig und gilt auch für diejenigen, die den Hund nur privat halten.

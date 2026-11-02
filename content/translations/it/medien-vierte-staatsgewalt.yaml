@@ -1,0 +1,33 @@
+id: medien-vierte-staatsgewalt
+lang: it
+source_version: 1
+question: I media vengono spesso designati con un'espressione particolare che descrive il loro ruolo nello
+  Stato. Di quale espressione si tratta?
+options:
+  a: Secondo potere dello Stato
+  b: Potere supremo dello Stato
+  c: Primo potere dello Stato
+  d: Quarto potere dello Stato
+explanation: I tre poteri dello Stato sono il legislativo, l'esecutivo e il giudiziario. I media non ne
+  fanno parte, ma controllano la politica e informano la popolazione. Per questo vengono spesso chiamati
+  il quarto potere dello Stato.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Medien werden oft mit einem besonderen Ausdruck bezeichnet, der ihre Rolle im Staat
+      beschreibt. Um welchen Ausdruck handelt es sich?
+    options_de:
+      a: Zweite Staatsgewalt
+      b: Oberste Staatsgewalt
+      c: Erste Staatsgewalt
+      d: Vierte Staatsgewalt
+    explanation_de: Die drei Staatsgewalten sind die Legislative, die Exekutive und die Judikative. Die
+      Medien gehören nicht dazu, aber sie kontrollieren die Politik und informieren die Bevölkerung. Deshalb
+      werden sie oft die vierte Staatsgewalt genannt.

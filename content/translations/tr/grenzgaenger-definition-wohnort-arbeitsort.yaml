@@ -1,0 +1,33 @@
+id: grenzgaenger-definition-wohnort-arbeitsort
+lang: tr
+source_version: 2
+question: İsviçre'de kimler sınır işçisi (Grenzgänger) olarak kabul edilir?
+options:
+  a: İsviçre'de çalışan, ancak ikametgâhı yurt dışında olan ve düzenli olarak oraya dönen kişi
+  b: Gümrükte çalışan ve ülke sınırını denetleyen kişi
+  c: Burada çalışmak için izinsiz olarak sınırı geçen kişi
+  d: Bir kantonda oturan ve her gün başka bir kantonda çalışan kişi
+explanation: Sınır işçilerinin iş yeri İsviçre'dedir, ancak başka bir ülkede otururlar. Sınır işçisi izni
+  almaları gerekir ve düzenli olarak, en az haftada bir kez, yurt dışındaki ikamet yerlerine dönerler.
+  Yalnızca iki kanton arasında gidip gelen kişi sınır işçisi değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer gilt in der Schweiz als Grenzgänger?
+    options_de:
+      a: Eine Person, die in der Schweiz arbeitet, aber ihren Wohnsitz im Ausland hat und regelmässig
+        dorthin zurückkehrt
+      b: Eine Person, die beim Zoll arbeitet und die Landesgrenze kontrolliert
+      c: Eine Person, die ohne Bewilligung die Grenze überquert, um hier zu arbeiten
+      d: Eine Person, die in einem Kanton wohnt und jeden Tag in einem anderen Kanton arbeitet
+    explanation_de: Grenzgänger haben ihren Arbeitsplatz in der Schweiz, wohnen aber in einem anderen
+      Land. Sie müssen eine Grenzgängerbewilligung erhalten und kehren regelmässig, mindestens einmal
+      pro Woche, an ihren Wohnort im Ausland zurück. Eine Person, die nur zwischen zwei Kantonen pendelt,
+      ist kein Grenzgänger.

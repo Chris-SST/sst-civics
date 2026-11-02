@@ -1,0 +1,30 @@
+id: anzahl-politische-gemeinden-ende-2021
+lang: sq
+source_version: 1
+question: Sa komuna politike (Gemeinde) kishte afërsisht në Zvicër në fund të vitit 2021?
+options:
+  a: Rreth 1200
+  b: Rreth 800
+  c: Rreth 2200
+  d: Rreth 4200
+explanation: Në fund të vitit 2021 Zvicra numëronte rreth 2200 komuna politike. Numri i tyre bie ngadalë,
+  sepse komunat bashkohen vazhdimisht me njëra-tjetrën. Prandaj gjendja e çastit është e rëndësishme.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele politische Gemeinden gab es ungefähr Ende 2021 in der Schweiz?
+    options_de:
+      a: Rund 1200
+      b: Rund 800
+      c: Rund 2200
+      d: Rund 4200
+    explanation_de: Ende 2021 zählte die Schweiz rund 2200 politische Gemeinden. Ihre Zahl sinkt langsam,
+      weil die Gemeinden sich fortwährend miteinander zusammenschliessen. Deshalb ist der momentane Stand
+      wichtig.

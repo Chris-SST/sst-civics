@@ -10,6 +10,22 @@ options:
 explanation: The Swiss Parliament meets in the Bundeshaus in Bern. This is where the National Council
   and the Council of States (Ständerat) meet for their sessions. The Rathaus is a building of the canton
   of Bern or of the city, not of the federal Parliament.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gebäude in Bern ist der Tagungsort des Schweizer Parlaments?
+    options_de:
+      a: Das Kornhaus
+      b: Das Rathaus
+      c: Das Bundesverwaltungsgericht
+      d: Das Bundeshaus
+    explanation_de: Das Schweizer Parlament tagt im Bundeshaus in Bern. Hier treffen sich der Nationalrat
+      und der Ständerat zu ihren Sessionen. Das Rathaus ist ein Gebäude des Kantons Bern oder der Stadt,
+      nicht des Bundesparlaments.

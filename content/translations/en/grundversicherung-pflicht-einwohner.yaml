@@ -9,6 +9,22 @@ options:
   d: All residents of Switzerland
 explanation: Compulsory health insurance applies to everyone who lives in Switzerland. Citizenship, employment
   and income play no role in this.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz durch die obligatorische Grundversicherung für medizinische Behandlung
+      versichert?
+    options_de:
+      a: Nur Personen mit Schweizer Bürgerrecht
+      b: Nur erwerbstätige Personen, die einen Lohn verdienen
+      c: Nur Personen mit niedrigem Einkommen
+      d: Alle Einwohner der Schweiz
+    explanation_de: Die obligatorische Krankenversicherung gilt für alle, die in der Schweiz wohnen. Bürgerrecht,
+      Erwerbstätigkeit und Einkommen spielen dabei keine Rolle.

@@ -22,7 +22,7 @@ sources:
 glossary:
 - Steuerpflicht
 - Wohnsitz
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-016
@@ -44,3 +44,35 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Die Steuerpflicht knüpft am Wohnsitz an» ist sprachlich ungewohnt und für B1 schwer verständlich;
+        besser: «Wer Steuern bezahlen muss, hängt vom Wohnsitz ab, nicht vom Bürgerrecht.»'
+      - 'Klein: Alle falschen Antworten beginnen mit «Nur», die richtige nicht; das verrät die Lösung.
+        Man könnte eine falsche Antwort ohne «Nur» formulieren, etwa «Personen, die ein Unternehmen führen».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «knüpft am Wohnsitz an» ist grammatikalisch ungenau und für B1 schwer verständlich; besser
+        «Die Steuerpflicht hängt vom Wohnsitz ab, nicht vom Bürgerrecht.»'
+      - 'Klein: Die Erklärung geht nicht auf Antwort b) ein; man könnte ergänzen: «Auch Angestellte und
+        Rentnerinnen und Rentner zahlen Steuern, nicht nur Unternehmerinnen und Unternehmer.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage könnte noch klarer sein, wenn sie «Wer ist in der Schweiz grundsätzlich steuerpflichtig?»
+        lautete, die jetzige Formulierung ist aber verständlich und eindeutig.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

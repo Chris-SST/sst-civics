@@ -1,0 +1,33 @@
+id: gleichberechtigung-frau-mann-bedeutung
+lang: fr
+source_version: 1
+question: Que signifie, dans son principe, l'égalité des droits entre la femme et l'homme ?
+options:
+  a: Les femmes et les hommes ont, dans leur principe, les mêmes droits.
+  b: Les femmes et les hommes ont, dans tous les domaines de la vie, les mêmes devoirs, mais des droits
+    différents.
+  c: Les femmes et les hommes gagnent exactement le même salaire dans chaque profession.
+  d: Les femmes et les hommes doivent partager également toutes les tâches au sein de la famille.
+explanation: L'égalité des droits signifie que les deux sexes possèdent, dans leur principe, les mêmes
+  droits. Elle est inscrite dans la Constitution fédérale. Ce principe ne dit rien sur la manière dont
+  les familles répartissent concrètement leurs tâches.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Gleichberechtigung von Frau und Mann im Grundsatz?
+    options_de:
+      a: Frauen und Männer haben im Grundsatz die gleichen Rechte.
+      b: Frauen und Männer haben in allen Lebensbereichen die gleichen Pflichten, aber unterschiedliche
+        Rechte.
+      c: Frauen und Männer verdienen in jedem Beruf genau den gleichen Lohn.
+      d: Frauen und Männer müssen alle Aufgaben innerhalb der Familie gleichmässig aufteilen.
+    explanation_de: Die Gleichberechtigung bedeutet, dass beide Geschlechter im Grundsatz die gleichen
+      Rechte besitzen. Sie ist in der Bundesverfassung verankert. Dieser Grundsatz sagt nichts darüber
+      aus, wie die Familien ihre Aufgaben konkret verteilen.

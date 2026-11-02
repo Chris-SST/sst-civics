@@ -1,0 +1,31 @@
+id: sonderbundskrieg-1847-konfliktparteien
+lang: pt
+source_version: 1
+question: Entre quem foi travada, em 1847, a Guerra do Sonderbund na Suíça?
+options:
+  a: Entre os cantões de língua alemã e os cantões de língua francesa
+  b: Entre as forças liberais e os cantões católicos
+  c: Entre cantões urbanos e cantões rurais por causa dos impostos
+  d: Entre a Suíça e a França
+explanation: No Sonderbund, vários cantões católico-conservadores tinham-se unido. As forças liberais
+  queriam uma Confederação mais forte. A curta guerra terminou com a vitória do lado liberal e abriu caminho
+  ao Estado federal de 1848.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Zwischen wem wurde 1847 in der Schweiz der Sonderbundskrieg geführt?
+    options_de:
+      a: Zwischen den deutschsprachigen Kantonen und den französischsprachigen Kantonen
+      b: Zwischen den liberalen Kräften und den katholischen Kantonen
+      c: Zwischen städtischen Kantonen und ländlichen Kantonen wegen der Steuern
+      d: Zwischen der Schweiz und Frankreich
+    explanation_de: Im Sonderbund hatten sich mehrere katholisch-konservative Kantone zusammengeschlossen.
+      Die liberalen Kräfte wollten eine stärkere Eidgenossenschaft. Der kurze Krieg endete mit dem Sieg
+      der liberalen Seite und ebnete den Weg zum Bundesstaat von 1848.

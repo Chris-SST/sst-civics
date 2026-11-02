@@ -1,0 +1,30 @@
+id: polizei-auftrag-gesetzesverstoesse-verfolgen
+lang: tr
+source_version: 1
+question: Aşağıdakilerden hangisi polisin görevleri arasında yer alır?
+options:
+  a: Yasa ihlallerinin takibini yapmak
+  b: Halk oylaması düzenlemek
+  c: Ülke için yasalar çıkarmak
+  d: Suçlular hakkında mahkeme kararları vermek
+explanation: Polis, güvenlik ve düzeni sağlar ve yasa ihlallerinin takibini yapar. Suçları aydınlatır
+  ve sonuçları ilgili makamlara iletir. Yasaları parlamento çıkarır, kararları mahkemeler verir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Aufgaben gehört zu den Aufgaben der Polizei?
+    options_de:
+      a: Gesetzesverstösse verfolgen
+      b: Volksabstimmungen durchführen
+      c: Gesetze für das Land erlassen
+      d: Gerichtsurteile über Straftäter fällen
+    explanation_de: Die Polizei sorgt für Sicherheit und Ordnung und verfolgt Gesetzesverstösse. Sie klärt
+      Straftaten auf und leitet die Ergebnisse an die zuständigen Behörden weiter. Die Gesetze erlässt
+      das Parlament, die Urteile fällen die Gerichte.

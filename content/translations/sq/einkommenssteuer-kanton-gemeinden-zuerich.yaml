@@ -1,0 +1,33 @@
+id: einkommenssteuer-kanton-gemeinden-zuerich
+lang: sq
+source_version: 1
+question: Cilin tatim të rëndësishëm e vendosin kantoni i Cyrihut dhe komunat (Gemeinden) mbi pagën dhe
+  të ardhurat e tjera të personave?
+options:
+  a: Tatimin mbi të ardhurat
+  b: Tatimin mbi trashëgiminë
+  c: Tatimin mbi qentë
+  d: Tatimin mbi automjetet motorike
+explanation: Tatimi mbi të ardhurat është një nga tatimet më të rëndësishme të kantonit dhe të komunave.
+  Ai vendoset mbi të ardhurat e personave fizikë. Tatimet e tjera janë më pak të rëndësishme ose përfshijnë
+  diçka tjetër.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche wichtige Steuer erheben der Kanton Zürich und die Gemeinden auf den Lohn und andere
+      Einkünfte von Personen?
+    options_de:
+      a: Die Einkommenssteuer
+      b: Die Erbschaftssteuer
+      c: Die Hundesteuer
+      d: Die Motorfahrzeugsteuer
+    explanation_de: Die Einkommenssteuer ist eine der wichtigsten Steuern des Kantons und der Gemeinden.
+      Sie wird auf das Einkommen natürlicher Personen erhoben. Die anderen Steuern sind weniger wichtig
+      oder betreffen etwas anderes.

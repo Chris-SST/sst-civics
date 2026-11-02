@@ -1,0 +1,31 @@
+id: rechtsprechende-gewalt-bund-bundesgericht
+lang: fr
+source_version: 1
+question: Quelle autorité est, au niveau fédéral, l'organe judiciaire suprême de la Suisse ?
+options:
+  a: La Chancellerie fédérale (Bundeskanzlei)
+  b: Le Conseil fédéral (Bundesrat)
+  c: L'Assemblée fédérale (Bundesversammlung)
+  d: Le Tribunal fédéral (Bundesgericht)
+explanation: La Constitution fédérale attribue le pouvoir judiciaire de la Confédération au Tribunal fédéral.
+  Il est l'autorité judiciaire suprême de la Confédération. Le Conseil fédéral et l'Assemblée fédérale
+  exercent respectivement le pouvoir exécutif et le pouvoir législatif.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde ist auf Bundesebene das oberste richterliche Organ der Schweiz?
+    options_de:
+      a: Die Bundeskanzlei
+      b: Der Bundesrat
+      c: Die Bundesversammlung
+      d: Das Bundesgericht
+    explanation_de: Die Bundesverfassung überträgt die richterliche Gewalt des Bundes dem Bundesgericht.
+      Es ist die oberste richterliche Behörde des Bundes. Der Bundesrat und die Bundesversammlung üben
+      jeweils die vollziehende Gewalt und die gesetzgebende Gewalt aus.

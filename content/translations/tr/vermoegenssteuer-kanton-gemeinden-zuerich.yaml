@@ -1,0 +1,31 @@
+id: vermoegenssteuer-kanton-gemeinden-zuerich
+lang: tr
+source_version: 1
+question: Zürich kantonu ve belediyeler (Gemeinde), bir kişinin sahip olduğu varlıklar üzerinden, örneğin
+  banka mevduatları ve değerli kağıtlar üzerinden, bu vergilerden hangisini alır?
+options:
+  a: Stopaj vergisi (Verrechnungssteuer)
+  b: Katma değer vergisi
+  c: Servet vergisi
+  d: Akaryakıt vergisi (mineral yağ vergisi)
+explanation: Kanton ve belediyeler, gerçek kişilerin servetini vergilendirir. Katma değer vergisi, stopaj
+  vergisi ve mineral yağ vergisi Konfederasyon vergileridir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche dieser Steuern erheben der Kanton Zürich und die Gemeinden auf die Vermögenswerte
+      einer Person, zum Beispiel auf Bankguthaben und Wertpapiere?
+    options_de:
+      a: Verrechnungssteuer
+      b: Mehrwertsteuer
+      c: Vermögenssteuer
+      d: Mineralölsteuer
+    explanation_de: Der Kanton und die Gemeinden besteuern das Vermögen natürlicher Personen. Die Mehrwertsteuer,
+      die Verrechnungssteuer und die Mineralölsteuer sind Steuern des Bundes.

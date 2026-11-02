@@ -1,0 +1,29 @@
+id: winterthur-fluss-toess
+lang: sq
+source_version: 1
+question: Cili lumë rrjedh nëpër qytetin Winterthur?
+options:
+  a: Limmat
+  b: Töss
+  c: Sihl
+  d: Glatt
+explanation: Töss rrjedh nëpër Winterthur dhe më vonë derdhet në Rhein. Sihl dhe Limmat rrjedhin nëpër
+  qytetin e Zürichut, ndërsa Glatt rrjedh nëpër Glattal.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Fluss fliesst durch die Stadt Winterthur?
+    options_de:
+      a: Limmat
+      b: Töss
+      c: Sihl
+      d: Glatt
+    explanation_de: Die Töss fliesst durch Winterthur und mündet später in den Rhein. Die Sihl und die
+      Limmat fliessen durch die Stadt Zürich, während die Glatt durch das Glattal fliesst.

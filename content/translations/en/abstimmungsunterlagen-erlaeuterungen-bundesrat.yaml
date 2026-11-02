@@ -12,6 +12,24 @@ explanation: In the explanations, often called the voting booklet, the Federal C
   proposal is about. They also contain the arguments of the initiative committee or referendum committee,
   as well as the recommendation of the Federal Council and Parliament. This allows everyone to form their
   own opinion.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was erhalten Stimmberechtigte vor einer eidgenössischen Abstimmung zusammen mit den Abstimmungsunterlagen,
+      damit sie sich über die Vorlagen informieren können?
+    options_de:
+      a: Die Erläuterungen des Bundesrates
+      b: Eine Stellungnahme des Bundesgerichts
+      c: Ein Expertengutachten ihres eigenen Kantons
+      d: Die Wahlliste aller Parteien
+    explanation_de: In den Erläuterungen, oft Abstimmungsbüchlein genannt, erklärt der Bundesrat, worum
+      es bei jeder Vorlage geht. Sie enthalten auch die Argumente des Initiativkomitees oder des Referendumskomitees
+      sowie die Empfehlung des Bundesrates und des Parlaments. So kann sich jeder seine eigene Meinung
+      bilden.

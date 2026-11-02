@@ -11,6 +11,23 @@ options:
 explanation: The pension fund is part of the occupational pension scheme and forms the second pillar.
   It supplements the OASI so that pensioners can continue to maintain their accustomed standard of living
   in an appropriate manner. The OASI is the first pillar and private provision is the third pillar.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Altersvorsorge in der Schweiz beruht auf drei Säulen. Welche Institution bildet die
+      zweite Säule?
+    options_de:
+      a: Ergänzungsleistungen zur Alters- und Hinterlassenenversicherung (AHV)
+      b: Die AHV (staatliche Rentenversicherung)
+      c: Die Pensionskasse (berufliche Vorsorge)
+      d: Das private Sparkonto mit Steuerabzug (Säule 3a)
+    explanation_de: Die Pensionskasse ist Teil der beruflichen Vorsorge und bildet die zweite Säule. Sie
+      ergänzt die AHV, damit Rentnerinnen und Rentner ihren gewohnten Lebensstandard in angemessener Weise
+      weiterführen können. Die AHV ist die erste Säule und die private Vorsorge ist die dritte Säule.

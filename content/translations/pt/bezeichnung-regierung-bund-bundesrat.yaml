@@ -1,0 +1,29 @@
+id: bezeichnung-regierung-bund-bundesrat
+lang: pt
+source_version: 1
+question: Como se chama o governo da Suíça a nível federal?
+options:
+  a: Assembleia Federal (Bundesversammlung)
+  b: Conselho Federal (Bundesrat)
+  c: Chancelaria Federal (Bundeskanzlei)
+  d: Tribunal Federal (Bundesgericht)
+explanation: O governo da Confederação chama-se Conselho Federal. A Assembleia Federal é o parlamento,
+  o Tribunal Federal é o tribunal supremo. A Chancelaria Federal apoia o Conselho Federal.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie heisst die Regierung der Schweiz auf Bundesebene?
+    options_de:
+      a: Bundesversammlung
+      b: Bundesrat
+      c: Bundeskanzlei
+      d: Bundesgericht
+    explanation_de: Die Regierung der Eidgenossenschaft heisst Bundesrat. Die Bundesversammlung ist das
+      Parlament, das Bundesgericht ist das oberste Gericht. Die Bundeskanzlei unterstützt den Bundesrat.

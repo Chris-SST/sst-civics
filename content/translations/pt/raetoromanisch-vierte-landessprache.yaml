@@ -1,0 +1,29 @@
+id: raetoromanisch-vierte-landessprache
+lang: pt
+source_version: 1
+question: Qual língua, além do alemão, do francês e do italiano, é uma das línguas nacionais da Suíça?
+options:
+  a: Espanhol
+  b: Português
+  c: Inglês
+  d: Romanche
+explanation: O romanche é a quarta língua nacional. É falado principalmente no cantão dos Grisões.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprache ist neben Deutsch, Französisch und Italienisch eine der Landessprachen
+      der Schweiz?
+    options_de:
+      a: Spanisch
+      b: Portugiesisch
+      c: Englisch
+      d: Rätoromanisch
+    explanation_de: Rätoromanisch ist die vierte Landessprache. Es wird hauptsächlich im Kanton Graubünden
+      gesprochen.

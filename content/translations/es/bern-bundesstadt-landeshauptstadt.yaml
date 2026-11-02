@@ -1,0 +1,31 @@
+id: bern-bundesstadt-landeshauptstadt
+lang: es
+source_version: 1
+question: ¿Qué ciudad asume en Suiza el papel de capital del país?
+options:
+  a: Berna
+  b: Ginebra
+  c: Lausana
+  d: Zúrich
+explanation: Berna es la sede del Consejo Federal (Bundesrat) y de la Asamblea Federal (Bundesversammlung)
+  y se denomina «ciudad federal». La Constitución Federal no menciona ninguna capital, pero Berna asume
+  ese papel. Zúrich es la ciudad más grande y Lausana es la sede del Tribunal Federal (Bundesgericht).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Stadt übernimmt in der Schweiz die Rolle der Hauptstadt des Landes?
+    options_de:
+      a: Bern
+      b: Genf
+      c: Lausanne
+      d: Zürich
+    explanation_de: Bern ist der Sitz des Bundesrates und der Bundesversammlung und wird «Bundesstadt»
+      genannt. Die Bundesverfassung erwähnt keine Hauptstadt, aber Bern übernimmt diese Rolle. Zürich
+      ist die grösste Stadt und Lausanne ist der Sitz des Bundesgerichts.

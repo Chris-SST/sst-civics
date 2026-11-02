@@ -20,7 +20,7 @@ sources:
 glossary:
 - Wappen
 - Kanton Zürich
-status: needs_fix
+status: retired
 difficulty: 2
 covers:
 - zh-349
@@ -42,3 +42,65 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: reject
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: fix
+      issues:
+      - 'Die Angabe «oben links weiss und unten rechts blau» stimmt nur aus heraldischer Sicht (vom Schildträger
+        aus); wer das Wappen anschaut, sieht die Trennlinie von oben links nach unten rechts, also oben
+        rechts weiss und unten links blau, weshalb Lernende die markierte Antwort für falsch halten können.
+        Vorschlag: Die Lösung ohne links und rechts formulieren, etwa «Schräg geteilt, oben weiss und
+        unten blau», so wie die Quelle sagt: «von Silber und Blau schräg geteilt».'
+      - 'Die Antworten a) und d) unterscheiden sich nur durch die Seitenangaben, die je nach Blickwinkel
+        anders gelesen werden; damit ist die Frage nicht eindeutig. Vorschlag: Als Distraktor d) «Schräg
+        geteilt, oben blau und unten weiss» verwenden, ohne links und rechts.'
+      - 'Die Tatsache in der Themenliste ist in der heraldischen Sicht formuliert und für Lernende irreführend;
+        sie sollte lauten: «Das Wappen des Kantons Zürich ist schräg geteilt, oben weiss (Silber) und
+        unten blau.»'
+      - 'Klein: Die Erklärung sollte an die neue Formulierung angepasst werden, zum Beispiel: «Das Zürcher
+        Wappen ist schräg geteilt, oben weiss und unten blau. In der Wappenkunde sagt man ‹von Silber
+        und Blau schräg geteilt›.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: reject
+      issues:
+      - 'Die Tatsache aus der Themenliste ist falsch: Das Zürcher Wappen ist «schräg geteilt von Silber
+        und Blau». Die Teilungslinie verläuft von oben links nach unten rechts, also ist das Feld oben
+        rechts weiss und das Feld unten links blau; die markierte Antwort a) ist damit falsch. Die Tatsache
+        sollte zuerst korrigiert werden, zum Beispiel: «Das Wappen ist schräg geteilt, oben rechts weiss
+        und unten links blau.»'
+      - Die Antworten a) und d) beschreiben beide Felder «oben links» und «unten rechts», die es bei der
+        Zürcher Schrägteilung so nicht gibt; bei einer Neufassung sollte die richtige Antwort «oben rechts
+        weiss, unten links blau» lauten und die Ablenker sollten klar falsch sein, etwa die vertauschten
+        Farben oder eine senkrechte oder waagrechte Teilung.
+      - Weil Lagebeschreibungen wie «oben links» schwer vorstellbar und leicht verwechselbar sind, wäre
+        bei einer Neufassung eine Frage mit Bildern der vier Wappen klarer; ohne Bilder sollten die Antworten
+        einheitlich und einfach formuliert sein.
+      - 'Die Erklärung muss an die korrigierte Tatsache angepasst werden, zum Beispiel: «Das Zürcher Wappen
+        ist schräg geteilt: oben rechts weiss, unten links blau. Dieselben Farben findet man auf der Zürcher
+        Fahne.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: reject
+      issues:
+      - 'Die Tatsache aus der Themenliste ist ungenau oder falsch: Das Zürcher Wappen ist «von Silber
+        und Blau schräg geteilt» (Quelle 2). Die Teilungslinie läuft von oben links nach unten rechts,
+        daher ist Weiss oben rechts und Blau unten links. Die Antwort a) «oben links weiss, unten rechts
+        blau» beschreibt das Wappen spiegelverkehrt, und keine der vier Antworten gibt es richtig wieder.'
+      - 'Keine Quelle stützt die Lage der Farben: Quelle 2 sagt nur «schräg geteilt» in Silber und Blau,
+        Quelle 1 enthält nichts zum Wappen. Die Lage «oben links weiss» ist also nirgends belegt.'
+      - 'Wenn die Frage gerettet werden soll: Tatsache und Antworten neu formulieren, etwa «Welche Farben
+        hat das Zürcher Wappen?» mit Antwort «Weiss und Blau, schräg geteilt». Die Lage der Farben sollte
+        nur abgefragt werden, wenn sie anhand einer Abbildung gesichert ist.'
+      - 'Klein: Die Erklärung sagt «Zürcher Fahnen». Besser wäre «Banner», denn die Quelle nennt die seit
+        1315 verwendeten Banner als Ursprung der Farben.'
+    round: 1
+    at: 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: 'Retired: rejected by the AI review panel'
+  at: 2026-11-02

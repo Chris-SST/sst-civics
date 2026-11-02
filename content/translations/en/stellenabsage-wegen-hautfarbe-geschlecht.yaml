@@ -1,16 +1,35 @@
 id: stellenabsage-wegen-hautfarbe-geschlecht
 lang: en
-source_version: 1
-question: A female applicant is rejected for a job solely because of her sex. Which fundamental right
+source_version: 2
+question: A woman applies for a job. She is rejected only because she is a woman. Which fundamental right
   is violated as a result?
 options:
-  a: The right to freedom of settlement
-  b: The right to freedom of assembly
-  c: The principle of equality before the law and the prohibition of discrimination
-  d: The right to protection of privacy
-explanation: Article 8 of the Federal Constitution prohibits discrimination, for example on grounds of
-  origin, skin colour or sex. Rejection solely on such grounds is therefore not permitted. The same applies
-  to skin colour.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: Freedom of settlement
+  b: Freedom of assembly
+  c: Equality before the law and the prohibition of discrimination
+  d: Protection of privacy
+explanation: Article 8 of the Federal Constitution states that all people are equal before the law and
+  that women and men have equal rights. No one may be discriminated against, for example because of origin,
+  race or sex. Anyone who rejects a female applicant only because of her sex therefore violates equality
+  before the law and the prohibition of discrimination.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Eine Frau bewirbt sich um eine Stelle. Sie wird nur deshalb abgelehnt, weil sie eine
+      Frau ist. Welches Grundrecht wird dadurch verletzt?
+    options_de:
+      a: Niederlassungsfreiheit
+      b: Versammlungsfreiheit
+      c: Rechtsgleichheit und Diskriminierungsverbot
+      d: Schutz der Privatsphäre
+    explanation_de: Artikel 8 der Bundesverfassung besagt, dass alle Menschen vor dem Gesetz gleich sind
+      und dass Frau und Mann gleichberechtigt sind. Niemand darf diskriminiert werden, zum Beispiel wegen
+      der Herkunft, der Rasse oder des Geschlechts. Wer eine Bewerberin nur wegen ihres Geschlechts ablehnt,
+      verletzt deshalb die Rechtsgleichheit und das Diskriminierungsverbot.

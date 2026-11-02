@@ -1,0 +1,32 @@
+id: aussenbeziehungen-zustaendigkeit-bund
+lang: sq
+source_version: 1
+question: Kush është në Zvicër, në parim, përgjegjës për ta konfiguruar marrëdhëniet me shtetet e tjera?
+options:
+  a: Konferenca e qeverive kantonale
+  b: Konfederata
+  c: Kantonet së bashku
+  d: Komunat (Gemeinden) në kufi
+explanation: Sipas Kushtetutës Federale, politika e jashtme është çështje e Konfederatës. Kantonet mund
+  të bashkëpunojnë me vendet e huaja në fushat e tyre të përgjegjësisë, por përgjegjësia e përgjithshme
+  mbetet te Konfederata.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz grundsätzlich dafür zuständig, die Beziehungen zu anderen Staaten
+      zu gestalten?
+    options_de:
+      a: Die Konferenz der Kantonsregierungen
+      b: Der Bund
+      c: Die Kantone gemeinsam
+      d: Die Gemeinden an der Grenze
+    explanation_de: Gemäss der Bundesverfassung ist die Aussenpolitik Sache des Bundes. Die Kantone können
+      in ihren Zuständigkeitsbereichen mit dem Ausland zusammenarbeiten, aber die Gesamtverantwortung
+      bleibt beim Bund.

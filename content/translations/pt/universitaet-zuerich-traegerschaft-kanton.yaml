@@ -1,0 +1,32 @@
+id: universitaet-zuerich-traegerschaft-kanton
+lang: pt
+source_version: 1
+question: Quem é responsável, no cantão de Zurique, pelo funcionamento e pela entidade mantenedora da
+  Universidade de Zurique?
+options:
+  a: A Confederação
+  b: A cidade de Zurique
+  c: O cantão de Zurique
+  d: Os conselhos distritais do cantão
+explanation: A Universidade de Zurique é uma instituição de ensino superior cantonal. O cantão de Zurique
+  é a sua entidade mantenedora e é ele que a gere. A cidade de Zurique e a Confederação não são os principais
+  responsáveis por ela.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist im Kanton Zürich für den Betrieb und die Trägerschaft der Universität Zürich
+      verantwortlich?
+    options_de:
+      a: Der Bund
+      b: Die Stadt Zürich
+      c: Der Kanton Zürich
+      d: Die Bezirksräte des Kantons
+    explanation_de: Die Universität Zürich ist eine kantonale Hochschule. Der Kanton Zürich ist ihre Trägerschaft
+      und er führt sie. Die Stadt Zürich und der Bund sind nicht die Hauptverantwortlichen für sie.

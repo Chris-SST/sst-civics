@@ -1,0 +1,31 @@
+id: sonntagszeitung-erscheint-woechentlich
+lang: es
+source_version: 1
+question: ¿Con qué frecuencia se publica un periódico dominical en Suiza?
+options:
+  a: Una vez por semana
+  b: Dos veces por semana
+  c: Una vez al mes
+  d: Todos los días
+explanation: Un periódico dominical se publica solo una vez por semana, el domingo. Los periódicos diarios,
+  en cambio, se publican la mayoría de los días de la semana. La prensa forma parte de la cultura y de
+  la formación de la opinión en el país.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie oft erscheint in der Schweiz eine Sonntagszeitung?
+    options_de:
+      a: Einmal pro Woche
+      b: Zweimal pro Woche
+      c: Einmal im Monat
+      d: Jeden Tag
+    explanation_de: Eine Sonntagszeitung erscheint nur einmal pro Woche, am Sonntag. Die Tageszeitungen
+      hingegen erscheinen an den meisten Tagen der Woche. Die Presse ist Teil der Kultur und der Meinungsbildung
+      im Land.

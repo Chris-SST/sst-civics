@@ -1,0 +1,31 @@
+id: zuerich-huegelzuege-am-zuerichsee
+lang: sq
+source_version: 2
+question: Cilat vargje kodrinore shtrihen në brigjet e Liqenit të Zyrihut?
+options:
+  a: Uetliberg, Albis dhe Pfannenstiel
+  b: Lägern, Irchel dhe Kohlfirst
+  c: Hörnli, Bachtel dhe Allmann
+  d: Heitersberg, Gubrist dhe Randen
+explanation: Uetliberg dhe Albis shtrihen përgjatë bregut të majtë të Liqenit të Zyrihut, ndërsa Pfannenstiel
+  ndodhet në bregun e djathtë. Ngritjet e tjera ndodhen më larg liqenit, për shembull në Unterland, në
+  Weinland, në Zürcher Oberland ose në kantone të tjera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Hügelketten erstrecken sich an den Ufern des Zürichsees?
+    options_de:
+      a: Uetliberg, Albis und Pfannenstiel
+      b: Lägern, Irchel und Kohlfirst
+      c: Hörnli, Bachtel und Allmann
+      d: Heitersberg, Gubrist und Randen
+    explanation_de: Uetliberg und Albis erstrecken sich entlang des linken Ufers des Zürichsees, während
+      sich der Pfannenstiel am rechten Ufer befindet. Die anderen Erhebungen befinden sich weiter vom
+      See entfernt, zum Beispiel im Unterland, im Weinland, im Zürcher Oberland oder in anderen Kantonen.

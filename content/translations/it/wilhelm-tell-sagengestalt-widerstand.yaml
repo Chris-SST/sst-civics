@@ -1,0 +1,30 @@
+id: wilhelm-tell-sagengestalt-widerstand
+lang: it
+source_version: 1
+question: Che cosa rappresenta il personaggio leggendario Guglielmo Tell, originario della Svizzera centrale?
+options:
+  a: La resistenza contro i dominatori stranieri
+  b: La neutralità della Svizzera in guerra
+  c: L'introduzione della Riforma
+  d: La fondazione della prima banca svizzera
+explanation: La leggenda racconta di un uomo che si oppone all'oppressione da parte dei balivi stranieri.
+  Per questo Guglielmo Tell è considerato un simbolo di libertà. Non è provato che sia realmente vissuto.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was verkörpert die legendäre Figur Wilhelm Tell, die aus der Zentralschweiz stammt?
+    options_de:
+      a: Den Widerstand gegen fremde Herrscher
+      b: Die Neutralität der Schweiz im Krieg
+      c: Die Einführung der Reformation
+      d: Die Gründung der ersten Schweizer Bank
+    explanation_de: Die Legende erzählt von einem Mann, der sich der Unterdrückung durch die fremden Vögte
+      widersetzt. Deshalb gilt Wilhelm Tell als Symbol der Freiheit. Es ist nicht bewiesen, dass er wirklich
+      gelebt hat.

@@ -1,0 +1,32 @@
+id: invalidenversicherung-gehoert-zu-sozialversicherungen
+lang: sq
+source_version: 1
+question: Cila nga institucionet e mëposhtme është pjesë e sigurimeve shoqërore të Zvicrës?
+options:
+  a: Sigurimi i invaliditetit (Invalidenversicherung)
+  b: Sigurimi i udhëtimit
+  c: Sigurimi i mbrojtjes juridike
+  d: Sigurimi i pasurisë shtëpiake
+explanation: Sigurimi i invaliditetit (IV) është një sigurim shoqëror i rregulluar nga shteti. Ai mbështet
+  persona që, për shkak të sëmundjes ose aksidentit, nuk mund të punojnë ose mund të punojnë vetëm në
+  masë të kufizuar. Sigurimet e pasurisë shtëpiake, të udhëtimit dhe të mbrojtjes juridike janë sigurime
+  private.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Institutionen ist Teil der Sozialversicherungen der Schweiz?
+    options_de:
+      a: Invalidenversicherung
+      b: Reiseversicherung
+      c: Rechtsschutzversicherung
+      d: Hausratversicherung
+    explanation_de: Die Invalidenversicherung (IV) ist eine vom Staat geregelte Sozialversicherung. Sie
+      unterstützt Personen, die wegen Krankheit oder Unfall nicht arbeiten können oder nur in begrenztem
+      Mass arbeiten können. Hausrat-, Reise- und Rechtsschutzversicherungen sind private Versicherungen.

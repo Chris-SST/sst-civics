@@ -16,14 +16,69 @@ explanation_de: Nach dem Zweiten Weltkrieg wuchs die Schweizer Wirtschaft stark.
   zuerst vor allem aus Italien.
 sources:
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: 2026-11-02
+  checked: &id001 2026-11-02
 - url: https://www.bar.admin.ch/de/einwandererland-schweiz
-  checked: 2026-11-02
+  checked: *id001
 glossary:
 - Wohlstand
 - Wirtschaftswachstum
-status: draft
+status: approved
 difficulty: 2
 covers:
 - zh-222
-checks: {}
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 2
+    reasoning: In den Jahrzehnten nach dem Zweiten Weltkrieg erlebte die Schweiz einen langen Wirtschaftsaufschwung
+      mit Vollbeschäftigung und steigendem Wohlstand, während die anderen Antworten historisch falsch
+      sind (kein EU-Beitritt, kein starker Schrumpfungsprozess, hoher Bedarf an ausländischen Arbeitskräften).
+  source:
+    verdict: supported
+    note: Quelle 1 (Abschnitt «Das 20. Jahrhundert») sagt, dass es der Schweiz nach dem Zweiten Weltkrieg
+      wirtschaftlich immer besser ging, viel Arbeit da war und ab den 1950er-Jahren viele Arbeitskräfte
+      aus Italien kamen. Quelle 2 bestätigt die Anwerbung von Arbeitskräften aus Italien wegen des Arbeitskräftemangels
+      nach 1947.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c) passt nicht zur Frage nach der wirtschaftlichen Lage und ist daher leicht auszuschliessen;
+        besser wäre eine wirtschaftliche Ablenkung wie «Die Schweiz war ein armes Agrarland, und viele
+        Menschen wanderten aus.»'
+      - 'Klein: «immer besser» und «in den Jahrzehnten nach dem Zweiten Weltkrieg» übergehen den Einbruch
+        in der Rezession Mitte der 1970er-Jahre; die Frage könnte enger auf die 1950er- und 1960er-Jahre
+        zielen, etwa «Wie ging es der Schweiz wirtschaftlich in den 1950er- und 1960er-Jahren?»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c) passt inhaltlich nicht zur Frage nach der wirtschaftlichen Lage und ist daher
+        sehr leicht auszuschliessen; besser wäre eine wirtschaftliche Antwort, etwa «Viele Firmen schlossen,
+        und die Menschen hatten weniger Geld als vor dem Krieg.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort c) (EU-Mitgliedschaft) ist keine wirtschaftliche Entwicklung und fällt dadurch
+        sofort als falsch auf; besser wäre eine plausiblere Alternative wie «Die Wirtschaft stagnierte,
+        und der Wohlstand blieb gleich».'
+      - 'Klein: «immer besser» in Antwort a) und im Fragetext «in den Jahrzehnten» vereinfacht stark (die
+        Krise der 1970er-Jahre kommt nicht vor); die Formulierung deckt sich aber mit der Broschüre und
+        ist durch «zum Beispiel in den 1960er-Jahren» ausreichend eingegrenzt.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

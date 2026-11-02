@@ -1,17 +1,18 @@
 id: volksschule-leitung-vor-ort-schulleitung
-version: 1
+version: 2
 scope: zh
 canton: zh
 topic: gemeinde.leistungen
-question_de: Wer ist für die Leitung einer Zürcher Volksschule vor Ort verantwortlich?
+question_de: Wer leitet eine Volksschule im Kanton Zürich direkt an der Schule?
 options_de:
-  a: Die Kantonspolizei
-  b: Der Elternrat allein
-  c: Das Statistische Amt
-  d: Die Schulleitung
-correct: d
-explanation_de: Jede Schule hat eine Schulleitung, die den Schulbetrieb vor Ort leitet. Sie sorgt für
-  die Organisation und die Qualität der Schule.
+  a: Der Kantonsrat
+  b: Die Schulleitung
+  c: Der Elternrat
+  d: Der Regierungsrat
+correct: b
+explanation_de: Jede Volksschule im Kanton Zürich hat eine Schulleitung, die den Betrieb direkt an der
+  Schule führt und organisiert. Regierungsrat und Kantonsrat arbeiten auf Ebene des Kantons. Der Elternrat
+  bringt die Anliegen der Eltern ein, leitet die Schule aber nicht.
 sources:
 - url: https://www.zh.ch/de/bildung/informationen-fuer-schulen/informationen-volksschule/volksschule-organisation.html
   checked: &id001 2026-11-02
@@ -22,24 +23,56 @@ sources:
 glossary:
 - Schulleitung
 - Volksschule
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-206
 checks:
   independent_answer:
-    option: d
+    option: b
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Die Schulleitung ist an Zürcher Volksschulen für die operative Leitung der Schule vor Ort
-      zuständig, während Kantonspolizei, Elternrat allein und Statistisches Amt diese Aufgabe nicht haben.
+    version: 2
+    reasoning: Im Kanton Zürich wird jede Volksschule operativ von der Schulleitung geführt, während Kantonsrat
+      und Regierungsrat nur übergeordnete Aufgaben haben und der Elternrat lediglich mitwirkt.
   source:
     verdict: supported
-    note: Quelle 1 (Abschnitt «Schulleitung») sagt, dass Schulleiterinnen und Schulleiter die Führungsaufgaben
-      in den Schuleinheiten übernehmen und die Schulen in betrieblich-operativen Belangen leiten; auch
-      die Qualitätssicherung und -entwicklung gehört dazu. Das stützt Antwort d und die Erklärung.
+    note: Quelle 1 (Abschnitt Schulleitung) sagt, dass Schulleiterinnen und Schulleiter die Schulen in
+      betrieblich-operativen Belangen leiten. Kantonsrat und Regierungsrat legen laut Quelle 1 nur die
+      Rahmenbedingungen auf kantonaler Ebene fest, und die Eltern haben ein Mitwirkungsrecht. Der Elternrat
+      wird in den Quellen nicht erwähnt, wird aber auch nicht als Leitung der Schule genannt.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Formulierung «direkt an der Schule» wirkt etwas holprig; besser wäre «Wer leitet eine
+        Volksschule im Kanton Zürich vor Ort?», was auch näher an der Tatsache aus der Themenliste liegt.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage wiederholt «Schule» («Volksschule … direkt an der Schule») und wirkt etwas holprig;
+        besser wäre zum Beispiel «Wer leitet im Kanton Zürich eine Volksschule vor Ort?».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage ist leicht, weil Kantonsrat und Regierungsrat klar auf Kantonsebene arbeiten.
+        Das ist aber nicht falsch, und die Frage deckt die Tatsache aus der Themenliste direkt ab.'
+      - 'Klein: Die Erklärung könnte erwähnen, dass die Schulpflege (Gemeindeebene) die Schulleitung anstellt
+        und die Gesamtverantwortung trägt. Dann würde klar, dass die Schulleitung nur den Schulbetrieb
+        vor Ort führt.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

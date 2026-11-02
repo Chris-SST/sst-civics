@@ -1,0 +1,32 @@
+id: kind-krankenversicherung-frist-geburt
+lang: fr
+source_version: 1
+question: Dans quel délai à compter de la naissance un enfant domicilié en Suisse doit-il être couvert
+  par une assurance-maladie ?
+options:
+  a: dans un délai de 12 mois
+  b: dans un délai de 3 mois
+  c: dans un délai de 14 jours
+  d: dans un délai de 6 mois
+explanation: Les parents doivent souscrire une assurance-maladie pour leur enfant dans les trois mois
+  qui suivent la naissance. Si ce délai est respecté, la couverture d'assurance prend effet rétroactivement
+  dès la naissance.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Innerhalb welcher Frist ab der Geburt muss ein in der Schweiz wohnhaftes Kind krankenversichert
+      sein?
+    options_de:
+      a: innerhalb von 12 Monaten
+      b: innerhalb von 3 Monaten
+      c: innerhalb von 14 Tagen
+      d: innerhalb von 6 Monaten
+    explanation_de: Die Eltern müssen für ihr Kind innerhalb von drei Monaten nach der Geburt eine Krankenversicherung
+      abschliessen. Wird diese Frist eingehalten, beginnt der Versicherungsschutz rückwirkend ab der Geburt.

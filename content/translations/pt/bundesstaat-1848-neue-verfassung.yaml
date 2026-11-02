@@ -1,0 +1,31 @@
+id: bundesstaat-1848-neue-verfassung
+lang: pt
+source_version: 1
+question: O que surgiu na Suíça em 1848?
+options:
+  a: A República Helvética com um governo central
+  b: A confederação de Estados sob supervisão francesa
+  c: O Estado federal moderno com uma nova constituição
+  d: A Confederação dos três cantões primitivos
+explanation: Em 1848, os cantões deram a si próprios uma Constituição Federal e fundaram o Estado federal
+  moderno. Este uniu tarefas comuns da Confederação à autonomia dos cantões. Esta constituição é a base
+  da Suíça atual.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was entstand 1848 in der Schweiz?
+    options_de:
+      a: Die Helvetische Republik mit einer Zentralregierung
+      b: Der Staatenbund unter französischer Aufsicht
+      c: Der moderne Bundesstaat mit einer neuen Verfassung
+      d: Die Eidgenossenschaft der drei Urkantone
+    explanation_de: 1848 gaben sich die Kantone eine Bundesverfassung und gründeten den modernen Bundesstaat.
+      Dieser vereinte gemeinsame Aufgaben der Eidgenossenschaft mit der Eigenständigkeit der Kantone.
+      Diese Verfassung ist die Grundlage der heutigen Schweiz.

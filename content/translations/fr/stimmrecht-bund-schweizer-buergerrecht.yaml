@@ -1,0 +1,33 @@
+id: stimmrecht-bund-schweizer-buergerrecht
+lang: fr
+source_version: 1
+question: Quelle est une condition pour avoir le droit de vote et d'éligibilité au niveau de la Confédération
+  ?
+options:
+  a: Le droit de cité suisse (Bürgerrecht)
+  b: L'appartenance à un parti politique
+  c: Au moins dix ans de domicile en Suisse
+  d: Une autorisation d'établissement (permis C) (Niederlassungsbewilligung C)
+explanation: Au niveau de la Confédération, seules les personnes ayant le droit de cité suisse peuvent
+  voter et élire. Les étrangères et les étrangers n'ont pas le droit de vote et d'éligibilité au niveau
+  de la Confédération, même avec une autorisation d'établissement. L'appartenance à un parti n'est pas
+  nécessaire.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist eine Voraussetzung, um auf Bundesebene das Stimm- und Wahlrecht zu haben?
+    options_de:
+      a: Das Schweizer Bürgerrecht
+      b: Die Zugehörigkeit zu einer politischen Partei
+      c: Mindestens zehn Jahre Wohnsitz in der Schweiz
+      d: Eine Niederlassungsbewilligung C
+    explanation_de: Auf Bundesebene können nur Personen mit Schweizer Bürgerrecht abstimmen und wählen.
+      Ausländerinnen und Ausländer haben auf Bundesebene kein Stimm- und Wahlrecht, auch nicht mit einer
+      Niederlassungsbewilligung. Die Zugehörigkeit zu einer Partei ist nicht notwendig.

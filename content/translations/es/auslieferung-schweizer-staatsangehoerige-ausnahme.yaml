@@ -1,0 +1,36 @@
+id: auslieferung-schweizer-staatsangehoerige-ausnahme
+lang: es
+source_version: 2
+question: ¿Qué se aplica en principio a la extradición de nacionales suizos al extranjero?
+options:
+  a: Son extraditados a petición de cualquier Estado.
+  b: No son extraditados a otro Estado contra su voluntad. Sin embargo, pueden ser entregados a un tribunal
+    internacional.
+  c: Solo son extraditados a los Estados vecinos de Suiza.
+  d: Son extraditados si el Consejo Federal (Bundesrat) lo desea en un caso concreto.
+explanation: Según el artículo 25 de la Constitución Federal, los ciudadanos suizos no pueden ser expulsados.
+  Solo pueden ser extraditados a otro Estado si ellos mismos están de acuerdo. Un tribunal internacional,
+  por ejemplo la Corte Penal Internacional, no es una autoridad extranjera; por eso una ley federal permite
+  entregar allí a nacionales suizos para un proceso.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt grundsätzlich für die Auslieferung von Schweizer Staatsangehörigen ins Ausland?
+    options_de:
+      a: Sie werden auf Ersuchen eines beliebigen Staates ausgeliefert.
+      b: Sie werden nicht gegen ihren Willen an einen anderen Staat ausgeliefert. Sie können jedoch an
+        ein internationales Gericht überstellt werden.
+      c: Sie werden nur an die Nachbarstaaten der Schweiz ausgeliefert.
+      d: Sie werden ausgeliefert, wenn der Bundesrat es in einem konkreten Fall wünscht.
+    explanation_de: Nach Artikel 25 der Bundesverfassung dürfen Schweizer Bürgerinnen und Bürger nicht
+      ausgewiesen werden. Sie dürfen nur an einen anderen Staat ausgeliefert werden, wenn sie selbst einverstanden
+      sind. Ein internationales Gericht, zum Beispiel der Internationale Strafgerichtshof, ist keine ausländische
+      Behörde; deshalb erlaubt ein Bundesgesetz, Schweizer Staatsangehörige dorthin für ein Verfahren
+      zu überstellen.

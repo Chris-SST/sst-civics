@@ -1,0 +1,31 @@
+id: absicherung-krankheit-unfall-sozialversicherung
+lang: sq
+source_version: 1
+question: Kundër cilave rreziqe mbron, ndër të tjera, sistemi i sigurimeve shoqërore të Zvicrës?
+options:
+  a: Kundër humbjeve në investimet private financiare
+  b: Kundër dëmeve në makinë dhe në plaçkat e shtëpisë shkaktuar nga vjedhja
+  c: Kundër pasojave të sëmundjes dhe të aksidentit
+  d: Kundër rritjes së çmimeve të qirave
+explanation: Sigurimet shoqërore i mbrojnë njerëzit nga pasojat financiare të rreziqeve të rëndësishme
+  të jetës. Mes tyre përfshihen sëmundja dhe aksidenti. Sigurimi shëndetësor dhe sigurimi kundër aksidenteve
+  janë shembuj.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen welche Risiken schützt unter anderem das System der Sozialversicherungen der Schweiz?
+    options_de:
+      a: Gegen Verluste bei privaten Finanzanlagen
+      b: Gegen Schäden am Auto und am Hausrat, die durch Diebstahl verursacht wurden
+      c: Gegen die Folgen von Krankheit und Unfall
+      d: Gegen den Anstieg der Mietpreise
+    explanation_de: Die Sozialversicherungen schützen die Menschen vor den finanziellen Folgen wichtiger
+      Lebensrisiken. Dazu gehören Krankheit und Unfall. Die Krankenversicherung und die Unfallversicherung
+      sind Beispiele.

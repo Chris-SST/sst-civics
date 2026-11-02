@@ -1,0 +1,30 @@
+id: tessin-gesprochene-sprache
+lang: it
+source_version: 1
+question: Quale lingua si parla nel Cantone Ticino?
+options:
+  a: Romancio
+  b: Francese
+  c: Italiano
+  d: Tedesco
+explanation: In Ticino l'italiano è la lingua della popolazione e la lingua ufficiale del Cantone. L'italiano
+  è una delle quattro lingue nazionali della Svizzera. Viene parlato anche in alcune parti dei Grigioni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprache spricht man im Kanton Tessin?
+    options_de:
+      a: Rätoromanisch
+      b: Französisch
+      c: Italienisch
+      d: Deutsch
+    explanation_de: Im Tessin ist Italienisch die Sprache der Bevölkerung und die Amtssprache des Kantons.
+      Italienisch ist eine der vier Landessprachen der Schweiz. Es wird auch in einigen Teilen Graubündens
+      gesprochen.

@@ -1,0 +1,31 @@
+id: baudirektion-zuerich-kantonsverwaltung-direktion
+lang: pt
+source_version: 1
+question: Qual dos seguintes serviços é uma direção da administração do cantão de Zurique?
+options:
+  a: A Direção da comuna (Gemeinde)
+  b: A Direção das Obras (Baudirektion)
+  c: A Direção da cidade
+  d: A Direção da Confederação
+explanation: A Direção das Obras (Baudirektion) faz parte das direções da administração do cantão de Zurique.
+  A administração do cantão está dividida em várias direções, cada uma dirigida por um membro do Conselho
+  de Governo (Regierungsrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche der folgenden Stellen ist eine Direktion der Verwaltung des Kantons Zürich?
+    options_de:
+      a: Die Gemeindedirektion
+      b: Die Baudirektion
+      c: Die Stadtdirektion
+      d: Die Direktion des Bundes
+    explanation_de: Die Baudirektion gehört zu den Direktionen der Verwaltung des Kantons Zürich. Die
+      Verwaltung des Kantons ist in mehrere Direktionen gegliedert, die jeweils von einem Mitglied des
+      Regierungsrates geleitet werden.

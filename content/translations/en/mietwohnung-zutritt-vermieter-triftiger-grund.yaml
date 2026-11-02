@@ -10,6 +10,23 @@ options:
 explanation: Tenants must allow access if there is a valid reason for it, for example an urgent repair.
   However, the landlord must announce the visit in good time and show consideration for the tenants. Access
   without a reason is not permitted.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall müssen Mieterinnen und Mieter dem Vermieter den Zugang zur Wohnung gewähren?
+    options_de:
+      a: Nie, die Wohnung ist immer geschützt
+      b: Wenn ein triftiger Grund vorliegt
+      c: Nur wenn der Vermieter es verlangt, ohne einen Grund anzugeben
+      d: Jederzeit und ohne vorherige Ankündigung
+    explanation_de: Mieterinnen und Mieter müssen den Zugang gewähren, wenn ein triftiger Grund dafür
+      vorliegt, zum Beispiel eine dringende Reparatur. Der Vermieter muss den Besuch jedoch rechtzeitig
+      ankündigen und auf die Mieterinnen und Mieter Rücksicht nehmen. Ein Zugang ohne Grund ist nicht
+      erlaubt.

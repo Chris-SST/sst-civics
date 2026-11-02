@@ -1,0 +1,33 @@
+id: mitwirkung-gemeinde-urnengang-stimmabgabe
+lang: pt
+source_version: 1
+question: De que forma as pessoas com direito de voto participam politicamente na sua comuna (Gemeinde)
+  através das urnas?
+options:
+  a: Presidem às sessões do conselho municipal (Gemeinderat)
+  b: Executam as decisões da comuna
+  c: Votam em eleições e votações
+  d: Elaboram elas próprias as leis do cantão
+explanation: Nas votações e eleições nas urnas, as pessoas com direito de voto votam sobre projetos e
+  elegem as autoridades. A execução das decisões é tarefa das autoridades e da administração.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort d: «erlassen die Gesetze des Kantons» (beschliessen) wird zu «erarbeiten die Gesetze»
+      (ausarbeiten) – andere Tätigkeit; Antwort c: «Stimme abgeben» wird zu «wählen», was die Abstimmungen
+      nicht mehr eindeutig erfasst.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Auf welche Weise beteiligen sich die Stimmberechtigten in ihrer Gemeinde über die Urne
+      politisch?
+    options_de:
+      a: Sie führen den Vorsitz bei den Sitzungen des Gemeinderats
+      b: Sie führen die Beschlüsse der Gemeinde aus
+      c: Sie wählen bei Wahlen und Abstimmungen
+      d: Sie erarbeiten die Gesetze des Kantons selbst
+    explanation_de: Bei den Abstimmungen und Wahlen an der Urne stimmen die Stimmberechtigten über Vorlagen
+      ab und wählen die Behörden. Die Ausführung der Beschlüsse ist Aufgabe der Behörden und der Verwaltung.

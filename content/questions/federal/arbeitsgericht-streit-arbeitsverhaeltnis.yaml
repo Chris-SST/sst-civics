@@ -15,17 +15,17 @@ explanation_de: Das Arbeitsgericht ist für Streitigkeiten zwischen Arbeitgebend
   zuständig. Dazu gehört auch der Streit um eine Kündigung. Das RAV hilft dagegen bei der Stellensuche.
 sources:
 - url: https://www.notes.zh.ch/appl/zhlex_r.nsf/WebView/43B3BDA36DB02CBDC1258D4C004EC591/$File/211.1_10.5.10_131.pdf
-  checked: 2026-11-02
+  checked: &id001 2026-11-02
 - url: https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
   checked: 2026-11-02
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: 2026-11-02
+  checked: *id001
 glossary:
 - Arbeitsgericht
 - Arbeitsverhältnis
 - Kündigung
 - RAV
-status: draft
+status: approved
 difficulty: 2
 covers:
 - zh-165
@@ -37,5 +37,54 @@ checks:
     at: 2026-11-02
     version: 1
     reasoning: Streitigkeiten aus dem Arbeitsverhältnis, etwa wegen einer missbräuchlichen Kündigung,
-      werden von der Schlichtungsbehörde und dem Arbeitsgericht behandelt, während RAV, Strassenverkehrsamt
-      und Betreibungsamt dafür nicht zuständig sind.
+      werden in der Schweiz nach einem Schlichtungsverfahren vom Arbeitsgericht (bzw. dem zuständigen
+      Zivilgericht) behandelt, während RAV, Strassenverkehrsamt und Betreibungsamt dafür nicht zuständig
+      sind.
+  source:
+    verdict: supported
+    note: Quelle 1 (GOG ZH, § 20 lit. a) nennt das Arbeitsgericht für Streitigkeiten aus dem Arbeitsverhältnis
+      zwischen Arbeitgebenden und Arbeitnehmenden. Quelle 3 stützt die Aussage zum RAV, das bei der Stellensuche
+      unterstützt. Quelle 2 verweist bei Kündigung auf die Rechtsauskunft des Bezirks- oder Arbeitsgerichts.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Im Schweizer Recht braucht eine ordentliche Kündigung grundsätzlich keinen Grund, deshalb
+        ist «unbegründet» rechtlich ungenau; besser wäre «Sie hält ihre Kündigung für ungerecht oder missbräuchlich»,
+        und die Tatsache in der Themenliste sollte entsprechend angepasst werden.'
+      - 'Klein: Die Erklärung könnte ergänzen, dass das Arbeitsgericht im Kanton Zürich eine Abteilung
+        des Bezirksgerichts ist (§ 3 und § 20 GOG) und dass vor dem Gerichtsverfahren meist ein Schlichtungsversuch
+        beim Friedensrichteramt stattfindet; ein kurzer Satz dazu würde das Verständnis verbessern.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Strassenverkehrsamt ist als falsche Antwort kaum plausibel; besser wäre eine Stelle
+        aus dem Arbeitsbereich, etwa «Die Arbeitslosenkasse» oder «Das Amt für Wirtschaft und Arbeit (AWA)».'
+      - 'Klein: In der Schweiz braucht eine Kündigung grundsätzlich keinen Grund, rechtlich geht es eher
+        um eine «missbräuchliche» Kündigung; die Erklärung könnte kurz erwähnen, dass man eine Kündigung
+        anfechten kann, wenn sie missbräuchlich ist.'
+      - 'Klein: Die Erklärung könnte erwähnen, dass vor dem Gericht meist zuerst ein Schlichtungsversuch
+        stattfindet, zum Beispiel beim Friedensrichteramt.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage sagt «unbegründet», die Quelle und die Tatsache sprechen von «unbegründeter
+        Kündigung»; vor dem Arbeitsgericht geht der Streit aber oft zuerst über die Schlichtungsbehörde,
+        was für die Frage nicht relevant ist und keine Änderung braucht.'
+      - 'Klein: Die Erklärung könnte erwähnen, dass zuerst meist ein Schlichtungsverfahren stattfindet,
+        ist aber für die Themenliste nicht nötig.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,32 @@
+id: auslaender-kein-stimmrecht-national
+lang: fr
+source_version: 1
+question: Les étrangères et les étrangers qui vivent en Suisse depuis des années peuvent-ils participer
+  aux votations fédérales ?
+options:
+  a: Oui, mais seulement aux votations et non aux élections.
+  b: Oui, s'ils ont une autorisation d'établissement (permis C) (Niederlassungsbewilligung).
+  c: Oui, s'ils paient des impôts.
+  d: Non, au niveau national, ils n'ont pas le droit de vote.
+explanation: Le droit de vote au niveau national est lié au droit de cité (Bürgerrecht) suisse. Les étrangères
+  et les étrangers ne peuvent l'exercer qu'après une naturalisation.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; der Zusatz «(Ausweis C)» in b) erklärt nur die Niederlassungsbewilligung,
+      und «Können» statt «Dürfen» ändert die Aussage nicht.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Können Ausländerinnen und Ausländer, die seit Jahren in der Schweiz leben, an eidgenössischen
+      Abstimmungen teilnehmen?
+    options_de:
+      a: Ja, aber nur an Abstimmungen und nicht an Wahlen.
+      b: Ja, wenn sie eine Niederlassungsbewilligung (Ausweis C) haben.
+      c: Ja, wenn sie Steuern zahlen.
+      d: Nein, auf nationaler Ebene haben sie kein Stimmrecht.
+    explanation_de: Das Stimmrecht auf nationaler Ebene ist an das Schweizer Bürgerrecht gebunden. Ausländerinnen
+      und Ausländer können es erst nach einer Einbürgerung ausüben.

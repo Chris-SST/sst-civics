@@ -1,0 +1,33 @@
+id: volksinitiative-sammelfrist-monate
+lang: fr
+source_version: 1
+question: De combien de temps les auteurs de l'initiative disposent-ils pour récolter les signatures nécessaires
+  à une initiative populaire (Volksinitiative) fédérale ?
+options:
+  a: 6 mois
+  b: 12 mois
+  c: 18 mois
+  d: 36 mois
+explanation: Le délai de récolte est de 18 mois à compter de la publication dans la Feuille fédérale.
+  Si les initiants ne parviennent pas à réunir les 100 000 signatures nécessaires dans ce délai, l'initiative
+  n'aboutit pas.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viel Zeit haben die Urheber der Initiative, um die für eine eidgenössische Volksinitiative
+      notwendigen Unterschriften zu sammeln?
+    options_de:
+      a: 6 Monate
+      b: 12 Monate
+      c: 18 Monate
+      d: 36 Monate
+    explanation_de: Die Sammelfrist beträgt 18 Monate ab der Veröffentlichung im Bundesblatt. Wenn es
+      den Initianten nicht gelingt, innerhalb dieser Frist die notwendigen 100 000 Unterschriften zusammenzubringen,
+      kommt die Initiative nicht zustande.

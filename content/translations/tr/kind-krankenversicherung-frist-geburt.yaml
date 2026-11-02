@@ -1,0 +1,31 @@
+id: kind-krankenversicherung-frist-geburt
+lang: tr
+source_version: 1
+question: İsviçre'de ikamet eden bir çocuk için doğumdan itibaren hangi süre içinde sağlık sigortası yaptırılmış
+  olması gerekir?
+options:
+  a: 12 ay içinde
+  b: 3 ay içinde
+  c: 14 gün içinde
+  d: 6 ay içinde
+explanation: Ebeveynlerin, çocuk için doğumdan sonraki üç ay içinde bir sağlık sigortası yaptırması gerekir.
+  Süreye uyulursa sigorta koruması geriye dönük olarak doğumdan itibaren geçerlidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Innerhalb welcher Frist ab der Geburt muss für ein in der Schweiz wohnhaftes Kind eine
+      Krankenversicherung abgeschlossen worden sein?
+    options_de:
+      a: Innerhalb von 12 Monaten
+      b: Innerhalb von 3 Monaten
+      c: Innerhalb von 14 Tagen
+      d: Innerhalb von 6 Monaten
+    explanation_de: Die Eltern müssen für das Kind innerhalb von drei Monaten nach der Geburt eine Krankenversicherung
+      abschliessen. Wird die Frist eingehalten, gilt der Versicherungsschutz rückwirkend ab der Geburt.

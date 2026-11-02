@@ -1,0 +1,31 @@
+id: zwingli-bekannt-fuer-reformation
+lang: sq
+source_version: 2
+question: Për çfarë njihet kryesisht Huldrych (Ulrich) Zwingli në historinë e Cyrihut?
+options:
+  a: Ai ndërtoi hekurudhën e parë në kanton.
+  b: Ai ishte Presidenti i parë i Konfederatës (Bundespräsident) i Zvicrës.
+  c: Ai prezantoi të drejtën e votës për gratë.
+  d: Ai ishte udhëheqësi i Reformacionit në Cyrih.
+explanation: Huldrych (Ulrich) Zwingli udhëhoqi Reformacionin në Cyrih në shekullin e 16-të, dhe kisha
+  e Cyrihut u bë reformate. Hekurudha, shteti federal me një President të Konfederatës dhe e drejta e
+  votës për gratë erdhën vetëm shekuj më vonë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür ist Huldrych (Ulrich) Zwingli in der Geschichte Zürichs hauptsächlich bekannt?
+    options_de:
+      a: Er baute die erste Eisenbahn im Kanton.
+      b: Er war der erste Bundespräsident der Schweiz.
+      c: Er führte das Stimmrecht für Frauen ein.
+      d: Er war der Anführer der Reformation in Zürich.
+    explanation_de: Huldrych (Ulrich) Zwingli führte im 16. Jahrhundert die Reformation in Zürich an,
+      und die Kirche Zürichs wurde reformiert. Die Eisenbahn, der Bundesstaat mit einem Bundespräsidenten
+      und das Stimmrecht für Frauen kamen erst Jahrhunderte später.

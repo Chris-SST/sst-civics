@@ -1,0 +1,29 @@
+id: fasnacht-umzuege-mit-masken
+lang: es
+source_version: 1
+question: ¿Qué es típico del Carnaval suizo (Fasnacht)?
+options:
+  a: Desfiles en los que los participantes llevan máscaras
+  b: Adornar abetos en la plaza del pueblo
+  c: Fuegos artificiales a medianoche el 1 de agosto
+  d: Encender grandes velas en las iglesias
+explanation: En el Carnaval (Fasnacht), grupos desfilan por las calles llevando máscaras y disfraces.
+  El Carnaval de Basilea es un ejemplo conocido de esta costumbre.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist typisch für die Schweizer Fasnacht?
+    options_de:
+      a: Umzüge, bei denen die Teilnehmenden Masken tragen
+      b: Tannen auf dem Dorfplatz schmücken
+      c: Feuerwerk um Mitternacht am 1. August
+      d: Grosse Kerzen in den Kirchen anzünden
+    explanation_de: An der Fasnacht ziehen Gruppen mit Masken und Verkleidungen durch die Strassen. Die
+      Basler Fasnacht ist ein bekanntes Beispiel für diesen Brauch.

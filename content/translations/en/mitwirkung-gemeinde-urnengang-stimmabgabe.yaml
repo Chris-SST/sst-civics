@@ -9,6 +9,21 @@ options:
   d: They themselves enact the laws of the canton
 explanation: At ballots, eligible voters vote on proposals and elect authorities. Implementing the decisions
   is the task of the authorities and the administration.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie beteiligen sich Stimmberechtigte politisch in ihrer Gemeinde, wenn Abstimmungen stattfinden?
+    options_de:
+      a: Sie leiten die Sitzungen des Gemeinderats.
+      b: Sie setzen die Beschlüsse der Gemeinde um.
+      c: Sie geben ihre Stimme bei Wahlen und Abstimmungen ab.
+      d: Sie erlassen selbst die Gesetze des Kantons.
+    explanation_de: Bei Abstimmungen stimmen die Stimmberechtigten über Vorlagen ab und wählen Behörden.
+      Die Umsetzung der Beschlüsse ist Aufgabe der Behörden und der Verwaltung.

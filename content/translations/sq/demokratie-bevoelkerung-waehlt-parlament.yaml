@@ -1,0 +1,31 @@
+id: demokratie-bevoelkerung-waehlt-parlament
+lang: sq
+source_version: 1
+question: Çfarë bën pjesë te të drejtat e popullsisë në një demokraci si Zvicra?
+options:
+  a: Ajo i emëron gjyqtarët e Gjykatës Federale (Bundesgericht) me short.
+  b: Ajo përcakton ligjet vetëm, pa Parlamentin.
+  c: Ajo e përcakton Parlamentin e vet përmes zgjedhjeve.
+  d: Ajo zgjedh drejtpërdrejt udhëheqjen e ushtrisë.
+explanation: Në demokraci, popullsia zgjedh përfaqësuesit e saj në Parlament. Në nivel të Konfederatës
+  këta janë Këshilli Kombëtar (Nationalrat) dhe Këshilli i Shteteve (Ständerat). Parlamenti pastaj nxjerr
+  ligjet e Konfederatës në emër të popullit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gehört zu den Rechten der Bevölkerung in einer Demokratie wie der Schweiz?
+    options_de:
+      a: Sie ernennt die Richter des Bundesgerichts durch das Los.
+      b: Sie legt die Gesetze allein fest, ohne das Parlament.
+      c: Sie bestimmt ihr eigenes Parlament durch Wahlen.
+      d: Sie wählt die Führung der Armee direkt.
+    explanation_de: In einer Demokratie wählt die Bevölkerung ihre Vertreter ins Parlament. Auf Ebene
+      des Bundes sind dies der Nationalrat und der Ständerat. Das Parlament erlässt dann die Gesetze des
+      Bundes im Namen des Volkes.

@@ -10,6 +10,22 @@ options:
   d: The mineral oil tax
 explanation: The canton and the communes tax the wealth of natural persons. The value added tax, the withholding
   tax and the mineral oil tax are Confederation taxes.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche dieser Steuern erheben der Kanton Zürich und die Gemeinden auf dem Vermögen einer
+      Person, zum Beispiel auf Bankguthaben und Wertschriften?
+    options_de:
+      a: Die Verrechnungssteuer
+      b: Die Mehrwertsteuer
+      c: Die Vermögenssteuer
+      d: Die Mineralölsteuer
+    explanation_de: Der Kanton und die Gemeinden besteuern das Vermögen von natürlichen Personen. Die
+      Mehrwertsteuer, die Verrechnungssteuer und die Mineralölsteuer sind Steuern des Bundes.

@@ -1,0 +1,31 @@
+id: petition-ohne-stimmrecht-zuerich
+lang: sq
+source_version: 1
+question: Çfarë mundësie politike kanë të huajt në kantonin e Cyrihut që nuk kanë të drejtën e votës?
+options:
+  a: Ata mund të votojnë në kuti për projekte kantonale.
+  b: Ata mund të zgjedhin anëtarë të Këshillit Kantonal (Kantonsrat).
+  c: Ata mund t'u drejtohen autoriteteve me një peticion.
+  d: Ata mund të paraqesin një nismë popullore (Volksinitiative) në kanton.
+explanation: E drejta e peticionit është e hapur për të gjitha personat, edhe për njerëzit pa të drejtën
+  e votës. Kështu ata mund t'u komunikojnë autoriteteve me shkrim shqetësime, dëshira ose kritika. Të
+  votojnë, të zgjedhin dhe të nënshkruajnë nisma mund vetëm personat me të drejtë vote.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche politische Möglichkeit haben Ausländer im Kanton Zürich, die kein Stimmrecht haben?
+    options_de:
+      a: Sie können an der Urne über kantonale Vorlagen abstimmen.
+      b: Sie können Mitglieder des Kantonsrates wählen.
+      c: Sie können sich mit einer Petition an die Behörden wenden.
+      d: Sie können im Kanton eine Volksinitiative einreichen.
+    explanation_de: Das Petitionsrecht steht allen Personen offen, auch Menschen ohne Stimmrecht. So können
+      sie den Behörden Anliegen, Wünsche oder Kritik schriftlich mitteilen. Abstimmen, wählen und Initiativen
+      unterschreiben können nur Personen mit Stimmrecht.

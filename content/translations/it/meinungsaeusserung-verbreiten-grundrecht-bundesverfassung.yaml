@@ -1,0 +1,33 @@
+id: meinungsaeusserung-verbreiten-grundrecht-bundesverfassung
+lang: it
+source_version: 1
+question: Quale diritto fondamentale garantito dalla Costituzione federale permette di esprimere e diffondere
+  liberamente la propria opinione?
+options:
+  a: La libertà di opinione
+  b: Il diritto di voto
+  c: La garanzia della proprietà
+  d: La libertà di domicilio
+explanation: La libertà di opinione permette di esprimere e diffondere liberamente la propria opinione.
+  È sancita all'articolo 16 della Costituzione federale. Il diritto di voto, invece, riguarda la partecipazione
+  alle elezioni e alle votazioni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches in der Bundesverfassung garantierte Grundrecht erlaubt es, die eigene Meinung
+      frei zu äussern und zu verbreiten?
+    options_de:
+      a: Die Meinungsfreiheit
+      b: Das Stimmrecht
+      c: Die Eigentumsgarantie
+      d: Die Niederlassungsfreiheit
+    explanation_de: Die Meinungsfreiheit erlaubt es, die eigene Meinung frei zu äussern und zu verbreiten.
+      Sie ist in Artikel 16 der Bundesverfassung verankert. Das Stimmrecht hingegen betrifft die Teilnahme
+      an Wahlen und Abstimmungen.

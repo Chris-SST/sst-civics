@@ -1,0 +1,31 @@
+id: zulassung-motorfahrzeuge-kantonales-strassenverkehrsamt
+lang: pt
+source_version: 1
+question: Quem, no cantão de Zurique, autoriza um veículo a motor a circular na via pública e emite para
+  isso as matrículas?
+options:
+  a: A polícia cantonal durante uma fiscalização de trânsito
+  b: O serviço de trânsito rodoviário do cantão (Strassenverkehrsamt)
+  c: O Touring Club Suíça
+  d: A administração da comuna (Gemeinde) do local de residência
+explanation: A autorização de veículos a motor é da competência do serviço cantonal de trânsito rodoviário.
+  É também este serviço que emite as matrículas. A comuna e a polícia não são competentes para isso.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer im Kanton Zürich lässt ein Motorfahrzeug zum Verkehr auf öffentlichen Strassen zu
+      und gibt dafür die Kontrollschilder aus?
+    options_de:
+      a: Die Kantonspolizei bei einer Verkehrskontrolle
+      b: Das Strassenverkehrsamt des Kantons
+      c: Der Touring Club Schweiz
+      d: Die Gemeindeverwaltung des Wohnorts
+    explanation_de: Die Zulassung von Motorfahrzeugen fällt in die Zuständigkeit des kantonalen Strassenverkehrsamts.
+      Dieses Amt gibt auch die Kontrollschilder aus. Die Gemeinde und die Polizei sind dafür nicht zuständig.

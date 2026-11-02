@@ -22,7 +22,7 @@ glossary:
 - Krankenkasse
 - Grundversicherung
 - freie Wahl
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-131
@@ -44,3 +44,35 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte genauer sagen, dass man unter den Krankenkassen wählt, «die am eigenen
+        Wohnort tätig sind», und dass diese jede Person in die Grundversicherung aufnehmen müssen, wie
+        es die BAG-Quelle beschreibt.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Wer sich nicht selbst versichert, wird vom Kanton einer Krankenkasse zugewiesen; die Erklärung
+        könnte kurz ergänzen, dass die Zuweisung durch den Kanton nur in diesem Ausnahmefall vorkommt
+        und nicht für jede Person gilt.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage sagt «Grundversicherung abschliesst»; der Begriff passt, könnte aber mit «obligatorische
+        Krankenversicherung (Grundversicherung)» noch klarer sein.'
+      - 'Klein: Die Erklärung könnte präzisieren, dass die Wahl unter den Versicherern am Wohnort gilt
+        und der Wechsel spätestens nach einem Jahr möglich ist (Quelle BAG).'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

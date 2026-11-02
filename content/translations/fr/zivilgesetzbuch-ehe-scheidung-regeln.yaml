@@ -1,0 +1,33 @@
+id: zivilgesetzbuch-ehe-scheidung-regeln
+lang: fr
+source_version: 1
+question: Quelle loi règle, entre autres, la manière dont un mariage est conclu puis dissous par le divorce
+  ?
+options:
+  a: Le Code civil
+  b: Le Code pénal
+  c: La loi sur l'asile
+  d: La loi sur le Tribunal fédéral
+explanation: Le Code civil règle le droit des personnes, le droit de la famille, le droit successoral
+  et les droits réels. La conclusion du mariage et le divorce en font également partie. Le Code pénal,
+  en revanche, traite des infractions et des peines.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Gesetz regelt unter anderem, wie eine Ehe geschlossen und dann durch die Scheidung
+      aufgelöst wird?
+    options_de:
+      a: Das Zivilgesetzbuch
+      b: Das Strafgesetzbuch
+      c: Das Asylgesetz
+      d: Das Bundesgerichtsgesetz
+    explanation_de: Das Zivilgesetzbuch regelt das Personenrecht, das Familienrecht, das Erbrecht und
+      das Sachenrecht. Die Eheschliessung und die Scheidung gehören ebenfalls dazu. Das Strafgesetzbuch
+      hingegen behandelt die Straftaten und die Strafen.

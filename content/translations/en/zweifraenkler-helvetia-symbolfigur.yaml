@@ -9,6 +9,22 @@ options:
   d: A Swiss Federal Council (Bundesrat) member
 explanation: The Swiss two-franc coin shows Helvetia, the female symbolic figure of the Swiss Confederation.
   She stands for Switzerland as a nation. Helvetia also appears on other coins and on postage stamps.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Symbolfigur ist auf dem Zweifrankenstück abgebildet?
+    options_de:
+      a: Das Matterhorn
+      b: Helvetia
+      c: Wilhelm Tell
+      d: Ein Mitglied des Bundesrates
+    explanation_de: Das Schweizer Zweifrankenstück zeigt Helvetia, die weibliche Symbolfigur der Schweizerischen
+      Eidgenossenschaft. Sie steht für die Schweiz als Nation. Helvetia erscheint auch auf anderen Münzen
+      und auf Briefmarken.

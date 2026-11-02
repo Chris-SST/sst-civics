@@ -1,0 +1,32 @@
+id: forstleute-andere-baumarten-pflanzen
+lang: tr
+source_version: 1
+question: İsviçre'de ormancılar artan sıcaklıklara nasıl tepki veriyor?
+options:
+  a: Giderek daha fazla başka ağaç türü dikiyorlar.
+  b: Yalnızca orada her zaman bulunmuş olan ağaçları dikiyorlar.
+  c: Ormanın bakımından tamamen vazgeçiyorlar.
+  d: Alçak rakımlardaki ormanları kesip temizliyorlar.
+explanation: Bazı ağaç türleri sıcağa ve kuraklığa iyi dayanamaz. Bu nedenle ormancılar, daha sıcak iklime
+  daha iyi uyum sağlayan diğer türlere yönelir. Böylece ormanın dengeli ve sağlam kalması amaçlanır.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort b: «nur noch» (Änderung) wird zu «nur die Bäume» (ohne Änderung), und Antwort d ergänzt
+      «und räumen sie»; zudem ergänzt die Erklärung «widerstandsfähig» zu «stabil». Die Kernaussagen bleiben
+      ähnlich, aber b verliert die Einschränkung «nur noch».»}</br>```json'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wie reagieren Försterinnen und Förster in der Schweiz auf die steigenden Temperaturen?
+    options_de:
+      a: Sie pflanzen immer mehr andere Baumarten.
+      b: Sie pflanzen nur die Bäume, die schon immer dort vorhanden waren.
+      c: Sie verzichten vollständig auf die Pflege des Waldes.
+      d: Sie holzen die Wälder in tiefen Lagen ab und räumen sie.
+    explanation_de: Einige Baumarten vertragen Hitze und Trockenheit nicht gut. Deshalb wenden sich die
+      Förster anderen Arten zu, die sich besser an das wärmere Klima anpassen. Dadurch soll der Wald ausgeglichen
+      und widerstandsfähig bleiben.

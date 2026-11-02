@@ -1,0 +1,34 @@
+id: datenschutz-verletzung-ohne-einverstaendnis
+lang: fr
+source_version: 1
+question: Dans quel cas la protection des données est-elle violée ?
+options:
+  a: Des informations privées concernant une personne sont rendues publiques sans son consentement et
+    sans base légale.
+  b: Une autorité enregistre des données, comme l'exige une loi.
+  c: Une personne communique volontairement sa propre adresse.
+  d: Une personne autorise expressément la publication de sa photo.
+explanation: La protection de la sphère privée comprend la protection contre l'utilisation abusive de
+  données personnelles. Des informations privées ne peuvent être rendues publiques qu'avec le consentement
+  de la personne concernée ou sur la base d'une loi. Si ni l'un ni l'autre n'existe, il y a violation.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Fall wird der Datenschutz verletzt?
+    options_de:
+      a: Private Informationen über eine Person werden ohne ihre Einwilligung und ohne gesetzliche Grundlage
+        öffentlich gemacht.
+      b: Eine Behörde erfasst Daten, wie es ein Gesetz verlangt.
+      c: Eine Person teilt freiwillig ihre eigene Adresse mit.
+      d: Eine Person erlaubt ausdrücklich die Veröffentlichung ihres Fotos.
+    explanation_de: Der Schutz der Privatsphäre umfasst den Schutz vor missbräuchlicher Verwendung persönlicher
+      Daten. Private Informationen dürfen nur mit der Einwilligung der betroffenen Person oder auf der
+      Grundlage eines Gesetzes öffentlich gemacht werden. Wenn weder das eine noch das andere vorliegt,
+      liegt eine Verletzung vor.

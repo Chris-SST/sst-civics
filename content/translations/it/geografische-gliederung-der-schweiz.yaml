@@ -1,0 +1,29 @@
+id: geografische-gliederung-der-schweiz
+lang: it
+source_version: 1
+question: In quali tre grandi regioni paesaggistiche si suddivide geograficamente la Svizzera?
+options:
+  a: Giura, Altopiano e Alpi
+  b: Giura, Lago di Costanza e Alpi
+  c: Foresta Nera, Altopiano e Alpi
+  d: Altopiano, Prealpi e Ticino
+explanation: Il Giura si trova a nord-ovest, le Alpi occupano la maggior parte della superficie. Tra di
+  essi si trova l'Altopiano, dove vive la maggior parte della popolazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welche drei grossen Landschaftsregionen gliedert sich die Schweiz geografisch?
+    options_de:
+      a: Jura, Mittelland und Alpen
+      b: Jura, Bodensee und Alpen
+      c: Schwarzwald, Mittelland und Alpen
+      d: Mittelland, Voralpen und Tessin
+    explanation_de: Der Jura befindet sich im Nordwesten, die Alpen nehmen den grössten Teil der Fläche
+      ein. Zwischen ihnen befindet sich das Mittelland, wo der grösste Teil der Bevölkerung lebt.

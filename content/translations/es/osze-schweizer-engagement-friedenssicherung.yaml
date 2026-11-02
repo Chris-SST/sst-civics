@@ -1,0 +1,34 @@
+id: osze-schweizer-engagement-friedenssicherung
+lang: es
+source_version: 2
+question: ¿Por qué se compromete Suiza en la Organización para la Seguridad y la Cooperación en Europa
+  (OSCE)?
+options:
+  a: Por la paz y la seguridad en Europa, por ejemplo en Europa del Este y en Asia Central
+  b: Por la distribución de fondos de ayuda en Europa Occidental
+  c: Por la introducción de una moneda común
+  d: Por la reducción de los aranceles en el comercio mundial
+explanation: Suiza es miembro fundador de la OSCE y la utiliza para promover la paz y la seguridad en
+  Europa. La OSCE actúa con misiones sobre el terreno, especialmente en Europa del Este y del Sudeste,
+  así como en Asia Central. En 2026, Suiza ocupa la presidencia de la OSCE.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: Fördergelder/Hilfsgelder und Feldmissionen/Missionen vor Ort sind sinngemäss
+      gleich, alle Antworten und Fakten stimmen überein.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür setzt sich die Schweiz in der Organisation für Sicherheit und Zusammenarbeit in
+      Europa (OSZE) ein?
+    options_de:
+      a: Für Frieden und Sicherheit in Europa, zum Beispiel in Osteuropa und in Zentralasien
+      b: Für die Verteilung von Hilfsgeldern in Westeuropa
+      c: Für die Einführung einer gemeinsamen Währung
+      d: Für die Senkung der Zölle im Welthandel
+    explanation_de: Die Schweiz ist Gründungsmitglied der OSZE und nutzt sie, um Frieden und Sicherheit
+      in Europa zu fördern. Die OSZE wirkt mit Missionen vor Ort, besonders in Osteuropa und Südosteuropa
+      sowie in Zentralasien. Im Jahr 2026 hat die Schweiz den Vorsitz der OSZE inne.

@@ -1,0 +1,34 @@
+id: obligatorische-schulzeit-dauer-schweiz
+lang: sq
+source_version: 2
+question: Sa vjet zgjat shkolla e detyrueshme në kantonin Cyrih, nëse llogaritet edhe kopshti?
+options:
+  a: Njëmbëdhjetë vjet
+  b: Dhjetë vjet
+  c: Dymbëdhjetë vjet
+  d: Nëntë vjet
+explanation: 'Në kantonin Cyrih të gjithë fëmijët ndjekin shkollën e detyrueshme për njëmbëdhjetë vjet:
+  dy vjet kopsht, gjashtë vjet shkollë fillore (Primarschule) dhe tre vjet shkallë sekondare I. Shumica
+  e kantoneve e kanë unifikuar këtë kohëzgjatje përmes konkordatit HarmoS. Disa kantone, megjithatë, nuk
+  iu bashkuan, dhe atje në disa raste është i detyrueshëm vetëm një vit kopsht.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wie viele Jahre dauert die obligatorische Schule im Kanton Zürich, wenn auch der Kindergarten
+      mitgerechnet wird?
+    options_de:
+      a: Elf Jahre
+      b: Zehn Jahre
+      c: Zwölf Jahre
+      d: Neun Jahre
+    explanation_de: 'Im Kanton Zürich besuchen alle Kinder die obligatorische Schule elf Jahre lang: zwei
+      Jahre Kindergarten, sechs Jahre Primarschule (Primarschule) und drei Jahre Sekundarstufe I. Die
+      meisten Kantone haben diese Dauer durch das HarmoS-Konkordat vereinheitlicht. Einige Kantone sind
+      dem jedoch nicht beigetreten, und dort ist in manchen Fällen nur ein Jahr Kindergarten obligatorisch.'

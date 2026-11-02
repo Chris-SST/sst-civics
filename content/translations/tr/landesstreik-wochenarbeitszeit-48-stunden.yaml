@@ -1,0 +1,31 @@
+id: landesstreik-wochenarbeitszeit-48-stunden
+lang: tr
+source_version: 1
+question: 1918 Ulusal Grevi'nden (Landesstreik) sonra İsviçre'de haftalık çalışma süresi ne kadardı?
+options:
+  a: 48 saat
+  b: 54 saat
+  c: 60 saat
+  d: 40 saat
+explanation: 1918 Ulusal Grevi, işçilerin gerçekleştirdiği bir genel grevdi. Daha sonra hayata geçirilen
+  taleplerden biri, haftalık 48 saatlik çalışma süresiydi. Bundan önce belirgin biçimde daha uzun çalışma
+  süreleri yaygındı.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie lang war die wöchentliche Arbeitszeit in der Schweiz nach dem Landesstreik von 1918?
+    options_de:
+      a: 48 Stunden
+      b: 54 Stunden
+      c: 60 Stunden
+      d: 40 Stunden
+    explanation_de: Der Landesstreik von 1918 war ein Generalstreik, der von den Arbeitern durchgeführt
+      wurde. Eine der später umgesetzten Forderungen war die wöchentliche Arbeitszeit von 48 Stunden.
+      Davor waren deutlich längere Arbeitszeiten üblich.

@@ -10,6 +10,22 @@ options:
   d: 30 days
 explanation: The time limit is 100 days from the official publication of the enactment. The 18 months,
   by contrast, apply to collecting signatures for a popular initiative (Volksinitiative).
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viel Zeit haben die Referendumskomitees, um die Unterschriften für ein fakultatives
+      Referendum gegen ein Bundesgesetz zu sammeln?
+    options_de:
+      a: 60 Tage
+      b: 18 Monate
+      c: 100 Tage
+      d: 30 Tage
+    explanation_de: Die Frist beträgt 100 Tage ab der amtlichen Veröffentlichung des Erlasses. Die 18
+      Monate hingegen gelten für das Sammeln von Unterschriften für eine Volksinitiative.

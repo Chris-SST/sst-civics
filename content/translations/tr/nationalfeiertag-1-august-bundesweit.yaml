@@ -1,0 +1,32 @@
+id: nationalfeiertag-1-august-bundesweit
+lang: tr
+source_version: 1
+question: Hangi gün İsviçre'nin tamamında yasal olarak işin tatil edildiği resmi bir tatil günüdür?
+options:
+  a: 2 Ocak (Berchtoldstag)
+  b: Fasnachtsmontag (Karnaval Pazartesisi)
+  c: Kutsal Cuma (Karfreitag)
+  d: Ulusal bayram olan 1 Ağustos
+explanation: 1 Ağustos ulusal bayramdır ve ülkenin tamamında resmi tatil günü sayılır. Kutsal Cuma veya
+  Berchtoldstag gibi diğer tatil günlerinin çoğunu kantonlar kendileri düzenler ve bu günler her yerde
+  tatil değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Tag ist ein offizieller Feiertag, an dem in der gesamten Schweiz gesetzlich die
+      Arbeit ruht?
+    options_de:
+      a: 2. Januar (Berchtoldstag)
+      b: Fasnachtsmontag (Karnevalsmontag)
+      c: Karfreitag (Karfreitag)
+      d: 1. August, der Nationalfeiertag
+    explanation_de: Der 1. August ist der Nationalfeiertag und gilt im ganzen Land als offizieller Feiertag.
+      Die meisten anderen Feiertage wie der Karfreitag oder der Berchtoldstag regeln die Kantone selbst,
+      und diese Tage sind nicht überall frei.

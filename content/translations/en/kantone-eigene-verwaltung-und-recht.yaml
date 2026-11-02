@@ -1,15 +1,32 @@
 id: kantone-eigene-verwaltung-und-recht
 lang: en
-source_version: 1
-question: What is the main task of the cantons in Switzerland?
+source_version: 2
+question: Which of the following is one of the responsibilities of the cantons?
 options:
   a: They determine Switzerland's foreign policy and currency.
-  b: They enact the law for the whole country and do not supervise the communes (Gemeinden).
-  c: They conclude treaties with other states and command the army.
+  b: They pass the laws for the whole country.
+  c: They run the army and set customs duties.
   d: They run their own administration and enact cantonal law.
-explanation: Switzerland is a federal state. The cantons are independent, insofar as their sovereignty
-  is not limited by the Federal Constitution. They organise their administration and enact their own cantonal
-  law, for example their cantonal constitution and laws.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: Each canton has its own government, its own parliament and its own administration. It makes
+  its own laws, which apply only in the canton, for example for schools or the police. Foreign policy,
+  currency, the army, customs duties and the laws for the whole of Switzerland are matters for the Confederation.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche der folgenden Aufgaben gehört zu den Aufgaben der Kantone?
+    options_de:
+      a: Sie bestimmen die Aussenpolitik und die Währung der Schweiz.
+      b: Sie erlassen die Gesetze für das ganze Land.
+      c: Sie führen die Armee und legen die Zölle fest.
+      d: Sie führen ihre eigene Verwaltung und erlassen kantonales Recht.
+    explanation_de: Jeder Kanton hat seine eigene Regierung, sein eigenes Parlament und seine eigene Verwaltung.
+      Er macht seine eigenen Gesetze, die nur im Kanton gelten, zum Beispiel für die Schulen oder die
+      Polizei. Aussenpolitik, Währung, die Armee, die Zölle und die Gesetze für die ganze Schweiz sind
+      Sache des Bundes.

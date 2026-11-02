@@ -1,0 +1,31 @@
+id: anmeldung-wohngemeinde-bei-zuzug
+lang: fr
+source_version: 1
+question: Que doivent faire les personnes qui s'établissent dans une commune (Gemeinde) ?
+options:
+  a: Elles doivent s'annoncer auprès de leur commune de domicile.
+  b: Elles doivent s'annoncer auprès de l'armée.
+  c: Elles doivent s'annoncer auprès du Conseil fédéral (Bundesrat).
+  d: Elles doivent s'annoncer auprès de l'administration fiscale de la Confédération.
+explanation: Toute personne qui s'installe dans un nouvel endroit doit s'enregistrer auprès de sa commune
+  de domicile. Cela se fait en général au contrôle des habitants. Ainsi, la commune est informée de ses
+  habitantes et habitants.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was müssen Personen tun, die sich in einer Gemeinde niederlassen?
+    options_de:
+      a: Sie müssen sich bei ihrer Wohnsitzgemeinde anmelden.
+      b: Sie müssen sich bei der Armee anmelden.
+      c: Sie müssen sich beim Bundesrat anmelden.
+      d: Sie müssen sich bei der Steuerverwaltung des Bundes anmelden.
+    explanation_de: Jede Person, die sich an einem neuen Ort niederlässt, muss sich bei ihrer Wohnsitzgemeinde
+      registrieren. Das geschieht in der Regel bei der Einwohnerkontrolle. So ist die Gemeinde über ihre
+      Einwohnerinnen und Einwohner informiert.

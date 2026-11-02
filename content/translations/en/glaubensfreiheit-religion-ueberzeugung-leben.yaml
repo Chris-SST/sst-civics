@@ -9,6 +9,22 @@ options:
   d: The right to oblige others to adopt one's own faith
 explanation: Every person may freely choose their religion and their philosophical conviction and live
   according to it. One may also change one's faith or have none. No one may be forced to adopt a faith.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gehört gemäss der Bundesverfassung zur Religions- und Gewissensfreiheit?
+    options_de:
+      a: Das Recht, einen Glauben und eine Überzeugung zu haben und danach zu leben
+      b: Nur die Mitgliedschaft in einer anerkannten kantonalen Kirche
+      c: Die Pflicht, den Glauben der eigenen Eltern beizubehalten
+      d: Das Recht, andere zu verpflichten, den eigenen Glauben anzunehmen
+    explanation_de: Jede Person darf ihre Religion und ihre weltanschauliche Überzeugung frei wählen und
+      danach leben. Man darf auch seinen Glauben wechseln oder keinen haben. Niemand darf gezwungen werden,
+      einen Glauben anzunehmen.

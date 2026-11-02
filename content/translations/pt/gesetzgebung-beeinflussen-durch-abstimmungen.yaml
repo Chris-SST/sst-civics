@@ -1,0 +1,31 @@
+id: gesetzgebung-beeinflussen-durch-abstimmungen
+lang: pt
+source_version: 1
+question: Como é que os eleitores na Suíça influenciam diretamente a legislação da Confederação?
+options:
+  a: Votam nas urnas sobre iniciativas e referendos.
+  b: Elegem os juízes que decidem sobre as novas leis.
+  c: Nomeiam os conselheiros federais, que aprovam as novas leis.
+  d: Aprovam eles próprios as leis na Assembleia Federal (Bundesversammlung).
+explanation: Os eleitores participam em votações populares sobre iniciativas e referendos e decidem aí
+  em conjunto. Assim, entre as eleições, participam diretamente na legislação. Isto é uma característica
+  da democracia direta.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie beeinflussen die Stimmberechtigten in der Schweiz die Gesetzgebung des Bundes direkt?
+    options_de:
+      a: Sie stimmen an der Urne über Initiativen und Referenden ab.
+      b: Sie wählen die Richter, die über die neuen Gesetze entscheiden.
+      c: Sie ernennen die Bundesräte, die die neuen Gesetze verabschieden.
+      d: Sie verabschieden die Gesetze selbst in der Bundesversammlung.
+    explanation_de: Die Stimmberechtigten nehmen an Volksabstimmungen über Initiativen und Referenden
+      teil und entscheiden dort gemeinsam. So beteiligen sie sich zwischen den Wahlen direkt an der Gesetzgebung.
+      Das ist ein Merkmal der direkten Demokratie.

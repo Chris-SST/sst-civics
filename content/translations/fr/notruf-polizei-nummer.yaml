@@ -1,0 +1,32 @@
+id: notruf-polizei-nummer
+lang: fr
+source_version: 1
+question: Quel numéro de téléphone compose-t-on en Suisse lorsqu'on a besoin de la police en cas d'urgence
+  ?
+options:
+  a: '143'
+  b: '118'
+  c: '144'
+  d: '117'
+explanation: On joint la police dans toute la Suisse au numéro 117. Les pompiers ont le 118, les services
+  sanitaires (ambulances) le 144. Le 143 est le numéro de La Main Tendue, destiné aux personnes en situation
+  de crise.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Telefonnummer wählt man in der Schweiz, wenn man im Notfall die Polizei braucht?
+    options_de:
+      a: '143'
+      b: '118'
+      c: '144'
+      d: '117'
+    explanation_de: Die Polizei erreicht man in der ganzen Schweiz unter der Nummer 117. Die Feuerwehr
+      hat die 118, die Sanitätsdienste (Ambulanzen) die 144. Die 143 ist die Nummer der Dargebotenen Hand,
+      die für Menschen in einer Krisensituation gedacht ist.

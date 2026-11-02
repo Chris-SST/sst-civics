@@ -1,0 +1,30 @@
+id: regierungsrat-zuerich-zusammensetzung-personen
+lang: fr
+source_version: 1
+question: Quelle affirmation concernant la composition du Conseil d'État (Regierungsrat) zurichois est
+  correcte ?
+options:
+  a: Il se compose de trois personnes.
+  b: Il se compose de sept personnes.
+  c: Il se compose de neuf personnes.
+  d: Il se compose de cinq personnes.
+explanation: Le Conseil d'État zurichois est un collège de sept personnes. Elles dirigent ensemble le
+  canton et dirigent chacune une direction.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage zur Zusammensetzung des Zürcher Regierungsrats ist richtig?
+    options_de:
+      a: Er besteht aus drei Personen.
+      b: Er besteht aus sieben Personen.
+      c: Er besteht aus neun Personen.
+      d: Er besteht aus fünf Personen.
+    explanation_de: Der Zürcher Regierungsrat ist ein Kollegium von sieben Personen. Sie leiten gemeinsam
+      den Kanton und leiten jeweils eine Direktion.

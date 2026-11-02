@@ -1,0 +1,31 @@
+id: bundesparlament-wahl-alle-vier-jahre
+lang: tr
+source_version: 2
+question: Halk, federal parlamentoyu hangi aralıklarla yeniden seçer?
+options:
+  a: Üç yılda bir
+  b: Dört yılda bir
+  c: Altı yılda bir
+  d: İki yılda bir
+explanation: Halk, Ulusal Konsey'i (Nationalrat) dört yılda bir yeniden seçer. Kantonlar Konseyi'nin (Ständerat)
+  üyeleri de bugün tüm kantonlarda dört yıllığına seçilir. Seçimin nasıl yapılacağını ve kısmen ne zaman
+  yapılacağını her kanton kendisi belirler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welchen Abständen wählt das Volk das eidgenössische Parlament neu?
+    options_de:
+      a: Alle drei Jahre
+      b: Alle vier Jahre
+      c: Alle sechs Jahre
+      d: Alle zwei Jahre
+    explanation_de: Das Volk wählt den Nationalrat alle vier Jahre neu. Die Mitglieder des Ständerats
+      werden heute ebenfalls in allen Kantonen für vier Jahre gewählt. Wie die Wahl durchgeführt wird
+      und teilweise wann sie stattfindet, bestimmt jeder Kanton selbst.

@@ -1,0 +1,32 @@
+id: grundrecht-meinungsfreiheit-informationsfreiheit
+lang: tr
+source_version: 1
+question: Hangi temel hak, kişinin kendi görüşünü oluşturma ve herkesin erişebileceği kaynaklardan bilgi
+  edinme özgürlüğünü korur?
+options:
+  a: Yerleşme özgürlüğü
+  b: Görüş ve bilgi edinme özgürlüğü
+  c: Ekonomik özgürlük
+  d: Toplanma özgürlüğü
+explanation: Federal Anayasa, görüş ve bilgi edinme özgürlüğünü 16. maddede korur. Herkes, herkesin erişebileceği
+  kaynaklardan bilgileri özgürce edinebilir. Bu, demokrasinin önemli bir temelidir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Grundrecht schützt die Freiheit, sich eine eigene Meinung zu bilden und sich
+      aus allgemein zugänglichen Quellen zu informieren?
+    options_de:
+      a: Niederlassungsfreiheit
+      b: Meinungs- und Informationsfreiheit
+      c: Wirtschaftsfreiheit
+      d: Versammlungsfreiheit
+    explanation_de: Die Bundesverfassung schützt die Meinungs- und Informationsfreiheit in Artikel 16.
+      Jede Person kann sich frei aus allgemein zugänglichen Quellen Informationen beschaffen. Dies ist
+      eine wichtige Grundlage der Demokratie.

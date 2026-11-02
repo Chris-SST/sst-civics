@@ -1,0 +1,29 @@
+id: emilie-lieberherr-frauenstimmrecht
+lang: sq
+source_version: 1
+question: Për çfarë angazhohej politikania zyriheze Emilie Lieberherr?
+options:
+  a: Për ndërtimin e aeroportit të Zyrihut
+  b: Për anëtarësimin e Zvicrës në OKB
+  c: Për të drejtën e votës dhe të zgjedhjes së grave
+  d: Për heqjen e kuvendit të komunës (Gemeindeversammlung)
+explanation: Emilie Lieberherr luftoi në vitet 1960 për të drejtën e votës dhe të zgjedhjes së grave.
+  Në nivel të Konfederatës u prezantua në vitin 1971. Në kantonin e Zyrihut vlen që nga viti 1970.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür setzte sich die Zürcher Politikerin Emilie Lieberherr ein?
+    options_de:
+      a: Für den Bau des Flughafens Zürich
+      b: Für den Beitritt der Schweiz zur UNO
+      c: Für das Stimm- und Wahlrecht der Frauen
+      d: Für die Abschaffung der Gemeindeversammlung
+    explanation_de: Emilie Lieberherr kämpfte in den 1960er Jahren für das Stimm- und Wahlrecht der Frauen.
+      Auf Ebene des Bundes wurde es im Jahr 1971 eingeführt. Im Kanton Zürich gilt es seit dem Jahr 1970.

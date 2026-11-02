@@ -19,7 +19,7 @@ glossary:
 - Wilhelm Tell
 - Sage
 - Innerschweiz
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-241
@@ -40,3 +40,29 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage sagt «aus der Innerschweiz», das gibt einen leichten Hinweis; das ist aber unproblematisch,
+        da die Themenliste genau diese Formulierung verwendet.'
+      - 'Klein: Die Erklärung könnte «fremde Vögte» kurz erklären (Vögte = von den Habsburgern eingesetzte
+        Verwalter), damit sie für B1-Lernende noch klarer ist.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

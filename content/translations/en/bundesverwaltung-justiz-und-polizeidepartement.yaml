@@ -11,6 +11,23 @@ explanation: The federal administration is divided into departments. The Federal
   and Police is one of them and belongs to the administration under the leadership of the Federal Council
   (Bundesrat). The National Council and the Federal Assembly belong to Parliament, and the Federal Supreme
   Court belongs to the judiciary.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches der folgenden Organe gehört zur Bundesverwaltung?
+    options_de:
+      a: Der Nationalrat
+      b: Die Bundesversammlung
+      c: Das Bundesgericht
+      d: Das Eidgenössische Justiz- und Polizeidepartement
+    explanation_de: Die Bundesverwaltung ist in Departemente gegliedert. Das Eidgenössische Justiz- und
+      Polizeidepartement ist eines davon und gehört zur Verwaltung unter der Leitung des Bundesrates.
+      Der Nationalrat und die Bundesversammlung gehören zum Parlament, und das Bundesgericht gehört zur
+      Judikative.

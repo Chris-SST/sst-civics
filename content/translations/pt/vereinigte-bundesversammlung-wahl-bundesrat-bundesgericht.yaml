@@ -1,0 +1,33 @@
+id: vereinigte-bundesversammlung-wahl-bundesrat-bundesgericht
+lang: pt
+source_version: 2
+question: Quem elege os membros do Conselho Federal (Bundesrat) e do Tribunal Federal (Bundesgericht)?
+options:
+  a: O povo nas urnas
+  b: Os governos dos cantões
+  c: O Conselho Nacional (Nationalrat) e o Conselho dos Estados (Ständerat) em conjunto
+  d: Os presidentes e as presidentes dos partidos
+explanation: Para estas eleições, o Conselho Nacional e o Conselho dos Estados reúnem-se. Formam então
+  a Assembleia Federal (Bundesversammlung) Reunida e elegem os membros do Conselho Federal e do Tribunal
+  Federal. O povo elege o Conselho Nacional e, segundo as regras do próprio cantão, também os membros
+  do Conselho dos Estados, mas não o Conselho Federal.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer wählt die Mitglieder des Bundesrates und des Bundesgerichts?
+    options_de:
+      a: Das Volk an der Urne
+      b: Die Regierungen der Kantone
+      c: Der Nationalrat und der Ständerat gemeinsam
+      d: Die Präsidenten und die Präsidentinnen der Parteien
+    explanation_de: Für diese Wahlen versammeln sich der Nationalrat und der Ständerat. Sie bilden dann
+      die Vereinigte Bundesversammlung und wählen die Mitglieder des Bundesrates und des Bundesgerichts.
+      Das Volk wählt den Nationalrat und, nach den Regeln des jeweiligen Kantons, auch die Mitglieder
+      des Ständerates, aber nicht den Bundesrat.

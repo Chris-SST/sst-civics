@@ -11,6 +11,23 @@ options:
 explanation: Freedom of expression allows you to express and spread your own opinion freely. It is set
   out in Article 16 of the Federal Constitution. The right to vote, by contrast, concerns participation
   in elections and referendums.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches durch die Bundesverfassung garantierte Grundrecht erlaubt es Ihnen, Ihre eigenen
+      Ansichten frei zu äussern und zu verbreiten?
+    options_de:
+      a: Die Meinungsfreiheit
+      b: Das Stimmrecht
+      c: Die Eigentumsgarantie
+      d: Die Niederlassungsfreiheit
+    explanation_de: Die Meinungsfreiheit erlaubt es Ihnen, Ihre eigene Meinung frei zu äussern und zu
+      verbreiten. Sie ist in Artikel 16 der Bundesverfassung festgehalten. Das Stimmrecht hingegen betrifft
+      die Teilnahme an Wahlen und Abstimmungen.

@@ -1,0 +1,35 @@
+id: pensionskasse-zweiter-pfeiler-altersvorsorge
+lang: sq
+source_version: 1
+question: Parashikimi për pleqërinë në Zvicër bazohet në tri shtylla. Cila institucion përbën shtyllën
+  e dytë?
+options:
+  a: Përfitimet plotësuese të sigurimit të pleqërisë dhe të të mbijetuarve (AHV)
+  b: Sigurimi i pleqërisë dhe i të mbijetuarve (AHV) (sigurimi shtetëror i pensionit)
+  c: Arka e pensioneve (parashikimi profesional)
+  d: Llogaria private e kursimit me zbritje tatimore (shtylla 3a)
+explanation: Arka e pensioneve i përket parashikimit profesional dhe përbën shtyllën e dytë. Ajo plotëson
+  sigurimin e pleqërisë dhe të të mbijetuarve, në mënyrë që pensionistët dhe pensionistet të mund ta vazhdojnë
+  standardin e tyre të zakonshëm të jetesës në një mënyrë të përshtatshme. Sigurimi i pleqërisë dhe i
+  të mbijetuarve është shtylla e parë, parashikimi privat është shtylla e tretë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Altersvorsorge in der Schweiz beruht auf drei Säulen. Welche Institution bildet die
+      zweite Säule?
+    options_de:
+      a: Ergänzungsleistungen zur Alters- und Hinterlassenenversicherung (AHV)
+      b: Alters- und Hinterlassenenversicherung (AHV) (staatliche Rentenversicherung)
+      c: Pensionskasse (berufliche Vorsorge)
+      d: Privates Sparkonto mit Steuerabzug (Säule 3a)
+    explanation_de: Die Pensionskasse gehört zur beruflichen Vorsorge und bildet die zweite Säule. Sie
+      ergänzt die Alters- und Hinterlassenenversicherung, damit die Rentnerinnen und Rentner ihren gewohnten
+      Lebensstandard in angemessener Weise fortführen können. Die Alters- und Hinterlassenenversicherung
+      ist die erste Säule, die private Vorsorge ist die dritte Säule.

@@ -1,0 +1,31 @@
+id: berufsinformationszentrum-auskunft-lehrstellen-berufswahl
+lang: it
+source_version: 1
+question: Dove si ottengono informazioni su posti di tirocinio, scelta della professione e lavoro?
+options:
+  a: Nel Centro d'informazione professionale
+  b: All'Ufficio dello stato civile
+  c: Nella scuola dell'infanzia
+  d: All'Ufficio di esecuzione
+explanation: Il Centro d'informazione professionale (BIZ) fornisce informazioni e consulenza su posti
+  di tirocinio, scelta della professione, formazione continua e lavoro. L'offerta è aperta a giovani e
+  adulti. Gli altri uffici e servizi hanno compiti diversi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo erhält man Informationen über Lehrstellen, Berufswahl und Arbeit?
+    options_de:
+      a: Im Berufsinformationszentrum
+      b: Beim Zivilstandsamt
+      c: Im Kindergarten
+      d: Beim Betreibungsamt
+    explanation_de: Das Berufsinformationszentrum (BIZ) bietet Informationen und Beratung zu Lehrstellen,
+      Berufswahl, Weiterbildung und Arbeit. Das Angebot steht Jugendlichen und Erwachsenen offen. Die
+      anderen Ämter und Dienste haben andere Aufgaben.

@@ -1,0 +1,32 @@
+id: polizei-befugnis-festnahme-straftaeter
+lang: sq
+source_version: 2
+question: Cila instancë ka të drejtë të arrestojë persona që dyshohen se kanë kryer një vepër penale?
+options:
+  a: Autoriteti shkollor
+  b: Policia
+  c: Parlamenti
+  d: Zyra e tatimeve
+explanation: Policia ka të drejtë të arrestojë persona që dyshohen për një vepër penale, nën kushtet e
+  përcaktuara me ligj. Nëse dikush është fajtor, vendos më pas një gjykatë. Autoriteti shkollor, parlamenti
+  dhe zyra e tatimeve nuk e kanë këtë kompetencë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Instanz hat das Recht, Personen zu verhaften, die verdächtigt werden, eine Straftat
+      begangen zu haben?
+    options_de:
+      a: Die Schulbehörde
+      b: Die Polizei
+      c: Das Parlament
+      d: Das Steueramt
+    explanation_de: Die Polizei hat das Recht, Personen zu verhaften, die einer Straftat verdächtigt werden,
+      unter den gesetzlich festgelegten Bedingungen. Ob jemand schuldig ist, entscheidet danach ein Gericht.
+      Die Schulbehörde, das Parlament und das Steueramt haben diese Zuständigkeit nicht.

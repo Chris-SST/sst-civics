@@ -1,0 +1,32 @@
+id: auswanderung-19-jahrhundert-grund-not
+lang: sq
+source_version: 1
+question: Në shekullin e 19-të shumë njerëz e lanë Zvicrën dhe emigruan, për shembull, në Amerikë. Cila
+  ishte një arsye e rëndësishme për këtë?
+options:
+  a: Nevoja dhe mungesa e punës e kërcënonin ekzistencën e tyre.
+  b: Konfederata ua ndaloi të jetonin në Zvicër.
+  c: Zvicra kishte shumë pak hapësirë për fabrika.
+  d: Jashtë vendit nuk kishte taksa për të ardhurit e rinj.
+explanation: Në shekullin e 19-të Zvicra ishte ende një vend emigrimi. Uria, varfëria dhe mungesa e punës
+  i shtynë shumë njerëz të kërkonin një jetë të re jashtë vendit. Vetëm më vonë Zvicra u bë vend imigrimi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Im 19. Jahrhundert verliessen viele Menschen die Schweiz und wanderten zum Beispiel nach
+      Amerika aus. Was war ein wichtiger Grund dafür?
+    options_de:
+      a: Not und Mangel an Arbeit bedrohten ihre Existenz.
+      b: Der Bund verbot ihnen, in der Schweiz zu leben.
+      c: Die Schweiz hatte sehr wenig Platz für Fabriken.
+      d: Im Ausland gab es keine Steuern für Neuankömmlinge.
+    explanation_de: Im 19. Jahrhundert war die Schweiz noch ein Auswanderungsland. Hunger, Armut und Mangel
+      an Arbeit trieben viele Menschen dazu, ein neues Leben im Ausland zu suchen. Erst später wurde die
+      Schweiz zu einem Einwanderungsland.

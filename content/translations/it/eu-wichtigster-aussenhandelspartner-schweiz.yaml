@@ -1,0 +1,29 @@
+id: eu-wichtigster-aussenhandelspartner-schweiz
+lang: it
+source_version: 1
+question: Qual è il partner più importante per l'economia svizzera nel commercio estero?
+options:
+  a: La Cina
+  b: Il Giappone
+  c: L'Unione europea
+  d: Gli Stati Uniti d'America
+explanation: La maggior parte degli scambi commerciali della Svizzera con l'estero avviene con i Paesi
+  dell'Unione europea. Per questo motivo la Svizzera è legata all'UE da diversi accordi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches ist der wichtigste Partner für die Schweizer Wirtschaft im Aussenhandel?
+    options_de:
+      a: China
+      b: Japan
+      c: Die Europäische Union
+      d: Die Vereinigten Staaten von Amerika
+    explanation_de: Der grösste Teil des Handels der Schweiz mit dem Ausland findet mit den Ländern der
+      Europäischen Union statt. Aus diesem Grund ist die Schweiz durch mehrere Abkommen mit der EU verbunden.

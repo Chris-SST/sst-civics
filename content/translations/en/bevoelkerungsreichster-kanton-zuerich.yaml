@@ -1,0 +1,29 @@
+id: bevoelkerungsreichster-kanton-zuerich
+lang: en
+source_version: 1
+question: Which canton has the largest population?
+options:
+  a: Bern
+  b: Zurich
+  c: Vaud
+  d: Aargau
+explanation: The canton of Zurich has the largest population in Switzerland, at around 1.6 million. It
+  is followed by the cantons of Bern and Vaud.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Kanton hat die grösste Bevölkerung?
+    options_de:
+      a: Bern
+      b: Zürich
+      c: Waadt
+      d: Aargau
+    explanation_de: Der Kanton Zürich hat mit rund 1,6 Millionen die grösste Bevölkerung der Schweiz.
+      Es folgen die Kantone Bern und Waadt.

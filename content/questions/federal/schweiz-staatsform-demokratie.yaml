@@ -22,7 +22,7 @@ sources:
 glossary:
 - Demokratie
 - Staatsform
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-021
@@ -44,3 +44,42 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Satz «Die Bundesverfassung hält dies als Grundlage des Staates fest» ist etwas vage;
+        besser wäre etwa «Schon die Präambel der Bundesverfassung nennt die Demokratie als Ziel des Staates».'
+      - 'Klein: Die Erklärung könnte den Begriff «direkte Demokratie» nennen, da er im Test oft vorkommt,
+        zum Beispiel: «Weil das Volk auch über Sachfragen abstimmt, nennt man die Schweiz eine direkte
+        Demokratie.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falschen Antworten sind sehr leicht zu erkennen. Eine plausiblere Alternative wie
+        «Sie ist ein Staat, in dem nur das Parlament entscheidet und das Volk nicht abstimmt» würde die
+        Frage etwas anspruchsvoller machen.'
+      - 'Klein: Die Erklärung könnte erwähnen, dass die Schweiz eine direkte Demokratie ist, zum Beispiel
+        mit dem Satz «Die Schweiz ist eine direkte Demokratie: Das Volk wählt und stimmt auch direkt über
+        Sachfragen ab.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte «direkte Demokratie» erwähnen, damit sie näher an der Broschüre ist,
+        zum Beispiel: «Die Schweiz ist eine direkte Demokratie: Das Volk wählt das Parlament und stimmt
+        über Sachfragen ab.»'
+      - 'Klein: Die Erklärung sagt, die Bundesverfassung halte die Demokratie als Grundlage des Staates
+        fest. Das stützt keine der angegebenen Quellen ausdrücklich. Besser wäre, diesen Satz zu streichen
+        oder durch «Demokratie bedeutet Herrschaft des Volkes» aus der Broschüre zu ersetzen.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

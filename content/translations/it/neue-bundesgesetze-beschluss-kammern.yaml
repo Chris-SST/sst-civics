@@ -1,0 +1,31 @@
+id: neue-bundesgesetze-beschluss-kammern
+lang: it
+source_version: 1
+question: Chi decide la maggior parte delle nuove leggi federali?
+options:
+  a: Il Tribunale federale (Bundesgericht)
+  b: Il Consiglio federale (Bundesrat) da solo
+  c: I parlamenti cantonali
+  d: Il Consiglio nazionale (Nationalrat) e il Consiglio degli Stati (Ständerat)
+explanation: La maggior parte delle nuove leggi federali è adottata da entrambe le camere del Parlamento.
+  Il Consiglio federale prepara i progetti, ma non decide da solo. Contro una legge il popolo può richiedere
+  un referendum.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet über den grössten Teil der neuen Bundesgesetze?
+    options_de:
+      a: Das Bundesgericht
+      b: Der Bundesrat allein
+      c: Die Kantonsparlamente
+      d: Der Nationalrat und der Ständerat
+    explanation_de: Der grösste Teil der neuen Bundesgesetze wird von beiden Kammern des Parlaments verabschiedet.
+      Der Bundesrat bereitet die Entwürfe vor, entscheidet aber nicht allein. Gegen ein Gesetz kann das
+      Volk ein Referendum verlangen.

@@ -1,0 +1,31 @@
+id: krankenversicherung-obligatorisch-einwohner
+lang: it
+source_version: 1
+question: Chi deve stipulare un'assicurazione malattia in Svizzera?
+options:
+  a: Solo le persone con cittadinanza (Bürgerrecht) svizzera
+  b: Tutte le persone che risiedono in Svizzera
+  c: Solo le persone con meno di 65 anni
+  d: Solo le persone che esercitano un'attività lucrativa
+explanation: L'assicurazione obbligatoria delle cure medico-sanitarie vale per tutte le persone domiciliate
+  in Svizzera. La cittadinanza, l'attività lucrativa e l'età non hanno alcuna importanza. L'assicurazione
+  deve essere stipulata entro tre mesi dall'arrivo in Svizzera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz eine Krankenversicherung abschliessen?
+    options_de:
+      a: Nur Personen mit schweizerischem Bürgerrecht
+      b: Alle Personen, die in der Schweiz wohnen
+      c: Nur Personen unter 65 Jahren
+      d: Nur Personen, die einer Erwerbstätigkeit nachgehen
+    explanation_de: Die obligatorische Krankenpflegeversicherung gilt für alle Personen, die in der Schweiz
+      wohnhaft sind. Das Bürgerrecht, die Erwerbstätigkeit und das Alter spielen keine Rolle. Die Versicherung
+      muss innerhalb von drei Monaten nach der Ankunft in der Schweiz abgeschlossen werden.

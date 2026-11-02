@@ -9,6 +9,21 @@ options:
   d: It is the oldest railway tunnel in Europe.
 explanation: The Gotthard Base Tunnel is the longest railway tunnel in the world. It connects northern
   Switzerland with Ticino and is an important part of the north-south axis through the Alps.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wodurch zeichnet sich der Gotthard-Basistunnel im weltweiten Vergleich aus?
+    options_de:
+      a: Er ist der längste Eisenbahntunnel der Welt.
+      b: Er ist der höchstgelegene Eisenbahntunnel der Welt.
+      c: Er ist der längste Strassentunnel der Welt.
+      d: Er ist der älteste Eisenbahntunnel Europas.
+    explanation_de: Der Gotthard-Basistunnel ist der längste Eisenbahntunnel der Welt. Er verbindet die
+      Nordschweiz mit dem Tessin und ist ein wichtiger Bestandteil der Nord-Süd-Achse durch die Alpen.

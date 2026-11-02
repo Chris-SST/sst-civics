@@ -24,7 +24,7 @@ glossary:
 - Vermögenssteuer
 - Steuer
 - Gemeinde
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-194
@@ -47,3 +47,35 @@ checks:
     at: *id002
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Verrechnungssteuer wird auf Zinsen und Erträge von Bankguthaben und Wertschriften
+        erhoben, darum kann sie leicht verwechselt werden; die Erklärung könnte ergänzen: «Die Verrechnungssteuer
+        ist eine Bundessteuer auf Zinsen und Erträge, nicht auf das Vermögen selbst.»'
+      - 'Klein: Der Fachbegriff «natürliche Personen» ist für Niveau B1 schwer; besser «das Vermögen von
+        Privatpersonen (natürlichen Personen)» schreiben.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Verrechnungssteuer wird ebenfalls auf Bankguthaben und Wertschriften erhoben, nämlich
+        auf deren Zinsen und Dividenden; die Erklärung könnte deshalb ergänzen: «Die Verrechnungssteuer
+        des Bundes wird auf Zinsen und Dividenden erhoben, nicht auf dem Vermögen selbst.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «auf dem Besitz einer Person» ist etwas ungenau und umständlich; einfacher wäre «auf dem
+        Vermögen einer Person (zum Beispiel Bankguthaben und Wertschriften)».'
+    round: 1
+    at: &id003 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id003

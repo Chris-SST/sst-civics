@@ -1,0 +1,31 @@
+id: sbb-abkuerzung-bedeutung-bundesbahnen
+lang: es
+source_version: 1
+question: ¿Qué significa la abreviatura «SBB» que se ve en los trenes y en las estaciones de Suiza?
+options:
+  a: Empresas suizas de autobuses (Schweizer Busbetriebe)
+  b: Ferrocarriles Federales Suizos (Schweizerische Bundesbahnen)
+  c: Empresas suizas de ferrocarril y autobús (Schweizerische Bahn- und Busbetriebe)
+  d: Ferrocarriles suizos de montaña (Schweizer Bergbahnen)
+explanation: SBB significa Schweizerische Bundesbahnen (Ferrocarriles Federales Suizos). La empresa explota
+  una gran parte de la red ferroviaria suiza y pertenece a la Confederación. Además, existen otras empresas
+  ferroviarias, por ejemplo BLS o el Ferrocarril Rético (Rhätische Bahn).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet die Abkürzung «SBB», die man auf Zügen und in Bahnhöfen in der Schweiz sieht?
+    options_de:
+      a: Schweizer Busbetriebe
+      b: Schweizerische Bundesbahnen
+      c: Schweizerische Bahn- und Busbetriebe
+      d: Schweizer Bergbahnen
+    explanation_de: SBB bedeutet Schweizerische Bundesbahnen. Das Unternehmen betreibt einen grossen Teil
+      des Schweizer Eisenbahnnetzes und gehört dem Bund. Daneben gibt es weitere Eisenbahnunternehmen,
+      zum Beispiel die BLS oder die Rhätische Bahn.

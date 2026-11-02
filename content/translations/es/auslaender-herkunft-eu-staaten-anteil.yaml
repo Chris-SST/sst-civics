@@ -1,0 +1,31 @@
+id: auslaender-herkunft-eu-staaten-anteil
+lang: es
+source_version: 1
+question: ¿De dónde procede la mayor parte de las personas extranjeras residentes en Suiza?
+options:
+  a: De Estados de Asia, aproximadamente dos tercios
+  b: De Estados de África, aproximadamente la mitad
+  c: De Estados de la Unión Europea, aproximadamente dos tercios
+  d: De Estados de América, aproximadamente un tercio
+explanation: Aproximadamente el 66 por ciento de la población extranjera residente procede de Estados
+  de la UE, es decir, alrededor de dos tercios. El resto procede de otros Estados europeos y del resto
+  del mundo. La cifra puede variar ligeramente con el tiempo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Woher stammt der grösste Teil der in der Schweiz wohnhaften ausländischen Personen?
+    options_de:
+      a: Aus Staaten Asiens, ungefähr zwei Drittel
+      b: Aus Staaten Afrikas, ungefähr die Hälfte
+      c: Aus Staaten der Europäischen Union, ungefähr zwei Drittel
+      d: Aus Staaten Amerikas, ungefähr ein Drittel
+    explanation_de: Ungefähr 66 Prozent der ansässigen ausländischen Bevölkerung stammen aus Staaten der
+      EU, das heisst rund zwei Drittel. Der Rest stammt aus anderen europäischen Staaten und aus dem Rest
+      der Welt. Die Zahl kann sich mit der Zeit leicht ändern.

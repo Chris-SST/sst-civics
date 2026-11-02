@@ -1,0 +1,29 @@
+id: heirat-planen-zivilstandsamt
+lang: sq
+source_version: 1
+question: Në cilën zyrë drejtohen çiftet që dëshirojnë të martohen?
+options:
+  a: Te Bordi i shkollës (Schulpflege)
+  b: Te Zyra e gjendjes civile
+  c: Te Zyra e tatimeve
+  d: Te Zyra e përmbarimit
+explanation: Zyra e gjendjes civile përgatit dhe kryen martesën. Ajo regjistron zyrtarisht edhe ngjarje
+  të tjera, si lindjet dhe vdekjet.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welche Stelle wenden sich Paare, die heiraten möchten?
+    options_de:
+      a: An die Schulpflege
+      b: An das Zivilstandsamt
+      c: An das Steueramt
+      d: An das Betreibungsamt
+    explanation_de: Das Zivilstandsamt bereitet die Eheschliessung vor und führt sie durch. Es registriert
+      auch andere Ereignisse amtlich, wie Geburten und Todesfälle.

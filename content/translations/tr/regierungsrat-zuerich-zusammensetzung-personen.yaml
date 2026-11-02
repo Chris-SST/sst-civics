@@ -1,0 +1,29 @@
+id: regierungsrat-zuerich-zusammensetzung-personen
+lang: tr
+source_version: 1
+question: Zürich Hükümet Konseyi'nin (Regierungsrat) bileşimiyle ilgili hangi ifade doğrudur?
+options:
+  a: Üç kişiden oluşur.
+  b: Yedi kişiden oluşur.
+  c: Dokuz kişiden oluşur.
+  d: Beş kişiden oluşur.
+explanation: Zürich Hükümet Konseyi yedi kişiden oluşan bir kuruldur. Üyeleri kantonu birlikte yönetir
+  ve her biri bir müdürlüğün (Direktion) başında yer alır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage über die Zusammensetzung des Zürcher Regierungsrates ist richtig?
+    options_de:
+      a: Er besteht aus drei Personen.
+      b: Er besteht aus sieben Personen.
+      c: Er besteht aus neun Personen.
+      d: Er besteht aus fünf Personen.
+    explanation_de: Der Zürcher Regierungsrat ist ein Gremium aus sieben Personen. Seine Mitglieder leiten
+      den Kanton gemeinsam und jedes von ihnen steht an der Spitze einer Direktion.

@@ -1,0 +1,33 @@
+id: dampfmaschine-industrialisierung-schweiz
+lang: fr
+source_version: 2
+question: Quelle invention a fortement marqué l'industrialisation en Suisse au XIXe siècle ?
+options:
+  a: L'avion
+  b: La machine à vapeur
+  c: L'ordinateur
+  d: Le travail à la chaîne
+explanation: Au XIXe siècle, la machine à vapeur est devenue importante en Suisse. Elle faisait fonctionner
+  les machines dans les fabriques et, plus tard, aussi les chemins de fer, et de plus en plus de personnes
+  travaillaient en fabrique. L'avion, le travail à la chaîne et l'ordinateur ne sont devenus importants
+  qu'au XXe siècle.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Fliessband» und «Fliessbandarbeit» bezeichnen hier dasselbe, die Dampfmaschine
+      bleibt die richtige Antwort.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Erfindung hat die Industrialisierung in der Schweiz im 19. Jahrhundert stark geprägt?
+    options_de:
+      a: Das Flugzeug
+      b: Die Dampfmaschine
+      c: Der Computer
+      d: Die Fliessbandarbeit
+    explanation_de: Im 19. Jahrhundert wurde die Dampfmaschine in der Schweiz wichtig. Sie betrieb die
+      Maschinen in den Fabriken und später auch die Eisenbahnen, und immer mehr Menschen arbeiteten in
+      der Fabrik. Das Flugzeug, die Fliessbandarbeit und der Computer wurden erst im 20. Jahrhundert wichtig.

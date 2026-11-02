@@ -1,0 +1,29 @@
+id: einwohnerreichste-stadt-der-schweiz
+lang: tr
+source_version: 1
+question: İsviçre'de en fazla nüfusa sahip şehir hangisidir?
+options:
+  a: Cenevre
+  b: Zürih
+  c: Bern
+  d: Basel
+explanation: Zürih, İsviçre'nin en büyük şehridir. Bern, Konfederasyon şehri olmasına rağmen nüfusu çok
+  daha azdır. Cenevre ve Basel de daha küçüktür.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Stadt hat in der Schweiz die grösste Bevölkerung?
+    options_de:
+      a: Genf
+      b: Zürich
+      c: Bern
+      d: Basel
+    explanation_de: Zürich ist die grösste Stadt der Schweiz. Obwohl Bern die Bundesstadt ist, ist ihre
+      Bevölkerungszahl viel geringer. Genf und Basel sind ebenfalls kleiner.

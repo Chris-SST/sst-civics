@@ -1,0 +1,32 @@
+id: familienzulage-fuer-eltern
+lang: pt
+source_version: 1
+question: Que prestação estatal recebem os pais na Suíça quando são empregados ou trabalham por conta
+  própria e têm filhos?
+options:
+  a: A pensão de invalidez
+  b: O subsídio de desemprego
+  c: A prestação complementar ao seguro de velhice e sobrevivência (AHV)
+  d: O abono de família
+explanation: Os abonos de família ajudam as famílias a suportar uma parte dos custos com os filhos. Compreendem
+  os abonos por filho e os abonos de formação. Também os trabalhadores por conta própria podem recebê-los.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Leistung erhalten Eltern in der Schweiz, wenn sie angestellt oder selbstständig
+      erwerbstätig sind und Kinder haben?
+    options_de:
+      a: Die Invalidenrente
+      b: Das Arbeitslosengeld
+      c: Die Ergänzungsleistung zur Alters- und Hinterlassenenversicherung (AHV)
+      d: Die Familienzulage
+    explanation_de: Die Familienzulagen helfen den Familien, einen Teil der Kosten für Kinder zu tragen.
+      Sie umfassen die Kinderzulagen und die Ausbildungszulagen. Auch Selbstständigerwerbende können sie
+      erhalten.

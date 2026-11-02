@@ -1,0 +1,31 @@
+id: mieterverband-vertritt-mietende
+lang: tr
+source_version: 1
+question: Kiracılar Birliği'nin (Mieterverband) görevi nedir?
+options:
+  a: Ev sahiplerinin çıkarlarını temsil eder
+  b: Tüm konutların kira bedellerini belirler
+  c: Kantonun adına konutları kiraya verir
+  d: Kiracıların çıkarlarını temsil eder
+explanation: Kiracılar Birliği, kiracıların çıkarlarını savunan bir kuruluştur. Üyelerine örneğin kira
+  hukuku konusundaki sorularda danışmanlık yapar. Ev sahiplerinin çıkarlarını ise başka birlikler temsil
+  eder.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was ist die Aufgabe des Mieterverbands?
+    options_de:
+      a: Er vertritt die Interessen der Vermieter
+      b: Er legt die Mietzinse aller Wohnungen fest
+      c: Er vermietet Wohnungen im Namen des Kantons
+      d: Er vertritt die Interessen der Mieter
+    explanation_de: Der Mieterverband ist eine Organisation, die die Interessen der Mieter verteidigt.
+      Er berät seine Mitglieder zum Beispiel bei Fragen zum Mietrecht. Die Interessen der Vermieter werden
+      hingegen von anderen Verbänden vertreten.

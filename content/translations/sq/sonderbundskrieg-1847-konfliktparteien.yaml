@@ -1,0 +1,31 @@
+id: sonderbundskrieg-1847-konfliktparteien
+lang: sq
+source_version: 1
+question: Mes cilëve u zhvillua në Zvicër lufta e Sonderbundit në vitin 1847?
+options:
+  a: Mes kantoneve gjermanishtfolëse dhe kantoneve frëngjishtfolëse
+  b: Mes forcave liberale dhe kantoneve katolike
+  c: Mes kantoneve të qyteteve dhe kantoneve rurale për shkak të taksave
+  d: Mes Zvicrës dhe Francës
+explanation: Në Sonderbund ishin bashkuar disa kantone katolike-konservatore. Forcat liberale donin një
+  Konfederatë më të fortë. Lufta e shkurtër përfundoi me fitoren e anës liberale dhe hapi rrugën drejt
+  shtetit federal të vitit 1848.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Zwischen wem wurde in der Schweiz im Jahr 1847 der Sonderbundskrieg geführt?
+    options_de:
+      a: Zwischen den deutschsprachigen Kantonen und den französischsprachigen Kantonen
+      b: Zwischen den liberalen Kräften und den katholischen Kantonen
+      c: Zwischen den Städtekantonen und den ländlichen Kantonen wegen der Steuern
+      d: Zwischen der Schweiz und Frankreich
+    explanation_de: Im Sonderbund hatten sich mehrere katholisch-konservative Kantone zusammengeschlossen.
+      Die liberalen Kräfte wollten einen stärkeren Bund. Der kurze Krieg endete mit dem Sieg der liberalen
+      Seite und ebnete den Weg zum Bundesstaat von 1848.

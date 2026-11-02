@@ -1,0 +1,31 @@
+id: stadtrat-zuerich-aufgabe-verwaltung-leitung
+lang: es
+source_version: 1
+question: ¿Qué función tiene el Consejo de la Ciudad (Stadtrat) de la ciudad de Zúrich?
+options:
+  a: Dirige la administración fiscal cantonal en la ciudad.
+  b: Promulga las leyes cantonales para el territorio de la ciudad.
+  c: Imparte justicia en los litigios entre los habitantes.
+  d: Dirige la administración de la ciudad y establece las directrices de la actuación de la ciudad.
+explanation: El Consejo de la Ciudad es el poder ejecutivo de la ciudad de Zúrich. Dirige la administración
+  de la ciudad y determina en qué dirección se desarrolla la ciudad. Los tribunales imparten justicia,
+  y las leyes cantonales las promulga el Consejo Cantonal (Kantonsrat).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Funktion hat der Stadtrat der Stadt Zürich?
+    options_de:
+      a: Er leitet die kantonale Steuerverwaltung in der Stadt.
+      b: Er erlässt die kantonalen Gesetze für das Gebiet der Stadt.
+      c: Er spricht Recht in den Streitigkeiten zwischen den Einwohnern.
+      d: Er leitet die Verwaltung der Stadt und legt die Richtlinien für das Handeln der Stadt fest.
+    explanation_de: Der Stadtrat ist die ausführende Gewalt der Stadt Zürich. Er leitet die Verwaltung
+      der Stadt und bestimmt, in welche Richtung sich die Stadt entwickelt. Die Gerichte sprechen Recht,
+      und die kantonalen Gesetze werden vom Kantonsrat erlassen.

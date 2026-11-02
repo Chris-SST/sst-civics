@@ -1,0 +1,30 @@
+id: region-basel-pharmaunternehmen-bekannt
+lang: tr
+source_version: 1
+question: İsviçre'nin hangi bölgesi, orada yerleşik büyük ilaç şirketleriyle tanınır?
+options:
+  a: Engadin
+  b: Basel bölgesi
+  c: Ticino
+  d: Valais
+explanation: Basel bölgesinde dünya çapında faaliyet gösteren birçok ilaç şirketinin genel merkezi bulunmaktadır.
+  İlaç sanayisi orada önemli bir ekonomi koludur ve ihracat açısından büyük önem taşır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Region der Schweiz ist für die dort ansässigen grossen Pharmaunternehmen bekannt?
+    options_de:
+      a: Engadin
+      b: Region Basel
+      c: Tessin
+      d: Wallis
+    explanation_de: In der Region Basel haben viele weltweit tätige Pharmaunternehmen ihren Hauptsitz.
+      Die Pharmaindustrie ist dort ein wichtiger Wirtschaftszweig und hat im Hinblick auf den Export eine
+      grosse Bedeutung.

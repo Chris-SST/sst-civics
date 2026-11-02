@@ -1,0 +1,31 @@
+id: aktives-wahlrecht-bedeutung
+lang: tr
+source_version: 3
+question: Aktif seçme hakkı ne anlama gelir?
+options:
+  a: Bir parti kurma hakkı
+  b: Kişinin kendisinin bir göreve seçilme hakkı
+  c: Parlamentoda önergeler sunma hakkı
+  d: Seçimlere ve oylamalara katılma ve kendi oyunu kullanma hakkı
+explanation: Aktif seçme hakkına sahip olan kişi, örneğin Ulusal Konsey (Nationalrat) seçiminde veya bir
+  halk oylamasında olduğu gibi, seçimlerde ve oylamalarda kendi oyunu kullanabilir. Kişinin kendisinin
+  bir göreve seçilme hakkına ise buna karşılık pasif seçme hakkı denir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Was bedeutet aktives Wahlrecht?
+    options_de:
+      a: Das Recht, eine Partei zu gründen
+      b: Das Recht einer Person, selbst in ein Amt gewählt zu werden
+      c: Das Recht, im Parlament Anträge zu stellen
+      d: Das Recht, an Wahlen und Abstimmungen teilzunehmen und seine eigene Stimme abzugeben
+    explanation_de: Eine Person, die das aktive Wahlrecht besitzt, kann bei Wahlen und Abstimmungen ihre
+      eigene Stimme abgeben, wie zum Beispiel bei der Nationalratswahl oder bei einer Volksabstimmung.
+      Das Recht einer Person, selbst in ein Amt gewählt zu werden, nennt man dagegen passives Wahlrecht.

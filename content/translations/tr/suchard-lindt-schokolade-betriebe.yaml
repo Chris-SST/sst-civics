@@ -1,0 +1,31 @@
+id: suchard-lindt-schokolade-betriebe
+lang: tr
+source_version: 1
+question: Philippe Suchard ve Rudolph Lindt işletmelerinde ne üretiyordu?
+options:
+  a: Çikolata
+  b: Makineler
+  c: Saatler
+  d: Tekstil ürünleri
+explanation: Philippe Suchard ve Rudolph Lindt çikolata üretimi için işletmeler kurdu. Böylece çikolata,
+  İsviçre'nin tanınmış bir ürünü haline geldi. Bu sanayi, Zürih'in ekonomi tarihinde de önemli bir rol
+  oynadı.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was stellten Philippe Suchard und Rudolph Lindt in ihren Betrieben her?
+    options_de:
+      a: Schokolade
+      b: Maschinen
+      c: Uhren
+      d: Textilprodukte
+    explanation_de: Philippe Suchard und Rudolph Lindt gründeten Betriebe zur Herstellung von Schokolade.
+      So wurde Schokolade zu einem bekannten Produkt der Schweiz. Diese Industrie spielte auch in der
+      Wirtschaftsgeschichte von Zürich eine wichtige Rolle.

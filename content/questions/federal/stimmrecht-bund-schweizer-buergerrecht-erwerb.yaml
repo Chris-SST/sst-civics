@@ -26,7 +26,7 @@ glossary:
 - Wahlrecht
 - Bürgerrecht
 - Niederlassungsbewilligung
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-082
@@ -48,3 +48,37 @@ checks:
     at: *id002
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort d) nennt als einzige zwei Bedingungen und fällt dadurch auf; besser wäre zum Beispiel
+        «Sobald sie eingebürgert und mindestens 18 Jahre alt ist», und eine falsche Antwort könnte ebenfalls
+        zwei Bedingungen nennen, etwa «Sobald sie den Ausweis C hat und 18 Jahre alt ist».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Person aus dem Ausland» könnte man auch als Auslandschweizerin oder Auslandschweizer
+        verstehen; klarer wäre «eine Ausländerin oder ein Ausländer, die oder der in der Schweiz lebt».'
+      - 'Klein: In der Erklärung sollte «volljährig» mit «also mindestens 18 Jahre alt» ergänzt werden,
+        damit die Lernenden das genaue Alter kennen.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage ist als «Ab welchem Zeitpunkt» formuliert; einfacher wäre «Wann erhält eine
+        Person aus dem Ausland das Stimm- und Wahlrecht auf Bundesebene?».'
+      - 'Klein: Antwort d) ist ein Stück länger als die anderen und nennt zusätzlich «volljährig». Das
+        ist sachlich richtig, kann aber als Hinweis auf die richtige Antwort wirken; die Antworten a)
+        bis c) könnten ähnlich lang formuliert werden.'
+    round: 1
+    at: &id003 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id003

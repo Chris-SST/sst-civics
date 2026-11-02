@@ -1,0 +1,32 @@
+id: gottfried-keller-zuercher-dichter
+lang: it
+source_version: 2
+question: Quale noto poeta e scrittore era originario di Zurigo?
+options:
+  a: Robert Walser
+  b: Gottfried Keller
+  c: Friedrich Dürrenmatt
+  d: Jeremias Gotthelf
+explanation: Gottfried Keller nacque a Zurigo nel 1819, scrisse ad esempio «Enrico il Verde» («Der grüne
+  Heinrich») e lavorò anche come cancelliere del Cantone di Zurigo. Robert Walser era originario di Bienne,
+  Friedrich Dürrenmatt di Konolfingen, nel Cantone di Berna, e Jeremias Gotthelf operò come pastore nel
+  Cantone di Berna.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welcher bekannte Dichter und Schriftsteller stammte aus Zürich?
+    options_de:
+      a: Robert Walser
+      b: Gottfried Keller
+      c: Friedrich Dürrenmatt
+      d: Jeremias Gotthelf
+    explanation_de: Gottfried Keller wurde 1819 in Zürich geboren, schrieb zum Beispiel «Der grüne Heinrich»
+      und arbeitete auch als Staatsschreiber des Kantons Zürich. Robert Walser stammte aus Biel, Friedrich
+      Dürrenmatt aus Konolfingen im Kanton Bern, und Jeremias Gotthelf wirkte als Pfarrer im Kanton Bern.

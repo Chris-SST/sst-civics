@@ -1,0 +1,31 @@
+id: zuerich-huegelzuege-am-zuerichsee
+lang: it
+source_version: 2
+question: Quali catene di colline si trovano sulle rive del lago di Zurigo?
+options:
+  a: Uetliberg, Albis e Pfannenstiel
+  b: Lägern, Irchel e Kohlfirst
+  c: Hörnli, Bachtel e Allmann
+  d: Heitersberg, Gubrist e Randen
+explanation: L'Uetliberg e l'Albis si estendono lungo la riva sinistra del lago di Zurigo, mentre il Pfannenstiel
+  si trova sulla riva destra. Le altre alture si trovano più lontano dal lago, per esempio nel Unterland,
+  nel Weinland, nell'Oberland zurighese o in altri Cantoni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Hügelzüge befinden sich an den Ufern des Zürichsees?
+    options_de:
+      a: Uetliberg, Albis und Pfannenstiel
+      b: Lägern, Irchel und Kohlfirst
+      c: Hörnli, Bachtel und Allmann
+      d: Heitersberg, Gubrist und Randen
+    explanation_de: Der Uetliberg und der Albis erstrecken sich entlang des linken Zürichseeufers, während
+      sich der Pfannenstiel am rechten Ufer befindet. Die anderen Anhöhen befinden sich weiter vom See
+      entfernt, zum Beispiel im Unterland, im Weinland, im Zürcher Oberland oder in anderen Kantonen.

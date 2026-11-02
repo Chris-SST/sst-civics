@@ -1,0 +1,30 @@
+id: ahv-erste-saeule-altersvorsorge
+lang: sq
+source_version: 1
+question: Cila institucion përbën shtyllën e parë të sigurimit për pleqëri në Zvicër?
+options:
+  a: Shtylla private 3a
+  b: sigurimi shtetëror i pleqërisë dhe i të mbijetuarve (AHV)
+  c: Arka e pensionit
+  d: Arka e sigurimit shëndetësor (Krankenkasse)
+explanation: Sigurimi i pleqërisë dhe i të mbijetuarve është sigurimi shtetëror dhe përbën shtyllën e
+  parë. Arka e pensionit është shtylla e dytë, ndërsa sigurimi privat është shtylla e tretë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Institution bildet die erste Säule der Altersvorsorge in der Schweiz?
+    options_de:
+      a: Die private Säule 3a
+      b: Die staatliche Alters- und Hinterlassenenversicherung (AHV)
+      c: Die Pensionskasse
+      d: Die Krankenkasse
+    explanation_de: Die Alters- und Hinterlassenenversicherung ist die staatliche Versicherung und bildet
+      die erste Säule. Die Pensionskasse ist die zweite Säule, während die private Versicherung die dritte
+      Säule ist.

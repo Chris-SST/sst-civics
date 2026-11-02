@@ -1,0 +1,31 @@
+id: reformation-neue-christliche-richtung
+lang: tr
+source_version: 1
+question: 16. yüzyılda Reform hareketinden (Reformation) hangi Hristiyan mezhebi ortaya çıkmıştır?
+options:
+  a: Kıpti Hristiyanlığı
+  b: Roma Katolik Hristiyanlığı
+  c: Ortodoks Hristiyanlığı
+  d: Protestan Hristiyanlığı
+explanation: Reform hareketi, Orta Çağ kilisesi içinde bir yenilenme hareketiydi. Protestan Hristiyanlığı
+  bu hareketten doğmuştur. Zürih'te bu süreçte Huldrych Zwingli etkili olmuştur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche christliche Konfession ist im 16. Jahrhundert aus der Reformbewegung (Reformation)
+      hervorgegangen?
+    options_de:
+      a: Koptisches Christentum
+      b: Römisch-katholisches Christentum
+      c: Orthodoxes Christentum
+      d: Protestantisches Christentum
+    explanation_de: Die Reformbewegung war eine Erneuerungsbewegung innerhalb der mittelalterlichen Kirche.
+      Das protestantische Christentum ist aus dieser Bewegung entstanden. In Zürich war in diesem Prozess
+      Huldrych Zwingli einflussreich.

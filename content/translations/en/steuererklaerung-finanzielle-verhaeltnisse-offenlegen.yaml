@@ -9,6 +9,21 @@ options:
   d: It discloses their financial circumstances to the tax authorities.
 explanation: In the tax return, taxpayers declare their income, assets and deductions. The tax authority
   uses this information to calculate the tax.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wozu dient die Steuererklärung, die Steuerpflichtige jedes Jahr ausfüllen?
+    options_de:
+      a: Sie dient zur Anmeldung beim Einwohneramt.
+      b: Sie ist der Antrag auf Krankenversicherung.
+      c: Sie ist die Anmeldung für den Zivildienst.
+      d: Sie legt den Steuerbehörden ihre finanziellen Verhältnisse offen.
+    explanation_de: In der Steuererklärung geben Steuerpflichtige ihr Einkommen, ihr Vermögen und ihre
+      Abzüge an. Die Steuerbehörde verwendet diese Angaben, um die Steuer zu berechnen.

@@ -1,0 +1,29 @@
+id: schloss-kyburg-standort-kanton
+lang: tr
+source_version: 1
+question: Kyburg Şatosu hangi kantonda bulunmaktadır?
+options:
+  a: Aargau kantonunda
+  b: St. Gallen kantonunda
+  c: Zürih kantonunda
+  d: Thurgau kantonunda
+explanation: Kyburg Şatosu, Töss Nehri'nin üzerindeki bir tepede, Zürih kantonunda bulunmaktadır. Şato,
+  kantonun tanınmış kültürel varlıkları arasında yer alır ve bir müzedir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Kanton befindet sich das Schloss Kyburg?
+    options_de:
+      a: Im Kanton Aargau
+      b: Im Kanton St. Gallen
+      c: Im Kanton Zürich
+      d: Im Kanton Thurgau
+    explanation_de: Das Schloss Kyburg befindet sich auf einem Hügel über der Töss, im Kanton Zürich.
+      Das Schloss gehört zu den bekannten Kulturgütern des Kantons und ist ein Museum.

@@ -1,0 +1,30 @@
+id: schwarzenbach-initiative-ziel-auslaenderanteil
+lang: tr
+source_version: 1
+question: 1970 yılında oylanan Schwarzenbach girişimi neyi istiyordu?
+options:
+  a: Tüm yabancılar için vatandaşlığa kabulü kolaylaştırmak istiyordu.
+  b: Yalnızca İtalya'dan göçü yasaklamak istiyordu.
+  c: İsviçre'de yaşayan yabancıların oranını sınırlamak istiyordu.
+  d: Yabancılar için oy hakkını getirmek istiyordu.
+explanation: Girişim, İsviçre'deki yabancıların oranının sınırlanmasını talep ediyordu. 1970'te halk tarafından
+  reddedildi. O dönemde göçün ne kadar yoğun tartışıldığını gösteriyor.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wollte die im Jahr 1970 zur Abstimmung gebrachte Schwarzenbach-Initiative?
+    options_de:
+      a: Sie wollte die Einbürgerung für alle Ausländer erleichtern.
+      b: Sie wollte nur die Einwanderung aus Italien verbieten.
+      c: Sie wollte den Anteil der in der Schweiz lebenden Ausländer begrenzen.
+      d: Sie wollte das Stimmrecht für Ausländer einführen.
+    explanation_de: Die Initiative forderte die Begrenzung des Anteils der Ausländer in der Schweiz. Sie
+      wurde 1970 vom Volk abgelehnt. Sie zeigt, wie intensiv die Einwanderung zu jener Zeit diskutiert
+      wurde.

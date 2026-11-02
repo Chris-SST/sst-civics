@@ -1,0 +1,29 @@
+id: bag-zustaendig-gesundheitsfragen-bund
+lang: fr
+source_version: 1
+question: Quelle autorité fédérale est compétente pour les questions de santé ?
+options:
+  a: L'Office fédéral de l'environnement (OFEV)
+  b: Le Secrétariat d'État aux migrations (SEM)
+  c: L'Office fédéral de la statistique (OFS)
+  d: L'Office fédéral de la santé publique (OFSP)
+explanation: L'Office fédéral de la santé publique (OFSP) est l'autorité fédérale compétente pour les
+  questions de santé. Il surveille par exemple l'assurance-maladie sociale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Bundesbehörde ist für Gesundheitsfragen zuständig?
+    options_de:
+      a: Das Bundesamt für Umwelt (BAFU)
+      b: Das Staatssekretariat für Migration (SEM)
+      c: Das Bundesamt für Statistik (BFS)
+      d: Das Bundesamt für Gesundheit (BAG)
+    explanation_de: Das Bundesamt für Gesundheit (BAG) ist die für Gesundheitsfragen zuständige Bundesbehörde.
+      Es beaufsichtigt zum Beispiel die soziale Krankenversicherung.

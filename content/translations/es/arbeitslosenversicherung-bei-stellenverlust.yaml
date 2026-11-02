@@ -1,0 +1,29 @@
+id: arbeitslosenversicherung-bei-stellenverlust
+lang: es
+source_version: 1
+question: ¿Qué seguro social interviene cuando una persona pierde su puesto de trabajo?
+options:
+  a: El seguro de invalidez
+  b: El seguro de vejez y supervivencia
+  c: El seguro de desempleo
+  d: El seguro de accidentes
+explanation: El seguro de desempleo paga una indemnización, bajo determinadas condiciones, cuando alguien
+  pierde su puesto de trabajo. También ayuda en la búsqueda de un nuevo empleo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sozialversicherung greift, wenn eine Person ihre Arbeitsstelle verliert?
+    options_de:
+      a: Die Invalidenversicherung
+      b: Die Alters- und Hinterlassenenversicherung
+      c: Die Arbeitslosenversicherung
+      d: Die Unfallversicherung
+    explanation_de: Die Arbeitslosenversicherung zahlt unter bestimmten Bedingungen eine Entschädigung,
+      wenn jemand seine Arbeitsstelle verliert. Sie hilft auch bei der Suche nach einer neuen Stelle.

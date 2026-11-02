@@ -1,0 +1,30 @@
+id: stimmabgabe-per-post-mehrheit
+lang: pt
+source_version: 1
+question: Como é que a maioria dos eleitores na Suíça vota hoje em votações e eleições?
+options:
+  a: Votam no domingo da votação na assembleia municipal (Gemeindeversammlung).
+  b: Depositam o voto pessoalmente na urna no domingo da votação.
+  c: Enviam o voto por correio para a comuna (Gemeinde).
+  d: Votam através de um site da Confederação.
+explanation: A maioria dos eleitores vota por correspondência, ou seja, pelo correio. Ir à urna no domingo
+  da votação já não é habitual para a maioria.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie stimmt die Mehrheit der Stimmberechtigten in der Schweiz heute bei Abstimmungen und
+      Wahlen ab?
+    options_de:
+      a: Sie stimmen am Abstimmungssonntag an der Gemeindeversammlung ab.
+      b: Sie geben ihre Stimme am Abstimmungssonntag persönlich an der Urne ab.
+      c: Sie senden ihre Stimme per Post an die Gemeinde.
+      d: Sie stimmen über eine Website des Bundes ab.
+    explanation_de: Die Mehrheit der Stimmberechtigten stimmt brieflich ab, das heisst per Post. Am Abstimmungssonntag
+      an die Urne zu gehen ist für die Mehrheit nicht mehr üblich.

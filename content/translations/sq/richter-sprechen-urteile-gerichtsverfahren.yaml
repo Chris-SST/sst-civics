@@ -1,0 +1,30 @@
+id: richter-sprechen-urteile-gerichtsverfahren
+lang: sq
+source_version: 1
+question: Kush shqiptoi aktgjykimin në një procedurë gjyqësore?
+options:
+  a: Gjyqtarja ose gjyqtari
+  b: Policja ose polici
+  c: Kryetarja ose kryetari i komunës (Gemeinde)
+  d: Prokurorja ose prokurori
+explanation: Gjyqtaret dhe gjyqtarët vendosin në mënyrë të pavarur në procedurat gjyqësore dhe marrin
+  aktgjykimin. Prokuroria zhvillon hetimin dhe ngre aktakuzën. Policia heton, por nuk shqipton aktgjykim.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer spricht in einem Gerichtsverfahren das Urteil aus?
+    options_de:
+      a: Die Richterin oder der Richter
+      b: Die Polizistin oder der Polizist
+      c: Die Gemeindepräsidentin oder der Gemeindepräsident der Gemeinde
+      d: Die Staatsanwältin oder der Staatsanwalt
+    explanation_de: Richterinnen und Richter entscheiden in Gerichtsverfahren unabhängig und fällen das
+      Urteil. Die Staatsanwaltschaft führt die Untersuchung und erhebt die Anklage. Die Polizei ermittelt,
+      spricht aber kein Urteil aus.

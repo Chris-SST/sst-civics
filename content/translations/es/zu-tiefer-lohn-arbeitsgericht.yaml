@@ -1,0 +1,32 @@
+id: zu-tiefer-lohn-arbeitsgericht
+lang: es
+source_version: 1
+question: Una trabajadora recibe de forma injustificada un salario demasiado bajo. ¿A qué entidad puede
+  recurrir?
+options:
+  a: El Centro Regional de Colocación Laboral (RAV)
+  b: La Oficina Federal de Estadística
+  c: El tribunal laboral
+  d: La asamblea municipal (Gemeindeversammlung)
+explanation: En los conflictos derivados de la relación laboral, por ejemplo por un salario demasiado
+  bajo, es competente el tribunal laboral. El RAV ayuda en la búsqueda de empleo y no en los conflictos
+  salariales.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Arbeitnehmerin erhält ungerechtfertigterweise einen zu tiefen Lohn. An welche Stelle
+      kann sie sich wenden?
+    options_de:
+      a: Das Regionale Arbeitsvermittlungszentrum (RAV)
+      b: Das Bundesamt für Statistik
+      c: Das Arbeitsgericht
+      d: Die Gemeindeversammlung
+    explanation_de: Bei Streitigkeiten aus dem Arbeitsverhältnis, zum Beispiel wegen eines zu tiefen Lohns,
+      ist das Arbeitsgericht zuständig. Das RAV hilft bei der Stellensuche und nicht bei Lohnstreitigkeiten.

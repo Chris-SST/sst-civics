@@ -1,24 +1,25 @@
 id: volksinitiative-ziel-verfassungsaenderung
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.volksrechte
-question_de: Was können Stimmberechtigte mit einer eidgenössischen Volksinitiative verlangen?
+question_de: Was können die Stimmberechtigten mit einer eidgenössischen Volksinitiative verlangen?
 options_de:
-  a: Die Abwahl des Bundesrates
-  b: Eine Änderung der Bundesverfassung
-  c: Die Ablehnung eines bestehenden Bundesgesetzes
-  d: Eine Änderung der Kantonsverfassung
+  a: Dass der Bundesrat abgewählt wird
+  b: Dass die Bundesverfassung geändert wird
+  c: Dass ein bestehendes Bundesgesetz direkt aufgehoben wird
+  d: Dass die Kantonsverfassung geändert wird
 correct: b
-explanation_de: Mit einer Volksinitiative können Stimmberechtigte eine Änderung der Bundesverfassung verlangen.
-  Die Ablehnung eines Gesetzes wäre dagegen Sache des Referendums.
+explanation_de: Mit einer eidgenössischen Volksinitiative können die Stimmberechtigten eine Änderung der
+  Bundesverfassung verlangen. Mit einem Referendum kann das Volk dagegen über ein neues Gesetz abstimmen,
+  das das Parlament gerade beschlossen hat. Ein schon bestehendes Gesetz lässt sich damit nicht abschaffen.
 sources:
 - url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
   checked: &id001 2026-11-02
 glossary:
 - Volksinitiative
 - Bundesverfassung
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-049
@@ -28,16 +29,54 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Mit einer eidgenössischen Volksinitiative können 100'000 Stimmberechtigte innerhalb von
-      18 Monaten eine Änderung der Bundesverfassung verlangen, während die Ablehnung eines Gesetzes Sache
-      des Referendums ist und die Abwahl des Bundesrates oder Änderungen der Kantonsverfassung nicht damit
-      erreicht werden können.
+    version: 2
+    reasoning: Mit einer eidgenössischen Volksinitiative können 100 000 Stimmberechtigte innerhalb von
+      18 Monaten eine Änderung (Total- oder Teilrevision) der Bundesverfassung verlangen, nicht aber die
+      Abwahl des Bundesrates, die direkte Aufhebung eines Gesetzes oder eine Änderung der Kantonsverfassung.
   source:
     verdict: supported
-    note: 'Die Seite der Bundeskanzlei sagt ausdrücklich: «Mit einer Volksinitiative können die Stimmbürgerinnen
-      und Stimmbürger eine Änderung der Bundesverfassung verlangen.» Der Hinweis auf das Referendum in
-      der Erklärung steht nicht auf der Seite, ist aber für die richtige Antwort nicht nötig.'
+    note: 'Quelle 1 sagt ausdrücklich: «Mit einer Volksinitiative können die Stimmbürgerinnen und Stimmbürger
+      eine Änderung der Bundesverfassung verlangen.» Das stützt Antwort b. Die Aussagen zum Referendum
+      und zu bestehenden Gesetzen in der Erklärung werden auf der Seite nicht behandelt, sind aber für
+      die richtige Antwort nicht nötig.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das «damit» im letzten Satz der Erklärung bezieht sich auf das Referendum, sodass unklar
+        bleibt, warum Antwort c falsch ist; besser: «Auch mit einer Volksinitiative kann man ein bestehendes
+        Bundesgesetz nicht direkt aufheben, weil sie auf Bundesebene nur eine Änderung der Bundesverfassung
+        verlangen kann.»'
+      - 'Klein: Das Referendum richtet sich nicht nur gegen neue, sondern auch gegen geänderte Gesetze;
+        besser: «über ein neues oder geändertes Gesetz, das das Parlament beschlossen hat».'
+      - 'Klein: Die Erklärung könnte kurz erwähnen, dass für eine Volksinitiative 100 000 gültige Unterschriften
+        innerhalb von 18 Monaten nötig sind; das steht so in der Quelle und hilft beim Lernen.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt nur, dass ein Referendum kein bestehendes Gesetz abschafft, aber nicht,
+        warum Antwort c bei der Volksinitiative falsch ist; ergänzen: «Auf Bundesebene gibt es keine Volksinitiative,
+        die direkt ein Gesetz ändert oder aufhebt. Sie kann nur eine Änderung der Bundesverfassung verlangen.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung steht, ein Referendum erlaube die Abstimmung über ein neues Gesetz, und
+        ein bestehendes Gesetz lasse sich «damit» nicht abschaffen. Das «damit» ist unklar, weil es sich
+        auf das Referendum bezieht, obwohl es um die Initiative gehen soll. Besser: «Ein bestehendes Gesetz
+        lässt sich mit einer Volksinitiative nicht direkt aufheben, sondern nur über eine Änderung der
+        Verfassung.»'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

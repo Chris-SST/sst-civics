@@ -11,6 +11,23 @@ options:
 explanation: Supplementary benefits help people whose old-age and survivors' insurance (OASI) or invalidity
   insurance (IV) pension and other income are not enough to live on. They are a legal entitlement and
   not social assistance. They are paid in addition to the pension.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer kann in der Schweiz Ergänzungsleistungen erhalten?
+    options_de:
+      a: Menschen, die ihre Arbeit verloren haben und Arbeitslosenentschädigung erhalten
+      b: Alle Menschen über 50 Jahre
+      c: Menschen, deren Rente der Alters- und Hinterlassenenversicherung (AHV) oder der Invalidenversicherung
+        (IV) die minimalen Lebenshaltungskosten nicht deckt
+      d: Alle Menschen, die Sozialhilfe erhalten
+    explanation_de: Ergänzungsleistungen helfen Menschen, deren Rente der Alters- und Hinterlassenenversicherung
+      (AHV) oder der Invalidenversicherung (IV) und deren übriges Einkommen zum Leben nicht ausreichen.
+      Sie sind ein gesetzlicher Anspruch und keine Sozialhilfe. Sie werden zusätzlich zur Rente ausbezahlt.

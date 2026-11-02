@@ -1,0 +1,31 @@
+id: nationalfeiertag-1-august-bundesweit
+lang: sq
+source_version: 1
+question: Cila ditë është me ligj një festë pa punë në të gjithë Zvicrën?
+options:
+  a: 2 janari (Berchtoldstag)
+  b: E hëna e karnavalit (Fasnachtsmontag)
+  c: E premtja e Madhe
+  d: 1 gushti, Festa Kombëtare
+explanation: 1 gushti është Festa Kombëtare dhe konsiderohet festë në të gjithë vendin. Shumicën e festave
+  të tjera, si E premtja e Madhe ose Berchtoldstag, e rregullojnë vetë kantonet dhe ato nuk janë kudo
+  ditë pa punë.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Tag ist gesetzlich in der ganzen Schweiz ein arbeitsfreier Feiertag?
+    options_de:
+      a: 2. Januar (Berchtoldstag)
+      b: Fasnachtsmontag
+      c: Karfreitag
+      d: 1. August, Nationalfeiertag
+    explanation_de: Der 1. August ist der Nationalfeiertag und gilt im ganzen Land als Feiertag. Die meisten
+      anderen Feiertage, wie der Karfreitag oder der Berchtoldstag, werden von den Kantonen selbst geregelt
+      und sind nicht überall arbeitsfreie Tage.

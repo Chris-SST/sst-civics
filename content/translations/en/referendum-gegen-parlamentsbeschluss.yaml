@@ -10,6 +10,22 @@ options:
 explanation: A referendum is directed against laws that Parliament has passed. Parliament consists of
   the National Council and the Council of States. Court judgments and administrative decisions cannot
   be challenged with a referendum.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Gegen welche Beschlüsse richtet sich ein Referendum auf Bundesebene?
+    options_de:
+      a: Gegen Gesetze, die der Nationalrat und der Ständerat verabschiedet haben
+      b: Gegen Beschlüsse, die die Bundeskanzlei gefasst hat
+      c: Gegen Urteile, die das Bundesgericht gefällt hat
+      d: Gegen Verordnungen, die einzelne Gemeinden erlassen haben
+    explanation_de: Ein Referendum richtet sich gegen Gesetze, die das Parlament verabschiedet hat. Das
+      Parlament besteht aus dem Nationalrat und dem Ständerat. Gerichtsurteile und Verwaltungsentscheide
+      können nicht mit einem Referendum angefochten werden.

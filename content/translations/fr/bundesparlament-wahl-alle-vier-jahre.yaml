@@ -1,0 +1,31 @@
+id: bundesparlament-wahl-alle-vier-jahre
+lang: fr
+source_version: 2
+question: À quel rythme le peuple renouvelle-t-il le Parlement fédéral ?
+options:
+  a: Tous les trois ans
+  b: Tous les quatre ans
+  c: Tous les six ans
+  d: Tous les deux ans
+explanation: Le peuple élit le Conseil national (Nationalrat) tous les quatre ans. Les membres du Conseil
+  des États (Ständerat) sont eux aussi aujourd'hui élus pour quatre ans dans tous les cantons. Chaque
+  canton détermine lui-même comment l'élection a lieu et, en partie aussi, quand elle a lieu.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welchem Rhythmus erneuert das Volk das Bundesparlament?
+    options_de:
+      a: Alle drei Jahre
+      b: Alle vier Jahre
+      c: Alle sechs Jahre
+      d: Alle zwei Jahre
+    explanation_de: Das Volk wählt den Nationalrat alle vier Jahre. Die Mitglieder des Ständerats werden
+      heute ebenfalls in allen Kantonen für vier Jahre gewählt. Jeder Kanton bestimmt selbst, wie die
+      Wahl stattfindet und teilweise auch, wann sie stattfindet.

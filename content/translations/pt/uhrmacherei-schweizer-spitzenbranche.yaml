@@ -1,0 +1,30 @@
+id: uhrmacherei-schweizer-spitzenbranche
+lang: pt
+source_version: 1
+question: Em que setor da economia a Suíça está há muito tempo na liderança a nível internacional?
+options:
+  a: Indústria têxtil
+  b: Construção naval
+  c: Indústria automóvel
+  d: Relojoaria
+explanation: Os relógios suíços são conhecidos em todo o mundo pela sua qualidade. A relojoaria tem uma
+  longa tradição na Suíça e continua a ser, até hoje, um importante setor de exportação.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Wirtschaftssektor nimmt die Schweiz seit langem international eine führende
+      Stellung ein?
+    options_de:
+      a: Textilindustrie
+      b: Schiffbau
+      c: Automobilindustrie
+      d: Uhrenindustrie
+    explanation_de: Schweizer Uhren sind auf der ganzen Welt für ihre Qualität bekannt. Die Uhrenindustrie
+      hat in der Schweiz eine lange Tradition und ist bis heute ein wichtiger Exportsektor.

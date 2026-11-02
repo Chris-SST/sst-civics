@@ -1,0 +1,29 @@
+id: juraregion-uhrenherstellung-bekannt
+lang: sq
+source_version: 1
+question: Për çfarë është e njohur rajoni i Jurës në Zvicër nga ana ekonomike?
+options:
+  a: Për industrinë farmaceutike
+  b: Për bankat e mëdha
+  c: Për vreshtarinë në liqenin e Cyrihut
+  d: Për prodhimin e orëve
+explanation: Në harkun e Jurës kanë selinë dhe punishtet e tyre shumë firma të njohura orësh. Prandaj
+  rajoni është një qendër e industrisë zvicerane të orëve.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür ist die Region Jura in der Schweiz wirtschaftlich bekannt?
+    options_de:
+      a: Für die pharmazeutische Industrie
+      b: Für die Grossbanken
+      c: Für den Weinbau am Zürichsee
+      d: Für die Uhrenherstellung
+    explanation_de: Im Jurabogen haben viele bekannte Uhrenfirmen ihren Sitz und ihre Werkstätten. Deshalb
+      ist die Region ein Zentrum der schweizerischen Uhrenindustrie.

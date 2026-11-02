@@ -10,6 +10,22 @@ options:
 explanation: 'The Romans called their settlement and customs station on the Limmat Turicum. The name Zurich
   later developed from this. The other names belong to Roman places in present-day Switzerland: Windisch,
   Augst and Avenches.'
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie lautete der römische Name für Zürich?
+    options_de:
+      a: Turicum
+      b: Augusta Raurica
+      c: Vindonissa
+      d: Aventicum
+    explanation_de: 'Die Römer nannten ihre Siedlung und Zollstation an der Limmat Turicum. Daraus entwickelte
+      sich später der Name Zürich. Die anderen Namen gehören zu römischen Orten in der heutigen Schweiz:
+      Windisch, Augst und Avenches.'

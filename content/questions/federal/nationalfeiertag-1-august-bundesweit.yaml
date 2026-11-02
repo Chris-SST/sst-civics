@@ -23,7 +23,7 @@ sources:
 glossary:
 - Nationalfeiertag
 - Feiertag
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-172
@@ -46,3 +46,41 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt «Die meisten anderen Feiertage» regeln die Kantone, laut SECO ist der
+        1. August aber der einzige eidgenössische Feiertag; besser «Alle anderen Feiertage, etwa Karfreitag
+        oder Berchtoldstag, legen die Kantone fest, deshalb sind sie nicht überall frei.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die richtige Antwort verrät sich durch den Zusatz «der Nationalfeiertag» fast selbst;
+        besser nur «Der 1. August» schreiben.'
+      - 'Klein: In der Erklärung «Die meisten anderen Feiertage» ist ungenau, denn der 1. August ist der
+        einzige Feiertag, den der Bund für das ganze Land festlegt; besser: «Der 1. August ist laut Bundesverfassung
+        der einzige landesweite Feiertag. Alle anderen Feiertage, etwa Karfreitag oder Berchtoldstag,
+        regeln die Kantone, und sie sind nicht überall frei (der Karfreitag zum Beispiel nicht im Tessin
+        und im Wallis).»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der Fasnachtsmontag und der 2. Januar sind in einzelnen Kantonen (z. B. Basel, Zürich
+        teilweise) kein gesetzlicher Feiertag, das ist für die Frage aber unproblematisch, weil sie nur
+        nach dem Tag fragt, der in der ganzen Schweiz gilt.'
+      - 'Klein: Die Erklärung sagt, Karfreitag und Berchtoldstag seien «nicht überall frei». Besser wäre
+        «nicht in allen Kantonen gesetzliche Feiertage», weil Karfreitag in den meisten Kantonen ein Feiertag
+        ist.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -22,7 +22,7 @@ sources:
 glossary:
 - Kanton
 - Bundesverfassung
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-213
@@ -43,3 +43,33 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Der letzte Satz der Erklärung zur Bundesverfassung hilft wenig beim Verstehen; besser
+        wäre ein kurzer Hinweis, warum die anderen Antworten falsch sind, zum Beispiel dass Basel-Landschaft
+        seit 1833 ein eigener Kanton ist.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues: []
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Frage wiederholt «Kanton». Kürzer und genauso klar wäre: «Welcher ist der jüngste
+        Kanton der Schweiz?»'
+      - 'Klein: Die Erklärung könnte genauer sagen, dass der Kanton Jura 1978 vom Volk beschlossen wurde
+        und am 1. Januar 1979 entstand. Der Satz zur Bundesverfassung hilft beim Verstehen kaum und könnte
+        weggelassen werden.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

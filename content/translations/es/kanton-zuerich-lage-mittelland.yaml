@@ -1,0 +1,31 @@
+id: kanton-zuerich-lage-mittelland
+lang: es
+source_version: 2
+question: ¿A qué gran región paisajística de Suiza pertenece el cantón de Zúrich?
+options:
+  a: A los Alpes del Sur
+  b: Al Jura
+  c: A la Meseta suiza (Mittelland)
+  d: A los Alpes Centrales
+explanation: El cantón de Zúrich pertenece a la Meseta suiza (Mittelland), es decir, a la zona más llana
+  situada entre el Jura, al noroeste, y los Alpes, al sur. La Meseta suiza es la parte más densamente
+  poblada de Suiza.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Zu welcher grossen Landschaftsregion der Schweiz gehört der Kanton Zürich?
+    options_de:
+      a: Zu den Südalpen
+      b: Zum Jura
+      c: Zum Mittelland
+      d: Zu den Zentralalpen
+    explanation_de: Der Kanton Zürich gehört zum Mittelland, das heisst zum flacheren Gebiet, das zwischen
+      dem Jura im Nordwesten und den Alpen im Süden liegt. Das Mittelland ist der am dichtesten besiedelte
+      Teil der Schweiz.

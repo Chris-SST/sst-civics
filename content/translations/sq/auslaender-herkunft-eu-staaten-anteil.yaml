@@ -1,0 +1,31 @@
+id: auslaender-herkunft-eu-staaten-anteil
+lang: sq
+source_version: 1
+question: Nga vijnë shumica e të huajve që banojnë në Zvicër?
+options:
+  a: Nga shtetet e Azisë, rreth dy të tretat
+  b: Nga shtetet e Afrikës, rreth gjysma
+  c: Nga shtetet e Bashkimit Evropian, rreth dy të tretat
+  d: Nga shtetet e Amerikës, rreth një e treta
+explanation: Rreth 66 për qind e popullsisë së huaj rezidente vijnë nga shtetet e BE-së, pra afërsisht
+  dy të tretat. Pjesa tjetër vjen nga shtete të tjera evropiane dhe nga pjesa tjetër e botës. Shifra mund
+  të ndryshojë paksa me kalimin e kohës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Woher kommt die Mehrheit der Ausländer, die in der Schweiz wohnen?
+    options_de:
+      a: Aus den Staaten Asiens, etwa zwei Drittel
+      b: Aus den Staaten Afrikas, etwa die Hälfte
+      c: Aus den Staaten der Europäischen Union, etwa zwei Drittel
+      d: Aus den Staaten Amerikas, etwa ein Drittel
+    explanation_de: Etwa 66 Prozent der ausländischen Wohnbevölkerung kommen aus den Staaten der EU, also
+      ungefähr zwei Drittel. Der Rest kommt aus anderen europäischen Staaten und aus dem Rest der Welt.
+      Die Zahl kann sich im Laufe der Zeit leicht ändern.

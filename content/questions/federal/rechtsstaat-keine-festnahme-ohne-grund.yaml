@@ -20,7 +20,7 @@ glossary:
 - Festnahme
 - Haft
 - Willkür
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-090
@@ -41,3 +41,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte die Quelle nennen, etwa mit dem Satz «Das steht in Artikel 31 der
+        Bundesverfassung: Die Freiheit darf nur in den vom Gesetz vorgesehenen Fällen entzogen werden.»'
+      - 'Klein: Antwort d) ist wenig plausibel; besser wäre zum Beispiel «Die Polizei darf jede Person
+        ohne Begründung beliebig lange festhalten.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «nach eigenem Ermessen» in Antwort b) ist ein Fachausdruck, und Behörden haben im Rahmen
+        des Gesetzes tatsächlich Ermessen; besser wäre «nach Belieben, auch ohne gesetzlichen Grund».'
+      - 'Klein: Antwort d) ist sehr offensichtlich falsch und hilft beim Üben wenig; sie könnte durch
+        eine plausiblere Ablenkung ersetzt werden, etwa «Die Polizei darf jemanden ohne Grund festnehmen,
+        wenn sie ihn verdächtig findet».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Antwort a) ist knapp formuliert; «ohne Grund» könnte genauer «ohne gesetzlichen Grund»
+        heissen, das entspräche besser der Erklärung und Art. 31 BV.'
+      - 'Klein: Die Falschantworten b) und c) sind inhaltlich sehr ähnlich (Willkür der Behörden), könnten
+        aber mit einer anderen Variante, etwa «Nur bei Verdacht auf ein Verbrechen», abwechslungsreicher
+        sein.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

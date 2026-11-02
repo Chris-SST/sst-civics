@@ -1,0 +1,31 @@
+id: wallis-gebirgskanton-alpen
+lang: tr
+source_version: 1
+question: Bu kantonlardan hangisi büyük ölçüde dağlarla şekillenmiştir?
+options:
+  a: Basel-Stadt
+  b: Valais (Wallis)
+  c: Thurgau
+  d: Cenevre
+explanation: Valais'de (Wallis) birçok yüksek Alp zirvesi bulunur; bunlar arasında İsviçre'nin en yüksek
+  dağı olan Dufourspitze de yer alır. Thurgau, Basel-Stadt ve Cenevre ise daha çok ovalık bölgede ya da
+  göllerin ve nehirlerin kıyısında yer alır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher dieser Kantone ist stark von Bergen geprägt?
+    options_de:
+      a: Basel-Stadt
+      b: Wallis
+      c: Thurgau
+      d: Genf
+    explanation_de: Im Wallis gibt es viele hohe Alpengipfel; darunter befindet sich auch die Dufourspitze,
+      der höchste Berg der Schweiz. Thurgau, Basel-Stadt und Genf liegen hingegen eher in Flachlandregionen
+      oder an den Ufern von Seen und Flüssen.

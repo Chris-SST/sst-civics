@@ -1,0 +1,36 @@
+id: volksinitiative-doppeltes-mehr
+lang: sq
+source_version: 2
+question: Çfarë i duhet një nismë popullore (Volksinitiative) federale që të miratohet në votim?
+options:
+  a: Votat "po" të dy të tretave të votuesve
+  b: '"Po"-ja e Këshillit Federal (Bundesrat) dhe e shumicës së votuesve'
+  c: '"Po"-ja e shumicës së votuesve dhe e shumicës së kantoneve'
+  d: Vetëm "po"-ja e shumicës së votuesve
+explanation: 'Një nismë popullore federale synon ta ndryshojë Kushtetutën Federale. Prandaj i duhet shumica
+  e dyfishtë: shumica e votuesve (shumica e popullit (Volksmehr)) dhe shumica e kantoneve (shumica e kantoneve
+  (Ständemehr)) duhet të thonë "po". Në rastin e një nisme kantonale në kantonin e Cyrihut, përkundrazi,
+  mjafton shumica e votuesve.'
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: In der Rückübersetzung steht überall «Stimmberechtigte» statt «Stimmende» (Antworten a–d und
+      Erklärung); das ist ein sachlicher Unterschied, denn die Mehrheit der Stimmenden (abgegebene Stimmen)
+      ist nicht die Mehrheit aller Stimmberechtigten.
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 2
+    question_de: Was braucht eine eidgenössische Volksinitiative, damit sie in der Abstimmung angenommen
+      wird?
+    options_de:
+      a: Die «Ja»-Stimmen von zwei Dritteln der Stimmberechtigten
+      b: Das «Ja» des Bundesrates und der Mehrheit der Stimmberechtigten
+      c: Das «Ja» der Mehrheit der Stimmberechtigten und der Mehrheit der Kantone
+      d: Nur das «Ja» der Mehrheit der Stimmberechtigten
+    explanation_de: 'Eine eidgenössische Volksinitiative zielt darauf ab, die Bundesverfassung zu ändern.
+      Deshalb braucht sie das doppelte Mehr: Die Mehrheit der Stimmberechtigten (Volksmehr) und die Mehrheit
+      der Kantone (Ständemehr) müssen «Ja» sagen. Bei einer kantonalen Initiative im Kanton Zürich genügt
+      dagegen die Mehrheit der Stimmberechtigten.'

@@ -11,6 +11,23 @@ options:
 explanation: The electorate approved the Bilaterals I in 2000. They regulate access to certain areas of
   the single market, for example the free movement of persons and land transport. In 1992, the people
   had not approved the EEA.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Verträge, die 2000 vom Volk angenommen wurden, bilden die Grundlage der aktuellen
+      Beziehungen der Schweiz zur EU?
+    options_de:
+      a: Die Bilateralen I
+      b: Das EWR-Abkommen
+      c: Das Schengen-Abkommen allein
+      d: Der Beitrittsvertrag zur EU
+    explanation_de: Die Stimmberechtigten haben die Bilateralen I im Jahr 2000 angenommen. Sie regeln
+      den Zugang zu bestimmten Bereichen des Binnenmarkts, zum Beispiel die Personenfreizügigkeit und
+      den Landverkehr. Im Jahr 1992 hatte das Volk den EWR nicht angenommen.

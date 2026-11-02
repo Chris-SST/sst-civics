@@ -1,0 +1,30 @@
+id: schienennetz-dichte-weltweit
+lang: pt
+source_version: 1
+question: Pelo que é conhecida a rede ferroviária suíça na comparação internacional?
+options:
+  a: É a rede ferroviária com a malha mais densa do mundo.
+  b: É a única rede ferroviária que passa inteiramente por túneis.
+  c: É a rede ferroviária mais extensa da Europa.
+  d: É a rede ferroviária mais antiga do mundo.
+explanation: Numa área pequena existem muitíssimas linhas ferroviárias e estações. Por isso, a rede suíça
+  é considerada a mais densa do mundo. No entanto, a densidade não diz nada sobre o comprimento absoluto.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wofür ist das Schweizer Eisenbahnnetz im internationalen Vergleich bekannt?
+    options_de:
+      a: Es ist das Eisenbahnnetz mit dem dichtesten Netz der Welt.
+      b: Es ist das einzige Eisenbahnnetz, das vollständig durch Tunnel führt.
+      c: Es ist das ausgedehnteste Eisenbahnnetz Europas.
+      d: Es ist das älteste Eisenbahnnetz der Welt.
+    explanation_de: Auf einer kleinen Fläche gibt es sehr viele Eisenbahnlinien und Bahnhöfe. Deshalb
+      gilt das Schweizer Netz als das dichteste der Welt. Die Dichte sagt jedoch nichts über die absolute
+      Länge aus.

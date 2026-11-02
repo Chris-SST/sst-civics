@@ -24,7 +24,7 @@ glossary:
 - Bundesrat
 - Parlament
 - Abstimmungsempfehlung
-status: in_review
+status: approved
 difficulty: 1
 checks:
   independent_answer:
@@ -44,3 +44,49 @@ checks:
     at: *id001
     model: claude-opus-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt nur die Empfehlung des Parlaments, obwohl die Antwort «Bundesrat und
+        Parlament» lautet; besser ergänzen: «Zuerst gibt der Bundesrat in einer Botschaft seine Empfehlung
+        ab, dann entscheidet das Parlament über seine Empfehlung (Art. 139 Abs. 5 BV).»'
+      - 'Klein: Das Wort «allein» in Antwort c) verrät die falsche Antwort zu leicht; besser einfach «Die
+        Bundeskanzlei» schreiben.'
+      - 'Klein: Zur Frage ist keine Tatsache aus der Themenliste angegeben; die passende Tatsache zu Volksinitiativen
+        und Abstimmungsempfehlungen sollte zugeordnet werden.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt nur das Parlament als Absender der Empfehlung, die richtige Antwort
+        nennt aber Bundesrat und Parlament; besser: «Bundesrat und Parlament empfehlen den Stimmberechtigten
+        die Annahme oder die Ablehnung.»'
+      - 'Klein: Das Wort «allein» in Antwort c) fällt auf und kann als Hinweis wirken; besser einfach
+        «Die Bundeskanzlei» schreiben und in der Erklärung ergänzen, dass die Bundeskanzlei die Abstimmungserläuterungen
+        zwar verschickt, aber keine eigene Empfehlung abgibt.'
+      - 'Klein: Die Frage ist keiner Tatsache aus der Themenliste zugeordnet; bitte die passende Tatsache
+        (etwa zu Volksinitiative oder Abstimmungen) angeben, damit der Umfang geprüft werden kann.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt nur die Empfehlung des Parlaments (Art. 139 Abs. 5 BV); ergänze, dass
+        auch der Bundesrat den Stimmberechtigten eine Empfehlung abgibt, die in den Abstimmungserläuterungen
+        steht.'
+      - 'Klein: In Antwort c) ist das Wort «allein» ein Hinweis, der die Antwort leicht als falsch erkennbar
+        macht; besser wäre «Die Bundeskanzlei», mit dem Hinweis in der Erklärung, dass sie nur das Verfahren
+        sicherstellt und die Erläuterungen erstellt.'
+      - 'Klein: Die Quellen belegen nur die Empfehlung der Bundesversammlung; die Empfehlung des Bundesrats
+        ist allgemein bekanntes Wissen, könnte aber mit einer Quelle zu den Abstimmungserläuterungen gestützt
+        werden.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

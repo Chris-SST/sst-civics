@@ -1,0 +1,30 @@
+id: referendum-gesetz-verhindern
+lang: tr
+source_version: 1
+question: Oy hakkı olan kişiler bir referandum ile ne elde edebilir?
+options:
+  a: Yeni bir yasayı kendileri yazıp yürürlüğe koyabilirler.
+  b: Parlamento tarafından kabul edilmiş bir yasayı engelleyebilirler.
+  c: Federal Konsey (Bundesrat) üyelerini görevden alabilirler.
+  d: Parlamentoyu feshedip yeni seçim talep edebilirler.
+explanation: Oy hakkı olan kişiler bir referandum ile, Parlamento tarafından kabul edilmiş bir yasa hakkında
+  oylama yapılmasını talep edebilir. Halk yasayı reddederse, yasa yürürlüğe girmez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was können Stimmberechtigte mit einem Referendum erreichen?
+    options_de:
+      a: Sie können ein neues Gesetz selbst schreiben und in Kraft setzen.
+      b: Sie können ein vom Parlament angenommenes Gesetz verhindern.
+      c: Sie können die Mitglieder des Bundesrates absetzen.
+      d: Sie können das Parlament auflösen und Neuwahlen verlangen.
+    explanation_de: Stimmberechtigte können mit einem Referendum verlangen, dass über ein vom Parlament
+      angenommenes Gesetz abgestimmt wird. Wenn das Volk das Gesetz ablehnt, tritt das Gesetz nicht in
+      Kraft.

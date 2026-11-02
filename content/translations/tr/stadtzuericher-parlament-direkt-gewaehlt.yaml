@@ -1,0 +1,31 @@
+id: stadtzuericher-parlament-direkt-gewaehlt
+lang: tr
+source_version: 1
+question: Zürih şehrinin parlamentosu olan belediye konseyi (Gemeinderat) nasıl oluşturulur?
+options:
+  a: Kantonun Hükümet Konseyi (Regierungsrat) onu atar
+  b: Şehir Konseyi (Stadtrat) üyeleri kendisi belirler
+  c: Partiler koltukları aralarında kura ile paylaşır
+  d: Halk onu sandıkta doğrudan seçer
+explanation: Zürih şehrinin oy hakkına sahip kişileri, belediye konseyini genel seçimlerle seçer. Belediye
+  konseyi şehrin parlamentosudur ve belediye halk toplantısının (Gemeindeversammlung) yerini alır.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Antwort b: im Original bestimmt der Stadtrat die Mitglieder (des Gemeinderats) selbst, in
+      der Rückübersetzung bestimmen die Mitglieder des Stadtrats ihn selbst, also eine andere Aussage;
+      sonst gleich.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Wie wird der Gemeinderat, das Parlament der Stadt Zürich, gebildet?
+    options_de:
+      a: Der Regierungsrat des Kantons ernennt ihn
+      b: Die Mitglieder des Stadtrats bestimmen ihn selbst
+      c: Die Parteien verteilen die Sitze unter sich per Los
+      d: Das Volk wählt ihn direkt an der Urne
+    explanation_de: Die Stimmberechtigten der Stadt Zürich wählen den Gemeinderat in allgemeinen Wahlen.
+      Der Gemeinderat ist das Parlament der Stadt und ersetzt die Gemeindeversammlung.

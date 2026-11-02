@@ -1,0 +1,34 @@
+id: alv-beitraege-pensionierte-personen
+lang: pt
+source_version: 1
+question: Quem, na Suíça, já não tem de pagar contribuições para o seguro de desemprego (ALV)?
+options:
+  a: Pessoas com um contrato de trabalho sem termo
+  b: Pessoas que atingiram a idade de reforma ordinária do seguro de velhice e sobrevivência (AHV)
+  c: Pessoas que trabalham a tempo parcial
+  d: Pessoas que nos últimos dois anos nunca estiveram desempregadas
+explanation: A obrigação de contribuir para o seguro de desemprego termina quando se atinge a idade de
+  reforma do seguro de velhice e sobrevivência. Quem está reformado já não paga contribuições para o seguro
+  de desemprego (ALV) sobre um eventual salário. Os trabalhadores a tempo parcial e a tempo inteiro, pelo
+  contrário, pagam contribuições.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer muss in der Schweiz keine Beiträge mehr an die Arbeitslosenversicherung (ALV) bezahlen?
+    options_de:
+      a: Personen mit einem unbefristeten Arbeitsvertrag
+      b: Personen, die das ordentliche Rentenalter der Alters- und Hinterlassenenversicherung (AHV) erreicht
+        haben
+      c: Personen, die in Teilzeit arbeiten
+      d: Personen, die in den letzten zwei Jahren nie arbeitslos waren
+    explanation_de: Die Beitragspflicht an die Arbeitslosenversicherung endet, wenn das Rentenalter der
+      Alters- und Hinterlassenenversicherung erreicht wird. Wer pensioniert ist, bezahlt auf einem allfälligen
+      Lohn keine Beiträge mehr an die Arbeitslosenversicherung (ALV). Teilzeit- und Vollzeitbeschäftigte
+      hingegen bezahlen Beiträge.

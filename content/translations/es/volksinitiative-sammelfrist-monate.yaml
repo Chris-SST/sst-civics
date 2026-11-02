@@ -1,0 +1,32 @@
+id: volksinitiative-sammelfrist-monate
+lang: es
+source_version: 1
+question: ¿De cuánto tiempo disponen las personas que promueven una iniciativa popular (Volksinitiative)
+  federal para recoger las firmas?
+options:
+  a: 6 meses
+  b: 12 meses
+  c: 18 meses
+  d: 36 meses
+explanation: El plazo para recoger las firmas es de 18 meses a partir de la publicación en la Hoja Federal
+  (Bundesblatt). Si en ese tiempo no logran reunir las 100 000 firmas necesarias, la iniciativa no prospera.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viel Zeit haben die Personen, die eine eidgenössische Volksinitiative lancieren,
+      um die Unterschriften zu sammeln?
+    options_de:
+      a: 6 Monate
+      b: 12 Monate
+      c: 18 Monate
+      d: 36 Monate
+    explanation_de: Die Frist für das Sammeln der Unterschriften beträgt 18 Monate ab der Veröffentlichung
+      im Bundesblatt. Wenn sie in dieser Zeit die erforderlichen 100 000 Unterschriften nicht zusammenbringen,
+      kommt die Initiative nicht zustande.

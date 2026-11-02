@@ -10,6 +10,23 @@ options:
 explanation: Eligible voters take part in popular votes on initiatives and referendums and have a say
   in the decision there. In this way, they directly contribute to legislation between elections. This
   is a characteristic of direct democracy.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie nehmen die Stimmberechtigten in der Schweiz direkten Einfluss auf die Gesetzgebung
+      des Bundes?
+    options_de:
+      a: Sie stimmen an der Urne über Initiativen und Referenden ab.
+      b: Sie wählen die Richter, die über neue Gesetze entscheiden.
+      c: Sie ernennen die Mitglieder des Bundesrates, die neue Gesetze erlassen.
+      d: Sie entscheiden selbst in der Bundesversammlung über die Gesetze.
+    explanation_de: Die Stimmberechtigten nehmen an Volksabstimmungen über Initiativen und Referenden
+      teil und haben dort ein Mitspracherecht bei der Entscheidung. Auf diese Weise wirken sie zwischen
+      den Wahlen direkt an der Gesetzgebung mit. Dies ist ein Merkmal der direkten Demokratie.

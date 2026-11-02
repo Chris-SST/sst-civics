@@ -1,0 +1,31 @@
+id: sonderbundskrieg-1847-konfliktparteien
+lang: tr
+source_version: 1
+question: 1847'de İsviçre'de Sonderbund Savaşı kimler arasında yapıldı?
+options:
+  a: Almanca konuşulan kantonlar ile Fransızca konuşulan kantonlar arasında
+  b: Liberal güçler ile Katolik kantonlar arasında
+  c: Vergiler konusunda şehir kantonları ile kırsal kantonlar arasında
+  d: İsviçre ile Fransa arasında
+explanation: Sonderbund içinde birkaç Katolik-muhafazakâr kanton bir araya gelmişti. Liberal güçler daha
+  güçlü bir Konfederasyon istiyordu. Kısa süren savaş, liberal tarafın zaferiyle sona erdi ve 1848 federal
+  devletine giden yolu açtı.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Zwischen wem wurde 1847 in der Schweiz der Sonderbundskrieg geführt?
+    options_de:
+      a: Zwischen den deutschsprachigen Kantonen und den französischsprachigen Kantonen
+      b: Zwischen den liberalen Kräften und den katholischen Kantonen
+      c: Zwischen den Stadtkantonen und den Landkantonen wegen der Steuern
+      d: Zwischen der Schweiz und Frankreich
+    explanation_de: Im Sonderbund hatten sich mehrere katholisch-konservative Kantone zusammengeschlossen.
+      Die liberalen Kräfte wollten eine stärkere Eidgenossenschaft. Der kurze Krieg endete mit dem Sieg
+      der liberalen Seite und ebnete den Weg zum Bundesstaat von 1848.

@@ -1,0 +1,29 @@
+id: ikrk-gruendung-genf-1863
+lang: es
+source_version: 1
+question: ¿Qué conocida organización humanitaria fue fundada en Ginebra en 1863?
+options:
+  a: Las Naciones Unidas (ONU)
+  b: La Organización Mundial de la Salud (OMS)
+  c: El Programa Mundial de Alimentos (PMA)
+  d: El Comité Internacional de la Cruz Roja (CICR)
+explanation: El CICR surgió en Ginebra en 1863, entre otras cosas por iniciativa de Henry Dunant. Representa
+  la tradición humanitaria de Suiza. Las demás organizaciones fueron fundadas más tarde.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche bekannte humanitäre Organisation wurde 1863 in Genf gegründet?
+    options_de:
+      a: Die Vereinten Nationen (UNO)
+      b: Die Weltgesundheitsorganisation (WHO)
+      c: Das Welternährungsprogramm (WFP)
+      d: Das Internationale Komitee vom Roten Kreuz (IKRK)
+    explanation_de: Das IKRK entstand 1863 in Genf, unter anderem auf Initiative von Henry Dunant. Es
+      steht für die humanitäre Tradition der Schweiz. Die anderen Organisationen wurden später gegründet.

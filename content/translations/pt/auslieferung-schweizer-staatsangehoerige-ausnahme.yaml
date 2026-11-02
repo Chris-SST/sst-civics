@@ -1,0 +1,37 @@
+id: auslieferung-schweizer-staatsangehoerige-ausnahme
+lang: pt
+source_version: 2
+question: O que se aplica, em princípio, à extradição de cidadãos suíços para o estrangeiro?
+options:
+  a: São extraditados a pedido de qualquer Estado.
+  b: Não são extraditados para outro Estado contra a sua vontade. Podem, no entanto, ser entregues a um
+    tribunal internacional.
+  c: Só são extraditados para Estados vizinhos da Suíça.
+  d: São extraditados se o Conselho Federal (Bundesrat) assim o quiser num caso concreto.
+explanation: Segundo o artigo 25 da Constituição Federal, os cidadãos suíços não podem ser expulsos. Só
+  podem ser extraditados para outro Estado se eles próprios o consentirem. Um tribunal internacional,
+  por exemplo o Tribunal Penal Internacional, não é uma autoridade estrangeira; por isso, uma lei federal
+  permite entregar-lhe cidadãos suíços para efeitos de um processo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Was gilt grundsätzlich für die Auslieferung von Schweizer Bürgerinnen und Bürgern ins
+      Ausland?
+    options_de:
+      a: Sie werden auf Ersuchen jedes Staates ausgeliefert.
+      b: Sie werden nicht gegen ihren Willen an einen anderen Staat ausgeliefert. Sie können jedoch an
+        ein internationales Gericht überstellt werden.
+      c: Sie werden nur an Nachbarstaaten der Schweiz ausgeliefert.
+      d: Sie werden ausgeliefert, wenn der Bundesrat dies in einem konkreten Fall so will.
+    explanation_de: Gemäss Artikel 25 der Bundesverfassung dürfen Schweizer Bürgerinnen und Bürger nicht
+      aus der Schweiz ausgewiesen werden. Sie dürfen nur an einen anderen Staat ausgeliefert werden, wenn
+      sie selbst zustimmen. Ein internationales Gericht, zum Beispiel der Internationale Strafgerichtshof,
+      ist keine ausländische Behörde; deshalb erlaubt ein Bundesgesetz, ihm Schweizer Bürgerinnen und
+      Bürger für die Zwecke eines Verfahrens zu überstellen.

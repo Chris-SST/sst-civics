@@ -18,11 +18,11 @@ sources:
 - url: https://www.aboutswitzerland.eda.admin.ch/de/das-gotthard-maerchen
   checked: *id001
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: 2026-11-02
+  checked: *id001
 glossary:
 - Alpenpass
 - Alpen
-status: draft
+status: approved
 difficulty: 1
 covers:
 - zh-256
@@ -33,5 +33,46 @@ checks:
     model: claude-sonnet-5-5
     at: 2026-11-02
     version: 1
-    reasoning: Simplon, Gotthard und Grosser St. Bernhard sind bekannte Alpenpässe und damit Übergänge
-      über die Alpen, während sie weder Kantone noch Flüsse noch Seen im Mittelland sind.
+    reasoning: Simplon, Gotthard und Grosser St. Bernhard sind bekannte Alpenpässe, also Übergänge über
+      die Alpen, und weder Kantone, Flüsse noch Seen.
+  source:
+    verdict: supported
+    note: Quelle 3 sagt, dass verschiedene Alpenpässe über die Alpen führen und dass der Gotthardpass
+      eine wichtige Verbindung durch die Alpen ist. Quelle 1 nennt Grosser St. Bernhard und Simplon ausdrücklich
+      «Pässe», Quelle 2 beschreibt den Gotthardpass als Alpenroute; zusammen stützen sie, dass alle drei
+      Alpenübergänge sind.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die falschen Antworten sind recht leicht zu erkennen; man könnte eine stärkere Ablenkung
+        wie «Es sind Tunnel unter dem Jura» oder «Es sind Gipfel über 4000 Meter» verwenden.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte ausdrücklich sagen, dass «Pass» dasselbe bedeutet wie «Übergang über
+        die Alpen», zum Beispiel: «Ein solcher Übergang heisst Pass.» So wird der Fachbegriff für Lernende
+        klarer.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Quellen nennen den Simplon, den Gotthard und den Grossen St. Bernhard ausdrücklich
+        als Pässe, aber keine einzelne Quelle sagt wörtlich, dass alle drei Übergänge über die Alpen sind;
+        das ist allgemein bekanntes, sicheres Wissen und reicht aus.'
+      - 'Klein: In der Erklärung könnte «Pässe» kurz erklärt werden (z. B. «Ein Pass ist ein Übergang
+        über einen Gebirgszug»), weil das Wort für B1-Lernende neu sein kann.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

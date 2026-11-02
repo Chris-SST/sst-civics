@@ -1,0 +1,31 @@
+id: zu-tiefer-lohn-arbeitsgericht
+lang: sq
+source_version: 1
+question: Një punonjëse merr pa të drejtë një pagë shumë të ulët. Cilën instancë mund të thërrasë ajo?
+options:
+  a: Qendrën rajonale të ndërmjetësimit të punës (RAV)
+  b: Zyrën federale të statistikës
+  c: Gjykatën e punës
+  d: Kuvendin i komunës (Gemeindeversammlung)
+explanation: Në rast mosmarrëveshjesh që dalin nga marrëdhënia e punës, për shembull për shkak të një
+  page shumë të ulët, kompetente është gjykata e punës. RAV ndihmon në kërkimin e një vendi pune dhe jo
+  në mosmarrëveshjet për pagën.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Angestellte erhält zu Unrecht einen sehr tiefen Lohn. Welche Instanz kann sie anrufen?
+    options_de:
+      a: Das regionale Arbeitsvermittlungszentrum (RAV)
+      b: Das Bundesamt für Statistik
+      c: Das Arbeitsgericht
+      d: Die Gemeindeversammlung
+    explanation_de: Bei Streitigkeiten, die sich aus dem Arbeitsverhältnis ergeben, zum Beispiel wegen
+      eines sehr tiefen Lohns, ist das Arbeitsgericht zuständig. Das RAV hilft bei der Stellensuche und
+      nicht bei Streitigkeiten über den Lohn.

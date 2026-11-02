@@ -1,0 +1,31 @@
+id: mutterschaftsurlaub-anspruch-erwerbstaetige-frauen
+lang: sq
+source_version: 1
+question: Kush ka në Zvicër, pas lindjes së një fëmije, të drejtë ligjore për pushim lehonie?
+options:
+  a: Vetëm gratë që punojnë në një ndërmarrje me më shumë se 50 punonjës
+  b: Çdo grua që punon dhe që lind një fëmijë
+  c: Vetëm gratë që janë të martuara
+  d: Vetëm gratë me shtetësi (Bürgerrecht) zvicerane
+explanation: Ligji parashikon për nënat që punojnë të drejtën për pushim lehonie dhe për një kompensim.
+  Madhësia e ndërmarrjes, shtetësia dhe gjendja civile nuk luajnë asnjë rol në këtë drejtim. Kompensimi
+  financohet përmes regjimit të kompensimit të të ardhurave (Erwerbsersatzordnung).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer hat in der Schweiz nach der Geburt eines Kindes einen gesetzlichen Anspruch auf Mutterschaftsurlaub?
+    options_de:
+      a: Nur Frauen, die in einem Unternehmen mit mehr als 50 Mitarbeitenden arbeiten
+      b: Jede Frau, die erwerbstätig ist und ein Kind zur Welt bringt
+      c: Nur Frauen, die verheiratet sind
+      d: Nur Frauen mit Schweizer Bürgerrecht
+    explanation_de: Das Gesetz sieht für erwerbstätige Mütter das Recht auf Mutterschaftsurlaub und auf
+      eine Entschädigung vor. Die Grösse des Unternehmens, die Staatsangehörigkeit und der Zivilstand
+      spielen dabei keine Rolle. Die Entschädigung wird über die Erwerbsersatzordnung finanziert.

@@ -1,0 +1,33 @@
+id: gemeindeversammlung-beschluss-finanzvoranschlag
+lang: tr
+source_version: 1
+question: Zürih kantonundaki belediye halk toplantısı (Gemeindeversammlung) olan bir belediyede (Gemeinde)
+  oy hakkına sahip kişiler her yıl toplantıda neye karar verir?
+options:
+  a: Konfederasyon vergilerinin tutarına
+  b: Kantondaki ceza hukukuna
+  c: Belediyenin mali bütçe taslağına
+  d: Temel okulun (Volksschule) ders programlarına
+explanation: Belediye halk toplantısı olan belediyelerde oy hakkına sahip kişiler önemli işler hakkında
+  karar verir; bunlar arasında mali bütçe taslağı (bütçe) ve vergi oranı da bulunur. Ceza hukuku ve Konfederasyon
+  vergileri belediyenin işi değildir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Worüber entscheiden die Stimmberechtigten in einer Gemeinde im Kanton Zürich mit Gemeindeversammlung
+      jedes Jahr an der Versammlung?
+    options_de:
+      a: Über die Höhe der Bundessteuern
+      b: Über das Strafrecht im Kanton
+      c: Über den Entwurf des Finanzbudgets der Gemeinde
+      d: Über die Lehrpläne der Volksschule
+    explanation_de: In Gemeinden mit Gemeindeversammlung entscheiden die Stimmberechtigten über wichtige
+      Geschäfte; dazu gehören der Entwurf des Finanzbudgets (Budget) und der Steuersatz. Das Strafrecht
+      und die Bundessteuern sind nicht Sache der Gemeinde.

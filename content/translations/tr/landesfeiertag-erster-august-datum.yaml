@@ -1,0 +1,30 @@
+id: landesfeiertag-erster-august-datum
+lang: tr
+source_version: 1
+question: İsviçre Federal Bayramı, yani İsviçre'nin ulusal bayramı hangi tarihe denk gelir?
+options:
+  a: 1 Ağustos
+  b: 26 Aralık
+  c: 11 Kasım
+  d: 1 Mayıs
+explanation: İsviçre'nin ulusal bayramı 1 Ağustos'tur. Bu günde 1291 tarihli Konfederasyon Andlaşması
+  (Bundesbrief) anılır. Birçok yerde kutlamalara havai fişekler, tepe ateşleri ve konuşmalar eşlik eder.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Auf welches Datum fällt der Schweizer Bundesfeiertag, also der Nationalfeiertag der Schweiz?
+    options_de:
+      a: 1. August
+      b: 26. Dezember
+      c: 11. November
+      d: 1. Mai
+    explanation_de: Der Nationalfeiertag der Schweiz ist der 1. August. An diesem Tag wird des Bundesbriefs
+      von 1291 gedacht. An vielen Orten werden die Feierlichkeiten von Feuerwerken, Höhenfeuern und Reden
+      begleitet.

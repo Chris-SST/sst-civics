@@ -1,0 +1,30 @@
+id: wasserkraft-stromproduktion-schweiz
+lang: fr
+source_version: 1
+question: La Suisse dispose de beaucoup d'eau. Comment celle-ci est-elle utilisée pour produire de l'électricité
+  ?
+options:
+  a: Dans des centrales à gaz
+  b: Dans des raffineries de pétrole
+  c: Dans des centrales hydroélectriques
+  d: Dans des centrales à charbon
+explanation: L'eau des rivières et des lacs de retenue actionne des turbines dans les centrales hydroélectriques.
+  En Suisse, la force hydraulique est une source d'électricité indigène essentielle.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Schweiz verfügt über viel Wasser. Wie wird dieses zur Stromproduktion genutzt?
+    options_de:
+      a: In Gaskraftwerken
+      b: In Erdölraffinerien
+      c: In Wasserkraftwerken
+      d: In Kohlekraftwerken
+    explanation_de: Das Wasser der Flüsse und der Stauseen treibt in den Wasserkraftwerken Turbinen an.
+      In der Schweiz ist die Wasserkraft eine wesentliche einheimische Stromquelle.

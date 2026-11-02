@@ -9,6 +9,22 @@ options:
   d: They cast it via a website of the Confederation.
 explanation: The majority of eligible voters vote by post, that is, by mail. Going to the ballot box on
   voting Sunday is no longer usual for most people today.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie geben die meisten Stimmberechtigten in der Schweiz heute ihre Stimme bei Abstimmungen
+      und Wahlen ab?
+    options_de:
+      a: Sie geben sie am Abstimmungssonntag an der Gemeindeversammlung ab.
+      b: Sie werfen sie am Abstimmungssonntag persönlich in die Urne.
+      c: Sie schicken sie per Post an die Gemeinde.
+      d: Sie geben sie über eine Website des Bundes ab.
+    explanation_de: Die Mehrheit der Stimmberechtigten stimmt brieflich ab, das heisst per Post. Der Gang
+      zur Urne am Abstimmungssonntag ist für die meisten Menschen heute nicht mehr üblich.

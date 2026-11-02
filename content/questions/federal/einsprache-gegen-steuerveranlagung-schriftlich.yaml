@@ -24,7 +24,7 @@ glossary:
 - Steuerveranlagung
 - Einsprache
 - Steuerbehörde
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-146
@@ -46,3 +46,39 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt nur «innerhalb einer Frist»; besser konkret ergänzen: «innert 30 Tagen
+        nach Zustellung» (Art. 132 DBG, Kanton Zürich).'
+      - 'Klein: Die Erklärung könnte ergänzen, dass die Steuer trotz Einsprache grundsätzlich bezahlt
+        werden muss (Quelle 2, Art. 161 Abs. 5 DBG); das zeigt auch klar, warum Antwort b falsch ist.'
+      - 'Klein: Antwort b ist sprachlich etwas holprig; einfacher wäre «Sie kann einfach nicht bezahlen.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Antwort b) ist mit «ohne weiteres Vorgehen» etwas umständlich formuliert; einfacher
+        wäre «Sie kann einfach nicht bezahlen.»'
+      - 'Klein: Die Erklärung könnte die Frist konkret nennen, zum Beispiel «innerhalb von 30 Tagen nach
+        Erhalt der Veranlagung», damit sie beim Verstehen mehr hilft.'
+      - 'Klein: Die falschen Antworten a) und d) sind sehr leicht als falsch zu erkennen; eine plausiblere
+        Alternative wäre etwa «Sie kann direkt beim Bundesgericht klagen.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung erwähnt eine Frist, nennt sie aber nicht; ein Zusatz wie «in der Regel innert
+        30 Tagen nach Zustellung» würde beim Lernen helfen, da diese Frist in den Quellen (DBG Art. 132,
+        Kanton Zürich) belegt ist.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

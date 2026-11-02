@@ -1,0 +1,30 @@
+id: reformation-neue-christliche-richtung
+lang: fr
+source_version: 1
+question: Quelle branche du christianisme est issue de la Réforme au XVIe siècle ?
+options:
+  a: Le christianisme copte
+  b: Le christianisme romain-catholique
+  c: Le christianisme orthodoxe
+  d: Le christianisme protestant
+explanation: La Réforme était un mouvement de renouveau au sein de l'Église du Moyen Âge. Le christianisme
+  protestant en est issu. À Zurich, Huldrych Zwingli y a joué un rôle important.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Zweig des Christentums ist aus der Reformation im 16. Jahrhundert hervorgegangen?
+    options_de:
+      a: Das koptische Christentum
+      b: Das römisch-katholische Christentum
+      c: Das orthodoxe Christentum
+      d: Das protestantische Christentum
+    explanation_de: Die Reformation war eine Erneuerungsbewegung innerhalb der Kirche des Mittelalters.
+      Das protestantische Christentum ist daraus hervorgegangen. In Zürich spielte Huldrych Zwingli dabei
+      eine wichtige Rolle.

@@ -9,6 +9,21 @@ options:
   d: Supplementary benefits
 explanation: The third pillar is private provision, for example tied savings. It is voluntary and supplements
   the first two pillars.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bildet die dritte Säule der Altersvorsorge in der Schweiz?
+    options_de:
+      a: Die obligatorische Unfallversicherung
+      b: Die private Vorsorge
+      c: Die Pensionskasse des Arbeitgebers
+      d: Ergänzungsleistungen
+    explanation_de: Die dritte Säule ist die private Vorsorge, zum Beispiel das gebundene Sparen. Sie
+      ist freiwillig und ergänzt die ersten beiden Säulen.

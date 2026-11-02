@@ -1,0 +1,31 @@
+id: obligatorisches-referendum-verfassungsaenderung
+lang: sq
+source_version: 1
+question: Për cilën projektpropozim duhet të votohet gjithmonë në Zvicër, edhe kur nuk mblidhen firma?
+options:
+  a: Për çdo ligj të ri federal
+  b: Për çdo ndryshim të Kushtetutës Federale
+  c: Për çdo urdhëresë të Këshillit Federal (Bundesrat)
+  d: Për çdo buxhet të Konfederatës
+explanation: Çdo ndryshim i Kushtetutës Federale duhet t'i paraqitet detyrimisht popullit dhe kantoneve.
+  Kjo quhet referendum i detyrueshëm. Ligjet federale i nnënshtrohen vetëm referendumit fakultativ.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Über welche Projektvorlage muss in der Schweiz immer abgestimmt werden, auch wenn keine
+      Unterschriften gesammelt werden?
+    options_de:
+      a: Über jedes neue Bundesgesetz
+      b: Über jede Änderung der Bundesverfassung
+      c: Über jede Verordnung des Bundesrates
+      d: Über jedes Budget der Eidgenossenschaft
+    explanation_de: Jede Änderung der Bundesverfassung muss zwingend dem Volk und den Kantonen vorgelegt
+      werden. Dies nennt man obligatorisches Referendum. Bundesgesetze unterstehen nur dem fakultativen
+      Referendum.

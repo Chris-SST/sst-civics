@@ -1,18 +1,18 @@
 id: henry-dunant-gruender-rotes-kreuz
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.geschichte.bundesstaat
-question_de: Welche Person gründete das Rote Kreuz in Genf?
+question_de: Wer gilt als Gründer des Roten Kreuzes in Genf?
 options_de:
   a: Alfred Escher
   b: Johann Heinrich Pestalozzi
-  c: Guillaume-Henri Dufour
+  c: Huldrych Zwingli
   d: Henry Dunant
 correct: d
-explanation_de: Henry Dunant aus Genf setzte sich nach der Schlacht von Solferino 1859 für die Pflege
-  von Verwundeten ein. Daraus entstand das Rote Kreuz, das für die humanitäre Tradition der Schweiz steht.
-  Dunant erhielt 1901 den ersten Friedensnobelpreis.
+explanation_de: Der Genfer Henry Dunant sah 1859 nach der Schlacht von Solferino, wie viele Verwundete
+  ohne Hilfe blieben. Er setzte sich darum für ihre Pflege ein, und 1863 entstand in Genf das Rote Kreuz.
+  Dafür erhielt Dunant 1901 zusammen mit Frédéric Passy den ersten Friedensnobelpreis.
 sources:
 - url: https://www.aboutswitzerland.eda.admin.ch/de/humanitaere-tradition
   checked: &id001 2026-11-02
@@ -21,7 +21,7 @@ sources:
 glossary:
 - Rotes Kreuz
 - humanitäre Tradition
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-242
@@ -31,14 +31,42 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Henry Dunant gründete 1863 in Genf das Rote Kreuz (Internationales Komitee vom Roten Kreuz),
-      wobei Guillaume-Henri Dufour zwar Mitgründer war, Dunant aber als der Hauptbegründer gilt.
+    version: 2
+    reasoning: Henry Dunant gilt als Gründer des Roten Kreuzes, das 1863 in Genf entstand, und erhielt
+      1901 den ersten Friedensnobelpreis.
   source:
     verdict: supported
     note: Quelle 1 nennt die Gründung des Roten Kreuzes 1863 in Genf «unter der Federführung des Genfer
-      Humanisten Henry Dunant». Damit ist Antwort d) gestützt. Solferino 1859 und der Friedensnobelpreis
-      1901 aus der Erklärung stehen nicht in den Quellen, sind aber für die richtige Antwort nicht nötig.
+      Humanisten Henry Dunant». Solferino und der Friedensnobelpreis 1901 werden dort nicht erwähnt, das
+      ist für die richtige Antwort aber nicht entscheidend.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte kurz erwähnen, dass Dunant 1862 das Buch «Eine Erinnerung an Solferino»
+        schrieb, denn damit gab er den Anstoss zur Gründung des Roten Kreuzes 1863; das macht den Ablauf
+        leichter verständlich.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte Dunants Buch «Eine Erinnerung an Solferino» (1862) erwähnen, damit
+        klarer wird, wie aus seinem Einsatz die Gründung entstand; zum Beispiel: «Er beschrieb das Leid
+        in einem Buch und setzte sich für eine neutrale Hilfe für Verwundete ein.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues: []
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

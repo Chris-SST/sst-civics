@@ -1,0 +1,31 @@
+id: arbeitsvertrag-inhalt-lohnhoehe
+lang: it
+source_version: 1
+question: Che cosa viene stabilito, tra l'altro, nel contratto di lavoro tra datore di lavoro e lavoratrice?
+options:
+  a: L'importo del salario
+  b: L'importo della rendita dell'assicurazione vecchiaia e superstiti (AHV)
+  c: L'importo dell'imposta sul valore aggiunto
+  d: L'importo del premio della cassa malati (Krankenkasse)
+explanation: Nel contratto di lavoro vengono concordate le condizioni più importanti del lavoro, per esempio
+  l'attività, l'orario di lavoro e il salario. La rendita AVS, l'imposta sul valore aggiunto e il premio
+  della cassa malati non sono determinati nel contratto di lavoro.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird unter anderem im Arbeitsvertrag zwischen Arbeitgeber und Arbeitnehmerin festgelegt?
+    options_de:
+      a: Die Höhe des Lohnes
+      b: Die Höhe der Rente der Alters- und Hinterlassenenversicherung (AHV)
+      c: Die Höhe der Mehrwertsteuer
+      d: Die Höhe der Prämie der Krankenkasse
+    explanation_de: Im Arbeitsvertrag werden die wichtigsten Bedingungen der Arbeit vereinbart, zum Beispiel
+      die Tätigkeit, die Arbeitszeit und der Lohn. Die AHV-Rente, die Mehrwertsteuer und die Prämie der
+      Krankenkasse werden nicht im Arbeitsvertrag bestimmt.

@@ -1,0 +1,37 @@
+id: volksinitiative-unterschreiben-wer-darf
+lang: it
+source_version: 2
+question: Chi può firmare un'iniziativa popolare (Volksinitiative) federale?
+options:
+  a: Tutte le persone a partire dai 16 anni con domicilio in Svizzera
+  b: Tutte le persone a partire dai 18 anni con permesso di domicilio (permesso C) (Niederlassungsbewilligung)
+  c: Solo i membri di un partito politico a partire dai 18 anni
+  d: Le cittadine e i cittadini svizzeri a partire dai 18 anni
+explanation: Può firmare un'iniziativa popolare federale chi ha diritto di voto a livello federale. Si
+  tratta delle Svizzere e degli Svizzeri a partire dai 18 anni, anche di quelli residenti all'estero,
+  se sono iscritti nel catalogo elettorale. Sono esclusi soltanto le persone che, a causa di incapacità
+  di discernimento durevole, sono sotto curatela generale o sono rappresentate da una persona designata
+  con mandato precauzionale; le straniere e gli stranieri non hanno diritti politici a livello federale,
+  nemmeno con il permesso C.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer kann eine eidgenössische Volksinitiative unterzeichnen?
+    options_de:
+      a: Alle Personen ab 16 Jahren mit Wohnsitz in der Schweiz
+      b: Alle Personen ab 18 Jahren mit Niederlassungsbewilligung (Bewilligung C)
+      c: Nur die Mitglieder einer politischen Partei ab 18 Jahren
+      d: Die Schweizer Bürgerinnen und Bürger ab 18 Jahren
+    explanation_de: Eine eidgenössische Volksinitiative kann unterzeichnen, wer auf Bundesebene stimmberechtigt
+      ist. Dabei handelt es sich um die Schweizerinnen und Schweizer ab 18 Jahren, auch um jene, die im
+      Ausland wohnen, wenn sie im Stimmregister eingetragen sind. Ausgeschlossen sind nur die Personen,
+      die wegen dauernder Urteilsunfähigkeit unter umfassender Beistandschaft stehen oder durch eine mit
+      einem Vorsorgeauftrag bezeichnete Person vertreten werden; die Ausländerinnen und Ausländer haben
+      auf Bundesebene keine politischen Rechte, nicht einmal mit der Bewilligung C.

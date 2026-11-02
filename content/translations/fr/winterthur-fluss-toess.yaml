@@ -1,0 +1,29 @@
+id: winterthur-fluss-toess
+lang: fr
+source_version: 1
+question: Quelle rivière traverse la ville de Winterthour ?
+options:
+  a: La Limmat
+  b: La Töss
+  c: La Sihl
+  d: La Glatt
+explanation: La Töss traverse Winterthour et se jette plus tard dans le Rhin. La Sihl et la Limmat traversent
+  la ville de Zurich, la Glatt traverse la vallée de la Glatt (Glattal).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher Fluss fliesst durch die Stadt Winterthur?
+    options_de:
+      a: Die Limmat
+      b: Die Töss
+      c: Die Sihl
+      d: Die Glatt
+    explanation_de: Die Töss fliesst durch Winterthur und mündet später in den Rhein. Die Sihl und die
+      Limmat fliessen durch die Stadt Zürich, die Glatt fliesst durch das Glattal.

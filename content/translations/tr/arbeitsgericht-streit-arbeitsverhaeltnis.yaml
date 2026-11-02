@@ -1,0 +1,32 @@
+id: arbeitsgericht-streit-arbeitsverhaeltnis
+lang: tr
+source_version: 1
+question: Bir çalışan, iş sözleşmesinin feshini haksız buluyor ve buna karşı harekete geçmek istiyor.
+  İş ilişkisinden doğan bu tür uyuşmazlıklarla hangi kurum ilgilenir?
+options:
+  a: Bölgesel İş Bulma Merkezi (RAV)
+  b: Karayolu Trafik Dairesi
+  c: İş Mahkemesi
+  d: İcra ve İflas Dairesi
+explanation: İş Mahkemesi, işverenler ile çalışanlar arasındaki uyuşmazlıklara bakmakla görevlidir. Bir
+  fesih nedeniyle çıkan anlaşmazlık da buna dahildir. RAV ise buna karşılık iş aramada yardımcı olur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Ein Arbeitnehmer hält die Kündigung seines Arbeitsvertrags für ungerechtfertigt und möchte
+      dagegen vorgehen. Welche Instanz befasst sich mit solchen Streitigkeiten aus dem Arbeitsverhältnis?
+    options_de:
+      a: Das Regionale Arbeitsvermittlungszentrum (RAV)
+      b: Das Strassenverkehrsamt
+      c: Das Arbeitsgericht
+      d: Das Betreibungs- und Konkursamt
+    explanation_de: Das Arbeitsgericht ist für Streitigkeiten zwischen Arbeitgebern und Arbeitnehmern
+      zuständig. Auch ein Streit, der wegen einer Kündigung entsteht, gehört dazu. Das RAV hingegen hilft
+      bei der Stellensuche.

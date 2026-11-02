@@ -1,0 +1,33 @@
+id: baugesuch-wohnhaus-entscheid-gemeindebehoerde
+lang: sq
+source_version: 1
+question: Kush vendos në kantonin e Cyrihut, si rregull, për kërkesën për leje ndërtimi të një shtëpie
+  të re banimi?
+options:
+  a: Këshilli Qeveritar (Regierungsrat)
+  b: Autoriteti i ndërtimit i komunës (Gemeinde)
+  c: Gjykata e rrethit
+  d: Zyra Federale për Zhvillim Hapësinor
+explanation: Kërkesat për leje ndërtimi për shtëpi banimi dorëzohen në komunë. Autoriteti komunal i ndërtimit
+  e shqyrton kërkesën dhe ose e jep lejen e ndërtimit, ose e refuzon atë. Kantoni përfshihet vetëm në
+  raste të veçanta.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet im Kanton Zürich in der Regel über das Baubewilligungsgesuch für ein
+      neues Wohnhaus?
+    options_de:
+      a: Der Regierungsrat
+      b: Die Baubehörde der Gemeinde
+      c: Das Bezirksgericht
+      d: Das Bundesamt für Raumentwicklung
+    explanation_de: Baugesuche für Wohnhäuser werden bei der Gemeinde eingereicht. Die kommunale Baubehörde
+      prüft das Gesuch und erteilt entweder die Baubewilligung oder lehnt sie ab. Der Kanton ist nur in
+      besonderen Fällen beteiligt.

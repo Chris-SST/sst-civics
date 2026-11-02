@@ -1,0 +1,31 @@
+id: mietvertrag-rechte-pflichten-regeln
+lang: es
+source_version: 1
+question: ¿Qué se establece en un contrato de arrendamiento?
+options:
+  a: Los derechos de los vecinos en el inmueble
+  b: El importe de los impuestos de los arrendatarios
+  c: Las obligaciones del municipio (Gemeinde) hacia los arrendatarios
+  d: Los derechos y obligaciones de los arrendadores y de los arrendatarios
+explanation: El contrato de arrendamiento regula la relación entre la persona que arrienda y la persona
+  que alquila. Esto incluye, por ejemplo, el alquiler y la duración del arrendamiento. El Código de las
+  Obligaciones (Obligationenrecht) contiene las normas legales al respecto.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was wird in einem Mietvertrag festgelegt?
+    options_de:
+      a: Die Rechte der Nachbarn in der Liegenschaft
+      b: Die Höhe der Steuern der Mieter
+      c: Die Pflichten der Gemeinde gegenüber den Mietern
+      d: Die Rechte und Pflichten der Vermieter und der Mieter
+    explanation_de: Der Mietvertrag regelt das Verhältnis zwischen der Person, die vermietet, und der
+      Person, die mietet. Dazu gehören zum Beispiel der Mietzins und die Dauer des Mietverhältnisses.
+      Das Obligationenrecht enthält die gesetzlichen Bestimmungen dazu.

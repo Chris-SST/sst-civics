@@ -1,0 +1,29 @@
+id: landessprachen-der-schweiz-aufzaehlung
+lang: es
+source_version: 1
+question: ¿Qué idiomas son lenguas nacionales en Suiza?
+options:
+  a: Alemán, francés, romanche y español
+  b: Alemán, francés, italiano y romanche
+  c: Alemán, francés, italiano e inglés
+  d: Alemán, francés e italiano
+explanation: La Constitución Federal menciona el alemán, el francés, el italiano y el romanche como lenguas
+  nacionales. El inglés no es una lengua nacional, pero se utiliza a menudo como lengua de comunicación.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Sprachen sind Landessprachen in der Schweiz?
+    options_de:
+      a: Deutsch, Französisch, Rätoromanisch und Spanisch
+      b: Deutsch, Französisch, Italienisch und Rätoromanisch
+      c: Deutsch, Französisch, Italienisch und Englisch
+      d: Deutsch, Französisch und Italienisch
+    explanation_de: Die Bundesverfassung nennt Deutsch, Französisch, Italienisch und Rätoromanisch als
+      Landessprachen. Englisch ist keine Landessprache, wird aber oft als Verkehrssprache verwendet.

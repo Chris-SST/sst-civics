@@ -1,0 +1,31 @@
+id: romandie-welschland-bedeutung
+lang: fr
+source_version: 1
+question: Que désigne le terme «Romandie» ou «Welschland» ?
+options:
+  a: La partie italophone de la Suisse
+  b: La partie francophone de la Suisse
+  c: La partie de la Suisse où l'on parle le romanche
+  d: La partie germanophone de la Suisse
+explanation: Le terme «Romandie» ou «Welschland» désigne les régions de la Suisse où l'on parle français.
+  Les cantons de Genève et de Vaud en font par exemple partie. La partie italophone correspond surtout
+  au Tessin.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bezeichnet der Begriff «Romandie» oder «Welschland»?
+    options_de:
+      a: Den italienischsprachigen Teil der Schweiz
+      b: Den französischsprachigen Teil der Schweiz
+      c: Den Teil der Schweiz, in dem Rätoromanisch gesprochen wird
+      d: Den deutschsprachigen Teil der Schweiz
+    explanation_de: Der Begriff «Romandie» oder «Welschland» bezeichnet die Regionen der Schweiz, in denen
+      Französisch gesprochen wird. Die Kantone Genf und Waadt gehören zum Beispiel dazu. Der italienischsprachige
+      Teil entspricht vor allem dem Tessin.

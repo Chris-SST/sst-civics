@@ -1,0 +1,31 @@
+id: fahren-alkohol-drogen-ausweisentzug
+lang: tr
+source_version: 1
+question: Alkollü veya uyuşturucu etkisi altında araç kullanan bir kişi neyi riske atar?
+options:
+  a: Oy hakkını kaybetmeyi
+  b: İkamet ettiği belediyeden çıkarılmayı
+  c: Sağlık sigortasının iptal edilmesini
+  d: Ehliyetinin geri alınmasını
+explanation: Araç kullanma yeteneğini yitirmiş olan kişi, trafikte başkalarını tehlikeye atar. Bu nedenle
+  yetkili makam ehliyeti geri alabilir. Buna ek olarak para cezaları veya başka cezalar da verilebilir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: 'gleiche Bedeutung: Frage, alle vier Antworten und Erklärung stimmen inhaltlich überein; Unterschiede
+      (Fahrzeug/Auto, Kündigung/Entzug, Geldstrafen/Bussen) sind sinngleich.'
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was riskiert eine Person, die unter Alkohol- oder Drogeneinfluss ein Fahrzeug führt?
+    options_de:
+      a: den Verlust des Stimmrechts
+      b: aus der Wohngemeinde ausgewiesen zu werden
+      c: die Kündigung der Krankenversicherung
+      d: den Entzug des Führerausweises
+    explanation_de: Eine Person, die nicht mehr fahrfähig ist, gefährdet andere im Verkehr. Deshalb kann
+      die zuständige Behörde den Führerausweis entziehen. Zusätzlich können auch Geldstrafen oder andere
+      Strafen verhängt werden.

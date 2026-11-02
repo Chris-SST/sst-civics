@@ -1,0 +1,29 @@
+id: kinderzulagen-fuer-familien
+lang: pt
+source_version: 1
+question: Que prestação estatal recebem as famílias com filhos na Suíça?
+options:
+  a: Pensão de invalidez
+  b: Abonos para filhos
+  c: Prémio para a propriedade de habitação própria
+  d: Subsídio diário de desemprego
+explanation: As famílias recebem abonos para filhos como contributo para os custos de sustento dos filhos.
+  Fazem parte dos abonos de família, que são regulados na lei da Confederação.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Leistung erhalten Familien mit Kindern in der Schweiz?
+    options_de:
+      a: Invalidenrente
+      b: Kinderzulagen
+      c: Prämie für das Wohneigentum
+      d: Arbeitslosentaggeld
+    explanation_de: Die Familien erhalten Kinderzulagen als Beitrag an die Kosten für den Unterhalt der
+      Kinder. Sie gehören zu den Familienzulagen, die im Recht des Bundes geregelt sind.

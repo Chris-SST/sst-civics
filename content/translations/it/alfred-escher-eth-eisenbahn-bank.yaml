@@ -1,0 +1,35 @@
+id: alfred-escher-eth-eisenbahn-bank
+lang: it
+source_version: 2
+question: Per che cosa è noto il politico e imprenditore zurighese Alfred Escher?
+options:
+  a: Guidò le truppe svizzere nella guerra del Sonderbund.
+  b: Scrisse da solo, interamente, la prima Costituzione federale.
+  c: Fondò a Ginevra la Croce Rossa.
+  d: Promosse il Politecnico federale (ETH) e la costruzione delle ferrovie e fondò la banca da cui nacque
+    il Credit Suisse.
+explanation: Nel XIX secolo Alfred Escher si impegnò per la fondazione del Politecnico federale di Zurigo
+  (ETH Zürich) e per la costruzione di ferrovie, in particolare della ferrovia del Gottardo. Nel 1856
+  fondò la Schweizerische Kreditanstalt (Banca svizzera di credito), la futura Credit Suisse. Nel 2023
+  questa banca è stata rilevata da UBS.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wofür ist der Zürcher Politiker und Unternehmer Alfred Escher bekannt?
+    options_de:
+      a: Er führte die Schweizer Truppen im Sonderbundskrieg an.
+      b: Er schrieb allein, vollständig, die erste Bundesverfassung.
+      c: Er gründete in Genf das Rote Kreuz.
+      d: Er förderte die Eidgenössische Technische Hochschule (ETH) und den Bau der Eisenbahnen und gründete
+        die Bank, aus der die Credit Suisse hervorging.
+    explanation_de: Im 19. Jahrhundert setzte sich Alfred Escher für die Gründung der Eidgenössischen
+      Technischen Hochschule Zürich (ETH Zürich) und für den Bau von Eisenbahnen ein, insbesondere der
+      Gotthardbahn. 1856 gründete er die Schweizerische Kreditanstalt, die spätere Credit Suisse. Im Jahr
+      2023 wurde diese Bank von der UBS übernommen.

@@ -1,0 +1,33 @@
+id: primarschule-traegerschaft-gemeinde-zuerich
+lang: it
+source_version: 2
+question: Chi gestisce le scuole del livello primario nel Cantone di Zurigo?
+options:
+  a: La Direzione dell'istruzione del Cantone
+  b: La Confederazione
+  c: I Comuni (Gemeinden)
+  d: I distretti
+explanation: Nel Cantone di Zurigo sono i Comuni a gestire le scuole primarie. A seconda della località,
+  si tratta dei Comuni politici o di appositi Comuni scolastici, e la Pflege scolastica eletta (Schulpflege)
+  è l'autorità scolastica locale. Il Cantone si limita a stabilire il quadro generale, ad esempio il piano
+  di studio, e vigila sulla scuola dell'obbligo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Wer führt die Schulen der Primarstufe im Kanton Zürich?
+    options_de:
+      a: Die Bildungsdirektion des Kantons
+      b: Der Bund
+      c: Die Gemeinden
+      d: Die Bezirke
+    explanation_de: Im Kanton Zürich führen die Gemeinden die Primarschulen. Je nach Ort handelt es sich
+      um die politischen Gemeinden oder um eigene Schulgemeinden, und die gewählte Schulpflege ist die
+      lokale Schulbehörde. Der Kanton legt lediglich den allgemeinen Rahmen fest, zum Beispiel den Lehrplan,
+      und beaufsichtigt die obligatorische Schule.

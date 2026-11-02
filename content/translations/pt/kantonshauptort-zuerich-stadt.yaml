@@ -1,0 +1,31 @@
+id: kantonshauptort-zuerich-stadt
+lang: pt
+source_version: 1
+question: Qual cidade é a capital do cantão de Zurique?
+options:
+  a: Uster
+  b: A cidade de Zurique
+  c: Winterthur
+  d: Dübendorf
+explanation: A cidade de Zurique é a capital do cantão e tem o mesmo nome. Aí estão sediados, entre outros,
+  o Conselho Cantonal (Kantonsrat) e o Conselho de Governo (Regierungsrat). Winterthur é a segunda maior
+  cidade do cantão.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Stadt ist die Hauptstadt des Kantons Zürich?
+    options_de:
+      a: Uster
+      b: Die Stadt Zürich
+      c: Winterthur
+      d: Dübendorf
+    explanation_de: Die Stadt Zürich ist die Hauptstadt des Kantons und hat denselben Namen. Dort haben
+      unter anderem der Kantonsrat und der Regierungsrat ihren Sitz. Winterthur ist die zweitgrösste Stadt
+      des Kantons.

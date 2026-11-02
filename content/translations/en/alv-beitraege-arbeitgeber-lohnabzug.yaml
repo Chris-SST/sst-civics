@@ -10,6 +10,22 @@ options:
 explanation: The employer deducts the contributions automatically from the wages and transfers them to
   the responsible body. Employees do not have to take care of this themselves. The employer also pays
   part of the contributions.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer zieht die Beiträge an die Arbeitslosenversicherung vom Lohn ab?
+    options_de:
+      a: Die Gemeinde des Wohnorts
+      b: Der Arbeitnehmer selbst, indem er eine Zahlung leistet
+      c: Das Regionale Arbeitsvermittlungszentrum
+      d: Der Arbeitgeber
+    explanation_de: Der Arbeitgeber zieht die Beiträge automatisch vom Lohn ab und überweist sie an die
+      zuständige Stelle. Die Arbeitnehmer müssen sich nicht selbst darum kümmern. Der Arbeitgeber bezahlt
+      auch einen Teil der Beiträge.

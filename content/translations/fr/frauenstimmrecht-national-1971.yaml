@@ -1,0 +1,33 @@
+id: frauenstimmrecht-national-1971
+lang: fr
+source_version: 2
+question: Depuis quelle année les femmes peuvent-elles voter et élire au niveau fédéral en Suisse ?
+options:
+  a: '1959'
+  b: '1991'
+  c: '1948'
+  d: '1971'
+explanation: En 1971, les hommes suisses ont accepté lors d'une votation populaire le droit de vote des
+  femmes au niveau fédéral. Depuis lors, les femmes peuvent voter, élire et se faire élire au niveau national.
+  Les cantons ont introduit le droit de vote des femmes à des moments différents, certains dès avant 1971,
+  et Appenzell Rhodes-Intérieures, dernier canton, seulement en 1990.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Seit welchem Jahr dürfen Frauen in der Schweiz auf Bundesebene abstimmen und wählen?
+    options_de:
+      a: '1959'
+      b: '1991'
+      c: '1948'
+      d: '1971'
+    explanation_de: Im Jahr 1971 haben die Schweizer Männer in einer Volksabstimmung das Frauenstimmrecht
+      auf Bundesebene angenommen. Seither können Frauen auf nationaler Ebene abstimmen, wählen und sich
+      wählen lassen. Die Kantone haben das Frauenstimmrecht zu unterschiedlichen Zeitpunkten eingeführt,
+      einige schon vor 1971, und Appenzell Innerrhoden als letzter Kanton erst 1990.

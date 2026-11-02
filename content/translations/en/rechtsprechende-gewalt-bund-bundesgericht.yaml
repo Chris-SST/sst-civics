@@ -10,6 +10,22 @@ options:
 explanation: The Federal Constitution assigns the judicial power of the Confederation to the Federal Supreme
   Court. It is the highest judicial authority of the Confederation. The Federal Council and the Federal
   Assembly exercise the executive and the legislative power respectively.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde ist auf Bundesebene die oberste richterliche Behörde der Schweiz?
+    options_de:
+      a: Die Bundeskanzlei
+      b: Der Bundesrat
+      c: Die Bundesversammlung
+      d: Das Bundesgericht
+    explanation_de: Die Bundesverfassung weist die richterliche Gewalt des Bundes dem Bundesgericht zu.
+      Es ist die oberste richterliche Behörde des Bundes. Der Bundesrat und die Bundesversammlung üben
+      die vollziehende beziehungsweise die gesetzgebende Gewalt aus.

@@ -1,0 +1,33 @@
+id: bilaterale-eins-basis-eu-beziehungen
+lang: fr
+source_version: 1
+question: Quels traités, acceptés par le peuple en 2000, constituent la base des relations actuelles de
+  la Suisse avec l'UE ?
+options:
+  a: Les Bilatérales I
+  b: Le traité sur l'EEE
+  c: Le traité de Schengen seul
+  d: Le traité d'adhésion à l'UE
+explanation: Le corps électoral a accepté les Bilatérales I en 2000. Elles règlent l'accès à certains
+  domaines du marché intérieur, par exemple la libre circulation des personnes et les transports terrestres.
+  Le peuple n'avait pas approuvé l'EEE en 1992.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Verträge, die das Volk im Jahr 2000 angenommen hat, bilden die Grundlage der heutigen
+      Beziehungen der Schweiz zur EU?
+    options_de:
+      a: Die Bilateralen I
+      b: Der EWR-Vertrag
+      c: Der Schengen-Vertrag allein
+      d: Der Beitrittsvertrag zur EU
+    explanation_de: Die Stimmberechtigten haben die Bilateralen I im Jahr 2000 angenommen. Sie regeln
+      den Zugang zu bestimmten Bereichen des Binnenmarkts, zum Beispiel den freien Personenverkehr und
+      den Landverkehr. Das Volk hatte den EWR 1992 nicht gutgeheissen.

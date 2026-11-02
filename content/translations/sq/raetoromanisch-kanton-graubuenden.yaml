@@ -1,0 +1,29 @@
+id: raetoromanisch-kanton-graubuenden
+lang: sq
+source_version: 1
+question: Në cilin kanton flitet gjuha retoromane?
+options:
+  a: Në kantonin Fribourg
+  b: Në kantonin Ticino
+  c: Në kantonin Valais
+  d: Në kantonin Graubünden
+explanation: Gjuha retoromane është gjuha e katërt kombëtare e Zvicrës. Ajo flitet në kantonin Graubünden.
+  Graubünden është i vetmi kanton trigjuhësh i Zvicrës.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Kanton wird Rätoromanisch gesprochen?
+    options_de:
+      a: Im Kanton Freiburg
+      b: Im Kanton Tessin
+      c: Im Kanton Wallis
+      d: Im Kanton Graubünden
+    explanation_de: Rätoromanisch ist die vierte Landessprache der Schweiz. Sie wird im Kanton Graubünden
+      gesprochen. Graubünden ist der einzige dreisprachige Kanton der Schweiz.

@@ -1,0 +1,29 @@
+id: raetoromanisch-kanton-graubuenden
+lang: es
+source_version: 1
+question: ¿En qué cantón se habla el romanche?
+options:
+  a: En el cantón de Friburgo
+  b: En el cantón del Tesino
+  c: En el cantón del Valais
+  d: En el cantón de los Grisones
+explanation: El romanche es la cuarta lengua nacional de Suiza. Se habla en el cantón de los Grisones.
+  Los Grisones es el único cantón trilingüe de Suiza.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welchem Kanton wird Rätoromanisch gesprochen?
+    options_de:
+      a: Im Kanton Freiburg
+      b: Im Kanton Tessin
+      c: Im Kanton Wallis
+      d: Im Kanton Graubünden
+    explanation_de: Rätoromanisch ist die vierte Landessprache der Schweiz. Es wird im Kanton Graubünden
+      gesprochen. Graubünden ist der einzige dreisprachige Kanton der Schweiz.

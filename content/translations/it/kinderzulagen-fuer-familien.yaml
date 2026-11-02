@@ -1,0 +1,29 @@
+id: kinderzulagen-fuer-familien
+lang: it
+source_version: 1
+question: Quale prestazione statale ricevono le famiglie con figli in Svizzera?
+options:
+  a: Rendita d'invalidità
+  b: Assegni per i figli
+  c: Premio per la proprietà abitativa
+  d: Indennità giornaliera di disoccupazione
+explanation: Le famiglie ricevono gli assegni per i figli come contributo alle spese per il mantenimento
+  dei figli. Essi fanno parte degli assegni familiari, che sono disciplinati nella legge federale.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche staatliche Leistung erhalten Familien mit Kindern in der Schweiz?
+    options_de:
+      a: Invalidenrente
+      b: Kinderzulagen
+      c: Prämie für das Wohneigentum
+      d: Arbeitslosentaggeld
+    explanation_de: Die Familien erhalten die Kinderzulagen als Beitrag an die Kosten für den Unterhalt
+      der Kinder. Sie sind Teil der Familienzulagen, die im Bundesgesetz geregelt sind.

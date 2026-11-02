@@ -1,0 +1,33 @@
+id: obligationenrecht-miete-wohnraum-vorschriften
+lang: fr
+source_version: 2
+question: Dans quelle loi les règles relatives à la location d'un logement sont-elles fixées ?
+options:
+  a: Dans le Code des obligations
+  b: Dans la loi sur le travail
+  c: Dans le Code pénal
+  d: Dans la loi sur la circulation routière
+explanation: Les règles relatives à la location de logements figurent dans le Code des obligations (CO).
+  Il y est précisé, par exemple, ce qui s'applique au contrat de bail, quel peut être le montant du loyer
+  et comment on peut résilier le bail. Le Code civil (CC), en revanche, règle surtout des thèmes tels
+  que la famille, le mariage et la succession.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welchem Gesetz sind die Regeln zur Miete einer Wohnung festgelegt?
+    options_de:
+      a: Im Obligationenrecht
+      b: Im Arbeitsgesetz
+      c: Im Strafgesetzbuch
+      d: Im Strassenverkehrsgesetz
+    explanation_de: Die Regeln zur Miete von Wohnungen stehen im Obligationenrecht (OR). Dort ist zum
+      Beispiel festgehalten, was für den Mietvertrag gilt, wie hoch der Mietzins sein darf und wie man
+      den Mietvertrag kündigen kann. Das Zivilgesetzbuch (ZGB) hingegen regelt vor allem Themen wie Familie,
+      Ehe und Erbschaft.

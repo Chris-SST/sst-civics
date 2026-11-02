@@ -1,0 +1,29 @@
+id: kanton-zuerich-lage-grenze-deutschland
+lang: tr
+source_version: 1
+question: Zürich kantonu İsviçre'nin neresinde yer alır ve hangi komşu ülkeyle sınır komşusudur?
+options:
+  a: İsviçre'nin batısında, Fransa ile sınır komşusudur
+  b: İsviçre'nin kuzeyinde, Almanya ile sınır komşusudur
+  c: İsviçre'nin doğusunda, Avusturya ile sınır komşusudur
+  d: İsviçre'nin güneyinde, İtalya ile sınır komşusudur
+explanation: Zürich kantonu İsviçre'nin kuzeyinde yer alır. Kuzeyde sınırının bir kısmı aynı zamanda Almanya
+  ile olan ülke sınırını oluşturur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo in der Schweiz liegt der Kanton Zürich und mit welchem Nachbarland grenzt er?
+    options_de:
+      a: Im Westen der Schweiz, er grenzt an Frankreich
+      b: Im Norden der Schweiz, er grenzt an Deutschland
+      c: Im Osten der Schweiz, er grenzt an Österreich
+      d: Im Süden der Schweiz, er grenzt an Italien
+    explanation_de: Der Kanton Zürich liegt im Norden der Schweiz. Im Norden bildet ein Teil seiner Grenze
+      zugleich die Landesgrenze zu Deutschland.

@@ -9,6 +9,22 @@ options:
   d: They were recruited by Swiss companies as seasonal workers.
 explanation: The break-up of Yugoslavia led to wars in the 1990s. As a result, many people sought protection
   in Switzerland. Some of them stayed and live here today.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Warum suchten in den 1990er-Jahren viele Menschen aus dem ehemaligen Jugoslawien Zuflucht
+      in der Schweiz?
+    options_de:
+      a: Sie wollten an Schweizer Universitäten studieren.
+      b: Sie flohen vor einer grossen Naturkatastrophe.
+      c: Sie flohen vor dem Krieg in ihrem Heimatland.
+      d: Sie wurden von Schweizer Firmen als Saisonarbeiter angeworben.
+    explanation_de: Der Zerfall Jugoslawiens führte in den 1990er-Jahren zu Kriegen. Infolgedessen suchten
+      viele Menschen Schutz in der Schweiz. Einige von ihnen blieben und leben heute hier.

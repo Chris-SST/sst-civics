@@ -1,0 +1,31 @@
+id: geldpolitik-zustaendigkeit-bund
+lang: sq
+source_version: 1
+question: Kush është përgjegjës në Zvicër për politikën monetare?
+options:
+  a: Konfederata
+  b: Komunat (Gemeinden)
+  c: Bankat kantonale
+  d: Kantonet së bashku
+explanation: Sipas Kushtetutës Federale, politika monetare dhe e valutës është çështje e Konfederatës.
+  Ajo ka të drejtën të nxjerrë monedha dhe kartëmonedha. Banka Kombëtare Zvicerane e zbaton politikën
+  monetare me porosi të Konfederatës dhe është e pavarur gjatë kësaj.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist in der Schweiz für die Geldpolitik zuständig?
+    options_de:
+      a: Der Bund
+      b: Die Gemeinden
+      c: Die Kantonalbanken
+      d: Die Kantone gemeinsam
+    explanation_de: Gemäss der Bundesverfassung ist die Geld- und Währungspolitik Sache des Bundes. Er
+      hat das Recht, Münzen und Banknoten auszugeben. Die Schweizerische Nationalbank setzt die Geldpolitik
+      im Auftrag des Bundes um und ist dabei unabhängig.

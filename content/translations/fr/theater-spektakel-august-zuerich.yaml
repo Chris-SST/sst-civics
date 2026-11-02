@@ -1,0 +1,31 @@
+id: theater-spektakel-august-zuerich
+lang: fr
+source_version: 1
+question: Quelle manifestation présente en août, à Zurich, des arts de la scène, de la danse et de la
+  musique du monde entier ?
+options:
+  a: Le Sechseläuten
+  b: Weltklasse Zürich
+  c: Le Knabenschiessen
+  d: Le Zürcher Theater Spektakel
+explanation: Le Zürcher Theater Spektakel est un festival international des arts de la scène. Il a lieu
+  chaque année en août et présente des productions venues de nombreux pays.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Veranstaltung zeigt im August in Zürich darstellende Künste, Tanz und Musik aus
+      der ganzen Welt?
+    options_de:
+      a: Das Sechseläuten
+      b: Weltklasse Zürich
+      c: Das Knabenschiessen
+      d: Das Zürcher Theater Spektakel
+    explanation_de: Das Zürcher Theater Spektakel ist ein internationales Festival der darstellenden Künste.
+      Es findet jedes Jahr im August statt und zeigt Produktionen aus vielen Ländern.

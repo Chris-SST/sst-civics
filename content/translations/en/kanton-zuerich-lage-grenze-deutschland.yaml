@@ -1,0 +1,30 @@
+id: kanton-zuerich-lage-grenze-deutschland
+lang: en
+source_version: 1
+question: Where is the canton of Zürich located in Switzerland, and which neighbouring country does it
+  border?
+options:
+  a: In the west of Switzerland; it borders France
+  b: In the north of Switzerland; it borders Germany
+  c: In the east of Switzerland; it borders Austria
+  d: In the south of Switzerland; it borders Italy
+explanation: The canton of Zürich is located in the north of Switzerland. In the north, part of its boundary
+  is also the national border with Germany.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wo in der Schweiz liegt der Kanton Zürich, und an welches Nachbarland grenzt er?
+    options_de:
+      a: Im Westen der Schweiz; er grenzt an Frankreich
+      b: Im Norden der Schweiz; er grenzt an Deutschland
+      c: Im Osten der Schweiz; er grenzt an Österreich
+      d: Im Süden der Schweiz; er grenzt an Italien
+    explanation_de: Der Kanton Zürich liegt im Norden der Schweiz. Im Norden ist ein Teil seiner Grenze
+      auch die Landesgrenze zu Deutschland.

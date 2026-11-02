@@ -1,0 +1,31 @@
+id: helvetier-roemische-zeit-schweiz
+lang: tr
+source_version: 1
+question: Romalılar döneminde bugünkü İsviçre topraklarında hangi halk yaşıyordu?
+options:
+  a: Hunlar
+  b: Vikingler
+  c: Gotlar
+  d: Helvetler
+explanation: Helvetler, İsviçre Platosu'nda (Mittelland) yaşayan bir Kelt kabilesiydi. Romalılar onları
+  egemenlikleri altına aldı ve bölge Roma İmparatorluğu'nun bir parçası oldu. İsviçre için kullanılan
+  Latince Helvetia adı hâlâ onları hatırlatmaktadır.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches Volk lebte zur Zeit der Römer auf dem Gebiet der heutigen Schweiz?
+    options_de:
+      a: Hunnen
+      b: Wikinger
+      c: Goten
+      d: Helvetier
+    explanation_de: Die Helvetier waren ein keltischer Stamm, der im Schweizer Mittelland lebte. Die Römer
+      unterwarfen sie ihrer Herrschaft, und die Region wurde ein Teil des Römischen Reiches. Der für die
+      Schweiz verwendete lateinische Name Helvetia erinnert noch heute an sie.

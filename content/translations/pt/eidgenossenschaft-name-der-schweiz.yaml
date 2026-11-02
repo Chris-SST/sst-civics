@@ -1,0 +1,30 @@
+id: eidgenossenschaft-name-der-schweiz
+lang: pt
+source_version: 1
+question: Que outro nome também é utilizado para a Suíça na Constituição Federal?
+options:
+  a: República Federal
+  b: Eidgenossenschaft
+  c: Confederação dos cantões
+  d: Reino Federal
+explanation: A designação oficial é «Confederação Suíça» («Schweizerische Eidgenossenschaft»). A palavra
+  Eidgenossenschaft designa, portanto, a Suíça como um todo. Recorda as alianças seladas por um juramento.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welcher andere Name wird in der Bundesverfassung ebenfalls für die Schweiz verwendet?
+    options_de:
+      a: Bundesrepublik
+      b: Eidgenossenschaft
+      c: Konföderation der Kantone
+      d: Bundeskönigreich
+    explanation_de: Die offizielle Bezeichnung ist «Schweizerische Eidgenossenschaft» («Schweizerische
+      Eidgenossenschaft»). Das Wort Eidgenossenschaft bezeichnet daher die Schweiz als Ganzes. Es erinnert
+      an die durch einen Eid besiegelten Bündnisse.

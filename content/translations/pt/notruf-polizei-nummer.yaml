@@ -1,0 +1,32 @@
+id: notruf-polizei-nummer
+lang: pt
+source_version: 1
+question: Que número de telefone se marca na Suíça quando, numa emergência, se precisa da polícia?
+options:
+  a: '143'
+  b: '118'
+  c: '144'
+  d: '117'
+explanation: A polícia pode ser contactada em toda a Suíça através do número 117. Os bombeiros têm o 118
+  e o serviço de emergência médica, o 144. O 143 é o número da «Dargebotene Hand», para pessoas em situação
+  de crise.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Telefonnummer wählt man in der Schweiz, wenn man in einem Notfall die Polizei
+      braucht?
+    options_de:
+      a: '143'
+      b: '118'
+      c: '144'
+      d: '117'
+    explanation_de: Die Polizei kann in der ganzen Schweiz unter der Nummer 117 erreicht werden. Die Feuerwehr
+      hat die 118 und der medizinische Notfalldienst die 144. Die 143 ist die Nummer der «Dargebotenen
+      Hand» für Menschen in einer Krisensituation.

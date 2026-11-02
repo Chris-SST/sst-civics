@@ -1,0 +1,29 @@
+id: zuteilung-primarschulklasse-durch-schulbehoerde
+lang: tr
+source_version: 1
+question: Zürich kantonunda bir çocuğun hangi ilkokul sınıfına yerleştirileceğine kim karar verir?
+options:
+  a: Okul kurulu (Schulpflege) veya okul yönetimi
+  b: Konfederasyonun eğitim departmanı
+  c: Belediye halk toplantısı (Gemeindeversammlung)
+  d: Çocuğun ebeveynleri
+explanation: Okul kurulu veya okul yönetimi çocukları sınıflara yerleştirir. Ebeveynler sınıfı serbestçe
+  seçemez. Okul bu şekilde işleyişini ve sınıf büyüklüklerini düzenler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer entscheidet im Kanton Zürich, in welche Primarschulklasse ein Kind eingeteilt wird?
+    options_de:
+      a: Die Schulpflege oder die Schulleitung
+      b: Das Bildungsdepartement der Eidgenossenschaft
+      c: Die Gemeindeversammlung
+      d: Die Eltern des Kindes
+    explanation_de: Die Schulpflege oder die Schulleitung teilt die Kinder den Klassen zu. Die Eltern
+      können die Klasse nicht frei wählen. Auf diese Weise regelt die Schule ihren Betrieb und die Klassengrössen.

@@ -22,7 +22,7 @@ sources:
 glossary:
 - Föhn
 - Wind
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-271
@@ -43,3 +43,37 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Laut Quelle 1 tritt der Föhn auf der Alpennord- und auf der Alpensüdseite auf; die Erklärung
+        könnte ergänzen, dass im Kanton Zürich und auf der Alpennordseite der Südföhn gemeint ist und
+        es im Tessin auch einen Nordföhn gibt.'
+      - 'Klein: Der Begriff «Fallwind» ist für Niveau B1 schwierig; besser kurz erklären, zum Beispiel
+        «ein Wind, der von den Bergen ins Tal hinunter weht».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Das Wort «Fallwind» in der Erklärung ist auf Niveau B1 schwer verständlich; ergänzen Sie
+        kurz «ein Wind, der von den Bergen ins Tal hinunterweht».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, der Föhn wehe «in den Alpen vor allem aus Süden». Die Quelle des Bundes
+        nennt ihn aber auf der Alpennord- und der Alpensüdseite, daher wäre «in der Schweiz meist als
+        Südwind auf der Alpennordseite» genauer.'
+      - 'Klein: Die Wörter «Fallwind» und «Sicht» könnten für B1-Lernende schwierig sein. Ein Zusatz wie
+        «Fallwind (ein Wind, der von den Bergen ins Tal weht)» würde helfen.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

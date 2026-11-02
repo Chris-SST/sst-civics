@@ -1,0 +1,34 @@
+id: religionsfreiheit-wahl-ausuebung-keine-religion
+lang: pt
+source_version: 1
+question: Uma mulher muda-se para a Suíça e quer escolher ela própria a sua religião. Pondera também não
+  pertencer a nenhuma religião. O que lhe garante a Constituição Federal a este respeito?
+options:
+  a: Ela só pode pertencer a uma religião que seja reconhecida no cantão por direito público.
+  b: Ela pode escolher livremente a sua religião, praticá-la ou não pertencer a nenhuma religião.
+  c: Ela pode escolher a sua religião em privado, mas não a pode praticar em lado nenhum em conjunto com
+    outras pessoas.
+  d: Ela tem de decidir-se, junto da comuna (Gemeinde), por uma religião reconhecida.
+explanation: A liberdade de crença e de consciência está garantida no artigo 15 da Constituição Federal.
+  Qualquer pessoa pode escolher livremente a sua religião, praticá-la sozinha ou com outras pessoas, ou
+  não pertencer a nenhuma religião. Ninguém pode ser obrigado a pertencer a uma comunidade religiosa.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Eine Frau zieht in die Schweiz und möchte ihre Religion selbst wählen. Sie überlegt sich
+      auch, keiner Religion anzugehören. Was garantiert ihr die Bundesverfassung in dieser Hinsicht?
+    options_de:
+      a: Sie darf nur einer Religion angehören, die im Kanton öffentlich-rechtlich anerkannt ist.
+      b: Sie kann ihre Religion frei wählen, sie ausüben oder keiner Religion angehören.
+      c: Sie kann ihre Religion privat wählen, darf sie aber nirgends gemeinsam mit anderen Personen ausüben.
+      d: Sie muss sich bei der Gemeinde für eine anerkannte Religion entscheiden.
+    explanation_de: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung garantiert.
+      Jede Person kann ihre Religion frei wählen, sie allein oder mit anderen Personen ausüben oder keiner
+      Religion angehören. Niemand darf gezwungen werden, einer Religionsgemeinschaft anzugehören.

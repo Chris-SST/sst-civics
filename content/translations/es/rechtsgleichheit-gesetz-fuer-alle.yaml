@@ -1,0 +1,32 @@
+id: rechtsgleichheit-gesetz-fuer-alle
+lang: es
+source_version: 1
+question: ¿Qué significa el principio de la igualdad ante la ley?
+options:
+  a: Todos los cantones tienen las mismas leyes.
+  b: Todas las personas tienen los mismos cargos políticos.
+  c: Todas las personas tienen los mismos ingresos.
+  d: La ley se aplica a todas las personas por igual.
+explanation: La igualdad ante la ley está recogida en el artículo 8 de la Constitución Federal. Todas
+  las personas son iguales ante la ley y nadie puede ser discriminado, por ejemplo, por su origen o por
+  su sexo. Esto no significa que todas las personas posean la misma cantidad de bienes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was bedeutet der Grundsatz der Gleichheit vor dem Gesetz?
+    options_de:
+      a: Alle Kantone haben die gleichen Gesetze.
+      b: Alle Personen haben die gleichen politischen Ämter.
+      c: Alle Personen haben das gleiche Einkommen.
+      d: Das Gesetz wird auf alle Personen gleich angewendet.
+    explanation_de: Die Gleichheit vor dem Gesetz ist in Artikel 8 der Bundesverfassung festgehalten.
+      Alle Personen sind vor dem Gesetz gleich und niemand darf zum Beispiel wegen seiner Herkunft oder
+      seines Geschlechts diskriminiert werden. Das bedeutet nicht, dass alle Personen die gleiche Menge
+      an Gütern besitzen.

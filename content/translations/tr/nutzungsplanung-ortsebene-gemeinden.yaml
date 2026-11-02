@@ -1,0 +1,33 @@
+id: nutzungsplanung-ortsebene-gemeinden
+lang: tr
+source_version: 1
+question: Zürich kantonunda yerel düzeyde, arazinin nasıl kullanılacağını, örneğin konut bölgelerinin
+  ve ticaret bölgelerinin nerede yer alacağını kim planlar?
+options:
+  a: İsviçre Federal Meclis (Bundesversammlung)
+  b: Kanton polisi
+  c: Belediyeler (Gemeinden)
+  d: Yalnızca ilçe konseyleri
+explanation: Belediyeler, kendi alanları için arazi kullanım planlamasını, örneğin inşaat ve bölge düzenlemesini
+  çıkarır. Bunu yaparken Konfederasyon'un ve kantonun getirdiği kurallara uyarlar. Böylece yerleşim yerinin
+  nasıl gelişeceğinin belirlenmesine katkıda bulunurlar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer plant im Kanton Zürich auf lokaler Ebene, wie das Land genutzt werden soll, zum Beispiel
+      wo Wohnzonen und Gewerbezonen liegen sollen?
+    options_de:
+      a: Die Schweizerische Bundesversammlung
+      b: Die Kantonspolizei
+      c: Die Gemeinden
+      d: Nur die Bezirksräte
+    explanation_de: Die Gemeinden erlassen für ihr Gebiet die Landnutzungsplanung, zum Beispiel die Bau-
+      und Zonenordnung. Dabei halten sie sich an die Vorschriften des Bundes und des Kantons. So tragen
+      sie dazu bei, zu bestimmen, wie sich der Siedlungsraum entwickeln wird.

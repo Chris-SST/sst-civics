@@ -1,16 +1,36 @@
 id: frauenstimmrecht-national-1971
 lang: en
-source_version: 1
-question: In which year did women in Switzerland obtain the right to vote and to stand for election at
-  national level?
+source_version: 2
+question: Since which year have women in Switzerland been allowed to vote and to take part in popular
+  votes at federal level?
 options:
   a: '1959'
   b: '1991'
   c: '1948'
   d: '1971'
-explanation: In 1971, men voted in a referendum in favour of women's right to vote at Confederation level.
-  Since then, women have been able to vote and take part in ballots nationally. In some cantons, it came
-  later at cantonal level as well.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: In 1971, Swiss men approved women's right to vote at federal level in a popular vote. Since
+  then, women have been allowed to vote, to take part in popular votes and to stand for election at national
+  level. The cantons introduced women's right to vote at different times, some of them before 1971, with
+  Appenzell Innerrhoden as the last canton only in 1990.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Seit welchem Jahr dürfen Frauen in der Schweiz auf Bundesebene wählen und an Volksabstimmungen
+      teilnehmen?
+    options_de:
+      a: '1959'
+      b: '1991'
+      c: '1948'
+      d: '1971'
+    explanation_de: 1971 haben die Schweizer Männer in einer Volksabstimmung das Frauenstimmrecht auf
+      Bundesebene angenommen. Seither dürfen Frauen auf nationaler Ebene wählen, an Volksabstimmungen
+      teilnehmen und sich zur Wahl stellen. Die Kantone haben das Frauenstimmrecht zu unterschiedlichen
+      Zeitpunkten eingeführt, einige davon vor 1971, wobei Appenzell Innerrhoden als letzter Kanton erst
+      1990.

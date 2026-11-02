@@ -9,6 +9,22 @@ options:
   d: 100,000 signatures
 explanation: An optional referendum requires 50,000 valid signatures from eligible voters. They must be
   collected within 100 days of the publication of the act.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Unterschriften sind für ein fakultatives Referendum gegen ein Bundesgesetz
+      nötig?
+    options_de:
+      a: 200 000 Unterschriften
+      b: 30 000 Unterschriften
+      c: 50 000 Unterschriften
+      d: 100 000 Unterschriften
+    explanation_de: Ein fakultatives Referendum erfordert 50 000 gültige Unterschriften von Stimmberechtigten.
+      Sie müssen innerhalb von 100 Tagen nach der Veröffentlichung des Erlasses gesammelt werden.

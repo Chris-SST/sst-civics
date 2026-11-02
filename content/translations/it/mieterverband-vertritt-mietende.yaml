@@ -1,0 +1,31 @@
+id: mieterverband-vertritt-mietende
+lang: it
+source_version: 1
+question: Quale compito ha l'associazione degli inquilini?
+options:
+  a: Rappresenta gli interessi dei proprietari di immobili
+  b: Stabilisce le pigioni per tutti gli appartamenti
+  c: Affitta appartamenti su incarico del Cantone
+  d: Rappresenta gli interessi degli inquilini
+explanation: L'associazione degli inquilini è un'organizzazione che si impegna per gli interessi degli
+  inquilini. Offre ai suoi membri una consulenza, ad esempio su questioni di diritto di locazione. Gli
+  interessi dei proprietari di immobili sono rappresentati da altre associazioni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aufgabe hat der Mieterverband?
+    options_de:
+      a: Er vertritt die Interessen der Immobilieneigentümer
+      b: Er legt die Mieten für alle Wohnungen fest
+      c: Er vermietet Wohnungen im Auftrag des Kantons
+      d: Er vertritt die Interessen der Mieter
+    explanation_de: Der Mieterverband ist eine Organisation, die sich für die Interessen der Mieter einsetzt.
+      Er bietet seinen Mitgliedern eine Beratung an, zum Beispiel zu Fragen des Mietrechts. Die Interessen
+      der Immobilieneigentümer werden von anderen Verbänden vertreten.

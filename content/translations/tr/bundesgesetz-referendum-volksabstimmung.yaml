@@ -1,0 +1,31 @@
+id: bundesgesetz-referendum-volksabstimmung
+lang: tr
+source_version: 1
+question: Parlamentonun her iki kamarasının da kabul ettiği bir federal kanun için ne geçerlidir?
+options:
+  a: Oy hakkına sahip olanlar, bir referandumla bu kanun hakkında halk oylaması talep edebilir.
+  b: Federal Konsey (Bundesrat) bundan sonra kanunu onaylanması için ayrıca Federal Mahkeme'ye (Bundesgericht)
+    sunmak zorundadır.
+  c: Kanun her zaman hemen yürürlüğe girer ve halk söz sahibi olamaz.
+  d: Kanton hükümetlerinin kanunu önce tek tek onaylaması gerekir.
+explanation: Her iki kamara da karar verdikten sonra federal kanunlar isteğe bağlı referanduma tabidir.
+  Referandum gerçekleşirse, oy hakkına sahip olanlar kanun hakkında sandıkta karar verir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gilt für ein Bundesgesetz, dem beide Kammern des Parlaments zugestimmt haben?
+    options_de:
+      a: Die Stimmberechtigten können mit einem Referendum eine Volksabstimmung über dieses Gesetz verlangen.
+      b: Der Bundesrat muss das Gesetz danach zusätzlich dem Bundesgericht zur Genehmigung vorlegen.
+      c: Das Gesetz tritt immer sofort in Kraft und das Volk kann nicht mitreden.
+      d: Die Kantonsregierungen müssen das Gesetz zuerst einzeln genehmigen.
+    explanation_de: Nachdem beide Kammern entschieden haben, unterliegen Bundesgesetze dem fakultativen
+      Referendum. Wenn das Referendum zustande kommt, entscheiden die Stimmberechtigten an der Urne über
+      das Gesetz.

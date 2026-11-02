@@ -1,0 +1,30 @@
+id: stadtzuericher-parlament-direkt-gewaehlt
+lang: fr
+source_version: 1
+question: Comment le parlement de la ville de Zurich, le conseil communal (Gemeinderat), est-il constitué
+  ?
+options:
+  a: Le Conseil d'État (Regierungsrat) du canton le nomme
+  b: Le Conseil municipal (Stadtrat) désigne lui-même les membres
+  c: Les partis tirent au sort les sièges entre eux
+  d: La population l'élit directement aux urnes
+explanation: Les citoyens ayant le droit de vote de la ville de Zurich élisent le conseil communal lors
+  d'élections générales. Il est le parlement de la ville et remplace l'assemblée communale (Gemeindeversammlung).
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie setzt sich das Parlament der Stadt Zürich, der Gemeinderat, zusammen?
+    options_de:
+      a: Der Regierungsrat des Kantons ernennt ihn
+      b: Der Stadtrat bestimmt die Mitglieder selbst
+      c: Die Parteien losen die Sitze untereinander aus
+      d: Die Bevölkerung wählt ihn direkt an der Urne
+    explanation_de: Die stimmberechtigten Bürgerinnen und Bürger der Stadt Zürich wählen den Gemeinderat
+      in allgemeinen Wahlen. Er ist das Parlament der Stadt und ersetzt die Gemeindeversammlung.

@@ -1,0 +1,29 @@
+id: wasserkraft-stromproduktion-schweiz
+lang: es
+source_version: 1
+question: Suiza dispone de abundante agua. ¿Cómo se utiliza para producir electricidad?
+options:
+  a: En centrales de gas
+  b: En refinerías de petróleo
+  c: En centrales hidroeléctricas
+  d: En centrales de carbón
+explanation: El agua de los ríos y de los embalses hace funcionar las turbinas en las centrales hidroeléctricas.
+  La energía hidráulica es en Suiza una fuente nacional fundamental de electricidad.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Schweiz verfügt über reichlich Wasser. Wie wird es zur Stromerzeugung genutzt?
+    options_de:
+      a: In Gaskraftwerken
+      b: In Erdölraffinerien
+      c: In Wasserkraftwerken
+      d: In Kohlekraftwerken
+    explanation_de: Das Wasser der Flüsse und der Stauseen treibt in den Wasserkraftwerken die Turbinen
+      an. Die Wasserkraft ist in der Schweiz eine grundlegende einheimische Stromquelle.

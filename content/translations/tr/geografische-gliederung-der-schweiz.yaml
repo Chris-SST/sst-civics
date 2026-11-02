@@ -1,0 +1,29 @@
+id: geografische-gliederung-der-schweiz
+lang: tr
+source_version: 1
+question: İsviçre coğrafi olarak hangi üç büyük peyzaj bölgesine ayrılır?
+options:
+  a: Jura, Orta Bölge (Mittelland) ve Alpler
+  b: Jura, Bodensee Gölü ve Alpler
+  c: Kara Orman (Schwarzwald), Orta Bölge (Mittelland) ve Alpler
+  d: Orta Bölge (Mittelland), Alp Önü (Voralpen) ve Ticino
+explanation: Jura kuzeybatıda yer alır, Alpler yüzölçümünün en büyük bölümünü kaplar. Bunların arasında,
+  çoğu insanın yaşadığı Orta Bölge (Mittelland) bulunur.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: In welche drei grossen Landschaftsregionen wird die Schweiz geografisch unterteilt?
+    options_de:
+      a: Jura, Mittelland und Alpen
+      b: Jura, Bodensee und Alpen
+      c: Schwarzwald, Mittelland und Alpen
+      d: Mittelland, Voralpen und Tessin
+    explanation_de: Der Jura liegt im Nordwesten, die Alpen nehmen den grössten Teil der Fläche ein. Dazwischen
+      befindet sich das Mittelland, in dem die meisten Menschen leben.

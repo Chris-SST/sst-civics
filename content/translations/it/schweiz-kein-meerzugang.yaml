@@ -1,0 +1,31 @@
+id: schweiz-kein-meerzugang
+lang: it
+source_version: 2
+question: Quale affermazione sulla posizione geografica della Svizzera è corretta?
+options:
+  a: La Svizzera non ha un accesso diretto al mare.
+  b: La Svizzera confina a ovest con l'Oceano Atlantico.
+  c: La Svizzera confina a sud con il Mar Mediterraneo.
+  d: La Svizzera confina a nord con il Mare del Nord.
+explanation: 'La Svizzera è un Paese senza sbocco sul mare: è interamente circondata da altri Paesi e
+  non ha coste marittime. Sul Reno le navi viaggiano sì da Basilea fino al Mare del Nord, ma nessun mare
+  confina direttamente con la Svizzera.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Aussage über die geografische Lage der Schweiz ist richtig?
+    options_de:
+      a: Die Schweiz hat keinen direkten Zugang zum Meer.
+      b: Die Schweiz grenzt im Westen an den Atlantischen Ozean.
+      c: Die Schweiz grenzt im Süden an das Mittelmeer.
+      d: Die Schweiz grenzt im Norden an die Nordsee.
+    explanation_de: 'Die Schweiz ist ein Land ohne Zugang zum Meer: Sie ist vollständig von anderen Ländern
+      umgeben und hat keine Meeresküsten. Auf dem Rhein fahren die Schiffe zwar von Basel bis zur Nordsee,
+      aber kein Meer grenzt direkt an die Schweiz.'

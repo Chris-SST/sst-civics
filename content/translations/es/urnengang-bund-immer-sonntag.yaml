@@ -1,0 +1,31 @@
+id: urnengang-bund-immer-sonntag
+lang: es
+source_version: 1
+question: ¿En qué día de la semana se celebran en Suiza las votaciones y elecciones federales?
+options:
+  a: Siempre en domingo
+  b: Siempre en sábado
+  c: Siempre en viernes
+  d: En un día de la semana que cada cantón elige por sí mismo
+explanation: Las votaciones en las urnas a nivel de la Confederación se celebran siempre en domingo. Así
+  pueden participar el mayor número posible de personas con derecho a voto, y la fecha es la misma para
+  todos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: An welchem Wochentag finden in der Schweiz die eidgenössischen Abstimmungen und Wahlen
+      statt?
+    options_de:
+      a: Immer an einem Sonntag
+      b: Immer an einem Samstag
+      c: Immer an einem Freitag
+      d: An einem Wochentag, den jeder Kanton selbst wählt
+    explanation_de: Die Urnenabstimmungen auf Ebene des Bundes finden immer an einem Sonntag statt. So
+      können möglichst viele Stimmberechtigte teilnehmen, und das Datum ist für alle dasselbe.

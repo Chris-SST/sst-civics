@@ -1,0 +1,32 @@
+id: landesstreik-wochenarbeitszeit-48-stunden
+lang: fr
+source_version: 1
+question: Quelle durée hebdomadaire du travail était en vigueur en Suisse après la grève générale de 1918
+  ?
+options:
+  a: 48 heures
+  b: 54 heures
+  c: 60 heures
+  d: 40 heures
+explanation: La grève générale de 1918 était une grève générale de la classe ouvrière. L'une des revendications
+  qui ont été mises en œuvre par la suite était la semaine de 48 heures. Auparavant, des durées de travail
+  nettement plus longues étaient courantes.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche wöchentliche Arbeitszeit galt in der Schweiz nach dem Generalstreik von 1918?
+    options_de:
+      a: 48 Stunden
+      b: 54 Stunden
+      c: 60 Stunden
+      d: 40 Stunden
+    explanation_de: Der Generalstreik von 1918 war ein Generalstreik der Arbeiterklasse. Eine der Forderungen,
+      die danach umgesetzt wurden, war die 48-Stunden-Woche. Zuvor waren deutlich längere Arbeitszeiten
+      üblich.

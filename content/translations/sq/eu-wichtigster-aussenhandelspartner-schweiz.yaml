@@ -1,0 +1,29 @@
+id: eu-wichtigster-aussenhandelspartner-schweiz
+lang: sq
+source_version: 1
+question: Cili është partneri më i rëndësishëm i tregtisë së jashtme për ekonominë zvicerane?
+options:
+  a: Kina
+  b: Japonia
+  c: Bashkimi Evropian
+  d: Shtetet e Bashkuara të Amerikës
+explanation: Pjesa më e madhe e tregtisë së Zvicrës me jashtë zhvillohet me vendet e Bashkimit Evropian.
+  Prandaj Zvicra është e lidhur me BE-në nëpërmjet marrëveshjeve të ndryshme.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist der wichtigste Aussenhandelspartner für die Schweizer Wirtschaft?
+    options_de:
+      a: China
+      b: Japan
+      c: Die Europäische Union
+      d: Die Vereinigten Staaten von Amerika
+    explanation_de: Der grösste Teil des Aussenhandels der Schweiz findet mit den Ländern der Europäischen
+      Union statt. Deshalb ist die Schweiz durch verschiedene Abkommen mit der EU verbunden.

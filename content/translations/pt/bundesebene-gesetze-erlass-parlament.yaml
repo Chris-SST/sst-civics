@@ -1,0 +1,32 @@
+id: bundesebene-gesetze-erlass-parlament
+lang: pt
+source_version: 1
+question: Qual autoridade aprova as leis a nível da Confederação?
+options:
+  a: A Assembleia Federal (Bundesversammlung), ou seja, o Conselho Nacional (Nationalrat) e o Conselho
+    dos Estados (Ständerat)
+  b: O Banco Nacional Suíço
+  c: A Chancelaria Federal (Bundeskanzlei)
+  d: A Conferência dos Governos Cantonais
+explanation: A Assembleia Federal é o parlamento da Confederação e é composta pelo Conselho Nacional e
+  pelo Conselho dos Estados. Ela é responsável pela legislação. A Chancelaria Federal, por sua vez, apoia
+  o Conselho Federal (Bundesrat) como órgão de estado-maior.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Behörde verabschiedet die Gesetze auf Ebene des Bundes?
+    options_de:
+      a: Die Bundesversammlung, also der Nationalrat und der Ständerat
+      b: Die Schweizerische Nationalbank
+      c: Die Bundeskanzlei
+      d: Die Konferenz der Kantonsregierungen
+    explanation_de: Die Bundesversammlung ist das Parlament des Bundes und setzt sich aus dem Nationalrat
+      und dem Ständerat zusammen. Sie ist für die Gesetzgebung zuständig. Die Bundeskanzlei hingegen unterstützt
+      den Bundesrat als Stabsorgan.

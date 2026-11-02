@@ -1,0 +1,30 @@
+id: kanton-zuerich-lage-mittelland
+lang: pt
+source_version: 2
+question: A que grande região paisagística da Suíça pertence o cantão de Zurique?
+options:
+  a: Aos Alpes do Sul
+  b: Ao Jura
+  c: Ao Planalto Suíço (Mittelland)
+  d: Aos Alpes Centrais
+explanation: O cantão de Zurique pertence ao Planalto Suíço (Mittelland), ou seja, à zona mais plana entre
+  o Jura, a noroeste, e os Alpes, a sul. O Planalto Suíço é a parte mais densamente povoada da Suíça.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Zu welcher grossen Landschaftsregion der Schweiz gehört der Kanton Zürich?
+    options_de:
+      a: Zu den Südalpen
+      b: Zum Jura
+      c: Zum Mittelland
+      d: Zu den Zentralalpen
+    explanation_de: Der Kanton Zürich gehört zum Mittelland, das heisst zur flacheren Zone zwischen dem
+      Jura im Nordwesten und den Alpen im Süden. Das Mittelland ist der am dichtesten besiedelte Teil
+      der Schweiz.

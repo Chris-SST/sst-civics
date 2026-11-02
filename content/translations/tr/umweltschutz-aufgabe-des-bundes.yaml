@@ -1,0 +1,33 @@
+id: umweltschutz-aufgabe-des-bundes
+lang: tr
+source_version: 1
+question: İsviçre'de çevreyi korumak ve bunun için düzenlemeler çıkarmak hangi düzeyin görevidir?
+options:
+  a: Konfederasyon
+  b: Özel kuruluşlar
+  c: Yalnızca belediyeler (Gemeinde)
+  d: Yalnızca ilçeler
+explanation: Federal Anayasa, Konfederasyonu insanı ve çevreyi zararlı etkilerden korumakla görevlendirir.
+  Konfederasyon bu amaçla, örneğin su ve doğa koruma alanında kanunlar çıkarır. Bu düzenlemelerin çoğunu
+  kantonlar uygular.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'Erklärung: Original sagt, die Kantone setzen «viele» dieser Vorschriften um; die Rückübersetzung
+      sagt «die meisten». Das ist eine andere Mengenangabe, der Rest ist gleich.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 1
+    question_de: Auf welcher Ebene ist es in der Schweiz die Aufgabe, die Umwelt zu schützen und dafür
+      Vorschriften zu erlassen?
+    options_de:
+      a: Der Bund
+      b: Private Organisationen
+      c: Nur die Gemeinden
+      d: Nur die Bezirke
+    explanation_de: Die Bundesverfassung beauftragt den Bund, den Menschen und die Umwelt vor schädlichen
+      Einwirkungen zu schützen. Der Bund erlässt zu diesem Zweck Gesetze, zum Beispiel im Bereich des
+      Gewässer- und Naturschutzes. Die meisten dieser Vorschriften werden von den Kantonen umgesetzt.

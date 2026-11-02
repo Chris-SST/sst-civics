@@ -1,0 +1,30 @@
+id: steuerpflicht-wohnhafte-personen-schweiz
+lang: sq
+source_version: 1
+question: Kush është në princip i detyruar të paguajë tatime në Zvicër?
+options:
+  a: Personat që banojnë në Zvicër
+  b: Vetëm personat që drejtojnë një ndërmarrje
+  c: Vetëm personat me shtetësi (Bürgerrecht) zvicerane
+  d: Vetëm personat që kanë të drejtën e votës
+explanation: Detyrimi tatimor lidhet me vendbanimin dhe jo me shtetësinë. Edhe të huajt, meshkuj dhe femra,
+  që banojnë në Zvicër, paguajnë tatime. E drejta e votës nuk luan asnjë rol në këtë drejtim.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer ist grundsätzlich verpflichtet, in der Schweiz Steuern zu bezahlen?
+    options_de:
+      a: Personen, die in der Schweiz wohnen
+      b: Nur Personen, die ein Unternehmen führen
+      c: Nur Personen mit Schweizer Bürgerrecht
+      d: Nur Personen, die das Stimmrecht haben
+    explanation_de: Die Steuerpflicht knüpft an den Wohnsitz an und nicht an die Staatsangehörigkeit.
+      Auch Ausländer, Männer und Frauen, die in der Schweiz wohnen, bezahlen Steuern. Das Stimmrecht spielt
+      in dieser Hinsicht keine Rolle.

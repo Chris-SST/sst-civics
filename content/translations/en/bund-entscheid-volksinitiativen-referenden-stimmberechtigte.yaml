@@ -11,6 +11,24 @@ options:
 explanation: In the case of popular initiatives and referendums, the citizens entitled to vote have the
   last word. They decide in the popular vote at the ballot box, which in Switzerland is also possible
   by post. The Federal Council, Parliament and the Federal Supreme Court cannot replace the result.
-status: draft
-reviewed_by: null
-reviewed_at: null
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wer hat auf Bundesebene bei einer Abstimmung über die Annahme einer Volksinitiative oder
+      eines Referendums das letzte Wort?
+    options_de:
+      a: Die Bundesversammlung in einer gemeinsamen Sitzung beider Kammern
+      b: Der Bundesrat nach Anhörung der Kantonsregierungen
+      c: Das Bundesgericht nach einer rechtlichen Prüfung der Vorlage
+      d: Die stimmberechtigten Bürgerinnen und Bürger, die an der Urne oder auf dem Postweg abstimmen
+    explanation_de: Bei Volksinitiativen und Referenden haben die stimmberechtigten Bürgerinnen und Bürger
+      das letzte Wort. Sie entscheiden in der Volksabstimmung an der Urne, was in der Schweiz auch auf
+      dem Postweg möglich ist. Der Bundesrat, das Parlament und das Bundesgericht können das Ergebnis
+      nicht ersetzen.

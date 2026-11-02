@@ -1,0 +1,36 @@
+id: quartierverein-aufgabe-im-quartier
+lang: fr
+source_version: 1
+question: Quelle est une tâche typique d'une association de quartier dans une commune (Gemeinde) ou une
+  ville du canton de Zurich ?
+options:
+  a: Elle défend les préoccupations des habitants du quartier auprès des autorités et encourage la vie
+    en commun.
+  b: Elle tient le contrôle des habitants pour le quartier.
+  c: Elle prélève des impôts auprès des habitants du quartier.
+  d: Elle autorise les demandes de permis de construire dans le quartier.
+explanation: Une association de quartier est un regroupement volontaire d'habitants. Elle transmet les
+  préoccupations du quartier aux autorités et organise des manifestations qui renforcent la vie en commun.
+  Les tâches relevant de la puissance publique, comme les impôts, les permis de construire ou le contrôle
+  des habitants, appartiennent à la commune.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welches ist eine typische Aufgabe eines Quartiervereins in einer Gemeinde oder einer
+      Stadt im Kanton Zürich?
+    options_de:
+      a: Er vertritt die Anliegen der Bewohner des Quartiers gegenüber den Behörden und fördert das Zusammenleben.
+      b: Er führt die Einwohnerkontrolle für das Quartier.
+      c: Er erhebt Steuern bei den Bewohnern des Quartiers.
+      d: Er bewilligt die Baugesuche im Quartier.
+    explanation_de: Ein Quartierverein ist ein freiwilliger Zusammenschluss von Bewohnern. Er übermittelt
+      die Anliegen des Quartiers an die Behörden und organisiert Veranstaltungen, die das Zusammenleben
+      stärken. Die hoheitlichen Aufgaben, wie die Steuern, die Baubewilligungen oder die Einwohnerkontrolle,
+      gehören zur Gemeinde.

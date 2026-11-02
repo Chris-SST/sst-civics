@@ -1,0 +1,31 @@
+id: ehe-voraussetzungen-volljaehrig-urteilsfaehig
+lang: pt
+source_version: 1
+question: Que requisitos as pessoas devem cumprir para poderem casar-se na Suíça?
+options:
+  a: Devem possuir a cidadania (Bürgerrecht) suíça e ser maiores de idade
+  b: Devem ser maiores de idade e ter capacidade de agir de forma racional
+  c: Devem viver juntas há pelo menos cinco anos
+  d: Devem pertencer à mesma religião
+explanation: Pode casar-se quem é maior de idade e tem capacidade de discernimento. Ter capacidade de
+  discernimento significa que a pessoa consegue agir de forma racional. A nacionalidade, a religião ou
+  uma determinada duração da vida em comum não são requisitos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Voraussetzungen müssen Personen erfüllen, um in der Schweiz heiraten zu können?
+    options_de:
+      a: Sie müssen das Schweizer Bürgerrecht besitzen und volljährig sein
+      b: Sie müssen volljährig sein und die Fähigkeit haben, vernünftig zu handeln
+      c: Sie müssen seit mindestens fünf Jahren zusammenleben
+      d: Sie müssen derselben Religion angehören
+    explanation_de: Heiraten kann, wer volljährig und urteilsfähig ist. Urteilsfähig zu sein bedeutet,
+      dass die Person vernünftig handeln kann. Die Staatsangehörigkeit, die Religion oder eine bestimmte
+      Dauer des Zusammenlebens sind keine Voraussetzungen.

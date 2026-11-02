@@ -1,0 +1,31 @@
+id: volksinitiative-unterschriften-anzahl
+lang: it
+source_version: 1
+question: Quante firme di aventi diritto di voto sono necessarie affinché un'iniziativa popolare (Volksinitiative)
+  federale riesca?
+options:
+  a: 50 000 firme
+  b: 150 000 firme
+  c: 200 000 firme
+  d: 100 000 firme
+explanation: Per un'iniziativa popolare federale sono necessarie 100 000 firme valide. Devono essere raccolte
+  entro 18 mesi.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Wie viele Unterschriften von Stimmberechtigten sind nötig, damit eine eidgenössische
+      Volksinitiative zustande kommt?
+    options_de:
+      a: 50 000 Unterschriften
+      b: 150 000 Unterschriften
+      c: 200 000 Unterschriften
+      d: 100 000 Unterschriften
+    explanation_de: Für eine eidgenössische Volksinitiative sind 100 000 gültige Unterschriften nötig.
+      Sie müssen innerhalb von 18 Monaten gesammelt werden.

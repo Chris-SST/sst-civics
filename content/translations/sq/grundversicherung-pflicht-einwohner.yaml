@@ -1,0 +1,30 @@
+id: grundversicherung-pflicht-einwohner
+lang: sq
+source_version: 1
+question: Për kë vlen në Zvicër sigurimi themelor i detyrueshëm për trajtimet mjekësore?
+options:
+  a: Vetëm për personat me shtetësi zvicerane (Bürgerrecht)
+  b: Vetëm për personat që punojnë dhe marrin pagë
+  c: Vetëm për personat me të ardhura të ulëta
+  d: Për të gjithë banorët dhe banoret e Zvicrës
+explanation: Sigurimi i detyrueshëm shëndetësor vlen për të gjithë personat që jetojnë në Zvicër. Shtetësia,
+  aktiviteti profesional dhe të ardhurat nuk kanë asnjë rëndësi në këtë drejtim.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Für wen gilt in der Schweiz die obligatorische Grundversicherung für medizinische Behandlungen?
+    options_de:
+      a: Nur für Personen mit Schweizer Bürgerrecht
+      b: Nur für Personen, die arbeiten und einen Lohn erhalten
+      c: Nur für Personen mit niedrigem Einkommen
+      d: Für alle Einwohner und Einwohnerinnen der Schweiz
+    explanation_de: Die obligatorische Krankenversicherung gilt für alle Personen, die in der Schweiz
+      leben. Die Staatsangehörigkeit, die berufliche Tätigkeit und das Einkommen spielen in dieser Hinsicht
+      keine Rolle.

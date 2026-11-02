@@ -1,26 +1,26 @@
 id: frauenstimmrecht-national-1971
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.geschichte.gesellschaftswandel
-question_de: In welchem Jahr erhielten die Frauen in der Schweiz das Stimm- und Wahlrecht auf nationaler
-  Ebene?
+question_de: Seit welchem Jahr dürfen Frauen in der Schweiz auf Bundesebene wählen und abstimmen?
 options_de:
   a: '1959'
   b: '1991'
   c: '1948'
   d: '1971'
 correct: d
-explanation_de: Die Männer stimmten 1971 in einer Abstimmung für das Frauenstimmrecht auf Bundesebene.
-  Seither dürfen Frauen national wählen und abstimmen. In einzelnen Kantonen kam es später auch auf kantonaler
-  Ebene.
+explanation_de: Im Jahr 1971 nahmen die Schweizer Männer in einer Volksabstimmung das Frauenstimmrecht
+  auf Bundesebene an. Seither dürfen Frauen national wählen, abstimmen und sich wählen lassen. Die Kantone
+  führten das Frauenstimmrecht zu unterschiedlichen Zeiten ein, einige schon vor 1971, Appenzell Innerrhoden
+  als letzter Kanton erst 1990.
 sources:
 - url: https://www.ekf.admin.ch/de/frauenrechte
   checked: &id001 2026-11-02
 glossary:
 - Stimmrecht
 - Wahlrecht
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-238
@@ -30,15 +30,51 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
-    reasoning: Die Schweizer Männer stimmten am 7. Februar 1971 der Einführung des Frauenstimm- und Wahlrechts
-      auf Bundesebene zu, sodass Frauen seit 1971 national abstimmen und wählen dürfen.
+    version: 2
+    reasoning: Das Frauenstimm- und Wahlrecht auf Bundesebene wurde in der Volksabstimmung vom 7. Februar
+      1971 eingeführt, daher stimmt 1971.
   source:
     verdict: supported
-    note: Quelle 1 nennt 1971 als Jahr der Einführung des Frauenstimm- und Wahlrechts auf eidgenössischer
-      Ebene (seit dem 7. Februar 1971 gleiche politische Rechte). 1959 wird als gescheiterte Volksabstimmung
-      genannt. Die Aussage der Erklärung zu den Kantonen wird in der Quelle nicht behandelt, ist für die
-      Antwort aber nicht entscheidend.
+    note: Quelle 1 (EKF) nennt den 7. Februar 1971 als Datum, seit dem Frauen auf eidgenössischer Ebene
+      dieselben politischen Rechte haben wie Männer; die Abstimmung von 1959 scheiterte. Die Angaben der
+      Erklärung zu den Kantonen und zu Appenzell Innerrhoden 1990 stehen nicht in der Quelle, sind für
+      die richtige Antwort aber nicht nötig.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Appenzell Innerrhoden hat das Frauenstimmrecht 1990 nicht selbst eingeführt, sondern das
+        Bundesgericht hat es angeordnet; besser wäre: «in Appenzell Innerrhoden erst 1990 durch einen
+        Entscheid des Bundesgerichts».'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: In der Erklärung könnte man ergänzen, dass Appenzell Innerrhoden das Frauenstimmrecht
+        1990 nicht freiwillig einführte, sondern das Bundesgericht es verlangte, zum Beispiel mit dem
+        Satz «Appenzell Innerrhoden musste es 1990 nach einem Entscheid des Bundesgerichts einführen».'
+      - 'Klein: Die Antworten könnten der Übersicht halber chronologisch geordnet werden (1948, 1959,
+        1971, 1991).'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt, Appenzell Innerrhoden habe das Frauenstimmrecht «erst 1990» eingeführt.
+        Das stimmt (Bundesgerichtsentscheid 1990), ist aber mehr Detail als nötig und stützt sich nicht
+        auf die angegebene Quelle. Der Satz könnte gekürzt werden, etwa mit «Appenzell Innerrhoden als
+        letzter Kanton erst 1990 (auf Anordnung des Bundesgerichts)».'
+      - 'Klein: Die Antwort 1959 ist als falsche Antwort gut gewählt, weil in diesem Jahr die erste nationale
+        Abstimmung scheiterte. Die Erklärung könnte dies erwähnen, damit Lernende den Unterschied verstehen.'
+    round: 2
+    at: &id002 2026-11-02
+    version: 2
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -23,7 +23,7 @@ sources:
 glossary:
 - Mutterschaftsurlaub
 - Erwerbsersatzordnung
-status: in_review
+status: approved
 difficulty: 1
 covers:
 - zh-179
@@ -46,3 +46,42 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Antwort «jede erwerbstätige Frau» vereinfacht das Gesetz, denn die Entschädigung nach
+        EOG setzt voraus, dass die Frau vor der Geburt neun Monate AHV-versichert und davon mindestens
+        fünf Monate erwerbstätig war; die Erklärung könnte das mit einem kurzen Satz wie «Dafür muss sie
+        vor der Geburt eine bestimmte Zeit versichert und erwerbstätig gewesen sein» ergänzen.'
+      - 'Klein: Die Erklärung nennt die Dauer nicht; ergänzen Sie, dass der bezahlte Mutterschaftsurlaub
+        14 Wochen dauert, wie es auch die Broschüre des Kantons Zürich festhält.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: «Jede erwerbstätige Frau» ist leicht vereinfacht, denn für die Entschädigung gelten Mindestbedingungen
+        (9 Monate AHV-versichert vor der Geburt, davon mindestens 5 Monate erwerbstätig); die Erklärung
+        könnte das kurz erwähnen, etwa mit «wenn sie vor der Geburt eine gewisse Zeit versichert und erwerbstätig
+        war».'
+      - 'Klein: Die Erklärung würde mehr helfen, wenn sie die Dauer und Höhe nennt, zum Beispiel «14 Wochen,
+        mit 80 Prozent des Lohns».'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung nennt nicht, dass der Anspruch 14 Wochen (98 Taggelder) dauert; die Brochure
+        erwähnt «14 Wochen», ein Zusatz wie «Der Urlaub dauert 14 Wochen» wäre für Lernende hilfreich.'
+      - 'Klein: Genau genommen setzt der Anspruch nach EOG eine Versicherungsdauer von neun Monaten und
+        eine Erwerbstätigkeit während mindestens fünf Monaten voraus; die vereinfachte Aussage «jede erwerbstätige
+        Frau» entspricht aber der Themenliste und ist für den Test vertretbar.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

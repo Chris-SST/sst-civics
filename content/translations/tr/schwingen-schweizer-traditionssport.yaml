@@ -1,0 +1,34 @@
+id: schwingen-schweizer-traditionssport
+lang: tr
+source_version: 2
+question: İsviçre'de geleneksel sporlardan hangisi bir tür güreştir?
+options:
+  a: Hornussen
+  b: Schwingen
+  c: Curling
+  d: Steinstossen
+explanation: 'Schwingen, talaşla kaplı yuvarlak bir alanda iki kişi arasında yapılan bir güreştir ve İsviçre''nin
+  geleneksel sporu olarak kabul edilir. Hornussen ve Steinstossen de eski İsviçre sporlarıdır, ancak güreş
+  değildir: Hornussen''de küçük bir disk havada uzağa fırlatılır, Steinstossen''de ise ağır bir taş atılır.
+  Curling buz üzerinde oynanır ve aslen İskoçya''dan gelir.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche der traditionellen Sportarten in der Schweiz ist eine Art des Ringens?
+    options_de:
+      a: Hornussen
+      b: Schwingen
+      c: Curling
+      d: Steinstossen
+    explanation_de: 'Schwingen ist ein Ringkampf zwischen zwei Personen in einem runden, mit Sägemehl
+      bedeckten Bereich und gilt als der traditionelle Sport der Schweiz. Hornussen und Steinstossen sind
+      ebenfalls alte Schweizer Sportarten, aber kein Ringen: Beim Hornussen wird eine kleine Scheibe weit
+      durch die Luft geschleudert, beim Steinstossen hingegen wird ein schwerer Stein geworfen. Curling
+      wird auf Eis gespielt und stammt ursprünglich aus Schottland.'

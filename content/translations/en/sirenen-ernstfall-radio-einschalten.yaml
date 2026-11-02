@@ -1,15 +1,33 @@
 id: sirenen-ernstfall-radio-einschalten
 lang: en
-source_version: 1
-question: What should you do if the sirens sound in an emergency?
+source_version: 2
+question: In an emergency, the sirens sound the "General Alarm" (a rising and falling wailing tone). What
+  should you do?
 options:
   a: Leave the house immediately
   b: Call the fire brigade
-  c: Switch on the radio
-  d: Get in the car and drive away
-explanation: When the sirens sound an alarm, the authorities broadcast information and instructions on
-  the radio. You should therefore switch on the radio and follow the instructions. The emergency telephone
-  lines should be kept free.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  c: Listen to the radio and follow the instructions of the authorities
+  d: Drive away in the car
+explanation: When the General Alarm sounds, the authorities use the radio to inform people what to do.
+  Information is also available in the Alertswiss app. You should follow the instructions and not call
+  the emergency numbers unnecessarily, so that they remain free for genuine emergencies.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Im Notfall ertönen die Sirenen mit dem «Allgemeinen Alarm» (ein an- und abschwellender
+      Heulton). Was sollte man tun?
+    options_de:
+      a: Das Haus sofort verlassen
+      b: Die Feuerwehr anrufen
+      c: Radio hören und den Anweisungen der Behörden folgen
+      d: Mit dem Auto wegfahren
+    explanation_de: Wenn der Allgemeine Alarm ertönt, informieren die Behörden die Bevölkerung über das
+      Radio, was zu tun ist. Informationen sind auch in der Alertswiss-App verfügbar. Man sollte den Anweisungen
+      folgen und die Notrufnummern nicht unnötig anrufen, damit sie für echte Notfälle frei bleiben.

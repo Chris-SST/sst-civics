@@ -1,0 +1,32 @@
+id: glaubensfreiheit-religion-ueberzeugung-leben
+lang: pt
+source_version: 1
+question: O que faz parte da liberdade de crença e de consciência segundo a Constituição Federal?
+options:
+  a: O direito de ter uma crença e uma convicção e de viver de acordo com elas
+  b: Apenas a filiação a uma igreja cantonal reconhecida
+  c: O dever de manter a crença dos pais
+  d: O direito de obrigar outras pessoas a adotar a própria crença
+explanation: Toda pessoa pode escolher livremente a sua religião e a sua convicção filosófica e viver
+  de acordo com elas. Também é permitido mudar de crença ou não ter nenhuma. Ninguém pode ser forçado
+  a ter uma crença.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung; «Landeskirche» und «Kantonskirche» bezeichnen hier dasselbe (anerkannte
+      Kirche) und bleiben falsche Antwort, «weltanschaulich» und «philosophisch» sind synonym verwendet.
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Was gehört gemäss Bundesverfassung zur Glaubens- und Gewissensfreiheit?
+    options_de:
+      a: Das Recht, einen Glauben und eine Überzeugung zu haben und gemäss diesen zu leben
+      b: Nur die Mitgliedschaft in einer anerkannten Kantonskirche
+      c: Die Pflicht, den Glauben der Eltern beizubehalten
+      d: Das Recht, andere Personen zu zwingen, den eigenen Glauben anzunehmen
+    explanation_de: Jede Person kann ihre Religion und ihre philosophische Überzeugung frei wählen und
+      gemäss diesen leben. Es ist auch erlaubt, den Glauben zu wechseln oder keinen zu haben. Niemand
+      kann gezwungen werden, einen Glauben zu haben.

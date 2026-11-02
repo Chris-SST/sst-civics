@@ -1,0 +1,34 @@
+id: polizei-befugnis-festnahme-straftaeter
+lang: fr
+source_version: 2
+question: Quelle autorité peut procéder à l'arrestation de personnes soupçonnées d'avoir commis une infraction
+  ?
+options:
+  a: L'autorité scolaire
+  b: La police
+  c: Le parlement
+  d: L'administration fiscale
+explanation: La police peut arrêter les personnes soupçonnées d'une infraction, aux conditions prévues
+  par la loi. Il appartient ensuite à un tribunal de décider si une personne est coupable. L'autorité
+  scolaire, le parlement et l'administration fiscale n'ont pas ce pouvoir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Behörde kann Personen festnehmen, die verdächtigt werden, eine Straftat begangen
+      zu haben?
+    options_de:
+      a: Die Schulbehörde
+      b: Die Polizei
+      c: Das Parlament
+      d: Die Steuerverwaltung
+    explanation_de: Die Polizei kann Personen, die einer Straftat verdächtigt werden, unter den vom Gesetz
+      vorgesehenen Bedingungen festnehmen. Danach ist es Sache eines Gerichts, zu entscheiden, ob eine
+      Person schuldig ist. Die Schulbehörde, das Parlament und die Steuerverwaltung haben diese Befugnis
+      nicht.

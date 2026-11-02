@@ -1,0 +1,31 @@
+id: medien-vierte-staatsgewalt
+lang: tr
+source_version: 1
+question: Medya, devlet içindeki rolünü anlatan özel bir ifadeyle sık sık anılır. Bu ifade hangisidir?
+options:
+  a: İkinci devlet gücü
+  b: En yüksek devlet gücü
+  c: Birinci devlet gücü
+  d: Dördüncü devlet gücü
+explanation: Üç devlet gücü yasama, yürütme ve yargıdır. Medya bunların arasında yer almaz, ancak siyaseti
+  denetler ve halkı bilgilendirir. Bu nedenle medyaya sıklıkla dördüncü devlet gücü denir.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Die Medien werden oft mit einem besonderen Ausdruck bezeichnet, der ihre Rolle im Staat
+      beschreibt. Welcher Ausdruck ist das?
+    options_de:
+      a: Zweite Staatsgewalt
+      b: Höchste Staatsgewalt
+      c: Erste Staatsgewalt
+      d: Vierte Staatsgewalt
+    explanation_de: Die drei Staatsgewalten sind die Legislative, die Exekutive und die Judikative. Die
+      Medien gehören nicht dazu, aber sie kontrollieren die Politik und informieren die Bevölkerung. Deshalb
+      werden die Medien häufig als vierte Staatsgewalt bezeichnet.

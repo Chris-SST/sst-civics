@@ -1,0 +1,31 @@
+id: vermoegenssteuer-kanton-gemeinden-zuerich
+lang: it
+source_version: 1
+question: Quale di queste imposte riscuotono il Cantone Zurigo e i Comuni (Gemeinden) sul patrimonio di
+  una persona, ad esempio sugli averi bancari e sui titoli?
+options:
+  a: L'imposta preventiva
+  b: L'imposta sul valore aggiunto
+  c: L'imposta sulla sostanza
+  d: L'imposta sugli oli minerali
+explanation: Il Cantone e i Comuni tassano la sostanza delle persone fisiche. L'imposta sul valore aggiunto,
+  l'imposta preventiva e l'imposta sugli oli minerali sono imposte della Confederazione.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche dieser Steuern erheben der Kanton Zürich und die Gemeinden auf dem Vermögen einer
+      Person, zum Beispiel auf Bankguthaben und Wertpapieren?
+    options_de:
+      a: Die Verrechnungssteuer
+      b: Die Mehrwertsteuer
+      c: Die Vermögenssteuer
+      d: Die Mineralölsteuer
+    explanation_de: Der Kanton und die Gemeinden besteuern das Vermögen der natürlichen Personen. Die
+      Mehrwertsteuer, die Verrechnungssteuer und die Mineralölsteuer sind Steuern des Bundes.

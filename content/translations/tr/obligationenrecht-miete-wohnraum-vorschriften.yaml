@@ -1,0 +1,33 @@
+id: obligationenrecht-miete-wohnraum-vorschriften
+lang: tr
+source_version: 2
+question: Bir dairenin kiralanmasına ilişkin kurallar hangi kanunda yer almaktadır?
+options:
+  a: Borçlar Hukuku'nda (Obligationenrecht)
+  b: İş Kanunu'nda (Arbeitsgesetz)
+  c: Ceza Kanunu'nda (Strafgesetzbuch)
+  d: Karayolu Trafik Kanunu'nda (Strassenverkehrsgesetz)
+explanation: Dairelerin kiralanmasına ilişkin kurallar Borçlar Hukuku'nda (OR) yer almaktadır. Orada örneğin
+  kira sözleşmesinde nelerin geçerli olduğu, kira bedelinin ne kadar yüksek olabileceği ve sözleşmenin
+  nasıl feshedilebileceği belirtilir. Medeni Kanun (ZGB) ise buna karşılık daha çok aile, evlilik ve miras
+  gibi konuları düzenler.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: In welchem Gesetz stehen die Regeln zur Vermietung einer Wohnung?
+    options_de:
+      a: Im Obligationenrecht
+      b: Im Arbeitsgesetz
+      c: Im Strafgesetzbuch
+      d: Im Strassenverkehrsgesetz
+    explanation_de: Die Regeln zur Vermietung von Wohnungen stehen im Obligationenrecht (OR). Dort wird
+      zum Beispiel festgelegt, was im Mietvertrag gilt, wie hoch der Mietzins sein darf und wie der Vertrag
+      gekündigt werden kann. Das Zivilgesetzbuch (ZGB) hingegen regelt eher Themen wie Familie, Ehe und
+      Erbschaft.

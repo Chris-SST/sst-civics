@@ -22,7 +22,7 @@ sources:
 glossary:
 - Kündigungsschutz
 - Arbeitnehmerin
-status: in_review
+status: approved
 difficulty: 2
 covers:
 - zh-163
@@ -45,3 +45,37 @@ checks:
     at: *id001
     model: claude-sonnet-5-5
     version: 1
+  panel:
+    verdict: approve
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung sagt nicht, dass der Kündigungsschutz nach Art. 336c OR erst nach der Probezeit
+        gilt und bis 16 Wochen nach der Geburt dauert; ergänzen: «Nach der Probezeit darf der Arbeitgeber
+        während der Schwangerschaft und in den 16 Wochen nach der Geburt nicht kündigen.»'
+      - 'Klein: Die Erklärung könnte kurz sagen, warum Antwort c falsch ist, etwa: «Der Schutz gilt auch
+        dann, wenn der Arbeitgeber noch nichts von der Schwangerschaft weiss.»'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung erwähnt nicht, dass der Schutz erst nach der Probezeit gilt und bis 16 Wochen
+        nach der Geburt dauert (Art. 336c OR); vorschlagen: «Nach der Probezeit darf der Arbeitgeber während
+        der Schwangerschaft und bis 16 Wochen nach der Geburt nicht kündigen.»'
+      - 'Klein: Die Erklärung könnte kurz sagen, warum c) falsch ist, etwa mit dem Satz «Der Schutz gilt
+        auch dann, wenn der Arbeitgeber noch nichts von der Schwangerschaft weiss.»'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Erklärung könnte ergänzen, dass der Schutz auch 16 Wochen nach der Geburt gilt und
+        erst nach der Probezeit greift (Art. 336c OR). Das würde Antwort c) noch klarer widerlegen.'
+    round: 1
+    at: &id002 2026-11-02
+    version: 1
+review:
+  action: ai_panel
+  note: Approved by the AI review panel
+  at: *id002

@@ -1,0 +1,30 @@
+id: schweiz-besteht-aus-kantonen-als-gliedstaaten
+lang: sq
+source_version: 1
+question: Nga çfarë përbëhet Zvicra si shtet federal?
+options:
+  a: Nga rrethe si shtete anëtare
+  b: Nga zona gjuhësore si shtete anëtare
+  c: Nga kantone si shtete anëtare
+  d: Nga rajone si shtete anëtare
+explanation: Zvicra është shtet federal. Kantonet janë shtetet e saj anëtare dhe kanë kushtetutë të vet,
+  parlament të vet dhe qeveri të vet. Rrethet dhe rajonet nuk janë shtete anëtare.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Woraus besteht die Schweiz als Bundesstaat?
+    options_de:
+      a: Aus Bezirken als Gliedstaaten
+      b: Aus Sprachgebieten als Gliedstaaten
+      c: Aus Kantonen als Gliedstaaten
+      d: Aus Regionen als Gliedstaaten
+    explanation_de: Die Schweiz ist ein Bundesstaat. Die Kantone sind ihre Gliedstaaten und haben eine
+      eigene Verfassung, ein eigenes Parlament und eine eigene Regierung. Bezirke und Regionen sind keine
+      Gliedstaaten.

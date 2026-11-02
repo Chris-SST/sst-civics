@@ -1,0 +1,35 @@
+id: ahv-iv-sozialversicherungen-schweiz
+lang: pt
+source_version: 1
+question: Qual afirmação sobre os seguros sociais da Suíça está correta?
+options:
+  a: O seguro de velhice e sobrevivência (AHV) e o seguro de invalidez (IV) fazem parte dos seguros sociais
+    da Suíça.
+  b: O seguro de velhice e sobrevivência e o seguro de invalidez são geridos apenas pelas comunas (Gemeinden).
+  c: O seguro de velhice e sobrevivência e o seguro de invalidez são seguros privados, sem base legal.
+  d: O seguro de velhice e sobrevivência e o seguro de invalidez destinam-se apenas a trabalhadores independentes.
+explanation: AHV significa seguro de velhice e sobrevivência (Alters- und Hinterlassenenversicherung),
+  IV significa seguro de invalidez (Invalidenversicherung). Ambos estão regulados no direito federal e
+  fazem parte do sistema estatal de seguros sociais.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 1
+    question_de: Welche Aussage über die Sozialversicherungen der Schweiz ist richtig?
+    options_de:
+      a: Die Alters- und Hinterlassenenversicherung (AHV) und die Invalidenversicherung (IV) gehören zu
+        den Sozialversicherungen der Schweiz.
+      b: Die Alters- und Hinterlassenenversicherung und die Invalidenversicherung werden nur von den Gemeinden
+        verwaltet.
+      c: Die Alters- und Hinterlassenenversicherung und die Invalidenversicherung sind private Versicherungen
+        ohne gesetzliche Grundlage.
+      d: Die Alters- und Hinterlassenenversicherung und die Invalidenversicherung sind nur für Selbstständigerwerbende
+        bestimmt.
+    explanation_de: AHV bedeutet Alters- und Hinterlassenenversicherung, IV bedeutet Invalidenversicherung.
+      Beide sind im Bundesrecht geregelt und gehören zum staatlichen System der Sozialversicherungen.
