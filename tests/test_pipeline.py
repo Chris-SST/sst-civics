@@ -333,6 +333,36 @@ async def test_source_check_supported_not_supported_and_dead_link(content, fake,
     assert "180 Mitglieder" in sent and "var x" not in sent and "<p>" not in sent
 
 
+def _pdf(lines: list[str]) -> bytes:
+    """A one-page PDF with these lines of text (Helvetica, Latin-1), built by hand."""
+    ops = "".join(f"({t}) Tj 0 -14 Td " for t in lines)
+    stream = f"BT /F1 12 Tf 72 720 Td {ops}ET".encode("latin-1")
+    objs = [
+        b"<< /Type /Catalog /Pages 2 0 R >>",
+        b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
+        b"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R"
+        b" /Resources << /Font << /F1 5 0 R >> >> >>",
+        b"<< /Length %d >>\nstream\n" % len(stream) + stream + b"\nendstream",
+        b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>",
+    ]
+    out, offsets = b"%PDF-1.4\n", []
+    for i, body in enumerate(objs, 1):
+        offsets.append(len(out))
+        out += b"%d 0 obj\n" % i + body + b"\nendobj\n"
+    xref = len(out)
+    out += b"xref\n0 %d\n0000000000 65535 f \n" % (len(objs) + 1)
+    out += b"".join(b"%010d 00000 n \n" % o for o in offsets)
+    out += b"trailer\n<< /Size %d /Root 1 0 R >>\nstartxref\n%d\n%%%%EOF\n" % (len(objs) + 1, xref)
+    return out
+
+
+BROCHURE_PDF = _pdf(
+    ["Die Geschichte der Schweiz"]
+    + ["Im Zweiten Weltkrieg gab es wenig zu essen."] * 4
+    + ["Zum Beispiel wurden auf dem Sechseläutenplatz in Zürich Kartoffeln angepflanzt."]
+)
+
+
 async def test_fetch_page_reads_text_with_a_size_cap_and_user_agent():
     client = fetch.new_client()
     assert client.headers["user-agent"] == fetch.USER_AGENT and client.timeout.read == 20
@@ -342,6 +372,10 @@ async def test_fetch_page_reads_text_with_a_size_cap_and_user_agent():
     def handler(request: httpx.Request) -> httpx.Response:
         if request.url.path == "/pdf":
             return httpx.Response(200, content=b"%PDF", headers={"content-type": "application/pdf"})
+        if request.url.path == "/brochure.pdf":
+            return httpx.Response(
+                200, content=BROCHURE_PDF, headers={"content-type": "application/pdf"}
+            )
         return httpx.Response(200, html=big if request.url.path == "/big" else PAGE)
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as c:
@@ -351,7 +385,9 @@ async def test_fetch_page_reads_text_with_a_size_cap_and_user_agent():
         assert page.text.startswith("Politik und Staat") and "var x" not in page.text
         assert page.readable
         page = await fetch.fetch_page(c, "https://www.ch.ch/pdf")
-        assert page.ok and not page.readable
+        assert page.ok and not page.readable and page.error == "PDF not readable"
+        page = await fetch.fetch_page(c, "https://www.zh.ch/brochure.pdf")
+        assert page.readable and "Sechseläutenplatz in Zürich Kartoffeln angepflanzt" in page.text
     assert fetch.is_official_url("https://www.fedlex.admin.ch/eli/cc/1999/404/de")
     assert not fetch.is_official_url("https://example.com/") and not fetch.is_official_url(
         "http://www.ch.ch/"

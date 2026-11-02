@@ -1,12 +1,14 @@
 """Fetching the official pages a question cites (source check, link check; task 1.5).
 
-httpx only, with a timeout, a descriptive user agent and a 2 MB cap per page. HTML is
-reduced to plain text with the standard library's parser. Nothing about learners is ever
-sent: the only request data is the public URL."""
+httpx only, with a timeout, a descriptive user agent and a 2 MB cap per page (16 MB for a
+PDF). HTML is reduced to plain text with the standard library's parser, a PDF with pypdf.
+Nothing about learners is ever sent: the only request data is the public URL."""
 
 from __future__ import annotations
 
 import asyncio
+import io
+import logging
 import re
 from dataclasses import dataclass
 from html.parser import HTMLParser
@@ -14,10 +16,14 @@ from typing import Any
 from urllib.parse import urlsplit
 
 import httpx
+from pypdf import PdfReader
 
 USER_AGENT = "civics-trainer-source-check/1.0 (checks cited public pages; contact via website)"
 TIMEOUT_SECONDS = 20.0
 MAX_BYTES = 2 * 1024 * 1024
+MAX_PDF_BYTES = 16 * 1024 * 1024  # official brochures run to 10 MB and more
+PDF_CHUNK_CHARS = 700  # PDF lines are joined into passages of about this size for excerpt()
+logging.getLogger("pypdf").setLevel(logging.ERROR)  # font-encoding notices are not errors here
 MIN_TEXT_CHARS = 200  # less than this is not a readable page (often a JavaScript shell)
 
 # Hosts a draft question may cite (PLAN.md: admin.ch, ch.ch, the canton or the commune).
@@ -141,6 +147,10 @@ async def fetch_page(client: httpx.AsyncClient, url: str, max_bytes: int = MAX_B
         async with client.stream("GET", url) as response:
             if response.status_code >= 400:
                 return Page(url, False, response.status_code, error=f"HTTP {response.status_code}")
+            ctype = response.headers.get("content-type", "").lower()
+            is_pdf = "pdf" in ctype
+            if is_pdf:
+                max_bytes = max(max_bytes, MAX_PDF_BYTES)
             chunks: list[bytes] = []
             size = 0
             truncated = False
@@ -151,18 +161,42 @@ async def fetch_page(client: httpx.AsyncClient, url: str, max_bytes: int = MAX_B
                     truncated = True
                     break
             raw = b"".join(chunks)[:max_bytes]
-            ctype = response.headers.get("content-type", "").lower()
             encoding = response.encoding or "utf-8"
             status = response.status_code
     except httpx.TimeoutException:
         return Page(url, False, error="timeout")
     except httpx.HTTPError as exc:
         return Page(url, False, error=exc.__class__.__name__)
-    if "pdf" in ctype:
-        return Page(url, True, status, text="", error="PDF, not read", truncated=truncated)
+    if is_pdf:
+        if truncated:
+            return Page(url, True, status, error="PDF too large, not read", truncated=True)
+        try:
+            text = await asyncio.to_thread(pdf_to_text, raw)
+        except Exception:  # noqa: BLE001 (any parser failure means: not readable)
+            return Page(url, True, status, error="PDF not readable")
+        return Page(url, True, status, text=text)
     decoded = raw.decode(encoding, errors="replace")
     text = decoded if "text/plain" in ctype else html_to_text(decoded)
     return Page(url, True, status, text=text, truncated=truncated)
+
+
+def pdf_to_text(raw: bytes) -> str:
+    """The text of a PDF as passages of about PDF_CHUNK_CHARS, one per line, so that
+    excerpt() can pick the relevant ones (a PDF breaks every printed line)."""
+    passages: list[str] = []
+    for page in PdfReader(io.BytesIO(raw)).pages:
+        current = ""
+        for line in (page.extract_text() or "").splitlines():
+            line = " ".join(line.split())
+            if not line:
+                continue
+            current = f"{current} {line}" if current else line
+            if len(current) >= PDF_CHUNK_CHARS:
+                passages.append(current)
+                current = ""
+        if current:
+            passages.append(current)
+    return "\n".join(passages)
 
 
 async def check_link(client: httpx.AsyncClient, url: str) -> Page:
