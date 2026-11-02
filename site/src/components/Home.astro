@@ -1,0 +1,190 @@
+---
+// The home page: hero with a sample test question, the Zurich scene, how it works, guide cards,
+// the language strip and the Civics Pass band.
+import { APP_URL } from "astro:env/server";
+import { HOME_KEYS, LOCALES, LOCALE_NAMES, resolveHref } from "../i18n/pages.mjs";
+import { ui } from "../i18n/ui";
+import { SAMPLE_QUESTION as Q } from "../data/sampleQuestion";
+
+interface Props { lang: string; index: Map<string, Set<string>> }
+const { lang, index } = Astro.props;
+const t = ui(lang);
+const h = t.home;
+const appHref = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
+const zurichHref = resolveHref(index, "zurich", lang) ?? "#guides";
+// The question is always in German; other readers see the English beside it (the only translation
+// the site carries).
+const side = lang === "de" ? null : Q.en;
+const keys = Object.keys(Q.de.options) as (keyof typeof Q.de.options)[];
+const explanation = side ? side.explanation : Q.de.explanation;
+const tagTone = ["teal", "clay", "sun"];
+---
+<div class="wrap">
+  <section class="h-hero" aria-labelledby="h-title">
+    <div class="h-hero__text">
+      <span class="h-eyebrow">{h.eyebrow}</span>
+      <h1 id="h-title">{h.h1}</h1>
+      <p class="h-lead">{h.lead}</p>
+      <div class="h-actions">
+        <a class="cv-btn cv-btn--primary" href={appHref}>{h.ctaFree}</a>
+        <a class="cv-btn cv-btn--secondary" href={zurichHref}>{h.ctaGuide}</a>
+      </div>
+      <ul class="h-trust">{h.trust.map((x) => <li>{x}</li>)}</ul>
+    </div>
+
+    <div class="h-q" data-sample-question data-correct={Q.correct}>
+      <div class="h-q__head">
+        <h2>{h.q.heading}</h2>
+        <span class="h-q__topic">{h.q.topic}</span>
+      </div>
+      <div class="h-q__body">
+        <div class="h-q__de">
+          <span class="h-q__label">{h.q.german}</span>
+          <p lang="de">{Q.de.question}</p>
+        </div>
+        {side && (
+          <div class="h-q__side">
+            <span class="h-q__label" lang="en">English</span>
+            <p lang="en">{side.question}</p>
+          </div>
+        )}
+        <div class="h-q__opts" role="group" aria-label={h.q.heading}>
+          {keys.map((k) => (
+            <button type="button" class="h-opt" data-key={k}>
+              <span class="h-opt__key" aria-hidden="true">{k.toUpperCase()}</span>
+              <span class="h-opt__text">
+                <span lang="de">{Q.de.options[k]}</span>
+                {side && <small lang="en">{side.options[k]}</small>}
+              </span>
+              <svg class="h-opt__mark h-opt__mark--right" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+              <svg class="h-opt__mark h-opt__mark--wrong" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+            </button>
+          ))}
+        </div>
+        <div class="h-q__feedback" role="status" hidden data-right={h.q.right} data-wrong={h.q.wrong}>
+          <strong></strong>
+          <p lang={side ? "en" : "de"}>{explanation}</p>
+        </div>
+        <noscript>
+          <details class="h-q__reveal">
+            <summary>{h.q.reveal}</summary>
+            <p><strong>{Q.correct.toUpperCase()}</strong>: {explanation}</p>
+          </details>
+        </noscript>
+        <a class="h-q__more" href={appHref}>{h.q.more} →</a>
+      </div>
+    </div>
+  </section>
+
+  <svg class="h-scene" viewBox="0 0 1200 170" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false">
+    <circle class="s-sun" cx="1040" cy="52" r="30"></circle>
+    <path class="s-hill" d="M0 120 C120 60 240 50 360 92 C430 116 500 70 600 58 C700 46 760 96 860 100 C960 104 1060 70 1200 96 L1200 170 L0 170 Z"></path>
+    <path class="s-hill2" d="M0 132 C180 108 330 112 470 124 C620 136 760 110 900 116 C1020 121 1110 114 1200 118 L1200 170 L0 170 Z"></path>
+    <rect class="s-ink" x="500" y="64" width="34" height="78" rx="6"></rect>
+    <rect class="s-ink" x="548" y="64" width="34" height="78" rx="6"></rect>
+    <path class="s-ink" d="M500 66 C500 44 534 44 534 66 Z M548 66 C548 44 582 44 582 66 Z"></path>
+    <rect class="s-ink" x="470" y="104" width="142" height="40" rx="6"></rect>
+    <rect class="s-win" x="511" y="84" width="12" height="18" rx="6"></rect>
+    <rect class="s-win" x="559" y="84" width="12" height="18" rx="6"></rect>
+    <rect class="s-lake" x="0" y="142" width="1200" height="28"></rect>
+    <path class="s-wave" d="M60 156 h40 M180 152 h60 M720 156 h50 M940 152 h70 M1100 157 h40" stroke-width="3" stroke-linecap="round"></path>
+    <path class="s-line" d="M250 134 L390 134" stroke-width="2"></path>
+    <rect class="s-tram" x="260" y="104" width="120" height="30" rx="10"></rect>
+    <rect class="s-white" x="260" y="104" width="120" height="9" rx="4"></rect>
+    <rect class="s-white" x="272" y="116" width="18" height="11" rx="3"></rect>
+    <rect class="s-white" x="298" y="116" width="18" height="11" rx="3"></rect>
+    <rect class="s-white" x="324" y="116" width="18" height="11" rx="3"></rect>
+    <rect class="s-white" x="350" y="116" width="18" height="11" rx="3"></rect>
+    <path class="s-ink" d="M800 152 h70 l-10 10 h-50 z"></path>
+    <path class="s-white s-line" d="M832 152 v-26 l20 22 z" stroke-width="2" stroke-linejoin="round" style="fill:var(--scene-white)"></path>
+  </svg>
+</div>
+
+<section class="h-band" id="how" aria-labelledby="how-h">
+  <div class="wrap h-section">
+    <h2 id="how-h">{h.how.heading}</h2>
+    <ol class="h-steps">
+      {h.how.steps.map((s, i) => (
+        <li>
+          <span class={`h-step__n h-step__n--${i + 1}`} aria-hidden="true">{i + 1}</span>
+          <h3>{s.title}</h3>
+          <p>{s.text}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<section class="wrap h-section" id="guides" aria-labelledby="guides-h" style="padding-bottom:24px">
+  <div class="h-section__head">
+    <h2 id="guides-h">{h.guidesHeading}</h2>
+    <p>{h.guidesNote}</p>
+  </div>
+  <ul class="h-guides">
+    {HOME_KEYS.map((k, i) => {
+      const href = resolveHref(index, k, lang);
+      const c = t.cards[k];
+      const tag = <span class={`h-tag h-tag--${tagTone[i % 3]}`}>{h.tags[k]}</span>;
+      return (
+        <li>
+          {href ? (
+            <a class="h-guide" href={href}>{tag}<h3>{c.title}</h3><p>{c.text}</p><span class="h-guide__read" aria-hidden="true">{h.read} →</span></a>
+          ) : (
+            <div class="h-guide" aria-disabled="true">{tag}<h3>{c.title}</h3><p>{c.text}</p><span class="muted">{h.soon}</span></div>
+          )}
+        </li>
+      );
+    })}
+  </ul>
+</section>
+
+<section class="wrap" style="padding-top:40px;padding-bottom:40px" aria-labelledby="langs-h">
+  <div class="h-langs">
+    <div>
+      <h2 id="langs-h">{h.langs.heading}</h2>
+      <p>{h.langs.text}</p>
+    </div>
+    <ul>{LOCALES.map((l) => <li lang={l}>{LOCALE_NAMES[l]}</li>)}</ul>
+  </div>
+</section>
+
+<section class="wrap h-end" id="pass" aria-labelledby="pass-h">
+  <div class="h-pass">
+    <div>
+      <span class="h-pass__badge" id="pass-h">{h.pass.badge}</span>
+      <p class="h-pass__price"><strong>CHF 29</strong><span>{h.pass.period}</span></p>
+      <p>{h.pass.pay}</p>
+    </div>
+    <ul>
+      {h.pass.points.map((p) => (
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>{p}</span></li>
+      ))}
+      <li class="h-pass__cta"><a class="cv-btn cv-btn--accent" href={appHref}>{h.pass.button}</a></li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  // Sample question: mark the picked answer and the right one, then show the explanation.
+  for (const box of document.querySelectorAll<HTMLElement>("[data-sample-question]")) {
+    const correct = box.dataset.correct;
+    const buttons = [...box.querySelectorAll<HTMLButtonElement>(".h-opt")];
+    const feedback = box.querySelector<HTMLElement>(".h-q__feedback");
+    for (const b of buttons) {
+      b.addEventListener("click", () => {
+        const good = b.dataset.key === correct;
+        for (const o of buttons) {
+          o.disabled = true;
+          if (o.dataset.key === correct) o.dataset.state = "right";
+          else if (o === b) o.dataset.state = "wrong";
+        }
+        if (feedback) {
+          feedback.dataset.good = String(good);
+          const title = feedback.querySelector("strong");
+          if (title) title.textContent = (good ? feedback.dataset.right : feedback.dataset.wrong) ?? "";
+          feedback.hidden = false;
+        }
+      });
+    }
+  }
+</script>

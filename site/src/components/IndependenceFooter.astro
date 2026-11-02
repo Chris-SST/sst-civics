@@ -1,11 +1,19 @@
 ---
-// Independence notice in the page language; the strings are copies of the app's footer.independence.
-import { INDEPENDENCE } from "../i18n/ui";
+// Site footer: the independence notice in the page language (the strings are copies of the app's
+// footer.independence) and links to the main guide pages.
+import { INDEPENDENCE, ui } from "../i18n/ui";
+import { pathFor } from "../i18n/pages.mjs";
 import { BRAND_NAME } from "../brand";
-interface Props { lang: string }
-const { lang } = Astro.props;
+interface Props { lang: string; links: { href: string; label: string }[] }
+const { lang, links } = Astro.props;
+const t = ui(lang);
 ---
-<footer class="cv-footer footer-wrap">
-  <p lang={lang}>{INDEPENDENCE[lang] ?? INDEPENDENCE.en}</p>
-  <p class="muted" style="margin-top:8px">{BRAND_NAME}</p>
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p lang={lang}>{INDEPENDENCE[lang] ?? INDEPENDENCE.en} {BRAND_NAME}.</p>
+    <nav aria-label={t.footerNav}>
+      <a href={pathFor(lang, "home")}>{t.homeLabel}</a>
+      {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+  </div>
 </footer>

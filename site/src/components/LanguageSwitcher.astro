@@ -1,5 +1,6 @@
 ---
-// Links to the same page in the other languages where it exists, to that language's home otherwise.
+// Language menu in the header: links to the same page in the other languages where it exists,
+// to that language's home otherwise. A <details> disclosure, so it works without script.
 import { LOCALES, LOCALE_NAMES, pathFor } from "../i18n/pages.mjs";
 import { ui } from "../i18n/ui";
 interface Props { lang: string; alternates: { lang: string; path: string }[] }
@@ -7,16 +8,19 @@ const { lang, alternates } = Astro.props;
 const t = ui(lang);
 const byLang = new Map(alternates.map((a) => [a.lang, a.path]));
 ---
-<nav aria-label={t.langLabel}>
-  <div class="cv-lang">
+<details class="langmenu">
+  <summary aria-label={`${t.langLabel}: ${LOCALE_NAMES[lang]}`}>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"></path></svg>
+    <span lang={lang}>{LOCALE_NAMES[lang]}</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+  </summary>
+  <ul>
     {LOCALES.map((l) => (
-      <a
-        href={byLang.get(l) ?? pathFor(l, "home")}
-        lang={l}
-        hreflang={l}
-        title={LOCALE_NAMES[l]}
-        aria-current={l === lang ? "true" : undefined}
-      >{l.toUpperCase()}</a>
+      <li>
+        <a href={byLang.get(l) ?? pathFor(l, "home")} lang={l} hreflang={l} aria-current={l === lang ? "true" : undefined}>
+          {LOCALE_NAMES[l]}<span>{l.toUpperCase()}</span>
+        </a>
+      </li>
     ))}
-  </div>
-</nav>
+  </ul>
+</details>

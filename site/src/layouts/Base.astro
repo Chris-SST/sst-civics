@@ -1,8 +1,10 @@
 ---
-// Page shell: head (meta, canonical, hreflang, Open Graph), header with wordmark and language
-// switcher, main slot, independence footer.
+// Page shell: head (meta, canonical, hreflang, Open Graph), sticky header with wordmark, links,
+// language menu and the route into the app, main slot, footer with the independence notice.
 import "../styles/global.css";
-import { pathFor } from "../i18n/pages.mjs";
+import { getCollection } from "astro:content";
+import { APP_URL } from "astro:env/server";
+import { pathFor, buildIndex, resolveHref } from "../i18n/pages.mjs";
 import { ui, usesFallback } from "../i18n/ui";
 import { BRAND_NAME } from "../brand";
 import Wordmark from "../components/Wordmark.astro";
@@ -18,8 +20,10 @@ interface Props {
   /** This page's own path (canonical). */
   path: string;
   noindex?: boolean;
+  /** Full-width main area for pages that lay out their own sections (the home page). */
+  wide?: boolean;
 }
-const { lang, title, description, alternates, path, noindex: pageNoindex = false } = Astro.props;
+const { lang, title, description, alternates, path, noindex: pageNoindex = false, wide = false } = Astro.props;
 const t = ui(lang);
 const site = (Astro.site ?? new URL("https://staging.viapunt.ch")).toString().replace(/\/$/, "");
 // A build for a staging host must never be indexed.
@@ -28,10 +32,16 @@ const abs = (p: string) => site + p;
 const fullTitle = title.includes(BRAND_NAME) ? title : `${title} | ${BRAND_NAME}`;
 const xdefault = alternates.find((a) => a.lang === "de") ?? alternates[0];
 const ogLocale: Record<string, string> = { de: "de_CH", en: "en_GB", fr: "fr_CH", it: "it_CH", pt: "pt_PT", es: "es_ES", sq: "sq_AL", tr: "tr_TR" };
+const guideAll = await getCollection("guide", (e) => !e.data.draft);
+const index = buildIndex(guideAll.map((e) => ({ lang: e.data.lang, slug: e.data.slug })));
+const footerLinks = (["overview", "zurich", "documents", "free", "faq"] as const)
+  .map((k) => ({ href: resolveHref(index, k, lang), label: t.cards[k].title }))
+  .filter((l): l is { href: string; label: string } => l.href !== null);
+const appHref = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
 const icon =
   "data:image/svg+xml," +
   encodeURIComponent(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#ffd23f"/><path d="M6 8h14a4 4 0 0 1 0 8H12l-4 4V8z" fill="#1b1740"/><circle cx="23" cy="21" r="4" fill="#5b4bdb"/></svg>',
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#0e6e6b"/><path d="M6 8h14a4 4 0 0 1 0 8H12l-4 4V8z" fill="#ffffff"/><circle cx="23" cy="21" r="4" fill="#f4b740"/></svg>',
   );
 ---
 <!doctype html>
@@ -41,7 +51,7 @@ const icon =
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#5b4bdb" />
+    <meta name="theme-color" content="#fbf6ee" />
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={abs(path)} />
     {alternates.length > 1 && alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={abs(a.path)} />)}
@@ -55,8 +65,8 @@ const icon =
     {alternates.filter((a) => a.lang !== lang).map((a) => <meta property="og:locale:alternate" content={ogLocale[a.lang] ?? "en_GB"} />)}
     <meta name="twitter:card" content="summary" />
     <link rel="icon" href={icon} />
-    <link rel="preload" href="/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin />
     {/*
       Analytics (cookie-free, self-hosted Umami, D-062). Renders only when PUBLIC_UMAMI_WEBSITE_ID
       is set at build time. Same-origin /stats/ paths are proxied to Umami by infra/Caddyfile;
@@ -70,28 +80,34 @@ const icon =
     <a class="skip" href="#main">{t.skip}</a>
     <div class="shell">
       <header class="topbar">
-        <div class="container topbar-inner">
-          <a href={pathFor(lang, "home")} aria-label={`${BRAND_NAME}: ${t.homeLabel}`} style="text-decoration:none"><Wordmark /></a>
-          <div class="topnav">
+        <div class="wrap topbar-inner">
+          <a class="topbar-home" href={pathFor(lang, "home")} aria-label={`${BRAND_NAME}: ${t.homeLabel}`}><Wordmark /></a>
+          <nav class="topnav" aria-label={t.mainNav}>
+            <a href={`${pathFor(lang, "home")}#guides`}>{t.navGuides}</a>
             <a href={pathFor(lang, "free")}>{t.navFree}</a>
             <a href={pathFor(lang, "faq")}>{t.navFaq}</a>
+          </nav>
+          <div class="topbar-tools">
             <LanguageSwitcher lang={lang} alternates={alternates} />
+            <a class="cv-btn cv-btn--primary cv-btn--small topbar-cta" href={appHref}>{t.navStart}</a>
           </div>
         </div>
       </header>
-      <main id="main" class="main container">
+      <main id="main" class={wide ? "main main--wide" : "main container"}>
         {usesFallback(lang) && (
-          <p class="notice" role="note">
-            {t.fallbackNote}
-            {" "}
-            {alternates.filter((a) => a.lang === "de" || a.lang === "en").map((a, i) => (
-              <>{i > 0 && " · "}<a href={a.path} hreflang={a.lang} lang={a.lang}>{a.lang === "de" ? "Auf Deutsch lesen" : "Read in English"}</a></>
-            ))}
-          </p>
+          <div class:list={{ wrap: wide }} style={wide ? "padding-top:24px" : undefined}>
+            <p class="notice" role="note" style={wide ? "margin:0" : undefined}>
+              {t.fallbackNote}
+              {" "}
+              {alternates.filter((a) => a.lang === "de" || a.lang === "en").map((a, i) => (
+                <>{i > 0 && " · "}<a href={a.path} hreflang={a.lang} lang={a.lang}>{a.lang === "de" ? "Auf Deutsch lesen" : "Read in English"}</a></>
+              ))}
+            </p>
+          </div>
         )}
         <slot />
       </main>
-      <IndependenceFooter lang={lang} />
+      <IndependenceFooter lang={lang} links={footerLinks} />
     </div>
   </body>
 </html>

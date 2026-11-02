@@ -38,8 +38,12 @@ export interface Ui {
   skip: string;
   homeLabel: string;
   langLabel: string;
+  mainNav: string;
+  footerNav: string;
+  navGuides: string;
   navFree: string;
   navFaq: string;
+  navStart: string;
   navApp: string;
   fallbackNote: string;
   fallbackGerman: string;
@@ -50,7 +54,25 @@ export interface Ui {
   reviewed: string;
   sourcesHeading: string;
   cta: Record<"free-questions" | "mock" | "pass", { heading: string; text: string; button: string }>;
-  home: { title: string; description: string; h1: string; lead: string; cardsHeading: string; soon: string };
+  home: {
+    title: string;
+    description: string;
+    eyebrow: string;
+    h1: string;
+    lead: string;
+    ctaFree: string;
+    ctaGuide: string;
+    trust: string[];
+    q: { heading: string; topic: string; german: string; right: string; wrong: string; more: string; reveal: string };
+    how: { heading: string; steps: { title: string; text: string }[] };
+    guidesHeading: string;
+    guidesNote: string;
+    read: string;
+    soon: string;
+    tags: Record<string, string>;
+    langs: { heading: string; text: string };
+    pass: { badge: string; period: string; pay: string; points: string[]; button: string };
+  };
   cards: Record<string, { title: string; text: string }>;
   calcPage: { title: string; description: string; h1: string };
   calc: CalcStrings;
@@ -63,8 +85,12 @@ const en: Ui = {
   skip: "Skip to content",
   homeLabel: "Home",
   langLabel: "Language",
+  mainNav: "Main",
+  footerNav: "Guides",
+  navGuides: "Guides",
   navFree: "Free practice",
   navFaq: "FAQ",
+  navStart: "Start free",
   navApp: "Open the app",
   fallbackNote: "The full pages of this guide are available in German and English.",
   fallbackGerman: "Read in German",
@@ -92,13 +118,56 @@ const en: Ui = {
     },
   },
   home: {
-    title: "Becoming Swiss: the knowledge test explained",
+    title: "Naturalisation in Zurich: guides and knowledge test practice",
     description:
-      "Plain guidance on naturalisation in Switzerland: the order of the steps, residence, fees, language certificates and the knowledge test, with free practice questions.",
-    h1: "Becoming Swiss: the steps, in plain language",
-    lead: "Naturalisation has a clear order: residence, documents, language, the knowledge test, then the application. Start with the overview, or jump to the part you need.",
-    cardsHeading: "Guides and tools",
+      "Plain guides to becoming Swiss in the canton of Zurich: residence, documents, fees, language certificates and the knowledge test, with free practice questions in your language.",
+    eyebrow: "Naturalisation in the canton of Zurich",
+    h1: "Understand it in your language. Pass it in German.",
+    lead: "Plain guides to every step of becoming Swiss in Zurich, from documents to the knowledge test. Then practise the test questions with the German and your language side by side.",
+    ctaFree: "Try 30 free questions",
+    ctaGuide: "Read the Zurich guide",
+    trust: ["No account needed to start", "8 languages", "Sources linked on every page"],
+    q: {
+      heading: "Try a test question",
+      topic: "Popular rights",
+      german: "Deutsch",
+      right: "Correct.",
+      wrong: "Not quite. The right answer is marked.",
+      more: "29 more free questions",
+      reveal: "Show the answer",
+    },
+    how: {
+      heading: "How it works",
+      steps: [
+        { title: "Read the guide", text: "Residence rules, documents, fees and the tests, explained step by step for Zurich, with the sources linked." },
+        { title: "Try 30 free questions", text: "See the kind of questions the test asks, in German with your language beside it. No account needed." },
+        { title: "Practise until you are ready", text: "Learn, practise your weak topics and take mock tests. Your readiness is a practice estimate, not an official result." },
+      ],
+    },
+    guidesHeading: "Guides for Zurich",
+    guidesNote: "General information, not legal advice",
+    read: "Read",
     soon: "Coming soon",
+    tags: {
+      overview: "Start here", zurich: "Zurich", documents: "Checklist", test: "Test", language: "German",
+      fees: "Costs", calculator: "Tool", free: "Free", faq: "Answers",
+    },
+    langs: {
+      heading: "Your language beside the German",
+      text: "The test is in German. Every question shows a translation as a study aid, so you understand first and then get used to the German.",
+    },
+    pass: {
+      badge: "Civics Pass · canton of Zurich",
+      period: "6 months, paid once. No subscription.",
+      pay: "Pay by card or TWINT. Is your test later? Add 3 months for CHF 9.",
+      points: [
+        "Questions on every topic of the Zurich knowledge test",
+        "Mock tests to see where you stand",
+        "Explain this: ask about any question in your language",
+        "Practice that focuses on your weak topics",
+      ],
+      button: "Start with 30 free questions",
+    },
   },
   cards: {
     overview: { title: "Overview", text: "Federal requirements, the order of steps and how long it takes." },
@@ -183,8 +252,12 @@ const de: Ui = {
   skip: "Zum Inhalt springen",
   homeLabel: "Startseite",
   langLabel: "Sprache",
+  mainNav: "Hauptnavigation",
+  footerNav: "Ratgeber",
+  navGuides: "Ratgeber",
   navFree: "Gratis üben",
   navFaq: "FAQ",
+  navStart: "Gratis starten",
   navApp: "App öffnen",
   fallbackNote: "Die vollständigen Seiten dieses Ratgebers gibt es auf Deutsch und auf Englisch.",
   fallbackGerman: "Auf Deutsch lesen",
@@ -212,13 +285,56 @@ const de: Ui = {
     },
   },
   home: {
-    title: "Schweizer werden: der Wissenstest erklärt",
+    title: "Einbürgerung in Zürich: Ratgeber und Wissenstest üben",
     description:
-      "Verständliche Hinweise zur Einbürgerung in der Schweiz: Ablauf, Aufenthaltsdauer, Gebühren, Sprachnachweise und Wissenstest, mit Gratis-Übungsfragen.",
-    h1: "Schweizer werden: die Schritte, einfach erklärt",
-    lead: "Die Einbürgerung folgt einer klaren Reihenfolge: Aufenthalt, Unterlagen, Sprache, Wissenstest, dann das Gesuch. Beginnen Sie mit der Übersicht oder springen Sie zum Teil, den Sie brauchen.",
-    cardsHeading: "Ratgeber und Werkzeuge",
+      "Verständliche Ratgeber zur Einbürgerung im Kanton Zürich: Aufenthalt, Unterlagen, Gebühren, Sprachnachweise und Wissenstest, mit Gratis-Übungsfragen in Ihrer Sprache.",
+    eyebrow: "Einbürgerung im Kanton Zürich",
+    h1: "In Ihrer Sprache verstehen. Auf Deutsch bestehen.",
+    lead: "Verständliche Ratgeber zu jedem Schritt der Einbürgerung in Zürich, von den Unterlagen bis zum Wissenstest. Danach üben Sie die Testfragen, auf Deutsch und auf Wunsch mit Übersetzung daneben.",
+    ctaFree: "30 Fragen gratis testen",
+    ctaGuide: "Zum Zürich-Ratgeber",
+    trust: ["Ohne Konto starten", "8 Sprachen", "Quellen auf jeder Seite verlinkt"],
+    q: {
+      heading: "Probieren Sie eine Testfrage",
+      topic: "Volksrechte",
+      german: "Deutsch",
+      right: "Richtig.",
+      wrong: "Nicht ganz. Die richtige Antwort ist markiert.",
+      more: "29 weitere Gratisfragen",
+      reveal: "Antwort zeigen",
+    },
+    how: {
+      heading: "So funktioniert es",
+      steps: [
+        { title: "Ratgeber lesen", text: "Aufenthalt, Unterlagen, Gebühren und Tests, Schritt für Schritt für Zürich erklärt, mit verlinkten Quellen." },
+        { title: "30 Fragen gratis testen", text: "Sehen Sie, wie die Testfragen aussehen, auf Deutsch und mit Ihrer Sprache daneben. Ohne Konto." },
+        { title: "Üben, bis Sie bereit sind", text: "Lernen, schwache Themen gezielt üben und Probeprüfungen machen. Ihr Bereitschaftswert ist eine Übungsschätzung, kein amtliches Ergebnis." },
+      ],
+    },
+    guidesHeading: "Ratgeber für Zürich",
+    guidesNote: "Allgemeine Informationen, keine Rechtsberatung",
+    read: "Lesen",
     soon: "Folgt in Kürze",
+    tags: {
+      overview: "Hier starten", zurich: "Zürich", documents: "Checkliste", test: "Test", language: "Deutsch",
+      fees: "Kosten", calculator: "Werkzeug", free: "Gratis", faq: "Antworten",
+    },
+    langs: {
+      heading: "Ihre Sprache neben dem Deutschen",
+      text: "Der Test ist auf Deutsch. Jede Frage zeigt eine Übersetzung als Lernhilfe: Sie verstehen zuerst und gewöhnen sich dann an das Deutsch.",
+    },
+    pass: {
+      badge: "Civics Pass · Kanton Zürich",
+      period: "6 Monate, einmal bezahlt. Kein Abo.",
+      pay: "Bezahlen mit Karte oder TWINT. Ist Ihr Test später? 3 Monate mehr für CHF 9.",
+      points: [
+        "Fragen zu allen Themen des Zürcher Wissenstests",
+        "Probeprüfungen, damit Sie Ihren Stand kennen",
+        "Erklärungen zu jeder Frage in Ihrer Sprache",
+        "Üben, das sich auf Ihre schwachen Themen konzentriert",
+      ],
+      button: "Mit 30 Gratisfragen starten",
+    },
   },
   cards: {
     overview: { title: "Überblick", text: "Bundesvoraussetzungen, Reihenfolge der Schritte und Dauer." },
