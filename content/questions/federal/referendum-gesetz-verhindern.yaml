@@ -1,0 +1,44 @@
+id: referendum-gesetz-verhindern
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Was können Stimmberechtigte mit einem Referendum erreichen?
+options_de:
+  a: Sie können ein neues Gesetz selbst schreiben und in Kraft setzen.
+  b: Sie können ein vom Parlament beschlossenes Gesetz verhindern.
+  c: Sie können die Mitglieder des Bundesrates abwählen.
+  d: Sie können das Parlament auflösen und Neuwahlen verlangen.
+correct: b
+explanation_de: Mit einem Referendum können Stimmberechtigte verlangen, dass über ein vom Parlament beschlossenes
+  Gesetz abgestimmt wird. Lehnt das Volk das Gesetz ab, tritt es nicht in Kraft.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+  checked: &id001 2026-11-02
+glossary:
+- Referendum
+- Parlament
+- Stimmberechtigte
+status: in_review
+difficulty: 1
+covers:
+- zh-006
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Mit einem Referendum können Stimmberechtigte erreichen, dass ein vom Parlament beschlossenes
+      Gesetz der Volksabstimmung unterstellt und bei einem Nein verhindert wird; neue Gesetze schreiben
+      (Initiative), Bundesratsabwahl und Parlamentsauflösung sind nicht Sache des Referendums.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass Stimmberechtigte mit dem fakultativen Referendum verlangen können, dass
+      Gesetze der Bundesversammlung dem Volk zur Abstimmung unterbreitet werden. Dass ein abgelehntes
+      Gesetz nicht in Kraft tritt, steht nicht ausdrücklich da, folgt aber eindeutig daraus, dass diese
+      Erlasse sonst ohne Volksabstimmung in Kraft treten.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

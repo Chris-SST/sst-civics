@@ -1,0 +1,46 @@
+id: staendemehr-mehrheit-der-kantone
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Was bedeutet der Begriff «Ständemehr» bei eidgenössischen Abstimmungen?
+options_de:
+  a: Die Mehrheit der Kantone muss der Vorlage zustimmen.
+  b: Die Mehrheit der Gemeinden muss der Vorlage zustimmen.
+  c: Die Mehrheit der Parteien muss der Vorlage zustimmen.
+  d: Die Mehrheit der Mitglieder des Ständerates muss anwesend sein.
+correct: a
+explanation_de: Das Ständemehr verlangt, dass die Mehrheit der Kantone einer Vorlage zustimmt. Die Stimmen
+  eines Kantons zählen dabei nach dem Ergebnis der Abstimmung in diesem Kanton. Bei Verfassungsänderungen
+  braucht es neben dem Volksmehr auch das Ständemehr.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Ständemehr
+- Kanton
+- Volksabstimmung
+status: in_review
+difficulty: 2
+covers:
+- zh-008
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Ständemehr bedeutet, dass bei obligatorischen Referenden (z. B. Verfassungsänderungen)
+      neben dem Volk auch die Mehrheit der Kantone (Stände) der Vorlage zustimmen muss.
+  source:
+    verdict: supported
+    note: Quelle 2 (Bundesverfassung) sagt, dass Vorlagen von Volk und Ständen angenommen sind, wenn die
+      Mehrheit der Stimmenden und die Mehrheit der Stände zustimmen, und dass das Ergebnis der Volksabstimmung
+      im Kanton als Standesstimme gilt. Das deckt Antwort a und die Erklärung ab; Quelle 1 behandelt das
+      Thema nicht.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,52 @@
+id: bund-entscheid-volksinitiativen-referenden-stimmberechtigte
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wer entscheidet auf Bundesebene in einer Abstimmung endgültig darüber, ob eine Volksinitiative
+  oder ein Referendum angenommen wird?
+options_de:
+  a: Die Bundesversammlung in einer gemeinsamen Sitzung beider Räte
+  b: Der Bundesrat nach Anhörung der Kantonsregierungen
+  c: Das Bundesgericht nach einer rechtlichen Prüfung der Vorlage
+  d: Die Stimmberechtigten, die an der Urne oder brieflich abstimmen
+correct: d
+explanation_de: Bei Volksinitiativen und Referenden haben die Stimmberechtigten das letzte Wort. Sie entscheiden
+  in der Volksabstimmung an der Urne, die in der Schweiz auch brieflich möglich ist. Bundesrat, Parlament
+  und Bundesgericht können das Ergebnis nicht ersetzen.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: &id001 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+  checked: *id001
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id002 2026-11-02
+glossary:
+- Volksinitiative
+- Referendum
+- Stimmberechtigte
+- Volksabstimmung
+status: in_review
+difficulty: 1
+covers:
+- zh-036
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Auf Bundesebene entscheiden die Stimmberechtigten mit ihrer Stimme an der Urne oder brieflich
+      endgültig über die Annahme einer Volksinitiative oder eines Referendums (bei Initiativen zusätzlich
+      mit dem Ständemehr).
+  source:
+    verdict: supported
+    note: Quelle 3 (Bundesverfassung) sagt, dass Initiativen Volk und Ständen zur Abstimmung unterbreitet
+      werden und «das Volk entscheidet», und Akte der Bundesversammlung und des Bundesrates können nicht
+      beim Bundesgericht angefochten werden. Dass die Stimmberechtigten das letzte Wort haben, ist damit
+      gedeckt. Die Quellen 1 und 2 erwähnen die Volksabstimmung nur beiläufig. Die Möglichkeit der brieflichen
+      Stimmabgabe steht in keiner Quelle, ist für die Kernaussage aber nicht entscheidend.
+    at: *id002
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,46 @@
+id: volksinitiative-eigene-forderungen-durchsetzen
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wozu dient eine Volksinitiative den Stimmberechtigten?
+options_de:
+  a: Sie können damit ein Urteil des Bundesgerichts ändern.
+  b: Sie können damit eigene Forderungen auf die politische Agenda bringen.
+  c: Sie können damit den Termin der nächsten Wahlen festlegen.
+  d: Sie können damit ein Gesetz des Parlaments verhindern.
+correct: b
+explanation_de: Mit einer Volksinitiative können Stimmberechtigte eine Änderung der Bundesverfassung vorschlagen.
+  Kommt sie zustande, wird darüber abgestimmt. So können sie eigene Anliegen auch gegen den Willen des
+  Parlaments durchsetzen, wenn Volk und Stände zustimmen.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: &id001 2026-11-02
+glossary:
+- Volksinitiative
+- Stimmberechtigte
+- Bundesverfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-033
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Mit einer Volksinitiative können 100'000 Stimmberechtigte eine Änderung der Bundesverfassung
+      verlangen und so eigene Forderungen auf die politische Agenda bringen, während Gesetze des Parlaments
+      durch das Referendum verhindert werden und weder Bundesgerichtsurteile noch Wahltermine so geändert
+      werden.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, Volksinitiativen gehen vom Volk aus und die Stimmberechtigten können damit eine
+      Änderung der Bundesverfassung verlangen, also eigene Anliegen einbringen. Die Aussage zu Volk und
+      Ständen sowie zum Durchsetzen gegen das Parlament steht nicht im Text, ist für die Antwort aber
+      nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

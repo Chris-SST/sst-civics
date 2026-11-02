@@ -1,0 +1,16 @@
+id: bund-entscheid-volksinitiativen-referenden-stimmberechtigte
+lang: en
+source_version: 1
+question: At federal level, who has the final say in a vote on whether a popular initiative (Volksinitiative)
+  or a referendum is accepted?
+options:
+  a: The Federal Assembly (Bundesversammlung) in a joint session of both chambers
+  b: The Federal Council (Bundesrat) after consulting the cantonal governments
+  c: The Federal Supreme Court (Bundesgericht) after a legal review of the proposal
+  d: The citizens entitled to vote, who vote at the ballot box or by post
+explanation: In the case of popular initiatives and referendums, the citizens entitled to vote have the
+  last word. They decide in the popular vote at the ballot box, which in Switzerland is also possible
+  by post. The Federal Council, Parliament and the Federal Supreme Court cannot replace the result.
+status: draft
+reviewed_by: null
+reviewed_at: null

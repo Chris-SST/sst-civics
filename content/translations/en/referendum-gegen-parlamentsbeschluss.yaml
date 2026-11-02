@@ -1,0 +1,15 @@
+id: referendum-gegen-parlamentsbeschluss
+lang: en
+source_version: 1
+question: Against which decisions is a referendum at federal level directed?
+options:
+  a: Against laws that the National Council (Nationalrat) and the Council of States (Ständerat) have passed
+  b: Against decisions that the Federal Chancellery (Bundeskanzlei) has taken
+  c: Against judgments that the Federal Supreme Court (Bundesgericht) has handed down
+  d: Against ordinances that individual communes (Gemeinden) have issued
+explanation: A referendum is directed against laws that Parliament has passed. Parliament consists of
+  the National Council and the Council of States. Court judgments and administrative decisions cannot
+  be challenged with a referendum.
+status: draft
+reviewed_by: null
+reviewed_at: null

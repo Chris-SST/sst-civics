@@ -1,0 +1,15 @@
+id: staendemehr-mehrheit-der-kantone
+lang: en
+source_version: 1
+question: What does the term «Ständemehr» (majority of the cantons) mean in federal votes?
+options:
+  a: The majority of the cantons must approve the proposal.
+  b: The majority of the communes (Gemeinden) must approve the proposal.
+  c: The majority of the parties must approve the proposal.
+  d: The majority of the members of the Council of States (Ständerat) must be present.
+explanation: The Ständemehr requires that a majority of the cantons approve a proposal. The vote of a
+  canton is determined by the result of the popular vote in that canton. For amendments to the Constitution,
+  the majority of the cantons is needed in addition to the popular majority (Volksmehr).
+status: draft
+reviewed_by: null
+reviewed_at: null

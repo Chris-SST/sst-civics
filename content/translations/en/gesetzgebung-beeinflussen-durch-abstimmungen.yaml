@@ -1,0 +1,15 @@
+id: gesetzgebung-beeinflussen-durch-abstimmungen
+lang: en
+source_version: 1
+question: How do eligible voters in Switzerland directly influence the legislation of the Confederation?
+options:
+  a: They vote at the ballot box on initiatives and referendums.
+  b: They elect the judges who decide on new laws.
+  c: They appoint the members of the Federal Council who enact new laws.
+  d: They decide on the laws themselves at the Federal Assembly (Bundesversammlung).
+explanation: Eligible voters take part in popular votes on initiatives and referendums and have a say
+  in the decision there. In this way, they directly contribute to legislation between elections. This
+  is a characteristic of direct democracy.
+status: draft
+reviewed_by: null
+reviewed_at: null

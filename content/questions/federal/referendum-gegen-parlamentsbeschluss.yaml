@@ -1,0 +1,46 @@
+id: referendum-gegen-parlamentsbeschluss
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Gegen welche Beschlüsse richtet sich ein Referendum auf Bundesebene?
+options_de:
+  a: Gegen Gesetze, die National- und Ständerat verabschiedet haben
+  b: Gegen Entscheide, die die Bundeskanzlei getroffen hat
+  c: Gegen Urteile, die das Bundesgericht gefällt hat
+  d: Gegen Verordnungen, die einzelne Gemeinden erlassen haben
+correct: a
+explanation_de: Ein Referendum richtet sich gegen Gesetze, die das Parlament beschlossen hat. Das Parlament
+  besteht aus National- und Ständerat. Gerichtsurteile und Verwaltungsentscheide kann man mit einem Referendum
+  nicht anfechten.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+  checked: &id001 2026-11-02
+glossary:
+- Referendum
+- Nationalrat
+- Ständerat
+- Parlament
+status: in_review
+difficulty: 2
+covers:
+- zh-032
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Mit einem fakultativen Referendum können 50'000 Stimmberechtigte oder 8 Kantone Bundesgesetze,
+      die das Parlament (National- und Ständerat) verabschiedet hat, dem Volk zur Abstimmung vorlegen,
+      während Entscheide der Bundeskanzlei, Urteile des Bundesgerichts und Gemeindeverordnungen nicht
+      Gegenstand eines Referendums auf Bundesebene sind.
+  source:
+    verdict: supported
+    note: Die Seite der Bundeskanzlei sagt, dass Bundesgesetze und andere Erlasse der Bundesversammlung
+      (National- und Ständerat) dem fakultativen Referendum unterstehen. Zu Gerichtsurteilen und Verwaltungsentscheiden
+      steht dort nichts, doch die Kernaussage für Antwort a) ist eindeutig belegt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

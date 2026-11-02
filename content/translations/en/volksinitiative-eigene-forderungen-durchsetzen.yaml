@@ -1,0 +1,15 @@
+id: volksinitiative-eigene-forderungen-durchsetzen
+lang: en
+source_version: 1
+question: What is a popular initiative (Volksinitiative) used for by those entitled to vote?
+options:
+  a: They can use it to change a ruling of the Federal Supreme Court (Bundesgericht).
+  b: They can use it to put their own demands on the political agenda.
+  c: They can use it to set the date of the next elections.
+  d: They can use it to prevent a law passed by Parliament.
+explanation: With a popular initiative, those entitled to vote can propose an amendment to the Federal
+  Constitution. If it is successful, it is put to a vote. In this way, they can push through their own
+  concerns even against the will of Parliament, if the people and the cantons agree.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,14 @@
+id: referendum-gesetz-verhindern
+lang: en
+source_version: 1
+question: What can citizens entitled to vote achieve with a referendum?
+options:
+  a: They can write a new law themselves and bring it into force.
+  b: They can prevent a law passed by Parliament.
+  c: They can remove the members of the Federal Council (Bundesrat) from office.
+  d: They can dissolve Parliament and demand new elections.
+explanation: With a referendum, citizens entitled to vote can demand that a vote be held on a law passed
+  by Parliament. If the people reject the law, it does not come into force.
+status: draft
+reviewed_by: null
+reviewed_at: null

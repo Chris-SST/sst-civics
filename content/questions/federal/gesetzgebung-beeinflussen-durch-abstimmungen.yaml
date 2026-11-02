@@ -1,0 +1,48 @@
+id: gesetzgebung-beeinflussen-durch-abstimmungen
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wie beeinflussen die Stimmberechtigten in der Schweiz direkt die Gesetzgebung des Bundes?
+options_de:
+  a: Sie stimmen an der Urne über Initiativen und Referenden ab.
+  b: Sie wählen die Richter, die über neue Gesetze entscheiden.
+  c: Sie ernennen die Bundesräte, die neue Gesetze erlassen.
+  d: Sie beschliessen die Gesetze an der Bundesversammlung selbst.
+correct: a
+explanation_de: Die Stimmberechtigten nehmen an Volksabstimmungen über Initiativen und Referenden teil
+  und entscheiden dort mit. So wirken sie zwischen den Wahlen direkt an der Gesetzgebung mit. Das ist
+  ein Kennzeichen der direkten Demokratie.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: &id001 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+  checked: *id001
+glossary:
+- Volksabstimmung
+- Initiative
+- Referendum
+- Stimmberechtigte
+status: in_review
+difficulty: 1
+covers:
+- zh-031
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Stimmberechtigten nehmen mit Abstimmungen über Volksinitiativen und Referenden direkt
+      Einfluss auf die Bundesgesetzgebung, während Bundesräte und Bundesrichter von der Bundesversammlung
+      gewählt werden und die Gesetze von Parlament beschlossen werden.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Volksinitiativen als Grundpfeiler der direkten Demokratie, mit denen Stimmberechtigte
+      eine Verfassungsänderung verlangen und die zur Volksabstimmung führen. Quelle 2 zeigt, dass Stimmberechtigte
+      per Referendum Bundesgesetze dem Volk zur Abstimmung unterbreiten können. Die Seiten erwähnen die
+      Abstimmung an der Urne nicht wörtlich, die Volksabstimmung ist aber eindeutig gemeint.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1
