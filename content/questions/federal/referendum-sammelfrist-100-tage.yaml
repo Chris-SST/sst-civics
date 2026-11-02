@@ -1,0 +1,41 @@
+id: referendum-sammelfrist-100-tage
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wie viel Zeit haben die Referendumskomitees, um die Unterschriften für ein fakultatives Referendum
+  gegen ein Bundesgesetz zu sammeln?
+options_de:
+  a: 60 Tage
+  b: 18 Monate
+  c: 100 Tage
+  d: 30 Tage
+correct: c
+explanation_de: Die Frist beträgt 100 Tage ab der amtlichen Veröffentlichung des Erlasses. Die 18 Monate
+  gelten dagegen für das Sammeln von Unterschriften für eine Volksinitiative.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+  checked: &id001 2026-11-02
+glossary:
+- Referendum
+- Referendumsfrist
+- Volksinitiative
+status: in_review
+difficulty: 2
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Für ein fakultatives Referendum gegen ein Bundesgesetz müssen innert 100 Tagen nach der
+      amtlichen Veröffentlichung des Erlasses 50'000 Unterschriften gesammelt werden.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt für das fakultative Referendum eine Frist von 100 Tagen seit der Publikation
+      des Erlasses im Bundesblatt für die 50 000 Unterschriften. Die 18 Monate für Volksinitiativen werden
+      auf der Seite nicht erwähnt, widersprechen der Antwort aber auch nicht.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

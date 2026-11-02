@@ -1,0 +1,41 @@
+id: volksinitiative-unterschriften-sammelfrist
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wie viele Unterschriften braucht eine eidgenössische Volksinitiative und wie lange darf man
+  dafür sammeln?
+options_de:
+  a: 100 000 Unterschriften in 100 Tagen
+  b: 50 000 Unterschriften in 100 Tagen
+  c: 50 000 Unterschriften in 18 Monaten
+  d: 100 000 Unterschriften in 18 Monaten
+correct: d
+explanation_de: Eine eidgenössische Volksinitiative braucht 100 000 gültige Unterschriften innerhalb von
+  18 Monaten. Das fakultative Referendum braucht dagegen 50 000 Unterschriften in 100 Tagen.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: &id001 2026-11-02
+glossary:
+- Volksinitiative
+- Unterschriften
+- Sammelfrist
+status: in_review
+difficulty: 1
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Für eine eidgenössische Volksinitiative braucht es 100 000 gültige Unterschriften, die
+      innerhalb von 18 Monaten gesammelt werden müssen.
+  source:
+    verdict: supported
+    note: Quelle 1 (Bundeskanzlei) sagt ausdrücklich, dass eine Volksinitiative zustande kommt, wenn innerhalb
+      von 18 Monaten 100 000 gültige Unterschriften zusammenkommen. Die Angabe zum fakultativen Referendum
+      (50 000 in 100 Tagen) steht nicht auf der Seite, ist für die richtige Antwort d) aber nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

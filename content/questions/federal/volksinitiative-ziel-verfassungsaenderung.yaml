@@ -1,0 +1,41 @@
+id: volksinitiative-ziel-verfassungsaenderung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Was können Stimmberechtigte mit einer eidgenössischen Volksinitiative verlangen?
+options_de:
+  a: Die Abwahl des Bundesrates
+  b: Eine Änderung der Bundesverfassung
+  c: Die Ablehnung eines bestehenden Bundesgesetzes
+  d: Eine Änderung der Kantonsverfassung
+correct: b
+explanation_de: Mit einer Volksinitiative können Stimmberechtigte eine Änderung der Bundesverfassung verlangen.
+  Die Ablehnung eines Gesetzes wäre dagegen Sache des Referendums.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: &id001 2026-11-02
+glossary:
+- Volksinitiative
+- Bundesverfassung
+status: in_review
+difficulty: 1
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Mit einer eidgenössischen Volksinitiative können 100'000 Stimmberechtigte innerhalb von
+      18 Monaten eine Änderung der Bundesverfassung verlangen, während die Ablehnung eines Gesetzes Sache
+      des Referendums ist und die Abwahl des Bundesrates oder Änderungen der Kantonsverfassung nicht damit
+      erreicht werden können.
+  source:
+    verdict: supported
+    note: 'Die Seite der Bundeskanzlei sagt ausdrücklich: «Mit einer Volksinitiative können die Stimmbürgerinnen
+      und Stimmbürger eine Änderung der Bundesverfassung verlangen.» Der Hinweis auf das Referendum in
+      der Erklärung steht nicht auf der Seite, ist aber für die richtige Antwort nicht nötig.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

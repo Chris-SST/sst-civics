@@ -1,0 +1,44 @@
+id: kantonsreferendum-acht-kantone
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wer kann neben 50'000 Stimmberechtigten ebenfalls ein fakultatives Referendum gegen ein Bundesgesetz
+  verlangen?
+options_de:
+  a: Acht Kantone
+  b: Drei grosse Parteien gemeinsam
+  c: Der Bundesrat
+  d: Das Bundesgericht
+correct: a
+explanation_de: Laut Bundesverfassung können auch acht Kantone eine Volksabstimmung über ein Bundesgesetz
+  verlangen. Man nennt dies Kantonsreferendum. Es wird selten genutzt, zeigt aber, dass die Kantone im
+  Bundesstaat Mitspracherechte haben.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+  checked: 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Kantonsreferendum
+- fakultatives Referendum
+- Kanton
+status: in_review
+difficulty: 3
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-opus-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Art. 141 Abs. 1 der Bundesverfassung können neben 50'000 Stimmberechtigten auch acht
+      Kantone (sogenanntes Kantonsreferendum) eine Volksabstimmung über ein Bundesgesetz verlangen.
+  source:
+    verdict: supported
+    note: 'Quelle 2 (Art. 141 Abs. 1 BV) hält fest: «Verlangen es 50 000 Stimmberechtigte oder acht Kantone
+      innerhalb von 100 Tagen … so werden dem Volk zur Abstimmung vorgelegt». Damit ist Antwort a) gestützt.
+      Quelle 1 nennt nur die 50 000 Unterschriften und erwähnt die Kantone nicht.'
+    at: *id001
+    model: claude-opus-5-5
+    version: 1

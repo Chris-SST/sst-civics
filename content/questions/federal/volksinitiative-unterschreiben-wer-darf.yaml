@@ -1,0 +1,47 @@
+id: volksinitiative-unterschreiben-wer-darf
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wer darf eine eidgenössische Volksinitiative unterschreiben?
+options_de:
+  a: Alle Personen ab 16 Jahren mit Wohnsitz in der Schweiz
+  b: Alle Personen ab 18 Jahren mit Niederlassungsbewilligung C
+  c: Nur Mitglieder einer politischen Partei ab 18 Jahren
+  d: Stimmberechtigte Schweizerinnen und Schweizer ab 18 Jahren
+correct: d
+explanation_de: Eine eidgenössische Volksinitiative unterschreiben dürfen nur Personen, die auf Bundesebene
+  stimmberechtigt sind. Das sind Schweizerinnen und Schweizer ab 18 Jahren, auch jene, die im Ausland
+  leben. Ausländerinnen und Ausländer haben auf Bundesebene keine politischen Rechte, auch nicht mit einer
+  Niederlassungsbewilligung.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: &id001 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: *id001
+glossary:
+- Volksinitiative
+- Stimmberechtigung
+- Unterschrift
+status: in_review
+difficulty: 1
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-opus-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Eine eidgenössische Volksinitiative dürfen nur in eidgenössischen Angelegenheiten stimmberechtigte
+      Schweizerinnen und Schweizer ab 18 Jahren unterschreiben, auch Auslandschweizer, nicht aber Ausländerinnen
+      und Ausländer oder Jugendliche unter 18 Jahren.
+  source:
+    verdict: supported
+    note: Quelle 2 (Art. 136 Abs. 1 BV) hält fest, dass die politischen Rechte in Bundessachen allen Schweizerinnen
+      und Schweizern ab dem 18. Altersjahr zustehen. Quelle 1 ergänzt, dass die Stimmbürgerinnen und Stimmbürger
+      mit einer Volksinitiative eine Verfassungsänderung verlangen können. Ausdrücklich, dass die Unterschrift
+      unter eine Initiative zu diesen Rechten gehört (Art. 136 Abs. 2), steht im gekürzten Text allerdings
+      nicht.
+    at: *id001
+    model: claude-opus-5-5
+    version: 1

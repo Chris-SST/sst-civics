@@ -1,0 +1,43 @@
+id: volksinitiative-doppeltes-mehr
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Was braucht eine Volksinitiative, damit sie in der Abstimmung angenommen wird?
+options_de:
+  a: Das Ja von zwei Dritteln der Stimmenden
+  b: Das Ja des Bundesrates und der Mehrheit der Stimmenden
+  c: Das Ja der Mehrheit der Stimmenden und der Mehrheit der Kantone
+  d: Nur das Ja der Mehrheit der Stimmenden
+correct: c
+explanation_de: 'Eine Volksinitiative verlangt eine Änderung der Bundesverfassung. Deshalb braucht es
+  das doppelte Mehr: die Mehrheit der Stimmenden und die Mehrheit der Kantone (Ständemehr).'
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Volksinitiative
+- Doppeltes Mehr
+- Ständemehr
+status: in_review
+difficulty: 2
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Eine Volksinitiative ist angenommen, wenn sowohl die Mehrheit der Stimmenden als auch die
+      Mehrheit der Stände (Kantone) zustimmt (Volks- und Ständemehr, Art. 139 BV).
+  source:
+    verdict: supported
+    note: 'Quelle 2 (BV): Vorlagen, die Volk und Ständen unterbreitet werden, sind angenommen, wenn die
+      Mehrheit der Stimmenden und die Mehrheit der Stände zustimmen; Art. 139 Abs. 5 legt Initiativen
+      im ausgearbeiteten Entwurf Volk und Ständen vor. Quelle 1 bestätigt, dass eine Volksinitiative eine
+      Verfassungsänderung verlangt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

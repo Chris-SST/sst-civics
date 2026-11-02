@@ -1,0 +1,48 @@
+id: ungueltigkeit-volksinitiative-bundesversammlung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Welche Behörde kann eine eidgenössische Volksinitiative für ungültig erklären, zum Beispiel
+  wenn sie die Einheit der Materie verletzt?
+options_de:
+  a: Der Bundesrat
+  b: Das Bundesgericht
+  c: Die Bundesversammlung
+  d: Die Bundeskanzlei
+correct: c
+explanation_de: Laut Bundesverfassung erklärt die Bundesversammlung eine Volksinitiative ganz oder teilweise
+  für ungültig, wenn sie die Einheit der Form, die Einheit der Materie oder zwingende Bestimmungen des
+  Völkerrechts verletzt. Die Bundeskanzlei prüft dagegen vor allem formale Punkte, etwa ob genügend gültige
+  Unterschriften eingereicht wurden.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: *id001
+glossary:
+- Bundesversammlung
+- Einheit der Materie
+- Volksinitiative
+- Ungültigkeit
+status: in_review
+difficulty: 3
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-opus-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Gemäss Art. 139 Abs. 3 der Bundesverfassung erklärt die Bundesversammlung eine eidgenössische
+      Volksinitiative ganz oder teilweise für ungültig, wenn sie die Einheit der Form, die Einheit der
+      Materie oder zwingende Bestimmungen des Völkerrechts verletzt.
+  source:
+    verdict: supported
+    note: Quelle 1 (Art. 139 Abs. 3 BV) sagt ausdrücklich, dass die Bundesversammlung eine Initiative,
+      welche die Einheit der Form, die Einheit der Materie oder zwingendes Völkerrecht verletzt, ganz
+      oder teilweise für ungültig erklärt. Quelle 2 bestätigt, dass die Bundeskanzlei die Unterschriften
+      zählt und das Zustandekommen feststellt.
+    at: *id001
+    model: claude-opus-5-5
+    version: 1

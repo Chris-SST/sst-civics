@@ -75,9 +75,10 @@ topics:
     name_en: "Popular rights: initiative, referendum and votes"
     target_questions: 22
     sources:
-      - https://www.ch.ch/de/abstimmungen-und-wahlen/initiativen/was-ist-eine-eidgenossische-volksinitiative/
-      - https://www.ch.ch/de/abstimmungen-und-wahlen/referendum/
-      - https://www.ch.ch/de/
+      - https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+      - https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1978/688_688_688/20221023/de/html/fedlex-data-admin-ch-eli-cc-1978-688_688_688-20221023-de-html-11.html
   - code: bund.demokratie.wahlen
     scope: federal
     name_de: "Wahlen, Wahlrecht und Parteien"

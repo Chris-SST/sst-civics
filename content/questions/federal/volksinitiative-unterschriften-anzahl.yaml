@@ -1,0 +1,40 @@
+id: volksinitiative-unterschriften-anzahl
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wie viele Unterschriften von Stimmberechtigten braucht eine eidgenössische Volksinitiative,
+  damit sie zustande kommt?
+options_de:
+  a: 50 000 Unterschriften
+  b: 150 000 Unterschriften
+  c: 200 000 Unterschriften
+  d: 100 000 Unterschriften
+correct: d
+explanation_de: Für eine eidgenössische Volksinitiative braucht es 100 000 gültige Unterschriften. Diese
+  müssen innerhalb von 18 Monaten gesammelt werden.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: &id001 2026-11-02
+glossary:
+- Volksinitiative
+- Stimmberechtigte
+status: in_review
+difficulty: 1
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Artikel 139 der Bundesverfassung braucht eine eidgenössische Volksinitiative 100 000
+      gültige Unterschriften von Stimmberechtigten, die innerhalb von 18 Monaten gesammelt werden müssen.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundeskanzlei) nennt ausdrücklich: Sind innerhalb von 18 Monaten 100 000 gültige
+      Unterschriften zusammengekommen, erklärt die Bundeskanzlei die Volksinitiative als zustande gekommen.
+      Das deckt Antwort d) und die Erklärung ab.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

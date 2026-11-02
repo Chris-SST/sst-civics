@@ -1,0 +1,41 @@
+id: volksinitiative-sammelfrist-monate
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wie lange haben die Initiantinnen und Initianten Zeit, um die Unterschriften für eine eidgenössische
+  Volksinitiative zu sammeln?
+options_de:
+  a: 6 Monate
+  b: 12 Monate
+  c: 18 Monate
+  d: 36 Monate
+correct: c
+explanation_de: Die Sammelfrist beträgt 18 Monate ab der Veröffentlichung im Bundesblatt. Schaffen sie
+  die nötigen 100 000 Unterschriften in dieser Zeit nicht, kommt die Initiative nicht zustande.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: &id001 2026-11-02
+glossary:
+- Volksinitiative
+- Sammelfrist
+- Bundesblatt
+status: in_review
+difficulty: 2
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Für eine eidgenössische Volksinitiative müssen innert 18 Monaten seit der Veröffentlichung
+      im Bundesblatt 100'000 gültige Unterschriften gesammelt werden (Art. 139 BV, Art. 71 BPR).
+  source:
+    verdict: supported
+    note: Quelle 1 nennt ausdrücklich 18 Monate für 100 000 gültige Unterschriften. Der Beginn der Frist
+      ab Veröffentlichung im Bundesblatt wird auf der Seite nicht erwähnt, ändert aber nichts an der richtigen
+      Antwort.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

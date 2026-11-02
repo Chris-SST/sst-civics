@@ -1,0 +1,49 @@
+id: abstimmungsunterlagen-erlaeuterungen-bundesrat
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Was erhalten die Stimmberechtigten vor einer eidgenössischen Abstimmung zusammen mit dem
+  Stimmmaterial, damit sie sich über die Vorlagen informieren können?
+options_de:
+  a: Die Erläuterungen des Bundesrates
+  b: Eine Stellungnahme des Bundesgerichts
+  c: Ein Gutachten des eigenen Kantons
+  d: Die Wahlliste aller Parteien
+correct: a
+explanation_de: Der Bundesrat erklärt in den Erläuterungen, oft Abstimmungsbüchlein genannt, worum es
+  bei jeder Vorlage geht. Darin stehen auch die Argumente des Initiativ- oder Referendumskomitees sowie
+  die Empfehlung von Bundesrat und Parlament. So können sich alle eine eigene Meinung bilden.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte.html
+  checked: &id001 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte.html
+  checked: *id001
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1978/688_688_688/20221023/de/html/fedlex-data-admin-ch-eli-cc-1978-688_688_688-20221023-de-html-11.html
+  checked: &id002 2026-11-02
+glossary:
+- Abstimmungserläuterungen
+- Bundesrat
+- Stimmmaterial
+- Abstimmung
+status: in_review
+difficulty: 1
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-opus-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Gemäss Bundesgesetz über die politischen Rechte erhalten die Stimmberechtigten zusammen
+      mit dem Stimmmaterial die Erläuterungen des Bundesrates (das «Abstimmungsbüchlein»), welche die
+      Vorlagen sachlich erklären und auch die Argumente der Gegnerschaft wiedergeben.
+  source:
+    verdict: supported
+    note: Art. 11 Abs. 2 BPR (Quelle 3) hält fest, dass der Abstimmungsvorlage eine kurze, sachliche Erläuterung
+      des Bundesrates beigegeben wird, die auch die Argumente der Urheberkomitees berücksichtigt; Abs.
+      3 regelt die Zustellung zusammen mit den Stimmunterlagen. Die Empfehlung von Bundesrat und Parlament
+      wird im Text nicht ausdrücklich erwähnt, und die Quellen 1 und 2 enthalten dazu nichts.
+    at: *id002
+    model: claude-opus-5-5
+    version: 1

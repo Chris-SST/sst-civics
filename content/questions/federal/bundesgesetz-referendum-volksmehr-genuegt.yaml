@@ -1,0 +1,46 @@
+id: bundesgesetz-referendum-volksmehr-genuegt
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Gegen ein neues Bundesgesetz wurde das fakultative Referendum ergriffen. Was braucht es,
+  damit das Gesetz in der Volksabstimmung angenommen wird?
+options_de:
+  a: Die Mehrheit der Stimmenden in der ganzen Schweiz
+  b: Eine Zweidrittelmehrheit der Stimmenden
+  c: Die Mehrheit der Kantone allein
+  d: Die Mehrheit der Stimmenden und die Mehrheit der Kantone
+correct: a
+explanation_de: Bei einem fakultativen Referendum gegen ein Bundesgesetz zählt nur das Volksmehr, also
+  die Mehrheit der gültigen Stimmen in der ganzen Schweiz. Das Ständemehr, die Mehrheit der Kantone, braucht
+  es zusätzlich nur bei Änderungen der Bundesverfassung und bei bestimmten Staatsverträgen.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+  checked: &id001 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: *id001
+glossary:
+- fakultatives Referendum
+- Volksmehr
+- Ständemehr
+- Bundesgesetz
+status: in_review
+difficulty: 2
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-opus-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Beim fakultativen Referendum gegen ein Bundesgesetz genügt nach Art. 142 Abs. 1 BV das
+      Volksmehr, also die Mehrheit der Stimmenden in der ganzen Schweiz, während das Ständemehr nur beim
+      obligatorischen Referendum, etwa bei Verfassungsänderungen, nötig ist.
+  source:
+    verdict: supported
+    note: Quelle 1 hält fest, dass mit dem fakultativen Referendum Gesetze «dem Volk zur Abstimmung unterbreitet»
+      werden. Quelle 2 (Art. 142 BV) sagt, dass solche Vorlagen angenommen sind, wenn die Mehrheit der
+      Stimmenden zustimmt; das Ständemehr braucht es nur bei Vorlagen an Volk und Stände wie Verfassungsänderungen.
+    at: *id001
+    model: claude-opus-5-5
+    version: 1

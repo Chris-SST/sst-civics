@@ -1,0 +1,46 @@
+id: empfehlung-bundesrat-parlament-volksinitiative
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wer gibt den Stimmberechtigten vor der Abstimmung über eine eidgenössische Volksinitiative
+  eine Empfehlung ab, ob sie die Initiative annehmen oder ablehnen sollen?
+options_de:
+  a: Der Bundesrat und das Parlament
+  b: Die Kantonsregierungen
+  c: Die Bundeskanzlei allein
+  d: Das Bundesgericht
+correct: a
+explanation_de: Nachdem eine Volksinitiative zustande gekommen ist, nehmen Bundesrat und Parlament dazu
+  Stellung. Das Parlament empfiehlt den Stimmberechtigten die Annahme oder die Ablehnung. Diese Empfehlung
+  steht auch in den Abstimmungserläuterungen, welche die Stimmberechtigten vor der Abstimmung erhalten.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Volksinitiative
+- Bundesrat
+- Parlament
+- Abstimmungsempfehlung
+status: in_review
+difficulty: 1
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-opus-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Bei eidgenössischen Volksinitiativen geben die Bundesversammlung und der Bundesrat eine
+      Abstimmungsempfehlung ab, die in den Abstimmungserläuterungen an die Stimmberechtigten veröffentlicht
+      wird.
+  source:
+    verdict: supported
+    note: 'Art. 139 Abs. 5 BV in Quelle 2 sagt ausdrücklich: «Die Bundesversammlung empfiehlt die Initiative
+      zur Annahme oder zur Ablehnung.» Damit ist nur Antwort a) möglich. Die Rolle des Bundesrats und
+      die Abstimmungserläuterungen erwähnt der vorliegende Text allerdings nicht.'
+    at: *id001
+    model: claude-opus-5-5
+    version: 1

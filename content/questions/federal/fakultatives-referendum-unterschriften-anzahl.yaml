@@ -1,0 +1,40 @@
+id: fakultatives-referendum-unterschriften-anzahl
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wie viele Unterschriften braucht es für ein fakultatives Referendum gegen ein Bundesgesetz?
+options_de:
+  a: 200 000 Unterschriften
+  b: 30 000 Unterschriften
+  c: 50 000 Unterschriften
+  d: 100 000 Unterschriften
+correct: c
+explanation_de: Für ein fakultatives Referendum braucht es 50 000 gültige Unterschriften von Stimmberechtigten.
+  Sie müssen innerhalb von 100 Tagen nach der Veröffentlichung des Gesetzes gesammelt werden.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+  checked: &id001 2026-11-02
+glossary:
+- Referendum
+- Bundesgesetz
+- Stimmberechtigte
+status: in_review
+difficulty: 1
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Für ein fakultatives Referendum gegen ein Bundesgesetz braucht es 50 000 gültige Unterschriften
+      innerhalb von 100 Tagen nach der Veröffentlichung des Erlasses im Bundesblatt.
+  source:
+    verdict: supported
+    note: Quelle 1 (Bundeskanzlei) nennt ausdrücklich 50 000 gültige Unterschriften innerhalb von 100
+      Tagen seit Publikation des Erlasses im Bundesblatt für das fakultative Referendum; das deckt Antwort
+      und Erklärung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

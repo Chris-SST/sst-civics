@@ -1,0 +1,44 @@
+id: obligatorisches-referendum-verfassungsaenderung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Über welche Vorlage muss in der Schweiz immer abgestimmt werden, auch wenn keine Unterschriften
+  gesammelt werden?
+options_de:
+  a: Über jedes neue Bundesgesetz
+  b: Über jede Änderung der Bundesverfassung
+  c: Über jede Verordnung des Bundesrates
+  d: Über jedes Budget des Bundes
+correct: b
+explanation_de: Jede Änderung der Bundesverfassung muss obligatorisch dem Volk und den Kantonen vorgelegt
+  werden. Man nennt das obligatorisches Referendum. Bundesgesetze unterstehen nur dem fakultativen Referendum.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+  checked: 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- obligatorisches Referendum
+- Bundesverfassung
+status: in_review
+difficulty: 2
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Jede Änderung der Bundesverfassung unterliegt dem obligatorischen Referendum und muss zwingend
+      von Volk und Ständen angenommen werden, während Bundesgesetze nur bei einem Referendum mit 50'000
+      Unterschriften, Verordnungen und Budgets gar nicht dem Volk vorgelegt werden.
+  source:
+    verdict: supported
+    note: Quelle 2 (BV, Art. 140 Obligatorisches Referendum sowie die Bestimmungen zur Revision) sagt,
+      dass die revidierte Bundesverfassung erst in Kraft tritt, wenn Volk und Stände sie angenommen haben;
+      Bundesgesetze kommen nach Quelle 1 und Art. 141 nur auf Verlangen vor das Volk (fakultatives Referendum).
+      Der Auszug in Quelle 2 ist allerdings lückenhaft, die Aussage ergibt sich aber eindeutig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

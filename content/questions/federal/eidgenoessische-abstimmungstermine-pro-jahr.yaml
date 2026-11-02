@@ -1,0 +1,43 @@
+id: eidgenoessische-abstimmungstermine-pro-jahr
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wie oft im Jahr finden in der Schweiz normalerweise eidgenössische Volksabstimmungen statt?
+options_de:
+  a: Einmal
+  b: Nur alle vier Jahre
+  c: Bis zu viermal
+  d: Jeden Monat
+correct: c
+explanation_de: Für eidgenössische Volksabstimmungen sind pro Jahr bis zu vier Abstimmungssonntage vorgesehen.
+  An einem Termin wird oft über mehrere Vorlagen gleichzeitig abgestimmt. Alle vier Jahre finden dagegen
+  die Wahlen in den Nationalrat statt, die keine Abstimmungen sind.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte.html
+  checked: &id001 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte.html
+  checked: *id001
+glossary:
+- Volksabstimmung
+- Abstimmungssonntag
+- Stimmberechtigte
+status: in_review
+difficulty: 1
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-opus-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Bundesrat legt jährlich bis zu vier Abstimmungstermine fest, an denen eidgenössische
+      Volksabstimmungen stattfinden können.
+  source:
+    verdict: supported
+    note: 'Beide Quellen (identische Seite der Bundeskanzlei) sagen ausdrücklich: «Jährlich sind bis zu
+      vier Abstimmungssonntage vorgesehen.» Dass oft über mehrere Vorlagen gleichzeitig abgestimmt wird
+      und der Nationalrat alle vier Jahre gewählt wird, steht hingegen nicht im Text.'
+    at: *id001
+    model: claude-opus-5-5
+    version: 1

@@ -1,0 +1,45 @@
+id: gegenvorschlag-parlament-zur-volksinitiative
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Was kann das Parlament einer eidgenössischen Volksinitiative gegenüberstellen?
+options_de:
+  a: Eine Verlängerung der Sammelfrist um ein weiteres Jahr
+  b: Einen eigenen Gegenvorschlag, über den ebenfalls abgestimmt wird
+  c: Eine zweite Unterschriftensammlung in allen Kantonen
+  d: Ein Verbot, die Initiative zur Abstimmung zu bringen
+correct: b
+explanation_de: Das Parlament kann einer Volksinitiative einen direkten Gegenvorschlag gegenüberstellen.
+  Dieser nimmt das Anliegen oft teilweise auf, geht aber weniger weit. Die Stimmberechtigten stimmen dann
+  am gleichen Tag über die Initiative und den Gegenvorschlag ab.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Volksinitiative
+- Gegenvorschlag
+- Parlament
+status: in_review
+difficulty: 2
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-opus-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Bundesversammlung kann einer Volksinitiative gemäss Art. 139 Abs. 5 und Art. 139b BV
+      einen direkten Gegenentwurf gegenüberstellen, über den Volk und Stände gleichzeitig mit der Initiative
+      abstimmen, wobei auch ein indirekter Gegenvorschlag auf Gesetzesstufe möglich ist.
+  source:
+    verdict: supported
+    note: Quelle 2 (Art. 139 Abs. 5 BV) hält fest, dass die Bundesversammlung einer Initiative einen Gegenentwurf
+      gegenüberstellen kann und die Stimmberechtigten gleichzeitig über Initiative und Gegenentwurf abstimmen.
+      Dass der Gegenvorschlag weniger weit geht, steht nicht im Text; Quelle 1 behandelt den Gegenvorschlag
+      nicht.
+    at: *id001
+    model: claude-opus-5-5
+    version: 1

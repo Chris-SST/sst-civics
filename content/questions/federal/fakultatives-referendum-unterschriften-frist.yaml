@@ -1,0 +1,43 @@
+id: fakultatives-referendum-unterschriften-frist
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Wie viele Unterschriften sind nötig, damit ein fakultatives Referendum gegen ein Bundesgesetz
+  zustande kommt, und in welcher Frist?
+options_de:
+  a: 50 000 Unterschriften innerhalb von 18 Monaten
+  b: 50 000 Unterschriften innerhalb von 100 Tagen
+  c: 100 000 Unterschriften innerhalb von 30 Tagen
+  d: 100 000 Unterschriften innerhalb von 100 Tagen
+correct: b
+explanation_de: Für ein fakultatives Referendum braucht es 50 000 gültige Unterschriften innerhalb von
+  100 Tagen nach der Veröffentlichung des Gesetzes im Bundesblatt. Kommt es zustande, stimmt das Volk
+  über das Gesetz ab.
+sources:
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+  checked: &id001 2026-11-02
+glossary:
+- fakultatives Referendum
+- Bundesgesetz
+- Bundesblatt
+status: in_review
+difficulty: 2
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Für ein fakultatives Referendum gegen ein Bundesgesetz braucht es 50 000 gültige Unterschriften
+      innerhalb von 100 Tagen nach der amtlichen Veröffentlichung des Erlasses.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundeskanzlei) sagt ausdrücklich: Sind innerhalb von 100 Tagen seit Publikation des
+      Erlasses im Bundesblatt 50 000 gültige Unterschriften zusammengekommen, kommt das fakultative Referendum
+      zustande. Das stützt Antwort b) und die Erklärung; der Satz zur Volksabstimmung folgt aus dem Zweck
+      des Referendums auf der Seite.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

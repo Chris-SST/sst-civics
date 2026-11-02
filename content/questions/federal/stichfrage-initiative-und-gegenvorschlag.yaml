@@ -1,0 +1,45 @@
+id: stichfrage-initiative-und-gegenvorschlag
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.volksrechte
+question_de: Bei einer Abstimmung über eine Volksinitiative und einen direkten Gegenvorschlag gibt es
+  eine Stichfrage. Wozu dient sie?
+options_de:
+  a: Sie entscheidet, ob die Abstimmung wiederholt werden muss
+  b: Sie entscheidet, ob die Kantone überhaupt mitstimmen dürfen
+  c: Sie entscheidet, welche Vorlage gilt, wenn beide angenommen werden
+  d: Sie entscheidet, ob die Unterschriften noch einmal geprüft werden
+correct: c
+explanation_de: Die Stimmberechtigten dürfen sowohl der Initiative als auch dem Gegenvorschlag zustimmen.
+  Mit der Stichfrage geben sie an, welche Vorlage in Kraft treten soll, falls beide angenommen werden.
+  So können Stimmen nicht zwischen zwei ähnlichen Vorlagen verloren gehen.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+  checked: 2026-11-02
+glossary:
+- Stichfrage
+- Gegenvorschlag
+- Volksinitiative
+- Abstimmung
+status: in_review
+difficulty: 2
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-opus-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Stichfrage legt fest, ob die Volksinitiative oder der direkte Gegenvorschlag in Kraft
+      tritt, falls beide Vorlagen von Volk und Ständen angenommen werden (Art. 139b BV).
+  source:
+    verdict: supported
+    note: Quelle 1 (Art. 139b BV) sagt ausdrücklich, dass die Stimmberechtigten beiden Vorlagen zustimmen
+      und in der Stichfrage angeben können, welcher Vorlage sie den Vorrang geben, falls beide angenommen
+      werden. Quelle 2 behandelt die Stichfrage nicht.
+    at: *id001
+    model: claude-opus-5-5
+    version: 1
