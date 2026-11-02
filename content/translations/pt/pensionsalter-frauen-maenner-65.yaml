@@ -1,0 +1,33 @@
+id: pensionsalter-frauen-maenner-65
+lang: pt
+source_version: 3
+question: Qual é a idade de reforma (hoje chamada «idade de referência») que se aplica, a partir de 2028,
+  a mulheres e homens no seguro de velhice e sobrevivência (AHV)?
+options:
+  a: Mulheres 64 anos, homens 65 anos
+  b: Mulheres e homens 65 anos
+  c: Mulheres e homens 63 anos
+  d: Mulheres e homens 67 anos
+explanation: Desde a reforma AHV 21, a idade de reforma chama-se oficialmente «idade de referência». A
+  partir de 2025, para as mulheres aumenta três meses por ano, até atingir os 65 anos. A partir de 2028,
+  mulheres e homens têm a mesma idade de referência de 65 anos.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Wie hoch ist das Rentenalter (heute «Referenzalter» genannt), das ab 2028 für Frauen
+      und Männer in der Alters- und Hinterlassenenversicherung (AHV) gilt?
+    options_de:
+      a: Frauen 64 Jahre, Männer 65 Jahre
+      b: Frauen und Männer 65 Jahre
+      c: Frauen und Männer 63 Jahre
+      d: Frauen und Männer 67 Jahre
+    explanation_de: Seit der Reform AHV 21 heisst das Rentenalter offiziell «Referenzalter». Ab 2025 steigt
+      es für Frauen um drei Monate pro Jahr, bis es 65 Jahre erreicht. Ab 2028 haben Frauen und Männer
+      dasselbe Referenzalter von 65 Jahren.

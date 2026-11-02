@@ -1,0 +1,35 @@
+id: oeffentliches-amt-bezahlte-freizeit
+lang: es
+source_version: 3
+question: Un empleado o una empleada ejerce, además de su trabajo, un cargo público, por ejemplo en la
+  autoridad escolar del municipio (Gemeinde). ¿Qué le concede normalmente el empleador por ello?
+options:
+  a: Una bonificación adicional al salario
+  b: Un ascenso
+  c: Tiempo libre remunerado
+  d: Nada; para el cargo hay que tomar vacaciones
+explanation: Quien ejerce un cargo público recibe por ello, por regla general, tiempo libre remunerado
+  por parte del empleador. La cantidad exacta depende del contrato de trabajo, del convenio colectivo
+  de trabajo o de otras normas. Por un cargo no se concede ni una bonificación ni un ascenso, y normalmente
+  tampoco hay que tomar vacaciones para ejercerlo.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Ein Arbeitnehmer oder eine Arbeitnehmerin übt neben der Arbeit ein öffentliches Amt aus,
+      zum Beispiel in der Schulbehörde der Gemeinde. Was gewährt ihm oder ihr der Arbeitgeber dafür normalerweise?
+    options_de:
+      a: Eine zusätzliche Gratifikation zum Lohn
+      b: Eine Beförderung
+      c: Bezahlte freie Zeit
+      d: Nichts; für das Amt muss man Ferien nehmen
+    explanation_de: Wer ein öffentliches Amt ausübt, erhält dafür in der Regel vom Arbeitgeber bezahlte
+      freie Zeit. Die genaue Menge hängt vom Arbeitsvertrag, vom Gesamtarbeitsvertrag oder von anderen
+      Vorschriften ab. Für ein Amt wird weder eine Gratifikation noch eine Beförderung gewährt, und normalerweise
+      muss man dafür auch keine Ferien nehmen.

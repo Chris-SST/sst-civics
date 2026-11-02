@@ -1,0 +1,31 @@
+id: zivildienst-anstelle-militaerdienst
+lang: pt
+source_version: 3
+question: Como estão relacionados, na Suíça, o serviço civil (Zivildienst) e o serviço militar?
+options:
+  a: O serviço civil só pode ser prestado por mulheres.
+  b: Quem presta serviço civil não precisa pagar impostos.
+  c: O serviço civil tem de ser prestado além do serviço militar.
+  d: O serviço civil pode ser prestado em vez do serviço militar.
+explanation: O serviço civil é um substituto civil do serviço militar. Destina-se a pessoas aptas para
+  o serviço militar que não conseguem conciliar o serviço militar com a sua consciência. Para isso, é
+  necessário apresentar um pedido, e o serviço civil dura mais tempo do que o serviço militar.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: In welchem Verhältnis stehen in der Schweiz der Zivildienst und der Militärdienst zueinander?
+    options_de:
+      a: Der Zivildienst kann nur von Frauen geleistet werden.
+      b: Wer Zivildienst leistet, muss keine Steuern bezahlen.
+      c: Der Zivildienst muss zusätzlich zum Militärdienst geleistet werden.
+      d: Der Zivildienst kann anstelle des Militärdienstes geleistet werden.
+    explanation_de: Der Zivildienst ist ein ziviler Ersatz für den Militärdienst. Er richtet sich an militärdiensttaugliche
+      Personen, die den Militärdienst nicht mit ihrem Gewissen vereinbaren können. Dafür muss ein Gesuch
+      gestellt werden, und der Zivildienst dauert länger als der Militärdienst.

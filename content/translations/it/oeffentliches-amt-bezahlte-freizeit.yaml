@@ -1,0 +1,35 @@
+id: oeffentliches-amt-bezahlte-freizeit
+lang: it
+source_version: 3
+question: Una dipendente o un dipendente svolge, oltre al lavoro, una carica pubblica, ad esempio nell'autorità
+  scolastica del Comune (Gemeinde). Che cosa concede normalmente il datore di lavoro per questo?
+options:
+  a: Un bonus sullo stipendio
+  b: Una promozione
+  c: Tempo libero retribuito
+  d: Niente, per la carica si devono prendere le ferie
+explanation: Chi svolge una carica pubblica riceve di regola dal datore di lavoro tempo libero retribuito.
+  Quanto tempo esattamente dipende dal contratto di lavoro, dal contratto collettivo di lavoro o da altre
+  disposizioni. Per una carica non sono previsti né un bonus né una promozione e normalmente non si devono
+  nemmeno prendere le ferie.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Eine Angestellte oder ein Angestellter übt neben der Arbeit ein öffentliches Amt aus,
+      zum Beispiel in der Schulbehörde der Gemeinde. Was gewährt der Arbeitgeber dafür normalerweise?
+    options_de:
+      a: Einen Bonus auf den Lohn
+      b: Eine Beförderung
+      c: Bezahlte Freizeit
+      d: Nichts, für das Amt müssen Ferien genommen werden
+    explanation_de: Wer ein öffentliches Amt ausübt, erhält in der Regel vom Arbeitgeber bezahlte Freizeit.
+      Wie viel genau, hängt vom Arbeitsvertrag, vom Gesamtarbeitsvertrag oder von anderen Bestimmungen
+      ab. Für ein Amt sind weder ein Bonus noch eine Beförderung vorgesehen und normalerweise müssen auch
+      keine Ferien genommen werden.

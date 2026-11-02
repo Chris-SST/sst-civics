@@ -1,0 +1,34 @@
+id: oeffentliches-amt-bezahlte-freizeit
+lang: tr
+source_version: 3
+question: Bir çalışan, işinin yanı sıra örneğin belediyenin (Gemeinde) okul kurulunda olduğu gibi kamusal
+  bir görev yürütmektedir. İşveren bunun için normalde ne verir?
+options:
+  a: Maaşa ek bir prim
+  b: Terfi
+  c: Ücretli izin süresi
+  d: Hiçbir şey, görev için yıllık izin kullanmak gerekir
+explanation: Kamusal bir görev yürüten kişiye işveren bunun için kural olarak ücretli izin süresi verir.
+  Bunun tam olarak ne kadar olduğu iş sözleşmesine, toplu iş sözleşmesine veya diğer düzenlemelere bağlıdır.
+  Bir görev için prim ya da terfi verilmez ve normalde bunun için yıllık izin kullanmak da gerekmez.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Ein Arbeitnehmer übt neben seiner Arbeit ein öffentliches Amt aus, zum Beispiel in der
+      Schulpflege der Gemeinde. Was gibt der Arbeitgeber dafür normalerweise?
+    options_de:
+      a: Eine zusätzliche Prämie zum Lohn
+      b: Eine Beförderung
+      c: Bezahlte Freizeit
+      d: Nichts, für das Amt muss man Jahresurlaub nehmen
+    explanation_de: Einer Person, die ein öffentliches Amt ausübt, gibt der Arbeitgeber dafür in der Regel
+      bezahlte Freizeit. Wie viel das genau ist, hängt vom Arbeitsvertrag, vom Gesamtarbeitsvertrag oder
+      von anderen Regelungen ab. Für ein Amt wird keine Prämie und keine Beförderung gegeben, und normalerweise
+      muss man dafür auch keinen Jahresurlaub nehmen.

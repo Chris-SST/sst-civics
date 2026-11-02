@@ -1,15 +1,35 @@
 id: oeffentliches-amt-bezahlte-freizeit
 lang: en
-source_version: 1
-question: A person holds a public office alongside their job. What do they usually receive from their
-  employer for this?
+source_version: 3
+question: An employee holds a public office alongside their work, for example on the school board of the
+  commune (Gemeinde). What does the employer normally provide for this?
 options:
-  a: Dismissal
-  b: Paid time off
-  c: A pay cut
-  d: An additional ban on holidays
-explanation: A person who holds a public office, for example on an authority, usually receives paid time
-  off from their employer for this. In this way, commitment to the community is supported.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: A bonus on top of their salary
+  b: A promotion
+  c: Paid time off
+  d: Nothing; you have to take holiday for the office
+explanation: Employees who hold a public office generally receive paid time off from their employer for
+  this. Exactly how much depends on the employment contract, the collective labour agreement or other
+  regulations. There is no bonus or promotion for holding an office, and normally you do not have to take
+  holiday for it either.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Eine Angestellte oder ein Angestellter übt neben der Arbeit ein öffentliches Amt aus,
+      zum Beispiel in der Schulpflege der Gemeinde. Was gewährt der Arbeitgeber dafür normalerweise?
+    options_de:
+      a: Einen Bonus zusätzlich zum Lohn
+      b: Eine Beförderung
+      c: Bezahlte Freistellung
+      d: Nichts; man muss für das Amt Ferien nehmen
+    explanation_de: Angestellte, die ein öffentliches Amt ausüben, erhalten dafür von ihrem Arbeitgeber
+      in der Regel bezahlte Freistellung. Wie viel genau, hängt vom Arbeitsvertrag, vom Gesamtarbeitsvertrag
+      oder von anderen Regelungen ab. Für die Ausübung eines Amtes gibt es weder einen Bonus noch eine
+      Beförderung, und normalerweise muss man dafür auch keine Ferien nehmen.

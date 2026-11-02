@@ -1,0 +1,33 @@
+id: pensionsalter-frauen-maenner-65
+lang: it
+source_version: 3
+question: Quale età pensionabile (oggi chiamata «età di riferimento») vale nell'assicurazione vecchiaia
+  e superstiti (AHV) a partire dal 2028 per le donne e per gli uomini?
+options:
+  a: Donne 64 anni, uomini 65 anni
+  b: Donne e uomini 65 anni
+  c: Donne e uomini 63 anni
+  d: Donne e uomini 67 anni
+explanation: Dopo la riforma AVS 21, l'età pensionabile si chiama ufficialmente «età di riferimento».
+  Dal 2025 per le donne aumenta ogni anno di tre mesi, fino a raggiungere i 65 anni. Dal 2028 donne e
+  uomini hanno la stessa età di riferimento di 65 anni.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Welches Rentenalter (heute «Referenzalter» genannt) gilt in der Alters- und Hinterlassenenversicherung
+      (AHV) ab 2028 für Frauen und für Männer?
+    options_de:
+      a: Frauen 64 Jahre, Männer 65 Jahre
+      b: Frauen und Männer 65 Jahre
+      c: Frauen und Männer 63 Jahre
+      d: Frauen und Männer 67 Jahre
+    explanation_de: Nach der Reform AHV 21 heisst das Rentenalter offiziell «Referenzalter». Ab 2025 steigt
+      es für Frauen jedes Jahr um drei Monate, bis es 65 Jahre erreicht. Ab 2028 haben Frauen und Männer
+      dasselbe Referenzalter von 65 Jahren.

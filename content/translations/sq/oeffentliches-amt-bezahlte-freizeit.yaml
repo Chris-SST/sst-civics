@@ -1,0 +1,36 @@
+id: oeffentliches-amt-bezahlte-freizeit
+lang: sq
+source_version: 3
+question: Një punonjëse ose një punonjës ushtron, përveç punës, një detyrë publike, për shembull në autoritetin
+  shkollor të komunës (Gemeinde). Çfarë jep zakonisht punëdhënësi për këtë?
+options:
+  a: Një bonus në pagë
+  b: Një ngritje në detyrë
+  c: Kohë të lirë të paguar
+  d: Asgjë, për detyrën duhet të merren pushime
+explanation: Kush ushtron një detyrë publike merr zakonisht nga punëdhënësi kohë të lirë të paguar për
+  këtë. Sa saktësisht, varet nga kontrata e punës, nga kontrata kolektive e punës ose nga rregullime të
+  tjera. Për një detyrë të tillë nuk jepet bonus ose ngritje në detyrë, dhe zakonisht nuk duhet as të
+  merren pushime për të.
+status: flagged
+reviewed_by: null
+reviewed_at: null
+checks:
+  back_translation:
+    verdict: different
+    reason: 'In der Erklärung steht in der Rückübersetzung «Wie genau» statt «Wie viel genau»: Der Bezug
+      auf das Ausmass der bezahlten Freizeit geht verloren, der Rest ist gleich.'
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    source_version: 3
+    question_de: Ein Mitarbeiter oder eine Mitarbeiterin übt neben der Arbeit ein öffentliches Amt aus,
+      zum Beispiel in der Schulbehörde der Gemeinde. Was gibt der Arbeitgeber dafür normalerweise?
+    options_de:
+      a: Einen Bonus auf den Lohn
+      b: Eine Beförderung
+      c: Bezahlte freie Zeit
+      d: Nichts, für das Amt müssen Ferien genommen werden
+    explanation_de: Wer ein öffentliches Amt ausübt, erhält dafür normalerweise vom Arbeitgeber bezahlte
+      freie Zeit. Wie genau, hängt vom Arbeitsvertrag, vom Gesamtarbeitsvertrag oder von anderen Regelungen
+      ab. Für ein solches Amt gibt es keinen Bonus und keine Beförderung, und normalerweise müssen dafür
+      auch keine Ferien genommen werden.

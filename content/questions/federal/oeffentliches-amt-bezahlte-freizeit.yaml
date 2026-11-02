@@ -1,29 +1,31 @@
 id: oeffentliches-amt-bezahlte-freizeit
-version: 2
+version: 3
 scope: federal
 canton: null
 topic: bund.sozial.wirtschaft_arbeit
-question_de: Ein Angestellter hat ein öffentliches Amt, zum Beispiel in der Schulbehörde seiner Gemeinde.
-  Was bekommt er dafür normalerweise von seinem Arbeitgeber?
+question_de: Eine Angestellte oder ein Angestellter übt neben der Arbeit ein öffentliches Amt aus, zum
+  Beispiel in der Schulbehörde der Gemeinde. Was gibt der Arbeitgeber dafür normalerweise?
 options_de:
   a: Einen Bonus zum Lohn
   b: Eine Beförderung
   c: Bezahlte Freizeit
-  d: Nichts, er muss das Amt in seinen Ferien erledigen
+  d: Nichts, für das Amt muss man Ferien nehmen
 correct: c
-explanation_de: Wer ein öffentliches Amt ausübt, bekommt vom Arbeitgeber dafür in der Regel bezahlte Freizeit.
-  Er muss dafür also keine Ferien nehmen. Einen Bonus oder eine Beförderung gibt es dafür nicht.
+explanation_de: Wer ein öffentliches Amt ausübt, erhält vom Arbeitgeber dafür in der Regel bezahlte Freizeit.
+  Wie viel genau, hängt vom Arbeitsvertrag, vom Gesamtarbeitsvertrag oder von anderen Regelungen ab. Einen
+  Bonus oder eine Beförderung gibt es für ein Amt nicht, und normalerweise muss man dafür auch keine Ferien
+  nehmen.
 sources:
 - url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
-  checked: &id001 2026-11-02
+  checked: 2026-11-02
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: *id001
+  checked: &id001 2026-11-02
 - url: https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
   checked: 2026-11-02
 glossary:
 - öffentliches Amt
 - Arbeitgeber
-status: needs_fix
+status: approved
 difficulty: 2
 covers:
 - zh-177
@@ -33,63 +35,50 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 2
-    reasoning: Wer ein öffentliches Amt wie ein Schulbehördenmandat ausübt, erhält von seinem Arbeitgeber
-      normalerweise die dafür nötige Zeit als bezahlte Freizeit bzw. Urlaub, während ein Bonus, eine Beförderung
-      oder der Bezug von Ferien nicht üblich sind.
+    version: 3
+    reasoning: Wer neben der Arbeit ein öffentliches Amt wie in der Schulbehörde ausübt, erhält vom Arbeitgeber
+      normalerweise bezahlte Freizeit bzw. den nötigen Urlaub, während Bonus, Beförderung oder Ferienbezug
+      nicht üblich sind.
   source:
     verdict: supported
-    note: 'Quelle 2 (Zürcher Broschüre) sagt ausdrücklich: Wer ein öffentliches Amt hat, hat als Arbeitnehmende
-      ein Recht auf bezahlte Zeit dafür. Quelle 1 (OR) stützt dies: Bei Verhinderung durch ein öffentliches
-      Amt zahlt der Arbeitgeber den Lohn, und die Ferien dürfen deswegen nicht gekürzt werden.'
+    note: Quelle 2 (Zürcher Broschüre, Kapitel «Arbeit und Beruf») sagt ausdrücklich, dass jemand mit
+      einem öffentlichen Amt als Arbeitnehmende ein Recht auf bezahlte Zeit dafür hat. Quelle 1 nennt
+      nur, dass die Ferien wegen eines öffentlichen Amtes nicht gekürzt werden dürfen, und Quelle 3 ist
+      nicht einschlägig.
     at: *id001
     model: claude-sonnet-5-5
-    version: 2
+    version: 3
   panel:
-    verdict: fix
+    verdict: approve
     reviews:
     - role: facts
       model: claude-opus-5-5
       verdict: approve
       issues:
-      - 'Klein: Nach Art. 324a OR wird der Lohn bei der Ausübung eines öffentlichen Amtes nur für eine
-        beschränkte Zeit weiterbezahlt; die Erklärung könnte das mit «in einem gewissen Umfang» oder «für
-        eine beschränkte Zeit» ergänzen, damit nicht der Eindruck einer unbegrenzten Freistellung entsteht.'
-      - 'Klein: Die Quelle 1 zeigt nur Art. 329b Abs. 2 OR (keine Kürzung der Ferien); als direktere Stütze
-        für die bezahlte Freizeit wäre Art. 324a OR (Lohnfortzahlung bei Ausübung eines öffentlichen Amtes)
-        zu ergänzen.'
+      - 'Klein: Die Erklärung könnte erwähnen, dass dieses Recht im Obligationenrecht (OR) geregelt ist,
+        zum Beispiel mit dem Zusatz «Das Obligationenrecht regelt dieses Recht.», damit die Lernenden
+        die Verbindung zur Broschüre sehen.'
     - role: exam
       model: claude-opus-5-5
       verdict: approve
       issues:
-      - 'Klein: Die Erklärung könnte erwähnen, dass der Lohn nach Obligationenrecht (Art. 324a OR) nur
-        für eine beschränkte Zeit weiterbezahlt wird, zum Beispiel mit dem Satz «Das ist im Obligationenrecht
-        geregelt, gilt aber nur für eine beschränkte Zeit».'
+      - 'Klein: Die Tatsache vereinfacht das Recht: Nach Art. 324a OR muss der Lohn für ein öffentliches
+        Amt nur für eine beschränkte Zeit weiterbezahlt werden, und Entschädigungen für das Amt werden
+        oft angerechnet. Die Erklärung könnte deshalb ergänzen, dass der Arbeitgeber die Zeit nicht unbegrenzt
+        bezahlen muss.'
+      - 'Klein: Die Frage ist etwas lang. Sie könnte kürzer lauten, zum Beispiel: «Sie arbeiten als Angestellte
+        oder Angestellter und haben ein öffentliches Amt in der Gemeinde. Was gibt Ihnen der Arbeitgeber
+        dafür normalerweise?»'
     - role: second
       model: claude-sonnet-5-5
-      verdict: fix
+      verdict: approve
       issues:
-      - 'Die Antwort c) ist rechtlich zu pauschal: Nach Art. 324a OR gilt bezahlte Freizeit für ein öffentliches
-        Amt nicht überall (Lohnfortzahlung nur bei Verhinderung ohne Verschulden und je nach Dauer). Ob
-        und wie viel bezahlte Freizeit es gibt, hängt oft vom Arbeitsvertrag, einem GAV oder dem Reglement
-        der Gemeinde ab. Das «normalerweise» in der Frage ist gut, aber die Erklärung sollte den Zusatz
-        «je nach Vertrag oder Regelung» enthalten, damit sie nicht absolut klingt.'
-      - 'Die Quellen stützen die Antwort nur indirekt: Art. 329a Abs. 2 (Ferienkürzung) erwähnt das öffentliche
-        Amt nur als Grund, weshalb Ferien nicht gekürzt werden dürfen. Die Broschüre und die Seite des
-        Kantons sagen nichts zu bezahlter Freizeit. Die Antwort ist wegen der Themenliste vertretbar,
-        aber die Erklärung sollte nicht mehr behaupten als die Themenliste («in der Regel»).'
-      - 'Die Antwort d) ist als falsche Antwort etwas zu extrem, aber klar falsch. Klein: Die Frage ist
-        mit «Ein Angestellter hat ein öffentliches Amt» etwas holprig, besser wäre «Eine Angestellte oder
-        ein Angestellter übt ein öffentliches Amt aus, zum Beispiel in der Schulbehörde.»'
-      - 'Klein: Das Wort «Arbeitgeber» in der Frage ist unproblematisch, aber «Bonus» ist ein Fremdwort
-        für B1-Lernende. Besser wäre «eine Prämie» oder «Zusatzlohn».'
-    round: 2
-    at: 2026-11-02
-    version: 2
+      - 'Klein: Die Erklärung könnte kurz erwähnen, dass sich der Anspruch aus dem Obligationenrecht (OR)
+        ergibt, wie es die Broschüre des Kantons tut.'
+    round: 3
+    at: &id002 2026-11-02
+    version: 3
 review:
   action: ai_panel
-  note: 'Rewritten: Beide Beanstandungen sind berechtigt. Die Strafen (Kündigung, Lohnkürzung) und das
-    unklare «zusätzliche Ferienverbot» wurden durch plausible, aber klar falsche Antworten ersetzt: Bonus,
-    Beförderung und Amt in den Ferien. Die richtige Antwort steht neu bei c. Frage und Erklärung sind
-    neu formuliert.'
-  at: 2026-11-02
+  note: Approved by the AI review panel
+  at: *id002

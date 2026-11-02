@@ -1,5 +1,5 @@
 id: wappen-kanton-zuerich-weiss-blau
-version: 1
+version: 2
 scope: zh
 canton: zh
 topic: kanton.kultur.zuerich
@@ -10,8 +10,8 @@ options_de:
   c: Weiss und Blau
   d: Blau und Gelb
 correct: c
-explanation_de: 'Das Zürcher Wappen ist schräg geteilt in Weiss und Blau. Die Linie läuft von oben links
-  nach unten rechts: oben rechts ist das Feld weiss, unten links blau.'
+explanation_de: Das Zürcher Wappen ist schräg geteilt in Weiss und Blau. In der Wappenkunde heisst das
+  Weiss «Silber». Die gleichen Farben zeigt die Fahne des Kantons.
 sources:
 - url: https://www.zh.ch/de/politik-staat/kanton/kantonale-verwaltung.html
   checked: 2026-11-02
@@ -23,3 +23,39 @@ status: draft
 difficulty: 1
 covers:
 - zh-349
+checks:
+  panel:
+    verdict: fix
+    reviews:
+    - role: facts
+      model: claude-opus-5-5
+      verdict: approve
+      issues:
+      - 'Klein: Die Quelle beschreibt das Wappen heraldisch als «von Silber und Blau schräg geteilt».
+        Die Erklärung könnte kurz ergänzen, dass Silber im Wappen als Weiss dargestellt wird, damit Lernende
+        die beiden Begriffe zuordnen können.'
+    - role: exam
+      model: claude-opus-5-5
+      verdict: fix
+      issues:
+      - 'Die Erklärung beschreibt die Lage der Felder in der Fachsprache der Wappenkunde, in der «rechts»
+        und «links» aus Sicht des Schildträgers gelten. Lernende lesen die Angaben aber aus Sicht des
+        Betrachters und stellen sich so ein gespiegeltes, also falsches Wappen vor. Tatsächlich ist für
+        den Betrachter oben links weiss und unten rechts blau, und die Trennlinie läuft von unten links
+        nach oben rechts. Vorschlag: «Das Zürcher Wappen ist schräg geteilt in Weiss und Blau. Von vorne
+        gesehen ist das Feld oben links weiss und unten rechts blau.» Alternativ die Seitenangaben ganz
+        weglassen.'
+      - 'Klein: Die Tatsache aus der Themenliste («oben rechts weiss, unten links blau») ist nur im heraldischen
+        Sinn richtig und für Lernende missverständlich. Sie sollte mit dem Hinweis «heraldisch» ergänzt
+        oder aus Sicht des Betrachters formuliert werden («oben links weiss, unten rechts blau»).'
+      - 'Klein: Die Reihenfolge der Farben ist uneinheitlich: Die Antwort lautet «Weiss und Blau», die
+        Frage nach Farben ist aber neutral. Das ist unproblematisch. Die Antworten a) und b) könnten für
+        Einheitlichkeit jedoch ebenfalls mit der helleren Farbe zuletzt oder alle alphabetisch geordnet
+        werden.'
+    - role: second
+      model: claude-sonnet-5-5
+      verdict: approve
+      issues: []
+    round: 1
+    at: 2026-11-02
+    version: 1

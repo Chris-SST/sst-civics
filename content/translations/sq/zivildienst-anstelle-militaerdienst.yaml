@@ -1,0 +1,31 @@
+id: zivildienst-anstelle-militaerdienst
+lang: sq
+source_version: 3
+question: Si lidhen në Zvicër shërbimi civil (Zivildienst) dhe shërbimi ushtarak?
+options:
+  a: Shërbimin civil mund ta kryejnë vetëm gratë.
+  b: Kush kryen shërbim civil, nuk duhet të paguajë taksa.
+  c: Shërbimi civil duhet të kryhet përveç shërbimit ushtarak.
+  d: Shërbimi civil mund të kryhet në vend të shërbimit ushtarak.
+explanation: Shërbimi civil është një zëvendësim civil për shërbimin ushtarak. Ai është menduar për persona
+  të aftë për shërbim ushtarak, të cilët nuk mund ta pajtojnë shërbimin ushtarak me ndërgjegjen e tyre.
+  Për këtë duhet të paraqitet një kërkesë, dhe shërbimi civil zgjat më shumë se shërbimi ushtarak.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Wie hängen in der Schweiz der Zivildienst und der Militärdienst zusammen?
+    options_de:
+      a: Den Zivildienst können nur Frauen leisten.
+      b: Wer Zivildienst leistet, muss keine Steuern bezahlen.
+      c: Der Zivildienst muss zusätzlich zum Militärdienst geleistet werden.
+      d: Der Zivildienst kann anstelle des Militärdienstes geleistet werden.
+    explanation_de: Der Zivildienst ist ein ziviler Ersatz für den Militärdienst. Er ist für militärdiensttaugliche
+      Personen gedacht, die den Militärdienst nicht mit ihrem Gewissen vereinbaren können. Dafür muss
+      ein Gesuch eingereicht werden, und der Zivildienst dauert länger als der Militärdienst.

@@ -1,15 +1,33 @@
 id: pensionsalter-frauen-maenner-65
 lang: en
-source_version: 1
-question: What is the standard retirement age in the old-age and survivors' insurance (OASI) (AHV) for
-  women and men?
+source_version: 3
+question: What retirement age (today called the "reference age") applies in the old-age and survivors'
+  insurance (OASI) (AHV) from 2028 for women and men?
 options:
-  a: 64 years for women, 65 years for men
-  b: 65 years for both women and men
-  c: 63 years for both women and men
-  d: 67 years for both women and men
-explanation: The standard retirement age is 65 years for women and men alike. The former difference for
-  women is being phased out gradually. After that, the same reference age applies to both sexes.
-status: draft
-reviewed_by: null
-reviewed_at: null
+  a: Women 64 years, men 65 years
+  b: Women and men 65 years
+  c: Women and men 63 years
+  d: Women and men 67 years
+explanation: Since the AHV 21 reform, the retirement age has officially been called the "reference age".
+  From 2025, it rises for women by three months each year until it reaches 65 years. From 2028, women
+  and men have the same reference age of 65 years.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Welches Rentenalter (heute «Referenzalter» genannt) gilt in der Alters- und Hinterlassenenversicherung
+      (AHV) ab 2028 für Frauen und Männer?
+    options_de:
+      a: Frauen 64 Jahre, Männer 65 Jahre
+      b: Frauen und Männer 65 Jahre
+      c: Frauen und Männer 63 Jahre
+      d: Frauen und Männer 67 Jahre
+    explanation_de: Seit der Reform AHV 21 heisst das Rentenalter offiziell «Referenzalter». Ab 2025 steigt
+      es für Frauen jedes Jahr um drei Monate, bis es 65 Jahre erreicht. Ab 2028 haben Frauen und Männer
+      dasselbe Referenzalter von 65 Jahren.

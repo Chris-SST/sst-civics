@@ -1,0 +1,32 @@
+id: zivildienst-anstelle-militaerdienst
+lang: tr
+source_version: 3
+question: İsviçre'de sivil hizmet (Zivildienst) ile askerlik hizmeti birbiriyle nasıl bağlantılıdır?
+options:
+  a: Sivil hizmeti yalnızca kadınlar yapabilir.
+  b: Sivil hizmet yapan kişi vergi ödemek zorunda değildir.
+  c: Sivil hizmet, askerlik hizmetine ek olarak yapılmak zorundadır.
+  d: Sivil hizmet, askerlik hizmeti yerine yapılabilir.
+explanation: Sivil hizmet, askerlik hizmetinin sivil bir alternatifidir. Askerlik hizmetine elverişli
+  olup da askerlik hizmetini vicdanıyla bağdaştıramayan kişiler için öngörülmüştür. Bunun için bir başvuru
+  yapılması gerekir ve sivil hizmet, askerlik hizmetinden daha uzun sürer.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Wie hängen der Zivildienst und der Militärdienst in der Schweiz miteinander zusammen?
+    options_de:
+      a: Den Zivildienst können nur Frauen leisten.
+      b: Wer Zivildienst leistet, muss keine Steuern zahlen.
+      c: Der Zivildienst muss zusätzlich zum Militärdienst geleistet werden.
+      d: Der Zivildienst kann anstelle des Militärdienstes geleistet werden.
+    explanation_de: Der Zivildienst ist eine zivile Alternative zum Militärdienst. Er ist für Personen
+      vorgesehen, die tauglich für den Militärdienst sind, den Militärdienst aber nicht mit ihrem Gewissen
+      vereinbaren können. Dafür muss ein Gesuch gestellt werden, und der Zivildienst dauert länger als
+      der Militärdienst.

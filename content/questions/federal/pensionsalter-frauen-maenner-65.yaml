@@ -1,28 +1,30 @@
 id: pensionsalter-frauen-maenner-65
-version: 2
+version: 3
 scope: federal
 canton: null
 topic: bund.sozial.sozialversicherungen
-question_de: Welches AHV-Rentenalter gilt ab dem Jahr 2028 für Frauen und Männer?
+question_de: Welches Rentenalter (heute «Referenzalter» genannt) gilt in der AHV ab 2028 für Frauen und
+  Männer?
 options_de:
-  a: Für Frauen 64 Jahre, für Männer 65 Jahre
-  b: Für Frauen und Männer 65 Jahre
-  c: Für Frauen und Männer 63 Jahre
-  d: Für Frauen und Männer 67 Jahre
+  a: Frauen 64 Jahre, Männer 65 Jahre
+  b: Frauen und Männer 65 Jahre
+  c: Frauen und Männer 63 Jahre
+  d: Frauen und Männer 67 Jahre
 correct: b
-explanation_de: Mit der Reform AHV 21 steigt das Rentenalter der Frauen von 2025 bis 2028 schrittweise
-  von 64 auf 65 Jahre. Ab 2028 haben Frauen und Männer dasselbe Referenzalter von 65 Jahren.
+explanation_de: Seit der Reform AHV 21 heisst das Rentenalter offiziell «Referenzalter». Ab 2025 steigt
+  es für Frauen jedes Jahr um drei Monate, bis es 65 Jahre erreicht. Ab 2028 haben Frauen und Männer das
+  gleiche Referenzalter von 65 Jahren.
 sources:
 - url: https://www.bsv.admin.ch/de/ahv-21
   checked: &id001 2026-11-02
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: *id001
+  checked: 2026-11-02
 - url: https://www.bsv.admin.ch/de/dreisaeulensystem
   checked: 2026-11-02
 glossary:
 - AHV
 - Rentenalter
-status: needs_fix
+status: approved
 difficulty: 1
 covers:
 - zh-173
@@ -32,68 +34,51 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 2
-    reasoning: Mit der AHV-21-Reform wird das Referenzalter der Frauen schrittweise bis 2028 auf 65 Jahre
-      angehoben und damit dem der Männer angeglichen, sodass ab 2028 für Frauen und Männer 65 Jahre gelten.
+    version: 3
+    reasoning: Mit der AHV-21-Reform wurde das Referenzalter für Frauen schrittweise auf 65 Jahre angehoben,
+      sodass spätestens ab 2028 für Frauen und Männer einheitlich 65 Jahre gelten.
   source:
     verdict: supported
-    note: Quelle 1 (BSV) nennt für Frauen und Männer das Referenzalter 65. Es wird für Frauen ab 2025
-      schrittweise von 64 auf 65 angehoben, und ab 2028 (Jahrgang 1964 und jünger) gilt 65 Jahre. Quelle
-      2 bestätigt die schrittweise Erhöhung bis 2028 auf 65 Jahre.
+    note: 'Quelle 1 (BSV, AHV 21) nennt das Referenzalter 65 für Frauen und Männer, erhöht Frauen ab 2025
+      schrittweise (64 Jahre 3, 6, 9 Monate) und führt «Ab 2028: Jahrgang 1964 und jünger: 65 Jahre» auf.
+      Das deckt Antwort b und die Erklärung. Quelle 2 bestätigt die Erhöhung bis 2028 auf 65 Jahre, aber
+      mit dem alten Begriff «ordentliches Rentenalter».'
     at: *id001
     model: claude-sonnet-5-5
-    version: 2
+    version: 3
   panel:
-    verdict: fix
+    verdict: approve
     reviews:
     - role: facts
       model: claude-opus-5-5
       verdict: approve
       issues:
-      - 'Klein: Die Tatsache aus der Themenliste ist für 2026 ungenau, weil das Referenzalter der Frauen
-        2026 erst 64 Jahre und 6 Monate beträgt; die Frage löst das gut mit «ab dem Jahr 2028», die Themenliste
-        sollte aber ebenfalls «ab 2028» ergänzen.'
-      - 'Klein: In der Erklärung könnte man kurz ergänzen, dass man die Rente ab 63 Jahren früher beziehen
-        kann, dann aber mit Kürzung, damit Antwort c) nicht verwirrt.'
+      - 'Klein: Die Erklärung könnte erwähnen, dass man die AHV-Rente zwischen 63 und 70 Jahren flexibel
+        beziehen kann, das Referenzalter aber 65 Jahre ist; so verwechselt niemand Antwort c) mit dem
+        frühesten Rentenbezug.'
+      - 'Klein: Die Kantonsbroschüre (Stand März 2023) nennt noch 64 Jahre für Frauen; massgebend ist
+        hier die aktuelle Quelle des BSV, die die Frage bestätigt.'
     - role: exam
       model: claude-opus-5-5
       verdict: approve
       issues:
-      - 'Klein: Die Tatsache aus der Themenliste ist 2026 noch ungenau, weil das Referenzalter der Frauen
-        erst ab 2028 bei 65 Jahren liegt; die Frage löst das mit «ab dem Jahr 2028» richtig, die Themenliste
-        sollte aber entsprechend ergänzt werden.'
-      - 'Klein: Die Erklärung verwendet den Begriff «Referenzalter», die Frage aber «Rentenalter»; ein
-        kurzer Hinweis wie «Referenzalter (früher Rentenalter)» würde den Zusammenhang klarer machen.'
-      - 'Klein: Die Erklärung könnte konkret sagen, dass das Rentenalter der Frauen jedes Jahr um 3 Monate
-        steigt; so wird das Wort «schrittweise» verständlicher.'
+      - 'Klein: Die Erklärung könnte ergänzen, dass das Referenzalter 65 für Frauen ab Jahrgang 1964 gilt
+        und dass früher für Frauen 64 Jahre galten, damit Antwort a) als frühere Regel erkennbar ist.'
     - role: second
       model: claude-sonnet-5-5
-      verdict: fix
+      verdict: approve
       issues:
-      - 'Die Erklärung sagt, das Rentenalter der Frauen steige «von 2025 bis 2028» von 64 auf 65 Jahre.
-        Das ist ungenau: Die Erhöhung läuft über die Jahrgänge 1961 bis 1963 (2025: 64 Jahre 3 Monate,
-        2026: 64 Jahre 6 Monate, 2027: 64 Jahre 9 Monate), und erst ab 2028 (Jahrgang 1964) gilt 65 Jahre.
-        Vorschlag: «Seit 2025 steigt das Referenzalter der Frauen schrittweise um je 3 Monate pro Jahrgang;
-        ab 2028 gilt für Frauen und Männer 65 Jahre.»'
-      - 'Die Frage fragt nach dem «AHV-Rentenalter», die amtliche Quelle verwendet aber neu den Begriff
-        «Referenzalter». Vorschlag: Begriff in Frage und Erklärung einmal erklären, z. B. «Welches AHV-Rentenalter
-        (Referenzalter) gilt ab 2028 für Frauen und Männer?».'
-      - 'Klein: Die Frage ist an das Jahr 2028 gebunden, obwohl die Themenliste nur das gleiche reguläre
-        Pensionsalter von 65 Jahren für Frauen und Männer verlangt. Vorschlag: einfacher fragen, z. B.
-        «Wie hoch ist das ordentliche Rentenalter (Referenzalter) für Frauen und Männer in der Schweiz?»
-        und die Übergangsphase nur in der Erklärung erwähnen.'
-      - 'Klein: Die amtliche Broschüre (Stand März 2023) nennt noch «Frauen 64, Männer 65 (bis 2028 schrittweise
-        auf 65)». Das ist veraltet, aber die Antwort b) bleibt richtig; in der Erklärung kann man das
-        kurz erwähnen, damit Lernende nicht verwirrt sind.'
-    round: 2
-    at: 2026-11-02
-    version: 2
+      - 'Klein: Die Frage nennt «ab 2028», die Antwort b) gilt aber auch heute für Männer und ab 2028
+        für alle. Das ist korrekt, aber a) («Frauen 64, Männer 65») ist für die Jahre vor 2028 teilweise
+        zutreffend. Wegen «ab 2028» bleibt die Frage trotzdem eindeutig; ein Vorschlag wäre, den Zusatz
+        «ab 2028» zu belassen und in der Erklärung zu betonen, dass a) nur bis 2024 galt.'
+      - 'Klein: Die Erklärung sagt «ab 2025 steigt es für Frauen jedes Jahr um drei Monate», was nach
+        der Quelle stimmt, aber der Satz «Ab 2028 haben Frauen und Männer das gleiche Referenzalter» könnte
+        präzisieren, dass dies für Frauen ab Jahrgang 1964 gilt.'
+    round: 3
+    at: &id002 2026-11-02
+    version: 3
 review:
   action: ai_panel
-  note: 'Rewritten: Alle Beanstandungen sind berechtigt. Die Tatsache in der Themenliste ist für 2026
-    ungenau: Wegen der Übergangszeit nach AHV 21 liegt das Referenzalter der Frauen 2026 bei 64 Jahren
-    und 6 Monaten (Jahrgang 1962). Erst ab 2028 (Jahrgang 1964 und jünger) gilt für alle 65. Die Frage
-    fragt deshalb nach dem Stand ab 2028. Damit ist Antwort a) eindeutig falsch. Die widersprüchliche
-    Erklärung wurde neu geschrieben. Die Themenliste selbst kann hier nicht geändert werden. Sie sollte
-    aber auf «65 Jahre für beide ab 2028» präzisiert werden.'
-  at: 2026-11-02
+  note: Approved by the AI review panel
+  at: *id002

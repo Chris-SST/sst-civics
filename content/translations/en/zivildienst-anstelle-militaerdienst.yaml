@@ -1,14 +1,31 @@
 id: zivildienst-anstelle-militaerdienst
 lang: en
-source_version: 1
-question: What applies in Switzerland to civilian service (Zivildienst) in relation to military service?
+source_version: 3
+question: How are civilian service (Zivildienst) and military service related in Switzerland?
 options:
-  a: Civilian service is only available to women.
-  b: Civilian service replaces the obligation to pay tax.
+  a: Only women can perform civilian service.
+  b: Anyone who performs civilian service does not have to pay taxes.
   c: Civilian service must be performed in addition to military service.
   d: Civilian service can be performed instead of military service.
-explanation: Civilian service is a civilian alternative service for people who do not wish to perform
-  military service. It is possible upon admission and lasts longer than military service.
-status: draft
-reviewed_by: null
-reviewed_at: null
+explanation: Civilian service is a civilian alternative to military service. It is intended for people
+  who are fit for military service but cannot reconcile military service with their conscience. To do
+  this, you must submit an application, and civilian service lasts longer than military service.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: In welchem Verhältnis stehen Zivildienst und Militärdienst in der Schweiz zueinander?
+    options_de:
+      a: Nur Frauen können Zivildienst leisten.
+      b: Wer Zivildienst leistet, muss keine Steuern bezahlen.
+      c: Der Zivildienst muss zusätzlich zum Militärdienst geleistet werden.
+      d: Der Zivildienst kann anstelle des Militärdienstes geleistet werden.
+    explanation_de: Der Zivildienst ist ein ziviler Ersatz für den Militärdienst. Er ist für Personen
+      gedacht, die militärdiensttauglich sind, den Militärdienst aber nicht mit ihrem Gewissen vereinbaren
+      können. Dazu muss man einen Antrag stellen, und der Zivildienst dauert länger als der Militärdienst.

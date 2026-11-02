@@ -431,7 +431,7 @@ One line per fact the official question catalogue asks about, in our own words, 
 - Die Masoala-Halle mit madagassischem Regenwald gehört zum Zürcher Zoo. / The Masoala Hall with its Madagascan rainforest is part of Zurich Zoo.
 - Beim Sechseläuten treten die Zürcher Zünfte als zentrale Akteure auf. / The Zurich guilds are central participants in the Sechseläuten festival.
 - Gottfried Keller war ein namhafter Zürcher Dichter und Autor. / Gottfried Keller was a renowned Zurich author (writer).
-- Das Wappen des Kantons Zürich ist schräg geteilt in Weiss und Blau: oben rechts weiss, unten links blau. / The coat of arms of the canton of Zurich is divided diagonally in white and blue: white at the upper right, blue at the lower left.
+- Das Wappen des Kantons Zürich ist schräg geteilt in Weiss (heraldisch «Silber») und Blau. / The coat of arms of the canton of Zurich is divided diagonally in white (heraldic 'silver') and blue.
 
 ## Communal assembly and communal parliament (Gemeindeversammlung und Gemeindeparlament)
 

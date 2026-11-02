@@ -1,5 +1,5 @@
 id: zivildienst-anstelle-militaerdienst
-version: 2
+version: 3
 scope: federal
 canton: null
 topic: bund.sozial.pflichten
@@ -10,16 +10,16 @@ options_de:
   c: Den Zivildienst muss man zusätzlich zum Militärdienst leisten.
   d: Den Zivildienst kann man statt des Militärdienstes leisten.
 correct: d
-explanation_de: Der Zivildienst ist ein ziviler Ersatz für den Militärdienst. Er ist für Personen gedacht,
-  die militärdiensttauglich sind, den Dienst mit der Waffe aber nicht mit ihrem Gewissen vereinbaren können.
-  Man muss ein Gesuch stellen, und der Zivildienst dauert länger als der Militärdienst.
+explanation_de: Der Zivildienst ist ein ziviler Ersatz für den Militärdienst. Er ist für militärdiensttaugliche
+  Personen gedacht, die den Militärdienst nicht mit ihrem Gewissen vereinbaren können. Dafür muss man
+  ein Gesuch stellen, und der Zivildienst dauert länger als der Militärdienst.
 sources:
 - url: https://www.zivi.admin.ch/de/zulassung
   checked: &id001 2026-11-02
 glossary:
 - Zivildienst
 - Militärdienst
-status: needs_fix
+status: approved
 difficulty: 1
 covers:
 - zh-130
@@ -29,54 +29,45 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 2
+    version: 3
     reasoning: Wer den Militärdienst mit seinem Gewissen nicht vereinbaren kann, darf in der Schweiz stattdessen
-      den (länger dauernden) Zivildienst leisten, er ersetzt also den Militärdienst.
+      den zivilen Ersatzdienst (Zivildienst) leisten, der als Alternative zum Militärdienst dient und
+      nicht zusätzlich verlangt wird.
   source:
     verdict: supported
-    note: 'Quelle 1 bestätigt die Erklärung: Zulassung nur für Militärdiensttaugliche, die den Militärdienst
-      nicht mit dem Gewissen vereinbaren können, per Gesuch, mit 1.5x so vielen Diensttagen wie im Militär.
-      Dass der Zivildienst an die Stelle des Militärdiensts tritt, geht daraus eindeutig hervor, auch
-      wenn das Wort «statt» nicht fällt.'
+    note: Quelle 1 sagt, dass zugelassen wird, wer militärdiensttauglich ist, den Militärdienst nicht
+      mit dem Gewissen vereinbaren kann und 1.5x so viele Diensttage wie in der Armee leistet. Dazu braucht
+      es ein Gesuch. Das stützt Antwort d) und die Erklärung (ziviler Ersatz, Gesuch, längere Dauer).
     at: *id001
     model: claude-sonnet-5-5
-    version: 2
+    version: 3
   panel:
-    verdict: fix
+    verdict: approve
     reviews:
     - role: facts
       model: claude-opus-5-5
-      verdict: fix
-      issues:
-      - Die Erklärung sagt, der Zivildienst sei für Personen, die «den Dienst mit der Waffe» nicht mit
-        ihrem Gewissen vereinbaren können; nach Quelle und Zivildienstgesetz geht es aber um den Militärdienst
-        als Ganzes, und für Menschen, die nur den Dienst mit der Waffe ablehnen, gibt es den waffenlosen
-        Militärdienst – bitte ersetzen durch «die den Militärdienst nicht mit ihrem Gewissen vereinbaren
-        können».
-      - 'Klein: «dauert länger als der Militärdienst» stimmt, ist aber ungenau; besser «dauert 1,5-mal
-        so lange wie der Militärdienst», wie es die Quelle angibt.'
-      - 'Klein: Antwort a) («nur Frauen») ist wenig plausibel; als Ablenker passt zum Beispiel «Den Zivildienst
-        kann man nur leisten, wenn man militärdienstuntauglich ist» besser.'
+      verdict: approve
+      issues: []
     - role: exam
       model: claude-opus-5-5
       verdict: approve
       issues:
-      - 'Klein: Die Antworten a) und b) sind recht leicht als falsch zu erkennen; sie könnten durch plausiblere
-        Ablenker ersetzt werden, etwa «Den Zivildienst kann nur leisten, wer militärdienstuntauglich ist.»'
-      - 'Klein: In der Erklärung könnte man konkret ergänzen, dass der Zivildienst in der Regel 1,5-mal
-        so lange dauert wie der Militärdienst.'
+      - 'Klein: Die Antworten a) und b) sind als Ablenker eher schwach, weil sie leicht als falsch zu
+        erkennen sind; besser wäre zum Beispiel «Den Zivildienst leistet man nach dem Ende der Militärdienstpflicht.»'
+      - 'Klein: In der Erklärung könnte man konkret ergänzen, dass der Zivildienst 1,5-mal so lange dauert
+        wie der Militärdienst, damit «länger» greifbarer wird.'
     - role: second
       model: claude-sonnet-5-5
       verdict: approve
       issues:
-      - 'Klein: Die Frage «Wie hängen ... zusammen?» ist etwas offen formuliert. Klarer wäre: «Was gilt
-        in der Schweiz für den Zivildienst im Vergleich zum Militärdienst?»'
-    round: 2
-    at: 2026-11-02
-    version: 2
+      - 'Klein: Die Frage «Wie hängen … zusammen?» ist etwas offen formuliert; konkreter wäre «Was gilt
+        in der Schweiz für den Zivildienst im Verhältnis zum Militärdienst?»'
+      - 'Klein: In der Erklärung könnte man «länger» genauer fassen, zum Beispiel «1,5-mal so lange wie
+        der Militärdienst», wie es die Quelle des Bundesamts für Zivildienst angibt.'
+    round: 3
+    at: &id002 2026-11-02
+    version: 3
 review:
   action: ai_panel
-  note: 'Rewritten: Die Beanstandung ist berechtigt: Die Erklärung klang nach freier Wahl. Sie nennt jetzt
-    die Voraussetzungen Militärdiensttauglichkeit und Gewissenskonflikt sowie das nötige Gesuch. Frage
-    und Antworten wurden in eigenen Worten neu formuliert. Die richtige Antwort bleibt d.'
-  at: 2026-11-02
+  note: Approved by the AI review panel
+  at: *id002

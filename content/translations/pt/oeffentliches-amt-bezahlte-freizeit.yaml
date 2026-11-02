@@ -1,0 +1,35 @@
+id: oeffentliches-amt-bezahlte-freizeit
+lang: pt
+source_version: 3
+question: Um funcionário ou uma funcionária exerce, além do seu trabalho, um cargo público, por exemplo
+  na autoridade escolar da comuna (Gemeinde). O que é que o empregador normalmente concede para isso?
+options:
+  a: Um bónus no salário
+  b: Uma promoção
+  c: Tempo livre remunerado
+  d: Nada, para o cargo é preciso tirar férias
+explanation: Quem exerce um cargo público recebe, em regra, do empregador tempo livre remunerado para
+  esse efeito. A quantidade exata depende do contrato de trabalho, da convenção coletiva de trabalho ou
+  de outras regulamentações. Por um cargo não há bónus nem promoção, e normalmente também não é preciso
+  tirar férias para o exercer.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Ein Angestellter oder eine Angestellte übt neben der Arbeit ein öffentliches Amt aus,
+      zum Beispiel in der Schulbehörde der Gemeinde. Was gewährt der Arbeitgeber dafür normalerweise?
+    options_de:
+      a: Einen Bonus auf den Lohn
+      b: Eine Beförderung
+      c: Bezahlte freie Zeit
+      d: Nichts, für das Amt muss man Ferien nehmen
+    explanation_de: Wer ein öffentliches Amt ausübt, erhält in der Regel vom Arbeitgeber dafür bezahlte
+      freie Zeit. Die genaue Menge hängt vom Arbeitsvertrag, vom Gesamtarbeitsvertrag oder von anderen
+      Regelungen ab. Für ein Amt gibt es weder einen Bonus noch eine Beförderung, und normalerweise muss
+      man dafür auch keine Ferien nehmen.

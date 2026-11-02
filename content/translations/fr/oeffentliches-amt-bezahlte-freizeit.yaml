@@ -1,0 +1,37 @@
+id: oeffentliches-amt-bezahlte-freizeit
+lang: fr
+source_version: 3
+question: Une employée ou un employé exerce, en plus de son travail, une fonction publique, par exemple
+  au sein de l'autorité scolaire de la commune (Gemeinde). Que l'employeur accorde-t-il normalement pour
+  cela ?
+options:
+  a: Une prime en plus du salaire
+  b: Une promotion
+  c: Du temps libre payé
+  d: 'Rien : pour cette fonction, il faut prendre des vacances'
+explanation: Une personne qui exerce une fonction publique reçoit en règle générale de son employeur du
+  temps libre payé. La durée exacte dépend du contrat de travail, de la convention collective de travail
+  ou d'autres réglementations. Une fonction publique ne donne droit ni à une prime ni à une promotion,
+  et normalement il n'est pas non plus nécessaire de prendre des vacances pour l'exercer.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Eine Angestellte oder ein Angestellter übt zusätzlich zu ihrer bzw. seiner Arbeit ein
+      öffentliches Amt aus, zum Beispiel in der Schulbehörde der Gemeinde. Was gewährt der Arbeitgeber
+      dafür normalerweise?
+    options_de:
+      a: Eine Prämie zusätzlich zum Lohn
+      b: Eine Beförderung
+      c: Bezahlte freie Zeit
+      d: 'Nichts: Für dieses Amt muss man Ferien nehmen'
+    explanation_de: Eine Person, die ein öffentliches Amt ausübt, erhält in der Regel von ihrem Arbeitgeber
+      bezahlte freie Zeit. Die genaue Dauer hängt vom Arbeitsvertrag, vom Gesamtarbeitsvertrag oder von
+      anderen Regelungen ab. Ein öffentliches Amt berechtigt weder zu einer Prämie noch zu einer Beförderung,
+      und normalerweise ist es auch nicht nötig, für die Ausübung Ferien zu nehmen.

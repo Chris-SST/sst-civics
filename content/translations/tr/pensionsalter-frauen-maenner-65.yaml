@@ -1,0 +1,33 @@
+id: pensionsalter-frauen-maenner-65
+lang: tr
+source_version: 3
+question: Yaşlılık ve dul-yetim sigortasında (AHV) 2028'den itibaren kadınlar ve erkekler için hangi emeklilik
+  yaşı (bugün «referans yaş» olarak adlandırılmaktadır) geçerlidir?
+options:
+  a: Kadınlar 64 yaş, erkekler 65 yaş
+  b: Kadınlar ve erkekler 65 yaş
+  c: Kadınlar ve erkekler 63 yaş
+  d: Kadınlar ve erkekler 67 yaş
+explanation: 'AHV 21 reformundan bu yana emeklilik yaşı resmî olarak «referans yaş» olarak adlandırılmaktadır.
+  Kadınlar için bu yaş 2025''ten itibaren her yıl üç ay artar ve 65 yaşa ulaşır. 2028''den itibaren kadınların
+  ve erkeklerin referans yaşı aynıdır: 65 yaş.'
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 3
+    question_de: Welches Rentenalter (heute «Referenzalter» genannt) gilt in der Alters- und Hinterlassenenversicherung
+      (AHV) ab 2028 für Frauen und Männer?
+    options_de:
+      a: Frauen 64 Jahre, Männer 65 Jahre
+      b: Frauen und Männer 65 Jahre
+      c: Frauen und Männer 63 Jahre
+      d: Frauen und Männer 67 Jahre
+    explanation_de: 'Seit der AHV-21-Reform wird das Rentenalter offiziell «Referenzalter» genannt. Für
+      Frauen steigt dieses Alter ab 2025 jedes Jahr um drei Monate und erreicht 65 Jahre. Ab 2028 ist
+      das Referenzalter von Frauen und Männern gleich: 65 Jahre.'
