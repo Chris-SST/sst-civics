@@ -215,9 +215,6 @@
   },
   "learner": {
     "tutorOffline": "O tutor ainda não está ligado neste ambiente.",
-    "noticeTitle": "Antes de começar com {{name}}",
-    "noticeBody": "As explicações aqui são redigidas por um assistente de IA e podem conter erros. Utilize-as para compreender uma pergunta e confirme o que for importante com as informações do seu cantão.",
-    "noticeOk": "Entendi",
     "recent": "Sessões recentes",
     "noRecent": "Ainda não há sessões. Escolha um tema para começar.",
     "endedTag": "terminada",

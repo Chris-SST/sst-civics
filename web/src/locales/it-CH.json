@@ -215,9 +215,6 @@
   },
   "learner": {
     "tutorOffline": "Il tutor non è ancora collegato in questo ambiente.",
-    "noticeTitle": "Prima di iniziare con {{name}}",
-    "noticeBody": "Le spiegazioni qui sono redatte da un assistente IA e possono contenere errori. Le utilizzi per comprendere una domanda e verifichi le informazioni importanti con quelle del Suo cantone.",
-    "noticeOk": "Ho capito",
     "recent": "Sessioni recenti",
     "noRecent": "Ancora nessuna sessione. Scelga un argomento per iniziare.",
     "endedTag": "terminata",

@@ -215,9 +215,6 @@
   },
   "learner": {
     "tutorOffline": "Tutori nuk është lidhur ende në këtë mjedis.",
-    "noticeTitle": "Para se të filloni me {{name}}",
-    "noticeBody": "Shpjegimet këtu shkruhen nga një asistent IA dhe mund të përmbajnë gabime. Përdoreni për të kuptuar një pyetje dhe kontrolloni çdo gjë të rëndësishme me informacionin e kantonit tuaj.",
-    "noticeOk": "E kuptova",
     "recent": "Sesionet e fundit",
     "noRecent": "Nuk ka ende sesione. Zgjidhni një temë për të filluar.",
     "endedTag": "përfunduar",

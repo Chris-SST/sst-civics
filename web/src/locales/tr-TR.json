@@ -215,9 +215,6 @@
   },
   "learner": {
     "tutorOffline": "Eğitmen bu ortamda henüz bağlı değil.",
-    "noticeTitle": "{{name}} ile başlamadan önce",
-    "noticeBody": "Buradaki açıklamaları bir yapay zekâ asistanı yazar ve hata içerebilir. Bir soruyu anlamak için kullanın; önemli konuları kantonunuzun bilgileriyle karşılaştırın.",
-    "noticeOk": "Anladım",
     "recent": "Son oturumlar",
     "noRecent": "Henüz oturum yok. Başlamak için bir konu seçin.",
     "endedTag": "sona erdi",

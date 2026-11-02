@@ -23,22 +23,11 @@ interface TutorOverview {
   usage: Usage;
 }
 
-const NOTICE_KEY = "sst.tutorNoticeSeen";
-
-function noticeSeen(): boolean {
-  try {
-    return localStorage.getItem(NOTICE_KEY) === "1";
-  } catch {
-    return false;
-  }
-}
-
 /** Learner home: readiness estimate, the three study areas (Learn, Practise, Mock test), mastery
  * per topic, the free-tier notice and the message count. The topic chat has no entry here any
  * more: Explain this, on every question in Learn and Practise, replaces it (task 1.10). */
 export default function LearnerHome() {
   const { t } = useTranslation();
-  const [showNotice, setShowNotice] = useState(() => !noticeSeen());
   const [tutor, setTutor] = useState<TutorOverview | null>(null);
   const [study, setStudy] = useState<StudyOverview | null | undefined>(undefined);
   const [error, setError] = useState<unknown>(null);
@@ -53,30 +42,10 @@ export default function LearnerHome() {
   if (!tutor) return error ? <ErrorText error={error} /> : <p className="muted">…</p>;
 
   const fullAccess = tutor.access === "full";
-  const canChat = fullAccess && tutor.tutor_enabled;
-
-  function acknowledge() {
-    try {
-      localStorage.setItem(NOTICE_KEY, "1");
-    } catch {
-      /* storage unavailable: the notice shows again next time */
-    }
-    setShowNotice(false);
-  }
 
   return (
     <>
       <h1>{t("learner.welcome")}</h1>
-
-      {showNotice && canChat && (
-        <section className="card notice-card">
-          <h2>{t("learner.noticeTitle", { name: tutor.tutor_name })}</h2>
-          <p>{t("learner.noticeBody")}</p>
-          <button type="button" className="btn btn-primary" onClick={acknowledge}>
-            {t("learner.noticeOk")}
-          </button>
-        </section>
-      )}
 
       {study?.free_tier && (
         <p className="alert alert-warn">

@@ -215,9 +215,6 @@
   },
   "learner": {
     "tutorOffline": "Der Tutor ist in dieser Umgebung noch nicht verbunden.",
-    "noticeTitle": "Bevor Sie mit {{name}} starten",
-    "noticeBody": "Die Erklärungen hier stammen von einem KI-Assistenten und können Fehler enthalten. Nutzen Sie sie, um eine Frage zu verstehen, und prüfen Sie Wichtiges anhand der Informationen Ihres Kantons.",
-    "noticeOk": "Verstanden",
     "recent": "Letzte Sitzungen",
     "noRecent": "Noch keine Sitzungen. Wählen Sie ein Thema, um zu beginnen.",
     "endedTag": "beendet",

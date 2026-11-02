@@ -215,9 +215,6 @@
   },
   "learner": {
     "tutorOffline": "Le tuteur n'est pas encore connecté dans cet environnement.",
-    "noticeTitle": "Avant de commencer avec {{name}}",
-    "noticeBody": "Les explications données ici sont rédigées par un assistant IA et peuvent contenir des erreurs. Servez-vous-en pour comprendre une question et vérifiez les points importants auprès des informations de votre canton.",
-    "noticeOk": "Compris",
     "recent": "Séances récentes",
     "noRecent": "Aucune séance pour l'instant. Choisissez un sujet pour commencer.",
     "endedTag": "terminée",

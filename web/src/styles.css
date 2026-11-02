@@ -1155,10 +1155,6 @@ code.secret {
   background: var(--bg);
   border-radius: var(--radius-md);
 }
-.notice-card {
-  border: 3px solid var(--primary);
-  margin-bottom: var(--space-5);
-}
 .recent-list {
   list-style: none;
   padding: 0;
