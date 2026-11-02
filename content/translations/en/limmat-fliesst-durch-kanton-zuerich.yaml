@@ -1,6 +1,6 @@
 id: limmat-fliesst-durch-kanton-zuerich
 lang: en
-source_version: 1
+source_version: 2
 question: Which river flows out of Lake Zurich, through the city of Zurich and on through the territory
   of the canton?
 options:
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Welcher Fluss fliesst aus dem Zürichsee, durch die Stadt Zürich und weiter durch das
       Gebiet des Kantons?
     options_de:

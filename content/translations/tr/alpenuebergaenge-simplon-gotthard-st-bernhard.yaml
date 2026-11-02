@@ -1,6 +1,6 @@
 id: alpenuebergaenge-simplon-gotthard-st-bernhard
 lang: tr
-source_version: 1
+source_version: 2
 question: Simplon, Gotthard ve Büyük Saint Bernhard'ın ortak noktası nedir?
 options:
   a: Bunlar Alpler'deki kantonlardır.
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Was ist den Simplon, dem Gotthard und dem Grossen Sankt Bernhard gemeinsam?
     options_de:
       a: Sie sind Kantone in den Alpen.

@@ -1,6 +1,6 @@
 id: fahren-alkohol-drogen-ausweisentzug
 lang: tr
-source_version: 1
+source_version: 2
 question: Alkollü veya uyuşturucu etkisi altında araç kullanan bir kişi neyi riske atar?
 options:
   a: Oy hakkını kaybetmeyi
@@ -19,7 +19,7 @@ checks:
       (Fahrzeug/Auto, Kündigung/Entzug, Geldstrafen/Bussen) sind sinngleich.'
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Was riskiert eine Person, die unter Alkohol- oder Drogeneinfluss ein Fahrzeug führt?
     options_de:
       a: den Verlust des Stimmrechts

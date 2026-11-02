@@ -1,6 +1,6 @@
 id: schulen-finanzierung-steuergelder
 lang: sq
-source_version: 1
+source_version: 2
 question: Nga çfarë paguhen kryesisht shkollat publike në Zvicër?
 options:
   a: Nga tarifat shkollore që prindërit i paguajnë çdo muaj
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Wovon werden die öffentlichen Schulen in der Schweiz hauptsächlich bezahlt?
     options_de:
       a: Von den Schulgebühren, die die Eltern jeden Monat bezahlen

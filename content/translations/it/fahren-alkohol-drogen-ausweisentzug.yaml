@@ -1,6 +1,6 @@
 id: fahren-alkohol-drogen-ausweisentzug
 lang: it
-source_version: 1
+source_version: 2
 question: Che cosa rischia una persona che guida un'automobile in stato di ebbrezza o sotto l'effetto
   di stupefacenti?
 options:
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Was riskiert eine Person, die ein Auto in angetrunkenem Zustand oder unter Drogeneinfluss
       lenkt?
     options_de:

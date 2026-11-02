@@ -1,6 +1,6 @@
 id: schulen-finanzierung-steuergelder
 lang: tr
-source_version: 1
+source_version: 2
 question: İsviçre'de devlet okulları esas olarak neyle finanse edilir?
 options:
   a: Velilerin her ay ödediği okul harçlarıyla
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Womit werden öffentliche Schulen in der Schweiz hauptsächlich finanziert?
     options_de:
       a: Mit den Schulgebühren, die die Eltern jeden Monat bezahlen

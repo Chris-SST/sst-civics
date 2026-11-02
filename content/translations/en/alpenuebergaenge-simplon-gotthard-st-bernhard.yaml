@@ -1,6 +1,6 @@
 id: alpenuebergaenge-simplon-gotthard-st-bernhard
 lang: en
-source_version: 1
+source_version: 2
 question: What do the Simplon, the Gotthard and the Great St Bernard have in common?
 options:
   a: They are cantons in the Alps.
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Was haben der Simplon, der Gotthard und der Grosse St. Bernhard gemeinsam?
     options_de:
       a: Sie sind Kantone in den Alpen.

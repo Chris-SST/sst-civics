@@ -1,6 +1,6 @@
 id: schulen-finanzierung-steuergelder
 lang: pt
-source_version: 1
+source_version: 2
 question: Com que dinheiro são principalmente pagas as escolas públicas na Suíça?
 options:
   a: Com as propinas que os pais pagam todos os meses
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Mit welchem Geld werden die öffentlichen Schulen in der Schweiz hauptsächlich bezahlt?
     options_de:
       a: Mit dem Schulgeld, das die Eltern jeden Monat bezahlen

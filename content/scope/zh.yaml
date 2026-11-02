@@ -1877,9 +1877,10 @@ facts:
 - id: zh-349
   topic: kanton.kultur.zuerich
   section: Demokratie und Föderalismus
-  fact_de: 'Das Wappen des Kantons Zürich ist schräg geteilt: oben links weiss, unten rechts blau.'
-  fact_en: 'The coat of arms of the canton of Zurich is divided diagonally: white at the upper left, blue
-    at the lower right.'
+  fact_de: 'Das Wappen des Kantons Zürich ist schräg geteilt in Weiss und Blau: oben rechts weiss, unten
+    links blau.'
+  fact_en: 'The coat of arms of the canton of Zurich is divided diagonally in white and blue: white at
+    the upper right, blue at the lower left.'
 - id: zh-350
   topic: kanton.geografie.zuerich
   section: Geografie

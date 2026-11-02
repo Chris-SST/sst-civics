@@ -1,6 +1,6 @@
 id: arbeitsgericht-streit-arbeitsverhaeltnis
 lang: fr
-source_version: 1
+source_version: 2
 question: Une employée estime que son licenciement est abusif et veut le contester. Quelle instance traite
   ce type de litiges relatifs au contrat de travail ?
 options:
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Eine Angestellte ist der Ansicht, dass ihre Kündigung missbräuchlich ist, und möchte
       sie anfechten. Welche Instanz behandelt diese Art von Streitigkeiten im Zusammenhang mit dem Arbeitsvertrag?
     options_de:

@@ -1,5 +1,5 @@
 id: alpenuebergaenge-simplon-gotthard-st-bernhard
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.geografie.landschaft
@@ -32,7 +32,7 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
+    version: 2
     reasoning: Simplon, Gotthard und Grosser St. Bernhard sind bekannte Alpenpässe, also Übergänge über
       die Alpen, und weder Kantone, Flüsse noch Seen.
   source:
@@ -43,7 +43,7 @@ checks:
       Alpenübergänge sind.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
   panel:
     verdict: approve
     reviews:
@@ -71,7 +71,7 @@ checks:
         über einen Gebirgszug»), weil das Wort für B1-Lernende neu sein kann.'
     round: 1
     at: &id002 2026-11-02
-    version: 1
+    version: 2
 review:
   action: ai_panel
   note: Approved by the AI review panel

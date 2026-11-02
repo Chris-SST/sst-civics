@@ -1,6 +1,6 @@
 id: fahren-alkohol-drogen-ausweisentzug
 lang: es
-source_version: 1
+source_version: 2
 question: ¿Qué riesgo corre una persona que conduce un coche bajo los efectos del alcohol o de las drogas?
 options:
   a: La pérdida del derecho de voto
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Welches Risiko geht eine Person ein, die unter Alkohol- oder Drogeneinfluss ein Auto
       fährt?
     options_de:

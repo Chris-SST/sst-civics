@@ -1,6 +1,6 @@
 id: bahnunternehmen-der-schweiz-erkennen
 lang: en
-source_version: 1
+source_version: 2
 question: Which of the following abbreviations all stand for railway companies in Switzerland?
 options:
   a: SOB, SEM, BLS and SZU
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Welche der folgenden Abkürzungen stehen alle für Eisenbahnunternehmen in der Schweiz?
     options_de:
       a: SOB, SEM, BLS und SZU

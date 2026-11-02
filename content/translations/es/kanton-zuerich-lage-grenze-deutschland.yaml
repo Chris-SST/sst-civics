@@ -1,6 +1,6 @@
 id: kanton-zuerich-lage-grenze-deutschland
 lang: es
-source_version: 1
+source_version: 2
 question: ¿Dónde se encuentra el cantón de Zúrich en Suiza y con qué país vecino limita?
 options:
   a: En el oeste de Suiza, limita con Francia
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Wo befindet sich der Kanton Zürich in der Schweiz und an welches Nachbarland grenzt er?
     options_de:
       a: Im Westen der Schweiz, er grenzt an Frankreich

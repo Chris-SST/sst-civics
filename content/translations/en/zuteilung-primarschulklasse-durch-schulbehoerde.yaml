@@ -1,6 +1,6 @@
 id: zuteilung-primarschulklasse-durch-schulbehoerde
 lang: en
-source_version: 1
+source_version: 2
 question: Who decides in the canton of Zürich which primary school class a child is assigned to?
 options:
   a: The school board (Schulpflege) or the school management
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Wer entscheidet im Kanton Zürich, welcher Primarschulklasse ein Kind zugeteilt wird?
     options_de:
       a: Die Schulpflege oder die Schulleitung

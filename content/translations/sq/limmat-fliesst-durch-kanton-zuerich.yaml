@@ -1,6 +1,6 @@
 id: limmat-fliesst-durch-kanton-zuerich
 lang: sq
-source_version: 1
+source_version: 2
 question: Cili lumë rrjedh nga Liqeni i Cyrihut përmes qytetit të Cyrihut dhe më tej përmes territorit
   të kantonit?
 options:
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Welcher Fluss fliesst aus dem Zürichsee durch die Stadt Zürich und weiter durch das Gebiet
       des Kantons?
     options_de:

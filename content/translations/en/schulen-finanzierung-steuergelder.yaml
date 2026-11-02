@@ -1,6 +1,6 @@
 id: schulen-finanzierung-steuergelder
 lang: en
-source_version: 1
+source_version: 2
 question: What are public schools in Switzerland mainly paid for from?
 options:
   a: From the school fees that parents pay every month
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Woraus werden die öffentlichen Schulen in der Schweiz hauptsächlich bezahlt?
     options_de:
       a: Aus dem Schulgeld, das die Eltern jeden Monat bezahlen

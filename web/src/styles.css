@@ -2318,3 +2318,40 @@ a.topic-row:hover {
   font-size: var(--fs-h2);
   font-weight: 800;
 }
+
+/* --- Civics Pass bar (free practice, Learn, Practise for free learners) ------------------- */
+
+.pass-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -8px 24px var(--shadow-ink);
+  padding: 10px var(--space-4) calc(10px + env(safe-area-inset-bottom));
+}
+.pass-bar-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.pass-bar-inner p {
+  margin: 0;
+}
+.pass-bar .btn {
+  flex: none;
+  white-space: nowrap;
+}
+.pass-bar-spacer {
+  height: 84px;
+}
+@media (max-width: 520px) {
+  .pass-bar-text {
+    display: none;
+  }
+}

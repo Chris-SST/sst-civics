@@ -1,6 +1,6 @@
 id: schulen-finanzierung-steuergelder
 lang: fr
-source_version: 1
+source_version: 2
 question: Comment les écoles publiques en Suisse sont-elles principalement financées ?
 options:
   a: Par les frais de scolarité que les parents paient chaque mois
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Wie werden die öffentlichen Schulen in der Schweiz hauptsächlich finanziert?
     options_de:
       a: Durch das Schulgeld, das die Eltern jeden Monat bezahlen

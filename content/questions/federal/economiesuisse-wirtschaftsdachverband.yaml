@@ -1,5 +1,5 @@
 id: economiesuisse-wirtschaftsdachverband
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.sozial.wirtschaft_arbeit
@@ -31,7 +31,7 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
+    version: 2
     reasoning: Economiesuisse ist der Dachverband der Schweizer Wirtschaft und vertritt die Interessen
       der Unternehmen gegenüber Politik und Öffentlichkeit; es ist weder eine Bundesbehörde noch eine
       Arbeitslosenkasse oder Gewerkschaft.
@@ -43,7 +43,7 @@ checks:
       der Bundesverwaltung (SECO).
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
   panel:
     verdict: approve
     reviews:
@@ -69,7 +69,7 @@ checks:
         vieler Wirtschaftsverbände und Unternehmen», damit er für Lernende auf B1-Niveau klarer wird.'
     round: 1
     at: &id002 2026-11-02
-    version: 1
+    version: 2
 review:
   action: ai_panel
   note: Approved by the AI review panel

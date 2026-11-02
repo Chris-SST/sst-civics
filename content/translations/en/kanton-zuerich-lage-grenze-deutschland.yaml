@@ -1,6 +1,6 @@
 id: kanton-zuerich-lage-grenze-deutschland
 lang: en
-source_version: 1
+source_version: 2
 question: Where is the canton of Zürich located in Switzerland, and which neighbouring country does it
   border?
 options:
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Wo in der Schweiz liegt der Kanton Zürich, und an welches Nachbarland grenzt er?
     options_de:
       a: Im Westen der Schweiz; er grenzt an Frankreich

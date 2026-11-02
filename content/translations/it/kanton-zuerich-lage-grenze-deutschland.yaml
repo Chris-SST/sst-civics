@@ -1,6 +1,6 @@
 id: kanton-zuerich-lage-grenze-deutschland
 lang: it
-source_version: 1
+source_version: 2
 question: Dove si trova il Cantone di Zurigo in Svizzera e con quale Paese confinante ha un confine?
 options:
   a: Nella Svizzera occidentale, confina con la Francia
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Wo in der Schweiz befindet sich der Kanton Zürich und mit welchem Nachbarland hat er
       eine Grenze?
     options_de:

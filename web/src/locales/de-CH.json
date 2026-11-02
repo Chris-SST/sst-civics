@@ -725,5 +725,9 @@
     "doneText": "Mit einem kostenlosen Konto behalten Sie Ihren Fortschritt, machen einen ganzen Probetest auf Deutsch und können den Hilfe-Chat fragen. Der Civics Pass öffnet alle Fragen des Kantons.",
     "again": "Neu beginnen",
     "none": "Die Übungsfragen für diesen Kanton sind in Vorbereitung."
+  },
+  "passBar": {
+    "cta": "Pass kaufen · {{price}}",
+    "text": "Alle Fragen, unbegrenzt Probetests und «Das erklären» für {{months}} Monate. Einmal bezahlen, kein Abo."
   }
 }

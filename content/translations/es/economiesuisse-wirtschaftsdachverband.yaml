@@ -1,6 +1,6 @@
 id: economiesuisse-wirtschaftsdachverband
 lang: es
-source_version: 1
+source_version: 2
 question: ¿Qué es Economiesuisse?
 options:
   a: Una caja de desempleo de la Confederación
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Was ist Economiesuisse?
     options_de:
       a: Eine Arbeitslosenkasse des Bundes

@@ -1,6 +1,6 @@
 id: limmat-fliesst-durch-kanton-zuerich
 lang: tr
-source_version: 1
+source_version: 2
 question: Hangi nehir Zürich Gölü'nden çıkar, Zürich şehrinin içinden geçer ve kanton topraklarında akmaya
   devam eder?
 options:
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Welcher Fluss fliesst aus dem Zürichsee, durchquert die Stadt Zürich und fliesst weiter
       auf dem Gebiet des Kantons?
     options_de:

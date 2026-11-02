@@ -1,6 +1,6 @@
 id: limmat-fliesst-durch-kanton-zuerich
 lang: it
-source_version: 1
+source_version: 2
 question: Quale fiume esce dal lago di Zurigo, attraversa la città di Zurigo e prosegue poi attraverso
   il territorio del Cantone?
 options:
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Welcher Fluss tritt aus dem Zürichsee aus, durchquert die Stadt Zürich und fliesst dann
       weiter durch das Gebiet des Kantons?
     options_de:

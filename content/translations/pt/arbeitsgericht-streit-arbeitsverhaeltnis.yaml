@@ -1,6 +1,6 @@
 id: arbeitsgericht-streit-arbeitsverhaeltnis
 lang: pt
-source_version: 1
+source_version: 2
 question: Uma trabalhadora considera que o seu despedimento é infundado e pretende contestá-lo. Qual é
   a entidade que trata deste tipo de litígios decorrentes da relação de trabalho?
 options:
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Eine Arbeitnehmerin hält ihre Kündigung für unbegründet und möchte sie anfechten. Welche
       Stelle behandelt solche Streitigkeiten aus dem Arbeitsverhältnis?
     options_de:

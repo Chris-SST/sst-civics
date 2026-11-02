@@ -1,0 +1,25 @@
+id: wappen-kanton-zuerich-weiss-blau
+version: 1
+scope: zh
+canton: zh
+topic: kanton.kultur.zuerich
+question_de: Welche Farben hat das Wappen des Kantons Zürich?
+options_de:
+  a: Rot und Weiss
+  b: Grün und Weiss
+  c: Weiss und Blau
+  d: Blau und Gelb
+correct: c
+explanation_de: 'Das Zürcher Wappen ist schräg geteilt in Weiss und Blau. Die Linie läuft von oben links
+  nach unten rechts: oben rechts ist das Feld weiss, unten links blau.'
+sources:
+- url: https://www.zh.ch/de/politik-staat/kanton/kantonale-verwaltung.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Wappen
+status: draft
+difficulty: 1
+covers:
+- zh-349

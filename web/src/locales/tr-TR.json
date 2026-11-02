@@ -725,5 +725,9 @@
     "doneText": "Ücretsiz bir hesapla ilerlemenizi saklar, Almanca tam bir deneme sınavı yapar ve yardım sohbetine soru sorabilirsiniz. Civics Pass kantonun tüm sorularını açar.",
     "again": "Baştan başla",
     "none": "Bu kanton için pratik soruları hazırlanıyor."
+  },
+  "passBar": {
+    "cta": "Pass'i satın al · {{price}}",
+    "text": "Tüm sorular, sınırsız deneme sınavı ve açıklamalar {{months}} ay boyunca. Tek ödeme, abonelik yok."
   }
 }

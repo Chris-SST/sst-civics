@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import {
@@ -12,11 +12,21 @@ import {
 } from "../api";
 import ErrorText from "../components/ErrorText";
 import { guideUrl } from "../guide";
+import { BUY_AFTER_SIGNUP } from "../components/PassBar";
 import { switchInterface } from "../language";
 
 
 export default function Signup() {
   const { t, i18n } = useTranslation();
+  // Came from the Civics Pass bar: the learner home opens the pass once the account exists.
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get("pass") !== "1") return;
+    try {
+      localStorage.setItem(BUY_AFTER_SIGNUP, "1");
+    } catch {
+      /* storage unavailable */
+    }
+  }, []);
   const [email, setEmail] = useState("");
   const [canton, setCanton] = useState<string>("zh");
   const [locale, setLocale] = useState<LanguageCode>(apiLocale(i18n.language));

@@ -1,6 +1,6 @@
 id: economiesuisse-wirtschaftsdachverband
 lang: en
-source_version: 1
+source_version: 2
 question: What is Economiesuisse?
 options:
   a: An unemployment insurance fund of the Confederation
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Was ist Economiesuisse?
     options_de:
       a: Eine Arbeitslosenversicherungskasse des Bundes

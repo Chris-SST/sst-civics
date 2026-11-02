@@ -1,6 +1,6 @@
 id: arbeitsgericht-streit-arbeitsverhaeltnis
 lang: en
-source_version: 1
+source_version: 2
 question: An employee considers her dismissal to be unjustified and wants to challenge it. Which body
   deals with such disputes arising from the employment relationship?
 options:
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Eine Arbeitnehmerin hält ihre Kündigung für ungerechtfertigt und möchte sie anfechten.
       Welche Stelle behandelt solche Streitigkeiten aus dem Arbeitsverhältnis?
     options_de:

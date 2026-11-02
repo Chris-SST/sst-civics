@@ -1,6 +1,6 @@
 id: bahnunternehmen-der-schweiz-erkennen
 lang: sq
-source_version: 1
+source_version: 2
 question: Cilat nga shkurtesat e mëposhtme përfaqësojnë të gjitha ndërmarrje hekurudhore të Zvicrës?
 options:
   a: SOB, SEM, BLS dhe SZU
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Welche der folgenden Abkürzungen stehen alle für Eisenbahnunternehmen der Schweiz?
     options_de:
       a: SOB, SEM, BLS und SZU

@@ -725,5 +725,9 @@
     "doneText": "Avec un compte gratuit, vous gardez vos progrès, passez un examen blanc complet en allemand et pouvez poser vos questions au chat d'aide. Le Civics Pass ouvre toutes les questions du canton.",
     "again": "Recommencer",
     "none": "Les questions d'entraînement pour ce canton arrivent bientôt."
+  },
+  "passBar": {
+    "cta": "Acheter le pass · {{price}}",
+    "text": "Toutes les questions, examens blancs illimités et « Expliquer ceci » pendant {{months}} mois. Un seul paiement, sans abonnement."
   }
 }

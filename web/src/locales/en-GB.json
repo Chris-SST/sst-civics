@@ -725,5 +725,9 @@
     "doneText": "With a free account you keep your progress, take a full mock test in German and can ask the help chat. The Civics Pass opens all questions of the canton.",
     "again": "Start again",
     "none": "The practice questions for this canton are on their way."
+  },
+  "passBar": {
+    "cta": "Get the pass · {{price}}",
+    "text": "All questions, unlimited mock tests and Explain this for {{months}} months. One payment, no subscription."
   }
 }

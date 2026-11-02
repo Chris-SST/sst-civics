@@ -1,6 +1,6 @@
 id: zuteilung-primarschulklasse-durch-schulbehoerde
 lang: sq
-source_version: 1
+source_version: 2
 question: Kush vendos në kantonin e Cyrihut se cilës klasë të shkollës fillore do t'i caktohet një fëmijë?
 options:
   a: Bordi i shkollës (Schulpflege) ose drejtimi i shkollës
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Wer entscheidet im Kanton Zürich, welcher Klasse der Primarschule ein Kind zugeteilt
       wird?
     options_de:

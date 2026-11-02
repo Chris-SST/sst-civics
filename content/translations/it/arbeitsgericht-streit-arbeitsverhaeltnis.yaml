@@ -1,6 +1,6 @@
 id: arbeitsgericht-streit-arbeitsverhaeltnis
 lang: it
-source_version: 1
+source_version: 2
 question: Una lavoratrice ritiene che il proprio licenziamento sia infondato e vuole opporvisi. Quale
   autorità tratta queste controversie derivanti dal rapporto di lavoro?
 options:
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Eine Arbeitnehmerin hält ihre Kündigung für unbegründet und will sich dagegen wehren.
       Welche Behörde behandelt diese Streitigkeiten aus dem Arbeitsverhältnis?
     options_de:

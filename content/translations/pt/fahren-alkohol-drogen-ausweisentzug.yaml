@@ -1,6 +1,6 @@
 id: fahren-alkohol-drogen-ausweisentzug
 lang: pt
-source_version: 1
+source_version: 2
 question: O que arrisca uma pessoa que conduz um automóvel sob o efeito de álcool ou de drogas?
 options:
   a: A perda do direito de voto
@@ -20,7 +20,7 @@ checks:
       den Entzug.
     model: claude-sonnet-5-5
     at: 2026-11-02
-    source_version: 1
+    source_version: 2
     question_de: Was riskiert eine Person, die ein Auto unter Alkohol- oder Drogeneinfluss lenkt?
     options_de:
       a: Den Verlust des Stimmrechts

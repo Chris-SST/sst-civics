@@ -1,6 +1,6 @@
 id: alpenuebergaenge-simplon-gotthard-st-bernhard
 lang: sq
-source_version: 1
+source_version: 2
 question: Çfarë kanë të përbashkët Simplon, Gotthard dhe Grosser St. Bernhard?
 options:
   a: Ata janë kantone në Alpe.
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Was haben Simplon, Gotthard und Grosser St. Bernhard gemeinsam?
     options_de:
       a: Sie sind Kantone in den Alpen.

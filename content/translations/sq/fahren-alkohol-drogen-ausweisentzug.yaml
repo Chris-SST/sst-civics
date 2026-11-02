@@ -1,6 +1,6 @@
 id: fahren-alkohol-drogen-ausweisentzug
 lang: sq
-source_version: 1
+source_version: 2
 question: Çfarë rrezikon një person që drejton makinë nën ndikimin e alkoolit ose të drogës?
 options:
   a: Humbjen e të drejtës së votës
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Was riskiert eine Person, die unter Einfluss von Alkohol oder Drogen Auto fährt?
     options_de:
       a: Den Verlust des Stimmrechts

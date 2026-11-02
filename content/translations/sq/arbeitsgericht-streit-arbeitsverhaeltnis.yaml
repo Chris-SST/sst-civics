@@ -1,6 +1,6 @@
 id: arbeitsgericht-streit-arbeitsverhaeltnis
 lang: sq
-source_version: 1
+source_version: 2
 question: Një punonjëse e konsideron shkarkimin e saj të pabazuar dhe dëshiron të veprojë kundër tij.
   Cili organ merret me konflikte të tilla që dalin nga marrëdhënia e punës?
 options:
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Eine Angestellte hält ihre Kündigung für unbegründet und möchte dagegen vorgehen. Welches
       Organ befasst sich mit solchen Konflikten, die aus dem Arbeitsverhältnis entstehen?
     options_de:

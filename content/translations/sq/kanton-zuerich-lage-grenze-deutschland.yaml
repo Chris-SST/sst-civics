@@ -1,6 +1,6 @@
 id: kanton-zuerich-lage-grenze-deutschland
 lang: sq
-source_version: 1
+source_version: 2
 question: Ku ndodhet kantoni Zürich në Zvicër dhe me cilin shtet fqinj kufizohet?
 options:
   a: Në perëndim të Zvicrës, kufizohet me Francën
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Wo befindet sich der Kanton Zürich in der Schweiz und mit welchem Nachbarstaat grenzt
       er?
     options_de:

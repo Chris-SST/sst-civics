@@ -1,6 +1,6 @@
 id: alpenuebergaenge-simplon-gotthard-st-bernhard
 lang: it
-source_version: 1
+source_version: 2
 question: Che cosa hanno in comune il Sempione, il San Gottardo e il Gran San Bernardo?
 options:
   a: Sono Cantoni nelle Alpi.
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Was haben der Simplon, der Gotthard und der Grosse Sankt Bernhard gemeinsam?
     options_de:
       a: Sie sind Kantone in den Alpen.

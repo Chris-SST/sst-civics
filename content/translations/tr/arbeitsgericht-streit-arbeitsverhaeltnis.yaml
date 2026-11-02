@@ -1,6 +1,6 @@
 id: arbeitsgericht-streit-arbeitsverhaeltnis
 lang: tr
-source_version: 1
+source_version: 2
 question: Bir çalışan, iş sözleşmesinin feshini haksız buluyor ve buna karşı harekete geçmek istiyor.
   İş ilişkisinden doğan bu tür uyuşmazlıklarla hangi kurum ilgilenir?
 options:
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Ein Arbeitnehmer hält die Kündigung seines Arbeitsvertrags für ungerechtfertigt und möchte
       dagegen vorgehen. Welche Instanz befasst sich mit solchen Streitigkeiten aus dem Arbeitsverhältnis?
     options_de:

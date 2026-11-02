@@ -725,5 +725,9 @@
     "doneText": "Con un account gratuito conserva i progressi, fa una simulazione d'esame completa in tedesco e può usare la chat di aiuto. Il Civics Pass apre tutte le domande del Cantone.",
     "again": "Ricominciare",
     "none": "Le domande di pratica per questo Cantone sono in preparazione."
+  },
+  "passBar": {
+    "cta": "Acquistare il pass · {{price}}",
+    "text": "Tutte le domande, simulazioni illimitate e spiegazioni per {{months}} mesi. Un solo pagamento, nessun abbonamento."
   }
 }

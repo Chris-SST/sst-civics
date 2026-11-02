@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { RequireRole } from "./auth";
 import Layout from "./components/Layout";
 import Landing from "./pages/Landing";
+import PassBar from "./components/PassBar";
 import Signup from "./pages/Signup";
 import VerifyEmail from "./pages/VerifyEmail";
 import LinkSignIn from "./pages/LinkSignIn";
@@ -33,7 +34,15 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/try" element={<Try />} />
+        <Route
+          path="/try"
+          element={
+            <>
+              <Try />
+              <PassBar />
+            </>
+          }
+        />
         <Route path="/verify-email" element={<VerifyEmail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/auth/link" element={<LinkSignIn />} />
@@ -79,6 +88,7 @@ export default function App() {
           element={
             <RequireRole roles={LEARNER}>
               <Learn />
+              <PassBar />
             </RequireRole>
           }
         />
@@ -87,6 +97,7 @@ export default function App() {
           element={
             <RequireRole roles={LEARNER}>
               <Practise />
+              <PassBar />
             </RequireRole>
           }
         />

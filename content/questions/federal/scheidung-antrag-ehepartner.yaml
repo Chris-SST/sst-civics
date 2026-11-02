@@ -1,5 +1,5 @@
 id: scheidung-antrag-ehepartner
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.sozial.zivilgesellschaft
@@ -28,7 +28,7 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
+    version: 2
     reasoning: Nach dem Schweizerischen Zivilgesetzbuch (Art. 111 ff. und Art. 114 f. ZGB) können beide
       Ehegatten gemeinsam die Scheidung verlangen (Scheidung auf gemeinsames Begehren), oder ein Ehegatte
       kann sie allein einreichen (Scheidungsklage), etwa nach zweijährigem Getrenntleben oder bei Unzumutbarkeit.
@@ -39,4 +39,4 @@ checks:
       die Scheidung verlangen kann, ist daher nicht belegt.
     at: 2026-11-02
     model: claude-sonnet-5-5
-    version: 1
+    version: 2

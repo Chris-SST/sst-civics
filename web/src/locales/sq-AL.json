@@ -725,5 +725,9 @@
     "doneText": "Me një llogari falas ruani përparimin, bëni një test provë të plotë në gjermanisht dhe mund të pyesni bisedën e ndihmës. Civics Pass hap të gjitha pyetjet e kantonit.",
     "again": "Filloni nga e para",
     "none": "Pyetjet e praktikës për këtë kanton janë në përgatitje."
+  },
+  "passBar": {
+    "cta": "Blini pasin · {{price}}",
+    "text": "Të gjitha pyetjet, teste provë pa kufi dhe shpjegime për {{months}} muaj. Një pagesë, pa abonim."
   }
 }

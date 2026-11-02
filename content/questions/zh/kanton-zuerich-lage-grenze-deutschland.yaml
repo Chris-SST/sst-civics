@@ -1,5 +1,5 @@
 id: kanton-zuerich-lage-grenze-deutschland
-version: 1
+version: 2
 scope: zh
 canton: zh
 topic: kanton.geografie.zuerich
@@ -30,7 +30,7 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
+    version: 2
     reasoning: Der Kanton Zürich liegt im Norden der Deutschschweiz (Nordostschweiz) und grenzt im Norden
       an Deutschland (Baden-Württemberg), während er weder an Frankreich, Österreich noch Italien grenzt.
   source:
@@ -41,7 +41,7 @@ checks:
       daraus eindeutig, auch wenn es nicht wörtlich dasteht.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
   panel:
     verdict: approve
     reviews:
@@ -68,7 +68,7 @@ checks:
         und das «zugleich» ist sprachlich etwas sperrig; besser: «Im Norden grenzt er an Deutschland.»'
     round: 1
     at: &id002 2026-11-02
-    version: 1
+    version: 2
 review:
   action: ai_panel
   note: Approved by the AI review panel

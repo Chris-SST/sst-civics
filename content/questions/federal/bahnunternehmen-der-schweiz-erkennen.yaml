@@ -1,5 +1,5 @@
 id: bahnunternehmen-der-schweiz-erkennen
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.alltag
@@ -35,7 +35,7 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
+    version: 2
     reasoning: SBB, BLS, SOB (Schweizerische Südostbahn) und SZU (Sihltal Zürich Uetliberg Bahn) sind
       alle Bahnunternehmen, während SEM (Staatssekretariat für Migration), SRF (Schweizer Radio und Fernsehen),
       SUVA (Unfallversicherung) und SNB (Schweizerische Nationalbank) keine Bahnunternehmen sind.
@@ -47,7 +47,7 @@ checks:
       zentrales Bahnunternehmen.
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
   panel:
     verdict: approve
     reviews:
@@ -81,7 +81,7 @@ checks:
         in Antwort c) vorkommt; ergänze «das Schweizer Radio und Fernsehen (SRF)».'
     round: 1
     at: &id002 2026-11-02
-    version: 1
+    version: 2
 review:
   action: ai_panel
   note: Approved by the AI review panel

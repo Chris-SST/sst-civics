@@ -1,6 +1,6 @@
 id: schulen-finanzierung-steuergelder
 lang: it
-source_version: 1
+source_version: 2
 question: Da dove proviene principalmente il finanziamento delle scuole pubbliche in Svizzera?
 options:
   a: Dalle tasse scolastiche che i genitori pagano ogni mese
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Woher stammt hauptsächlich die Finanzierung der öffentlichen Schulen in der Schweiz?
     options_de:
       a: Aus dem Schulgeld, das die Eltern jeden Monat bezahlen

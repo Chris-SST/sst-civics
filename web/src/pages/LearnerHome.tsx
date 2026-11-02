@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { get } from "../api";
 import ErrorText from "../components/ErrorText";
 import Pricing from "../components/Pricing";
+import { BUY_AFTER_SIGNUP } from "../components/PassBar";
 import { MasteryBar } from "../components/QuestionCard";
 import { TOPIC_SCOPES, learnUrl, practiseUrl, type StudyOverview, type TopicOverview } from "../study";
 
@@ -39,6 +40,18 @@ export default function LearnerHome() {
       .then(setStudy)
       .catch(() => setStudy(null));
   }, []);
+
+  // Signed up from the Civics Pass bar: bring the pass into view once.
+  useEffect(() => {
+    if (!tutor) return;
+    try {
+      if (!localStorage.getItem(BUY_AFTER_SIGNUP)) return;
+      localStorage.removeItem(BUY_AFTER_SIGNUP);
+    } catch {
+      return;
+    }
+    setTimeout(() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth", block: "start" }), 150);
+  }, [tutor]);
 
   if (!tutor) return error ? <ErrorText error={error} /> : <p className="muted">…</p>;
 
