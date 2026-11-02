@@ -146,10 +146,12 @@ jobs:
           cache: npm
           cache-dependency-path: site/package-lock.json
       - run: npm ci --no-audit --no-fund
+      # Measured as the production site: a staging build carries "noindex" on every page
+      # (search engines must not list staging), which Lighthouse's SEO score rightly penalises.
       - name: Build
         env:
-          SITE_URL: ${{ vars.SITE_URL || 'https://staging.viapunt.ch' }}
-          APP_URL: ${{ vars.APP_URL || 'https://app.staging.viapunt.ch' }}
+          SITE_URL: https://viapunt.ch
+          APP_URL: https://app.viapunt.ch
         run: npm run build
       - run: npm run check:hreflang
       - name: Lighthouse
