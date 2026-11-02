@@ -13,11 +13,11 @@ correct: d
 explanation_de: Wer fahrunfähig ist, gefährdet andere im Strassenverkehr. Deshalb kann die Behörde den
   Führerausweis entziehen. Dazu können auch Bussen oder weitere Strafen kommen.
 sources:
-- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1959/679_705_685/20260701/de/html/fedlex-data-admin-ch-eli-cc-1959-679_705_685-20260701-de-html.html
+- url: https://www.zh.ch/de/mobilitaet/fuehrerausweis-fahren-lernen/ausweisentzug.html
   checked: &id001 2026-11-02
-- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+- url: https://www.zh.ch/de/mobilitaet/fuehrerausweis-fahren-lernen/ausweisentzug/fahren-alkohol.html
   checked: *id001
-- url: https://www.admin.ch
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1959/679_705_685/20260701/de/html/fedlex-data-admin-ch-eli-cc-1959-679_705_685-20260701-de-html.html
   checked: 2026-11-02
 glossary:
 - Führerausweis
@@ -37,11 +37,3 @@ checks:
     reasoning: Wer alkoholisiert oder unter Drogeneinfluss Auto fährt, riskiert nach dem Strassenverkehrsgesetz
       den Entzug des Führerausweises, während die anderen Folgen (Verlust des Stimmrechts, Ausweisung
       aus der Gemeinde, Entzug der Krankenversicherung) nicht vorgesehen sind.
-  source:
-    verdict: unclear
-    note: Quelle 1 (SVG) regelt den Ausweisentzug allgemein (Art. 16 ff.) und erwähnt Fahrunfähigkeit
-      und Alkoholproben. Im gekürzten Text fehlt aber eine Stelle, die ausdrücklich den Entzug bei Fahren
-      unter Alkohol- oder Drogeneinfluss nennt. Quellen 2 und 3 behandeln das Thema nicht.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1

@@ -28,7 +28,9 @@ TranslationStatus = Literal["draft", "flagged", "in_review", "approved"]
 GlossaryStatus = Literal["draft", "reviewed"]
 OptionKey = Literal["a", "b", "c", "d"]
 SourceVerdict = Literal["supported", "not_supported", "unclear", "dead_link"]
-ReviewAction = Literal["approve", "send_back", "retire", "learner_reports", "broken_links"]
+ReviewAction = Literal[
+    "approve", "send_back", "retire", "learner_reports", "broken_links", "ai_panel"
+]
 
 
 class _Strict(BaseModel):
@@ -192,10 +194,31 @@ class LinkCheck(_Strict):
     at: date
 
 
+class PanelReview(_Strict):
+    """One reviewer of the AI review panel (scripts/content/panel, D-069)."""
+
+    role: str = Field(max_length=32)
+    model: str = Field(max_length=64)
+    verdict: Literal["approve", "fix", "reject"]
+    issues: list[str] = Field(default_factory=list)
+
+
+class PanelCheck(_Strict):
+    """The AI review panel's result for one question version: approved when every reviewer
+    approves; otherwise the blocking issues go to the fixer (scripts/content/panel_fix)."""
+
+    verdict: Literal["approve", "fix", "reject"]
+    reviews: list[PanelReview] = Field(default_factory=list)
+    round: int = Field(default=1, ge=1)
+    at: date
+    version: int | None = Field(default=None, ge=1)
+
+
 class QuestionChecks(_Strict):
     independent_answer: IndependentAnswer | None = None
     source: SourceCheck | None = None
     links: LinkCheck | None = None
+    panel: PanelCheck | None = None
 
 
 class ReviewNote(_Strict):

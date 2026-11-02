@@ -1,22 +1,22 @@
 id: waehlbar-in-bundesamt-voraussetzungen
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.wahlen
-question_de: Welche Voraussetzungen muss erfüllen, wer in ein Bundesamt wählbar sein will?
+question_de: Wer kann in den Nationalrat, in den Bundesrat oder ins Bundesgericht gewählt werden?
 options_de:
-  a: Abgeschlossene Hochschulausbildung
-  b: Wohnsitz in der Schweiz seit mindestens zehn Jahren
-  c: Mitgliedschaft in einer politischen Partei
-  d: Schweizer Staatsangehörigkeit und Mündigkeit
+  a: Nur wer eine Hochschule abgeschlossen hat
+  b: Nur wer seit mindestens zehn Jahren in der Schweiz wohnt
+  c: Nur wer Mitglied einer politischen Partei ist
+  d: Alle stimmberechtigten Schweizerinnen und Schweizer ab 18 Jahren
 correct: d
-explanation_de: Wählbar ist, wer das Schweizer Bürgerrecht besitzt und mündig ist. Eine Parteimitgliedschaft
-  oder eine bestimmte Ausbildung wird nicht verlangt.
+explanation_de: Laut Bundesverfassung sind alle Stimmberechtigten wählbar. Stimmberechtigt sind Schweizerinnen
+  und Schweizer ab 18 Jahren. Eine Parteimitgliedschaft oder eine bestimmte Ausbildung braucht es nicht.
 sources:
-- url: https://www.bk.admin.ch/de/nationalratswahlen
-  checked: &id001 2026-11-02
 - url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
   checked: 2026-11-02
+- url: https://www.bk.admin.ch/de/nationalratswahlen
+  checked: &id001 2026-11-02
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: *id001
 glossary:
@@ -27,23 +27,4 @@ status: draft
 difficulty: 2
 covers:
 - zh-030
-checks:
-  independent_answer:
-    option: d
-    agrees: true
-    model: claude-sonnet-5-5
-    at: 2026-11-02
-    version: 1
-    reasoning: Wählbar in Bundesbehörden ist nach der Bundesverfassung, wer stimmberechtigt ist, also
-      Schweizer Bürgerin oder Bürger und mindestens 18 Jahre alt (mündig) ist, während Hochschulabschluss,
-      zehnjähriger Wohnsitz oder Parteimitgliedschaft nicht verlangt werden.
-  source:
-    verdict: unclear
-    note: Die Quellen nennen Schweizer Bürgerrecht und Alter 18 als Voraussetzung für die Wählbarkeit
-      ins Parlament (Quelle 1, 3) und dass man auch ohne Partei gewählt werden kann (Quelle 3). Von einem
-      «Bundesamt» ist aber nirgends die Rede, ebenso wenig von Ausbildung oder Wohnsitz als Voraussetzung.
-      Die Frage bezieht sich auf ein Bundesamt, die Quellen behandeln nur die Wählbarkeit in den Nationalrat;
-      die Antwort ist daher nicht eindeutig belegt.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1
+checks: {}

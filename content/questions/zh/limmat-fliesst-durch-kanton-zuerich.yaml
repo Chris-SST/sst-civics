@@ -16,8 +16,10 @@ explanation_de: Die Limmat beginnt am Ausfluss des Zürichsees und durchquert di
 sources:
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: 2026-11-02
-- url: https://www.zh.ch/de/politik-staat/kanton.html
-  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/organisation/baudirektion/awel/seeregulierung_zuerichsee_merkblatt.pdf
+  checked: &id001 2026-11-02
+- url: https://www.bafu.admin.ch/de/newnsb/AhGAmdNkdNPt
+  checked: *id001
 glossary:
 - Limmat
 - Zürichsee
@@ -34,11 +36,3 @@ checks:
     version: 1
     reasoning: Die Limmat entspringt dem Zürichsee, fliesst durch die Stadt Zürich und weiter durch den
       Kanton Zürich Richtung Aargau, während Thur, Birs und Reuss andere Einzugsgebiete haben.
-  source:
-    verdict: unclear
-    note: Quelle 1 sagt, die Limmat fliesse durch Zürich und ende im Kanton Aargau in der Aare; die Karte
-      zeigt sie beim Zürichsee. Dass sie aus dem Zürichsee ausfliesst, steht aber nicht ausdrücklich im
-      Text. Quelle 2 behandelt das Thema nicht.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1

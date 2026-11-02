@@ -1,0 +1,26 @@
+id: bevoelkerungsreichster-kanton-zuerich
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Welcher Kanton hat die meisten Einwohnerinnen und Einwohner?
+options_de:
+  a: Bern
+  b: Zürich
+  c: Waadt
+  d: Aargau
+correct: b
+explanation_de: Der Kanton Zürich hat die meisten Einwohnerinnen und Einwohner der Schweiz, rund 1,6 Millionen.
+  Danach folgen die Kantone Bern und Waadt.
+sources:
+- url: https://www.zh.ch/de/soziales/bevoelkerungszahlen.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary: []
+status: draft
+difficulty: 1
+covers:
+- zh-322

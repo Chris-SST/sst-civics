@@ -13,7 +13,7 @@ correct: b
 explanation_de: Eine Scheidung kann von einem Ehepartner allein oder von beiden gemeinsam verlangt werden.
   Eine Zustimmung des anderen Teils ist für den Antrag nicht nötig. Zuständig ist das Gericht.
 sources:
-- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/html/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-html-2.html
   checked: 2026-11-02
 glossary:
 - Scheidung
@@ -32,11 +32,3 @@ checks:
     reasoning: Nach dem Schweizerischen Zivilgesetzbuch (Art. 111 ff. und Art. 114 f. ZGB) können beide
       Ehegatten gemeinsam die Scheidung verlangen (einvernehmlich) oder ein Ehegatte allein klagen, ohne
       dass der andere zustimmen muss, etwa nach zwei Jahren Trennung.
-  source:
-    verdict: unclear
-    note: Die Broschüre behandelt Politik, Rechte und Pflichten, Geschichte und Geografie. Im gekürzten
-      Text steht aber nichts zur Scheidung, zur Antragsberechtigung oder zur Zuständigkeit des Gerichts.
-      Die Antwort lässt sich daher anhand dieser Quelle weder bestätigen noch widerlegen.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1

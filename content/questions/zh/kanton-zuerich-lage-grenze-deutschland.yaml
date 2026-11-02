@@ -13,9 +13,9 @@ correct: b
 explanation_de: Der Kanton Zürich liegt im Norden der Schweiz. Im Norden bildet ein Teil seiner Grenze
   zugleich die Landesgrenze zu Deutschland.
 sources:
-- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+- url: https://www.web.statistik.zh.ch/ogd/daten/ressourcen/KTZH_00000124_00001239.pdf
   checked: 2026-11-02
-- url: https://www.zh.ch/de/politik-staat/kanton.html
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: 2026-11-02
 glossary:
 - Kanton
@@ -34,11 +34,3 @@ checks:
     reasoning: Der Kanton Zürich liegt im Norden der Deutschschweiz (Nordostschweiz) und grenzt im Norden
       an das Nachbarland Deutschland (Baden-Württemberg), während er weder an Frankreich, Österreich noch
       Italien grenzt.
-  source:
-    verdict: unclear
-    note: Quelle 1 sagt nur, dass der Kanton Zürich zum Mittelland gehört und an 6 andere Kantone grenzt,
-      und dass die Schweiz im Norden an Deutschland grenzt. Dass der Kanton Zürich im Norden liegt und
-      an Deutschland grenzt, steht im gekürzten Text nicht; Quelle 2 enthält dazu nichts.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1

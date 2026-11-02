@@ -28,12 +28,15 @@ from scripts.content import (
     answer,
     back_translate,
     draft,
+    panel,
+    panel_fix,
     promote,
     recheck_sources,
     source_check,
     stats,
     sync_reviews,
     translate,
+    translations_done,
 )
 from tests.conftest import CONTENT_TODAY, FIXTURE_CONTENT, admin_logged_in
 
@@ -781,3 +784,126 @@ async def test_stats_by_status_language_and_topic_gap(content, capsys):
     assert en.split() == ["en", "0", "0", "0", "2", "0", "0"]
     sq = next(line for line in lines if line.startswith("sq "))
     assert sq.split() == ["sq", "1", "0", "0", "0", "0", "1"]
+
+
+# --- AI review panel (D-069) -----------------------------------------------------------------
+
+
+def panel_reply(text: str) -> dict:
+    if "panel-mangel" in text and "Prüfungsqualität" in text:
+        return {"verdict": "fix", "issues": ["Antwort c ist auch vertretbar; klarer formulieren."]}
+    if "panel-falsch" in text:
+        return {"verdict": "reject", "issues": ["Die Tatsache ist falsch."]}
+    return {"verdict": "approve", "issues": ["Klein: «Bundessteuer» könnte erklärt werden."]}
+
+
+async def test_panel_approves_only_when_all_three_reviewers_approve(content, fake, monkeypatch):
+    monkeypatch.setattr(panel, "new_client", transport)
+    for qid in ("panel-gut", "panel-mangel", "panel-falsch"):
+        add_draft(content, qid, url="https://www.ch.ch/de/steuern/", status="in_review")
+    fake.json_replies["content/panel_review"] = panel_reply
+    ids = ["panel-gut", "panel-mangel", "panel-falsch"]
+    assert await panel.run(["--root", str(content), "--today", TODAY, "--ids", *ids]) == 0
+
+    good = qfile(content, "panel-gut")
+    assert good["status"] == "approved" and good["translations_missing"] is True
+    assert good["review"] == {
+        "action": "ai_panel",
+        "note": "Approved by the AI review panel",
+        "at": CONTENT_TODAY,
+    }
+    result = good["checks"]["panel"]
+    assert result["verdict"] == "approve" and result["round"] == 1 and result["version"] == 1
+    assert [r["role"] for r in result["reviews"]] == ["facts", "exam", "second"]
+    assert qfile(content, "panel-mangel")["status"] == "needs_fix"
+    assert qfile(content, "panel-mangel")["checks"]["panel"]["verdict"] == "fix"
+    assert qfile(content, "panel-falsch")["checks"]["panel"]["verdict"] == "reject"
+    check_ok(content)
+
+    # Two reviewers read the cited page, the exam reviewer does not.
+    sent = [r.messages[0]["content"] for b in fake.batches.values() for r in b]
+    assert len(sent) == 9
+    with_pages = [t for t in sent if "<seite>" in t]
+    assert len(with_pages) == 6 and all("Prüfungsqualität" not in t for t in with_pages)
+    assert "Kantonsrat ist das Parlament" in with_pages[0]
+    # One judgement per version: a second run has nothing to do.
+    assert await panel.run(["--root", str(content), "--ids", *ids]) == 0
+    assert len([r for b in fake.batches.values() for r in b]) == 9
+
+
+async def test_panel_fix_rewrites_as_a_new_version_and_retires_rejects(content, fake, monkeypatch):
+    monkeypatch.setattr(panel, "new_client", transport)
+    for qid in ("panel-mangel", "panel-falsch"):
+        add_draft(content, qid, url="https://www.ch.ch/de/steuern/", status="in_review")
+    fake.json_replies["content/panel_review"] = panel_reply
+    ids = ["panel-mangel", "panel-falsch"]
+    await panel.run(["--root", str(content), "--today", TODAY, "--ids", *ids])
+    fake.json_replies["content/panel_fix"] = {
+        "retire": False,
+        "question_de": "Testfrage panel-mangel: Welche Ebene erhebt die direkte Bundessteuer?",
+        "options_de": {"a": "Der Bund", "b": "Der Kanton", "c": "Die Gemeinde", "d": "Die Strasse"},
+        "correct": "a",
+        "explanation_de": "Die direkte Bundessteuer erhebt der Bund; die Kantone ziehen sie ein.",
+        "note": "Antwort c klarer abgegrenzt.",
+    }
+    assert await panel_fix.run(["--root", str(content), "--today", TODAY]) == 0
+    fixed = qfile(content, "panel-mangel")
+    assert fixed["version"] == 2 and fixed["status"] == "draft"
+    assert fixed["question_de"].endswith("Welche Ebene erhebt die direkte Bundessteuer?")
+    assert "independent_answer" not in fixed.get("checks", {})
+    assert fixed["checks"]["panel"]["version"] == 1  # kept, so the next round is counted
+    assert fixed["review"]["note"] == "Rewritten: Antwort c klarer abgegrenzt."
+    sent = [r.messages[0]["content"] for b in fake.batches.values() for r in b][-1]
+    assert "Antwort c ist auch vertretbar" in sent and "Klein:" not in sent
+    retired = qfile(content, "panel-falsch")
+    assert retired["status"] == "retired" and "rejected" in retired["review"]["note"]
+    check_ok(content)
+
+    # Round two: the panel sees version 2; after a second "fix" the question stays for a person.
+    data = qfile(content, "panel-mangel")
+    data["status"] = "in_review"
+    store.write_question(content, data)
+    await panel.run(["--root", str(content), "--today", TODAY, "--ids", "panel-mangel"])
+    again = qfile(content, "panel-mangel")
+    assert again["checks"]["panel"]["round"] == 2 and again["status"] == "needs_fix"
+    assert await panel_fix.run(["--root", str(content), "--today", TODAY]) == 0
+    assert qfile(content, "panel-mangel")["version"] == 2  # no third round
+
+
+async def test_back_translation_can_approve_and_translations_done_clears_the_mark(content, fake):
+    store.write_translation(
+        content,
+        {
+            "id": Q2,
+            "lang": "it",
+            "source_version": 1,
+            "question": "Quanti cantoni ha la Svizzera?",
+            "options": {"a": "20", "b": "23", "c": "26", "d": "30"},
+            "explanation": "La Svizzera ha 26 cantoni.",
+            "status": "draft",
+        },
+    )
+    fake.json_replies["content/back_translate"] = {
+        "question_de": "Wie viele Kantone hat die Schweiz?",
+        "options_de": {"a": "20", "b": "23", "c": "26", "d": "30"},
+        "explanation_de": "Die Schweiz hat 26 Kantone.",
+    }
+    fake.json_replies["content/compare"] = {"verdict": "same", "reason": "gleiche Bedeutung"}
+    args = ["--root", str(content), "--lang", "it", "--today", TODAY, "--approve-same"]
+    assert await back_translate.run(args) == 0
+    it = tfile(content, "it", Q2)
+    assert it["status"] == "approved" and it["reviewed_by"] == "ai-panel"
+
+    data = qfile(content, Q2)
+    data["translations_missing"] = True
+    store.write_question(content, data)
+    assert await translations_done.run(["--root", str(content)]) == 0
+    still = qfile(content, Q2).get("translations_missing")  # Q2 lacks other languages
+    assert still is True
+    for lang in ("fr", "pt", "es", "sq", "tr", "de"):
+        if lang == "de" or (content / "translations" / lang / f"{Q2}.yaml").exists():
+            continue
+        tr = tfile(content, "it", Q2) | {"lang": lang}
+        store.write_translation(content, tr)
+    assert await translations_done.run(["--root", str(content)]) == 0
+    assert "translations_missing" not in qfile(content, Q2)

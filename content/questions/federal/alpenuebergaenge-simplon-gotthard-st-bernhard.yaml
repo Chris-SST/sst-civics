@@ -13,9 +13,11 @@ correct: d
 explanation_de: Simplon, Gotthard und Grosser St. Bernhard sind bekannte Pässe, die über die Alpen führen.
   Sie verbinden die Alpennordseite mit der Alpensüdseite.
 sources:
+- url: https://www.astra.admin.ch/de/grosser-st-bernhard-simplonpass-sperrungen-infolge-giro-ditalia
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/das-gotthard-maerchen
+  checked: *id001
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: 2026-11-02
-- url: https://www.aboutswitzerland.eda.admin.ch/de/alpen
   checked: 2026-11-02
 glossary:
 - Alpenpass
@@ -33,11 +35,3 @@ checks:
     version: 1
     reasoning: Simplon, Gotthard und Grosser St. Bernhard sind bekannte Alpenpässe und damit Übergänge
       über die Alpen, während sie weder Kantone noch Flüsse noch Seen im Mittelland sind.
-  source:
-    verdict: unclear
-    note: Beide Quellen sagen, dass Alpenpässe und Tunnel wichtige Übergänge über die Alpen sind, und
-      Quelle 1 nennt den Gotthardpass. Simplon und Grosser St. Bernhard kommen aber nicht vor (Text allenfalls
-      gekürzt), daher bleibt die gemeinsame Eigenschaft der drei unbelegt.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1

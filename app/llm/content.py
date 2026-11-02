@@ -34,6 +34,8 @@ PURPOSE_SOURCE = "content_source_check"
 PURPOSE_TRANSLATE = "content_translate"
 PURPOSE_BACK = "content_back_translate"
 PURPOSE_COMPARE = "content_compare"
+PURPOSE_PANEL = "content_panel"
+PURPOSE_PANEL_FIX = "content_panel_fix"
 
 
 class BudgetExceeded(Exception):

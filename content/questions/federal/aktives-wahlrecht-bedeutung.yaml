@@ -1,24 +1,24 @@
 id: aktives-wahlrecht-bedeutung
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.wahlen
-question_de: Was versteht man unter dem aktiven Wahlrecht?
+question_de: Was bedeutet das aktive Wahlrecht?
 options_de:
   a: Das Recht, eine Partei zu gründen
-  b: Das Recht, sich selbst in ein Amt wählen zu lassen
+  b: Das Recht, selbst in ein Amt gewählt zu werden
   c: Das Recht, im Parlament Vorstösse einzureichen
-  d: Das Recht, bei Wahlen und Abstimmungen seine Stimme abzugeben
+  d: Das Recht, an Wahlen teilzunehmen und Politikerinnen und Politiker zu wählen
 correct: d
-explanation_de: Das aktive Wahlrecht bedeutet, dass man bei Wahlen und Abstimmungen mitentscheiden darf.
-  Das Recht, selbst gewählt zu werden, heisst passives Wahlrecht.
+explanation_de: 'Aktives Wahlrecht heisst: Man darf selbst wählen, zum Beispiel das Parlament. Das Recht,
+  selbst gewählt zu werden, heisst passives Wahlrecht. Bei Sachabstimmungen spricht man vom Stimmrecht.'
 sources:
+- url: https://www.zh.ch/de-ls/politik-staat/wahlen-abstimmungen.html
+  checked: &id001 2026-11-02
+- url: https://www.bk.admin.ch/de/nationalratswahlen
+  checked: *id001
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: 2026-11-02
-- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
-  checked: &id001 2026-11-02
-- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksabstimmungen.html
-  checked: *id001
 glossary:
 - aktives Wahlrecht
 - passives Wahlrecht
@@ -27,22 +27,4 @@ status: draft
 difficulty: 2
 covers:
 - zh-029
-checks:
-  independent_answer:
-    option: d
-    agrees: true
-    model: claude-sonnet-5-5
-    at: 2026-11-02
-    version: 1
-    reasoning: Das aktive Wahlrecht ist das Recht, bei Wahlen und Abstimmungen die eigene Stimme abzugeben,
-      während das Recht, sich selbst wählen zu lassen, das passive Wahlrecht ist.
-  source:
-    verdict: unclear
-    note: Quelle 1 erklärt nur das Wahlrecht (Regierung und Parlament wählen) und das Stimmrecht (Ja oder
-      Nein bei Sachfragen), kennt aber die Begriffe «aktives» und «passives Wahlrecht» nicht. Quelle 1
-      sagt zwar, wer gewählt werden kann, ordnet das aber nicht als passives Wahlrecht ein. Quelle 2 (Bundesverfassung)
-      und Quelle 3 (Volksabstimmungen) enthalten keine passende Definition. Die Antwort d) ist inhaltlich
-      naheliegend, wird aber in den Quellen nicht eindeutig so bezeichnet.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1
+checks: {}

@@ -15,10 +15,10 @@ explanation_de: SBB, BLS, SOB und SZU sind Bahnunternehmen, die in der Schweiz Z
   anderen Abkürzungen stehen für Organisationen wie die Nationalbank (SNB), das Staatssekretariat für
   Migration (SEM) oder die Unfallversicherung (SUVA).
 sources:
-- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: 2026-11-02
-- url: https://www.uvek.admin.ch/de/sbb
-  checked: 2026-11-02
+- url: https://www.bav.admin.ch/dam/de/sd-web/kaJyy00Azzbo/adressatliste-tu-2025.pdf
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/verkehr
+  checked: *id001
 glossary:
 - SBB
 - Bahnunternehmen
@@ -40,12 +40,3 @@ checks:
       Zürich Uetliberg Bahn) sind alle Bahnunternehmen, während SEM (Staatssekretariat für Migration),
       SRF (Schweizer Radio und Fernsehen), SUVA (Unfallversicherung) und SNB (Schweizerische Nationalbank)
       keine Bahnunternehmen sind.
-  source:
-    verdict: unclear
-    note: Quelle 2 bestätigt nur, dass die SBB das grösste Unternehmen des öffentlichen Verkehrs ist und
-      rund 120 weitere Transportunternehmen bestehen. BLS, SOB und SZU werden nicht genannt, ebenso wenig
-      SNB, SEM und SUVA als Organisationen. Quelle 1 enthält dazu nichts, daher ist die Antwort nicht
-      belegt.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1

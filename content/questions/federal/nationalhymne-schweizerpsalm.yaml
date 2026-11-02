@@ -1,0 +1,27 @@
+id: nationalhymne-schweizerpsalm
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Wie heisst die Nationalhymne der Schweiz?
+options_de:
+  a: Rufst du, mein Vaterland
+  b: Lueget vo Bärg und Tal
+  c: Vo Luzern gäg Weggis zue
+  d: Schweizerpsalm
+correct: d
+explanation_de: Die Nationalhymne der Schweiz ist der Schweizerpsalm. Der Bundesrat hat ihn 1981 endgültig
+  zur Landeshymne erklärt. Vorher wurde oft «Rufst du, mein Vaterland» gesungen.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/nationalfeiertag-und-nationalhymne
+  checked: *id001
+- url: https://www.parlament.ch/de/services/mediathek/schweizer-landeshymne
+  checked: *id001
+glossary:
+- Nationalhymne
+status: draft
+difficulty: 1
+covers:
+- zh-212

@@ -13,10 +13,10 @@ correct: c
 explanation_de: Economiesuisse ist der Dachverband der Schweizer Wirtschaft und vertritt die Interessen
   der Unternehmen. Er ist keine staatliche Stelle und keine Gewerkschaft.
 sources:
-- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: 2026-11-02
-- url: https://www.seco.admin.ch/de/gesamtarbeitsvertraege-grundlagen
-  checked: 2026-11-02
+- url: https://www.newsd.admin.ch/newsd/message/attachments/59332.pdf
+  checked: &id001 2026-11-02
+- url: https://www.newsd.admin.ch/newsd/message/attachments/41954.pdf
+  checked: *id001
 glossary:
 - Economiesuisse
 - Dachverband
@@ -35,11 +35,3 @@ checks:
     reasoning: Economiesuisse ist der Dachverband der Schweizer Wirtschaft und vertritt die Interessen
       der Unternehmen gegenüber Politik und Öffentlichkeit, ist also weder eine Bundesstelle noch eine
       Gewerkschaft.
-  source:
-    verdict: unclear
-    note: Keine der beiden Quellen erwähnt Economiesuisse. Quelle 1 (Broschüre) behandelt Geschichte,
-      Politik und Wirtschaft allgemein, Quelle 2 (SECO) Gesamtarbeitsverträge und Arbeitgeber- und Arbeitnehmerverbände,
-      aber ohne den Dachverband zu nennen.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1

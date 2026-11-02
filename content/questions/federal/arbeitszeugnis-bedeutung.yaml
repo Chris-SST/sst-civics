@@ -1,0 +1,22 @@
+id: arbeitszeugnis-bedeutung
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Was ist ein Arbeitszeugnis?
+options_de:
+  a: Eine Bestätigung der Ärztin oder des Arztes, dass man nicht arbeiten kann
+  b: Ein Dokument des Arbeitgebers, das Leistung und Verhalten der angestellten Person beurteilt
+  c: Die Bewilligung des Migrationsamts, in der Schweiz zu arbeiten
+  d: Der jährliche Lohnausweis für die Steuererklärung
+correct: b
+explanation_de: Ein Arbeitszeugnis stellt der Arbeitgeber aus. Es beschreibt Art und Dauer der Arbeit
+  und beurteilt Leistung und Verhalten. Angestellte können es jederzeit verlangen.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
+  checked: 2026-11-02
+glossary: []
+status: draft
+difficulty: 1
+covers:
+- zh-127

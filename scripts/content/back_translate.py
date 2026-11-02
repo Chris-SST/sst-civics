@@ -9,8 +9,10 @@ First call: the draft translation is translated back into German without seeing 
 original (prompts/content/back_translate/vN.md). Second call: the original German and the
 back-translation are compared and judged `same` or `different` with a one-line reason
 (prompts/content/compare/vN.md). The result is stored under `checks.back_translation`;
-`different` sets the translation to `status: flagged` for the reviewer. Stale drafts (made
-from an older German version) are left for scripts.content.translate to refresh."""
+`different` sets the translation to `status: flagged` for the reviewer. With
+`--approve-same` (D-069, the AI review panel replaces the human review), `same` approves the
+translation, reviewed by `ai-panel`. Stale drafts (made from an older German version) are
+left for scripts.content.translate to refresh."""
 
 from __future__ import annotations
 
@@ -21,7 +23,7 @@ from app.content import store
 from app.content.schema import QuestionFile, TranslationFile
 from app.db import SessionLocal
 from app.llm.content import PURPOSE_BACK, PURPOSE_COMPARE, Job, run_jobs
-from app.models import OPTION_KEYS, T_DRAFT, T_FLAGGED, TRANSLATION_LANGUAGES
+from app.models import OPTION_KEYS, T_APPROVED, T_DRAFT, T_FLAGGED, TRANSLATION_LANGUAGES
 from scripts.content._common import (
     add_ai_args,
     base_parser,
@@ -113,6 +115,9 @@ async def run(argv: list[str] | None = None) -> int:
     parser.add_argument("--ids", nargs="+", default=None)
     parser.add_argument("--redo", action="store_true")
     parser.add_argument("--resume-compare", metavar="BATCH_ID", default=None)
+    parser.add_argument(
+        "--approve-same", action="store_true", help="approve translations judged the same"
+    )
     add_ai_args(parser, max_tokens=3000)
     args = parser.parse_args(argv)
     langs = list(TRANSLATION_LANGUAGES) if args.lang == "all" else [args.lang]
@@ -192,7 +197,11 @@ async def run(argv: list[str] | None = None) -> int:
             say(f"{key}: DIFFERENT -> flagged ({block['back_translation']['reason']})")
         else:
             same += 1
-            say(f"{key}: same meaning")
+            if args.approve_same:
+                data["status"] = T_APPROVED
+                data["reviewed_by"] = "ai-panel"
+                data["reviewed_at"] = today
+            say(f"{key}: same meaning" + (" -> approved" if args.approve_same else ""))
         store.write_translation(root, data)
     say(f"{same} same, {different} flagged, {failed} without a result")
     return 0 if not failed else 1

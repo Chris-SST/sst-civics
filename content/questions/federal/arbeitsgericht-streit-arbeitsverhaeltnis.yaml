@@ -14,9 +14,11 @@ correct: c
 explanation_de: Das Arbeitsgericht ist für Streitigkeiten zwischen Arbeitgebenden und Arbeitnehmenden
   zuständig. Dazu gehört auch der Streit um eine Kündigung. Das RAV hilft dagegen bei der Stellensuche.
 sources:
-- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+- url: https://www.notes.zh.ch/appl/zhlex_r.nsf/WebView/43B3BDA36DB02CBDC1258D4C004EC591/$File/211.1_10.5.10_131.pdf
   checked: 2026-11-02
 - url: https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: 2026-11-02
 glossary:
 - Arbeitsgericht
@@ -37,12 +39,3 @@ checks:
     reasoning: Streitigkeiten aus dem Arbeitsverhältnis, etwa wegen einer missbräuchlichen Kündigung,
       werden von der Schlichtungsbehörde und dem Arbeitsgericht behandelt, während RAV, Strassenverkehrsamt
       und Betreibungsamt dafür nicht zuständig sind.
-  source:
-    verdict: unclear
-    note: Quelle 2 verweist bei privatrechtlichen Themen wie Kündigung nur auf die unentgeltliche Rechtsauskunft
-      des Bezirks- oder Arbeitsgerichts. Sie sagt nicht ausdrücklich, dass das Arbeitsgericht Kündigungsstreitigkeiten
-      behandelt. Quelle 1 bestätigt nur, dass das RAV bei der Stellensuche unterstützt, was den zweiten
-      Teil der Erklärung stützt.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1

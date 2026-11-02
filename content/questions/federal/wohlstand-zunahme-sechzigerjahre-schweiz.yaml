@@ -1,17 +1,19 @@
 id: wohlstand-zunahme-sechzigerjahre-schweiz
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.geschichte.gesellschaftswandel
-question_de: Was war für die Schweiz in den 1960er-Jahren typisch?
+question_de: Wie ging es der Schweiz wirtschaftlich in den Jahrzehnten nach dem Zweiten Weltkrieg, zum
+  Beispiel in den 1960er-Jahren?
 options_de:
-  a: Der Wohlstand vieler Menschen nahm stark zu.
-  b: Die Wirtschaft schrumpfte stark und viele wurden arbeitslos.
+  a: 'Es ging ihr immer besser: Es gab viel Arbeit und der Wohlstand vieler Menschen stieg.'
+  b: Die Wirtschaft schrumpfte stark und viele Menschen wurden arbeitslos.
   c: Die Schweiz wurde Mitglied der Europäischen Union.
-  d: Die Einwanderung kam fast ganz zum Stillstand.
+  d: Die Schweiz brauchte keine Arbeitskräfte aus dem Ausland mehr.
 correct: a
-explanation_de: In den 1960er-Jahren wuchs die Wirtschaft stark. Viele Menschen verdienten mehr und konnten
-  sich mehr leisten. Dafür wurden auch viele Arbeitskräfte aus dem Ausland angeworben.
+explanation_de: Nach dem Zweiten Weltkrieg wuchs die Schweizer Wirtschaft stark. Es gab viel Arbeit, und
+  viele Menschen konnten sich mehr leisten. Die Firmen holten deshalb viele Arbeitskräfte aus dem Ausland,
+  zuerst vor allem aus Italien.
 sources:
 - url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
   checked: 2026-11-02
@@ -24,22 +26,4 @@ status: draft
 difficulty: 2
 covers:
 - zh-222
-checks:
-  independent_answer:
-    option: a
-    agrees: true
-    model: claude-sonnet-5-5
-    at: 2026-11-02
-    version: 1
-    reasoning: In den 1960er-Jahren erlebte die Schweiz einen starken Wirtschaftsaufschwung mit stark
-      steigendem Wohlstand, während sie nie EU-Mitglied wurde, die Wirtschaft nicht schrumpfte und die
-      Einwanderung (Gastarbeiter) hoch war.
-  source:
-    verdict: unclear
-    note: Quelle 1 sagt nur allgemein, dass es der Schweiz nach dem Zweiten Weltkrieg wirtschaftlich immer
-      besser ging und ab den 1950er-Jahren viele Arbeitskräfte aus Italien kamen. Quelle 2 beschreibt
-      die Anwerbung von Arbeitskräften nach 1947. Beide nennen weder die 1960er-Jahre noch ausdrücklich
-      einen stark steigenden Wohlstand, daher ist die Antwort nicht eindeutig belegt.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1
+checks: {}

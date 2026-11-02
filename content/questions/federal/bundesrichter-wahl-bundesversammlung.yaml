@@ -1,0 +1,28 @@
+id: bundesrichter-wahl-bundesversammlung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.gerichte
+question_de: Wer wählt die Richterinnen und Richter des Bundesgerichts?
+options_de:
+  a: Der Bundesrat
+  b: Das Volk an der Urne
+  c: Die Bundesversammlung
+  d: Die Regierungen der Kantone
+correct: c
+explanation_de: Die Bundesversammlung, also Nationalrat und Ständerat gemeinsam, wählt die Richterinnen
+  und Richter des Bundesgerichts. Ihre Amtsdauer beträgt sechs Jahre.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.parlament.ch/de/%C3%BCber-das-parlament/parlamentsportraet/aufgaben-der-bundesversammlung/wahlen/wahl-mitglieder-eidgen%C3%B6ssische-gerichte
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Bundesversammlung
+- Bundesgericht
+status: draft
+difficulty: 1
+covers:
+- zh-096

@@ -1,21 +1,20 @@
 id: unwahre-behauptungen-ueber-andere-verbreiten
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.demokratie.grundrechte
-question_de: Eine Person verbreitet öffentlich unwahre Tatsachen über eine andere Person. Wie ist das
-  in der Schweiz zu beurteilen?
+question_de: Eine Person verbreitet wider besseres Wissen unwahre Tatsachen über jemanden, die geeignet
+  sind, seinen Ruf zu schädigen. Ist das in der Schweiz erlaubt?
 options_de:
-  a: Es ist rechtswidrig, weil es die Ehre und den Ruf der Person verletzt.
-  b: Es ist erlaubt, solange die Person kein Amt hat.
-  c: Es ist erlaubt, wenn es nur im Internet geschieht.
-  d: Es ist von der Meinungsfreiheit gedeckt und immer erlaubt.
+  a: Nein, das ist als Verleumdung strafbar.
+  b: Ja, solange die betroffene Person kein öffentliches Amt hat.
+  c: Ja, wenn es nur im Internet geschieht.
+  d: Ja, das ist durch die Meinungsfreiheit immer gedeckt.
 correct: a
-explanation_de: Die Meinungsfreiheit schützt nicht das Verbreiten unwahrer Tatsachen über andere. Wer
-  das tut, verletzt deren Persönlichkeit und kann rechtlich belangt werden. Das gilt auch im Internet.
+explanation_de: Die Meinungsfreiheit erlaubt es nicht, bewusst Unwahres über andere zu verbreiten, das
+  ihrem Ruf schadet. Das Strafgesetzbuch bestraft das als Verleumdung, wenn die betroffene Person es verlangt.
+  Das gilt auch im Internet.
 sources:
-- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
-  checked: 2026-11-02
 - url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/54/757_781_799/20261101/de/html/fedlex-data-admin-ch-eli-cc-54-757_781_799-20261101-de-html-1.html
   checked: 2026-11-02
 glossary:
@@ -26,22 +25,4 @@ status: draft
 difficulty: 2
 covers:
 - zh-080
-checks:
-  independent_answer:
-    option: a
-    agrees: true
-    model: claude-sonnet-5-5
-    at: 2026-11-02
-    version: 1
-    reasoning: Das öffentliche Verbreiten unwahrer Tatsachen über eine Person verletzt deren Ehre und
-      Ruf und kann als üble Nachrede oder Verleumdung (Art. 173 ff. StGB) sowie als Persönlichkeitsverletzung
-      (Art. 28 ZGB) rechtswidrig sein, unabhängig vom Amt oder vom Medium.
-  source:
-    verdict: unclear
-    note: Quelle 1 sagt nur, dass man seine Meinung "im Rahmen des Gesetzes" mitteilen darf, und äussert
-      sich nicht zu unwahren Tatsachen, Ehre oder Ruf. Der Auszug aus dem Strafgesetzbuch (Quelle 2) enthält
-      nur Fragmente, etwa zum Rückzug unwahrer Äusserungen, aber keinen vollständigen Artikel zu Ehrverletzung
-      oder Verleumdung. Die Antwort ist daher nicht eindeutig belegt.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1
+checks: {}

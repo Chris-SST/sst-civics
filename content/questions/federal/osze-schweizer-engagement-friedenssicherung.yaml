@@ -1,25 +1,25 @@
 id: osze-schweizer-engagement-friedenssicherung
-version: 1
+version: 2
 scope: federal
 canton: null
 topic: bund.international
-question_de: Wofür setzt sich die Schweiz innerhalb der Organisation für Sicherheit und Zusammenarbeit
-  in Europa (OSZE) vor allem ein?
+question_de: Wofür setzt sich die Schweiz in der Organisation für Sicherheit und Zusammenarbeit in Europa
+  (OSZE) ein?
 options_de:
-  a: Für den Frieden in Osteuropa und Zentralasien
+  a: Für Frieden und Sicherheit in Europa, zum Beispiel in Osteuropa und Zentralasien
   b: Für die Verteilung von Fördergeldern in Westeuropa
   c: Für die Einführung einer gemeinsamen Währung
   d: Für die Senkung von Zöllen im Welthandel
 correct: a
-explanation_de: Die Schweiz engagiert sich in der OSZE für Frieden und Sicherheit, vor allem in Osteuropa
-  und Zentralasien. Die OSZE ist eine Organisation für Sicherheit und Zusammenarbeit. Die Schweiz ist
-  seit der Gründung dabei.
+explanation_de: Die Schweiz ist Gründungsmitglied der OSZE und nutzt sie, um Frieden und Sicherheit in
+  Europa zu fördern. Die OSZE ist mit Feldmissionen besonders in Ost- und Südosteuropa und in Zentralasien
+  tätig. 2026 hat die Schweiz den Vorsitz der OSZE.
 sources:
-- url: https://www.eda.admin.ch/de/schweizer-osze-vorsitz-2026
+- url: https://www.eda.admin.ch/de/die-schweiz-und-die-osze-setzen-sich-gemeinsam-fuer-frieden-und-sicherheit-in-europa-ein
   checked: &id001 2026-11-02
-- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+- url: https://www.eda.admin.ch/osze
   checked: *id001
-- url: https://www.eda.admin.ch/de/organisation-fuer-sicherheit-und-zusammenarbeit-in-europa-osze
+- url: https://www.eda.admin.ch/de/schweizer-osze-vorsitz-2026
   checked: 2026-11-02
 glossary:
 - OSZE
@@ -28,22 +28,4 @@ status: draft
 difficulty: 3
 covers:
 - zh-332
-checks:
-  independent_answer:
-    option: a
-    agrees: true
-    model: claude-sonnet-5-5
-    at: 2026-11-02
-    version: 1
-    reasoning: Die OSZE befasst sich mit Sicherheit, Frieden und Stabilität in Europa, Osteuropa und Zentralasien,
-      und die Schweiz engagiert sich dort für Konfliktprävention und Frieden, während Fördergelder, eine
-      gemeinsame Währung und Zölle nicht zu den Aufgaben der OSZE gehören.
-  source:
-    verdict: unclear
-    note: Die Quellen 1 und 3 sagen, die Schweiz setze sich in der OSZE für Frieden und Sicherheit in
-      Europa (und der Welt) ein. Ein besonderer Schwerpunkt auf Osteuropa und Zentralasien wird nirgends
-      ausdrücklich genannt. Nur die Ukraine und zentralasiatische Projekte werden erwähnt. Auch die Gründungsmitgliedschaft
-      wird nicht eindeutig belegt, da die Schweiz seit 1973 dabei ist. Quelle 2 behandelt das Thema nicht.
-    at: 2026-11-02
-    model: claude-sonnet-5-5
-    version: 1
+checks: {}
