@@ -271,7 +271,7 @@ Read this plan in full, then the SST maths app's code, before writing anything.
 5. Remove the parent and student roles, under-18 rules, parent summaries, homework photos and image screening, and maths-specific rendering and checks, with their tests.
 6. Every AI call goes through the existing AI module, with its limits and cost logging. The content pipeline (drafting, independent answer, translation, back-translation) runs as command-line scripts using the batch API, and never overwrites a translation a reviewer has approved.
 7. Question content and guide pages are versioned files in the repository; the database is filled from them on deploy.
-8. Never copy text from cantonal question catalogues or test series into the repository, prompts or generated content. Use them only to list topics.
+8. Never copy text from cantonal question catalogues or test series into the repository, prompts or generated content. They may be read to list topics and to build a fact checklist in our own words (D-063, 2 November 2026).
 9. Never collect nationality, permit type, date of birth or address. The residence calculator runs only in the browser.
 10. No Swiss or cantonal coats of arms, no "official" wording, and the independence notice in every footer.
 11. Interface text in British English, German, French, Italian and the launch languages; amounts in CHF with Swiss number formatting.

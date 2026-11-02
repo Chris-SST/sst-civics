@@ -3,9 +3,11 @@ and 5).
 
 Usage:
   python -m scripts.content.translate --lang en [--ids ...] [--canton zh] [--topic CODE]
-      [--redo] [--direct] [--model ...] [--resume BATCH_ID]
+      [--include-in-review] [--redo] [--direct] [--model ...] [--resume BATCH_ID]
 
-Only questions with `status: approved` are translated, and only where there is no
+Only questions with `status: approved` are translated, except that `--lang en
+--include-in-review` also translates questions in review, so the reviewer can read them in
+English (D-064). Translations are made only where there is no
 translation yet or the existing one is stale (made from an older German version); a
 current draft is replaced only with --redo. A translation with status approved or
 in_review is never touched, stale or not: it is printed and skipped (set it back to draft
@@ -31,6 +33,7 @@ from app.llm.content import PURPOSE_TRANSLATE, Job, run_jobs
 from app.models import (
     OPTION_KEYS,
     Q_APPROVED,
+    Q_IN_REVIEW,
     T_APPROVED,
     T_DRAFT,
     T_IN_REVIEW,
@@ -216,21 +219,30 @@ async def run(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--lang", required=True, help=f"one of {', '.join(TRANSLATION_LANGUAGES)} or all"
     )
+    parser.add_argument(
+        "--include-in-review",
+        action="store_true",
+        help="with --lang en: also translate questions in review, for the reviewer",
+    )
     add_selection_args(parser)
     add_ai_args(parser, max_tokens=3000)
     args = parser.parse_args(argv)
     langs = list(TRANSLATION_LANGUAGES) if args.lang == "all" else [args.lang]
     if any(lang not in TRANSLATION_LANGUAGES for lang in langs):
         parser.error(f"--lang is one of {', '.join(TRANSLATION_LANGUAGES)} or all")
+    if args.include_in_review and langs != ["en"]:
+        parser.error("--include-in-review works with --lang en only")
+    statuses = [Q_APPROVED, Q_IN_REVIEW] if args.include_in_review else [Q_APPROVED]
     cs = load(root_of(args))
-    approved = select_questions(cs, args, [Q_APPROVED])
+    selected = select_questions(cs, args, statuses)
     if args.ids:
         for q in select_questions(cs, args, None):
-            if q.status != Q_APPROVED:
-                say(f"{q.id}: status {q.status}; only approved questions are translated")
+            if q.status not in statuses:
+                allowed = " or ".join(statuses)
+                say(f"{q.id}: status {q.status}; only {allowed} questions are translated")
     total_failed = 0
     for lang in langs:
-        written, failed = await translate_language(cs, args, lang, approved)
+        written, failed = await translate_language(cs, args, lang, selected)
         total_failed += failed
         say(f"{lang}: {written} translation(s) written, {failed} failed")
     return 0 if not total_failed else 1

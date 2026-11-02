@@ -65,6 +65,11 @@ async def run(argv: list[str] | None = None) -> int:
         f"{moved} moved to in_review, {waiting} still draft"
         + (" (dry run)" if args.dry_run else "")
     )
+    if moved and not args.dry_run:
+        say(
+            "Next: python -m scripts.content.translate --lang en --include-in-review "
+            "(English for the reviewer)"
+        )
     return 0
 
 

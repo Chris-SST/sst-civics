@@ -1638,6 +1638,16 @@ button.topic-row:hover {
 .preview-box p:last-child {
   margin-bottom: 0;
 }
+.german-original {
+  margin: var(--space-3) 0;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+.german-original summary {
+  cursor: pointer;
+  font-weight: 700;
+}
 .options-list {
   list-style: none;
   padding: 0;

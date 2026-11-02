@@ -31,11 +31,16 @@ python -m scripts.content.source_check --canton zh --topic bund.demokratie.volks
 # 4. Drafts with an agreeing answer and a supported source -> in_review.
 python -m scripts.content.promote --canton zh --topic bund.demokratie.volksrechte
 
+# 4b. English for the reviewer (D-064): the review screen shows English first, German in a
+#     "German original" section. Other languages still wait for approval (step 7).
+python -m scripts.content.translate --lang en --include-in-review --canton zh --topic bund.demokratie.volksrechte
+
 # 5. Commit and deploy; a person reviews in Admin, Question bank (approve, send back, retire).
 # 6. Write the review actions back to the files, then commit and deploy again.
 python -m scripts.content.sync_reviews
 
 # 7. Translate the approved questions, then check each translation by back-translation.
+#    English made in step 4b is kept (a current draft is replaced only with --redo).
 python -m scripts.content.translate --lang all --canton zh --topic bund.demokratie.volksrechte
 python -m scripts.content.back_translate --lang all
 

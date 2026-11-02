@@ -565,6 +565,50 @@ async def test_translate_skips_reviewed_work_and_writes_drafts(content, fake, ca
     assert tfile(content, "fr", Q1)["status"] == "in_review"
 
 
+def en_reply(text: str) -> dict:
+    return {
+        "question": "How many members does the Cantonal Council of Zurich have?",
+        "options": {"a": "60", "b": "120", "c": "180", "d": "240"},
+        "explanation": "The Cantonal Council (Kantonsrat) of Zurich has 180 members.",
+    }
+
+
+async def test_translate_english_for_questions_in_review(content, fake, capsys):
+    q = qfile(content, Q3, "zh")
+    q["status"] = "in_review"
+    store.write_question(content, q)
+    fake.json_replies["content/translate"] = en_reply
+
+    # Without the option a question in review is not translated.
+    assert await translate.run(["--root", str(content), "--lang", "en", "--ids", Q3]) == 0
+    assert f"{Q3}: status in_review; only approved questions are translated" in (
+        capsys.readouterr().out
+    )
+    assert not (content / "translations" / "en" / f"{Q3}.yaml").exists()
+
+    # Only English may be made early.
+    with pytest.raises(SystemExit):
+        await translate.run(["--root", str(content), "--lang", "fr", "--include-in-review"])
+
+    assert (
+        await translate.run(
+            ["--root", str(content), "--lang", "en", "--include-in-review", "--ids", Q3]
+        )
+        == 0
+    )
+    written = tfile(content, "en", Q3)
+    assert written["status"] == "draft" and written["question"].startswith("How many")
+    report = validate_content(content, today=CONTENT_TODAY)
+    assert report.ok
+    assert not [i for i in report.warnings if i.kind == "translation_of_unapproved"]
+
+    # A French translation of a question in review still warns.
+    fr = dict(written, lang="fr")
+    store.write_translation(content, fr)
+    report = validate_content(content, today=CONTENT_TODAY)
+    assert [i for i in report.warnings if i.kind == "translation_of_unapproved"]
+
+
 def test_glossary_terms_match_inflections_and_whole_abbreviations():
     from app.content.schema import GlossaryEntry, QuestionFile
 

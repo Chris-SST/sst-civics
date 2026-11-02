@@ -500,6 +500,12 @@ async def test_review_queue_filters(api, api2, content):
     assert full["options_de"]["b"].startswith("Auf drei") and full["file_status"] == "approved"
     states = {t["lang"]: t["state"] for t in full["translations"]}
     assert states["fr"] == "approved" and states["sq"] == "draft"
+    # English for the reviewer (D-064): on the detail and the queue; None while not made.
+    assert full["english"]["question"] and full["english"]["stale"] is False
+    assert set(full["english"]["options"]) == {"a", "b", "c", "d"}
+    queue = (await api.get("/api/review/queue?status=approved&canton=federal")).json()
+    assert all(q["english"] and q["english"]["status"] for q in queue)
+    assert (await api.get("/api/review/queue")).json()[0]["english"] is None
     await learner_logged_in(api2, "lena@example.ch", access=True)
     assert (await api2.get("/api/review/queue")).status_code == 403
 

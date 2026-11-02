@@ -46,6 +46,15 @@ interface TranslationState {
   reviewed_at: string | null;
 }
 
+/** The English translation shown to the reviewer (D-064); null until it has been made. */
+interface EnglishText {
+  question: string;
+  options: Record<OptionKey, string>;
+  explanation: string;
+  status: string;
+  stale: boolean;
+}
+
 export interface QuestionFull {
   id: string;
   version: number;
@@ -69,6 +78,7 @@ export interface QuestionFull {
   review_note: string | null;
   reviewed_at: string | null;
   report_count: number;
+  english?: EnglishText | null;
   translations?: TranslationState[];
   reports?: { id: string; lang: string | null; comment: string | null; created_at: string }[];
 }
@@ -311,10 +321,13 @@ export default function QuestionReview({ initialQuestionId }: { initialQuestionI
                 </tr>
               </thead>
               <tbody>
-                {rows.map((r) => (
+                {rows.map((r) => {
+                  const preview = r.english?.question ?? r.question_de;
+                  return (
                   <tr key={r.id}>
                     <td data-label={t("review.question")}>
-                      <RichText className="q-preview" text={r.question_de.length > 160 ? r.question_de.slice(0, 160) + "…" : r.question_de} />
+                      <RichText className="q-preview" text={preview.length > 160 ? preview.slice(0, 160) + "…" : preview} />
+                      {!r.english && <span className="chip">{t("review.germanTag")}</span>}
                       <span className="small muted">
                         {r.id} · {t("review.version", { version: r.version })}
                       </span>
@@ -336,7 +349,8 @@ export default function QuestionReview({ initialQuestionId }: { initialQuestionI
                       </button>
                     </td>
                   </tr>
-                ))}
+                  );
+                })}
               </tbody>
             </table>
           </div>
@@ -450,18 +464,46 @@ function ReviewPanel({
 
       <div className="grid-2">
         <div>
-          <h3>{t("review.question")}</h3>
-          <RichText className="preview-box" text={edits.question_de} />
-          <ul className="options-list">
-            {OPTION_KEYS.map((k) => (
-              <li key={k} className={k === edits.correct ? "is-correct" : undefined}>
-                <b>{k.toUpperCase()}</b> <RichText text={edits.options_de[k]} />
-                {k === edits.correct && <span className="chip">{t("review.answer")}</span>}
-              </li>
-            ))}
-          </ul>
-          <h3>{t("review.explanation")}</h3>
-          <RichText className="preview-box" text={edits.explanation_de || "–"} />
+          {q.english ? (
+            <div lang="en">
+              <h3>{t("review.englishHeading")}</h3>
+              {q.english.stale ? (
+                <p className="alert alert-warn small">{t("review.englishStale")}</p>
+              ) : (
+                q.english.status === "draft" && <p className="small muted">{t("review.englishMachine")}</p>
+              )}
+              <RichText className="preview-box" text={q.english.question} />
+              <ul className="options-list">
+                {OPTION_KEYS.map((k) => (
+                  <li key={k} className={k === edits.correct ? "is-correct" : undefined}>
+                    <b>{k.toUpperCase()}</b> <RichText text={q.english!.options[k]} />
+                    {k === edits.correct && <span className="chip">{t("review.answer")}</span>}
+                  </li>
+                ))}
+              </ul>
+              <h3>{t("review.explanation")}</h3>
+              <RichText className="preview-box" text={q.english.explanation || "–"} />
+            </div>
+          ) : (
+            <p className="alert alert-info small">{t("review.englishPending")}</p>
+          )}
+          <details className="german-original" open={!q.english || editing}>
+            <summary>{t("review.germanOriginal")}</summary>
+            <div lang="de">
+              <h3>{t("review.question")}</h3>
+              <RichText className="preview-box" text={edits.question_de} />
+              <ul className="options-list">
+                {OPTION_KEYS.map((k) => (
+                  <li key={k} className={k === edits.correct ? "is-correct" : undefined}>
+                    <b>{k.toUpperCase()}</b> <RichText text={edits.options_de[k]} />
+                    {k === edits.correct && <span className="chip">{t("review.answer")}</span>}
+                  </li>
+                ))}
+              </ul>
+              <h3>{t("review.explanation")}</h3>
+              <RichText className="preview-box" text={edits.explanation_de || "–"} />
+            </div>
+          </details>
           <h3>{t("review.sources")}</h3>
           <ul className="small">
             {q.sources.map((s) => (

@@ -200,7 +200,8 @@ def _check_translations(cs: ContentSet) -> None:
         texts = [tr.options[k].casefold() for k in tr.options]
         if len(set(texts)) != len(texts):
             cs.error("options_not_distinct", path, "the four options must all differ")
-        if q.status in ("draft", "needs_fix", "in_review"):
+        reviewer_english = tr.lang == "en" and q.status == "in_review"  # D-064
+        if q.status in ("draft", "needs_fix", "in_review") and not reviewer_english:
             cs.warn(
                 "translation_of_unapproved",
                 path,

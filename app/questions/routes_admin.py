@@ -111,6 +111,30 @@ def _question_full(q: Question) -> dict[str, Any]:
     }
 
 
+def _english(q: Question, tr: QuestionTranslation | None) -> dict[str, Any] | None:
+    """The English text for the reviewer (D-064), or None while it is not made yet."""
+    if tr is None:
+        return None
+    return {
+        "question": tr.question,
+        "options": tr.options,
+        "explanation": tr.explanation,
+        "status": tr.status,
+        "stale": tr.source_version < q.version,
+    }
+
+
+async def _english_by_id(db: AsyncSession, ids: list[str]) -> dict[str, QuestionTranslation]:
+    if not ids:
+        return {}
+    rows = await db.execute(
+        select(QuestionTranslation).where(
+            QuestionTranslation.lang == "en", QuestionTranslation.question_id.in_(ids)
+        )
+    )
+    return {t.question_id: t for t in rows.scalars()}
+
+
 @router.get("/meta")
 async def meta(
     user: User = Depends(require_admin), db: AsyncSession = Depends(get_db)
@@ -158,7 +182,8 @@ async def queue(
         .scalars()
         .all()
     )
-    return [_question_full(q) for q in rows]
+    english = await _english_by_id(db, [q.id for q in rows])
+    return [{**_question_full(q), "english": _english(q, english.get(q.id))} for q in rows]
 
 
 @router.get("/questions/{question_id}")
@@ -188,6 +213,7 @@ async def get_question(
         .all()
     )
     out = _question_full(q)
+    out["english"] = _english(q, trs.get("en"))
     out["translations"] = [
         {
             "lang": lang,
@@ -296,7 +322,8 @@ async def review_question(
     )
     await db.commit()
     await db.refresh(q)
-    return _question_full(q)
+    english = await _english_by_id(db, [q.id])
+    return {**_question_full(q), "english": _english(q, english.get(q.id))}
 
 
 @router.get("/stats")
