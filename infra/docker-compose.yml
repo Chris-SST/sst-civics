@@ -131,7 +131,10 @@ services:
   # Caddy proxies to umami:3000 (tracker and collect path on the guide host, dashboard on the
   # stats host).
   umami:
-    image: ghcr.io/umami-software/umami:postgresql-v3.4.1
+    image: ghcr.io/umami-software/umami:3.4.1
+    # Opt-in until the one-time setup in docs/runbooks/analytics.md is done; then start it
+    # with `--profile analytics`.
+    profiles: ["analytics"]
     restart: unless-stopped
     environment:
       DATABASE_URL: postgresql://umami:${UMAMI_DB_PASSWORD}@postgres:5432/umami

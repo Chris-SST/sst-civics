@@ -23,7 +23,7 @@ The dashboard host needs one DNS record (A/AAAA to the server, like the other na
    ```
 4. Add the `stats.` name to the host list in the edge Caddy block (`infra/edge-snippet.Caddyfile`) and reload the edge. Then rebuild the civics web service, because its Caddyfile is baked into the image, and start Umami:
    ```
-   docker compose -f infra/docker-compose.yml --env-file .env up -d --build web umami
+   docker compose -f infra/docker-compose.yml --env-file .env --profile analytics up -d --build web umami
    ```
    The first start creates the tables (about a minute). Check with `docker compose ... ps` that `umami` is healthy.
 5. Open the stats host and log in as `admin` with the default password `umami`. Change the password at once (Settings, Profile).
@@ -55,5 +55,5 @@ and encrypt and copy it like the main dump (or switch to `pg_dumpall`, which inc
 ## Switching analytics off
 
 - Visitors: remove `PUBLIC_UMAMI_WEBSITE_ID` from the guide build environment and redeploy the site. The tracker tag disappears; nothing else changes.
-- Server: `docker compose -f infra/docker-compose.yml --env-file .env stop umami`. The `/stats/` paths then return a 502, which the tracker ignores. To remove the data, `DROP DATABASE umami;` and `DROP USER umami;` in `psql`.
+- Server: `docker compose -f infra/docker-compose.yml --env-file .env --profile analytics stop umami`. The `/stats/` paths then return a 502, which the tracker ignores. To remove the data, `DROP DATABASE umami;` and `DROP USER umami;` in `psql`.
 - Delete clause 6.4 in the privacy notice if analytics are removed for good.
