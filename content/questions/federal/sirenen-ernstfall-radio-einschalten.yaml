@@ -1,0 +1,47 @@
+id: sirenen-ernstfall-radio-einschalten
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Was sollen Sie tun, wenn im Ernstfall die Sirenen ertönen?
+options_de:
+  a: Das Haus sofort verlassen
+  b: Die Feuerwehr anrufen
+  c: Das Radio einschalten
+  d: Das Auto nehmen und wegfahren
+correct: c
+explanation_de: Bei einem Sirenenalarm gibt die Behörde über das Radio Informationen und Anweisungen durch.
+  Man soll also das Radio einschalten und den Anweisungen folgen. Die Notrufnummern sollen frei bleiben.
+sources:
+- url: https://www.babs.admin.ch/de/alarmierung
+  checked: &id001 2026-11-02
+- url: https://www.babs.admin.ch/de/sirenen
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Sirene
+- Alarm
+status: in_review
+difficulty: 2
+covers:
+- zh-309
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Bei einem Sirenenalarm in der Schweiz gilt die Weisung der Behörden, das Radio einzuschalten
+      (z.B. SRF), auf Durchsagen zu achten und die Nachbarn zu informieren, nicht aber das Haus zu verlassen
+      oder die Notrufnummern zu blockieren.
+  source:
+    verdict: supported
+    note: 'Quelle 1 und 2 (BABS) sagen, dass der Allgemeine Alarm bedeutet: Radio hören oder Alertswiss
+      konsultieren und den Anweisungen der Behörden folgen. Quelle 3 bestätigt: «Bei Katastrophen ertönen
+      Alarmsirenen. In diesem Fall müssen alle Personen Radio hören.» Der Hinweis, dass die Notrufnummern
+      frei bleiben sollen, steht in den Quellen nicht, ist aber für die Antwort nicht entscheidend.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

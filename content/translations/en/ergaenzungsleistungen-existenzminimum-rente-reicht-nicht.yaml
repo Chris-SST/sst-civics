@@ -1,0 +1,16 @@
+id: ergaenzungsleistungen-existenzminimum-rente-reicht-nicht
+lang: en
+source_version: 1
+question: Who can receive supplementary benefits in Switzerland?
+options:
+  a: People who have lost their job and receive unemployment benefit
+  b: All people over the age of 50
+  c: People whose old-age and survivors' insurance (OASI; AHV) or invalidity insurance (IV) pension does
+    not cover the minimum cost of living
+  d: All people who receive social assistance
+explanation: Supplementary benefits help people whose old-age and survivors' insurance (OASI) or invalidity
+  insurance (IV) pension and other income are not enough to live on. They are a legal entitlement and
+  not social assistance. They are paid in addition to the pension.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,14 @@
+id: kanton-zuerich-lage-mittelland
+lang: en
+source_version: 1
+question: In which major geographical region of Switzerland is the canton of Zürich located?
+options:
+  a: In the Pre-Alps
+  b: In the Jura
+  c: In the Central Plateau (Mittelland)
+  d: In the Central Alps
+explanation: The canton of Zürich is located in the Swiss Central Plateau, the densely populated area
+  between the Jura and the Alps. Most of the people in Switzerland live there.
+status: draft
+reviewed_by: null
+reviewed_at: null

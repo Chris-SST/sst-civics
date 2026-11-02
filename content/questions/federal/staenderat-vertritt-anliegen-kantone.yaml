@@ -1,0 +1,47 @@
+id: staenderat-vertritt-anliegen-kantone
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.parlament
+question_de: Welche Kammer des Parlaments nimmt hauptsächlich die Anliegen der Kantone wahr?
+options_de:
+  a: Der Bundesrat
+  b: Der Nationalrat
+  c: Der Ständerat
+  d: Das Bundesgericht
+correct: c
+explanation_de: Der Ständerat vertritt vor allem die Kantone. Jeder Kanton schickt Vertreterinnen und
+  Vertreter in diese Kammer. Der Nationalrat vertritt dagegen das Volk.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/bundesversammlung-parlament
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/politisches-system
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Ständerat
+- Nationalrat
+- Kanton
+status: in_review
+difficulty: 1
+covers:
+- zh-044
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Ständerat ist die Kammer der Kantone, in der jeder Kanton (mit je zwei Sitzen, Halbkantone
+      mit einem) vertreten ist und deren Anliegen er hauptsächlich wahrnimmt, während der Nationalrat
+      das Volk vertritt.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt ausdrücklich, dass der Ständerat die Kantone vertritt und der Nationalrat die
+      Bevölkerung. Quelle 2 und Quelle 3 bestätigen dies. Die Aussage, jeder Kanton sei im Ständerat vertreten,
+      belegt Quelle 1 ebenfalls (zwei Sitze pro Kanton, ein Sitz pro Halbkanton).
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,48 @@
+id: familien-steuerabzuege-entlastung
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Wie werden Familien bei den Steuern entlastet?
+options_de:
+  a: Familien zahlen keine Steuern.
+  b: Familien können bei den Steuern Abzüge geltend machen.
+  c: Familien müssen keine Steuererklärung ausfüllen.
+  d: Familien zahlen nur die Mehrwertsteuer.
+correct: b
+explanation_de: Familien können zum Beispiel Abzüge für Kinder oder für die Kinderbetreuung geltend machen.
+  Dadurch sinkt das steuerbare Einkommen und damit die Steuer.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184/20260902/de/html/fedlex-data-admin-ch-eli-cc-1991-1184_1184_1184-20260902-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen/steuerwissen-natuerliche-personen.html
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Steuerabzug
+- Familie
+- Steuererklärung
+status: in_review
+difficulty: 2
+covers:
+- zh-147
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Familien werden steuerlich entlastet, indem sie bei den Steuern Abzüge wie den Kinderabzug
+      oder den Abzug für Kinderbetreuungskosten geltend machen können, während die anderen Aussagen falsch
+      sind.
+  source:
+    verdict: supported
+    note: Quelle 1 (DBG) nennt Abzüge für Kinder (6800 Franken pro Kind) und den Zweiverdienerabzug für
+      Ehegatten, Quelle 2 (Kanton Zürich) nennt den Abzug für fremdbetreute Kinder und den Kinderabzug.
+      Damit können Familien Abzüge geltend machen; die Antworten a, c und d widersprechen den Quellen,
+      denn alle Personen ab 18 müssen eine Steuererklärung ausfüllen (Quelle 3).
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

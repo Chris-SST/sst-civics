@@ -1,0 +1,43 @@
+id: armee-zustaendigkeit-bund
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Welche staatliche Ebene ist für die Armee zuständig?
+options_de:
+  a: Die Kantone
+  b: Der Bund
+  c: Die Bezirke
+  d: Die Gemeinden
+correct: b
+explanation_de: Das Militärwesen ist Sache des Bundes. Er regelt die Armee und ihre Aufgaben in der Bundesverfassung
+  und in Bundesgesetzen. Die Kantone wirken beim Vollzug mit, zum Beispiel bei der Rekrutierung.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Bund
+- Armee
+- Zuständigkeit
+status: in_review
+difficulty: 1
+covers:
+- zh-061
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Artikel 58 der Bundesverfassung ist das Militärwesen grundsätzlich Sache des Bundes,
+      der die Schweizer Armee führt und gesetzlich regelt.
+  source:
+    verdict: supported
+    note: 'Die Bundesverfassung sagt: «Die Militärgesetzgebung sowie Organisation, Ausbildung und Ausrüstung
+      der Armee sind Sache des Bundes» und «Der Einsatz der Armee ist Sache des Bundes». Dass die Kantone
+      beim Vollzug mitwirken, etwa bei der Rekrutierung, steht im Text nicht ausdrücklich, widerspricht
+      der Antwort aber nicht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

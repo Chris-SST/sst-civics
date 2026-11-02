@@ -1,0 +1,45 @@
+id: rechtsstaat-staat-an-recht-gebunden
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.staatsprinzipien
+question_de: Was gilt in einem Rechtsstaat wie der Schweiz für die Behörden und die Regierung?
+options_de:
+  a: Sie dürfen im Notfall ohne gesetzliche Grundlage handeln.
+  b: Sie sind selbst an das geltende Recht gebunden.
+  c: Sie stehen über dem geltenden Recht.
+  d: Sie sind nur an Entscheide der Medien gebunden.
+correct: b
+explanation_de: 'Die Bundesverfassung sagt: Grundlage und Schranke staatlichen Handelns ist das Recht.
+  Das gilt auch für Behörden und Regierung. So wird Willkür verhindert.'
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Rechtsstaat
+- Bundesverfassung
+- Behörde
+status: in_review
+difficulty: 2
+covers:
+- zh-075
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: 'In einem Rechtsstaat wie der Schweiz ist alles staatliche Handeln an das Recht gebunden
+      (Art. 5 BV: Grundlage und Schranke staatlichen Handelns ist das Recht), also sind auch Behörden
+      und Regierung selbst an das geltende Recht gebunden.'
+  source:
+    verdict: supported
+    note: 'Quelle 1 (BV Art. 5 Abs. 1) sagt: «Grundlage und Schranke staatlichen Handelns ist das Recht».
+      Quelle 2 ergänzt, dass sich in der Schweiz als Rechtsstaat auch Bund, Kantone und Gemeinden immer
+      an die Gesetze halten müssen.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

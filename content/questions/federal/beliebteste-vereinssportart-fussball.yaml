@@ -1,0 +1,48 @@
+id: beliebteste-vereinssportart-fussball
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Welche Sportart wird in der Schweiz am meisten in Vereinen betrieben?
+options_de:
+  a: Turnen
+  b: Schwimmen
+  c: Skifahren
+  d: Fussball
+correct: d
+explanation_de: Fussball ist die Sportart mit den meisten Vereinsmitgliedern in der Schweiz. Viele Kinder
+  und Erwachsene spielen in einem lokalen Fussballclub. Daneben sind auch Turnen, Skifahren und andere
+  Sportarten verbreitet.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/nationalsportarten
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sport-und-freizeit
+  checked: *id001
+glossary:
+- Verein
+- Fussball
+status: in_review
+difficulty: 2
+covers:
+- zh-338
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Fussball hat mit dem Schweizerischen Fussballverband die meisten Vereinsmitglieder und
+      lizenzierten Spielerinnen und Spieler, wobei der Schweizer Turnverband als Gesamtverband ebenfalls
+      sehr gross ist, bei einer einzelnen Sportart aber Fussball vorne liegt.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den Schweizerischen Fussballverband mit rund 300 000 Mitgliedern den mitgliederstärksten
+      Sportverband der Schweiz. Quelle 3 nennt Fussball die beliebteste Sportart und führt über 1300 Vereine
+      und über 270 000 lizenzierte Spielerinnen und Spieler auf. Das stützt die Antwort Fussball, auch
+      wenn kein Text ausdrücklich sagt, dass Fussball am meisten in Vereinen betrieben wird.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,46 @@
+id: grundversicherung-pflicht-einwohner
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.gesundheit
+question_de: Für wen gilt in der Schweiz die obligatorische Grundversicherung für medizinische Behandlungen?
+options_de:
+  a: Nur für Personen mit Schweizer Bürgerrecht
+  b: Nur für Erwerbstätige mit einem Lohn
+  c: Nur für Personen mit niedrigem Einkommen
+  d: Für alle Einwohnerinnen und Einwohner der Schweiz
+correct: d
+explanation_de: Die obligatorische Krankenpflegeversicherung gilt für alle Personen, die in der Schweiz
+  wohnen. Das Bürgerrecht, die Erwerbstätigkeit und das Einkommen spielen dafür keine Rolle.
+sources:
+- url: https://www.bag.admin.ch/de/krankenversicherung-das-wichtigste-in-kuerze
+  checked: &id001 2026-11-02
+- url: https://www.bag.admin.ch/de/krankenversicherung-versicherungspflicht
+  checked: 2026-11-02
+glossary:
+- Grundversicherung
+- Krankenversicherung
+- Versicherungspflicht
+status: in_review
+difficulty: 1
+covers:
+- zh-128
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die obligatorische Krankenpflegeversicherung gilt nach dem Krankenversicherungsgesetz (KVG)
+      für alle Personen mit Wohnsitz in der Schweiz, unabhängig von Nationalität, Erwerbstätigkeit oder
+      Einkommen.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt, die Krankenversicherung sei in der Schweiz obligatorisch, die Versicherer müssten
+      jede versicherungspflichtige Person aufnehmen, und die Prämien hingen nicht vom Einkommen ab. Der
+      Wohnsitz in der Schweiz als Kriterium wird nur indirekt gestützt (Quelle 2: Pflicht endet beim Wegzug
+      ins Ausland), widerspricht der Antwort d aber nicht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

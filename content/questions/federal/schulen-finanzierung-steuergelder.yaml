@@ -1,0 +1,47 @@
+id: schulen-finanzierung-steuergelder
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Woraus werden die öffentlichen Schulen in der Schweiz hauptsächlich bezahlt?
+options_de:
+  a: Aus den Schulgebühren, welche die Eltern jeden Monat bezahlen
+  b: Aus den Steuergeldern von Kanton und Gemeinden
+  c: Aus den Einnahmen der Post und der SBB
+  d: Aus den Beiträgen der Krankenkassen
+correct: b
+explanation_de: Die obligatorische öffentliche Schule ist nach der Bundesverfassung unentgeltlich. Sie
+  wird aus Steuergeldern finanziert, vor allem von Kantonen und Gemeinden.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen.html
+  checked: &id001 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: *id001
+glossary:
+- Steuern
+- Volksschule
+- Grundschulunterricht
+status: draft
+difficulty: 1
+covers:
+- zh-148
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die öffentlichen Schulen in der Schweiz sind grundsätzlich unentgeltlich und werden hauptsächlich
+      aus den Steuergeldern von Kantonen und Gemeinden finanziert.
+  source:
+    verdict: unclear
+    note: Quelle 3 (Bundesverfassung) sagt, der Grundschulunterricht sei an öffentlichen Schulen unentgeltlich,
+      und Quelle 1 nennt die Kantone als verantwortlich und die Schule im Kanton Zürich als gratis. Keine
+      Quelle sagt aber ausdrücklich, dass die Schulen aus Steuergeldern von Kanton und Gemeinden bezahlt
+      werden. Quelle 2 behandelt nur allgemein Steuern.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

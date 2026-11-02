@@ -1,0 +1,43 @@
+id: wohnortswechsel-anmeldung-einwohnerkontrolle
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Wo müssen Sie sich anmelden, wenn Sie in eine andere Zürcher Gemeinde umziehen?
+options_de:
+  a: Beim Bezirksgericht
+  b: Beim Bundesamt für Statistik
+  c: Bei der Kantonspolizei
+  d: Bei der Einwohnerkontrolle der neuen Wohngemeinde
+correct: d
+explanation_de: Die Anmeldung erfolgt bei der Einwohnerkontrolle, auch Einwohneramt genannt. Sie führt
+  das Register der Einwohnerinnen und Einwohner der Gemeinde.
+sources:
+- url: https://www.zh.ch/de/politik-staat/gemeinden/einwohnerwesen.html
+  checked: &id001 2026-11-02
+glossary:
+- Einwohnerkontrolle
+- Wohnortswechsel
+status: in_review
+difficulty: 1
+covers:
+- zh-205
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Wer innerhalb des Kantons Zürich umzieht, muss sich bei der Einwohnerkontrolle (Einwohneramt)
+      der neuen Wohngemeinde anmelden, nicht bei Gericht, Bundesamt oder Kantonspolizei.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass die Gemeinden die Einwohnerregister führen und dass sich Einwohnerinnen
+      und Einwohner bei einem Umzug persönlich am Schalter der zuständigen Einwohnerdienste oder über
+      eUmzugCH an- und abmelden. Das stützt Antwort d) und die Erklärung. Der Begriff «Einwohnerkontrolle»
+      steht im Text nur im Zusammenhang mit der zugewiesenen Gemeinde, aber die Aussage ist eindeutig
+      genug.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

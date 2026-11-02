@@ -1,0 +1,15 @@
+id: sonntagszeitung-erscheint-woechentlich
+lang: en
+source_version: 1
+question: How often does a Sunday newspaper appear in Switzerland?
+options:
+  a: Once a week
+  b: Twice a week
+  c: Once a month
+  d: Every day
+explanation: A Sunday newspaper appears only once a week, on Sunday. Daily newspapers, by contrast, appear
+  on most days of the week. The press is part of the country's culture and of the formation of public
+  opinion.
+status: draft
+reviewed_by: null
+reviewed_at: null

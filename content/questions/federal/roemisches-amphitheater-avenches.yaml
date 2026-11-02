@@ -1,0 +1,45 @@
+id: roemisches-amphitheater-avenches
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gruendung
+question_de: In welcher Schweizer Stadt bauten die Römer ein Amphitheater, dessen Reste noch heute zu
+  sehen sind?
+options_de:
+  a: Chur
+  b: Thun
+  c: Sitten
+  d: Avenches
+correct: d
+explanation_de: Avenches hiess in römischer Zeit Aventicum und war eine wichtige Stadt. Das Amphitheater
+  dort ist ein bekanntes Zeugnis der Römerzeit in der Schweiz. Die anderen Städte sind für dieses Bauwerk
+  nicht bekannt.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: 2026-11-02
+glossary:
+- Amphitheater
+- Römer
+status: in_review
+difficulty: 2
+covers:
+- zh-227
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In Avenches (römisch Aventicum, die Hauptstadt der Helvetier) steht das römische Amphitheater,
+      dessen Reste noch heute zu sehen sind und in dem heute Veranstaltungen stattfinden.
+  source:
+    verdict: supported
+    note: Quelle 1 (Zürcher Broschüre, Abschnitt «Die Helvetier») sagt ausdrücklich, dass es in Avenches
+      noch ein Amphitheater aus römischer Zeit gibt. Quelle 2 behandelt nur die römische Herrschaft allgemein
+      und nennt weder Avenches noch ein Amphitheater.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

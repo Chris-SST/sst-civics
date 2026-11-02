@@ -1,0 +1,45 @@
+id: helvetische-republik-zentralstaat-1798
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.bundesstaat
+question_de: Was geschah 1798 unter dem Einfluss von Napoleon Bonaparte mit der Schweiz?
+options_de:
+  a: Sie wurde ein Teil des Deutschen Reiches.
+  b: Sie wurde eine Monarchie mit einem eigenen König.
+  c: Sie wurde dauerhaft in zwei Staaten geteilt.
+  d: Sie wurde vorübergehend ein Zentralstaat, die Helvetische Republik.
+correct: d
+explanation_de: 1798 entstand nach dem Einmarsch französischer Truppen die Helvetische Republik. Sie war
+  ein zentral regierter Einheitsstaat und löste die alte Eidgenossenschaft vorübergehend ab. Die Kantone
+  hatten kaum eigene Rechte.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Helvetische Republik
+- Zentralstaat
+- Eidgenossenschaft
+status: in_review
+difficulty: 2
+covers:
+- zh-207
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: 1798 wurde nach dem Einmarsch französischer Truppen die Alte Eidgenossenschaft durch die
+      Helvetische Republik ersetzt, einen zentralistisch organisierten Einheitsstaat, der bis 1803 bestand.
+  source:
+    verdict: supported
+    note: Im Abschnitt «Unter Französischer Herrschaft» steht, dass 1798 französische Truppen einmarschierten,
+      die Alte Eidgenossenschaft zusammenbrach und an ihre Stelle zunächst der zentralistische Einheitsstaat
+      der Helvetischen Republik trat, ab 1803 dann ein föderaler Staat. Das stützt Antwort d und die Erklärung;
+      die Aussage zu den kaum vorhandenen Kantonsrechten wird nicht ausdrücklich genannt, ergibt sich
+      aber aus «zentralistisch».
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

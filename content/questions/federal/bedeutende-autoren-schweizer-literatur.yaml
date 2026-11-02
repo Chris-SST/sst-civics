@@ -1,0 +1,43 @@
+id: bedeutende-autoren-schweizer-literatur
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Welche zwei Personen gehören zu den bedeutenden Autoren der Schweizer Literatur?
+options_de:
+  a: Hermann Hesse und Franz Kafka
+  b: Thomas Mann und Bertolt Brecht
+  c: Johann Wolfgang von Goethe und Friedrich Schiller
+  d: Max Frisch und Friedrich Dürrenmatt
+correct: d
+explanation_de: Max Frisch und Friedrich Dürrenmatt gelten als wichtige Schweizer Schriftsteller des 20.
+  Jahrhunderts. Beide sind auch im Ausland bekannt. Die anderen Autoren stammen nicht aus der Schweiz
+  oder werden nicht als Schweizer Autoren bezeichnet.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/kulturschaffen-in-der-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Literatur
+- Schriftsteller
+status: in_review
+difficulty: 2
+covers:
+- zh-328
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Max Frisch und Friedrich Dürrenmatt sind die beiden bedeutendsten Schweizer Autoren der
+      Nachkriegszeit, während die übrigen genannten Autoren Deutsche, Österreicher bzw. Tschechen (Hesse
+      war zwar später Schweizer Bürger, Kafka aber nicht) sind.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Max Frisch und Friedrich Dürrenmatt ausdrücklich unter den bedeutendsten Schweizer
+      Literaturschaffenden. Die Autoren der anderen Antworten werden nicht als Schweizer Autoren aufgeführt,
+      doch das ist nur indirekt belegt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

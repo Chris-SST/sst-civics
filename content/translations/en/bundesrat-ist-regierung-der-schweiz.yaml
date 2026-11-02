@@ -1,0 +1,15 @@
+id: bundesrat-ist-regierung-der-schweiz
+lang: en
+source_version: 1
+question: What role does the Federal Council (Bundesrat) play in Switzerland?
+options:
+  a: It is the government of Switzerland.
+  b: It is the highest court in the country.
+  c: It is the parliament of the Confederation.
+  d: It is the representation of the cantons.
+explanation: The Federal Council is the highest governing and executive authority of the Confederation,
+  that is, the government. It has seven members. The parliament and the Federal Supreme Court (Bundesgericht)
+  are other branches of power.
+status: draft
+reviewed_by: null
+reviewed_at: null

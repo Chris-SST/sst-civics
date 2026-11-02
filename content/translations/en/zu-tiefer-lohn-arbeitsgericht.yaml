@@ -1,0 +1,14 @@
+id: zu-tiefer-lohn-arbeitsgericht
+lang: en
+source_version: 1
+question: An employee is being paid too little without justification. Which body can she turn to?
+options:
+  a: The Regional Employment Centre (RAV)
+  b: The Federal Statistical Office
+  c: The labour court
+  d: The communal assembly (Gemeindeversammlung)
+explanation: In disputes arising from an employment relationship, for example because of too low a wage,
+  the labour court is responsible. The RAV helps with looking for a job and not with wage disputes.
+status: draft
+reviewed_by: null
+reviewed_at: null

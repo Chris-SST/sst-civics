@@ -1,0 +1,47 @@
+id: bund-spitze-dreistufiger-staatsaufbau
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Welche Staatsebene steht im dreistufigen Staatsaufbau der Schweiz an der Spitze?
+options_de:
+  a: Der Bund
+  b: Der Kanton Bern
+  c: Die Bundesversammlung allein
+  d: Der Gemeindeverband
+correct: a
+explanation_de: An der Spitze des Staatsaufbaus steht der Bund. Darunter folgen die Kantone und danach
+  die Gemeinden. Die Bundesverfassung regelt, welche Aufgaben beim Bund liegen und welche bei den Kantonen.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/foederalismus
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/politisches-system
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Bund
+- Staatsaufbau
+- Bundesverfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-059
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im dreistufigen Staatsaufbau der Schweiz (Bund, Kantone, Gemeinden) steht der Bund an der
+      obersten Stelle, während Kanton Bern, die Bundesversammlung allein und ein Gemeindeverband keine
+      Staatsebene an der Spitze darstellen.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Bund, Kantone und Gemeinden als die drei Ebenen und bezeichnet den Bund ausdrücklich
+      als «die höchste Ebene». Quelle 2 nennt dieselbe Reihenfolge und spricht von den «übergeordneten
+      Ebenen, Kantone und Bund». Quelle 3 nennt die drei Ebenen nur, ohne die Spitze ausdrücklich zu benennen.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

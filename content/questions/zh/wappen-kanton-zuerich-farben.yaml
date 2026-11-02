@@ -1,0 +1,44 @@
+id: wappen-kanton-zuerich-farben
+version: 1
+scope: zh
+canton: zh
+topic: kanton.kultur.zuerich
+question_de: Wie sieht das Wappen des Kantons Zürich aus?
+options_de:
+  a: Schräg geteilt, oben links weiss und unten rechts blau
+  b: Senkrecht geteilt, links weiss und rechts blau
+  c: Waagrecht geteilt, oben blau und unten weiss
+  d: Schräg geteilt, oben links blau und unten rechts weiss
+correct: a
+explanation_de: Das Zürcher Wappen ist schräg geteilt. Oben links ist es weiss, unten rechts blau. Die
+  Farben Blau und Weiss findet man auch auf den Zürcher Fahnen.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/politik-staat/kanton/kantonale-verwaltung.html
+  checked: &id001 2026-11-02
+glossary:
+- Wappen
+- Kanton Zürich
+status: needs_fix
+difficulty: 2
+covers:
+- zh-349
+checks:
+  independent_answer:
+    option: d
+    agrees: false
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Zürcher Wappen ist schräg (von oben links nach unten rechts) geteilt, wobei das obere
+      linke Feld (heraldisch rechts) blau und das untere rechte Feld weiss ist.
+  source:
+    verdict: supported
+    note: Quelle 2 nennt das Zürcher Wappen «von Silber und Blau schräg geteilt». Silber steht heraldisch
+      für Weiss, und die Reihenfolge Silber–Blau entspricht «oben links weiss, unten rechts blau» (Antwort
+      a). Die Orientierung «oben links» steht nicht ausdrücklich im Text. Die Aussage zu den Farben auf
+      den Fahnen stützt der Hinweis auf die Banner ab 1315 ebenfalls. Quelle 1 sagt dazu nichts.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

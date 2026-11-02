@@ -1,0 +1,47 @@
+id: helvetier-roemische-zeit-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gruendung
+question_de: Welches Volk siedelte zur Zeit der Römer im Gebiet der heutigen Schweiz?
+options_de:
+  a: Die Hunnen
+  b: Die Wikinger
+  c: Die Goten
+  d: Die Helvetier
+correct: d
+explanation_de: Die Helvetier waren ein keltischer Stamm im Mittelland. Die Römer unterwarfen sie und
+  das Gebiet wurde Teil des Römischen Reichs. Der lateinische Name Helvetia für die Schweiz erinnert noch
+  an sie.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/kaese
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: 2026-11-02
+glossary:
+- Helvetier
+status: in_review
+difficulty: 1
+covers:
+- zh-225
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Helvetier, ein keltischer Stamm, siedelten zur Zeit der Römer im Schweizer Mittelland,
+      während Hunnen, Wikinger und Goten nicht dort ansässig waren.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt, die Helvetier hätten damals (zur Zeit des Plinius, 1. Jh.) das Gebiet der heutigen
+      Schweiz besiedelt. Quelle 2 nennt: «Um 58 v. Chr. hat die Schweiz zum alten Rom gehört. Damals haben
+      die Helvetier in der Schweiz gelebt» und erwähnt den Namen Helvetia (CH). Nicht belegt sind nur
+      «keltisch», «Mittelland» und die Unterwerfung durch die Römer, die Kernaussage der Antwort stützen
+      die Quellen aber.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

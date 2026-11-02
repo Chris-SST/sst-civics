@@ -1,0 +1,45 @@
+id: stimmrecht-bund-ab-18-geburtstag
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: Ab welchem Alter dürfen Schweizerinnen und Schweizer auf eidgenössischer Ebene abstimmen
+  und wählen?
+options_de:
+  a: Ab dem 20. Geburtstag
+  b: Ab dem 21. Geburtstag
+  c: Ab dem 16. Geburtstag
+  d: Ab dem 18. Geburtstag
+correct: d
+explanation_de: Das Stimm- und Wahlrecht auf Bundesebene beginnt mit der Mündigkeit, also mit dem 18.
+  Geburtstag. Das Alter gilt für Wahlen und Abstimmungen des Bundes gleichermassen.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksabstimmungen.html
+  checked: 2026-11-02
+glossary:
+- Stimmrecht
+- Wahlrecht
+- Mündigkeit
+status: in_review
+difficulty: 1
+covers:
+- zh-028
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Stimm- und Wahlrecht auf eidgenössischer Ebene gilt in der Schweiz ab dem vollendeten
+      18. Lebensjahr, also ab dem 18. Geburtstag (Art. 136 Bundesverfassung).
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundesverfassung) sagt: Die politischen Rechte in Bundessachen stehen allen Schweizerinnen
+      und Schweizern zu, die das 18. Altersjahr zurückgelegt haben; dazu gehören die Teilnahme an den
+      Nationalratswahlen und an den Abstimmungen des Bundes. Quelle 2 äussert sich nicht zum Alter.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,15 @@
+id: sirenen-ernstfall-radio-einschalten
+lang: en
+source_version: 1
+question: What should you do if the sirens sound in an emergency?
+options:
+  a: Leave the house immediately
+  b: Call the fire brigade
+  c: Switch on the radio
+  d: Get in the car and drive away
+explanation: When the sirens sound an alarm, the authorities broadcast information and instructions on
+  the radio. You should therefore switch on the radio and follow the instructions. The emergency telephone
+  lines should be kept free.
+status: draft
+reviewed_by: null
+reviewed_at: null

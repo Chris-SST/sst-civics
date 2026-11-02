@@ -1,0 +1,44 @@
+id: grundrecht-meinungsfreiheit-informationsfreiheit
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Welches Grundrecht schützt die Freiheit, sich eine eigene Meinung zu bilden und sich aus
+  allgemein zugänglichen Quellen zu informieren?
+options_de:
+  a: Die Niederlassungsfreiheit
+  b: Die Meinungs- und Informationsfreiheit
+  c: Die Wirtschaftsfreiheit
+  d: Die Versammlungsfreiheit
+correct: b
+explanation_de: Die Bundesverfassung schützt die Meinungs- und Informationsfreiheit in Artikel 16. Jede
+  Person darf Informationen frei aus allgemein zugänglichen Quellen beschaffen. Das ist eine wichtige
+  Grundlage der Demokratie.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Grundrecht
+- Meinungsfreiheit
+- Informationsfreiheit
+status: in_review
+difficulty: 1
+covers:
+- zh-014
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Meinungs- und Informationsfreiheit nach Art. 16 der Bundesverfassung schützt das Recht,
+      sich eine Meinung frei zu bilden und Informationen aus allgemein zugänglichen Quellen zu beschaffen.
+  source:
+    verdict: supported
+    note: Art. 16 BV (Meinungs- und Informationsfreiheit) sagt in Abs. 2, dass jede Person ihre Meinung
+      frei bilden darf, und in Abs. 3, dass sie Informationen aus allgemein zugänglichen Quellen beschaffen
+      darf. Das deckt Antwort b) und die Erklärung ab.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,15 @@
+id: krankenkasse-freie-wahl-versicherte
+lang: en
+source_version: 1
+question: Who decides in Switzerland with which health insurer (Krankenkasse) a person takes out basic
+  insurance?
+options:
+  a: The municipality of residence determines the health insurer
+  b: The insured person chooses their health insurer themselves
+  c: The employer determines the health insurer for all employees
+  d: The canton of residence assigns a health insurer to each person
+explanation: In Switzerland, there is free choice of health insurer. Insured persons can choose from among
+  the authorised health insurers and can switch insurer under certain conditions.
+status: draft
+reviewed_by: null
+reviewed_at: null

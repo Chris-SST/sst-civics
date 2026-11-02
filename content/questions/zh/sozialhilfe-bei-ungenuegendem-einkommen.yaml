@@ -1,0 +1,45 @@
+id: sozialhilfe-bei-ungenuegendem-einkommen
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Was bietet die Gemeinde an, wenn das Einkommen und das Vermögen einer Person zum Leben nicht
+  ausreichen?
+options_de:
+  a: Sozialhilfe
+  b: Eine Baubewilligung
+  c: Eine Einbürgerung
+  d: Ein Stipendium der Volksschule
+correct: a
+explanation_de: Wer seinen Lebensunterhalt nicht aus eigenen Mitteln bezahlen kann, hat Anspruch auf Unterstützung
+  durch die Sozialhilfe. Sie wird von der Gemeinde, in der die Person wohnt, geleistet. Sie ist das letzte
+  Netz der sozialen Sicherheit.
+sources:
+- url: https://www.zh.ch/de/soziales/sozialhilfe.html
+  checked: &id001 2026-11-02
+glossary:
+- Sozialhilfe
+- Gemeinde
+status: in_review
+difficulty: 1
+covers:
+- zh-200
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Wenn Einkommen und Vermögen zum Leben nicht ausreichen, unterstützt die Gemeinde die betroffene
+      Person mit Sozialhilfe, während Baubewilligung, Einbürgerung und ein Stipendium der Volksschule
+      nicht der Existenzsicherung dienen.
+  source:
+    verdict: supported
+    note: Die Seite nennt Sozialhilfe als Leistung für Menschen in einer Notlage, die sie nicht aus eigener
+      Kraft bewältigen können. Sie nennt auch die Gemeinden als zuständig für den Vollzug und verweist
+      Betroffene an die Sozialen Dienste der Gemeinde. Die Formulierung «letztes Netz der sozialen Sicherheit»
+      steht nicht wörtlich da, ist aber für die Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,44 @@
+id: jass-klassisches-schweizer-kartenspiel
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Welches Kartenspiel gilt in der Schweiz als das klassische heimische Kartenspiel?
+options_de:
+  a: Bridge
+  b: Jass
+  c: Poker
+  d: Rommé
+correct: b
+explanation_de: Jass gilt als das typische Schweizer Kartenspiel. Es wird meist zu viert in zwei Teams
+  gespielt, oft mit französischen oder deutschschweizer Karten. Man spielt es in vielen Familien und Beizen.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/traditionen
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sport-und-freizeit
+  checked: 2026-11-02
+glossary:
+- Jass
+status: in_review
+difficulty: 1
+covers:
+- zh-302
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Jass gilt in der Schweiz als das klassische und weit verbreitete heimische Kartenspiel,
+      während Bridge, Poker und Rommé nicht als typisch schweizerisch gelten.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Jassen «das Schweizer Kartenspiel», gespielt mit französischen oder deutschen
+      Karten. Quelle 2 nennt den Jass «das traditionelle Kartenspiel der Schweiz». Die Angaben zu vier
+      Spielern, zwei Teams und zu Familien und Beizen stehen nicht in den Quellen, sind aber Nebendetails.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

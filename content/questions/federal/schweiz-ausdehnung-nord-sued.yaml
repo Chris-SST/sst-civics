@@ -1,0 +1,38 @@
+id: schweiz-ausdehnung-nord-sued
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Wie weit ist es in der Schweiz ungefähr vom nördlichsten zum südlichsten Punkt?
+options_de:
+  a: rund 650 Kilometer
+  b: rund 220 Kilometer
+  c: rund 120 Kilometer
+  d: rund 450 Kilometer
+correct: b
+explanation_de: Die Schweiz misst von Norden nach Süden rund 220 Kilometer. Sie ist also ein kleines Land.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geografie
+  checked: &id001 2026-11-02
+glossary:
+- Ausdehnung
+status: in_review
+difficulty: 2
+covers:
+- zh-264
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz misst in der Nord-Süd-Ausdehnung rund 220 Kilometer (ca. 348 km in Ost-West-Richtung),
+      daher stimmt Antwort b.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (About Switzerland, EDA) nennt ausdrücklich: «Die Ausdehnung der Schweiz beträgt von
+      Norden nach Süden 220 km und von Osten nach Westen 348 km.» Das stützt Antwort b) und die Erklärung.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

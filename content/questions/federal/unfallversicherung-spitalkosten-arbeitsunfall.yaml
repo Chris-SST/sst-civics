@@ -1,0 +1,48 @@
+id: unfallversicherung-spitalkosten-arbeitsunfall
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Eine Arbeitnehmerin hat bei der Arbeit einen schweren Unfall und muss ins Spital. Welche
+  Versicherung kommt für die Spitalkosten auf?
+options_de:
+  a: Die Arbeitslosenversicherung
+  b: Die Unfallversicherung
+  c: Die Erwerbsersatzordnung
+  d: Die Alters- und Hinterlassenenversicherung
+correct: b
+explanation_de: Die obligatorische Unfallversicherung zahlt bei Berufsunfällen die Heilungskosten, also
+  zum Beispiel die Spitalkosten. Arbeitnehmende sind über den Arbeitgeber dagegen versichert. Die anderen
+  genannten Versicherungen decken andere Risiken ab.
+sources:
+- url: https://www.bsv.admin.ch/de/krankenversicherung-unfallversicherung
+  checked: &id001 2026-11-02
+- url: https://www.bag.admin.ch/de/unfallversicherung
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Unfallversicherung
+- Arbeitsunfall
+status: in_review
+difficulty: 2
+covers:
+- zh-154
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Für Berufsunfälle von Arbeitnehmenden kommt die obligatorische Unfallversicherung (UVG)
+      für die Heilbehandlungskosten und damit auch für die Spitalkosten auf.
+  source:
+    verdict: supported
+    note: Quelle 2 (BAG) nennt die obligatorische Unfallversicherung für Arbeitnehmende mit Pflegeleistungen
+      und Kostenvergütungen bei Berufsunfällen. Quelle 1 (BSV) bestätigt, dass die Unfallversicherung
+      alle Arbeitnehmenden gegen Berufsunfälle versichert und medizinische Behandlungskosten abdeckt.
+      Spitalkosten werden nicht wörtlich genannt, die Aussage ist aber eindeutig genug.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

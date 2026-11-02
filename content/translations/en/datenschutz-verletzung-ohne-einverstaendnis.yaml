@@ -1,0 +1,15 @@
+id: datenschutz-verletzung-ohne-einverstaendnis
+lang: en
+source_version: 1
+question: In which case is data protection violated?
+options:
+  a: Private details about a person are disclosed without their consent and without a legal basis.
+  b: An authority stores data as required by law.
+  c: A person voluntarily provides their own address.
+  d: A person expressly permits the publication of their photo.
+explanation: The protection of privacy includes protection against the misuse of personal data. Private
+  information may only be disclosed with the person's consent or on the basis of a law. If neither is
+  present, there is a violation.
+status: draft
+reviewed_by: null
+reviewed_at: null

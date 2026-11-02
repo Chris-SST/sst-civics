@@ -1,0 +1,16 @@
+id: gemeindeversammlung-beschluss-finanzvoranschlag
+lang: en
+source_version: 1
+question: What do the eligible voters in a Zurich commune (Gemeinde) with a communal assembly (Gemeindeversammlung)
+  decide on each year at the assembly?
+options:
+  a: On the level of Confederation taxes
+  b: On criminal law in the canton
+  c: On the commune's budget estimate
+  d: On the curricula of the compulsory public school
+explanation: In communes with a communal assembly, the eligible voters decide on important matters, including
+  the budget estimate (budget) and the tax rate. Criminal law and Confederation taxes are not matters
+  for the commune.
+status: draft
+reviewed_by: null
+reviewed_at: null

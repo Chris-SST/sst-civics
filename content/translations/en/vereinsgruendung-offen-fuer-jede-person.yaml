@@ -1,0 +1,14 @@
+id: vereinsgruendung-offen-fuer-jede-person
+lang: en
+source_version: 1
+question: Who may found an association in Switzerland?
+options:
+  a: Only persons who are resident in the commune (Gemeinde)
+  b: Any person
+  c: Only Swiss nationals
+  d: Only persons with a settlement permit (C permit) (Niederlassungsbewilligung)
+explanation: In Switzerland, the founding of an association is open to any person. Freedom of association
+  is guaranteed in the Federal Constitution. Nationality or residence status play no role in this.
+status: draft
+reviewed_by: null
+reviewed_at: null

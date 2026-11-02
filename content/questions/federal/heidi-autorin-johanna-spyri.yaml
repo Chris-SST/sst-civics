@@ -1,0 +1,41 @@
+id: heidi-autorin-johanna-spyri
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Wer hat die Geschichten über das Mädchen Heidi geschrieben?
+options_de:
+  a: Sophie Taeuber-Arp
+  b: Johanna Spyri
+  c: Niki de Saint Phalle
+  d: Pipilotti Rist
+correct: b
+explanation_de: Die Figur Heidi stammt von der Schweizer Autorin Johanna Spyri. Die Bücher über Heidi
+  sind weltweit bekannt. Die anderen genannten Frauen sind bildende Künstlerinnen.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/kulturschaffen-in-der-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Heidi
+- Literatur
+status: in_review
+difficulty: 1
+covers:
+- zh-327
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Heidi-Geschichten wurden von der Schweizer Schriftstellerin Johanna Spyri geschrieben,
+      während die anderen genannten Frauen Künstlerinnen sind.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt ausdrücklich, das Kinderbuch «Heidi» sei 1880 von Johanna Spyri geschrieben worden.
+      Niki de Saint Phalle wird dort als Bildhauerin genannt, was die Erklärung zu den anderen Künstlerinnen
+      teilweise stützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

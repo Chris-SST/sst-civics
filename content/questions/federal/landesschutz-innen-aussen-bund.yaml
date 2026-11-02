@@ -1,0 +1,48 @@
+id: landesschutz-innen-aussen-bund
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Welche Aufgabe gehört zu den zentralen Aufgaben des Bundes?
+options_de:
+  a: Die Organisation der örtlichen Schulen
+  b: Der Schutz des Landes nach innen und nach aussen
+  c: Der Betrieb der Gemeindestrassen
+  d: Die Verwaltung der Einwohnerregister der Gemeinden
+correct: b
+explanation_de: Der Bund sorgt für die Sicherheit des Landes nach aussen, zum Beispiel mit der Armee,
+  und für die innere Sicherheit. Die Schulen, die Gemeindestrassen und die Einwohnerregister sind hingegen
+  vor allem Sache der Kantone und Gemeinden.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+  checked: 2026-11-02
+glossary:
+- Bund
+- Armee
+- Sicherheit
+status: in_review
+difficulty: 2
+covers:
+- zh-053
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Sicherheit des Landes nach innen und aussen, etwa durch Armee und Aussenpolitik, ist
+      eine zentrale Bundesaufgabe, während Schulen, Gemeindestrassen und Einwohnerregister in die Zuständigkeit
+      von Kantonen und Gemeinden fallen.
+  source:
+    verdict: supported
+    note: Quelle 1 (Bundesverfassung) sagt in Art. 2, dass die Eidgenossenschaft die Unabhängigkeit und
+      die Sicherheit des Landes wahrt. Die Armee und deren Einsatz sind Sache des Bundes, und die Armee
+      unterstützt die zivilen Behörden bei der inneren Sicherheit. Zu Schulen, Gemeindestrassen und Einwohnerregistern
+      äussert sich der Text nicht ausdrücklich. Er hält aber fest, dass die Kantone alle Rechte ausüben,
+      die nicht dem Bund übertragen sind.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

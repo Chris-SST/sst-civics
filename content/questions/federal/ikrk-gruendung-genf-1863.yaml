@@ -1,0 +1,42 @@
+id: ikrk-gruendung-genf-1863
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.bundesstaat
+question_de: Welche bekannte humanitäre Organisation wurde 1863 in Genf gegründet?
+options_de:
+  a: Die Vereinten Nationen (UNO)
+  b: Die Weltgesundheitsorganisation (WHO)
+  c: Das Welternährungsprogramm (WFP)
+  d: Das Internationale Komitee vom Roten Kreuz (IKRK)
+correct: d
+explanation_de: Das IKRK entstand 1863 in Genf, unter anderem auf Anregung von Henry Dunant. Es steht
+  für die humanitäre Tradition der Schweiz. Die anderen Organisationen wurden später gegründet.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/humanitaere-tradition
+  checked: &id001 2026-11-02
+glossary:
+- IKRK
+- Rotes Kreuz
+- humanitäre Tradition
+status: in_review
+difficulty: 1
+covers:
+- zh-234
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Internationale Komitee vom Roten Kreuz (IKRK) wurde 1863 in Genf auf Initiative von
+      Henry Dunant gegründet, während UNO, WHO und WFP erst nach 1945 entstanden.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die Gründung des Roten Kreuzes (heute IKRK) 1863 in Genf unter Henry Dunant und
+      beschreibt sie als Teil der humanitären Tradition der Schweiz. Dass die anderen Organisationen später
+      gegründet wurden, steht nicht im Text, doch das ist für die richtige Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

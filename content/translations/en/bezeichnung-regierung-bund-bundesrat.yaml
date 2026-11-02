@@ -1,0 +1,15 @@
+id: bezeichnung-regierung-bund-bundesrat
+lang: en
+source_version: 1
+question: What is the government of Switzerland at federal level called?
+options:
+  a: Federal Assembly (Bundesversammlung)
+  b: Federal Council (Bundesrat)
+  c: Federal Chancellery (Bundeskanzlei)
+  d: Federal Supreme Court (Bundesgericht)
+explanation: The government of the Confederation is called the Federal Council (Bundesrat). The Federal
+  Assembly (Bundesversammlung) is the parliament, and the Federal Supreme Court (Bundesgericht) is the
+  highest court. The Federal Chancellery (Bundeskanzlei) supports the Federal Council.
+status: draft
+reviewed_by: null
+reviewed_at: null

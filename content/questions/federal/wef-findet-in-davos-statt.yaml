@@ -1,0 +1,42 @@
+id: wef-findet-in-davos-statt
+version: 1
+scope: federal
+canton: null
+topic: bund.international
+question_de: In welchem Schweizer Ort findet das Jahrestreffen des Weltwirtschaftsforums (WEF) regelmässig
+  statt?
+options_de:
+  a: In Davos
+  b: In Luzern
+  c: In Montreux
+  d: In Interlaken
+correct: a
+explanation_de: Das Weltwirtschaftsforum trifft sich regelmässig in Davos im Kanton Graubünden. Dort kommen
+  Fachleute aus Politik und Wirtschaft zusammen. Der Bund unterstützt die Sicherheit des Treffens.
+sources:
+- url: https://www.admin.ch/de/wef-davos
+  checked: &id001 2026-11-02
+glossary:
+- Weltwirtschaftsforum
+- Davos
+status: in_review
+difficulty: 1
+covers:
+- zh-334
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Jahrestreffen des Weltwirtschaftsforums (WEF) findet regelmässig im Januar in Davos
+      im Kanton Graubünden statt.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt das Jahrestreffen des WEF 2026 ausdrücklich «in Davos» und spricht von einer
+      langen Tradition. Sie bestätigt auch die Rolle des Kantons Graubünden und die Beteiligung des Bundes
+      an den Sicherheitskosten sowie die Teilnahme von Personen aus Politik und Wirtschaft.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

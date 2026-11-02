@@ -1,0 +1,46 @@
+id: roemer-badekultur-in-zuerich
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geschichte.zuerich
+question_de: Welche Neuerung brachten die Römer nach Zürich?
+options_de:
+  a: Den Buchdruck
+  b: Die Zünfte
+  c: Die Badekultur
+  d: Die Reformation
+correct: c
+explanation_de: Die Römer führten in Zürich die Badekultur ein, also öffentliche Bäder nach römischem
+  Vorbild. Zünfte, Buchdruck und Reformation gehören erst ins Mittelalter und in die frühe Neuzeit.
+sources:
+- url: https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/archaeologie/stadt/fenster/thermengasse.html
+  checked: &id001 2026-11-02
+- url: https://www.stadt-zuerich.ch/misc/de/mitteilungsarchiv/medienmitteilungen/2009/10/091027b.html
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Badekultur
+- Römer
+status: in_review
+difficulty: 2
+covers:
+- zh-247
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Römer brachten in ihre Siedlung Turicum unter anderem die Badekultur mit Thermen, während
+      Buchdruck, Zünfte und Reformation erst im Mittelalter bzw. in der Neuzeit aufkamen.
+  source:
+    verdict: supported
+    note: 'Quelle 3 (Broschüre, Geschichte der Schweiz) sagt ausdrücklich: «Die Römer haben auch die Badekultur
+      und ihre Sprache in die Schweiz gebracht», mit Bezug auf Turicum/Zürich. Die Quellen 1 und 2 belegen
+      die römischen Thermen von Turicum. Die Reformation wird im 16. Jahrhundert verortet; zu Buchdruck
+      und Zünften als späteren Entwicklungen sagen die Quellen nichts Widersprüchliches.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

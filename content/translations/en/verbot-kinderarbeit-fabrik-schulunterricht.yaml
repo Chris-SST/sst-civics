@@ -1,0 +1,14 @@
+id: verbot-kinderarbeit-fabrik-schulunterricht
+lang: en
+source_version: 1
+question: What was the 1877 ban on child labour in factories mainly intended to secure?
+options:
+  a: That factories would have to pay lower wages
+  b: That children could attend school
+  c: That children would have to help out at home earlier
+  d: That factories would bring in more workers from abroad
+explanation: The Factory Act of 1877 banned factory work for children. They were meant to attend school
+  instead of working. The law also protected the health of workers.
+status: draft
+reviewed_by: null
+reviewed_at: null

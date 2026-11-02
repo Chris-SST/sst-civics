@@ -1,0 +1,14 @@
+id: krankenversicherung-obligatorisch-alle-einwohner
+lang: en
+source_version: 1
+question: Who in Switzerland must have basic insurance with a health insurer (Krankenkasse)?
+options:
+  a: all persons who live in Switzerland
+  b: only persons with a low income
+  c: only persons with Swiss citizenship (Bürgerrecht)
+  d: only persons who are gainfully employed
+explanation: Health insurance is compulsory for all persons resident in Switzerland. This applies regardless
+  of nationality, age or employment. The health insurers must accept all persons for basic insurance.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,14 @@
+id: stimmabgabe-per-post-mehrheit
+lang: en
+source_version: 1
+question: How do most eligible voters in Switzerland today cast their vote in referendums and elections?
+options:
+  a: They cast it on voting Sunday at the communal assembly (Gemeindeversammlung).
+  b: They personally put it in the ballot box on voting Sunday.
+  c: They send it by post to the commune (Gemeinde).
+  d: They cast it via a website of the Confederation.
+explanation: The majority of eligible voters vote by post, that is, by mail. Going to the ballot box on
+  voting Sunday is no longer usual for most people today.
+status: draft
+reviewed_by: null
+reviewed_at: null

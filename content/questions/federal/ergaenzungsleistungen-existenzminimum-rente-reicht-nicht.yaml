@@ -1,0 +1,45 @@
+id: ergaenzungsleistungen-existenzminimum-rente-reicht-nicht
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Wer kann in der Schweiz Ergänzungsleistungen erhalten?
+options_de:
+  a: Personen, die ihre Stelle verloren haben und Arbeitslosentaggelder beziehen
+  b: Alle Personen, die älter als 50 Jahre sind
+  c: Personen, deren AHV- oder IV-Rente das Existenzminimum nicht deckt
+  d: Alle Personen, die Sozialhilfe beziehen
+correct: c
+explanation_de: Ergänzungsleistungen helfen Personen, bei denen die AHV- oder IV-Rente und das übrige
+  Einkommen nicht zum Leben reichen. Sie sind ein Rechtsanspruch und keine Sozialhilfe. Sie werden zur
+  Rente hinzu ausbezahlt.
+sources:
+- url: https://www.bsv.admin.ch/de/dreisaeulensystem
+  checked: &id001 2026-11-02
+glossary:
+- Ergänzungsleistungen
+- Existenzminimum
+- AHV
+- IV
+status: in_review
+difficulty: 2
+covers:
+- zh-191
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Ergänzungsleistungen erhalten Bezügerinnen und Bezüger einer AHV- oder IV-Rente, wenn die
+      Rente und das übrige Einkommen die minimalen Lebenskosten nicht decken.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (BSV) sagt: «Wenn das Renteneinkommen nicht zur Existenzsicherung ausreicht, helfen
+      ausserdem Ergänzungsleistungen (EL), den nötigen Lebensbedarf zu decken.» Das stützt Antwort c).
+      Rechtsanspruch, Abgrenzung zur Sozialhilfe und Auszahlung zusätzlich zur Rente erwähnt die Seite
+      nicht, das sind aber Nebenaussagen der Erklärung.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

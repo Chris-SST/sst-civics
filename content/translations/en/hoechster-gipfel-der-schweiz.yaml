@@ -1,0 +1,15 @@
+id: hoechster-gipfel-der-schweiz
+lang: en
+source_version: 1
+question: What is the name of the highest mountain peak that lies entirely on Swiss territory?
+options:
+  a: Piz Bernina
+  b: Matterhorn
+  c: Dufourspitze
+  d: Jungfrau
+explanation: At around 4,634 metres, the Dufourspitze in the Monte Rosa massif in the Valais is the highest
+  peak in Switzerland. The Matterhorn is better known, but lower. Piz Bernina is the highest peak in the
+  Eastern Alps.
+status: draft
+reviewed_by: null
+reviewed_at: null

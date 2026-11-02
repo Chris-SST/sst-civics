@@ -1,0 +1,15 @@
+id: dienstpflicht-nur-maenner-bis-alter
+lang: en
+source_version: 1
+question: Who in Switzerland is obliged to perform military service or alternative civilian service up
+  to a certain age?
+options:
+  a: Only men
+  b: Women and men equally
+  c: Only people with a qualification
+  d: Only people who hold an office in a commune (Gemeinde)
+explanation: In Switzerland, the duty to serve applies only to men. For women, military service is voluntary.
+  The obligation lasts until an age set by law.
+status: draft
+reviewed_by: null
+reviewed_at: null

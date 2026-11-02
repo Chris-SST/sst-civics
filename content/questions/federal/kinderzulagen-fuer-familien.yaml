@@ -1,0 +1,42 @@
+id: kinderzulagen-fuer-familien
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Welche staatliche Leistung erhalten Familien mit Kindern in der Schweiz?
+options_de:
+  a: Invalidenrente
+  b: Kinderzulagen
+  c: Wohneigentumsprämie
+  d: Arbeitslosentaggeld
+correct: b
+explanation_de: Familien erhalten Kinderzulagen als Beitrag an die Kosten für den Unterhalt der Kinder.
+  Sie gehören zu den Familienzulagen, die im Bundesgesetz geregelt sind.
+sources:
+- url: https://www.bsv.admin.ch/de/familienzulagen-leistungen-und-voraussetzungen
+  checked: &id001 2026-11-02
+glossary:
+- Kinderzulage
+- Familienzulage
+status: in_review
+difficulty: 1
+covers:
+- zh-144
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Kinderzulagen (Kinder- und Ausbildungszulagen) sind die Leistung, die Familien mit Kindern
+      in der Schweiz erhalten, während die übrigen Antworten andere Risiken oder Zwecke betreffen.
+  source:
+    verdict: supported
+    note: Die BSV-Seite nennt die Kinderzulage als Teil des Familienzulagensystems mit einem Mindestbetrag
+      von 215 Franken pro Monat. Zudem hält sie fest, dass Familienzulagen für den Unterhalt des Kindes
+      verwendet werden müssen. Das Bundesgesetz wird im Text nicht ausdrücklich genannt, die Kernaussage
+      der Erklärung ist aber gedeckt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

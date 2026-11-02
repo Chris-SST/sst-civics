@@ -1,0 +1,47 @@
+id: steuererklaerung-finanzielle-verhaeltnisse-offenlegen
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Wozu dient die Steuererklärung, die Steuerpflichtige jedes Jahr ausfüllen?
+options_de:
+  a: Sie dient der Registrierung beim Einwohneramt.
+  b: Sie ist der Antrag auf eine Krankenversicherung.
+  c: Sie ist die Anmeldung für den Zivildienst.
+  d: Sie legt gegenüber den Steuerbehörden die finanziellen Verhältnisse offen.
+correct: d
+explanation_de: Mit der Steuererklärung geben Steuerpflichtige Einkommen, Vermögen und Abzüge an. Auf
+  dieser Grundlage berechnet die Steuerbehörde die Steuer.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184/20260902/de/html/fedlex-data-admin-ch-eli-cc-1991-1184_1184_1184-20260902-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen.html
+  checked: 2026-11-02
+glossary:
+- Steuererklärung
+- Steuerbehörde
+status: in_review
+difficulty: 1
+covers:
+- zh-126
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Mit der Steuererklärung legen Steuerpflichtige den Steuerbehörden ihr Einkommen und Vermögen
+      offen, damit die Steuern berechnet werden können, während die übrigen Antworten mit anderen Verfahren
+      zu tun haben.
+  source:
+    verdict: supported
+    note: Quelle 2 (Broschüre Kanton Zürich) sagt, dass man in der Steuererklärung Einkommen und Vermögen
+      angibt und dass die Steuerrechnung darauf beruht. Quelle 1 (DBG) verlangt, die Steuererklärung wahrheitsgemäss
+      und vollständig bei der Steuerbehörde einzureichen. Der Hinweis auf Abzüge in der Erklärung steht
+      nur sinngemäss in Quelle 1, ist aber nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

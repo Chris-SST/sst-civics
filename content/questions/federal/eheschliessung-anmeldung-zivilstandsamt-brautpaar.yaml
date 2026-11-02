@@ -1,0 +1,47 @@
+id: eheschliessung-anmeldung-zivilstandsamt-brautpaar
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Wer meldet die geplante Eheschliessung beim Zivilstandsamt an?
+options_de:
+  a: Die Trauzeugen im Namen des Paares
+  b: Das Brautpaar gemeinsam
+  c: Das Einwohneramt der Wohngemeinde automatisch
+  d: Die Eltern der Braut oder des Bräutigams
+correct: b
+explanation_de: Das Brautpaar stellt das Gesuch um Durchführung des Ehevorbereitungsverfahrens gemeinsam
+  beim Zivilstandsamt. Andere Personen können dies nicht an seiner Stelle tun. Danach prüft das Amt die
+  Voraussetzungen der Ehe.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/html/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-html-2.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Zivilstandsamt
+- Eheschliessung
+- Brautpaar
+status: in_review
+difficulty: 1
+covers:
+- zh-184
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Art. 98 ZGB melden die Brautleute das Gesuch um Durchführung des Ehevorbereitungsverfahrens
+      beim Zivilstandsamt selbst an, also gemeinsam, und weder Trauzeugen, Einwohneramt noch Eltern tun
+      dies für sie.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (ZGB, Gesuch): «Die Verlobten stellen das Gesuch um Durchführung des Vorbereitungsverfahrens
+      beim Zivilstandsamt», und sie müssen persönlich erscheinen. Das stützt die Antwort, dass das Brautpaar
+      die Eheschliessung gemeinsam anmeldet. Die Prüfung der Ehevoraussetzungen durch das Zivilstandsamt
+      steht ebenfalls im Text.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

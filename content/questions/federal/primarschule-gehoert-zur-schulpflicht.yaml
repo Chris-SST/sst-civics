@@ -1,0 +1,48 @@
+id: primarschule-gehoert-zur-schulpflicht
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.bildung
+question_de: Welche Schulstufe gehört in der Schweiz zur gesetzlichen Schulpflicht?
+options_de:
+  a: Die Hochschule
+  b: Die Primarschule
+  c: Das Gymnasium
+  d: Die Berufsfachschule
+correct: b
+explanation_de: Die Schulpflicht umfasst die obligatorische Schule. Dazu gehört die Primarschule, die
+  alle Kinder besuchen müssen. Gymnasium, Berufsfachschule und Hochschule sind freiwillige Ausbildungen
+  nach der obligatorischen Schulzeit.
+sources:
+- url: https://www.zh.ch/de/bildung/schulen/volksschule.html
+  checked: &id001 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: 2026-11-02
+glossary:
+- Schulpflicht
+- Primarschule
+- Volksschule
+status: in_review
+difficulty: 1
+covers:
+- zh-162
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Primarschule gehört zur obligatorischen Schulzeit, während Hochschule, Gymnasium und
+      Berufsfachschule nachobligatorische Bildungsangebote sind (das Gymnasium kann zwar teilweise die
+      Sekundarstufe I umfassen, die Primarschule ist aber die eindeutig richtige Antwort).
+  source:
+    verdict: supported
+    note: Quelle 1 (Kanton Zürich) nennt die Primarschule als Teil der Volksschule (Kindergarten-, Primar-
+      und Sekundarstufe, elf Jahre, unentgeltlich). Gymnasium, Berufsfachschule und Hochschule erscheinen
+      dort als weiterführende Schulen. Das Wort «obligatorisch» steht nur im Titel eines Merkblatts, und
+      die Freiwilligkeit der Mittelschulen wird nicht ausdrücklich gesagt, doch die Antwort wird klar
+      gestützt. Quelle 2 (Bundesverfassung, gekürzt) enthält dazu nichts Verwertbares.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

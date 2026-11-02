@@ -1,0 +1,40 @@
+id: freiburg-zweisprachiger-kanton
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.sprachen
+question_de: Welche Sprachen werden im zweisprachigen Kanton Freiburg gesprochen?
+options_de:
+  a: Französisch und Rätoromanisch
+  b: Französisch und Italienisch
+  c: Französisch und Deutsch
+  d: Deutsch und Italienisch
+correct: c
+explanation_de: Freiburg ist ein zweisprachiger Kanton, in dem Französisch und Deutsch gesprochen werden.
+  Er liegt an der Grenze zwischen der Deutsch- und der Westschweiz.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/mehrsprachigkeit
+  checked: &id001 2026-11-02
+glossary:
+- Kanton
+- Zweisprachigkeit
+status: in_review
+difficulty: 2
+covers:
+- zh-282
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Kanton Freiburg ist zweisprachig, und seine Amtssprachen sind Französisch und Deutsch.
+  source:
+    verdict: supported
+    note: Quelle 1 (Abschnitt «Verteilung der Landessprachen») sagt ausdrücklich, dass in den Kantonen
+      Bern, Freiburg und Wallis Französisch und Deutsch gesprochen wird. Die Aussage zur Lage an der Sprachgrenze
+      wird dort nur allgemein gestützt (Verlauf der Sprachgrenze).
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

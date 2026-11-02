@@ -1,0 +1,41 @@
+id: raetoromanisch-vierte-landessprache
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.sprachen
+question_de: Welche Sprache gehört neben Deutsch, Französisch und Italienisch zu den Landessprachen der
+  Schweiz?
+options_de:
+  a: Spanisch
+  b: Portugiesisch
+  c: Englisch
+  d: Rätoromanisch
+correct: d
+explanation_de: Rätoromanisch ist die vierte Landessprache. Es wird vor allem im Kanton Graubünden gesprochen.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sprachen
+  checked: &id001 2026-11-02
+glossary:
+- Rätoromanisch
+- Landessprache
+status: in_review
+difficulty: 1
+covers:
+- zh-065
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Rätoromanisch ist neben Deutsch, Französisch und Italienisch die vierte Landessprache der
+      Schweiz, während Spanisch, Portugiesisch und Englisch keine Landessprachen sind.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt als vier offizielle Landessprachen Deutsch, Französisch, Italienisch und Rätoromanisch
+      und sagt, Romanisch sei im Kanton Graubünden verbreitet. Spanisch, Portugiesisch und Englisch werden
+      nur als häufig gesprochene Nichtlandessprachen aufgeführt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

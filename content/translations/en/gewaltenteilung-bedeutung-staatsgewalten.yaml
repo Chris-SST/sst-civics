@@ -1,0 +1,15 @@
+id: gewaltenteilung-bedeutung-staatsgewalten
+lang: en
+source_version: 1
+question: What does the principle of the separation of powers mean in Switzerland?
+options:
+  a: The Confederation, the cantons and the communes (Gemeinden) share the tax revenue among themselves.
+  b: The government, parliament and the courts share state power.
+  c: Power in the state lies solely with the Federal Council (Bundesrat).
+  d: The people and the media share state power.
+explanation: Under the separation of powers, the executive (government), the legislative (parliament)
+  and the judiciary (courts) take on different tasks. This means that no single body can have too much
+  power. The branches of state power check one another.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,48 @@
+id: polizei-befugnis-festnahme-straftaeter
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.gerichte
+question_de: Wer ist befugt, mutmassliche Straftäter festzunehmen?
+options_de:
+  a: Die Schulbehörde
+  b: Die Polizei
+  c: Das Parlament
+  d: Das Steueramt
+correct: b
+explanation_de: Die Polizei darf Personen, die verdächtigt werden, eine Straftat begangen zu haben, unter
+  den gesetzlichen Voraussetzungen festnehmen. Über eine Verurteilung entscheidet danach ein Gericht.
+  Andere Behörden haben diese Befugnis nicht.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2010/267/20250401/de/html/fedlex-data-admin-ch-eli-cc-2010-267-20250401-de-html-4.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
+  checked: 2026-11-02
+glossary:
+- Polizei
+- Festnahme
+- Straftäter
+status: in_review
+difficulty: 1
+covers:
+- zh-073
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Polizei ist als Strafverfolgungsbehörde befugt, mutmassliche Straftäter vorläufig festzunehmen,
+      während Schulbehörde, Parlament und Steueramt dafür keine Befugnis haben.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (StPO) sagt: «Die Polizei stellt nach der Festnahme unverzüglich die Identität der
+      festgenommenen Person fest … informiert die Staatsanwaltschaft», also nimmt die Polizei Personen
+      fest. Private dürfen nur vorläufig festnehmen, wenn polizeiliche Hilfe nicht rechtzeitig erlangt
+      werden kann. Quelle 2 bestätigt, dass nur das Gericht bestraft.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

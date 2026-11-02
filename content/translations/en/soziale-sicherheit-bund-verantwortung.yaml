@@ -1,0 +1,16 @@
+id: soziale-sicherheit-bund-verantwortung
+lang: en
+source_version: 1
+question: Which level of government in Switzerland is responsible for providing social security for the
+  population, for example through old-age provision?
+options:
+  a: The districts
+  b: Only the communes (Gemeinden)
+  c: The Confederation
+  d: Only the cantons
+explanation: The Federal Constitution assigns important social security tasks to the Confederation. These
+  include, for example, old-age and survivors' insurance (OASI) (AHV) and disability insurance. As a result,
+  uniform foundations apply throughout Switzerland.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,42 @@
+id: zwingli-bekannt-fuer-reformation
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geschichte.zuerich
+question_de: Wofür ist Ulrich Zwingli in der Geschichte Zürichs vor allem bekannt?
+options_de:
+  a: Er baute die erste Eisenbahn im Kanton.
+  b: Er gründete die Universität Zürich.
+  c: Er führte das Frauenstimmrecht ein.
+  d: Er war der Anführer der Reformation in Zürich.
+correct: d
+explanation_de: Zwingli prägte die Zürcher Reformation und damit die Kirche und das Leben in der Stadt
+  nachhaltig. Die Zürcher Kirche wurde zur reformierten Kirche. Die anderen Antworten haben mit ihm nichts
+  zu tun.
+sources:
+- url: https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html
+  checked: &id001 2026-11-02
+glossary:
+- Reformation
+- Ulrich Zwingli
+status: in_review
+difficulty: 1
+covers:
+- zh-252
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Ulrich Zwingli war ab 1519 Leutpriester am Grossmünster und der Anführer der Reformation
+      in Zürich, während die anderen Antworten nichts mit ihm zu tun haben.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass Huldrych Zwingli mit Unterstützung des Rates die Reformation in Zürich in
+      wenigen Jahren durchsetzte, und beschreibt ihn als treibende Kraft der Reformation. Die anderen
+      Antworten (Eisenbahn, Universität, Frauenstimmrecht) kommen nicht vor.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

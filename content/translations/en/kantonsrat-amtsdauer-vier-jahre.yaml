@@ -1,0 +1,15 @@
+id: kantonsrat-amtsdauer-vier-jahre
+lang: en
+source_version: 1
+question: For how many years are the members of the Zurich Cantonal Council (Kantonsrat) elected?
+options:
+  a: For two years
+  b: For three years
+  c: For six years
+  d: For four years
+explanation: The members of the Zurich Cantonal Council are elected for a term of office of four years.
+  After that, general elections take place. The citizens entitled to vote can then decide afresh who sits
+  in the parliament.
+status: draft
+reviewed_by: null
+reviewed_at: null

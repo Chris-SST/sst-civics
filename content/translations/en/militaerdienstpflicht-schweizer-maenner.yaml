@@ -1,0 +1,15 @@
+id: militaerdienstpflicht-schweizer-maenner
+lang: en
+source_version: 1
+question: In Switzerland, who is subject to the obligation to perform military service or substitute service?
+options:
+  a: All residents aged 18 and over
+  b: Men with Swiss citizenship (Bürgerrecht)
+  c: All men who live in Switzerland
+  d: Only women with Swiss citizenship
+explanation: According to the Federal Constitution, every Swiss man is obliged to perform military service.
+  Anyone who cannot reconcile this with their conscience performs civilian substitute service. Foreigners
+  are not subject to compulsory service.
+status: draft
+reviewed_by: null
+reviewed_at: null

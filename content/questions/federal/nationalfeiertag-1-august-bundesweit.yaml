@@ -1,0 +1,48 @@
+id: nationalfeiertag-1-august-bundesweit
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Welcher Tag ist in der ganzen Schweiz gesetzlich ein arbeitsfreier Feiertag?
+options_de:
+  a: Der 2. Januar (Berchtoldstag)
+  b: Der Fasnachtsmontag
+  c: Der Karfreitag
+  d: Der 1. August, der Nationalfeiertag
+correct: d
+explanation_de: Der 1. August ist der Nationalfeiertag und gilt im ganzen Land als Feiertag. Die meisten
+  anderen Feiertage, etwa Karfreitag oder Berchtoldstag, regeln die Kantone selbst und sie sind nicht
+  überall frei.
+sources:
+- url: https://www.seco.admin.ch/seco/de/home/Arbeit/Personenfreizugigkeit_Arbeitsbeziehungen/Arbeitsrecht/FAQ_zum_privaten_Arbeitsrecht/freizeit-und-feiertage.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.aboutswitzerland.eda.admin.ch/de/traditionen
+  checked: 2026-11-02
+glossary:
+- Nationalfeiertag
+- Feiertag
+status: in_review
+difficulty: 2
+covers:
+- zh-172
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der 1. August ist als Nationalfeiertag seit 1993 durch die Bundesverfassung (Art. 110 Abs.
+      3) einem Sonntag gleichgestellt und damit als einziger der genannten Tage in der ganzen Schweiz
+      arbeitsfrei, während Berchtoldstag, Fasnachtsmontag und Karfreitag nur kantonal oder regional gelten.
+  source:
+    verdict: supported
+    note: Quelle 1 (SECO) nennt den 1. August als einzigen eidgenössischen Feiertag, der den Sonntagen
+      gleichgestellt ist, während die Kantone die übrigen Feiertage bestimmen. Quelle 2 bestätigt, dass
+      nur der 1. August in der ganzen Schweiz gesetzlicher Feiertag ist und die anderen von Kanton zu
+      Kanton verschieden sind.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

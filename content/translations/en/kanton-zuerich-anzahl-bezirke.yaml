@@ -1,0 +1,15 @@
+id: kanton-zuerich-anzahl-bezirke
+lang: en
+source_version: 1
+question: Into how many districts is the canton of Zurich divided?
+options:
+  a: Into ten districts
+  b: Into twelve districts
+  c: Into fourteen districts
+  d: Into eight districts
+explanation: The canton of Zurich is divided into twelve districts, for example Affoltern, Meilen, Winterthur
+  and Zurich. The districts are administrative and judicial districts between the canton and the communes
+  (Gemeinden).
+status: draft
+reviewed_by: null
+reviewed_at: null

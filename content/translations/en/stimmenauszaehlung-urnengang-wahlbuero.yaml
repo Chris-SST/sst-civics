@@ -1,0 +1,14 @@
+id: stimmenauszaehlung-urnengang-wahlbuero
+lang: en
+source_version: 1
+question: Who counts the votes cast at ballots in a Zurich commune (Gemeinde)?
+options:
+  a: The social welfare authority
+  b: The electoral office
+  c: The commune clerk alone
+  d: The public prosecutor's office
+explanation: The electoral office determines the results of the commune for referendums and elections.
+  It consists of several people so that the counting is carried out correctly and transparently.
+status: draft
+reviewed_by: null
+reviewed_at: null

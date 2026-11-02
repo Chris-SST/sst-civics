@@ -1,0 +1,14 @@
+id: zuerich-groesste-staedte-einwohnerzahl
+lang: en
+source_version: 1
+question: Which three cities in the canton of Zürich have the largest populations?
+options:
+  a: Zürich, Uster and Wetzikon
+  b: Zürich, Dietikon and Winterthur
+  c: Zürich, Winterthur and Uster
+  d: Zürich, Winterthur and Dübendorf
+explanation: Zürich is by far the largest city, followed by Winterthur and Uster. Dübendorf, Dietikon
+  and Wetzikon are also fairly large towns, but they have fewer inhabitants than Uster.
+status: draft
+reviewed_by: null
+reviewed_at: null

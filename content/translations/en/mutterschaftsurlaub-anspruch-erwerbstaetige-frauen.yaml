@@ -1,0 +1,15 @@
+id: mutterschaftsurlaub-anspruch-erwerbstaetige-frauen
+lang: en
+source_version: 1
+question: Who in Switzerland has a legal entitlement to maternity leave after the birth of a child?
+options:
+  a: Only women who work for a company with more than 50 employees
+  b: Every working woman who gives birth to a child
+  c: Only women who are married
+  d: Only women with Swiss citizenship (Bürgerrecht)
+explanation: The law provides working mothers with an entitlement to maternity leave and an allowance.
+  The size of the company, nationality and marital status are irrelevant in this respect. The allowance
+  is financed through the loss of earnings compensation scheme (Erwerbsersatzordnung).
+status: draft
+reviewed_by: null
+reviewed_at: null

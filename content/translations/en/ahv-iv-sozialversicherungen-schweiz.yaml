@@ -1,0 +1,16 @@
+id: ahv-iv-sozialversicherungen-schweiz
+lang: en
+source_version: 1
+question: Which statement about social insurance in Switzerland is correct?
+options:
+  a: The old-age and survivors' insurance (OASI) (AHV) and invalidity insurance (IV) are part of Switzerland's
+    social insurance system.
+  b: OASI and IV are run only by the communes (Gemeinden).
+  c: OASI and IV are private insurance schemes with no legal basis.
+  d: OASI and IV are intended only for self-employed people.
+explanation: AHV stands for Alters- und Hinterlassenenversicherung (old-age and survivors' insurance),
+  IV for Invalidenversicherung (invalidity insurance). Both are regulated by federal law and are part
+  of the state social insurance system.
+status: draft
+reviewed_by: null
+reviewed_at: null

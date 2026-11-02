@@ -1,0 +1,42 @@
+id: wiener-kongress-dauernde-neutralitaet-anerkennung
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.weltkriege_neutralitaet
+question_de: Welches Ereignis von 1815 ist für die Neutralität der Schweiz wichtig?
+options_de:
+  a: Die Schweiz erklärte allen Nachbarstaaten den Krieg.
+  b: Die Grossmächte anerkannten die dauernde Neutralität der Schweiz.
+  c: Die Schweiz trat dem Völkerbund bei.
+  d: Die Schweiz führte erstmals eine Volksabstimmung über die Neutralität durch.
+correct: b
+explanation_de: Am Wiener Kongress 1815 anerkannten die europäischen Grossmächte die dauernde Neutralität
+  der Schweiz. Das gab der Neutralität eine internationale Grundlage.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/neutralitaet
+  checked: &id001 2026-11-02
+glossary:
+- Neutralität
+- Grossmacht
+status: in_review
+difficulty: 2
+covers:
+- zh-232
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Am Wiener Kongress von 1815 anerkannten die Grossmächte die dauernde Neutralität der Schweiz
+      und die Unverletzlichkeit ihres Gebiets, während der Beitritt zum Völkerbund erst 1920 erfolgte
+      und die anderen Antworten nicht zutreffen.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, die Neutralität der Schweiz sei 1815 am Wiener Kongress von der internationalen
+      Staatengemeinschaft anerkannt worden. Das stützt Antwort b); das Wort «dauernd» steht dort nicht
+      ausdrücklich, widerspricht dem Sinn aber nicht.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

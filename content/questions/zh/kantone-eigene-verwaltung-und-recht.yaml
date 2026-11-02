@@ -1,0 +1,50 @@
+id: kantone-eigene-verwaltung-und-recht
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.verfassung
+question_de: Welche Aufgabe haben die Kantone in der Schweiz hauptsächlich?
+options_de:
+  a: Sie bestimmen die Aussenpolitik und die Währung der Schweiz.
+  b: Sie erlassen das Recht für das ganze Land und überwachen die Gemeinden nicht.
+  c: Sie schliessen Verträge mit anderen Staaten ab und führen die Armee.
+  d: Sie führen ihre eigene Verwaltung und erlassen kantonales Recht.
+correct: d
+explanation_de: Die Schweiz ist ein Bundesstaat. Die Kantone sind selbstständig, soweit ihre Souveränität
+  nicht durch die Bundesverfassung beschränkt ist. Sie organisieren ihre Verwaltung und erlassen eigenes
+  kantonales Recht, zum Beispiel ihre Kantonsverfassung und Gesetze.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/foederalismus
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: 2026-11-02
+glossary:
+- Kanton
+- Kantonales Recht
+- Verwaltung
+- Bundesstaat
+status: in_review
+difficulty: 1
+covers:
+- zh-106
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Kantone sind nach der Bundesverfassung souverän, soweit ihre Souveränität nicht durch
+      die Bundesverfassung beschränkt ist, und führen deshalb ihre eigene Verwaltung und erlassen kantonales
+      Recht, während Aussenpolitik, Währung und Armee hauptsächlich Sache des Bundes sind.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass Kantone als Gliedstaaten über eigene Verfassung, Parlament, Regierung und
+      Gerichte verfügen und übergeordnete Aufgaben wie Schul- und Polizeiwesen übernehmen; Aussenpolitik
+      und Landesverteidigung liegen beim Bund. Quelle 2 bestätigt, dass die Kantone souverän sind und
+      eigene Gesetze bestimmen dürfen.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

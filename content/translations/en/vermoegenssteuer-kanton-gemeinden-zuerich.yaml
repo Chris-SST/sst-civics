@@ -1,0 +1,15 @@
+id: vermoegenssteuer-kanton-gemeinden-zuerich
+lang: en
+source_version: 1
+question: Which of these taxes do the canton of Zürich and the communes (Gemeinden) levy on a person's
+  property, for example on bank balances and securities?
+options:
+  a: The withholding tax
+  b: The value added tax
+  c: The wealth tax
+  d: The mineral oil tax
+explanation: The canton and the communes tax the wealth of natural persons. The value added tax, the withholding
+  tax and the mineral oil tax are Confederation taxes.
+status: draft
+reviewed_by: null
+reviewed_at: null

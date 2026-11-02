@@ -1,0 +1,40 @@
+id: regierungsrat-zuerich-zusammensetzung-personen
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.regierungsrat
+question_de: Welche Aussage zur Zusammensetzung des Zürcher Regierungsrats stimmt?
+options_de:
+  a: Er setzt sich aus drei Personen zusammen.
+  b: Er setzt sich aus sieben Personen zusammen.
+  c: Er setzt sich aus neun Personen zusammen.
+  d: Er setzt sich aus fünf Personen zusammen.
+correct: b
+explanation_de: Der Zürcher Regierungsrat ist ein Gremium aus sieben Personen. Sie leiten gemeinsam den
+  Kanton und führen je eine Direktion.
+sources:
+- url: https://www.zh.ch/de/regierungsrat.html
+  checked: &id001 2026-11-02
+glossary:
+- Regierungsrat
+- Direktion
+status: in_review
+difficulty: 1
+covers:
+- zh-105
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Regierungsrat des Kantons Zürich besteht gemäss Kantonsverfassung aus sieben Mitgliedern,
+      die vom Volk gewählt werden.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt ausdrücklich sieben Mitglieder des Regierungsrats, die alle vier Jahre vom Volk
+      gewählt werden. Sie stehen den sieben Direktionen vor, was auch die Erklärung stützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

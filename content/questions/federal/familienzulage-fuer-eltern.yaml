@@ -1,0 +1,43 @@
+id: familienzulage-fuer-eltern
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Welche staatliche Leistung erhalten Eltern in der Schweiz, wenn sie angestellt oder selbstständig
+  erwerbstätig sind und Kinder haben?
+options_de:
+  a: Die Invalidenrente
+  b: Die Arbeitslosenentschädigung
+  c: Die Ergänzungsleistung zur AHV
+  d: Die Familienzulage
+correct: d
+explanation_de: Die Familienzulagen helfen Familien, einen Teil der Kosten für Kinder zu tragen. Sie bestehen
+  aus Kinderzulagen und Ausbildungszulagen. Auch Selbstständigerwerbende können sie erhalten.
+sources:
+- url: https://www.bsv.admin.ch/de/familienzulagen-leistungen-und-voraussetzungen
+  checked: &id001 2026-11-02
+glossary:
+- Familienzulage
+- Sozialversicherung
+status: in_review
+difficulty: 1
+covers:
+- zh-129
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Erwerbstätige Eltern, ob angestellt oder selbstständig, haben in der Schweiz Anspruch auf
+      Familienzulagen (Kinder- und Ausbildungszulagen), während die anderen Leistungen an Invalidität,
+      Arbeitslosigkeit oder AHV-Bezug geknüpft sind.
+  source:
+    verdict: supported
+    note: Quelle 1 (BSV) nennt Arbeitnehmende und Selbstständigerwerbende als Anspruchsberechtigte auf
+      Familienzulagen und beschreibt Kinder- und Ausbildungszulage. Damit sind Antwort d) und die Erklärung
+      gestützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

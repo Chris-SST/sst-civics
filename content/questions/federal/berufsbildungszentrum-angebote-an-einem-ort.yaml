@@ -1,0 +1,47 @@
+id: berufsbildungszentrum-angebote-an-einem-ort
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.bildung
+question_de: Was ist ein Berufsbildungszentrum?
+options_de:
+  a: Eine Schule, die verschiedene Angebote der beruflichen Aus- und Weiterbildung an einem Ort bündelt
+  b: Eine Universität für Berufsleute mit Doktorat
+  c: Ein Betrieb, in dem man die Lehre ausschliesslich praktisch absolviert
+  d: Eine Stelle, die Lehrstellen vermittelt und Arbeitslose berät
+correct: a
+explanation_de: Ein Berufsbildungszentrum fasst verschiedene Ausbildungen und Weiterbildungen der Berufsbildung
+  an einem Ort zusammen. Lernende besuchen dort etwa die Berufsfachschule. Die Beratung zur Berufswahl
+  bieten dagegen die Berufsinformationszentren an.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/bildung/berufs-studien-laufbahnberatung.html
+  checked: 2026-11-02
+glossary:
+- Berufsbildungszentrum
+- Berufsbildung
+- Weiterbildung
+status: draft
+difficulty: 2
+covers:
+- zh-171
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Ein Berufsbildungszentrum ist eine Schule, die mehrere Angebote der beruflichen Grund-
+      und Weiterbildung an einem Standort bündelt, während die anderen Antworten eine Universität, einen
+      Lehrbetrieb bzw. eine Vermittlungsstelle beschreiben.
+  source:
+    verdict: unclear
+    note: Quelle 2 stützt nur den Teil der Erklärung über die Berufsinformationszentren (biz), die zu
+      Beruf, Studium sowie Aus- und Weiterbildung beraten. Quelle 1 erwähnt Berufsbildungszentren nicht
+      und nennt nur Lehre und Gymnasium. Was ein Berufsbildungszentrum ist, steht in keiner der beiden
+      Quellen.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

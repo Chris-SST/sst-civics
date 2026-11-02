@@ -1,0 +1,48 @@
+id: informationen-kommunale-angebote-finden
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Wo kann man sich über Angebote und Vorschriften der eigenen Gemeinde informieren?
+options_de:
+  a: Nur direkt beim Bundesrat in Bern
+  b: Nur bei der Kantonspolizei am Schalter
+  c: Nur an der Gemeindeversammlung, die einmal im Jahr stattfindet
+  d: Über die Lokalzeitung oder das Internet, zum Beispiel die Website der Gemeinde
+correct: d
+explanation_de: Gemeinden informieren über ihre Angebote und Vorschriften in der Lokalzeitung, im amtlichen
+  Publikationsorgan und auf ihrer Website. So finden Einwohnerinnen und Einwohner leicht, was für sie
+  gilt. Die Gemeindeverwaltung gibt auf Anfrage ebenfalls Auskunft.
+sources:
+- url: https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/vorgaben-zur-amtlichen-publikation.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/politik-staat/gemeinden.html
+  checked: 2026-11-02
+glossary:
+- Gemeinde
+- Lokalzeitung
+status: in_review
+difficulty: 1
+covers:
+- zh-201
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Über Angebote und Vorschriften der eigenen Gemeinde informiert man sich zum Beispiel über
+      die Lokalzeitung oder die Website der Gemeinde, während die anderen Antworten mit «nur» fälschlich
+      ausschliessliche Informationsquellen nennen.
+  source:
+    verdict: supported
+    note: 'Quelle 2 (Broschüre Einbürgerung, Kanton Zürich) sagt wörtlich: «Alle Informationen über die
+      Angebote und Regelungen in der Gemeinde gibt es in der Lokalzeitung oder im Internet.» Quelle 1
+      stützt die Erklärung zusätzlich: Gemeinden publizieren in Zeitung oder Internet (Website der Gemeinde
+      als Publikationsorgan) und die Verwaltung kann Beschlüsse einsehen lassen.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

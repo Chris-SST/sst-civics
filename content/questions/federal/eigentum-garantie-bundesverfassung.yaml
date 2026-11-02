@@ -1,0 +1,45 @@
+id: eigentum-garantie-bundesverfassung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Welches Grundrecht schützt in der Schweiz Häuser, Grundstücke und andere Vermögenswerte von
+  Privatpersonen?
+options_de:
+  a: Die Eigentumsgarantie
+  b: Die Glaubens- und Gewissensfreiheit
+  c: Die Niederlassungsfreiheit
+  d: Die Versammlungsfreiheit
+correct: a
+explanation_de: Die Bundesverfassung gewährleistet das Eigentum in Artikel 26. Der Staat darf Eigentum
+  nur unter bestimmten Voraussetzungen einschränken, zum Beispiel mit gesetzlicher Grundlage und voller
+  Entschädigung bei einer Enteignung.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Eigentumsgarantie
+- Grundrecht
+- Bundesverfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-085
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Eigentumsgarantie (Art. 26 der Bundesverfassung) schützt das Privateigentum wie Häuser,
+      Grundstücke und andere Vermögenswerte, während die anderen genannten Freiheiten andere Bereiche
+      betreffen.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundesverfassung) nennt Art. 26 «Eigentumsgarantie»: «Das Eigentum ist gewährleistet»
+      und Enteignungen werden voll entschädigt. Auch der Hinweis auf die gesetzliche Grundlage bei Grundrechtseinschränkungen
+      steht im Text; die übrigen Antworten sind andere Grundrechte.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

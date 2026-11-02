@@ -1,0 +1,16 @@
+id: obligatorische-schulzeit-dauer-schweiz
+lang: en
+source_version: 1
+question: How many years does compulsory schooling last in Switzerland, that is, the school attendance
+  required by law?
+options:
+  a: Eleven years
+  b: Ten years
+  c: Twelve years
+  d: Nine years
+explanation: Compulsory schooling in Switzerland lasts eleven years. It begins with kindergarten (two
+  years) and includes primary school and lower secondary school. The cantons regulate schooling, but its
+  duration is harmonised across Switzerland.
+status: draft
+reviewed_by: null
+reviewed_at: null

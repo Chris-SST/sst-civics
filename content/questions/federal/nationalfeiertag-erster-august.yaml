@@ -1,0 +1,43 @@
+id: nationalfeiertag-erster-august
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: An welchem Datum feiert die Schweiz ihren Nationalfeiertag?
+options_de:
+  a: Am 12. September
+  b: Am 1. August
+  c: Am 11. November
+  d: Am 1. Mai
+correct: b
+explanation_de: Der 1. August ist der Nationalfeiertag der Schweiz. Er erinnert an den Bundesbrief von
+  1291. Man feiert ihn mit Feuern, Feuerwerk und Reden.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/traditionen
+  checked: &id001 2026-11-02
+- url: https://www.ch.ch
+  checked: 2026-11-02
+glossary:
+- Nationalfeiertag
+- Bundesbrief
+status: in_review
+difficulty: 1
+covers:
+- zh-306
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz feiert ihren Nationalfeiertag am 1. August in Erinnerung an den Bundesbrief
+      von 1291.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den 1. August als Bundesfeiertag mit Bezug auf den Bundesbrief von 1291 und verweist
+      auf den Nationalfeiertag am 1. August mit Fahnen, Feuerwerk und Ansprachen. Quelle 2 ist eine Fehlerseite
+      ohne Inhalt zur Frage.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

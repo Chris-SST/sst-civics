@@ -1,0 +1,42 @@
+id: hundehaltung-abgabe-hundesteuer
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Was muss eine Person im Kanton Zürich zusätzlich tun, wenn sie einen Hund hält?
+options_de:
+  a: Sie muss dafür jährlich eine Abgabe, die Hundesteuer, bezahlen
+  b: Sie muss den Hund alle zwei Jahre dem Bundesrat melden
+  c: Sie muss die Mehrwertsteuer auf das Futter nicht bezahlen
+  d: Sie muss dafür einen Militärdienst-Ersatz leisten
+correct: a
+explanation_de: Hundehalterinnen und Hundehalter zahlen jährlich eine Hundesteuer an die Gemeinde. Der
+  Hund muss ausserdem registriert sein. Die Abgabe gehört zu den Pflichten gegenüber dem Staat.
+sources:
+- url: https://www.zh.ch/de/umwelt-tiere/tiere/haustiere-heimtiere/hunde.html
+  checked: &id001 2026-11-02
+glossary:
+- Hundesteuer
+- Abgabe
+- Gemeinde
+status: in_review
+difficulty: 2
+covers:
+- zh-190
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Kanton Zürich müssen Hundehalterinnen und Hundehalter jährlich die Hundesteuer an die
+      Gemeinde bezahlen, während die anderen Antworten frei erfunden sind.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Kanton Zürich, Haltung & Pflichten) sagt ausdrücklich: «Sie müssen für jeden Hund
+      bei Ihrer Wohngemeinde jährlich eine Abgabe (Hundesteuer) bezahlen.» Auch die Registrierung (AMICUS,
+      Meldung bei der Gemeinde) ist genannt, die Erklärung passt also.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

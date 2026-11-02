@@ -1,0 +1,44 @@
+id: romandie-welschland-bedeutung
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.sprachen
+question_de: Was ist mit dem Begriff «Romandie» oder «Welschland» gemeint?
+options_de:
+  a: Der italienischsprachige Teil der Schweiz
+  b: Der französischsprachige Teil der Schweiz
+  c: Der rätoromanischsprachige Teil der Schweiz
+  d: Der deutschsprachige Teil der Schweiz
+correct: b
+explanation_de: Mit Romandie oder Welschland bezeichnet man die Gebiete der Schweiz, in denen Französisch
+  gesprochen wird. Dazu gehören zum Beispiel die Kantone Genf und Waadt. Der italienischsprachige Teil
+  ist vor allem das Tessin.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sprachen
+  checked: &id001 2026-11-02
+glossary:
+- Romandie
+- Welschland
+- Sprachregion
+status: in_review
+difficulty: 1
+covers:
+- zh-283
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Mit «Romandie» oder «Welschland» wird der französischsprachige Teil der Schweiz bezeichnet,
+      also etwa die Kantone Waadt, Genf, Neuenburg und Jura.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt: «Französisch ist die Hauptsprache in der französischen Schweiz, der sogenannten
+      Romandie» und stützt damit Antwort b. Italienisch als Hauptsprache im Tessin steht ebenfalls dort.
+      Die Kantone Genf und Waadt aus der Erklärung werden nicht genannt, das ändert die Kernaussage aber
+      nicht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

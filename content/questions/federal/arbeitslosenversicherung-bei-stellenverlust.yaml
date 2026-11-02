@@ -1,0 +1,46 @@
+id: arbeitslosenversicherung-bei-stellenverlust
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Welche Sozialversicherung greift, wenn eine Person ihre Arbeitsstelle verliert?
+options_de:
+  a: Die Invalidenversicherung
+  b: Die Alters- und Hinterlassenenversicherung
+  c: Die Arbeitslosenversicherung
+  d: Die Unfallversicherung
+correct: c
+explanation_de: Die Arbeitslosenversicherung zahlt unter bestimmten Bedingungen eine Entschädigung, wenn
+  jemand die Stelle verliert. Sie hilft auch bei der Suche nach neuer Arbeit.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184/20260101/de/html/fedlex-data-admin-ch-eli-cc-1982-2184_2184_2184-20260101-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.bsv.admin.ch/de/beitraege-im-ueberblick
+  checked: 2026-11-02
+glossary:
+- Arbeitslosenversicherung
+- Sozialversicherung
+status: in_review
+difficulty: 1
+covers:
+- zh-135
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Bei Verlust der Arbeitsstelle springt die Arbeitslosenversicherung (ALV) ein, die Taggelder
+      und Unterstützung bei der Stellensuche bietet, während IV, AHV und Unfallversicherung andere Risiken
+      abdecken.
+  source:
+    verdict: supported
+    note: Quelle 1 (AVIG) regelt, dass die versicherte Person bei Arbeitslosigkeit Anspruch auf Arbeitslosenentschädigung
+      hat, und verlangt Bemühungen und Vermittlung bei der Stellensuche. Quelle 2 (Glossar) nennt die
+      Arbeitslosenversicherung als Beispiel, wenn jemand keine Arbeit findet.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

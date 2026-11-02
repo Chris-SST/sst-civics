@@ -1,0 +1,15 @@
+id: technorama-standort-winterthur
+lang: en
+source_version: 1
+question: In which town or city in the canton of Zürich is the Technorama, a museum for experimenting,
+  located?
+options:
+  a: In Uster
+  b: In Dübendorf
+  c: In Winterthur
+  d: In Zürich
+explanation: The Technorama is the Swiss Science Center and is located in Winterthur. Visitors can experiment
+  for themselves there and try out natural phenomena.
+status: draft
+reviewed_by: null
+reviewed_at: null

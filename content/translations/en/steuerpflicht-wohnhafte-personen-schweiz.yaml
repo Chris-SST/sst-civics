@@ -1,0 +1,14 @@
+id: steuerpflicht-wohnhafte-personen-schweiz
+lang: en
+source_version: 1
+question: Who is, in principle, required to pay taxes in Switzerland?
+options:
+  a: People who live in Switzerland
+  b: Only people who run a business
+  c: Only people with Swiss citizenship (Bürgerrecht)
+  d: Only people who have the right to vote
+explanation: The obligation to pay tax is linked to place of residence and not to citizenship. Foreign
+  nationals who live in Switzerland also pay taxes. The right to vote plays no role in this.
+status: draft
+reviewed_by: null
+reviewed_at: null

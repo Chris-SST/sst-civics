@@ -1,0 +1,14 @@
+id: ahv-pflichtversicherung
+lang: en
+source_version: 1
+question: Which statement about the old-age and survivors' insurance (OASI) (AHV) is correct?
+options:
+  a: The OASI is one of the compulsory insurance schemes.
+  b: The OASI is a voluntary insurance for self-employed people.
+  c: The OASI applies only to people with a Swiss passport.
+  d: The OASI is a private insurance provided by employers.
+explanation: The OASI is compulsory. Anyone who lives or works in Switzerland is in principle insured
+  and must pay contributions.
+status: draft
+reviewed_by: null
+reviewed_at: null

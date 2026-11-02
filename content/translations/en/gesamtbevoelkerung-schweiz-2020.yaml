@@ -1,0 +1,14 @@
+id: gesamtbevoelkerung-schweiz-2020
+lang: en
+source_version: 1
+question: Approximately how large was the total population of Switzerland in 2020?
+options:
+  a: about 6.2 million
+  b: about 8.6 million
+  c: about 10.1 million
+  d: about 7.4 million
+explanation: In 2020, around 8.6 million people lived in Switzerland. The population has grown strongly
+  over recent decades. Current figures are published by the Federal Statistical Office.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,15 @@
+id: polizei-befugnis-festnahme-straftaeter
+lang: en
+source_version: 1
+question: Who has the authority to arrest suspected offenders?
+options:
+  a: The school authority
+  b: The police
+  c: The parliament
+  d: The tax office
+explanation: The police may arrest persons who are suspected of having committed a criminal offence, provided
+  the legal requirements are met. A court then decides on a conviction. Other authorities do not have
+  this power.
+status: draft
+reviewed_by: null
+reviewed_at: null

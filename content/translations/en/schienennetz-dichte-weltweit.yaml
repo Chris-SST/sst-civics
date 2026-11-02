@@ -1,0 +1,15 @@
+id: schienennetz-dichte-weltweit
+lang: en
+source_version: 1
+question: What is the Swiss rail network known for in international comparison?
+options:
+  a: It is the most densely developed rail network in the world.
+  b: It is the only rail network that runs entirely through tunnels.
+  c: It is the longest rail network in Europe.
+  d: It is the oldest rail network in the world.
+explanation: In a small area there are a very large number of railway lines and stations. For this reason,
+  the Swiss network is regarded as the densest in the world. However, density says nothing about absolute
+  length.
+status: draft
+reviewed_by: null
+reviewed_at: null

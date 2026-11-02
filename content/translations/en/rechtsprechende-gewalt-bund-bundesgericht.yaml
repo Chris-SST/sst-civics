@@ -1,0 +1,15 @@
+id: rechtsprechende-gewalt-bund-bundesgericht
+lang: en
+source_version: 1
+question: Which authority is the highest judicial body of Switzerland at federal level?
+options:
+  a: The Federal Chancellery (Bundeskanzlei)
+  b: The Federal Council (Bundesrat)
+  c: The Federal Assembly (Bundesversammlung)
+  d: The Federal Supreme Court (Bundesgericht)
+explanation: The Federal Constitution assigns the judicial power of the Confederation to the Federal Supreme
+  Court. It is the highest judicial authority of the Confederation. The Federal Council and the Federal
+  Assembly exercise the executive and the legislative power respectively.
+status: draft
+reviewed_by: null
+reviewed_at: null

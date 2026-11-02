@@ -1,0 +1,14 @@
+id: zeitung-inhalte-bestimmt-redaktion
+lang: en
+source_version: 1
+question: Who decides in Switzerland what content is published in a newspaper?
+options:
+  a: The Federal Supreme Court (Bundesgericht)
+  b: The commune (Gemeinde) in which the newspaper is published
+  c: The newspaper's editorial team
+  d: The Federal Council (Bundesrat)
+explanation: Freedom of the media protects newspapers from interference by the state. The editorial team
+  itself decides what it publishes. The Federal Constitution prohibits censorship.
+status: draft
+reviewed_by: null
+reviewed_at: null

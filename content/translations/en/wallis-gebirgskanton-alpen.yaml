@@ -1,0 +1,14 @@
+id: wallis-gebirgskanton-alpen
+lang: en
+source_version: 1
+question: Which of these cantons is strongly characterised by mountains?
+options:
+  a: Basel-Stadt
+  b: Valais
+  c: Thurgau
+  d: Geneva
+explanation: Valais has many high Alpine peaks, including the Dufourspitze, the highest mountain in Switzerland.
+  Thurgau, Basel-Stadt and Geneva are situated more in lowland areas or by lakes and rivers.
+status: draft
+reviewed_by: null
+reviewed_at: null

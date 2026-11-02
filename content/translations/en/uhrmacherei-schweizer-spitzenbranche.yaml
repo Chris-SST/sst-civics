@@ -1,0 +1,14 @@
+id: uhrmacherei-schweizer-spitzenbranche
+lang: en
+source_version: 1
+question: In which branch of the economy has Switzerland long been a world leader?
+options:
+  a: Textile industry
+  b: Shipbuilding
+  c: Car manufacturing
+  d: Watchmaking
+explanation: Swiss watches are known throughout the world for their quality. Watchmaking has a long tradition
+  in Switzerland and is still an important export sector today.
+status: draft
+reviewed_by: null
+reviewed_at: null

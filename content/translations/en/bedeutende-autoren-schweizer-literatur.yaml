@@ -1,0 +1,15 @@
+id: bedeutende-autoren-schweizer-literatur
+lang: en
+source_version: 1
+question: Which two people are among the important authors of Swiss literature?
+options:
+  a: Hermann Hesse and Franz Kafka
+  b: Thomas Mann and Bertolt Brecht
+  c: Johann Wolfgang von Goethe and Friedrich Schiller
+  d: Max Frisch and Friedrich Dürrenmatt
+explanation: Max Frisch and Friedrich Dürrenmatt are regarded as important Swiss writers of the 20th century.
+  Both are also well known abroad. The other authors do not come from Switzerland or are not described
+  as Swiss authors.
+status: draft
+reviewed_by: null
+reviewed_at: null

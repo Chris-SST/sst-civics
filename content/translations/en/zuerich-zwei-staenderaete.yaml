@@ -1,0 +1,15 @@
+id: zuerich-zwei-staenderaete
+lang: en
+source_version: 1
+question: How many representatives does the canton of Zürich send to the Council of States (Ständerat)?
+options:
+  a: One representative
+  b: Four representatives
+  c: Six representatives
+  d: Two representatives
+explanation: The canton of Zürich is a full canton and has two seats in the Council of States. The members
+  of the Council of States are elected by the voters of the canton. Only the half-cantons have one representative
+  each.
+status: draft
+reviewed_by: null
+reviewed_at: null

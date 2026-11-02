@@ -1,0 +1,14 @@
+id: nachbarland-im-sueden-der-schweiz
+lang: en
+source_version: 1
+question: Which country lies to the south of Switzerland and borders it?
+options:
+  a: Spain
+  b: Italy
+  c: Slovenia
+  d: France
+explanation: Italy is Switzerland's southern neighbour. The border runs, among other places, through the
+  Alps and along Ticino and Graubünden. Spain and Slovenia do not border Switzerland.
+status: draft
+reviewed_by: null
+reviewed_at: null

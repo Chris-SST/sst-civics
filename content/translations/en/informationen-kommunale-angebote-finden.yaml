@@ -1,0 +1,15 @@
+id: informationen-kommunale-angebote-finden
+lang: en
+source_version: 1
+question: Where can one find information about the services and regulations of one's own commune (Gemeinde)?
+options:
+  a: Only directly from the Federal Council (Bundesrat) in Bern
+  b: Only at the counter of the cantonal police
+  c: Only at the communal assembly (Gemeindeversammlung), which takes place once a year
+  d: Through the local newspaper or the internet, for example the website of the commune
+explanation: Communes inform people about their services and regulations in the local newspaper, in the
+  official publication and on their website. In this way, residents can easily find out what applies to
+  them. The communal administration also provides information on request.
+status: draft
+reviewed_by: null
+reviewed_at: null

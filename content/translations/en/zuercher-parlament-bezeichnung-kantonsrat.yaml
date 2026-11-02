@@ -1,0 +1,15 @@
+id: zuercher-parlament-bezeichnung-kantonsrat
+lang: en
+source_version: 1
+question: What is the parliament of the canton of Zürich called?
+options:
+  a: Grosser Rat
+  b: Landrat
+  c: Communal council (Gemeinderat)
+  d: Cantonal Council (Kantonsrat)
+explanation: The parliament of the canton of Zürich is called the Cantonal Council. Other cantons use
+  different names, for example Grosser Rat or Landrat. The communal council, by contrast, is an authority
+  at the level of the commune (Gemeinde).
+status: draft
+reviewed_by: null
+reviewed_at: null

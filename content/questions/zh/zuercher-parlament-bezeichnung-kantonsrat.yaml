@@ -1,0 +1,45 @@
+id: zuercher-parlament-bezeichnung-kantonsrat
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.kantonsrat
+question_de: Wie heisst das Parlament des Kantons Zürich?
+options_de:
+  a: Grosser Rat
+  b: Landrat
+  c: Gemeinderat
+  d: Kantonsrat
+correct: d
+explanation_de: Das Parlament des Kantons Zürich heisst Kantonsrat. Andere Kantone verwenden andere Bezeichnungen,
+  zum Beispiel Grosser Rat oder Landrat. Der Gemeinderat ist dagegen eine Behörde auf Gemeindeebene.
+sources:
+- url: https://www.kantonsrat.zh.ch/
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: 2026-11-02
+glossary:
+- Kantonsrat
+- Kantonsparlament
+- Gemeinderat
+status: in_review
+difficulty: 1
+covers:
+- zh-110
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Parlament des Kantons Zürich heisst Kantonsrat, während «Grosser Rat» und «Landrat»
+      in anderen Kantonen verwendet werden und der Gemeinderat ein Gemeindeorgan ist.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Kantonsrat Zürich, Rubrik «Kurz erklärt») sagt ausdrücklich: «Der Kantonsrat ist
+      das Parlament des Kantons Zürich.» Zu den anderen Bezeichnungen (Grosser Rat, Landrat) und zum Gemeinderat
+      äussern sich die Seiten nicht; Quelle 2 nennt den Kantonsrat nur als Parlament neben Regierungsrat
+      und Gerichten.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

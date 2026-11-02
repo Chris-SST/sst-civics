@@ -1,0 +1,49 @@
+id: auslaender-kein-stimmrecht-national
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: Dürfen Ausländerinnen und Ausländer, die seit Jahren in der Schweiz leben, an eidgenössischen
+  Abstimmungen teilnehmen?
+options_de:
+  a: Ja, aber nur bei Abstimmungen und nicht bei Wahlen.
+  b: Ja, wenn sie eine Niederlassungsbewilligung haben.
+  c: Ja, wenn sie Steuern bezahlen.
+  d: Nein, auf nationaler Ebene haben sie kein Stimmrecht.
+correct: d
+explanation_de: Das Stimmrecht auf nationaler Ebene ist an das Schweizer Bürgerrecht gebunden. Ausländerinnen
+  und Ausländer können es erst nach einer Einbürgerung ausüben.
+sources:
+- url: https://www.bk.admin.ch/de/nationalratswahlen
+  checked: &id001 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Stimmrecht
+- Niederlassungsbewilligung
+- Einbürgerung
+status: in_review
+difficulty: 1
+covers:
+- zh-132
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Auf eidgenössischer Ebene haben nur Schweizer Bürgerinnen und Bürger ab 18 Jahren das Stimm-
+      und Wahlrecht, ausländische Personen sind davon unabhängig von Aufenthaltsdauer, Bewilligung oder
+      Steuerzahlung ausgeschlossen.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass nur Schweizerbürgerinnen und -bürger ab 18 an den Nationalratswahlen teilnehmen
+      können. Quelle 3 nennt das Stimm- und Wahlrecht als Rechte der Schweizer Bürgerinnen und Bürger
+      und sagt, dass Ausländerinnen und Ausländer nach der Einbürgerung an der Schweizer Politik teilnehmen
+      können. Das stützt Antwort d und die Erklärung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

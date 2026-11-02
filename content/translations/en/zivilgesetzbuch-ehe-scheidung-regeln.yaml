@@ -1,0 +1,16 @@
+id: zivilgesetzbuch-ehe-scheidung-regeln
+lang: en
+source_version: 1
+question: Which law governs, among other things, how a marriage is entered into and how it is dissolved
+  by divorce?
+options:
+  a: The Civil Code
+  b: The Criminal Code
+  c: The Asylum Act
+  d: The Federal Supreme Court (Bundesgericht) Act
+explanation: The Civil Code governs the law of persons, family law, inheritance law and property law.
+  This also includes marriage and divorce. The Criminal Code, by contrast, deals with criminal offences
+  and penalties.
+status: draft
+reviewed_by: null
+reviewed_at: null

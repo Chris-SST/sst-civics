@@ -1,0 +1,14 @@
+id: rhone-endet-im-mittelmeer
+lang: en
+source_version: 1
+question: Where does the Rhône, which rises in the canton of Valais, end?
+options:
+  a: In the North Sea
+  b: In the Atlantic Ocean
+  c: In the Mediterranean Sea
+  d: In the Black Sea
+explanation: The Rhône flows through Lake Geneva and then on through France. It flows into the Mediterranean
+  Sea.
+status: draft
+reviewed_by: null
+reviewed_at: null

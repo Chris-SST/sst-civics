@@ -1,0 +1,15 @@
+id: auslaender-herkunft-eu-staaten-anteil
+lang: en
+source_version: 1
+question: Where do most of the foreign nationals living in Switzerland come from?
+options:
+  a: From Asian countries, about two thirds
+  b: From African countries, about half
+  c: From countries of the European Union, about two thirds
+  d: From countries in the Americas, about one third
+explanation: About 66 per cent of the foreign resident population come from EU countries, that is, around
+  two thirds. The rest come from other European countries and from the rest of the world. The figure may
+  change slightly over time.
+status: draft
+reviewed_by: null
+reviewed_at: null

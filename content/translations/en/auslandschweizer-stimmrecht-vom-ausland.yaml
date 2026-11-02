@@ -1,0 +1,15 @@
+id: auslandschweizer-stimmrecht-vom-ausland
+lang: en
+source_version: 1
+question: A Swiss citizen lives permanently abroad. How can she take part in federal elections and votes?
+options:
+  a: She may only vote if she travels to Switzerland for that purpose.
+  b: She may only take part in elections, but not in votes.
+  c: She can elect and vote from her place of residence abroad without travelling to Switzerland.
+  d: She loses the right to vote and to elect at Confederation level.
+explanation: Swiss citizens living abroad have political rights at Confederation level. They can exercise
+  them from abroad without travelling to Switzerland. To do so, they must register with their representation
+  or their voting municipality.
+status: draft
+reviewed_by: null
+reviewed_at: null

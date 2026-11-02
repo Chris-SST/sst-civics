@@ -1,0 +1,50 @@
+id: gemeindeversammlung-beschluss-finanzvoranschlag
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.organisation.versammlung_parlament
+question_de: Worüber beschliessen die Stimmberechtigten in einer Zürcher Gemeinde mit Gemeindeversammlung
+  jedes Jahr an der Versammlung?
+options_de:
+  a: Über die Höhe der Bundessteuern
+  b: Über das Strafrecht im Kanton
+  c: Über den Finanzvoranschlag der Gemeinde
+  d: Über die Lehrpläne der Volksschule
+correct: c
+explanation_de: In Gemeinden mit Gemeindeversammlung entscheiden die Stimmberechtigten über wichtige Geschäfte,
+  darunter den Finanzvoranschlag (Budget) und den Steuerfuss. Strafrecht und Bundessteuern sind nicht
+  Sache der Gemeinde.
+sources:
+- url: https://www.zh.ch/de/steuern-finanzen/gemeindefinanzen/finanzhaushalt-gemeinden/budget-jahresrechnung.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/politik-staat/gemeinden/gemeindeorganisation.html
+  checked: 2026-11-02
+glossary:
+- Gemeindeversammlung
+- Finanzvoranschlag
+- Stimmberechtigte
+status: in_review
+difficulty: 2
+covers:
+- zh-115
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In Zürcher Gemeinden mit Gemeindeversammlung beschliessen die Stimmberechtigten jährlich
+      über den Voranschlag (Budget) und den Steuerfuss der Gemeinde, während Bundessteuern, Strafrecht
+      und Lehrpläne nicht in ihre Zuständigkeit fallen.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, das Budget werde von den Stimmberechtigten in der Gemeindeversammlung beschlossen,
+      und nennt die jährliche Genehmigung durch die Gemeindeversammlung. Quelle 2 nennt als Beispiel für
+      Entscheide der Stimmbevölkerung an der Gemeindeversammlung das Budget. Der Steuerfuss aus der Erklärung
+      wird in den Quellen nicht erwähnt, ist aber für die richtige Antwort nicht nötig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

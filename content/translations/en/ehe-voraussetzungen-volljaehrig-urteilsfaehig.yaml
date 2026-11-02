@@ -1,0 +1,15 @@
+id: ehe-voraussetzungen-volljaehrig-urteilsfaehig
+lang: en
+source_version: 1
+question: What requirements must people meet in order to be allowed to marry in Switzerland?
+options:
+  a: They must hold Swiss citizenship (Bürgerrecht) and be of full age
+  b: They must be of full age and capable of acting rationally
+  c: They must have been living together for at least five years
+  d: They must belong to the same religion
+explanation: Anyone who is of full age and capable of judgement may marry. Being capable of judgement
+  means being able to act rationally. Nationality, religion or a particular length of time living together
+  are not requirements.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,45 @@
+id: kollegialitaetsprinzip-bundesrat-beschluesse
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.bundesrat
+question_de: Was bedeutet das Kollegialitätsprinzip im Bundesrat?
+options_de:
+  a: Die Bundespräsidentin oder der Bundespräsident entscheidet allein.
+  b: Die Mitglieder vertreten die Beschlüsse des Bundesrats gegen aussen einheitlich.
+  c: Jedes Mitglied entscheidet in seinem Departement ohne Absprache mit den anderen.
+  d: Die Mitglieder dürfen ihre abweichende Meinung öffentlich vertreten.
+correct: b
+explanation_de: Der Bundesrat entscheidet als Kollegium. Auch wer im Bundesrat eine andere Meinung vertreten
+  hat, trägt den Beschluss nach aussen mit. So tritt die Regierung geschlossen auf.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/bundesrat
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/politisches-system
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Kollegialitätsprinzip
+- Bundesrat
+status: in_review
+difficulty: 2
+covers:
+- zh-005
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach dem Kollegialitätsprinzip entscheidet der Bundesrat als Gremium, und alle Mitglieder
+      vertreten seine Beschlüsse gegen aussen einheitlich, auch wenn sie intern anderer Meinung waren.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, der Bundesrat sei eine Kollegialbehörde, deren Mitglieder die Beschlüsse nach
+      aussen vertreten müssen, auch bei persönlich anderer Meinung. Quelle 3 nennt die gemeinsame Haltung
+      nach aussen ausdrücklich Kollegialitätsprinzip und stützt damit auch die Erklärung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,15 @@
+id: landesschutz-innen-aussen-bund
+lang: en
+source_version: 1
+question: Which task is one of the central tasks of the Confederation?
+options:
+  a: The organisation of local schools
+  b: The protection of the country internally and externally
+  c: The operation of the commune roads (Gemeindestrassen)
+  d: The administration of the residents' registers of the communes
+explanation: The Confederation ensures the country's security externally, for example with the army, and
+  internal security. Schools, commune roads and residents' registers, on the other hand, are primarily
+  the responsibility of the cantons and communes.
+status: draft
+reviewed_by: null
+reviewed_at: null

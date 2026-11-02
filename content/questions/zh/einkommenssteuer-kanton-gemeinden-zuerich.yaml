@@ -1,0 +1,49 @@
+id: einkommenssteuer-kanton-gemeinden-zuerich
+version: 1
+scope: zh
+canton: zh
+topic: kanton.sozial.steuern_leistungen
+question_de: Welche wichtige Steuer erheben der Kanton Zürich und die Gemeinden auf dem Lohn und anderen
+  Einkünften von Personen?
+options_de:
+  a: Die Einkommenssteuer
+  b: Die Erbschaftssteuer
+  c: Die Hundesteuer
+  d: Die Motorfahrzeugsteuer
+correct: a
+explanation_de: Die Einkommenssteuer ist eine der wichtigsten Steuern von Kanton und Gemeinden. Sie wird
+  auf dem Einkommen der natürlichen Personen erhoben. Die anderen Steuern sind weniger bedeutend oder
+  erfassen etwas anderes.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id002 2026-11-02
+- url: https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/steuern-finanzen/steuern.html
+  checked: *id001
+glossary:
+- Einkommenssteuer
+- Steuer
+- Gemeinde
+status: in_review
+difficulty: 1
+covers:
+- zh-195
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Kanton Zürich und die Gemeinden erheben auf dem Lohn und anderen Einkünften natürlicher
+      Personen die Einkommenssteuer, während die anderen genannten Steuern andere Bereiche betreffen (Erbschaften,
+      Hunde, Fahrzeuge).
+  source:
+    verdict: supported
+    note: Quelle 1 (Broschüre, Seite 34) nennt die Einkommenssteuer und die Vermögenssteuer ausdrücklich
+      als wichtigste Steuern von Kantonen und Gemeinden und beschreibt das Einkommen als Geld aus der
+      Arbeit. Die Quellen 2 und 3 enthalten keine Aussage, die dem widerspricht.
+    at: *id002
+    model: claude-sonnet-5-5
+    version: 1

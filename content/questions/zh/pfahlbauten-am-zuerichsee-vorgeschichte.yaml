@@ -1,0 +1,41 @@
+id: pfahlbauten-am-zuerichsee-vorgeschichte
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geschichte.zuerich
+question_de: Wie waren die vorgeschichtlichen Siedlungen am Zürichsee gebaut?
+options_de:
+  a: Als Höhlen im Fels
+  b: Als Pfahlbauten, also Häuser auf Pfählen
+  c: Als Häuser aus Backstein in Dörfern
+  d: Als Burgen auf Felsen
+correct: b
+explanation_de: Am Ufer des Zürichsees standen in vorgeschichtlicher Zeit Pfahlbauten, das heisst Häuser
+  auf Pfählen. Reste davon liegen noch heute unter Wasser und werden von Unterwasserarchäologen untersucht.
+sources:
+- url: https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/archaeologie/uwad/unterwasser/pastzurich.html
+  checked: &id001 2026-11-02
+glossary:
+- Pfahlbauten
+- Zürichsee
+status: in_review
+difficulty: 1
+covers:
+- zh-248
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die vorgeschichtlichen Siedlungen am Zürichsee waren Pfahlbauten, also Häuser auf Pfählen,
+      die als Teil der prähistorischen Pfahlbauten rund um die Alpen zum UNESCO-Welterbe gehören.
+  source:
+    verdict: supported
+    note: Die Seite nennt Pfahlbauten auf dem heutigen Sechseläutenplatz (vor 5000 Jahren) und Fundstellen
+      am Zürichsee im UNESCO-Welterbe. Dass die Reste unter Wasser liegen und von Unterwasserarchäologen
+      untersucht werden, ist nur indirekt belegt (Unterwasserarchäologie Stadt Zürich als Urheberin).
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,14 @@
+id: forstleute-andere-baumarten-pflanzen
+lang: en
+source_version: 1
+question: How do foresters in Switzerland respond to rising temperatures?
+options:
+  a: They are increasingly planting other tree species.
+  b: They only plant trees that have always stood there.
+  c: They give up caring for the forest altogether.
+  d: They clear the forests at low altitudes.
+explanation: Some tree species tolerate heat and drought poorly. Foresters therefore rely on other species
+  that are better adapted to the warmer climate. This is intended to keep the forest stable.
+status: draft
+reviewed_by: null
+reviewed_at: null

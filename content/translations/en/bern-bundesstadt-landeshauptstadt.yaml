@@ -1,0 +1,16 @@
+id: bern-bundesstadt-landeshauptstadt
+lang: en
+source_version: 1
+question: Which city assumes the role of the capital city in Switzerland?
+options:
+  a: Bern
+  b: Geneva
+  c: Lausanne
+  d: Zurich
+explanation: Bern is the seat of the Federal Council (Bundesrat) and the Federal Assembly (Bundesversammlung)
+  and is referred to as the federal city. The Federal Constitution does not name a capital city, but Bern
+  assumes this role. Zurich is the largest city, and Lausanne is the seat of the Federal Supreme Court
+  (Bundesgericht).
+status: draft
+reviewed_by: null
+reviewed_at: null

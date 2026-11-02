@@ -1,0 +1,44 @@
+id: frauenstimmrecht-national-1971
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gesellschaftswandel
+question_de: In welchem Jahr erhielten die Frauen in der Schweiz das Stimm- und Wahlrecht auf nationaler
+  Ebene?
+options_de:
+  a: '1959'
+  b: '1991'
+  c: '1948'
+  d: '1971'
+correct: d
+explanation_de: Die Männer stimmten 1971 in einer Abstimmung für das Frauenstimmrecht auf Bundesebene.
+  Seither dürfen Frauen national wählen und abstimmen. In einzelnen Kantonen kam es später auch auf kantonaler
+  Ebene.
+sources:
+- url: https://www.ekf.admin.ch/de/frauenrechte
+  checked: &id001 2026-11-02
+glossary:
+- Stimmrecht
+- Wahlrecht
+status: in_review
+difficulty: 1
+covers:
+- zh-238
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweizer Männer stimmten am 7. Februar 1971 der Einführung des Frauenstimm- und Wahlrechts
+      auf Bundesebene zu, sodass Frauen seit 1971 national abstimmen und wählen dürfen.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt 1971 als Jahr der Einführung des Frauenstimm- und Wahlrechts auf eidgenössischer
+      Ebene (seit dem 7. Februar 1971 gleiche politische Rechte). 1959 wird als gescheiterte Volksabstimmung
+      genannt. Die Aussage der Erklärung zu den Kantonen wird in der Quelle nicht behandelt, ist für die
+      Antwort aber nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

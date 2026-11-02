@@ -1,0 +1,14 @@
+id: gemeinden-finanzieren-sozialhilfe
+lang: en
+source_version: 1
+question: Who finances social assistance for people in need in the canton of Zurich?
+options:
+  a: The churches alone
+  b: The Swiss National Bank
+  c: The employers' associations
+  d: The communes (Gemeinden)
+explanation: In the canton of Zurich, the communes are responsible for social assistance and bear its
+  costs. This can place a heavy burden on smaller communes. That is why there is fiscal equalisation.
+status: draft
+reviewed_by: null
+reviewed_at: null

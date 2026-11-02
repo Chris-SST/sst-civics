@@ -1,0 +1,14 @@
+id: parlament-hauptaufgabe-gesetze-beschliessen
+lang: en
+source_version: 1
+question: What is the most important task of the Federal Parliament?
+options:
+  a: To manage the police throughout the country
+  b: To decide disputes between individuals
+  c: To discuss and pass laws
+  d: To enforce laws in everyday life
+explanation: Parliament is the legislative power. It discusses and adopts the laws of the Confederation.
+  The government implements them, and the courts rule in disputes.
+status: draft
+reviewed_by: null
+reviewed_at: null

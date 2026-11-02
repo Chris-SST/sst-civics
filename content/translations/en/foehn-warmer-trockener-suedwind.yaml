@@ -1,0 +1,14 @@
+id: foehn-warmer-trockener-suedwind
+lang: en
+source_version: 1
+question: What is the Föhn?
+options:
+  a: A cold, damp wind from the north
+  b: A cold wind from the east in winter
+  c: Heavy rain in spring
+  d: A warm, dry wind from a southerly direction
+explanation: The Föhn is a warm, dry downslope wind that blows in the Alps mainly from the south. It can
+  make temperatures rise rapidly and make visibility very clear.
+status: draft
+reviewed_by: null
+reviewed_at: null

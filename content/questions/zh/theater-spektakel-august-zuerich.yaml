@@ -1,0 +1,47 @@
+id: theater-spektakel-august-zuerich
+version: 1
+scope: zh
+canton: zh
+topic: kanton.kultur.zuerich
+question_de: Welche Veranstaltung zeigt im August in Zürich Bühnenkunst, Tanz und Musik aus aller Welt?
+options_de:
+  a: Das Sechseläuten
+  b: Weltklasse Zürich
+  c: Das Knabenschiessen
+  d: Das Zürcher Theater Spektakel
+correct: d
+explanation_de: Das Zürcher Theater Spektakel ist ein internationales Festival der darstellenden Künste.
+  Es findet jeweils im August statt und zeigt Produktionen aus vielen Ländern.
+sources:
+- url: https://www.schuleundkultur.zh.ch/angebot/info/60/zuercher-theater-spektakel
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.stadt-zuerich.ch/de/stadtleben/kultur/kulturauftrag/zukunft-theater-spektakel.html
+  checked: 2026-11-02
+glossary:
+- Theater Spektakel
+- Bühnenkunst
+status: in_review
+difficulty: 2
+covers:
+- zh-341
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Zürcher Theater Spektakel ist ein internationales Festival für Bühnenkunst, Tanz und
+      Musik, das jeweils im August am Zürichseeufer stattfindet, während Sechseläuten, Weltklasse Zürich
+      und Knabenschiessen andere Anlässe sind.
+  source:
+    verdict: supported
+    note: Quelle 2 (Broschüre, S. 63) sagt ausdrücklich, das Zürcher Theater Spektakel biete Theater,
+      Tanz und Musik aus der ganzen Welt und finde jährlich im August auf der Landiwiese statt. Das Sechseläuten
+      (April) und Weltklasse Zürich (Sportevent) werden dort anders beschrieben. Quelle 1 stützt die Angabe
+      zu den darstellenden Künsten aus aller Welt und zur zweiten Augusthälfte.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,15 @@
+id: obligationenrecht-miete-wohnraum-vorschriften
+lang: en
+source_version: 1
+question: In which law are the rules on the rental of residential premises found?
+options:
+  a: In the Code of Obligations
+  b: In the Federal Constitution alone
+  c: In the Criminal Code
+  d: In the Swiss Road Traffic Act
+explanation: Tenancy law is regulated in the Code of Obligations. It contains, for example, rules on the
+  tenancy agreement, the rent and termination. The Code of Obligations is the fifth part of the Civil
+  Code, but it is a separate law.
+status: draft
+reviewed_by: null
+reviewed_at: null

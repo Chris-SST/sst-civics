@@ -1,0 +1,47 @@
+id: parlamentsmitglieder-direkt-gewaehlt-volk
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.parlament
+question_de: Wer bestimmt die Mitglieder des Nationalrats?
+options_de:
+  a: Der Bundesrat ernennt sie.
+  b: Die Parteien bestimmen sie ohne Wahl.
+  c: Das Bundesgericht wählt sie aus.
+  d: Die wahlberechtigten Bürgerinnen und Bürger wählen sie direkt.
+correct: d
+explanation_de: Die Mitglieder des Nationalrats werden vom Volk direkt gewählt, und zwar alle vier Jahre.
+  Auch die Ständerätinnen und Ständeräte werden in fast allen Kantonen vom Volk gewählt.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/bundesversammlung-parlament
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/politisches-system
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Nationalrat
+- Ständerat
+- Wahl
+status: in_review
+difficulty: 1
+covers:
+- zh-035
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Mitglieder des Nationalrats werden vom Volk, also von den wahlberechtigten Bürgerinnen
+      und Bürgern, in den Kantonen direkt im Proporzverfahren gewählt.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass die Abgeordneten beider Räte alle 4 Jahre vom Volk gewählt werden, den Nationalrat
+      mit Proporzwahl, und den Ständerat mit Majorzwahl. Quelle 3 bestätigt, dass das Volk Nationalrat
+      und Ständerat wählt. Das stützt Antwort d und die Erklärung. Dass die Ständeräte in fast allen Kantonen
+      vom Volk gewählt werden, steht nicht ausdrücklich dort, ist aber für die Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,47 @@
+id: arbeitsvertrag-inhalt-lohnhoehe
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Was wird unter anderem im Arbeitsvertrag zwischen Arbeitgeber und Arbeitnehmerin festgelegt?
+options_de:
+  a: Die Höhe des Lohns
+  b: Die Höhe der AHV-Rente
+  c: Die Höhe der Mehrwertsteuer
+  d: Die Höhe der Krankenkassenprämie
+correct: a
+explanation_de: Im Arbeitsvertrag werden die wichtigsten Bedingungen der Arbeit vereinbart, zum Beispiel
+  die Tätigkeit, die Arbeitszeit und der Lohn. AHV-Rente, Mehrwertsteuer und Krankenkassenprämie werden
+  nicht im Arbeitsvertrag bestimmt.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
+  checked: 2026-11-02
+glossary:
+- Arbeitsvertrag
+- Lohn
+status: in_review
+difficulty: 1
+covers:
+- zh-169
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Arbeitsvertrag werden unter anderem der Lohn, die Arbeitszeit und die Ferien geregelt,
+      während AHV-Rente, Mehrwertsteuer und Krankenkassenprämie nicht vom Arbeitsvertrag abhängen.
+  source:
+    verdict: supported
+    note: 'Quelle 2 (Broschüre Kanton Zürich, S. 33) sagt ausdrücklich: «Im Arbeitsvertrag ist zum Beispiel
+      geregelt, wie hoch der Lohn ist.» Quelle 1 (OR) stützt dies, da der Arbeitgeber den Lohn entrichten
+      muss, der verabredet oder üblich ist. Dass AHV-Rente, Mehrwertsteuer und Krankenkassenprämie nicht
+      im Arbeitsvertrag stehen, wird nicht ausdrücklich gesagt, folgt aber aus der Antwort a.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,15 @@
+id: bundeskanzlei-stabsstelle-des-bundesrats
+lang: en
+source_version: 1
+question: What is the role of the Federal Chancellery (Bundeskanzlei) for the Federal Council (Bundesrat)?
+options:
+  a: It is the general staff office of the Federal Council.
+  b: It reviews decisions of the Federal Council as a court.
+  c: It heads the Federal Department of Finance.
+  d: It elects the members of the Federal Council.
+explanation: The Federal Chancellery supports the Federal Council in its work, for example in preparing
+  its meetings. It is headed by the Federal Chancellor. The Federal Council is elected by the Federal
+  Assembly (Bundesversammlung).
+status: draft
+reviewed_by: null
+reviewed_at: null

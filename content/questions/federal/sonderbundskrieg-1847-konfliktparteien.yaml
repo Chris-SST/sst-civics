@@ -1,0 +1,44 @@
+id: sonderbundskrieg-1847-konfliktparteien
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.bundesstaat
+question_de: Zwischen wem wurde 1847 der Sonderbundskrieg in der Schweiz geführt?
+options_de:
+  a: Zwischen den deutschsprachigen und den französischsprachigen Kantonen
+  b: Zwischen den liberalen Kräften und den katholischen Kantonen
+  c: Zwischen Stadt- und Landkantonen um die Steuern
+  d: Zwischen der Schweiz und Frankreich
+correct: b
+explanation_de: Im Sonderbund hatten sich mehrere katholisch-konservative Kantone zusammengeschlossen.
+  Die liberalen Kräfte wollten einen stärkeren Bund. Der kurze Krieg endete mit dem Sieg der liberalen
+  Seite und ebnete den Weg zum Bundesstaat von 1848.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Sonderbundskrieg
+- Sonderbund
+- Kanton
+status: in_review
+difficulty: 2
+covers:
+- zh-226
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Sonderbundskrieg von 1847 war ein kurzer Bürgerkrieg zwischen den liberalen (eidgenössischen)
+      Kantonen und dem Sonderbund der konservativen katholischen Kantone, der den Weg zum Bundesstaat
+      von 1848 ebnete.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den Sonderbundskrieg von 1847 als letzten Bürgerkrieg der Schweiz, in dem sich
+      katholisch-konservative und liberal-radikale Kantone gegenüberstanden. Die Liberalen gewannen innerhalb
+      weniger Wochen, danach folgte der Bundesstaat. Das stützt Antwort b) und die Erklärung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

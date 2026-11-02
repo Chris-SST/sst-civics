@@ -1,0 +1,16 @@
+id: stimmrecht-bund-schweizer-buergerrecht-erwerb
+lang: en
+source_version: 1
+question: From what point does a person from abroad receive the right to vote and to stand for election
+  at federal level?
+options:
+  a: As soon as they have lived in Switzerland for ten years.
+  b: As soon as they receive a settlement permit (C permit) (Niederlassungsbewilligung).
+  c: As soon as they pay taxes and work in Switzerland.
+  d: As soon as they hold Swiss citizenship (Bürgerrecht) and are of legal age.
+explanation: The right to vote and to stand for election at federal level is tied to Swiss citizenship.
+  A settlement permit, a certain length of residence or paying taxes is not enough. Anyone who is naturalised
+  and is of legal age may take part in federal elections and referendums.
+status: draft
+reviewed_by: null
+reviewed_at: null

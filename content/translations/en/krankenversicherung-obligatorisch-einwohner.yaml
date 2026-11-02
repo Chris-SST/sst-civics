@@ -1,0 +1,15 @@
+id: krankenversicherung-obligatorisch-einwohner
+lang: en
+source_version: 1
+question: Who must take out health insurance in Switzerland?
+options:
+  a: Only persons with Swiss citizenship (Bürgerrecht)
+  b: All persons who live in Switzerland
+  c: Only persons under 65 years of age
+  d: Only people in gainful employment
+explanation: Compulsory basic health insurance applies to all persons resident in Switzerland. Citizenship,
+  employment and age are irrelevant. The insurance must be taken out within three months of moving to
+  Switzerland.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,45 @@
+id: einwohnerregister-fuehren-gemeinde-aufgabe
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Welche der folgenden Aufgaben erfüllt in Zürcher Gemeinden das Einwohneramt?
+options_de:
+  a: Es stellt Strafurteile aus.
+  b: Es führt das Einwohnerregister der Gemeinde.
+  c: Es erteilt Baubewilligungen für Kantonsstrassen.
+  d: Es legt die Steuergesetze fest.
+correct: b
+explanation_de: Die Gemeinde führt das Register der Personen, die bei ihr wohnen. Dort melden Sie sich
+  an, ab oder um, wenn Sie umziehen. Strafurteile, Steuergesetze und Kantonsstrassen gehören nicht zu
+  dieser Aufgabe.
+sources:
+- url: https://www.zh.ch/de/politik-staat/gemeinden/einwohnerwesen.html
+  checked: &id001 2026-11-02
+glossary:
+- Einwohnerregister
+- Einwohneramt
+- Gemeinde
+status: in_review
+difficulty: 1
+covers:
+- zh-123
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Einwohneramt (Einwohnerkontrolle) einer Zürcher Gemeinde führt das Einwohnerregister,
+      während Strafurteile von Gerichten gefällt, Steuergesetze von Parlamenten und Stimmvolk erlassen
+      und Kantonsstrassen vom Kanton bewilligt werden.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass im Kanton Zürich die 160 Gemeinden die Einwohnerregister führen, und dass
+      man sich bei Umzug bei den Einwohnerdiensten ab- und anmeldet. Das stützt Antwort b und die Erklärung;
+      die Seite verwendet allerdings meist «Einwohnerdienste» statt «Einwohneramt» (einmal «Einwohnerkontrolle»),
+      der Sinn ist aber derselbe.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

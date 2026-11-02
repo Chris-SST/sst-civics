@@ -1,0 +1,44 @@
+id: weltklasse-zuerich-sportveranstaltung
+version: 1
+scope: zh
+canton: zh
+topic: kanton.kultur.zuerich
+question_de: Was ist Weltklasse Zürich?
+options_de:
+  a: Ein Frühlingsfest mit Umzug der Zünfte
+  b: Ein Musikfestival am Zürichsee
+  c: Eine bekannte Sportveranstaltung der Stadt Zürich
+  d: Eine Messe für Wissenschaft und Technik
+correct: c
+explanation_de: Weltklasse Zürich ist ein internationales Leichtathletik-Meeting. Es gehört zu den bekannten
+  Sportanlässen der Stadt Zürich.
+sources:
+- url: https://www.stadt-zuerich.ch/de/aktuell/verkehrsmeldungen/2025/08/vm-leichtathletik-meeting-weltklasse-zuerich-2025.html
+  checked: &id001 2026-11-02
+- url: https://www.stadt-zuerich.ch/de/aktuell/medienmitteilungen/2025/03/stadt-unterstuetzt-den-neubau-einer-leichtathletikhalle-auf-dem-letzigrund-areal.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Weltklasse Zürich
+status: in_review
+difficulty: 1
+covers:
+- zh-342
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Weltklasse Zürich ist das bekannte internationale Leichtathletik-Meeting, das jährlich
+      im Letzigrund-Stadion in Zürich stattfindet, also eine Sportveranstaltung.
+  source:
+    verdict: supported
+    note: Quelle 3 (Broschüre, S. 63) nennt «Weltklasse Zürich» einen Sportevent in Zürich und eine der
+      weltweit bekanntesten Leichtathletik-Veranstaltungen. Quelle 1 bestätigt es als Leichtathletik-Meeting
+      im Stadion Letzigrund.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

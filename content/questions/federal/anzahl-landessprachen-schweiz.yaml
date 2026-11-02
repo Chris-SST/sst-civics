@@ -1,0 +1,40 @@
+id: anzahl-landessprachen-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.sprachen
+question_de: Wie viele Landessprachen kennt die Schweiz?
+options_de:
+  a: Sechs
+  b: Fünf
+  c: Drei
+  d: Vier
+correct: d
+explanation_de: 'Die Schweiz hat vier Landessprachen: Deutsch, Französisch, Italienisch und Rätoromanisch.
+  Die Vielfalt der Sprachen gehört zur Identität des Landes.'
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sprachen
+  checked: &id001 2026-11-02
+glossary:
+- Landessprache
+status: in_review
+difficulty: 1
+covers:
+- zh-064
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz kennt vier Landessprachen, nämlich Deutsch, Französisch, Italienisch und Rätoromanisch
+      (Art. 4 der Bundesverfassung).
+  source:
+    verdict: supported
+    note: Quelle 1 nennt vier offizielle Landessprachen (Deutsch, Französisch, Italienisch, Rätoromanisch)
+      und bezeichnet die Mehrsprachigkeit als wesentlichen Aspekt der Identität der Schweiz. Damit sind
+      Antwort und Erklärung belegt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,44 @@
+id: zivilgesetzbuch-ehe-scheidung-regeln
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.gerichte
+question_de: Welches Gesetz regelt unter anderem, wie eine Ehe geschlossen und wieder geschieden wird?
+options_de:
+  a: Das Zivilgesetzbuch
+  b: Das Strafgesetzbuch
+  c: Das Asylgesetz
+  d: Das Bundesgerichtsgesetz
+correct: a
+explanation_de: Das Zivilgesetzbuch regelt das Personen-, Familien-, Erb- und Sachenrecht. Dazu gehören
+  auch Eheschliessung und Scheidung. Das Strafgesetzbuch befasst sich dagegen mit Straftaten und Strafen.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/html/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-html-2.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+glossary:
+- Zivilgesetzbuch
+- Ehe
+- Scheidung
+status: in_review
+difficulty: 1
+covers:
+- zh-094
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Schweizerische Zivilgesetzbuch (ZGB) regelt im Familienrecht unter anderem die Eheschliessung
+      und die Ehescheidung, während die anderen genannten Gesetze andere Bereiche betreffen.
+  source:
+    verdict: supported
+    note: 'Quelle 2 (Broschüre des Kantons Zürich) sagt ausdrücklich: «Das Zivilgesetzbuch (ZGB) regelt
+      die Familie, die Heirat und die Scheidung», das Strafgesetzbuch regle dagegen, wann jemand ins Gefängnis
+      muss. Quelle 1 ist nur ein Auszug aus dem ZGB und belegt die Zuordnung nicht ausdrücklich.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

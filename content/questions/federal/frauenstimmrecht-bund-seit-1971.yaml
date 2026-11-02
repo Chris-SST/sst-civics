@@ -1,0 +1,42 @@
+id: frauenstimmrecht-bund-seit-1971
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gesellschaftswandel
+question_de: Seit wann dürfen Frauen in der Schweiz auf nationaler Ebene wählen und abstimmen?
+options_de:
+  a: Seit 1918
+  b: Seit 1848
+  c: Seit 1971
+  d: Seit 1991
+correct: c
+explanation_de: Auf Bundesebene wurde das Frauenstimmrecht 1971 eingeführt. Einzelne Kantone und Gemeinden
+  kannten es früher, andere führten es erst später ein. Als letzter Kanton folgte Appenzell Innerrhoden
+  1990.
+sources:
+- url: https://www.ekf.admin.ch/de/frauenrechte
+  checked: &id001 2026-11-02
+glossary:
+- Frauenstimmrecht
+- Stimmrecht
+status: in_review
+difficulty: 1
+covers:
+- zh-215
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Frauenstimm- und Wahlrecht auf nationaler Ebene wurde in der Schweiz nach der Volksabstimmung
+      vom 7. Februar 1970 bzw. 1971 eingeführt, und zwar 1971.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den 7. Februar 1971 als Datum, seit dem Frauen auf eidgenössischer Ebene dieselben
+      politischen Rechte haben wie Männer. Die Aussage zu Appenzell Innerrhoden 1990 und zu früheren kantonalen
+      Regelungen steht nicht in der Quelle, sie ist aber für die richtige Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

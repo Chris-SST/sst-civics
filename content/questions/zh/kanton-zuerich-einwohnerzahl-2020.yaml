@@ -1,0 +1,45 @@
+id: kanton-zuerich-einwohnerzahl-2020
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: Wie viele Einwohnerinnen und Einwohner zählte der Kanton Zürich im Jahr 2020 ungefähr?
+options_de:
+  a: Etwa 1,1 Millionen
+  b: Etwa 2,2 Millionen
+  c: Etwa 0,8 Millionen
+  d: Etwa 1,5 Millionen
+correct: d
+explanation_de: Im Jahr 2020 lebten im Kanton Zürich ungefähr 1,5 Millionen Menschen. Er ist damit der
+  bevölkerungsreichste Kanton der Schweiz.
+sources:
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2021/02/15-000-neuzuercherinnen-und-neuzuercher.html
+  checked: *id001
+glossary:
+- Einwohnerzahl
+- Kanton
+status: in_review
+difficulty: 2
+covers:
+- zh-299
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Kanton Zürich zählte Ende 2020 rund 1,55 Millionen Einwohnerinnen und Einwohner, daher
+      passt «Etwa 1,5 Millionen» am besten.
+  source:
+    verdict: supported
+    note: Quelle 3 nennt für Ende 2020 rund 1'551'300 Einwohnende im Kanton Zürich, Quelle 2 (Broschüre
+      zum Grundkenntnistest) spricht von etwa 1,5 Millionen und nennt Zürich den Kanton mit den meisten
+      Einwohnenden. Quelle 1 stützt zusätzlich, dass Zürich der bevölkerungsreichste Kanton ist.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

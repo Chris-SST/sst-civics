@@ -1,0 +1,15 @@
+id: strafgesetzbuch-haftstrafe-entscheid
+lang: en
+source_version: 1
+question: Under which law is it determined whether someone has to serve a prison sentence?
+options:
+  a: Under the Civil Code
+  b: Under the Code of Obligations
+  c: Under tenancy law
+  d: Under the Criminal Code
+explanation: The Criminal Code sets out which acts are punishable and which penalties are possible for
+  them. These include monetary penalties and custodial sentences. A court decides on the penalty in each
+  individual case.
+status: draft
+reviewed_by: null
+reviewed_at: null

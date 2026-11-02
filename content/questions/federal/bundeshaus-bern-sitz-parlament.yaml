@@ -1,0 +1,42 @@
+id: bundeshaus-bern-sitz-parlament
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.parlament
+question_de: Welches Gebäude in Bern ist der Tagungsort des Schweizer Parlaments?
+options_de:
+  a: Das Kornhaus
+  b: Das Rathaus
+  c: Das Bundesverwaltungsgericht
+  d: Das Bundeshaus
+correct: d
+explanation_de: Das Schweizer Parlament tagt im Bundeshaus in Bern. Dort treffen sich National- und Ständerat
+  zu ihren Sessionen. Das Rathaus ist ein Gebäude des Kantons Bern oder der Stadt, nicht des Bundesparlaments.
+sources:
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsgebaeude
+  checked: &id001 2026-11-02
+glossary:
+- Bundeshaus
+- Parlament
+- Session
+status: in_review
+difficulty: 1
+covers:
+- zh-039
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Schweizer Parlament (National- und Ständerat) tagt im Bundeshaus in Bern, während das
+      Rathaus Bern den Kantonsbehörden dient und das Bundesverwaltungsgericht in St. Gallen sitzt.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt das Parlamentsgebäude umgangssprachlich «Bundeshaus» und beschreibt den Nationalrats-
+      und den Ständeratssaal darin. Zum Rathaus steht auf der Seite nichts, der Kern der Antwort ist aber
+      klar belegt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

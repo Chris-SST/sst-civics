@@ -1,0 +1,14 @@
+id: private-vorsorge-dritte-saeule
+lang: en
+source_version: 1
+question: What forms the third pillar of old-age provision in Switzerland?
+options:
+  a: Compulsory accident insurance
+  b: Private provision
+  c: The employer's pension fund
+  d: Supplementary benefits
+explanation: The third pillar is private provision, for example tied savings. It is voluntary and supplements
+  the first two pillars.
+status: draft
+reviewed_by: null
+reviewed_at: null

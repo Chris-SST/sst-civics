@@ -1,0 +1,45 @@
+id: foehn-warmer-trockener-suedwind
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Was ist der Föhn?
+options_de:
+  a: Ein kalter, feuchter Wind aus Norden
+  b: Ein kalter Wind aus dem Osten im Winter
+  c: Ein starker Regen im Frühling
+  d: Ein warmer, trockener Wind aus südlicher Richtung
+correct: d
+explanation_de: Der Föhn ist ein warmer, trockener Fallwind, der in den Alpen vor allem aus Süden weht.
+  Er kann die Temperaturen rasch ansteigen lassen und die Sicht sehr klar machen.
+sources:
+- url: https://www.media.bk.admin.ch/web/gefahren_de/sturm.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/klima
+  checked: *id001
+glossary:
+- Föhn
+- Wind
+status: in_review
+difficulty: 1
+covers:
+- zh-271
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Föhn ist ein warmer, trockener Fallwind, der in der Schweiz meist aus südlicher Richtung
+      über die Alpen weht.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den Föhn einen trockenen und meist warmen Fallwind auf der Alpennord- und Alpensüdseite.
+      Quelle 3 beschreibt ihn als Wind, der ein sehr mildes und trockenes Klima bringt. Die Südrichtung
+      nennen die Quellen nicht ausdrücklich, aber die übrigen Antworten sind klar falsch.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

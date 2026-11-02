@@ -1,0 +1,14 @@
+id: arbeitsrecht-beratung-anlaufstellen
+lang: en
+source_version: 1
+question: Who can help with questions about employment law?
+options:
+  a: The school board and the parish
+  b: Lawyers, trade unions and employment tribunals
+  c: The public transport operators and the Post Office
+  d: The civil registry offices and the residents' registration office
+explanation: There are several points of contact for questions about employment law. These include lawyers,
+  trade unions and employment tribunals. The other bodies are responsible for other tasks.
+status: draft
+reviewed_by: null
+reviewed_at: null

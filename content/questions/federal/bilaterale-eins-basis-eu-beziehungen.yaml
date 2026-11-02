@@ -1,0 +1,45 @@
+id: bilaterale-eins-basis-eu-beziehungen
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.weltkriege_neutralitaet
+question_de: Welche Verträge, vom Volk im Jahr 2000 angenommen, bilden die Basis der heutigen Beziehungen
+  der Schweiz zur EU?
+options_de:
+  a: Die Bilateralen I
+  b: Der EWR-Vertrag
+  c: Der Schengen-Vertrag allein
+  d: Der Beitrittsvertrag zur EU
+correct: a
+explanation_de: Das Stimmvolk nahm die Bilateralen I im Jahr 2000 an. Sie regeln den Zugang zu bestimmten
+  Bereichen des Binnenmarkts, zum Beispiel Personenfreizügigkeit und Landverkehr. Dem EWR hatte das Volk
+  1992 nicht zugestimmt.
+sources:
+- url: https://www.europa.eda.admin.ch/de/abstimmungen-und-chronologie
+  checked: &id001 2026-11-02
+glossary:
+- Bilaterale Verträge
+- Europäische Union
+status: in_review
+difficulty: 2
+covers:
+- zh-240
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Schweizer Stimmvolk hat im Mai 2000 die Bilateralen I mit der EU angenommen, die bis
+      heute die Grundlage der Beziehungen bilden, während der EWR 1992 abgelehnt wurde, Schengen erst
+      2005 angenommen wurde und es nie einen EU-Beitrittsvertrag gab.
+  source:
+    verdict: supported
+    note: Die Seite nennt die Abstimmung vom 21. Mai 2000, bei der das Volk die Bilateralen Abkommen I
+      angenommen hat, und die Ablehnung des EWR am 6. Dezember 1992. Dass sie die Basis der heutigen Beziehungen
+      bilden und Personenfreizügigkeit und Landverkehr regeln, steht auf der Seite nicht ausdrücklich;
+      die Kernaussage von Antwort und Erklärung ist aber gestützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

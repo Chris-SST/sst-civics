@@ -1,0 +1,47 @@
+id: stimmrecht-bund-ab-18-jahren
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: Wer hat auf Bundesebene das Stimm- und Wahlrecht?
+options_de:
+  a: Schweizer Staatsangehörige, die 20 Jahre alt sind
+  b: Alle Personen mit Niederlassungsbewilligung ab 18 Jahren
+  c: Schweizer Staatsangehörige, die 18 Jahre alt sind
+  d: Alle Personen mit Wohnsitz in der Schweiz ab 16 Jahren
+correct: c
+explanation_de: Auf Bundesebene sind Schweizerinnen und Schweizer ab dem vollendeten 18. Altersjahr stimm-
+  und wahlberechtigt. Die Staatsangehörigkeit ist ebenso nötig wie das Alter. Der Wohnsitz in der Schweiz
+  spielt keine Rolle.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.ch.ch/de/abstimmungen-und-wahlen/
+  checked: 2026-11-02
+glossary:
+- Stimmrecht
+- Wahlrecht
+- Altersjahr
+- Bundesebene
+status: in_review
+difficulty: 1
+covers:
+- zh-027
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Auf Bundesebene haben Schweizer Staatsangehörige ab dem vollendeten 18. Lebensjahr das
+      Stimm- und Wahlrecht, sofern sie nicht wegen dauernder Urteilsunfähigkeit unter umfassender Beistandschaft
+      stehen, während Ausländerinnen und Ausländer es auf Bundesebene nicht haben.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundesverfassung) sagt: «Die politischen Rechte in Bundessachen stehen allen Schweizerinnen
+      und Schweizern zu, die das 18. Altersjahr zurückgelegt haben». Das stützt Antwort c); Quelle 2 ist
+      eine Fehlerseite ohne Inhalt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

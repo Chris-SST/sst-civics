@@ -1,0 +1,15 @@
+id: demokratie-bevoelkerung-waehlt-parlament
+lang: en
+source_version: 1
+question: Which of the following is one of the rights of the population in a democracy such as Switzerland?
+options:
+  a: It appoints the judges of the Federal Supreme Court (Bundesgericht) by lot.
+  b: It decides on the laws alone, without Parliament.
+  c: It determines its Parliament through elections.
+  d: It directly elects the army leadership.
+explanation: In a democracy, the population elects its representatives to Parliament. At the level of
+  the Confederation, these are the National Council (Nationalrat) and the Council of States (Ständerat).
+  Parliament then enacts the federal laws on behalf of the people.
+status: draft
+reviewed_by: null
+reviewed_at: null

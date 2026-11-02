@@ -1,0 +1,47 @@
+id: gemeinden-finanzieren-sozialhilfe
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Wer finanziert im Kanton Zürich die Sozialhilfe für Menschen in einer Notlage?
+options_de:
+  a: Die Kirchen allein
+  b: Die Schweizerische Nationalbank
+  c: Die Arbeitgeberverbände
+  d: Die Gemeinden
+correct: d
+explanation_de: Im Kanton Zürich sind die Gemeinden für die Sozialhilfe zuständig und tragen deren Kosten.
+  Das kann kleinere Gemeinden stark belasten. Darum gibt es den Finanzausgleich.
+sources:
+- url: https://www.zh.ch/de/soziales/bevoelkerungszahlen/sozialleistungen-in-zahlen/wirtschaftliche-sozialhilfe/mehr-zur-sozialhilfe.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/soziales/sozialhilfe.html
+  checked: *id001
+glossary:
+- Sozialhilfe
+- Gemeinde
+- Notlage
+status: in_review
+difficulty: 2
+covers:
+- zh-202
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Kanton Zürich werden die Sozialhilfe und ihre Kosten von den politischen Gemeinden getragen,
+      während Kirchen, Nationalbank und Arbeitgeberverbände sie nicht finanzieren.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt ausdrücklich: «Grundsätzlich sind die Gemeinden für die Finanzierung der durch
+      sie ausgerichteten wirtschaftlichen Sozialhilfe zuständig.» Quelle 2 nennt Sozialhilfe als Gemeindeaufgabe
+      und beschreibt den Finanzausgleich für Gemeinden mit hohen Sozialausgaben. Der Kanton leistet allerdings
+      Staatsbeiträge (Quelle 1), was der Antwort nicht widerspricht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

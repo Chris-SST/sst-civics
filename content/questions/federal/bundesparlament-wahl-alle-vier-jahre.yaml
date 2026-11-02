@@ -1,0 +1,45 @@
+id: bundesparlament-wahl-alle-vier-jahre
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: In welchem Rhythmus wählt das Volk das Bundesparlament neu?
+options_de:
+  a: Alle drei Jahre
+  b: Alle vier Jahre
+  c: Alle sechs Jahre
+  d: Alle zwei Jahre
+correct: b
+explanation_de: Der Nationalrat wird alle vier Jahre vom Volk neu gewählt. Auch der Ständerat wird in
+  den meisten Kantonen im selben Rhythmus gewählt, die Kantone regeln das selbst.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksabstimmungen.html
+  checked: 2026-11-02
+glossary:
+- Bundesparlament
+- Nationalrat
+- Ständerat
+status: in_review
+difficulty: 1
+covers:
+- zh-034
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Nationalrat wird vom Volk alle vier Jahre neu gewählt (Gesamterneuerungswahlen), und
+      auch die Ständeratsmitglieder werden in den meisten Kantonen gleichzeitig für vier Jahre gewählt.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundesverfassung) sagt zum Nationalrat: «Alle vier Jahre findet eine Gesamterneuerung
+      statt», und die Abgeordneten werden vom Volk direkt gewählt. Dass der Ständerat von den Kantonen
+      geregelt wird, steht dort ebenfalls («Die Wahl in den Ständerat wird vom Kanton geregelt»). Quelle
+      2 ist für die Frage nicht relevant.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

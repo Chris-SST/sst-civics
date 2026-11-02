@@ -1,0 +1,46 @@
+id: grundrecht-glaubens-gewissensfreiheit-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Welches Grundrecht ist in der Schweiz durch die Bundesverfassung geschützt?
+options_de:
+  a: Das Recht auf ein Einkommen vom Staat
+  b: Das Recht auf ein Auto
+  c: Das Recht auf eine Arbeitsstelle
+  d: Die Freiheit des Glaubens und des Gewissens
+correct: d
+explanation_de: Die Glaubens- und Gewissensfreiheit steht in Artikel 15 der Bundesverfassung. Der Staat
+  darf niemanden zu einem Glauben zwingen. Ein Recht auf Arbeitsstelle oder Einkommen gibt es als Grundrecht
+  nicht.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Grundrecht
+- Glaubensfreiheit
+- Gewissensfreiheit
+- Bundesverfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-015
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung als Grundrecht
+      garantiert, während ein Recht auf Einkommen, Auto oder Arbeitsstelle dort nicht als Grundrecht verankert
+      ist.
+  source:
+    verdict: supported
+    note: 'Art. 15 BV in Quelle 1 lautet: «Die Glaubens- und Gewissensfreiheit ist gewährleistet» und
+      niemand darf zu einer Religionsgemeinschaft oder religiösen Handlung gezwungen werden. Dass es kein
+      Grundrecht auf Arbeitsstelle oder Einkommen gibt, sagt die Quelle nicht ausdrücklich; es folgt nur
+      daraus, dass diese Rechte im Grundrechtsteil nicht vorkommen.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

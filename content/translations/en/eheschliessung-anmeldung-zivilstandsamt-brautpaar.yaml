@@ -1,0 +1,15 @@
+id: eheschliessung-anmeldung-zivilstandsamt-brautpaar
+lang: en
+source_version: 1
+question: Who registers the planned marriage with the civil registry office?
+options:
+  a: The witnesses, on behalf of the couple
+  b: The engaged couple together
+  c: The residents' registration office of the municipality of residence, automatically
+  d: The parents of the bride or the groom
+explanation: The engaged couple jointly submits the application for the marriage preparation procedure
+  to the civil registry office. Other people cannot do this in their place. The office then checks whether
+  the requirements for marriage are met.
+status: draft
+reviewed_by: null
+reviewed_at: null

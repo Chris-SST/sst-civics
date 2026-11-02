@@ -1,0 +1,43 @@
+id: parlament-hauptaufgabe-gesetze-beschliessen
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.parlament
+question_de: Was ist die wichtigste Aufgabe des Bundesparlaments?
+options_de:
+  a: Die Polizei im ganzen Land zu leiten
+  b: Streitfälle zwischen Personen zu entscheiden
+  c: Gesetze zu beraten und zu verabschieden
+  d: Gesetze im Alltag durchzusetzen
+correct: c
+explanation_de: Das Parlament ist die gesetzgebende Gewalt. Es berät und beschliesst die Bundesgesetze.
+  Die Regierung setzt sie um, und die Gerichte urteilen in Streitfällen.
+sources:
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+  checked: &id001 2026-11-02
+glossary:
+- Bundesparlament
+- Gesetzgebung
+- Gewaltenteilung
+status: in_review
+difficulty: 1
+covers:
+- zh-037
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Bundesversammlung (Nationalrat und Ständerat) ist die gesetzgebende Gewalt des Bundes
+      und hat als Hauptaufgabe, Gesetze zu beraten und zu verabschieden, während Polizei und Vollzug Sache
+      der Exekutive und Streitentscheide Sache der Gerichte sind.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die Gesetzgebung als erste Aufgabe der Bundesversammlung, was Antwort c) stützt.
+      Dass die Regierung die Gesetze umsetzt und die Gerichte Streitfälle entscheiden, steht im Text nicht
+      ausdrücklich. Das widerspricht der Antwort aber nicht.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

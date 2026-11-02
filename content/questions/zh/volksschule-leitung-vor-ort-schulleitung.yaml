@@ -1,0 +1,45 @@
+id: volksschule-leitung-vor-ort-schulleitung
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Wer ist für die Leitung einer Zürcher Volksschule vor Ort verantwortlich?
+options_de:
+  a: Die Kantonspolizei
+  b: Der Elternrat allein
+  c: Das Statistische Amt
+  d: Die Schulleitung
+correct: d
+explanation_de: Jede Schule hat eine Schulleitung, die den Schulbetrieb vor Ort leitet. Sie sorgt für
+  die Organisation und die Qualität der Schule.
+sources:
+- url: https://www.zh.ch/de/bildung/informationen-fuer-schulen/informationen-volksschule/volksschule-organisation.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/bildung/schulen/volksschule/rechte-und-pflichten-der-eltern.html
+  checked: 2026-11-02
+glossary:
+- Schulleitung
+- Volksschule
+status: in_review
+difficulty: 2
+covers:
+- zh-206
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schulleitung ist an Zürcher Volksschulen für die operative Leitung der Schule vor Ort
+      zuständig, während Kantonspolizei, Elternrat allein und Statistisches Amt diese Aufgabe nicht haben.
+  source:
+    verdict: supported
+    note: Quelle 1 (Abschnitt «Schulleitung») sagt, dass Schulleiterinnen und Schulleiter die Führungsaufgaben
+      in den Schuleinheiten übernehmen und die Schulen in betrieblich-operativen Belangen leiten; auch
+      die Qualitätssicherung und -entwicklung gehört dazu. Das stützt Antwort d und die Erklärung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

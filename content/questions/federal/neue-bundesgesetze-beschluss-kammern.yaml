@@ -1,0 +1,44 @@
+id: neue-bundesgesetze-beschluss-kammern
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.parlament
+question_de: Wer beschliesst die meisten neuen Bundesgesetze?
+options_de:
+  a: Das Bundesgericht
+  b: Der Bundesrat allein
+  c: Die Kantonsparlamente
+  d: Der Nationalrat und der Ständerat
+correct: d
+explanation_de: Die meisten neuen Bundesgesetze werden von beiden Kammern des Parlaments beschlossen.
+  Der Bundesrat bereitet Vorlagen vor, entscheidet aber nicht allein. Gegen ein Gesetz kann das Volk ein
+  Referendum ergreifen.
+sources:
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet/aufgaben-der-bundesversammlung/rechtsetzung/bundesgesetze
+  checked: &id001 2026-11-02
+glossary:
+- Bundesgesetz
+- Nationalrat
+- Ständerat
+status: in_review
+difficulty: 1
+covers:
+- zh-047
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Bundesgesetze werden von der Bundesversammlung beschlossen, also vom Nationalrat und vom
+      Ständerat gemeinsam, wobei das Volk per Referendum noch mitentscheiden kann.
+  source:
+    verdict: supported
+    note: Die Seite sagt, dass Bundesgesetze von der Bundesversammlung (Parlament) erlassen werden und
+      dem fakultativen Referendum unterstehen. Das stützt die Antwort und den Hinweis auf das Referendum.
+      Dass die Bundesversammlung aus Nationalrat und Ständerat besteht, steht nicht im Seitentext, sondern
+      nur indirekt in der Navigation. Die Rolle des Bundesrats bei der Vorbereitung wird nicht erwähnt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

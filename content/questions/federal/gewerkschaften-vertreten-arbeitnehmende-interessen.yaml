@@ -1,0 +1,46 @@
+id: gewerkschaften-vertreten-arbeitnehmende-interessen
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Wessen Interessen vertreten die Gewerkschaften?
+options_de:
+  a: Die Interessen der Arbeitgeber
+  b: Die Interessen der Gemeinden
+  c: Die Interessen der Banken
+  d: Die Interessen der Arbeitnehmenden
+correct: d
+explanation_de: Gewerkschaften setzen sich für die Anliegen der Arbeitnehmenden ein, zum Beispiel bei
+  Löhnen und Arbeitsbedingungen. Sie verhandeln oft mit den Arbeitgebern über Gesamtarbeitsverträge.
+sources:
+- url: https://www.kmu.admin.ch/de/gewerkschaftliche-vertretung-eine-bruecke-zwischen-arbeitgeber-und-arbeitnehmer
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.seco.admin.ch/de/gesamtarbeitsvertraege-grundlagen
+  checked: *id001
+glossary:
+- Gewerkschaft
+- Arbeitnehmende
+- Gesamtarbeitsvertrag
+status: in_review
+difficulty: 1
+covers:
+- zh-141
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Gewerkschaften sind Organisationen, die sich für die Interessen der Arbeitnehmenden einsetzen,
+      etwa bei Löhnen, Arbeitszeiten und Gesamtarbeitsverträgen.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, Gewerkschaften seien Verbände von Arbeitnehmenden, die deren Rechte verteidigen;
+      Quelle 2 (Broschüre) bestätigt, sie setzten sich für die Rechte und Interessen von Arbeitnehmenden
+      ein. Die Aussage zu Gesamtarbeitsverträgen mit den Arbeitgebern stützen Quelle 1 und Quelle 3.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

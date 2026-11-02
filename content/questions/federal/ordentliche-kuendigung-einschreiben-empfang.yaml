@@ -1,0 +1,48 @@
+id: ordentliche-kuendigung-einschreiben-empfang
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Wie sollte eine ordentliche Kündigung eines Arbeitsverhältnisses zugestellt werden, damit
+  man den Empfang nachweisen kann?
+options_de:
+  a: Über eine Mitteilung an die Gemeindeverwaltung
+  b: Per Einschreiben, oder die andere Seite bestätigt den Empfang schriftlich
+  c: Per einfacher E-Mail ohne Bestätigung
+  d: Mündlich im Gespräch unter vier Augen
+correct: b
+explanation_de: Mit einem Einschreiben oder einer schriftlichen Empfangsbestätigung lässt sich beweisen,
+  dass die Kündigung angekommen ist. Das ist wichtig, weil Kündigungsfristen ab dem Empfang laufen.
+sources:
+- url: https://www.kmu.admin.ch/de/die-kniffligen-details-bei-der-kuendigung-des-arbeitsvertrags
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
+  checked: 2026-11-02
+glossary:
+- Kündigung
+- Einschreiben
+- Kündigungsfrist
+status: in_review
+difficulty: 2
+covers:
+- zh-167
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Eine Kündigung muss der Gegenseite zugehen, und den Empfang kann man am besten per Einschreiben
+      oder durch schriftliche Empfangsbestätigung nachweisen, während die anderen Wege keinen verlässlichen
+      Nachweis liefern.
+  source:
+    verdict: supported
+    note: Quelle 1 (KMU-Portal des SECO) sagt, man solle für eine sichere Beweislage schriftlich per Einschreiben
+      kündigen, und die Kündigung werde erst mit dem Empfang wirksam. Die Variante mit schriftlicher Empfangsbestätigung
+      wird nicht ausdrücklich genannt, passt aber zum Beweiszweck.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

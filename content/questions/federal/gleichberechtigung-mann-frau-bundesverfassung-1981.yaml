@@ -1,0 +1,44 @@
+id: gleichberechtigung-mann-frau-bundesverfassung-1981
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gesellschaftswandel
+question_de: Seit wann steht die Gleichberechtigung von Mann und Frau in der Schweizer Bundesverfassung?
+options_de:
+  a: Seit 1999
+  b: Seit 1971
+  c: Seit 1981
+  d: Seit 1848
+correct: c
+explanation_de: 1981 wurde der Gleichstellungsartikel in die Bundesverfassung aufgenommen. Er verpflichtet
+  den Staat, die Gleichstellung in Familie, Ausbildung und Arbeit zu sichern. Das Frauenstimmrecht gab
+  es schon seit 1971.
+sources:
+- url: https://www.ekf.admin.ch/de/frauenrechte
+  checked: &id001 2026-11-02
+glossary:
+- Gleichberechtigung
+- Bundesverfassung
+status: in_review
+difficulty: 2
+covers:
+- zh-220
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Gleichstellungsartikel (Art. 4 Abs. 2 aBV) wurde 1981 nach der Volksabstimmung vom
+      14. Juni 1981 in die Bundesverfassung aufgenommen, während 1971 das Frauenstimmrecht eingeführt
+      und 1999 die totalrevidierte Verfassung in Kraft trat.
+  source:
+    verdict: supported
+    note: Quelle 1 (EKF) sagt, die Volksinitiative «Gleiche Rechte für Mann und Frau» habe 1981 zur Aufnahme
+      des Gleichstellungsartikels in die Bundesverfassung (Art. 8 Abs. 3 BV) geführt. Der Text nennt auch
+      «vor allem in Familie, Ausbildung und Arbeit» und das Frauenstimmrecht seit 1971, was die Erklärung
+      stützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

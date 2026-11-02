@@ -1,0 +1,43 @@
+id: fasnacht-umzuege-mit-masken
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Was gehört typischerweise zur Schweizer Fasnacht?
+options_de:
+  a: Umzüge, bei denen die Teilnehmenden Masken tragen
+  b: Das Schmücken von Tannenbäumen auf dem Dorfplatz
+  c: Feuerwerk um Mitternacht am 1. August
+  d: Das Anzünden grosser Kerzen in Kirchen
+correct: a
+explanation_de: An der Fasnacht ziehen Gruppen in Umzügen durch die Strassen und tragen dabei Masken und
+  Kostüme. Die Basler Fasnacht ist ein bekanntes Beispiel für diesen Brauch.
+sources:
+- url: https://www.bak.admin.ch/de/basler-fasnacht
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/traditionen
+  checked: 2026-11-02
+glossary:
+- Fasnacht
+- Umzug
+status: in_review
+difficulty: 1
+covers:
+- zh-326
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Zur Schweizer Fasnacht gehören typischerweise Umzüge mit maskierten und kostümierten Teilnehmenden,
+      während die anderen Antworten zu Weihnachten, zum Nationalfeiertag und zu kirchlichen Bräuchen gehören.
+  source:
+    verdict: supported
+    note: Quelle 1 (BAK) beschreibt für die Basler Fasnacht Kostüme, Masken (Larven) und grosse Fasnachtsumzüge
+      («Cortèges»), die von den Cliquen gestaltet werden. Das stützt Antwort a und die Erklärung. Quelle
+      2 nennt die Basler Fasnacht nur als Beispiel für einen lebendigen Brauch.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

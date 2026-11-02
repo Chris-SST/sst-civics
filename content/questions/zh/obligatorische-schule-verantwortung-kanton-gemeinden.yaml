@@ -1,0 +1,49 @@
+id: obligatorische-schule-verantwortung-kanton-gemeinden
+version: 1
+scope: zh
+canton: zh
+topic: kanton.sozial.bildung_gesundheit
+question_de: Wer trägt in der Schweiz hauptsächlich die Verantwortung für die öffentliche obligatorische
+  Schule?
+options_de:
+  a: Die Schulleitungen und die Eltern
+  b: Der Bund allein
+  c: Die Bezirke und die Kirchen
+  d: Die Kantone und die Gemeinden
+correct: d
+explanation_de: Die Volksschule ist Sache der Kantone und der Gemeinden. Der Kanton legt den Rahmen fest,
+  die Gemeinden führen die Schulen vor Ort. Der Bund spielt bei der obligatorischen Schule nur eine kleine
+  Rolle.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/bildung
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/bildung/schulen/volksschule.html
+  checked: 2026-11-02
+glossary:
+- Volksschule
+- Kanton
+- Gemeinde
+- Schulpflicht
+status: in_review
+difficulty: 1
+covers:
+- zh-196
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Artikel 62 der Bundesverfassung sind für das Schulwesen die Kantone zuständig, und
+      diese übertragen den Vollzug der obligatorischen Schule weitgehend den Gemeinden.
+  source:
+    verdict: supported
+    note: 'Quelle 1: Bildung ist hauptsächlich Sache der Kantone, der Bund und die Gemeinden übernehmen
+      ergänzende Aufgaben. Quelle 2: Die Kantone sind für die öffentliche Volksschule verantwortlich,
+      und die Gemeinden dürfen die Führung der Volksschule selbst bestimmen.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,44 @@
+id: geografische-gliederung-der-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: In welche drei grossen Landschaftsräume gliedert sich die Schweiz geografisch?
+options_de:
+  a: Jura, Mittelland und Alpen
+  b: Jura, Bodensee und Alpen
+  c: Schwarzwald, Mittelland und Alpen
+  d: Mittelland, Voralpen und Tessin
+correct: a
+explanation_de: Der Jura liegt im Nordwesten, die Alpen nehmen den grössten Teil der Fläche ein. Dazwischen
+  liegt das Mittelland, in dem die meisten Menschen leben.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geografie
+  checked: &id001 2026-11-02
+glossary:
+- Jura
+- Mittelland
+- Alpen
+status: in_review
+difficulty: 1
+covers:
+- zh-263
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz gliedert sich geografisch in die drei grossen Landschaftsräume Jura, Mittelland
+      und Alpen, während Bodensee, Schwarzwald, Voralpen und Tessin keine solchen drei Hauptlandschaftsräume
+      bilden.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt ausdrücklich, die Schweiz gliedere sich in drei geografische Zonen: Alpen, Mittelland
+      und Jura. Sie stützt auch die Erklärung: Der Jura liegt im Westen, die Alpen nehmen den grössten
+      Teil der Fläche ein, und im Mittelland lebt die Mehrheit der Bevölkerung. Der Jura im «Nordwesten»
+      steht dort nicht wörtlich, nur «im Westen».'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

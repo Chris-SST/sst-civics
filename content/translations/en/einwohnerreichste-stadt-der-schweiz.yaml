@@ -1,0 +1,14 @@
+id: einwohnerreichste-stadt-der-schweiz
+lang: en
+source_version: 1
+question: Which city in Switzerland has the largest population?
+options:
+  a: Geneva
+  b: Zurich
+  c: Bern
+  d: Basel
+explanation: Zurich is the largest city in Switzerland. Bern is indeed the Confederation's city (Bundesstadt),
+  but it has significantly fewer inhabitants. Geneva and Basel are also smaller.
+status: draft
+reviewed_by: null
+reviewed_at: null

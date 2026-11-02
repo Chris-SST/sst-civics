@@ -1,0 +1,16 @@
+id: alv-beitraege-pensionierte-personen
+lang: en
+source_version: 1
+question: Who in Switzerland no longer has to pay contributions to unemployment insurance (ALV)?
+options:
+  a: People in permanent employment
+  b: People who have reached the ordinary retirement age under the old-age and survivors' insurance (OASI)
+    (AHV)
+  c: People who work part-time
+  d: People who have never been unemployed in the last two years
+explanation: The obligation to pay contributions to unemployment insurance ends when a person reaches
+  the OASI retirement age. Anyone who is retired no longer pays ALV contributions on any wages they may
+  earn. Part-time and full-time employees, on the other hand, do pay contributions.
+status: draft
+reviewed_by: null
+reviewed_at: null

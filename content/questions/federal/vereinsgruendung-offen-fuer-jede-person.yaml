@@ -1,0 +1,47 @@
+id: vereinsgruendung-offen-fuer-jede-person
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Wer darf in der Schweiz einen Verein gründen?
+options_de:
+  a: Nur Personen, die einen Wohnsitz in der Gemeinde haben
+  b: Jede Person
+  c: Nur Schweizer Staatsangehörige
+  d: Nur Personen mit einer Niederlassungsbewilligung
+correct: b
+explanation_de: Die Gründung eines Vereins steht in der Schweiz jeder Person offen. Die Vereinsfreiheit
+  ist in der Bundesverfassung garantiert. Staatsangehörigkeit oder Aufenthaltsstatus spielen dafür keine
+  Rolle.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
+  checked: 2026-11-02
+glossary:
+- Verein
+- Vereinsfreiheit
+status: in_review
+difficulty: 1
+covers:
+- zh-193
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Vereinsfreiheit nach Art. 23 der Bundesverfassung und Art. 60 ZGB erlaubt es jeder
+      Person, unabhängig von Nationalität, Wohnsitz oder Aufenthaltsstatus, einen Verein zu gründen.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundesverfassung): «Jede Person hat das Recht, Vereinigungen zu bilden, Vereinigungen
+      beizutreten …». Quelle 2 sagt es ebenso: «Jede Person hat das Recht, eine Vereinigung zu gründen»,
+      z. B. einen Sportverein oder politischen Verein. Eine Einschränkung nach Staatsangehörigkeit oder
+      Aufenthaltsstatus steht dort nicht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

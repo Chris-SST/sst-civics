@@ -1,0 +1,15 @@
+id: familienzulage-fuer-eltern
+lang: en
+source_version: 1
+question: Which state benefit do parents in Switzerland receive if they are employed or self-employed
+  and have children?
+options:
+  a: The disability pension
+  b: Unemployment benefit
+  c: The supplementary benefit to old-age and survivors' insurance (OASI) (AHV)
+  d: The family allowance
+explanation: Family allowances help families to bear part of the cost of children. They consist of child
+  allowances and training allowances. Self-employed people can also receive them.
+status: draft
+reviewed_by: null
+reviewed_at: null

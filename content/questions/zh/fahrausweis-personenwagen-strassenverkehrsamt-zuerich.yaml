@@ -1,0 +1,41 @@
+id: fahrausweis-personenwagen-strassenverkehrsamt-zuerich
+version: 1
+scope: zh
+canton: zh
+topic: kanton.sozial.steuern_leistungen
+question_de: Welche Stelle erteilt im Kanton Zürich den Fahrausweis für Personenwagen?
+options_de:
+  a: Das Bezirksgericht
+  b: Das Strassenverkehrsamt des Kantons
+  c: Die Stadtpolizei der Wohngemeinde
+  d: Das Bundesamt für Strassen
+correct: b
+explanation_de: Im Kanton Zürich ist das Strassenverkehrsamt für die Fahrausweise zuständig. Es gehört
+  zur Sicherheitsdirektion. Die Gemeinden und der Bund stellen keine Fahrausweise aus.
+sources:
+- url: https://www.zh.ch/de/sicherheitsdirektion/strassenverkehrsamt.html
+  checked: &id001 2026-11-02
+glossary:
+- Fahrausweis
+- Strassenverkehrsamt
+status: in_review
+difficulty: 1
+covers:
+- zh-112
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Kanton Zürich erteilt das kantonale Strassenverkehrsamt die Fahrausweise, während Gerichte,
+      Gemeindepolizei und das Bundesamt für Strassen (ASTRA) dafür nicht zuständig sind.
+  source:
+    verdict: supported
+    note: Die Seite des Strassenverkehrsamts Kanton Zürich nennt Führerausweise als Zuständigkeit des
+      Amts und es gehört zur Sicherheitsdirektion. Dass Gemeinden und Bund keine Fahrausweise ausstellen,
+      steht nicht ausdrücklich da, folgt aber aus der Zuständigkeit des Amts.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,47 @@
+id: anzahl-kantone-und-halbkantone-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Wie viele Kantone hat die Schweiz und wie viele davon sind Halbkantone?
+options_de:
+  a: 26 Kantone, davon 6 Halbkantone
+  b: 26 Kantone, davon 3 Halbkantone
+  c: 23 Kantone, davon 6 Halbkantone
+  d: 20 Kantone, davon 6 Halbkantone
+correct: a
+explanation_de: 'Die Schweiz hat 26 Kantone. Sechs davon sind Halbkantone: Obwalden, Nidwalden, Basel-Stadt,
+  Basel-Landschaft, Appenzell Ausserrhoden und Appenzell Innerrhoden. Sie haben im Ständerat je eine Stimme
+  statt zwei.'
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/foederalismus
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/bundesversammlung-parlament
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Kanton
+- Halbkanton
+- Ständerat
+status: in_review
+difficulty: 1
+covers:
+- zh-056
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz hat 26 Kantone, von denen sechs (Obwalden, Nidwalden, Basel-Stadt, Basel-Landschaft,
+      Appenzell Ausserrhoden und Appenzell Innerrhoden) traditionell als Halbkantone gelten.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt 26 Kantone und 6 Halbkantone mit nur einem Ständeratssitz. Quelle 2 zählt die
+      sechs Halbkantone namentlich auf (Appenzell Ausserrhoden und Innerrhoden, Obwalden, Nidwalden, Basel-Stadt,
+      Basel-Landschaft) und bestätigt die eine Stimme im Ständerat.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

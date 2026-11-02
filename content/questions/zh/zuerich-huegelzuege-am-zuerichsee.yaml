@@ -1,0 +1,46 @@
+id: zuerich-huegelzuege-am-zuerichsee
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: Welche Hügelzüge säumen den Zürichsee?
+options_de:
+  a: Uetliberg, Albis und Pfannenstiel
+  b: Lägern, Irchel und Höhronen
+  c: Hörnli, Bachtel und Allmann
+  d: Heitersberg, Üetliberg und Randen
+correct: a
+explanation_de: Der Uetliberg und der Albis liegen am linken Seeufer, der Pfannenstiel am rechten Seeufer.
+  Lägern, Irchel, Bachtel und Hörnli sind andere Erhebungen im Kanton oder in der Region.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: 2026-11-02
+glossary:
+- Zürichsee
+- Uetliberg
+- Albis
+- Pfannenstiel
+status: in_review
+difficulty: 3
+covers:
+- zh-290
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Uetliberg und Albis säumen den Zürichsee im Westen (Sihltal-Seite) und der Pfannenstiel
+      im Osten, während Lägern, Irchel, Hörnli, Bachtel, Allmann, Heitersberg und Randen nicht direkt
+      am Zürichsee liegen.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Broschüre, Seite 61) sagt ausdrücklich: «Der Zürichsee ist von drei Hügeln umgeben:
+      dem Uetliberg, dem Albis und dem Pfannenstiel.» Zur Lage am linken beziehungsweise rechten Seeufer
+      steht im Text nichts, aber die Antwort a) wird eindeutig gestützt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

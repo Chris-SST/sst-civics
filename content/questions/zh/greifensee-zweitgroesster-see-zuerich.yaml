@@ -1,0 +1,43 @@
+id: greifensee-zweitgroesster-see-zuerich
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: Welcher See ist im Kanton Zürich nach dem Zürichsee der zweitgrösste?
+options_de:
+  a: Greifensee
+  b: Pfäffikersee
+  c: Türlersee
+  d: Katzensee
+correct: a
+explanation_de: Der Greifensee liegt zwischen Uster und Dübendorf und ist nach dem Zürichsee der zweitgrösste
+  See im Kanton. Der Pfäffikersee ist kleiner. Türlersee und Katzensee sind noch deutlich kleiner.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: 2026-11-02
+glossary:
+- Greifensee
+- Zürichsee
+status: in_review
+difficulty: 2
+covers:
+- zh-293
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Greifensee ist mit etwa 8,5 km² der zweitgrösste See im Kanton Zürich nach dem Zürichsee,
+      während der Pfäffikersee mit etwa 3,3 km² kleiner ist.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Broschüre, Seite 61) sagt ausdrücklich: «Der Greifensee ist der zweitgrösste See
+      im Kanton Zürich. Der Pfäffikersee ist der drittgrösste See.» Die Lage zwischen Uster und Dübendorf
+      sowie die Grösse von Türlersee und Katzensee werden nicht belegt, aber die Kernaussage stimmt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

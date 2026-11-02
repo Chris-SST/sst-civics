@@ -1,0 +1,14 @@
+id: grundversicherung-pflicht-einwohner
+lang: en
+source_version: 1
+question: Who is covered by compulsory basic insurance for medical treatment in Switzerland?
+options:
+  a: Only people with Swiss citizenship (Bürgerrecht)
+  b: Only gainfully employed people who earn a salary
+  c: Only people on a low income
+  d: All residents of Switzerland
+explanation: Compulsory health insurance applies to everyone who lives in Switzerland. Citizenship, employment
+  and income play no role in this.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,43 @@
+id: pyramidenfoermiger-berg-matterhorn
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Welcher Schweizer Berg ist für seine markante Pyramidenform bekannt?
+options_de:
+  a: Eiger
+  b: Matterhorn
+  c: Pilatus
+  d: Säntis
+correct: b
+explanation_de: Das Matterhorn bei Zermatt im Wallis hat eine steile, pyramidenförmige Spitze. Es gehört
+  zu den bekanntesten Bergen der Schweiz. Eiger, Säntis und Pilatus sehen anders aus.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/alpen
+  checked: 2026-11-02
+glossary:
+- Matterhorn
+- Alpen
+status: draft
+difficulty: 1
+covers:
+- zh-277
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Matterhorn ist mit seiner markanten, pyramidenförmigen Gestalt der bekannteste Pyramidenberg
+      der Schweiz, während Eiger, Pilatus und Säntis andere charakteristische Formen haben.
+  source:
+    verdict: unclear
+    note: Quelle 1 nennt das Matterhorn nur als Name auf der Karte, Quelle 2 erwähnt Zermatt im Wallis,
+      aber keine Pyramidenform des Matterhorns. Quelle 2 nennt den Niesen als «höchste Pyramide der Schweiz»,
+      was die Antwort nicht stützt. Die Quellen bestätigen die Pyramidenform des Matterhorns daher nicht.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

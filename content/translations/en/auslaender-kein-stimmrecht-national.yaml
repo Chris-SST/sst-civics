@@ -1,0 +1,15 @@
+id: auslaender-kein-stimmrecht-national
+lang: en
+source_version: 1
+question: Are foreign nationals who have lived in Switzerland for years allowed to take part in federal
+  votes?
+options:
+  a: Yes, but only in votes and not in elections.
+  b: Yes, if they have a settlement permit (C permit) (Niederlassungsbewilligung).
+  c: Yes, if they pay taxes.
+  d: No, they have no right to vote at national level.
+explanation: The right to vote at national level is tied to Swiss citizenship (Bürgerrecht). Foreign nationals
+  can only exercise it after naturalisation.
+status: draft
+reviewed_by: null
+reviewed_at: null

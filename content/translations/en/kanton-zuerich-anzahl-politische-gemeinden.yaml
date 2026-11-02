@@ -1,0 +1,14 @@
+id: kanton-zuerich-anzahl-politische-gemeinden
+lang: en
+source_version: 1
+question: Approximately how many political communes (Gemeinden) are there in the canton of Zurich?
+options:
+  a: About 60
+  b: About 110
+  c: About 250
+  d: About 160
+explanation: The canton of Zurich consists of around 160 political communes. The exact number may change
+  slightly due to mergers of communes.
+status: draft
+reviewed_by: null
+reviewed_at: null

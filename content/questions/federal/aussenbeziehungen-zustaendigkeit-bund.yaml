@@ -1,0 +1,45 @@
+id: aussenbeziehungen-zustaendigkeit-bund
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Wer ist in der Schweiz grundsätzlich dafür zuständig, die Beziehungen zu anderen Staaten
+  zu gestalten?
+options_de:
+  a: Die Konferenz der Kantonsregierungen
+  b: Der Bund
+  c: Die Kantone gemeinsam
+  d: Die Gemeinden an der Grenze
+correct: b
+explanation_de: Nach der Bundesverfassung ist die Aussenpolitik Sache des Bundes. Die Kantone können in
+  ihren eigenen Zuständigkeitsbereichen mit dem Ausland zusammenarbeiten, die Gesamtverantwortung liegt
+  aber beim Bund.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Bund
+- Kanton
+- Aussenpolitik
+status: in_review
+difficulty: 1
+covers:
+- zh-060
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Art. 54 der Bundesverfassung sind die auswärtigen Angelegenheiten Sache des Bundes,
+      während die Kantone nur in ihren eigenen Zuständigkeitsbereichen begrenzt mit dem Ausland verkehren
+      dürfen.
+  source:
+    verdict: supported
+    note: 'In Quelle 1 steht im Abschnitt «Beziehungen zum Ausland»: «Die auswärtigen Angelegenheiten
+      sind Sache des Bundes.» Art. 56 erlaubt den Kantonen Verträge mit dem Ausland nur in ihren Zuständigkeitsbereichen
+      und im Rahmen des Bundesrechts, was die Erklärung bestätigt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

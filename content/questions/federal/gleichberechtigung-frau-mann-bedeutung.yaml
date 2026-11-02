@@ -1,0 +1,44 @@
+id: gleichberechtigung-frau-mann-bedeutung
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gesellschaftswandel
+question_de: Was bedeutet die Gleichberechtigung von Frau und Mann im Grundsatz?
+options_de:
+  a: Frauen und Männer haben im Grundsatz dieselben Rechte.
+  b: Frauen und Männer haben in jedem Lebensbereich die gleichen Pflichten, aber unterschiedliche Rechte.
+  c: Frauen und Männer verdienen in jedem Beruf genau gleich viel.
+  d: Frauen und Männer müssen alle Aufgaben in der Familie gleich teilen.
+correct: a
+explanation_de: Gleichberechtigung heisst, dass beide Geschlechter im Grundsatz dieselben Rechte besitzen.
+  Sie ist in der Bundesverfassung verankert. Der Grundsatz sagt nichts darüber, wie Familien ihre Aufgaben
+  im Einzelnen aufteilen.
+sources:
+- url: https://www.ekf.admin.ch/de/frauenrechte
+  checked: &id001 2026-11-02
+glossary:
+- Gleichberechtigung
+- Bundesverfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-079
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Artikel 8 Absatz 3 der Bundesverfassung verankert die Gleichberechtigung von Frau und Mann,
+      das heisst, beide haben im Grundsatz dieselben Rechte, während die anderen Antworten Pflichten,
+      Lohn oder Familienaufgaben fälschlich absolut festlegen.
+  source:
+    verdict: supported
+    note: 'Quelle 1 zitiert Art. 8 Abs. 3 BV: «Mann und Frau sind gleichberechtigt» und nennt die gleichen
+      politischen Rechte sowie die gleichberechtigte Partnerschaft in der Ehe. Das stützt Antwort a und
+      die Verankerung in der Bundesverfassung. Die Aussage, der Grundsatz sage nichts über die Aufgabenteilung
+      in Familien, steht dort nicht ausdrücklich, widerspricht aber nichts.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

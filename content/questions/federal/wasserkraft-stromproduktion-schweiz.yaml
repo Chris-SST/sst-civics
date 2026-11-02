@@ -1,0 +1,46 @@
+id: wasserkraft-stromproduktion-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Die Schweiz hat reichlich Wasser. Wie wird es zur Stromproduktion genutzt?
+options_de:
+  a: In Gaskraftwerken
+  b: In Ölraffinerien
+  c: In Wasserkraftwerken
+  d: In Kohlekraftwerken
+correct: c
+explanation_de: Das Wasser aus Flüssen und Stauseen treibt in Wasserkraftwerken Turbinen an. Die Wasserkraft
+  ist in der Schweiz eine zentrale einheimische Quelle für Strom.
+sources:
+- url: https://www.bfe.admin.ch/de/wasserkraft
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.seco.admin.ch/de/europaeische-union-eu
+  checked: 2026-11-02
+glossary:
+- Wasserkraftwerk
+- Stromproduktion
+status: in_review
+difficulty: 1
+covers:
+- zh-281
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz nutzt ihr reichlich vorhandenes Wasser zur Stromproduktion in Wasserkraftwerken,
+      die rund die Hälfte des Schweizer Stroms liefern.
+  source:
+    verdict: supported
+    note: Quelle 1 (BFE) nennt die Wasserkraft die wichtigste einheimische Quelle erneuerbarer Energie,
+      mit rund 58.5% der inländischen Stromproduktion aus Wasserkraftwerken. Quelle 2 (Zürcher Broschüre)
+      sagt, Seen und Flüsse würden für Wasserkraftwerke zur Stromproduktion genutzt. Das Antreiben von
+      Turbinen steht nicht wörtlich da, ist aber nebensächlich.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

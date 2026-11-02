@@ -1,0 +1,44 @@
+id: bezeichnung-regierung-bund-bundesrat
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.bundesrat
+question_de: Wie heisst die Regierung der Schweiz auf Bundesebene?
+options_de:
+  a: Bundesversammlung
+  b: Bundesrat
+  c: Bundeskanzlei
+  d: Bundesgericht
+correct: b
+explanation_de: Die Regierung des Bundes heisst Bundesrat. Die Bundesversammlung ist das Parlament, das
+  Bundesgericht ist das oberste Gericht. Die Bundeskanzlei unterstützt den Bundesrat.
+sources:
+- url: https://www.admin.ch/gov/de/start/bundesrat.html
+  checked: &id001 2026-11-02
+glossary:
+- Bundesrat
+- Bundesversammlung
+- Bundesgericht
+- Bundeskanzlei
+status: in_review
+difficulty: 1
+covers:
+- zh-040
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Bundesrat ist als siebenköpfiges Kollegium die Regierung der Schweiz auf Bundesebene,
+      während die Bundesversammlung das Parlament, die Bundeskanzlei der Stab des Bundesrates und das
+      Bundesgericht die oberste rechtsprechende Behörde ist.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt ausdrücklich: «Der Bundesrat ist die Regierung der Schweiz» und «Der Bundesrat
+      regiert die Schweiz». Dass die Bundesversammlung als Parlament und das Bundesgericht als Gericht
+      gelten, ist nur indirekt erkennbar, die Kernaussage ist aber klar belegt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

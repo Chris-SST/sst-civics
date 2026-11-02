@@ -1,0 +1,15 @@
+id: zulassung-motorfahrzeuge-kantonales-strassenverkehrsamt
+lang: en
+source_version: 1
+question: Who authorises a motor vehicle for road traffic in the canton of Zürich and issues the number
+  plates for it?
+options:
+  a: The cantonal police during a traffic check
+  b: The road traffic office of the canton
+  c: The Touring Club Switzerland
+  d: The commune (Gemeinde) administration at the place of residence
+explanation: The authorisation of motor vehicles is the responsibility of the cantonal road traffic office.
+  It also issues the number plates. The commune and the police are not responsible for this.
+status: draft
+reviewed_by: null
+reviewed_at: null

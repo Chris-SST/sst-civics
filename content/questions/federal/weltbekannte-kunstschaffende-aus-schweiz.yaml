@@ -1,0 +1,44 @@
+id: weltbekannte-kunstschaffende-aus-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Welche Namen gehören zu weltweit angesehenen Kunstschaffenden mit Bezug zur Schweiz?
+options_de:
+  a: Vincent van Gogh, Paul Cézanne und Henri Matisse
+  b: Niki de Saint Phalle, Sophie Taeuber-Arp und Pipilotti Rist
+  c: Claude Monet, Edgar Degas und Auguste Renoir
+  d: Pablo Picasso, Frida Kahlo und Salvador Dalí
+correct: b
+explanation_de: Niki de Saint Phalle, Sophie Taeuber-Arp und Pipilotti Rist sind international anerkannte
+  Künstlerinnen, die mit der Schweiz verbunden sind. Die anderen Gruppen nennen bekannte Künstler ohne
+  diesen Schweizer Bezug.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/kulturschaffen-in-der-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Kunstschaffende
+- Kunst
+status: in_review
+difficulty: 3
+covers:
+- zh-329
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Niki de Saint Phalle (lebte zeitweise in der Schweiz, Tinguely-Brunnen in Basel), Sophie
+      Taeuber-Arp (in Davos geboren, Schweizer Künstlerin) und Pipilotti Rist (Schweizer Videokünstlerin)
+      haben einen Bezug zur Schweiz, während die Künstler in den übrigen Antworten vor allem mit Frankreich,
+      Spanien, Mexiko oder den Niederlanden verbunden sind.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Sophie Taeuber-Arp (Dada), Niki de Saint Phalle (Bildhauerin, Frau von Jean Tinguely)
+      und Pipilotti Rist unter den Schweizer Kunstschaffenden. Die Namen der anderen Antworten kommen
+      im Text nicht vor, daher stützt die Seite Antwort b.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

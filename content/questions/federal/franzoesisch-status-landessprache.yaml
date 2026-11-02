@@ -1,0 +1,41 @@
+id: franzoesisch-status-landessprache
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.sprachen
+question_de: Welchen Status hat Französisch in der Schweiz?
+options_de:
+  a: Französisch ist nur eine Fremdsprache in der Schule.
+  b: Französisch ist nur eine regionale Verkehrssprache.
+  c: Französisch ist eine Landessprache.
+  d: Französisch ist eine Minderheitensprache ohne amtlichen Status.
+correct: c
+explanation_de: Französisch ist eine der Landessprachen der Schweiz. Es wird vor allem in der Westschweiz
+  gesprochen und ist auf Bundesebene eine Amtssprache.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sprachen
+  checked: &id001 2026-11-02
+glossary:
+- Landessprache
+- Amtssprache
+status: in_review
+difficulty: 1
+covers:
+- zh-063
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Französisch ist gemäss Artikel 4 der Bundesverfassung neben Deutsch, Italienisch und Rätoromanisch
+      eine der vier Landessprachen und zudem eine Amtssprache des Bundes.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Französisch ausdrücklich als eine der vier offiziellen Landessprachen und als
+      Hauptsprache der Romandie. Die Aussage zur Amtssprache auf Bundesebene steht nicht wörtlich da,
+      doch die Antwort «Landessprache» ist klar gestützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

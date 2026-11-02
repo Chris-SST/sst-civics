@@ -1,0 +1,14 @@
+id: fahrausweis-personenwagen-strassenverkehrsamt-zuerich
+lang: en
+source_version: 1
+question: Which authority issues driving licences for passenger cars in the canton of Zürich?
+options:
+  a: The district court
+  b: The cantonal road traffic office
+  c: The city police of the commune of residence (Gemeinde)
+  d: The Federal Roads Office
+explanation: In the canton of Zürich, the road traffic office is responsible for driving licences. It
+  belongs to the Security Directorate. The communes and the Confederation do not issue driving licences.
+status: draft
+reviewed_by: null
+reviewed_at: null

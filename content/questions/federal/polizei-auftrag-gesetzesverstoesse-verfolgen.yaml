@@ -1,0 +1,46 @@
+id: polizei-auftrag-gesetzesverstoesse-verfolgen
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.gerichte
+question_de: Welche Aufgabe gehört zum Auftrag der Polizei?
+options_de:
+  a: Gesetzesverstösse zu verfolgen
+  b: Volksabstimmungen durchzuführen
+  c: Gesetze für das Land zu erlassen
+  d: Gerichtsurteile über Straftäter zu fällen
+correct: a
+explanation_de: Die Polizei sorgt für Sicherheit und Ordnung und verfolgt Gesetzesverstösse. Sie klärt
+  Straftaten ab und leitet die Ergebnisse weiter. Gesetze erlässt das Parlament, Urteile fällen die Gerichte.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2010/267/20250401/de/html/fedlex-data-admin-ch-eli-cc-2010-267-20250401-de-html-4.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: 2026-11-02
+glossary:
+- Polizei
+- Gesetzesverstoss
+- Straftat
+status: in_review
+difficulty: 1
+covers:
+- zh-072
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Polizei sorgt für Sicherheit und Ordnung und verfolgt Gesetzesverstösse, während Abstimmungen
+      von den Behörden, Gesetze vom Parlament und Urteile von den Gerichten verantwortet werden.
+  source:
+    verdict: supported
+    note: Quelle 1 (StPO Art. 15) sagt, dass die Polizei Straftaten aus eigenem Antrieb, auf Anzeige oder
+      im Auftrag der Staatsanwaltschaft ermittelt, und stützt damit Antwort a. Dass Gerichte urteilen
+      und das Parlament Gesetze macht, stützt Quelle 2, aber die Hauptaussage ist durch Quelle 1 belegt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,48 @@
+id: gewerkschaften-aufgabe-arbeitnehmende
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Welche Aufgabe haben Gewerkschaften in der Schweiz?
+options_de:
+  a: Sie setzen sich für die Anliegen der Arbeitnehmenden ein.
+  b: Sie zahlen Arbeitslosen das Taggeld aus.
+  c: Sie legen die Steuersätze für Unternehmen fest.
+  d: Sie vertreten die Anliegen der Arbeitgeber gegenüber dem Bund.
+correct: a
+explanation_de: Gewerkschaften sind Organisationen der Arbeitnehmenden. Sie vertreten deren Interessen,
+  zum Beispiel bei Löhnen und Arbeitsbedingungen, und verhandeln oft Gesamtarbeitsverträge mit.
+sources:
+- url: https://www.kmu.admin.ch/de/gewerkschaftliche-vertretung-eine-bruecke-zwischen-arbeitgeber-und-arbeitnehmer
+  checked: &id001 2026-11-02
+- url: https://www.kmu.admin.ch/de/vorteile-von-gesamtarbeitsvertraegen
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Gewerkschaft
+- Arbeitnehmende
+- Gesamtarbeitsvertrag
+status: in_review
+difficulty: 1
+covers:
+- zh-164
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Gewerkschaften sind Organisationen der Arbeitnehmenden, die deren Interessen vertreten,
+      etwa bei Löhnen und Arbeitsbedingungen und in Gesamtarbeitsverträgen, während Taggelder von den
+      Arbeitslosenkassen ausgezahlt, Steuersätze von Bund, Kantonen und Gemeinden festgelegt und Arbeitgeberanliegen
+      von Arbeitgeberverbänden vertreten werden.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, Gewerkschaften seien Verbände von Arbeitnehmenden, die ihre Rechte verteidigen
+      und bei Lohn und Arbeitsbedingungen verhandeln. Quelle 2 und 3 stützen dies, auch die Gesamtarbeitsverträge
+      (Quelle 2) und die Interessenvertretung (Quelle 3).
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

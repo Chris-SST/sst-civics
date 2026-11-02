@@ -1,0 +1,15 @@
+id: arbeitsvertrag-inhalt-lohnhoehe
+lang: en
+source_version: 1
+question: What is, among other things, specified in the employment contract between employer and employee?
+options:
+  a: The amount of the salary
+  b: The amount of the old-age and survivors' insurance (AHV) pension
+  c: The amount of value added tax
+  d: The amount of the health insurer (Krankenkasse) premium
+explanation: The employment contract sets out the most important conditions of the work, for example the
+  duties, the working hours and the salary. The old-age and survivors' insurance (OASI) pension, value
+  added tax and the health insurer premium are not determined in the employment contract.
+status: draft
+reviewed_by: null
+reviewed_at: null

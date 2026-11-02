@@ -1,0 +1,45 @@
+id: alfred-escher-eth-eisenbahn-bank
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.bundesstaat
+question_de: Wofür ist der Zürcher Politiker und Unternehmer Alfred Escher bekannt?
+options_de:
+  a: Er führte die Schweizer Truppen im Sonderbundskrieg.
+  b: Er schrieb die erste Bundesverfassung allein.
+  c: Er gründete das Rote Kreuz in Genf.
+  d: Er war an ETH, Eisenbahnbau und der Gründung der Credit Suisse beteiligt.
+correct: d
+explanation_de: Alfred Escher förderte im 19. Jahrhundert die Gründung der ETH Zürich und den Bau der
+  Eisenbahn, besonders der Gotthardbahn. Zudem gründete er die Schweizerische Kreditanstalt, die heutige
+  Credit Suisse. Er gilt als Visionär der modernen Schweiz.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/alfred-escher-ein-visionaer-der-modernen-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Alfred Escher
+- ETH
+- Eisenbahnbau
+- Credit Suisse
+status: in_review
+difficulty: 2
+covers:
+- zh-208
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Alfred Escher war Gründer der Schweizerischen Kreditanstalt (Credit Suisse), förderte die
+      Gründung der ETH Zürich und trieb den Eisenbahnbau (Nordostbahn, Gotthardbahn) voran, während die
+      anderen Aussagen auf Dufour, die Verfassungskommission bzw. Henri Dunant zutreffen.
+  source:
+    verdict: supported
+    note: Die Seite nennt Eschers Einsatz für das Polytechnikum (heute ETH Zürich), den Eisenbahnbau (Nordostbahn,
+      Gotthardbahn) und die Gründung der Schweizerischen Kreditanstalt (später Credit Suisse) im Jahr
+      1856. Damit sind Antwort d und die Erklärung gedeckt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,47 @@
+id: absicherung-krankheit-unfall-sozialversicherung
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Gegen welche Risiken sichert das Sozialversicherungssystem der Schweiz unter anderem ab?
+options_de:
+  a: Gegen Verluste bei privaten Geldanlagen
+  b: Gegen Schäden an Auto und Hausrat durch Diebstahl
+  c: Gegen die Folgen von Krankheit und Unfall
+  d: Gegen Preissteigerungen bei Mieten
+correct: c
+explanation_de: Die Sozialversicherungen schützen Menschen vor finanziellen Folgen wichtiger Lebensrisiken.
+  Dazu gehören Krankheit und Unfall. Die Krankenversicherung und die Unfallversicherung sind Beispiele.
+sources:
+- url: https://www.bsv.admin.ch/de/krankenversicherung-unfallversicherung
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.bsv.admin.ch/de/dreisaeulensystem
+  checked: 2026-11-02
+glossary:
+- Sozialversicherung
+- Krankenversicherung
+- Unfallversicherung
+status: in_review
+difficulty: 1
+covers:
+- zh-134
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Schweizer Sozialversicherungssystem sichert unter anderem gegen die Folgen von Krankheit
+      und Unfall ab (Kranken- und Unfallversicherung), während Anlageverluste, Diebstahlschäden und Mietpreissteigerungen
+      nicht dazu gehören.
+  source:
+    verdict: supported
+    note: Quelle 1 (BSV) sagt, dass Kranken- und Unfallversicherung bei Krankheit und Unfall die Kosten
+      für medizinische Behandlungen decken. Quelle 2 (Broschüre Kanton Zürich) nennt die Krankenkassen
+      als Schutz vor den Folgen einer Krankheit und eines Unfalls als Teil des Sozialversicherungssystems.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

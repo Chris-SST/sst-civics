@@ -1,0 +1,14 @@
+id: schweizer-fahne-aussehen
+lang: en
+source_version: 1
+question: What does the Swiss flag look like?
+options:
+  a: A white, free-standing cross on a red square
+  b: A white cross on a red background with a coat of arms in the centre
+  c: A white cross that extends to the edge of the red rectangle
+  d: A red, free-standing cross on a white square
+explanation: The Swiss flag is square. It shows a white cross on a red background, the arms of which do
+  not touch the edge. Alongside the flag of the Vatican, it is one of the only two square national flags.
+status: draft
+reviewed_by: null
+reviewed_at: null

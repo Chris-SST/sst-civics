@@ -1,0 +1,49 @@
+id: primarschule-finanzierung-kanton-gemeinde
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Wer finanziert und organisiert im Kanton Zürich die Primarschule?
+options_de:
+  a: Nur die Kirchgemeinden
+  b: Nur die Eltern der Schulkinder
+  c: Nur der Bund
+  d: Der Kanton und die Gemeinden gemeinsam
+correct: d
+explanation_de: Die Volksschule im Kanton Zürich ist eine gemeinsame Aufgabe von Kanton und Gemeinden.
+  Der Kanton legt die Grundlagen fest, die Gemeinden führen die Schulen vor Ort.
+sources:
+- url: https://www.zh.ch/de/bildung/informationen-fuer-schulen/informationen-volksschule/volksschule-fuehrung/volksschule-finanzen-infrastruktur/volksschule-gemeinderechnung.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/bildung/informationen-fuer-schulen/informationen-volksschule/volksschule-fuehrung/volksschule-finanzen-infrastruktur.html
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Primarschule
+- Volksschule
+- Gemeinde
+status: in_review
+difficulty: 2
+covers:
+- zh-203
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Kanton Zürich ist die Volksschule eine gemeinsame Aufgabe von Kanton und Gemeinden,
+      wobei die Gemeinden (Schulgemeinden bzw. politische Gemeinden) die Schule organisieren und der Kanton
+      den Rahmen setzt und sich an der Finanzierung beteiligt, während Kirchgemeinden, Eltern oder der
+      Bund dafür nicht allein zuständig sind.
+  source:
+    verdict: supported
+    note: 'Quelle 2 sagt, die Gemeinden führen die Volksschulen und der Kanton beteiligt sich nach § 61
+      VSG mit 20 Prozent an den Lehrerbesoldungen (Quelle 1: Schulgemeinden tragen 80 Prozent). Quelle
+      3 nennt die Führung der Volksschule als Gemeindeaufgabe und das Volksschulamt als kantonale Stelle,
+      die die Schulen organisiert; die Schule ist gratis, also zahlen nicht nur die Eltern.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

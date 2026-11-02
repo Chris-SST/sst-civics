@@ -1,0 +1,14 @@
+id: freiburg-zweisprachiger-kanton
+lang: en
+source_version: 1
+question: Which languages are spoken in the bilingual canton of Fribourg?
+options:
+  a: French and Romansh
+  b: French and Italian
+  c: French and German
+  d: German and Italian
+explanation: Fribourg is a bilingual canton in which French and German are spoken. It lies on the border
+  between German-speaking Switzerland and French-speaking Switzerland.
+status: draft
+reviewed_by: null
+reviewed_at: null

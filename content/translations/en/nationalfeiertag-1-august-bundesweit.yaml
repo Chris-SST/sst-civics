@@ -1,0 +1,15 @@
+id: nationalfeiertag-1-august-bundesweit
+lang: en
+source_version: 1
+question: Which day is a statutory public holiday (non-working day) throughout Switzerland?
+options:
+  a: 2 January (Berchtoldstag)
+  b: Carnival Monday (Fasnachtsmontag)
+  c: Good Friday
+  d: 1 August, the National Day
+explanation: 1 August is the National Day and is a public holiday throughout the country. Most other public
+  holidays, such as Good Friday or Berchtoldstag, are regulated by the cantons themselves and are not
+  days off everywhere.
+status: draft
+reviewed_by: null
+reviewed_at: null

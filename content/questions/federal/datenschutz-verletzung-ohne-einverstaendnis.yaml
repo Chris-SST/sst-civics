@@ -1,0 +1,46 @@
+id: datenschutz-verletzung-ohne-einverstaendnis
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: In welchem Fall wird der Datenschutz verletzt?
+options_de:
+  a: Private Angaben über eine Person werden ohne ihr Einverständnis und ohne gesetzliche Grundlage bekannt
+    gemacht.
+  b: Eine Behörde speichert Daten, wie es ein Gesetz verlangt.
+  c: Eine Person gibt freiwillig ihre eigene Adresse an.
+  d: Eine Person erlaubt ausdrücklich die Veröffentlichung ihres Fotos.
+correct: a
+explanation_de: Der Schutz der Privatsphäre umfasst den Schutz vor dem Missbrauch persönlicher Daten.
+  Private Informationen dürfen nur mit Einverständnis der Person oder aufgrund eines Gesetzes bekannt
+  gemacht werden. Fehlt beides, liegt eine Verletzung vor.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2022/491/20250707/de/html/fedlex-data-admin-ch-eli-cc-2022-491-20250707-de-html-1.html
+  checked: &id001 2026-11-02
+glossary:
+- Datenschutz
+- Privatsphäre
+- Einverständnis
+status: in_review
+difficulty: 2
+covers:
+- zh-083
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Datenschutz wird verletzt, wenn private Angaben über eine Person ohne ihr Einverständnis
+      und ohne gesetzliche Grundlage bekannt gemacht werden, während die übrigen Fälle auf Gesetz oder
+      Einwilligung beruhen.
+  source:
+    verdict: supported
+    note: Das DSG verlangt für die Bearbeitung durch Bundesorgane eine gesetzliche Grundlage und für die
+      Bekanntgabe eine gesetzliche Grundlage oder Einwilligung bzw. allgemein zugängliche Daten. Es dient
+      dem Schutz der Persönlichkeit. Damit stützt es, dass Bekanntgabe ohne Einverständnis und ohne gesetzliche
+      Grundlage den Datenschutz verletzt; die Aussage zu privaten Personen ist weniger ausdrücklich.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

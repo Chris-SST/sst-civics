@@ -1,0 +1,45 @@
+id: bundesgesetz-referendum-volksabstimmung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.parlament
+question_de: Was gilt für ein Bundesgesetz, das beide Kammern des Parlaments verabschiedet haben?
+options_de:
+  a: Die Stimmberechtigten können mit einem Referendum eine Volksabstimmung darüber verlangen.
+  b: Der Bundesrat muss es danach noch dem Bundesgericht zur Genehmigung vorlegen.
+  c: Es tritt immer sofort in Kraft, ohne dass das Volk mitreden kann.
+  d: Die Kantonsregierungen müssen es zuerst einzeln genehmigen.
+correct: a
+explanation_de: Nach dem Beschluss beider Kammern unterstehen Bundesgesetze dem fakultativen Referendum.
+  Kommt es zustande, entscheiden die Stimmberechtigten an der Urne über das Gesetz.
+sources:
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet/aufgaben-der-bundesversammlung/rechtsetzung/bundesgesetze
+  checked: &id001 2026-11-02
+glossary:
+- Bundesgesetz
+- Referendum
+- Volksabstimmung
+- Stimmberechtigte
+status: in_review
+difficulty: 2
+covers:
+- zh-026
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Bundesgesetze unterstehen dem fakultativen Referendum, sodass 50'000 Stimmberechtigte oder
+      acht Kantone innert 100 Tagen eine Volksabstimmung verlangen können, während Bundesgericht und Kantonsregierungen
+      kein Genehmigungsrecht haben.
+  source:
+    verdict: supported
+    note: 'Die Seite hält fest: «Die Bundesgesetze werden von der Bundesversammlung erlassen, unterstehen
+      aber dem fakultativen Referendum» und das Volk habe mit dem Referendumsrecht ein direktes Mitwirkungsrecht.
+      Das stützt Antwort a) und die Erklärung; dass dann an der Urne entschieden wird, ist nur implizit,
+      widerspricht aber nichts.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

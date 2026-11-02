@@ -1,0 +1,15 @@
+id: sihl-muendung-in-limmat
+lang: en
+source_version: 1
+question: Into which river does the Sihl flow in the middle of the city of Zurich?
+options:
+  a: Into the Töss
+  b: Into the Limmat
+  c: Into the Glatt
+  d: Into the Aare
+explanation: The Sihl flows through Zurich and joins the Limmat at the Platzspitz. The Glatt and the Töss
+  are other rivers in Zurich that flow into the Rhine. The Aare only receives the Limmat further downstream
+  in the canton of Aargau.
+status: draft
+reviewed_by: null
+reviewed_at: null

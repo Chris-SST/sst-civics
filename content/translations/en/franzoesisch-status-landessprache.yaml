@@ -1,0 +1,14 @@
+id: franzoesisch-status-landessprache
+lang: en
+source_version: 1
+question: What status does French have in Switzerland?
+options:
+  a: French is only a foreign language at school.
+  b: French is only a regional language of communication.
+  c: French is a national language.
+  d: French is a minority language with no official status.
+explanation: French is one of the national languages of Switzerland. It is spoken mainly in French-speaking
+  Switzerland and is an official language at the level of the Confederation.
+status: draft
+reviewed_by: null
+reviewed_at: null

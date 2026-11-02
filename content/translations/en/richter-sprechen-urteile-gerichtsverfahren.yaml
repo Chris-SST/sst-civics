@@ -1,0 +1,14 @@
+id: richter-sprechen-urteile-gerichtsverfahren
+lang: en
+source_version: 1
+question: Who pronounces the judgment in court proceedings?
+options:
+  a: The judge
+  b: The police officer
+  c: The president of the commune (Gemeinde)
+  d: The public prosecutor
+explanation: Judges decide independently in court proceedings and deliver the judgment. The public prosecutor's
+  office conducts the investigation and brings charges. The police investigate, but do not pass judgment.
+status: draft
+reviewed_by: null
+reviewed_at: null

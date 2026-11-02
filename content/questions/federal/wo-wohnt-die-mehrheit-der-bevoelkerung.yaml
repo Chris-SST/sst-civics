@@ -1,0 +1,42 @@
+id: wo-wohnt-die-mehrheit-der-bevoelkerung
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: In welcher Grossregion der Schweiz wohnt die Mehrheit der Bevölkerung?
+options_de:
+  a: In den Alpen
+  b: Im Tessin
+  c: Im Mittelland
+  d: Im Jura
+correct: c
+explanation_de: Im Mittelland zwischen Jura und Alpen liegen die meisten grossen Städte. Dort lebt der
+  grösste Teil der Bevölkerung. Die Alpen sind zwar gross, aber dünn besiedelt.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geografie
+  checked: &id001 2026-11-02
+glossary:
+- Mittelland
+- Jura
+- Alpen
+status: in_review
+difficulty: 2
+covers:
+- zh-275
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Mittelland, das nur etwa ein Drittel der Landesfläche ausmacht, wohnt mit rund zwei
+      Dritteln der Bevölkerung die Mehrheit der Schweizerinnen und Schweizer.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt das Mittelland die am dichtesten besiedelte Region mit den meisten Agglomerationen.
+      Die vorwiegend im Mittelland gelegenen urbanen Gebiete umfassen die Mehrheit der Bevölkerung, während
+      die Alpen nur einen kleinen Teil der Bevölkerung beherbergen und der Jura dünn besiedelt ist.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

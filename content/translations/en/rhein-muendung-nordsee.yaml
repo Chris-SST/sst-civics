@@ -1,0 +1,14 @@
+id: rhein-muendung-nordsee
+lang: en
+source_version: 1
+question: Into which sea does the water of the Rhine flow in the end?
+options:
+  a: Into the Mediterranean Sea
+  b: Into the Black Sea
+  c: Into the North Sea
+  d: Into the Baltic Sea
+explanation: The Rhine rises in the Swiss Alps and flows through Germany and the Netherlands. It flows
+  into the North Sea.
+status: draft
+reviewed_by: null
+reviewed_at: null

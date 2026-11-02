@@ -1,0 +1,45 @@
+id: obligationenrecht-miete-wohnraum-vorschriften
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.gerichte
+question_de: In welchem Gesetz stehen die Vorschriften zur Miete von Wohnraum?
+options_de:
+  a: Im Obligationenrecht
+  b: In der Bundesverfassung allein
+  c: Im Strafgesetzbuch
+  d: Im Schweizerischen Strassenverkehrsgesetz
+correct: a
+explanation_de: Das Mietrecht ist im Obligationenrecht geregelt. Dort finden sich zum Beispiel Regeln
+  zu Mietvertrag, Mietzins und Kündigung. Das Obligationenrecht ist der fünfte Teil des Zivilgesetzbuchs,
+  aber ein eigenes Gesetz.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Obligationenrecht
+- Miete
+- Mietvertrag
+status: in_review
+difficulty: 2
+covers:
+- zh-093
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Mietrecht, auch die Miete von Wohnraum, ist im Obligationenrecht (Art. 253 ff. OR)
+      geregelt, nicht im Strafgesetzbuch, im Strassenverkehrsgesetz oder allein in der Bundesverfassung.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Obligationenrecht, Fünfter Teil des ZGB) enthält die Mietvertragsbestimmungen (Mietvertrag,
+      Mietzins). Quelle 2 sagt ausdrücklich: «Das Obligationenrecht (OR) regelt den Mietvertrag.» Auch
+      der Hinweis, dass das OR der fünfte Teil des Zivilgesetzbuchs ist, steht in Quelle 1.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

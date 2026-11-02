@@ -1,0 +1,15 @@
+id: stimmrecht-bund-schweizer-buergerrecht
+lang: en
+source_version: 1
+question: What is a requirement for the right to vote and to stand for election at federal level?
+options:
+  a: Swiss citizenship (Bürgerrecht)
+  b: Membership of a political party
+  c: At least ten years' residence in Switzerland
+  d: A settlement permit (C permit) (Niederlassungsbewilligung)
+explanation: At federal level, only persons with Swiss citizenship may vote and elect. Foreign nationals
+  do not have the right to vote at federal level, even with a settlement permit. Membership of a party
+  is not necessary.
+status: draft
+reviewed_by: null
+reviewed_at: null

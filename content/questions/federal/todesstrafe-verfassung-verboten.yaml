@@ -1,0 +1,41 @@
+id: todesstrafe-verfassung-verboten
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Was gilt in der Schweiz nach der Bundesverfassung für die Todesstrafe?
+options_de:
+  a: Sie ist nur bei Mord erlaubt.
+  b: Sie ist nur im Krieg erlaubt.
+  c: Die Kantone entscheiden, ob sie gilt.
+  d: Sie ist verboten.
+correct: d
+explanation_de: Die Bundesverfassung schützt das Recht auf Leben in Artikel 10. Die Todesstrafe ist ausdrücklich
+  verboten, auch für schwere Verbrechen.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Todesstrafe
+- Recht auf Leben
+- Bundesverfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-092
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Artikel 10 Absatz 1 der Bundesverfassung bestimmt, dass die Todesstrafe verboten ist, und
+      zwar ohne Ausnahme auch im Krieg.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundesverfassung) nennt in Art. 10 Abs. 1: «Jeder Mensch hat das Recht auf Leben.
+      Die Todesstrafe ist verboten.» Das stützt Antwort d und die Erklärung.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

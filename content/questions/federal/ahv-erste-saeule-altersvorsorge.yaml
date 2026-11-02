@@ -1,0 +1,43 @@
+id: ahv-erste-saeule-altersvorsorge
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Welche Einrichtung bildet den ersten Pfeiler der Altersvorsorge in der Schweiz?
+options_de:
+  a: Die private Säule 3a
+  b: Die staatliche AHV
+  c: Die Pensionskasse
+  d: Die Krankenkasse
+correct: b
+explanation_de: Die AHV ist die staatliche Vorsorge und bildet die erste Säule. Die Pensionskasse ist
+  die zweite Säule, die private Vorsorge die dritte Säule.
+sources:
+- url: https://www.bsv.admin.ch/de/dreisaeulensystem
+  checked: &id001 2026-11-02
+glossary:
+- AHV
+- Dreisäulensystem
+- Pensionskasse
+status: in_review
+difficulty: 1
+covers:
+- zh-137
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die staatliche AHV (Alters- und Hinterlassenenversicherung) bildet die erste Säule der
+      Schweizer Altersvorsorge, während die Pensionskasse die zweite und die Säule 3a die dritte Säule
+      ist.
+  source:
+    verdict: supported
+    note: 'Die BSV-Seite nennt unter «1. Säule: Die staatliche Vorsorge» die AHV und die IV. Die Pensionskasse
+      wird als 2. Säule (berufliche Vorsorge) und die private Vorsorge als 3. Säule aufgeführt, was die
+      Erklärung bestätigt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

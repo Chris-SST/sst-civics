@@ -1,0 +1,41 @@
+id: technorama-standort-winterthur
+version: 1
+scope: zh
+canton: zh
+topic: kanton.kultur.zuerich
+question_de: In welcher Stadt im Kanton Zürich befindet sich das Technorama, ein Museum zum Experimentieren?
+options_de:
+  a: In Uster
+  b: In Dübendorf
+  c: In Winterthur
+  d: In Zürich
+correct: c
+explanation_de: Das Technorama ist das Schweizer Science Center und steht in Winterthur. Besucherinnen
+  und Besucher können dort selbst experimentieren und Naturphänomene ausprobieren.
+sources:
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2026/10/das-technorama-soll-ein-attraktives-science-center-bleiben.html
+  checked: &id001 2026-11-02
+glossary:
+- Technorama
+- Science Center
+status: in_review
+difficulty: 1
+covers:
+- zh-343
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Technorama, das Schweizer Science Center, befindet sich in Winterthur (im Quartier
+      Oberwinterthur).
+  source:
+    verdict: supported
+    note: Die Medienmitteilung des Kantons Zürich spricht vom «international bekannten Museum in Winterthur»
+      der Stiftung Swiss Science Center Technorama und nennt Experimentierstationen und Phänomene aus
+      Natur und Technik. Das stützt die Antwort Winterthur und die Erklärung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,15 @@
+id: parteien-vertreten-interessen-bevoelkerung
+lang: en
+source_version: 1
+question: What is the role of political parties in a democracy?
+options:
+  a: They administer justice in disputes
+  b: They represent the different interests of the population
+  c: They carry out federal votes
+  d: They enforce the laws in everyday life
+explanation: Parties bring together the various interests and opinions of the population and introduce
+  them into politics. Enforcing laws is the task of the authorities, and administering justice is the
+  task of the courts.
+status: draft
+reviewed_by: null
+reviewed_at: null

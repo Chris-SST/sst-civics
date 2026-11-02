@@ -1,0 +1,15 @@
+id: mieterverband-vertritt-mietende
+lang: en
+source_version: 1
+question: What is the role of the tenants' association?
+options:
+  a: It represents the interests of homeowners
+  b: It sets the rents for all flats
+  c: It lets flats on behalf of the canton
+  d: It represents the interests of tenants
+explanation: The tenants' association is an organisation that campaigns for the interests of tenants.
+  For example, it advises its members on questions about tenancy law. The interests of homeowners are
+  represented by other associations.
+status: draft
+reviewed_by: null
+reviewed_at: null

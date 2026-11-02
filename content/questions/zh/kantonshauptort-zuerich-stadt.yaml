@@ -1,0 +1,48 @@
+id: kantonshauptort-zuerich-stadt
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: Welche Stadt ist der Hauptort des Kantons Zürich?
+options_de:
+  a: Uster
+  b: Die Stadt Zürich
+  c: Winterthur
+  d: Dübendorf
+correct: b
+explanation_de: Die Stadt Zürich ist der Hauptort des Kantons und trägt denselben Namen. Dort sind unter
+  anderem der Kantonsrat und der Regierungsrat angesiedelt. Winterthur ist die zweitgrösste Stadt des
+  Kantons.
+sources:
+- url: https://www.zh.ch/de/direktion-der-justiz-und-des-innern/statthalteraemter-bezirksratskanzleien/bezirk-zuerich.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: 2026-11-02
+glossary:
+- Kantonshauptort
+- Kanton
+status: in_review
+difficulty: 1
+covers:
+- zh-300
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Stadt Zürich ist der Hauptort des Kantons Zürich, während Uster, Winterthur und Dübendorf
+      zwar grosse Städte im Kanton sind, aber nicht der Hauptort.
+  source:
+    verdict: supported
+    note: 'Quelle 2 (Broschüre, S. 57) sagt: «Die Stadt Zürich ist die Hauptstadt des Kantons Zürich.»
+      Quelle 1 nennt die Stadt Zürich ebenfalls die Kantonshauptstadt. Dass Winterthur die zweitgrösste
+      Stadt ist, bestätigt die Broschüre mit der Reihenfolge Zürich, Winterthur, Uster. Dass Kantonsrat
+      und Regierungsrat dort sitzen, steht nicht ausdrücklich in den Quellen, ändert aber nichts an der
+      richtigen Antwort.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,44 @@
+id: folterverbot-bundesverfassung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Was sagt die Bundesverfassung zur Folter?
+options_de:
+  a: Folter ist nur bei Straftätern verboten.
+  b: Folter ist in Notlagen für die Polizei erlaubt.
+  c: Folter ist erlaubt, wenn ein Gericht zustimmt.
+  d: Niemand darf gefoltert werden.
+correct: d
+explanation_de: Artikel 10 der Bundesverfassung verbietet Folter und jede andere Art grausamer, unmenschlicher
+  oder erniedrigender Behandlung. Dieses Verbot gilt für alle Menschen ohne Ausnahme. Auch der Staat darf
+  keine Ausnahmen machen.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Folter
+- Bundesverfassung
+- Menschenwürde
+status: in_review
+difficulty: 1
+covers:
+- zh-084
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Artikel 10 Absatz 3 der Bundesverfassung verbietet Folter und jede andere Art grausamer,
+      unmenschlicher oder erniedrigender Behandlung oder Strafe uneingeschränkt, sodass niemand gefoltert
+      werden darf.
+  source:
+    verdict: supported
+    note: 'Quelle 1 enthält den Verfassungstext: «Folter und jede andere Art grausamer, unmenschlicher
+      oder erniedrigender Behandlung oder Bestrafung sind verboten.» Das stützt Antwort d. Die Artikelnummer
+      10 ist im gekürzten Text nicht sichtbar, und das Verbot wird ohne Ausnahmen formuliert.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

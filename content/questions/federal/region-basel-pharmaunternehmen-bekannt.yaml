@@ -1,0 +1,45 @@
+id: region-basel-pharmaunternehmen-bekannt
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Welche Region der Schweiz ist durch grosse dort ansässige Pharmaunternehmen bekannt?
+options_de:
+  a: Das Engadin
+  b: Die Region Basel
+  c: Das Tessin
+  d: Das Wallis
+correct: b
+explanation_de: In der Region Basel haben mehrere weltweit tätige Pharmaunternehmen ihren Hauptsitz. Die
+  Pharmaindustrie ist dort ein wichtiger Wirtschaftszweig und für den Export bedeutend.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/chemie-und-pharma
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.seco.admin.ch/de/europaeische-union-eu
+  checked: 2026-11-02
+glossary:
+- Pharmaunternehmen
+- Region Basel
+status: in_review
+difficulty: 1
+covers:
+- zh-321
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Region Basel ist mit Unternehmen wie Novartis und Roche das Zentrum der Schweizer Pharmaindustrie.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Roche und Novartis als Pharmakonzerne und sagt, dass sich die Firmen der Branche
+      auf die Regionen Basel, Zürich, Zug und die Genferseeregion konzentrieren. Basel ist damit als Pharmastandort
+      belegt, und die Bedeutung für den Export steht ebenfalls dort. Die Hauptsitze in Basel nennt die
+      Quelle nicht ausdrücklich, und Engadin, Tessin und Wallis kommen nicht vor.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

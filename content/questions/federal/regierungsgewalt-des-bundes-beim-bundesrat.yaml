@@ -1,0 +1,45 @@
+id: regierungsgewalt-des-bundes-beim-bundesrat
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.bundesrat
+question_de: Welche Behörde übt auf Bundesebene die oberste Regierungsgewalt aus?
+options_de:
+  a: Der Bundesrat
+  b: Der Nationalrat
+  c: Die Bundeskanzlei
+  d: Das Bundesgericht
+correct: a
+explanation_de: Nach der Bundesverfassung ist der Bundesrat die oberste leitende und vollziehende Behörde
+  des Bundes. Das Parlament macht die Gesetze, das Bundesgericht spricht Recht.
+sources:
+- url: https://www.admin.ch/gov/de/start/bundesrat.html
+  checked: &id001 2026-11-02
+- url: https://www.fedlex.admin.ch/eli/cc/1999/404/de
+  checked: 2026-11-02
+glossary:
+- Bundesrat
+- Regierungsgewalt
+- Bundesverfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-069
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Artikel 174 der Bundesverfassung ist der Bundesrat die oberste leitende und vollziehende
+      Behörde des Bundes, also die Regierung.
+  source:
+    verdict: supported
+    note: Quelle 1 (admin.ch) sagt, der Bundesrat regiere die Schweiz, lenke das Land, leite die Verwaltung
+      und vollziehe die Gesetze; er sei die Regierung und nehme die Exekutivgewalt wahr. Quelle 2 (Fedlex)
+      enthält nur einen Browserhinweis, der Verfassungstext fehlt, daher wird der genaue Wortlaut «oberste
+      leitende und vollziehende Behörde» nicht belegt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

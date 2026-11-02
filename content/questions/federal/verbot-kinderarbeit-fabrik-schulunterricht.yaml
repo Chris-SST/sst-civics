@@ -1,0 +1,42 @@
+id: verbot-kinderarbeit-fabrik-schulunterricht
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gesellschaftswandel
+question_de: Was sollte das Verbot der Kinderarbeit in Fabriken von 1877 vor allem sichern?
+options_de:
+  a: Dass Fabriken weniger Lohn zahlen mussten
+  b: Dass Kinder die Schule besuchen konnten
+  c: Dass Kinder früher im Haushalt helfen mussten
+  d: Dass Fabriken mehr Arbeitskräfte aus dem Ausland holten
+correct: b
+explanation_de: Das Fabrikgesetz von 1877 verbot die Fabrikarbeit für Kinder. Sie sollten Schulunterricht
+  besuchen statt zu arbeiten. Das Gesetz schützte auch die Gesundheit der Arbeitenden.
+sources:
+- url: https://www.parlament.ch/blog/Pages/20221019-fabrikgesetz-de.aspx
+  checked: &id001 2026-11-02
+glossary:
+- Fabrikgesetz
+- Kinderarbeit
+status: in_review
+difficulty: 2
+covers:
+- zh-236
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das eidgenössische Fabrikgesetz von 1877 verbot die Fabrikarbeit für Kinder unter 14 Jahren,
+      damit sie geschützt waren und die Schule besuchen konnten.
+  source:
+    verdict: supported
+    note: 'Die Seite nennt das Verbot der Arbeit für Kinder unter 14 Jahren im Fabrikgesetz von 1877 und
+      erwähnt Hygiene und Sicherheit. Der Schulbesuch der Kinder wird dort nur indirekt gestützt: Es werden
+      Forderungen aus Bildungskreisen und die kantonale Schulpflicht für arbeitende Kinder genannt. Dass
+      das Bundesgesetz von 1877 den Schulbesuch sichern sollte, steht nicht ausdrücklich da.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

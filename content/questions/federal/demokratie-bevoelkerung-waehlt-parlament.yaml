@@ -1,0 +1,46 @@
+id: demokratie-bevoelkerung-waehlt-parlament
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.staatsprinzipien
+question_de: Was gehört in einer Demokratie wie der Schweiz zu den Rechten der Bevölkerung?
+options_de:
+  a: Sie ernennt die Richter des Bundesgerichts durch das Los.
+  b: Sie bestimmt die Gesetze allein, ohne das Parlament.
+  c: Sie bestimmt ihr Parlament durch Wahlen.
+  d: Sie wählt die Armeeführung direkt.
+correct: c
+explanation_de: In der Demokratie wählt die Bevölkerung ihre Vertreterinnen und Vertreter ins Parlament.
+  Auf Bundesebene sind dies der Nationalrat und der Ständerat. Das Parlament erlässt dann im Namen des
+  Volkes die Bundesgesetze.
+sources:
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+  checked: 2026-11-02
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet/aufgaben-der-bundesversammlung/rechtsetzung/bundesgesetze
+  checked: &id001 2026-11-02
+glossary:
+- Demokratie
+- Parlament
+- Wahl
+status: in_review
+difficulty: 1
+covers:
+- zh-022
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In der Schweiz wählt die Bevölkerung das Parlament (Nationalrat direkt, Ständerat nach
+      kantonalem Recht), während Bundesrichter vom Parlament gewählt werden, Gesetze von Parlament und
+      Volk gemeinsam beschlossen werden und die Armeeführung nicht vom Volk gewählt wird.
+  source:
+    verdict: supported
+    note: Quelle 2 sagt, das Parlament sei die «vom Volk gewählte Volksvertretung» und erlasse die Bundesgesetze,
+      wobei das Volk mit dem Referendum mitwirkt. Das stützt Antwort c und die Erklärung. Dass Nationalrat
+      und Ständerat die beiden Kammern sind, steht in Quelle 1.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

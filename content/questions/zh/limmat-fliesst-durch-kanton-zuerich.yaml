@@ -1,0 +1,44 @@
+id: limmat-fliesst-durch-kanton-zuerich
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: Welcher Fluss fliesst aus dem Zürichsee durch die Stadt Zürich und weiter durch das Kantonsgebiet?
+options_de:
+  a: Die Thur
+  b: Die Birs
+  c: Die Reuss
+  d: Die Limmat
+correct: d
+explanation_de: Die Limmat beginnt am Ausfluss des Zürichsees und durchquert die Stadt Zürich und das
+  Limmattal. Sie verlässt danach das Kantonsgebiet Richtung Aargau. Reuss, Thur und Birs fliessen nicht
+  aus dem Zürichsee.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: 2026-11-02
+glossary:
+- Limmat
+- Zürichsee
+status: draft
+difficulty: 1
+covers:
+- zh-295
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Limmat entspringt dem Zürichsee, fliesst durch die Stadt Zürich und weiter durch den
+      Kanton Zürich Richtung Aargau, während Thur, Birs und Reuss andere Einzugsgebiete haben.
+  source:
+    verdict: unclear
+    note: Quelle 1 sagt, die Limmat fliesse durch Zürich und ende im Kanton Aargau in der Aare; die Karte
+      zeigt sie beim Zürichsee. Dass sie aus dem Zürichsee ausfliesst, steht aber nicht ausdrücklich im
+      Text. Quelle 2 behandelt das Thema nicht.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

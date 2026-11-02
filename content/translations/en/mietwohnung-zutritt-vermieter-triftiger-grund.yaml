@@ -1,0 +1,15 @@
+id: mietwohnung-zutritt-vermieter-triftiger-grund
+lang: en
+source_version: 1
+question: In which case must tenants allow the landlord access to the flat?
+options:
+  a: Never, the flat is always protected
+  b: When there is a valid reason
+  c: Only if the landlord requests it, without giving a reason
+  d: At any time and without prior notice
+explanation: Tenants must allow access if there is a valid reason for it, for example an urgent repair.
+  However, the landlord must announce the visit in good time and show consideration for the tenants. Access
+  without a reason is not permitted.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,42 @@
+id: private-vorsorge-dritte-saeule
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Was bildet in der Schweiz den dritten Pfeiler der Altersvorsorge?
+options_de:
+  a: Die obligatorische Unfallversicherung
+  b: Die private Vorsorge
+  c: Die Pensionskasse des Arbeitgebers
+  d: Die Ergänzungsleistungen
+correct: b
+explanation_de: Der dritte Pfeiler ist die private Vorsorge, zum Beispiel das gebundene Sparen. Sie ist
+  freiwillig und ergänzt die ersten beiden Pfeiler.
+sources:
+- url: https://www.bsv.admin.ch/de/dreisaeulensystem
+  checked: &id001 2026-11-02
+glossary:
+- private Vorsorge
+- dritte Säule
+- Dreisäulensystem
+status: in_review
+difficulty: 1
+covers:
+- zh-139
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der dritte Pfeiler der Schweizer Altersvorsorge ist die private Vorsorge (gebundene Säule
+      3a und freie Säule 3b), während die AHV den ersten und die Pensionskasse den zweiten Pfeiler bilden.
+  source:
+    verdict: supported
+    note: Die BSV-Seite nennt als 3. Säule ausdrücklich die private Vorsorge. Sie beschreibt sie als Sparen
+      auf Bankkonto oder Police mit Sperrung bis zur Pensionierung und als Deckung zusätzlicher individueller
+      Bedürfnisse. Das Wort «freiwillig» steht nicht wörtlich da, ergibt sich aber aus der Beschreibung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,47 @@
+id: ehe-voraussetzungen-volljaehrig-urteilsfaehig
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Welche Voraussetzungen müssen Personen erfüllen, damit sie in der Schweiz heiraten dürfen?
+options_de:
+  a: Sie müssen das Schweizer Bürgerrecht besitzen und volljährig sein
+  b: Sie müssen volljährig und fähig sein, vernunftgemäss zu handeln
+  c: Sie müssen seit mindestens fünf Jahren zusammenleben
+  d: Sie müssen derselben Religion angehören
+correct: b
+explanation_de: Heiraten darf, wer volljährig und urteilsfähig ist. Urteilsfähig heisst, dass man vernunftgemäss
+  handeln kann. Staatsangehörigkeit, Religion oder eine bestimmte Dauer des Zusammenlebens sind keine
+  Voraussetzung.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/html/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-html-2.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Ehe
+- Volljährigkeit
+- Urteilsfähigkeit
+status: in_review
+difficulty: 2
+covers:
+- zh-182
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Art. 94 ZGB müssen Brautleute das 18. Altersjahr zurückgelegt haben und urteilsfähig,
+      also fähig sein, vernunftgemäss zu handeln; Schweizer Bürgerrecht, eine Mindestdauer des Zusammenlebens
+      oder dieselbe Religion sind nicht verlangt.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (ZGB) sagt: «Die Ehe kann von zwei Personen eingegangen werden, die das 18. Altersjahr
+      zurückgelegt haben und urteilsfähig sind»; Urteilsfähigkeit ist als Fähigkeit definiert, vernunftgemäss
+      zu handeln. Staatsangehörigkeit, Religion und Dauer des Zusammenlebens werden nicht als Voraussetzung
+      genannt, und Quelle 2 bestätigt, dass in der Schweiz alle heiraten können.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,44 @@
+id: street-parade-zuerich-werte
+version: 1
+scope: zh
+canton: zh
+topic: kanton.kultur.zuerich
+question_de: Für welche Werte steht die Street Parade in Zürich?
+options_de:
+  a: Heimat, Glaube, Familie, Gemeinschaft und Treue
+  b: Tradition, Ordnung, Fleiss, Sparsamkeit und Pünktlichkeit
+  c: Sport, Gesundheit, Leistung, Wettkampf und Fairness
+  d: Liebe, Frieden, Freiheit, Grosszügigkeit und Toleranz
+correct: d
+explanation_de: Die Street Parade ist ein grosser Technoumzug in Zürich. Sie versteht sich als Demonstration
+  für Liebe, Frieden, Freiheit, Grosszügigkeit und Toleranz.
+sources:
+- url: https://www.stadt-zuerich.ch/artikel/de/stadt-der-zukunft/der-kopf-joel-meier.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/politik-staat/kanton/kantonale-verwaltung.html
+  checked: 2026-11-02
+glossary:
+- Street Parade
+status: in_review
+difficulty: 2
+covers:
+- zh-340
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Street Parade in Zürich versteht sich als Techno-Demonstration für Liebe, Frieden,
+      Freiheit, Grosszügigkeit und Toleranz, was dem Motto der Veranstalter entspricht.
+  source:
+    verdict: supported
+    note: 'Quelle 2 (Einbürgerungsbroschüre, Seite 63) sagt: «Die Street Parade steht für Liebe, Friede,
+      Freiheit, Grosszügigkeit und Toleranz.» Quelle 1 nennt dieselben Werte als Anspruch der Street Parade
+      als Demonstration; Quelle 3 ist für die Frage nicht relevant.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

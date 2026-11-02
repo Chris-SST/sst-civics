@@ -1,0 +1,45 @@
+id: menschenrechtsrat-uno-sitz-genf
+version: 1
+scope: federal
+canton: null
+topic: bund.international
+question_de: In welcher Schweizer Stadt hat der Menschenrechtsrat der Vereinten Nationen (UNO) seinen
+  Sitz?
+options_de:
+  a: Lausanne
+  b: Genf
+  c: Bern
+  d: Basel
+correct: b
+explanation_de: Der Menschenrechtsrat der UNO tagt in Genf. Genf ist neben New York einer der wichtigsten
+  Standorte der UNO und Sitz vieler internationaler Organisationen.
+sources:
+- url: https://www.eda.admin.ch/de/die-uno-und-die-menschenrechte
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.eda.admin.ch/de/uno
+  checked: 2026-11-02
+glossary:
+- Menschenrechtsrat
+- Vereinte Nationen
+status: in_review
+difficulty: 1
+covers:
+- zh-335
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Menschenrechtsrat der UNO hat seinen Sitz im Palais des Nations in Genf, wo auch das
+      europäische Hauptquartier der UNO liegt.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (EDA) sagt ausdrücklich, dass der UNO-Menschenrechtsrat seinen Sitz in Genf hat. Quelle
+      3 stützt den zweiten Teil der Erklärung: Genf ist neben New York ein grosses UNO-Zentrum.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

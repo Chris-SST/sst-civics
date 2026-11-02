@@ -1,0 +1,15 @@
+id: pensionsalter-frauen-maenner-65
+lang: en
+source_version: 1
+question: What is the standard retirement age in the old-age and survivors' insurance (OASI) (AHV) for
+  women and men?
+options:
+  a: 64 years for women, 65 years for men
+  b: 65 years for both women and men
+  c: 63 years for both women and men
+  d: 67 years for both women and men
+explanation: The standard retirement age is 65 years for women and men alike. The former difference for
+  women is being phased out gradually. After that, the same reference age applies to both sexes.
+status: draft
+reviewed_by: null
+reviewed_at: null

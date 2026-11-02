@@ -1,0 +1,16 @@
+id: gewaltmonopol-des-staates
+lang: en
+source_version: 1
+question: Who is permitted to use physical force in Switzerland, for example through the police and the
+  army?
+options:
+  a: Private security firms acting on behalf of associations
+  b: Any person who feels threatened
+  c: Only the state
+  d: Any commune (Gemeinde) with its own vigilante groups
+explanation: The state has a monopoly on the use of force. Only the state may use physical force to protect
+  public order, for example through the police and the army. This is to ensure that disputes are not settled
+  through vigilantism.
+status: draft
+reviewed_by: null
+reviewed_at: null

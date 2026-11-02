@@ -1,0 +1,15 @@
+id: kantonshauptort-zuerich-stadt
+lang: en
+source_version: 1
+question: Which city is the capital of the canton of Zürich?
+options:
+  a: Uster
+  b: The city of Zürich
+  c: Winterthur
+  d: Dübendorf
+explanation: The city of Zürich is the capital of the canton and has the same name. The Cantonal Council
+  (Kantonsrat) and the Executive Council (Regierungsrat) are located there, among other institutions.
+  Winterthur is the second-largest city in the canton.
+status: draft
+reviewed_by: null
+reviewed_at: null

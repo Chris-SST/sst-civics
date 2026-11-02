@@ -1,0 +1,15 @@
+id: ordentliche-kuendigung-einschreiben-empfang
+lang: en
+source_version: 1
+question: How should an ordinary notice of termination of an employment relationship be delivered so that
+  receipt can be proved?
+options:
+  a: By notifying the commune administration (Gemeindeverwaltung)
+  b: By registered post, or the other party confirms receipt in writing
+  c: By ordinary email without confirmation
+  d: Verbally in a private conversation
+explanation: With registered post or a written confirmation of receipt, it is possible to prove that the
+  notice of termination has arrived. This is important because notice periods start to run from receipt.
+status: draft
+reviewed_by: null
+reviewed_at: null

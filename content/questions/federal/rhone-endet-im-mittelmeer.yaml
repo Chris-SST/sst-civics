@@ -1,0 +1,40 @@
+id: rhone-endet-im-mittelmeer
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Wo endet die Rhone, die im Wallis entspringt?
+options_de:
+  a: In der Nordsee
+  b: Im Atlantischen Ozean
+  c: Im Mittelmeer
+  d: Im Schwarzen Meer
+correct: c
+explanation_de: Die Rhone fliesst durch den Genfersee und weiter durch Frankreich. Sie mündet ins Mittelmeer.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/seen-und-fluesse
+  checked: &id001 2026-11-02
+glossary:
+- Rhone
+- Mittelmeer
+status: in_review
+difficulty: 2
+covers:
+- zh-258
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Rhone entspringt im Wallis (Rhonegletscher), fliesst durch den Genfersee und Frankreich
+      und mündet in der Camargue ins Mittelmeer.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt ausdrücklich: «Der Rhein fliesst in die Nordsee, die Rhone in das Mittelmeer».
+      Dass die Rhone in der Schweiz entspringt, steht ebenfalls dort. Die Details der Erklärung zum Genfersee
+      und zu Frankreich werden nicht im Einzelnen belegt, tragen die Antwort aber nicht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

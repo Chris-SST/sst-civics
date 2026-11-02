@@ -1,0 +1,45 @@
+id: pestepidemie-zuerich-17-jahrhundert
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geschichte.zuerich
+question_de: Welche Katastrophe kostete im frühen 17. Jahrhundert fast die Hälfte der Zürcher Bevölkerung
+  das Leben?
+options_de:
+  a: Ein Stadtbrand
+  b: Eine Pestepidemie
+  c: Eine Überschwemmung
+  d: Eine Hungersnot
+correct: b
+explanation_de: Im frühen 17. Jahrhundert starb fast die Hälfte der Zürcher Einwohnerschaft an der Pest.
+  Die Pest war eine ansteckende Krankheit, die sich damals in Europa mehrfach ausbreitete.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2003/04/ktzh200.html
+  checked: 2026-11-02
+glossary:
+- Pest
+- Epidemie
+status: in_review
+difficulty: 3
+covers:
+- zh-249
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Pestepidemie von 1611 forderte in Zürich sehr viele Todesopfer, und die Pest war die
+      einzige der genannten Katastrophen, die im frühen 17. Jahrhundert einen so grossen Teil der Bevölkerung
+      dahinraffen konnte.
+  source:
+    verdict: supported
+    note: 'Die Broschüre (Seite 8, «Die Pest») sagt: «In Zürich ist zwischen 1611 und 1635 die Hälfte
+      der Bevölkerung gestorben.» Sie nennt die Pest als hochansteckende Infektionskrankheit, die sich
+      in Europa ausbreitete. Quelle 2 behandelt ein anderes Thema.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,15 @@
+id: primarschule-gehoert-zur-schulpflicht
+lang: en
+source_version: 1
+question: Which level of schooling is part of compulsory schooling required by law in Switzerland?
+options:
+  a: The university
+  b: The primary school
+  c: The grammar school (Gymnasium)
+  d: The vocational school
+explanation: Compulsory schooling comprises the mandatory school years. This includes primary school,
+  which all children must attend. Grammar school (Gymnasium), vocational school and university are voluntary
+  forms of education taken after the compulsory school years.
+status: draft
+reviewed_by: null
+reviewed_at: null

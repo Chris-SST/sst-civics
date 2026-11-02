@@ -1,0 +1,14 @@
+id: familien-steuerabzuege-entlastung
+lang: en
+source_version: 1
+question: How are families given tax relief?
+options:
+  a: Families do not pay any taxes.
+  b: Families can claim deductions on their taxes.
+  c: Families do not have to fill in a tax return.
+  d: Families only pay value added tax.
+explanation: For example, families can claim deductions for children or for childcare. This reduces taxable
+  income and therefore the amount of tax.
+status: draft
+reviewed_by: null
+reviewed_at: null

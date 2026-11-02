@@ -1,0 +1,16 @@
+id: pensionskasse-zweiter-pfeiler-altersvorsorge
+lang: en
+source_version: 1
+question: Old-age provision in Switzerland is based on three pillars. Which institution forms the second
+  pillar?
+options:
+  a: Supplementary benefits to the old-age and survivors' insurance (OASI) (AHV)
+  b: The OASI (state pension insurance)
+  c: The pension fund (occupational pension scheme)
+  d: The private savings account with tax deduction (pillar 3a)
+explanation: The pension fund is part of the occupational pension scheme and forms the second pillar.
+  It supplements the OASI so that pensioners can continue to maintain their accustomed standard of living
+  in an appropriate manner. The OASI is the first pillar and private provision is the third pillar.
+status: draft
+reviewed_by: null
+reviewed_at: null

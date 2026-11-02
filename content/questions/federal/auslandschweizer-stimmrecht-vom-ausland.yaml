@@ -1,0 +1,49 @@
+id: auslandschweizer-stimmrecht-vom-ausland
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: Eine Schweizer Bürgerin lebt dauerhaft im Ausland. Wie kann sie bei eidgenössischen Wahlen
+  und Abstimmungen mitmachen?
+options_de:
+  a: Sie darf nur abstimmen, wenn sie dafür in die Schweiz reist.
+  b: Sie darf nur an Wahlen teilnehmen, aber nicht an Abstimmungen.
+  c: Sie kann vom Wohnort im Ausland aus wählen und abstimmen, ohne in die Schweiz zu reisen.
+  d: Sie verliert das Stimm- und Wahlrecht auf Bundesebene.
+correct: c
+explanation_de: Auslandschweizerinnen und Auslandschweizer haben auf Bundesebene politische Rechte. Sie
+  können sie vom Ausland aus ausüben, ohne anzureisen. Sie müssen sich dafür bei ihrer Vertretung oder
+  Stimmgemeinde anmelden.
+sources:
+- url: https://www.eda.admin.ch/countries/liechtenstein/de/home/dienstleistungen/politische-rechte.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksabstimmungen.html
+  checked: 2026-11-02
+glossary:
+- Auslandschweizer
+- Stimmrecht
+- Wahlrecht
+status: in_review
+difficulty: 2
+covers:
+- zh-009
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Auslandschweizerinnen und Auslandschweizer, die sich bei ihrer Stimmgemeinde in der Schweiz
+      registrieren lassen, können bei eidgenössischen Wahlen und Abstimmungen von ihrem Wohnort im Ausland
+      aus teilnehmen, ohne in die Schweiz zu reisen.
+  source:
+    verdict: supported
+    note: Quelle 1 (EDA) sagt, dass Auslandschweizer an eidgenössischen Volksabstimmungen und Nationalratswahlen
+      teilnehmen können, ohne in die Schweiz zu reisen, und beschreibt die Eintragung ins Stimmregister
+      über die Vertretung. Quelle 2 bestätigt, dass sie dafür nicht in die Schweiz reisen müssen.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

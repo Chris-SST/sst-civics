@@ -1,0 +1,46 @@
+id: heirat-planen-zivilstandsamt
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: An welche Stelle wenden sich Paare, die heiraten möchten?
+options_de:
+  a: An die Schulpflege
+  b: An das Zivilstandsamt
+  c: An das Steueramt
+  d: An das Betreibungsamt
+correct: b
+explanation_de: Das Zivilstandsamt bereitet die Eheschliessung vor und führt sie durch. Es beurkundet
+  auch andere Ereignisse wie Geburten und Todesfälle.
+sources:
+- url: https://www.stadt-zuerich.ch/de/lebenslagen/einwohner-services/heiraten/ehevorbereitung.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/politik-staat/gemeinden/einwohnerwesen.html
+  checked: 2026-11-02
+glossary:
+- Zivilstandsamt
+- Eheschliessung
+status: in_review
+difficulty: 1
+covers:
+- zh-204
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Paare, die heiraten möchten, melden sich beim Zivilstandsamt, das das Ehevorbereitungsverfahren
+      durchführt und die Trauung vornimmt.
+  source:
+    verdict: supported
+    note: 'Quelle 1 beschreibt, dass die Ehevorbereitung beim Zivilstandsamt stattfindet, und Quelle 2
+      sagt ausdrücklich: «Wenn man heiraten will, muss man sich beim Zivilstandsamt der Gemeinde melden.»
+      Der Zusatz der Erklärung zu Geburten und Todesfällen wird in den Quellen nicht belegt, ist für die
+      richtige Antwort aber nicht entscheidend.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

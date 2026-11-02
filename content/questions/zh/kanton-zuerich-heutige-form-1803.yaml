@@ -1,0 +1,44 @@
+id: kanton-zuerich-heutige-form-1803
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geschichte.zuerich
+question_de: In welchem Jahr entstand der Kanton Zürich in seiner heutigen Form?
+options_de:
+  a: '1291'
+  b: '1519'
+  c: '1848'
+  d: '1803'
+correct: d
+explanation_de: Der Kanton Zürich wurde 1803 mit der Mediationsakte in seiner heutigen Form geschaffen.
+  Das Jubiläum wurde 2003 als 200 Jahre Kanton Zürich gefeiert. 1848 entstand der heutige Bundesstaat.
+sources:
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2003/04/ktzh200.html
+  checked: &id001 2026-11-02
+glossary:
+- Kanton
+- Mediationsakte
+status: in_review
+difficulty: 2
+covers:
+- zh-251
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Kanton Zürich entstand in seiner heutigen Form 1803 mit der Mediationsakte Napoleons,
+      als der Kanton als eigenständiger Stand der Eidgenossenschaft neu gebildet wurde, während 1848 die
+      Bundesverfassung des Bundesstaats entstand; die Frage ist aber etwas unscharf, da Zürich schon 1351
+      der Eidgenossenschaft beitrat.
+  source:
+    verdict: supported
+    note: Die Medienmitteilung des Kantons Zürich sagt ausdrücklich, das Staatsgebiet habe 1803 seine
+      heutige Form erhalten, nach der Mediationsakte Napoleons, und feiert 200 Jahre moderner Kanton Zürich
+      im Jahr 2003. Die Aussage zu 1848 als Bundesstaat wird nur indirekt gestützt (Ausstellung «1803
+      bis 1848 – von Napoleon zum Bundesstaat»).
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

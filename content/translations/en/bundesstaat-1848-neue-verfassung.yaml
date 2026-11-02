@@ -1,0 +1,15 @@
+id: bundesstaat-1848-neue-verfassung
+lang: en
+source_version: 1
+question: What emerged in Switzerland in 1848?
+options:
+  a: The Helvetic Republic with a central government
+  b: The confederation of states under French supervision
+  c: The modern federal state with a new constitution
+  d: The Confederation of the three original cantons
+explanation: In 1848, the cantons gave themselves a Federal Constitution and founded the modern federal
+  state. It combined shared tasks of the Confederation with the autonomy of the cantons. This constitution
+  is the foundation of present-day Switzerland.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,43 @@
+id: nachbarland-im-sueden-der-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Welches Land liegt südlich der Schweiz und grenzt an sie?
+options_de:
+  a: Spanien
+  b: Italien
+  c: Slowenien
+  d: Frankreich
+correct: b
+explanation_de: Italien ist der südliche Nachbar der Schweiz. Die Grenze verläuft unter anderem durch
+  die Alpen und über das Tessin und Graubünden. Spanien und Slowenien grenzen nicht an die Schweiz.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geografie
+  checked: *id001
+glossary:
+- Nachbarland
+status: in_review
+difficulty: 1
+covers:
+- zh-273
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Italien grenzt im Süden an die Schweiz, während Spanien und Slowenien keine gemeinsame
+      Grenze mit ihr haben und Frankreich im Westen liegt.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Italien als südlichen Nachbarn («im Süden an Italien»). Quelle 2 listet Deutschland,
+      Frankreich, Italien, Liechtenstein und Österreich als Grenzländer, also weder Spanien noch Slowenien.
+      Die Angaben zu Tessin und Graubünden in der Erklärung stehen nicht ausdrücklich in den Quellen,
+      sind aber für die Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

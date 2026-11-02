@@ -1,0 +1,14 @@
+id: ahv-abkuerzung-bedeutung
+lang: en
+source_version: 1
+question: What does the abbreviation AHV stand for?
+options:
+  a: Old-age and survivors' insurance
+  b: Official household insurance
+  c: General assistance for insured persons
+  d: Unemployment and medical treatment insurance
+explanation: AHV stands for Alters- und Hinterlassenenversicherung, that is, old-age and survivors' insurance
+  (OASI). It pays pensions in old age and to surviving dependants, such as widows, widowers and orphans.
+status: draft
+reviewed_by: null
+reviewed_at: null

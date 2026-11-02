@@ -1,0 +1,42 @@
+id: sbb-abkuerzung-bedeutung-bundesbahnen
+version: 1
+scope: federal
+canton: null
+topic: bund.alltag
+question_de: Wofür steht die Abkürzung «SBB», die man auf Zügen und Bahnhöfen in der Schweiz sieht?
+options_de:
+  a: Schweizer Busbetriebe
+  b: Schweizerische Bundesbahnen
+  c: Schweizerische Bahn- und Busbetriebe
+  d: Schweizer Bergbahnen
+correct: b
+explanation_de: SBB steht für Schweizerische Bundesbahnen. Das Unternehmen betreibt einen grossen Teil
+  des Schweizer Bahnnetzes und gehört dem Bund. Daneben gibt es weitere Bahnunternehmen, zum Beispiel
+  die BLS oder die Rhätische Bahn.
+sources:
+- url: https://www.uvek.admin.ch/de/sbb
+  checked: &id001 2026-11-02
+glossary:
+- SBB
+- Bundesbahnen
+status: in_review
+difficulty: 1
+covers:
+- zh-307
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: SBB steht für Schweizerische Bundesbahnen, das staatliche Eisenbahnunternehmen der Schweiz.
+  source:
+    verdict: supported
+    note: Die Seite trägt den Titel «Schweizerische Bundesbahnen SBB» und nennt das Unternehmen durchgehend
+      «die SBB». Sie bestätigt, dass die SBB den grössten Teil des Schienenfernverkehrs betreibt und vollständig
+      dem Bund gehört. Die BLS und die Rhätische Bahn als weitere Bahnunternehmen werden nicht ausdrücklich
+      genannt, aber die Seite spricht von rund 120 weiteren Transportunternehmen.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

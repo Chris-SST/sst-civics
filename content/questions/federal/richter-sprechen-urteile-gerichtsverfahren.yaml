@@ -1,0 +1,48 @@
+id: richter-sprechen-urteile-gerichtsverfahren
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.gerichte
+question_de: Wer spricht in einem Gerichtsverfahren das Urteil aus?
+options_de:
+  a: Die Richterin oder der Richter
+  b: Die Polizistin oder der Polizist
+  c: Die Gemeindepräsidentin oder der Gemeindepräsident
+  d: Die Staatsanwältin oder der Staatsanwalt
+correct: a
+explanation_de: Richterinnen und Richter entscheiden in Gerichtsverfahren unabhängig und fällen das Urteil.
+  Die Staatsanwaltschaft führt die Untersuchung und erhebt Anklage. Die Polizei ermittelt, urteilt aber
+  nicht.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2010/267/20250401/de/html/fedlex-data-admin-ch-eli-cc-2010-267-20250401-de-html-4.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: 2026-11-02
+glossary:
+- Richter
+- Urteil
+- Gerichtsverfahren
+- Staatsanwaltschaft
+status: in_review
+difficulty: 1
+covers:
+- zh-071
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In einem Gerichtsverfahren spricht das Gericht, also die Richterin oder der Richter, das
+      Urteil aus, während Polizei, Gemeindepräsidium und Staatsanwaltschaft andere Aufgaben haben.
+  source:
+    verdict: supported
+    note: Quelle 2 sagt, nur das Gericht dürfe eine Person bestrafen, weder die Polizei noch sonst jemand;
+      das Gericht richtet. Quelle 1 nennt die Richterin oder den Richter im Gerichtsverfahren bei Einzelgerichten
+      und beschreibt die Rolle von Polizei (ermittelt) und Staatsanwaltschaft (Untersuchung, Anklage).
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

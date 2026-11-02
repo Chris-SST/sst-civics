@@ -1,0 +1,50 @@
+id: industrialisierung-zugang-zu-rohstoffen-kolonialzeit
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.bundesstaat
+question_de: Die Schweiz besitzt nur wenige eigene Rohstoffe. Was trug in der Kolonialzeit dazu bei, dass
+  sie sich zu einem Industrieland entwickelte?
+options_de:
+  a: Ein Verbot jeder Einfuhr von Waren
+  b: Die Herrschaft über eigene Kolonien in Übersee
+  c: Der Zugang zu Rohstoffen aus dem Welthandel
+  d: Grosse eigene Vorkommen an Kohle und Eisenerz
+correct: c
+explanation_de: Die Schweiz kam über den Welthandel an Rohstoffe, zum Beispiel Baumwolle, und verarbeitete
+  sie in ihren Fabriken. So entstanden Industrien wie die Textil- und Stickereiindustrie. Eigene Kohle-
+  oder Erzvorkommen hatte das Land kaum.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/st-galler-stickereien-in-der-ganzen-welt-begehrt
+  checked: *id001
+glossary:
+- Industrieland
+- Rohstoff
+- Kolonialzeit
+status: draft
+difficulty: 2
+covers:
+- zh-223
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz hatte keine eigenen Kolonien und kaum Rohstoffe, konnte aber über den Welthandel
+      Rohstoffe wie Baumwolle einführen und verarbeitete sie zu Exportprodukten, was ihre Industrialisierung
+      förderte.
+  source:
+    verdict: unclear
+    note: Keine der Seiten sagt, dass die Schweiz in der Kolonialzeit über den Welthandel an Rohstoffe
+      wie Baumwolle kam. Quelle 3 erwähnt Baumwollhandel und Stickereiexport, Quelle 2 die Abhängigkeit
+      von Ein- und Ausfuhren, aber ohne Bezug zu Rohstoffzugang oder Kolonialzeit. Zu eigener Kohle oder
+      Eisenerz äussern sich die Seiten nicht.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

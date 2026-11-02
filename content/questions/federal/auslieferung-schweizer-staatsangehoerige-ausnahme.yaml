@@ -1,0 +1,49 @@
+id: auslieferung-schweizer-staatsangehoerige-ausnahme
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Was gilt grundsätzlich für die Auslieferung von Schweizer Staatsangehörigen ins Ausland?
+options_de:
+  a: Sie werden auf Verlangen jedes Staates ausgeliefert.
+  b: Sie werden nicht ausgeliefert, ausser an ein internationales Gericht.
+  c: Sie werden nur an Nachbarstaaten der Schweiz ausgeliefert.
+  d: Sie werden ausgeliefert, wenn der Bundesrat dies im Einzelfall will.
+correct: b
+explanation_de: Artikel 25 der Bundesverfassung schützt Schweizerinnen und Schweizer vor Ausweisung und
+  Auslieferung. Eine Auslieferung an ein internationales Gericht ist nur dann möglich, wenn dieses dort
+  ein Verfahren führt.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: 2026-11-02
+glossary:
+- Auslieferung
+- Staatsangehörigkeit
+- Bundesverfassung
+status: needs_fix
+difficulty: 2
+covers:
+- zh-097
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Art. 25 Abs. 1 der Bundesverfassung dürfen Schweizer Bürgerinnen und Bürger nicht
+      aus der Schweiz ausgewiesen werden und dürfen nur mit ihrer Zustimmung einer ausländischen Behörde
+      überstellt werden; da Antwort b die Nichtauslieferung als Grundsatz mit der Ausnahme eines internationalen
+      Gerichts nennt, ist sie die beste Antwort, wobei die Frage vereinfacht ist (das Gesetz kennt auch
+      die Zustimmung der betroffenen Person).
+  source:
+    verdict: not_supported
+    note: Quelle 2 (Art. 25 Abs. 1 BV) sagt, Schweizerinnen und Schweizer dürfen nur mit ihrem Einverständnis
+      an eine ausländische Behörde ausgeliefert werden. Von einer Ausnahme für internationale Gerichte
+      steht dort nichts, und die Aussage der Erklärung zu einem Verfahren vor Ort ist nicht belegt. Quelle
+      1 behandelt das Thema nicht.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

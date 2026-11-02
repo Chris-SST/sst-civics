@@ -1,0 +1,43 @@
+id: anzahl-politische-gemeinden-ende-2021
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Wie viele politische Gemeinden gab es in der Schweiz Ende 2021 ungefähr?
+options_de:
+  a: Rund 1200
+  b: Rund 800
+  c: Rund 2200
+  d: Rund 4200
+correct: c
+explanation_de: Ende 2021 zählte die Schweiz rund 2200 politische Gemeinden. Ihre Zahl sinkt langsam,
+  weil sich immer wieder Gemeinden zusammenschliessen. Darum ist der Stand wichtig.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+  checked: 2026-11-02
+glossary:
+- politische Gemeinde
+- Gemeindefusion
+status: in_review
+difficulty: 2
+covers:
+- zh-057
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Ende 2021 zählte die Schweiz laut Bundesamt für Statistik 2148 politische Gemeinden, also
+      rund 2200, während die anderen Zahlen deutlich abweichen.
+  source:
+    verdict: supported
+    note: Quelle 1 (Broschüre des Kantons Zürich) zeigt in der Grafik zum Föderalismus «1 Bund, 26 Kantone,
+      ~2200 Gemeinden». Das stützt «rund 2200», nennt aber kein Jahr und sagt nichts zum Stand Ende 2021
+      oder zur sinkenden Zahl; Quelle 2 behandelt das Thema nicht.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

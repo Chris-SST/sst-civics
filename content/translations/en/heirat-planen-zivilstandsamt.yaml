@@ -1,0 +1,14 @@
+id: heirat-planen-zivilstandsamt
+lang: en
+source_version: 1
+question: Which office should couples who wish to marry contact?
+options:
+  a: The school board (Schulpflege)
+  b: The civil registry office (Zivilstandsamt)
+  c: The tax office
+  d: The debt enforcement office
+explanation: The civil registry office prepares and conducts the marriage ceremony. It also records other
+  events such as births and deaths.
+status: draft
+reviewed_by: null
+reviewed_at: null

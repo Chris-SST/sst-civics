@@ -1,0 +1,15 @@
+id: regierungsrat-zuerich-wahl-durch-volk
+lang: en
+source_version: 1
+question: Who decides in the canton of Zürich who sits on the Executive Council (Regierungsrat)?
+options:
+  a: The Federal Assembly (Bundesversammlung) elects the members of the Executive Council.
+  b: The Cantonal Council (Kantonsrat) elects the members from among its own ranks.
+  c: The commune (Gemeinde) presidents elect the members.
+  d: The voting population of the canton elects the members directly.
+explanation: In the canton of Zürich, the people elect the Executive Council directly at the ballot box.
+  The Cantonal Council is the parliament and does not elect the government. This distinguishes the canton
+  from the Confederation, where the Federal Assembly elects the Federal Council (Bundesrat).
+status: draft
+reviewed_by: null
+reviewed_at: null

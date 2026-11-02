@@ -1,0 +1,41 @@
+id: rhein-muendung-nordsee
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: In welches Meer fliesst das Wasser des Rheins am Ende?
+options_de:
+  a: In das Mittelmeer
+  b: In das Schwarze Meer
+  c: In die Nordsee
+  d: In die Ostsee
+correct: c
+explanation_de: Der Rhein entspringt in den Schweizer Alpen und fliesst durch Deutschland und die Niederlande.
+  Er mündet in die Nordsee.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/seen-und-fluesse
+  checked: &id001 2026-11-02
+glossary:
+- Rhein
+- Nordsee
+status: in_review
+difficulty: 1
+covers:
+- zh-257
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Rhein entspringt in den Schweizer Alpen und mündet in den Niederlanden in die Nordsee.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt ausdrücklich: «Der Rhein fliesst in die Nordsee, die Rhone in das Mittelmeer
+      und der Inn über die Donau in das Schwarze Meer.» Das stützt Antwort c. Die Angaben zu Deutschland
+      und den Niederlanden in der Erklärung stehen nicht auf der Seite, sind für die Antwort aber nicht
+      entscheidend.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

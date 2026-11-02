@@ -1,0 +1,15 @@
+id: vereinigte-bundesversammlung-gemeinsame-sitzung
+lang: en
+source_version: 1
+question: When does one speak of the United Federal Assembly (Bundesversammlung)?
+options:
+  a: When the National Council (Nationalrat) and the Council of States (Ständerat) deliberate separately
+    in their own chambers
+  b: When all the cantonal parliaments meet at the same time
+  c: When the members of the National Council and the Council of States meet together
+  d: When the Federal Council (Bundesrat) and Parliament meet together
+explanation: The United Federal Assembly comes into being when both chambers meet together. It elects,
+  for example, the members of the Federal Council.
+status: draft
+reviewed_by: null
+reviewed_at: null

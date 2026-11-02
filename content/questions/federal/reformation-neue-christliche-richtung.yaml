@@ -1,0 +1,42 @@
+id: reformation-neue-christliche-richtung
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gruendung
+question_de: Welche christliche Richtung entstand aus der Reformation im 16. Jahrhundert?
+options_de:
+  a: Das koptische Christentum
+  b: Das römisch-katholische Christentum
+  c: Das orthodoxe Christentum
+  d: Das protestantische Christentum
+correct: d
+explanation_de: Die Reformation war eine Erneuerungsbewegung innerhalb der Kirche des Mittelalters. Aus
+  ihr ging das protestantische Christentum hervor. In Zürich wirkte dabei Huldrych Zwingli.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Reformation
+- Protestantismus
+status: in_review
+difficulty: 1
+covers:
+- zh-229
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das protestantische Christentum entstand im 16. Jahrhundert aus der Reformation, etwa durch
+      Luther, Zwingli und Calvin, während die koptische, die römisch-katholische und die orthodoxe Kirche
+      deutlich älter sind.
+  source:
+    verdict: supported
+    note: Quelle 1 beschreibt die Reformation als Spaltung des christlichen Abendlandes in Katholiken
+      und Protestanten ab dem 16. Jahrhundert. Zwingli von Zürich und Calvin von Genf prägten demnach
+      den Protestantismus, was Antwort d und die Erklärung stützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

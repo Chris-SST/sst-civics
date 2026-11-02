@@ -1,0 +1,15 @@
+id: bundesverfassung-1848-bundesstaat-kantone
+lang: en
+source_version: 1
+question: What changed for Switzerland with the Federal Constitution of 1848?
+options:
+  a: It became a loose confederation of states again
+  b: It became a monarchy with a king
+  c: It became a federal state in which the cantons remain autonomous
+  d: It became a unitary state without cantons
+explanation: In 1848, the modern federal state with common institutions was created. However, the cantons
+  kept their own responsibilities and their own statehood. This division of powers still shapes Switzerland
+  today.
+status: draft
+reviewed_by: null
+reviewed_at: null

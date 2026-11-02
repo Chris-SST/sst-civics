@@ -1,0 +1,15 @@
+id: primarschule-traegerschaft-gemeinde-zuerich
+lang: en
+source_version: 1
+question: Who runs the primary schools in the canton of Zürich?
+options:
+  a: The cantonal Education Department, as the school management of each school
+  b: The Confederation
+  c: The local political commune (Gemeinde) or the local school commune (Schulgemeinde)
+  d: The district administration
+explanation: In the canton of Zürich, primary school is a responsibility of the communes. They run the
+  schools locally and appoint the school authority. The canton sets the framework and supervises the state
+  school system.
+status: draft
+reviewed_by: null
+reviewed_at: null

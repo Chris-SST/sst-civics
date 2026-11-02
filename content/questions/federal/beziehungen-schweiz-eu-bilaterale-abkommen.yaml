@@ -1,0 +1,42 @@
+id: beziehungen-schweiz-eu-bilaterale-abkommen
+version: 1
+scope: federal
+canton: null
+topic: bund.international
+question_de: Worauf beruhen die Beziehungen zwischen der Schweiz und der Europäischen Union (EU) im Kern?
+options_de:
+  a: Auf einem Paket bilateraler Abkommen
+  b: Auf einer gemeinsamen Regierung
+  c: Auf der Mitgliedschaft der Schweiz in der EU
+  d: Auf einer gemeinsamen Verfassung
+correct: a
+explanation_de: Die Schweiz ist nicht Mitglied der EU. Ihre Beziehungen regeln viele bilaterale Abkommen,
+  also Verträge zwischen zwei Partnern. Sie betreffen zum Beispiel den Handel und den Personenverkehr.
+sources:
+- url: https://www.eda.admin.ch/de/europapolitik-einfach-erklaert
+  checked: &id001 2026-11-02
+glossary:
+- EU
+- bilaterale Abkommen
+status: in_review
+difficulty: 2
+covers:
+- zh-333
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz ist nicht Mitglied der EU und hat keine gemeinsame Regierung oder Verfassung
+      mit ihr, ihre Beziehungen beruhen im Kern auf einem Paket bilateraler Abkommen.
+  source:
+    verdict: supported
+    note: Die Seite des EDA sagt, die Schweiz und die EU hätten in allen Bereichen bilaterale Abkommen
+      abgeschlossen. Sie nennt die Bilateralen I und II als wichtigste Vertragspakete, unter anderem zu
+      Marktzugang, Handel und Personenfreizügigkeit. Dass die Schweiz nicht EU-Mitglied ist, steht nicht
+      ausdrücklich da, ergibt sich aber aus der Beschreibung der Beziehungen über Abkommen.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

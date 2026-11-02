@@ -1,0 +1,45 @@
+id: ahv-pflichtversicherung
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Welche Aussage zur AHV ist richtig?
+options_de:
+  a: Die AHV gehört zu den Pflichtversicherungen.
+  b: Die AHV ist eine freiwillige Versicherung für Selbständige.
+  c: Die AHV gilt nur für Personen mit Schweizer Pass.
+  d: Die AHV ist eine private Versicherung der Arbeitgeber.
+correct: a
+explanation_de: Die AHV ist obligatorisch. Wer in der Schweiz wohnt oder arbeitet, ist grundsätzlich versichert
+  und muss Beiträge zahlen.
+sources:
+- url: https://www.bsv.admin.ch/de/organisation-ahv
+  checked: 2026-11-02
+- url: https://www.bsv.admin.ch/de/beitraege-im-ueberblick
+  checked: &id001 2026-11-02
+glossary:
+- AHV
+- Pflichtversicherung
+- Obligatorium
+status: in_review
+difficulty: 2
+covers:
+- zh-145
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die AHV ist die obligatorische staatliche Alters- und Hinterlassenenversicherung, die für
+      alle in der Schweiz wohnhaften oder erwerbstätigen Personen unabhängig von der Staatsangehörigkeit
+      gilt, und gehört damit zu den Pflichtversicherungen.
+  source:
+    verdict: supported
+    note: Quelle 2 sagt, wer in der Schweiz arbeitet oder wohnt, sei versichert und beitragspflichtig,
+      und spricht von der «obligatorischen AHV/IV/EO-Versicherung». Auch Selbständige und Nichterwerbstätige
+      zahlen Beiträge. Damit sind b, c und d widerlegt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

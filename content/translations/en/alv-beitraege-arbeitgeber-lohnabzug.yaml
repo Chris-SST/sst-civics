@@ -1,0 +1,15 @@
+id: alv-beitraege-arbeitgeber-lohnabzug
+lang: en
+source_version: 1
+question: Who deducts the contributions to unemployment insurance from wages?
+options:
+  a: The commune (Gemeinde) of the place of residence
+  b: The employee themselves, by making a payment
+  c: The Regional Employment Centre
+  d: The employer
+explanation: The employer deducts the contributions automatically from the wages and transfers them to
+  the responsible body. Employees do not have to take care of this themselves. The employer also pays
+  part of the contributions.
+status: draft
+reviewed_by: null
+reviewed_at: null

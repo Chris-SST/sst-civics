@@ -1,0 +1,15 @@
+id: baudirektion-zuerich-kantonsverwaltung-direktion
+lang: en
+source_version: 1
+question: Which of the following bodies is a Direktion (directorate) of the Zurich cantonal administration?
+options:
+  a: The commune (Gemeinde) directorate
+  b: The Building Directorate
+  c: The city directorate
+  d: The Confederation directorate
+explanation: The Building Directorate is one of the directorates of the Zurich cantonal administration.
+  The cantonal administration is divided into several directorates, each headed by a member of the Executive
+  Council (Regierungsrat).
+status: draft
+reviewed_by: null
+reviewed_at: null

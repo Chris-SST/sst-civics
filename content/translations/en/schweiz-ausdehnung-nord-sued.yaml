@@ -1,0 +1,13 @@
+id: schweiz-ausdehnung-nord-sued
+lang: en
+source_version: 1
+question: Approximately how far is it from the northernmost to the southernmost point in Switzerland?
+options:
+  a: around 650 kilometres
+  b: around 220 kilometres
+  c: around 120 kilometres
+  d: around 450 kilometres
+explanation: Switzerland measures around 220 kilometres from north to south. It is therefore a small country.
+status: draft
+reviewed_by: null
+reviewed_at: null

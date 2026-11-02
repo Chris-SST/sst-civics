@@ -1,0 +1,46 @@
+id: uhrmacherei-schweizer-spitzenbranche
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: In welchem Wirtschaftszweig steht die Schweiz seit langer Zeit international an der Spitze?
+options_de:
+  a: Textilindustrie
+  b: Schiffbau
+  c: Automobilbau
+  d: Uhrmacherei
+correct: d
+explanation_de: Schweizer Uhren sind weltweit für ihre Qualität bekannt. Die Uhrmacherei hat in der Schweiz
+  eine lange Tradition und ist bis heute ein wichtiger Exportzweig.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/uhrenindustrie
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.seco.admin.ch/de/europaeische-union-eu
+  checked: 2026-11-02
+glossary:
+- Uhrmacherei
+- Wirtschaftszweig
+status: in_review
+difficulty: 1
+covers:
+- zh-243
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz ist seit langer Zeit weltweit führend in der Uhrmacherei, während sie im Schiffbau
+      und Automobilbau kaum und in der Textilindustrie nicht mehr an der Weltspitze steht.
+  source:
+    verdict: supported
+    note: Quelle 1 (EDA) sagt, die Schweiz sei im Bereich der klassischen Uhren wertmässig das grösste
+      Exportland der Welt und die Uhrenindustrie sei dank Innovationen zur weltweiten Nr. 1 geworden.
+      Sie nennt zudem den Ursprung im 16. Jahrhundert, was die lange Tradition stützt. Quelle 2 erwähnt
+      die Uhrenindustrie nur als wichtige Branche.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

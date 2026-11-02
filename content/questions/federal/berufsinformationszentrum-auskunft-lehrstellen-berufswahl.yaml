@@ -1,0 +1,42 @@
+id: berufsinformationszentrum-auskunft-lehrstellen-berufswahl
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.bildung
+question_de: Wo erhält man Auskünfte zu Lehrstellen, Berufswahl und Arbeit?
+options_de:
+  a: Im Berufsinformationszentrum
+  b: Im Zivilstandsamt
+  c: Im Kindergarten
+  d: Im Betreibungsamt
+correct: a
+explanation_de: Das Berufsinformationszentrum (BIZ) informiert und berät zu Lehrstellen, Berufswahl, Weiterbildung
+  und Arbeit. Das Angebot steht Jugendlichen und Erwachsenen offen. Die anderen Stellen haben andere Aufgaben.
+sources:
+- url: https://www.zh.ch/de/bildung/berufs-studien-laufbahnberatung.html
+  checked: &id001 2026-11-02
+glossary:
+- Berufsinformationszentrum
+- Berufswahl
+- Lehrstelle
+status: in_review
+difficulty: 1
+covers:
+- zh-175
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Berufsinformationszentrum (BIZ) berät zu Lehrstellen, Berufswahl und Arbeit, während
+      Zivilstandsamt, Kindergarten und Betreibungsamt dafür nicht zuständig sind.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Kanton Zürich): «Jugendliche und Erwachsene können sich mit Fragen zu Beruf, Studium,
+      Aus- und Weiterbildung an ihr biz (Berufsinformationszentrum) wenden.» Lehrstellensuche, Berufswahl
+      und Stellensuche werden ebenfalls genannt. Das stützt die Antwort und die Erklärung.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

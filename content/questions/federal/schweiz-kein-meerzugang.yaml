@@ -1,0 +1,41 @@
+id: schweiz-kein-meerzugang
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Welche Aussage zur geografischen Lage der Schweiz stimmt?
+options_de:
+  a: Die Schweiz hat keinen direkten Zugang zum Meer.
+  b: Die Schweiz hat über den Rhein einen eigenen Meerzugang.
+  c: Die Schweiz grenzt im Süden ans Mittelmeer.
+  d: Die Schweiz grenzt im Norden an die Nordsee.
+correct: a
+explanation_de: Die Schweiz ist ein Binnenland und liegt nicht am Meer. Ihre Flüsse wie Rhein und Rhone
+  fliessen aber in Meere.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geografie
+  checked: &id001 2026-11-02
+glossary:
+- Binnenland
+status: in_review
+difficulty: 1
+covers:
+- zh-260
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz ist ein Binnenland ohne eigene Meeresküste und hat daher keinen direkten Zugang
+      zum Meer, auch wenn der Rhein ins Meer fliesst.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass die Schweiz an fünf Länder grenzt (Deutschland, Frankreich, Italien, Liechtenstein,
+      Österreich), also an kein Meer. Die Quelle nennt Rhone, Rhein und Inn als Flüsse, die in den Schweizer
+      Alpen entspringen, und nennt keinen Meerzugang. Das Wort «Binnenland» und die Mündung von Rhein
+      und Rhone ins Meer stehen nicht ausdrücklich im Text.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

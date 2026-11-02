@@ -1,0 +1,15 @@
+id: kantone-eigene-verwaltung-und-recht
+lang: en
+source_version: 1
+question: What is the main task of the cantons in Switzerland?
+options:
+  a: They determine Switzerland's foreign policy and currency.
+  b: They enact the law for the whole country and do not supervise the communes (Gemeinden).
+  c: They conclude treaties with other states and command the army.
+  d: They run their own administration and enact cantonal law.
+explanation: Switzerland is a federal state. The cantons are independent, insofar as their sovereignty
+  is not limited by the Federal Constitution. They organise their administration and enact their own cantonal
+  law, for example their cantonal constitution and laws.
+status: draft
+reviewed_by: null
+reviewed_at: null

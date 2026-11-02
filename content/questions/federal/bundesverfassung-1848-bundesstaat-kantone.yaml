@@ -1,0 +1,48 @@
+id: bundesverfassung-1848-bundesstaat-kantone
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.bundesstaat
+question_de: Was änderte sich mit der Bundesverfassung von 1848 für die Schweiz?
+options_de:
+  a: Sie wurde wieder ein loser Staatenbund
+  b: Sie wurde eine Monarchie mit einem König
+  c: Sie wurde ein Bundesstaat, in dem die Kantone eigenständig bleiben
+  d: Sie wurde ein Einheitsstaat ohne Kantone
+correct: c
+explanation_de: 1848 entstand der moderne Bundesstaat mit gemeinsamen Institutionen. Die Kantone behielten
+  aber eigene Aufgaben und eine eigene Staatlichkeit. Diese Aufteilung prägt die Schweiz bis heute.
+sources:
+- url: https://www.admin.ch/de/bundesrat-geschichte
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/foederalismus
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Bundesstaat
+- Bundesverfassung
+- Kanton
+status: in_review
+difficulty: 1
+covers:
+- zh-233
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Mit der Bundesverfassung von 1848 wurde die Schweiz vom Staatenbund zu einem Bundesstaat,
+      in dem die Kantone weiterhin eigenständig blieben und Souveränität behielten, soweit sie nicht dem
+      Bund übertragen wurde.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass die Schweiz 1848 ein moderner Bundesstaat wurde und die Kantone nun eine
+      eidgenössische Regierung und ein Parlament über sich hatten. Quelle 2 nennt die Kantone Gliedstaaten
+      mit eigener Verfassung, eigenem Parlament, eigener Regierung und eigenen Gerichten. Quelle 3 spricht
+      von einem föderalistischen Bundesstaat.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,14 @@
+id: obligatorische-schule-verantwortung-kanton-gemeinden
+lang: en
+source_version: 1
+question: Who is mainly responsible for public compulsory schooling in Switzerland?
+options:
+  a: The school management teams and the parents
+  b: The Confederation alone
+  c: The districts and the churches
+  d: The cantons and the communes (Gemeinden)
+explanation: Public schooling is a matter for the cantons and the communes. The canton sets the framework,
+  and the communes run the schools locally. The Confederation plays only a small role in compulsory schooling.
+status: draft
+reviewed_by: null
+reviewed_at: null

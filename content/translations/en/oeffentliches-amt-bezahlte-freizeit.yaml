@@ -1,0 +1,15 @@
+id: oeffentliches-amt-bezahlte-freizeit
+lang: en
+source_version: 1
+question: A person holds a public office alongside their job. What do they usually receive from their
+  employer for this?
+options:
+  a: Dismissal
+  b: Paid time off
+  c: A pay cut
+  d: An additional ban on holidays
+explanation: A person who holds a public office, for example on an authority, usually receives paid time
+  off from their employer for this. In this way, commitment to the community is supported.
+status: draft
+reviewed_by: null
+reviewed_at: null

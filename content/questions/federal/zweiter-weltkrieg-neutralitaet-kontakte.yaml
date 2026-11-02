@@ -1,0 +1,46 @@
+id: zweiter-weltkrieg-neutralitaet-kontakte
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.weltkriege_neutralitaet
+question_de: Wie verhielt sich die Schweiz im Zweiten Weltkrieg?
+options_de:
+  a: Sie brach alle Kontakte zu den Kriegsparteien ab und schloss die Grenzen vollständig.
+  b: Sie schloss sich Deutschland an und lieferte Truppen.
+  c: Sie blieb neutral und pflegte zu den Kriegsparteien politische und wirtschaftliche Kontakte.
+  d: Sie trat dem Bündnis der Alliierten bei und kämpfte mit.
+correct: c
+explanation_de: Die Schweiz wurde im Zweiten Weltkrieg nicht Kriegspartei. Sie hielt aber politische und
+  wirtschaftliche Kontakte zu den Kriegsparteien aufrecht. Diese Haltung wird historisch bis heute diskutiert.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: 2026-11-02
+glossary:
+- Neutralität
+- Zweiter Weltkrieg
+status: in_review
+difficulty: 2
+covers:
+- zh-218
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz blieb im Zweiten Weltkrieg neutral, bewaffnet und unterhielt zu den Kriegsparteien
+      weiterhin politische und wirtschaftliche Beziehungen, während die anderen Antworten (vollständiger
+      Abbruch der Kontakte, Anschluss an Deutschland, Beitritt zu den Alliierten) nicht zutreffen.
+  source:
+    verdict: supported
+    note: Quelle 1 (Seite 7) sagt ausdrücklich, die Schweiz sei auch im Zweiten Weltkrieg neutral gewesen,
+      habe nicht aktiv am Krieg teilgenommen und habe politische und wirtschaftliche Beziehungen zu den
+      Kriegsnationen gehabt. Quelle 2 nennt die Neutralität und die wirtschaftliche Abhängigkeit vom Ausland,
+      aber nicht ausdrücklich die Kontakte im Zweiten Weltkrieg; die Aussage zur historischen Diskussion
+      in der Erklärung wird nicht belegt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

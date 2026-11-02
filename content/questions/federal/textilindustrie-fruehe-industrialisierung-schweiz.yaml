@@ -1,0 +1,46 @@
+id: textilindustrie-fruehe-industrialisierung-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.bundesstaat
+question_de: Welcher Wirtschaftszweig war in der frühen Industrialisierung der Schweiz am wichtigsten?
+options_de:
+  a: Die Uhrenindustrie
+  b: Die Pharmaindustrie
+  c: Die Textilindustrie
+  d: Die Maschinenindustrie
+correct: c
+explanation_de: In der frühen Industrialisierung prägte die Textilindustrie die Schweizer Wirtschaft,
+  etwa mit Spinnereien, Webereien und Stickereien. Ein bekanntes Beispiel sind die St. Galler Stickereien,
+  die weltweit begehrt waren. Andere Branchen wurden erst später so wichtig.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/st-galler-stickereien-in-der-ganzen-welt-begehrt
+  checked: *id001
+glossary:
+- Industrialisierung
+- Textilindustrie
+- Stickerei
+status: in_review
+difficulty: 2
+covers:
+- zh-219
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In der frühen Industrialisierung der Schweiz im späten 18. und frühen 19. Jahrhundert war
+      die Textilindustrie (Baumwollspinnerei und Weberei, später Seide und Stickerei) der wichtigste Wirtschaftszweig,
+      während Maschinen-, Uhren- und Pharmaindustrie erst später an Bedeutung gewannen.
+  source:
+    verdict: supported
+    note: Quelle 1 (Seite 12) sagt ausdrücklich, dass bei der Industrialisierung die Textilindustrie am
+      wichtigsten war. Quelle 2 stützt das Beispiel der St. Galler Stickereien, die in der ganzen Welt
+      begehrt waren und bis zum Ersten Weltkrieg die wichtigste Einnahmequelle des Kantons bildeten.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

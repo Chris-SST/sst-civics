@@ -1,0 +1,47 @@
+id: iv-kuerzel-invalidenversicherung
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Wofür steht die Abkürzung «IV» im Schweizer Sozialversicherungssystem?
+options_de:
+  a: Inlandversicherung
+  b: Invalidenversicherung
+  c: Integrationsversicherung
+  d: Individualversicherung
+correct: b
+explanation_de: IV steht für Invalidenversicherung. Sie gehört zur ersten Säule der Altersvorsorge und
+  hilft Menschen mit gesundheitlichen Einschränkungen, zum Beispiel mit Eingliederungsmassnahmen oder
+  Renten.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1959/827_857_845/20260101/de/html/fedlex-data-admin-ch-eli-cc-1959-827_857_845-20260101-de-html-8.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.bsv.admin.ch/de/dreisaeulensystem
+  checked: *id001
+glossary:
+- Invalidenversicherung
+- Dreisäulensystem
+status: in_review
+difficulty: 1
+covers:
+- zh-152
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Abkürzung «IV» steht im Schweizer Sozialversicherungssystem für die Invalidenversicherung,
+      die Menschen mit gesundheitlich bedingter Erwerbsunfähigkeit unterstützt.
+  source:
+    verdict: supported
+    note: Quelle 1 ist das «Bundesgesetz über die Invalidenversicherung (IVG)» und spricht von der «IV-Stelle»,
+      Quelle 2 nennt «die Invalidenversicherung (IV)» als Teil der ersten Säule. Quelle 3 (BSV) bestätigt,
+      dass die 1. Säule aus AHV und IV besteht. Quelle 1 behandelt zudem Eingliederungsmassnahmen und
+      Renten, wie in der Erklärung genannt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

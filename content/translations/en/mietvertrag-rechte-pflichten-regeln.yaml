@@ -1,0 +1,15 @@
+id: mietvertrag-rechte-pflichten-regeln
+lang: en
+source_version: 1
+question: What is set out in a tenancy agreement?
+options:
+  a: The rights of the neighbours in the property
+  b: The amount of tax paid by tenants
+  c: The obligations of the commune (Gemeinde) towards tenants
+  d: The rights and obligations of landlords and tenants
+explanation: The tenancy agreement governs the relationship between the person who lets the property and
+  the person who rents it. This includes, for example, the rent and the duration of the tenancy. The Code
+  of Obligations contains the statutory rules on this.
+status: draft
+reviewed_by: null
+reviewed_at: null

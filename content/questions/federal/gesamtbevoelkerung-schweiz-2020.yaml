@@ -1,0 +1,40 @@
+id: gesamtbevoelkerung-schweiz-2020
+version: 1
+scope: federal
+canton: null
+topic: bund.alltag
+question_de: Wie gross war die Gesamtbevölkerung der Schweiz im Jahr 2020 ungefähr?
+options_de:
+  a: etwa 6,2 Millionen
+  b: etwa 8,6 Millionen
+  c: etwa 10,1 Millionen
+  d: etwa 7,4 Millionen
+correct: b
+explanation_de: Im Jahr 2020 lebten in der Schweiz rund 8,6 Millionen Menschen. Die Bevölkerung ist in
+  den letzten Jahrzehnten stark gewachsen. Aktuelle Zahlen veröffentlicht das Bundesamt für Statistik.
+sources:
+- url: https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/stand-entwicklung.html
+  checked: &id001 2026-11-02
+glossary:
+- Bevölkerung
+- Bundesamt für Statistik
+status: in_review
+difficulty: 2
+covers:
+- zh-279
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die ständige Wohnbevölkerung der Schweiz betrug Ende 2020 rund 8,6 Millionen Personen laut
+      Bundesamt für Statistik.
+  source:
+    verdict: supported
+    note: Quelle 1 (BFS) nennt für den 31. Dezember 2020 insgesamt 8 670 300 Einwohnerinnen und Einwohner,
+      was gerundet etwa 8,6 bis 8,7 Millionen entspricht und Antwort b stützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

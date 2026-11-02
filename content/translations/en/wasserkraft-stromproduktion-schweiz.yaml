@@ -1,0 +1,14 @@
+id: wasserkraft-stromproduktion-schweiz
+lang: en
+source_version: 1
+question: Switzerland has plenty of water. How is it used to produce electricity?
+options:
+  a: In gas-fired power stations
+  b: In oil refineries
+  c: In hydroelectric power stations
+  d: In coal-fired power stations
+explanation: The water from rivers and reservoirs drives turbines in hydroelectric power stations. Hydroelectric
+  power is a key domestic source of electricity in Switzerland.
+status: draft
+reviewed_by: null
+reviewed_at: null

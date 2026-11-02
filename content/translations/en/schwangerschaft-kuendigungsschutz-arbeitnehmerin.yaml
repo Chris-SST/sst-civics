@@ -1,0 +1,14 @@
+id: schwangerschaft-kuendigungsschutz-arbeitnehmerin
+lang: en
+source_version: 1
+question: What applies to pregnant employees in Switzerland with regard to dismissal?
+options:
+  a: They only have protection against dismissal in companies with a collective labour agreement
+  b: They enjoy statutory protection against dismissal during pregnancy
+  c: They must notify their employer of their pregnancy immediately, otherwise the protection lapses
+  d: They can be dismissed at any time without restriction
+explanation: The law protects women from dismissal by the employer during pregnancy. The protection applies
+  regardless of the company. It is intended to give women security during this period.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,49 @@
+id: oeffentliches-amt-bezahlte-freizeit
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Eine Person übt neben ihrer Arbeit ein öffentliches Amt aus. Was erhält sie dafür in der
+  Regel von der Arbeitgeberseite?
+options_de:
+  a: Eine Kündigung
+  b: Bezahlte Freizeit
+  c: Eine Lohnkürzung
+  d: Ein zusätzliches Ferienverbot
+correct: b
+explanation_de: Wer ein öffentliches Amt ausübt, zum Beispiel in einer Behörde, erhält dafür von der Arbeitgeberseite
+  bezahlte Freizeit. So wird das Engagement für die Allgemeinheit unterstützt.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
+  checked: 2026-11-02
+glossary:
+- öffentliches Amt
+- Arbeitgeber
+status: in_review
+difficulty: 2
+covers:
+- zh-177
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In der Schweiz wird das Milizsystem unterstützt, indem Arbeitgebende Personen mit einem
+      öffentlichen Amt in der Regel bezahlte oder zumindest bewilligte Freizeit gewähren, während Kündigung,
+      Lohnkürzung oder Ferienverbot nicht üblich sind; die Frage ist leicht vereinfacht, aber b ist die
+      beste Antwort.
+  source:
+    verdict: supported
+    note: Quelle 2 (ZH-Broschüre, Arbeit und Beruf) sagt ausdrücklich, dass man bei einem öffentlichen
+      Amt als Arbeitnehmende ein Recht auf bezahlte Zeit dafür hat. Quelle 1 (OR, Lohnfortzahlung bei
+      Verhinderung durch Ausübung eines öffentlichen Amtes) stützt dies ebenfalls; Quelle 3 ist für die
+      Frage nicht relevant.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

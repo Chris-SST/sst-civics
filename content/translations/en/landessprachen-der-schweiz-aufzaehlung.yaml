@@ -1,0 +1,14 @@
+id: landessprachen-der-schweiz-aufzaehlung
+lang: en
+source_version: 1
+question: Which languages are national languages in Switzerland?
+options:
+  a: German, French, Romansh and Spanish
+  b: German, French, Italian and Romansh
+  c: German, French, Italian and English
+  d: German, French and Italian
+explanation: The Federal Constitution names German, French, Italian and Romansh as the national languages.
+  English is not a national language, but it is often used as a common language for communication.
+status: draft
+reviewed_by: null
+reviewed_at: null

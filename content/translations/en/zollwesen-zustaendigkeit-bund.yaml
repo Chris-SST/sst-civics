@@ -1,0 +1,15 @@
+id: zollwesen-zustaendigkeit-bund
+lang: en
+source_version: 1
+question: Who is responsible for customs in Switzerland?
+options:
+  a: The Confederation
+  b: The communes (Gemeinden) along the border
+  c: The cantons in which the borders lie
+  d: The cantons and the Confederation, half each
+explanation: Under the Federal Constitution, customs is a matter for the Confederation. It regulates customs
+  duties and the control of goods crossing the border. The cantons and communes have no responsibility
+  of their own for this.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,45 @@
+id: bundesrat-wahl-durch-vereinigte-bundesversammlung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.bundesrat
+question_de: Wer wählt die sieben Mitglieder des Bundesrats?
+options_de:
+  a: Das Volk in einer Wahl an der Urne
+  b: Die Kantonsregierungen
+  c: Das Bundesgericht
+  d: Der Nationalrat und der Ständerat gemeinsam
+correct: d
+explanation_de: Die beiden Kammern des Parlaments treten zur Vereinigten Bundesversammlung zusammen und
+  wählen die Bundesratsmitglieder. Das Volk wählt den Bundesrat in der Schweiz nicht direkt.
+sources:
+- url: https://www.admin.ch/gov/de/start/bundesrat.html
+  checked: &id001 2026-11-02
+- url: https://www.parlament.ch
+  checked: *id001
+glossary:
+- Bundesrat
+- Bundesversammlung
+- Nationalrat
+- Ständerat
+status: in_review
+difficulty: 1
+covers:
+- zh-041
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Bundesversammlung, also der Nationalrat und der Ständerat in gemeinsamer Sitzung (Vereinigte
+      Bundesversammlung), wählt die sieben Mitglieder des Bundesrats gemäss Art. 175 der Bundesverfassung.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, die Mitglieder des Bundesrates würden vom Parlament gewählt. Quelle 2 nennt die
+      Vereinigte Bundesversammlung (beide Räte), die ein neues Bundesratsmitglied wählt. Das stützt Antwort
+      d und widerspricht einer Volkswahl.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

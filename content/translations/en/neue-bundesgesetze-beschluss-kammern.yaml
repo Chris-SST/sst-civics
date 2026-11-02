@@ -1,0 +1,14 @@
+id: neue-bundesgesetze-beschluss-kammern
+lang: en
+source_version: 1
+question: Who adopts most new federal laws?
+options:
+  a: The Federal Supreme Court (Bundesgericht)
+  b: The Federal Council (Bundesrat) alone
+  c: The cantonal parliaments
+  d: The National Council (Nationalrat) and the Council of States (Ständerat)
+explanation: Most new federal laws are adopted by both chambers of Parliament. The Federal Council prepares
+  bills, but does not decide alone. The people can call a referendum against a law.
+status: draft
+reviewed_by: null
+reviewed_at: null

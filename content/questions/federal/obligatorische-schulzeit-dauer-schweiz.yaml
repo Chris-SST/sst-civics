@@ -1,0 +1,47 @@
+id: obligatorische-schulzeit-dauer-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.bildung
+question_de: Wie viele Jahre dauert die obligatorische Schulzeit in der Schweiz, also der gesetzlich vorgeschriebene
+  Schulbesuch?
+options_de:
+  a: Elf Jahre
+  b: Zehn Jahre
+  c: Zwölf Jahre
+  d: Neun Jahre
+correct: a
+explanation_de: Die obligatorische Schulzeit umfasst in der Schweiz elf Jahre. Sie beginnt mit dem Kindergarten
+  (zwei Jahre) und schliesst die Primarschule und die Sekundarstufe I ein. Die Kantone regeln die Schule,
+  aber die Dauer ist gesamtschweizerisch harmonisiert.
+sources:
+- url: https://www.zh.ch/de/bildung/schulen/volksschule.html
+  checked: &id001 2026-11-02
+- url: https://www.ch.ch/de/bildung/
+  checked: 2026-11-02
+glossary:
+- Schulpflicht
+- Volksschule
+- Kindergarten
+status: in_review
+difficulty: 1
+covers:
+- zh-159
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach dem HarmoS-Konkordat und Art. 62 der Bundesverfassung dauert die obligatorische Schulzeit
+      in der Schweiz elf Jahre (zwei Jahre Kindergarten bzw. Eingangsstufe, sechs Jahre Primarstufe und
+      drei Jahre Sekundarstufe I).
+  source:
+    verdict: supported
+    note: Quelle 1 (Kanton Zürich, Volksschule) sagt ausdrücklich, die Volksschule umfasse Kindergarten-,
+      Primar- und Sekundarstufe und dauere elf Jahre. Die gesamtschweizerische Harmonisierung und die
+      zwei Kindergartenjahre werden nicht erwähnt; Quelle 2 ist eine Fehlerseite ohne Inhalt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

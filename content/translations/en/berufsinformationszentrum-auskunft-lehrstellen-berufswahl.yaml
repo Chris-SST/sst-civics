@@ -1,0 +1,15 @@
+id: berufsinformationszentrum-auskunft-lehrstellen-berufswahl
+lang: en
+source_version: 1
+question: Where can you obtain information about apprenticeships, choosing a career and work?
+options:
+  a: At the careers information centre (Berufsinformationszentrum)
+  b: At the civil registry office
+  c: At the kindergarten
+  d: At the debt enforcement office
+explanation: The careers information centre (BIZ) provides information and advice on apprenticeships,
+  choosing a career, further training and work. The service is open to young people and adults. The other
+  offices have different responsibilities.
+status: draft
+reviewed_by: null
+reviewed_at: null

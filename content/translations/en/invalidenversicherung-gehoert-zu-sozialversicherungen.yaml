@@ -1,0 +1,15 @@
+id: invalidenversicherung-gehoert-zu-sozialversicherungen
+lang: en
+source_version: 1
+question: Which of the following institutions is part of Switzerland's social insurance system?
+options:
+  a: Invalidity insurance (IV)
+  b: Travel insurance
+  c: Legal expenses insurance
+  d: Household contents insurance
+explanation: Invalidity insurance (IV) is a social insurance scheme regulated by the state. It supports
+  people who cannot work, or can only work to a limited extent, because of illness or accident. Household
+  contents insurance, travel insurance and legal expenses insurance are private insurance policies.
+status: draft
+reviewed_by: null
+reviewed_at: null

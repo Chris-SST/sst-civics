@@ -1,0 +1,14 @@
+id: name-der-schweizer-verfassung
+lang: en
+source_version: 1
+question: What is the Constitution of Switzerland called?
+options:
+  a: Federal Basic Law
+  b: Federal Constitution
+  c: Federal Order of Switzerland
+  d: Swiss State Charter
+explanation: The Constitution of Switzerland is called the Federal Constitution, abbreviated to BV (Bundesverfassung).
+  It is the highest legal foundation of the country. The version currently in force dates from 1999.
+status: draft
+reviewed_by: null
+reviewed_at: null

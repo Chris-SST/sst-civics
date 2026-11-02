@@ -1,0 +1,45 @@
+id: gemeinde-unterste-stufe-staatsaufbau
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Welche Ebene steht im dreistufigen Staatsaufbau der Schweiz ganz unten?
+options_de:
+  a: Die Gemeinde
+  b: Die Region
+  c: Der Kanton
+  d: Der Bezirk
+correct: a
+explanation_de: 'Der Staatsaufbau der Schweiz hat drei Stufen: Bund, Kantone und Gemeinden. Die Gemeinde
+  ist die unterste Stufe und den Menschen am nächsten. Sie erfüllt Aufgaben, die ihr Bund und Kanton übertragen.'
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/foederalismus
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/politisches-system
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Gemeinde
+- Staatsaufbau
+status: in_review
+difficulty: 1
+covers:
+- zh-058
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der dreistufige Staatsaufbau der Schweiz besteht aus Bund, Kantonen und Gemeinden, wobei
+      die Gemeinde die unterste Ebene bildet.
+  source:
+    verdict: supported
+    note: 'Quelle 3 sagt ausdrücklich: «Die Gemeinden sind die unterste der drei politischen Ebenen».
+      Quelle 1 nennt die Gemeinde die «kleinste politische Einheit» und Quelle 2 die Ebene, die den Menschen
+      am nächsten ist; beide bestätigen die Dreiteilung Bund, Kantone, Gemeinden.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

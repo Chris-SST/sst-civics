@@ -1,0 +1,46 @@
+id: sechselaeuten-boeoegg-kopf-sommer
+version: 1
+scope: zh
+canton: zh
+topic: kanton.kultur.zuerich
+question_de: Was besagt der Volksglaube über den Sommer, wenn der Kopf des Bööggs am Sechseläuten rasch
+  verbrennt?
+options_de:
+  a: Der folgende Sommer wird verregnet.
+  b: Der folgende Winter wird kalt.
+  c: Der folgende Herbst wird früh beginnen.
+  d: Der folgende Sommer wird schön.
+correct: d
+explanation_de: 'Nach dem Volksglauben gilt: Je schneller der Kopf des Bööggs explodiert oder verbrennt,
+  desto schöner wird der Sommer. Der Böögg ist eine Schneemann-Figur, die am Sechseläuten verbrannt wird.'
+sources:
+- url: https://www.stadt-zuerich.ch/artikel/de/mobilitaet/sechselaeuten.html
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sechselaeuten-das-grosse-zuercher-fruehlingsfest
+  checked: *id001
+glossary:
+- Sechseläuten
+- Böögg
+- Volksglaube
+status: in_review
+difficulty: 1
+covers:
+- zh-339
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach dem Zürcher Volksglauben wird der Sommer umso schöner und wärmer, je schneller der
+      Kopf des Bööggs am Sechseläuten explodiert, also verbrennt.
+  source:
+    verdict: supported
+    note: Quelle 2 sagt ausdrücklich, je schneller das Feuer den Böögg erreiche und dessen Kopf zum Explodieren
+      bringe, desto schöner werde der Sommer. Quelle 1 enthält dieselbe Aussage («Je schneller der Böögg
+      explodiert, desto schöner der Sommer»). Quelle 2 beschreibt den Böögg zudem als künstlichen Schneemann,
+      der den Winter darstellt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

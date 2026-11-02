@@ -1,0 +1,15 @@
+id: armee-zustaendigkeit-bund
+lang: en
+source_version: 1
+question: Which level of government is responsible for the army?
+options:
+  a: The cantons
+  b: The Confederation
+  c: The districts
+  d: The communes (Gemeinden)
+explanation: Military affairs are a matter for the Confederation. It regulates the army and its tasks
+  in the Federal Constitution and in federal laws. The cantons help with implementation, for example with
+  recruitment.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,44 @@
+id: ruetli-zusammenschluss-der-urkantone
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gruendung
+question_de: Wofür steht das Rütli in der Schweizer Geschichte?
+options_de:
+  a: Für den Zusammenschluss der Urkantone
+  b: Für den Sieg in der Schlacht bei Marignano
+  c: Für den Beginn der Reformation
+  d: Für die Gründung des Bundesstaates 1848
+correct: a
+explanation_de: Auf dem Rütli sollen sich nach der Überlieferung Vertreter der Urkantone verbündet haben.
+  Es gilt deshalb als Symbol für die Anfänge der Eidgenossenschaft. Die Wiese liegt am Vierwaldstättersee.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/nationalfeiertag-und-nationalhymne
+  checked: *id001
+glossary:
+- Rütli
+- Urkanton
+- Eidgenossenschaft
+status: in_review
+difficulty: 1
+covers:
+- zh-318
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Auf dem Rütli sollen gemäss der Überlieferung die Vertreter von Uri, Schwyz und Unterwalden
+      den Bund der Eidgenossen geschworen haben, es steht also für den Zusammenschluss der Urkantone.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den Rütlischwur die Gründungslegende der Schweiz, bei dem sich 1291 Uri, Schwyz
+      und Unterwalden verbündeten. Quelle 2 bestätigt, dass der Legende nach die Vertreter der drei Gründer-Orte
+      auf der Rütliwiese über dem Vierwaldstättersee ihren Eid leisteten.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

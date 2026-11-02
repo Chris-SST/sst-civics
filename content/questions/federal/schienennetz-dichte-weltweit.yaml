@@ -1,0 +1,41 @@
+id: schienennetz-dichte-weltweit
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Wofür ist das Schweizer Schienennetz im internationalen Vergleich bekannt?
+options_de:
+  a: Es ist das weltweit am engmaschigsten ausgebaute Schienennetz.
+  b: Es ist das einzige Schienennetz, das vollständig durch Tunnel führt.
+  c: Es ist das längste Schienennetz in Europa.
+  d: Es ist das älteste Schienennetz der Welt.
+correct: a
+explanation_de: Auf einer kleinen Fläche gibt es sehr viele Bahnlinien und Bahnhöfe. Darum gilt das Schweizer
+  Netz als das dichteste der Welt. Die Dichte sagt aber nichts über die absolute Länge aus.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/weltmeisterin-im-zugfahren-die-entstehungsgeschichte-der-bahnnation-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Schienennetz
+status: in_review
+difficulty: 2
+covers:
+- zh-261
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Schweizer Schienennetz gilt als eines der dichtesten und am engmaschigsten ausgebauten
+      der Welt, während es weder vollständig durch Tunnel führt noch das längste oder älteste ist.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die Schweiz das kleine Binnenland mit dem «dichtesten Verkehrsnetz der Welt»
+      und sagt, sie habe mit rund 5300 km «eines der ausgedehntesten Schienennetze Europas», also nicht
+      das längste. Das stützt die Antwort und den Hinweis der Erklärung, dass Dichte nichts über die absolute
+      Länge aussagt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

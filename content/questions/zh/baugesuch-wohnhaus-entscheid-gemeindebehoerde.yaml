@@ -1,0 +1,45 @@
+id: baugesuch-wohnhaus-entscheid-gemeindebehoerde
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Wer entscheidet im Kanton Zürich in der Regel über das Baugesuch für ein neues Wohnhaus?
+options_de:
+  a: Der Regierungsrat
+  b: Die Baubehörde der Gemeinde
+  c: Das Bezirksgericht
+  d: Das Bundesamt für Raumentwicklung
+correct: b
+explanation_de: Baugesuche für Wohnhäuser reicht man bei der Gemeinde ein. Die kommunale Baubehörde prüft
+  das Gesuch und erteilt die Baubewilligung oder lehnt sie ab. Der Kanton ist nur in besonderen Fällen
+  beteiligt.
+sources:
+- url: https://www.zh.ch/de/planen-bauen/baubewilligung.html
+  checked: &id001 2026-11-02
+glossary:
+- Baugesuch
+- Baubewilligung
+- Gemeinde
+status: in_review
+difficulty: 2
+covers:
+- zh-118
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Kanton Zürich entscheidet in der Regel die kommunale Baubehörde (Bauausschuss bzw. Bauamt
+      der Gemeinde) über Baugesuche für Wohnhäuser, während Regierungsrat, Bezirksgericht und Bundesamt
+      nicht die zuständige erste Instanz sind.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass die Baubewilligung für Neu- und Umbauten die Standortgemeinde erteilt und
+      das Baugesuch bei der Standortgemeinde eingereicht wird. Kantonale Bewilligungen sind nur je nach
+      Lage und Art nötig (z.B. ausserhalb der Bauzone). Das deckt die Erklärung. Die Seite nennt die Baubehörde
+      nicht wörtlich, spricht aber vom Bauamt der Gemeinde.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

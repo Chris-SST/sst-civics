@@ -1,0 +1,45 @@
+id: religionsfreiheit-wahl-ausuebung-keine-religion
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Eine Frau zieht in die Schweiz und möchte ihre Religion selbst wählen. Sie überlegt auch,
+  gar keiner Religion anzugehören. Was sichert ihr die Bundesverfassung in diesem Zusammenhang zu?
+options_de:
+  a: Sie darf nur einer Religion angehören, die im Kanton öffentlich-rechtlich anerkannt ist.
+  b: Sie darf ihre Religion frei wählen, ausüben oder keiner Religion angehören.
+  c: Sie darf ihre Religion privat wählen, aber nirgends gemeinsam mit anderen ausüben.
+  d: Sie muss sich bei der Gemeinde für eine anerkannte Religion entscheiden.
+correct: b
+explanation_de: Die Glaubens- und Gewissensfreiheit ist in Artikel 15 der Bundesverfassung garantiert.
+  Jede Person kann ihre Religion frei wählen, allein oder mit anderen ausüben oder keiner Religion angehören.
+  Niemand darf zu einer Religionsgemeinschaft gezwungen werden.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Glaubens- und Gewissensfreiheit
+- Bundesverfassung
+- Grundrecht
+status: in_review
+difficulty: 1
+covers:
+- zh-078
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Art. 15 der Bundesverfassung garantiert die Glaubens- und Gewissensfreiheit, also das Recht,
+      die Religion frei zu wählen, allein oder gemeinsam mit anderen auszuüben oder keiner Religion anzugehören.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundesverfassung) enthält die Absätze zur Glaubens- und Gewissensfreiheit: Jede Person
+      darf ihre Religion frei wählen und allein oder in Gemeinschaft bekennen, und niemand darf gezwungen
+      werden, einer Religionsgemeinschaft anzugehören. Das stützt Antwort b und die Erklärung; die Artikelnummer
+      15 steht im gekürzten Text nicht, passt aber inhaltlich.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

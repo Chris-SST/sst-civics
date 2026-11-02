@@ -1,0 +1,42 @@
+id: stadt-zuerich-regierung-heisst-stadtrat
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.regierungsrat
+question_de: Wie heisst die Regierung der Stadt Zürich?
+options_de:
+  a: Stadtrat
+  b: Bezirksrat
+  c: Gemeinderat
+  d: Stadtparlament
+correct: a
+explanation_de: Die Exekutive der Stadt Zürich heisst Stadtrat. Der Gemeinderat ist dagegen das Parlament
+  der Stadt.
+sources:
+- url: https://www.stadt-zuerich.ch/de/politik-und-verwaltung/behoerden-und-organe/stadtrat.html
+  checked: &id001 2026-11-02
+glossary:
+- Stadtrat
+- Gemeinderat
+- Exekutive
+status: in_review
+difficulty: 1
+covers:
+- zh-101
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Exekutive der Stadt Zürich heisst Stadtrat, während der Gemeinderat das Parlament der
+      Stadt ist und der Bezirksrat die kantonale Aufsichtsbehörde auf Bezirksebene.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt ausdrücklich: «Der Stadtrat (STR) bildet die Regierung der Stadt Zürich». Dass
+      der Gemeinderat das Parlament ist, steht dort nicht, aber das ist für die richtige Antwort nicht
+      nötig.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

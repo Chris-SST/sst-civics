@@ -1,0 +1,15 @@
+id: greifensee-zweitgroesster-see-zuerich
+lang: en
+source_version: 1
+question: Which lake in the canton of Zurich is the second largest after Lake Zurich?
+options:
+  a: Greifensee
+  b: Pfäffikersee
+  c: Türlersee
+  d: Katzensee
+explanation: The Greifensee lies between Uster and Dübendorf and is the second largest lake in the canton
+  after Lake Zurich. The Pfäffikersee is smaller. The Türlersee and the Katzensee are considerably smaller
+  still.
+status: draft
+reviewed_by: null
+reviewed_at: null

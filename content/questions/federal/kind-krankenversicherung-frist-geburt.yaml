@@ -1,0 +1,47 @@
+id: kind-krankenversicherung-frist-geburt
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.gesundheit
+question_de: Innert welcher Frist ab der Geburt muss für ein in der Schweiz wohnhaftes Kind eine Krankenversicherung
+  bestehen?
+options_de:
+  a: innert 12 Monaten
+  b: innert 3 Monaten
+  c: innert 14 Tagen
+  d: innert 6 Monaten
+correct: b
+explanation_de: Für ein Kind müssen die Eltern innert drei Monaten nach der Geburt eine Krankenversicherung
+  abschliessen. Wird die Frist eingehalten, besteht der Versicherungsschutz rückwirkend ab der Geburt.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328/20260701/de/html/fedlex-data-admin-ch-eli-cc-1995-1328_1328_1328-20260701-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.bag.admin.ch/de/krankenversicherung-versicherungspflicht-fuer-in-der-schweiz-wohnhafte-versicherte
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Krankenversicherung
+- Versicherungspflicht
+status: in_review
+difficulty: 2
+covers:
+- zh-158
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Art. 3 KVG und der Praxis des Bundes muss die Versicherungspflicht innert drei Monaten
+      ab Geburt oder Wohnsitznahme erfüllt werden, wobei die Versicherung bei rechtzeitiger Anmeldung
+      rückwirkend ab Geburt gilt.
+  source:
+    verdict: supported
+    note: Art. 3 Abs. 1 KVG und die BAG-Seite nennen eine Frist von drei Monaten nach der Geburt in der
+      Schweiz. Bei rechtzeitigem Beitritt beginnt der Schutz mit der Geburt (Art. 5 KVG; BAG-Seite). Die
+      Zürcher Broschüre bestätigt ebenfalls «spätestens 3 Monate nach der Geburt».
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

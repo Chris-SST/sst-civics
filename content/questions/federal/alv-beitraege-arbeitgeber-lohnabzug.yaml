@@ -1,0 +1,44 @@
+id: alv-beitraege-arbeitgeber-lohnabzug
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Wer zieht die Beiträge an die Arbeitslosenversicherung vom Lohn ab?
+options_de:
+  a: Die Gemeinde am Wohnort
+  b: Die Arbeitnehmerin oder der Arbeitnehmer selbst per Einzahlung
+  c: Das Regionale Arbeitsvermittlungszentrum
+  d: Der Arbeitgeber
+correct: d
+explanation_de: Der Arbeitgeber zieht die Beiträge automatisch vom Lohn ab und überweist sie an die zuständige
+  Stelle. Die Arbeitnehmenden müssen sich nicht selbst darum kümmern. Auch der Arbeitgeber zahlt einen
+  Teil der Beiträge.
+sources:
+- url: https://www.bsv.admin.ch/de/beitraege-im-ueberblick
+  checked: &id001 2026-11-02
+glossary:
+- Arbeitslosenversicherung
+- Arbeitgeber
+- Lohnabzug
+status: in_review
+difficulty: 1
+covers:
+- zh-150
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Arbeitgeber zieht die ALV-Beiträge direkt vom Lohn ab und rechnet sie zusammen mit
+      den übrigen Sozialversicherungsbeiträgen über die Ausgleichskasse ab.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt: «Auf den Löhnen, die er den Arbeitnehmenden bezahlt, erhebt der Arbeitgeber
+      den Beitrags- und Prämienanteil, den die Angestellten übernehmen müssen.» Ausserdem zahlen nur Angestellte
+      in die ALV ein, und der Arbeitgeber trägt bei AHV/IV/EO die Hälfte. Die ALV-Aufteilung wird nicht
+      ausdrücklich genannt, was die Antwort aber nicht infrage stellt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

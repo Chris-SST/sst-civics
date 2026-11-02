@@ -1,0 +1,16 @@
+id: sozialhilfe-bei-ungenuegendem-einkommen
+lang: en
+source_version: 1
+question: What does the commune (Gemeinde) offer if a person's income and assets are not sufficient to
+  live on?
+options:
+  a: Social assistance
+  b: A building permit
+  c: A naturalisation
+  d: A scholarship for compulsory schooling
+explanation: Anyone who cannot pay for their living costs from their own means is entitled to support
+  through social assistance. It is provided by the commune in which the person lives. It is the last safety
+  net of social security.
+status: draft
+reviewed_by: null
+reviewed_at: null

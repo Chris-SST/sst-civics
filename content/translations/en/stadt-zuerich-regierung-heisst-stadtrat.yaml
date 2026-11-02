@@ -1,0 +1,14 @@
+id: stadt-zuerich-regierung-heisst-stadtrat
+lang: en
+source_version: 1
+question: What is the government of the city of Zurich called?
+options:
+  a: City Council (Stadtrat)
+  b: District Council (Bezirksrat)
+  c: Communal council (Gemeinderat)
+  d: City parliament (Stadtparlament)
+explanation: The executive of the city of Zurich is called the City Council. The communal council, on
+  the other hand, is the parliament of the city.
+status: draft
+reviewed_by: null
+reviewed_at: null

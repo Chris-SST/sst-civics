@@ -1,0 +1,14 @@
+id: schweiz-staatsform-demokratie
+lang: en
+source_version: 1
+question: What form of government does Switzerland have?
+options:
+  a: It is a dictatorship with a single party.
+  b: It is a monarchy with an elected king.
+  c: It is a democratic state.
+  d: It is a state that is ruled by a noble family.
+explanation: Switzerland is a democracy. The population takes part in political decisions through elections
+  and votes. The Federal Constitution establishes this as the foundation of the state.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,14 @@
+id: landesfeiertag-erster-august-datum
+lang: en
+source_version: 1
+question: On what date does the Swiss Federal National Day, the national holiday of Switzerland, fall?
+options:
+  a: 1 August
+  b: 26 December
+  c: 11 November
+  d: 1 May
+explanation: Switzerland's national holiday is on 1 August. It commemorates the Federal Charter of 1291.
+  In many places, the celebrations include fireworks, bonfires on the hills and speeches.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,47 @@
+id: primarschule-traegerschaft-gemeinde-zuerich
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Wer betreibt im Kanton Zürich die Schulen der Primarstufe?
+options_de:
+  a: Die Bildungsdirektion des Kantons als Schulleitung jeder Schule
+  b: Der Bund
+  c: Die politische Gemeinde bzw. die Schulgemeinde vor Ort
+  d: Die Bezirksverwaltung
+correct: c
+explanation_de: Die Primarschule ist im Kanton Zürich eine Aufgabe der Gemeinden. Sie führen die Schulen
+  vor Ort und stellen die Schulbehörde. Der Kanton legt den Rahmen fest und beaufsichtigt die Volksschule.
+sources:
+- url: https://www.zh.ch/de/bildung/schulen/volksschule/rechte-und-pflichten-der-eltern.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/politik-staat/gemeinden.html
+  checked: &id001 2026-11-02
+glossary:
+- Primarstufe
+- Gemeinde
+- Volksschule
+status: in_review
+difficulty: 1
+covers:
+- zh-117
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Kanton Zürich sind die Gemeinden (politische Gemeinden bzw. Schulgemeinden) Träger der
+      Volksschule und betreiben die Primarschulen, während der Kanton nur die Aufsicht und die Rahmenbedingungen
+      festlegt.
+  source:
+    verdict: supported
+    note: Quelle 2 sagt, dass Schulgemeinden die Volksschulaufgaben erfüllen und dass politische Gemeinden
+      (Einheitsgemeinden) diese Aufgaben übernehmen, inklusive Schulpflege. Das stützt Antwort c. Dass
+      der Kanton den Rahmen festlegt und die Aufsicht führt, steht dort nicht ausdrücklich, ist für die
+      richtige Antwort aber nicht entscheidend. Quelle 1 behandelt Elternrechte und trägt dazu nichts
+      bei.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

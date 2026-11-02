@@ -1,0 +1,15 @@
+id: kindererziehung-verantwortung-eltern
+lang: en
+source_version: 1
+question: Who is primarily responsible for the upbringing of children in Switzerland?
+options:
+  a: The commune (Gemeinde)
+  b: The parents
+  c: The school
+  d: The canton
+explanation: Under the Civil Code, parents look after the child's welfare and direct the child's upbringing.
+  The school supplements this task with education. The state only intervenes if the child's welfare is
+  at risk.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,48 @@
+id: quartierverein-aufgabe-im-quartier
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Was ist eine typische Aufgabe eines Quartiervereins in einer Zürcher Gemeinde oder Stadt?
+options_de:
+  a: Er vertritt die Anliegen der Quartierbevölkerung gegenüber den Behörden und fördert das Zusammenleben.
+  b: Er führt die Einwohnerkontrolle für das Quartier.
+  c: Er erhebt Steuern bei den Bewohnerinnen und Bewohnern des Quartiers.
+  d: Er bewilligt Baugesuche im Quartier.
+correct: a
+explanation_de: Ein Quartierverein ist ein freiwilliger Zusammenschluss von Einwohnerinnen und Einwohnern.
+  Er bringt Anliegen des Quartiers bei den Behörden ein und organisiert Anlässe, die das Zusammenleben
+  stärken. Hoheitliche Aufgaben wie Steuern, Baubewilligungen oder Einwohnerkontrolle gehören der Gemeinde.
+sources:
+- url: https://www.stadt-zuerich.ch/de/stadtleben/zusammenleben/in-den-quartieren/quartiervereine.html
+  checked: &id001 2026-11-02
+- url: https://www.stadt-zuerich.ch/de/aktuell/medienmitteilungen/2024/11/staedtischer-beitrag-an-die-quartiervereine-2025-bis-2028.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Quartierverein
+- Gemeinde
+status: in_review
+difficulty: 1
+covers:
+- zh-198
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Quartiervereine sind private Vereine, die die Anliegen der Quartierbevölkerung gegenüber
+      den Behörden vertreten und das Zusammenleben fördern, während Einwohnerkontrolle, Steuererhebung
+      und Baubewilligungen Aufgaben der Gemeinde- bzw. Stadtbehörden sind.
+  source:
+    verdict: supported
+    note: Quelle 3 (Broschüre) sagt ausdrücklich, dass Quartiervereine die Interessen der Bewohnerschaft
+      bei den Behörden vertreten und das gesellschaftliche Leben verbessern; Quelle 1 nennt sie Bindeglied
+      zur Stadtverwaltung und Förderer der Integration. Steuern, Baubewilligungen und Einwohnerkontrolle
+      werden in Quelle 3 als Aufgaben der Gemeinde genannt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

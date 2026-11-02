@@ -1,0 +1,14 @@
+id: erderwaermung-gletscher-schrumpfen
+lang: en
+source_version: 1
+question: What effect does global warming have on the glaciers in the Swiss Alps?
+options:
+  a: The glaciers are shrinking.
+  b: The glaciers are moving northwards.
+  c: The glaciers are growing faster.
+  d: The glaciers are remaining unchanged.
+explanation: When temperatures rise, more ice melts than is replaced by snow. As a result, the Swiss glaciers
+  are getting smaller. This also affects bodies of water and the landscape in the Alps.
+status: draft
+reviewed_by: null
+reviewed_at: null

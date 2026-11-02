@@ -1,0 +1,45 @@
+id: einwohnerreichste-stadt-der-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Welche Stadt hat in der Schweiz die meisten Einwohnerinnen und Einwohner?
+options_de:
+  a: Genf
+  b: Zürich
+  c: Bern
+  d: Basel
+correct: b
+explanation_de: Zürich ist die grösste Stadt der Schweiz. Bern ist zwar die Bundesstadt, hat aber deutlich
+  weniger Einwohnerinnen und Einwohner. Auch Genf und Basel sind kleiner.
+sources:
+- url: https://www.zh.ch/de/direktion-der-justiz-und-des-innern/statthalteraemter-bezirksratskanzleien/bezirk-zuerich.html
+  checked: &id001 2026-11-02
+- url: https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/digitale-zeitreise/zuerich-wird-zur-grossstadt.html
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Bundesstadt
+- Einwohnerzahl
+status: in_review
+difficulty: 1
+covers:
+- zh-274
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Zürich ist mit rund 440'000 Einwohnerinnen und Einwohnern die bevölkerungsreichste Stadt
+      der Schweiz, vor Genf, Basel und Bern.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die Stadt Zürich mit rund 420'000 Einwohnenden die grösste Stadt der Schweiz,
+      Quelle 3 sagt ebenfalls «Zürich ist die grösste Stadt der Schweiz». Quelle 2 bestätigt, dass Zürich
+      seit 1893 grösser ist als Genf, Basel und Bern.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

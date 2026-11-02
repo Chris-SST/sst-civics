@@ -1,0 +1,42 @@
+id: kanton-zuerich-landwirtschaftsflaeche-anteil
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: Wie gross ist ungefähr der Anteil der Kantonsfläche Zürichs, der landwirtschaftlich genutzt
+  wird?
+options_de:
+  a: Rund 68 Prozent
+  b: Rund 25 Prozent
+  c: Rund 11 Prozent
+  d: Rund 41 Prozent
+correct: d
+explanation_de: Rund 41 Prozent der Fläche des Kantons Zürich dienen der Landwirtschaft. Der Rest besteht
+  vor allem aus Wald, Siedlungsfläche und Gewässern.
+sources:
+- url: https://www.zh.ch/de/planen-bauen/raumplanung/raumbeobachtung/bodennutzung.html
+  checked: &id001 2026-11-02
+glossary:
+- Landwirtschaftsfläche
+- Bodennutzung
+status: in_review
+difficulty: 3
+covers:
+- zh-298
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Kanton Zürich werden rund 40 Prozent der Kantonsfläche (etwa 41 Prozent) landwirtschaftlich
+      genutzt, der Rest entfällt vor allem auf Wald, Siedlungen und Gewässer.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Kanton Zürich, Bodennutzung) sagt ausdrücklich: «Rund 41 Prozent der Kantonsfläche
+      dienen der Landwirtschaft». Auch die übrigen Angaben der Erklärung passen dazu: 30 Prozent Wald,
+      23 Prozent Siedlungsfläche, 6 Prozent unproduktives Gebiet, vor allem Seen und Fliessgewässer.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

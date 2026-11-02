@@ -1,0 +1,47 @@
+id: stimmrecht-bund-schweizer-buergerrecht
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: Was ist eine Voraussetzung für das Stimm- und Wahlrecht auf Bundesebene?
+options_de:
+  a: Das Schweizer Bürgerrecht
+  b: Die Mitgliedschaft in einer politischen Partei
+  c: Mindestens zehn Jahre Wohnsitz in der Schweiz
+  d: Eine Niederlassungsbewilligung C
+correct: a
+explanation_de: Auf Bundesebene dürfen nur Personen mit Schweizer Bürgerrecht wählen und abstimmen. Ausländerinnen
+  und Ausländer haben auf Bundesebene kein Stimm- und Wahlrecht, auch nicht mit einer Niederlassungsbewilligung.
+  Eine Parteimitgliedschaft ist nicht nötig.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.ch.ch/de/abstimmungen-und-wahlen/
+  checked: 2026-11-02
+glossary:
+- Stimmrecht
+- Wahlrecht
+- Bürgerrecht
+- Bundesebene
+status: in_review
+difficulty: 1
+covers:
+- zh-010
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Auf Bundesebene sind alle Schweizer Bürgerinnen und Bürger ab 18 Jahren stimm- und wahlberechtigt
+      (Art. 136 BV), während Parteimitgliedschaft, eine Mindestwohnsitzdauer oder eine Niederlassungsbewilligung
+      keine Voraussetzungen sind.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundesverfassung) sagt: «Die politischen Rechte in Bundessachen stehen allen Schweizerinnen
+      und Schweizern zu, die das 18. Altersjahr zurückgelegt haben» – das Schweizer Bürgerrecht ist also
+      Voraussetzung. Quelle 2 ist eine Fehlerseite und enthält nichts Verwertbares.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

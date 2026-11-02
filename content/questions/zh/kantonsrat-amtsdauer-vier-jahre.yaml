@@ -1,0 +1,47 @@
+id: kantonsrat-amtsdauer-vier-jahre
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.kantonsrat
+question_de: Für wie viele Jahre werden die Mitglieder des Zürcher Kantonsrats gewählt?
+options_de:
+  a: Für zwei Jahre
+  b: Für drei Jahre
+  c: Für sechs Jahre
+  d: Für vier Jahre
+correct: d
+explanation_de: Die Mitglieder des Zürcher Kantonsrats werden für eine Amtsdauer von vier Jahren gewählt.
+  Danach finden Gesamterneuerungswahlen statt. Die Stimmberechtigten können dann neu entscheiden, wer
+  im Parlament sitzt.
+sources:
+- url: https://www.zh.ch/de-ls/politik-staat/wahlen-abstimmungen/kantons-regierungsratswahlen.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.kantonsrat.zh.ch/
+  checked: 2026-11-02
+glossary:
+- Kantonsrat
+- Amtsdauer
+- Gesamterneuerungswahl
+status: in_review
+difficulty: 1
+covers:
+- zh-107
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Mitglieder des Zürcher Kantonsrats werden nach der Kantonsverfassung für eine Amtsdauer
+      von vier Jahren gewählt.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt: «Die Stimmberechtigten wählen die Mitglieder alle vier Jahre». Quelle 2 (Glossar)
+      nennt es ausdrücklich: «wählen alle 4 Jahre die Mitglieder des Kantonsrats». Beides stützt Antwort
+      d.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

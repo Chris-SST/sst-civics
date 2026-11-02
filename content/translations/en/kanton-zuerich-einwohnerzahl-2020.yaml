@@ -1,0 +1,14 @@
+id: kanton-zuerich-einwohnerzahl-2020
+lang: en
+source_version: 1
+question: Approximately how many inhabitants did the canton of Zurich have in 2020?
+options:
+  a: About 1.1 million
+  b: About 2.2 million
+  c: About 0.8 million
+  d: About 1.5 million
+explanation: In 2020, approximately 1.5 million people lived in the canton of Zurich. It is therefore
+  the most populous canton in Switzerland.
+status: draft
+reviewed_by: null
+reviewed_at: null

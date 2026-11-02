@@ -1,0 +1,45 @@
+id: lateinischer-name-der-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.staatsprinzipien
+question_de: Wie lautet der offizielle lateinische Name der Schweizerischen Eidgenossenschaft?
+options_de:
+  a: Helvetia Unita
+  b: Res Publica Helvetica
+  c: Confoederatio Helvetica
+  d: Respublica Alpina
+correct: c
+explanation_de: Der lateinische Name lautet Confoederatio Helvetica. Davon stammt das Kürzel CH, das man
+  zum Beispiel auf Autokennzeichen und bei Internetadressen findet. Der Name wird verwendet, weil er in
+  allen Landessprachen gleich ist.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.admin.ch/gov/de/start/bundesrat.html
+  checked: 2026-11-02
+glossary:
+- Eidgenossenschaft
+- Confoederatio Helvetica
+status: in_review
+difficulty: 1
+covers:
+- zh-003
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der offizielle lateinische Name der Schweizerischen Eidgenossenschaft lautet «Confoederatio
+      Helvetica», woher auch das Länderkürzel CH stammt.
+  source:
+    verdict: supported
+    note: Quelle 1 enthält den Satz «Helvetica (CH). Dieser Name steht zum Beispiel auf der 5-Franken-Münze».
+      Der Text ist gekürzt, sodass «Confoederatio» davor fehlt. Der Name mit dem Kürzel CH wird aber bestätigt.
+      Dass er in allen Landessprachen gleich ist und auf Autokennzeichen steht, belegt die Quelle nicht
+      ausdrücklich. Quelle 2 behandelt ein anderes Thema.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

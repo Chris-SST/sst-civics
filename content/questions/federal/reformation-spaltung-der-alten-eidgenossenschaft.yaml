@@ -1,0 +1,45 @@
+id: reformation-spaltung-der-alten-eidgenossenschaft
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gruendung
+question_de: Welche Folge hatte die Reformation für die Schweiz?
+options_de:
+  a: Die Schweiz war religiös in einen reformierten und einen katholischen Teil gespalten.
+  b: Die Schweiz wurde ein Teil des Deutschen Reiches.
+  c: Die Kirche verlor überall jeden Einfluss auf die Politik.
+  d: Alle Orte der Eidgenossenschaft wurden reformiert.
+correct: a
+explanation_de: Einige Orte nahmen die Reformation an, andere blieben katholisch. So entstand ein religiöser
+  Gegensatz, der die Eidgenossenschaft lange belastete. Es kam auch zu Konflikten zwischen den Konfessionen.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Reformation
+- Eidgenossenschaft
+- Konfession
+status: in_review
+difficulty: 2
+covers:
+- zh-230
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Reformation führte in der Eidgenossenschaft zu einer konfessionellen Spaltung in reformierte
+      und katholische Orte, während die Schweiz weder Teil des Deutschen Reiches wurde, noch alle Orte
+      reformiert wurden, noch die Kirche überall ihren politischen Einfluss verlor.
+  source:
+    verdict: supported
+    note: Quelle 1 beschreibt die Reformation als Spaltung in Katholiken und Protestanten, die in der
+      Schweiz zu Spannungen, Unruhen und kriegerischen Konflikten führte. Der Sonderbundskrieg zwischen
+      katholisch-konservativen und liberal-radikalen Kantonen bestätigt den bleibenden Gegensatz. Dass
+      einige Orte katholisch blieben, steht nicht ausdrücklich da, ergibt sich aber eindeutig aus der
+      Spaltung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

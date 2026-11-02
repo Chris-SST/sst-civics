@@ -1,0 +1,14 @@
+id: beliebteste-vereinssportart-fussball
+lang: en
+source_version: 1
+question: Which sport is most commonly practised in clubs in Switzerland?
+options:
+  a: Gymnastics
+  b: Swimming
+  c: Skiing
+  d: Football
+explanation: Football is the sport with the most club members in Switzerland. Many children and adults
+  play in a local football club. Gymnastics, skiing and other sports are also popular.
+status: draft
+reviewed_by: null
+reviewed_at: null

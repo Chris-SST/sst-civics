@@ -1,0 +1,46 @@
+id: eidgenossenschaft-name-der-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.staatsprinzipien
+question_de: Welcher Name wird in der Bundesverfassung für die Schweiz ebenfalls verwendet?
+options_de:
+  a: Bundesrepublik
+  b: Eidgenossenschaft
+  c: Konföderation der Kantone
+  d: Eidgenössisches Königreich
+correct: b
+explanation_de: Der offizielle Name lautet «Schweizerische Eidgenossenschaft». Das Wort Eidgenossenschaft
+  steht also für die Schweiz als Ganzes. Es erinnert an die Bünde, die durch einen Eid besiegelt wurden.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/foederalismus
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Eidgenossenschaft
+- Bundesverfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-316
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Bundesverfassung nennt die Schweiz in Artikel 1 und der Präambel ausdrücklich «Schweizerische
+      Eidgenossenschaft», sodass «Eidgenossenschaft» ebenfalls als Name verwendet wird.
+  source:
+    verdict: supported
+    note: Quelle 1 (Art. 1 BV) sagt, Volk und Kantone «bilden die Schweizerische Eidgenossenschaft», und
+      die Bundesverfassung trägt den Titel «der Schweizerischen Eidgenossenschaft». Quelle 2 nennt «Schweizerische
+      Eidgenossenschaft» den amtlichen Namen der Schweiz und erklärt den historischen Bezug zum Eid der
+      Urkantone.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

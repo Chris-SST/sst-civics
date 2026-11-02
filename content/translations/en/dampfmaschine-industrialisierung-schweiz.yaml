@@ -1,0 +1,14 @@
+id: dampfmaschine-industrialisierung-schweiz
+lang: en
+source_version: 1
+question: Which invention shaped the industrial transformation in Switzerland in the 18th century?
+options:
+  a: The steam engine
+  b: The computer
+  c: The assembly line
+  d: The car
+explanation: Industrialisation began with the steam engine, and work increasingly shifted to factories.
+  The computer, the assembly line and the car only came much later.
+status: draft
+reviewed_by: null
+reviewed_at: null

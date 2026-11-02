@@ -1,0 +1,16 @@
+id: auslaenderanteil-wohnbevoelkerung-2020
+lang: en
+source_version: 1
+question: Approximately what proportion of Switzerland's permanent resident population did foreign nationals
+  make up in 2020?
+options:
+  a: about three fifths
+  b: about one tenth
+  c: about half
+  d: about a quarter
+explanation: In 2020, around a quarter of the permanent resident population was of foreign nationality.
+  This corresponds to about 2.1 million out of 8.6 million people. Compared with other European countries,
+  Switzerland therefore has a high proportion of foreign nationals.
+status: draft
+reviewed_by: null
+reviewed_at: null

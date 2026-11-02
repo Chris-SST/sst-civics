@@ -1,0 +1,48 @@
+id: arbeitsgericht-streit-arbeitsverhaeltnis
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Eine Arbeitnehmerin hält ihre Kündigung für unbegründet und will dagegen vorgehen. Welche
+  Stelle behandelt solche Streitigkeiten aus dem Arbeitsverhältnis?
+options_de:
+  a: Das Regionale Arbeitsvermittlungszentrum (RAV)
+  b: Das Strassenverkehrsamt
+  c: Das Arbeitsgericht
+  d: Das Betreibungsamt
+correct: c
+explanation_de: Das Arbeitsgericht ist für Streitigkeiten zwischen Arbeitgebenden und Arbeitnehmenden
+  zuständig. Dazu gehört auch der Streit um eine Kündigung. Das RAV hilft dagegen bei der Stellensuche.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
+  checked: 2026-11-02
+glossary:
+- Arbeitsgericht
+- Arbeitsverhältnis
+- Kündigung
+- RAV
+status: draft
+difficulty: 2
+covers:
+- zh-165
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Streitigkeiten aus dem Arbeitsverhältnis, etwa wegen einer missbräuchlichen Kündigung,
+      werden von der Schlichtungsbehörde und dem Arbeitsgericht behandelt, während RAV, Strassenverkehrsamt
+      und Betreibungsamt dafür nicht zuständig sind.
+  source:
+    verdict: unclear
+    note: Quelle 2 verweist bei privatrechtlichen Themen wie Kündigung nur auf die unentgeltliche Rechtsauskunft
+      des Bezirks- oder Arbeitsgerichts. Sie sagt nicht ausdrücklich, dass das Arbeitsgericht Kündigungsstreitigkeiten
+      behandelt. Quelle 1 bestätigt nur, dass das RAV bei der Stellensuche unterstützt, was den zweiten
+      Teil der Erklärung stützt.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

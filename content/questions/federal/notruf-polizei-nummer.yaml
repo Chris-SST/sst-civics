@@ -1,0 +1,43 @@
+id: notruf-polizei-nummer
+version: 1
+scope: federal
+canton: null
+topic: bund.alltag
+question_de: Welche Telefonnummer wählt man in der Schweiz, wenn man im Notfall die Polizei braucht?
+options_de:
+  a: '143'
+  b: '118'
+  c: '144'
+  d: '117'
+correct: d
+explanation_de: Die Polizei erreicht man in der ganzen Schweiz unter der Nummer 117. Die Feuerwehr hat
+  die 118, die Sanität die 144. Die 143 ist die Nummer der Dargebotenen Hand für Menschen in einer Krise.
+sources:
+- url: https://www.bakom.admin.ch/de/notrufdienste
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Notruf
+- Polizei
+status: in_review
+difficulty: 1
+covers:
+- zh-133
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In der Schweiz erreicht man die Polizei im Notfall unter der Nummer 117, während 118 die
+      Feuerwehr, 144 die Sanität und 143 die Dargebotene Hand ist.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die Notrufdienste der Polizei (117), der Feuerwehr (118) und der Sanität (144).
+      Quelle 2 listet 117 Polizei, 118 Feuerwehr, 144 Ambulanz. Die 143 (Dargebotene Hand) wird in den
+      Quellen nicht erwähnt, ist aber für die richtige Antwort nicht nötig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

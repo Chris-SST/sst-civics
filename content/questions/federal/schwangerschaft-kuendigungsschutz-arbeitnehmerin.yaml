@@ -1,0 +1,47 @@
+id: schwangerschaft-kuendigungsschutz-arbeitnehmerin
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Was gilt für schwangere Arbeitnehmerinnen in der Schweiz bei der Kündigung?
+options_de:
+  a: Sie haben nur in Betrieben mit Gesamtarbeitsvertrag Kündigungsschutz
+  b: Sie geniessen während der Schwangerschaft gesetzlichen Kündigungsschutz
+  c: Sie müssen ihre Schwangerschaft dem Arbeitgeber sofort melden, sonst verfällt der Schutz
+  d: Sie können jederzeit ohne Einschränkung gekündigt werden
+correct: b
+explanation_de: Das Gesetz schützt Frauen während der Schwangerschaft vor einer Kündigung durch den Arbeitgeber.
+  Der Schutz gilt unabhängig vom Betrieb. Er soll die Frauen in dieser Zeit absichern.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
+  checked: 2026-11-02
+glossary:
+- Kündigungsschutz
+- Arbeitnehmerin
+status: in_review
+difficulty: 2
+covers:
+- zh-163
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Art. 336c OR darf der Arbeitgeber während der Schwangerschaft und in den 16 Wochen
+      nach der Niederkunft nicht kündigen (nach Ablauf der Probezeit), und dieser Schutz gilt unabhängig
+      von einem Gesamtarbeitsvertrag und ohne sofortige Meldepflicht.
+  source:
+    verdict: supported
+    note: Quelle 1 (Obligationenrecht) nennt eine Kündigung während der Schwangerschaft und in den 16
+      Wochen nach der Niederkunft als missbräuchlich und regelt, dass sie während der Sperrfrist nichtig
+      ist. Das stützt Antwort b; die Seite nennt weder eine Beschränkung auf Betriebe mit GAV noch eine
+      Meldepflicht.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

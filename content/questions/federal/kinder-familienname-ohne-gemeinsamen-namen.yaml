@@ -1,0 +1,45 @@
+id: kinder-familienname-ohne-gemeinsamen-namen
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Zwei Eheleute haben bei der Heirat keinen gemeinsamen Familiennamen bestimmt. Wer legt dann
+  den Namen ihrer gemeinsamen Kinder fest?
+options_de:
+  a: Die Kinder erhalten automatisch den Namen des Vaters.
+  b: Das Zivilstandsamt entscheidet nach dem Alphabet der Namen.
+  c: Die Eheleute wählen den Namen ihrer Kinder selbst.
+  d: Die Kinder erhalten automatisch den Namen der Mutter.
+correct: c
+explanation_de: Haben die Eheleute keinen gemeinsamen Familiennamen bestimmt, müssen sie den Namen der
+  Kinder selbst wählen. Das Gesetz legt ihn nicht automatisch fest. Die Regeln stehen im Schweizerischen
+  Zivilgesetzbuch.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/html/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-html-2.html
+  checked: &id001 2026-11-02
+glossary:
+- Familienname
+- Zivilgesetzbuch
+- Zivilstandsamt
+status: in_review
+difficulty: 2
+covers:
+- zh-189
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach dem seit 2013 geltenden Namensrecht (Art. 270a ZGB) bestimmen Eheleute ohne gemeinsamen
+      Familiennamen bei der Heirat gemeinsam, welchen ihrer Ledignamen alle gemeinsamen Kinder tragen,
+      sodass sie den Namen selbst wählen.
+  source:
+    verdict: supported
+    note: 'Die Quelle (ZGB) sagt: «Behalten die Verlobten ihren Namen, so bestimmen sie, welchen ihrer
+      Ledignamen ihre Kinder tragen sollen.» Das stützt Antwort c); eine automatische Namensregel gibt
+      es nach dem Text nicht. Die Bestimmung erfolgt bei der Eheschliessung, was der Erklärung nicht widerspricht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

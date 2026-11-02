@@ -1,0 +1,47 @@
+id: zuerich-groesste-staedte-einwohnerzahl
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: Welche drei Städte sind nach Einwohnerzahl die grössten im Kanton Zürich?
+options_de:
+  a: Zürich, Uster und Wetzikon
+  b: Zürich, Dietikon und Winterthur
+  c: Zürich, Winterthur und Uster
+  d: Zürich, Winterthur und Dübendorf
+correct: c
+explanation_de: Zürich ist mit Abstand die grösste Stadt, danach folgen Winterthur und Uster. Dübendorf,
+  Dietikon und Wetzikon sind ebenfalls grössere Städte, haben aber weniger Einwohnerinnen und Einwohner
+  als Uster.
+sources:
+- url: https://www.zh.ch/de/direktion-der-justiz-und-des-innern/statthalteraemter-bezirksratskanzleien/bezirk-zuerich.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2023/04/bundesrat-extra-muros-zu-gast-in-winterthur.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/news-uebersicht/mitteilungen/2025/umwelt-tiere/klima/veloverkehr-und-klima.html
+  checked: *id001
+glossary:
+- Einwohnerzahl
+- Stadt
+status: in_review
+difficulty: 2
+covers:
+- zh-289
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die drei einwohnerstärksten Städte im Kanton Zürich sind Zürich (rund 440'000), Winterthur
+      (rund 120'000) und Uster (rund 36'000), knapp vor Dübendorf, weshalb Antwort c stimmt.
+  source:
+    verdict: supported
+    note: Quelle 2 nennt Winterthur die zweitgrösste Stadt im Kanton, Quelle 3 nennt Uster die drittgrösste
+      Stadt im Kanton; Quelle 1 bestätigt Zürich als grösste Stadt der Schweiz. Damit stimmt Antwort c).
+      Dass Dübendorf, Dietikon und Wetzikon weniger Einwohner haben, folgt aus der Rangfolge, ist aber
+      nicht einzeln belegt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

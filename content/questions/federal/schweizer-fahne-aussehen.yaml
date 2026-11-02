@@ -1,0 +1,46 @@
+id: schweizer-fahne-aussehen
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Wie sieht die Schweizer Fahne aus?
+options_de:
+  a: Ein weisses, freistehendes Kreuz auf rotem Quadrat
+  b: Ein weisses Kreuz auf rotem Grund mit einem Wappen in der Mitte
+  c: Ein weisses Kreuz, das bis an den Rand des roten Rechtecks reicht
+  d: Ein rotes, freistehendes Kreuz auf weissem Quadrat
+correct: a
+explanation_de: Die Schweizer Fahne ist quadratisch. Sie zeigt ein weisses Kreuz auf rotem Grund, dessen
+  Arme den Rand nicht berühren. Sie ist neben der Fahne des Vatikans eine der beiden quadratischen Landesflaggen.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/fahne
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/traditionen
+  checked: 2026-11-02
+glossary:
+- Schweizer Fahne
+- Wappen
+status: in_review
+difficulty: 1
+covers:
+- zh-348
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweizer Fahne zeigt ein weisses, freistehendes Kreuz, dessen Arme den Rand nicht
+      berühren, auf einem roten quadratischen Grund.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die quadratische rote Fahne mit weissem Kreuz, das zentriert in der Mitte steht;
+      ausserdem ist die Schweiz neben dem Vatikan die einzige Flagge mit quadratischem Format. Dass die
+      Kreuzarme den Rand nicht berühren, steht nicht wörtlich da, ergibt sich aber aus dem zentrierten
+      Kreuz im Quadrat; ein Wappen wird ausdrücklich verneint.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

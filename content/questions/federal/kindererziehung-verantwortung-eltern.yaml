@@ -1,0 +1,44 @@
+id: kindererziehung-verantwortung-eltern
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Wer ist in der Schweiz hauptverantwortlich für die Erziehung der Kinder?
+options_de:
+  a: Die Gemeinde
+  b: Die Eltern
+  c: Die Schule
+  d: Der Kanton
+correct: b
+explanation_de: Nach dem Zivilgesetzbuch sorgen die Eltern für das Wohl des Kindes und leiten seine Erziehung.
+  Die Schule ergänzt diese Aufgabe mit der Bildung. Der Staat greift nur ein, wenn das Wohl des Kindes
+  gefährdet ist.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+glossary:
+- Elterliche Sorge
+- Erziehung
+- Zivilgesetzbuch
+status: in_review
+difficulty: 1
+covers:
+- zh-161
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach dem Zivilgesetzbuch (Art. 296 ff. ZGB, elterliche Sorge) sind die Eltern hauptverantwortlich
+      für die Erziehung ihrer Kinder, während die Schule diese nur ergänzt.
+  source:
+    verdict: supported
+    note: 'Im Abschnitt «Rechte der Kinder» steht: «Die Eltern sind für ihre Kinder bis 18 Jahre verantwortlich»
+      und sie begleiten ihre Kinder bei Aufwachsen, Bildung und Entwicklung. Das stützt Antwort b); das
+      Zivilgesetzbuch und der staatliche Eingriff bei Gefährdung des Kindeswohls werden in der Quelle
+      nicht erwähnt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

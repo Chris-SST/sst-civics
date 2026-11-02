@@ -1,0 +1,46 @@
+id: krankenkasse-freie-wahl-versicherte
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.gesundheit
+question_de: Wer entscheidet in der Schweiz, bei welcher Krankenkasse eine Person die Grundversicherung
+  abschliesst?
+options_de:
+  a: Die Wohngemeinde legt die Krankenkasse fest
+  b: Die versicherte Person wählt ihre Krankenkasse selbst aus
+  c: Der Arbeitgeber bestimmt die Krankenkasse für alle Angestellten
+  d: Der Wohnkanton teilt jeder Person eine Krankenkasse zu
+correct: b
+explanation_de: In der Schweiz gilt die freie Wahl der Krankenkasse. Die Versicherten können unter den
+  zugelassenen Krankenkassen auswählen und die Kasse unter bestimmten Bedingungen wechseln.
+sources:
+- url: https://www.bag.admin.ch/de/krankenversicherung-das-wichtigste-in-kuerze
+  checked: &id001 2026-11-02
+- url: https://www.bag.admin.ch/de/krankenversicherung-versicherungspflicht
+  checked: 2026-11-02
+glossary:
+- Krankenkasse
+- Grundversicherung
+- freie Wahl
+status: in_review
+difficulty: 1
+covers:
+- zh-131
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In der Schweiz besteht für die obligatorische Grundversicherung freie Kassenwahl, das heisst,
+      die versicherte Person wählt selbst, bei welchem Versicherer sie sich versichert, und die Kassen
+      müssen sie aufnehmen.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt: «Die Versicherten können unter den Versicherern, die an ihrem Wohnort tätig
+      sind, frei wählen» und «spätestens nach einem Jahr wechseln». Das stützt die Antwort b) und die
+      Erklärung. Quelle 2 behandelt die Versicherungspflicht bei Wegzug und sagt dazu nichts.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

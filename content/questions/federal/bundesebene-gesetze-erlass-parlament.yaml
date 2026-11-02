@@ -1,0 +1,43 @@
+id: bundesebene-gesetze-erlass-parlament
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.parlament
+question_de: Welche Behörde erlässt auf Bundesebene die Gesetze?
+options_de:
+  a: Die Bundesversammlung, also National- und Ständerat
+  b: Die Schweizerische Nationalbank
+  c: Die Bundeskanzlei
+  d: Die Konferenz der Kantonsregierungen
+correct: a
+explanation_de: Die Bundesversammlung ist das Parlament des Bundes und besteht aus National- und Ständerat.
+  Sie ist für die Gesetzgebung zuständig. Die Bundeskanzlei unterstützt dagegen den Bundesrat als Stabsstelle.
+sources:
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+  checked: &id001 2026-11-02
+glossary:
+- Bundesversammlung
+- Nationalrat
+- Ständerat
+- Bundeskanzlei
+status: in_review
+difficulty: 2
+covers:
+- zh-068
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Bundesversammlung, bestehend aus National- und Ständerat, ist als Legislative das gesetzgebende
+      Organ des Bundes.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die Bundesversammlung das Parlament der Schweiz. Sie besteht aus Nationalrat
+      und Ständerat, und zu ihren Aufgaben gehört die Gesetzgebung. Die Aussage zur Bundeskanzlei als
+      Stabsstelle des Bundesrates steht nicht auf der Seite, ist für die Antwort aber nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

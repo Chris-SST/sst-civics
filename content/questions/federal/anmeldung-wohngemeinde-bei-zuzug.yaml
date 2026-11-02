@@ -1,0 +1,45 @@
+id: anmeldung-wohngemeinde-bei-zuzug
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Was müssen Personen tun, die sich in einer Gemeinde niederlassen?
+options_de:
+  a: Sie müssen sich bei der Wohngemeinde anmelden.
+  b: Sie müssen sich bei der Armee melden.
+  c: Sie müssen sich beim Bundesrat melden.
+  d: Sie müssen sich bei der Steuerverwaltung des Bundes melden.
+correct: a
+explanation_de: Wer an einen neuen Ort zieht, muss sich bei der Wohngemeinde registrieren. Dies geschieht
+  in der Regel bei der Einwohnerkontrolle. So ist die Gemeinde über ihre Einwohnerinnen und Einwohner
+  informiert.
+sources:
+- url: https://www.zh.ch/de/migration-integration/willkommen/deutsch/ankommen.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Wohngemeinde
+- Einwohnerkontrolle
+status: in_review
+difficulty: 1
+covers:
+- zh-017
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Wer sich in einer Gemeinde niederlässt, muss sich innert kurzer Frist bei der Einwohnerkontrolle
+      der Wohngemeinde anmelden, während Armee, Bundesrat und Bundessteuerverwaltung dafür nicht zuständig
+      sind.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, wer in eine Zürcher Gemeinde zieht, müsse sich innerhalb von 14 Tagen in der
+      neuen Wohngemeinde anmelden (Einwohnermeldeamt). Quelle 2 nennt ebenfalls, dass man sich beim Umzug
+      bei der Einwohnerkontrolle der Gemeinde melden muss.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,44 @@
+id: parlament-zwei-kammern-bund
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.parlament
+question_de: Aus welchen beiden Kammern besteht das Schweizer Parlament auf Bundesebene?
+options_de:
+  a: Aus Bundesrat und Ständerat
+  b: Aus Bundesrat und Nationalrat
+  c: Aus Ständerat und Bundesgericht
+  d: Aus Nationalrat und Ständerat
+correct: d
+explanation_de: 'Die Bundesversammlung, das Parlament des Bundes, besteht aus zwei Kammern: dem Nationalrat
+  und dem Ständerat. Der Bundesrat ist die Regierung und gehört nicht zum Parlament.'
+sources:
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+  checked: &id001 2026-11-02
+glossary:
+- Bundesversammlung
+- Nationalrat
+- Ständerat
+- Bundesrat
+status: in_review
+difficulty: 1
+covers:
+- zh-020
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Bundesversammlung, das Schweizer Parlament, besteht aus zwei Kammern, dem Nationalrat
+      und dem Ständerat, während der Bundesrat die Regierung und das Bundesgericht die Judikative ist.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Parlamentsporträt) sagt ausdrücklich: «Die Bundesversammlung besteht aus zwei gleichberechtigten
+      Kammern, dem Nationalrat und dem Ständerat.» Dass der Bundesrat die Regierung ist und nicht zum
+      Parlament gehört, steht dort nur indirekt (Oberaufsicht der Bundesversammlung über die Regierung),
+      widerspricht der Erklärung aber nicht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

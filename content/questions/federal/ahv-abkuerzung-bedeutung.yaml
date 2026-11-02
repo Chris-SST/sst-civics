@@ -1,0 +1,46 @@
+id: ahv-abkuerzung-bedeutung
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Wofür steht die Abkürzung AHV?
+options_de:
+  a: Alters- und Hinterlassenenversicherung
+  b: Amtliche Haushaltsversicherung
+  c: Allgemeine Hilfe für Versicherte
+  d: Arbeitslosen- und Heilungsversicherung
+correct: a
+explanation_de: AHV heisst Alters- und Hinterlassenenversicherung. Sie zahlt Renten im Alter und an Hinterbliebene,
+  etwa an Witwen, Witwer und Waisen.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/63/837_843_843/20260101/de/html/fedlex-data-admin-ch-eli-cc-63-837_843_843-20260101-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.bsv.admin.ch/de/organisation-ahv
+  checked: 2026-11-02
+glossary:
+- AHV
+- Hinterlassenenversicherung
+status: in_review
+difficulty: 1
+covers:
+- zh-143
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: AHV steht für Alters- und Hinterlassenenversicherung, die erste Säule der schweizerischen
+      Altersvorsorge.
+  source:
+    verdict: supported
+    note: Quelle 1 (AHVG) nennt den Titel «Bundesgesetz über die Alters- und Hinterlassenenversicherung
+      (AHVG)» mit der Abkürzung. Quelle 2 schreibt «Alters- und Hinterlassenen-Versicherung (AHV)» und
+      sagt, dass die AHV Witwen, Witwer und Waisen vor finanzieller Not schützt und die Existenz nach
+      der Pensionierung sichert.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

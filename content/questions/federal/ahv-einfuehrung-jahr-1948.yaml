@@ -1,0 +1,48 @@
+id: ahv-einfuehrung-jahr-1948
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: In welchem Jahr wurde die AHV, die staatliche Rentenversicherung für Alter und Hinterbliebene,
+  eingeführt?
+options_de:
+  a: '1975'
+  b: '1918'
+  c: '1930'
+  d: '1948'
+correct: d
+explanation_de: Die AHV nahm 1948 ihre Tätigkeit auf, nachdem das Volk das Gesetz 1947 angenommen hatte.
+  Sie bildet die erste Säule des Schweizer Dreisäulensystems. Sie sichert die Existenz im Alter und für
+  Hinterbliebene.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/63/837_843_843/20260101/de/html/fedlex-data-admin-ch-eli-cc-63-837_843_843-20260101-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.bsv.admin.ch/de/dreisaeulensystem
+  checked: *id001
+glossary:
+- AHV
+- Hinterbliebene
+- Dreisäulensystem
+status: in_review
+difficulty: 2
+covers:
+- zh-237
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die AHV trat 1948 in Kraft, nachdem das Stimmvolk das Bundesgesetz 1947 angenommen hatte.
+  source:
+    verdict: supported
+    note: Quelle 1 (AHVG) hält fest, dass das Gesetz am 1. Januar 1948 in Kraft tritt. Quelle 2 nennt
+      im Zeitstrahl 1948 für die Gründung der Sozialversicherungen. Quelle 3 stützt die Aussage zur ersten
+      Säule (AHV und IV). Die Volksabstimmung von 1947 wird nicht ausdrücklich beschrieben, nur die Jahreszahl
+      1947 steht in Quelle 1.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

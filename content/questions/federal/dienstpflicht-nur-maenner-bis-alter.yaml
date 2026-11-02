@@ -1,0 +1,46 @@
+id: dienstpflicht-nur-maenner-bis-alter
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Wer ist in der Schweiz verpflichtet, bis zu einem bestimmten Alter Militärdienst oder Ersatzdienst
+  zu leisten?
+options_de:
+  a: Nur die Männer
+  b: Frauen und Männer gleichermassen
+  c: Nur Personen mit einer Ausbildung
+  d: Nur Personen, die in einer Gemeinde ein Amt haben
+correct: a
+explanation_de: Die Dienstpflicht gilt in der Schweiz nur für Männer. Für Frauen ist der Militärdienst
+  freiwillig. Die Pflicht dauert bis zu einem gesetzlich festgelegten Alter.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Dienstpflicht
+- Militärdienst
+- Ersatzdienst
+status: in_review
+difficulty: 1
+covers:
+- zh-089
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Art. 59 der Bundesverfassung sind nur Schweizer Männer zum Militärdienst oder zivilen
+      Ersatzdienst verpflichtet, während der Dienst für Frauen freiwillig ist.
+  source:
+    verdict: supported
+    note: 'Art. 59 BV (Quelle 1) sagt: «Jeder Schweizer ist verpflichtet, Militärdienst zu leisten. Das
+      Gesetz sieht einen zivilen Ersatzdienst vor» und «Für Schweizerinnen ist der Militärdienst freiwillig».
+      Das stützt Antwort a und den Kern der Erklärung. Die Altersgrenze wird im gezeigten Text nicht genannt,
+      aber die Antwort hängt nicht davon ab.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

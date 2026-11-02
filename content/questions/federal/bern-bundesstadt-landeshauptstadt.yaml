@@ -1,0 +1,49 @@
+id: bern-bundesstadt-landeshauptstadt
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.staatsprinzipien
+question_de: Welche Stadt übernimmt in der Schweiz die Rolle der Landeshauptstadt?
+options_de:
+  a: Bern
+  b: Genf
+  c: Lausanne
+  d: Zürich
+correct: a
+explanation_de: Bern ist Sitz von Bundesrat und Bundesversammlung und wird als Bundesstadt bezeichnet.
+  Die Bundesverfassung nennt keine Hauptstadt, Bern übernimmt aber diese Rolle. Zürich ist die grösste
+  Stadt, Lausanne ist Sitz des Bundesgerichts.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/politisches-system
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/foederalismus
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Bundesstadt
+- Bundesrat
+- Bundesversammlung
+status: in_review
+difficulty: 1
+covers:
+- zh-320
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Bern ist der Sitz von Bundesrat und Bundesversammlung und gilt als Bundesstadt, die faktisch
+      die Rolle der Landeshauptstadt übernimmt, auch wenn die Bundesverfassung den Begriff Hauptstadt
+      nicht verwendet.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, Bern diene als Hauptstadt, sei de jure aber nur Bundesstadt, und die Schweiz
+      habe de jure keine Hauptstadt; Bern erfülle de facto diese Rolle. Quelle 2 bestätigt das. Zürich
+      als grösste Stadt stützt Quelle 3. Zum Bundesgericht in Lausanne sagen die Quellen nichts, aber
+      das betrifft nur einen Nebenpunkt der Erklärung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

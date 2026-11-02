@@ -1,0 +1,14 @@
+id: schloss-kyburg-standort-kanton
+lang: en
+source_version: 1
+question: In which canton is Kyburg Castle located?
+options:
+  a: In the canton of Aargau
+  b: In the canton of St. Gallen
+  c: In the canton of Zurich
+  d: In the canton of Thurgau
+explanation: Kyburg Castle is located in the canton of Zurich, on a hill above the River Töss. It is one
+  of the canton's well-known cultural heritage sites and is a museum.
+status: draft
+reviewed_by: null
+reviewed_at: null

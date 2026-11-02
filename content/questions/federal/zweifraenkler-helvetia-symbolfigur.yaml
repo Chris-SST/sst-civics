@@ -1,0 +1,46 @@
+id: zweifraenkler-helvetia-symbolfigur
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Welche Symbolfigur ist auf dem Zweifränkler abgebildet?
+options_de:
+  a: Das Matterhorn
+  b: Helvetia
+  c: Wilhelm Tell
+  d: Ein Schweizer Bundesrat
+correct: b
+explanation_de: Auf der Schweizer Zweifrankenmünze ist Helvetia zu sehen, die weibliche Symbolfigur der
+  Eidgenossenschaft. Sie steht für die Schweiz als Nation. Helvetia erscheint auch auf anderen Münzen
+  und Briefmarken.
+sources:
+- url: https://www.nb.admin.ch/de/helvetia-de
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/traditionen
+  checked: 2026-11-02
+glossary:
+- Helvetia
+- Zweifränkler
+status: in_review
+difficulty: 2
+covers:
+- zh-319
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Auf dem Zweifränkler ist auf der Vorderseite der Kopf der Helvetia, der Symbolfigur der
+      Schweiz, abgebildet, umgeben von Sternen.
+  source:
+    verdict: supported
+    note: Quelle 1 (Nationalbibliothek) nennt Helvetia als personifizierte weibliche Repräsentationsfigur
+      der Schweiz und sagt, sie sei heute noch auf den 50-Rappen-, 1- und 2-Franken-Münzen zu sehen; auch
+      Briefmarken werden erwähnt. Die Quellen 2 und 3 sagen dazu nichts.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

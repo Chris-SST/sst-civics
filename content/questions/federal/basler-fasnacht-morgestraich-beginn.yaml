@@ -1,0 +1,42 @@
+id: basler-fasnacht-morgestraich-beginn
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Was geschieht beim Morgestraich, dem Beginn der Basler Fasnacht?
+options_de:
+  a: Der Bürgermeister übergibt den Stadtschlüssel an die Fasnachtsgesellschaft.
+  b: Die Gassen werden hell beleuchtet und ein Feuerwerk beginnt.
+  c: Die Lichter in den Gassen gehen aus, dann beginnen Pfeifen und Trommeln zu spielen.
+  d: Die Fasnächtler werfen Konfetti vom Münsterturm und läuten alle Kirchenglocken.
+correct: c
+explanation_de: Der Morgestraich beginnt am Montag nach Aschermittwoch um vier Uhr morgens. Dann werden
+  die Lichter in den Gassen gelöscht. Danach setzt das Spiel von Pfeifen und Trommeln ein.
+sources:
+- url: https://www.bak.admin.ch/de/basler-fasnacht
+  checked: &id001 2026-11-02
+glossary:
+- Morgestraich
+- Basler Fasnacht
+status: in_review
+difficulty: 2
+covers:
+- zh-304
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Beim Morgestraich um vier Uhr morgens am Montag nach Aschermittwoch werden in Basel die
+      Lichter gelöscht, und dann beginnen die Cliquen mit Pfeifen und Trommeln zu spielen und ziehen mit
+      ihren beleuchteten Laternen durch die Gassen.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den Beginn am Montag nach Aschermittwoch um vier Uhr morgens in der völlig dunklen
+      Innenstadt, mit pfeifenden und trommelnden Aktiven. Das stützt Antwort c) und die Erklärung. Dass
+      die Lichter ausgehen, wird nur als dunkle Stadt beschrieben, was aber eindeutig genug ist.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

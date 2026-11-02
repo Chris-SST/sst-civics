@@ -1,0 +1,41 @@
+id: kanton-zuerich-anzahl-politische-gemeinden
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.organisation.versammlung_parlament
+question_de: Wie viele politische Gemeinden gibt es ungefähr im Kanton Zürich?
+options_de:
+  a: Etwa 60
+  b: Etwa 110
+  c: Etwa 250
+  d: Etwa 160
+correct: d
+explanation_de: Der Kanton Zürich besteht aus rund 160 politischen Gemeinden. Die genaue Zahl kann sich
+  durch Gemeindefusionen leicht ändern.
+sources:
+- url: https://www.zh.ch/de/politik-staat/gemeinden.html
+  checked: &id001 2026-11-02
+glossary:
+- politische Gemeinde
+- Kanton Zürich
+status: in_review
+difficulty: 2
+covers:
+- zh-124
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: 'Der Kanton Zürich zählt aktuell rund 160 politische Gemeinden (2024: 160), daher kommt
+      «Etwa 160» der Wahrheit am nächsten.'
+  source:
+    verdict: supported
+    note: Quelle 1 nennt ausdrücklich 160 politische Gemeinden im Kanton Zürich (Stand 1. Januar 2026).
+      Das stützt Antwort d) «Etwa 160». Die Quelle erwähnt ausserdem 60 Schulgemeinden, die nicht mit
+      den politischen Gemeinden zu verwechseln sind.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

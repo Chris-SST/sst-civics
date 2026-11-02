@@ -1,0 +1,46 @@
+id: ahv-iv-sozialversicherungen-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Welche Aussage über die Sozialversicherungen der Schweiz stimmt?
+options_de:
+  a: AHV und IV gehören zu den Sozialversicherungen der Schweiz.
+  b: AHV und IV werden nur von den Gemeinden geführt.
+  c: AHV und IV sind private Versicherungen ohne gesetzliche Grundlage.
+  d: AHV und IV sind nur für Selbstständige gedacht.
+correct: a
+explanation_de: AHV steht für Alters- und Hinterlassenenversicherung, IV für Invalidenversicherung. Beide
+  sind im Bundesrecht geregelt und gehören zum staatlichen Sozialversicherungssystem.
+sources:
+- url: https://www.bsv.admin.ch/de/organisation-ahv
+  checked: &id001 2026-11-02
+- url: https://www.bsv.admin.ch/de/dreisaeulensystem
+  checked: *id001
+glossary:
+- AHV
+- IV
+- Sozialversicherung
+status: in_review
+difficulty: 1
+covers:
+- zh-136
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die AHV (Alters- und Hinterlassenenversicherung) und die IV (Invalidenversicherung) sind
+      gesetzlich geregelte, obligatorische Sozialversicherungen des Bundes und gelten für die gesamte
+      Bevölkerung, nicht nur für Selbstständige oder private Versicherte.
+  source:
+    verdict: supported
+    note: Quelle 2 nennt AHV und IV als staatliche Vorsorge (1. Säule), deren Beiträge und Leistungen
+      das Gesetz vorschreibt. Quelle 1 beschreibt die AHV als Teil des schweizerischen Sozialversicherungssystems,
+      das auf dem AHV-Gesetz beruht und vom BSV beaufsichtigt wird. Das stützt Antwort a und widerlegt
+      b, c und d.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

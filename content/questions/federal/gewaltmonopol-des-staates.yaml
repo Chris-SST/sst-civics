@@ -1,0 +1,45 @@
+id: gewaltmonopol-des-staates
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.staatsprinzipien
+question_de: Wer darf in der Schweiz physische Gewalt anwenden, zum Beispiel durch Polizei und Armee?
+options_de:
+  a: Private Sicherheitsfirmen im Auftrag von Vereinen
+  b: Jede Person, die sich bedroht fühlt
+  c: Nur der Staat
+  d: Jede Gemeinde mit eigenen Bürgerwehren
+correct: c
+explanation_de: Der Staat hat das Gewaltmonopol. Nur er darf zum Schutz der Ordnung physische Gewalt einsetzen,
+  etwa durch Polizei und Armee. So sollen Streitigkeiten nicht mit Selbstjustiz gelöst werden.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.admin.ch/gov/de/start/bundesrat.html
+  checked: 2026-11-02
+glossary:
+- Gewaltmonopol
+- Polizei
+- Armee
+status: in_review
+difficulty: 2
+covers:
+- zh-066
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In der Schweiz besitzt der Staat das Gewaltmonopol, weshalb physische Gewalt grundsätzlich
+      nur durch staatliche Organe wie Polizei und Armee angewendet werden darf (ausser in eng begrenzten
+      Fällen wie Notwehr).
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Seite «Die Politik in der Schweiz») sagt: «In einem Rechtsstaat hat der Staat das
+      Gewaltmonopol. Das heisst, nur der Staat darf Gewalt gegen Personen und Sachen anwenden, sonst niemand»,
+      und nennt dafür Polizei und Militär. Quelle 2 behandelt ein anderes Thema.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

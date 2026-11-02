@@ -1,0 +1,48 @@
+id: stimmenauszaehlung-urnengang-wahlbuero
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Wer zählt bei Urnengängen in einer Zürcher Gemeinde die abgegebenen Stimmen aus?
+options_de:
+  a: Die Sozialbehörde
+  b: Das Wahlbüro
+  c: Die Gemeindeschreiberin allein
+  d: Die Staatsanwaltschaft
+correct: b
+explanation_de: Das Wahlbüro ermittelt bei Abstimmungen und Wahlen die Ergebnisse der Gemeinde. Es besteht
+  aus mehreren Personen, damit die Auszählung korrekt und nachvollziehbar abläuft.
+sources:
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2023/02/regierungs-und-kantonsratswahlen-2023-grosseinsatz-am-wahlsonntag.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2026/05/erstmals-elektronisches-auszaehlen-von-stimmzetteln.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Wahlbüro
+- Urnengang
+- Gemeinde
+status: in_review
+difficulty: 2
+covers:
+- zh-120
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In Zürcher Gemeinden ermittelt das Wahlbüro (Wahl- und Abstimmungsbüro) die Ergebnisse
+      bei Urnengängen, indem es die abgegebenen Stimmen auszählt.
+  source:
+    verdict: supported
+    note: 'Quelle 3 (Broschüre, Kanton Zürich) sagt ausdrücklich: «Bei Abstimmungen und Wahlen zählt das
+      Wahlbüro die Stimmzettel.» Quelle 1 nennt die Gemeindewahlbüros als Orte, wo die Stimmen ausgezählt
+      werden, und Quelle 2 nennt das Gemeindewahlbüro als verantwortlich für die korrekte Auszählung.
+      Dass das Wahlbüro aus mehreren Personen besteht, sagen die Quellen nur indirekt (tausende Personen
+      im Einsatz).'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

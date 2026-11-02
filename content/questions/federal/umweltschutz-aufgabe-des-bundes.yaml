@@ -1,0 +1,46 @@
+id: umweltschutz-aufgabe-des-bundes
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Welche Ebene ist in der Schweiz dafür zuständig, die Umwelt zu schützen und dafür Vorschriften
+  zu erlassen?
+options_de:
+  a: Der Bund
+  b: Private Organisationen
+  c: Allein die Gemeinden
+  d: Allein die Bezirke
+correct: a
+explanation_de: Die Bundesverfassung beauftragt den Bund, Mensch und Umwelt vor schädlichen Einwirkungen
+  zu schützen. Er erlässt dazu Gesetze, zum Beispiel zum Gewässer- und Naturschutz. Die Kantone setzen
+  viele dieser Vorschriften um.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Umweltschutz
+- Bund
+- Kanton
+status: in_review
+difficulty: 1
+covers:
+- zh-054
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Artikel 74 der Bundesverfassung ist der Bund zuständig, Vorschriften zum Schutz des
+      Menschen und seiner natürlichen Umwelt zu erlassen, während der Vollzug weitgehend bei den Kantonen
+      liegt.
+  source:
+    verdict: supported
+    note: 'Die Bundesverfassung sagt: «Der Bund erlässt Vorschriften über den Schutz des Menschen und
+      seiner natürlichen Umwelt vor schädlichen oder lästigen Einwirkungen.» Zudem sind für den Vollzug
+      die Kantone zuständig, soweit das Gesetz ihn nicht dem Bund vorbehält. Das deckt Antwort und Erklärung.
+      Gewässer- und Naturschutz werden im Text nicht eigens genannt, das ist aber nur ein Beispiel.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

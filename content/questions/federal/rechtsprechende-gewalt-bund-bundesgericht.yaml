@@ -1,0 +1,45 @@
+id: rechtsprechende-gewalt-bund-bundesgericht
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.gerichte
+question_de: Welche Behörde ist auf Bundesebene das oberste rechtsprechende Organ der Schweiz?
+options_de:
+  a: Die Bundeskanzlei
+  b: Der Bundesrat
+  c: Die Bundesversammlung
+  d: Das Bundesgericht
+correct: d
+explanation_de: Die Bundesverfassung weist die rechtsprechende Gewalt des Bundes dem Bundesgericht zu.
+  Es ist die oberste rechtsprechende Behörde des Bundes. Bundesrat und Bundesversammlung üben die vollziehende
+  beziehungsweise die gesetzgebende Gewalt aus.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Bundesgericht
+- rechtsprechende Gewalt
+- Gewaltenteilung
+status: in_review
+difficulty: 1
+covers:
+- zh-067
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Bundesgericht in Lausanne ist die oberste rechtsprechende Behörde des Bundes, während
+      Bundesrat (Exekutive), Bundesversammlung (Legislative) und Bundeskanzlei (Stabsstelle des Bundesrats)
+      keine obersten Gerichte sind.
+  source:
+    verdict: supported
+    note: 'Die Bundesverfassung (Quelle 1) sagt ausdrücklich: «Das Bundesgericht ist die oberste rechtsprechende
+      Behörde des Bundes.» Sie nennt den Bundesrat als oberste leitende und vollziehende Behörde und beschreibt
+      die Bundesversammlung als oberste Gewalt im Bund mit Gesetzgebungs- und Aufsichtsfunktion, was die
+      Erklärung stützt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

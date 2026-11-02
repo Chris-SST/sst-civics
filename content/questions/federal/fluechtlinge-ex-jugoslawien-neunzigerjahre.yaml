@@ -1,0 +1,44 @@
+id: fluechtlinge-ex-jugoslawien-neunzigerjahre
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gesellschaftswandel
+question_de: Aus welchem Grund suchten in den 1990er-Jahren viele Menschen aus dem ehemaligen Jugoslawien
+  in der Schweiz Aufnahme?
+options_de:
+  a: Sie wollten an Schweizer Hochschulen studieren.
+  b: Sie flohen vor einer grossen Naturkatastrophe.
+  c: Sie flohen vor dem Krieg in ihrer Heimat.
+  d: Sie wurden von Schweizer Firmen als Saisonniers angeworben.
+correct: c
+explanation_de: Der Zerfall Jugoslawiens führte in den 1990er-Jahren zu Kriegen. Viele Menschen suchten
+  deshalb Schutz in der Schweiz. Ein Teil von ihnen ist geblieben und lebt heute hier.
+sources:
+- url: https://www.bar.admin.ch/de/einwandererland-schweiz
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/auswanderung-und-einwanderung
+  checked: 2026-11-02
+glossary:
+- Flüchtling
+- Einwanderung
+status: in_review
+difficulty: 1
+covers:
+- zh-217
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In den 1990er-Jahren flohen viele Menschen vor den Jugoslawienkriegen (Kroatien, Bosnien,
+      später Kosovo) und suchten deshalb in der Schweiz Schutz.
+  source:
+    verdict: supported
+    note: Quelle 1 (Bundesarchiv) nennt im Abschnitt «Asyl nach dem Zweiten Weltkrieg», dass die Zahl
+      der Asylsuchenden während der Konflikte im ehemaligen Jugoslawien in den 1990er-Jahren ihren Höhepunkt
+      erreichte. Das stützt Flucht vor dem Krieg als Grund; Quelle 2 sagt dazu nichts.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

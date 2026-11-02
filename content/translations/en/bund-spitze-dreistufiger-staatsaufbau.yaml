@@ -1,0 +1,15 @@
+id: bund-spitze-dreistufiger-staatsaufbau
+lang: en
+source_version: 1
+question: Which level of government is at the top of Switzerland's three-tier state structure?
+options:
+  a: The Confederation
+  b: The canton of Bern
+  c: The Federal Assembly (Bundesversammlung) alone
+  d: The association of communes (Gemeindeverband)
+explanation: The Confederation is at the top of the state structure. Below it come the cantons and then
+  the communes (Gemeinden). The Federal Constitution sets out which tasks lie with the Confederation and
+  which with the cantons.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,41 @@
+id: sonntagszeitung-erscheint-woechentlich
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Wie oft erscheint eine Sonntagszeitung in der Schweiz?
+options_de:
+  a: Einmal pro Woche
+  b: Zweimal pro Woche
+  c: Einmal pro Monat
+  d: Jeden Tag
+correct: a
+explanation_de: Eine Sonntagszeitung erscheint nur einmal wöchentlich, am Sonntag. Tageszeitungen erscheinen
+  dagegen an den meisten Tagen der Woche. Die Presse gehört zur Kultur und zur Meinungsbildung im Land.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/kulturschaffen-in-der-schweiz
+  checked: 2026-11-02
+glossary:
+- Sonntagszeitung
+status: in_review
+difficulty: 1
+covers:
+- zh-315
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Eine Sonntagszeitung erscheint, wie der Name sagt, einmal pro Woche, nämlich am Sonntag.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Broschüre des Kantons Zürich) nennt unter den wichtigen Medien ausdrücklich: «Sonntagszeitung
+      (erscheint 1× pro Woche)». Das stützt Antwort a). Quelle 2 behandelt nur Kulturschaffen und sagt
+      dazu nichts.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

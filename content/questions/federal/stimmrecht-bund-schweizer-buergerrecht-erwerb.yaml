@@ -1,0 +1,50 @@
+id: stimmrecht-bund-schweizer-buergerrecht-erwerb
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: Ab welchem Zeitpunkt erhält eine Person aus dem Ausland das Stimm- und Wahlrecht auf Bundesebene?
+options_de:
+  a: Sobald sie zehn Jahre lang in der Schweiz gelebt hat.
+  b: Sobald sie eine Niederlassungsbewilligung (Ausweis C) erhält.
+  c: Sobald sie in der Schweiz Steuern zahlt und arbeitet.
+  d: Sobald sie das Schweizer Bürgerrecht hat und volljährig ist.
+correct: d
+explanation_de: Das Stimm- und Wahlrecht auf Bundesebene ist an das Schweizer Bürgerrecht gebunden. Eine
+  Niederlassungsbewilligung, eine bestimmte Aufenthaltsdauer oder das Bezahlen von Steuern reichen dafür
+  nicht aus. Wer eingebürgert wird und volljährig ist, darf bei eidgenössischen Wahlen und Abstimmungen
+  mitmachen.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id002 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksabstimmungen.html
+  checked: &id001 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: *id001
+glossary:
+- Stimmrecht
+- Wahlrecht
+- Bürgerrecht
+- Niederlassungsbewilligung
+status: in_review
+difficulty: 1
+covers:
+- zh-082
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Auf Bundesebene haben nur Schweizer Bürgerinnen und Bürger, die volljährig sind, das Stimm-
+      und Wahlrecht, Ausländerinnen und Ausländer erhalten es also erst mit dem Schweizer Bürgerrecht.
+  source:
+    verdict: supported
+    note: Quelle 1 (Broschüre Kanton Zürich) sagt, dass als Schweizer Stimmvolk alle Personen ab 18 Jahren
+      mit dem Schweizer Bürgerrecht gelten und dass Ausländerinnen und Ausländer nach der Einbürgerung
+      an der Schweizer Politik teilnehmen können. Dass Niederlassungsbewilligung, Aufenthaltsdauer oder
+      Steuern nicht genügen, folgt daraus indirekt. Die Quellen 2 und 3 enthalten dazu nichts Eindeutiges.
+    at: *id002
+    model: claude-sonnet-5-5
+    version: 1

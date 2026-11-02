@@ -1,0 +1,46 @@
+id: ch-kuerzel-lateinischer-landesname
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.staatsprinzipien
+question_de: Wofür steht das Länderkürzel «CH» der Schweiz?
+options_de:
+  a: Für den französischen Namen Confédération Helvétique
+  b: Für den Begriff «Cantons Helvétiques»
+  c: Für den lateinischen Namen Civitas Helvetica
+  d: Für den lateinischen Landesnamen Confoederatio Helvetica
+correct: d
+explanation_de: CH ist die Kurzform von Confoederatio Helvetica, dem lateinischen Namen der Schweiz. Latein
+  wird verwendet, weil es keine der vier Landessprachen bevorzugt. Das Kürzel steht zum Beispiel auf Autokennzeichen
+  und in Internetadressen.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.admin.ch/gov/de/start/bundesrat.html
+  checked: 2026-11-02
+glossary:
+- Confoederatio Helvetica
+- Landesname
+- Landessprache
+status: in_review
+difficulty: 1
+covers:
+- zh-324
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Länderkürzel «CH» steht für den lateinischen Landesnamen Confoederatio Helvetica, der
+      als neutrale, mehrsprachig verwendbare Bezeichnung auf Münzen und im Länderkürzel dient.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den offiziellen lateinischen Namen «Confoederatio Helvetica (CH)», der etwa auf
+      der 5-Franken-Münze steht. Dass Latein gewählt wurde, weil es keine Landessprache bevorzugt, sowie
+      die Beispiele Autokennzeichen und Internetadressen stehen nicht in den Quellen, sind aber für die
+      richtige Antwort nicht entscheidend. Quelle 2 behandelt ein anderes Thema.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,15 @@
+id: kinder-familienname-ohne-gemeinsamen-namen
+lang: en
+source_version: 1
+question: Two spouses did not choose a joint family name when they married. Who then decides the name
+  of their joint children?
+options:
+  a: The children automatically receive the father's name.
+  b: The civil registry office decides according to the alphabetical order of the names.
+  c: The spouses themselves choose their children's name.
+  d: The children automatically receive the mother's name.
+explanation: If the spouses have not chosen a joint family name, they must choose the children's name
+  themselves. The law does not set it automatically. The rules are set out in the Swiss Civil Code.
+status: draft
+reviewed_by: null
+reviewed_at: null

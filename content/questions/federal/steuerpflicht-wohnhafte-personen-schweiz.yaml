@@ -1,0 +1,46 @@
+id: steuerpflicht-wohnhafte-personen-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Wer ist in der Schweiz grundsätzlich verpflichtet, Steuern zu bezahlen?
+options_de:
+  a: Personen, die in der Schweiz wohnen
+  b: Nur Personen, die ein Unternehmen führen
+  c: Nur Personen mit Schweizer Bürgerrecht
+  d: Nur Personen, die das Stimmrecht haben
+correct: a
+explanation_de: Die Steuerpflicht knüpft am Wohnsitz an und nicht am Bürgerrecht. Auch Ausländerinnen
+  und Ausländer, die in der Schweiz wohnen, zahlen Steuern. Das Stimmrecht spielt dafür keine Rolle.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184/20260902/de/html/fedlex-data-admin-ch-eli-cc-1991-1184_1184_1184-20260902-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen.html
+  checked: *id001
+glossary:
+- Steuerpflicht
+- Wohnsitz
+status: in_review
+difficulty: 1
+covers:
+- zh-016
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Steuerpflicht knüpft in der Schweiz grundsätzlich an den Wohnsitz an, sodass alle Personen,
+      die hier wohnen, unabhängig von Staatsangehörigkeit, Stimmrecht oder Unternehmertätigkeit Steuern
+      zahlen müssen.
+  source:
+    verdict: supported
+    note: Quelle 1 (DBG) sagt, dass natürliche Personen steuerpflichtig sind, wenn sie ihren steuerrechtlichen
+      Wohnsitz oder Aufenthalt in der Schweiz haben. Quelle 3 hält fest, dass jeder Mensch als natürliche
+      Person steuerpflichtig ist. Das Bürgerrecht oder das Stimmrecht wird nicht als Voraussetzung genannt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

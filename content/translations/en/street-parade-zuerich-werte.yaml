@@ -1,0 +1,14 @@
+id: street-parade-zuerich-werte
+lang: en
+source_version: 1
+question: What values does the Street Parade in Zürich stand for?
+options:
+  a: Homeland, faith, family, community and loyalty
+  b: Tradition, order, diligence, thrift and punctuality
+  c: Sport, health, performance, competition and fairness
+  d: Love, peace, freedom, generosity and tolerance
+explanation: The Street Parade is a large techno parade in Zürich. It sees itself as a demonstration for
+  love, peace, freedom, generosity and tolerance.
+status: draft
+reviewed_by: null
+reviewed_at: null

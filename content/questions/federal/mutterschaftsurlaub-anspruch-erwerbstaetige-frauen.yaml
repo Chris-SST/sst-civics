@@ -1,0 +1,48 @@
+id: mutterschaftsurlaub-anspruch-erwerbstaetige-frauen
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Wer hat in der Schweiz nach der Geburt eines Kindes einen gesetzlichen Anspruch auf Mutterschaftsurlaub?
+options_de:
+  a: Nur Frauen, die in einem Betrieb mit mehr als 50 Angestellten arbeiten
+  b: Jede erwerbstätige Frau, die ein Kind zur Welt bringt
+  c: Nur Frauen, die verheiratet sind
+  d: Nur Frauen mit Schweizer Bürgerrecht
+correct: b
+explanation_de: Das Gesetz sieht für erwerbstätige Mütter einen Anspruch auf Mutterschaftsurlaub und eine
+  Entschädigung vor. Die Betriebsgrösse, die Staatsangehörigkeit und der Zivilstand spielen dafür keine
+  Rolle. Die Entschädigung wird über die Erwerbsersatzordnung finanziert.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1952/1021_1046_1050/20260601/de/html/fedlex-data-admin-ch-eli-cc-1952-1021_1046_1050-20260601-de-html-1.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.bsv.admin.ch/de/beitraege-im-ueberblick
+  checked: 2026-11-02
+glossary:
+- Mutterschaftsurlaub
+- Erwerbsersatzordnung
+status: in_review
+difficulty: 1
+covers:
+- zh-179
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach dem Erwerbsersatzgesetz haben alle erwerbstätigen Frauen, die ein Kind zur Welt bringen
+      und die Voraussetzungen der Versicherungsdauer und Erwerbstätigkeit erfüllen, Anspruch auf 14 Wochen
+      Mutterschaftsentschädigung, unabhängig von Betriebsgrösse, Zivilstand oder Staatsbürgerschaft.
+  source:
+    verdict: supported
+    note: 'Quelle 2 (Broschüre Kanton Zürich, S. 33) sagt: «Jede Frau, die arbeitet und ein Kind bekommt,
+      hat ein Recht auf einen bezahlten Mutterschaftsurlaub von 14 Wochen.» Quelle 1 (EOG) nennt als Voraussetzung
+      Versicherung und Erwerbstätigkeit, aber keine Betriebsgrösse, Staatsangehörigkeit oder Ehe; die
+      Finanzierung über die Erwerbsersatzordnung wird dort ebenfalls bestätigt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

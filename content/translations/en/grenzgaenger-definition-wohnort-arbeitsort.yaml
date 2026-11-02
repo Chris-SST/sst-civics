@@ -1,0 +1,15 @@
+id: grenzgaenger-definition-wohnort-arbeitsort
+lang: en
+source_version: 1
+question: What is meant by a cross-border commuter in Switzerland?
+options:
+  a: A person who works in Switzerland but lives abroad, near the border
+  b: A person who works for customs at the national border
+  c: A person who crosses the border without a permit in order to work
+  d: A person who lives in Switzerland but works abroad every day
+explanation: Cross-border commuters have their place of work in Switzerland but live on the other side
+  of the national border. They need a special permit to do so. They come, for example, from Germany, France,
+  Italy or Austria.
+status: draft
+reviewed_by: null
+reviewed_at: null

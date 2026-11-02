@@ -1,0 +1,14 @@
+id: absicherung-krankheit-unfall-sozialversicherung
+lang: en
+source_version: 1
+question: Against which risks, among others, does the Swiss social insurance system provide protection?
+options:
+  a: Against losses on private investments
+  b: Against damage to cars and household contents caused by theft
+  c: Against the consequences of illness and accident
+  d: Against rent increases
+explanation: Social insurance protects people from the financial consequences of major life risks. These
+  include illness and accident. Health insurance and accident insurance are examples.
+status: draft
+reviewed_by: null
+reviewed_at: null

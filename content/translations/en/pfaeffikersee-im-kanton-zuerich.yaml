@@ -1,0 +1,15 @@
+id: pfaeffikersee-im-kanton-zuerich
+lang: en
+source_version: 1
+question: In which canton is Lake Pfäffikon (Pfäffikersee) located?
+options:
+  a: Canton Thurgau
+  b: Canton St Gallen
+  c: Canton Zurich
+  d: Canton Zug
+explanation: Lake Pfäffikon (Pfäffikersee) is located in the Zurich Oberland and belongs to the territory
+  of the canton of Zurich. It is one of the larger lakes in the canton. Some of the other cantons mentioned
+  border Zurich, but they do not contain the lake.
+status: draft
+reviewed_by: null
+reviewed_at: null

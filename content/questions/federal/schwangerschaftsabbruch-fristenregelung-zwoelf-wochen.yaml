@@ -1,0 +1,49 @@
+id: schwangerschaftsabbruch-fristenregelung-zwoelf-wochen
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gesellschaftswandel
+question_de: Welche Regelung gilt in der Schweiz seit 2002 für den Schwangerschaftsabbruch in den ersten
+  zwölf Wochen?
+options_de:
+  a: Der Abbruch ist in dieser Zeit grundsätzlich verboten.
+  b: Die Frau kann selbst über den Abbruch entscheiden.
+  c: Der Ehemann oder Partner muss dem Abbruch zustimmen.
+  d: Ein Gericht muss den Abbruch bewilligen.
+correct: b
+explanation_de: Seit 2002 gilt die sogenannte Fristenregelung. Danach entscheidet die Frau in den ersten
+  zwölf Schwangerschaftswochen selbst. Sie muss dafür schriftlich eine Notlage geltend machen.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/54/757_781_799/20261101/de/html/fedlex-data-admin-ch-eli-cc-54-757_781_799-20261101-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.ekf.admin.ch/de/frauenrechte
+  checked: *id001
+glossary:
+- Schwangerschaftsabbruch
+- Fristenregelung
+status: in_review
+difficulty: 2
+covers:
+- zh-142
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Seit der Einführung der Fristenregelung im Jahr 2002 (Art. 119 StGB) ist ein Schwangerschaftsabbruch
+      in den ersten zwölf Wochen straffrei, wenn die schwangere Frau ihn schriftlich verlangt und sich
+      in einer Notlage befindet, sie entscheidet also selbst, ohne Zustimmung des Partners oder eines
+      Gerichts.
+  source:
+    verdict: supported
+    note: Quelle 1 (StGB, Art. 119 Abs. 2, seit 1. Okt. 2002) macht den Abbruch innerhalb von zwölf Wochen
+      straflos, und zwar auf schriftliches Verlangen der Frau, die eine Notlage geltend macht. Quelle
+      3 bestätigt die Fristenregelung seit 2002 mit straffreiem Abbruch in den ersten zwölf Wochen. Ein
+      Verbot, eine Zustimmung des Partners oder eine gerichtliche Bewilligung ist nirgends vorgesehen.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

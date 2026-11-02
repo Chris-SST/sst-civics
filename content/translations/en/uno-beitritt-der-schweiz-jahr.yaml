@@ -1,0 +1,15 @@
+id: uno-beitritt-der-schweiz-jahr
+lang: en
+source_version: 1
+question: In which year did Switzerland become a member of the United Nations (UN)?
+options:
+  a: '2002'
+  b: '1945'
+  c: '1986'
+  d: '2010'
+explanation: Switzerland joined the UN in 2002, after the people and the cantons had approved it. It was
+  thus one of the last countries to join. However, many UN organisations have had a seat in Geneva for
+  a long time.
+status: draft
+reviewed_by: null
+reviewed_at: null

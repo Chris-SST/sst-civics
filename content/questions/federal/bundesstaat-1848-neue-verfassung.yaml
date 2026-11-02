@@ -1,0 +1,47 @@
+id: bundesstaat-1848-neue-verfassung
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.bundesstaat
+question_de: Was entstand in der Schweiz im Jahr 1848?
+options_de:
+  a: Die Helvetische Republik mit einer Zentralregierung
+  b: Der Staatenbund unter französischer Aufsicht
+  c: Der moderne Bundesstaat mit einer neuen Verfassung
+  d: Der Bund der drei Urkantone
+correct: c
+explanation_de: 1848 gaben sich die Kantone eine Bundesverfassung und gründeten den modernen Bundesstaat.
+  Er verband gemeinsame Aufgaben des Bundes mit der Eigenständigkeit der Kantone. Diese Verfassung ist
+  die Grundlage der heutigen Schweiz.
+sources:
+- url: https://www.admin.ch/de/bundesrat-geschichte
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/politisches-system
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Bundesstaat
+- Bundesverfassung
+- Kanton
+status: in_review
+difficulty: 1
+covers:
+- zh-211
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: 1848 entstand mit der ersten Bundesverfassung der moderne schweizerische Bundesstaat, während
+      die Helvetische Republik 1798 und der Bund der drei Urkantone 1291 entstanden.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, mit der Bundesverfassung 1848 sei die Schweiz zu einem modernen Bundesstaat geworden.
+      Quelle 3 nennt ausdrücklich die Gründung der modernen Schweiz 1848 mit der ersten Bundesverfassung,
+      und Quelle 2 bestätigt, dass die Schweiz seit 1848 ein Bundesstaat ist.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

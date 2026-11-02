@@ -1,0 +1,15 @@
+id: einkommenssteuer-kanton-gemeinden-zuerich
+lang: en
+source_version: 1
+question: Which important tax do the canton of Zürich and the communes (Gemeinden) levy on the wages and
+  other income of individuals?
+options:
+  a: Income tax
+  b: Inheritance tax
+  c: Dog tax
+  d: Motor vehicle tax
+explanation: Income tax is one of the most important taxes of the canton and the communes. It is levied
+  on the income of natural persons. The other taxes are less significant or cover something else.
+status: draft
+reviewed_by: null
+reviewed_at: null

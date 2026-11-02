@@ -1,0 +1,43 @@
+id: zollwesen-zustaendigkeit-bund
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Wer besorgt in der Schweiz das Zollwesen?
+options_de:
+  a: Der Bund
+  b: Die Gemeinden an der Grenze
+  c: Die Kantone, in denen die Grenzen liegen
+  d: Die Kantone und der Bund je zur Hälfte
+correct: a
+explanation_de: Das Zollwesen ist nach der Bundesverfassung Sache des Bundes. Er regelt die Zölle und
+  die Kontrolle beim Warenverkehr über die Grenze. Kantone und Gemeinden haben dafür keine eigene Zuständigkeit.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Zollwesen
+- Bund
+- Kanton
+- Gemeinde
+status: in_review
+difficulty: 1
+covers:
+- zh-013
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Artikel 133 der Bundesverfassung ist die Gesetzgebung über den Zoll Sache des Bundes,
+      und die Zollverwaltung (Bundesamt für Zoll und Grenzsicherheit) ist eine Bundesbehörde.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundesverfassung) sagt: «Die Gesetzgebung über Zölle und andere Abgaben auf dem grenzüberschreitenden
+      Warenverkehr ist Sache des Bundes.» Das stützt Antwort a); die Seite behandelt allerdings die Gesetzgebung
+      und nennt die Kontrolle an der Grenze nicht ausdrücklich.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

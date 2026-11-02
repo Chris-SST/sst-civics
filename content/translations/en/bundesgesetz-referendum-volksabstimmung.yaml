@@ -1,0 +1,15 @@
+id: bundesgesetz-referendum-volksabstimmung
+lang: en
+source_version: 1
+question: What applies to a federal act that both chambers of Parliament have passed?
+options:
+  a: The citizens entitled to vote can demand a popular vote on it by means of a referendum.
+  b: The Federal Council (Bundesrat) must then still submit it to the Federal Supreme Court (Bundesgericht)
+    for approval.
+  c: It always comes into force immediately, without the people having any say.
+  d: The cantonal governments must first approve it individually.
+explanation: Once both chambers have passed it, federal acts are subject to the optional referendum. If
+  a referendum is successfully called, the citizens entitled to vote decide on the act at the ballot box.
+status: draft
+reviewed_by: null
+reviewed_at: null

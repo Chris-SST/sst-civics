@@ -1,0 +1,42 @@
+id: zirkus-knie-groesster-zirkus
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Welches Unternehmen ist das grösste Zirkusunternehmen der Schweiz?
+options_de:
+  a: Zirkus Knie
+  b: Circus Nock
+  c: Circus Monti
+  d: Zirkus Stey
+correct: a
+explanation_de: Der Zirkus Knie ist das grösste Zirkusunternehmen des Landes. Er tourt jedes Jahr mit
+  seinem Zelt durch viele Schweizer Städte und Dörfer. Der Zirkus gehört zur Schweizer Kultur.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/kulturschaffen-in-der-schweiz
+  checked: 2026-11-02
+glossary:
+- Zirkus Knie
+status: draft
+difficulty: 1
+covers:
+- zh-303
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Zirkus Knie, der auch als Schweizer National-Circus bekannt ist, ist das grösste und
+      bekannteste Zirkusunternehmen der Schweiz.
+  source:
+    verdict: unclear
+    note: Keine der beiden Quellen erwähnt den Zirkus Knie oder andere Zirkusunternehmen. Die Zürcher
+      Broschüre und die EDA-Seite behandeln Geschichte, Politik, Kunst und Kultur, aber nicht, welches
+      das grösste Zirkusunternehmen ist.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

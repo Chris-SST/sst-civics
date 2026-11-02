@@ -1,0 +1,14 @@
+id: rechtsstaat-keine-festnahme-ohne-grund
+lang: en
+source_version: 1
+question: What applies to arrest and detention in a state governed by the rule of law?
+options:
+  a: The state may not arrest and imprison anyone without a reason.
+  b: The state may detain persons at its own discretion.
+  c: The government may take critics into custody as a precaution.
+  d: Only foreign nationals may be arrested without a reason.
+explanation: In a state governed by the rule of law, state action is bound by the law. An arrest or detention
+  requires a legal ground. This protects people's freedom from arbitrary treatment.
+status: draft
+reviewed_by: null
+reviewed_at: null

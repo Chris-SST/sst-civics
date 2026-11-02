@@ -1,0 +1,15 @@
+id: selbstjustiz-verbot-staat-bestraft
+lang: en
+source_version: 1
+question: What applies in Switzerland when someone has broken the law?
+options:
+  a: The neighbourhood decides together on the punishment.
+  b: The state prosecutes and punishes the offence; taking the law into one's own hands is prohibited.
+  c: The victim may determine and carry out the punishment themselves.
+  d: The offence goes unpunished if the victim defended themselves.
+explanation: The state holds the monopoly on the use of force. Only the police, the public prosecutor's
+  office and the courts may prosecute criminal offences and impose penalties. Anyone who takes revenge
+  themselves may, in certain circumstances, be committing a criminal offence themselves.
+status: draft
+reviewed_by: null
+reviewed_at: null

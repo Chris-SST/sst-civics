@@ -1,0 +1,15 @@
+id: kantonsrat-mandat-durch-volkswahl
+lang: en
+source_version: 1
+question: How do the members of the Zurich Cantonal Council (Kantonsrat) obtain their seat?
+options:
+  a: They are elected by the people.
+  b: They are appointed by the municipal councils (Gemeinderäte).
+  c: They are appointed by the Executive Council (Regierungsrat).
+  d: They are installed by the Federal Council (Bundesrat).
+explanation: The members of the Cantonal Council are elected by the citizens entitled to vote in the canton
+  in a popular election. The parliament is therefore determined directly by the people. Neither the government
+  nor the Confederation appoints the members.
+status: draft
+reviewed_by: null
+reviewed_at: null

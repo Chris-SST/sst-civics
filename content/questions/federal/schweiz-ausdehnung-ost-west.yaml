@@ -1,0 +1,41 @@
+id: schweiz-ausdehnung-ost-west
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Wie gross ist die Entfernung zwischen dem östlichsten und dem westlichsten Punkt der Schweiz
+  ungefähr?
+options_de:
+  a: Rund 250 Kilometer
+  b: Rund 350 Kilometer
+  c: Rund 550 Kilometer
+  d: Rund 150 Kilometer
+correct: b
+explanation_de: Die Schweiz misst von Osten nach Westen rund 350 Kilometer. Sie ist also ein eher kleines
+  Land, das in Ost-West-Richtung länger ist als von Norden nach Süden.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geografie
+  checked: &id001 2026-11-02
+glossary:
+- Ausdehnung
+- Schweiz
+status: in_review
+difficulty: 2
+covers:
+- zh-265
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz misst in Ost-West-Richtung rund 348 Kilometer (von Chancy GE bis Val Müstair
+      GR), also ungefähr 350 Kilometer.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt als Ausdehnung der Schweiz von Osten nach Westen 348 km, was rund 350 km entspricht.
+      Die Nord-Süd-Ausdehnung von 220 km belegt zudem, dass das Land in Ost-West-Richtung länger ist.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

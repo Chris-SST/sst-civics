@@ -1,0 +1,43 @@
+id: schwimmbad-zutritt-hautfarbe-diskriminierung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Ein öffentliches Schwimmbad verweigert einer Person den Eintritt wegen ihrer Hautfarbe. Welcher
+  Grundsatz der Bundesverfassung wird dadurch verletzt?
+options_de:
+  a: Die Wirtschaftsfreiheit
+  b: Das Diskriminierungsverbot
+  c: Das Stimmrecht
+  d: Das Recht auf Ehe und Familie
+correct: b
+explanation_de: Die Bundesverfassung verbietet in Artikel 8 die Diskriminierung, zum Beispiel wegen der
+  Herkunft oder der Rasse. Niemand darf deshalb schlechter behandelt werden.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Diskriminierungsverbot
+- Rechtsgleichheit
+- Bundesverfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-088
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Verweigerung des Eintritts wegen der Hautfarbe verletzt das Diskriminierungsverbot
+      in Art. 8 Abs. 2 der Bundesverfassung, das Benachteiligungen wegen der Rasse oder der Herkunft verbietet.
+  source:
+    verdict: supported
+    note: 'Die Quelle enthält den Text von Art. 8 Abs. 2 BV: «Niemand darf diskriminiert werden, namentlich
+      nicht wegen der Herkunft, der Rasse, …». Das stützt Antwort b und die Erklärung. Die Artikelnummer
+      8 ist nur durch die Randnotiz «Herkunft 8» erkennbar, der Inhalt passt aber eindeutig.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

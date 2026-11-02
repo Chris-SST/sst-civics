@@ -1,0 +1,46 @@
+id: kanton-zuerich-nachbarkanton-thurgau
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: Welcher der folgenden Kantone grenzt direkt an den Kanton Zürich?
+options_de:
+  a: Graubünden
+  b: Thurgau
+  c: Uri
+  d: Waadt
+correct: b
+explanation_de: Der Kanton Thurgau liegt im Nordosten des Kantons Zürich und grenzt direkt an ihn. Graubünden,
+  Waadt und Uri haben keine gemeinsame Grenze mit Zürich.
+sources:
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2010/01/004.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: 2026-11-02
+glossary:
+- Kanton
+- Nachbarkanton
+status: in_review
+difficulty: 2
+covers:
+- zh-301
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Kanton Thurgau grenzt im Nordosten direkt an den Kanton Zürich, während Graubünden,
+      Uri und Waadt keine gemeinsame Grenze mit Zürich haben.
+  source:
+    verdict: supported
+    note: Quelle 2 (Broschüre, Seite 60/61) zeigt auf der Karte Thurgau, Schaffhausen, Aargau, St. Gallen,
+      Zug und Schwyz rund um Zürich und sagt, der Kanton grenze an 6 andere Kantone. Graubünden, Uri und
+      Waadt kommen dort nicht als Nachbarn vor. Die Formulierung «im Nordosten» der Erklärung steht nicht
+      ausdrücklich im Text, ist aber für die Antwort unerheblich.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

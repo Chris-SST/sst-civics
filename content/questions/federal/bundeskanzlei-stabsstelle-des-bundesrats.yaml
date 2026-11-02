@@ -1,0 +1,49 @@
+id: bundeskanzlei-stabsstelle-des-bundesrats
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.bundesrat
+question_de: Welche Aufgabe hat die Bundeskanzlei für den Bundesrat?
+options_de:
+  a: Sie ist die Stabsstelle des Bundesrats.
+  b: Sie überprüft Bundesratsbeschlüsse als Gericht.
+  c: Sie leitet das Finanzdepartement.
+  d: Sie wählt die Mitglieder des Bundesrats.
+correct: a
+explanation_de: Die Bundeskanzlei unterstützt den Bundesrat bei seiner Arbeit, zum Beispiel bei der Vorbereitung
+  der Sitzungen. Sie steht unter der Leitung der Bundeskanzlerin oder des Bundeskanzlers. Der Bundesrat
+  wird von der Bundesversammlung gewählt.
+sources:
+- url: https://www.bk.admin.ch/de/volksabstimmungen
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/bundesrat
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Bundeskanzlei
+- Stabsstelle
+- Bundesrat
+status: in_review
+difficulty: 2
+covers:
+- zh-007
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Bundeskanzlei ist die allgemeine Stabsstelle des Bundesrats und unterstützt ihn bei
+      Planung, Koordination und Verwaltung, während Gerichte, Departementsleitung und Bundesratswahl (Bundesversammlung)
+      nicht zu ihren Aufgaben gehören.
+  source:
+    verdict: supported
+    note: Quelle 1 und 2 nennen die Bundeskanzlei ausdrücklich die Stabsstelle des Bundesrats; Quelle
+      2 erwähnt zudem die Vorbereitung der Geschäfte. Quelle 3 bestätigt die Unterstützung des Bundesrats,
+      die Leitung durch die Bundeskanzlerin oder den Bundeskanzler und die Wahl des Bundesrats durch die
+      Vereinigte Bundesversammlung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

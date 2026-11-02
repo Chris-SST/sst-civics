@@ -1,0 +1,15 @@
+id: folterverbot-bundesverfassung
+lang: en
+source_version: 1
+question: What does the Federal Constitution say about torture?
+options:
+  a: Torture is prohibited only in the case of offenders.
+  b: Torture is permitted for the police in emergencies.
+  c: Torture is permitted if a court agrees.
+  d: No one may be tortured.
+explanation: Article 10 of the Federal Constitution prohibits torture and any other form of cruel, inhuman
+  or degrading treatment. This prohibition applies to all people without exception. The state, too, may
+  not make any exceptions.
+status: draft
+reviewed_by: null
+reviewed_at: null

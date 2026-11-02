@@ -1,0 +1,15 @@
+id: lateinischer-name-der-schweiz
+lang: en
+source_version: 1
+question: What is the official Latin name of the Swiss Confederation?
+options:
+  a: Helvetia Unita
+  b: Res Publica Helvetica
+  c: Confoederatio Helvetica
+  d: Respublica Alpina
+explanation: The Latin name is Confoederatio Helvetica. The abbreviation CH comes from it, and can be
+  found, for example, on car number plates and in internet addresses. The name is used because it is the
+  same in all national languages.
+status: draft
+reviewed_by: null
+reviewed_at: null

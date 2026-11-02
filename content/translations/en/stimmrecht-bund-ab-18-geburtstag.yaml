@@ -1,0 +1,14 @@
+id: stimmrecht-bund-ab-18-geburtstag
+lang: en
+source_version: 1
+question: From what age may Swiss citizens vote and elect at federal level?
+options:
+  a: From their 20th birthday
+  b: From their 21st birthday
+  c: From their 16th birthday
+  d: From their 18th birthday
+explanation: The right to vote and to elect at Confederation level begins at the age of majority, that
+  is, on one's 18th birthday. This age applies equally to elections and votes held by the Confederation.
+status: draft
+reviewed_by: null
+reviewed_at: null

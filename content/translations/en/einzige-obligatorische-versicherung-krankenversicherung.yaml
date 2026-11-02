@@ -1,0 +1,14 @@
+id: einzige-obligatorische-versicherung-krankenversicherung
+lang: en
+source_version: 1
+question: Which of the following types of insurance is required by law for all residents of Switzerland?
+options:
+  a: Legal expenses insurance
+  b: Health insurance
+  c: Travel insurance
+  d: Household contents insurance
+explanation: Health insurance is compulsory for all persons residing in Switzerland. Household contents
+  insurance, legal expenses insurance and travel insurance are voluntary.
+status: draft
+reviewed_by: null
+reviewed_at: null

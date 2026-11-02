@@ -1,0 +1,46 @@
+id: mietvertrag-rechte-pflichten-regeln
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Was wird in einem Mietvertrag festgelegt?
+options_de:
+  a: Die Rechte der Nachbarn in der Liegenschaft
+  b: Die Höhe der Steuern der Mietenden
+  c: Die Pflichten der Gemeinde gegenüber den Mietenden
+  d: Die Rechte und Pflichten von Vermietenden und Mietenden
+correct: d
+explanation_de: Der Mietvertrag regelt das Verhältnis zwischen der Person, die vermietet, und der Person,
+  die mietet. Dazu gehören zum Beispiel der Mietzins und die Dauer der Miete. Das Obligationenrecht enthält
+  die gesetzlichen Regeln dazu.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Mietvertrag
+- Vermieter
+- Mieter
+- Obligationenrecht
+status: in_review
+difficulty: 1
+covers:
+- zh-181
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Ein Mietvertrag regelt die Rechte und Pflichten zwischen Vermietenden und Mietenden, etwa
+      Mietzins, Dauer und Kündigung, nicht aber Nachbarrechte, Steuern oder Pflichten der Gemeinde.
+  source:
+    verdict: supported
+    note: Quelle 2 sagt ausdrücklich, dass der Mietvertrag die Rechte und Pflichten der Vertragspartner
+      regelt, und das OR regelt ihn. Quelle 1 (OR) beschreibt die gegenseitigen Pflichten von Vermieter
+      und Mieter (Überlassen der Sache, Mietzins).
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

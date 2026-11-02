@@ -1,0 +1,45 @@
+id: groesster-kanton-nach-flaeche
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Welcher Kanton hat die grösste Fläche aller Schweizer Kantone?
+options_de:
+  a: Tessin
+  b: Wallis
+  c: Bern
+  d: Graubünden
+correct: d
+explanation_de: Graubünden ist flächenmässig der grösste Kanton der Schweiz. Er liegt ganz in den Alpen
+  und hat viele Täler und Berge. Auch Wallis, Bern und Tessin sind gross, aber kleiner als Graubünden.
+sources:
+- url: https://www.agvchapp.bfs.admin.ch/de/kennzahlen/results?IncArea=True&SnapshotDate=01.01.2025&Unit=Cantons
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geografie
+  checked: 2026-11-02
+glossary:
+- Kanton
+- Graubünden
+status: in_review
+difficulty: 2
+covers:
+- zh-278
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Graubünden ist mit rund 7105 km² der flächenmässig grösste Kanton der Schweiz, vor Bern
+      (rund 5960 km²) und dem Wallis (rund 5220 km²).
+  source:
+    verdict: supported
+    note: Quelle 1 (BFS, Stand 01.01.2025) nennt für Graubünden 710530 ha, mehr als Wallis (522464), Bern
+      (595851) und Tessin (281215). Damit ist Graubünden der flächengrösste Kanton; die Erklärung stimmt
+      in diesem Punkt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

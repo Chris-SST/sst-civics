@@ -1,0 +1,14 @@
+id: stadtzuericher-parlament-direkt-gewaehlt
+lang: en
+source_version: 1
+question: How is the parliament of the city of Zurich, the communal council (Gemeinderat), constituted?
+options:
+  a: The Executive Council (Regierungsrat) of the canton appoints it
+  b: The City Council (Stadtrat) determines the members itself
+  c: The parties draw lots among themselves for the seats
+  d: The population elects it directly at the ballot box
+explanation: The eligible voters of the city of Zurich elect the communal council in general elections.
+  It is the parliament of the city and replaces the communal assembly (Gemeindeversammlung).
+status: draft
+reviewed_by: null
+reviewed_at: null

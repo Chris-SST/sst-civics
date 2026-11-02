@@ -1,0 +1,47 @@
+id: pensionsalter-frauen-maenner-65
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Wie hoch ist das reguläre Rentenalter in der AHV für Frauen und Männer?
+options_de:
+  a: Für Frauen 64 Jahre, für Männer 65 Jahre
+  b: Für Frauen und Männer 65 Jahre
+  c: Für Frauen und Männer 63 Jahre
+  d: Für Frauen und Männer 67 Jahre
+correct: b
+explanation_de: Das reguläre Rentenalter beträgt für Frauen und Männer gleichermassen 65 Jahre. Die frühere
+  Differenz bei den Frauen wird schrittweise abgebaut. Danach gilt für beide Geschlechter dasselbe Referenzalter.
+sources:
+- url: https://www.bsv.admin.ch/de/ahv-21
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.bsv.admin.ch/de/dreisaeulensystem
+  checked: 2026-11-02
+glossary:
+- AHV
+- Rentenalter
+status: in_review
+difficulty: 1
+covers:
+- zh-173
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Mit der AHV-21-Reform gilt seit 2024 für Frauen und Männer ein einheitliches Referenzalter
+      von 65 Jahren, wobei das Rentenalter der Frauen schrittweise von 64 auf 65 Jahre angehoben wird
+      (Übergangsphase bis 2028).
+  source:
+    verdict: supported
+    note: Quelle 1 (BSV, AHV 21) nennt das Referenzalter für Frauen und Männer mit 65 Jahren und beschreibt
+      die schrittweise Anhebung für Frauen von 64 auf 65 bis 2028. Das deckt Antwort b und die Erklärung.
+      Die Zürcher Broschüre (Quelle 2) beschreibt noch den Zwischenstand mit 64 Jahren für Frauen und
+      erwähnt die Erhöhung bis 2028.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

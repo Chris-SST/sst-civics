@@ -1,0 +1,42 @@
+id: franzoesische-besetzung-1798-alte-eidgenossenschaft
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.bundesstaat
+question_de: Was bewirkte der Einmarsch französischer Truppen in der Schweiz im Jahr 1798?
+options_de:
+  a: Er machte die Schweiz zu einem Teil Frankreichs
+  b: Er stärkte die Macht der alten Orte
+  c: Er führte zur Gründung des Bundesstaates von 1848
+  d: Er beendete die alte Ordnung der Eidgenossenschaft
+correct: d
+explanation_de: Mit der Besetzung durch Frankreich brach die alte Eidgenossenschaft zusammen. An ihre
+  Stelle trat die Helvetische Republik als Einheitsstaat. Der heutige Bundesstaat entstand erst 1848.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Eidgenossenschaft
+- Helvetik
+status: in_review
+difficulty: 2
+covers:
+- zh-231
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der französische Einmarsch 1798 führte zum Zusammenbruch der Alten Eidgenossenschaft und
+      zur Gründung der Helvetischen Republik, während die Schweiz nicht Teil Frankreichs wurde, die alten
+      Orte entmachtet wurden und der Bundesstaat erst 1848 entstand.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass nach dem Einmarsch französischer Truppen 1798 das politische System der
+      «Alten Eidgenossenschaft» zusammenbrach und die zentralistische Helvetische Republik an ihre Stelle
+      trat. Der Bundesstaat wird erst 1848 gegründet. Damit sind Antwort d und die Erklärung gestützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

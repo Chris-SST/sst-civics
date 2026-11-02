@@ -1,0 +1,47 @@
+id: schwingen-schweizer-traditionssport
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Welche Sportart gilt in der Schweiz als traditioneller Nationalsport, bei dem zwei Männer
+  in Hosen aus Zwilch miteinander ringen?
+options_de:
+  a: Hornussen
+  b: Schwingen
+  c: Curling
+  d: Steinstossen
+correct: b
+explanation_de: Schwingen ist eine Form des Ringens und gilt als Schweizer Traditionssport. Gekämpft wird
+  auf einem Sägemehlring. Bekannt sind die Schwingfeste, zum Beispiel das Eidgenössische Schwing- und
+  Älplerfest.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/traditionen
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sport-und-freizeit
+  checked: *id001
+glossary:
+- Schwingen
+- Traditionssport
+status: in_review
+difficulty: 1
+covers:
+- zh-305
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Schwingen ist der traditionelle Schweizer Nationalsport, bei dem zwei Schwinger in Zwilchhosen
+      miteinander ringen, während Hornussen, Curling und Steinstossen keine Ringkämpfe sind.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Schwingen als «eine Art Ringen» und als einzigartigen Schweizer Brauch; sie erwähnt
+      auch das Eidgenössische Schwing- und Älplerfest. Quelle 2 beschreibt Schwingen (Hosenlupf) als Variante
+      des Freistilringens, Hornussen und Steinstossen sind andere Sportarten. Zwilchhosen, Sägemehlring
+      und die Bezeichnung «Nationalsport» für Schwingen werden nicht wörtlich bestätigt, die Kernaussage
+      ist aber gestützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

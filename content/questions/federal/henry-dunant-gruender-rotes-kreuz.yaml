@@ -1,0 +1,44 @@
+id: henry-dunant-gruender-rotes-kreuz
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.bundesstaat
+question_de: Welche Person gründete das Rote Kreuz in Genf?
+options_de:
+  a: Alfred Escher
+  b: Johann Heinrich Pestalozzi
+  c: Guillaume-Henri Dufour
+  d: Henry Dunant
+correct: d
+explanation_de: Henry Dunant aus Genf setzte sich nach der Schlacht von Solferino 1859 für die Pflege
+  von Verwundeten ein. Daraus entstand das Rote Kreuz, das für die humanitäre Tradition der Schweiz steht.
+  Dunant erhielt 1901 den ersten Friedensnobelpreis.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/humanitaere-tradition
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: 2026-11-02
+glossary:
+- Rotes Kreuz
+- humanitäre Tradition
+status: in_review
+difficulty: 1
+covers:
+- zh-242
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Henry Dunant gründete 1863 in Genf das Rote Kreuz (Internationales Komitee vom Roten Kreuz),
+      wobei Guillaume-Henri Dufour zwar Mitgründer war, Dunant aber als der Hauptbegründer gilt.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die Gründung des Roten Kreuzes 1863 in Genf «unter der Federführung des Genfer
+      Humanisten Henry Dunant». Damit ist Antwort d) gestützt. Solferino 1859 und der Friedensnobelpreis
+      1901 aus der Erklärung stehen nicht in den Quellen, sind aber für die richtige Antwort nicht nötig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

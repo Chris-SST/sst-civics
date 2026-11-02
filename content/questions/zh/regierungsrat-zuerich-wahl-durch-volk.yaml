@@ -1,0 +1,43 @@
+id: regierungsrat-zuerich-wahl-durch-volk
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.regierungsrat
+question_de: Wer bestimmt im Kanton Zürich, wer im Regierungsrat sitzt?
+options_de:
+  a: Die Bundesversammlung wählt die Mitglieder des Regierungsrats.
+  b: Der Kantonsrat wählt die Mitglieder aus seinen eigenen Reihen.
+  c: Die Gemeindepräsidentinnen und Gemeindepräsidenten wählen die Mitglieder.
+  d: Die stimmberechtigte Bevölkerung des Kantons wählt die Mitglieder direkt.
+correct: d
+explanation_de: Im Kanton Zürich wählt das Volk den Regierungsrat direkt an der Urne. Der Kantonsrat ist
+  das Parlament und wählt die Regierung nicht. Das unterscheidet den Kanton vom Bund, wo die Bundesversammlung
+  den Bundesrat wählt.
+sources:
+- url: https://www.zh.ch/de/regierungsrat.html
+  checked: &id001 2026-11-02
+glossary:
+- Regierungsrat
+- Kantonsrat
+- Stimmberechtigte
+status: in_review
+difficulty: 1
+covers:
+- zh-111
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Kanton Zürich werden die sieben Mitglieder des Regierungsrats von den Stimmberechtigten
+      des Kantons in einer Volkswahl direkt gewählt.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt ausdrücklich, dass die sieben Mitglieder des Regierungsrats alle vier Jahre im
+      Majorzverfahren vom Volk gewählt werden. Das stützt Antwort d); der Vergleich mit dem Bund (Bundesversammlung
+      wählt den Bundesrat) steht nicht auf der Seite, widerspricht ihr aber nicht.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

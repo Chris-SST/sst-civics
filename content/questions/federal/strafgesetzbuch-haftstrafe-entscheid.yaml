@@ -1,0 +1,46 @@
+id: strafgesetzbuch-haftstrafe-entscheid
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.gerichte
+question_de: Nach welchem Gesetz richtet sich, ob jemand eine Haftstrafe verbüssen muss?
+options_de:
+  a: Nach dem Zivilgesetzbuch
+  b: Nach dem Obligationenrecht
+  c: Nach dem Mietrecht
+  d: Nach dem Strafgesetzbuch
+correct: d
+explanation_de: Das Strafgesetzbuch legt fest, welche Taten strafbar sind und welche Strafen dafür möglich
+  sind. Dazu gehören Geldstrafen und Freiheitsstrafen. Über die Strafe im Einzelfall entscheidet ein Gericht.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/54/757_781_799/20261101/de/html/fedlex-data-admin-ch-eli-cc-54-757_781_799-20261101-de-html-1.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+glossary:
+- Strafgesetzbuch
+- Freiheitsstrafe
+- Gericht
+status: in_review
+difficulty: 1
+covers:
+- zh-095
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Ob jemand eine Haftstrafe verbüssen muss, richtet sich nach dem Strafgesetzbuch (StGB),
+      das Straftaten und die dafür vorgesehenen Strafen regelt, während Zivilgesetzbuch, Obligationenrecht
+      und Mietrecht das Privatrecht betreffen.
+  source:
+    verdict: supported
+    note: 'Quelle 2 (Broschüre des Kantons Zürich, Kapitel «Gesetze in der Schweiz») sagt ausdrücklich:
+      «Das Strafgesetzbuch (StGB) regelt, wann eine Person ins Gefängnis muss.» Zivilgesetzbuch und Obligationenrecht
+      werden dort für andere Bereiche genannt (Familie, Verträge inkl. Mietvertrag). Quelle 1 (StGB-Text)
+      ist gekürzt und nennt die Strafen nicht ausdrücklich, widerspricht aber nicht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,41 @@
+id: kanton-zuerich-anzahl-bezirke
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: In wie viele Bezirke ist der Kanton Zürich gegliedert?
+options_de:
+  a: In zehn Bezirke
+  b: In zwölf Bezirke
+  c: In vierzehn Bezirke
+  d: In acht Bezirke
+correct: b
+explanation_de: Der Kanton Zürich ist in zwölf Bezirke gegliedert, zum Beispiel Affoltern, Meilen, Winterthur
+  und Zürich. Die Bezirke sind Verwaltungs- und Gerichtsbezirke zwischen Kanton und Gemeinden.
+sources:
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: &id001 2026-11-02
+glossary:
+- Bezirk
+- Kanton
+status: in_review
+difficulty: 2
+covers:
+- zh-103
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: 'Der Kanton Zürich ist in zwölf Bezirke gegliedert: Affoltern, Andelfingen, Bülach, Dielsdorf,
+      Dietikon, Hinwil, Horgen, Meilen, Pfäffikon, Uster, Winterthur und Zürich.'
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt ausdrücklich: «Er ist in 12 Bezirke und 160 politische Gemeinden aufgeteilt.»
+      Die Beispiele und die Beschreibung der Bezirke als Verwaltungs- und Gerichtsbezirke stehen nicht
+      im Text, die Kernaussage zur Zahl ist aber belegt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

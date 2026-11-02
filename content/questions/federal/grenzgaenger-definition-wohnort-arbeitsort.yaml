@@ -1,0 +1,48 @@
+id: grenzgaenger-definition-wohnort-arbeitsort
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Was versteht man in der Schweiz unter einem Grenzgänger?
+options_de:
+  a: Eine Person, die in der Schweiz arbeitet, aber im Ausland nahe der Grenze wohnt
+  b: Eine Person, die für den Zoll an der Landesgrenze arbeitet
+  c: Eine Person, die ohne Bewilligung die Grenze überquert, um zu arbeiten
+  d: Eine Person, die in der Schweiz wohnt, aber täglich im Ausland arbeitet
+correct: a
+explanation_de: Grenzgängerinnen und Grenzgänger haben ihre Arbeitsstelle in der Schweiz, wohnen aber
+  jenseits der Landesgrenze. Sie brauchen dafür eine besondere Bewilligung. Sie kommen zum Beispiel aus
+  Deutschland, Frankreich, Italien oder Österreich.
+sources:
+- url: https://www.sem.admin.ch/sem/de/home/themen/aufenthalt/eu_efta/ausweis_g_eu_efta.html
+  checked: &id002 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/758/20261101/de/html/fedlex-data-admin-ch-eli-cc-2007-758-20261101-de-html-2.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Grenzgänger
+status: in_review
+difficulty: 1
+covers:
+- zh-002
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Ein Grenzgänger (Grenzgängerbewilligung G) ist eine Person, die im Ausland wohnt und in
+      der Schweiz arbeitet, in der Regel in der Grenzzone und mit mindestens wöchentlicher Rückkehr an
+      den Wohnort.
+  source:
+    verdict: supported
+    note: Quelle 1 (SEM) definiert Grenzgängerinnen und Grenzgänger als Personen, die in einem EU/EFTA-Staat
+      wohnen und in der Schweiz arbeiten, und nennt die Grenzgängerbewilligung. Das stützt Antwort a und
+      die Erklärung. Die genannten Herkunftsländer (Deutschland, Frankreich, Italien, Österreich) stehen
+      nicht ausdrücklich auf der Seite, und «nahe der Grenze» wird dort sogar relativiert, weil keine
+      Grenzzonen mehr gelten. Quellen 2 und 3 liefern dazu nichts Eindeutiges.
+    at: *id002
+    model: claude-sonnet-5-5
+    version: 1

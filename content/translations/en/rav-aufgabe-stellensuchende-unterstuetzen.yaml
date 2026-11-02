@@ -1,0 +1,14 @@
+id: rav-aufgabe-stellensuchende-unterstuetzen
+lang: en
+source_version: 1
+question: What is the task of the Regional Employment Centre (RAV)?
+options:
+  a: It checks wages in businesses
+  b: It pays a pension to all residents
+  c: It supports jobseekers in their job search and finds them jobs
+  d: It issues employment references for jobseekers
+explanation: The RAV is the regional point of contact for jobseekers. It advises them and finds them jobs.
+  In the canton of Zurich, it is part of the Office for Employment.
+status: draft
+reviewed_by: null
+reviewed_at: null

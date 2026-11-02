@@ -1,0 +1,44 @@
+id: fifa-sitz-in-zuerich
+version: 1
+scope: federal
+canton: null
+topic: bund.international
+question_de: In welcher Schweizer Stadt ist der Weltfussballverband FIFA ansässig?
+options_de:
+  a: Zürich
+  b: Bern
+  c: Luzern
+  d: Genf
+correct: a
+explanation_de: Die FIFA hat ihren Sitz in Zürich. Die Schweiz ist Standort vieler internationaler Sportverbände,
+  etwa auch des Internationalen Olympischen Komitees in Lausanne.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.eda.admin.ch/de/uno
+  checked: 2026-11-02
+glossary:
+- FIFA
+- Sitz
+status: draft
+difficulty: 1
+covers:
+- zh-336
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die FIFA hat ihren Sitz in Zürich, während Genf und Lausanne Sitz anderer Sportorganisationen
+      sind (z. B. UEFA in Nyon, IOC in Lausanne).
+  source:
+    verdict: unclear
+    note: Quelle 1 sagt nur allgemein, dass viele internationale Organisationen ihren Hauptsitz in einer
+      Schweizer Stadt haben, und nennt UNO und IKRK in Genf. Quelle 2 handelt von der UNO in Genf. Keine
+      der beiden Seiten erwähnt die FIFA oder Zürich als FIFA-Sitz, auch das IOC in Lausanne wird nicht
+      genannt.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,42 @@
+id: zivildienst-anstelle-militaerdienst
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Was gilt in der Schweiz für den Zivildienst im Verhältnis zum Militärdienst?
+options_de:
+  a: Der Zivildienst ist nur für Frauen möglich.
+  b: Der Zivildienst ersetzt die Steuerpflicht.
+  c: Der Zivildienst muss zusätzlich zum Militärdienst geleistet werden.
+  d: Der Zivildienst kann anstelle des Militärdienstes geleistet werden.
+correct: d
+explanation_de: Der Zivildienst ist ein ziviler Ersatzdienst für Personen, die den Militärdienst nicht
+  leisten wollen. Er ist auf Zulassung hin möglich und dauert länger als der Militärdienst.
+sources:
+- url: https://www.zivi.admin.ch/de/zulassung
+  checked: &id001 2026-11-02
+glossary:
+- Zivildienst
+- Militärdienst
+status: in_review
+difficulty: 1
+covers:
+- zh-130
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Wer den Militärdienst mit seinem Gewissen nicht vereinbaren kann, darf nach Bundesverfassung
+      und Zivildienstgesetz stattdessen den (länger dauernden) Zivildienst leisten.
+  source:
+    verdict: supported
+    note: Quelle 1 zeigt, dass militärdienstpflichtige Personen, die den Militärdienst nicht mit dem Gewissen
+      vereinbaren können, zum Zivildienst zugelassen werden und dann 1.5x so viele Diensttage wie im Militär
+      leisten. Das stützt Antwort d) und die Erklärung (Zulassung nötig, längere Dauer). Dass der Zivildienst
+      den Militärdienst ersetzt, steht nicht wörtlich da, ergibt sich aber eindeutig aus dem Text.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,42 @@
+id: zuerich-zwei-staenderaete
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.abstimmungen_wahlen
+question_de: Wie viele Vertreterinnen und Vertreter entsendet der Kanton Zürich in den Ständerat?
+options_de:
+  a: Eine Vertretung
+  b: Vier Vertretungen
+  c: Sechs Vertretungen
+  d: Zwei Vertretungen
+correct: d
+explanation_de: Der Kanton Zürich ist ein Vollkanton und hat zwei Sitze im Ständerat. Die Ständerätinnen
+  und Ständeräte werden vom Stimmvolk des Kantons gewählt. Nur die Halbkantone haben je eine Vertretung.
+sources:
+- url: https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/national-staenderatswahlen.html
+  checked: &id001 2026-11-02
+glossary:
+- Ständerat
+- Vollkanton
+- Halbkanton
+status: in_review
+difficulty: 1
+covers:
+- zh-109
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Jeder Kanton, auch der Kanton Zürich, entsendet zwei Vertreterinnen oder Vertreter in den
+      Ständerat (nur die Halbkantone je eine).
+  source:
+    verdict: supported
+    note: Die Seite sagt ausdrücklich, dass der Kanton Zürich zwei Sitze im Ständerat hat, die das Stimmvolk
+      in einer Majorzwahl besetzt. Die Aussage zu den Halbkantonen steht nicht auf der Seite, ist für
+      die richtige Antwort aber nicht nötig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

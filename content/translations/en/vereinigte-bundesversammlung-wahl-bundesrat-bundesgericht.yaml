@@ -1,0 +1,16 @@
+id: vereinigte-bundesversammlung-wahl-bundesrat-bundesgericht
+lang: en
+source_version: 1
+question: Who elects the members of the Federal Council (Bundesrat) and of the Federal Supreme Court (Bundesgericht)?
+options:
+  a: The people at the ballot box
+  b: The cantonal governments
+  c: The National Council (Nationalrat) and the Council of States (Ständerat) together
+  d: The presidents of the political parties
+explanation: For these elections, the National Council and the Council of States meet together as the
+  United Federal Assembly (Bundesversammlung). They elect the members of the Federal Council and of the
+  Federal Supreme Court. At federal level, the people elect only the National Council, and in most cantons
+  also the Council of States.
+status: draft
+reviewed_by: null
+reviewed_at: null

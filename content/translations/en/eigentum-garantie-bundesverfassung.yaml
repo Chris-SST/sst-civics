@@ -1,0 +1,15 @@
+id: eigentum-garantie-bundesverfassung
+lang: en
+source_version: 1
+question: Which fundamental right protects houses, land and other assets belonging to private individuals
+  in Switzerland?
+options:
+  a: The guarantee of property
+  b: Freedom of belief and conscience
+  c: Freedom of settlement
+  d: Freedom of assembly
+explanation: The Federal Constitution guarantees property in Article 26. The state may restrict property
+  only under certain conditions, for example with a legal basis and full compensation in the case of expropriation.
+status: draft
+reviewed_by: null
+reviewed_at: null

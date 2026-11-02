@@ -1,0 +1,43 @@
+id: sechselaeuten-zuenfte-zentrale-akteure
+version: 1
+scope: zh
+canton: zh
+topic: kanton.kultur.zuerich
+question_de: Wer tritt beim Zürcher Frühlingsfest Sechseläuten als zentrale Akteure auf?
+options_de:
+  a: Die Zürcher Schulklassen
+  b: Die Zürcher Zünfte
+  c: Die Gemeindepräsidien des Kantons
+  d: Die Mitglieder des Kantonsrats
+correct: b
+explanation_de: Beim Sechseläuten ziehen die Zünfte in historischen Kostümen durch die Stadt. Am Abend
+  verbrennen sie den Böögg. Der Anlass ist ein bekanntes Frühlingsfest in Zürich.
+sources:
+- url: https://www.stadt-zuerich.ch/artikel/de/mobilitaet/sechselaeuten.html
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sechselaeuten-das-grosse-zuercher-fruehlingsfest
+  checked: &id001 2026-11-02
+glossary:
+- Sechseläuten
+- Zunft
+status: in_review
+difficulty: 1
+covers:
+- zh-346
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Beim Sechseläuten sind die Zürcher Zünfte die zentralen Akteure, denn sie veranstalten
+      den Umzug und verbrennen den «Böögg» auf dem Sechseläutenplatz.
+  source:
+    verdict: supported
+    note: Quelle 2 beschreibt, dass die 26 Zürcher Zünfte am Montag in einem Umzug durch die Innenstadt
+      zum Sechseläutenplatz ziehen, wo der Böögg verbrannt wird. Das stützt die Antwort und die Erklärung
+      (Frühlingsfest, Böögg). Quelle 1 erwähnt die Zünfte nur am Rand.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

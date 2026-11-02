@@ -1,0 +1,48 @@
+id: urnengang-bund-immer-sonntag
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: An welchem Wochentag finden eidgenössische Abstimmungen und Wahlen in der Schweiz statt?
+options_de:
+  a: Immer an einem Sonntag
+  b: Immer an einem Samstag
+  c: Immer an einem Freitag
+  d: An einem Wochentag, den jeder Kanton selbst wählt
+correct: a
+explanation_de: Urnengänge auf Bundesebene finden stets an einem Sonntag statt. So können möglichst viele
+  Stimmberechtigte teilnehmen, und der Termin ist für alle gleich.
+sources:
+- url: https://www.bk.admin.ch/de/volksabstimmungen
+  checked: &id001 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1978/688_688_688/20221023/de/html/fedlex-data-admin-ch-eli-cc-1978-688_688_688-20221023-de-html-11.html
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id002 2026-11-02
+glossary:
+- Urnengang
+- Abstimmung
+- Wahl
+status: in_review
+difficulty: 1
+covers:
+- zh-051
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Eidgenössische Abstimmungen und Wahlen finden in der Schweiz immer an einem Sonntag statt,
+      wobei die brieflichen Stimmabgabe schon vorher möglich ist und der Bundesrat die Termine im Voraus
+      festlegt.
+  source:
+    verdict: supported
+    note: 'Quelle 3 (Zürcher Einbürgerungsbroschüre) sagt ausdrücklich: «Abstimmungen und Wahlen finden
+      immer an einem Sonntag statt.» Quelle 1 spricht von «Abstimmungssonntagen» und Quelle 2 nennt für
+      die Nationalratswahlen den zweitletzten Sonntag im Oktober, beides passt dazu. Die Aussage zur Teilnahme
+      möglichst vieler Stimmberechtigter in der Erklärung ist aber in keiner Quelle belegt.'
+    at: *id002
+    model: claude-sonnet-5-5
+    version: 1

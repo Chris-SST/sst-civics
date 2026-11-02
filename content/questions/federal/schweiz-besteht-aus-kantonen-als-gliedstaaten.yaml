@@ -1,0 +1,47 @@
+id: schweiz-besteht-aus-kantonen-als-gliedstaaten
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Woraus setzt sich die Schweiz als Bundesstaat zusammen?
+options_de:
+  a: Aus Bezirken als Gliedstaaten
+  b: Aus Sprachgebieten als Gliedstaaten
+  c: Aus Kantonen als Gliedstaaten
+  d: Aus Regionen als Gliedstaaten
+correct: c
+explanation_de: Die Schweiz ist ein Bundesstaat. Die Kantone sind ihre Gliedstaaten und haben eine eigene
+  Verfassung, ein eigenes Parlament und eine eigene Regierung. Bezirke und Regionen sind keine Gliedstaaten.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/foederalismus
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+  checked: 2026-11-02
+glossary:
+- Bundesstaat
+- Kanton
+- Gliedstaat
+status: in_review
+difficulty: 1
+covers:
+- zh-055
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz ist ein Bundesstaat, der sich aus den 26 Kantonen als Gliedstaaten zusammensetzt
+      (Art. 1 und 3 der Bundesverfassung).
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, die Schweiz sei seit 1848 ein Bundesstaat mit den Kantonen als Gliedstaaten,
+      die eine eigene Verfassung, ein eigenes Parlament, eine eigene Regierung und eigene Gerichte haben.
+      Quelle 2 (Glossar) nennt die Kantone als Teilstaaten; dass Bezirke und Regionen keine Gliedstaaten
+      sind, folgt daraus, wird aber nicht ausdrücklich gesagt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,14 @@
+id: einsprache-gegen-steuerveranlagung-schriftlich
+lang: en
+source_version: 1
+question: A taxable person does not agree with their tax assessment. What can they do?
+options:
+  a: They can have a vote held on it at the communal assembly (Gemeindeversammlung).
+  b: They can refuse to pay without taking any further action.
+  c: They can lodge an objection in writing with the tax authority.
+  d: They can submit a popular initiative (Volksinitiative) to the Federal Council (Bundesrat).
+explanation: The legal remedy against an assessment is the objection. It must be lodged in writing with
+  the tax authority, and within a time limit.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,41 @@
+id: erste-frau-im-bundesrat-elisabeth-kopp
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.bundesrat
+question_de: Wer wurde als erste Frau in den Schweizer Bundesrat gewählt?
+options_de:
+  a: Elisabeth Kopp
+  b: Doris Leuthard
+  c: Ruth Dreifuss
+  d: Micheline Calmy-Rey
+correct: a
+explanation_de: Elisabeth Kopp wurde 1984 als erste Frau in den Bundesrat gewählt. Die anderen genannten
+  Frauen wurden erst später Bundesrätinnen.
+sources:
+- url: https://www.admin.ch/gov/de/start/bundesrat/geschichte-des-bundesrats/frauen-im-bundesrat.html
+  checked: &id001 2026-11-02
+glossary:
+- Bundesrat
+- Bundesrätin
+status: in_review
+difficulty: 2
+covers:
+- zh-239
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Elisabeth Kopp wurde 1984 als erste Frau in den Bundesrat gewählt, während Ruth Dreifuss
+      1993, Micheline Calmy-Rey 2002 und Doris Leuthard 2006 folgten.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die Wahl von Elisabeth Kopp 1984 als erste Frau im Bundesrat. Ruth Dreifuss (ab
+      1993), Doris Leuthard (ab 2006) und Micheline Calmy-Rey (ab 2003) kamen später, was die Erklärung
+      bestätigt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

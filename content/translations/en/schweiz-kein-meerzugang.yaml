@@ -1,0 +1,14 @@
+id: schweiz-kein-meerzugang
+lang: en
+source_version: 1
+question: Which statement about the geographical location of Switzerland is correct?
+options:
+  a: Switzerland has no direct access to the sea.
+  b: Switzerland has its own access to the sea via the Rhine.
+  c: Switzerland borders the Mediterranean Sea in the south.
+  d: Switzerland borders the North Sea in the north.
+explanation: Switzerland is a landlocked country and does not lie on the sea. However, its rivers, such
+  as the Rhine and the Rhone, flow into seas.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,14 @@
+id: primarschule-finanzierung-kanton-gemeinde
+lang: en
+source_version: 1
+question: Who finances and organises primary school in the canton of Zürich?
+options:
+  a: Only the church communes (Kirchgemeinden)
+  b: Only the parents of the schoolchildren
+  c: Only the Confederation
+  d: The canton and the communes (Gemeinden) together
+explanation: Compulsory public schooling (Volksschule) in the canton of Zürich is a shared responsibility
+  of the canton and the communes. The canton sets the framework, while the communes run the schools locally.
+status: draft
+reviewed_by: null
+reviewed_at: null

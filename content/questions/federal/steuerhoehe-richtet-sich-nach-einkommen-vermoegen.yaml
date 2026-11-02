@@ -1,0 +1,48 @@
+id: steuerhoehe-richtet-sich-nach-einkommen-vermoegen
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Wovon hängt es hauptsächlich ab, wie viel Einkommens- und Vermögenssteuer eine Person im
+  Kanton Zürich zahlt?
+options_de:
+  a: Vom steuerpflichtigen Einkommen und Vermögen
+  b: Vom Beruf der Person
+  c: Von der Dauer des Wohnsitzes in der Gemeinde
+  d: Von der Anzahl der Stimmrechtsausübungen
+correct: a
+explanation_de: Die Steuer wird auf dem steuerpflichtigen Einkommen und Vermögen berechnet. Wer mehr verdient
+  oder besitzt, zahlt in der Regel mehr Steuern.
+sources:
+- url: https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen/steuererklaerung-natuerliche-personen.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen.html
+  checked: 2026-11-02
+glossary:
+- Steuern
+- Einkommen
+- Vermögen
+status: in_review
+difficulty: 1
+covers:
+- zh-098
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Höhe der Einkommens- und Vermögenssteuer im Kanton Zürich richtet sich hauptsächlich
+      nach dem steuerpflichtigen Einkommen und Vermögen (zusammen mit dem Steuerfuss der Gemeinde), nicht
+      nach Beruf, Wohndauer oder Stimmrechtsausübung.
+  source:
+    verdict: supported
+    note: 'Quelle 2 (Broschüre, Abschnitt «Steuern») nennt Einkommens- und Vermögenssteuer als wichtigste
+      Steuern von Kantonen und Gemeinden und sagt: Wer mehr verdient und mehr Geld hat, muss mehr Steuern
+      bezahlen. Der Begriff «steuerpflichtig» fehlt dort, die Aussage stützt die Antwort aber inhaltlich.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

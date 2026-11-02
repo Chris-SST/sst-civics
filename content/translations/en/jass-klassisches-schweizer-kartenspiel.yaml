@@ -1,0 +1,14 @@
+id: jass-klassisches-schweizer-kartenspiel
+lang: en
+source_version: 1
+question: Which card game is regarded in Switzerland as the classic native card game?
+options:
+  a: Bridge
+  b: Jass
+  c: Poker
+  d: Rummy
+explanation: Jass is regarded as the typical Swiss card game. It is usually played by four people in two
+  teams, often with French or German-Swiss cards. It is played in many families and pubs.
+status: draft
+reviewed_by: null
+reviewed_at: null

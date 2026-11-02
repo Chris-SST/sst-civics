@@ -1,0 +1,46 @@
+id: zuwanderung-fuenfzigerjahre-italien
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gesellschaftswandel
+question_de: Aus welchem Land stammten in den 1950er-Jahren die meisten Arbeitskräfte, die in die Schweiz
+  zuwanderten?
+options_de:
+  a: Aus Italien
+  b: Aus der Türkei
+  c: Aus Portugal
+  d: Aus Spanien
+correct: a
+explanation_de: In den 1950er-Jahren kamen die meisten zugewanderten Arbeitskräfte aus Italien. Die Wirtschaft
+  brauchte damals viele Arbeitskräfte, etwa auf dem Bau und in der Industrie. Später kamen auch viele
+  Menschen aus anderen Ländern.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.bar.admin.ch/de/einwandererland-schweiz
+  checked: *id001
+glossary:
+- Arbeitskraft
+- Zuwanderung
+status: in_review
+difficulty: 1
+covers:
+- zh-216
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In den 1950er-Jahren stammte die grosse Mehrheit der zugewanderten Arbeitskräfte aus Italien,
+      während Spanien, Portugal und die Türkei erst später bedeutend wurden.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Seite 12) sagt: «Ab den 1950er-Jahren sind viele Arbeitnehmende aus Italien gekommen.»
+      Quelle 2 nennt, dass nach 1947 vermehrt Arbeitskräfte aus Italien und anderen Nachbarländern angeworben
+      wurden. Beide nennen nur Italien als Herkunftsland, nicht Türkei, Portugal oder Spanien. «Die meisten»
+      wird dort nicht ausdrücklich gesagt, folgt aber eindeutig aus der alleinigen Nennung.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

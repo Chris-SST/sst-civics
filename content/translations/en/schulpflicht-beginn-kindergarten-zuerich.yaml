@@ -1,0 +1,14 @@
+id: schulpflicht-beginn-kindergarten-zuerich
+lang: en
+source_version: 1
+question: What marks the start of a child's compulsory schooling in the canton of Zurich?
+options:
+  a: Starting secondary school (Sekundarschule)
+  b: Starting primary school (Primarschule)
+  c: Starting playgroup (Spielgruppe)
+  d: Starting kindergarten
+explanation: In the canton of Zurich, kindergarten is part of compulsory state schooling (Volksschule).
+  Compulsory schooling therefore already begins when a child starts kindergarten. Playgroup is voluntary.
+status: draft
+reviewed_by: null
+reviewed_at: null

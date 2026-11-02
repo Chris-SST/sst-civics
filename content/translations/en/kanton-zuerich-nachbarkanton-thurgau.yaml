@@ -1,0 +1,14 @@
+id: kanton-zuerich-nachbarkanton-thurgau
+lang: en
+source_version: 1
+question: Which of the following cantons borders the canton of Zürich directly?
+options:
+  a: Graubünden
+  b: Thurgau
+  c: Uri
+  d: Vaud
+explanation: The canton of Thurgau lies to the north-east of the canton of Zürich and borders it directly.
+  Graubünden, Vaud and Uri do not share a border with Zürich.
+status: draft
+reviewed_by: null
+reviewed_at: null

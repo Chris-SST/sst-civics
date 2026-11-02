@@ -1,0 +1,46 @@
+id: zulassung-motorfahrzeuge-kantonales-strassenverkehrsamt
+version: 1
+scope: zh
+canton: zh
+topic: kanton.sozial.steuern_leistungen
+question_de: Wer lässt im Kanton Zürich ein Motorfahrzeug zum Strassenverkehr zu und gibt dazu die Kontrollschilder
+  ab?
+options_de:
+  a: Die Kantonspolizei bei einer Verkehrskontrolle
+  b: Das Strassenverkehrsamt des Kantons
+  c: Der Touring Club Schweiz
+  d: Die Gemeindeverwaltung am Wohnort
+correct: b
+explanation_de: Die Zulassung von Motorfahrzeugen ist Aufgabe des kantonalen Strassenverkehrsamts. Es
+  gibt auch die Kontrollschilder ab. Gemeinde und Polizei sind dafür nicht zuständig.
+sources:
+- url: https://www.zh.ch/de/mobilitaet/fahrzeuge-kontrollschilder.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/sicherheitsdirektion/strassenverkehrsamt.html
+  checked: *id001
+glossary:
+- Zulassung
+- Motorfahrzeug
+- Kontrollschild
+- Strassenverkehrsamt
+status: in_review
+difficulty: 1
+covers:
+- zh-113
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Kanton Zürich ist das Strassenverkehrsamt die zuständige Behörde, die Motorfahrzeuge
+      zum Verkehr zulässt, den Fahrzeugausweis ausstellt und die Kontrollschilder abgibt.
+  source:
+    verdict: supported
+    note: Quelle 2 nennt das Strassenverkehrsamt als zuständig für Zulassungen (Anmeldungen) von Fahrzeugen.
+      Quelle 1 beschreibt, dass das Strassenverkehrsamt Fahrzeuge einlöst und zulässt und Kontrollschilder
+      zurücknimmt oder neu einlöst. Eine Zuständigkeit von Gemeinde, Polizei oder TCS wird nicht genannt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

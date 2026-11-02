@@ -1,0 +1,14 @@
+id: zivildienst-anstelle-militaerdienst
+lang: en
+source_version: 1
+question: What applies in Switzerland to civilian service (Zivildienst) in relation to military service?
+options:
+  a: Civilian service is only available to women.
+  b: Civilian service replaces the obligation to pay tax.
+  c: Civilian service must be performed in addition to military service.
+  d: Civilian service can be performed instead of military service.
+explanation: Civilian service is a civilian alternative service for people who do not wish to perform
+  military service. It is possible upon admission and lasts longer than military service.
+status: draft
+reviewed_by: null
+reviewed_at: null

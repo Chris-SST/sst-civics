@@ -1,0 +1,13 @@
+id: raetoromanisch-vierte-landessprache
+lang: en
+source_version: 1
+question: Besides German, French and Italian, which language is also a national language of Switzerland?
+options:
+  a: Spanish
+  b: Portuguese
+  c: English
+  d: Romansh
+explanation: Romansh is the fourth national language. It is spoken mainly in the canton of Graubünden.
+status: draft
+reviewed_by: null
+reviewed_at: null

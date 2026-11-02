@@ -1,0 +1,16 @@
+id: sbb-abkuerzung-bedeutung-bundesbahnen
+lang: en
+source_version: 1
+question: What does the abbreviation "SBB", which you see on trains and at railway stations in Switzerland,
+  stand for?
+options:
+  a: Swiss Bus Operators (Schweizer Busbetriebe)
+  b: Swiss Federal Railways (Schweizerische Bundesbahnen)
+  c: Swiss Railway and Bus Operators (Schweizerische Bahn- und Busbetriebe)
+  d: Swiss Mountain Railways (Schweizer Bergbahnen)
+explanation: SBB stands for Swiss Federal Railways (Schweizerische Bundesbahnen). The company operates
+  a large part of the Swiss rail network and is owned by the Confederation. There are also other railway
+  companies, for example the BLS or the Rhaetian Railway.
+status: draft
+reviewed_by: null
+reviewed_at: null

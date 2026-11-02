@@ -1,0 +1,45 @@
+id: stadtrat-zuerich-aufgabe-verwaltung-leitung
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.organisation.gemeinderat_stadtrat
+question_de: Welche Aufgabe hat der Stadtrat der Stadt Zürich?
+options_de:
+  a: Er führt die kantonale Steuerverwaltung in der Stadt.
+  b: Er erlässt die kantonalen Gesetze für das Stadtgebiet.
+  c: Er spricht Recht in Streitfällen zwischen Einwohnerinnen und Einwohnern.
+  d: Er steuert die Stadtverwaltung und legt die Leitlinien für das Handeln der Stadt fest.
+correct: d
+explanation_de: Der Stadtrat ist die Exekutive der Stadt Zürich. Er leitet die Stadtverwaltung und bestimmt,
+  in welche Richtung die Stadt sich entwickelt. Gerichte sprechen Recht, und kantonale Gesetze erlässt
+  der Kantonsrat.
+sources:
+- url: https://www.stadt-zuerich.ch/de/politik-und-verwaltung/behoerden-und-organe/stadtrat.html
+  checked: &id001 2026-11-02
+glossary:
+- Stadtrat
+- Stadtverwaltung
+- Exekutive
+status: in_review
+difficulty: 2
+covers:
+- zh-122
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Stadtrat ist die Exekutive der Stadt Zürich und leitet die Stadtverwaltung sowie legt
+      die Leitlinien des städtischen Handelns fest, während Gesetzgebung (Kanton) und Rechtsprechung (Gerichte)
+      nicht zu seinen Aufgaben gehören.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den Stadtrat die Regierung der Stadt Zürich. Er sei für die strategische Entwicklung
+      und langfristige Planung verantwortlich und leite als oberste Behörde die städtische Verwaltung.
+      Das deckt Antwort d und die Erklärung; die Aussage zum Kantonsrat und zu den Gerichten wird von
+      der Seite nicht behandelt, ist für die Antwort aber nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

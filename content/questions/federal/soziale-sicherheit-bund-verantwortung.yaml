@@ -1,0 +1,44 @@
+id: soziale-sicherheit-bund-verantwortung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Welche staatliche Ebene trägt in der Schweiz die Verantwortung, die Bevölkerung sozial abzusichern,
+  zum Beispiel durch die Altersvorsorge?
+options_de:
+  a: Die Bezirke
+  b: Nur die Gemeinden
+  c: Der Bund
+  d: Nur die Kantone
+correct: c
+explanation_de: Die Bundesverfassung weist dem Bund wichtige Aufgaben der sozialen Sicherheit zu. Dazu
+  gehören zum Beispiel die Alters- und Hinterlassenenversicherung (AHV) und die Invalidenversicherung.
+  So gelten für die ganze Schweiz einheitliche Grundlagen.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Bund
+- Sozialversicherung
+- AHV
+status: in_review
+difficulty: 2
+covers:
+- zh-052
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Bund ist für die Altersvorsorge zuständig, denn die AHV und die Pensionskassenregelung
+      (BVG) sind in der Bundesverfassung geregelt und werden auf Bundesebene gesetzlich festgelegt.
+  source:
+    verdict: supported
+    note: 'Die Bundesverfassung sagt: «Der Bund trifft Massnahmen für eine ausreichende Alters-, Hinterlassenen-
+      und Invalidenvorsorge» und «Der Bund erlässt Vorschriften über die Alters-, Hinterlassenen- und
+      Invalidenversicherung». Das stützt Antwort c und die Erklärung (AHV, IV).'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

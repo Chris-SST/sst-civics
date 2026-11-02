@@ -1,0 +1,46 @@
+id: geldpolitik-zustaendigkeit-bund
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.foederalismus
+question_de: Wer ist in der Schweiz für die Geldpolitik zuständig?
+options_de:
+  a: Der Bund
+  b: Die Gemeinden
+  c: Die Kantonalbanken
+  d: Die Kantone gemeinsam
+correct: a
+explanation_de: Die Geld- und Währungspolitik ist nach der Bundesverfassung Sache des Bundes. Er hat das
+  Recht, Münzen und Banknoten auszugeben. Die Schweizerische Nationalbank führt die Geldpolitik im Auftrag
+  des Bundes aus und ist dabei unabhängig.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Geldpolitik
+- Bund
+- Kanton
+- Gemeinde
+status: in_review
+difficulty: 1
+covers:
+- zh-012
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Geld- und Währungspolitik ist nach Artikel 99 der Bundesverfassung Sache des Bundes
+      und wird von der unabhängigen Schweizerischen Nationalbank als Bundesinstitution im Gesamtinteresse
+      des Landes geführt, nicht von Gemeinden, Kantonalbanken oder Kantonen.
+  source:
+    verdict: supported
+    note: Art. 99 Abs. 1 BV sagt ausdrücklich, das Geld- und Währungswesen sei Sache des Bundes und nur
+      ihm stehe das Recht zur Ausgabe von Münzen und Banknoten zu. Abs. 2 bestätigt, dass die unabhängige
+      Nationalbank die Geld- und Währungspolitik führt und dabei unter Mitwirkung und Aufsicht des Bundes
+      verwaltet wird.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

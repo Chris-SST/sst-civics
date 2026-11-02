@@ -1,0 +1,48 @@
+id: regelmaessige-wahlen-vertreter-bestimmen
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: Welche Bedeutung haben regelmässige Wahlen in einer Demokratie?
+options_de:
+  a: Die Bevölkerung bestimmt selbst, wer sie vertritt.
+  b: Die Regierung ernennt ihre Nachfolger selbst.
+  c: Die Parteien legen die Vertretung unter sich fest.
+  d: Das Gericht bestimmt, wer ein Amt übernimmt.
+correct: a
+explanation_de: Bei Wahlen entscheiden die Stimmberechtigten, wer sie in Parlament oder Regierung vertritt.
+  Da die Wahlen regelmässig stattfinden, können sie Personen bestätigen oder durch andere ersetzen. So
+  behält die Bevölkerung Einfluss auf die Politik.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/politisches-system
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/bundesversammlung-parlament
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Wahlen
+- Demokratie
+- Stimmberechtigte
+status: in_review
+difficulty: 1
+covers:
+- zh-023
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Bei regelmässigen Wahlen bestimmt die stimmberechtigte Bevölkerung selbst, wer sie in Parlament
+      und Regierung vertritt, während die übrigen Antworten dem demokratischen Grundsatz widersprechen.
+  source:
+    verdict: supported
+    note: Quelle 3 (Broschüre Kanton Zürich) sagt, das Wahlrecht bedeute, Regierung und Parlament zu wählen,
+      jede Person dürfe die gewünschte Vertretung wählen, und die Bürgerinnen und Bürger wählten alle
+      4 Jahre neu; im Glossar steht, das Volk habe in einer Demokratie die grösste Macht. Quelle 2 bestätigt,
+      dass die Abgeordneten alle 4 Jahre vom Volk gewählt werden.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

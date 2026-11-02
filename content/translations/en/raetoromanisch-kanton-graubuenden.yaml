@@ -1,0 +1,14 @@
+id: raetoromanisch-kanton-graubuenden
+lang: en
+source_version: 1
+question: In which canton is Romansh spoken?
+options:
+  a: In the canton of Fribourg
+  b: In the canton of Ticino
+  c: In the canton of Valais
+  d: In the canton of Graubünden
+explanation: Romansh is the fourth national language of Switzerland. It is spoken in the canton of Graubünden.
+  Graubünden is the only trilingual canton in Switzerland.
+status: draft
+reviewed_by: null
+reviewed_at: null

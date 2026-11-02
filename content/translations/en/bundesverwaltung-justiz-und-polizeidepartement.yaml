@@ -1,0 +1,16 @@
+id: bundesverwaltung-justiz-und-polizeidepartement
+lang: en
+source_version: 1
+question: Which of the following bodies belongs to the federal administration?
+options:
+  a: The National Council (Nationalrat)
+  b: The Federal Assembly (Bundesversammlung)
+  c: The Federal Supreme Court (Bundesgericht)
+  d: The Federal Department of Justice and Police
+explanation: The federal administration is divided into departments. The Federal Department of Justice
+  and Police is one of them and belongs to the administration under the leadership of the Federal Council
+  (Bundesrat). The National Council and the Federal Assembly belong to Parliament, and the Federal Supreme
+  Court belongs to the judiciary.
+status: draft
+reviewed_by: null
+reviewed_at: null

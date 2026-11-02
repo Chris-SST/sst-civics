@@ -1,0 +1,15 @@
+id: anzahl-politische-gemeinden-ende-2021
+lang: en
+source_version: 1
+question: Approximately how many political communes (Gemeinden) were there in Switzerland at the end of
+  2021?
+options:
+  a: Around 1,200
+  b: Around 800
+  c: Around 2,200
+  d: Around 4,200
+explanation: At the end of 2021, Switzerland had around 2,200 political communes. Their number is slowly
+  falling, because communes keep merging with one another. That is why the date of the figure matters.
+status: draft
+reviewed_by: null
+reviewed_at: null

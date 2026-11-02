@@ -1,0 +1,14 @@
+id: anzahl-landessprachen-schweiz
+lang: en
+source_version: 1
+question: How many national languages does Switzerland have?
+options:
+  a: Six
+  b: Five
+  c: Three
+  d: Four
+explanation: 'Switzerland has four national languages: German, French, Italian and Romansh. The diversity
+  of languages is part of the country''s identity.'
+status: draft
+reviewed_by: null
+reviewed_at: null

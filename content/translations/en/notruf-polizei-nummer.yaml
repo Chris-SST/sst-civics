@@ -1,0 +1,15 @@
+id: notruf-polizei-nummer
+lang: en
+source_version: 1
+question: Which telephone number do you dial in Switzerland if you need the police in an emergency?
+options:
+  a: '143'
+  b: '118'
+  c: '144'
+  d: '117'
+explanation: The police can be reached throughout Switzerland on the number 117. The fire brigade has
+  118, and the ambulance service has 144. The number 143 is the helpline of Die Dargebotene Hand (a telephone
+  support service) for people in crisis.
+status: draft
+reviewed_by: null
+reviewed_at: null

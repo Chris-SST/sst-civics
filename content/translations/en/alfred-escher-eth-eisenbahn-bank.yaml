@@ -1,0 +1,15 @@
+id: alfred-escher-eth-eisenbahn-bank
+lang: en
+source_version: 1
+question: What is the Zurich politician and entrepreneur Alfred Escher known for?
+options:
+  a: He led the Swiss troops in the Sonderbund War.
+  b: He wrote the first Federal Constitution on his own.
+  c: He founded the Red Cross in Geneva.
+  d: He was involved in the ETH, the building of the railways and the founding of Credit Suisse.
+explanation: In the 19th century, Alfred Escher promoted the founding of ETH Zurich and the building of
+  the railways, especially the Gotthard Railway. He also founded the Swiss Credit Institution (Schweizerische
+  Kreditanstalt), today's Credit Suisse. He is regarded as a visionary of modern Switzerland.
+status: draft
+reviewed_by: null
+reviewed_at: null

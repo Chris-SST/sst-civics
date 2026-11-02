@@ -1,0 +1,15 @@
+id: kleine-gemeinde-vertretung-gemeindepraesident
+lang: en
+source_version: 1
+question: Who represents a smaller Zurich commune (Gemeinde) externally?
+options:
+  a: the communal president (Gemeindepräsidentin or Gemeindepräsident)
+  b: the district councillor (Bezirksrätin or Bezirksrat)
+  c: the communal clerk (Gemeindeschreiberin or Gemeindeschreiber)
+  d: the school principal (Schulleiterin or Schulleiter)
+explanation: In smaller Zurich communes, the communal president represents the commune externally. He
+  or she chairs the communal council (Gemeinderat). In the city of Zurich, this role is taken by the city
+  president (Stadtpräsidentin or Stadtpräsident).
+status: draft
+reviewed_by: null
+reviewed_at: null

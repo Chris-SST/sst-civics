@@ -1,0 +1,47 @@
+id: petition-ohne-stimmrecht-zuerich
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.abstimmungen_wahlen
+question_de: Welche politische Möglichkeit haben Ausländerinnen und Ausländer im Kanton Zürich, die kein
+  Stimmrecht haben?
+options_de:
+  a: Sie können an der Urne über kantonale Vorlagen abstimmen.
+  b: Sie können Mitglieder des Kantonsrats wählen.
+  c: Sie können sich mit einer Petition an die Behörden wenden.
+  d: Sie können eine Volksinitiative im Kanton einreichen.
+correct: c
+explanation_de: Das Petitionsrecht steht allen Personen offen, auch Menschen ohne Stimmrecht. Sie können
+  den Behörden so Anliegen, Wünsche oder Kritik schriftlich mitteilen. Abstimmen, wählen und Initiativen
+  unterschreiben dürfen nur Stimmberechtigte.
+sources:
+- url: https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/initiativen-referenden-anfragerecht.html
+  checked: &id001 2026-11-02
+glossary:
+- Petition
+- Stimmrecht
+- Volksinitiative
+- Kantonsrat
+status: in_review
+difficulty: 2
+covers:
+- zh-104
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Petitionsrecht steht in der Schweiz jeder Person unabhängig von Staatsangehörigkeit
+      und Stimmrecht zu, während Abstimmen, Wählen und das Unterzeichnen bzw. Einreichen einer Volksinitiative
+      das Stimmrecht voraussetzen.
+  source:
+    verdict: supported
+    note: Die Seite hält fest, dass die Petition ein verfassungsrechtlich garantiertes Grundrecht ist
+      und sich jede Person, auch ohne Stimmrecht, schriftlich mit Bitten, Vorschlägen, Kritik oder Beschwerden
+      an eine Behörde wenden kann. Initiativen, Referenden und Abstimmungen sind dagegen Stimmberechtigten
+      vorbehalten.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

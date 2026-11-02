@@ -1,0 +1,46 @@
+id: einzige-obligatorische-versicherung-krankenversicherung
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.gesundheit
+question_de: Welche der folgenden Versicherungen ist in der Schweiz für alle Einwohnerinnen und Einwohner
+  gesetzlich vorgeschrieben?
+options_de:
+  a: Die Rechtsschutzversicherung
+  b: Die Krankenversicherung
+  c: Die Reiseversicherung
+  d: Die Hausratversicherung
+correct: b
+explanation_de: Die Krankenversicherung ist für alle Personen mit Wohnsitz in der Schweiz obligatorisch.
+  Hausrat-, Rechtsschutz- und Reiseversicherungen sind freiwillig.
+sources:
+- url: https://www.bag.admin.ch/de/krankenversicherung-das-wichtigste-in-kuerze
+  checked: &id001 2026-11-02
+- url: https://www.bag.admin.ch/de/krankenversicherung-versicherungspflicht
+  checked: 2026-11-02
+glossary:
+- Krankenversicherung
+- Hausratversicherung
+- Rechtsschutzversicherung
+status: in_review
+difficulty: 1
+covers:
+- zh-155
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die obligatorische Krankenpflegeversicherung (Grundversicherung) ist nach dem Krankenversicherungsgesetz
+      für alle Personen mit Wohnsitz in der Schweiz vorgeschrieben, während Rechtsschutz-, Reise- und
+      Hausratversicherung freiwillig sind.
+  source:
+    verdict: supported
+    note: 'Quelle 1 hält fest: «Die Krankenversicherung ist in der Schweiz obligatorisch.» Dass Hausrat-,
+      Rechtsschutz- und Reiseversicherungen freiwillig sind, steht nicht ausdrücklich da, folgt aber daraus,
+      dass nur die Krankenversicherung als obligatorisch genannt wird.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

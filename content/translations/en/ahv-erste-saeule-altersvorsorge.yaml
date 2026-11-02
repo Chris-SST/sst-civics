@@ -1,0 +1,14 @@
+id: ahv-erste-saeule-altersvorsorge
+lang: en
+source_version: 1
+question: Which institution forms the first pillar of old-age provision in Switzerland?
+options:
+  a: The private pillar 3a
+  b: The state old-age and survivors' insurance (OASI) (AHV)
+  c: The pension fund
+  d: The health insurer (Krankenkasse)
+explanation: The OASI is the state provision and forms the first pillar. The pension fund is the second
+  pillar, and private provision is the third pillar.
+status: draft
+reviewed_by: null
+reviewed_at: null

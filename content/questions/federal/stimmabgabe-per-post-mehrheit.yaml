@@ -1,0 +1,50 @@
+id: stimmabgabe-per-post-mehrheit
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: Wie geben die meisten Stimmberechtigten in der Schweiz heute ihre Stimme bei Abstimmungen
+  und Wahlen ab?
+options_de:
+  a: Sie geben sie am Abstimmungssonntag in der Gemeindeversammlung ab.
+  b: Sie legen sie am Abstimmungssonntag persönlich in die Urne.
+  c: Sie schicken sie per Post an die Gemeinde.
+  d: Sie geben sie über eine Internetseite des Bundes ab.
+correct: c
+explanation_de: Die Mehrheit der Stimmberechtigten stimmt brieflich ab, also auf dem Postweg. Der Gang
+  zur Urne am Abstimmungssonntag ist heute für die meisten nicht mehr üblich.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/der-weg-zur-modernen-direkten-demokratie-in-der-schweiz
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksabstimmungen.html
+  checked: 2026-11-02
+glossary:
+- Stimmberechtigte
+- briefliche Stimmabgabe
+- Urne
+status: in_review
+difficulty: 1
+covers:
+- zh-050
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die meisten Stimmberechtigten in der Schweiz stimmen heute brieflich ab, indem sie ihren
+      Stimmzettel per Post an die Gemeinde schicken oder dort einwerfen, während die Urne am Abstimmungssonntag
+      und die Gemeindeversammlung nur noch von wenigen genutzt werden und E-Voting nicht über eine Bundesseite
+      angeboten wird.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass heute über 90 Prozent aller Stimmen brieflich auf dem Postweg oder elektronisch
+      abgegeben werden und die Stimmlokale am Abstimmungssonntag meist leer sind. Das stützt Antwort c
+      und die Erklärung. Quelle 2 nennt den Briefversand ebenfalls als Möglichkeit, macht aber keine Aussage
+      zur Mehrheit.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

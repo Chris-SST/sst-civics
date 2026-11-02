@@ -1,0 +1,14 @@
+id: anmeldung-wohngemeinde-bei-zuzug
+lang: en
+source_version: 1
+question: What must people do who settle in a commune (Gemeinde)?
+options:
+  a: They must register with the commune where they live.
+  b: They must report to the army.
+  c: They must report to the Federal Council (Bundesrat).
+  d: They must report to the tax administration of the Confederation.
+explanation: Anyone who moves to a new place must register with the commune where they live. This is usually
+  done at the residents' registration office. In this way, the commune is informed about its residents.
+status: draft
+reviewed_by: null
+reviewed_at: null

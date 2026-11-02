@@ -1,0 +1,48 @@
+id: marignano-1515-ende-expansion
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gruendung
+question_de: Welche Folge hatte die Niederlage der Eidgenossen bei Marignano im Jahr 1515?
+options_de:
+  a: Sie lösten den Bund der Orte auf.
+  b: Sie beendeten ihre Expansionspolitik.
+  c: Sie führten die Reformation ein.
+  d: Sie eroberten danach Mailand dauerhaft.
+correct: b
+explanation_de: Nach Marignano gaben die Eidgenossen ihre Politik der Eroberung auf. Das gilt als Anfang
+  der späteren Neutralität. Der Bund der Orte blieb bestehen.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/neutralitaet
+  checked: *id001
+glossary:
+- Marignano
+- Expansionspolitik
+- Neutralität
+status: draft
+difficulty: 2
+covers:
+- zh-228
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach der Niederlage bei Marignano 1515 gaben die Eidgenossen ihre Expansionspolitik in
+      Oberitalien auf und gingen zur Neutralität über, während der Bund weiterbestand, die Reformation
+      erst ab 1519 von Zwingli ausging und Mailand nicht dauerhaft erobert wurde.
+  source:
+    verdict: unclear
+    note: Quelle 3 sagt nur, dass die Neutralität der Schweiz auf die Niederlage bei Marignano 1515 (und
+      den Westfälischen Frieden 1648) zurückgeht. Dass die Eidgenossen danach ihre Expansionspolitik beendeten
+      und der Bund der Orte bestehen blieb, steht in keiner Quelle ausdrücklich. Die Quellen 1 und 2 äussern
+      sich nicht zu Marignano.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

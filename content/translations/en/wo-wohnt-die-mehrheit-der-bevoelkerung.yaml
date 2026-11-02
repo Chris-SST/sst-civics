@@ -1,0 +1,14 @@
+id: wo-wohnt-die-mehrheit-der-bevoelkerung
+lang: en
+source_version: 1
+question: In which major region of Switzerland does the majority of the population live?
+options:
+  a: In the Alps
+  b: In Ticino
+  c: On the Central Plateau (Mittelland)
+  d: In the Jura
+explanation: Most of the large cities are located on the Central Plateau between the Jura and the Alps.
+  The largest part of the population lives there. The Alps are large, but sparsely populated.
+status: draft
+reviewed_by: null
+reviewed_at: null

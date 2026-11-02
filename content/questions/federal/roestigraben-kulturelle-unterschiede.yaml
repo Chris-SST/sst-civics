@@ -1,0 +1,49 @@
+id: roestigraben-kulturelle-unterschiede
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.sprachen
+question_de: Was bezeichnet man in der Schweiz mit dem Begriff «Röstigraben»?
+options_de:
+  a: Die Alpen als Trennlinie zwischen Nord und Süd
+  b: Die Unterschiede zwischen Stadt und Land
+  c: Die Grenze zwischen der Schweiz und Deutschland
+  d: Die kulturellen Unterschiede zwischen der Deutschschweiz und der Romandie
+correct: d
+explanation_de: Der Begriff «Röstigraben» ist ein bildlicher Ausdruck. Er beschreibt die kulturellen Unterschiede
+  zwischen der Deutschschweiz und der französischsprachigen Romandie. Diese zeigen sich zum Beispiel manchmal
+  bei Abstimmungen.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/schweizer-nationalgerichte
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.aboutswitzerland.eda.admin.ch/de/mehrsprachigkeit
+  checked: 2026-11-02
+glossary:
+- Röstigraben
+- Deutschschweiz
+- Romandie
+status: in_review
+difficulty: 2
+covers:
+- zh-286
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Begriff «Röstigraben» bezeichnet die kulturellen und mentalitätsmässigen Unterschiede
+      zwischen der Deutschschweiz und der französischsprachigen Romandie, die sich auch bei Abstimmungen
+      zeigen.
+  source:
+    verdict: supported
+    note: Quelle 2 (Broschüre des Kantons Zürich) nennt den Röstigraben die kulturelle Grenze zwischen
+      der deutsch- und der französischsprachigen Schweiz. Quelle 1 sagt, er hebe Unterschiede zwischen
+      der französischen und der deutschen Schweiz hervor. Der Hinweis auf Abstimmungen in der Erklärung
+      steht nicht in den Quellen, ist aber für die Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

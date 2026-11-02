@@ -1,0 +1,44 @@
+id: auslaender-anzahl-schweiz-2020
+version: 1
+scope: federal
+canton: null
+topic: bund.alltag
+question_de: Wie viele Personen ohne Schweizer Pass wohnten im Jahr 2020 ungefähr ständig in der Schweiz?
+options_de:
+  a: rund 2,1 Millionen
+  b: rund 0,8 Millionen
+  c: rund 3,5 Millionen
+  d: rund 1,4 Millionen
+correct: a
+explanation_de: Ende 2020 lebten rund 2,1 Millionen Ausländerinnen und Ausländer in der Schweiz. Sie gehören
+  zur ständigen Wohnbevölkerung. Die Zahlen veröffentlicht das Bundesamt für Statistik.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/stand-entwicklung.html
+  checked: 2026-11-02
+glossary:
+- Wohnbevölkerung
+- Bundesamt für Statistik
+status: in_review
+difficulty: 2
+covers:
+- zh-276
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Ende 2020 lebten gemäss Bundesamt für Statistik rund 2,16 Millionen Ausländerinnen und
+      Ausländer ständig in der Schweiz, was etwa 25 Prozent der ständigen Wohnbevölkerung entspricht,
+      also ungefähr 2,1 Millionen.
+  source:
+    verdict: supported
+    note: Quelle 1 (Seite 47) nennt für 2020 ausdrücklich 2,1 Millionen Ausländerinnen und Ausländer in
+      der Schweiz, rund 25 Prozent der Gesamtbevölkerung. Quelle 2 passt dazu (rund ein Viertel von 8
+      670 300 Einwohnenden), nennt die Zahl aber nicht direkt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

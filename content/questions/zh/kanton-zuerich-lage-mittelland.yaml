@@ -1,0 +1,45 @@
+id: kanton-zuerich-lage-mittelland
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: In welcher geografischen Grossregion der Schweiz liegt der Kanton Zürich?
+options_de:
+  a: In den Voralpen
+  b: Im Jura
+  c: Im Mittelland
+  d: In den Zentralalpen
+correct: c
+explanation_de: Der Kanton Zürich liegt im Schweizer Mittelland, dem dicht besiedelten Gebiet zwischen
+  Jura und Alpen. Dort leben die meisten Menschen der Schweiz.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/mittelland
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/direktion-der-justiz-und-des-innern/statthalteraemter-bezirksratskanzleien/bezirk-horgen.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Mittelland
+- Kanton
+status: in_review
+difficulty: 1
+covers:
+- zh-287
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Kanton Zürich liegt im Schweizer Mittelland, der Grossregion zwischen Jura und Alpen,
+      auch wenn einzelne Randgebiete wie das Zürcher Oberland hügelig sind.
+  source:
+    verdict: supported
+    note: 'Quelle 3 (Broschüre des Kantons Zürich, S. 61) sagt ausdrücklich: «Der Kanton Zürich gehört
+      zum Mittelland.» Quelle 1 stützt die Beschreibung des Mittellandes (dicht besiedelt, zwischen Jura
+      und Alpen, mit Zürichsee) und die Aussage, dass dort die meisten Menschen leben.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

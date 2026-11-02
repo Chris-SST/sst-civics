@@ -1,0 +1,44 @@
+id: vereinigte-bundesversammlung-wahl-bundesrat-bundesgericht
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.parlament
+question_de: Wer wählt die Mitglieder des Bundesrates und des Bundesgerichts?
+options_de:
+  a: Das Volk an der Urne
+  b: Die Kantonsregierungen
+  c: Der Nationalrat und der Ständerat gemeinsam
+  d: Die Parteipräsidentinnen und Parteipräsidenten
+correct: c
+explanation_de: Nationalrat und Ständerat tagen für diese Wahlen gemeinsam als Vereinigte Bundesversammlung.
+  Sie wählen die Mitglieder des Bundesrates und des Bundesgerichts. Das Volk wählt auf Bundesebene nur
+  den Nationalrat, in den meisten Kantonen auch den Ständerat.
+sources:
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet/aufgaben-der-bundesversammlung/wahlen/wahl-mitglieder-bundesrat
+  checked: &id001 2026-11-02
+glossary:
+- Vereinigte Bundesversammlung
+- Bundesrat
+- Bundesgericht
+status: in_review
+difficulty: 2
+covers:
+- zh-045
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Vereinigte Bundesversammlung, also National- und Ständerat gemeinsam, wählt sowohl
+      die Mitglieder des Bundesrates als auch jene des Bundesgerichts.
+  source:
+    verdict: supported
+    note: Die Seite sagt, die Mitglieder des Bundesrates würden von der Vereinigten Bundesversammlung
+      gewählt, also von den vereinigten Mitgliedern des National- und des Ständerates. Sie nennt auch,
+      dass diese die Richterinnen und Richter des Bundesgerichts wählt. Die Aussage der Erklärung zur
+      Volkswahl des Nationalrates und Ständerates wird nicht belegt, ist aber für die Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

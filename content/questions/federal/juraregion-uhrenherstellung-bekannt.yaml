@@ -1,0 +1,46 @@
+id: juraregion-uhrenherstellung-bekannt
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Wofür ist die Juraregion in der Schweiz wirtschaftlich berühmt?
+options_de:
+  a: Für die Pharmaindustrie
+  b: Für grosse Banken
+  c: Für den Weinbau am Zürichsee
+  d: Für die Herstellung von Uhren
+correct: d
+explanation_de: Im Jurabogen haben viele bekannte Uhrenfirmen ihren Sitz und ihre Werkstätten. Die Region
+  ist daher ein Zentrum der Schweizer Uhrenindustrie.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/uhrenindustrie
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.seco.admin.ch/de/europaeische-union-eu
+  checked: 2026-11-02
+glossary:
+- Juraregion
+- Uhrenindustrie
+status: in_review
+difficulty: 2
+covers:
+- zh-311
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Jurabogen (u.a. Kanton Jura, Neuenburg, Biel) ist weltberühmt für die Uhrenindustrie,
+      während Pharma in Basel, Banken in Zürich und Genf und der Zürichsee-Weinbau nicht die Juraregion
+      betreffen.
+  source:
+    verdict: supported
+    note: Quelle 1 (EDA) nennt die Uhrenindustrie und hält fest, dass die meisten der rund 700 Uhrenunternehmen
+      in Genf und im Jurabogen angesiedelt sind. Das stützt die Erklärung, dass der Jurabogen ein Zentrum
+      der Uhrenindustrie ist.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,42 @@
+id: raetoromanisch-kanton-graubuenden
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.sprachen
+question_de: In welchem Kanton wird Rätoromanisch gesprochen?
+options_de:
+  a: Im Kanton Freiburg
+  b: Im Kanton Tessin
+  c: Im Kanton Wallis
+  d: Im Kanton Graubünden
+correct: d
+explanation_de: Rätoromanisch ist die vierte Landessprache der Schweiz. Es wird im Kanton Graubünden gesprochen.
+  Graubünden ist der einzige dreisprachige Kanton der Schweiz.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sprachen
+  checked: &id001 2026-11-02
+glossary:
+- Rätoromanisch
+- Graubünden
+- Landessprache
+status: in_review
+difficulty: 1
+covers:
+- zh-285
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Rätoromanisch ist im Kanton Graubünden beheimatet, wo es neben Deutsch und Italienisch
+      eine der drei Amtssprachen ist.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Rätoromanisch als vierte Landessprache und sagt, es sei im Kanton Graubünden
+      verbreitet. Die Aussage, Graubünden sei der einzige dreisprachige Kanton, steht dort nicht ausdrücklich,
+      ist für die Antwort aber nicht nötig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

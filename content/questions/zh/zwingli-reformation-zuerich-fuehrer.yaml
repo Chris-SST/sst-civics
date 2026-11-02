@@ -1,0 +1,43 @@
+id: zwingli-reformation-zuerich-fuehrer
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geschichte.zuerich
+question_de: Wer führte in den 1520er-Jahren die Reformation in Zürich an?
+options_de:
+  a: Heinrich Bullinger
+  b: Ulrich Zwingli
+  c: Martin Luther
+  d: Johannes Calvin
+correct: b
+explanation_de: Ulrich Zwingli war Leutpriester am Grossmünster und führte in Zürich die Reformation ein.
+  Der Rat der Stadt unterstützte ihn dabei. Calvin wirkte in Genf, Luther in Deutschland.
+sources:
+- url: https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html
+  checked: &id001 2026-11-02
+glossary:
+- Reformation
+- Ulrich Zwingli
+status: in_review
+difficulty: 1
+covers:
+- zh-250
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Ulrich Zwingli führte ab 1519 als Leutpriester am Grossmünster in den 1520er-Jahren die
+      Reformation in Zürich an, während Bullinger erst nach Zwinglis Tod 1531 sein Nachfolger wurde, Luther
+      in Wittenberg und Calvin in Genf wirkte.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass Huldrych Zwingli mit Unterstützung des Rates die Reformation in Zürich in
+      wenigen Jahren durchsetzte. Sie nennt Daten aus den 1520er-Jahren (1522, 1523, 1525) und bezeichnet
+      ihn als Chorherrn am Grossmünster. Die Angabe «Leutpriester» steht nicht im Text, ist aber für die
+      Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

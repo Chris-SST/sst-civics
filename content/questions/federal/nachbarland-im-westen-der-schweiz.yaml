@@ -1,0 +1,41 @@
+id: nachbarland-im-westen-der-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Welches Land grenzt im Westen an die Schweiz?
+options_de:
+  a: Deutschland
+  b: Italien
+  c: Frankreich
+  d: Österreich
+correct: c
+explanation_de: Im Westen und Nordwesten grenzt die Schweiz an Frankreich. Deutschland liegt im Norden,
+  Österreich und Liechtenstein im Osten, Italien im Süden.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geografie
+  checked: &id001 2026-11-02
+glossary:
+- Nachbarland
+status: in_review
+difficulty: 1
+covers:
+- zh-272
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Frankreich grenzt im Westen an die Schweiz, während Deutschland im Norden, Italien im Süden
+      und Österreich (zusammen mit Liechtenstein) im Osten liegt.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die fünf Nachbarländer (Deutschland, Frankreich, Italien, Liechtenstein, Österreich)
+      und sagt, der Jura im Westen der Schweiz bilde die natürliche Grenze zu Frankreich. Die Himmelsrichtungen
+      der übrigen Länder (Norden, Osten, Süden) stehen nicht ausdrücklich im Text, sind für die richtige
+      Antwort aber nicht nötig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,15 @@
+id: geldpolitik-zustaendigkeit-bund
+lang: en
+source_version: 1
+question: Who is responsible for monetary policy in Switzerland?
+options:
+  a: The Confederation
+  b: The communes (Gemeinden)
+  c: The cantonal banks
+  d: The cantons together
+explanation: Under the Federal Constitution, monetary and currency policy is a matter for the Confederation.
+  It has the right to issue coins and banknotes. The Swiss National Bank carries out monetary policy on
+  behalf of the Confederation and is independent in doing so.
+status: draft
+reviewed_by: null
+reviewed_at: null

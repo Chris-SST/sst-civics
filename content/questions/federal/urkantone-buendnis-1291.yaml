@@ -1,0 +1,43 @@
+id: urkantone-buendnis-1291
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gruendung
+question_de: Welche drei Gebiete verbündeten sich 1291 und gelten als Kern der späteren Eidgenossenschaft?
+options_de:
+  a: Uri, Schwyz und Unterwalden
+  b: Glarus, Zug und Uri
+  c: Basel, Schaffhausen und Appenzell
+  d: Zürich, Bern und Luzern
+correct: a
+explanation_de: Uri, Schwyz und Unterwalden schlossen 1291 einen Bund. Dieses Datum gilt als Ursprung
+  der Schweiz und wird am 1. August gefeiert. Die anderen Orte kamen erst später zum Bund.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/nationalfeiertag-und-nationalhymne
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: *id001
+glossary:
+- Eidgenossenschaft
+- Bund
+status: in_review
+difficulty: 1
+covers:
+- zh-224
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Bundesbrief von 1291 verbündeten sich Uri, Schwyz und Unterwalden, die als Urkantone
+      den Kern der späteren Eidgenossenschaft bilden.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Uri, Schwyz und Unterwalden als Orte des Bundesbriefs von 1291 und verbindet
+      ihn mit dem 1. August. Quelle 2 bestätigt das Bündnis der drei Talschaften 1291 als Ausgangspunkt
+      der Eidgenossenschaft und sagt, dass weitere Gebiete später beitraten.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

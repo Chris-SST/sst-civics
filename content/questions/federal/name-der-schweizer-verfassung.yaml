@@ -1,0 +1,46 @@
+id: name-der-schweizer-verfassung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.staatsprinzipien
+question_de: Wie heisst die Verfassung der Schweiz?
+options_de:
+  a: Eidgenössisches Grundgesetz
+  b: Bundesverfassung
+  c: Bundesordnung der Schweiz
+  d: Schweizerische Staatscharta
+correct: b
+explanation_de: Die Verfassung der Schweiz heisst Bundesverfassung, kurz BV. Sie ist die oberste Rechtsgrundlage
+  des Landes. Die geltende Fassung stammt von 1999.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/politisches-system
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Bundesverfassung
+- Verfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-024
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Verfassung der Schweiz heisst offiziell «Bundesverfassung der Schweizerischen Eidgenossenschaft»,
+      kurz Bundesverfassung.
+  source:
+    verdict: supported
+    note: 'Quelle 3 sagt ausdrücklich: «Die Verfassung in der Schweiz heisst Bundesverfassung», und Quelle
+      1 trägt den Titel «Bundesverfassung der Schweizerischen Eidgenossenschaft vom 18. April 1999». Das
+      stützt auch die Angabe zur geltenden Fassung von 1999 und die Erklärung, dass sie die oberste Rechtsgrundlage
+      ist.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

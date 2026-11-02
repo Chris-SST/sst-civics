@@ -1,0 +1,16 @@
+id: umweltschutz-aufgabe-des-bundes
+lang: en
+source_version: 1
+question: Which level in Switzerland is responsible for protecting the environment and issuing regulations
+  for this purpose?
+options:
+  a: The Confederation
+  b: Private organisations
+  c: The communes (Gemeinden) alone
+  d: The districts alone
+explanation: The Federal Constitution instructs the Confederation to protect people and the environment
+  from harmful effects. To this end, it enacts laws, for example on the protection of water and nature.
+  The cantons implement many of these regulations.
+status: draft
+reviewed_by: null
+reviewed_at: null

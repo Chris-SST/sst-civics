@@ -1,0 +1,44 @@
+id: chilbi-jahrmarkt-fahrgeschaefte
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Was ist eine Chilbi in der Schweiz?
+options_de:
+  a: Ein Wettkampf im Schwingen und Steinstossen
+  b: Ein Umzug mit Masken und Guggenmusik im Winter
+  c: Ein Fest zum Abtrieb der Kühe von der Alp
+  d: Ein Jahrmarkt mit Fahrgeschäften wie der Achterbahn
+correct: d
+explanation_de: Die Chilbi ist ein Jahrmarkt mit Fahrgeschäften, Verkaufsständen und Festwirtschaften.
+  Der Name geht auf die Kirchweihe zurück, das Fest findet vor allem im Herbst statt. Die anderen Antworten
+  beschreiben Fasnacht, Schwingfest und Alpabzug.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/feste-und-braeuche-im-herbst
+  checked: 2026-11-02
+glossary:
+- Chilbi
+- Jahrmarkt
+status: draft
+difficulty: 1
+covers:
+- zh-337
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Chilbi (Kirchweih) ist ein traditioneller Jahrmarkt bzw. Volksfest mit Fahrgeschäften,
+      Ständen und Festbetrieb, während Schwingfeste, Fasnachtsumzüge und Alpabzüge (Määs/Alpabzug) andere
+      Anlässe sind.
+  source:
+    verdict: unclear
+    note: Die Seite nennt Chilbi-Varianten (Bénichon-Kilbi, Älpler- oder Sennenchilbi) als Herbst-Strassenfeste
+      mit Mahlzeiten, Tänzen, Umzügen und Musik. Sie sagt aber nicht, dass die Chilbi ein Jahrmarkt mit
+      Fahrgeschäften ist, und erwähnt die Herkunft des Namens aus der Kirchweihe nicht. Fahrgeschäfte
+      werden nur bei der Basler Herbstmesse genannt.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

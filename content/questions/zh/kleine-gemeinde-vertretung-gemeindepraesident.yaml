@@ -1,0 +1,48 @@
+id: kleine-gemeinde-vertretung-gemeindepraesident
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.organisation.gemeinderat_stadtrat
+question_de: Wer vertritt eine kleinere Zürcher Gemeinde nach aussen?
+options_de:
+  a: die Gemeindepräsidentin oder der Gemeindepräsident
+  b: die Bezirksrätin oder der Bezirksrat
+  c: die Gemeindeschreiberin oder der Gemeindeschreiber
+  d: die Schulleiterin oder der Schulleiter
+correct: a
+explanation_de: In kleineren Zürcher Gemeinden vertritt die Gemeindepräsidentin oder der Gemeindepräsident
+  die Gemeinde nach aussen. Sie oder er leitet den Gemeinderat. In der Stadt Zürich übernimmt diese Rolle
+  die Stadtpräsidentin oder der Stadtpräsident.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/politik-staat/gemeinden/fuer-neue-behoerdenmitglieder.html
+  checked: 2026-11-02
+glossary:
+- Gemeindepräsident
+- Gemeinderat
+- Gemeinde
+status: in_review
+difficulty: 1
+covers:
+- zh-125
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Gemeindepräsidentin oder der Gemeindepräsident leitet den Gemeinderat und vertritt
+      die Gemeinde nach aussen, während Bezirksrat, Gemeindeschreiber und Schulleiter andere Aufgaben
+      haben.
+  source:
+    verdict: supported
+    note: Quelle 1 (Broschüre, Seite zum Zürcher Gemeindewesen) nennt die Gemeindepräsidentin oder den
+      Gemeindepräsidenten als höchste Repräsentantin bzw. höchsten Repräsentanten der Gemeinde und in
+      grösseren Städten die Stadtpräsidentin bzw. den Stadtpräsidenten. Das stützt die Antwort und die
+      Erklärung weitgehend; die Formulierung «nach aussen» und die Leitung des Gemeinderats stehen nicht
+      wörtlich da. Quelle 2 ist für die Frage nicht relevant.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

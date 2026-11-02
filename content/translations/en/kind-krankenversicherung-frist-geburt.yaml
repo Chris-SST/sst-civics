@@ -1,0 +1,14 @@
+id: kind-krankenversicherung-frist-geburt
+lang: en
+source_version: 1
+question: Within what period from birth must health insurance be in place for a child living in Switzerland?
+options:
+  a: within 12 months
+  b: within 3 months
+  c: within 14 days
+  d: within 6 months
+explanation: Parents must take out health insurance for a child within three months of the birth. If this
+  deadline is met, insurance cover applies retroactively from the date of birth.
+status: draft
+reviewed_by: null
+reviewed_at: null

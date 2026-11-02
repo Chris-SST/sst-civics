@@ -1,0 +1,45 @@
+id: invalidenversicherung-gehoert-zu-sozialversicherungen
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Welche der folgenden Einrichtungen gehört zu den Sozialversicherungen der Schweiz?
+options_de:
+  a: Die Invalidenversicherung
+  b: Die Reiseversicherung
+  c: Die Rechtsschutzversicherung
+  d: Die Hausratversicherung
+correct: a
+explanation_de: Die Invalidenversicherung (IV) ist eine staatlich geregelte Sozialversicherung. Sie unterstützt
+  Menschen, die wegen Krankheit oder Unfall nicht oder nur eingeschränkt arbeiten können. Hausrat-, Reise-
+  und Rechtsschutzversicherungen sind private Versicherungen.
+sources:
+- url: https://www.bsv.admin.ch/de/dreisaeulensystem
+  checked: &id001 2026-11-02
+- url: https://www.bsv.admin.ch/de/beitraege-im-ueberblick
+  checked: *id001
+glossary:
+- Sozialversicherung
+- Invalidenversicherung
+status: in_review
+difficulty: 1
+covers:
+- zh-149
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Invalidenversicherung (IV) ist eine staatliche Sozialversicherung der Schweiz, während
+      Reise-, Rechtsschutz- und Hausratversicherung private Versicherungen sind.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die IV zusammen mit der AHV als staatliche Vorsorge (1. Säule) mit gesetzlich
+      geregelten Beiträgen und Leistungen. Quelle 2 führt die IV unter den Beiträgen an die Sozialversicherungen
+      auf. Die Aussage zu privaten Versicherungen (Hausrat, Reise, Rechtsschutz) wird nicht ausdrücklich
+      belegt, folgt aber daraus, dass sie nirgends als Sozialversicherung erscheinen.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

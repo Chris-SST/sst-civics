@@ -1,0 +1,15 @@
+id: aussenbeziehungen-zustaendigkeit-bund
+lang: en
+source_version: 1
+question: Who in Switzerland is, in principle, responsible for shaping relations with other states?
+options:
+  a: The Conference of Cantonal Governments
+  b: The Confederation
+  c: The cantons jointly
+  d: The communes (Gemeinden) on the border
+explanation: Under the Federal Constitution, foreign policy is a matter for the Confederation. The cantons
+  may cooperate with other countries within their own areas of responsibility, but overall responsibility
+  lies with the Confederation.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,41 @@
+id: landesmuseum-zuerich-schweizer-geschichte
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Was wird im Landesmuseum Zürich gezeigt?
+options_de:
+  a: Die Geschichte der Schweiz
+  b: Die Geschichte der Eisenbahn
+  c: Naturkunde und Tierwelt der Alpen
+  d: Moderne Kunst aus aller Welt
+correct: a
+explanation_de: Das Landesmuseum Zürich zeigt die schweizerische Vergangenheit und Kulturgeschichte. Es
+  gehört zum Schweizerischen Nationalmuseum. Es steht beim Hauptbahnhof Zürich.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/kulturschaffen-in-der-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Landesmuseum
+- Nationalmuseum
+status: in_review
+difficulty: 2
+covers:
+- zh-310
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Landesmuseum Zürich ist das grösste kulturhistorische Museum der Schweiz und zeigt
+      die Geschichte und Kulturgeschichte der Schweiz.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt das Landesmuseum Zürich als Teil des Schweizerischen Nationalmuseums, dessen
+      Institutionen «Objekte der Vergangenheit aus allen Epochen und Regionen des Landes» konservieren.
+      Das stützt Antwort a und die Erklärung. Die Lage beim Hauptbahnhof Zürich steht nicht in der Quelle.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

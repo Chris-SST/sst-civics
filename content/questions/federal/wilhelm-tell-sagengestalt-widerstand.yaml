@@ -1,0 +1,42 @@
+id: wilhelm-tell-sagengestalt-widerstand
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gruendung
+question_de: Wofür steht die Sagengestalt Wilhelm Tell aus der Innerschweiz?
+options_de:
+  a: Für den Widerstand gegen fremde Herrscher
+  b: Für die Neutralität der Schweiz im Krieg
+  c: Für die Einführung der Reformation
+  d: Für die Gründung der ersten Schweizer Bank
+correct: a
+explanation_de: Die Sage erzählt von einem Mann, der sich gegen die Unterdrückung durch fremde Vögte wehrt.
+  Wilhelm Tell gilt deshalb als Symbol für Freiheit. Ob er wirklich gelebt hat, ist nicht belegt.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/wilhelm-tell-weltbekanntes-schweizer-symbol-fuer-freiheit
+  checked: &id001 2026-11-02
+glossary:
+- Wilhelm Tell
+- Sage
+- Innerschweiz
+status: in_review
+difficulty: 1
+covers:
+- zh-241
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Wilhelm Tell gilt in der Sage als Symbolfigur für den Widerstand gegen die Willkür der
+      habsburgischen Vögte und damit gegen fremde Herrscher.
+  source:
+    verdict: supported
+    note: Quelle 1 beschreibt Tell als Freiheitskämpfer gegen den habsburgischen Landvogt Gessler und
+      als Symbol für Freiheit und Widerstand gegen Machtmissbrauch. Sie hält auch fest, dass nicht belegt
+      ist, ob Tell wirklich gelebt hat.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

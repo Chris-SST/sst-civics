@@ -1,0 +1,14 @@
+id: gewerkschaften-vertreten-arbeitnehmende-interessen
+lang: en
+source_version: 1
+question: Whose interests do trade unions represent?
+options:
+  a: The interests of employers
+  b: The interests of the communes (Gemeinden)
+  c: The interests of banks
+  d: The interests of employees
+explanation: Trade unions stand up for the concerns of employees, for example regarding wages and working
+  conditions. They often negotiate with employers over collective labour agreements.
+status: draft
+reviewed_by: null
+reviewed_at: null

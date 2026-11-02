@@ -1,0 +1,15 @@
+id: anzahl-kantone-und-halbkantone-schweiz
+lang: en
+source_version: 1
+question: How many cantons does Switzerland have, and how many of them are half-cantons?
+options:
+  a: 26 cantons, of which 6 are half-cantons
+  b: 26 cantons, of which 3 are half-cantons
+  c: 23 cantons, of which 6 are half-cantons
+  d: 20 cantons, of which 6 are half-cantons
+explanation: 'Switzerland has 26 cantons. Six of them are half-cantons: Obwalden, Nidwalden, Basel-Stadt,
+  Basel-Landschaft, Appenzell Ausserrhoden and Appenzell Innerrhoden. In the Council of States (Ständerat),
+  they each have one vote instead of two.'
+status: draft
+reviewed_by: null
+reviewed_at: null

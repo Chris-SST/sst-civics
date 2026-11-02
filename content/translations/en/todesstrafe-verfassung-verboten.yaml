@@ -1,0 +1,14 @@
+id: todesstrafe-verfassung-verboten
+lang: en
+source_version: 1
+question: What applies in Switzerland to the death penalty under the Federal Constitution?
+options:
+  a: It is permitted only in cases of murder.
+  b: It is permitted only in wartime.
+  c: The cantons decide whether it applies.
+  d: It is prohibited.
+explanation: The Federal Constitution protects the right to life in Article 10. The death penalty is expressly
+  prohibited, even for serious crimes.
+status: draft
+reviewed_by: null
+reviewed_at: null

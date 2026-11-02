@@ -1,0 +1,14 @@
+id: kinderzulagen-fuer-familien
+lang: en
+source_version: 1
+question: Which state benefit do families with children receive in Switzerland?
+options:
+  a: Disability pension
+  b: Child allowances
+  c: Home ownership bonus
+  d: Unemployment daily allowance
+explanation: Families receive child allowances as a contribution towards the costs of maintaining their
+  children. They are part of the family allowances, which are regulated in the law of the Confederation.
+status: draft
+reviewed_by: null
+reviewed_at: null

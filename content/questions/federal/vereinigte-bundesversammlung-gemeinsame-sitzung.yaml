@@ -1,0 +1,43 @@
+id: vereinigte-bundesversammlung-gemeinsame-sitzung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.parlament
+question_de: Wann spricht man von der Vereinigten Bundesversammlung?
+options_de:
+  a: Wenn Nationalrat und Ständerat getrennt in ihren Sälen beraten
+  b: Wenn alle Kantonsparlamente gleichzeitig tagen
+  c: Wenn die Mitglieder von Nationalrat und Ständerat gemeinsam tagen
+  d: Wenn der Bundesrat und das Parlament gemeinsam tagen
+correct: c
+explanation_de: Die Vereinigte Bundesversammlung entsteht, wenn beide Kammern zusammen tagen. Sie wählt
+  zum Beispiel die Mitglieder des Bundesrats.
+sources:
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet/aufgaben-der-bundesversammlung/wahlen/wahl-mitglieder-bundesrat
+  checked: &id001 2026-11-02
+glossary:
+- Vereinigte Bundesversammlung
+- Nationalrat
+- Ständerat
+- Bundesrat
+status: in_review
+difficulty: 2
+covers:
+- zh-038
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Vereinigte Bundesversammlung entsteht, wenn die Mitglieder von Nationalrat und Ständerat
+      gemeinsam tagen, etwa zur Wahl des Bundesrats, der Bundesrichter oder des Bundeskanzlers.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt: Die Vereinigte Bundesversammlung sind «die im Nationalratssaal vereinigten Mitglieder
+      des National- und des Ständerates», und sie wählt die Mitglieder des Bundesrates. Das stützt Antwort
+      c) und die Erklärung.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

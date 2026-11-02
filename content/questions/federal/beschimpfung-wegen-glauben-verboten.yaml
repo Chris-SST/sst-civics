@@ -1,0 +1,49 @@
+id: beschimpfung-wegen-glauben-verboten
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Eine Person beschimpft öffentlich Menschen wegen ihres Glaubens oder ihrer Abstammung. Wie
+  ist das in der Schweiz geregelt?
+options_de:
+  a: Es ist nur in Schulen und Betrieben untersagt.
+  b: Es ist untersagt und kann bestraft werden.
+  c: Es ist nur verboten, wenn es in der Zeitung steht.
+  d: Es ist durch die Meinungsfreiheit immer geschützt.
+correct: b
+explanation_de: Das Strafgesetzbuch verbietet die öffentliche Herabsetzung von Menschen wegen ihrer Rasse,
+  Ethnie, Religion oder sexuellen Orientierung. Die Meinungsfreiheit gilt nicht unbegrenzt.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/54/757_781_799/20261101/de/html/fedlex-data-admin-ch-eli-cc-54-757_781_799-20261101-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: 2026-11-02
+glossary:
+- Diskriminierung
+- Meinungsfreiheit
+- Strafgesetzbuch
+status: in_review
+difficulty: 2
+covers:
+- zh-086
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Öffentliche Herabsetzung oder Diskriminierung von Menschen wegen ihrer Rasse, Ethnie, Religion
+      oder sexuellen Orientierung ist nach Art. 261bis des Strafgesetzbuches verboten und strafbar, die
+      Meinungsfreiheit schützt dies nicht.
+  source:
+    verdict: supported
+    note: Quelle 1 (Strafgesetzbuch) stellt unter Strafe, wer öffentlich eine Person oder Gruppe wegen
+      Rasse, Ethnie, Religion oder sexueller Orientierung in menschenwürdewidriger Weise herabsetzt oder
+      diskriminiert, und stützt damit Antwort b und die Erklärung. Quelle 2 erwähnt zudem, dass die Meinungsfreiheit
+      nur im Rahmen des Gesetzes gilt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

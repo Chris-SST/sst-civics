@@ -1,0 +1,45 @@
+id: politische-partei-aehnliche-ziele
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: Was beschreibt eine politische Partei am besten?
+options_de:
+  a: Ein Gericht, das über politische Streitfälle entscheidet
+  b: Ein Zusammenschluss von Personen mit ähnlichen politischen Zielen
+  c: Eine Gruppe von Gemeinden, die gemeinsam Aufgaben erfüllen
+  d: Eine Behörde, die Wahlen und Abstimmungen durchführt
+correct: b
+explanation_de: In einer Partei schliessen sich Menschen zusammen, die ähnliche politische Ziele verfolgen.
+  Parteien stellen bei Wahlen Kandidatinnen und Kandidaten auf und äussern sich zu Abstimmungsvorlagen.
+  Sie sind keine staatlichen Behörden.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksabstimmungen.html
+  checked: 2026-11-02
+glossary:
+- Partei
+- Wahlen
+status: in_review
+difficulty: 1
+covers:
+- zh-011
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Eine politische Partei ist ein Zusammenschluss von Personen mit ähnlichen politischen Zielen,
+      während die anderen Antworten ein Gericht, einen Gemeindeverband und eine Wahlbehörde beschreiben.
+  source:
+    verdict: supported
+    note: Quelle 1 (Seite 25) definiert eine politische Partei als Gruppe von Personen mit ähnlichen Ansichten,
+      die sich zusammentun, um die Politik zu beeinflussen. Das entspricht Antwort b. Die Aussage, dass
+      Parteien Kandidierende aufstellen und keine Behörden sind, steht nicht ausdrücklich im Text, widerspricht
+      ihm aber nicht.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

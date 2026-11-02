@@ -1,0 +1,46 @@
+id: bundesverwaltung-justiz-und-polizeidepartement
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.bundesrat
+question_de: Welche der folgenden Einheiten gehört zur Bundesverwaltung?
+options_de:
+  a: Der Nationalrat
+  b: Die Bundesversammlung
+  c: Das Bundesgericht
+  d: Das Justiz- und Polizeidepartement
+correct: d
+explanation_de: Die Bundesverwaltung ist in Departemente gegliedert. Das Justiz- und Polizeidepartement
+  ist eines davon und gehört zur Verwaltung unter der Leitung des Bundesrats. Nationalrat und Bundesversammlung
+  gehören zum Parlament, das Bundesgericht zur Justiz.
+sources:
+- url: https://www.admin.ch/gov/de/start/departemente.html
+  checked: &id001 2026-11-02
+glossary:
+- Bundesverwaltung
+- Departement
+- Bundesrat
+status: in_review
+difficulty: 1
+covers:
+- zh-004
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Eidgenössische Justiz- und Polizeidepartement ist ein Departement des Bundesrates und
+      gehört damit zur Bundesverwaltung, während Nationalrat und Bundesversammlung zur Legislative und
+      das Bundesgericht zur Judikative zählen.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt das Eidgenössische Justiz- und Polizeidepartement (EJPD) unter den Departementen
+      als zentralen Organisationseinheiten der Bundesverwaltung, die vom Bundesrat geführt wird. Die Zuordnung
+      von Nationalrat, Bundesversammlung und Bundesgericht zu Parlament bzw. Justiz wird nur indirekt
+      gestützt (Verweise auf «Das Schweizer Parlament» und «Schweizerische Gerichte»), ändert aber die
+      richtige Antwort nicht.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

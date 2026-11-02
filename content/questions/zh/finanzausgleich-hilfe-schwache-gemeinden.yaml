@@ -1,0 +1,49 @@
+id: finanzausgleich-hilfe-schwache-gemeinden
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Wozu dient der Finanzausgleich zwischen den Gemeinden im Kanton Zürich?
+options_de:
+  a: Er senkt die Steuern in allen Gemeinden auf denselben Satz.
+  b: Er bezahlt den Gemeinden die Kosten für Gemeindeversammlungen.
+  c: Er hilft finanzschwachen oder durch hohe Sozialkosten belasteten Gemeinden, ihre Aufgaben zu erfüllen.
+  d: Er verteilt das Geld des Bundes gleichmässig an alle Einwohnerinnen und Einwohner.
+correct: c
+explanation_de: Gemeinden haben sehr unterschiedliche finanzielle Möglichkeiten. Der Finanzausgleich gleicht
+  diese Unterschiede teilweise aus. So können auch Gemeinden mit wenig Steuerkraft oder hohen Sozialkosten
+  ihre Aufgaben erfüllen.
+sources:
+- url: https://www.zh.ch/de/steuern-finanzen/gemeindefinanzen/zuercher-finanzausgleich/instrumente-zuercher-finanzausgleich.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/politik-staat/gemeinden.html
+  checked: 2026-11-02
+glossary:
+- Finanzausgleich
+- Gemeinde
+- Sozialkosten
+status: in_review
+difficulty: 2
+covers:
+- zh-199
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Finanzausgleich im Kanton Zürich gleicht Unterschiede in der Finanzkraft und besondere
+      Lasten der Gemeinden aus, damit auch finanzschwache oder stark belastete Gemeinden ihre Aufgaben
+      erfüllen können.
+  source:
+    verdict: supported
+    note: 'Quelle 2 (Broschüre, S. 59) sagt ausdrücklich, der Finanzausgleich unterstütze arme Gemeinden
+      oder Gemeinden mit hohen Sozialausgaben, damit sie ihre Aufgaben erledigen können. Quelle 1 stützt
+      dies: Ressourcenzuschüsse sichern allen Gemeinden genügend Mittel, und der Ausgleich berücksichtigt
+      Sonderlasten wie einen hohen Anteil an Sozialfällen.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

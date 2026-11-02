@@ -1,0 +1,44 @@
+id: schwarzenbach-initiative-ziel-auslaenderanteil
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gesellschaftswandel
+question_de: Was wollte die Schwarzenbach-Initiative, über die 1970 abgestimmt wurde?
+options_de:
+  a: Sie wollte die Einbürgerung für alle Ausländer erleichtern.
+  b: Sie wollte die Zuwanderung nur aus Italien verbieten.
+  c: Sie wollte den Anteil der in der Schweiz lebenden Ausländer beschränken.
+  d: Sie wollte das Stimmrecht für Ausländer einführen.
+correct: c
+explanation_de: Die Initiative verlangte, den Anteil der Ausländer in der Schweiz zu beschränken. Sie
+  wurde 1970 vom Volk abgelehnt. Sie zeigt, wie stark die Zuwanderung damals diskutiert wurde.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.bar.admin.ch/de/einwandererland-schweiz
+  checked: 2026-11-02
+glossary:
+- Schwarzenbach-Initiative
+- Volksinitiative
+status: in_review
+difficulty: 2
+covers:
+- zh-210
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schwarzenbach-Initiative («Überfremdungsinitiative») wollte den Ausländeranteil in
+      jedem Kanton (ausser Genf) auf 10 Prozent beschränken und wurde 1970 abgelehnt.
+  source:
+    verdict: supported
+    note: Quelle 1 (Broschüre Kanton Zürich, Seite 13) sagt, die Schwarzenbach-Initiative von 1970 wollte,
+      dass nur noch eine bestimmte Anzahl Ausländerinnen und Ausländer in die Schweiz kommen darf, und
+      54 Prozent sagten Nein. Das stützt die Antwort und die Erklärung; Quelle 2 erwähnt die Initiative
+      nicht.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

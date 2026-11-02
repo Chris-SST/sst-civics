@@ -1,0 +1,15 @@
+id: jodeln-eigene-stimme-instrument
+lang: en
+source_version: 1
+question: What serves as the instrument in yodelling?
+options:
+  a: The alphorn
+  b: One's own voice
+  c: The Schwyzerörgeli (Swiss button accordion)
+  d: The accordion
+explanation: In yodelling, one sings without words, usually only with syllables, and switches quickly
+  between chest voice and head voice. The voice itself is the instrument. Yodelling is part of Swiss folk
+  tradition and is often associated with the alphorn or the Schwyzerörgeli.
+status: draft
+reviewed_by: null
+reviewed_at: null

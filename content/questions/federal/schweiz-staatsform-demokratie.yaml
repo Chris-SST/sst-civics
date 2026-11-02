@@ -1,0 +1,46 @@
+id: schweiz-staatsform-demokratie
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.staatsprinzipien
+question_de: Welche Staatsform hat die Schweiz?
+options_de:
+  a: Sie ist eine Diktatur mit einer einzigen Partei.
+  b: Sie ist eine Monarchie mit einem gewählten König.
+  c: Sie ist ein demokratischer Staat.
+  d: Sie ist ein Staat, der von einer Adelsfamilie regiert wird.
+correct: c
+explanation_de: Die Schweiz ist eine Demokratie. Die Bevölkerung wirkt über Wahlen und Abstimmungen an
+  den politischen Entscheiden mit. Die Bundesverfassung hält dies als Grundlage des Staates fest.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/politisches-system
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+  checked: 2026-11-02
+glossary:
+- Demokratie
+- Staatsform
+status: in_review
+difficulty: 1
+covers:
+- zh-021
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz ist ein demokratischer Bundesstaat (Republik mit direkter Demokratie), weder
+      eine Diktatur noch eine Monarchie noch von einer Adelsfamilie regiert.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt ausdrücklich: «Die Schweiz ist eine direkte Demokratie» mit Wahlrecht und Abstimmungsrecht
+      der Bevölkerung. Quelle 2 erklärt, dass das Volk in politischen Fragen entscheidet und Regierung
+      und Parlament wählt; die Bundesverfassung als Grundlage wird in Quelle 2 als Grundgesetz beschrieben,
+      die Aussage zur Demokratie als Verfassungsgrundlage steht dort aber nicht wörtlich.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

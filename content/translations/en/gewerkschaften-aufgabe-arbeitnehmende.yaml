@@ -1,0 +1,14 @@
+id: gewerkschaften-aufgabe-arbeitnehmende
+lang: en
+source_version: 1
+question: What is the role of trade unions in Switzerland?
+options:
+  a: They stand up for the concerns of employees.
+  b: They pay daily allowances to unemployed people.
+  c: They set the tax rates for companies.
+  d: They represent the concerns of employers to the Confederation.
+explanation: Trade unions are organisations of employees. They represent employees' interests, for example
+  regarding wages and working conditions, and are often involved in negotiating collective labour agreements.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,47 @@
+id: zu-tiefer-lohn-arbeitsgericht
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Eine Arbeitnehmerin erhält ungerechtfertigt einen zu tiefen Lohn. Welche Stelle kann sie
+  anrufen?
+options_de:
+  a: Das Regionale Arbeitsvermittlungszentrum (RAV)
+  b: Das Bundesamt für Statistik
+  c: Das Arbeitsgericht
+  d: Die Gemeindeversammlung
+correct: c
+explanation_de: Bei Streitigkeiten aus dem Arbeitsverhältnis, zum Beispiel wegen eines zu tiefen Lohns,
+  ist das Arbeitsgericht zuständig. Das RAV hilft bei der Stellensuche und nicht bei Lohnstreitigkeiten.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
+  checked: *id001
+glossary:
+- Arbeitsgericht
+- Lohn
+- RAV
+status: in_review
+difficulty: 2
+covers:
+- zh-170
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Bei ungerechtfertigt zu tiefem Lohn kann sich die Arbeitnehmerin an das Arbeitsgericht
+      (bzw. die zuständige Schlichtungsbehörde und das Gericht) wenden, während RAV, Bundesamt für Statistik
+      und Gemeindeversammlung dafür nicht zuständig sind.
+  source:
+    verdict: supported
+    note: Quelle 2 verweist bei privatrechtlichen Themen wie ausbleibenden Lohnzahlungen an die unentgeltliche
+      Rechtsauskunft des Bezirks- oder Arbeitsgerichts. Quelle 1 bestätigt, dass das RAV bei der Stellensuche
+      hilft, nicht bei Lohnstreitigkeiten. Dass das Arbeitsgericht für Streitigkeiten wegen zu tiefen
+      Lohns zuständig ist, sagt keine Quelle wörtlich, es folgt aber eindeutig aus Quelle 2.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,14 @@
+id: volksschule-leitung-vor-ort-schulleitung
+lang: en
+source_version: 1
+question: Who is responsible for managing a Zurich public primary and lower secondary school on site?
+options:
+  a: The cantonal police
+  b: The parents' council alone
+  c: The Statistical Office
+  d: The school management
+explanation: Every school has a school management team that runs the school on site. It is responsible
+  for the organisation and the quality of the school.
+status: draft
+reviewed_by: null
+reviewed_at: null

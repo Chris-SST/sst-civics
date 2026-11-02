@@ -1,0 +1,49 @@
+id: gottfried-keller-zuercher-dichter
+version: 1
+scope: zh
+canton: zh
+topic: kanton.kultur.zuerich
+question_de: Wer war ein bekannter Dichter und Schriftsteller aus Zürich?
+options_de:
+  a: Max Frisch
+  b: Gottfried Keller
+  c: Friedrich Dürrenmatt
+  d: Jeremias Gotthelf
+correct: b
+explanation_de: Gottfried Keller wurde 1819 in Zürich geboren und schrieb unter anderem «Der grüne Heinrich».
+  Er war auch Staatsschreiber des Kantons Zürich. Gotthelf lebte im Kanton Bern.
+sources:
+- url: https://www.stadt-zuerich.ch/misc/de/mitteilungsarchiv/medienmitteilungen/2009/01/090128b.html
+  checked: &id001 2026-11-02
+- url: https://www.kantonsrat.zh.ch/besuch/das-rathaus/
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Gottfried Keller
+- Dichter
+status: in_review
+difficulty: 2
+covers:
+- zh-347
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Gottfried Keller (1819–1890) wurde in Zürich geboren und war ein bekannter Dichter und
+      Schriftsteller; Max Frisch wurde zwar ebenfalls in Zürich geboren, doch Keller ist der klassische
+      Zürcher Dichter, während Dürrenmatt aus dem Kanton Bern und Gotthelf aus dem Emmental stammt, daher
+      ist b die beste Antwort, auch wenn a ebenfalls vertretbar wäre.
+  source:
+    verdict: supported
+    note: Quelle 3 (Broschüre) sagt, Gottfried Keller sei 1819 in Zürich geboren, ein berühmter Schriftsteller
+      und Politiker gewesen und habe «Der grüne Heinrich» geschrieben. Quelle 1 nennt ihn Dichter und
+      Zürcher Staatsschreiber (1861–1876), Quelle 2 den bedeutenden Zürcher Schriftsteller und Staatsschreiber.
+      Dass Gotthelf im Kanton Bern lebte, steht in den Quellen nicht, ist aber für die richtige Antwort
+      nicht nötig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

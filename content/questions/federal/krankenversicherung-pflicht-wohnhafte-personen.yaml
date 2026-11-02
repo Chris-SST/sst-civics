@@ -1,0 +1,48 @@
+id: krankenversicherung-pflicht-wohnhafte-personen
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.gesundheit
+question_de: Was gilt für Personen, die in der Schweiz wohnen, in Bezug auf die Krankenversicherung?
+options_de:
+  a: Sie müssen sich nur versichern, wenn sie in der Schweiz arbeiten
+  b: Sie sind gesetzlich verpflichtet, eine Krankenversicherung abzuschliessen
+  c: Sie müssen sich nur versichern, wenn sie älter als 50 Jahre sind
+  d: Sie können frei entscheiden, ob sie sich versichern wollen
+correct: b
+explanation_de: Das Krankenversicherungsgesetz verpflichtet jede Person mit Wohnsitz in der Schweiz zur
+  Krankenversicherung. Man muss sich innert drei Monaten nach der Geburt oder der Wohnsitznahme versichern.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328/20260701/de/html/fedlex-data-admin-ch-eli-cc-1995-1328_1328_1328-20260701-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.bag.admin.ch/de/krankenversicherung-versicherungspflicht-fuer-in-der-schweiz-wohnhafte-versicherte
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Krankenversicherung
+- Versicherungspflicht
+- Wohnsitz
+status: in_review
+difficulty: 1
+covers:
+- zh-153
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach dem Krankenversicherungsgesetz (KVG) besteht für alle Personen mit Wohnsitz in der
+      Schweiz ein Versicherungsobligatorium, und sie müssen sich innerhalb von drei Monaten nach Wohnsitznahme
+      für die obligatorische Grundversicherung versichern.
+  source:
+    verdict: supported
+    note: Art. 3 Abs. 1 KVG (Quelle 1) und die BAG-Seite (Quelle 2) sagen, dass jede Person mit Wohnsitz
+      in der Schweiz sich innert drei Monaten nach Wohnsitznahme oder Geburt versichern muss. Damit sind
+      Antwort b und die Erklärung gedeckt; Quelle 2 nennt die Krankenversicherung ausdrücklich obligatorisch,
+      unabhängig von der Erwerbstätigkeit.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

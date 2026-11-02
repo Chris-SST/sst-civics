@@ -1,0 +1,42 @@
+id: uno-beitritt-der-schweiz-jahr
+version: 1
+scope: federal
+canton: null
+topic: bund.international
+question_de: In welchem Jahr wurde die Schweiz Mitglied der Vereinten Nationen (UNO)?
+options_de:
+  a: '2002'
+  b: '1945'
+  c: '1986'
+  d: '2010'
+correct: a
+explanation_de: Die Schweiz trat 2002 der UNO bei, nachdem Volk und Stände zugestimmt hatten. Sie war
+  damit eines der letzten Länder, die beitraten. Viele UNO-Organisationen haben aber schon lange einen
+  Sitz in Genf.
+sources:
+- url: https://www.eda.admin.ch/de/uno
+  checked: &id001 2026-11-02
+glossary:
+- UNO
+- Vereinte Nationen
+status: in_review
+difficulty: 2
+covers:
+- zh-331
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Schweiz wurde nach der Volksabstimmung vom März 2002 am 10. September 2002 als 190.
+      Mitgliedstaat in die UNO aufgenommen.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den Beitritt der Schweiz zur UNO im September 2002 und erwähnt Genf als wichtigen
+      UNO-Sitz. Die Volksabstimmung (Volk und Stände) und die Aussage, die Schweiz sei eines der letzten
+      Länder gewesen, stehen nicht im Text, aber das Beitrittsjahr 2002 ist eindeutig belegt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

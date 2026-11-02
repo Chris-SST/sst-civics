@@ -1,0 +1,46 @@
+id: agrargesellschaft-zum-industrieland-19-jahrhundert
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.bundesstaat
+question_de: Wie veränderte sich die Schweiz im 19. Jahrhundert wirtschaftlich?
+options_de:
+  a: Sie lebte vor allem vom Handel mit Kolonien.
+  b: Sie blieb bis 1900 fast ausschliesslich ein Bauernland.
+  c: Sie entwickelte sich von einem Industrieland zu einer Agrargesellschaft.
+  d: Sie entwickelte sich von einer Agrargesellschaft zu einem Industrieland.
+correct: d
+explanation_de: Im 19. Jahrhundert verlagerte sich die Arbeit von der Landwirtschaft in Fabriken. Neue
+  Verkehrswege wie die Eisenbahn unterstützten diesen Wandel. So wurde aus dem Agrarland ein Industrieland.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: 2026-11-02
+glossary:
+- Agrargesellschaft
+- Industrieland
+- Industrialisierung
+status: in_review
+difficulty: 1
+covers:
+- zh-221
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im 19. Jahrhundert wandelte sich die Schweiz durch die Industrialisierung (Textil-, Maschinen-
+      und Uhrenindustrie, Eisenbahnbau) von einer überwiegend agrarisch geprägten Gesellschaft zu einem
+      Industrieland.
+  source:
+    verdict: supported
+    note: Quelle 1 (Seite 12, «Die Industrialisierung») sagt, dass die Schweiz vor der Industrialisierung
+      ein Agrarstaat war und sich im 19. Jahrhundert zum Industriestaat entwickelte, und nennt den Bau
+      des Eisenbahnnetzes. Quelle 2 erwähnt die Entwicklung von Industriezweigen und den Eisenbahnbau,
+      sagt aber nichts so eindeutig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

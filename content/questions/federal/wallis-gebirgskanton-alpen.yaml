@@ -1,0 +1,43 @@
+id: wallis-gebirgskanton-alpen
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Welcher dieser Kantone ist stark vom Gebirge geprägt?
+options_de:
+  a: Basel-Stadt
+  b: Wallis
+  c: Thurgau
+  d: Genf
+correct: b
+explanation_de: Im Wallis liegen viele hohe Alpengipfel, darunter die Dufourspitze, der höchste Berg der
+  Schweiz. Thurgau, Basel-Stadt und Genf liegen eher im Flachland oder an Seen und Flüssen.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/alpen
+  checked: &id001 2026-11-02
+glossary:
+- Wallis
+- Kanton
+- Gebirge
+status: in_review
+difficulty: 1
+covers:
+- zh-266
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Wallis liegt in den Alpen und hat mit der Dufourspitze und dem Matterhorn die höchsten
+      Berge der Schweiz, während Basel-Stadt, Thurgau und Genf eher flach bzw. hügelig sind.
+  source:
+    verdict: supported
+    note: Die Seite nennt die Dufourspitze als höchsten Gipfel im Monte-Rosa-Massiv sowie Zermatt und
+      den Aletschgletscher im Wallis als alpine Merkmale. Sie sagt aber nicht ausdrücklich, dass die Dufourspitze
+      im Wallis liegt, und äussert sich nicht zu Thurgau, Basel-Stadt und Genf. Dass das Wallis stark
+      vom Gebirge geprägt ist, ergibt sich dennoch eindeutig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

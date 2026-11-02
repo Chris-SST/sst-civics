@@ -1,0 +1,46 @@
+id: mehrehe-in-schweiz-verboten
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Was gilt in der Schweiz für die Ehe mit mehreren Partnerinnen oder Partnern gleichzeitig?
+options_de:
+  a: Sie ist erlaubt, wenn alle zustimmen
+  b: Sie ist verboten
+  c: Sie ist erlaubt, wenn sie religiös begründet ist
+  d: Sie ist nur für Personen mit ausländischem Pass erlaubt
+correct: b
+explanation_de: Die Schweiz kennt nur die Einehe. Wer bereits verheiratet ist oder in eingetragener Partnerschaft
+  lebt, kann nicht eine weitere Ehe schliessen. Das gilt unabhängig von Religion oder Herkunft.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/html/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-html-2.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Ehe
+- Mehrehe
+- Zivilgesetzbuch
+status: in_review
+difficulty: 1
+covers:
+- zh-180
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In der Schweiz ist die Mehrfachehe (Polygamie) verboten, da nach dem Zivilgesetzbuch eine
+      neue Ehe nur eingehen darf, wer nicht bereits verheiratet oder in eingetragener Partnerschaft lebt,
+      und eine bestehende Ehe ein Ehehindernis darstellt.
+  source:
+    verdict: supported
+    note: Quelle 1 (ZGB) verlangt den Nachweis, dass eine frühere Ehe oder eingetragene Partnerschaft
+      aufgelöst wurde, und nennt als Ungültigkeitsgrund, dass ein Ehegatte bereits verheiratet ist oder
+      in eingetragener Partnerschaft lebt. Quelle 2 (Broschüre) sagt in einem abgeschnittenen Satz, man
+      dürfe nur mit einer Person verheiratet sein, und stützt damit das Verbot der Mehrehe.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,45 @@
+id: dampfmaschine-industrialisierung-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Welche Erfindung prägte im 18. Jahrhundert den industriellen Umbruch in der Schweiz?
+options_de:
+  a: Die Dampfmaschine
+  b: Der Computer
+  c: Das Fliessband
+  d: Das Auto
+correct: a
+explanation_de: Mit der Dampfmaschine begann die Industrialisierung, und die Arbeit verlagerte sich zunehmend
+  in Fabriken. Computer, Fliessband und Auto kamen erst viel später.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
+  checked: 2026-11-02
+glossary:
+- Dampfmaschine
+- Industrialisierung
+status: in_review
+difficulty: 2
+covers:
+- zh-235
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Dampfmaschine wurde im 18. Jahrhundert entwickelt und prägte die frühe Industrialisierung
+      (auch in der Schweiz, wo zudem mechanische Spinnmaschinen wichtig waren), während Computer, Fliessband
+      und Auto erst im 19. und 20. Jahrhundert aufkamen.
+  source:
+    verdict: supported
+    note: Quelle 1 (Broschüre, Seite 12) sagt, die Industrialisierung habe mit der Erfindung der Dampfmaschine
+      begonnen und die Schweizer Industrie stark verändert. Die Quelle nennt allerdings das 19. Jahrhundert
+      statt des 18. in der Frage; die Antwort a) wird dennoch gestützt, weil die anderen Optionen nicht
+      als Auslöser genannt werden.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

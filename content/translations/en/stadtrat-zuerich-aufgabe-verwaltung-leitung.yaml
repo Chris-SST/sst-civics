@@ -1,0 +1,15 @@
+id: stadtrat-zuerich-aufgabe-verwaltung-leitung
+lang: en
+source_version: 1
+question: What is the role of the City Council (Stadtrat) of the City of Zurich?
+options:
+  a: It runs the cantonal tax administration in the city.
+  b: It enacts cantonal laws for the urban area.
+  c: It administers justice in disputes between residents.
+  d: It directs the city administration and sets the guidelines for the city's actions.
+explanation: The City Council is the executive of the City of Zurich. It heads the city administration
+  and determines the direction in which the city develops. Courts administer justice, and cantonal laws
+  are enacted by the Cantonal Council (Kantonsrat).
+status: draft
+reviewed_by: null
+reviewed_at: null

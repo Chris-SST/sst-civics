@@ -1,0 +1,45 @@
+id: masoala-halle-zuercher-zoo
+version: 1
+scope: zh
+canton: zh
+topic: kanton.kultur.zuerich
+question_de: Zu welcher Einrichtung in Zürich gehört die Masoala-Halle mit dem Regenwald aus Madagaskar?
+options_de:
+  a: Zum Zürcher Zoo
+  b: Zum Botanischen Garten der Universität
+  c: Zum Naturhistorischen Museum
+  d: Zum Technorama
+correct: a
+explanation_de: Die Masoala-Halle ist ein Teil des Zürcher Zoos. Sie zeigt einen Regenwald, wie er in
+  Madagaskar wächst. Dort leben auch Tiere dieses Regenwaldes.
+sources:
+- url: https://www.stadt-zuerich.ch/de/aktuell/medienmitteilungen/2026/09/gestaltungsplan-fuer-den-zoo-der-zukunft.html
+  checked: &id001 2026-11-02
+- url: https://www.stadt-zuerich.ch/misc/de/mitteilungsarchiv/medienmitteilungen/2009/10/091021c.html
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id002 2026-11-02
+glossary:
+- Masoala-Halle
+- Zoo
+status: in_review
+difficulty: 2
+covers:
+- zh-345
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Masoala-Halle, eine Regenwald-Halle mit Pflanzen und Tieren aus Madagaskar, wurde 2003
+      eröffnet und gehört zum Zoo Zürich.
+  source:
+    verdict: supported
+    note: 'Die Broschüre zum Grundkenntnistest (Quelle 3) nennt unter den Zürcher Museen: «Zoo Zürich:
+      Dort ist die Masoala-Halle mit ihrem Urwald aus Madagaskar.» Quelle 2 nennt den Masoala Regenwald
+      ebenfalls im Zusammenhang mit dem Zoo, und das Technorama wird dort als Museum in Winterthur genannt.'
+    at: *id002
+    model: claude-sonnet-5-5
+    version: 1

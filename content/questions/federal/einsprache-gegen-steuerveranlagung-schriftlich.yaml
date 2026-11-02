@@ -1,0 +1,48 @@
+id: einsprache-gegen-steuerveranlagung-schriftlich
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Eine steuerpflichtige Person ist mit ihrer Steuerveranlagung nicht einverstanden. Was kann
+  sie tun?
+options_de:
+  a: Sie kann an der Gemeindeversammlung abstimmen lassen.
+  b: Sie kann die Zahlung ohne weiteres Vorgehen verweigern.
+  c: Sie kann schriftlich Einsprache bei der Steuerbehörde erheben.
+  d: Sie kann beim Bundesrat eine Volksinitiative einreichen.
+correct: c
+explanation_de: Gegen die Veranlagung gibt es das Rechtsmittel der Einsprache. Sie muss schriftlich bei
+  der Steuerbehörde erhoben werden, und zwar innerhalb einer Frist.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184/20260902/de/html/fedlex-data-admin-ch-eli-cc-1991-1184_1184_1184-20260902-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen/steuerrechnung-natuerliche-personen.html
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Steuerveranlagung
+- Einsprache
+- Steuerbehörde
+status: in_review
+difficulty: 2
+covers:
+- zh-146
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Gegen eine Steuerveranlagung kann man innert der gesetzlichen Frist (in der Regel 30 Tage)
+      schriftlich Einsprache bei der zuständigen Steuerbehörde erheben, während die anderen Antworten
+      rechtlich nicht möglich oder nicht wirksam sind.
+  source:
+    verdict: supported
+    note: Quelle 1 (DBG, Art. 132 Abs. 1) nennt die schriftliche Einsprache bei der Veranlagungsbehörde
+      innert 30 Tagen. Quelle 2 bestätigt dies für die Steuerrechnung im Kanton Zürich. Quelle 3 sagt
+      vereinfacht, man könne dem Steueramt einen Brief schreiben.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

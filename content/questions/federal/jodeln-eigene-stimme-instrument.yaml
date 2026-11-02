@@ -1,0 +1,48 @@
+id: jodeln-eigene-stimme-instrument
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Was dient beim Jodeln als Instrument?
+options_de:
+  a: Das Alphorn
+  b: Die eigene Stimme
+  c: Das Schwyzerörgeli
+  d: Die Handorgel
+correct: b
+explanation_de: Beim Jodeln singt man ohne Worte, meist nur mit Silben, und wechselt schnell zwischen
+  Brust- und Kopfstimme. Die Stimme selbst ist das Instrument. Jodeln gehört zum Brauchtum der Schweiz
+  und wird oft mit dem Alphorn oder dem Schwyzerörgeli verbunden.
+sources:
+- url: https://www.bak.admin.ch/de/jodel
+  checked: &id001 2026-11-02
+- url: https://www.news.admin.ch/de/newnsb/VcmsBfaIzuPkmrztC81iK
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Jodeln
+status: in_review
+difficulty: 1
+covers:
+- zh-313
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Beim Jodeln ist die eigene Stimme das Instrument, denn Jodeln ist ein Gesang mit schnellem
+      Wechsel zwischen Brust- und Kopfstimme, während Alphorn, Schwyzerörgeli und Handorgel andere Instrumente
+      sind.
+  source:
+    verdict: supported
+    note: Quelle 1 beschreibt das Jodeln als text- und wortlose Singweise mit Wechsel zwischen Kopf- und
+      Brustregister, Quelle 2 als Gesangstechnik mit bedeutungsfreien Silben. Damit ist die Stimme das
+      Instrument. Instrumente wie das Akkordeon erscheinen nur als gelegentliche Begleitung. Alphorn und
+      Schwyzerörgeli werden nicht erwähnt, die Verbindung in der Erklärung ist also nicht belegt, ändert
+      aber die Antwort nicht.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,42 @@
+id: roemischer-name-zuerichs-turicum
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geschichte.zuerich
+question_de: Wie lautete der römische Name von Zürich?
+options_de:
+  a: Turicum
+  b: Augusta Raurica
+  c: Vindonissa
+  d: Aventicum
+correct: a
+explanation_de: 'Die Römer nannten ihre Siedlung und Zollstation an der Limmat Turicum. Daraus entwickelte
+  sich später der Name Zürich. Die anderen Namen gehören zu römischen Orten in der heutigen Schweiz: Windisch,
+  Augst und Avenches.'
+sources:
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2021/02/turicum-eine-roemische-hafenstadt-und-zollstation.html
+  checked: &id001 2026-11-02
+glossary:
+- Turicum
+- Zollstation
+status: in_review
+difficulty: 1
+covers:
+- zh-246
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der römische Name von Zürich lautete Turicum, während Augusta Raurica bei Augst, Vindonissa
+      bei Windisch und Aventicum bei Avenches lagen.
+  source:
+    verdict: supported
+    note: Die Medienmitteilung der Kantonsarchäologie nennt den Namen Turicum für das römische Zürich,
+      dazu die Funktion als Zollstation und Hafenstadt an der Limmat. Die Namen der anderen Orte (Windisch,
+      Augst, Avenches) kommen in der Quelle nicht vor, sind aber für die richtige Antwort nicht nötig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

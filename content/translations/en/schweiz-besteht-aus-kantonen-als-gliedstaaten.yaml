@@ -1,0 +1,14 @@
+id: schweiz-besteht-aus-kantonen-als-gliedstaaten
+lang: en
+source_version: 1
+question: What is Switzerland made up of as a federal state?
+options:
+  a: Of districts as member states
+  b: Of linguistic regions as member states
+  c: Of cantons as member states
+  d: Of regions as member states
+explanation: Switzerland is a federal state. The cantons are its member states and each has its own constitution,
+  its own parliament and its own government. Districts and regions are not member states.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,14 @@
+id: krankenversicherung-pflicht-wohnhafte-personen
+lang: en
+source_version: 1
+question: What applies to people who live in Switzerland with regard to health insurance?
+options:
+  a: They only have to take out insurance if they work in Switzerland
+  b: They are legally required to take out health insurance
+  c: They only have to take out insurance if they are older than 50
+  d: They are free to decide whether they want to take out insurance
+explanation: The Health Insurance Act requires every person resident in Switzerland to have health insurance.
+  You must take out insurance within three months of birth or of taking up residence.
+status: draft
+reviewed_by: null
+reviewed_at: null

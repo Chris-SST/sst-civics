@@ -1,0 +1,14 @@
+id: hundehaltung-abgabe-hundesteuer
+lang: en
+source_version: 1
+question: What else must a person in the canton of Zürich do if they keep a dog?
+options:
+  a: They must pay an annual charge for it, the dog tax
+  b: They must report the dog to the Federal Council (Bundesrat) every two years
+  c: They do not have to pay value added tax on the dog food
+  d: They must perform a substitute for military service for it
+explanation: Dog owners pay an annual dog tax to the commune (Gemeinde). The dog must also be registered.
+  The charge is one of the obligations towards the state.
+status: draft
+reviewed_by: null
+reviewed_at: null

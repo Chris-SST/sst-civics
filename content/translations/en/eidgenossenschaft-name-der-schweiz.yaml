@@ -1,0 +1,14 @@
+id: eidgenossenschaft-name-der-schweiz
+lang: en
+source_version: 1
+question: Which name is also used for Switzerland in the Federal Constitution?
+options:
+  a: Federal Republic
+  b: Eidgenossenschaft
+  c: Confederation of the Cantons
+  d: Federal Kingdom
+explanation: The official name is "Swiss Confederation" (Schweizerische Eidgenossenschaft). The word Eidgenossenschaft
+  therefore stands for Switzerland as a whole. It recalls the alliances that were sealed by an oath.
+status: draft
+reviewed_by: null
+reviewed_at: null

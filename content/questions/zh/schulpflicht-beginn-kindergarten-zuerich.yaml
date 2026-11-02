@@ -1,0 +1,42 @@
+id: schulpflicht-beginn-kindergarten-zuerich
+version: 1
+scope: zh
+canton: zh
+topic: kanton.sozial.bildung_gesundheit
+question_de: Womit beginnt im Kanton Zürich die Schulpflicht eines Kindes?
+options_de:
+  a: Mit dem Eintritt in die Sekundarschule
+  b: Mit dem Eintritt in die Primarschule
+  c: Mit dem Eintritt in die Spielgruppe
+  d: Mit dem Eintritt in den Kindergarten
+correct: d
+explanation_de: Im Kanton Zürich gehört der Kindergarten zur obligatorischen Volksschule. Die Schulpflicht
+  beginnt deshalb schon mit dem Eintritt in den Kindergarten. Die Spielgruppe ist freiwillig.
+sources:
+- url: https://www.zh.ch/de/bildung/schulen/volksschule/kindergarten.html
+  checked: &id001 2026-11-02
+glossary:
+- Schulpflicht
+- Kindergarten
+- Volksschule
+status: in_review
+difficulty: 1
+covers:
+- zh-197
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Kanton Zürich beginnt die obligatorische Schulpflicht mit dem Eintritt in den Kindergarten,
+      der Teil der Primarstufe ist, wenn das Kind bis zum 31. Juli vier Jahre alt geworden ist.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass mit dem Eintritt in den Kindergarten die Volksschulzeit beginnt. Der Kindergarten
+      ist die erste Stufe der Volksschule und obligatorisch. Die Spielgruppe wird nur als Umfeld vor dem
+      Kindergarten erwähnt; dass sie freiwillig ist, steht nicht ausdrücklich da, widerspricht aber nichts.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

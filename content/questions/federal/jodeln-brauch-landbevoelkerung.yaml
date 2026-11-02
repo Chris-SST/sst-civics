@@ -1,0 +1,48 @@
+id: jodeln-brauch-landbevoelkerung
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Welcher überlieferte Brauch der Schweizer Landbevölkerung ist ein Gesang ohne Text, bei dem
+  die Stimme schnell zwischen Brust- und Kopfstimme wechselt?
+options_de:
+  a: Alphornblasen
+  b: Jodeln
+  c: Silvesterchlausen
+  d: Fahnenschwingen
+correct: b
+explanation_de: Jodeln gehört zu den überlieferten Bräuchen der Schweizer Landbevölkerung. Typisch ist
+  der Wechsel zwischen Brust- und Kopfstimme. Es gibt Jodlerklubs und Jodlerfeste im ganzen Land.
+sources:
+- url: https://www.bak.admin.ch/de/jodel
+  checked: &id001 2026-11-02
+- url: https://www.news.admin.ch/de/newnsb/VcmsBfaIzuPkmrztC81iK
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Jodeln
+- Brauchtum
+status: in_review
+difficulty: 1
+covers:
+- zh-312
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Jodeln ist ein textloser Gesang (Naturjodel) mit schnellem Wechsel zwischen Brust- und
+      Kopfstimme, während Alphornblasen und Fahnenschwingen keinen Gesang darstellen und Silvesterchlausen
+      ein Brauch mit Schellen und Masken ist.
+  source:
+    verdict: supported
+    note: Quelle 1 (BAK) definiert Jodeln als text- und wortlose Singweise mit Wechsel zwischen Kopf-
+      und Brustregister. Quelle 2 bestätigt den Wechsel zwischen Brust- und Kopfstimme und nennt Jodlerverband,
+      Feste und Wettbewerbe. Die Aussage zur Landbevölkerung steht nicht ausdrücklich da, ist aber für
+      die Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

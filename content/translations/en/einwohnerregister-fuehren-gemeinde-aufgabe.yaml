@@ -1,0 +1,15 @@
+id: einwohnerregister-fuehren-gemeinde-aufgabe
+lang: en
+source_version: 1
+question: Which of the following tasks is performed by the Einwohneramt in Zurich communes (Gemeinden)?
+options:
+  a: It issues criminal judgments.
+  b: It keeps the commune's register of residents.
+  c: It grants building permits for cantonal roads.
+  d: It sets tax laws.
+explanation: The commune keeps the register of the people who live in it. This is where you register,
+  deregister or change your registration when you move. Criminal judgments, tax laws and cantonal roads
+  are not part of this task.
+status: draft
+reviewed_by: null
+reviewed_at: null

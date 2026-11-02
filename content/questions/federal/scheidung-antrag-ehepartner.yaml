@@ -1,0 +1,42 @@
+id: scheidung-antrag-ehepartner
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Wer kann in der Schweiz die Scheidung beantragen?
+options_de:
+  a: Nur beide Ehepartner gemeinsam
+  b: Einer der Ehepartner allein oder beide gemeinsam
+  c: Nur der Ehepartner, der die Scheidung wünscht, mit Zustimmung des anderen
+  d: Nur die Eltern der Ehepartner oder ein Familienmitglied
+correct: b
+explanation_de: Eine Scheidung kann von einem Ehepartner allein oder von beiden gemeinsam verlangt werden.
+  Eine Zustimmung des anderen Teils ist für den Antrag nicht nötig. Zuständig ist das Gericht.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Scheidung
+- Ehepartner
+status: draft
+difficulty: 2
+covers:
+- zh-183
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach dem Schweizerischen Zivilgesetzbuch (Art. 111 ff. und Art. 114 f. ZGB) können beide
+      Ehegatten gemeinsam die Scheidung verlangen (einvernehmlich) oder ein Ehegatte allein klagen, ohne
+      dass der andere zustimmen muss, etwa nach zwei Jahren Trennung.
+  source:
+    verdict: unclear
+    note: Die Broschüre behandelt Politik, Rechte und Pflichten, Geschichte und Geografie. Im gekürzten
+      Text steht aber nichts zur Scheidung, zur Antragsberechtigung oder zur Zuständigkeit des Gerichts.
+      Die Antwort lässt sich daher anhand dieser Quelle weder bestätigen noch widerlegen.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

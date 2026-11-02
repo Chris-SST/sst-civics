@@ -1,0 +1,47 @@
+id: krankenversicherung-obligatorisch-einwohner
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Wer muss in der Schweiz eine Krankenversicherung abschliessen?
+options_de:
+  a: Nur Personen mit Schweizer Bürgerrecht
+  b: Alle Personen, die in der Schweiz wohnen
+  c: Nur Personen unter 65 Jahren
+  d: Nur Erwerbstätige
+correct: b
+explanation_de: Die obligatorische Krankenpflegeversicherung gilt für alle Personen mit Wohnsitz in der
+  Schweiz. Das Bürgerrecht, die Erwerbstätigkeit und das Alter spielen keine Rolle. Die Versicherung muss
+  innert drei Monaten nach dem Zuzug abgeschlossen werden.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328/20260701/de/html/fedlex-data-admin-ch-eli-cc-1995-1328_1328_1328-20260701-de-html-1.html
+  checked: &id001 2026-11-02
+- url: https://www.bag.admin.ch/de/krankenversicherung-versicherungspflicht-fuer-in-der-schweiz-wohnhafte-versicherte
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Krankenversicherung
+- Versicherungspflicht
+status: in_review
+difficulty: 1
+covers:
+- zh-018
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach dem Krankenversicherungsgesetz (KVG) gilt das Versicherungsobligatorium für alle Personen
+      mit Wohnsitz in der Schweiz, unabhängig von Staatsbürgerschaft, Alter oder Erwerbstätigkeit.
+  source:
+    verdict: supported
+    note: Art. 3 KVG (Quelle 1) und die BAG-Seite (Quelle 2) sagen, dass jede Person mit Wohnsitz in der
+      Schweiz sich innert drei Monaten nach der Wohnsitznahme versichern muss, unabhängig von der Staatsangehörigkeit.
+      Damit sind auch die Aussagen zu Bürgerrecht, Erwerbstätigkeit und Alter sowie die Dreimonatsfrist
+      gestützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

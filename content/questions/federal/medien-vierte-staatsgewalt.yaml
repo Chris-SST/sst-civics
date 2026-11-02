@@ -1,0 +1,46 @@
+id: medien-vierte-staatsgewalt
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.staatsprinzipien
+question_de: Die Medien werden oft mit einem besonderen Ausdruck bezeichnet, der ihre Rolle im Staat beschreibt.
+  Welcher Ausdruck ist das?
+options_de:
+  a: Zweite Staatsgewalt
+  b: Oberste Staatsgewalt
+  c: Erste Staatsgewalt
+  d: Vierte Staatsgewalt
+correct: d
+explanation_de: Die drei staatlichen Gewalten sind Legislative, Exekutive und Judikative. Die Medien gehören
+  nicht dazu, sie kontrollieren aber die Politik und informieren die Bevölkerung. Deshalb nennt man sie
+  oft die vierte Staatsgewalt.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+  checked: 2026-11-02
+glossary:
+- Staatsgewalt
+- Medien
+- Gewaltenteilung
+status: in_review
+difficulty: 1
+covers:
+- zh-070
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Medien werden allgemein als «Vierte Staatsgewalt» (Vierte Gewalt) bezeichnet, weil
+      sie neben Legislative, Exekutive und Judikative die Staatsgewalt kontrollieren und kritisch begleiten.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Zürcher Einbürgerungsbroschüre) sagt: «Die Medien nennt man auch die vierte Gewalt
+      in einem Staat (neben Legislative, Exekutive und Judikative).» Das deckt Antwort d) und die Erklärung
+      zu den drei Gewalten ab. Quelle 2 behandelt das Thema nicht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

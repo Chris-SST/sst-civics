@@ -1,0 +1,48 @@
+id: auswanderung-19-jahrhundert-grund-not
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gesellschaftswandel
+question_de: Im 19. Jahrhundert verliessen viele Menschen die Schweiz und wanderten zum Beispiel nach
+  Amerika aus. Was war ein wichtiger Grund dafür?
+options_de:
+  a: Not und fehlende Arbeit bedrohten ihre Existenz.
+  b: Der Bund verbot ihnen, in der Schweiz zu wohnen.
+  c: Die Schweiz hatte zu wenig Platz für Fabriken.
+  d: Im Ausland gab es keine Steuern für Neuankömmlinge.
+correct: a
+explanation_de: Im 19. Jahrhundert war die Schweiz noch ein Auswanderungsland. Hungersnöte, Armut und
+  fehlende Arbeit trieben viele Menschen dazu, im Ausland ein neues Leben zu suchen. Erst später wurde
+  die Schweiz zum Einwanderungsland.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.bar.admin.ch/de/einwandererland-schweiz
+  checked: *id001
+- url: https://www.aboutswitzerland.eda.admin.ch/de/auswanderung-und-einwanderung
+  checked: 2026-11-02
+glossary:
+- Auswanderung
+- Einwanderungsland
+status: in_review
+difficulty: 1
+covers:
+- zh-244
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im 19. Jahrhundert wanderten viele Schweizerinnen und Schweizer wegen Armut, Hungersnöten
+      und fehlender Arbeit aus, während die anderen Antworten historisch nicht zutreffen.
+  source:
+    verdict: supported
+    note: Quelle 1 (Zürcher Broschüre) sagt, im 19. Jahrhundert seien viele Menschen in der Schweiz arm
+      und arbeitslos gewesen und hätten Hunger gehabt, weshalb viele das Land verlassen hätten. Quelle
+      2 bestätigt, dass die Schweiz Ende des 19. Jahrhunderts vom Auswanderungs- zum Einwanderungsland
+      wurde. Die übrigen Antworten werden nicht gestützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

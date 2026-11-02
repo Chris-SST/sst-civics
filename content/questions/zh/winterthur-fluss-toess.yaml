@@ -1,0 +1,47 @@
+id: winterthur-fluss-toess
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: Welcher Fluss fliesst durch die Stadt Winterthur?
+options_de:
+  a: Die Limmat
+  b: Die Töss
+  c: Die Sihl
+  d: Die Glatt
+correct: b
+explanation_de: Die Töss fliesst durch Winterthur und mündet später in den Rhein. Die Sihl und die Limmat
+  fliessen durch die Stadt Zürich, die Glatt durch das Glattal.
+sources:
+- url: https://www.zh.ch/de/mobilitaet/gesamtverkehrsplanung/agglomerationsprogramme/massnahmen/portfolio/flexdata/massnahme-754.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2018/05/wie-sich-die-toess-entwickeln-soll.html
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id002 2026-11-02
+glossary:
+- Töss
+- Winterthur
+status: in_review
+difficulty: 2
+covers:
+- zh-296
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Töss fliesst durch den Stadtkreis Töss in Winterthur, während Limmat und Sihl durch
+      Zürich und die Glatt durch Glattbrugg/Uster-Region fliessen, weshalb die Töss die beste Antwort
+      ist.
+  source:
+    verdict: supported
+    note: 'Quelle 3 (Broschüre zum Grundkenntnistest) sagt ausdrücklich: «Die Töss fliesst durch Winterthur
+      und endet im Rhein», ausserdem fliesst die Limmat durch Zürich und die Sihl mündet in der Stadt
+      Zürich in die Limmat. Die Aussage zur Glatt («durch das Glattal») steht dort nicht ausdrücklich,
+      ist aber für die Antwort nicht entscheidend.'
+    at: *id002
+    model: claude-sonnet-5-5
+    version: 1

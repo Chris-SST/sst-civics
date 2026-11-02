@@ -1,0 +1,47 @@
+id: sihl-muendung-in-limmat
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: In welchen Fluss mündet die Sihl mitten in der Stadt Zürich?
+options_de:
+  a: In die Töss
+  b: In die Limmat
+  c: In die Glatt
+  d: In die Aare
+correct: b
+explanation_de: Die Sihl fliesst durch Zürich und mündet beim Platzspitz in die Limmat. Glatt und Töss
+  sind andere Zürcher Flüsse, die in den Rhein münden. Die Aare nimmt die Limmat erst weiter unten im
+  Kanton Aargau auf.
+sources:
+- url: https://www.zh.ch/de/planen-bauen/wasserbau/wasserbauprojekte/erneuerung-platzspitzwehr.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: 2026-11-02
+glossary:
+- Sihl
+- Limmat
+status: in_review
+difficulty: 2
+covers:
+- zh-294
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Sihl mündet beim Platzspitz mitten in der Stadt Zürich in die Limmat, die anderen genannten
+      Flüsse (Töss, Glatt, Aare) kommen dafür nicht in Frage.
+  source:
+    verdict: supported
+    note: 'Quelle 2 (Broschüre, S. 61) sagt ausdrücklich: «Die Sihl fliesst in der Stadt Zürich in die
+      Limmat», die Limmat ende im Kanton Aargau in der Aare, und die Töss ende im Rhein. Quelle 1 bestätigt
+      den Zusammenfluss von Limmat und Sihl beim Platzspitz. Zur Glatt sagen die Seiten nichts Ausdrückliches,
+      das ändert die richtige Antwort aber nicht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

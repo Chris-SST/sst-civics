@@ -1,0 +1,43 @@
+id: flughafen-zuerich-standort-gemeinde
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: Auf dem Gebiet welcher Gemeinde liegt der grösste Teil des Flughafens Zürich?
+options_de:
+  a: Winterthur
+  b: Kloten
+  c: Uster
+  d: Dübendorf
+correct: b
+explanation_de: Der Flughafen Zürich liegt auf dem Gebiet der Gemeinde Kloten im Zürcher Unterland. Deshalb
+  sagen viele Leute auch «Flughafen Kloten». Dübendorf hat einen anderen Flugplatz, der früher militärisch
+  genutzt wurde.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/politik-staat/kanton.html
+  checked: 2026-11-02
+glossary:
+- Gemeinde
+- Flughafen Zürich
+status: draft
+difficulty: 1
+covers:
+- zh-291
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der grösste Teil des Flughafens Zürich liegt auf dem Gebiet der Stadt Kloten, auch wenn
+      Teile davon in Rümlang, Oberglatt, Winkel und Opfikon liegen.
+  source:
+    verdict: unclear
+    note: Weder die Broschüre (Quelle 1, gekürzt) noch die Kantonsseite (Quelle 2) erwähnen den Flughafen
+      Zürich oder Kloten. Die Antwort wird daher durch die Quellen weder gestützt noch widerlegt.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

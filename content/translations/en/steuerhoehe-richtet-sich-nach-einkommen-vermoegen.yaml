@@ -1,0 +1,15 @@
+id: steuerhoehe-richtet-sich-nach-einkommen-vermoegen
+lang: en
+source_version: 1
+question: What does the amount of income and wealth tax that a person pays in the canton of Zürich mainly
+  depend on?
+options:
+  a: On the person's taxable income and wealth
+  b: On the person's occupation
+  c: On how long the person has lived in the commune (Gemeinde)
+  d: On the number of times the person has exercised their right to vote
+explanation: Tax is calculated on taxable income and wealth. Those who earn or own more generally pay
+  more tax.
+status: draft
+reviewed_by: null
+reviewed_at: null

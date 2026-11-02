@@ -1,0 +1,49 @@
+id: raumplanung-landschaften-ohne-bebauung
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Welches Ziel hat die Raumplanung in der Schweiz unter anderem?
+options_de:
+  a: Sie soll Landschaften ohne Bebauung erhalten.
+  b: Sie soll die Kantonsgrenzen regelmässig neu ziehen.
+  c: Sie soll möglichst viel Land für Neubauten freigeben.
+  d: Sie soll die Preise für Bauland festlegen.
+correct: a
+explanation_de: Die Raumplanung regelt, wie der Boden genutzt wird. Sie soll Siedlungen, Landwirtschaft
+  und Natur ausgewogen ordnen und unbebaute Landschaften schützen. Das Land ist knapp und soll haushälterisch
+  genutzt werden.
+sources:
+- url: https://uvek.admin.ch/uvek/de/home/raumentwicklung/raumentwicklungspolitik.html
+  checked: &id001 2026-11-02
+- url: https://www.uvek.admin.ch/de/siedlung-und-landschaft
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Raumplanung
+- Landschaft
+status: in_review
+difficulty: 2
+covers:
+- zh-268
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Raumplanung soll nach Art. 75 der Bundesverfassung und dem Raumplanungsgesetz den Boden
+      haushälterisch nutzen und die natürlichen Lebensgrundlagen wie unbebaute Landschaften schützen,
+      während die anderen Antworten nicht zu ihren Zielen gehören.
+  source:
+    verdict: supported
+    note: 'Quelle 1 nennt als Hauptzweck die nachhaltige Nutzung des Bodens: weniger überbauen, um die
+      Landschaft zu schonen, und den Boden haushälterisch nutzen. Quelle 2 nennt den Schutz der Landschaft
+      als zentrale Aufgabe und das Ziel, die Zersiedelung zu stoppen sowie Natur- und Kulturlandschaften
+      zu erhalten. Das stützt Antwort a und die Erklärung. Die anderen Antworten werden durch die Texte
+      widerlegt oder kommen darin nicht vor.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

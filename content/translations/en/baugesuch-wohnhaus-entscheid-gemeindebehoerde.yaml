@@ -1,0 +1,16 @@
+id: baugesuch-wohnhaus-entscheid-gemeindebehoerde
+lang: en
+source_version: 1
+question: Who generally decides on the building application for a new residential building in the canton
+  of Zürich?
+options:
+  a: The Executive Council (Regierungsrat)
+  b: The building authority of the commune (Gemeinde)
+  c: The district court
+  d: The Federal Office for Spatial Development
+explanation: Building applications for residential buildings are submitted to the commune. The communal
+  building authority examines the application and either grants or refuses the building permit. The canton
+  is involved only in special cases.
+status: draft
+reviewed_by: null
+reviewed_at: null

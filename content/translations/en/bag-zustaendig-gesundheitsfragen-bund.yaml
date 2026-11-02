@@ -1,0 +1,14 @@
+id: bag-zustaendig-gesundheitsfragen-bund
+lang: en
+source_version: 1
+question: Which federal authority is responsible for health matters?
+options:
+  a: The Federal Office for the Environment (FOEN)
+  b: The State Secretariat for Migration (SEM)
+  c: The Federal Statistical Office (FSO)
+  d: The Federal Office of Public Health (FOPH)
+explanation: The Federal Office of Public Health (FOPH) is the competent federal authority for health
+  matters. For example, it supervises social health insurance.
+status: draft
+reviewed_by: null
+reviewed_at: null

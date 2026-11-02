@@ -1,0 +1,45 @@
+id: sechselaeutenplatz-kartoffelanbau-zweiter-weltkrieg
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geschichte.zuerich
+question_de: Was wurde im Zweiten Weltkrieg auf dem Sechseläutenplatz in Zürich angebaut?
+options_de:
+  a: Weizen
+  b: Reben
+  c: Mais
+  d: Kartoffeln
+correct: d
+explanation_de: Im Zweiten Weltkrieg war die Versorgung mit Lebensmitteln knapp. Darum wurde auch mitten
+  in der Stadt Zürich Land bepflanzt, unter anderem der Sechseläutenplatz mit Kartoffeln. Diese Anbauaktion
+  gehörte zur Anbauschlacht, mit der die Schweiz ihre Ernährung sichern wollte.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/digitale-zeitreise/landwirtschaft-natur-und-umwelt.html
+  checked: *id001
+glossary:
+- Sechseläutenplatz
+- Anbauschlacht
+status: needs_fix
+difficulty: 2
+covers:
+- zh-245
+checks:
+  independent_answer:
+    option: a
+    agrees: false
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Rahmen der Anbauschlacht (Plan Wahlen) wurde im Zweiten Weltkrieg auf dem Sechseläutenplatz
+      (damals Platz beim Opernhaus) Weizen angebaut, was durch bekannte Fotografien von 1941 belegt ist.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt ausdrücklich, dass im Zweiten Weltkrieg auf dem Sechseläutenplatz Kartoffeln angepflanzt
+      wurden, weil Lebensmittel knapp waren. Quelle 2 bestätigt den Kartoffelanbau und den Zusammenhang
+      mit der Anbauschlacht (Plan Wahlen), nennt aber auch Korn und Raps. Kartoffeln bleibt unter den
+      Antworten die richtige.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

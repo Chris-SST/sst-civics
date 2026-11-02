@@ -1,0 +1,43 @@
+id: baudirektion-zuerich-kantonsverwaltung-direktion
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.regierungsrat
+question_de: Welche der folgenden Stellen ist eine Direktion der Zürcher Kantonsverwaltung?
+options_de:
+  a: Die Gemeindedirektion
+  b: Die Baudirektion
+  c: Die Stadtdirektion
+  d: Die Bundesdirektion
+correct: b
+explanation_de: Die Baudirektion gehört zu den Direktionen der Zürcher Kantonsverwaltung. Die Kantonsverwaltung
+  ist in mehrere Direktionen gegliedert, die je von einem Mitglied des Regierungsrats geführt werden.
+sources:
+- url: https://www.zh.ch/de/politik-staat/kanton/kantonale-verwaltung.html
+  checked: &id001 2026-11-02
+glossary:
+- Baudirektion
+- Direktion
+- Kantonsverwaltung
+status: in_review
+difficulty: 2
+covers:
+- zh-100
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Baudirektion ist eine der sieben Direktionen des Regierungsrats im Kanton Zürich, während
+      es eine Gemeinde-, Stadt- oder Bundesdirektion in der Zürcher Kantonsverwaltung nicht gibt.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die Baudirektion in der Liste der Direktionen der kantonalen Verwaltung Zürich;
+      Gemeinde-, Stadt- und Bundesdirektion kommen dort nicht vor. Die Seite sagt auch, dass die Verwaltung
+      aus sieben Direktionen plus der Staatskanzlei besteht. Die Aussage, dass jede Direktion von einem
+      Regierungsratsmitglied geführt wird, steht dort nicht ausdrücklich.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

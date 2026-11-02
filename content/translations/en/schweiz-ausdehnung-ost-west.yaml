@@ -1,0 +1,14 @@
+id: schweiz-ausdehnung-ost-west
+lang: en
+source_version: 1
+question: What is the approximate distance between the easternmost and the westernmost points of Switzerland?
+options:
+  a: Around 250 kilometres
+  b: Around 350 kilometres
+  c: Around 550 kilometres
+  d: Around 150 kilometres
+explanation: Switzerland measures around 350 kilometres from east to west. It is therefore a rather small
+  country, which is longer from east to west than from north to south.
+status: draft
+reviewed_by: null
+reviewed_at: null

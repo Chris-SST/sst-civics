@@ -1,0 +1,47 @@
+id: suchard-lindt-schokolade-betriebe
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geschichte.zuerich
+question_de: Was stellten Philippe Suchard und Rudolph Lindt in ihren Betrieben her?
+options_de:
+  a: Schokolade
+  b: Maschinen
+  c: Uhren
+  d: Textilien
+correct: a
+explanation_de: Philippe Suchard und Rudolph Lindt errichteten Betriebe zur Herstellung von Schokolade.
+  Die Schokolade wurde so zu einem bekannten Schweizer Produkt. Die Industrie spielte auch in der Zürcher
+  Wirtschaftsgeschichte eine wichtige Rolle.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/schokolade
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte.html
+  checked: 2026-11-02
+glossary:
+- Schokolade
+- Industrie
+status: in_review
+difficulty: 1
+covers:
+- zh-254
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Philippe Suchard (Neuenburg) und Rudolph Lindt (Bern, später Kilchberg) waren bekannte
+      Schweizer Schokoladenfabrikanten.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (About Switzerland, EDA) nennt Philippe Suchard und Rudolf Lindt als Schweizer Chocolatiers:
+      Suchard errichtete Schokoladenfabriken, Lindt eröffnete in Bern eine Schokoladefabrik. Der Hinweis
+      auf die Zürcher Wirtschaftsgeschichte in der Erklärung wird von den Quellen nicht belegt, ist aber
+      für die Antwort nicht entscheidend.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

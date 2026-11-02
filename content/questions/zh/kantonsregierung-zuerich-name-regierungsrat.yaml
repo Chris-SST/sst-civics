@@ -1,0 +1,43 @@
+id: kantonsregierung-zuerich-name-regierungsrat
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.regierungsrat
+question_de: Wie nennt man die Regierung des Kantons Zürich?
+options_de:
+  a: Obergericht
+  b: Kantonsrat
+  c: Bundesrat
+  d: Regierungsrat
+correct: d
+explanation_de: Die Regierung des Kantons Zürich heisst Regierungsrat. Der Kantonsrat ist das Parlament,
+  das Obergericht gehört zur Justiz.
+sources:
+- url: https://www.zh.ch/de/regierungsrat.html
+  checked: &id001 2026-11-02
+glossary:
+- Regierungsrat
+- Kantonsrat
+- Obergericht
+status: in_review
+difficulty: 1
+covers:
+- zh-108
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Regierung des Kantons Zürich heisst Regierungsrat, während der Kantonsrat das Parlament,
+      das Obergericht das oberste kantonale Gericht und der Bundesrat die Landesregierung ist.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt den Regierungsrat die oberste leitende und vollziehende Behörde (Exekutive) des
+      Kantons Zürich. Sie erwähnt auch, dass er die Beschlüsse des Kantonsrates umsetzt. Dass der Kantonsrat
+      das Parlament ist und das Obergericht zur Justiz gehört, steht nicht ausdrücklich dort, ergibt sich
+      aber aus dieser Rollenverteilung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

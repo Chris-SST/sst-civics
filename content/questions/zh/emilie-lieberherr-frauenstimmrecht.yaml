@@ -1,0 +1,46 @@
+id: emilie-lieberherr-frauenstimmrecht
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geschichte.zuerich
+question_de: Wofür setzte sich die Zürcher Politikerin Emilie Lieberherr ein?
+options_de:
+  a: Für den Bau des Zürcher Flughafens
+  b: Für den Beitritt der Schweiz zur UNO
+  c: Für das Stimm- und Wahlrecht der Frauen
+  d: Für die Abschaffung der Gemeindeversammlung
+correct: c
+explanation_de: Emilie Lieberherr kämpfte in den 1960er-Jahren für das Stimm- und Wahlrecht der Frauen.
+  Auf Bundesebene wurde es 1971 eingeführt. Im Kanton Zürich gilt es seit 1970.
+sources:
+- url: https://www.stadt-zuerich.ch/de/aktuell/medienmitteilungen/2020/02/200226a1.html
+  checked: &id001 2026-11-02
+- url: https://www.stadt-zuerich.ch/misc/de/mitteilungsarchiv/medienmitteilungen/2011/01/110104a1.html
+  checked: *id001
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Stimmrecht
+- Wahlrecht
+status: in_review
+difficulty: 2
+covers:
+- zh-253
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Emilie Lieberherr war Frauenrechtlerin und kämpfte in den 1960er-Jahren für das Stimm-
+      und Wahlrecht der Frauen, das 1971 auf Bundesebene eingeführt wurde.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, Lieberherr habe für das Frauenstimmrecht gekämpft und 1970 sei sie in den Zürcher
+      Stadtrat gewählt worden; Quelle 2 nennt ihren Einsatz für das Frauenstimmrecht seit den 1960er Jahren;
+      Quelle 3 nennt sie Vorkämpferin für Frauenrechte und nennt 1971 für den Bund. Das Jahr 1970 im Kanton
+      Zürich wird nicht ausdrücklich belegt, aber die Kernaussage ist klar gestützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

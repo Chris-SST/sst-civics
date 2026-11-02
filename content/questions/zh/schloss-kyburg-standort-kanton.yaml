@@ -1,0 +1,42 @@
+id: schloss-kyburg-standort-kanton
+version: 1
+scope: zh
+canton: zh
+topic: kanton.geografie.zuerich
+question_de: In welchem Kanton steht das Schloss Kyburg?
+options_de:
+  a: Im Kanton Aargau
+  b: Im Kanton St. Gallen
+  c: Im Kanton Zürich
+  d: Im Kanton Thurgau
+correct: c
+explanation_de: Das Schloss Kyburg steht im Kanton Zürich, auf einem Hügel über der Töss. Es gehört zu
+  den bekannten Kulturgütern des Kantons und ist ein Museum.
+sources:
+- url: https://www.zh.ch/de/sport-kultur/kultur/kulturerbe/kulturhistorische-institutionen.html
+  checked: &id001 2026-11-02
+glossary:
+- Schloss Kyburg
+- Kulturerbe
+status: in_review
+difficulty: 1
+covers:
+- zh-297
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Schloss Kyburg steht in der Gemeinde Kyburg im Kanton Zürich, im Tösstal oberhalb der
+      Töss.
+  source:
+    verdict: supported
+    note: Die Seite des Kantons Zürich führt das Museum Schloss Kyburg unter den kulturhistorischen Institutionen
+      auf und nennt die Unterstützung des Trägervereins durch den Kanton Zürich. Dass es im Kanton Zürich
+      liegt, ergibt sich daraus eindeutig; der Hügel über der Töss wird nicht erwähnt, ist aber für die
+      Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

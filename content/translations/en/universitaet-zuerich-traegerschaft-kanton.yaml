@@ -1,0 +1,15 @@
+id: universitaet-zuerich-traegerschaft-kanton
+lang: en
+source_version: 1
+question: Who is responsible for the operation and sponsorship of the University of Zurich in the canton
+  of Zurich?
+options:
+  a: The Confederation
+  b: The city of Zurich
+  c: The canton of Zurich
+  d: The district councils of the canton
+explanation: The University of Zurich is a cantonal university. The canton of Zurich sponsors it and operates
+  it. The city of Zurich and the Confederation are not primarily responsible for it.
+status: draft
+reviewed_by: null
+reviewed_at: null

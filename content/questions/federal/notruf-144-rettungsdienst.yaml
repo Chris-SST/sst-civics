@@ -1,0 +1,45 @@
+id: notruf-144-rettungsdienst
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.gesundheit
+question_de: Welche Telefonnummer wählt man in der Schweiz bei einem medizinischen Notfall, um den Rettungsdienst
+  zu rufen?
+options_de:
+  a: '118'
+  b: '117'
+  c: '144'
+  d: '145'
+correct: c
+explanation_de: Die Nummer 144 ist der Notruf für den Rettungsdienst bei medizinischen Notfällen. Die
+  117 gilt für die Polizei und die 118 für die Feuerwehr. Die 145 ist die Nummer von Tox Info Suisse bei
+  Vergiftungen.
+sources:
+- url: https://www.bakom.admin.ch/de/notrufdienste
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Rettungsdienst
+- Notruf
+status: in_review
+difficulty: 1
+covers:
+- zh-157
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Nummer 144 ist in der Schweiz der Notruf für den Rettungsdienst, während 117 die Polizei,
+      118 die Feuerwehr und 145 die Vergiftungsnotrufzentrale erreicht.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (BAKOM) nennt Polizei (117), Feuerwehr (118) und Sanität (144). Quelle 2 (Broschüre
+      Kanton Zürich) listet die Notfallnummern ausdrücklich auf: 117 Polizei, 118 Feuerwehr, 144 Ambulanz/Sanitätsnotruf,
+      145 Vergiftungen/Tox-Info. Damit sind Antwort und Erklärung gestützt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,14 @@
+id: tessin-gesprochene-sprache
+lang: en
+source_version: 1
+question: Which language is spoken in the canton of Ticino?
+options:
+  a: Romansh
+  b: French
+  c: Italian
+  d: German
+explanation: In Ticino, Italian is the language of the population and the official language of the canton.
+  Italian is one of the four national languages of Switzerland. It is also spoken in parts of Graubünden.
+status: draft
+reviewed_by: null
+reviewed_at: null

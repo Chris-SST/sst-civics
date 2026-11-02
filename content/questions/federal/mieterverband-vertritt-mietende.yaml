@@ -1,0 +1,45 @@
+id: mieterverband-vertritt-mietende
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Welche Aufgabe hat der Mieterverband?
+options_de:
+  a: Er vertritt die Anliegen der Hauseigentümer
+  b: Er legt die Mietzinse für alle Wohnungen fest
+  c: Er vermietet Wohnungen im Auftrag des Kantons
+  d: Er vertritt die Anliegen der Mietenden
+correct: d
+explanation_de: Der Mieterverband ist eine Organisation, die sich für die Interessen der Mietenden einsetzt.
+  Er berät seine Mitglieder zum Beispiel bei Fragen zum Mietrecht. Die Interessen der Hauseigentümer vertreten
+  andere Verbände.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+glossary:
+- Mieterverband
+- Mietende
+status: in_review
+difficulty: 1
+covers:
+- zh-186
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Mieterverband ist eine Interessenvertretung, die die Anliegen der Mietenden vertritt
+      und sie berät, während Hauseigentümer vom Hauseigentümerverband vertreten werden und weder Mietzinse
+      festgelegt noch Wohnungen im Auftrag des Kantons vermietet werden.
+  source:
+    verdict: supported
+    note: Die Broschüre (Abschnitt «Miete und Wohnung») sagt, der Mieterinnen- und Mieterverband schaue,
+      dass die mietenden Personen beim Mietvertrag gut behandelt werden, und mietende Personen könnten
+      sich bei Fragen oder Problemen an ihn wenden. Das stützt Antwort d; die weiteren Aussagen der Erklärung
+      (andere Verbände für Hauseigentümer) stehen nicht ausdrücklich da, sind aber für die Antwort nicht
+      nötig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

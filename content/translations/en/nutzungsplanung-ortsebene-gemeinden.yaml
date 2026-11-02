@@ -1,0 +1,16 @@
+id: nutzungsplanung-ortsebene-gemeinden
+lang: en
+source_version: 1
+question: In the canton of Zurich, who plans at local level how land is used, for example where residential
+  zones and commercial zones are located?
+options:
+  a: The Swiss Federal Assembly (Bundesversammlung)
+  b: The cantonal police
+  c: The communes (Gemeinden)
+  d: The district councils alone
+explanation: The communes issue the land-use planning for their area, for example the building and zoning
+  regulations. In doing so, they observe the requirements of the Confederation and the canton. In this
+  way, they help to determine how the locality develops.
+status: draft
+reviewed_by: null
+reviewed_at: null

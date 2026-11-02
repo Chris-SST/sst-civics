@@ -1,0 +1,14 @@
+id: beziehungen-schweiz-eu-bilaterale-abkommen
+lang: en
+source_version: 1
+question: What are the relations between Switzerland and the European Union (EU) fundamentally based on?
+options:
+  a: On a package of bilateral agreements
+  b: On a common government
+  c: On Switzerland's membership of the EU
+  d: On a common constitution
+explanation: Switzerland is not a member of the EU. Its relations are governed by many bilateral agreements,
+  that is, treaties between two partners. They cover, for example, trade and the free movement of persons.
+status: draft
+reviewed_by: null
+reviewed_at: null

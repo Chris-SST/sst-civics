@@ -1,0 +1,41 @@
+id: abkuerzung-mwst-bedeutung
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Auf Rechnungen und Quittungen steht oft die Abkürzung «MWST». Wofür steht sie?
+options_de:
+  a: Für die Mietwohnungssteuer
+  b: Für die Militärwehrsteuer
+  c: Für die Motorwagensteuer
+  d: Für die Mehrwertsteuer
+correct: d
+explanation_de: MWST bedeutet Mehrwertsteuer. Sie wird auf den meisten Waren und Dienstleistungen erhoben
+  und ist im Preis enthalten. Sie ist eine wichtige Einnahmequelle des Bundes.
+sources:
+- url: https://www.estv.admin.ch/de/mehrwertsteuer
+  checked: &id001 2026-11-02
+glossary:
+- Mehrwertsteuer
+- Steuer
+status: in_review
+difficulty: 1
+covers:
+- zh-178
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: «MWST» steht in der Schweiz für Mehrwertsteuer, die auf Waren und Dienstleistungen erhoben
+      wird und auf Rechnungen und Quittungen ausgewiesen ist.
+  source:
+    verdict: supported
+    note: Die ESTV-Seite führt «Mehrwertsteuer (MWST)» ausdrücklich als Abkürzung auf. Sie bestätigt auch,
+      dass die Steuer vom Bund erhoben und in den Preis eingerechnet oder auf der Rechnung ausgewiesen
+      wird und die zweitwichtigste Einnahmequelle des Bundes ist.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

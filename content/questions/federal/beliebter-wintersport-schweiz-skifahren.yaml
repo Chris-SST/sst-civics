@@ -1,0 +1,41 @@
+id: beliebter-wintersport-schweiz-skifahren
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Welcher Sport ist im Winter in der Schweiz besonders weit verbreitet?
+options_de:
+  a: Wasserball
+  b: Skifahren
+  c: Eishockey auf dem Meer
+  d: Beachvolleyball
+correct: b
+explanation_de: Skifahren ist in der Schweiz im Winter ein sehr beliebter Sport. Viele Menschen fahren
+  in den Bergen Ski, auch Kinder lernen es oft in der Schule oder in Lagern.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sport-und-freizeit
+  checked: &id001 2026-11-02
+glossary:
+- Skifahren
+status: in_review
+difficulty: 1
+covers:
+- zh-325
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Skifahren ist in der Schweiz der im Winter besonders weit verbreitete Sport, während Wasserball
+      und Beachvolleyball keine typischen Wintersportarten sind und es in der Schweiz kein Meer gibt,
+      auf dem Eishockey gespielt werden könnte.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Skifahren einen eigentlichen Nationalsport, der in den Wintermonaten unzählige
+      Skibegeisterte auf die Pisten lockt. Dass Kinder Skifahren oft in Schule oder Lagern lernen, steht
+      dort nicht, ist aber für die richtige Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

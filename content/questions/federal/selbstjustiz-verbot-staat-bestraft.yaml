@@ -1,0 +1,44 @@
+id: selbstjustiz-verbot-staat-bestraft
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.gerichte
+question_de: Was gilt in der Schweiz, wenn jemand ein Gesetz gebrochen hat?
+options_de:
+  a: Die Nachbarschaft entscheidet gemeinsam über die Strafe.
+  b: Der Staat verfolgt und bestraft die Tat; Selbstjustiz ist verboten.
+  c: Das Opfer darf die Strafe selbst bestimmen und vollziehen.
+  d: Die Tat bleibt straflos, wenn das Opfer sich selbst gewehrt hat.
+correct: b
+explanation_de: Das Gewaltmonopol liegt beim Staat. Nur Polizei, Staatsanwaltschaft und Gerichte dürfen
+  Straftaten verfolgen und Strafen verhängen. Wer selbst Rache übt, macht sich unter Umständen selbst
+  strafbar.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+glossary:
+- Selbstjustiz
+- Gewaltmonopol
+- Rechtsstaat
+status: in_review
+difficulty: 1
+covers:
+- zh-091
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In der Schweiz hat der Staat das Gewaltmonopol, verfolgt und bestraft Straftaten durch
+      Strafbehörden und Gerichte, und Selbstjustiz ist verboten.
+  source:
+    verdict: supported
+    note: Die Broschüre sagt, der Staat habe das Gewaltmonopol und nur er dürfe Gewalt anwenden, und dass
+      nur das Gericht eine Person bestrafen darf, die sich nicht an das Gesetz hält. Das stützt Antwort
+      b und die Erklärung; der Hinweis auf eine mögliche eigene Strafbarkeit bei Rache steht nicht ausdrücklich
+      da, folgt aber aus dem Verbot von Gewalt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

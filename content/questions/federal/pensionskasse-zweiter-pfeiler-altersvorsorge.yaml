@@ -1,0 +1,46 @@
+id: pensionskasse-zweiter-pfeiler-altersvorsorge
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Die Altersvorsorge in der Schweiz beruht auf drei Säulen. Welche Einrichtung bildet den zweiten
+  Pfeiler?
+options_de:
+  a: Die Ergänzungsleistungen zur AHV
+  b: Die AHV (staatliche Rentenversicherung)
+  c: Die Pensionskasse (berufliche Vorsorge)
+  d: Das private Sparkonto mit Steuerabzug (Säule 3a)
+correct: c
+explanation_de: Die Pensionskasse gehört zur beruflichen Vorsorge und bildet den zweiten Pfeiler. Sie
+  ergänzt die AHV, damit Rentnerinnen und Rentner ihren gewohnten Lebensstandard in angemessener Weise
+  weiterführen können. Die AHV ist der erste, die private Vorsorge der dritte Pfeiler.
+sources:
+- url: https://www.bsv.admin.ch/de/dreisaeulensystem
+  checked: &id001 2026-11-02
+glossary:
+- Pensionskasse
+- berufliche Vorsorge
+- Pfeiler
+- AHV
+- Ergänzungsleistungen
+status: in_review
+difficulty: 1
+covers:
+- zh-138
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die zweite Säule der Schweizer Altersvorsorge ist die berufliche Vorsorge, also die Pensionskasse,
+      während die AHV die erste und die Säule 3a die dritte Säule bildet.
+  source:
+    verdict: supported
+    note: 'Die BSV-Seite nennt unter «2. Säule: Die berufliche Vorsorge» die Pensionskasse und das Ziel,
+      den gewohnten Lebensstandard in angemessener Weise weiterzuführen. Die AHV/IV als 1. Säule und die
+      private Vorsorge als 3. Säule stimmen ebenfalls mit der Erklärung überein.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

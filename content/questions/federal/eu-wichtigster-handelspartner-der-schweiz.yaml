@@ -1,0 +1,43 @@
+id: eu-wichtigster-handelspartner-der-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Mit welchem Wirtschaftsraum treibt die Schweiz insgesamt am meisten Handel?
+options_de:
+  a: Mit den Staaten des Nahen Ostens
+  b: Mit den asiatischen Staaten
+  c: Mit der Europäischen Union
+  d: Mit den Vereinigten Staaten von Amerika
+correct: c
+explanation_de: Die Europäische Union ist der wichtigste Handelspartner der Schweiz. Ein grosser Teil
+  der Importe und Exporte läuft über die EU-Staaten. Deshalb sind die Beziehungen zur EU für die Schweizer
+  Wirtschaft sehr wichtig.
+sources:
+- url: https://www.seco.admin.ch/de/europaeische-union-eu
+  checked: &id001 2026-11-02
+glossary:
+- Europäische Union
+- Aussenhandel
+- Handelspartner
+status: in_review
+difficulty: 1
+covers:
+- zh-262
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Europäische Union ist mit deutlichem Abstand der wichtigste Handelspartner der Schweiz,
+      da rund die Hälfte der Exporte und gut zwei Drittel der Importe auf sie entfallen.
+  source:
+    verdict: supported
+    note: Quelle 1 (SECO) sagt ausdrücklich, die EU sei «die mit Abstand wichtigste Handelspartnerin der
+      Schweiz». Das stützt die richtige Antwort c) und die Erklärung. Der Quelle fehlen Zahlen zu den
+      Anteilen der Importe und Exporte, doch das ändert an der Kernaussage nichts.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

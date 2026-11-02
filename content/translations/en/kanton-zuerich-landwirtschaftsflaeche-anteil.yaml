@@ -1,0 +1,14 @@
+id: kanton-zuerich-landwirtschaftsflaeche-anteil
+lang: en
+source_version: 1
+question: Approximately what proportion of the area of the canton of Zurich is used for agriculture?
+options:
+  a: Around 68 per cent
+  b: Around 25 per cent
+  c: Around 11 per cent
+  d: Around 41 per cent
+explanation: Around 41 per cent of the area of the canton of Zurich is used for agriculture. The rest
+  consists mainly of forest, built-up areas and bodies of water.
+status: draft
+reviewed_by: null
+reviewed_at: null

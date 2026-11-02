@@ -1,0 +1,41 @@
+id: roger-federer-tennisprofi
+version: 1
+scope: federal
+canton: null
+topic: bund.kultur.feiertage_brauchtum
+question_de: Für welche Sportart ist der Schweizer Roger Federer weltberühmt?
+options_de:
+  a: Eishockey
+  b: Fussball
+  c: Skirennen
+  d: Tennis
+correct: d
+explanation_de: Roger Federer ist ein berühmter Schweizer Tennisprofi. Er gewann viele grosse Turniere
+  und gilt als einer der erfolgreichsten Spieler der Geschichte. Tennis ist eine der Sportarten, in denen
+  die Schweiz international bekannte Persönlichkeiten hat.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sport-und-freizeit
+  checked: &id001 2026-11-02
+glossary:
+- Tennis
+status: in_review
+difficulty: 1
+covers:
+- zh-317
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Roger Federer ist ein Schweizer Tennisspieler, der mit zahlreichen Grand-Slam-Titeln weltberühmt
+      wurde.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt Roger Federer, ehemaligen Tennisspieler, als international bekanntesten Schweizer
+      Sportler mit 20 Grand-Slam-Titeln und 103 Turniersiegen, einen der erfolgreichsten Sportler der
+      Welt. Das stützt Antwort und Erklärung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

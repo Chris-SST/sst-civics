@@ -1,0 +1,15 @@
+id: wef-findet-in-davos-statt
+lang: en
+source_version: 1
+question: In which Swiss town does the annual meeting of the World Economic Forum (WEF) regularly take
+  place?
+options:
+  a: In Davos
+  b: In Lucerne
+  c: In Montreux
+  d: In Interlaken
+explanation: The World Economic Forum meets regularly in Davos in the canton of Graubünden. Experts from
+  politics and business come together there. The Confederation supports the security of the meeting.
+status: draft
+reviewed_by: null
+reviewed_at: null

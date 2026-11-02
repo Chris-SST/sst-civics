@@ -1,0 +1,42 @@
+id: technorama-science-center-anfassen-ausprobieren
+version: 1
+scope: zh
+canton: zh
+topic: kanton.kultur.zuerich
+question_de: In welcher Institution im Kanton Zürich können Besucherinnen und Besucher naturwissenschaftliche
+  und technische Phänomene selbst anfassen und ausprobieren?
+options_de:
+  a: Im Opernhaus Zürich
+  b: Im Technorama in Winterthur
+  c: Im Landesmuseum Zürich
+  d: Im Kunsthaus Zürich
+correct: b
+explanation_de: Das Technorama in Winterthur ist ein Science Center. Die Besuchenden experimentieren dort
+  selbst an den Exponaten. Kunsthaus, Landesmuseum und Opernhaus zeigen Kunst, Geschichte und Aufführungen.
+sources:
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2026/10/das-technorama-soll-ein-attraktives-science-center-bleiben.html
+  checked: &id001 2026-11-02
+glossary:
+- Technorama
+- Science Center
+status: in_review
+difficulty: 1
+covers:
+- zh-344
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Technorama in Winterthur ist das Schweizer Science Center, in dem Besucherinnen und
+      Besucher naturwissenschaftliche und technische Phänomene selbst anfassen und ausprobieren können.
+  source:
+    verdict: supported
+    note: Die Medienmitteilung nennt das Technorama in Winterthur ein Science Center mit über 500 Exponaten
+      und Experimentierstationen und einen Lernort zu Phänomenen aus Natur und Technik. Zu Opernhaus,
+      Landesmuseum und Kunsthaus steht nichts, das ist für die richtige Antwort aber auch nicht nötig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,49 @@
+id: vermoegenssteuer-kanton-gemeinden-zuerich
+version: 1
+scope: zh
+canton: zh
+topic: kanton.sozial.steuern_leistungen
+question_de: Welche dieser Steuern erheben der Kanton Zürich und die Gemeinden auf dem Besitz einer Person,
+  zum Beispiel auf Bankguthaben und Wertschriften?
+options_de:
+  a: Die Verrechnungssteuer
+  b: Die Mehrwertsteuer
+  c: Die Vermögenssteuer
+  d: Die Mineralölsteuer
+correct: c
+explanation_de: Kanton und Gemeinden besteuern das Vermögen der natürlichen Personen. Die Mehrwertsteuer,
+  die Verrechnungssteuer und die Mineralölsteuer sind Bundessteuern.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id002 2026-11-02
+- url: https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/steuern-finanzen/steuern.html
+  checked: *id001
+glossary:
+- Vermögenssteuer
+- Steuer
+- Gemeinde
+status: in_review
+difficulty: 2
+covers:
+- zh-194
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Kanton Zürich und die Gemeinden erheben auf dem Vermögen einer Person, also zum Beispiel
+      auf Bankguthaben und Wertschriften, die Vermögenssteuer, während Verrechnungssteuer, Mehrwertsteuer
+      und Mineralölsteuer Bundessteuern sind.
+  source:
+    verdict: supported
+    note: Quelle 1 (Broschüre, Kapitel «Steuern») nennt die Einkommenssteuer und die Vermögenssteuer als
+      wichtigste Steuern von Kantonen und Gemeinden; unter Vermögen versteht sie das Geld, das man hat.
+      Dass Mehrwert-, Verrechnungs- und Mineralölsteuer Bundessteuern sind, steht in den Quellen nicht
+      ausdrücklich, ist für die richtige Antwort aber nicht nötig.
+    at: *id002
+    model: claude-sonnet-5-5
+    version: 1

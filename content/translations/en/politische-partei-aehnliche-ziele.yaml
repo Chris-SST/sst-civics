@@ -1,0 +1,14 @@
+id: politische-partei-aehnliche-ziele
+lang: en
+source_version: 1
+question: Which of the following best describes a political party?
+options:
+  a: A court that decides on political disputes
+  b: An association of people with similar political aims
+  c: A group of communes (Gemeinden) that carry out tasks together
+  d: An authority that conducts elections and votes
+explanation: A party brings together people who pursue similar political aims. Parties put forward candidates
+  at elections and take positions on proposals put to a vote. They are not state authorities.
+status: draft
+reviewed_by: null
+reviewed_at: null

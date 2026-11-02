@@ -1,0 +1,14 @@
+id: polizei-auftrag-gesetzesverstoesse-verfolgen
+lang: en
+source_version: 1
+question: Which task is part of the remit of the police?
+options:
+  a: To prosecute breaches of the law
+  b: To hold popular votes
+  c: To enact laws for the country
+  d: To pass court judgments on offenders
+explanation: The police maintain safety and order and pursue breaches of the law. They investigate criminal
+  offences and pass on the results. Laws are enacted by Parliament, and judgments are passed by the courts.
+status: draft
+reviewed_by: null
+reviewed_at: null

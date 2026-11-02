@@ -1,0 +1,16 @@
+id: bundesebene-gesetze-erlass-parlament
+lang: en
+source_version: 1
+question: Which authority enacts laws at federal level?
+options:
+  a: The Federal Assembly (Bundesversammlung), that is, the National Council (Nationalrat) and the Council
+    of States (Ständerat)
+  b: The Swiss National Bank
+  c: The Federal Chancellery (Bundeskanzlei)
+  d: The Conference of Cantonal Governments
+explanation: The Federal Assembly is the parliament of the Confederation and consists of the National
+  Council and the Council of States. It is responsible for legislation. The Federal Chancellery, by contrast,
+  supports the Federal Council (Bundesrat) as a staff unit.
+status: draft
+reviewed_by: null
+reviewed_at: null

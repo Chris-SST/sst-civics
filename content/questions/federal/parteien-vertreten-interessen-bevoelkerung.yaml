@@ -1,0 +1,46 @@
+id: parteien-vertreten-interessen-bevoelkerung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.wahlen
+question_de: Welche Aufgabe haben politische Parteien in der Demokratie?
+options_de:
+  a: Sie sprechen Recht in Streitfällen
+  b: Sie vertreten die unterschiedlichen Interessen der Bevölkerung
+  c: Sie führen die eidgenössischen Abstimmungen durch
+  d: Sie setzen die Gesetze im Alltag durch
+correct: b
+explanation_de: Parteien bündeln die verschiedenen Interessen und Meinungen der Bevölkerung und bringen
+  sie in die Politik ein. Gesetze durchsetzen ist Sache der Behörden, Recht sprechen Sache der Gerichte.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.bk.admin.ch/bk/de/home/politische-rechte/volksabstimmungen.html
+  checked: 2026-11-02
+glossary:
+- Partei
+- Demokratie
+status: in_review
+difficulty: 1
+covers:
+- zh-042
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Politische Parteien bündeln und vertreten die unterschiedlichen Interessen der Bevölkerung
+      und wirken so an der politischen Meinungs- und Willensbildung mit, während Rechtsprechung, Durchführung
+      von Abstimmungen und Gesetzesvollzug Aufgaben von Gerichten bzw. Behörden sind.
+  source:
+    verdict: supported
+    note: Quelle 1 (Seite 25) beschreibt Parteien als Gruppen, die sich zusammentun, um die Politik zu
+      beeinflussen und für ihre Interessen zu kämpfen. Seite 19 nennt zudem, dass im Bundesrat die Interessen
+      von Minderheiten gehört und vertreten werden. Das stützt Antwort b) sinngemäss; die Abgrenzung zu
+      den Gerichten ist in Quelle 1 ebenfalls belegt (Judikative richtet). Quelle 2 betrifft nur die Durchführung
+      der Abstimmungen durch die Bundeskanzlei.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

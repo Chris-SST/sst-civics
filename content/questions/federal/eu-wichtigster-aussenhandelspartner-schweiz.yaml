@@ -1,0 +1,41 @@
+id: eu-wichtigster-aussenhandelspartner-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Wer ist für die Schweizer Wirtschaft der bedeutendste Partner im Aussenhandel?
+options_de:
+  a: China
+  b: Japan
+  c: Die Europäische Union
+  d: Die Vereinigten Staaten von Amerika
+correct: c
+explanation_de: Der grösste Teil des Schweizer Handels mit dem Ausland läuft mit den Ländern der Europäischen
+  Union. Die Schweiz ist deshalb mit der EU durch verschiedene Verträge verbunden.
+sources:
+- url: https://www.seco.admin.ch/de/europaeische-union-eu
+  checked: &id001 2026-11-02
+glossary:
+- Europäische Union
+- Aussenhandel
+status: in_review
+difficulty: 1
+covers:
+- zh-176
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Europäische Union ist mit rund der Hälfte der Schweizer Exporte und über der Hälfte
+      der Importe der mit Abstand wichtigste Handelspartner der Schweiz.
+  source:
+    verdict: supported
+    note: Quelle 1 (SECO) nennt die EU ausdrücklich «die mit Abstand wichtigste Handelspartnerin der Schweiz».
+      Damit ist Antwort c) gestützt; die Verbundenheit durch bilaterale Verträge steht ebenfalls auf der
+      Seite.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

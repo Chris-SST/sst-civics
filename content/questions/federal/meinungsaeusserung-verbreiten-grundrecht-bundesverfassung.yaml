@@ -1,0 +1,45 @@
+id: meinungsaeusserung-verbreiten-grundrecht-bundesverfassung
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Welches von der Bundesverfassung gesicherte Grundrecht erlaubt es, die eigene Ansicht frei
+  zu äussern und zu verbreiten?
+options_de:
+  a: Die Meinungsfreiheit
+  b: Das Stimmrecht
+  c: Die Eigentumsgarantie
+  d: Die Niederlassungsfreiheit
+correct: a
+explanation_de: Die Meinungsfreiheit erlaubt es, die eigene Meinung frei zu äussern und zu verbreiten.
+  Sie ist in Artikel 16 der Bundesverfassung festgehalten. Das Stimmrecht betrifft dagegen die Teilnahme
+  an Wahlen und Abstimmungen.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Meinungsfreiheit
+- Grundrecht
+- Bundesverfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-077
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Meinungsfreiheit (Art. 16 und 17 der Bundesverfassung) garantiert das Recht, die eigene
+      Meinung frei zu bilden, zu äussern und zu verbreiten.
+  source:
+    verdict: supported
+    note: Quelle 1 (Bundesverfassung) enthält den Absatz «Jede Person hat das Recht, ihre Meinung frei
+      zu bilden und sie ungehindert zu äussern und zu verbreiten», was die Meinungsfreiheit als richtige
+      Antwort stützt. Die Artikelnummer 16 ist im gekürzten Text nicht sichtbar, und die Aussage zum Stimmrecht
+      wird nicht ausdrücklich belegt, was für die Antwort aber nicht entscheidend ist.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

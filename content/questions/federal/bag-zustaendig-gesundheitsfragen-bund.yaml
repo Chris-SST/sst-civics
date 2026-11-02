@@ -1,0 +1,43 @@
+id: bag-zustaendig-gesundheitsfragen-bund
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.gesundheit
+question_de: Welche Bundesbehörde ist für Gesundheitsfragen zuständig?
+options_de:
+  a: Das Bundesamt für Umwelt (BAFU)
+  b: Das Staatssekretariat für Migration (SEM)
+  c: Das Bundesamt für Statistik (BFS)
+  d: Das Bundesamt für Gesundheit (BAG)
+correct: d
+explanation_de: Das Bundesamt für Gesundheit (BAG) ist die zuständige Bundesbehörde für Gesundheitsfragen.
+  Es beaufsichtigt zum Beispiel die soziale Krankenversicherung.
+sources:
+- url: https://www.bag.admin.ch/de/krankenversicherung-das-wichtigste-in-kuerze
+  checked: &id001 2026-11-02
+glossary:
+- Bundesamt für Gesundheit
+- Bundesbehörde
+- Krankenversicherung
+status: in_review
+difficulty: 1
+covers:
+- zh-156
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Bundesamt für Gesundheit (BAG) ist die Bundesbehörde, die für Gesundheitsfragen wie
+      öffentliche Gesundheit, Krankenversicherung und Seuchenbekämpfung zuständig ist.
+  source:
+    verdict: supported
+    note: Quelle 1 (BAG-Seite) sagt unter «Über uns», das BAG sei als Teil des EDI für die Gesundheit
+      der Bevölkerung verantwortlich und entwickle die Gesundheitspolitik. Die Seite zeigt auch die Aufsicht
+      über die soziale Krankenversicherung, etwa durch die verlinkten Aufsichtsgesetze (KVAG), allerdings
+      nicht ausdrücklich als Aufgabe des BAG formuliert.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

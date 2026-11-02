@@ -1,0 +1,15 @@
+id: parlament-zwei-kammern-bund
+lang: en
+source_version: 1
+question: Which two chambers make up the Swiss Parliament at federal level?
+options:
+  a: The Federal Council (Bundesrat) and the Council of States (Ständerat)
+  b: The Federal Council and the National Council (Nationalrat)
+  c: The Council of States and the Federal Supreme Court (Bundesgericht)
+  d: The National Council and the Council of States
+explanation: 'The Federal Assembly (Bundesversammlung), the Parliament of the Confederation, consists
+  of two chambers: the National Council and the Council of States. The Federal Council is the government
+  and is not part of Parliament.'
+status: draft
+reviewed_by: null
+reviewed_at: null

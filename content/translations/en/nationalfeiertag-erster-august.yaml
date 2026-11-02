@@ -1,0 +1,14 @@
+id: nationalfeiertag-erster-august
+lang: en
+source_version: 1
+question: On what date does Switzerland celebrate its national day?
+options:
+  a: On 12 September
+  b: On 1 August
+  c: On 11 November
+  d: On 1 May
+explanation: 1 August is Switzerland's national day. It commemorates the Federal Charter of 1291. It is
+  celebrated with bonfires, fireworks and speeches.
+status: draft
+reviewed_by: null
+reviewed_at: null

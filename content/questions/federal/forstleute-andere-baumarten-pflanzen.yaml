@@ -1,0 +1,47 @@
+id: forstleute-andere-baumarten-pflanzen
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Wie reagieren Forstleute in der Schweiz auf die steigenden Temperaturen?
+options_de:
+  a: Sie pflanzen vermehrt andere Baumarten an.
+  b: Sie pflanzen nur noch Bäume, die schon immer dort standen.
+  c: Sie verzichten ganz auf die Pflege des Waldes.
+  d: Sie roden die Wälder in tiefen Lagen.
+correct: a
+explanation_de: Manche Baumarten vertragen Hitze und Trockenheit schlecht. Forstleute setzen deshalb auf
+  andere Arten, die besser an das wärmere Klima angepasst sind. So soll der Wald stabil bleiben.
+sources:
+- url: https://www.bafu.admin.ch/de/waldpflege-und-verjuengung
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/klima
+  checked: 2026-11-02
+glossary:
+- Forstleute
+- Baumart
+- Klimawandel
+status: in_review
+difficulty: 2
+covers:
+- zh-270
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Schweizer Forstleute setzen angesichts des Klimawandels vermehrt auf klimaresistentere,
+      standortgerechte andere Baumarten, um den Wald an höhere Temperaturen anzupassen, während die übrigen
+      Antworten dem Waldgesetz und der Praxis widersprechen.
+  source:
+    verdict: supported
+    note: Quelle 1 (BAFU) sagt, die Zusammensetzung der Wälder müsse angepasst werden, damit sie aus hitze-
+      und trockenheitsresistenten Baumarten bestehen; Forstfachleute wählen zukunftsfähige Baumarten aus
+      und pflanzen bei Bedarf ergänzend, auch gebietsfremde Arten. Das stützt Antwort a und die Erklärung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

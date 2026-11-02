@@ -1,0 +1,45 @@
+id: mietwohnung-zutritt-vermieter-triftiger-grund
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: In welchem Fall müssen Mietende der Vermieterseite den Zutritt zur Wohnung gewähren?
+options_de:
+  a: Nie, die Wohnung ist immer geschützt
+  b: Wenn ein triftiger Grund vorliegt
+  c: Nur wenn der Vermieter es verlangt, ohne Begründung
+  d: Jederzeit und ohne Voranmeldung
+correct: b
+explanation_de: Mietende müssen den Zutritt gewähren, wenn dafür ein triftiger Grund besteht, zum Beispiel
+  eine dringende Reparatur. Die Vermieterseite muss den Besuch aber rechtzeitig ankündigen und auf die
+  Mietenden Rücksicht nehmen. Ein Zutritt ohne Grund ist nicht erlaubt.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+glossary:
+- Mietende
+- Vermieterseite
+- Mietrecht
+status: in_review
+difficulty: 2
+covers:
+- zh-185
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Art. 257h OR muss der Mieter der Vermieterseite den Zutritt gewähren, wenn dies für
+      Unterhalt, Reparatur, Verkauf oder Neuvermietung nötig ist, also bei einem triftigen Grund und mit
+      vorheriger Anmeldung.
+  source:
+    verdict: supported
+    note: Quelle 1 (Abschnitt «Miete und Wohnung») sagt, dass die mietende Person die Vermieterpartei
+      in ihre Wohnung lassen muss, wenn es einen guten Grund dafür gibt. Das stützt Antwort b. Die Hinweise
+      zur rechtzeitigen Ankündigung und zur Rücksichtnahme stehen nicht im Text, sind aber für die richtige
+      Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

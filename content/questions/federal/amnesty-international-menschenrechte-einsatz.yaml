@@ -1,0 +1,45 @@
+id: amnesty-international-menschenrechte-einsatz
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Wofür setzt sich die Organisation Amnesty International in erster Linie ein?
+options_de:
+  a: Für die Rechte von Mieterinnen und Mietern
+  b: Für den Schutz bedrohter Tier- und Pflanzenarten
+  c: Für den Schutz der Menschenrechte
+  d: Für die Förderung des internationalen Handels
+correct: c
+explanation_de: Amnesty International ist eine Nichtregierungsorganisation. Sie macht auf Verletzungen
+  der Menschenrechte aufmerksam und setzt sich für Betroffene ein. Solche Organisationen sind Teil der
+  Zivilgesellschaft.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.eda.admin.ch/eda/de/home/aussenpolitik/menschenrechte.html
+  checked: 2026-11-02
+glossary:
+- Menschenrechte
+- Zivilgesellschaft
+- Nichtregierungsorganisation
+status: draft
+difficulty: 1
+covers:
+- zh-140
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Amnesty International ist eine weltweit tätige Organisation, die sich in erster Linie für
+      den Schutz der Menschenrechte einsetzt.
+  source:
+    verdict: unclear
+    note: Keine der beiden Quellen erwähnt Amnesty International. Die Broschüre des Kantons Zürich nennt
+      nur das IKRK und die UNO, und die EDA-Seite ist eine allgemeine Startseite ohne Aussage zu dieser
+      Organisation.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

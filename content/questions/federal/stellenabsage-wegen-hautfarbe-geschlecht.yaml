@@ -1,0 +1,44 @@
+id: stellenabsage-wegen-hautfarbe-geschlecht
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Eine Bewerberin wird für eine Stelle abgelehnt, nur wegen ihres Geschlechts. Welches Grundrecht
+  wird dadurch verletzt?
+options_de:
+  a: Das Recht auf Niederlassungsfreiheit
+  b: Das Recht auf Versammlungsfreiheit
+  c: Das Gebot der Rechtsgleichheit und das Diskriminierungsverbot
+  d: Das Recht auf Schutz der Privatsphäre
+correct: c
+explanation_de: Artikel 8 der Bundesverfassung verbietet Diskriminierung, zum Beispiel wegen Herkunft,
+  Hautfarbe oder Geschlecht. Eine Ablehnung allein aus solchen Gründen ist deshalb nicht zulässig. Dasselbe
+  gilt für die Hautfarbe.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Rechtsgleichheit
+- Diskriminierungsverbot
+- Grundrecht
+status: in_review
+difficulty: 1
+covers:
+- zh-081
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Eine Ablehnung allein wegen des Geschlechts verletzt die Rechtsgleichheit und das Diskriminierungsverbot
+      nach Art. 8 der Bundesverfassung, der auch die Gleichstellung von Frau und Mann einschliesst.
+  source:
+    verdict: supported
+    note: 'Art. 8 Abs. 2 BV (Quelle 1) lautet: «Niemand darf diskriminiert werden, namentlich nicht wegen
+      der Herkunft, der Rasse, des Geschlechts …». Das stützt Antwort c und die Erklärung. Die «Hautfarbe»
+      steht nicht wörtlich im Text, wird aber als «Rasse» und «Herkunft» sinngemäss erfasst.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

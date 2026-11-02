@@ -1,0 +1,15 @@
+id: kollegialitaetsprinzip-bundesrat-beschluesse
+lang: en
+source_version: 1
+question: What does the principle of collegiality mean in the Federal Council (Bundesrat)?
+options:
+  a: The President of the Swiss Confederation (Bundespräsident) decides alone.
+  b: The members present the decisions of the Federal Council in a unified way to the outside world.
+  c: Each member decides within their own department without consulting the others.
+  d: The members may publicly express their dissenting opinion.
+explanation: The Federal Council decides as a collegial body. Even a member who held a different opinion
+  within the Federal Council supports the decision outwardly. In this way, the government presents a united
+  front.
+status: draft
+reviewed_by: null
+reviewed_at: null

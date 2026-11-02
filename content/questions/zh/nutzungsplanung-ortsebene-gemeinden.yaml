@@ -1,0 +1,47 @@
+id: nutzungsplanung-ortsebene-gemeinden
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.leistungen
+question_de: Wer plant im Kanton Zürich auf Ortsebene, wie der Boden genutzt wird, zum Beispiel wo Wohnzonen
+  und Gewerbezonen liegen?
+options_de:
+  a: Die Schweizerische Bundesversammlung
+  b: Die Kantonspolizei
+  c: Die Gemeinden
+  d: Die Bezirksräte allein
+correct: c
+explanation_de: Die Gemeinden erlassen die Nutzungsplanung für ihr Gebiet, etwa die Bau- und Zonenordnung.
+  Dabei beachten sie die Vorgaben von Bund und Kanton. So bestimmen sie mit, wie sich der Ort entwickelt.
+sources:
+- url: https://www.zh.ch/de/planen-bauen/raumplanung/nutzungsplanung.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://www.zh.ch/de/planen-bauen/baubewilligung.html
+  checked: 2026-11-02
+glossary:
+- Nutzungsplanung
+- Bau- und Zonenordnung
+- Gemeinde
+status: in_review
+difficulty: 2
+covers:
+- zh-119
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Im Kanton Zürich legen die Gemeinden in ihrer kommunalen Nutzungsplanung (Bau- und Zonenordnung)
+      fest, wo Wohn- und Gewerbezonen liegen, während Bund und Kanton nur den Rahmen setzen.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass die kommunale Nutzungsplanung das Gemeindegebiet in Zonen einteilt und dass
+      das Planungs- und Baugesetz von den Gemeinden eine Bau- und Zonenordnung verlangt; die Gemeinden
+      müssen dabei übergeordnetes Recht beachten. Quelle 2 nennt Raumplanung und Bauwesen als Gemeindeaufgaben.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

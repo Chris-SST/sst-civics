@@ -1,0 +1,14 @@
+id: wohnortswechsel-anmeldung-einwohnerkontrolle
+lang: en
+source_version: 1
+question: Where must you register if you move to another Zurich commune (Gemeinde)?
+options:
+  a: At the district court
+  b: At the Federal Statistical Office
+  c: At the cantonal police
+  d: At the residents' registration office of your new commune of residence
+explanation: Registration takes place at the residents' registration office (Einwohnerkontrolle), also
+  called the Einwohneramt. It keeps the register of the inhabitants of the commune.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,14 @@
+id: groesster-kanton-nach-flaeche
+lang: en
+source_version: 1
+question: Which canton has the largest area of all the Swiss cantons?
+options:
+  a: Ticino
+  b: Valais
+  c: Bern
+  d: Graubünden
+explanation: Graubünden is the largest canton in Switzerland by area. It lies entirely in the Alps and
+  has many valleys and mountains. Valais, Bern and Ticino are also large, but they are smaller than Graubünden.
+status: draft
+reviewed_by: null
+reviewed_at: null

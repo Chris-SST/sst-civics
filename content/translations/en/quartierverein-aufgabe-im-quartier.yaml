@@ -1,0 +1,15 @@
+id: quartierverein-aufgabe-im-quartier
+lang: en
+source_version: 1
+question: What is a typical task of a neighbourhood association in a Zurich commune (Gemeinde) or city?
+options:
+  a: It represents the concerns of the local residents to the authorities and promotes community life.
+  b: It runs the residents' registration office for the neighbourhood.
+  c: It collects taxes from the residents of the neighbourhood.
+  d: It approves building applications in the neighbourhood.
+explanation: A neighbourhood association is a voluntary association of residents. It raises the neighbourhood's
+  concerns with the authorities and organises events that strengthen community life. Sovereign tasks such
+  as taxes, building permits or residents' registration belong to the commune.
+status: draft
+reviewed_by: null
+reviewed_at: null

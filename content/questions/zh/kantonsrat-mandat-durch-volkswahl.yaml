@@ -1,0 +1,48 @@
+id: kantonsrat-mandat-durch-volkswahl
+version: 1
+scope: zh
+canton: zh
+topic: kanton.demokratie.kantonsrat
+question_de: Wie kommen die Mitglieder des Zürcher Kantonsrats zu ihrem Mandat?
+options_de:
+  a: Sie werden vom Volk gewählt.
+  b: Sie werden von den Gemeinderäten bestimmt.
+  c: Sie werden vom Regierungsrat ernannt.
+  d: Sie werden vom Bundesrat eingesetzt.
+correct: a
+explanation_de: Die Kantonsratsmitglieder werden von den Stimmberechtigten des Kantons in einer Volkswahl
+  gewählt. Das Parlament ist damit direkt vom Volk bestimmt. Weder die Regierung noch der Bund setzen
+  die Mitglieder ein.
+sources:
+- url: https://www.zh.ch/de-ls/politik-staat/wahlen-abstimmungen/kantons-regierungsratswahlen.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/kantonsrat.html
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+glossary:
+- Kantonsrat
+- Volkswahl
+- Stimmberechtigte
+- Regierungsrat
+status: in_review
+difficulty: 1
+covers:
+- zh-114
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Mitglieder des Zürcher Kantonsrats werden im Proporzverfahren (doppelter Pukelsheim)
+      vom Stimmvolk des Kantons Zürich direkt gewählt.
+  source:
+    verdict: supported
+    note: 'Quelle 1 sagt, die Stimmberechtigten wählen die Mitglieder des Kantonsrats alle vier Jahre.
+      Quelle 3 (Seite 55) bestätigt: «Die Bürgerinnen und Bürger des Kantons Zürich wählen die Mitglieder
+      alle 4 Jahre.» Dass Regierung oder Bund die Mitglieder einsetzen, wird nirgends gesagt.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

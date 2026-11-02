@@ -1,0 +1,15 @@
+id: iv-kuerzel-invalidenversicherung
+lang: en
+source_version: 1
+question: What does the abbreviation «IV» stand for in the Swiss social insurance system?
+options:
+  a: Domestic insurance (Inlandversicherung)
+  b: Invalidity insurance (Invalidenversicherung)
+  c: Integration insurance (Integrationsversicherung)
+  d: Individual insurance (Individualversicherung)
+explanation: IV stands for invalidity insurance (Invalidenversicherung). It belongs to the first pillar
+  of retirement provision and helps people with health impairments, for example through integration measures
+  or pensions.
+status: draft
+reviewed_by: null
+reviewed_at: null

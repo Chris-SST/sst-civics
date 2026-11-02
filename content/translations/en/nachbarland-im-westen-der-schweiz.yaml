@@ -1,0 +1,14 @@
+id: nachbarland-im-westen-der-schweiz
+lang: en
+source_version: 1
+question: Which country borders Switzerland to the west?
+options:
+  a: Germany
+  b: Italy
+  c: France
+  d: Austria
+explanation: To the west and north-west, Switzerland borders France. Germany lies to the north, Austria
+  and Liechtenstein to the east, and Italy to the south.
+status: draft
+reviewed_by: null
+reviewed_at: null

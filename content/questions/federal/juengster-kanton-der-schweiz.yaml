@@ -1,0 +1,45 @@
+id: juengster-kanton-der-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.kantone_rolle
+question_de: Welcher Kanton ist der jüngste Kanton der Schweiz?
+options_de:
+  a: Jura
+  b: Appenzell Ausserrhoden
+  c: Basel-Landschaft
+  d: Neuenburg
+correct: a
+explanation_de: Der Kanton Jura wurde 1979 gegründet. Er hat sich vom Kanton Bern gelöst und ist seither
+  der jüngste der 26 Kantone. Die Bundesverfassung nennt ihn unter den Kantonen der Schweizerischen Eidgenossenschaft.
+sources:
+- url: https://www.bj.admin.ch/de/loesung-der-jurafrage
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: *id001
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: *id001
+glossary:
+- Kanton
+- Bundesverfassung
+status: in_review
+difficulty: 2
+covers:
+- zh-213
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Kanton Jura wurde 1979 durch die Abspaltung vom Kanton Bern gegründet und ist damit
+      der jüngste Kanton der Schweiz.
+  source:
+    verdict: supported
+    note: Quelle 2 (Zürcher Broschüre) sagt ausdrücklich, der Kanton Jura sei 1979 gegründet worden, früher
+      Teil des Kantons Bern gewesen und der jüngste Kanton der Schweiz. Quelle 1 bestätigt die Gründung
+      1979, Quelle 3 (Art. 1 BV) nennt Jura unter den Kantonen.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

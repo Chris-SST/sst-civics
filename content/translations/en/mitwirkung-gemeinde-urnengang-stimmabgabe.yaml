@@ -1,0 +1,14 @@
+id: mitwirkung-gemeinde-urnengang-stimmabgabe
+lang: en
+source_version: 1
+question: How do eligible voters take part politically in their commune (Gemeinde) when ballots are held?
+options:
+  a: They chair the meetings of the communal council (Gemeinderat)
+  b: They implement the decisions of the commune
+  c: They cast their vote in elections and referendums
+  d: They themselves enact the laws of the canton
+explanation: At ballots, eligible voters vote on proposals and elect authorities. Implementing the decisions
+  is the task of the authorities and the administration.
+status: draft
+reviewed_by: null
+reviewed_at: null

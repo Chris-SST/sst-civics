@@ -1,0 +1,50 @@
+id: alv-beitraege-pensionierte-personen
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.sozialversicherungen
+question_de: Wer muss in der Schweiz keine Beiträge mehr an die Arbeitslosenversicherung (ALV) bezahlen?
+options_de:
+  a: Personen, die in einem unbefristeten Arbeitsverhältnis stehen
+  b: Personen, die das ordentliche AHV-Rentenalter erreicht haben
+  c: Personen, die in einem Teilzeitpensum arbeiten
+  d: Personen, die in den letzten zwei Jahren nie arbeitslos waren
+correct: b
+explanation_de: Die Beitragspflicht für die Arbeitslosenversicherung endet mit dem Erreichen des AHV-Rentenalters.
+  Wer pensioniert ist, bezahlt auf einem allfälligen Lohn keine ALV-Beiträge mehr. Teilzeit- und Vollzeitangestellte
+  bezahlen dagegen Beiträge.
+sources:
+- url: https://www.kmu.admin.ch/de/arbeitslosenversicherung-alv
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.bsv.admin.ch/de/beitraege-im-ueberblick
+  checked: 2026-11-02
+glossary:
+- Arbeitslosenversicherung
+- AHV
+- Rentenalter
+status: in_review
+difficulty: 2
+covers:
+- zh-174
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die ALV-Beitragspflicht endet mit dem Erreichen des ordentlichen AHV-Rentenalters, während
+      Beiträge bei unbefristeter Anstellung, Teilzeitarbeit oder fehlender Arbeitslosigkeit weiterhin
+      geschuldet sind.
+  source:
+    verdict: supported
+    note: Quelle 1 nennt die Meldepflicht für alle Arbeitnehmenden bis zum gesetzlichen Renteneintrittsalter
+      und hält fest, dass bei Pensionierten auf Lohn über dem Freibetrag nur AHV/IV/EO-Beiträge, nicht
+      aber ALV-Beiträge zu leisten sind. Das stützt Antwort b und die Erklärung. Die Aussage zu Teilzeit-
+      und Vollzeitangestellten wird nicht ausdrücklich bestätigt, folgt aber aus der allgemeinen ALV-Pflicht
+      für Angestellte. Dass das Rentenalter 'ordentlich' ist, wird nicht eigens thematisiert.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

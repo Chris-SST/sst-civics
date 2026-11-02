@@ -1,0 +1,15 @@
+id: bundesrat-wahl-durch-vereinigte-bundesversammlung
+lang: en
+source_version: 1
+question: Who elects the seven members of the Federal Council (Bundesrat)?
+options:
+  a: The people, in a ballot at the polls
+  b: The cantonal governments
+  c: The Federal Supreme Court (Bundesgericht)
+  d: The National Council (Nationalrat) and the Council of States (Ständerat) together
+explanation: The two chambers of Parliament meet as the United Federal Assembly (Vereinigte Bundesversammlung)
+  and elect the members of the Federal Council. In Switzerland, the people do not elect the Federal Council
+  directly.
+status: draft
+reviewed_by: null
+reviewed_at: null

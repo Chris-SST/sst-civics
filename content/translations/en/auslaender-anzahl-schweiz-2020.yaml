@@ -1,0 +1,16 @@
+id: auslaender-anzahl-schweiz-2020
+lang: en
+source_version: 1
+question: Approximately how many people without a Swiss passport were permanently resident in Switzerland
+  in 2020?
+options:
+  a: around 2.1 million
+  b: around 0.8 million
+  c: around 3.5 million
+  d: around 1.4 million
+explanation: At the end of 2020, around 2.1 million foreign nationals were living in Switzerland. They
+  are part of the permanent resident population. The figures are published by the Federal Statistical
+  Office.
+status: draft
+reviewed_by: null
+reviewed_at: null

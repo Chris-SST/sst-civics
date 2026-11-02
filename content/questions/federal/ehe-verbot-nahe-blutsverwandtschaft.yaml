@@ -1,0 +1,47 @@
+id: ehe-verbot-nahe-blutsverwandtschaft
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Wer darf in der Schweiz nicht heiraten?
+options_de:
+  a: Personen, die schon einmal geschieden wurden
+  b: Personen, die aus verschiedenen Kantonen stammen
+  c: Personen, die nah blutsverwandt sind
+  d: Personen, die in verschiedenen Gemeinden wohnen
+correct: c
+explanation_de: Die Ehe zwischen nahen Blutsverwandten ist verboten, zum Beispiel zwischen Geschwistern
+  oder zwischen Eltern und Kindern. Die Herkunft, der Wohnort und eine frühere Scheidung sind dagegen
+  kein Ehehindernis.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/html/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-html-2.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+glossary:
+- Blutsverwandtschaft
+- Ehehindernis
+- Eheschliessung
+status: in_review
+difficulty: 1
+covers:
+- zh-187
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Art. 95 ZGB ist die Ehe zwischen Verwandten in gerader Linie sowie zwischen Geschwistern
+      und Halbgeschwistern verboten, während Scheidung, verschiedene Heimatkantone oder Wohnorte kein
+      Ehehindernis sind.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (ZGB) enthält das Eheverbot: Die Eheschliessung ist zwischen Verwandten in gerader
+      Linie sowie zwischen Geschwistern oder Halbgeschwistern verboten. Das stützt Antwort c und die Beispiele
+      der Erklärung. Dass Herkunft, Wohnort und frühere Scheidung kein Ehehindernis sind, steht dort nicht
+      ausdrücklich, widerspricht dem Text aber auch nicht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

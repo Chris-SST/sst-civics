@@ -1,0 +1,16 @@
+id: unfallversicherung-spitalkosten-arbeitsunfall
+lang: en
+source_version: 1
+question: An employee has a serious accident at work and has to go to hospital. Which insurance covers
+  the hospital costs?
+options:
+  a: Unemployment insurance
+  b: Accident insurance
+  c: Loss of earnings compensation scheme
+  d: Old-age and survivors' insurance
+explanation: Compulsory accident insurance pays the treatment costs, for example hospital costs, in the
+  case of occupational accidents. Employees are insured against this through their employer. The other
+  insurance schemes mentioned cover other risks.
+status: draft
+reviewed_by: null
+reviewed_at: null

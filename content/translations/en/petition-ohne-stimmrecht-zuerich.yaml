@@ -1,0 +1,16 @@
+id: petition-ohne-stimmrecht-zuerich
+lang: en
+source_version: 1
+question: What political option do foreign nationals in the canton of Zurich who do not have the right
+  to vote have?
+options:
+  a: They can vote at the ballot box on cantonal proposals.
+  b: They can elect members of the Cantonal Council (Kantonsrat).
+  c: They can contact the authorities by means of a petition.
+  d: They can submit a popular initiative (Volksinitiative) in the canton.
+explanation: The right of petition is open to everyone, including people without the right to vote. In
+  this way, they can inform the authorities in writing of concerns, wishes or criticism. Only those entitled
+  to vote may vote, elect and sign initiatives.
+status: draft
+reviewed_by: null
+reviewed_at: null

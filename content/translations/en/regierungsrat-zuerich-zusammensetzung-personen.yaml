@@ -1,0 +1,14 @@
+id: regierungsrat-zuerich-zusammensetzung-personen
+lang: en
+source_version: 1
+question: Which statement about the composition of the Zurich Executive Council (Regierungsrat) is correct?
+options:
+  a: It consists of three people.
+  b: It consists of seven people.
+  c: It consists of nine people.
+  d: It consists of five people.
+explanation: The Zurich Executive Council is a body of seven people. Together they govern the canton,
+  and each of them heads one department.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,15 @@
+id: gemeinde-unterste-stufe-staatsaufbau
+lang: en
+source_version: 1
+question: Which level is at the very bottom of Switzerland's three-tier state structure?
+options:
+  a: The commune (Gemeinde)
+  b: The region
+  c: The canton
+  d: The district
+explanation: 'Switzerland''s state structure has three tiers: the Confederation, the cantons and the communes.
+  The commune is the lowest tier and closest to the people. It carries out tasks that the Confederation
+  and the canton assign to it.'
+status: draft
+reviewed_by: null
+reviewed_at: null

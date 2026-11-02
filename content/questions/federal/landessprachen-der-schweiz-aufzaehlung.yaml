@@ -1,0 +1,42 @@
+id: landessprachen-der-schweiz-aufzaehlung
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.sprachen
+question_de: Welche Sprachen sind in der Schweiz Landessprachen?
+options_de:
+  a: Deutsch, Französisch, Rätoromanisch und Spanisch
+  b: Deutsch, Französisch, Italienisch und Rätoromanisch
+  c: Deutsch, Französisch, Italienisch und Englisch
+  d: Deutsch, Französisch und Italienisch
+correct: b
+explanation_de: Die Bundesverfassung nennt Deutsch, Französisch, Italienisch und Rätoromanisch als Landessprachen.
+  Englisch ist keine Landessprache, wird aber oft als Verständigungssprache genutzt.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/sprachen
+  checked: &id001 2026-11-02
+glossary:
+- Landessprache
+status: in_review
+difficulty: 1
+covers:
+- zh-062
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Artikel 4 der Bundesverfassung sind Deutsch, Französisch, Italienisch und Rätoromanisch
+      die vier Landessprachen der Schweiz; Antwort d lässt Rätoromanisch weg, und Spanisch und Englisch
+      sind keine Landessprachen.
+  source:
+    verdict: supported
+    note: 'Quelle 1 nennt vier offizielle Landessprachen: Deutsch, Französisch, Italienisch und Rätoromanisch.
+      Sie erwähnt auch, dass Englisch eine Nichtlandessprache ist und als Brückenbauer zwischen den Landessprachen
+      an Bedeutung gewinnt. Der Verweis auf die Bundesverfassung steht nicht ausdrücklich im Text, nur
+      die gesetzliche Verankerung.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

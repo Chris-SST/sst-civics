@@ -1,0 +1,15 @@
+id: juengster-kanton-der-schweiz
+lang: en
+source_version: 1
+question: Which canton is the youngest canton in Switzerland?
+options:
+  a: Jura
+  b: Appenzell Ausserrhoden
+  c: Basel-Landschaft
+  d: Neuchâtel
+explanation: The canton of Jura was founded in 1979. It separated from the canton of Bern and has been
+  the youngest of the 26 cantons ever since. The Federal Constitution lists it among the cantons of the
+  Swiss Confederation.
+status: draft
+reviewed_by: null
+reviewed_at: null

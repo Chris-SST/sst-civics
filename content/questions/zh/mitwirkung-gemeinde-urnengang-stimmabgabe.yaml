@@ -1,0 +1,44 @@
+id: mitwirkung-gemeinde-urnengang-stimmabgabe
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.organisation.versammlung_parlament
+question_de: Wie wirken Stimmberechtigte in ihrer Gemeinde bei Urnengängen politisch mit?
+options_de:
+  a: Sie leiten die Sitzungen des Gemeinderats
+  b: Sie setzen die Beschlüsse der Gemeinde um
+  c: Sie geben ihre Stimme bei Wahlen und Abstimmungen ab
+  d: Sie erlassen selbst die Gesetze des Kantons
+correct: c
+explanation_de: Bei Urnengängen stimmen die Stimmberechtigten über Vorlagen ab und wählen Behörden. Die
+  Umsetzung der Beschlüsse ist Aufgabe der Behörden und der Verwaltung.
+sources:
+- url: https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/gemeindeabstimmungen.html
+  checked: &id001 2026-11-02
+glossary:
+- Urnengang
+- Stimmberechtigte
+- Abstimmung
+status: in_review
+difficulty: 1
+covers:
+- zh-121
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Bei Urnengängen in der Gemeinde geben Stimmberechtigte ihre Stimme bei Wahlen und Abstimmungen
+      ab, während Sitzungsleitung, Umsetzung der Beschlüsse und Kantonsgesetze nicht ihre Aufgabe an der
+      Urne sind.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, dass die Stimmberechtigten an der Urne über Sachgeschäfte beschliessen (Abstimmungen)
+      und eine Urnenabstimmung nur Annehmen oder Ablehnen erlaubt. Der Gemeindevorstand, nicht die Stimmberechtigten,
+      beruft die Gemeindeversammlung ein und leitet sie. Das Wählen von Behörden steht im Text nicht ausdrücklich,
+      aber die Kernaussage zur Stimmabgabe an der Urne ist eindeutig gestützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

@@ -1,0 +1,46 @@
+id: universitaet-zuerich-traegerschaft-kanton
+version: 1
+scope: zh
+canton: zh
+topic: kanton.sozial.bildung_gesundheit
+question_de: Wer ist im Kanton Zürich für den Betrieb und die Trägerschaft der Universität Zürich zuständig?
+options_de:
+  a: Der Bund
+  b: Die Stadt Zürich
+  c: Der Kanton Zürich
+  d: Die Bezirksräte des Kantons
+correct: c
+explanation_de: Die Universität Zürich ist eine kantonale Hochschule. Der Kanton Zürich trägt sie und
+  betreibt sie. Die Stadt Zürich und der Bund sind dafür nicht hauptverantwortlich.
+sources:
+- url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/09/regierungsrat-definiert-eigentuemerstrategie-fuer-die-universitaet-zuerich-2025-2028.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zh.ch/de/bildung/bildungssystem/wissenschafts-und-hochschulplatz-zuerich.html
+  checked: 2026-11-02
+glossary:
+- Universität
+- Trägerschaft
+- Kanton
+status: in_review
+difficulty: 2
+covers:
+- zh-102
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Universität Zürich ist eine selbständige öffentlich-rechtliche Anstalt des Kantons
+      Zürich, der sie trägt und finanziert, nicht der Bund, die Stadt Zürich oder die Bezirksräte.
+  source:
+    verdict: supported
+    note: Quelle 1 (Medienmitteilung des Regierungsrats) nennt den Kanton Zürich ausdrücklich «Träger»
+      der Universität Zürich und spricht von der Steuerung der Universität durch den Kanton als Träger.
+      Damit stützt sie Antwort c); die Quellen 2 und 3 enthalten dazu nichts Eindeutiges.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

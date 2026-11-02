@@ -1,0 +1,45 @@
+id: rechtsgleichheit-gesetz-fuer-alle
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.grundrechte
+question_de: Was bedeutet der Grundsatz der Rechtsgleichheit?
+options_de:
+  a: Alle Kantone haben dieselben Gesetze.
+  b: Alle Personen haben dieselben politischen Ämter.
+  c: Alle Personen haben dasselbe Einkommen.
+  d: Das Gesetz gilt für alle Personen gleichermassen.
+correct: d
+explanation_de: Rechtsgleichheit steht in Artikel 8 der Bundesverfassung. Alle Menschen sind vor dem Gesetz
+  gleich und niemand darf zum Beispiel wegen Herkunft oder Geschlecht diskriminiert werden. Es bedeutet
+  nicht, dass alle gleich viel besitzen.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Rechtsgleichheit
+- Gesetz
+- Bundesverfassung
+status: in_review
+difficulty: 1
+covers:
+- zh-019
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Rechtsgleichheit (Art. 8 BV) bedeutet, dass das Gesetz für alle Personen gleichermassen
+      gilt und Gleiches nicht ungleich behandelt werden darf, während die anderen Antworten weder Gesetzesvereinheitlichung
+      unter den Kantonen noch gleiche Ämter oder gleiches Einkommen garantieren.
+  source:
+    verdict: supported
+    note: 'Art. 8 BV (Rechtsgleichheit) in Quelle 1 sagt: «Alle Menschen sind vor dem Gesetz gleich» und
+      Absatz 2 verbietet Diskriminierung wegen Herkunft, Geschlecht usw. Das stützt Antwort d und die
+      Erklärung; dass nicht alle gleich viel besitzen, steht nicht ausdrücklich da, folgt aber aus dem
+      Inhalt des Artikels.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

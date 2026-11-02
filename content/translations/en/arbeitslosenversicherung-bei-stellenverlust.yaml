@@ -1,0 +1,14 @@
+id: arbeitslosenversicherung-bei-stellenverlust
+lang: en
+source_version: 1
+question: Which social insurance applies when a person loses their job?
+options:
+  a: Disability insurance
+  b: Old-age and survivors' insurance
+  c: Unemployment insurance
+  d: Accident insurance
+explanation: Unemployment insurance pays compensation under certain conditions when someone loses their
+  job. It also helps with the search for new work.
+status: draft
+reviewed_by: null
+reviewed_at: null

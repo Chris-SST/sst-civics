@@ -1,0 +1,42 @@
+id: landesstreik-wochenarbeitszeit-48-stunden
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.weltkriege_neutralitaet
+question_de: Welche Wochenarbeitszeit galt in der Schweiz nach dem Landesstreik von 1918?
+options_de:
+  a: 48 Stunden
+  b: 54 Stunden
+  c: 60 Stunden
+  d: 40 Stunden
+correct: a
+explanation_de: Der Landesstreik von 1918 war ein Generalstreik der Arbeiterschaft. Eine der Forderungen,
+  die danach umgesetzt wurden, war die 48-Stunden-Woche. Davor waren deutlich längere Arbeitszeiten üblich.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: 2026-11-02
+glossary:
+- Landesstreik
+- Wochenarbeitszeit
+status: in_review
+difficulty: 2
+covers:
+- zh-209
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Eine der Forderungen des Landesstreiks von 1918 war die 48-Stunden-Woche, die 1919 mit
+      der Revision des Fabrikgesetzes für Fabrikarbeiter eingeführt wurde.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Zeitstrahl, Seite 10) sagt: Beim Landesstreik 1918 streikten über 250 000 Arbeitnehmende,
+      und als Folge wurde die 48-Stunden-Woche eingeführt. Quelle 2 erwähnt den Landesstreik nicht.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

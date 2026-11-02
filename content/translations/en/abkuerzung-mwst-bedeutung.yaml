@@ -1,0 +1,14 @@
+id: abkuerzung-mwst-bedeutung
+lang: en
+source_version: 1
+question: The abbreviation «MWST» often appears on invoices and receipts. What does it stand for?
+options:
+  a: Rental housing tax (Mietwohnungssteuer)
+  b: Military defence tax (Militärwehrsteuer)
+  c: Motor vehicle tax (Motorwagensteuer)
+  d: Value added tax (Mehrwertsteuer)
+explanation: MWST means Mehrwertsteuer (value added tax). It is levied on most goods and services and
+  is included in the price. It is an important source of revenue for the Confederation.
+status: draft
+reviewed_by: null
+reviewed_at: null

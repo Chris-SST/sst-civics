@@ -1,0 +1,14 @@
+id: kantonsregierung-zuerich-anzahl-mitglieder
+lang: en
+source_version: 1
+question: How many members does the Zurich cantonal government have?
+options:
+  a: Five members
+  b: Nine members
+  c: Eleven members
+  d: Seven members
+explanation: The cantonal government of the canton of Zurich consists of seven members. As a rule, each
+  member heads a department of the administration.
+status: draft
+reviewed_by: null
+reviewed_at: null

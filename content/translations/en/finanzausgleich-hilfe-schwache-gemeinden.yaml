@@ -1,0 +1,17 @@
+id: finanzausgleich-hilfe-schwache-gemeinden
+lang: en
+source_version: 1
+question: What is the purpose of the financial equalisation between the communes (Gemeinden) in the canton
+  of Zürich?
+options:
+  a: It lowers taxes in all communes to the same rate.
+  b: It pays the communes the costs of communal assemblies (Gemeindeversammlungen).
+  c: It helps communes with weak finances or communes burdened by high social costs to carry out their
+    tasks.
+  d: It distributes the money of the Confederation equally to all inhabitants.
+explanation: Communes have very different financial resources. Financial equalisation partially balances
+  out these differences. In this way, communes with little tax revenue or high social costs can also carry
+  out their tasks.
+status: draft
+reviewed_by: null
+reviewed_at: null

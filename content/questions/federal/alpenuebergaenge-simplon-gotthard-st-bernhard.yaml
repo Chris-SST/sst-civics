@@ -1,0 +1,43 @@
+id: alpenuebergaenge-simplon-gotthard-st-bernhard
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Was haben Simplon, Gotthard und Grosser St. Bernhard gemeinsam?
+options_de:
+  a: Es sind Kantone in den Alpen.
+  b: Es sind Flüsse, die ins Meer münden.
+  c: Es sind Seen im Mittelland.
+  d: Es sind Übergänge über die Alpen.
+correct: d
+explanation_de: Simplon, Gotthard und Grosser St. Bernhard sind bekannte Pässe, die über die Alpen führen.
+  Sie verbinden die Alpennordseite mit der Alpensüdseite.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/alpen
+  checked: 2026-11-02
+glossary:
+- Alpenpass
+- Alpen
+status: draft
+difficulty: 1
+covers:
+- zh-256
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Simplon, Gotthard und Grosser St. Bernhard sind bekannte Alpenpässe und damit Übergänge
+      über die Alpen, während sie weder Kantone noch Flüsse noch Seen im Mittelland sind.
+  source:
+    verdict: unclear
+    note: Beide Quellen sagen, dass Alpenpässe und Tunnel wichtige Übergänge über die Alpen sind, und
+      Quelle 1 nennt den Gotthardpass. Simplon und Grosser St. Bernhard kommen aber nicht vor (Text allenfalls
+      gekürzt), daher bleibt die gemeinsame Eigenschaft der drei unbelegt.
+    at: 2026-11-02
+    model: claude-sonnet-5-5
+    version: 1

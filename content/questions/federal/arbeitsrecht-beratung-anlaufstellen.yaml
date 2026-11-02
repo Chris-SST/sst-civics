@@ -1,0 +1,46 @@
+id: arbeitsrecht-beratung-anlaufstellen
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Wer hilft bei Fragen zum Arbeitsrecht weiter?
+options_de:
+  a: Die Schulpflege und die Kirchgemeinde
+  b: Die Anwaltschaft, Gewerkschaften und Arbeitsgerichte
+  c: Die Verkehrsbetriebe und die Post
+  d: Die Zivilstandsämter und die Einwohnerkontrolle
+correct: b
+explanation_de: Bei Fragen zum Arbeitsrecht gibt es mehrere Anlaufstellen. Dazu gehören Anwältinnen und
+  Anwälte, Gewerkschaften und die Arbeitsgerichte. Die anderen Stellen sind für andere Aufgaben zuständig.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
+  checked: 2026-11-02
+glossary:
+- Arbeitsrecht
+- Anwaltschaft
+- Gewerkschaft
+- Arbeitsgericht
+status: in_review
+difficulty: 2
+covers:
+- zh-166
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Bei Fragen zum Arbeitsrecht helfen Anwältinnen und Anwälte, Gewerkschaften und die Arbeitsgerichte
+      weiter, während die anderen genannten Stellen dafür nicht zuständig sind.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Broschüre zum Grundkenntnistest) sagt ausdrücklich: Bei Fragen und Streitigkeiten
+      zum Arbeitsvertrag können sich Arbeitnehmende an Anwältinnen und Anwälte, Gewerkschaften und Arbeitsgerichte
+      wenden. Die Aufgaben von Zivilstandsamt und Einwohnerkontrolle werden ebenfalls anders beschrieben
+      (Heirat, Umzug).'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

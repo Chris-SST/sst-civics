@@ -1,0 +1,41 @@
+id: rav-aufgabe-stellensuchende-unterstuetzen
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.wirtschaft_arbeit
+question_de: Welche Aufgabe hat das Regionale Arbeitsvermittlungszentrum (RAV)?
+options_de:
+  a: Es kontrolliert die Löhne in den Betrieben
+  b: Es zahlt allen Einwohnern eine Rente aus
+  c: Es unterstützt Stellensuchende bei der Arbeitssuche und vermittelt Stellen
+  d: Es stellt Arbeitszeugnisse für Stellensuchende aus
+correct: c
+explanation_de: Das RAV ist die regionale Anlaufstelle für Stellensuchende. Es berät sie und vermittelt
+  ihnen Stellen. Im Kanton Zürich gehört es zum Amt für Arbeit.
+sources:
+- url: https://www.zh.ch/de/volkswirtschaftsdirektion/amt-fuer-arbeit/rav-im-kanton-zuerich.html
+  checked: &id001 2026-11-02
+glossary:
+- RAV
+- Stellensuchende
+status: in_review
+difficulty: 1
+covers:
+- zh-151
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das RAV berät und unterstützt Stellensuchende bei der Stellensuche und vermittelt offene
+      Stellen, während Lohnkontrollen, Renten und Arbeitszeugnisse nicht zu seinen Aufgaben gehören.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt, die RAV seien auf Stellensuche und Vermittlung spezialisiert und unterstützten
+      Arbeitslose im Bewerbungsprozess und beim Finden einer neuen Stelle. Die Seite steht beim Amt für
+      Arbeit des Kantons Zürich, was auch die Aussage der Erklärung dazu stützt.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

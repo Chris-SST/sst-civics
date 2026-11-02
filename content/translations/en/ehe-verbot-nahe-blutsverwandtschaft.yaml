@@ -1,0 +1,15 @@
+id: ehe-verbot-nahe-blutsverwandtschaft
+lang: en
+source_version: 1
+question: Who is not allowed to marry in Switzerland?
+options:
+  a: People who have been divorced before
+  b: People who come from different cantons
+  c: People who are closely related by blood
+  d: People who live in different communes (Gemeinden)
+explanation: Marriage between close blood relatives is prohibited, for example between siblings or between
+  parents and children. Origin, place of residence and a previous divorce, on the other hand, are not
+  impediments to marriage.
+status: draft
+reviewed_by: null
+reviewed_at: null

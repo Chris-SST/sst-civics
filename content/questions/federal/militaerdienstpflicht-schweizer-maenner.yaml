@@ -1,0 +1,48 @@
+id: militaerdienstpflicht-schweizer-maenner
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.pflichten
+question_de: Wen trifft in der Schweiz die Pflicht zum Militärdienst oder zum Ersatzdienst?
+options_de:
+  a: Alle Einwohnerinnen und Einwohner ab 18 Jahren
+  b: Männer mit Schweizer Bürgerrecht
+  c: Alle Männer, die in der Schweiz wohnen
+  d: Nur Frauen mit Schweizer Bürgerrecht
+correct: b
+explanation_de: Nach der Bundesverfassung ist jeder Schweizer Mann zum Militärdienst verpflichtet. Wer
+  dies mit seinem Gewissen nicht vereinbaren kann, leistet zivilen Ersatzdienst. Ausländer sind nicht
+  dienstpflichtig.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: 2026-11-02
+- url: https://www.zivi.admin.ch/de/zulassung
+  checked: 2026-11-02
+glossary:
+- Militärdienst
+- Zivildienst
+- Bürgerrecht
+status: in_review
+difficulty: 2
+covers:
+- zh-087
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Nach Art. 59 der Bundesverfassung ist jeder Schweizer Mann zum Militärdienst verpflichtet
+      und kann stattdessen einen zivilen Ersatzdienst leisten, während Frauen freiwillig dienen können
+      und Ausländer nicht dienstpflichtig sind.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Bundesverfassung) sagt: «Jeder Schweizer ist verpflichtet, Militärdienst zu leisten.
+      Das Gesetz sieht einen zivilen Ersatzdienst vor.» Das stützt Antwort b und die Erklärung; dass Ausländer
+      nicht dienstpflichtig sind, folgt nur indirekt, da die Pflicht an den Schweizer gebunden ist.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

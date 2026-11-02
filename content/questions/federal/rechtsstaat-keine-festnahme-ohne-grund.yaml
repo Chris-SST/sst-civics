@@ -1,0 +1,43 @@
+id: rechtsstaat-keine-festnahme-ohne-grund
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.gerichte
+question_de: Was gilt in einem Rechtsstaat für Festnahme und Haft?
+options_de:
+  a: Der Staat darf niemanden ohne Grund festnehmen und inhaftieren.
+  b: Der Staat darf Personen nach eigenem Ermessen festhalten.
+  c: Die Regierung darf Kritiker vorsorglich in Haft nehmen.
+  d: Nur Ausländerinnen und Ausländer dürfen ohne Grund festgenommen werden.
+correct: a
+explanation_de: In einem Rechtsstaat ist staatliches Handeln an das Recht gebunden. Eine Festnahme oder
+  Haft braucht einen gesetzlichen Grund. Das schützt die Freiheit der Menschen vor Willkür.
+sources:
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+  checked: &id001 2026-11-02
+glossary:
+- Rechtsstaat
+- Festnahme
+- Haft
+- Willkür
+status: in_review
+difficulty: 1
+covers:
+- zh-090
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: In einem Rechtsstaat darf der Staat niemanden willkürlich festnehmen oder inhaftieren,
+      sondern nur bei gesetzlichem Grund und unter den Voraussetzungen der Verfassung (Art. 9 und 31 BV).
+  source:
+    verdict: supported
+    note: 'Die Bundesverfassung sagt: «Die Freiheit darf einer Person nur in den vom Gesetz selbst vorgesehenen
+      Fällen und nur auf die im Gesetz vorgeschriebene Weise entzogen werden.» Dazu kommen das Willkürverbot
+      und das Recht auf persönliche Freiheit. Das stützt die Antwort a) und die Erklärung.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

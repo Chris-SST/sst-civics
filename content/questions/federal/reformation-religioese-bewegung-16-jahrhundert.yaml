@@ -1,0 +1,42 @@
+id: reformation-religioese-bewegung-16-jahrhundert
+version: 1
+scope: federal
+canton: null
+topic: bund.geschichte.gruendung
+question_de: Welche bedeutende religiöse Bewegung prägte im 16. Jahrhundert Europa und auch die Schweiz?
+options_de:
+  a: Die Reformation
+  b: Die Aufklärung
+  c: Die Regeneration
+  d: Die Helvetik
+correct: a
+explanation_de: Die Reformation spaltete im 16. Jahrhundert die Kirche in Europa. In der Schweiz waren
+  zum Beispiel Huldrych Zwingli in Zürich und Johannes Calvin in Genf wichtig. Die anderen Begriffe bezeichnen
+  spätere Entwicklungen.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+  checked: &id001 2026-11-02
+glossary:
+- Reformation
+status: in_review
+difficulty: 1
+covers:
+- zh-214
+checks:
+  independent_answer:
+    option: a
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Reformation im 16. Jahrhundert, in der Schweiz mit Zwingli in Zürich und Calvin in
+      Genf, war die bedeutende religiöse Bewegung, während Aufklärung, Regeneration und Helvetik andere
+      Epochen oder politische Entwicklungen des 18. und 19. Jahrhunderts bezeichnen.
+  source:
+    verdict: supported
+    note: Quelle 1 beschreibt die Reformation als Spaltung des christlichen Abendlandes ab dem 16. Jahrhundert
+      und nennt Zwingli (Zürich) und Calvin (Genf) als Reformatoren in der Schweiz. Aufklärung und Helvetische
+      Republik werden dort im 18. Jahrhundert beziehungsweise ab 1798 eingeordnet, also später.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

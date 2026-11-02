@@ -1,0 +1,49 @@
+id: gewaltenteilung-bedeutung-staatsgewalten
+version: 1
+scope: federal
+canton: null
+topic: bund.demokratie.staatsprinzipien
+question_de: Was bedeutet der Grundsatz der Gewaltenteilung in der Schweiz?
+options_de:
+  a: Bund, Kantone und Gemeinden teilen die Steuereinnahmen unter sich auf.
+  b: Regierung, Parlament und Gerichte teilen sich die staatliche Macht.
+  c: Die Macht im Staat liegt allein beim Bundesrat.
+  d: Das Volk und die Medien teilen sich die staatliche Macht.
+correct: b
+explanation_de: Bei der Gewaltenteilung übernehmen die Exekutive (Regierung), die Legislative (Parlament)
+  und die Judikative (Gerichte) unterschiedliche Aufgaben. So kann keine Stelle allein zu viel Macht haben.
+  Die Staatsgewalten kontrollieren sich gegenseitig.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/foederalismus
+  checked: 2026-11-02
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+  checked: 2026-11-02
+glossary:
+- Gewaltenteilung
+- Exekutive
+- Legislative
+- Judikative
+status: in_review
+difficulty: 2
+covers:
+- zh-074
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Gewaltenteilung heisst, dass die staatliche Macht auf Regierung (Exekutive), Parlament
+      (Legislative) und Gerichte (Judikative) aufgeteilt ist, damit keine Behörde allein zu viel Macht
+      hat.
+  source:
+    verdict: supported
+    note: Quelle 2 (Zürcher Einbürgerungsbroschüre, S. 15 und Glossar) erklärt, dass die Macht auf Legislative
+      (Parlament), Exekutive (Bundesrat/Regierung) und Judikative (Gericht) aufgeteilt ist und dass sich
+      die drei Gewalten gegenseitig kontrollieren. Das stützt Antwort b und die Erklärung.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

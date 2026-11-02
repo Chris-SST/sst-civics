@@ -1,0 +1,42 @@
+id: stadtzuericher-parlament-direkt-gewaehlt
+version: 1
+scope: zh
+canton: zh
+topic: gemeinde.organisation.versammlung_parlament
+question_de: Wie wird das Parlament der Stadt Zürich, der Gemeinderat, bestellt?
+options_de:
+  a: Der Regierungsrat des Kantons ernennt es
+  b: Der Stadtrat bestimmt die Mitglieder selbst
+  c: Die Parteien losen die Sitze unter sich aus
+  d: Die Bevölkerung wählt es direkt an der Urne
+correct: d
+explanation_de: Die Stimmberechtigten der Stadt Zürich wählen den Gemeinderat in allgemeinen Wahlen. Er
+  ist das Parlament der Stadt und ersetzt die Gemeindeversammlung.
+sources:
+- url: https://www.stadt-zuerich.ch/de/politik-und-verwaltung/behoerden-und-organe/gemeinderat.html
+  checked: &id001 2026-11-02
+glossary:
+- Gemeinderat
+- Gemeindeparlament
+- Stimmberechtigte
+status: in_review
+difficulty: 1
+covers:
+- zh-116
+checks:
+  independent_answer:
+    option: d
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Der Gemeinderat der Stadt Zürich mit 125 Mitgliedern wird von den Stimmberechtigten der
+      Stadt im Proporzverfahren direkt an der Urne gewählt.
+  source:
+    verdict: supported
+    note: Quelle 1 sagt ausdrücklich, dass die Mitglieder des Gemeinderats alle vier Jahre von den Stimmberechtigten
+      an der Urne gewählt werden. Dass er die Gemeindeversammlung ersetzt, steht dort nicht, ist für die
+      richtige Antwort aber nicht nötig.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

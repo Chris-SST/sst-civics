@@ -1,0 +1,14 @@
+id: steuererklaerung-finanzielle-verhaeltnisse-offenlegen
+lang: en
+source_version: 1
+question: What is the purpose of the tax return that taxpayers fill in every year?
+options:
+  a: It is used to register with the residents' registration office.
+  b: It is the application for health insurance.
+  c: It is the registration for civilian service (Zivildienst).
+  d: It discloses their financial circumstances to the tax authorities.
+explanation: In the tax return, taxpayers declare their income, assets and deductions. The tax authority
+  uses this information to calculate the tax.
+status: draft
+reviewed_by: null
+reviewed_at: null

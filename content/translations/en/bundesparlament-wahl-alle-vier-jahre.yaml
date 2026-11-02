@@ -1,0 +1,14 @@
+id: bundesparlament-wahl-alle-vier-jahre
+lang: en
+source_version: 1
+question: How often do the people elect the federal parliament anew?
+options:
+  a: Every three years
+  b: Every four years
+  c: Every six years
+  d: Every two years
+explanation: The National Council (Nationalrat) is elected anew by the people every four years. The Council
+  of States (Ständerat) is also elected on the same cycle in most cantons; the cantons regulate this themselves.
+status: draft
+reviewed_by: null
+reviewed_at: null

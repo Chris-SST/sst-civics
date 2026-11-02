@@ -1,0 +1,16 @@
+id: stellenabsage-wegen-hautfarbe-geschlecht
+lang: en
+source_version: 1
+question: A female applicant is rejected for a job solely because of her sex. Which fundamental right
+  is violated as a result?
+options:
+  a: The right to freedom of settlement
+  b: The right to freedom of assembly
+  c: The principle of equality before the law and the prohibition of discrimination
+  d: The right to protection of privacy
+explanation: Article 8 of the Federal Constitution prohibits discrimination, for example on grounds of
+  origin, skin colour or sex. Rejection solely on such grounds is therefore not permitted. The same applies
+  to skin colour.
+status: draft
+reviewed_by: null
+reviewed_at: null

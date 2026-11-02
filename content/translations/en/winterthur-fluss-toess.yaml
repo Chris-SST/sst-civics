@@ -1,0 +1,14 @@
+id: winterthur-fluss-toess
+lang: en
+source_version: 1
+question: Which river flows through the city of Winterthur?
+options:
+  a: The Limmat
+  b: The Töss
+  c: The Sihl
+  d: The Glatt
+explanation: The Töss flows through Winterthur and later joins the Rhine. The Sihl and the Limmat flow
+  through the city of Zurich, and the Glatt flows through the Glatt Valley (Glattal).
+status: draft
+reviewed_by: null
+reviewed_at: null

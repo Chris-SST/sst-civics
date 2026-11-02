@@ -1,0 +1,41 @@
+id: ikrk-hauptsitz-in-genf
+version: 1
+scope: federal
+canton: null
+topic: bund.international
+question_de: In welchem Land hat das Internationale Komitee vom Roten Kreuz (IKRK) seinen Hauptsitz?
+options_de:
+  a: In den Niederlanden
+  b: In der Schweiz
+  c: In Österreich
+  d: In Belgien
+correct: b
+explanation_de: Das IKRK hat seinen Hauptsitz in Genf in der Schweiz. Es wurde 1863 in Genf gegründet
+  und schützt Opfer von bewaffneten Konflikten. Die Schweiz unterstützt seine Arbeit.
+sources:
+- url: https://www.eda.admin.ch/de/die-schweiz-und-das-ikrk-bereiten-sich-auf-die-herausforderungen-der-digitalisierung-vor
+  checked: &id001 2026-11-02
+glossary:
+- IKRK
+- Rotes Kreuz
+status: in_review
+difficulty: 1
+covers:
+- zh-330
+checks:
+  independent_answer:
+    option: b
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Das Internationale Komitee vom Roten Kreuz (IKRK) wurde 1863 in Genf gegründet und hat
+      dort bis heute seinen Hauptsitz, also in der Schweiz.
+  source:
+    verdict: supported
+    note: Quelle 1 (EDA) sagt, das IKRK habe «seinen Sitz und seine Archive in Genf» und sei ein «Internationales
+      Komitee vom Roten Kreuz (IKRK) mit Sitz in Genf». Das stützt die Antwort Schweiz. Die Gründung 1863
+      wird in der Quelle nicht erwähnt, ist aber für die Antwort nicht entscheidend.
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

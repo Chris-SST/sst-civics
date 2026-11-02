@@ -1,0 +1,46 @@
+id: auslaender-herkunft-eu-staaten-anteil
+version: 1
+scope: federal
+canton: null
+topic: bund.sozial.zivilgesellschaft
+question_de: Woher stammt der grösste Teil der in der Schweiz wohnhaften Ausländerinnen und Ausländer?
+options_de:
+  a: Aus Staaten Asiens, etwa zwei Drittel
+  b: Aus Staaten Afrikas, etwa die Hälfte
+  c: Aus Staaten der Europäischen Union, etwa zwei Drittel
+  d: Aus Staaten Amerikas, etwa ein Drittel
+correct: c
+explanation_de: Etwa 66 Prozent der ausländischen Wohnbevölkerung stammen aus EU-Staaten, also rund zwei
+  Drittel. Der Rest kommt aus anderen europäischen Staaten und aus der übrigen Welt. Die Zahl kann sich
+  mit der Zeit leicht verändern.
+sources:
+- url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/broschuere_einbuergerung_grundkenntnistest.pdf
+  checked: &id001 2026-11-02
+- url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/html/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-html-2.html
+  checked: 2026-11-02
+glossary:
+- Europäische Union
+- Ausländerin
+- Wohnbevölkerung
+status: in_review
+difficulty: 2
+covers:
+- zh-259
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Rund zwei Drittel der ausländischen Wohnbevölkerung in der Schweiz stammen aus Staaten
+      der EU beziehungsweise EU/EFTA (vor allem Italien, Deutschland, Portugal, Frankreich), während Asien,
+      Afrika und Amerika deutlich kleinere Anteile ausmachen.
+  source:
+    verdict: supported
+    note: 'Quelle 1 (Broschüre des Kantons Zürich, Seite 47) sagt: «Zwei Drittel der Ausländerinnen und
+      Ausländer kommen aus einem EU-Land.» Das stützt Antwort c) und die Erklärung. Quelle 2 (Zivilgesetzbuch)
+      behandelt ein anderes Thema.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

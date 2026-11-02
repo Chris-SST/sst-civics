@@ -1,0 +1,47 @@
+id: hoechster-gipfel-der-schweiz
+version: 1
+scope: federal
+canton: null
+topic: bund.geografie.landschaft
+question_de: Wie heisst der höchste Berggipfel, der ganz auf Schweizer Gebiet liegt?
+options_de:
+  a: Piz Bernina
+  b: Matterhorn
+  c: Dufourspitze
+  d: Jungfrau
+correct: c
+explanation_de: Die Dufourspitze im Monte-Rosa-Massiv im Wallis ist mit rund 4634 Metern der höchste Gipfel
+  der Schweiz. Das Matterhorn ist bekannter, aber niedriger. Der Piz Bernina ist der höchste Gipfel in
+  den Ostalpen.
+sources:
+- url: https://www.aboutswitzerland.eda.admin.ch/de/alpen
+  checked: &id001 2026-11-02
+- url: https://www.aboutswitzerland.eda.admin.ch/de/geografie
+  checked: *id001
+glossary:
+- Dufourspitze
+- Gipfel
+status: in_review
+difficulty: 2
+covers:
+- zh-267
+checks:
+  independent_answer:
+    option: c
+    agrees: true
+    model: claude-sonnet-5-5
+    at: 2026-11-02
+    version: 1
+    reasoning: Die Dufourspitze (4634 m) ist der höchste Gipfel der Schweiz, während der Monte Rosa mit
+      der Grenze zu Italien verläuft, die Dufourspitze selbst liegt aber ganz auf Schweizer Gebiet (der
+      Gipfel ist nicht grenzbildend), und der Piz Bernina, das Matterhorn und die Jungfrau sind niedriger
+      oder (beim Matterhorn) ein Grenzgipfel.
+  source:
+    verdict: supported
+    note: 'Beide Seiten nennen die Dufourspitze im Monte-Rosa-Massiv als höchsten Gipfel der Schweiz (Quelle
+      1: 4634 m, Quelle 2: 4636 m). Die Höhenangabe weicht zwischen den Quellen leicht ab; die Erklärung
+      nennt 4634 m, was zu Quelle 1 passt. Aussagen zum Piz Bernina oder zum Matterhorn fehlen, sie sind
+      für die Antwort aber nicht nötig.'
+    at: *id001
+    model: claude-sonnet-5-5
+    version: 1

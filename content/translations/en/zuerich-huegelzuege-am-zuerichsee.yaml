@@ -1,0 +1,14 @@
+id: zuerich-huegelzuege-am-zuerichsee
+lang: en
+source_version: 1
+question: Which ranges of hills line Lake Zurich?
+options:
+  a: Uetliberg, Albis and Pfannenstiel
+  b: Lägern, Irchel and Höhronen
+  c: Hörnli, Bachtel and Allmann
+  d: Heitersberg, Üetliberg and Randen
+explanation: The Uetliberg and the Albis are on the left shore of the lake, the Pfannenstiel on the right
+  shore. Lägern, Irchel, Bachtel and Hörnli are other elevations in the canton or in the region.
+status: draft
+reviewed_by: null
+reviewed_at: null
