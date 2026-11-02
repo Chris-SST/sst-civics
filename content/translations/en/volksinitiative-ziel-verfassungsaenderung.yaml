@@ -1,0 +1,14 @@
+id: volksinitiative-ziel-verfassungsaenderung
+lang: en
+source_version: 1
+question: What can citizens entitled to vote demand with a federal popular initiative (Volksinitiative)?
+options:
+  a: The removal from office of the Federal Council (Bundesrat)
+  b: An amendment to the Federal Constitution
+  c: The rejection of an existing federal act
+  d: An amendment to a cantonal constitution
+explanation: With a popular initiative, citizens entitled to vote can demand an amendment to the Federal
+  Constitution. The rejection of a law, on the other hand, would be a matter for the referendum.
+status: draft
+reviewed_by: null
+reviewed_at: null

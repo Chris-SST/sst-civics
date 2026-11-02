@@ -1,0 +1,15 @@
+id: volksinitiative-unterschreiben-wer-darf
+lang: en
+source_version: 1
+question: Who may sign a federal popular initiative (Volksinitiative)?
+options:
+  a: All persons aged 16 or over who are resident in Switzerland
+  b: All persons aged 18 or over with a settlement permit (C permit) (Niederlassungsbewilligung)
+  c: Only members of a political party aged 18 or over
+  d: Swiss citizens aged 18 or over who are entitled to vote
+explanation: Only persons who are entitled to vote at federal level may sign a federal popular initiative.
+  These are Swiss citizens aged 18 or over, including those who live abroad. Foreign nationals have no
+  political rights at federal level, not even with a settlement permit.
+status: draft
+reviewed_by: null
+reviewed_at: null

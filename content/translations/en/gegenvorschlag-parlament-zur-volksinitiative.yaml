@@ -1,0 +1,15 @@
+id: gegenvorschlag-parlament-zur-volksinitiative
+lang: en
+source_version: 1
+question: What can Parliament set against a federal popular initiative (Volksinitiative)?
+options:
+  a: An extension of the signature collection period by a further year
+  b: Its own counter-proposal, which is also put to a vote
+  c: A second collection of signatures in all the cantons
+  d: A ban on bringing the initiative to a vote
+explanation: Parliament can set a direct counter-proposal against a popular initiative. This often takes
+  up the concern in part, but goes less far. Voters then vote on the initiative and the counter-proposal
+  on the same day.
+status: draft
+reviewed_by: null
+reviewed_at: null

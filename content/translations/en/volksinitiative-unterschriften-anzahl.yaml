@@ -1,0 +1,15 @@
+id: volksinitiative-unterschriften-anzahl
+lang: en
+source_version: 1
+question: How many signatures from eligible voters does a federal popular initiative (Volksinitiative)
+  need in order to be formally submitted?
+options:
+  a: 50,000 signatures
+  b: 150,000 signatures
+  c: 200,000 signatures
+  d: 100,000 signatures
+explanation: A federal popular initiative requires 100,000 valid signatures. These must be collected within
+  18 months.
+status: draft
+reviewed_by: null
+reviewed_at: null

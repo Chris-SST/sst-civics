@@ -1,0 +1,15 @@
+id: obligatorisches-referendum-verfassungsaenderung
+lang: en
+source_version: 1
+question: In Switzerland, which proposal must always be put to a vote, even if no signatures are collected?
+options:
+  a: Every new federal law
+  b: Every amendment to the Federal Constitution
+  c: Every ordinance of the Federal Council (Bundesrat)
+  d: Every budget of the Confederation
+explanation: Every amendment to the Federal Constitution must compulsorily be submitted to the people
+  and the cantons. This is called a compulsory referendum. Federal laws are subject only to the optional
+  referendum.
+status: draft
+reviewed_by: null
+reviewed_at: null

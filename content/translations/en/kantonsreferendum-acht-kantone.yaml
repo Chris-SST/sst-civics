@@ -1,0 +1,16 @@
+id: kantonsreferendum-acht-kantone
+lang: en
+source_version: 1
+question: Besides 50,000 persons entitled to vote, who else can also demand an optional referendum against
+  a federal act?
+options:
+  a: Eight cantons
+  b: Three large parties acting together
+  c: The Federal Council (Bundesrat)
+  d: The Federal Supreme Court (Bundesgericht)
+explanation: According to the Federal Constitution, eight cantons can also demand a popular vote on a
+  federal act. This is called a cantonal referendum. It is rarely used, but it shows that the cantons
+  have a say in the federal state.
+status: draft
+reviewed_by: null
+reviewed_at: null

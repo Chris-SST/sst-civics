@@ -1,0 +1,15 @@
+id: volksinitiative-doppeltes-mehr
+lang: en
+source_version: 1
+question: What does a popular initiative (Volksinitiative) need in order to be accepted in a vote?
+options:
+  a: The approval of two thirds of those voting
+  b: The approval of the Federal Council (Bundesrat) and of the majority of those voting
+  c: The approval of the majority of those voting and of the majority of the cantons
+  d: Only the approval of the majority of those voting
+explanation: 'A popular initiative calls for an amendment to the Federal Constitution. For this reason,
+  a double majority is required: the majority of those voting and the majority of the cantons (majority
+  of the cantons (Ständemehr)).'
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,15 @@
+id: volksinitiative-sammelfrist-monate
+lang: en
+source_version: 1
+question: How long do the initiators have to collect the signatures for a federal popular initiative (Volksinitiative)?
+options:
+  a: 6 months
+  b: 12 months
+  c: 18 months
+  d: 36 months
+explanation: The collection period is 18 months from publication in the Federal Gazette (Bundesblatt).
+  If they do not manage to collect the required 100,000 signatures within this time, the initiative does
+  not come about.
+status: draft
+reviewed_by: null
+reviewed_at: null

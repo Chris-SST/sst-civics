@@ -1,0 +1,15 @@
+id: volksinitiative-unterschriften-sammelfrist
+lang: en
+source_version: 1
+question: How many signatures does a federal popular initiative (Volksinitiative) need, and how long may
+  signatures be collected for?
+options:
+  a: 100,000 signatures in 100 days
+  b: 50,000 signatures in 100 days
+  c: 50,000 signatures in 18 months
+  d: 100,000 signatures in 18 months
+explanation: A federal popular initiative needs 100,000 valid signatures within 18 months. The optional
+  referendum, by contrast, needs 50,000 signatures within 100 days.
+status: draft
+reviewed_by: null
+reviewed_at: null

@@ -1,0 +1,17 @@
+id: abstimmungsunterlagen-erlaeuterungen-bundesrat
+lang: en
+source_version: 1
+question: What do eligible voters receive together with the voting material before a federal vote, so
+  that they can inform themselves about the proposals?
+options:
+  a: The explanations of the Federal Council (Bundesrat)
+  b: A statement from the Federal Supreme Court (Bundesgericht)
+  c: An expert opinion from their own canton
+  d: The electoral list of all parties
+explanation: In the explanations, often called the voting booklet, the Federal Council explains what each
+  proposal is about. They also contain the arguments of the initiative committee or referendum committee,
+  as well as the recommendation of the Federal Council and Parliament. This allows everyone to form their
+  own opinion.
+status: draft
+reviewed_by: null
+reviewed_at: null

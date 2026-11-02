@@ -1,0 +1,15 @@
+id: referendum-sammelfrist-100-tage
+lang: en
+source_version: 1
+question: How much time do the referendum committees have to collect the signatures for an optional referendum
+  against a federal act?
+options:
+  a: 60 days
+  b: 18 months
+  c: 100 days
+  d: 30 days
+explanation: The time limit is 100 days from the official publication of the enactment. The 18 months,
+  by contrast, apply to collecting signatures for a popular initiative (Volksinitiative).
+status: draft
+reviewed_by: null
+reviewed_at: null

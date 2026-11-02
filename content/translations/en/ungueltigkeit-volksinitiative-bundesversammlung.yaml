@@ -1,0 +1,17 @@
+id: ungueltigkeit-volksinitiative-bundesversammlung
+lang: en
+source_version: 1
+question: Which authority can declare a federal popular initiative (Volksinitiative) invalid, for example
+  if it violates the unity of subject matter?
+options:
+  a: The Federal Council (Bundesrat)
+  b: The Federal Supreme Court (Bundesgericht)
+  c: The Federal Assembly (Bundesversammlung)
+  d: The Federal Chancellery (Bundeskanzlei)
+explanation: According to the Federal Constitution, the Federal Assembly declares a popular initiative
+  wholly or partially invalid if it violates the unity of form, the unity of subject matter or mandatory
+  provisions of international law. The Federal Chancellery, by contrast, mainly checks formal points,
+  such as whether enough valid signatures have been submitted.
+status: draft
+reviewed_by: null
+reviewed_at: null

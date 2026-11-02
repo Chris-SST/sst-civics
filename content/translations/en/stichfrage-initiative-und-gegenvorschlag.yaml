@@ -1,0 +1,16 @@
+id: stichfrage-initiative-und-gegenvorschlag
+lang: en
+source_version: 1
+question: In a vote on a popular initiative (Volksinitiative) and a direct counter-proposal, there is
+  a tie-breaker question. What is its purpose?
+options:
+  a: It decides whether the vote has to be repeated
+  b: It decides whether the cantons are allowed to vote at all
+  c: It decides which proposal applies if both are accepted
+  d: It decides whether the signatures are checked again
+explanation: Voters may approve both the initiative and the counter-proposal. With the tie-breaker question,
+  they indicate which proposal should enter into force if both are accepted. This way, votes cannot be
+  lost between two similar proposals.
+status: draft
+reviewed_by: null
+reviewed_at: null

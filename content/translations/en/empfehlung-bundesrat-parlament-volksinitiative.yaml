@@ -1,0 +1,16 @@
+id: empfehlung-bundesrat-parlament-volksinitiative
+lang: en
+source_version: 1
+question: Who gives voters a recommendation, before the vote on a federal popular initiative (Volksinitiative),
+  on whether they should accept or reject the initiative?
+options:
+  a: The Federal Council (Bundesrat) and Parliament
+  b: The cantonal governments
+  c: The Federal Chancellery (Bundeskanzlei) alone
+  d: The Federal Supreme Court (Bundesgericht)
+explanation: Once a popular initiative has been formally submitted and validated, the Federal Council
+  and Parliament take a position on it. Parliament recommends that voters accept or reject it. This recommendation
+  is also included in the voting explanations, which voters receive before the vote.
+status: draft
+reviewed_by: null
+reviewed_at: null

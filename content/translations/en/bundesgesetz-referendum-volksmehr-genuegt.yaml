@@ -1,0 +1,17 @@
+id: bundesgesetz-referendum-volksmehr-genuegt
+lang: en
+source_version: 1
+question: An optional referendum has been called against a new federal law. What is required for the law
+  to be accepted in the popular vote?
+options:
+  a: A majority of those voting throughout Switzerland
+  b: A two-thirds majority of those voting
+  c: A majority of the cantons alone
+  d: A majority of those voting and a majority of the cantons
+explanation: In an optional referendum against a federal law, only the popular majority (Volksmehr) counts,
+  that is, the majority of the valid votes throughout Switzerland. The majority of the cantons (Ständemehr)
+  is additionally required only for amendments to the Federal Constitution and for certain international
+  treaties.
+status: draft
+reviewed_by: null
+reviewed_at: null

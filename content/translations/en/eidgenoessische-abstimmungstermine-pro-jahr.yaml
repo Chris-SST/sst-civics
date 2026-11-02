@@ -1,0 +1,15 @@
+id: eidgenoessische-abstimmungstermine-pro-jahr
+lang: en
+source_version: 1
+question: How often per year do federal popular votes normally take place in Switzerland?
+options:
+  a: Once
+  b: Only every four years
+  c: Up to four times
+  d: Every month
+explanation: Up to four voting Sundays per year are scheduled for federal popular votes. On one date,
+  voters are often asked to decide on several proposals at the same time. By contrast, the elections to
+  the National Council (Nationalrat) take place every four years, and these are not votes on proposals.
+status: draft
+reviewed_by: null
+reviewed_at: null

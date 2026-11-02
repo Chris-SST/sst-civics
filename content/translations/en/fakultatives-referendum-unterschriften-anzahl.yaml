@@ -1,0 +1,14 @@
+id: fakultatives-referendum-unterschriften-anzahl
+lang: en
+source_version: 1
+question: How many signatures are needed for an optional referendum against a federal act?
+options:
+  a: 200,000 signatures
+  b: 30,000 signatures
+  c: 50,000 signatures
+  d: 100,000 signatures
+explanation: An optional referendum requires 50,000 valid signatures from eligible voters. They must be
+  collected within 100 days of the publication of the act.
+status: draft
+reviewed_by: null
+reviewed_at: null

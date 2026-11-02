@@ -1,0 +1,16 @@
+id: fakultatives-referendum-unterschriften-frist
+lang: en
+source_version: 1
+question: How many signatures are required for an optional referendum against a federal act to be successful,
+  and within what time limit?
+options:
+  a: 50,000 signatures within 18 months
+  b: 50,000 signatures within 100 days
+  c: 100,000 signatures within 30 days
+  d: 100,000 signatures within 100 days
+explanation: An optional referendum requires 50,000 valid signatures within 100 days of the publication
+  of the act in the Federal Gazette (Bundesblatt). If the referendum succeeds, the people vote on the
+  act.
+status: draft
+reviewed_by: null
+reviewed_at: null
