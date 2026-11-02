@@ -59,6 +59,13 @@ http://staging.viapunt.ch, http://civics-staging.swisssciencetutors.ch {
 		respond "Not found" 404
 	}
 
+	# Public API for the guide site (D-067): the help chat and the question of the day. Only
+	# /api/public/* is reachable from the guide host, so the pages call it same-origin
+	# (connect-src 'self'). The help chat checks the Origin header and rate-limits per visitor.
+	handle /api/public/* {
+		reverse_proxy api:8000
+	}
+
 	try_files {path} {path}/index.html
 	file_server
 

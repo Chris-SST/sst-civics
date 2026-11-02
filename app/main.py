@@ -17,6 +17,7 @@ from app.billing.routes import router as billing_router
 from app.config import get_settings
 from app.content.routes import router as content_router
 from app.portal import router as portal_router
+from app.questions.daily import router as daily_router
 from app.questions.routes_admin import router as review_router
 from app.questions.routes_student import questions_router
 from app.study.routes import mock_router
@@ -24,6 +25,7 @@ from app.study.routes import router as study_router
 from app.tutoring.admin_routes import router as admin_tutor_router
 from app.tutoring.explain import router as explain_router
 from app.tutoring.help import router as help_router
+from app.tutoring.public_help import router as public_help_router
 from app.tutoring.routes import router as tutor_router
 
 UNSAFE_METHODS = {"POST", "PUT", "PATCH", "DELETE"}
@@ -98,6 +100,8 @@ def create_app() -> FastAPI:
     app.include_router(tutor_router)
     app.include_router(explain_router)
     app.include_router(help_router)
+    app.include_router(public_help_router)
+    app.include_router(daily_router)
     app.include_router(admin_tutor_router)
     app.include_router(study_router)
     app.include_router(mock_router)

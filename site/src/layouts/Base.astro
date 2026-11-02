@@ -1,6 +1,7 @@
 ---
 // Page shell: head (meta, canonical, hreflang, Open Graph), sticky header with wordmark, links,
-// language menu and the route into the app, main slot, footer with the independence notice.
+// language menu and the route into the app, main slot, footer with the independence notice,
+// and the public help chat launcher (D-067).
 import "../styles/global.css";
 import { getCollection } from "astro:content";
 import { APP_URL } from "astro:env/server";
@@ -10,6 +11,7 @@ import { BRAND_NAME } from "../brand";
 import Wordmark from "../components/Wordmark.astro";
 import LanguageSwitcher from "../components/LanguageSwitcher.astro";
 import IndependenceFooter from "../components/IndependenceFooter.astro";
+import HelpChat from "../components/HelpChat.astro";
 
 interface Props {
   lang: string;
@@ -109,5 +111,6 @@ const icon =
       </main>
       <IndependenceFooter lang={lang} links={footerLinks} />
     </div>
+    <HelpChat lang={lang} signupHref={appHref} />
   </body>
 </html>

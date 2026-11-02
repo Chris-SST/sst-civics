@@ -1,0 +1,192 @@
+---
+// Public help chat (D-067): a launcher in the corner of every page that opens a small chat
+// panel. It calls /api/public/help on this same host (proxied to the API by infra/Caddyfile),
+// sends the last few turns, and keeps the conversation for this tab only (sessionStorage).
+// The API limits each visitor to a few questions a day. Without JavaScript nothing shows.
+import { ui } from "../i18n/ui";
+
+interface Props {
+  lang: string;
+  /** Sign-up link into the app, shown when the daily limit is reached. */
+  signupHref: string;
+}
+const { lang, signupHref } = Astro.props;
+const t = ui(lang).chat;
+---
+<div class="hc" data-help-chat data-lang={lang} data-signup={signupHref}
+  data-t-remaining={t.remaining} data-t-limit={t.limit} data-t-limit-cta={t.limitCta}
+  data-t-busy={t.busy} data-t-error={t.error} data-t-unavailable={t.unavailable}>
+  <button type="button" class="hc-launcher" aria-expanded="false" aria-controls="hc-panel" hidden>
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M4 5h12a4 4 0 0 1 0 8H9l-5 4V5z" fill="currentColor"/><circle cx="18.5" cy="17.5" r="3" fill="var(--accent)"/></svg>
+    <span>{t.launcher}</span>
+  </button>
+  <section id="hc-panel" class="hc-panel" role="dialog" aria-label={t.title} hidden>
+    <header class="hc-head">
+      <h2>{t.title}</h2>
+      <button type="button" class="hc-icon" data-hc-clear title={t.clear} aria-label={t.clear}>
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M4 12a8 8 0 1 0 2.3-5.7M4 4v4h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="hc-icon" data-hc-close title={t.close} aria-label={t.close}>
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </header>
+    <div class="hc-log" role="log" aria-live="polite">
+      <p class="hc-intro">{t.intro}</p>
+    </div>
+    <form class="hc-form">
+      <label class="hc-sr" for="hc-input">{t.placeholder}</label>
+      <textarea id="hc-input" rows="2" maxlength="600" placeholder={t.placeholder}></textarea>
+      <button type="submit" class="cv-btn cv-btn--primary cv-btn--small">{t.send}</button>
+    </form>
+    <p class="hc-foot"><span>{t.note}</span> <span class="hc-left" aria-live="polite"></span></p>
+  </section>
+</div>
+
+<script>
+  type Turn = { role: "user" | "assistant"; content: string };
+  const KEY = "viapunt-help";
+
+  /** Plain text with paragraphs, **bold** and [links](https://...) as DOM nodes (no innerHTML). */
+  function render(text: string): DocumentFragment {
+    const frag = document.createDocumentFragment();
+    for (const para of text.split(/\n{2,}/)) {
+      const p = document.createElement("p");
+      const lines = para.split("\n");
+      lines.forEach((line, i) => {
+        const re = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|\*\*([^*]+)\*\*/g;
+        let last = 0;
+        for (let m = re.exec(line); m; m = re.exec(line)) {
+          if (m.index > last) p.append(line.slice(last, m.index));
+          if (m[1]) {
+            const a = document.createElement("a");
+            a.href = m[2];
+            a.textContent = m[1];
+            p.append(a);
+          } else {
+            const b = document.createElement("strong");
+            b.textContent = m[3];
+            p.append(b);
+          }
+          last = m.index + m[0].length;
+        }
+        if (last < line.length) p.append(line.slice(last));
+        if (i < lines.length - 1) p.append(document.createElement("br"));
+      });
+      frag.append(p);
+    }
+    return frag;
+  }
+
+  for (const root of document.querySelectorAll<HTMLElement>("[data-help-chat]")) {
+    const d = root.dataset;
+    const launcher = root.querySelector<HTMLButtonElement>(".hc-launcher")!;
+    const panel = root.querySelector<HTMLElement>(".hc-panel")!;
+    const log = root.querySelector<HTMLElement>(".hc-log")!;
+    const form = root.querySelector<HTMLFormElement>(".hc-form")!;
+    const input = root.querySelector<HTMLTextAreaElement>("textarea")!;
+    const send = form.querySelector<HTMLButtonElement>("button")!;
+    const left = root.querySelector<HTMLElement>(".hc-left")!;
+    let turns: Turn[] = [];
+    try {
+      turns = JSON.parse(sessionStorage.getItem(KEY) || "[]");
+    } catch {
+      turns = [];
+    }
+    const save = () => {
+      try {
+        sessionStorage.setItem(KEY, JSON.stringify(turns.slice(-12)));
+      } catch {
+        /* private mode: the chat still works for this page */
+      }
+    };
+    const bubble = (role: string, content: string | Node) => {
+      const div = document.createElement("div");
+      div.className = `hc-msg hc-msg--${role}`;
+      if (typeof content === "string") {
+        if (role === "user") div.textContent = content;
+        else div.append(render(content));
+      } else div.append(content);
+      log.append(div);
+      log.scrollTop = log.scrollHeight;
+      return div;
+    };
+    for (const turn of turns) bubble(turn.role, turn.content);
+
+    const open = (show: boolean) => {
+      panel.hidden = !show;
+      launcher.setAttribute("aria-expanded", String(show));
+      launcher.hidden = show;
+      if (show) input.focus();
+      else launcher.focus();
+    };
+    launcher.hidden = false;
+    launcher.addEventListener("click", () => open(true));
+    root.querySelector("[data-hc-close]")!.addEventListener("click", () => open(false));
+    panel.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") open(false);
+    });
+    root.querySelector("[data-hc-clear]")!.addEventListener("click", () => {
+      turns = [];
+      save();
+      for (const m of log.querySelectorAll(".hc-msg")) m.remove();
+      input.focus();
+    });
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        form.requestSubmit();
+      }
+    });
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text || send.disabled) return;
+      input.value = "";
+      bubble("user", text);
+      turns.push({ role: "user", content: text });
+      save();
+      send.disabled = true;
+      const wait = bubble("assistant", "…");
+      wait.classList.add("hc-msg--wait");
+      try {
+        const r = await fetch("/api/public/help", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ lang: d.lang, messages: turns.slice(-6) }),
+        });
+        wait.remove();
+        if (r.ok) {
+          const out = (await r.json()) as { role: string; content: string; remaining: number };
+          bubble(out.role, out.content);
+          if (out.role === "assistant") turns.push({ role: "assistant", content: out.content });
+          else turns.pop();
+          left.textContent = (d.tRemaining ?? "").replace("{n}", String(out.remaining));
+        } else {
+          turns.pop();
+          const code = ((await r.json().catch(() => ({}))) as { detail?: string }).detail;
+          if (code === "daily_limit_reached") {
+            const span = document.createElement("span");
+            span.append((d.tLimit ?? "") + " ");
+            const a = document.createElement("a");
+            a.href = d.signup ?? "/";
+            a.textContent = d.tLimitCta ?? "";
+            span.append(a);
+            bubble("notice", span);
+            left.textContent = (d.tRemaining ?? "").replace("{n}", "0");
+          } else if (code === "busy") bubble("notice", d.tBusy ?? "");
+          else if (r.status === 503) bubble("notice", d.tUnavailable ?? "");
+          else bubble("notice", d.tError ?? "");
+        }
+      } catch {
+        wait.remove();
+        turns.pop();
+        bubble("notice", d.tError ?? "");
+      } finally {
+        save();
+        send.disabled = false;
+        input.focus();
+      }
+    });
+  }
+</script>

@@ -57,7 +57,7 @@ This notice explains how personal data is handled when you use the guide website
 
 5.2 **Payments: Stripe.** Stripe processes payment details and may process data outside Switzerland. See [Stripe's privacy notice](https://stripe.com/privacy).
 
-5.3 **AI assistant: our AI provider, Anthropic.** When you use "Explain this" or the help chat, the text of the question and what you type are sent to our AI provider, which processes them outside Switzerland. We do not send your name, your email address or other account details. Please do not type personal details into the assistant. [Data processing agreement and transfer safeguards to be confirmed by the lawyer.]
+5.3 **AI assistant: our AI provider, Anthropic.** When you use "Explain this" or the help chat (in the app or on the guide site), the text of the question and what you type are sent to our AI provider, which processes them outside Switzerland. We do not send your name, your email address or other account details. Please do not type personal details into the assistant. [Data processing agreement and transfer safeguards to be confirmed by the lawyer.]
 
 5.4 **Email relay:** [provider name and location to be added]. It delivers sign-in links and account emails and so handles your email address and the message.
 

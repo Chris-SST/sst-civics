@@ -55,5 +55,18 @@ async def hit(key: str, limit: int, window_seconds: int) -> bool:
     return count <= limit
 
 
+async def count(key: str) -> int:
+    """Hits recorded under `key` in its current window (0 when unknown)."""
+    r = await _get_redis()
+    if r is not None:
+        try:
+            return int(await r.get(key) or 0)
+        except Exception as exc:  # noqa: BLE001
+            log.warning("Rate limiter Redis error on count: %s", exc.__class__.__name__)
+            return 0
+    hits, reset_at = _memory.get(key, (0, 0.0))
+    return hits if time.monotonic() <= reset_at else 0
+
+
 def reset_memory() -> None:
     _memory.clear()

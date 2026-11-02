@@ -31,6 +31,7 @@ log = logging.getLogger(__name__)
 PURPOSE_REPLY = "tutor_reply"
 PURPOSE_GATE = "gatekeeper"
 PURPOSE_SUMMARY = "summary"
+PURPOSE_PUBLIC_HELP = "public_help"
 
 GATE_ON_TOPIC = "on_topic"
 GATE_BORDERLINE = "borderline"

@@ -45,6 +45,22 @@ export interface Ui {
   navFaq: string;
   navStart: string;
   navApp: string;
+  chat: {
+    launcher: string;
+    title: string;
+    intro: string;
+    note: string;
+    placeholder: string;
+    send: string;
+    close: string;
+    clear: string;
+    remaining: string;
+    limit: string;
+    limitCta: string;
+    busy: string;
+    error: string;
+    unavailable: string;
+  };
   fallbackNote: string;
   fallbackGerman: string;
   fallbackEnglish: string;
@@ -63,7 +79,7 @@ export interface Ui {
     ctaFree: string;
     ctaGuide: string;
     trust: string[];
-    q: { heading: string; topic: string; german: string; right: string; wrong: string; more: string; reveal: string };
+    q: { heading: string; daily: string; topic: string; german: string; right: string; wrong: string; more: string; reveal: string };
     how: { heading: string; steps: { title: string; text: string }[] };
     guidesHeading: string;
     guidesNote: string;
@@ -92,6 +108,22 @@ const en: Ui = {
   navFaq: "FAQ",
   navStart: "Start free",
   navApp: "Open the app",
+  chat: {
+    launcher: "Ask a question",
+    title: "Ask Viapunt",
+    intro: "Ask about the knowledge test, its topics or the naturalisation procedure in Zurich, in your language. Answers come from this guide.",
+    note: "AI assistant: it can make mistakes, and it gives no legal advice.",
+    placeholder: "Your question",
+    send: "Send",
+    close: "Close",
+    clear: "Start again",
+    remaining: "{n} questions left today",
+    limit: "You have used today's questions here. A free account gives you more each day, plus practice questions.",
+    limitCta: "Create a free account",
+    busy: "Many people are asking right now. Please try again later.",
+    error: "Something went wrong. Please try again in a moment.",
+    unavailable: "The help chat is not available right now.",
+  },
   fallbackNote: "The full pages of this guide are available in German and English.",
   fallbackGerman: "Read in German",
   fallbackEnglish: "Read in English",
@@ -129,6 +161,7 @@ const en: Ui = {
     trust: ["No account needed to start", "8 languages", "Sources linked on every page"],
     q: {
       heading: "Try a test question",
+      daily: "Question of the day",
       topic: "Popular rights",
       german: "Deutsch",
       right: "Correct.",
@@ -259,6 +292,22 @@ const de: Ui = {
   navFaq: "FAQ",
   navStart: "Gratis starten",
   navApp: "App öffnen",
+  chat: {
+    launcher: "Frage stellen",
+    title: "Viapunt fragen",
+    intro: "Fragen Sie zum Grundkenntnistest, zu seinen Themen oder zum Einbürgerungsverfahren in Zürich, in Ihrer Sprache. Die Antworten stützen sich auf diesen Ratgeber.",
+    note: "KI-Assistent: Er kann sich irren und gibt keine Rechtsberatung.",
+    placeholder: "Ihre Frage",
+    send: "Senden",
+    close: "Schliessen",
+    clear: "Neu beginnen",
+    remaining: "Heute noch {n} Fragen",
+    limit: "Sie haben die heutigen Fragen hier aufgebraucht. Mit einem kostenlosen Konto erhalten Sie mehr pro Tag und dazu Übungsfragen.",
+    limitCta: "Kostenloses Konto erstellen",
+    busy: "Gerade fragen sehr viele. Bitte versuchen Sie es später noch einmal.",
+    error: "Etwas ist schiefgelaufen. Bitte versuchen Sie es gleich noch einmal.",
+    unavailable: "Der Hilfe-Chat ist gerade nicht verfügbar.",
+  },
   fallbackNote: "Die vollständigen Seiten dieses Ratgebers gibt es auf Deutsch und auf Englisch.",
   fallbackGerman: "Auf Deutsch lesen",
   fallbackEnglish: "Auf Englisch lesen",
@@ -296,6 +345,7 @@ const de: Ui = {
     trust: ["Ohne Konto starten", "8 Sprachen", "Quellen auf jeder Seite verlinkt"],
     q: {
       heading: "Probieren Sie eine Testfrage",
+      daily: "Frage des Tages",
       topic: "Volksrechte",
       german: "Deutsch",
       right: "Richtig.",

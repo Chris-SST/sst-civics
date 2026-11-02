@@ -93,6 +93,11 @@ class Settings(BaseSettings):
     # active entitlement, and for learners without one (help chat only; 0 switches it off).
     ai_daily_message_limit: int = 20
     ai_free_daily_message_limit: int = 5
+    # The public help chat on the guide site (D-067): messages per visitor address a day
+    # (0 switches it off), all visitors together a day, and the longest message accepted.
+    public_help_per_ip_daily: int = 5
+    public_help_daily_total: int = 300
+    public_help_max_chars: int = 600
     # The public guide site; the help chat links to its pages.
     guide_base_url: str = "https://viapunt.ch"
     serve_unreviewed_questions: bool = False  # staging/dev: also serve in_review questions

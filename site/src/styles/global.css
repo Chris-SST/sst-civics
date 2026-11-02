@@ -492,3 +492,31 @@ a.h-guide:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); c
 .cv-cta p{margin:4px 0 0;font-size:16px;line-height:24px;max-width:38ch}
 .cv-cta .cv-btn--primary{flex:none}
 
+
+/* Public help chat (D-067): corner launcher and panel, components/HelpChat.astro */
+.hc-launcher{position:fixed;inset-inline-end:16px;bottom:16px;z-index:30;display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 18px;border:0;border-radius:var(--radius-pill);background:var(--primary);color:var(--on-primary);font:800 16px/1 var(--font-sans);box-shadow:var(--shadow-lift);cursor:pointer}
+.hc-launcher:hover{background:var(--primary-hover)}
+.hc-launcher:focus-visible,.hc-icon:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.hc-launcher[hidden],.hc-panel[hidden]{display:none}
+.hc-panel{position:fixed;inset-inline-end:16px;bottom:16px;z-index:31;width:min(400px,calc(100vw - 32px));max-height:min(620px,calc(100dvh - 32px));display:flex;flex-direction:column;background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-lift);overflow:hidden}
+.hc-head{display:flex;align-items:center;gap:4px;padding:12px 12px 12px 18px;background:var(--band);color:var(--on-band)}
+.hc-head h2{flex:1;margin:0;font:800 18px/1.2 var(--font-display);color:inherit}
+.hc-icon{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:0;border-radius:var(--radius-pill);background:transparent;color:inherit;cursor:pointer}
+.hc-icon:hover{background:rgba(255,255,255,.12)}
+.hc-log{flex:1;overflow-y:auto;padding:14px 16px;display:flex;flex-direction:column;gap:10px;min-height:160px}
+.hc-intro{margin:0;color:var(--muted);font-size:15px}
+.hc-msg{max-width:88%;padding:10px 14px;border-radius:var(--radius-md);font-size:15px;line-height:1.5;overflow-wrap:anywhere}
+.hc-msg p{margin:0 0 8px}.hc-msg p:last-child{margin:0}
+.hc-msg--user{align-self:flex-end;background:var(--primary);color:var(--on-primary)}
+.hc-msg--assistant{align-self:flex-start;background:var(--surface-tint)}
+.hc-msg--notice{align-self:stretch;max-width:none;background:var(--accent-soft);color:var(--accent-ink)}
+.hc-msg--wait{color:var(--muted)}
+.hc-msg a{color:var(--primary);font-weight:700}
+.hc-msg--notice a{color:var(--accent-ink)}
+.hc-form{display:flex;gap:8px;align-items:flex-end;padding:10px 12px;border-top:1px solid var(--line)}
+.hc-form textarea{flex:1;resize:none;min-height:48px;max-height:120px;padding:10px 12px;border:1.5px solid var(--border-strong);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);font:400 16px/1.4 var(--font-sans)}
+.hc-form textarea:focus-visible{outline:3px solid var(--focus);outline-offset:1px}
+.hc-foot{margin:0;padding:0 14px 10px;font-size:13px;color:var(--muted)}
+.hc-left{white-space:nowrap}
+.hc-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media print{.hc{display:none}}

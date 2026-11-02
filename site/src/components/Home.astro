@@ -32,7 +32,7 @@ const tagTone = ["teal", "clay", "sun"];
       <ul class="h-trust">{h.trust.map((x) => <li>{x}</li>)}</ul>
     </div>
 
-    <div class="h-q" data-sample-question data-correct={Q.correct}>
+    <div class="h-q" data-sample-question data-correct={Q.correct} data-daily={h.q.daily}>
       <div class="h-q__head">
         <h2>{h.q.heading}</h2>
         <span class="h-q__topic">{h.q.topic}</span>
@@ -166,12 +166,18 @@ const tagTone = ["teal", "clay", "sun"];
 
 <script>
   // Sample question: mark the picked answer and the right one, then show the explanation.
+  // When the API has a question of the day (D-067), it replaces the built-in sample first.
+  type Daily = {
+    correct: string;
+    de: { question: string; options: Record<string, string>; explanation: string };
+    en: { question: string; options: Record<string, string>; explanation: string };
+  };
   for (const box of document.querySelectorAll<HTMLElement>("[data-sample-question]")) {
-    const correct = box.dataset.correct;
     const buttons = [...box.querySelectorAll<HTMLButtonElement>(".h-opt")];
     const feedback = box.querySelector<HTMLElement>(".h-q__feedback");
     for (const b of buttons) {
       b.addEventListener("click", () => {
+        const correct = box.dataset.correct;
         const good = b.dataset.key === correct;
         for (const o of buttons) {
           o.disabled = true;
@@ -186,5 +192,30 @@ const tagTone = ["teal", "clay", "sun"];
         }
       });
     }
+    fetch("/api/public/question-of-the-day")
+      .then((r) => (r.ok ? (r.json() as Promise<Daily>) : null))
+      .then((q) => {
+        if (!q || buttons.some((b) => b.disabled)) return; // keep the sample once answered
+        box.dataset.correct = q.correct;
+        const heading = box.querySelector("h2");
+        if (heading && box.dataset.daily) heading.textContent = box.dataset.daily;
+        box.querySelector<HTMLElement>(".h-q__topic")?.setAttribute("hidden", "");
+        const de = box.querySelector(".h-q__de p");
+        if (de) de.textContent = q.de.question;
+        const side = box.querySelector(".h-q__side p");
+        if (side) side.textContent = q.en.question;
+        for (const b of buttons) {
+          const key = b.dataset.key ?? "";
+          const deOpt = b.querySelector('.h-opt__text [lang="de"]');
+          if (deOpt) deOpt.textContent = q.de.options[key] ?? "";
+          const enOpt = b.querySelector('.h-opt__text [lang="en"]');
+          if (enOpt) enOpt.textContent = q.en.options[key] ?? "";
+        }
+        const explanation = feedback?.querySelector("p");
+        if (explanation) explanation.textContent = side ? q.en.explanation : q.de.explanation;
+      })
+      .catch(() => {
+        /* offline or no API: the built-in sample stays */
+      });
   }
 </script>
