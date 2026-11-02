@@ -1,0 +1,29 @@
+id: wappen-kanton-zuerich-weiss-blau
+lang: sq
+source_version: 2
+question: Cilat ngjyra ka stema e kantonit të Cyrihut?
+options:
+  a: E kuqe dhe e bardhë
+  b: E gjelbër dhe e bardhë
+  c: E bardhë dhe blu
+  d: Blu dhe e verdhë
+explanation: Stema e Cyrihut është e ndarë tërthor (në diagonale) në të bardhë dhe blu. Në heraldikë,
+  e bardha quhet «argjend». Të njëjtat ngjyra i ka edhe flamuri i kantonit.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Farben hat das Wappen des Kantons Zürich?
+    options_de:
+      a: Rot und Weiss
+      b: Grün und Weiss
+      c: Weiss und Blau
+      d: Blau und Gelb
+    explanation_de: Das Wappen von Zürich ist quer (diagonal) in Weiss und Blau geteilt. In der Heraldik
+      wird Weiss «Silber» genannt. Dieselben Farben hat auch die Flagge des Kantons.

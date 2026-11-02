@@ -1,0 +1,29 @@
+id: wappen-kanton-zuerich-weiss-blau
+lang: es
+source_version: 2
+question: ¿Qué colores tiene el escudo de armas del cantón de Zúrich?
+options:
+  a: Rojo y blanco
+  b: Verde y blanco
+  c: Blanco y azul
+  d: Azul y amarillo
+explanation: El escudo de armas de Zúrich está dividido en diagonal en blanco y azul. En heráldica, el
+  blanco se denomina «plata». La bandera del cantón muestra los mismos colores.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Farben hat das Wappen des Kantons Zürich?
+    options_de:
+      a: Rot und Weiss
+      b: Grün und Weiss
+      c: Weiss und Blau
+      d: Blau und Gelb
+    explanation_de: Das Wappen von Zürich ist diagonal in Weiss und Blau geteilt. In der Heraldik wird
+      Weiss «Silber» genannt. Die Fahne des Kantons zeigt dieselben Farben.

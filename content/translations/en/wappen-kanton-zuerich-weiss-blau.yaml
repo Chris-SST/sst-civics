@@ -1,0 +1,29 @@
+id: wappen-kanton-zuerich-weiss-blau
+lang: en
+source_version: 2
+question: What colours are in the coat of arms of the canton of Zurich?
+options:
+  a: Red and white
+  b: Green and white
+  c: White and blue
+  d: Blue and yellow
+explanation: The Zurich coat of arms is divided diagonally into white and blue. In heraldry, the white
+  is called "silver". The flag of the canton shows the same colours.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Farben hat das Wappen des Kantons Zürich?
+    options_de:
+      a: Rot und Weiss
+      b: Grün und Weiss
+      c: Weiss und Blau
+      d: Blau und Gelb
+    explanation_de: Das Zürcher Wappen ist diagonal in Weiss und Blau geteilt. In der Heraldik wird das
+      Weiss «Silber» genannt. Die Flagge des Kantons zeigt dieselben Farben.

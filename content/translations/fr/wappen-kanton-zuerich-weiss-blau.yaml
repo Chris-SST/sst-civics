@@ -1,0 +1,29 @@
+id: wappen-kanton-zuerich-weiss-blau
+lang: fr
+source_version: 2
+question: Quelles sont les couleurs des armoiries du canton de Zurich ?
+options:
+  a: Rouge et blanc
+  b: Vert et blanc
+  c: Blanc et bleu
+  d: Bleu et jaune
+explanation: Les armoiries zurichoises sont coupées en biais en blanc et bleu. En héraldique, le blanc
+  s'appelle « argent ». Le drapeau du canton présente les mêmes couleurs.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welches sind die Farben des Wappens des Kantons Zürich?
+    options_de:
+      a: Rot und Weiss
+      b: Grün und Weiss
+      c: Weiss und Blau
+      d: Blau und Gelb
+    explanation_de: Das Zürcher Wappen ist schräg in Weiss und Blau geteilt. In der Heraldik heisst Weiss
+      «Silber». Die Fahne des Kantons weist dieselben Farben auf.

@@ -1,0 +1,29 @@
+id: wappen-kanton-zuerich-weiss-blau
+lang: tr
+source_version: 2
+question: Zürih kantonunun armasında hangi renkler vardır?
+options:
+  a: Kırmızı ve beyaz
+  b: Yeşil ve beyaz
+  c: Beyaz ve mavi
+  d: Mavi ve sarı
+explanation: Zürih arması çapraz olarak beyaz ve mavi şeklinde bölünmüştür. Armacılıkta beyaza «gümüş»
+  denir. Aynı renkler kantonun bayrağında da görülür.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welche Farben hat das Wappen des Kantons Zürich?
+    options_de:
+      a: Rot und Weiss
+      b: Grün und Weiss
+      c: Weiss und Blau
+      d: Blau und Gelb
+    explanation_de: Das Zürcher Wappen ist diagonal in Weiss und Blau geteilt. In der Heraldik wird Weiss
+      «Silber» genannt. Dieselben Farben sieht man auch auf der Flagge des Kantons.

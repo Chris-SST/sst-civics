@@ -1,0 +1,29 @@
+id: wappen-kanton-zuerich-weiss-blau
+lang: pt
+source_version: 2
+question: Quais são as cores do brasão do cantão de Zurique?
+options:
+  a: Vermelho e branco
+  b: Verde e branco
+  c: Branco e azul
+  d: Azul e amarelo
+explanation: O brasão de Zurique é dividido na diagonal em branco e azul. Na heráldica, o branco chama-se
+  «prata». A bandeira do cantão mostra as mesmas cores.
+status: approved
+reviewed_by: ai-panel
+reviewed_at: &id001 2026-11-02
+checks:
+  back_translation:
+    verdict: same
+    reason: gleiche Bedeutung
+    model: claude-sonnet-5-5
+    at: *id001
+    source_version: 2
+    question_de: Welches sind die Farben des Wappens des Kantons Zürich?
+    options_de:
+      a: Rot und Weiss
+      b: Grün und Weiss
+      c: Weiss und Blau
+      d: Blau und Gelb
+    explanation_de: Das Wappen von Zürich ist diagonal in Weiss und Blau geteilt. In der Heraldik wird
+      Weiss «Silber» genannt. Die Flagge des Kantons zeigt dieselben Farben.
