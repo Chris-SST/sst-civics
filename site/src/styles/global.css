@@ -51,7 +51,7 @@
 
 /* --- Tokens. The only place literal colours live. --- */
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   /* Colour, light: cream ground, lake teal, sunflower, clay */
   --bg: #fbf6ee;
@@ -142,44 +142,7 @@
   --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #16130f;
-    --surface: #211d18;
-    --surface-tint: #2c2620;
-    --text: #f6efe3;
-    --muted: #c8bdae;
-    --border-strong: #9a8f82;
-    --line: #3a332b;
-    --primary: #5cc2b9;
-    --primary-hover: #84d4cc;
-    --on-primary: #0b1f1e;
-    --accent-soft: #3b2e12;
-    --accent-ink: #f6cf7a;
-    --support: #2a5b56;
-    --on-support: #e2f4f1;
-    --support-soft: #12302d;
-    --support-ink: #8fdcd2;
-    --clay-soft: #3a221b;
-    --clay-ink: #f2b5a3;
-    --band: #0f3532;
-    --success: #6fd6a5;
-    --success-soft: #123526;
-    --warning: #f4c56a;
-    --warning-soft: #3b2e12;
-    --error: #ff9a85;
-    --error-soft: #3f1c15;
-    --focus: #f4b740;
-    --header-bg: rgba(22, 19, 15, 0.86);
-    --shadow-ink: rgba(0, 0, 0, 0.4);
-    --glow: rgba(92, 194, 185, 0.25);
-    --scene-hill: #1d3532;
-    --scene-hill-2: #24453f;
-    --scene-lake: #1a2c33;
-    --scene-ink: #0b0a08;
-    --scene-white: #f6efe3;
-  }
-}
+/* Light only (Chris, 2 November 2026): no dark palette, whatever the system setting. */
 
 @media (prefers-reduced-motion: reduce) {
   :root {
