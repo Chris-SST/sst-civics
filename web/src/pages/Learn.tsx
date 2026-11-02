@@ -7,7 +7,7 @@ import ModeStepper from "../components/ModeStepper";
 import QuestionCard, { MasteryBar } from "../components/QuestionCard";
 import { STUDY_MODES, TOPIC_SCOPES, learnUrl, practiseUrl, type LearnOut, type StudyMode, type StudyOverview } from "../study";
 
-const MODE_KEY = "sst.learnMode";
+const MODE_KEY = "viapunt.learnMode";
 
 function savedMode(): StudyMode {
   try {

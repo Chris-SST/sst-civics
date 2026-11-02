@@ -39,7 +39,7 @@ test("a free learner asks the help chat and starts a new conversation", async ({
   // Explain this stays a paid feature.
   const explain = await page.request.post("/api/explain/start", {
     data: { question_id: "e2e-q01" },
-    headers: { "X-CSRF-Token": (await page.context().cookies()).find((c) => c.name === "sst_csrf")?.value ?? "" },
+    headers: { "X-CSRF-Token": (await page.context().cookies()).find((c) => c.name === "viapunt_csrf")?.value ?? "" },
   });
   expect(explain.status()).toBe(403);
 });

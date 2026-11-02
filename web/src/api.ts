@@ -17,7 +17,7 @@ function readCookie(name: string): string | null {
 }
 
 export async function ensureCsrf(): Promise<string> {
-  const existing = readCookie("sst_csrf");
+  const existing = readCookie("viapunt_csrf");
   if (existing) return existing;
   const r = await fetch("/api/auth/csrf", { credentials: "same-origin" });
   const data = (await r.json()) as { csrf_token: string };

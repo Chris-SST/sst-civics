@@ -25,8 +25,8 @@ class Settings(BaseSettings):
     jobs_inline: bool = False  # run background jobs in-process (dev without Redis, tests)
 
     # Sessions and security
-    session_cookie_name: str = "sst_session"
-    csrf_cookie_name: str = "sst_csrf"
+    session_cookie_name: str = "viapunt_session"
+    csrf_cookie_name: str = "viapunt_csrf"
     session_ttl_hours: int = 24 * 14  # learners
     staff_session_ttl_hours: int = 12  # admins
     cookie_secure: bool | None = None  # None means secure unless app_env is dev or test

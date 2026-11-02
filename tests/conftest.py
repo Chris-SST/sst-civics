@@ -75,7 +75,7 @@ class Api:
         self.client = client
 
     async def _csrf(self) -> str:
-        token = self.client.cookies.get("sst_csrf")
+        token = self.client.cookies.get("viapunt_csrf")
         if not token:
             r = await self.client.get("/api/auth/csrf")
             token = r.json()["csrf_token"]

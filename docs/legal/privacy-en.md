@@ -67,13 +67,17 @@ This notice explains how personal data is handled when you use the guide website
 
 ## 6. Cookies and tracking
 
-6.1 We use only cookies needed to run the service: a session cookie that keeps you signed in and security cookies that protect forms. They are not used for tracking.
+6.1 We use only two cookies, both needed to run the service and both set only in the app (app.viapunt.ch): `viapunt_session` keeps you signed in (14 days, renewed while you use the app) and `viapunt_csrf` protects forms against forged requests (kept for 30 days). They are not used for tracking. The guide site (viapunt.ch) sets no cookies.
 
-6.2 We use no advertising or tracking cookies and no third-party trackers, so no consent banner is needed.
+6.2 Your browser also keeps a few settings on your own device, which are not sent to us: your interface language and study view, where you are in the free practice questions, and, on the guide site, the help chat conversation for as long as the browser tab is open.
 
-6.3 Fonts are hosted on our own servers, so visiting our pages does not send your IP address to a font provider.
+6.3 We use no advertising or tracking cookies and no third-party trackers, so no consent banner is needed.
 
-6.4 [If used: our analytics are self-hosted and cookie-free and do not identify you. Delete this clause if there are none.]
+6.4 Fonts are hosted on our own servers, so visiting our pages does not send your IP address to a font provider.
+
+6.5 When you pay, you are taken to Stripe's payment page. Stripe sets its own cookies there, for example to prevent fraud; see Stripe's privacy notice. We do not load Stripe on our own pages.
+
+6.6 [Once analytics are switched on: we count visits to the guide site with Umami, which we host ourselves on our server in Switzerland. It sets no cookies, does not store your IP address and cannot identify you. Until then, delete this clause.]
 
 ## 7. How long we keep data
 

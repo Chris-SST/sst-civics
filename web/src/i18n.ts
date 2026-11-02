@@ -30,7 +30,7 @@ function initialLanguage(): string {
     /* no window */
   }
   try {
-    const saved = localStorage.getItem("sst.lang");
+    const saved = localStorage.getItem("viapunt.lang");
     if (saved && LANGUAGES.some((l) => l.code === saved)) return saved;
   } catch {
     /* storage unavailable */
@@ -65,7 +65,7 @@ void i18n.use(initReactI18next).init({
 i18n.on("languageChanged", (lng) => {
   document.documentElement.lang = lng;
   try {
-    localStorage.setItem("sst.lang", lng);
+    localStorage.setItem("viapunt.lang", lng);
   } catch {
     /* ignore */
   }
