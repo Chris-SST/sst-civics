@@ -88,7 +88,7 @@ These terms apply to the guide website and the learning app of Viapunt (working 
 
 ## 10. The AI assistant
 
-10.1 "Explain this" uses artificial intelligence. It can make mistakes, including wrong or out-of-date statements. Check important points against the question's explanation and official sources.
+10.1 "Explain this" and the help chat use artificial intelligence. It can make mistakes, including wrong or out-of-date statements. Check important points against the question's explanation and official sources.
 
 10.2 It gives no legal advice. There is a daily message limit.
 

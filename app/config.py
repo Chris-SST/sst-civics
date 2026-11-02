@@ -72,6 +72,11 @@ class Settings(BaseSettings):
     llm_fake: bool = False  # dev and test only: canned replies, no provider call
     tutor_model: str = "claude-sonnet-5-5"
     fast_model: str = "claude-haiku-5-5"
+    # Explain this and the help chat are grounded in our own material, so the fast model
+    # is enough (D-066); `tutor_model` is left for the general topic chat.
+    explain_model: str = "claude-haiku-5-5"
+    help_model: str = "claude-haiku-5-5"
+    chat_effort: Literal["low", "medium", "high"] = "low"  # for those two: quick replies
     tutor_effort: Literal["low", "medium", "high"] = "medium"
     tutor_max_output_tokens: int = 1500
     tutor_timeout_seconds: float = 90
@@ -84,13 +89,25 @@ class Settings(BaseSettings):
     ai_monthly_budget_chf: float = 300
     ai_learner_alert_chf: float = 8
     max_student_message_chars: int = 2000
-    # "Explain this" messages a day for every learner with an active entitlement.
+    # AI messages a day (Explain this and the help chat together) for every learner with an
+    # active entitlement, and for learners without one (help chat only; 0 switches it off).
     ai_daily_message_limit: int = 20
+    ai_free_daily_message_limit: int = 5
+    # The public guide site; the help chat links to its pages.
+    guide_base_url: str = "https://viapunt.ch"
     serve_unreviewed_questions: bool = False  # staging/dev: also serve in_review questions
     practice_round_size: int = 5  # questions per Practise round
     conversation_window_turns: int = 20
 
-    @field_validator("tutor_model", "fast_model", "tutor_effort", mode="before")
+    @field_validator(
+        "tutor_model",
+        "fast_model",
+        "explain_model",
+        "help_model",
+        "tutor_effort",
+        "chat_effort",
+        mode="before",
+    )
     @classmethod
     def _empty_means_default(cls, v: object, info) -> object:
         """`TUTOR_MODEL=` in a .env file must not override the default with an empty name."""

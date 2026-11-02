@@ -24,8 +24,9 @@ interface TutorOverview {
 }
 
 /** Learner home: readiness estimate, the three study areas (Learn, Practise, Mock test), mastery
- * per topic, the free-tier notice and the message count. The topic chat has no entry here any
- * more: Explain this, on every question in Learn and Practise, replaces it (task 1.10). */
+ * per topic, the free-tier notice, the help chat and the message count. The topic chat has no
+ * entry here any more: Explain this, on every question in Learn and Practise, replaces it (task
+ * 1.10); the help chat (D-066) takes general questions. */
 export default function LearnerHome() {
   const { t } = useTranslation();
   const [tutor, setTutor] = useState<TutorOverview | null>(null);
@@ -58,6 +59,16 @@ export default function LearnerHome() {
       {study === undefined && <p className="muted">…</p>}
       {study === null && <p className="muted">{t("learner.noTopics")}</p>}
       {study && <StudyAreas study={study} />}
+
+      <section className="card help-card">
+        <div>
+          <h2>{t("help.cardTitle")}</h2>
+          <p>{t("help.cardBody")}</p>
+        </div>
+        <Link to="/help" className="btn btn-primary">
+          {t("help.cardCta")}
+        </Link>
+      </section>
 
       <Pricing />
 

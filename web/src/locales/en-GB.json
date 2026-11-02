@@ -104,7 +104,7 @@
     "deadline_passed": "The time for this mock test is up. Answers after the deadline are not counted.",
     "mock_finished": "This mock test has already been handed in.",
     "invalid_answer": "Please choose one of the four options.",
-    "mock_in_progress": "Explain this is not available while a mock test is running.",
+    "mock_in_progress": "Explain this and the help chat are not available while a mock test is running.",
     "invalid_language": "Please choose a language from the list.",
     "translation_required": "Please enter a translation."
   },
@@ -695,5 +695,22 @@
       "draft": "Draft",
       "reviewed": "Reviewed"
     }
+  },
+  "help": {
+    "title": "Ask Viapunt",
+    "lead": "Questions about the knowledge test, its topics or the naturalisation procedure? Ask here, in your language. The answers come from the Viapunt guide and the checklist of what the test covers.",
+    "note": "The AI assistant can make mistakes, and its answers are not legal advice. Only your commune and the canton can decide on your own application.",
+    "intro": "For example:",
+    "s1": "Which documents do I need to apply in Zurich?",
+    "s2": "What is the difference between the Nationalrat and the Ständerat?",
+    "s3": "How does the knowledge test work?",
+    "placeholder": "Type your question… (Enter to send)",
+    "newChat": "New conversation",
+    "limitReached": "You have reached today's message limit. The help chat is back tomorrow.",
+    "free": "Free account: a few questions a day. A Civics Pass gives you more, plus Explain this on every question.",
+    "freeCta": "See the Civics Pass",
+    "cardTitle": "Questions? Ask Viapunt",
+    "cardBody": "Ask about the test, its topics or the naturalisation procedure, in your language.",
+    "cardCta": "Open the help chat"
   }
 }

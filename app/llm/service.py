@@ -2,7 +2,7 @@
 summaries, and cost logging with alerts. Callers never see the SDK.
 
 Data sent to the provider: the civics context, canton, topic, the question text in "Explain
-this" and the conversation. Never a
+this", Viapunt's reference material in the help chat, and the conversation. Never a
 name, email, username or any identifier; `user_id` is used only in our own cost log."""
 
 from __future__ import annotations
@@ -12,12 +12,14 @@ import time
 from collections.abc import AsyncIterator
 from dataclasses import dataclass
 from datetime import datetime
+from functools import lru_cache
 from typing import Any
 
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import get_settings
+from app.content.files import content_root
 from app.db import utcnow
 from app.llm import prompts
 from app.llm.client import Completion, LLMError, Usage, get_provider
@@ -94,6 +96,7 @@ class TutorContext:
     mastery: int | None = None  # 0 to 100 on this topic, if the student has been tested
     misses: list[dict[str, str]] | None = None  # recent wrong answers on this topic
     question: QuestionContext | None = None  # set in "Explain this"
+    help: bool = False  # the help chat: answers from the reference material (D-066)
 
 
 # --- Prompt assembly -----------------------------------------------------------------
@@ -107,11 +110,43 @@ def canton_label(canton: str) -> str:
     return f"canton of {name} ({canton.upper()})" if name else f"canton {canton.upper()}"
 
 
-def prompt_version(explain: bool = False) -> str:
+def prompt_version(explain: bool = False, help: bool = False) -> str:
     base = prompts.load("base")
     civics = prompts.load("civics")
     label = f"{base.label}+{civics.label}"
-    return f"{label}+{prompts.load('explain').label}" if explain else label
+    if explain:
+        return f"{label}+{prompts.load('explain').label}"
+    if help:
+        return f"{label}+{prompts.load('help').label}"
+    return label
+
+
+def reply_model(ctx: TutorContext) -> tuple[str, str]:
+    """Model and effort for a reply: the fast model for Explain this and the help chat, which
+    are grounded in the question or the reference material; the tutor model otherwise."""
+    settings = get_settings()
+    if ctx.help:
+        return settings.help_model, settings.chat_effort
+    if ctx.question is not None:
+        return settings.explain_model, settings.chat_effort
+    return settings.tutor_model, settings.tutor_effort
+
+
+@lru_cache(maxsize=16)
+def _help_files(canton: str, guide_url: str) -> str:
+    """content/help/guide.md and the canton's fact list (scripts/build_help_pack.py), with
+    the guide site's address filled in. A missing file is left out."""
+    root = content_root() / "help"
+    parts = []
+    for name in ("guide.md", f"facts-{canton}.md"):
+        path = root / name
+        if path.is_file():
+            parts.append(path.read_text(encoding="utf-8"))
+    return "\n\n".join(parts).replace("{{GUIDE_URL}}", guide_url.rstrip("/"))
+
+
+def help_reference(canton: str) -> str:
+    return _help_files(canton, get_settings().guide_base_url)
 
 
 def _options_text(options: dict[str, str]) -> str:
@@ -171,6 +206,20 @@ def build_system(ctx: TutorContext) -> list[dict[str, Any]]:
         lines.append("- Note for this turn: " + ctx.note)
     if ctx.question is not None:
         lines.append("\n" + explain_text(ctx.question))
+    if ctx.help:
+        # The reference material is long and the same for every learner of the canton: one
+        # breakpoint after it caches base, civics and the material together.
+        reference = (
+            prompts.load("help").text
+            + "\n\n# Reference material\n\n"
+            + (help_reference(ctx.canton) or "(No reference material is available.)")
+        )
+        return [
+            {"type": "text", "text": base.text},
+            {"type": "text", "text": civics.text},
+            {"type": "text", "text": reference, "cache_control": {"type": "ephemeral"}},
+            {"type": "text", "text": "\n".join(lines)},
+        ]
     return [
         {"type": "text", "text": base.text},
         {"type": "text", "text": civics.text, "cache_control": {"type": "ephemeral"}},
@@ -388,6 +437,7 @@ class ReplyOutcome:
     completion: Completion | None
     error: LLMError | None
     latency_ms: int
+    model: str = ""
 
 
 async def stream_reply(
@@ -398,13 +448,14 @@ async def stream_reply(
     settings = get_settings()
     started = time.monotonic()
     system = build_system(ctx)
+    model, effort = reply_model(ctx)
     try:
         async for item in get_provider().stream(
-            model=settings.tutor_model,
+            model=model,
             system=system,
             messages=messages,
             max_tokens=settings.tutor_max_output_tokens,
-            effort=settings.tutor_effort,
+            effort=effort,
             timeout=settings.tutor_timeout_seconds,
         ):
             if isinstance(item, Completion):
@@ -412,12 +463,16 @@ async def stream_reply(
                     completion=item,
                     error=None,
                     latency_ms=int((time.monotonic() - started) * 1000),
+                    model=model,
                 )
                 return
             yield item
     except LLMError as exc:
         yield ReplyOutcome(
-            completion=None, error=exc, latency_ms=int((time.monotonic() - started) * 1000)
+            completion=None,
+            error=exc,
+            latency_ms=int((time.monotonic() - started) * 1000),
+            model=model,
         )
 
 

@@ -1,6 +1,7 @@
 """Learner-facing tutor API: conversations on a topic of the learner's canton, streaming
 replies. A conversation bound to one question ("Explain this", app.tutoring.explain) is
-answered with that question as context; the general topic chat stays for now.
+answered with that question as context, a help conversation (app.tutoring.help) from the
+reference material; the general topic chat stays for now.
 
 Replies stream as server-sent events over a POST:
 
@@ -47,6 +48,7 @@ from app.models import (
 from app.questions import bank
 from app.study.selection import topic_mastery_for
 from app.tutoring import context as question_context
+from app.tutoring.context import HELP_TOPIC
 from app.tutoring.limits import UsageInfo, usage_for
 
 log = logging.getLogger(__name__)
@@ -136,7 +138,11 @@ async def overview(
         (
             await db.execute(
                 select(Conversation)
-                .where(Conversation.user_id == user.id, Conversation.question_id.is_(None))
+                .where(
+                    Conversation.user_id == user.id,
+                    Conversation.question_id.is_(None),
+                    Conversation.topic_code != HELP_TOPIC,
+                )
                 .order_by(Conversation.last_activity_at.desc())
                 .limit(10)
             )
@@ -187,7 +193,11 @@ async def list_conversations(
         (
             await db.execute(
                 select(Conversation)
-                .where(Conversation.user_id == user.id, Conversation.question_id.is_(None))
+                .where(
+                    Conversation.user_id == user.id,
+                    Conversation.question_id.is_(None),
+                    Conversation.topic_code != HELP_TOPIC,
+                )
                 .order_by(Conversation.last_activity_at.desc())
                 .limit(50)
             )
@@ -250,9 +260,11 @@ async def send_message(
         raise HTTPException(status.HTTP_409_CONFLICT, "conversation_ended")
     if not get_provider().available:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "tutor_unavailable")
-    if not has_access(user, user.canton):
+    is_help = conv.topic_code == HELP_TOPIC
+    # The help chat is open to every learner within the daily allowance (free or paid).
+    if not is_help and not has_access(user, user.canton):
         raise HTTPException(status.HTTP_403_FORBIDDEN, "no_access")
-    if conv.question_id and await question_context.mock_running(db, user):
+    if (conv.question_id or is_help) and await question_context.mock_running(db, user):
         raise HTTPException(status.HTTP_409_CONFLICT, "mock_in_progress")
     text = body.content.strip()
     if not text:
@@ -362,6 +374,7 @@ async def _reply_stream(
             yield _sse("error", {"code": "not_found"})
             return
         locale = conv.language
+        is_help = conv.topic_code == HELP_TOPIC
 
         previous_assistant = (
             await db.execute(
@@ -419,7 +432,14 @@ async def _reply_stream(
 
         conv.off_topic_streak = 0
         note = None
-        if gate.label == service.GATE_BORDERLINE and question_ctx is not None:
+        if gate.label == service.GATE_BORDERLINE and is_help:
+            note = (
+                "The latest message drifts from the test and the procedure, or asks about the "
+                "learner's own case. Answer the general part from the reference material, say "
+                "that only the commune or the canton can decide their own case, and decline "
+                "anything else in one sentence."
+            )
+        elif gate.label == service.GATE_BORDERLINE and question_ctx is not None:
             note = (
                 "The latest message drifts from this question or touches the learner's own "
                 "application. Answer only the part about the question and its topic, and "
@@ -434,16 +454,16 @@ async def _reply_stream(
             note = (
                 "The latest message may indicate a wellbeing concern "
                 f"({gate.wellbeing}). Follow the wellbeing and safety section of your "
-                "instructions: respond with care, give the helpline 147, and do not continue "
+                "instructions: respond with care, give the helpline 143, and do not continue "
                 "tutoring in this reply."
             )
             yield _sse("notice", {"kind": "wellbeing"})
         await db.commit()
 
-        if question_ctx is None:
+        if question_ctx is None and not is_help:
             topic_mastery = await topic_mastery_for(db, learner, conv.topic_code)
             misses = await bank.recent_misses(db, learner.id, conv.topic_code)
-        else:  # "Explain this" is about the one question, not the learner's record
+        else:  # Explain this and the help chat do not use the learner's record
             topic_mastery, misses = None, None
         ctx = service.TutorContext(
             canton=conv.canton,
@@ -455,9 +475,10 @@ async def _reply_stream(
             mastery=topic_mastery,
             misses=misses or None,
             question=question_ctx,
+            help=is_help,
         )
         history = await _history(db, conv)
-        version = service.prompt_version(explain=question_ctx is not None)
+        version = service.prompt_version(explain=question_ctx is not None, help=is_help)
         collected: list[str] = []
         outcome: service.ReplyOutcome | None = None
         async for item in service.stream_reply(ctx, history):
@@ -475,7 +496,7 @@ async def _reply_stream(
                 user_id=learner.id,
                 conversation_id=conv.id,
                 purpose=service.PURPOSE_REPLY,
-                model=settings.tutor_model,
+                model=outcome.model if outcome else settings.tutor_model,
                 prompt_version=version,
                 status="error",
                 usage=None,

@@ -104,7 +104,7 @@
     "deadline_passed": "Die Zeit für diesen Probetest ist abgelaufen. Antworten nach Ablauf zählen nicht.",
     "mock_finished": "Dieser Probetest wurde bereits abgegeben.",
     "invalid_answer": "Bitte wählen Sie eine der vier Antworten.",
-    "mock_in_progress": "Während eines Probetests ist «Das erklären» nicht verfügbar.",
+    "mock_in_progress": "Während eines Probetests sind «Das erklären» und der Hilfe-Chat nicht verfügbar.",
     "invalid_language": "Bitte wählen Sie eine Sprache aus der Liste.",
     "translation_required": "Bitte geben Sie eine Übersetzung ein."
   },
@@ -695,5 +695,22 @@
       "draft": "Entwurf",
       "reviewed": "Geprüft"
     }
+  },
+  "help": {
+    "title": "Viapunt fragen",
+    "lead": "Fragen zum Grundkenntnistest, zu seinen Themen oder zum Einbürgerungsverfahren? Fragen Sie hier, in Ihrer Sprache. Die Antworten stützen sich auf den Viapunt-Ratgeber und die Liste der Testinhalte.",
+    "note": "Der KI-Assistent kann sich irren, und seine Antworten sind keine Rechtsberatung. Über Ihr eigenes Gesuch entscheiden nur Ihre Gemeinde und der Kanton.",
+    "intro": "Zum Beispiel:",
+    "s1": "Welche Unterlagen brauche ich für das Gesuch im Kanton Zürich?",
+    "s2": "Was ist der Unterschied zwischen Nationalrat und Ständerat?",
+    "s3": "Wie läuft der Grundkenntnistest ab?",
+    "placeholder": "Ihre Frage… (Enter zum Senden)",
+    "newChat": "Neues Gespräch",
+    "limitReached": "Sie haben das heutige Nachrichtenlimit erreicht. Der Hilfe-Chat ist morgen wieder da.",
+    "free": "Kostenloses Konto: einige Fragen pro Tag. Mit einem Civics Pass erhalten Sie mehr, dazu «Das erklären» bei jeder Frage.",
+    "freeCta": "Zum Civics Pass",
+    "cardTitle": "Fragen? Viapunt fragen",
+    "cardBody": "Fragen Sie zum Test, zu seinen Themen oder zum Einbürgerungsverfahren, in Ihrer Sprache.",
+    "cardCta": "Hilfe-Chat öffnen"
   }
 }

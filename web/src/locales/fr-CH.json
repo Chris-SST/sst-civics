@@ -104,7 +104,7 @@
     "deadline_passed": "Le temps de cet examen blanc est écoulé. Les réponses données après la fin ne comptent pas.",
     "mock_finished": "Cet examen blanc a déjà été rendu.",
     "invalid_answer": "Veuillez choisir l'une des quatre réponses.",
-    "mock_in_progress": "« Expliquer ceci » n'est pas disponible pendant un examen blanc.",
+    "mock_in_progress": "« Expliquer ceci » et le chat d'aide ne sont pas disponibles pendant un examen blanc.",
     "invalid_language": "Veuillez choisir une langue dans la liste.",
     "translation_required": "Veuillez saisir une traduction."
   },
@@ -695,5 +695,22 @@
       "draft": "Brouillon",
       "reviewed": "Révisé"
     }
+  },
+  "help": {
+    "title": "Demander à Viapunt",
+    "lead": "Des questions sur le test de connaissances, ses thèmes ou la procédure de naturalisation ? Posez-les ici, dans votre langue. Les réponses s'appuient sur le guide Viapunt et la liste des contenus du test.",
+    "note": "L'assistant IA peut se tromper, et ses réponses ne sont pas des conseils juridiques. Seuls votre commune et le canton décident de votre propre demande.",
+    "intro": "Par exemple :",
+    "s1": "Quels documents me faut-il pour la demande dans le canton de Zurich ?",
+    "s2": "Quelle est la différence entre le Conseil national et le Conseil des États ?",
+    "s3": "Comment se déroule le test de connaissances ?",
+    "placeholder": "Votre question… (Entrée pour envoyer)",
+    "newChat": "Nouvelle conversation",
+    "limitReached": "Vous avez atteint la limite de messages du jour. Le chat d'aide revient demain.",
+    "free": "Compte gratuit : quelques questions par jour. Un Civics Pass vous en donne davantage, ainsi que « Expliquer ceci » pour chaque question.",
+    "freeCta": "Voir le Civics Pass",
+    "cardTitle": "Des questions ? Demandez à Viapunt",
+    "cardBody": "Posez vos questions sur le test, ses thèmes ou la procédure de naturalisation, dans votre langue.",
+    "cardCta": "Ouvrir le chat d'aide"
   }
 }

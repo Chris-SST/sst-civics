@@ -7,6 +7,7 @@ active, and the version string is written to every row of the AI call log.
 | --- | --- |
 | `base/vN.md` | Persona, teaching method, scope, wellbeing and safety rules, language and formatting. Placeholders `{{TUTOR_NAME}}` and `{{PROVIDER_DISCLOSURE}}` are filled from settings. |
 | `civics/vN.md` | Civics-trainer context sent after the base instructions and cached with them: what the knowledge test is, the three levels of government, how to handle facts and limits. The learner's canton and topic follow in the per-session context. |
+| `help/vN.md` | Help chat rules (D-066): answer from the reference material that follows it (`content/help/`, built by `scripts/build_help_pack.py`), say when it does not cover a question, link one guide page, general rule only for the learner's own case. |
 | `gatekeeper/vN.md` | Instructions for the fast model that labels each learner message (on topic, borderline, off topic, override, wellbeing). Version 2 is the civics wording: on topic means about the question under discussion or its topic; the learner's own application is borderline. |
 | `explain/vN.md` | "Explain this": the block added to the learner context of a conversation bound to one question: the question, options, correct key, explanation, approved translation and sources (placeholders `{{QUESTION_DE}}`, `{{OPTIONS_DE}}`, `{{CORRECT}}`, `{{EXPLANATION_DE}}`, `{{TRANSLATION}}`, `{{SOURCES}}` filled per question), and the rules: reply language, stay on the question, a few sentences, no legal advice about the learner's own application, refer to the sources. |
 | `summary/vN.md` | Instructions for the running summary of older turns. |
@@ -18,7 +19,7 @@ active, and the version string is written to every row of the AI call log.
 | `content/back_translate/vN.md` | Independent translation back into German (`scripts/content/back_translate`). |
 | `content/compare/vN.md` | Original against back-translation: same or different (`scripts/content/back_translate`). |
 
-The tutor's prompt version is logged as `base@vN+civics@vN`, with `+explain@vN` in "Explain this". The school course modules
+The tutor's prompt version is logged as `base@vN+civics@vN`, with `+explain@vN` in "Explain this" and `+help@vN` in the help chat. The school course modules
 (`courses/<module>/`) and the course-based question prompts (`questions/generate`,
 `questions/solve`) were removed in Phase 1 task 1.1 with the course concept; they are in git
 history. The content pipeline's prompts are under `content/` (task 1.5, logged as `content/<step>@vN`;

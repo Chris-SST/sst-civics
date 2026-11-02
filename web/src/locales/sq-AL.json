@@ -104,7 +104,7 @@
     "deadline_passed": "Koha për këtë test provë mbaroi. Përgjigjet pas afatit nuk numërohen.",
     "mock_finished": "Ky test provë është dorëzuar tashmë.",
     "invalid_answer": "Ju lutemi zgjidhni një nga katër opsionet.",
-    "mock_in_progress": "Shpjegimi nuk është i disponueshëm gjatë një testi provë.",
+    "mock_in_progress": "Shpjegimi dhe biseda e ndihmës nuk janë të disponueshme gjatë një testi provë.",
     "invalid_language": "Zgjidhni një gjuhë nga lista.",
     "translation_required": "Shkruani një përkthim."
   },
@@ -695,5 +695,22 @@
       "draft": "Draft",
       "reviewed": "I rishikuar"
     }
+  },
+  "help": {
+    "title": "Pyetni Viapunt",
+    "lead": "Keni pyetje për testin e njohurive, temat e tij ose procedurën e natyralizimit? Pyetni këtu, në gjuhën tuaj. Përgjigjet bazohen në udhëzuesin Viapunt dhe në listën e përmbajtjes së testit.",
+    "note": "Asistenti i IA-së mund të gabojë dhe përgjigjet e tij nuk janë këshillë ligjore. Për kërkesën tuaj vendosin vetëm komuna dhe kantoni.",
+    "intro": "Për shembull:",
+    "s1": "Cilat dokumente më duhen për kërkesën në kantonin e Cyrihut?",
+    "s2": "Cili është ndryshimi midis Këshillit Kombëtar dhe Këshillit të Shteteve?",
+    "s3": "Si zhvillohet testi i njohurive?",
+    "placeholder": "Pyetja juaj… (Enter për ta dërguar)",
+    "newChat": "Bisedë e re",
+    "limitReached": "Keni arritur kufirin e mesazheve për sot. Biseda e ndihmës kthehet nesër.",
+    "free": "Llogari falas: disa pyetje në ditë. Me një Civics Pass merrni më shumë, si dhe shpjegim për çdo pyetje.",
+    "freeCta": "Shihni Civics Pass",
+    "cardTitle": "Pyetje? Pyetni Viapunt",
+    "cardBody": "Pyetni për testin, temat e tij ose procedurën e natyralizimit, në gjuhën tuaj.",
+    "cardCta": "Hapni bisedën e ndihmës"
   }
 }

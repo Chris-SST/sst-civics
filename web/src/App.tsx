@@ -19,6 +19,7 @@ const Learn = lazy(() => import("./pages/Learn"));
 const Practise = lazy(() => import("./pages/Practise"));
 const Mock = lazy(() => import("./pages/Mock"));
 const Glossary = lazy(() => import("./pages/Glossary"));
+const Help = lazy(() => import("./pages/Help"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 import NotFound from "./pages/NotFound";
 
@@ -92,6 +93,14 @@ export default function App() {
           element={
             <RequireRole roles={LEARNER}>
               <Glossary />
+            </RequireRole>
+          }
+        />
+        <Route
+          path="/help"
+          element={
+            <RequireRole roles={LEARNER}>
+              <Help />
             </RequireRole>
           }
         />

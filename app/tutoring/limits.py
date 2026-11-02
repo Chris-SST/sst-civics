@@ -1,7 +1,8 @@
-"""Message limits for "Explain this". Every learner with an active entitlement gets the same
-daily cap (`AI_DAILY_MESSAGE_LIMIT`); learners without one cannot use the chat at all (the
-routes check `has_access`). There is no monthly cap; months are still counted for display.
-Days and months are counted in Swiss time."""
+"""Message limits for the AI chats (Explain this and the help chat, counted together). Every
+learner with an active entitlement for their canton gets the same daily cap
+(`AI_DAILY_MESSAGE_LIMIT`); learners without one get `AI_FREE_DAILY_MESSAGE_LIMIT` for the
+help chat only (Explain this checks `has_access` itself). There is no monthly cap; months are
+still counted for display. Days and months are counted in Swiss time."""
 
 from __future__ import annotations
 
@@ -12,6 +13,7 @@ from zoneinfo import ZoneInfo
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.billing.access import has_access
 from app.config import get_settings
 from app.db import utcnow
 from app.models import MESSAGE_USER, Message, User
@@ -70,9 +72,13 @@ async def _count(db: AsyncSession, user_id, since: datetime) -> int:
 
 async def usage_for(db: AsyncSession, user: User) -> UsageInfo:
     now = utcnow()
+    settings = get_settings()
+    paid = has_access(user, user.canton)
     return UsageInfo(
         daily_used=await _count(db, user.id, day_start(now)),
-        daily_limit=get_settings().ai_daily_message_limit,
+        daily_limit=(
+            settings.ai_daily_message_limit if paid else settings.ai_free_daily_message_limit
+        ),
         monthly_used=await _count(db, user.id, month_start(now)),
         monthly_limit=None,
     )

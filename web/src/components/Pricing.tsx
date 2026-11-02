@@ -77,7 +77,7 @@ export default function Pricing() {
   const billingOn = config?.billing_enabled !== false;
 
   return (
-    <section className="card">
+    <section className="card" id="pricing">
       <h2>{t("pricing.title")}</h2>
       <p className="small">{t("pricing.intro")}</p>
       <ErrorText error={error} />

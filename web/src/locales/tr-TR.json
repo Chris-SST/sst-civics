@@ -104,7 +104,7 @@
     "deadline_passed": "Bu deneme sınavının süresi doldu. Süre bittikten sonraki cevaplar sayılmaz.",
     "mock_finished": "Bu deneme sınavı zaten teslim edildi.",
     "invalid_answer": "Lütfen dört seçenekten birini seçin.",
-    "mock_in_progress": "Deneme sınavı sürerken açıklama özelliği kullanılamaz.",
+    "mock_in_progress": "Deneme sınavı sürerken açıklama ve yardım sohbeti kullanılamaz.",
     "invalid_language": "Lütfen listeden bir dil seçin.",
     "translation_required": "Lütfen bir çeviri girin."
   },
@@ -695,5 +695,22 @@
       "draft": "Taslak",
       "reviewed": "İncelendi"
     }
+  },
+  "help": {
+    "title": "Viapunt'a sorun",
+    "lead": "Bilgi testi, konuları ya da vatandaşlığa geçiş süreci hakkında sorularınız mı var? Burada, kendi dilinizde sorun. Yanıtlar Viapunt rehberine ve testin kapsadığı konuların listesine dayanır.",
+    "note": "Yapay zekâ asistanı hata yapabilir ve yanıtları hukuki danışmanlık değildir. Kendi başvurunuz hakkında yalnızca belediyeniz ve kanton karar verir.",
+    "intro": "Örneğin:",
+    "s1": "Zürih kantonunda başvuru için hangi belgelere ihtiyacım var?",
+    "s2": "Nationalrat ile Ständerat arasındaki fark nedir?",
+    "s3": "Bilgi testi nasıl yapılıyor?",
+    "placeholder": "Sorunuz… (Göndermek için Enter)",
+    "newChat": "Yeni sohbet",
+    "limitReached": "Bugünkü mesaj sınırına ulaştınız. Yardım sohbeti yarın yeniden açılır.",
+    "free": "Ücretsiz hesap: günde birkaç soru. Civics Pass ile daha fazlasını ve her soruda açıklamayı alırsınız.",
+    "freeCta": "Civics Pass'e bakın",
+    "cardTitle": "Sorunuz mu var? Viapunt'a sorun",
+    "cardBody": "Test, konuları ya da vatandaşlığa geçiş süreci hakkında kendi dilinizde sorun.",
+    "cardCta": "Yardım sohbetini açın"
   }
 }

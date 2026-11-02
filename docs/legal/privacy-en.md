@@ -22,7 +22,7 @@ This notice explains how personal data is handled when you use the guide website
 - your interface language and your study language;
 - your canton (which canton's test you study);
 - your confirmation that you are 16 or older (not your date of birth), and which terms you accepted and when;
-- your progress: answers you gave, mock tests, which questions you have understood, your review schedule, optional comments when you report a faulty question, and your conversations with the "Explain this" assistant;
+- your progress: answers you gave, mock tests, which questions you have understood, your review schedule, optional comments when you report a faulty question, and your conversations with the "Explain this" assistant and the help chat;
 - payment status: which pass you hold and for how long, and a link to your customer record at Stripe;
 - security data: sessions and sign-in links (stored as hashes), when you last signed in, a password hash if you set a password, and two-factor data for administrators (encrypted).
 
@@ -46,7 +46,7 @@ This notice explains how personal data is handled when you use the guide website
 | Take payment, give access, handle refunds | Payment status, Stripe references | Performance of the contract |
 | Keep accounting records | Payment records | Legal obligation |
 | Security, abuse prevention, support | Security data, server logs | Our legitimate interest in a safe service |
-| Answer your questions in "Explain this" | Question text and your typed question | Performance of the contract; your request |
+| Answer your questions in "Explain this" and the help chat | Question text and your typed question | Performance of the contract; your request |
 | Improve content quality | Reports you send | Our legitimate interest |
 
 4.2 We do not sell your data and do not use it for advertising or profiling. [Confirm: no marketing email at launch.]
@@ -57,7 +57,7 @@ This notice explains how personal data is handled when you use the guide website
 
 5.2 **Payments: Stripe.** Stripe processes payment details and may process data outside Switzerland. See [Stripe's privacy notice](https://stripe.com/privacy).
 
-5.3 **AI assistant: our AI provider, Anthropic.** When you use "Explain this", the text of the question and what you type are sent to our AI provider, which processes them outside Switzerland. We do not send your name, your email address or other account details. Please do not type personal details into the assistant. [Data processing agreement and transfer safeguards to be confirmed by the lawyer.]
+5.3 **AI assistant: our AI provider, Anthropic.** When you use "Explain this" or the help chat, the text of the question and what you type are sent to our AI provider, which processes them outside Switzerland. We do not send your name, your email address or other account details. Please do not type personal details into the assistant. [Data processing agreement and transfer safeguards to be confirmed by the lawyer.]
 
 5.4 **Email relay:** [provider name and location to be added]. It delivers sign-in links and account emails and so handles your email address and the message.
 

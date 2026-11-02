@@ -2283,3 +2283,44 @@ a.topic-row:hover {
 .glossary-table td b {
   overflow-wrap: anywhere;
 }
+
+/* --- Help chat (D-066) ------------------------------------------------------------------ */
+
+.help-page h1 {
+  margin: 0;
+}
+.help-log {
+  flex: none;
+  min-height: 120px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: var(--space-2) 0;
+}
+.help-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+.help-suggestions p {
+  flex-basis: 100%;
+  margin: 0;
+}
+.help-suggestions .btn {
+  white-space: normal;
+  text-align: left;
+}
+.help-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.help-card h2 {
+  margin: 0 0 var(--space-1);
+}
+.help-card p {
+  margin: 0;
+}

@@ -10,6 +10,11 @@ from app.llm.service import QuestionContext
 from app.models import CONTENT_MASTER_LANGUAGE, OPTION_KEYS, Question, User
 from app.study import mock, modes
 
+# Help chat conversations (app.tutoring.help) are not about one topic; this marks them in
+# `topic_code`. The name is shown to the gatekeeper as the session topic.
+HELP_TOPIC = "_help"
+HELP_TOPIC_NAME = "General help: the knowledge test, its topics and the naturalisation procedure"
+
 
 async def question_context(db: AsyncSession, q: Question, lang: str) -> QuestionContext:
     translation = None

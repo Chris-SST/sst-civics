@@ -148,7 +148,7 @@ async def test_system_prompt_has_the_question_and_translation_and_no_personal_da
             .scalars()
             .one()
         )
-        assert reply.prompt_version == "base@v2+civics@v1+explain@v1"
+        assert reply.prompt_version == "base@v3+civics@v2+explain@v1"
         gate = (
             (await db.execute(select(LlmCall).where(LlmCall.purpose == "gatekeeper")))
             .scalars()
@@ -181,7 +181,9 @@ async def test_off_topic_gets_the_fixed_reply_without_calling_the_tutor(api, fak
     events = parse_sse(r.text)
     assert ("notice", {"kind": "off_topic"}) in events
     message = next(d for e, d in events if e == "message")
-    assert message["role"] == "notice" and message["content"].startswith("Ich kann hier nur")
+    assert message["role"] == "notice" and message["content"].startswith(
+        "Ich kann nur beim Grundkenntnistest"
+    )
     assert not any(c.kind == "stream" for c in fake.calls)
 
 

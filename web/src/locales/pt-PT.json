@@ -104,7 +104,7 @@
     "deadline_passed": "O tempo deste simulacro acabou. As respostas depois do fim do tempo não contam.",
     "mock_finished": "Este simulacro já foi entregue.",
     "invalid_answer": "Escolha uma das quatro opções.",
-    "mock_in_progress": "A função Explicar isto não está disponível durante um simulacro.",
+    "mock_in_progress": "Explicar isto e o chat de ajuda não estão disponíveis durante um simulacro.",
     "invalid_language": "Escolha uma língua da lista.",
     "translation_required": "Introduza uma tradução."
   },
@@ -695,5 +695,22 @@
       "draft": "Rascunho",
       "reviewed": "Revisto"
     }
+  },
+  "help": {
+    "title": "Pergunte ao Viapunt",
+    "lead": "Tem perguntas sobre o teste de conhecimentos, os seus temas ou o processo de naturalização? Pergunte aqui, na sua língua. As respostas baseiam-se no guia Viapunt e na lista dos conteúdos do teste.",
+    "note": "O assistente de IA pode enganar-se e as suas respostas não são aconselhamento jurídico. Só a sua comuna e o cantão decidem sobre o seu pedido.",
+    "intro": "Por exemplo:",
+    "s1": "Que documentos preciso para o pedido no cantão de Zurique?",
+    "s2": "Qual é a diferença entre o Conselho Nacional e o Conselho dos Estados?",
+    "s3": "Como funciona o teste de conhecimentos?",
+    "placeholder": "A sua pergunta… (Enter para enviar)",
+    "newChat": "Nova conversa",
+    "limitReached": "Atingiu o limite de mensagens de hoje. O chat de ajuda volta amanhã.",
+    "free": "Conta gratuita: algumas perguntas por dia. Um Civics Pass dá-lhe mais, além de Explicar isto em todas as perguntas.",
+    "freeCta": "Ver o Civics Pass",
+    "cardTitle": "Dúvidas? Pergunte ao Viapunt",
+    "cardBody": "Pergunte sobre o teste, os seus temas ou o processo de naturalização, na sua língua.",
+    "cardCta": "Abrir o chat de ajuda"
   }
 }

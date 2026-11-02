@@ -32,6 +32,7 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 - [x] Guide content in German and English with official sources (1.12): overview, Zurich step by step, knowledge test, language certificates, fees, calculator, free practice, ten FAQs each. Overview, knowledge test, calculator, free practice and FAQ also in fr, it, pt, es, sq, tr as drafts for native review (56 pages). Umami analytics wired (D-062), awaiting the stats DNS record and one-time setup on the server.
 - [x] Terms, privacy notice, independence notice drafted in English (1.13, `docs/legal/`); lawyer and accountant review open; other languages after approval.
 - [x] Quality (1.14): Playwright end-to-end suite (free questions, email link, full mock, webhook fulfilment, expiry, deletion), axe accessibility on the main screens with fixes, Lighthouse 100/100/100/100 on three guide pages, hreflang check; CI jobs added. Weekly link check (1.15) exists in the worker.
+- [x] Help chat and Explain this on Haiku (2 November 2026, D-066): `/help` in the app, grounded in the guide pages and the Zurich fact checklist (`content/help/`, `scripts/build_help_pack.py`), 5 free messages a day without a pass; prompts cleaned of the school tutor wording.
 - [ ] Test panel of 15 to 20 people (1.16): Chris recruits once the first questions are approved.
 
 ## Next
