@@ -209,7 +209,8 @@ const tagTone = ["teal", "clay", "sun"];
           const deOpt = b.querySelector('.h-opt__text [lang="de"]');
           if (deOpt) deOpt.textContent = q.de.options[key] ?? "";
           const enOpt = b.querySelector('.h-opt__text [lang="en"]');
-          if (enOpt) enOpt.textContent = q.en.options[key] ?? "";
+          const en = q.en.options[key] ?? "";
+          if (enOpt) enOpt.textContent = en === q.de.options[key] ? "" : en; // years, numbers
         }
         const explanation = feedback?.querySelector("p");
         if (explanation) explanation.textContent = side ? q.en.explanation : q.de.explanation;
