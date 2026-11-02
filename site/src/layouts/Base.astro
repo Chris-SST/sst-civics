@@ -19,9 +19,11 @@ interface Props {
   path: string;
   noindex?: boolean;
 }
-const { lang, title, description, alternates, path, noindex = false } = Astro.props;
+const { lang, title, description, alternates, path, noindex: pageNoindex = false } = Astro.props;
 const t = ui(lang);
 const site = (Astro.site ?? new URL("https://staging.viapunt.ch")).toString().replace(/\/$/, "");
+// A build for a staging host must never be indexed.
+const noindex = pageNoindex || new URL(site).hostname.includes("staging");
 const abs = (p: string) => site + p;
 const fullTitle = title.includes(BRAND_NAME) ? title : `${title} | ${BRAND_NAME}`;
 const xdefault = alternates.find((a) => a.lang === "de") ?? alternates[0];
