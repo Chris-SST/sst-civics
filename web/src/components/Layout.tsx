@@ -5,12 +5,13 @@ import { post } from "../api";
 import { homeFor, useAuth } from "../auth";
 import { BRAND_NAME } from "../brand";
 import { LANGUAGES } from "../i18n";
+import { guideUrl } from "../guide";
 import Wordmark from "./Wordmark";
 
-export const SITE = "https://swisssciencetutors.ch";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const { t, i18n } = useTranslation();
+  const lang = i18n.language.slice(0, 2);
   const { me, config, logout, refresh } = useAuth();
   const navigate = useNavigate();
 
@@ -101,16 +102,19 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="container footer-inner">
           <ul className="footer-links">
             <li>
-              <a href={`${SITE}/frequently-asked-questions/`}>{t("footer.faq")}</a>
+              <a href={guideUrl("faq", lang)}>{t("footer.faq")}</a>
             </li>
             <li>
-              <a href={`${SITE}/contact/`}>{t("footer.contact")}</a>
+              <a href={guideUrl("contact", lang)}>{t("footer.contact")}</a>
             </li>
             <li>
-              <a href={`${SITE}/terms/`}>{t("footer.terms")}</a>
+              <a href={guideUrl("terms", lang)}>{t("footer.terms")}</a>
             </li>
             <li>
-              <a href={`${SITE}/privacy/`}>{t("footer.privacy")}</a>
+              <a href={guideUrl("privacy", lang)}>{t("footer.privacy")}</a>
+            </li>
+            <li>
+              <a href={guideUrl("imprint", lang)}>{t("footer.imprint")}</a>
             </li>
           </ul>
           <p className="muted small">{t("footer.independence")}</p>

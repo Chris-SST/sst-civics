@@ -34,6 +34,11 @@ export const SLUGS = {
   calculator: { de: "rechner", fr: "calculateur", it: "calcolatore", pt: "calculadora", es: "calculadora", sq: "llogaritesi", tr: "hesaplayici", other: "calculator" },
   free: { de: "kostenlos", fr: "pratique-gratuite", it: "pratica-gratuita", pt: "pratica-gratuita", es: "practica-gratuita", sq: "praktike-falas", tr: "ucretsiz-pratik", other: "free-practice" },
   faq: { de: "faq", other: "faq" },
+  imprint: { de: "impressum", other: "imprint" },
+  contact: { de: "kontakt", other: "contact" },
+  about: { de: "ueber-viapunt", other: "about" },
+  terms: { de: "nutzungsbedingungen", other: "terms" },
+  privacy: { de: "datenschutz", other: "privacy" },
 };
 
 /** Pages built from templates, present in every language (copy falls back to English). */

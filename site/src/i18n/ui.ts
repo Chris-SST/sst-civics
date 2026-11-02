@@ -45,6 +45,7 @@ export interface Ui {
   navFaq: string;
   navStart: string;
   navApp: string;
+  legal: { nav: string; imprint: string; privacy: string; terms: string; contact: string; about: string };
   chat: {
     launcher: string;
     title: string;
@@ -108,6 +109,7 @@ const en: Ui = {
   navFaq: "FAQ",
   navStart: "Start free",
   navApp: "Open the app",
+  legal: { nav: "Legal", imprint: "Imprint", privacy: "Privacy", terms: "Terms of use", contact: "Contact", about: "About Viapunt" },
   chat: {
     launcher: "Ask a question",
     title: "Ask Viapunt",
@@ -292,6 +294,7 @@ const de: Ui = {
   navFaq: "FAQ",
   navStart: "Gratis starten",
   navApp: "App öffnen",
+  legal: { nav: "Rechtliches", imprint: "Impressum", privacy: "Datenschutz", terms: "Nutzungsbedingungen", contact: "Kontakt", about: "Über Viapunt" },
   chat: {
     launcher: "Frage stellen",
     title: "Viapunt fragen",

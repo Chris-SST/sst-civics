@@ -2,11 +2,11 @@
 
 > **DRAFT for review by Chris and a lawyer; not published.**
 >
-> Operator: Swiss Science Tutors GmbH, [address], Switzerland
+> Operator: Swiss Science Tutors GmbH, Laurstrasse 15, 5200 Brugg, Switzerland
 > Service: Viapunt (working name; the brand is provisional)
 > Date of draft: 30 October 2026
 
-These terms apply to the guide website and the learning app of Viapunt (working name), run by Swiss Science Tutors GmbH, [address], Switzerland ("we", "us"). By creating an account or buying a Civics Pass you accept them.
+These terms apply to the guide website and the learning app of Viapunt (working name), run by Swiss Science Tutors GmbH, Laurstrasse 15, 5200 Brugg, Switzerland ("we", "us"). By creating an account or buying a Civics Pass you accept them.
 
 ## 1. Who we are and what the service is
 
@@ -120,4 +120,4 @@ These terms apply to the guide website and the learning app of Viapunt (working 
 
 ## 15. Contact
 
-Swiss Science Tutors GmbH, [address], Switzerland. Email: [contact email].
+Swiss Science Tutors GmbH, Laurstrasse 15, 5200 Brugg, Switzerland. Email: info@viapunt.ch.

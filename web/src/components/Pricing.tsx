@@ -5,7 +5,7 @@ import { get, post, type AccessOut, type ProductKey, type ProductOut, type Refun
 import { useAuth } from "../auth";
 import { formatChf, formatDate } from "../i18n";
 import ErrorText from "./ErrorText";
-import { SITE } from "./Layout";
+import { guideUrl } from "../guide";
 
 interface CantonStatus {
   /** Longest-running access of any kind (pass, admin grant or trial) active now. */
@@ -34,7 +34,7 @@ function cantonStatus(access: AccessOut, canton: string, now = Date.now()): Cant
 /** The Civics Pass products for sale, with access status, Buy and Extend buttons, and the
  * refund rule for the learner's latest payment. Used on the landing page and learner home. */
 export default function Pricing() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { me, config } = useAuth();
   const [products, setProducts] = useState<ProductOut[] | null>(null);
   const [refund, setRefund] = useState<RefundEligibility | null>(null);
@@ -171,7 +171,7 @@ export default function Pricing() {
               : refund.reason === "too_late"
                 ? t("pricing.refundTooLate", { date: formatDate(refund.deadline) })
                 : t("pricing.refundTooMany", { max: refund.max_questions, count: refund.questions_studied })}{" "}
-          {refund.eligible && <a href={`${SITE}/contact/`}>{t("pricing.writeToSupport")}</a>}
+          {refund.eligible && <a href={guideUrl("contact", i18n.language.slice(0, 2))}>{t("pricing.writeToSupport")}</a>}
         </p>
       )}
     </section>

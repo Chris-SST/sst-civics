@@ -11,7 +11,10 @@ const site = (process.env.SITE_URL || "https://staging.viapunt.ch").replace(/\/+
 // Which language versions exist, read from the content folder, so each sitemap entry can list
 // its translations (slugs differ per language, so the sitemap integration's own i18n matching
 // by path would miss them).
-const index = buildIndex(scanGuide(fileURLToPath(new URL("./src/content/guide", import.meta.url))));
+const index = buildIndex([
+  ...scanGuide(fileURLToPath(new URL("./src/content/guide", import.meta.url))),
+  ...scanGuide(fileURLToPath(new URL("./src/content/legal", import.meta.url))),
+]);
 
 export default defineConfig({
   site,

@@ -35,9 +35,14 @@ const fullTitle = title.includes(BRAND_NAME) ? title : `${title} | ${BRAND_NAME}
 const xdefault = alternates.find((a) => a.lang === "de") ?? alternates[0];
 const ogLocale: Record<string, string> = { de: "de_CH", en: "en_GB", fr: "fr_CH", it: "it_CH", pt: "pt_PT", es: "es_ES", sq: "sq_AL", tr: "tr_TR" };
 const guideAll = await getCollection("guide", (e) => !e.data.draft);
-const index = buildIndex(guideAll.map((e) => ({ lang: e.data.lang, slug: e.data.slug })));
+const legalAll = await getCollection("legal");
+const index = buildIndex([...guideAll, ...legalAll].map((e) => ({ lang: e.data.lang, slug: e.data.slug })));
 const footerLinks = (["overview", "zurich", "documents", "free", "faq"] as const)
   .map((k) => ({ href: resolveHref(index, k, lang), label: t.cards[k].title }))
+  .filter((l): l is { href: string; label: string } => l.href !== null);
+// Imprint, privacy, terms, contact and about: German pages for German, English for the rest.
+const legalLinks = (["imprint", "privacy", "terms", "contact", "about"] as const)
+  .map((k) => ({ href: resolveHref(index, k, lang), label: t.legal[k] }))
   .filter((l): l is { href: string; label: string } => l.href !== null);
 const appHref = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
 const tryHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(lang)}`;
@@ -110,7 +115,7 @@ const icon =
         )}
         <slot />
       </main>
-      <IndependenceFooter lang={lang} links={footerLinks} />
+      <IndependenceFooter lang={lang} links={footerLinks} legal={legalLinks} />
     </div>
     <HelpChat lang={lang} signupHref={appHref} />
   </body>

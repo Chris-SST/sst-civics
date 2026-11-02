@@ -2,7 +2,7 @@
 
 > **DRAFT for review by Chris and a lawyer; not published.**
 >
-> Operator: Swiss Science Tutors GmbH, [address], Switzerland
+> Operator: Swiss Science Tutors GmbH, Laurstrasse 15, 5200 Brugg, Switzerland
 > Service: Viapunt (working name; the brand is provisional)
 > Date of draft: 30 October 2026
 
@@ -14,7 +14,7 @@
 
 ### Who runs this service
 
-1. Viapunt (working name) is an independent private service of Swiss Science Tutors GmbH, [address], Switzerland.
+1. Viapunt (working name) is an independent private service of Swiss Science Tutors GmbH, Laurstrasse 15, 5200 Brugg, Switzerland.
 2. It has no connection to any federal, cantonal or communal authority and has no official status. No authority approves, endorses or runs it.
 
 ### Our questions
@@ -38,4 +38,4 @@
 
 11. Each guide page names the official pages it relies on and shows a "last checked" date.
 12. We review every page against its sources at least once a year, and links are checked automatically each week.
-13. If you find something wrong or out of date, please tell us: [contact email].
+13. If you find something wrong or out of date, please tell us: info@viapunt.ch.

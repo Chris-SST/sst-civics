@@ -28,6 +28,26 @@ const guide = defineCollection({
   }),
 });
 
+// Legal and contact pages (imprint, contact, about, terms, privacy) at
+// src/content/legal/<lang>/<slug>.md, in German and English. `notice` is shown above the text and
+// `contentLang` marks a page whose text is in another language (German pages showing English).
+const legal = defineCollection({
+  loader: glob({
+    pattern: "**/*.md",
+    base: "./src/content/legal",
+    generateId: ({ entry }) => entry.replace(/\.md$/, ""),
+  }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    lang,
+    slug: z.string(),
+    updated: z.coerce.date(),
+    notice: z.string().optional(),
+    contentLang: lang.optional(),
+  }),
+});
+
 // FAQ items live at src/content/faq/<lang>/<name>.md; the Markdown body is the answer.
 const faq = defineCollection({
   loader: glob({
@@ -42,4 +62,4 @@ const faq = defineCollection({
   }),
 });
 
-export const collections = { guide, faq };
+export const collections = { guide, faq, legal };

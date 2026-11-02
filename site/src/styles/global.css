@@ -359,6 +359,9 @@ a.h-guide:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); c
 .site-footer__inner { padding-top: 28px; padding-bottom: 40px; display: flex; flex-wrap: wrap; gap: 16px 32px; justify-content: space-between; align-items: flex-start; }
 .site-footer p { margin: 0; flex: 1 1 420px; color: var(--muted); font-size: var(--fs-caption); line-height: 21px; font-weight: 700; }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 4px 20px; font-weight: 800; font-size: var(--fs-caption); }
+.site-footer__legal { flex-basis: 100%; font-weight: 700 !important; }
+/* Room for the help chat launcher in the bottom corner (D-067). */
+.site-footer__inner { padding-bottom: 88px; }
 .site-footer nav a { display: inline-flex; align-items: center; min-height: 32px; }
 
 /* --- Components --- */

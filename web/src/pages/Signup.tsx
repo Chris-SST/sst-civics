@@ -11,9 +11,9 @@ import {
   type LanguageCode,
 } from "../api";
 import ErrorText from "../components/ErrorText";
+import { guideUrl } from "../guide";
 import { switchInterface } from "../language";
 
-const SITE = "https://swisssciencetutors.ch";
 
 export default function Signup() {
   const { t, i18n } = useTranslation();
@@ -158,8 +158,8 @@ export default function Signup() {
         <label className="check">
           <input type="checkbox" checked={terms} onChange={(e) => setTerms(e.target.checked)} required />
           <span>
-            {t("signup.terms")} <a href={`${SITE}/terms/`}>{t("footer.terms")}</a>,{" "}
-            <a href={`${SITE}/privacy/`}>{t("footer.privacy")}</a>
+            {t("signup.terms")} <a href={guideUrl("terms", i18n.language.slice(0, 2))}>{t("footer.terms")}</a>,{" "}
+            <a href={guideUrl("privacy", i18n.language.slice(0, 2))}>{t("footer.privacy")}</a>
           </span>
         </label>
         {mismatch ? (

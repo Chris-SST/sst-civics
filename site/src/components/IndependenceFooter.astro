@@ -4,8 +4,8 @@
 import { INDEPENDENCE, ui } from "../i18n/ui";
 import { pathFor } from "../i18n/pages.mjs";
 import { BRAND_NAME } from "../brand";
-interface Props { lang: string; links: { href: string; label: string }[] }
-const { lang, links } = Astro.props;
+interface Props { lang: string; links: { href: string; label: string }[]; legal?: { href: string; label: string }[] }
+const { lang, links, legal = [] } = Astro.props;
 const t = ui(lang);
 ---
 <footer class="site-footer">
@@ -15,5 +15,10 @@ const t = ui(lang);
       <a href={pathFor(lang, "home")}>{t.homeLabel}</a>
       {links.map((l) => <a href={l.href}>{l.label}</a>)}
     </nav>
+    {legal.length > 0 && (
+      <nav class="site-footer__legal" aria-label={t.legal.nav}>
+        {legal.map((l) => <a href={l.href}>{l.label}</a>)}
+      </nav>
+    )}
   </div>
 </footer>

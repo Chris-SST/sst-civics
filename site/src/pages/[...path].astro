@@ -1,6 +1,7 @@
 ---
-// One route file for every page: home, guide pages from the content collection, and template
-// pages (calculator, FAQ, free practice) for languages that have no guide file for them.
+// One route file for every page: home, guide pages from the content collection, legal and
+// contact pages (German and English), and template pages (calculator, FAQ, free practice) for
+// languages that have no guide file for them.
 // URLs are /<lang>/ and /<lang>/<slug>/ for all eight languages.
 import { getCollection, render } from "astro:content";
 import { APP_URL } from "astro:env/server";
@@ -15,6 +16,7 @@ import GuideCta from "../components/GuideCta.astro";
 import ResidenceCalculator from "../components/ResidenceCalculator.astro";
 import FaqAccordion from "../components/FaqAccordion.astro";
 import Home from "../components/Home.astro";
+import ArticleLayout from "../components/ArticleLayout.astro";
 
 export async function getStaticPaths() {
   const guide = await getCollection("guide", (e) => !e.data.draft);
@@ -29,6 +31,10 @@ export async function getStaticPaths() {
     haveGuide.add(`${lang}/${key}`);
     paths.push({ params: { path: `${lang}/${slug}` }, props: { kind: "guide", lang, key, id: entry.id } });
   }
+  for (const entry of await getCollection("legal")) {
+    const { lang, slug } = entry.data;
+    paths.push({ params: { path: `${lang}/${slug}` }, props: { kind: "legal", lang, key: keyFor(lang, slug), id: entry.id } });
+  }
   for (const lang of LOCALES) {
     for (const key of STATIC_KEYS) {
       if (haveGuide.has(`${lang}/${key}`)) continue;
@@ -42,12 +48,15 @@ const { kind, lang, key, id } = Astro.props as { kind: string; lang: string; key
 const t = ui(lang);
 
 const guideAll = await getCollection("guide", (e) => !e.data.draft);
-const index = buildIndex(guideAll.map((e) => ({ lang: e.data.lang, slug: e.data.slug })));
+const legalAll = await getCollection("legal");
+const index = buildIndex([...guideAll, ...legalAll].map((e) => ({ lang: e.data.lang, slug: e.data.slug })));
 const alternates = alternatesFor(index, key);
 const path = pathFor(lang, key);
 
-const entry = id ? guideAll.find((e) => e.id === id) : undefined;
+const entry = id && kind === "guide" ? guideAll.find((e) => e.id === id) : undefined;
 const rendered = entry ? await render(entry) : undefined;
+const legalEntry = id && kind === "legal" ? legalAll.find((e) => e.id === id) : undefined;
+const legalRendered = legalEntry ? await render(legalEntry) : undefined;
 
 // FAQ items: this language, else English, else German.
 let faqItems: { question: string; text: string; Content: any }[] = [];
@@ -87,6 +96,15 @@ const appHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(la
     <rendered.Content />
     {key === "calculator" && <div style="margin-top:32px"><ResidenceCalculator lang={lang} /></div>}
   </Guide>
+)}
+
+{kind === "legal" && legalEntry && legalRendered && (
+  <Base lang={lang} title={legalEntry.data.title} description={legalEntry.data.description} alternates={alternates} path={path}>
+    <ArticleLayout lang={lang} title={legalEntry.data.title} headings={legalRendered.headings}>
+      {legalEntry.data.notice && <p class="notice" role="note">{legalEntry.data.notice}</p>}
+      <div lang={legalEntry.data.contentLang ?? lang}><legalRendered.Content /></div>
+    </ArticleLayout>
+  </Base>
 )}
 
 {kind === "calculator" && (
