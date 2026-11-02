@@ -641,4 +641,4 @@ async def test_progress_is_kept_per_user_and_question(api, content):
     async with SessionLocal() as db:
         rows = (await db.execute(select(QuestionProgress))).scalars().all()
         assert {p.question_id for p in rows} == {Q1, Q2}
-        assert sorted((p.correct_own, p.wrong) for p in rows) == [(0, 1), (1, 0)]
+        assert sorted((p.correct_side, p.wrong) for p in rows) == [(0, 1), (1, 0)]

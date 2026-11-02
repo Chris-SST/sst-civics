@@ -71,8 +71,8 @@ async def get_or_create(db: AsyncSession, user_id: uuid.UUID, question_id: str) 
         row = QuestionProgress(
             user_id=user_id,
             question_id=question_id,
-            mode=MODE_OWN,
-            mode_reached=MODE_OWN,
+            mode=MODE_SIDE,
+            mode_reached=MODE_SIDE,
             correct_own=0,
             correct_side=0,
             correct_help=0,
@@ -88,7 +88,7 @@ async def get_or_create(db: AsyncSession, user_id: uuid.UUID, question_id: str) 
 
 
 def current_mode(p: QuestionProgress | None) -> str:
-    return p.mode if p is not None and p.mode in STUDY_MODES else MODE_OWN
+    return p.mode if p is not None and p.mode in STUDY_MODES else MODE_SIDE
 
 
 def set_mode(p: QuestionProgress, mode: str) -> None:
@@ -146,8 +146,8 @@ def apply_answer(
 def progress_out(p: QuestionProgress | None) -> dict[str, Any]:
     if p is None:
         return {
-            "mode": MODE_OWN,
-            "mode_reached": MODE_OWN,
+            "mode": MODE_SIDE,
+            "mode_reached": MODE_SIDE,
             "understood": False,
             "known": False,
             "seen": False,

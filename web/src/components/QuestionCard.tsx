@@ -37,6 +37,8 @@ interface Props {
   onSelect?: (key: string) => void;
   /** Rendered under the result panel (or the revealed answer), typically a "Next" button. */
   children?: ReactNode;
+  /** No "Report a problem" link (free practice without an account). */
+  noReport?: boolean;
 }
 
 function pick(list: unknown, seed: number): string | null {
@@ -138,6 +140,7 @@ export default function QuestionCard({
   selected,
   onSelect,
   children,
+  noReport,
 }: Props) {
   const { t } = useTranslation();
   const testMode = onSelect !== undefined;
@@ -196,7 +199,7 @@ export default function QuestionCard({
     </button>
   ) : null;
 
-  const report = reported ? (
+  const report = noReport ? null : reported ? (
     <span className="small muted">{t("question.reported")}</span>
   ) : (
     <button type="button" className="link-btn small" onClick={() => setReporting((r) => !r)}>

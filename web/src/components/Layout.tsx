@@ -112,9 +112,6 @@ export default function Layout({ children }: { children: ReactNode }) {
             <li>
               <a href={`${SITE}/privacy/`}>{t("footer.privacy")}</a>
             </li>
-            <li>
-              <a href={`${SITE}/ai-safety/`}>{t("footer.aiSafety")}</a>
-            </li>
           </ul>
           <p className="muted small">{t("footer.independence")}</p>
         </div>

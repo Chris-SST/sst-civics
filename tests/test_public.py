@@ -150,3 +150,23 @@ async def test_canton_questions_of_another_canton_are_left_out(api):
 def test_pick_changes_from_day_to_day():
     picks = {pick_index(40, day) for day in range(739_000, 739_010)}
     assert len(picks) == 10
+
+
+# --- Free practice without an account --------------------------------------------------------
+
+
+async def test_sample_questions_side_by_side_with_answers_without_an_account(api):
+    for i in range(35):
+        await add(f"probe-{i:02d}", english="approved" if i % 2 == 0 else None)
+    r = await api.get("/api/public/sample-questions?canton=zh&lang=en")
+    assert r.status_code == 200
+    qs = r.json()["questions"]
+    assert len(qs) == 30  # the same sample set a new free account gets
+    first = qs[0]
+    assert first["mode"] == "side" and first["translation"]["question"].startswith("English")
+    assert first["answer"] == "a" and first["explanation"]["lang"] == "en"
+    no_english = next(q for q in qs if q["translation"] is None)
+    assert no_english["mode"] == "de" and no_english["fallback"] is True
+    german = (await api.get("/api/public/sample-questions?lang=de")).json()["questions"]
+    assert german[0]["mode"] == "de" and german[0]["fallback"] is False
+    assert (await api.get("/api/public/sample-questions?lang=xx")).json()["lang"] == "en"

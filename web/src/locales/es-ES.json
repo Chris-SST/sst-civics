@@ -29,7 +29,6 @@
     "contact": "Contacto",
     "terms": "Condiciones de uso",
     "privacy": "Aviso de privacidad",
-    "aiSafety": "IA y seguridad",
     "independence": "Servicio independiente, sin vinculación con ninguna autoridad federal, cantonal ni municipal. Información general, no asesoramiento jurídico."
   },
   "errors": {
@@ -659,8 +658,6 @@
   "explain": {
     "button": "Explicar esto",
     "title": "Explicar esta pregunta",
-    "note": "El asistente de IA puede cometer errores y sus respuestas no constituyen asesoramiento jurídico. Compruebe lo importante en las fuentes oficiales.",
-    "intro": "Pregunte sobre esta pregunta o su tema. El asistente responde con brevedad, en su idioma de estudio.",
     "placeholder": "Haga su pregunta… (Intro para enviar)",
     "remaining": "Quedan {{left}} de {{limit}} mensajes hoy",
     "limitReached": "Ha alcanzado el límite de mensajes de hoy. Mañana vuelve a estar disponible.",
@@ -712,5 +709,20 @@
     "cardTitle": "¿Dudas? Pregunte a Viapunt",
     "cardBody": "Pregunte sobre la prueba, sus temas o el procedimiento de naturalización, en su idioma.",
     "cardCta": "Abrir el chat de ayuda"
+  },
+  "try": {
+    "title": "Práctica gratuita: preguntas del test para {{canton}}",
+    "intro": "Sin cuenta. Cada pregunta aparece en alemán, como en la prueba, con el {{language}} al lado.",
+    "progress": "Pregunta {{n}} de {{total}} · {{score}} correctas hasta ahora",
+    "next": "Siguiente pregunta",
+    "finish": "Ver el resultado",
+    "germanOnly": "Esta pregunta aún no está traducida a su idioma, por eso aparece solo en alemán.",
+    "nudge": "Una cuenta gratuita guarda su progreso y le da un simulacro de examen.",
+    "signup": "Crear una cuenta gratuita",
+    "doneTitle": "Muy bien, eran las 30",
+    "doneScore": "Ha acertado {{score}} de {{total}}.",
+    "doneText": "Con una cuenta gratuita conserva su progreso, hace un simulacro completo en alemán y puede usar el chat de ayuda. El Civics Pass abre todas las preguntas del cantón.",
+    "again": "Empezar de nuevo",
+    "none": "Las preguntas de práctica para este cantón están en preparación."
   }
 }

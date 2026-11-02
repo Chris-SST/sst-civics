@@ -244,7 +244,7 @@ async def test_stored_mode_per_question_and_step_back(api):
     [q1, _] = await seed({FED_A: 2})
     await translate(q1)
     await paid(api)
-    assert (await api.get(f"/api/study/question/{q1}")).json()["mode"] == "own"  # default
+    assert (await api.get(f"/api/study/question/{q1}")).json()["mode"] == "side"  # default
     r = await api.post(f"/api/study/question/{q1}/mode", json={"mode": "help"})
     assert r.status_code == 200 and r.json()["mode"] == "help"
     assert (await api.get(f"/api/study/question/{q1}")).json()["mode"] == "help"
@@ -277,17 +277,15 @@ async def test_understood_and_known_follow_the_plan(api, frozen):
     await translate(q1)
     await paid(api)
 
-    res = await answer(api, q1, right=False)  # wrong in own language: nothing moves
-    assert res["mode"] == "own" and res["progress"]["mode"] == "own"
+    res = await answer(api, q1, right=False)  # wrong side by side (the default): nothing moves
+    assert res["mode"] == "side" and res["progress"]["mode"] == "side"
     assert res["progress"]["understood"] is False and res["progress"]["box"] == 0
     assert res["explanation"]["lang"] == "en"  # feedback in the learner's language
 
-    res = await answer(api, q1)  # correct in own language: understood, on to side by side
+    res = await answer(api, q1)  # correct side by side: understood, on to German with help
     assert res["progress"]["understood"] is True and res["progress"]["newly_understood"] is True
-    assert res["progress"]["mode"] == "side" and res["progress"]["moved_forward"] is True
+    assert res["progress"]["mode"] == "help" and res["progress"]["moved_forward"] is True
     assert res["mastery"] == {"topic_code": FED_A, "mastery": 50, "previous": 0}
-    res = await answer(api, q1)
-    assert res["mode"] == "side" and res["progress"]["mode"] == "help"
     res = await answer(api, q1)
     assert res["mode"] == "help" and res["progress"]["mode"] == "de"
     assert res["progress"]["known"] is False
@@ -305,7 +303,7 @@ async def test_understood_and_known_follow_the_plan(api, frozen):
     async with SessionLocal() as db:
         p = (await db.execute(select(QuestionProgress))).scalar_one()
         assert (p.correct_own, p.correct_side, p.correct_help, p.correct_de, p.wrong) == (
-            1,
+            0,
             1,
             1,
             3,
@@ -313,7 +311,7 @@ async def test_understood_and_known_follow_the_plan(api, frozen):
         )
         assert p.last_correct_de_date.isoformat() == "2026-11-03"
         modes = [a.study_mode for a in (await db.execute(select(Attempt))).scalars()]
-        assert sorted(modes) == sorted(["own", "own", "side", "help", "de", "de", "de"])
+        assert sorted(modes) == sorted(["side", "side", "help", "de", "de", "de"])
 
 
 async def test_known_needs_german_only_not_help(api, frozen):
@@ -405,10 +403,10 @@ async def test_practise_round_serves_each_question_in_its_stored_mode(api, froze
     [q1] = await seed({FED_A: 1})
     await translate(q1)
     await paid(api)
-    await answer(api, q1)  # own -> side
+    await answer(api, q1)  # side -> help
     frozen.advance(minutes=30)
     [q] = (await api.get("/api/study/practise")).json()["questions"]
-    assert q["id"] == q1 and q["mode"] == "side" and "answer" not in q
+    assert q["id"] == q1 and q["mode"] == "help" and "answer" not in q
 
 
 # --- Free tier ----------------------------------------------------------------------------------
@@ -502,7 +500,7 @@ async def test_mock_deadline_scoring_pass_fail_and_review(api, mock_format, froz
     assert len(review) == 20 and ids[0] in review and ids[1] not in review
     first = review[ids[0]]
     assert first["given"] == wrong and first["answer"] == key
-    assert first["mode"] == "own" and first["explanation"]["lang"] == "en"
+    assert first["mode"] == "side" and first["explanation"]["lang"] == "en"
     assert review[ids[45]]["given"] is None and review[ids[45]]["explanation"]["lang"] == "de"
     async with SessionLocal() as db:
         attempts = (await db.execute(select(Attempt))).scalars().all()

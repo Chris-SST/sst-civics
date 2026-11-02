@@ -615,13 +615,19 @@ a {
   margin: 0;
 }
 .price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: var(--space-2);
   font-family: var(--font-display);
   font-weight: 700;
   font-size: var(--fs-display-sm);
   line-height: 1.1;
   color: var(--text);
 }
+/* "for 6 months" stays in one piece: beside the price, or as a whole on the next line. */
 .price small {
+  white-space: nowrap;
   font-family: var(--font-sans);
   font-weight: 700;
   font-size: var(--fs-body);
@@ -937,6 +943,14 @@ code.secret {
   .topnav .lang {
     grid-column: 1 / -1;
     justify-self: start;
+    /* All eight languages on one line on a phone (min 320px wide). */
+    flex-wrap: nowrap;
+    gap: 2px;
+    max-width: 100%;
+  }
+  .topnav .lang button {
+    min-width: 34px;
+    padding: 0 4px;
   }
   .who {
     display: flex;
@@ -2323,4 +2337,21 @@ a.topic-row:hover {
 }
 .help-card p {
   margin: 0;
+}
+
+/* --- Free practice without an account (/try) ---------------------------------------------- */
+
+.try-page {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.try-progress {
+  margin: var(--space-3) 0 var(--space-2);
+}
+.try-nudge {
+  margin-top: var(--space-3);
+}
+.try-score {
+  font-size: var(--fs-h2);
+  font-weight: 800;
 }

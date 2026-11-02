@@ -29,7 +29,6 @@
     "contact": "Kontakt",
     "terms": "Kushtet e përdorimit",
     "privacy": "Njoftimi i privatësisë",
-    "aiSafety": "IA dhe siguria",
     "independence": "Shërbim i pavarur, pa lidhje me asnjë autoritet federal, kantonal apo komunal. Informacion i përgjithshëm, jo këshillim juridik."
   },
   "errors": {
@@ -659,8 +658,6 @@
   "explain": {
     "button": "Shpjegim",
     "title": "Shpjegim për këtë pyetje",
-    "note": "Asistenti IA mund të bëjë gabime dhe përgjigjet e tij nuk përbëjnë këshillë juridike. Verifikoni çdo gjë të rëndësishme në burimet zyrtare.",
-    "intro": "Pyesni për këtë pyetje ose temën e saj. Asistenti përgjigjet shkurt, në gjuhën tuaj të studimit.",
     "placeholder": "Bëni pyetjen tuaj… (Enter për të dërguar)",
     "remaining": "{{left}} nga {{limit}} mesazhe të mbetura sot",
     "limitReached": "Keni arritur kufirin e mesazheve për sot. Nesër funksionon sërish.",
@@ -712,5 +709,20 @@
     "cardTitle": "Pyetje? Pyetni Viapunt",
     "cardBody": "Pyetni për testin, temat e tij ose procedurën e natyralizimit, në gjuhën tuaj.",
     "cardCta": "Hapni bisedën e ndihmës"
+  },
+  "try": {
+    "title": "Praktikë falas: pyetje testi për {{canton}}",
+    "intro": "Pa llogari. Çdo pyetje shfaqet në gjermanisht, si në test, me {{language}} pranë saj.",
+    "progress": "Pyetja {{n}} nga {{total}} · deri tani {{score}} të sakta",
+    "next": "Pyetja tjetër",
+    "finish": "Shihni rezultatin",
+    "germanOnly": "Kjo pyetje ende nuk është përkthyer në gjuhën tuaj, prandaj shfaqet vetëm në gjermanisht.",
+    "nudge": "Një llogari falas ruan përparimin tuaj dhe ju jep një test provë.",
+    "signup": "Krijoni një llogari falas",
+    "doneTitle": "Shumë mirë, ishin të 30-at",
+    "doneScore": "Iu përgjigjët saktë {{score}} nga {{total}}.",
+    "doneText": "Me një llogari falas ruani përparimin, bëni një test provë të plotë në gjermanisht dhe mund të pyesni bisedën e ndihmës. Civics Pass hap të gjitha pyetjet e kantonit.",
+    "again": "Filloni nga e para",
+    "none": "Pyetjet e praktikës për këtë kanton janë në përgatitje."
   }
 }

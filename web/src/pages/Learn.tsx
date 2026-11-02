@@ -16,7 +16,7 @@ function savedMode(): StudyMode {
   } catch {
     /* storage unavailable */
   }
-  return "own";
+  return "side";
 }
 
 function saveMode(m: StudyMode) {

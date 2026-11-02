@@ -110,7 +110,6 @@ export default function ExplainPanel({ questionId, lang, onClose }: { questionId
           {t("common.close")}
         </button>
       </div>
-      <p className="small muted explain-note">{t("explain.note")}</p>
 
       {!conv && !error && <p className="muted">{t("common.working")}</p>}
       {error ? <ErrorText error={error} /> : null}
@@ -122,7 +121,6 @@ export default function ExplainPanel({ questionId, lang, onClose }: { questionId
             messages={messages}
             streaming={streaming}
             notice={notice}
-            intro={t("explain.intro")}
             bottomRef={bottomRef}
             className="chat-log explain-log"
           />

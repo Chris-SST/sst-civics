@@ -29,7 +29,6 @@
     "contact": "İletişim",
     "terms": "Kullanım koşulları",
     "privacy": "Gizlilik bildirimi",
-    "aiSafety": "Yapay zekâ ve güvenlik",
     "independence": "Federal, kantonal veya yerel hiçbir makamla bağlantısı olmayan bağımsız bir hizmettir. Genel bilgidir, hukuki danışmanlık değildir."
   },
   "errors": {
@@ -659,8 +658,6 @@
   "explain": {
     "button": "Bunu açıklayın",
     "title": "Bu soruyu açıklayın",
-    "note": "Yapay zekâ asistanı hata yapabilir ve yanıtları hukuki tavsiye değildir. Önemli bilgileri resmî kaynaklardan kontrol edin.",
-    "intro": "Bu soru veya konusu hakkında sorular sorun. Asistan kısa ve çalışma dilinizde yanıt verir.",
     "placeholder": "Sorunuzu yazın… (Göndermek için Enter)",
     "remaining": "Bugün için {{limit}} mesajdan {{left}} tanesi kaldı",
     "limitReached": "Bugünkü mesaj sınırına ulaştınız. Yarın yeniden kullanabilirsiniz.",
@@ -712,5 +709,20 @@
     "cardTitle": "Sorunuz mu var? Viapunt'a sorun",
     "cardBody": "Test, konuları ya da vatandaşlığa geçiş süreci hakkında kendi dilinizde sorun.",
     "cardCta": "Yardım sohbetini açın"
+  },
+  "try": {
+    "title": "Ücretsiz pratik: {{canton}} için test soruları",
+    "intro": "Hesap gerekmez. Her soru, testteki gibi Almanca, yanında {{language}} olarak gösterilir.",
+    "progress": "Soru {{n}} / {{total}} · şimdiye kadar {{score}} doğru",
+    "next": "Sonraki soru",
+    "finish": "Sonucu gör",
+    "germanOnly": "Bu sorunun henüz dilinize çevirisi yok, bu yüzden yalnızca Almanca gösteriliyor.",
+    "nudge": "Ücretsiz bir hesap ilerlemenizi kaydeder ve size bir deneme sınavı sunar.",
+    "signup": "Ücretsiz hesap oluştur",
+    "doneTitle": "Tebrikler, 30 sorunun hepsi buydu",
+    "doneScore": "{{total}} sorudan {{score}} tanesini doğru yanıtladınız.",
+    "doneText": "Ücretsiz bir hesapla ilerlemenizi saklar, Almanca tam bir deneme sınavı yapar ve yardım sohbetine soru sorabilirsiniz. Civics Pass kantonun tüm sorularını açar.",
+    "again": "Baştan başla",
+    "none": "Bu kanton için pratik soruları hazırlanıyor."
   }
 }

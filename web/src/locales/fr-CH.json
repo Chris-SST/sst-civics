@@ -29,7 +29,6 @@
     "contact": "Contact",
     "terms": "Conditions d'utilisation",
     "privacy": "Déclaration de confidentialité",
-    "aiSafety": "IA et sécurité",
     "independence": "Service indépendant, sans lien avec une autorité fédérale, cantonale ou communale. Informations générales, pas de conseil juridique."
   },
   "errors": {
@@ -659,8 +658,6 @@
   "explain": {
     "button": "Expliquer ceci",
     "title": "Expliquer cette question",
-    "note": "L'assistant IA peut se tromper, et ses réponses ne constituent pas un conseil juridique. Vérifiez les points importants auprès des sources officielles.",
-    "intro": "Posez vos questions sur cette question ou son thème. L'assistant répond brièvement, dans votre langue d'étude.",
     "placeholder": "Posez votre question… (Entrée pour envoyer)",
     "remaining": "{{left}} messages restants sur {{limit}} aujourd'hui",
     "limitReached": "Vous avez atteint la limite de messages d'aujourd'hui. Cela reprend demain.",
@@ -712,5 +709,20 @@
     "cardTitle": "Des questions ? Demandez à Viapunt",
     "cardBody": "Posez vos questions sur le test, ses thèmes ou la procédure de naturalisation, dans votre langue.",
     "cardCta": "Ouvrir le chat d'aide"
+  },
+  "try": {
+    "title": "Pratique gratuite : questions du test pour {{canton}}",
+    "intro": "Sans compte. Chaque question est en allemand, comme au test, avec le {{language}} à côté.",
+    "progress": "Question {{n}} sur {{total}} · {{score}} juste(s) jusqu'ici",
+    "next": "Question suivante",
+    "finish": "Voir le résultat",
+    "germanOnly": "Cette question n'est pas encore traduite dans votre langue, elle est donc affichée en allemand seulement.",
+    "nudge": "Un compte gratuit enregistre vos progrès et vous donne un examen blanc.",
+    "signup": "Créer un compte gratuit",
+    "doneTitle": "Bravo, c'étaient les 30",
+    "doneScore": "Vous avez {{score}} réponses justes sur {{total}}.",
+    "doneText": "Avec un compte gratuit, vous gardez vos progrès, passez un examen blanc complet en allemand et pouvez poser vos questions au chat d'aide. Le Civics Pass ouvre toutes les questions du canton.",
+    "again": "Recommencer",
+    "none": "Les questions d'entraînement pour ce canton arrivent bientôt."
   }
 }

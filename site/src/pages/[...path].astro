@@ -63,7 +63,8 @@ if (kind === "faq") {
     }
   }
 }
-const appHref = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
+// The free-practice page's button opens the no-account practice page in the app.
+const appHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(lang)}`;
 ---
 {kind === "home" && (
   <Base lang={lang} title={t.home.title} description={t.home.description} alternates={alternates} path={path} wide>

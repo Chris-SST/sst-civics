@@ -7,6 +7,8 @@
 
 `mode` is the mode actually rendered. When the learner's study language has no approved,
 current translation of the question, `own` and `side` fall back to `de` with `fallback: true`.
+On staging (SERVE_UNREVIEWED_QUESTIONS) draft and in-review translations count too, as questions
+in review do. New questions start in `side` (Chris, 2 November 2026).
 A learner studying in German always gets `de`. With `reveal`, each block also carries the
 explanation and the response the correct option key (Learn cards, answers in Practise)."""
 
@@ -18,6 +20,7 @@ from typing import Any
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.config import get_settings
 from app.models import (
     CONTENT_MASTER_LANGUAGE,
     MODE_DE,
@@ -28,6 +31,8 @@ from app.models import (
     Q_APPROVED,
     STUDY_MODES,
     T_APPROVED,
+    T_DRAFT,
+    T_IN_REVIEW,
     GlossaryTerm,
     Question,
     QuestionTranslation,
@@ -47,13 +52,13 @@ def later_mode(a: str, b: str) -> str:
 
 
 def translation_usable(q: Question, tr: QuestionTranslation | None) -> bool:
-    """Approved and made from the German version now served (not stale, not hidden)."""
-    return (
-        tr is not None
-        and tr.status == T_APPROVED
-        and not tr.hidden
-        and tr.source_version >= q.version
-    )
+    """Approved and made from the German version now served (not stale, not hidden). On
+    staging, where questions in review are served, draft and in-review translations too."""
+    if tr is None or tr.hidden or tr.source_version < q.version:
+        return False
+    if tr.status == T_APPROVED:
+        return True
+    return get_settings().unreviewed_questions_allowed and tr.status in (T_DRAFT, T_IN_REVIEW)
 
 
 def effective_mode(requested: str, study_language: str, has_translation: bool) -> tuple[str, bool]:
@@ -141,7 +146,7 @@ def render(
     reveal: bool = False,
 ) -> dict[str, Any]:
     if mode not in STUDY_MODES:
-        mode = MODE_OWN
+        mode = MODE_SIDE
     usable = translation_usable(q, translation)
     shown, fallback = effective_mode(mode, study_language, usable)
     german: dict[str, Any] = {

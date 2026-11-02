@@ -29,7 +29,6 @@
     "contact": "Kontakt",
     "terms": "Nutzungsbedingungen",
     "privacy": "Datenschutzerklärung",
-    "aiSafety": "KI und Sicherheit",
     "independence": "Unabhängiger Dienst ohne Verbindung zu Bundes-, Kantons- oder Gemeindebehörden. Allgemeine Informationen, keine Rechtsberatung."
   },
   "errors": {
@@ -659,8 +658,6 @@
   "explain": {
     "button": "Das erklären",
     "title": "Diese Frage erklären",
-    "note": "Der KI-Assistent kann Fehler machen, und seine Antworten sind keine Rechtsberatung. Prüfen Sie Wichtiges anhand der offiziellen Quellen.",
-    "intro": "Fragen Sie zu dieser Frage oder ihrem Thema. Der Assistent antwortet kurz und in Ihrer Lernsprache.",
     "placeholder": "Fragen Sie zu dieser Frage … (Enter zum Senden)",
     "remaining": "Heute noch {{left}} von {{limit}} Nachrichten",
     "limitReached": "Sie haben das heutige Nachrichtenlimit erreicht. Morgen geht es weiter.",
@@ -712,5 +709,20 @@
     "cardTitle": "Fragen? Viapunt fragen",
     "cardBody": "Fragen Sie zum Test, zu seinen Themen oder zum Einbürgerungsverfahren, in Ihrer Sprache.",
     "cardCta": "Hilfe-Chat öffnen"
+  },
+  "try": {
+    "title": "Gratis üben: Testfragen für {{canton}}",
+    "intro": "Ohne Konto. Jede Frage steht auf Deutsch wie im Test, daneben auf {{language}}.",
+    "progress": "Frage {{n}} von {{total}} · bisher {{score}} richtig",
+    "next": "Nächste Frage",
+    "finish": "Zum Ergebnis",
+    "germanOnly": "Für diese Frage gibt es noch keine Übersetzung in Ihre Sprache, darum steht sie nur auf Deutsch.",
+    "nudge": "Ein kostenloses Konto speichert Ihren Fortschritt und bietet einen Probetest.",
+    "signup": "Kostenloses Konto erstellen",
+    "doneTitle": "Geschafft, das waren alle 30",
+    "doneScore": "Sie haben {{score}} von {{total}} richtig beantwortet.",
+    "doneText": "Mit einem kostenlosen Konto behalten Sie Ihren Fortschritt, machen einen ganzen Probetest auf Deutsch und können den Hilfe-Chat fragen. Der Civics Pass öffnet alle Fragen des Kantons.",
+    "again": "Neu beginnen",
+    "none": "Die Übungsfragen für diesen Kanton sind in Vorbereitung."
   }
 }

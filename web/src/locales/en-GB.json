@@ -29,7 +29,6 @@
     "contact": "Contact",
     "terms": "Terms of use",
     "privacy": "Privacy notice",
-    "aiSafety": "AI and safety",
     "independence": "Independent service, not connected to any federal, cantonal or communal authority. General information, not legal advice."
   },
   "errors": {
@@ -659,8 +658,6 @@
   "explain": {
     "button": "Explain this",
     "title": "Explain this question",
-    "note": "The AI assistant can make mistakes, and its answers are not legal advice. Check anything important against the official sources.",
-    "intro": "Ask about this question or its topic. The assistant answers briefly, in your study language.",
     "placeholder": "Ask about this question… (Enter to send)",
     "remaining": "{{left}} of {{limit}} messages left today",
     "limitReached": "You have reached today's message limit. Explain this is back tomorrow.",
@@ -712,5 +709,20 @@
     "cardTitle": "Questions? Ask Viapunt",
     "cardBody": "Ask about the test, its topics or the naturalisation procedure, in your language.",
     "cardCta": "Open the help chat"
+  },
+  "try": {
+    "title": "Free practice: test questions for {{canton}}",
+    "intro": "No account needed. Each question is shown in German, as in the test, with {{language}} beside it.",
+    "progress": "Question {{n}} of {{total}} · {{score}} right so far",
+    "next": "Next question",
+    "finish": "See your result",
+    "germanOnly": "This question has no translation into your language yet, so it is shown in German only.",
+    "nudge": "A free account saves your progress and gives you a mock test.",
+    "signup": "Create a free account",
+    "doneTitle": "Well done, that was all 30",
+    "doneScore": "You got {{score}} of {{total}} right.",
+    "doneText": "With a free account you keep your progress, take a full mock test in German and can ask the help chat. The Civics Pass opens all questions of the canton.",
+    "again": "Start again",
+    "none": "The practice questions for this canton are on their way."
   }
 }

@@ -40,6 +40,7 @@ const footerLinks = (["overview", "zurich", "documents", "free", "faq"] as const
   .map((k) => ({ href: resolveHref(index, k, lang), label: t.cards[k].title }))
   .filter((l): l is { href: string; label: string } => l.href !== null);
 const appHref = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
+const tryHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(lang)}`;
 const icon =
   "data:image/svg+xml," +
   encodeURIComponent(
@@ -91,7 +92,7 @@ const icon =
           </nav>
           <div class="topbar-tools">
             <LanguageSwitcher lang={lang} alternates={alternates} />
-            <a class="cv-btn cv-btn--primary cv-btn--small topbar-cta" href={appHref}>{t.navStart}</a>
+            <a class="cv-btn cv-btn--primary cv-btn--small topbar-cta" href={tryHref}>{t.navStart}</a>
           </div>
         </div>
       </header>

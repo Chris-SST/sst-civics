@@ -24,7 +24,7 @@ from app.models import (
     ATTEMPT_PRACTICE,
     G_REVIEWED,
     MOCK_FINISHED,
-    MODE_OWN,
+    MODE_SIDE,
     Attempt,
     Conversation,
     GlossaryTerm,
@@ -266,7 +266,7 @@ async def glossary(
 @router.get("/learn")
 async def learn(
     topic_code: str = Query(max_length=80),
-    mode: StudyMode = MODE_OWN,
+    mode: StudyMode = MODE_SIDE,
     user: User = Depends(require_learner),
     db: AsyncSession = Depends(get_db),
 ) -> dict[str, Any]:
@@ -470,7 +470,7 @@ async def _run_out(db: AsyncSession, user: User, run: MockRun) -> dict[str, Any]
     await r.load(db, wrong)
     review = []
     for q in wrong:
-        item = r.render(q, MODE_OWN, reveal=True)
+        item = r.render(q, MODE_SIDE, reveal=True)
         item["given"] = (run.answers or {}).get(q.id)
         review.append(item)
     out["review"] = review

@@ -29,7 +29,6 @@
     "contact": "Contacto",
     "terms": "Condições de utilização",
     "privacy": "Aviso de privacidade",
-    "aiSafety": "IA e segurança",
     "independence": "Serviço independente, sem ligação a qualquer autoridade federal, cantonal ou municipal. Informação geral, não aconselhamento jurídico."
   },
   "errors": {
@@ -659,8 +658,6 @@
   "explain": {
     "button": "Explicar isto",
     "title": "Explicar esta pergunta",
-    "note": "O assistente de IA pode cometer erros e as suas respostas não constituem aconselhamento jurídico. Confirme o que for importante nas fontes oficiais.",
-    "intro": "Pergunte sobre esta pergunta ou o seu tema. O assistente responde de forma breve, na sua língua de estudo.",
     "placeholder": "Faça a sua pergunta… (Enter para enviar)",
     "remaining": "Restam {{left}} de {{limit}} mensagens hoje",
     "limitReached": "Atingiu o limite de mensagens de hoje. Volta amanhã.",
@@ -712,5 +709,20 @@
     "cardTitle": "Dúvidas? Pergunte ao Viapunt",
     "cardBody": "Pergunte sobre o teste, os seus temas ou o processo de naturalização, na sua língua.",
     "cardCta": "Abrir o chat de ajuda"
+  },
+  "try": {
+    "title": "Prática gratuita: perguntas do teste para {{canton}}",
+    "intro": "Sem conta. Cada pergunta aparece em alemão, como no teste, com o {{language}} ao lado.",
+    "progress": "Pergunta {{n}} de {{total}} · {{score}} certas até agora",
+    "next": "Pergunta seguinte",
+    "finish": "Ver o resultado",
+    "germanOnly": "Esta pergunta ainda não tem tradução para a sua língua, por isso aparece só em alemão.",
+    "nudge": "Uma conta gratuita guarda o seu progresso e dá-lhe um simulacro do teste.",
+    "signup": "Criar uma conta gratuita",
+    "doneTitle": "Muito bem, eram as 30",
+    "doneScore": "Acertou {{score}} de {{total}}.",
+    "doneText": "Com uma conta gratuita guarda o progresso, faz um simulacro completo em alemão e pode usar o chat de ajuda. O Civics Pass abre todas as perguntas do cantão.",
+    "again": "Recomeçar",
+    "none": "As perguntas de prática para este cantão estão a caminho."
   }
 }

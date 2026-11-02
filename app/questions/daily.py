@@ -5,8 +5,9 @@ the canton's own) in German, with its English translation when there is a usable
 correct key and the explanation. The pick changes at midnight Swiss time and is the same for
 every visitor that day. In production only approved questions with an approved English
 translation take part; on staging (SERVE_UNREVIEWED_QUESTIONS) questions in review and draft
-English translations do too, so the feature can be seen before the bank is approved. With no
-question to show the answer is 404 and the page keeps its built-in sample question.
+English translations do too (`modes.translation_usable`), so the feature can be seen before
+the bank is approved. With no question to show the answer is 404 and the page keeps its
+built-in sample question.
 
 The guide host proxies this path to the API (infra/Caddyfile)."""
 
@@ -20,9 +21,8 @@ from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.config import get_settings
 from app.db import get_db
-from app.models import OPTION_KEYS, Question, QuestionTranslation
+from app.models import OPTION_KEYS, Question
 from app.questions import bank
 from app.study import modes
 
@@ -30,17 +30,6 @@ router = APIRouter(prefix="/api/public", tags=["public"])
 
 ZURICH = ZoneInfo("Europe/Zurich")
 SIDE_LANG = "en"  # the guide site shows the German question with English beside it
-
-
-def _english_ok(q: Question, tr: QuestionTranslation | None) -> bool:
-    if modes.translation_usable(q, tr):
-        return True
-    return (
-        get_settings().unreviewed_questions_allowed
-        and tr is not None
-        and not tr.hidden
-        and tr.source_version >= q.version
-    )
 
 
 def pick_index(n: int, day: int) -> int:
@@ -66,7 +55,7 @@ async def question_of_the_day(
         .all()
     )
     english = await modes.translations_for(db, [q.id for q in questions], SIDE_LANG)
-    pool = [q for q in questions if _english_ok(q, english.get(q.id))]
+    pool = [q for q in questions if modes.translation_usable(q, english.get(q.id))]
     if not pool:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "no_question")
     today = datetime.now(ZURICH).date()

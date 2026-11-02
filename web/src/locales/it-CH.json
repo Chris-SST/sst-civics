@@ -29,7 +29,6 @@
     "contact": "Contatto",
     "terms": "Condizioni d'uso",
     "privacy": "Informativa sulla protezione dei dati",
-    "aiSafety": "IA e sicurezza",
     "independence": "Servizio indipendente, non collegato ad alcuna autorità federale, cantonale o comunale. Informazioni generali, non consulenza legale."
   },
   "errors": {
@@ -659,8 +658,6 @@
   "explain": {
     "button": "Spiegare questo",
     "title": "Spiegare questa domanda",
-    "note": "L'assistente IA può commettere errori e le sue risposte non costituiscono consulenza legale. Verifichi le informazioni importanti presso le fonti ufficiali.",
-    "intro": "Ponga domande su questa domanda o sul suo tema. L'assistente risponde in modo breve, nella Sua lingua di studio.",
     "placeholder": "Ponga la Sua domanda… (Invio per inviare)",
     "remaining": "{{left}} messaggi rimasti su {{limit}} oggi",
     "limitReached": "Ha raggiunto il limite di messaggi di oggi. Si riprende domani.",
@@ -712,5 +709,20 @@
     "cardTitle": "Domande? Chieda a Viapunt",
     "cardBody": "Chieda del test, dei suoi temi o della procedura di naturalizzazione, nella sua lingua.",
     "cardCta": "Aprire la chat di aiuto"
+  },
+  "try": {
+    "title": "Pratica gratuita: domande del test per {{canton}}",
+    "intro": "Senza account. Ogni domanda è in tedesco, come nel test, con l'{{language}} accanto.",
+    "progress": "Domanda {{n}} di {{total}} · finora {{score}} giuste",
+    "next": "Domanda successiva",
+    "finish": "Vedere il risultato",
+    "germanOnly": "Questa domanda non è ancora tradotta nella sua lingua, quindi è mostrata solo in tedesco.",
+    "nudge": "Un account gratuito salva i suoi progressi e le offre una simulazione d'esame.",
+    "signup": "Creare un account gratuito",
+    "doneTitle": "Fatto, erano tutte e 30",
+    "doneScore": "Ha risposto correttamente a {{score}} domande su {{total}}.",
+    "doneText": "Con un account gratuito conserva i progressi, fa una simulazione d'esame completa in tedesco e può usare la chat di aiuto. Il Civics Pass apre tutte le domande del Cantone.",
+    "again": "Ricominciare",
+    "none": "Le domande di pratica per questo Cantone sono in preparazione."
   }
 }

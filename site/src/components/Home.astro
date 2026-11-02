@@ -11,6 +11,8 @@ const { lang, index } = Astro.props;
 const t = ui(lang);
 const h = t.home;
 const appHref = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
+// "Try 30 free questions" goes straight to the questions, no account needed.
+const tryHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(lang)}`;
 const zurichHref = resolveHref(index, "zurich", lang) ?? "#guides";
 // The question is always in German; other readers see the English beside it (the only translation
 // the site carries).
@@ -26,7 +28,7 @@ const tagTone = ["teal", "clay", "sun"];
       <h1 id="h-title">{h.h1}</h1>
       <p class="h-lead">{h.lead}</p>
       <div class="h-actions">
-        <a class="cv-btn cv-btn--primary" href={appHref}>{h.ctaFree}</a>
+        <a class="cv-btn cv-btn--primary" href={tryHref}>{h.ctaFree}</a>
         <a class="cv-btn cv-btn--secondary" href={zurichHref}>{h.ctaGuide}</a>
       </div>
       <ul class="h-trust">{h.trust.map((x) => <li>{x}</li>)}</ul>
@@ -71,7 +73,7 @@ const tagTone = ["teal", "clay", "sun"];
             <p><strong>{Q.correct.toUpperCase()}</strong>: {explanation}</p>
           </details>
         </noscript>
-        <a class="h-q__more" href={appHref}>{h.q.more} →</a>
+        <a class="h-q__more" href={tryHref}>{h.q.more} →</a>
       </div>
     </div>
   </section>

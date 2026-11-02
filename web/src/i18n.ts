@@ -21,6 +21,14 @@ export const LANGUAGES = [
 ] as const;
 
 function initialLanguage(): string {
+  // A link from the guide site carries the page language (?lang=fr); it wins over the rest.
+  try {
+    const fromLink = new URLSearchParams(window.location.search).get("lang");
+    const match = LANGUAGES.find((l) => l.short === fromLink);
+    if (match) return match.code;
+  } catch {
+    /* no window */
+  }
   try {
     const saved = localStorage.getItem("sst.lang");
     if (saved && LANGUAGES.some((l) => l.code === saved)) return saved;

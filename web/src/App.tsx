@@ -20,6 +20,7 @@ const Practise = lazy(() => import("./pages/Practise"));
 const Mock = lazy(() => import("./pages/Mock"));
 const Glossary = lazy(() => import("./pages/Glossary"));
 const Help = lazy(() => import("./pages/Help"));
+const Try = lazy(() => import("./pages/Try"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard"));
 import NotFound from "./pages/NotFound";
 
@@ -32,6 +33,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/try" element={<Try />} />
         <Route path="/verify-email" element={<VerifyEmail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/auth/link" element={<LinkSignIn />} />

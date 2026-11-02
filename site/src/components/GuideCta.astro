@@ -5,7 +5,10 @@ import { ui } from "../i18n/ui";
 interface Props { lang: string; variant?: "free-questions" | "mock" | "pass" }
 const { lang, variant = "free-questions" } = Astro.props;
 const copy = ui(lang).cta[variant];
-const href = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
+// The free-questions and pass cards ("Try 30 free questions") open the no-account practice
+// page; the mock-test card needs an account, so it goes to sign-up.
+const page = variant === "mock" ? "signup" : "try";
+const href = `${APP_URL.replace(/\/+$/, "")}/${page}?lang=${encodeURIComponent(lang)}`;
 ---
 <aside class="cv-cta" aria-labelledby="cta-h">
   <div>
