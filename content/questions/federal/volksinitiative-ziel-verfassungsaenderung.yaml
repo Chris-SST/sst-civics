@@ -20,6 +20,8 @@ glossary:
 - Bundesverfassung
 status: in_review
 difficulty: 1
+covers:
+- zh-049
 checks:
   independent_answer:
     option: b

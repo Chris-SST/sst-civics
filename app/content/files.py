@@ -13,7 +13,13 @@ import yaml
 from pydantic import BaseModel, ValidationError
 
 from app.config import get_settings
-from app.content.schema import GlossaryFile, QuestionFile, TopicFile, TranslationFile
+from app.content.schema import (
+    GlossaryFile,
+    QuestionFile,
+    ScopeFile,
+    TopicFile,
+    TranslationFile,
+)
 
 ERROR = "error"
 WARNING = "warning"
@@ -31,6 +37,7 @@ class Issue:
 class ContentSet:
     root: Path
     topic_files: dict[str, TopicFile] = field(default_factory=dict)
+    scopes: dict[str, ScopeFile] = field(default_factory=dict)  # canton -> fact checklist
     questions: dict[str, QuestionFile] = field(default_factory=dict)
     question_paths: dict[str, str] = field(default_factory=dict)
     translations: dict[tuple[str, str], TranslationFile] = field(default_factory=dict)  # (lang, id)
@@ -67,7 +74,7 @@ def content_hash(model: BaseModel) -> str:
 
 # Workflow fields of a question file: the pipeline and the review write-back change them
 # without raising the version (task 1.5), so they are not part of the question's content.
-QUESTION_WORKFLOW_FIELDS = frozenset({"status", "checks", "review"})
+QUESTION_WORKFLOW_FIELDS = frozenset({"status", "checks", "review", "covers"})
 
 
 def question_content_hash(q: QuestionFile) -> str:
@@ -136,6 +143,16 @@ def load_content(root: Path | None = None) -> ContentSet:
             )
             continue
         cs.topic_files[topics.canton] = topics
+
+    for path in _yaml_files(root / "scope"):
+        scope = _parse(cs, path, ScopeFile)
+        if scope is None:
+            continue
+        if scope.canton != path.stem:
+            rel = path.relative_to(root).as_posix()
+            cs.error("file_name", rel, f"the scope file of {scope.canton} is {scope.canton}.yaml")
+            continue
+        cs.scopes[scope.canton] = scope
 
     seen_ids: dict[str, str] = {}
     for directory in _subdirs(root / "questions"):

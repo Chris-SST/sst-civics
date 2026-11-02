@@ -1,0 +1,1887 @@
+canton: zh
+basis: Fact checklist for the Zurich knowledge test, written in our own words from the official question
+  catalogue of the canton of Zurich (zh.ch, 'Alle Fragen als Download', version of 15 May 2025), read
+  on 2 November 2026 under D-063. No catalogue question, answer or wording is reproduced. One fact per
+  catalogue question; 3 picture questions described in words.
+source: https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+facts:
+- id: zh-001
+  topic: bund.geschichte.weltkriege_neutralitaet
+  section: Demokratie und Föderalismus
+  fact_de: Neutralität bedeutet, dass die Schweiz bei bewaffneten Auseinandersetzungen zwischen anderen
+    Staaten nicht Partei ergreift.
+  fact_en: Neutrality means Switzerland takes no side in armed disputes between other countries.
+- id: zh-002
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Demokratie und Föderalismus
+  fact_de: Grenzgänger sind Erwerbstätige, die ihre Stelle in der Schweiz haben, aber jenseits der Landesgrenze
+    wohnen.
+  fact_en: Cross-border commuters have a job in Switzerland but live in another country.
+- id: zh-003
+  topic: bund.demokratie.staatsprinzipien
+  section: Demokratie und Föderalismus
+  fact_de: Auf Latein heisst die Schweizerische Eidgenossenschaft Confoederatio Helvetica.
+  fact_en: Confoederatio Helvetica is the Latin name of the Swiss Confederation.
+- id: zh-004
+  topic: bund.demokratie.bundesrat
+  section: Demokratie und Föderalismus
+  fact_de: Zur Bundesverwaltung gehört unter anderem das Justiz- und Polizeidepartement.
+  fact_en: The Justice and Police Department is one of the departments of the federal administration.
+- id: zh-005
+  topic: bund.demokratie.bundesrat
+  section: Demokratie und Föderalismus
+  fact_de: Nach dem Kollegialitätsprinzip tragen alle Bundesratsmitglieder die gefassten Beschlüsse gegen
+    aussen einheitlich mit.
+  fact_en: Under the collegiality principle, all Federal Council members present its decisions publicly
+    in a unified way.
+- id: zh-006
+  topic: bund.demokratie.volksrechte
+  section: Demokratie und Föderalismus
+  fact_de: Mit einem Referendum können Stimmberechtigte ein vom Parlament beschlossenes Gesetz verhindern.
+  fact_en: Through a referendum, voters can block a law that Parliament has passed.
+- id: zh-007
+  topic: bund.demokratie.bundesrat
+  section: Demokratie und Föderalismus
+  fact_de: Die Bundeskanzlei steht dem Bundesrat als Stabsstelle zur Seite.
+  fact_en: The Federal Chancellor serves as the Federal Council's staff office, assisting its work.
+- id: zh-008
+  topic: bund.demokratie.volksrechte
+  section: Demokratie und Föderalismus
+  fact_de: Das Ständemehr verlangt, dass bei einer Vorlage die Mehrzahl der Kantone zustimmt.
+  fact_en: The Ständemehr requires approval by most of the cantons.
+- id: zh-009
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Auslandschweizer können von ihrem Wohnort im Ausland aus auf Bundesebene wählen und abstimmen,
+    ohne anzureisen.
+  fact_en: Swiss citizens abroad can vote and elect at federal level from where they live, without travelling
+    to Switzerland.
+- id: zh-010
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Das Stimm- und Wahlrecht auf Bundesebene setzt das Schweizer Bürgerrecht voraus.
+  fact_en: Voting and election rights at federal level require Swiss citizenship.
+- id: zh-011
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Eine Partei vereint Personen, die ähnliche politische Ziele verfolgen.
+  fact_en: A party is a group of people who pursue similar political goals.
+- id: zh-012
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Die Geldpolitik liegt in der Zuständigkeit des Bundes, nicht der Kantone oder Gemeinden.
+  fact_en: Monetary policy is handled by the Confederation, not by cantons or communes.
+- id: zh-013
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Das Zollwesen wird vom Bund besorgt, nicht von Kantonen oder Gemeinden.
+  fact_en: Customs is handled by the Confederation, not by cantons or communes.
+- id: zh-014
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Zu den Grundrechten gehört die Freiheit, eine eigene Meinung zu äussern und sich zu informieren.
+  fact_en: Freedom to express one's opinion and to obtain information is a fundamental right.
+- id: zh-015
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Die Freiheit des Glaubens und des Gewissens ist in der Schweiz als Grundrecht geschützt.
+  fact_en: Freedom of belief and conscience is protected as a fundamental right in Switzerland.
+- id: zh-016
+  topic: bund.sozial.pflichten
+  section: Demokratie und Föderalismus
+  fact_de: Wer in der Schweiz wohnt, ist verpflichtet, Steuern zu entrichten.
+  fact_en: Residents of Switzerland are obliged to pay taxes.
+- id: zh-017
+  topic: bund.sozial.pflichten
+  section: Demokratie und Föderalismus
+  fact_de: Wer sich niederlässt, muss sich bei der Wohngemeinde registrieren.
+  fact_en: Residents must register with the commune where they live.
+- id: zh-018
+  topic: bund.sozial.pflichten
+  section: Demokratie und Föderalismus
+  fact_de: Alle Einwohnerinnen und Einwohner müssen eine Krankenversicherung abschliessen.
+  fact_en: Health insurance is compulsory for all residents.
+- id: zh-019
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Rechtsgleichheit heisst, dass das Gesetz für sämtliche Personen gleichermassen gilt.
+  fact_en: Equality before the law means the law applies equally to everyone.
+- id: zh-020
+  topic: bund.demokratie.parlament
+  section: Demokratie und Föderalismus
+  fact_de: Das Parlament besteht aus den zwei Kammern Nationalrat und Ständerat.
+  fact_en: 'Parliament consists of two chambers: the Nationalrat and the Ständerat.'
+- id: zh-021
+  topic: bund.demokratie.staatsprinzipien
+  section: Demokratie und Föderalismus
+  fact_de: Die Schweiz ist ein demokratischer Staat.
+  fact_en: Switzerland is a democratic state.
+- id: zh-022
+  topic: bund.demokratie.staatsprinzipien
+  section: Demokratie und Föderalismus
+  fact_de: In einer Demokratie bestimmt die Bevölkerung durch Wahlen ihr Parlament.
+  fact_en: In a democracy, the population elects its parliament.
+- id: zh-023
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Regelmässige Wahlen ermöglichen es der Bevölkerung, ihre Vertreterinnen und Vertreter selbst
+    zu bestimmen.
+  fact_en: Regular elections let the people choose their own representatives.
+- id: zh-024
+  topic: bund.demokratie.staatsprinzipien
+  section: Demokratie und Föderalismus
+  fact_de: Die Verfassung der Schweiz trägt den Namen Bundesverfassung.
+  fact_en: The Swiss constitution is called the Bundesverfassung (Federal Constitution).
+- id: zh-025
+  topic: bund.demokratie.bundesrat
+  section: Demokratie und Föderalismus
+  fact_de: Der Bundesrat ist die Regierung der Schweiz.
+  fact_en: The Federal Council is the government of Switzerland.
+- id: zh-026
+  topic: bund.demokratie.parlament
+  section: Demokratie und Föderalismus
+  fact_de: Bundesgesetze werden von den beiden Kammern des Parlaments verabschiedet, und die Stimmberechtigten
+    können per Referendum eine Volksabstimmung darüber verlangen.
+  fact_en: Federal laws are passed by the two chambers of Parliament, and the electorate can demand a
+    popular vote on them through a referendum.
+- id: zh-027
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Das Stimm- und Wahlrecht im Bund haben Schweizer Staatsangehörige, die das 18. Altersjahr erreicht
+    haben.
+  fact_en: At federal level, Swiss citizens who have reached the age of 18 hold the right to vote and
+    elect.
+- id: zh-028
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Das Stimm- und Wahlrecht auf eidgenössischer Ebene beginnt mit dem 18. Geburtstag.
+  fact_en: The right to vote and to elect at federal level begins on a Swiss citizen's 18th birthday.
+- id: zh-029
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Das aktive Wahlrecht ist das Recht, bei Wahlen und Abstimmungen seine Stimme abzugeben.
+  fact_en: Active suffrage is the right to cast one's ballot in elections and votes.
+- id: zh-030
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Wählbar in ein Bundesamt ist, wer die Schweizer Staatsangehörigkeit besitzt und mündig ist.
+  fact_en: Anyone who holds Swiss citizenship and is of legal age can be elected to federal office.
+- id: zh-031
+  topic: bund.demokratie.volksrechte
+  section: Demokratie und Föderalismus
+  fact_de: Die Stimmberechtigten beeinflussen die Gesetzgebung, indem sie an Volksabstimmungen über Initiativen
+    und Referenden teilnehmen.
+  fact_en: Citizens influence legislation by taking part in popular votes on initiatives and referendums.
+- id: zh-032
+  topic: bund.demokratie.volksrechte
+  section: Demokratie und Föderalismus
+  fact_de: Ein Referendum richtet sich gegen Gesetze, die das Parlament, also National- und Ständerat,
+    verabschiedet hat.
+  fact_en: A referendum targets laws that Parliament, meaning both chambers, has adopted.
+- id: zh-033
+  topic: bund.demokratie.volksrechte
+  section: Demokratie und Föderalismus
+  fact_de: Mit einer Volksinitiative können Stimmberechtigte eigene Forderungen auf die politische Agenda
+    bringen und durchsetzen.
+  fact_en: Through a popular initiative, voters can put their own demands on the political agenda and
+    get them enacted.
+- id: zh-034
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Das Bundesparlament wird vom Volk im Vierjahresrhythmus neu gewählt.
+  fact_en: The people elect the federal parliament anew every four years.
+- id: zh-035
+  topic: bund.demokratie.parlament
+  section: Demokratie und Föderalismus
+  fact_de: Die Mitglieder des Bundesparlaments werden direkt von den wahlberechtigten Bürgerinnen und
+    Bürgern bestimmt.
+  fact_en: The members of the federal parliament are chosen directly by the citizens entitled to vote.
+- id: zh-036
+  topic: bund.demokratie.volksrechte
+  section: Demokratie und Föderalismus
+  fact_de: Auf Bundesebene entscheiden die Stimmberechtigten an der Urne über Volksinitiativen und Referenden.
+  fact_en: At federal level, eligible voters decide on popular initiatives and referendums.
+- id: zh-037
+  topic: bund.demokratie.parlament
+  section: Demokratie und Föderalismus
+  fact_de: Das Bundesparlament hat vor allem die Aufgabe, Gesetze zu diskutieren und zu verabschieden.
+  fact_en: The main task of the federal parliament is to debate and adopt laws.
+- id: zh-038
+  topic: bund.demokratie.parlament
+  section: Demokratie und Föderalismus
+  fact_de: Die Vereinigte Bundesversammlung entsteht, wenn die Mitglieder beider Parlamentskammern gemeinsam
+    tagen.
+  fact_en: The United Federal Assembly is formed when the members of both parliamentary chambers meet
+    together.
+- id: zh-039
+  topic: bund.demokratie.parlament
+  section: Demokratie und Föderalismus
+  fact_de: Im Bundeshaus in Bern tagt das Schweizer Parlament.
+  fact_en: The Swiss Parliament meets in the Federal Palace in Bern.
+- id: zh-040
+  topic: bund.demokratie.bundesrat
+  section: Demokratie und Föderalismus
+  fact_de: Die Regierung der Schweiz auf Bundesebene trägt die Bezeichnung Bundesrat.
+  fact_en: The Swiss government at federal level is called the Federal Council.
+- id: zh-041
+  topic: bund.demokratie.bundesrat
+  section: Demokratie und Föderalismus
+  fact_de: Die sieben Bundesratsmitglieder werden von den beiden Parlamentskammern gemeinsam gewählt.
+  fact_en: The seven Federal Councillors are elected jointly by the two chambers of Parliament.
+- id: zh-042
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Parteien vertreten die unterschiedlichen Interessen der Bevölkerung.
+  fact_en: Political parties represent the differing interests of the population.
+- id: zh-043
+  topic: bund.demokratie.volksrechte
+  section: Demokratie und Föderalismus
+  fact_de: Eine eidgenössische Volksinitiative kommt zustande, wenn 100'000 gültige Unterschriften gesammelt
+    werden.
+  fact_en: A federal popular initiative requires 100,000 valid signatures.
+- id: zh-044
+  topic: bund.demokratie.parlament
+  section: Demokratie und Föderalismus
+  fact_de: Der Ständerat ist die Parlamentskammer, die hauptsächlich die Anliegen der Kantone wahrnimmt.
+  fact_en: The Council of States is the parliamentary chamber that chiefly represents the concerns of
+    the cantons.
+- id: zh-045
+  topic: bund.demokratie.parlament
+  section: Demokratie und Föderalismus
+  fact_de: Die beiden Parlamentskammern bestellen gemeinsam, in der Vereinigten Bundesversammlung, die
+    Mitglieder von Bundesrat und Bundesgericht.
+  fact_en: The two chambers jointly elect the members of the Federal Council and of the Federal Supreme
+    Court.
+- id: zh-046
+  topic: bund.demokratie.volksrechte
+  section: Demokratie und Föderalismus
+  fact_de: Üblicherweise finden pro Jahr vier eidgenössische Abstimmungstermine statt.
+  fact_en: Federal voting days usually take place four times a year.
+- id: zh-047
+  topic: bund.demokratie.parlament
+  section: Demokratie und Föderalismus
+  fact_de: Die meisten neuen Bundesgesetze werden von den beiden Kammern des Parlaments beschlossen.
+  fact_en: Most new federal laws are decided by the two chambers of Parliament.
+- id: zh-048
+  topic: bund.demokratie.volksrechte
+  section: Demokratie und Föderalismus
+  fact_de: Eine Volksinitiative gilt nur dann als angenommen, wenn sowohl die Mehrheit des Volks als auch
+    die Mehrheit der Kantone zustimmt.
+  fact_en: A popular initiative is accepted only if both a majority of the people and a majority of the
+    cantons approve.
+- id: zh-049
+  topic: bund.demokratie.volksrechte
+  section: Demokratie und Föderalismus
+  fact_de: Mit einer Volksinitiative lässt sich der Text der Bundesverfassung ändern.
+  fact_en: A popular initiative can be used to amend the text of the Federal Constitution.
+- id: zh-050
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Die Mehrheit der Stimmberechtigten gibt ihre Stimme auf dem Postweg ab.
+  fact_en: Most eligible voters cast their ballots by post.
+- id: zh-051
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Urnengänge auf Bundesebene werden in der Schweiz stets an einem Sonntag abgehalten.
+  fact_en: Federal elections and votes in Switzerland are always held on a Sunday.
+- id: zh-052
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Der Bund trägt Verantwortung dafür, die Bevölkerung sozial abzusichern.
+  fact_en: The Confederation is responsible for providing the population with social security.
+- id: zh-053
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Zu den zentralen Aufgaben des Bundes gehört der Schutz des Landes nach innen und nach aussen.
+  fact_en: One of the Confederation's central tasks is protecting the country both internally and externally.
+- id: zh-054
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Der Bund ist dafür zuständig, die Umwelt zu schützen.
+  fact_en: The Confederation is responsible for protecting the environment.
+- id: zh-055
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Die Schweiz setzt sich aus Kantonen als Gliedstaaten zusammen.
+  fact_en: Switzerland is composed of cantons as its constituent states.
+- id: zh-056
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Insgesamt zählt die Schweiz 26 Kantone, von denen sechs Halbkantone sind.
+  fact_en: Switzerland has 26 cantons in total, six of which are half-cantons.
+- id: zh-057
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Ende 2021 existierten rund 2200 politische Gemeinden im Land.
+  fact_en: In 2021 there were roughly 2,200 political communes in the country.
+- id: zh-058
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Auf der untersten Stufe des dreistufigen Staatsaufbaus steht die Gemeinde.
+  fact_en: The commune occupies the lowest rung of the three-tier state structure.
+- id: zh-059
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Im dreistufigen Staatsaufbau steht der Bund an der Spitze.
+  fact_en: In the three-tier state structure, the Confederation sits at the top.
+- id: zh-060
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Die Beziehungen zum Ausland zu gestalten ist Sache des Bundes.
+  fact_en: Shaping relations with other countries (foreign policy) is a matter for the Confederation.
+- id: zh-061
+  topic: bund.demokratie.foederalismus
+  section: Demokratie und Föderalismus
+  fact_de: Die Armee fällt in die Zuständigkeit des Bundes.
+  fact_en: The armed forces fall under the responsibility of the Confederation.
+- id: zh-062
+  topic: bund.geografie.sprachen
+  section: Demokratie und Föderalismus
+  fact_de: 'Die Schweiz hat vier Landessprachen: Deutsch, Französisch, Italienisch und Rätoromanisch.'
+  fact_en: 'Switzerland has four national languages: German, French, Italian and Romansh.'
+- id: zh-063
+  topic: bund.geografie.sprachen
+  section: Demokratie und Föderalismus
+  fact_de: Französisch hat im Land den Status einer Landessprache.
+  fact_en: French holds the status of a national language in Switzerland.
+- id: zh-064
+  topic: bund.geografie.sprachen
+  section: Demokratie und Föderalismus
+  fact_de: Die Schweiz kennt vier Landessprachen.
+  fact_en: Switzerland recognises four national languages.
+- id: zh-065
+  topic: bund.geografie.sprachen
+  section: Demokratie und Föderalismus
+  fact_de: Neben Deutsch, Französisch und Italienisch zählt Rätoromanisch zu den Landessprachen.
+  fact_en: Besides German, French and Italian, Romansh is a national language.
+- id: zh-066
+  topic: bund.demokratie.staatsprinzipien
+  section: Demokratie und Föderalismus
+  fact_de: Nur der Staat, etwa durch Polizei und Armee, darf physische Gewalt anwenden.
+  fact_en: Only the state, for example through police and army, may use physical force.
+- id: zh-067
+  topic: bund.demokratie.gerichte
+  section: Demokratie und Föderalismus
+  fact_de: Die rechtsprechende Gewalt des Bundes liegt beim Bundesgericht.
+  fact_en: Judicial power at the federal level rests with the Federal Supreme Court.
+- id: zh-068
+  topic: bund.demokratie.parlament
+  section: Demokratie und Föderalismus
+  fact_de: Gesetze auf Bundesebene werden vom Parlament aus National- und Ständerat erlassen.
+  fact_en: Federal legislative power lies with the parliament made up of the National Council and the
+    Council of States.
+- id: zh-069
+  topic: bund.demokratie.bundesrat
+  section: Demokratie und Föderalismus
+  fact_de: Die Regierungsgewalt des Bundes liegt beim Bundesrat.
+  fact_en: Executive power at the federal level lies with the Federal Council.
+- id: zh-070
+  topic: bund.demokratie.staatsprinzipien
+  section: Demokratie und Föderalismus
+  fact_de: Die Medien gelten oft als vierte Staatsgewalt.
+  fact_en: The media are often regarded as the fourth power of the state.
+- id: zh-071
+  topic: bund.demokratie.gerichte
+  section: Demokratie und Föderalismus
+  fact_de: Richterinnen und Richter sprechen in Gerichtsverfahren Urteile aus.
+  fact_en: Judges deliver verdicts in court proceedings.
+- id: zh-072
+  topic: bund.demokratie.gerichte
+  section: Demokratie und Föderalismus
+  fact_de: Es gehört zum Auftrag der Polizei, Gesetzesverstösse zu verfolgen.
+  fact_en: It is part of the police's mandate to pursue violations of the law.
+- id: zh-073
+  topic: bund.demokratie.gerichte
+  section: Demokratie und Föderalismus
+  fact_de: Die Befugnis, Straftäter festzunehmen, liegt bei der Polizei.
+  fact_en: The authority to arrest offenders lies with the police.
+- id: zh-074
+  topic: bund.demokratie.staatsprinzipien
+  section: Demokratie und Föderalismus
+  fact_de: Gewaltenteilung heisst, dass sich Exekutive, Legislative und Judikative die staatliche Macht
+    aufteilen.
+  fact_en: Separation of powers means that the executive, legislative and judicial branches share state
+    power among themselves.
+- id: zh-075
+  topic: bund.demokratie.staatsprinzipien
+  section: Demokratie und Föderalismus
+  fact_de: In einem Rechtsstaat ist auch die Staatsgewalt selbst an das geltende Recht gebunden.
+  fact_en: In a state governed by the rule of law, the state itself is also bound by the law.
+- id: zh-076
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Die Bundesverfassung schützt die Freiheit, einen Glauben und eine Überzeugung zu haben und
+    danach zu leben.
+  fact_en: The Federal Constitution protects the freedom to hold a faith and a personal conviction and
+    to live accordingly.
+- id: zh-077
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Die Freiheit, die eigene Ansicht frei zu äussern und zu verbreiten, gehört zu den von der Bundesverfassung
+    gesicherten Grundrechten.
+  fact_en: The freedom to express and spread one's views freely is among the fundamental rights secured
+    by the Federal Constitution.
+- id: zh-078
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Die Glaubens- und Gewissensfreiheit sichert jeder Person das Recht, ihre Religion frei zu wählen,
+    auszuüben oder keiner anzugehören.
+  fact_en: Freedom of belief and conscience secures everyone's right to choose and practise a religion
+    or to follow none.
+- id: zh-079
+  topic: bund.geschichte.gesellschaftswandel
+  section: Demokratie und Föderalismus
+  fact_de: Gleichberechtigung von Frau und Mann bedeutet, dass beide Geschlechter im Grundsatz dieselben
+    Rechte besitzen.
+  fact_en: Equal rights for women and men means that both sexes in principle hold the same rights.
+- id: zh-080
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Wer öffentlich unwahre Tatsachen über andere Personen verbreitet, handelt in der Schweiz rechtswidrig.
+  fact_en: Publicly spreading untrue claims about other people is unlawful in Switzerland.
+- id: zh-081
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Wird jemand wegen Hautfarbe oder Geschlecht bei der Stellenvergabe abgelehnt, verletzt dies
+    das Gebot der Rechtsgleichheit und das Diskriminierungsverbot.
+  fact_en: Rejecting a job applicant because of skin colour or sex violates the principle of legal equality
+    and the ban on discrimination.
+- id: zh-082
+  topic: bund.demokratie.wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Das Stimm- und Wahlrecht auf Bundesebene erhält man erst mit dem Schweizer Bürgerrecht.
+  fact_en: The right to vote and elect at federal level is obtained only with Swiss citizenship.
+- id: zh-083
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Datenschutz wird verletzt, wenn Privates über eine Person ohne gesetzliche Grundlage oder ohne
+    ihr Einverständnis bekannt gemacht wird.
+  fact_en: Data protection is violated when private information about a person is made public without
+    legal basis or the person's consent.
+- id: zh-084
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Die Bundesverfassung untersagt es, Menschen zu foltern.
+  fact_en: The Federal Constitution prohibits torturing anyone.
+- id: zh-085
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Die Bundesverfassung garantiert den Schutz des privaten Eigentums.
+  fact_en: The Federal Constitution guarantees the protection of private property.
+- id: zh-086
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Öffentliche Beschimpfungen von Menschen aufgrund ihrer Abstammung oder ihres Glaubens sind
+    in der Schweiz untersagt.
+  fact_en: Publicly insulting people because of their origin or faith is prohibited in Switzerland.
+- id: zh-087
+  topic: bund.sozial.pflichten
+  section: Demokratie und Föderalismus
+  fact_de: Die Pflicht zum Militär- oder Zivilschutzdienst trifft in der Schweiz Männer mit Schweizer
+    Bürgerrecht.
+  fact_en: The duty to serve in the military or civil protection applies in Switzerland to men holding
+    Swiss citizenship.
+- id: zh-088
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Der Zutritt zu einem Schwimmbad darf nicht wegen der Hautfarbe verweigert werden, da dies das
+    Diskriminierungsverbot verletzt.
+  fact_en: Denying entry to a swimming pool because of skin colour breaches the ban on discrimination.
+- id: zh-089
+  topic: bund.sozial.pflichten
+  section: Demokratie und Föderalismus
+  fact_de: Nur Männer sind verpflichtet, bis zu einem gewissen Alter Militärdienst oder Zivilschutz zu
+    leisten.
+  fact_en: Only men are obliged to perform military or civil protection service up to a certain age.
+- id: zh-090
+  topic: bund.demokratie.gerichte
+  section: Demokratie und Föderalismus
+  fact_de: In einem Rechtsstaat darf der Staat niemanden ohne Grund festnehmen und inhaftieren.
+  fact_en: In a state governed by the rule of law, the state may not arrest and imprison anyone without
+    cause.
+- id: zh-091
+  topic: bund.demokratie.gerichte
+  section: Demokratie und Föderalismus
+  fact_de: Wer in der Schweiz ein Gesetz bricht, wird dafür vom Staat bestraft; Selbstjustiz ist nicht
+    erlaubt.
+  fact_en: In Switzerland, whoever breaks the law is punished by the state; taking revenge personally
+    is not allowed.
+- id: zh-092
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Die Bundesverfassung schliesst die Hinrichtung von Verurteilten als Sanktion aus.
+  fact_en: The Federal Constitution rules out executing convicted offenders as a sanction.
+- id: zh-093
+  topic: bund.demokratie.gerichte
+  section: Demokratie und Föderalismus
+  fact_de: Das Obligationenrecht enthält die Vorschriften zur Miete von Wohnraum.
+  fact_en: The Code of Obligations contains the rules on renting housing.
+- id: zh-094
+  topic: bund.demokratie.gerichte
+  section: Demokratie und Föderalismus
+  fact_de: Das Zivilgesetzbuch bestimmt unter anderem, wie eine Ehe geschlossen und wieder geschieden
+    wird.
+  fact_en: The Civil Code governs, among other things, how a marriage is entered into and dissolved.
+- id: zh-095
+  topic: bund.demokratie.gerichte
+  section: Demokratie und Föderalismus
+  fact_de: Ob eine Person eine Haftstrafe verbüssen muss, bestimmt sich nach dem Strafgesetzbuch.
+  fact_en: Whether a person must serve a prison sentence is determined by the Criminal Code.
+- id: zh-096
+  topic: bund.demokratie.gerichte
+  section: Demokratie und Föderalismus
+  fact_de: Die Bundesversammlung wählt die Richterinnen und Richter des Bundesgerichts.
+  fact_en: The Federal Assembly elects the judges of the Federal Supreme Court.
+- id: zh-097
+  topic: bund.demokratie.grundrechte
+  section: Demokratie und Föderalismus
+  fact_de: Schweizer Staatsangehörige werden grundsätzlich nicht ausgeliefert, ausser an internationale
+    Gerichte für Verfahren dort.
+  fact_en: Swiss nationals are in principle not extradited, except to international courts for proceedings
+    there.
+- id: zh-098
+  topic: bund.sozial.pflichten
+  section: Demokratie und Föderalismus
+  fact_de: Wie viel Steuern eine Person zahlt, richtet sich nach ihrem steuerpflichtigen Einkommen und
+    Vermögen.
+  fact_en: The amount of tax a person pays depends on their taxable income and assets.
+- id: zh-099
+  topic: kanton.demokratie.regierungsrat
+  section: Demokratie und Föderalismus
+  fact_de: Die Zürcher Kantonsregierung besteht aus sieben Mitgliedern.
+  fact_en: The Zurich cantonal government consists of seven members.
+- id: zh-100
+  topic: kanton.demokratie.regierungsrat
+  section: Demokratie und Föderalismus
+  fact_de: Die Baudirektion ist eine der Direktionen der Zürcher Kantonsverwaltung.
+  fact_en: The Baudirektion (building department) is one of the directorates of the Zurich cantonal administration.
+- id: zh-101
+  topic: kanton.demokratie.regierungsrat
+  section: Demokratie und Föderalismus
+  fact_de: Die städtische Regierung Zürichs trägt die Bezeichnung Stadtrat.
+  fact_en: The governing executive body of the city of Zurich is called the Stadtrat.
+- id: zh-102
+  topic: kanton.sozial.bildung_gesundheit
+  section: Demokratie und Föderalismus
+  fact_de: Der Kanton Zürich ist für den Betrieb und die Trägerschaft der Universität zuständig.
+  fact_en: The canton of Zurich is responsible for running and operating the university.
+- id: zh-103
+  topic: kanton.geografie.zuerich
+  section: Demokratie und Föderalismus
+  fact_de: Der Kanton Zürich ist in zwölf Bezirke gegliedert.
+  fact_en: The canton of Zurich is divided into twelve districts.
+- id: zh-104
+  topic: kanton.demokratie.abstimmungen_wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Ausländerinnen und Ausländer ohne Stimmrecht können sich im Kanton Zürich mit Eingaben an die
+    Behörden, also Petitionen, politisch äussern.
+  fact_en: Foreigners without voting rights in Zurich can take part politically by submitting petitions
+    to the authorities.
+- id: zh-105
+  topic: kanton.demokratie.regierungsrat
+  section: Demokratie und Föderalismus
+  fact_de: Der Zürcher Regierungsrat setzt sich aus sieben Personen zusammen.
+  fact_en: The Zurich cantonal government consists of seven people.
+- id: zh-106
+  topic: kanton.demokratie.verfassung
+  section: Demokratie und Föderalismus
+  fact_de: Die Kantone kümmern sich hauptsächlich um ihre eigene Verwaltung und erlassen kantonales Recht.
+  fact_en: Cantons mainly handle their own administration and enact cantonal legislation.
+- id: zh-107
+  topic: kanton.demokratie.kantonsrat
+  section: Demokratie und Föderalismus
+  fact_de: Die Zürcher Kantonsratsmitglieder werden für eine Amtsdauer von vier Jahren bestellt.
+  fact_en: Members of the Zurich Kantonsrat are elected for a term of four years.
+- id: zh-108
+  topic: kanton.demokratie.regierungsrat
+  section: Demokratie und Föderalismus
+  fact_de: Die Zürcher Kantonsregierung trägt den Namen Regierungsrat.
+  fact_en: The cantonal executive in Zurich is called the Regierungsrat.
+- id: zh-109
+  topic: kanton.demokratie.abstimmungen_wahlen
+  section: Demokratie und Föderalismus
+  fact_de: Zürich entsendet zwei Vertretungen in den Ständerat.
+  fact_en: Zurich sends two representatives to the Council of States.
+- id: zh-110
+  topic: kanton.demokratie.kantonsrat
+  section: Demokratie und Föderalismus
+  fact_de: Das Zürcher Kantonsparlament trägt die Bezeichnung Kantonsrat.
+  fact_en: The cantonal legislature of Zurich is called the Kantonsrat.
+- id: zh-111
+  topic: kanton.demokratie.regierungsrat
+  section: Demokratie und Föderalismus
+  fact_de: Die Regierungsratsmitglieder des Kantons Zürich werden direkt von der stimmberechtigten Bevölkerung
+    bestimmt.
+  fact_en: The members of the Zurich cantonal government are chosen directly by the eligible voting population.
+- id: zh-112
+  topic: kanton.sozial.steuern_leistungen
+  section: Demokratie und Föderalismus
+  fact_de: Fahrausweise für Personenwagen werden im Kanton Zürich vom Strassenverkehrsamt erteilt.
+  fact_en: Driving licences for cars in the canton of Zurich are issued by the road traffic office.
+- id: zh-113
+  topic: kanton.sozial.steuern_leistungen
+  section: Demokratie und Föderalismus
+  fact_de: Die Zulassung von Motorfahrzeugen zum Strassenverkehr erfolgt durch das kantonale Strassenverkehrsamt.
+  fact_en: Approval of motor vehicles for road use is carried out by the cantonal road traffic office.
+- id: zh-114
+  topic: kanton.demokratie.kantonsrat
+  section: Demokratie und Föderalismus
+  fact_de: Die Kantonsratsmitglieder erhalten ihr Mandat durch eine Volkswahl.
+  fact_en: Kantonsrat members obtain their seats through popular election.
+- id: zh-115
+  topic: gemeinde.organisation.versammlung_parlament
+  section: Demokratie und Föderalismus
+  fact_de: Die Stimmberechtigten beschliessen an der Gemeindeversammlung über den Finanzvoranschlag der
+    Gemeinde.
+  fact_en: At the communal assembly, eligible voters decide on the commune's financial budget.
+- id: zh-116
+  topic: gemeinde.organisation.versammlung_parlament
+  section: Demokratie und Föderalismus
+  fact_de: Das Stadtzürcher Parlament wird direkt von der Bevölkerung bestellt.
+  fact_en: The parliament of the city of Zurich is elected directly by the people.
+- id: zh-117
+  topic: gemeinde.leistungen
+  section: Demokratie und Föderalismus
+  fact_de: Die Zürcher Gemeinden betreiben die Schulen der Primarstufe.
+  fact_en: Zurich communes run the schools at primary level.
+- id: zh-118
+  topic: gemeinde.leistungen
+  section: Demokratie und Föderalismus
+  fact_de: Für Baugesuche von Wohnhäusern im Kanton Zürich entscheidet die Gemeindebehörde.
+  fact_en: The communal authority decides on building applications for houses in the canton of Zurich.
+- id: zh-119
+  topic: gemeinde.leistungen
+  section: Demokratie und Föderalismus
+  fact_de: Die Planung der Nutzung des Bodens auf Ortsebene liegt bei den Gemeinden.
+  fact_en: Planning land use at the local level falls to the communes.
+- id: zh-120
+  topic: gemeinde.leistungen
+  section: Demokratie und Föderalismus
+  fact_de: Die Auszählung der abgegebenen Stimmen bei Urnengängen übernimmt das Wahlbüro.
+  fact_en: The electoral office carries out the counting of ballots cast in votes.
+- id: zh-121
+  topic: gemeinde.organisation.versammlung_parlament
+  section: Demokratie und Föderalismus
+  fact_de: In der Gemeinde wirken Stimmberechtigte politisch mit, indem sie ihre Stimme bei Urnengängen
+    abgeben.
+  fact_en: In the commune, eligible citizens have a political say by casting their ballots in elections
+    and votes.
+- id: zh-122
+  topic: gemeinde.organisation.gemeinderat_stadtrat
+  section: Demokratie und Föderalismus
+  fact_de: Der Stadtrat steuert die Stadtverwaltung und legt die Leitlinien für das Handeln der Stadt
+    fest.
+  fact_en: The Stadtrat directs the city administration and sets the guiding objectives for the city's
+    actions.
+- id: zh-123
+  topic: gemeinde.leistungen
+  section: Demokratie und Föderalismus
+  fact_de: Das Führen des Einwohnerregisters gehört zu den Aufgaben der Gemeinde.
+  fact_en: Maintaining the residents' register is one of the communes' tasks.
+- id: zh-124
+  topic: gemeinde.organisation.versammlung_parlament
+  section: Demokratie und Föderalismus
+  fact_de: Der Kanton Zürich zählt ungefähr 160 politische Gemeinden, nämlich zwischen 150 und 170.
+  fact_en: The canton of Zurich has roughly 160 communes, numbering between 150 and 170.
+- id: zh-125
+  topic: gemeinde.organisation.gemeinderat_stadtrat
+  section: Demokratie und Föderalismus
+  fact_de: Kleinere Zürcher Gemeinden werden nach aussen von einer Gemeindepräsidentin oder einem Gemeindepräsidenten
+    vertreten.
+  fact_en: Smaller Zurich communes are represented at the top by a Gemeindepräsident, i.e. a communal
+    president.
+- id: zh-126
+  topic: bund.sozial.pflichten
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Mit der Steuererklärung legen Steuerpflichtige den Steuerbehörden ihre finanziellen Verhältnisse
+    offen.
+  fact_en: With the tax return, taxpayers disclose their financial circumstances to the tax authorities.
+- id: zh-127
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Ein Arbeitszeugnis ist ein vom Arbeitgeber verfasstes Dokument, das Arbeitsleistung und Verhalten
+    der angestellten Person beurteilt.
+  fact_en: A reference letter is a document written by the employer that assesses an employee's work performance
+    and conduct.
+- id: zh-128
+  topic: bund.sozial.gesundheit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Grundversicherung für medizinische Behandlungen ist für alle Einwohnerinnen und Einwohner
+    Pflicht.
+  fact_en: Basic insurance covering medical treatment is compulsory for all residents.
+- id: zh-129
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Eltern, ob angestellt oder selbstständig, erhalten als staatliche Leistung die Familienzulage.
+  fact_en: Parents, whether employed or self-employed, receive the family allowance as a statutory benefit.
+- id: zh-130
+  topic: bund.sozial.pflichten
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Der Zivildienst kann anstelle des Militärdienstes geleistet werden.
+  fact_en: Civilian service can be performed instead of military service.
+- id: zh-131
+  topic: bund.sozial.gesundheit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Versicherte dürfen ihre Krankenkasse selbst auswählen.
+  fact_en: Insured persons may choose their health insurer themselves.
+- id: zh-132
+  topic: bund.demokratie.wahlen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Ausländerinnen und Ausländer haben auf nationaler Ebene kein Stimmrecht.
+  fact_en: Foreign nationals have no voting rights at the national level.
+- id: zh-133
+  topic: bund.alltag
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Unter der Telefonnummer 117 erreicht man im Notfall die Polizei.
+  fact_en: Dialling 117 reaches the police in an emergency.
+- id: zh-134
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Das Sozialversicherungssystem sichert gegen die Folgen von Krankheit und Unfall ab.
+  fact_en: The social insurance system provides protection against the consequences of illness and accidents.
+- id: zh-135
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Bei Verlust der Arbeitsstelle greift die Arbeitslosenversicherung als Sozialversicherung.
+  fact_en: Unemployment insurance, a social insurance, applies when a person loses their job.
+- id: zh-136
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: AHV und IV gehören zu den Sozialversicherungen der Schweiz.
+  fact_en: AHV and IV are among Switzerland's social insurances.
+- id: zh-137
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die staatliche AHV bildet den ersten Pfeiler der Altersvorsorge.
+  fact_en: The state-run AHV forms the first pillar of old-age provision.
+- id: zh-138
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Pensionskasse bildet den zweiten Pfeiler der Altersvorsorge.
+  fact_en: The occupational pension fund forms the second pillar of old-age provision.
+- id: zh-139
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die private Vorsorge bildet den dritten Pfeiler der Altersvorsorge.
+  fact_en: Private savings form the third pillar of old-age provision.
+- id: zh-140
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Amnesty International engagiert sich für den Schutz der Menschenrechte.
+  fact_en: Amnesty International campaigns for the protection of human rights.
+- id: zh-141
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Gewerkschaften vertreten die Interessen der Arbeitnehmenden.
+  fact_en: Trade unions represent the interests of employees.
+- id: zh-142
+  topic: bund.geschichte.gesellschaftswandel
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Seit 2002 darf eine Frau in den ersten zwölf Schwangerschaftswochen selbst über einen Abbruch
+    entscheiden.
+  fact_en: Since 2002, a woman may decide for herself on an abortion during the first twelve weeks of
+    pregnancy.
+- id: zh-143
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Abkürzung AHV bezeichnet die Versicherung für Alter und Hinterbliebene.
+  fact_en: The abbreviation AHV stands for old-age and survivors' insurance.
+- id: zh-144
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Familien mit Kindern erhalten staatliche Kinderzulagen.
+  fact_en: Families with children receive state child allowances.
+- id: zh-145
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die AHV gehört zu den Pflichtversicherungen.
+  fact_en: The AHV is one of the compulsory insurances.
+- id: zh-146
+  topic: bund.sozial.pflichten
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Wer eine Steuerveranlagung anfechten will, kann schriftlich Einsprache bei der Steuerbehörde
+    erheben.
+  fact_en: Anyone wishing to contest a tax assessment can file a written objection with the tax authority.
+- id: zh-147
+  topic: bund.sozial.pflichten
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Familien werden entlastet, indem sie bei den Steuern Abzüge geltend machen können.
+  fact_en: Families are relieved by being able to claim deductions on their taxes.
+- id: zh-148
+  topic: bund.sozial.pflichten
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Schulen werden aus Steuergeldern des Staates bezahlt.
+  fact_en: Schools are paid for from the state's tax revenue.
+- id: zh-149
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Invalidenversicherung gehört zu den Sozialversicherungen des Landes.
+  fact_en: Disability insurance is one of the country's social insurances.
+- id: zh-150
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Beiträge an die Arbeitslosenversicherung zieht der Arbeitgeber automatisch vom Lohn ab.
+  fact_en: Unemployment insurance contributions are automatically deducted from wages by the employer.
+- id: zh-151
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Das RAV ist die regionale Anlaufstelle, die Stellensuchende bei der Arbeitssuche unterstützt
+    und in Stellen vermittelt.
+  fact_en: The RAV is the regional office that supports jobseekers and helps place them in jobs.
+- id: zh-152
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: IV ist das Kürzel der Invalidenversicherung.
+  fact_en: IV is the abbreviation for the disability insurance (Invalidenversicherung).
+- id: zh-153
+  topic: bund.sozial.gesundheit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Jede in der Schweiz wohnhafte Person ist gesetzlich verpflichtet, eine Krankenversicherung
+    abzuschliessen.
+  fact_en: Every person living in Switzerland is legally required to take out health insurance.
+- id: zh-154
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Bei einem schweren Unfall am Arbeitsplatz kommt die Unfallversicherung für die Spitalkosten
+    auf.
+  fact_en: After a serious accident at work, the accident insurance covers the hospital costs.
+- id: zh-155
+  topic: bund.sozial.gesundheit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Von den genannten Versicherungen ist in der Schweiz nur die Krankenversicherung gesetzlich
+    vorgeschrieben.
+  fact_en: Of the insurances listed, only health insurance is legally compulsory in Switzerland.
+- id: zh-156
+  topic: bund.sozial.gesundheit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Das BAG ist die Bundesbehörde, die für Gesundheitsfragen zuständig ist.
+  fact_en: The BAG is the federal authority responsible for health matters.
+- id: zh-157
+  topic: bund.sozial.gesundheit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Unter der Telefonnummer 144 erreicht man in der Schweiz den Rettungsdienst für medizinische
+    Notfälle.
+  fact_en: The telephone number 144 in Switzerland reaches the ambulance service for medical emergencies.
+- id: zh-158
+  topic: bund.sozial.gesundheit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Innert 3 Monaten ab Geburt muss für ein Kind eine Krankenversicherung bestehen.
+  fact_en: A child must have health insurance within 3 months of birth.
+- id: zh-159
+  topic: bund.sozial.bildung
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Der gesetzlich vorgeschriebene Schulbesuch dauert in der Schweiz elf Jahre.
+  fact_en: Legally required schooling in Switzerland lasts eleven years.
+- id: zh-160
+  topic: bund.sozial.bildung
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Schulpflege oder Schulleitung legen fest, welcher Primarschulklasse ein Kind zugeteilt wird.
+  fact_en: The school board or school management decides which primary school class a child is assigned
+    to.
+- id: zh-161
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Hauptverantwortlich für die Kindererziehung sind die Eltern.
+  fact_en: Parents bear the main responsibility for bringing up children.
+- id: zh-162
+  topic: bund.sozial.bildung
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Der Besuch der Primarschule gehört zur gesetzlichen Schulpflicht.
+  fact_en: Attending primary school is part of legally required schooling.
+- id: zh-163
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Schwangere Arbeitnehmerinnen geniessen während der Schwangerschaft einen gesetzlichen Kündigungsschutz.
+  fact_en: Pregnant employees are legally protected against dismissal during their pregnancy.
+- id: zh-164
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Gewerkschaften setzen sich für die Anliegen der Arbeitnehmenden ein.
+  fact_en: Trade unions represent the concerns of employees.
+- id: zh-165
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Das Arbeitsgericht behandelt Streitigkeiten aus dem Arbeitsverhältnis, etwa eine unbegründete
+    Kündigung.
+  fact_en: The labour court handles disputes arising from employment, such as a dismissal without justification.
+- id: zh-166
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Bei Fragen zum Arbeitsrecht helfen die Anwaltschaft, Gewerkschaften und Arbeitsgerichte weiter.
+  fact_en: For employment law questions, employees can consult lawyers, trade unions and labour courts.
+- id: zh-167
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Eine ordentliche Kündigung erfolgt per Einschreiben, oder die andere Seite bestätigt den Empfang
+    schriftlich.
+  fact_en: A regular termination is made by registered mail, or the other party confirms receipt in writing.
+- id: zh-168
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Economiesuisse ist der Wirtschaftsdachverband, der die Anliegen der Unternehmen vertritt.
+  fact_en: Economiesuisse is the umbrella business association that represents the concerns of companies.
+- id: zh-169
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Im Arbeitsvertrag wird unter anderem die Höhe des Lohns festgelegt.
+  fact_en: Among other things, an employment contract sets the amount of pay.
+- id: zh-170
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Bei ungerechtfertigt zu tiefer Lohnzahlung kann man das Arbeitsgericht anrufen.
+  fact_en: If an employer unjustifiably underpays, the employee can turn to the labour court.
+- id: zh-171
+  topic: bund.sozial.bildung
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Ein Berufsbildungszentrum bündelt verschiedene Angebote der beruflichen Aus- und Weiterbildung
+    an einem Ort.
+  fact_en: A vocational training centre brings together various vocational education offerings at one
+    location.
+- id: zh-172
+  topic: bund.kultur.feiertage_brauchtum
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Der 1. August, der Nationalfeiertag, ist gesetzlich im ganzen Land ein Feiertag.
+  fact_en: 1 August, the national day, is a legally recognised holiday throughout the country.
+- id: zh-173
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Das reguläre Pensionsalter beträgt für Frauen und Männer gleichermassen 65 Jahre.
+  fact_en: The regular retirement age is 65 for both women and men.
+- id: zh-174
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Pensionierte entrichten keine Beiträge an die Arbeitslosenversicherung.
+  fact_en: Retired people pay no contributions to unemployment insurance.
+- id: zh-175
+  topic: bund.sozial.bildung
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Auskünfte zu Lehrstellen, Berufswahl und Arbeit erhält man im Berufsinformationszentrum.
+  fact_en: Information about apprenticeships, careers and employment is available at the career information
+    centre (Berufsinformationszentrum).
+- id: zh-176
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Europäische Union ist für die Schweizer Wirtschaft der bedeutendste Partner im Aussenhandel.
+  fact_en: The European Union is the most important partner for Swiss foreign trade.
+- id: zh-177
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Wer ein öffentliches Amt ausübt, erhält von der Arbeitgeberseite dafür bezahlte Freizeit.
+  fact_en: Employees receive paid time off from work in order to carry out a public office.
+- id: zh-178
+  topic: bund.sozial.pflichten
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Abkürzung MWST steht für die Mehrwertsteuer.
+  fact_en: The abbreviation MWST stands for value added tax.
+- id: zh-179
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Jede erwerbstätige Frau, die ein Kind zur Welt bringt, hat einen gesetzlichen Anspruch auf
+    Mutterschaftsurlaub.
+  fact_en: Every employed woman who gives birth has a legal entitlement to maternity leave.
+- id: zh-180
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Ehe mit mehreren Partnerinnen gleichzeitig ist in der Schweiz untersagt.
+  fact_en: Being married to more than one spouse at the same time is prohibited in Switzerland.
+- id: zh-181
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Ein Mietvertrag legt fest, welche Rechte und Verpflichtungen Vermietende und Mietende gegenseitig
+    haben.
+  fact_en: A rental contract sets out the mutual rights and obligations of landlord and tenant.
+- id: zh-182
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Heiraten darf, wer volljährig ist und die Fähigkeit besitzt, vernunftgemäss zu handeln.
+  fact_en: To marry in Switzerland, a person must be of full age and capable of rational judgement.
+- id: zh-183
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Eine Scheidung kann von einem der Ehepartner oder von beiden gemeinsam beantragt werden.
+  fact_en: Divorce can be requested by either spouse or by both together.
+- id: zh-184
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Anmeldung der Eheschliessung beim Zivilstandsamt erfolgt durch das Brautpaar gemeinsam.
+  fact_en: The engaged couple registers its intention to marry with the civil registry office together.
+- id: zh-185
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Wenn ein triftiger Grund vorliegt, müssen Mietende der Vermieterseite Zutritt zur Wohnung gewähren.
+  fact_en: Tenants must grant the landlord access to the dwelling when there is a justified reason.
+- id: zh-186
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Der Mieterverband vertritt die Anliegen der Mietenden.
+  fact_en: The tenants' association represents the interests of tenants.
+- id: zh-187
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Wer heiraten will, darf mit der Partnerin oder dem Partner nicht nah blutsverwandt sein.
+  fact_en: Persons wishing to marry must not be closely related to each other.
+- id: zh-188
+  topic: bund.sozial.pflichten
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Wer alkoholisiert oder unter Drogeneinfluss fährt, riskiert den Entzug des Führerausweises.
+  fact_en: Driving under the influence of alcohol or drugs can lead to withdrawal of the driving licence.
+- id: zh-189
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Haben Eheleute bei der Heirat keinen gemeinsamen Familiennamen bestimmt, müssen sie den Namen
+    ihrer Kinder selbst wählen.
+  fact_en: Spouses without a shared family name must decide together which surname their children will
+    bear.
+- id: zh-190
+  topic: bund.sozial.pflichten
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Wer einen Hund hält, muss dafür eine Abgabe an den Staat entrichten.
+  fact_en: Dog owners must pay a tax on their dog.
+- id: zh-191
+  topic: bund.sozial.sozialversicherungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Ergänzungsleistungen erhalten Personen, deren IV- oder AHV-Rente nicht ausreicht, um das Existenzminimum
+    zu decken.
+  fact_en: Supplementary benefits go to people whose IV or AHV pension does not cover the minimum cost
+    of living.
+- id: zh-192
+  topic: bund.sozial.gesundheit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Mitgliedschaft bei einer Krankenkasse ist in der Schweiz für alle Pflicht.
+  fact_en: Membership in a health insurer is compulsory for everyone in Switzerland.
+- id: zh-193
+  topic: bund.sozial.zivilgesellschaft
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Gründung eines Vereins steht in der Schweiz jeder Person offen.
+  fact_en: Anyone in Switzerland is allowed to found an association.
+- id: zh-194
+  topic: kanton.sozial.steuern_leistungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Zu den bedeutenden Steuern von Kanton und Gemeinden zählt die Steuer auf das Vermögen.
+  fact_en: Wealth tax is one of the main taxes levied by cantons and communes.
+- id: zh-195
+  topic: kanton.sozial.steuern_leistungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Kanton und Gemeinden erheben als wichtige Steuer jene auf das Einkommen.
+  fact_en: Income tax is one of the main taxes levied by cantons and communes.
+- id: zh-196
+  topic: kanton.sozial.bildung_gesundheit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Für die öffentliche obligatorische Schule tragen hauptsächlich Kantone und Gemeinden die Verantwortung.
+  fact_en: Cantons and communes bear primary responsibility for compulsory public schooling.
+- id: zh-197
+  topic: kanton.sozial.bildung_gesundheit
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Im Kanton Zürich fängt die Schulpflicht mit dem Eintritt in den Kindergarten an.
+  fact_en: In the canton of Zurich, compulsory schooling starts with kindergarten.
+- id: zh-198
+  topic: gemeinde.leistungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Ein Quartierverein vertritt gegenüber den Behörden die Anliegen der Quartierbevölkerung und
+    fördert das Zusammenleben im Quartier.
+  fact_en: A neighbourhood association represents local residents' concerns to the authorities and promotes
+    community life in the district.
+- id: zh-199
+  topic: gemeinde.leistungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Der Finanzausgleich hilft finanzschwachen oder durch hohe Sozialkosten belasteten Gemeinden,
+    ihre Aufgaben zu erfüllen.
+  fact_en: Fiscal equalisation helps financially weak communes, or those with high social costs, to carry
+    out their tasks.
+- id: zh-200
+  topic: gemeinde.leistungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Reichen Einkommen und Vermögen zum Leben nicht aus, bietet die Gemeinde Sozialhilfe.
+  fact_en: When income and assets are insufficient for living costs, the commune provides social assistance.
+- id: zh-201
+  topic: gemeinde.leistungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Informationen über kommunale Angebote und Vorschriften findet man über die Lokalzeitung oder
+    das Internet.
+  fact_en: Information about communal services and rules can be found via the local newspaper or the internet.
+- id: zh-202
+  topic: gemeinde.leistungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Gemeinden finanzieren die Sozialhilfe für Menschen, die sich in einer Notlage befinden.
+  fact_en: Communes finance social assistance for people in an emergency situation.
+- id: zh-203
+  topic: gemeinde.leistungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Die Primarschule wird vom Kanton und von den Gemeinden gemeinsam finanziert und organisiert.
+  fact_en: The canton and the communes jointly finance and organise primary school.
+- id: zh-204
+  topic: gemeinde.leistungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Wer eine Heirat plant, wendet sich dafür an das Zivilstandsamt.
+  fact_en: People planning to marry register with the civil registry office (Zivilstandsamt).
+- id: zh-205
+  topic: gemeinde.leistungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Bei einem Wohnortswechsel erfolgt die Anmeldung bei der Einwohnerkontrolle der Gemeinde.
+  fact_en: After moving, one must register with the communal residents' registration office (Einwohnerkontrolle).
+- id: zh-206
+  topic: gemeinde.leistungen
+  section: Sozialstaat und Zivilgesellschaft
+  fact_de: Für die Leitung der Zürcher Volksschulen vor Ort ist die Schulleitung verantwortlich.
+  fact_en: The school management (Schulleitung) is responsible for running the local public schools in
+    Zurich.
+- id: zh-207
+  topic: bund.geschichte.bundesstaat
+  section: Geschichte
+  fact_de: Napoleon Bonaparte formte 1798 aus der Eidgenossenschaft vorübergehend einen Zentralstaat,
+    die Helvetische Republik.
+  fact_en: Napoleon Bonaparte briefly turned the Confederacy into a centralised state in 1798.
+- id: zh-208
+  topic: bund.geschichte.bundesstaat
+  section: Geschichte
+  fact_de: Alfred Escher spielte eine Schlüsselrolle bei ETH, Eisenbahnbau und der Gründung der Bank Credit
+    Suisse.
+  fact_en: Alfred Escher was a key figure in founding the ETH, building railways and establishing Credit
+    Suisse.
+- id: zh-209
+  topic: bund.geschichte.weltkriege_neutralitaet
+  section: Geschichte
+  fact_de: Nach dem Landesstreik von 1918 galt eine Wochenarbeitszeit von 48 Stunden.
+  fact_en: After the 1918 general strike, a 48-hour working week was introduced.
+- id: zh-210
+  topic: bund.geschichte.gesellschaftswandel
+  section: Geschichte
+  fact_de: Die Schwarzenbach-Initiative von 1970 wollte den Anteil der in der Schweiz lebenden Ausländer
+    beschränken.
+  fact_en: The 1970 Schwarzenbach initiative sought to limit the number of foreigners living in Switzerland.
+- id: zh-211
+  topic: bund.geschichte.bundesstaat
+  section: Geschichte
+  fact_de: Im Jahr 1848 entstand der moderne schweizerische Bundesstaat mit einer neuen Verfassung.
+  fact_en: In 1848 the modern Swiss federal state was created.
+- id: zh-212
+  topic: bund.kultur.feiertage_brauchtum
+  section: Geschichte
+  fact_de: Die offizielle Hymne der Schweiz trägt den Titel Schweizerpsalm.
+  fact_en: The Swiss national anthem is called the Schweizerpsalm.
+- id: zh-213
+  topic: bund.demokratie.kantone_rolle
+  section: Geschichte
+  fact_de: Der Kanton Jura wurde 1979 als jüngster Kanton gegründet.
+  fact_en: The canton of Jura was founded in 1979, the youngest canton.
+- id: zh-214
+  topic: bund.geschichte.gruendung
+  section: Geschichte
+  fact_de: Die Reformation war die bedeutende religiöse Bewegung des 16. Jahrhunderts in Europa und der
+    Schweiz.
+  fact_en: The Reformation was the major religious movement of the 16th century in Europe and Switzerland.
+- id: zh-215
+  topic: bund.geschichte.gesellschaftswandel
+  section: Geschichte
+  fact_de: Auf nationaler Ebene dürfen Frauen in der Schweiz seit 1971 wählen und abstimmen.
+  fact_en: Women in Switzerland have been able to vote and stand in federal elections since 1971.
+- id: zh-216
+  topic: bund.geschichte.gesellschaftswandel
+  section: Geschichte
+  fact_de: In den 1950er-Jahren stammten die meisten zugewanderten Arbeitskräfte aus Italien.
+  fact_en: Most foreign workers arriving in the 1950s came from Italy.
+- id: zh-217
+  topic: bund.geschichte.gesellschaftswandel
+  section: Geschichte
+  fact_de: Viele Menschen aus dem ehemaligen Jugoslawien suchten in den 1990er-Jahren in der Schweiz Zuflucht
+    vor dem Krieg.
+  fact_en: Many people from former Yugoslavia came to Switzerland in the 1990s as refugees from war.
+- id: zh-218
+  topic: bund.geschichte.weltkriege_neutralitaet
+  section: Geschichte
+  fact_de: Im Zweiten Weltkrieg blieb die Schweiz neutral und pflegte zu den Kriegsparteien politische
+    und wirtschaftliche Kontakte.
+  fact_en: In World War II Switzerland stayed neutral while maintaining political and economic contacts
+    with the warring powers.
+- id: zh-219
+  topic: bund.geschichte.bundesstaat
+  section: Geschichte
+  fact_de: Die Textilindustrie war der wichtigste Zweig der frühen Industrialisierung in der Schweiz.
+  fact_en: The textile industry was the most important sector in early Swiss industrialisation.
+- id: zh-220
+  topic: bund.geschichte.gesellschaftswandel
+  section: Geschichte
+  fact_de: Die Gleichberechtigung von Mann und Frau steht seit 1981 in der Bundesverfassung.
+  fact_en: Equal rights for men and women have been in the Federal Constitution since 1981.
+- id: zh-221
+  topic: bund.geschichte.bundesstaat
+  section: Geschichte
+  fact_de: Im 19. Jahrhundert entwickelte sich die Schweiz von einer Agrargesellschaft zu einem Industrieland.
+  fact_en: During the 19th century Switzerland developed from an agricultural society into an industrial
+    one.
+- id: zh-222
+  topic: bund.geschichte.gesellschaftswandel
+  section: Geschichte
+  fact_de: Der Wohlstand vieler Menschen in der Schweiz nahm in den 1960er-Jahren stark zu.
+  fact_en: Living standards for many people in Switzerland rose sharply in the 1960s.
+- id: zh-223
+  topic: bund.geschichte.bundesstaat
+  section: Geschichte
+  fact_de: Dank dem Zugang zu Rohstoffen entwickelte sich die Schweiz in der Kolonialzeit zu einem Industrieland.
+  fact_en: Thanks to access to raw materials, Switzerland became an industrial nation during the colonial
+    era.
+- id: zh-224
+  topic: bund.geschichte.gruendung
+  section: Geschichte
+  fact_de: Uri, Schwyz und Unterwalden verbündeten sich 1291.
+  fact_en: Uri, Schwyz and Unterwalden formed an alliance in 1291.
+- id: zh-225
+  topic: bund.geschichte.gruendung
+  section: Geschichte
+  fact_de: In römischer Zeit siedelten im Gebiet der heutigen Schweiz die Helvetier.
+  fact_en: In Roman times the Helvetii inhabited the territory of present-day Switzerland.
+- id: zh-226
+  topic: bund.geschichte.bundesstaat
+  section: Geschichte
+  fact_de: Der Sonderbundskrieg von 1847 war ein Konflikt zwischen den liberalen Kräften und den katholischen
+    Kantonen.
+  fact_en: The 1847 Sonderbund war was a conflict between the liberal forces and the Catholic cantons.
+- id: zh-227
+  topic: bund.geschichte.gruendung
+  section: Geschichte
+  fact_de: Die Römer erbauten das Amphitheater in Avenches.
+  fact_en: The Romans built the amphitheatre in Avenches.
+- id: zh-228
+  topic: bund.geschichte.gruendung
+  section: Geschichte
+  fact_de: Nach der Niederlage von Marignano 1515 beendeten die Eidgenossen ihre Expansionspolitik.
+  fact_en: After their defeat at Marignano in 1515, the Confederates ended their policy of territorial
+    expansion.
+- id: zh-229
+  topic: bund.geschichte.gruendung
+  section: Geschichte
+  fact_de: Aus der Reformation ging das protestantische Christentum hervor.
+  fact_en: The Reformation gave rise to Protestant Christianity.
+- id: zh-230
+  topic: bund.geschichte.gruendung
+  section: Geschichte
+  fact_de: Die Reformation spaltete die Schweiz in einen reformierten und einen katholischen Teil.
+  fact_en: The Reformation divided Switzerland into a Reformed part and a Catholic part.
+- id: zh-231
+  topic: bund.geschichte.bundesstaat
+  section: Geschichte
+  fact_de: Die Besetzung durch französische Truppen 1798 beendete die alte Ordnung der Eidgenossenschaft.
+  fact_en: The occupation by French troops in 1798 ended the old order of the Confederacy.
+- id: zh-232
+  topic: bund.geschichte.weltkriege_neutralitaet
+  section: Geschichte
+  fact_de: 1815 anerkannten die Grossmächte die dauernde Neutralität der Schweiz.
+  fact_en: In 1815 the great powers recognised Switzerland's permanent neutrality.
+- id: zh-233
+  topic: bund.geschichte.bundesstaat
+  section: Geschichte
+  fact_de: Mit der Verfassung von 1848 wurde die Schweiz ein Bundesstaat, in dem die Kantone eigenständig
+    bleiben.
+  fact_en: The 1848 constitution made Switzerland a federal state in which the cantons retain their autonomy.
+- id: zh-234
+  topic: bund.geschichte.bundesstaat
+  section: Geschichte
+  fact_de: 1863 entstand in Genf das IKRK.
+  fact_en: The ICRC (Red Cross) came into being in Geneva in 1863.
+- id: zh-235
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Geschichte
+  fact_de: Im 18. Jahrhundert prägte die Dampfmaschine den industriellen Umbruch in der Schweiz.
+  fact_en: The steam engine drove the industrial transformation in Switzerland in the 18th century.
+- id: zh-236
+  topic: bund.geschichte.gesellschaftswandel
+  section: Geschichte
+  fact_de: Das Verbot der Kinderarbeit 1877 sollte sichern, dass Kinder Schulunterricht besuchen statt
+    in Fabriken zu arbeiten.
+  fact_en: The 1877 ban on child labour was meant to ensure children attended school instead of working
+    in factories.
+- id: zh-237
+  topic: bund.sozial.sozialversicherungen
+  section: Geschichte
+  fact_de: Die AHV, die staatliche Rentenversicherung für Alter und Hinterbliebene, wurde 1948 eingeführt.
+  fact_en: The AHV, the state pension insurance for old age and survivors, was introduced in 1948.
+- id: zh-238
+  topic: bund.geschichte.gesellschaftswandel
+  section: Geschichte
+  fact_de: Frauen erhielten 1971 auf nationaler Ebene das Stimm- und Wahlrecht.
+  fact_en: Women obtained the right to vote and to stand for election at national level in 1971.
+- id: zh-239
+  topic: bund.demokratie.bundesrat
+  section: Geschichte
+  fact_de: Elisabeth Kopp war das erste weibliche Mitglied des Bundesrats.
+  fact_en: Elisabeth Kopp was the first female member of the Federal Council.
+- id: zh-240
+  topic: bund.geschichte.weltkriege_neutralitaet
+  section: Geschichte
+  fact_de: Die Bilateralen I, im Jahr 2000 vom Volk angenommen, sind die Basis der heutigen Beziehungen
+    zwischen der Schweiz und der EU.
+  fact_en: The Bilaterals I, approved by voters in 2000, form the basis of today's relations between Switzerland
+    and the EU.
+- id: zh-241
+  topic: bund.geschichte.gruendung
+  section: Geschichte
+  fact_de: Wilhelm Tell ist eine Sagengestalt aus der Innerschweiz, die für den Widerstand gegen fremde
+    Herrscher steht.
+  fact_en: William Tell is a legendary figure from central Switzerland symbolising resistance against
+    foreign rulers.
+- id: zh-242
+  topic: bund.geschichte.bundesstaat
+  section: Geschichte
+  fact_de: Henry Dunant war der Gründer des Roten Kreuzes in Genf.
+  fact_en: Henry Dunant was the founder of the Red Cross in Geneva.
+- id: zh-243
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Geschichte
+  fact_de: Die Uhrmacherei ist der Wirtschaftszweig, in dem die Schweiz seit langer Zeit international
+    an der Spitze steht.
+  fact_en: Watchmaking is the industry in which Switzerland has long been a world leader.
+- id: zh-244
+  topic: bund.geschichte.gesellschaftswandel
+  section: Geschichte
+  fact_de: Im 19. Jahrhundert verliessen viele die Schweiz, weil Not und fehlende Arbeit ihre Existenz
+    bedrohten.
+  fact_en: In the 19th century many people left Switzerland because hardship and lack of work threatened
+    their livelihood.
+- id: zh-245
+  topic: kanton.geschichte.zuerich
+  section: Geschichte
+  fact_de: Im Zweiten Weltkrieg wurde auf dem Sechseläutenplatz Kartoffelanbau betrieben.
+  fact_en: During the Second World War, potatoes were grown on the Sechseläutenplatz.
+- id: zh-246
+  topic: kanton.geschichte.zuerich
+  section: Geschichte
+  fact_de: Turicum lautete der römische Name Zürichs.
+  fact_en: Turicum was the Roman name of Zurich.
+- id: zh-247
+  topic: kanton.geschichte.zuerich
+  section: Geschichte
+  fact_de: Die Römer führten in Zürich die Badekultur ein.
+  fact_en: The Romans introduced bathing culture to Zurich.
+- id: zh-248
+  topic: kanton.geschichte.zuerich
+  section: Geschichte
+  fact_de: In vorgeschichtlicher Zeit entstanden Siedlungen am Zürichsee als Pfahlbauten, also Häuser
+    auf Pfählen.
+  fact_en: In prehistoric times, settlements on Lake Zurich took the form of pile dwellings, i.e. houses
+    built on stilts.
+- id: zh-249
+  topic: kanton.geschichte.zuerich
+  section: Geschichte
+  fact_de: Eine Pestepidemie kostete im frühen 17. Jahrhundert fast die halbe Zürcher Einwohnerschaft
+    das Leben.
+  fact_en: A plague epidemic in the early 17th century killed almost half of Zurich's inhabitants.
+- id: zh-250
+  topic: kanton.geschichte.zuerich
+  section: Geschichte
+  fact_de: Ulrich Zwingli führte die Reformation in Zürich an.
+  fact_en: Ulrich Zwingli led the Reformation in Zurich.
+- id: zh-251
+  topic: kanton.geschichte.zuerich
+  section: Geschichte
+  fact_de: Der Kanton Zürich in seiner heutigen Form wurde im Jahr 1803 geschaffen.
+  fact_en: The canton of Zurich as it exists today was created in 1803.
+- id: zh-252
+  topic: kanton.geschichte.zuerich
+  section: Geschichte
+  fact_de: Die Reformation in Zürich wurde von Ulrich Zwingli angeführt.
+  fact_en: Ulrich Zwingli led the Reformation in Zurich.
+- id: zh-253
+  topic: kanton.geschichte.zuerich
+  section: Geschichte
+  fact_de: Emilie Lieberherr kämpfte für das Stimm- und Wahlrecht der Frauen.
+  fact_en: Emilie Lieberherr campaigned for women's right to vote.
+- id: zh-254
+  topic: kanton.geschichte.zuerich
+  section: Geschichte
+  fact_de: Philippe Suchard und Rudolph Lindt errichteten Betriebe zur Herstellung von Schokolade.
+  fact_en: Philippe Suchard and Rudolph Lindt set up chocolate-making companies.
+- id: zh-255
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Der Gotthard-Basistunnel ist weltweit der Eisenbahntunnel mit der grössten Länge.
+  fact_en: The Gotthard Base Tunnel is the world's longest railway tunnel.
+- id: zh-256
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Simplon, Gotthard und Grosser St. Bernhard sind Übergänge über die Alpen.
+  fact_en: Simplon, Gotthard and Great St Bernard are mountain passes crossing the Alps.
+- id: zh-257
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Der Rhein mündet letztlich in die Nordsee.
+  fact_en: The Rhine ultimately empties into the North Sea.
+- id: zh-258
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Die Rhone endet im Mittelmeer.
+  fact_en: The Rhone ends in the Mediterranean Sea.
+- id: zh-259
+  topic: bund.sozial.zivilgesellschaft
+  section: Geografie
+  fact_de: Etwa 66 Prozent der in der Schweiz wohnhaften Ausländerinnen und Ausländer stammen aus Staaten
+    der Europäischen Union.
+  fact_en: Roughly two thirds of foreigners residing in Switzerland originate from member states of the
+    European Union.
+- id: zh-260
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Geografisch betrachtet hat die Schweiz keinen Zugang zum Meer.
+  fact_en: Geographically, Switzerland has no access to the sea; it is landlocked.
+- id: zh-261
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Das Schweizer Schienennetz gilt als das weltweit am engmaschigsten ausgebaute.
+  fact_en: Switzerland's rail network is regarded as the most densely built in the world.
+- id: zh-262
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Geografie
+  fact_de: Die Europäische Union ist für den Schweizer Aussenhandel der bedeutendste Partner.
+  fact_en: The European Union is Switzerland's most important trading partner.
+- id: zh-263
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Die Schweiz gliedert sich geografisch in Jura, Mittelland und Alpen.
+  fact_en: Switzerland divides geographically into the Jura, the Mittelland and the Alps.
+- id: zh-264
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Vom nördlichsten zum südlichsten Punkt misst die Schweiz rund 220 Kilometer.
+  fact_en: Switzerland measures about 220 kilometres from its northernmost to its southernmost point.
+- id: zh-265
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Vom östlichsten zum westlichsten Punkt misst die Schweiz rund 350 Kilometer.
+  fact_en: Switzerland measures about 350 kilometres from its easternmost to its westernmost point.
+- id: zh-266
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Das Wallis gehört zu den Kantonen, die von Gebirge geprägt sind.
+  fact_en: Valais is a canton characterised by mountains.
+- id: zh-267
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Die Dufourspitze ist der höchste Gipfel der Schweiz.
+  fact_en: The Dufourspitze is the highest summit in Switzerland.
+- id: zh-268
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Die Raumplanung soll unter anderem Landschaften ohne Bebauung erhalten.
+  fact_en: Spatial planning aims, among other things, to preserve landscapes free of construction.
+- id: zh-269
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Die Erderwärmung lässt die Schweizer Gletscher schrumpfen.
+  fact_en: Global warming is causing Swiss glaciers to shrink.
+- id: zh-270
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Forstleute setzen angesichts der steigenden Temperaturen auf die Anpflanzung anderer Baumarten.
+  fact_en: Because of rising temperatures, foresters respond by planting different species of tree.
+- id: zh-271
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Der Föhn ist ein warmer, trockener Wind aus südlicher Richtung.
+  fact_en: The Föhn is a warm, dry wind blowing from the south.
+- id: zh-272
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Frankreich ist das Nachbarland der Schweiz im Westen.
+  fact_en: France is Switzerland's neighbour to the west.
+- id: zh-273
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Italien liegt südlich der Schweiz und grenzt an sie.
+  fact_en: Italy borders Switzerland to the south.
+- id: zh-274
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Zürich hat von allen Schweizer Städten die meisten Einwohnerinnen und Einwohner.
+  fact_en: Zurich has more inhabitants than any other Swiss city.
+- id: zh-275
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Die Mehrheit der Bevölkerung der Schweiz wohnt im Mittelland.
+  fact_en: Most of Switzerland's population lives in the Mittelland.
+- id: zh-276
+  topic: bund.alltag
+  section: Geografie
+  fact_de: Im Jahr 2020 wohnten rund 2,1 Millionen Personen ohne Schweizer Pass in der Schweiz.
+  fact_en: In 2020, around 2.1 million people without Swiss citizenship resided in Switzerland.
+- id: zh-277
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Der abgebildete, markant pyramidenförmige Berg ist das Matterhorn.
+  fact_en: The distinctly pyramid-shaped mountain shown in the picture is the Matterhorn.
+- id: zh-278
+  topic: bund.geografie.landschaft
+  section: Geografie
+  fact_de: Flächenmässig ist Graubünden der grösste Schweizer Kanton.
+  fact_en: Graubünden is the largest Swiss canton by area.
+- id: zh-279
+  topic: bund.alltag
+  section: Geografie
+  fact_de: Die Schweiz hatte 2020 eine Gesamtbevölkerung von etwa 8,6 Millionen Einwohnern.
+  fact_en: Switzerland had a total population of about 8.6 million inhabitants in 2020.
+- id: zh-280
+  topic: bund.alltag
+  section: Geografie
+  fact_de: 2020 betrug der Ausländeranteil an der ständigen Wohnbevölkerung der Schweiz rund ein Viertel.
+  fact_en: In 2020, foreign nationals made up roughly one quarter of Switzerland's resident population.
+- id: zh-281
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Geografie
+  fact_de: Die Schweiz verfügt über reichlich Wasser, das zur Stromproduktion in Wasserkraftwerken genutzt
+    wird.
+  fact_en: Switzerland has abundant water, which is used to generate electricity in hydropower plants.
+- id: zh-282
+  topic: bund.geografie.sprachen
+  section: Geografie
+  fact_de: Freiburg ist ein zweisprachiger Kanton, in dem Französisch und Deutsch gesprochen werden.
+  fact_en: Fribourg is a bilingual canton where both French and German are spoken.
+- id: zh-283
+  topic: bund.geografie.sprachen
+  section: Geografie
+  fact_de: Mit Romandie oder Welschland ist der französischsprachige Teil der Schweiz gemeint.
+  fact_en: Romandie, also called Welschland, refers to the French-speaking part of Switzerland.
+- id: zh-284
+  topic: bund.geografie.sprachen
+  section: Geografie
+  fact_de: Im Tessin ist Italienisch die gesprochene Sprache.
+  fact_en: Italian is the language spoken in Ticino.
+- id: zh-285
+  topic: bund.geografie.sprachen
+  section: Geografie
+  fact_de: Rätoromanisch wird im Kanton Graubünden gesprochen.
+  fact_en: Romansh is spoken in the canton of Graubünden.
+- id: zh-286
+  topic: bund.geografie.sprachen
+  section: Geografie
+  fact_de: Mit Röstigraben bezeichnet man die kulturellen Unterschiede zwischen Deutschschweiz und Romandie.
+  fact_en: Röstigraben denotes the cultural divide separating German-speaking Switzerland from the French-speaking
+    part.
+- id: zh-287
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Der Kanton Zürich befindet sich geografisch im Schweizer Mittelland.
+  fact_en: The canton of Zurich is geographically situated in the Swiss Plateau (Mittelland).
+- id: zh-288
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Der Kanton Zürich hat sechs Nachbarkantone.
+  fact_en: The canton of Zurich has six neighbouring cantons.
+- id: zh-289
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Nach Einwohnerzahl sind Zürich, Winterthur und Uster die drei grössten Städte im Kanton.
+  fact_en: By population, Zurich, Winterthur and Uster are the three largest cities in the canton.
+- id: zh-290
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Uetliberg, Albis und Pfannenstiel sind die Hügelzüge, die den Zürichsee säumen.
+  fact_en: The Uetliberg, Albis and Pfannenstiel are the hill ranges flanking Lake Zurich.
+- id: zh-291
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Der Flughafen Zürich befindet sich auf dem Gebiet der Gemeinde Kloten.
+  fact_en: Zurich Airport is located on the territory of the municipality of Kloten.
+- id: zh-292
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Der Pfäffikersee gehört zum Kantonsgebiet von Zürich.
+  fact_en: Lake Pfäffikon (Pfäffikersee) is within the territory of the canton of Zurich.
+- id: zh-293
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Der Greifensee ist nach dem Zürichsee der zweitgrösste See im Kanton.
+  fact_en: After Lake Zurich, the Greifensee is the next largest lake in the canton.
+- id: zh-294
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Die Sihl mündet mitten in Zürich in die Limmat.
+  fact_en: The Sihl joins the Limmat in the middle of Zurich.
+- id: zh-295
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Die Limmat durchquert das Gebiet des Kantons Zürich.
+  fact_en: The Limmat crosses the territory of the canton of Zurich.
+- id: zh-296
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Winterthur wird von der Töss durchflossen.
+  fact_en: The Töss river runs through Winterthur.
+- id: zh-297
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Das Schloss Kyburg steht im Kanton Zürich.
+  fact_en: Kyburg Castle stands in the canton of Zurich.
+- id: zh-298
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Rund 41 Prozent der Kantonsfläche Zürichs werden landwirtschaftlich genutzt.
+  fact_en: About 41 percent of the canton of Zurich's area is used for agriculture.
+- id: zh-299
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Im Jahr 2020 zählte der Kanton Zürich ungefähr 1,5 Millionen Einwohnerinnen und Einwohner.
+  fact_en: In 2020, the canton of Zurich had approximately 1.5 million inhabitants.
+- id: zh-300
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Kantonshauptort von Zürich ist die Stadt Zürich selbst.
+  fact_en: The city of Zurich itself is the capital of the canton of Zurich.
+- id: zh-301
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Der Kanton Thurgau liegt direkt an der Grenze zum Kanton Zürich.
+  fact_en: Thurgau shares a border with the canton of Zurich.
+- id: zh-302
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: In der Schweiz gilt Jass als das klassische heimische Kartenspiel.
+  fact_en: Jass is regarded as Switzerland's classic national card game.
+- id: zh-303
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Der Zirkus Knie ist das grösste Zirkusunternehmen des Landes.
+  fact_en: Circus Knie is the biggest circus in Switzerland.
+- id: zh-304
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Zum Morgestraich werden in Basel die Lichter in den Gassen ausgemacht, worauf das Spiel von
+    Pfeifen und Trommeln einsetzt.
+  fact_en: At the Morgestraich in Basel the lights in the lanes are switched off, and then fife and drum
+    playing begins.
+- id: zh-305
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Schwingen gilt als Schweizer Traditionssport.
+  fact_en: Schwingen (Swiss wrestling) is a traditional Swiss sport.
+- id: zh-306
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Der 1. August ist in der Schweiz der Nationalfeiertag.
+  fact_en: 1 August is the national holiday in Switzerland.
+- id: zh-307
+  topic: bund.alltag
+  section: Kultur und Alltagskultur
+  fact_de: Die Abkürzung SBB steht für die Schweizerischen Bundesbahnen.
+  fact_en: The abbreviation SBB stands for the Swiss Federal Railways (Schweizerische Bundesbahnen).
+- id: zh-308
+  topic: bund.alltag
+  section: Kultur und Alltagskultur
+  fact_de: Bei SBB, BLS, SOB und SZU handelt es sich um Bahnunternehmen der Schweiz.
+  fact_en: SBB, BLS, SOB and SZU are all railway companies operating in Switzerland.
+- id: zh-309
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Ertönen im Ernstfall die Sirenen, muss man das Radio einschalten.
+  fact_en: When sirens sound in a real emergency, one should switch on the radio.
+- id: zh-310
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Im Landesmuseum Zürich wird die schweizerische Vergangenheit dargestellt.
+  fact_en: The Swiss National Museum in Zurich presents the past of Switzerland.
+- id: zh-311
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Kultur und Alltagskultur
+  fact_de: Die Juraregion ist für die Herstellung von Uhren berühmt.
+  fact_en: The Jura region is famous for making watches.
+- id: zh-312
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Jodeln gehört zu den überlieferten Bräuchen der Schweizer Landbevölkerung.
+  fact_en: Yodelling is a handed-down custom of rural Swiss farming communities.
+- id: zh-313
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Zum Jodeln dient die eigene Stimme als Instrument.
+  fact_en: Yodelling is done with one's own voice.
+- id: zh-314
+  topic: bund.demokratie.grundrechte
+  section: Kultur und Alltagskultur
+  fact_de: Über die Inhalte einer Zeitung bestimmt deren Redaktion.
+  fact_en: A newspaper's editorial team determines what content is published.
+- id: zh-315
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Die Sonntagszeitung erscheint nur einmal wöchentlich.
+  fact_en: The Sonntagszeitung is published just once a week.
+- id: zh-316
+  topic: bund.demokratie.staatsprinzipien
+  section: Kultur und Alltagskultur
+  fact_de: Eidgenossenschaft ist ein alternativer Name für die Schweiz.
+  fact_en: Eidgenossenschaft (Confederation) is another name for Switzerland.
+- id: zh-317
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Roger Federer ist als Schweizer Tennisprofi berühmt.
+  fact_en: Roger Federer is a famous Swiss tennis player.
+- id: zh-318
+  topic: bund.geschichte.gruendung
+  section: Kultur und Alltagskultur
+  fact_de: Das Rütli steht für den Zusammenschluss der Urkantone.
+  fact_en: The Rütli commemorates the alliance formed by the original cantons.
+- id: zh-319
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Auf dem Zweifränkler ist Helvetia als weibliche Symbolfigur abgebildet.
+  fact_en: Helvetia, a symbolic female figure, is depicted on the 2-franc coin.
+- id: zh-320
+  topic: bund.demokratie.staatsprinzipien
+  section: Kultur und Alltagskultur
+  fact_de: Bern nimmt die Rolle der Schweizer Landeshauptstadt ein.
+  fact_en: Bern holds politically importance because it serves as the Swiss capital.
+- id: zh-321
+  topic: bund.sozial.wirtschaft_arbeit
+  section: Kultur und Alltagskultur
+  fact_de: Die Region Basel ist durch grosse dort ansässige Pharmaunternehmen bekannt.
+  fact_en: The Basel region is known for large pharmaceutical companies based there.
+- id: zh-322
+  topic: bund.geografie.landschaft
+  section: Kultur und Alltagskultur
+  fact_de: Zürich ist der bevölkerungsreichste Kanton der Schweiz.
+  fact_en: Zurich is the most populous canton in Switzerland.
+- id: zh-323
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Das Datum des helvetischen Landesfeiertags ist der 1. August.
+  fact_en: The date of the Swiss national holiday is 1 August.
+- id: zh-324
+  topic: bund.demokratie.staatsprinzipien
+  section: Kultur und Alltagskultur
+  fact_de: CH ist die Kurzform des lateinischen Landesnamens Confoederatio Helvetica.
+  fact_en: CH is the short form of the Latin country name Confoederatio Helvetica.
+- id: zh-325
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Skifahren ist im Winter ein weit verbreiteter Sport in der Schweiz.
+  fact_en: Skiing is a widespread winter sport among people living in Switzerland.
+- id: zh-326
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Zur Schweizer Fasnacht gehören Umzüge, bei denen die Teilnehmenden Masken tragen.
+  fact_en: Swiss Fasnacht (carnival) traditionally includes parades in which participants wear masks.
+- id: zh-327
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Die Figur Heidi stammt aus der Feder der Autorin Johanna Spyri.
+  fact_en: The character Heidi was created by the author Johanna Spyri.
+- id: zh-328
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Max Frisch und Friedrich Dürrenmatt waren bedeutende Autoren der Schweizer Literatur.
+  fact_en: Max Frisch and Friedrich Dürrenmatt were major Swiss authors (writers).
+- id: zh-329
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Niki de Saint Phalle, Sophie Taeuber-Arp und Pipilotti Rist sind weltweit angesehene Kunstschaffende.
+  fact_en: Niki de Saint Phalle, Sophie Taeuber-Arp and Pipilotti Rist are internationally renowned female
+    artists.
+- id: zh-330
+  topic: bund.international
+  section: Kultur und Alltagskultur
+  fact_de: Das Internationale Komitee vom Roten Kreuz hat seinen Hauptsitz in der Schweiz.
+  fact_en: The International Committee of the Red Cross is headquartered in Switzerland.
+- id: zh-331
+  topic: bund.international
+  section: Kultur und Alltagskultur
+  fact_de: Die Schweiz trat im Jahr 2002 den Vereinten Nationen bei.
+  fact_en: Switzerland joined the United Nations in 2002.
+- id: zh-332
+  topic: bund.international
+  section: Kultur und Alltagskultur
+  fact_de: Innerhalb der OSZE engagiert sich die Schweiz vor allem dafür, in Osteuropa und Zentralasien
+    den Frieden zu sichern.
+  fact_en: Within the OSCE, Switzerland focuses especially on safeguarding peace in Eastern Europe and
+    Central Asia.
+- id: zh-333
+  topic: bund.international
+  section: Kultur und Alltagskultur
+  fact_de: Die Beziehungen zwischen der Schweiz und der EU beruhen auf einem Paket bilateraler Abkommen.
+  fact_en: Relations between Switzerland and the EU rest on a set of bilateral agreements.
+- id: zh-334
+  topic: bund.international
+  section: Kultur und Alltagskultur
+  fact_de: Das Weltwirtschaftsforum findet regelmässig in Davos statt.
+  fact_en: The World Economic Forum is held regularly in Davos, Switzerland.
+- id: zh-335
+  topic: bund.international
+  section: Kultur und Alltagskultur
+  fact_de: Der Menschenrechtsrat der Vereinten Nationen hat seinen Sitz in Genf.
+  fact_en: The UN human rights body is based in Geneva.
+- id: zh-336
+  topic: bund.international
+  section: Kultur und Alltagskultur
+  fact_de: Der Weltfussballverband FIFA ist in Zürich ansässig.
+  fact_en: The world football association FIFA is based in Zurich.
+- id: zh-337
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Eine Chilbi ist ein Jahrmarkt mit Fahrgeschäften wie der Achterbahn.
+  fact_en: A Chilbi is a fun fair with rides such as a roller coaster.
+- id: zh-338
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Fussball ist die Sportart, die in der Schweiz am meisten in Vereinen betrieben wird.
+  fact_en: Football is the sport most commonly played in clubs in Switzerland.
+- id: zh-339
+  topic: kanton.kultur.zuerich
+  section: Kultur und Alltagskultur
+  fact_de: Verbrennt der Kopf des Bööggs am Sechseläuten rasch, wird laut Volksglauben der folgende Sommer
+    schön.
+  fact_en: According to tradition, the faster the Böögg's head burns off at Sechseläuten, the nicer the
+    coming summer will be.
+- id: zh-340
+  topic: kanton.kultur.zuerich
+  section: Kultur und Alltagskultur
+  fact_de: Die Street Parade in Zürich steht für die Werte Liebe, Frieden, Freiheit, Grosszügigkeit und
+    Toleranz.
+  fact_en: Zurich's Street Parade stands for love, peace, freedom, generosity and tolerance.
+- id: zh-341
+  topic: kanton.kultur.zuerich
+  section: Kultur und Alltagskultur
+  fact_de: Im August zeigt das Zürcher Theater Spektakel Bühnenkunst, Tanz und Musik aus aller Welt.
+  fact_en: Each August the Zurich Theater Spektakel presents performing arts, dance and music from around
+    the world.
+- id: zh-342
+  topic: kanton.kultur.zuerich
+  section: Kultur und Alltagskultur
+  fact_de: Weltklasse Zürich ist eine bekannte Sportveranstaltung der Stadt Zürich.
+  fact_en: Weltklasse Zürich is a well-known sporting event held in Zurich.
+- id: zh-343
+  topic: kanton.kultur.zuerich
+  section: Kultur und Alltagskultur
+  fact_de: Das Technorama, ein Museum zum Experimentieren, befindet sich in Winterthur.
+  fact_en: The Technorama, a museum for experimenting, is located in Winterthur.
+- id: zh-344
+  topic: kanton.kultur.zuerich
+  section: Kultur und Alltagskultur
+  fact_de: Das Technorama ist das Museum, in dem Besuchende Exponate anfassen und selbst ausprobieren
+    dürfen.
+  fact_en: The Technorama is the museum where visitors may touch exhibits and try out experiments themselves.
+- id: zh-345
+  topic: kanton.kultur.zuerich
+  section: Kultur und Alltagskultur
+  fact_de: Die Masoala-Halle mit madagassischem Regenwald gehört zum Zürcher Zoo.
+  fact_en: The Masoala Hall with its Madagascan rainforest is part of Zurich Zoo.
+- id: zh-346
+  topic: kanton.kultur.zuerich
+  section: Kultur und Alltagskultur
+  fact_de: Beim Sechseläuten treten die Zürcher Zünfte als zentrale Akteure auf.
+  fact_en: The Zurich guilds are central participants in the Sechseläuten festival.
+- id: zh-347
+  topic: kanton.kultur.zuerich
+  section: Kultur und Alltagskultur
+  fact_de: Gottfried Keller war ein namhafter Zürcher Dichter und Autor.
+  fact_en: Gottfried Keller was a renowned Zurich author (writer).
+- id: zh-348
+  topic: bund.kultur.feiertage_brauchtum
+  section: Kultur und Alltagskultur
+  fact_de: Die Schweizer Fahne zeigt ein weisses, freistehendes Kreuz auf einem roten Quadrat.
+  fact_en: The Swiss flag shows a free-standing white cross on a red square.
+- id: zh-349
+  topic: kanton.kultur.zuerich
+  section: Demokratie und Föderalismus
+  fact_de: 'Das Wappen des Kantons Zürich ist schräg geteilt: oben links weiss, unten rechts blau.'
+  fact_en: 'The coat of arms of the canton of Zurich is divided diagonally: white at the upper left, blue
+    at the lower right.'
+- id: zh-350
+  topic: kanton.geografie.zuerich
+  section: Geografie
+  fact_de: Der Kanton Zürich liegt im Norden der Schweiz und grenzt an Deutschland.
+  fact_en: The canton of Zurich lies in the north of Switzerland and borders Germany.

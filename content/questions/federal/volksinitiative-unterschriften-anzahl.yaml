@@ -21,6 +21,8 @@ glossary:
 - Stimmberechtigte
 status: in_review
 difficulty: 1
+covers:
+- zh-043
 checks:
   independent_answer:
     option: d

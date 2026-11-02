@@ -49,6 +49,8 @@ def question_data(q: QuestionFile) -> dict[str, Any]:
         data["review"] = _prune(data["review"])
     if not data.get("translations_missing"):
         data.pop("translations_missing", None)
+    if not data.get("covers"):
+        data.pop("covers", None)
     return data
 
 

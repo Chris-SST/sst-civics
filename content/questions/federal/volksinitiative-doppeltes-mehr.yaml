@@ -23,6 +23,8 @@ glossary:
 - Ständemehr
 status: in_review
 difficulty: 2
+covers:
+- zh-048
 checks:
   independent_answer:
     option: c

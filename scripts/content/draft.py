@@ -4,9 +4,12 @@ Usage:
   python -m scripts.content.draft --canton zh --topic bund.demokratie.volksrechte [--count N]
       [--commune winterthur] [--per-request 5] [--direct] [--model ...] [--resume BATCH_ID]
 
-The default count is the topic's target_questions minus the questions on that topic that
-are not retired. Each result is written to content/questions/<scope>/<id>.yaml with
-status draft and version 1; near-duplicates of existing questions are skipped and listed.
+When content/scope/<canton>.yaml lists facts for the topic (D-063), each request carries the
+facts no question covers yet, the model writes one question per fact, and the question records
+the fact id under `covers`; the default count is the number of uncovered facts. Without facts,
+the default count is the topic's target_questions minus the questions on that topic that are
+not retired. Each result is written to content/questions/<scope>/<id>.yaml with status draft
+and version 1; near-duplicates of existing questions are skipped and listed.
 Prompt: prompts/content/draft/vN.md."""
 
 from __future__ import annotations
@@ -18,7 +21,7 @@ from typing import Any
 
 from app.content import store
 from app.content.fetch import is_official_url
-from app.content.schema import QuestionFile, TopicEntry
+from app.content.schema import QuestionFile, ScopeFact, TopicEntry
 from app.db import SessionLocal
 from app.llm.content import PURPOSE_DRAFT, Job, run_jobs
 from app.models import OPTION_KEYS, Q_DRAFT, Q_RETIRED
@@ -62,6 +65,7 @@ SCHEMA: dict[str, Any] = {
                     "difficulty": {"type": "integer"},
                     "sources": {"type": "array", "items": {"type": "string"}},
                     "glossary": {"type": "array", "items": {"type": "string"}},
+                    "covers": {"type": "string"},
                 },
                 "required": [
                     "slug",
@@ -72,6 +76,7 @@ SCHEMA: dict[str, Any] = {
                     "difficulty",
                     "sources",
                     "glossary",
+                    "covers",
                 ],
                 "additionalProperties": False,
             },
@@ -98,6 +103,17 @@ def on_topic(q: QuestionFile, topic: TopicEntry, canton: str) -> bool:
     return q.scope == "federal" if topic.scope == "federal" else q.canton == canton
 
 
+def uncovered_facts(cs: Any, canton: str, topic: TopicEntry) -> list[ScopeFact] | None:
+    """The topic's facts that no question which is not retired covers yet, in checklist order;
+    None when the canton has no scope file or the file lists no fact for the topic."""
+    scope = cs.scopes.get(canton)
+    facts = [f for f in scope.facts if f.topic == topic.code] if scope else []
+    if not facts:
+        return None
+    covered = {fid for q in cs.questions.values() if q.status != Q_RETIRED for fid in q.covers}
+    return [f for f in facts if f.id not in covered]
+
+
 def request_text(
     *,
     canton: str,
@@ -107,6 +123,7 @@ def request_text(
     part: int,
     parts: int,
     existing: list[QuestionFile],
+    facts: list[ScopeFact] | None = None,
 ) -> str:
     lines = [
         f"Kanton: {canton.upper()}",
@@ -116,7 +133,10 @@ def request_text(
         *[f"- {u}" for u in topic.sources],
         f"Anzahl Fragen: {count}",
     ]
-    if parts > 1:
+    if facts:
+        lines.append("Prüfpunkte (genau eine Frage pro Punkt, `covers` = die Kennung des Punkts):")
+        lines += [f"- {f.id}: {f.fact_de}" for f in facts]
+    elif parts > 1:
         lines.append(
             f"Dies ist Anfrage {part} von {parts} zum gleichen Thema. Teile das Thema gedanklich "
             f"in {parts} Teilbereiche und schreibe nur Fragen zum Teilbereich {part}."
@@ -148,8 +168,11 @@ def unique_id(base: str, taken: set[str]) -> str:
     return qid
 
 
-def clean_item(item: dict[str, Any], *, commune: bool) -> tuple[dict[str, Any] | None, str]:
-    """A checked candidate, or None and the reason it was rejected."""
+def clean_item(
+    item: dict[str, Any], *, commune: bool, fact_ids: set[str] | None = None
+) -> tuple[dict[str, Any] | None, str]:
+    """A checked candidate, or None and the reason it was rejected. With `fact_ids`, the
+    candidate must name one of them under `covers`."""
     try:
         options = {k: swiss_german(str(item["options_de"][k]).strip()) for k in OPTION_KEYS}
         correct = str(item["correct"]).strip().lower()
@@ -167,7 +190,11 @@ def clean_item(item: dict[str, Any], *, commune: bool) -> tuple[dict[str, Any] |
     if not good:
         return None, "no official https source"
     glossary = [swiss_german(str(t).strip()) for t in item.get("glossary") or [] if str(t).strip()]
+    covers = str(item.get("covers") or "").strip()
+    if fact_ids is not None and covers not in fact_ids:
+        return None, f"covers {covers or 'nothing'}, not one of the requested facts"
     return {
+        "covers": [covers] if fact_ids is not None else [],
         "slug": str(item.get("slug") or ""),
         "question_de": question,
         "options_de": options,
@@ -194,9 +221,16 @@ async def run(argv: list[str] | None = None) -> int:
     topic = find_topic(cs, args.canton, args.topic)
     scope, canton = question_scope(topic, args.canton, args.commune)
     existing = [q for q in cs.questions.values() if on_topic(q, topic, args.canton)]
+    pending = uncovered_facts(cs, args.canton, topic)
     count = args.count
     if count is None:
-        count = max(0, topic.target_questions - len(existing))
+        if pending is None:
+            count = max(0, topic.target_questions - len(existing))
+        else:
+            count = len(pending)
+    if pending is not None:
+        pending = pending[:count]
+        count = len(pending)
     if count <= 0:
         have = f"{len(existing)} of {topic.target_questions}"
         say(f"{topic.code}: {have} questions exist; none drafted.")
@@ -204,8 +238,10 @@ async def run(argv: list[str] | None = None) -> int:
     per = max(1, args.per_request)
     parts = math.ceil(count / per)
     jobs = []
+    fact_ids: dict[str, set[str]] = {}
     for part in range(1, parts + 1):
         n = min(per, count - (part - 1) * per)
+        facts = pending[(part - 1) * per : (part - 1) * per + n] if pending is not None else None
         text = request_text(
             canton=args.canton,
             topic=topic,
@@ -214,8 +250,12 @@ async def run(argv: list[str] | None = None) -> int:
             part=part,
             parts=parts,
             existing=existing,
+            facts=facts,
         )
-        jobs.append(Job(key=f"draft-{part}", text=text))
+        key = f"draft-{part}"
+        jobs.append(Job(key=key, text=text))
+        if facts is not None:
+            fact_ids[key] = {f.id for f in facts}
     say(f"{topic.code}: drafting {count} question(s) in {len(jobs)} request(s), scope {scope}")
 
     async with SessionLocal() as db:
@@ -239,7 +279,9 @@ async def run(argv: list[str] | None = None) -> int:
             if len(written) >= count:
                 break
             cand, why = clean_item(
-                item if isinstance(item, dict) else {}, commune=topic.scope == "commune"
+                item if isinstance(item, dict) else {},
+                commune=topic.scope == "commune",
+                fact_ids=fact_ids.get(job.key),
             )
             if cand is None:
                 rejected.append(why)
@@ -268,6 +310,8 @@ async def run(argv: list[str] | None = None) -> int:
                 "status": Q_DRAFT,
                 "difficulty": cand["difficulty"],
             }
+            if cand["covers"]:
+                data["covers"] = cand["covers"]
             try:
                 store.write_question(root, data)
             except ValueError as exc:

@@ -162,7 +162,7 @@ async def test_draft_writes_valid_files_skips_duplicates_and_logs_cost(content, 
     async with SessionLocal() as db:
         calls = (await db.execute(select(LlmCall))).scalars().all()
     assert [c.purpose for c in calls] == ["content_draft"]
-    assert calls[0].prompt_version == "content/draft@v1" and calls[0].cost_usd > 0
+    assert calls[0].prompt_version == "content/draft@v2" and calls[0].cost_usd > 0
 
 
 async def test_draft_default_count_fills_the_gap_and_direct_mode(content, fake, capsys):
@@ -189,6 +189,58 @@ async def test_draft_stops_when_the_target_is_reached(content, fake, capsys):
     args = ["--root", str(content), "--canton", "zh", "--topic", "bund.demokratie.kantone_rolle"]
     assert await draft.run(args) == 0
     assert "none drafted" in capsys.readouterr().out and not fake.calls
+
+
+def write_scope(root: Path, facts: list[tuple[str, str, str]]) -> None:
+    (root / "scope").mkdir(exist_ok=True)
+    doc = {
+        "canton": "zh",
+        "basis": "test checklist",
+        "source": "https://www.zh.ch/",
+        "facts": [{"id": i, "topic": t, "fact_de": de, "fact_en": de} for i, t, de in facts],
+    }
+    (root / "scope" / "zh.yaml").write_text(yaml.safe_dump(doc, allow_unicode=True), "utf-8")
+
+
+async def test_draft_from_scope_facts_records_covers_and_skips_covered(content, fake, capsys):
+    topic = "bund.demokratie.foederalismus"
+    write_scope(
+        content,
+        [
+            ("zh-001", topic, "Bund und Kantone teilen sich die staatlichen Aufgaben."),
+            ("zh-002", topic, "Die Gemeinden sind die dritte Ebene des Staates."),
+            ("zh-003", "bund.demokratie.kantone_rolle", "Die Kantone haben eigene Verfassungen."),
+        ],
+    )
+    good = item("Wer teilt sich in der Schweiz die staatlichen Aufgaben?", slug="aufgaben-teilen")
+    stray = item("Wie heisst die kleinste politische Einheit?", slug="kleinste-einheit")
+    fake.json_replies["content/draft"] = {
+        "questions": [{**good, "covers": "zh-001"}, {**stray, "covers": "zh-003"}]
+    }
+    args = ["--root", str(content), "--canton", "zh", "--topic", topic, "--today", TODAY]
+    assert await draft.run([*args, "--direct"]) == 0
+    out = capsys.readouterr().out
+    assert "drafting 2 question(s) in 1 request(s)" in out  # the topic's two facts
+    sent = fake.calls[0].messages[0]["content"]
+    assert "zh-001: Bund und Kantone" in sent and "zh-002:" in sent and "zh-003" not in sent
+    assert "covers zh-003, not one of the requested facts" in out
+    assert qfile(content, "aufgaben-teilen")["covers"] == ["zh-001"]
+    check_ok(content)
+
+    # zh-001 is covered now: the next run asks only for zh-002.
+    fake.calls.clear()
+    fake.json_replies["content/draft"] = {"questions": []}
+    assert await draft.run([*args, "--direct"]) == 0
+    assert "drafting 1 question(s)" in capsys.readouterr().out
+    sent = fake.calls[0].messages[0]["content"]
+    assert "zh-002:" in sent and "zh-001" not in sent
+
+
+def test_validator_flags_unknown_facts_and_topics(content):
+    write_scope(content, [("zh-001", "kein.thema", "Ein Punkt ohne Thema.")])
+    add_draft(content, "deckt-unbekannt", url="https://www.ch.ch/de/", covers=["zh-999"])
+    kinds = {i.kind for i in validate_content(content, today=CONTENT_TODAY).errors}
+    assert {"unknown_topic", "unknown_fact"} <= kinds
 
 
 # --- Independent answer --------------------------------------------------------------------

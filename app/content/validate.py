@@ -219,4 +219,28 @@ def validate_content(root: Path | None = None, today: date | None = None) -> Rep
         if q.status != "retired":  # a retired question may keep a topic that was removed
             _check_topic(cs, path, q, federal, by_canton)
     _check_translations(cs)
+    _check_scopes(cs, federal, by_canton)
     return Report(content=cs, today=today)
+
+
+def _check_scopes(
+    cs: ContentSet,
+    federal: dict[str, TopicEntry],
+    by_canton: dict[str, dict[str, TopicEntry]],
+) -> None:
+    """Every fact names a known topic; every question's `covers` names a known fact."""
+    facts: dict[str, str] = {}  # fact id -> topic code
+    for canton, scope in cs.scopes.items():
+        own = by_canton.get(canton, {})
+        for f in scope.facts:
+            if f.topic not in own and f.topic not in federal:
+                path = f"scope/{canton}.yaml"
+                cs.error("unknown_topic", path, f"{f.id}: {f.topic} is not a topic")
+            facts[f.id] = f.topic
+    for qid, q in cs.questions.items():
+        for fid in q.covers:
+            path = cs.question_paths[qid]
+            if fid not in facts:
+                cs.error("unknown_fact", path, f"covers {fid}, which is in no scope file")
+            elif facts[fid] != q.topic:
+                cs.warn("fact_topic", path, f"covers {fid}, a fact of topic {facts[fid]}")

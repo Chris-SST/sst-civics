@@ -81,6 +81,51 @@ class MockTestFormat(_Strict):
     proportions: dict[Literal["federal", "canton", "commune"], float] = Field(default_factory=dict)
 
 
+FACT_ID_RE = re.compile(r"^[a-z]{2}-\d{3,4}$")
+
+
+class ScopeFact(_Strict):
+    """One fact the official test can ask, in our own words (D-063)."""
+
+    id: str
+    topic: str
+    section: str = ""
+    fact_de: str = Field(min_length=1)
+    fact_en: str = Field(min_length=1)
+
+    @field_validator("id")
+    @classmethod
+    def _id(cls, v: str) -> str:
+        if not FACT_ID_RE.match(v):
+            raise ValueError("fact ids are <canton>-<number>, e.g. zh-001")
+        return v
+
+
+class ScopeFile(_Strict):
+    """content/scope/<canton>.yaml: the fact checklist built from the official catalogue."""
+
+    canton: str
+    basis: str
+    source: str
+    facts: list[ScopeFact] = Field(min_length=1)
+
+    @field_validator("canton")
+    @classmethod
+    def _canton(cls, v: str) -> str:
+        if v not in CANTONS:
+            raise ValueError("unknown canton code")
+        return v
+
+    @model_validator(mode="after")
+    def _unique_ids(self) -> ScopeFile:
+        seen: set[str] = set()
+        for f in self.facts:
+            if f.id in seen:
+                raise ValueError(f"fact id {f.id} appears twice")
+            seen.add(f.id)
+        return self
+
+
 class TopicFile(_Strict):
     canton: str
     test: MockTestFormat | None = None
@@ -185,6 +230,7 @@ class QuestionFile(_Strict):
     status: Status
     difficulty: Literal[1, 2, 3]
     translations_missing: bool = False
+    covers: list[str] = Field(default_factory=list)  # fact ids from content/scope (D-063)
     checks: QuestionChecks | None = None
     review: ReviewNote | None = None
 
