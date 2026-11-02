@@ -21,7 +21,7 @@ interface Props {
 }
 const { lang, title, description, alternates, path, noindex = false } = Astro.props;
 const t = ui(lang);
-const site = (Astro.site ?? new URL("https://civics-staging.swisssciencetutors.ch")).toString().replace(/\/$/, "");
+const site = (Astro.site ?? new URL("https://staging.viapunt.ch")).toString().replace(/\/$/, "");
 const abs = (p: string) => site + p;
 const fullTitle = title.includes(BRAND_NAME) ? title : `${title} | ${BRAND_NAME}`;
 const xdefault = alternates.find((a) => a.lang === "de") ?? alternates[0];

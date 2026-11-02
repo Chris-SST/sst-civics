@@ -22,7 +22,7 @@
 # /opt/civics/site-releases/releases/<sha>/ with a relative symlink "current" (mounted read-only
 # at /srv/site). GO-LIVE: edit this host list to the brand domain (apex and www) and change
 # the same list in infra/edge-snippet.Caddyfile. Staging today:
-http://civics-staging.swisssciencetutors.ch {
+http://staging.viapunt.ch, http://civics-staging.swisssciencetutors.ch {
 	root * /srv/site/current
 	encode zstd gzip
 

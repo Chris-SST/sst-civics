@@ -84,8 +84,8 @@ jobs:
       - name: Build
         env:
           # Repository variables; the defaults are the staging names.
-          SITE_URL: ${{ vars.SITE_URL || 'https://civics-staging.swisssciencetutors.ch' }}
-          APP_URL: ${{ vars.APP_URL || 'https://app.civics-staging.swisssciencetutors.ch' }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://staging.viapunt.ch' }}
+          APP_URL: ${{ vars.APP_URL || 'https://app.staging.viapunt.ch' }}
         run: npm run build
       - uses: actions/upload-artifact@v4
         with:
@@ -148,8 +148,8 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - name: Build
         env:
-          SITE_URL: ${{ vars.SITE_URL || 'https://civics-staging.swisssciencetutors.ch' }}
-          APP_URL: ${{ vars.APP_URL || 'https://app.civics-staging.swisssciencetutors.ch' }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://staging.viapunt.ch' }}
+          APP_URL: ${{ vars.APP_URL || 'https://app.staging.viapunt.ch' }}
         run: npm run build
       - run: npm run check:hreflang
       - name: Lighthouse
@@ -184,7 +184,7 @@ jobs:
           DEPLOY_USER: ${{ secrets.STAGING_USER }}
           KEY: ${{ secrets.STAGING_SSH_KEY }}
           RELEASE_ID: ${{ github.sha }}
-          SMOKE_URL: ${{ vars.SITE_URL || 'https://civics-staging.swisssciencetutors.ch' }}
+          SMOKE_URL: ${{ vars.SITE_URL || 'https://staging.viapunt.ch' }}
         run: |
           mkdir -p ~/.ssh && echo "$KEY" > ~/.ssh/id_ed25519 && chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts

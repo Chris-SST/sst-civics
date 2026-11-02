@@ -17,9 +17,9 @@ Build-time settings (environment variables):
 
 | Variable | Default | Used for |
 | --- | --- | --- |
-| `SITE_URL` | `https://civics-staging.swisssciencetutors.ch` | canonical URLs, hreflang, sitemap, `robots.txt` |
+| `SITE_URL` | `https://staging.viapunt.ch` | canonical URLs, hreflang, sitemap, `robots.txt` |
 | `PUBLIC_UMAMI_WEBSITE_ID` | unset (no analytics) | Umami website id; when set, the page loads the cookie-free tracker from `/stats/script.js` (docs/runbooks/analytics.md) |
-| `APP_URL` | `https://app.civics-staging.swisssciencetutors.ch` | target of the "Try 30 free questions" card (`/signup?lang=<lang>`) |
+| `APP_URL` | `https://app.staging.viapunt.ch` | target of the "Try 30 free questions" card (`/signup?lang=<lang>`) |
 
 ## Target
 

@@ -6,7 +6,7 @@ import { LOCALES, DEFAULT_LOCALE, scanGuide, buildIndex, parsePath, alternatesFo
 
 // Public host of the guide site. Staging default; set SITE_URL at build time for production
 // (the brand domain, see docs/runbooks/deploy-guide-site.md).
-const site = (process.env.SITE_URL || "https://civics-staging.swisssciencetutors.ch").replace(/\/+$/, "");
+const site = (process.env.SITE_URL || "https://staging.viapunt.ch").replace(/\/+$/, "");
 
 // Which language versions exist, read from the content folder, so each sitemap entry can list
 // its translations (slugs differ per language, so the sitemap integration's own i18n matching
@@ -30,7 +30,7 @@ export default defineConfig({
       APP_URL: envField.string({
         context: "server",
         access: "public",
-        default: "https://app.civics-staging.swisssciencetutors.ch",
+        default: "https://app.staging.viapunt.ch",
       }),
     },
   },
