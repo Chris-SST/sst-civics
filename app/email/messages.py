@@ -9,29 +9,29 @@ from app.config import get_settings
 from app.email.backend import OutgoingEmail
 
 SIGNATURE = {
-    "en": "\n\nCivics Trainer",
-    "de": "\n\nCivics Trainer",
-    "fr": "\n\nCivics Trainer",
+    "en": "\n\nViapunt",
+    "de": "\n\nViapunt",
+    "fr": "\n\nViapunt",
 }
 
 TEXTS: dict[str, dict[str, tuple[str, str]]] = {
     "verify_email": {
         "en": (
             "Confirm your email address",
-            "Hello,\n\nThanks for creating a Civics Trainer account. "
+            "Hello,\n\nThanks for creating a Viapunt account. "
             "Please confirm your email address by opening this link within 24 hours:\n\n"
             "{link}\n\nIf you did not create an account, you can ignore this email.",
         ),
         "de": (
             "Bestätigen Sie Ihre E-Mail-Adresse",
-            "Guten Tag,\n\nVielen Dank, dass Sie ein Konto bei Civics Trainer erstellt haben. "
+            "Guten Tag,\n\nVielen Dank, dass Sie ein Konto bei Viapunt erstellt haben. "
             "Bitte bestätigen Sie Ihre E-Mail-Adresse innerhalb von 24 Stunden über diesen "
             "Link:\n\n{link}\n\n"
             "Falls Sie kein Konto erstellt haben, können Sie diese E-Mail ignorieren.",
         ),
         "fr": (
             "Confirmez votre adresse e-mail",
-            "Bonjour,\n\nMerci d'avoir créé un compte Civics Trainer. "
+            "Bonjour,\n\nMerci d'avoir créé un compte Viapunt. "
             "Veuillez confirmer votre adresse e-mail en ouvrant ce lien dans les 24 heures :\n\n"
             "{link}\n\nSi vous n'avez pas créé de compte, vous pouvez ignorer cet e-mail.",
         ),
@@ -39,14 +39,14 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
     "reset_password": {
         "en": (
             "Reset your password",
-            "Hello,\n\nSomeone asked to reset the password for this Civics Trainer account. "
+            "Hello,\n\nSomeone asked to reset the password for this Viapunt account. "
             "Open this link within 30 minutes to choose a new password:\n\n{link}\n\n"
             "If this was not you, you can ignore this email and your password stays the same.",
         ),
         "de": (
             "Passwort zurücksetzen",
             "Guten Tag,\n\nJemand hat das Zurücksetzen des Passworts für dieses "
-            "Civics-Trainer-Konto angefordert. Öffnen Sie diesen Link innerhalb von 30 Minuten, "
+            "Viapunt-Konto angefordert. Öffnen Sie diesen Link innerhalb von 30 Minuten, "
             "um ein neues Passwort zu wählen:\n\n{link}\n\n"
             "Falls Sie das nicht waren, ignorieren Sie diese E-Mail; Ihr Passwort bleibt "
             "unverändert.",
@@ -54,7 +54,7 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
         "fr": (
             "Réinitialiser votre mot de passe",
             "Bonjour,\n\nQuelqu'un a demandé la réinitialisation du mot de passe de ce compte "
-            "Civics Trainer. Ouvrez ce lien dans les 30 minutes pour choisir un nouveau "
+            "Viapunt. Ouvrez ce lien dans les 30 minutes pour choisir un nouveau "
             "mot de passe :\n\n{link}\n\n"
             "Si ce n'était pas vous, ignorez cet e-mail ; votre mot de passe reste inchangé.",
         ),

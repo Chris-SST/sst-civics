@@ -1,1 +1,1 @@
-"""Civics Trainer API."""
+"""Viapunt API."""

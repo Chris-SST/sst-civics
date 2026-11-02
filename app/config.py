@@ -58,7 +58,7 @@ class Settings(BaseSettings):
 
     # Email
     email_backend: Literal["console", "smtp", "memory"] = "console"
-    email_from: str = "Civics Trainer <noreply@example.ch>"
+    email_from: str = "Viapunt <noreply@viapunt.ch>"
     email_outbox_dir: str = "var/outbox"
     email_api_key: str = ""
     smtp_host: str = ""
@@ -76,7 +76,7 @@ class Settings(BaseSettings):
     tutor_max_output_tokens: int = 1500
     tutor_timeout_seconds: float = 90
     fast_timeout_seconds: float = 6
-    tutor_name: str = "Civics Trainer"
+    tutor_name: str = "Viapunt"
     disclose_model_provider: bool = True
     prompts_dir: str = "prompts"
     content_dir: str = "content"  # question, topic and translation files (D-041)
