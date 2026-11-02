@@ -11,64 +11,75 @@ topics:
     name_en: "Founding of the Confederation and the Old Confederacy"
     target_questions: 9
     sources:
-      - https://www.bk.admin.ch/bund-kurz-erklaert
-      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+      - https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+      - https://www.aboutswitzerland.eda.admin.ch/de/wilhelm-tell-weltbekanntes-schweizer-symbol-fuer-freiheit
+      - https://www.aboutswitzerland.eda.admin.ch/de/nationalfeiertag-und-nationalhymne
+      - https://www.aboutswitzerland.eda.admin.ch/de/neutralitaet
   - code: bund.geschichte.bundesstaat
     scope: federal
     name_de: "Von der Helvetik zum Bundesstaat von 1848"
     name_en: "From the Helvetic Republic to the 1848 federal state"
     target_questions: 11
     sources:
-      - https://www.bk.admin.ch/bund-kurz-erklaert
-      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+      - https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+      - https://www.aboutswitzerland.eda.admin.ch/de/alfred-escher-ein-visionaer-der-modernen-schweiz
+      - https://www.aboutswitzerland.eda.admin.ch/de/humanitaere-tradition
+      - https://www.aboutswitzerland.eda.admin.ch/de/st-galler-stickereien-in-der-ganzen-welt-begehrt
   - code: bund.geschichte.weltkriege_neutralitaet
     scope: federal
     name_de: "Neutralität, Weltkriege und Nachkriegszeit"
     name_en: "Neutrality, the World Wars and the post-war period"
     target_questions: 5
     sources:
-      - https://www.bk.admin.ch/bund-kurz-erklaert
-      - https://www.ch.ch/de/
+      - https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+      - https://www.aboutswitzerland.eda.admin.ch/de/neutralitaet
+      - https://www.europa.eda.admin.ch/de/abstimmungen-und-chronologie
   - code: bund.geschichte.gesellschaftswandel
     scope: federal
     name_de: "Gesellschaftlicher Wandel und Gleichstellung"
     name_en: "Social change and equality"
     target_questions: 11
     sources:
-      - https://www.bk.admin.ch/bund-kurz-erklaert
-      - https://www.ch.ch/de/
+      - https://www.ekf.admin.ch/de/frauenrechte
+      - https://www.bar.admin.ch/de/einwandererland-schweiz
+      - https://www.census1850.bfs.admin.ch/de/auslaendische-bevoelkerung.html
+      - https://www.parlament.ch/blog/Pages/20221019-fabrikgesetz-de.aspx
+      - https://www.aboutswitzerland.eda.admin.ch/de/auswanderung-und-einwanderung
   - code: bund.demokratie.staatsprinzipien
     scope: federal
     name_de: "Bundesverfassung und Staatsprinzipien"
     name_en: "Federal Constitution and state principles"
     target_questions: 11
     sources:
-      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
-      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+      - https://www.admin.ch/gov/de/start/bundesrat.html
+      - https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet/aufgaben-der-bundesversammlung/rechtsetzung/bundesgesetze
+      - https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
   - code: bund.demokratie.foederalismus
     scope: federal
     name_de: "Föderalismus: Bund, Kantone und Gemeinden"
     name_en: "Federalism: Confederation, cantons and communes"
     target_questions: 12
     sources:
-      - https://www.bk.admin.ch/bund-kurz-erklaert
-      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+      - https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
   - code: bund.demokratie.kantone_rolle
     scope: federal
     name_de: "Aufgaben und Stellung der Kantone"
     name_en: "Role and standing of the cantons"
     target_questions: 1
     sources:
-      - https://www.bk.admin.ch/bund-kurz-erklaert
-      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+      - https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsgebaeude
   - code: bund.demokratie.grundrechte
     scope: federal
     name_de: "Grundrechte und Bürgerrechte"
     name_en: "Fundamental rights and civil rights"
     target_questions: 16
     sources:
-      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
-      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/54/757_781_799/20261101/de/html/fedlex-data-admin-ch-eli-cc-54-757_781_799-20261101-de-html-1.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2022/491/20250707/de/html/fedlex-data-admin-ch-eli-cc-2022-491-20250707-de-html-1.html
   - code: bund.demokratie.volksrechte
     scope: federal
     name_de: "Volksrechte: Initiative, Referendum und Abstimmungen"
@@ -85,138 +96,179 @@ topics:
     name_en: "Elections, voting rights and parties"
     target_questions: 14
     sources:
-      - https://www.ch.ch/de/
-      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1978/688_688_688/20221023/de/html/fedlex-data-admin-ch-eli-cc-1978-688_688_688-20221023-de-html-11.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2015/653/20180101/de/html/fedlex-data-admin-ch-eli-cc-2015-653-20180101-de-html-9.html
+      - https://www.bk.admin.ch/bk/de/home/politische-rechte/volksabstimmungen.html
   - code: bund.demokratie.parlament
     scope: federal
     name_de: "Bundesversammlung: Nationalrat und Ständerat"
     name_en: "Federal Assembly: National Council and Council of States"
     target_questions: 10
     sources:
-      - https://www.bk.admin.ch/bund-kurz-erklaert
-      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+      - https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+      - https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet/aufgaben-der-bundesversammlung/rechtsetzung/bundesgesetze
+      - https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet/aufgaben-der-bundesversammlung/wahlen/wahl-mitglieder-bundesrat
+      - https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsgebaeude
   - code: bund.demokratie.bundesrat
     scope: federal
     name_de: "Bundesrat und Bundesverwaltung"
     name_en: "Federal Council and federal administration"
     target_questions: 8
     sources:
-      - https://www.bk.admin.ch/bund-kurz-erklaert
-      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+      - https://www.admin.ch/gov/de/start/bundesrat.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022/20250501/de/html/fedlex-data-admin-ch-eli-cc-1997-2022_2022_2022-20250501-de-html-3.html
+      - https://www.admin.ch/gov/de/start/departemente.html
+      - https://www.admin.ch/gov/de/start/bundesrat/geschichte-des-bundesrats/frauen-im-bundesrat.html
   - code: bund.demokratie.gerichte
     scope: federal
     name_de: "Gerichte und Rechtsstaat"
     name_en: "Courts and the rule of law"
     target_questions: 10
     sources:
-      - https://www.bk.admin.ch/bund-kurz-erklaert
-      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2010/267/20250401/de/html/fedlex-data-admin-ch-eli-cc-2010-267-20250401-de-html-4.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/54/757_781_799/20261101/de/html/fedlex-data-admin-ch-eli-cc-54-757_781_799-20261101-de-html-1.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/html/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-html-2.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
   - code: bund.sozial.sozialversicherungen
     scope: federal
     name_de: "Sozialversicherungen und Sozialstaat"
     name_en: "Social insurance and the welfare state"
     target_questions: 19
     sources:
-      - https://www.ch.ch/de/
-      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+      - https://www.bsv.admin.ch/de/dreisaeulensystem
+      - https://www.bsv.admin.ch/de/beitraege-im-ueberblick
+      - https://www.bsv.admin.ch/de/familienzulagen-leistungen-und-voraussetzungen
+      - https://www.bsv.admin.ch/de/organisation-ahv
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184/20260101/de/html/fedlex-data-admin-ch-eli-cc-1982-2184_2184_2184-20260101-de-html-1.html
   - code: bund.sozial.pflichten
     scope: federal
     name_de: "Staatsbürgerliche Pflichten: Steuern, Militär- und Zivildienst, Versicherungspflicht"
     name_en: "Civic duties: taxes, military and civilian service, compulsory insurance"
     target_questions: 14
     sources:
-      - https://www.ch.ch/de/
-      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+      - https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen.html
+      - https://www.estv.admin.ch/de/mehrwertsteuer
+      - https://www.zivi.admin.ch/de/zulassung
+      - https://www.zh.ch/de/umwelt-tiere/tiere/haustiere-heimtiere/hunde.html
   - code: bund.sozial.bildung
     scope: federal
     name_de: "Bildungssystem"
     name_en: "Education system"
     target_questions: 5
     sources:
-      - https://www.ch.ch/de/
+      - https://www.zh.ch/de/bildung/schulen/volksschule.html
+      - https://www.zh.ch/de/bildung/schulen/volksschule/kindergarten.html
+      - https://www.zh.ch/de/bildung/berufs-studien-laufbahnberatung.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
   - code: bund.sozial.gesundheit
     scope: federal
     name_de: "Gesundheitswesen und Krankenversicherung"
     name_en: "Health care and health insurance"
     target_questions: 8
     sources:
-      - https://www.ch.ch/de/
+      - https://www.bag.admin.ch/de/krankenversicherung-das-wichtigste-in-kuerze
+      - https://www.bag.admin.ch/de/krankenversicherung-versicherungspflicht
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328/20260701/de/html/fedlex-data-admin-ch-eli-cc-1995-1328_1328_1328-20260701-de-html-1.html
   - code: bund.sozial.wirtschaft_arbeit
     scope: federal
     name_de: "Wirtschaft und Arbeitswelt"
     name_en: "Economy and working life"
     target_questions: 20
     sources:
-      - https://www.ch.ch/de/
-      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.seco.admin.ch/de/europaeische-union-eu
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
+      - https://www.zh.ch/de/wirtschaft-arbeit/arbeitsbedingungen.html
+      - https://www.zh.ch/de/volkswirtschaftsdirektion/amt-fuer-arbeit/rav-im-kanton-zuerich.html
+      - https://www.seco.admin.ch/de/gesamtarbeitsvertraege-grundlagen
   - code: bund.sozial.zivilgesellschaft
     scope: federal
     name_de: "Zivilgesellschaft, Vereine, Religion und Zusammenleben"
     name_en: "Civil society, associations, religion and living together"
     target_questions: 13
     sources:
-      - https://www.ch.ch/de/
-      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/html/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-html-2.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20261001/de/html/fedlex-data-admin-ch-eli-cc-27-317_321_377-20261001-de-html-4.html
   - code: bund.geografie.landschaft
     scope: federal
     name_de: "Geografie der Schweiz: Landschaften, Gewässer, Kantone"
     name_en: "Geography of Switzerland: landscapes, waters, cantons"
     target_questions: 22
     sources:
-      - https://www.ch.ch/de/
-      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.aboutswitzerland.eda.admin.ch/de/geografie
+      - https://www.aboutswitzerland.eda.admin.ch/de/weltmeisterin-im-zugfahren-die-entstehungsgeschichte-der-bahnnation-schweiz
+      - https://www.aboutswitzerland.eda.admin.ch/de/seen-und-fluesse
+      - https://www.aboutswitzerland.eda.admin.ch/de/alpen
+      - https://www.aboutswitzerland.eda.admin.ch/de/klima
   - code: bund.geografie.sprachen
     scope: federal
     name_de: "Landessprachen und Sprachregionen"
     name_en: "National languages and language regions"
     target_questions: 9
     sources:
-      - https://www.ch.ch/de/
-      - https://www.fedlex.admin.ch/eli/cc/1999/404/de
+      - https://www.aboutswitzerland.eda.admin.ch/de/sprachen
+      - https://www.aboutswitzerland.eda.admin.ch/de/mehrsprachigkeit
+      - https://www.aboutswitzerland.eda.admin.ch/de/schweizer-nationalgerichte
   - code: bund.kultur.feiertage_brauchtum
     scope: federal
     name_de: "Feiertage, Brauchtum und Kultur"
     name_en: "Holidays, customs and culture"
     target_questions: 23
     sources:
-      - https://www.ch.ch/de/
-      - https://www.bk.admin.ch/bund-kurz-erklaert
+      - https://www.aboutswitzerland.eda.admin.ch/de/traditionen
+      - https://www.aboutswitzerland.eda.admin.ch/de/kulturschaffen-in-der-schweiz
+      - https://www.aboutswitzerland.eda.admin.ch/de/sport-und-freizeit
+      - https://www.bak.admin.ch/de/basler-fasnacht
+      - https://www.aboutswitzerland.eda.admin.ch/de/feste-und-braeuche-im-herbst
   - code: bund.international
     scope: federal
     name_de: "Die Schweiz und internationale Organisationen"
     name_en: "Switzerland and international organisations"
     target_questions: 7
-    sources: []
+    sources:
+      - https://www.eda.admin.ch/de/uno
+      - https://www.eda.admin.ch/de/europapolitik-einfach-erklaert
+      - https://www.eda.admin.ch/de/organisation-fuer-sicherheit-und-zusammenarbeit-in-europa-osze
+      - https://www.eda.admin.ch/de/die-schweiz-und-das-ikrk-bereiten-sich-auf-die-herausforderungen-der-digitalisierung-vor
+      - https://www.admin.ch/de/wef-davos
   - code: bund.alltag
     scope: federal
     name_de: "Alltag: Bevölkerung, Verkehr und Notrufnummern"
     name_en: "Everyday life: population, transport and emergency numbers"
     target_questions: 6
-    sources: []
+    sources:
+      - https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/stand-entwicklung.html
+      - https://www.uvek.admin.ch/de/sbb
   - code: kanton.demokratie.verfassung
     scope: canton
     name_de: "Verfassung des Kantons Zürich"
     name_en: "Constitution of the canton of Zurich"
     target_questions: 1
     sources:
-      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
-      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse.html
+      - https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+      - https://www.zh.ch/de/politik-staat/kanton.html
   - code: kanton.demokratie.kantonsrat
     scope: canton
     name_de: "Kantonsrat"
     name_en: "Cantonal Parliament (Kantonsrat)"
     target_questions: 3
     sources:
-      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
-      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+      - https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/kantons-regierungsratswahlen.html
+      - https://www.kantonsrat.zh.ch/
+      - https://www.zh.ch/de/politik-staat/kanton.html
   - code: kanton.demokratie.regierungsrat
     scope: canton
     name_de: "Regierungsrat und Kantonsverwaltung"
     name_en: "Cantonal Government (Regierungsrat) and administration"
     target_questions: 6
     sources:
-      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
-      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+      - https://www.zh.ch/de/regierungsrat.html
+      - https://www.zh.ch/de/politik-staat/kanton/kantonale-verwaltung.html
+      - https://www.stadt-zuerich.ch/de/politik-und-verwaltung/behoerden-und-organe/stadtrat.html
   - code: kanton.demokratie.gerichte
     scope: canton
     name_de: "Zürcher Gerichte"
@@ -230,66 +282,90 @@ topics:
     name_en: "Cantonal votes, elections and popular rights"
     target_questions: 2
     sources:
-      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
-      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+      - https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/national-staenderatswahlen.html
+      - https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/initiativen-referenden-anfragerecht.html
   - code: kanton.sozial.steuern_leistungen
     scope: canton
     name_de: "Kantonale Leistungen und Steuern"
     name_en: "Cantonal services and taxes"
     target_questions: 4
     sources:
-      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
-      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse.html
+      - https://www.zh.ch/de/sicherheitsdirektion/strassenverkehrsamt.html
+      - https://www.zh.ch/de/mobilitaet/fahrzeuge-kontrollschilder.html
+      - https://www.zh.ch/de/steuern-finanzen/steuern.html
+      - https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen.html
   - code: kanton.sozial.bildung_gesundheit
     scope: canton
     name_de: "Bildung und Gesundheit im Kanton Zürich"
     name_en: "Education and health in the canton of Zurich"
     target_questions: 3
     sources:
-      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+      - https://www.zh.ch/de/bildung/schulen/volksschule.html
+      - https://www.zh.ch/de/bildung/schulen/volksschule/kindergarten.html
+      - https://www.zh.ch/de/bildung/bildungssystem.html
+      - https://www.zh.ch/de/bildung/bildungssystem/wissenschafts-und-hochschulplatz-zuerich.html
   - code: kanton.geschichte.zuerich
     scope: canton
     name_de: "Geschichte des Kantons Zürich"
     name_en: "History of the canton of Zurich"
     target_questions: 10
     sources:
-      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+      - https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html
+      - https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2021/02/turicum-eine-roemische-hafenstadt-und-zollstation.html
+      - https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2003/04/ktzh200.html
+      - https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/digitale-zeitreise/landwirtschaft-natur-und-umwelt.html
+      - https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/archaeologie/uwad/unterwasser/pastzurich.html
   - code: kanton.geografie.zuerich
     scope: canton
     name_de: "Geografie des Kantons Zürich"
     name_en: "Geography of the canton of Zurich"
     target_questions: 17
     sources:
-      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+      - https://www.zh.ch/de/politik-staat/kanton.html
+      - https://www.zh.ch/de/planen-bauen/raumplanung/raumbeobachtung/bodennutzung.html
+      - https://www.zh.ch/de/umwelt-tiere/tiere/fischerei.html
+      - https://www.zh.ch/de/sport-kultur/kultur/kulturerbe/kulturhistorische-institutionen.html
+      - https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2021/02/15-000-neuzuercherinnen-und-neuzuercher.html
   - code: kanton.kultur.zuerich
     scope: canton
     name_de: "Kultur, Brauchtum und Anlässe im Kanton Zürich"
     name_en: "Culture, customs and events in the canton of Zurich"
     target_questions: 10
-    sources: []
+    sources:
+      - https://www.stadt-zuerich.ch/artikel/de/mobilitaet/sechselaeuten.html
+      - https://www.aboutswitzerland.eda.admin.ch/de/sechselaeuten-das-grosse-zuercher-fruehlingsfest
+      - https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2026/10/das-technorama-soll-ein-attraktives-science-center-bleiben.html
+      - https://www.zh.ch/de/politik-staat/kanton/kantonale-verwaltung.html
+      - https://www.stadt-zuerich.ch/de/stadtleben/kultur/kulturauftrag/zukunft-theater-spektakel.html
   - code: gemeinde.organisation.versammlung_parlament
     scope: commune
     name_de: "Gemeindeversammlung und Gemeindeparlament"
     name_en: "Communal assembly and communal parliament"
     target_questions: 4
     sources:
-      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
-      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
+      - https://www.zh.ch/de/politik-staat/gemeinden.html
+      - https://www.zh.ch/de/politik-staat/gemeinden/gemeindeorganisation.html
+      - https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/gemeindeabstimmungen.html
+      - https://www.stadt-zuerich.ch/de/politik-und-verwaltung/behoerden-und-organe/gemeinderat.html
   - code: gemeinde.organisation.gemeinderat_stadtrat
     scope: commune
     name_de: "Gemeinderat, Stadtrat und Gemeindeverwaltung"
     name_en: "Communal executive (Gemeinderat, Stadtrat in the city) and administration"
     target_questions: 2
     sources:
-      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
-      - https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-101-2005_02_27-2006_01_01-129.html
+      - https://www.stadt-zuerich.ch/de/politik-und-verwaltung/behoerden-und-organe/stadtrat.html
+      - https://www.zh.ch/de/politik-staat/gemeinden/fuer-neue-behoerdenmitglieder.html
   - code: gemeinde.leistungen
     scope: commune
     name_de: "Leistungen der Gemeinde"
     name_en: "Communal services"
     target_questions: 14
     sources:
-      - https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+      - https://www.zh.ch/de/politik-staat/gemeinden.html
+      - https://www.zh.ch/de/politik-staat/gemeinden/einwohnerwesen.html
+      - https://www.zh.ch/de/planen-bauen/baubewilligung.html
+      - https://www.zh.ch/de/bildung/schulen/volksschule/rechte-und-pflichten-der-eltern.html
+      - https://www.zh.ch/de/soziales/sozialhilfe.html
   - code: gemeinde.einbuergerung
     scope: commune
     name_de: "Einbürgerung auf Gemeindeebene"
