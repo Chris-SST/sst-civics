@@ -153,7 +153,7 @@ const en: Ui = {
   home: {
     title: "Swiss naturalisation guide and citizenship test practice",
     description:
-      "Plain guides to becoming Swiss and practice for the citizenship test, for all of Switzerland and with questions on the canton of Zurich. 30 free questions in German, with your language beside them.",
+      "Step-by-step guides to Swiss naturalisation, and citizenship test practice in German with your language side by side. Try 30 questions free.",
     eyebrow: "Naturalisation in Switzerland",
     h1: "Understand it in your language. Pass it in German.",
     lead: "Plain guides to every step of becoming Swiss, from documents to the knowledge test, with the details for the canton of Zurich. Then practise the test questions with the German and your language side by side.",
@@ -338,7 +338,7 @@ const de: Ui = {
   home: {
     title: "Einbürgerung Schweiz: Ratgeber und Einbürgerungstest üben",
     description:
-      "Verständliche Ratgeber zur Einbürgerung in der Schweiz und Training für den Einbürgerungstest, für die ganze Schweiz und mit Fragen zum Kanton Zürich. 30 Gratisfragen auf Deutsch, mit Übersetzung in Ihre Sprache.",
+      "Die Einbürgerung in der Schweiz Schritt für Schritt erklärt, dazu Übungsfragen für den Einbürgerungstest mit Übersetzung in Ihre Sprache. 30 Fragen gratis.",
     eyebrow: "Einbürgerung in der Schweiz",
     h1: "In Ihrer Sprache verstehen. Auf Deutsch bestehen.",
     lead: "Verständliche Ratgeber zu jedem Schritt der Einbürgerung, von den Unterlagen bis zum Wissenstest, mit den Details für den Kanton Zürich. Danach üben Sie die Testfragen, auf Deutsch und auf Wunsch mit Übersetzung daneben.",

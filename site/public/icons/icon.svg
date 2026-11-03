@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Viapunt">
+  <rect width="512" height="512" rx="112" fill="#0e6e6b"/>
+  <g transform="translate(256 256) scale(11) translate(-16 -15)">
+    <path d="M6 8h14a4 4 0 0 1 0 8H12l-4 4V8z" fill="#ffffff"/>
+    <circle cx="23" cy="21" r="4" fill="#f4b740"/>
+  </g>
+</svg>

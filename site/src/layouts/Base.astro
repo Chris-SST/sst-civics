@@ -46,11 +46,6 @@ const legalLinks = (["imprint", "privacy", "terms", "contact", "about"] as const
   .filter((l): l is { href: string; label: string } => l.href !== null);
 const appHref = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
 const tryHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(lang)}`;
-const icon =
-  "data:image/svg+xml," +
-  encodeURIComponent(
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#0e6e6b"/><path d="M6 8h14a4 4 0 0 1 0 8H12l-4 4V8z" fill="#ffffff"/><circle cx="23" cy="21" r="4" fill="#f4b740"/></svg>',
-  );
 ---
 <!doctype html>
 <html lang={lang}>
@@ -72,7 +67,12 @@ const icon =
     <meta property="og:locale" content={ogLocale[lang] ?? "en_GB"} />
     {alternates.filter((a) => a.lang !== lang).map((a) => <meta property="og:locale:alternate" content={ogLocale[a.lang] ?? "en_GB"} />)}
     <meta name="twitter:card" content="summary" />
-    <link rel="icon" href={icon} />
+    {/* Real files, not a data: URL: Google's result snippets only show a favicon it can crawl
+        (a multiple of 48px). The icons are copies of the app's (web/public/icons). */}
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin />
     {/*
