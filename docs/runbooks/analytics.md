@@ -57,3 +57,18 @@ and encrypt and copy it like the main dump (or switch to `pg_dumpall`, which inc
 - Visitors: remove `PUBLIC_UMAMI_WEBSITE_ID` from the guide build environment and redeploy the site. The tracker tag disappears; nothing else changes.
 - Server: `docker compose -f infra/docker-compose.yml --env-file .env --profile analytics stop umami`. The `/stats/` paths then return a 502, which the tracker ignores. To remove the data, `DROP DATABASE umami;` and `DROP USER umami;` in `psql`.
 - Delete clause 6.4 in the privacy notice if analytics are removed for good.
+
+## Production (set up 3 November 2026)
+
+- Umami runs in the production stack (`/opt/civics-prod`, `--profile analytics`), database
+  `umami` in the production PostgreSQL. Website "Viapunt" (domain viapunt.ch), id in
+  `UMAMI_WEBSITE_ID` in `/opt/civics-prod/.env`; the app's web image is built with it
+  (`VITE_UMAMI_WEBSITE_ID` build argument) and the production guide build sets
+  `PUBLIC_UMAMI_WEBSITE_ID` to the same id. Staging has no statistics.
+- Both hosts count: viapunt.ch and app.viapunt.ch serve `/stats/script.js` and
+  `/stats/api/send` from the same origin. App events: try-start, try-finish, signup, checkout,
+  help-chat; site events: cta-try, cta-pass, cta-free-questions/cta-pass/cta-mock (guide cards),
+  site-chat-open, site-chat-message.
+- Dashboard: https://stats.viapunt.ch (needs the DNS records stats.viapunt.ch A/AAAA and the host
+  in the edge Caddy's production block). User `admin`; the password was changed from the default
+  and is stored only in `/opt/civics-prod/.umami-admin-password` (mode 600).
