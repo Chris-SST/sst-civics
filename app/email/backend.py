@@ -44,7 +44,7 @@ def _build(msg: OutgoingEmail) -> EmailMessage:
     em["Subject"] = msg.subject
     # Our own Date and a Message-ID on the sender's domain: without them the mail server
     # makes an ID from the container's internal address, which spam filters mark down.
-    em["Date"] = formatdate(localtime=False)
+    em["Date"] = formatdate(usegmt=True)
     em["Message-ID"] = make_msgid(domain=parseaddr(settings.email_from)[1].split("@")[-1] or None)
     em.set_content(msg.text)
     if msg.html:
