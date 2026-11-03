@@ -1,5 +1,7 @@
-"""Create or update the Viapunt Pass products and prices in the Stripe account, test mode
-only, with the lookup keys the app expects (D-015). Safe to re-run.
+"""Create or update the Viapunt Pass products and prices in the Stripe account, with the
+lookup keys the app expects (D-015). Safe to re-run. Test mode by default; a live key
+(sk_live_ or rk_live_) needs --live, and then only the passes on sale (CANTONS_FOR_SALE) and
+the extension are created.
 
 The app never reads an amount from code: it looks prices up in Stripe by lookup key. The
 amounts below are only what this script writes into the test account; change them with
@@ -8,6 +10,7 @@ amount creates a new price and moves the lookup key to it.
 
 Usage:
   STRIPE_SECRET_KEY=sk_test_... python -m scripts.stripe_bootstrap [--amount civics_pass_zh=2900]
+  python -m scripts.stripe_bootstrap --live      (production, after go-live approval)
 """
 
 from __future__ import annotations
@@ -60,14 +63,25 @@ def _product_id(client: stripe.StripeClient, key: str, name: str, existing_price
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--amount", action="append", default=[], metavar="KEY=RAPPEN")
+    parser.add_argument("--live", action="store_true", help="allow a live key (go-live approved)")
     args = parser.parse_args()
     amounts = _amounts(args.amount)
 
     settings = get_settings()
     if not settings.stripe_secret_key:
         raise SystemExit("Set STRIPE_SECRET_KEY first")
-    if not settings.stripe_secret_key.startswith("sk_test_"):
-        raise SystemExit("Refusing to run against a live key before go-live approval")
+    live = settings.stripe_secret_key.startswith(("sk_live_", "rk_live_"))
+    if live and not args.live:
+        raise SystemExit(
+            "Live key: run with --live to write products and prices to the live account"
+        )
+    if not live and not settings.stripe_secret_key.startswith(("sk_test_", "rk_test_")):
+        raise SystemExit("STRIPE_SECRET_KEY is neither a test nor a live key")
+    wanted = {
+        k: p
+        for k, p in PRODUCTS.items()
+        if not live or p.canton is None or p.canton in settings.cantons_on_sale
+    }
     client = stripe.StripeClient(
         settings.stripe_secret_key, stripe_version=settings.stripe_api_version
     )
@@ -75,11 +89,11 @@ def main() -> None:
     prices = {
         p.lookup_key: p
         for p in client.prices.list(
-            params={"lookup_keys": list(PRODUCTS), "active": True, "limit": 100}
+            params={"lookup_keys": list(wanted), "active": True, "limit": 100}
         ).data
         if p.lookup_key
     }
-    for key, product in PRODUCTS.items():
+    for key, product in wanted.items():
         price = prices.get(key)
         product_id = _product_id(client, key, product.name, price)
         metadata = {"access_months": str(product.months), "kind": product.kind}
