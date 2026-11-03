@@ -19,6 +19,3 @@ Schreiben Sie uns an **[info@viapunt.ch](mailto:info@viapunt.ch)**. Wir antworte
 
 Wir geben keine Rechtsberatung und können Ihr eigenes Gesuch nicht beurteilen. Für Fragen zu Ihrem Gesuch wenden Sie sich an Ihre Gemeinde oder an das [Gemeindeamt des Kantons Zürich](https://www.zh.ch/de/migration-integration/einbuergerung.html).
 
-## Postadresse
-
-Swiss Science Tutors GmbH, Laurstrasse 15, 5200 Brugg, Schweiz

@@ -8,7 +8,7 @@ updated: 2026-11-02
 
 ## Wer diesen Dienst betreibt
 
-Viapunt ist ein unabhängiger privater Dienst der Swiss Science Tutors GmbH, Laurstrasse 15, 5200 Brugg, Schweiz. Viapunt hat keine Verbindung zu einer Behörde des Bundes, eines Kantons oder einer Gemeinde und keinen amtlichen Status. Keine Behörde prüft, empfiehlt oder betreibt Viapunt.
+Viapunt ist ein unabhängiger privater Dienst der Swiss Science Tutors GmbH, 5200 Brugg, Schweiz. Viapunt hat keine Verbindung zu einer Behörde des Bundes, eines Kantons oder einer Gemeinde und keinen amtlichen Status. Keine Behörde prüft, empfiehlt oder betreibt Viapunt.
 
 ## Unsere Fragen
 

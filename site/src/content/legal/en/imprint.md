@@ -9,7 +9,6 @@ updated: 2026-11-02
 Viapunt is a service of:
 
 **Swiss Science Tutors GmbH**  
-Laurstrasse 15  
 5200 Brugg  
 Switzerland
 

@@ -2,7 +2,7 @@
 
 > **DRAFT for review by Chris and a lawyer; not published.**
 >
-> Operator: Swiss Science Tutors GmbH, Laurstrasse 15, 5200 Brugg, Switzerland
+> Operator: Swiss Science Tutors GmbH, 5200 Brugg, Switzerland
 > Service: Viapunt (working name; the brand is provisional)
 > Date of draft: 30 October 2026
 
@@ -10,7 +10,7 @@ This notice explains how personal data is handled when you use the guide website
 
 ## 1. Controller
 
-1.1 The controller is Swiss Science Tutors GmbH, Laurstrasse 15, 5200 Brugg, Switzerland. Contact for privacy matters: info@viapunt.ch.
+1.1 The controller is Swiss Science Tutors GmbH, 5200 Brugg, Switzerland. Contact for privacy matters: info@viapunt.ch.
 
 1.2 [Lawyer to confirm whether a data protection adviser or a representative in the EU/EEA is needed.]
 
@@ -116,4 +116,4 @@ This notice explains how personal data is handled when you use the guide website
 
 ## 11. Contact
 
-Swiss Science Tutors GmbH, Laurstrasse 15, 5200 Brugg, Switzerland. Email: info@viapunt.ch.
+Swiss Science Tutors GmbH, 5200 Brugg, Switzerland. Email: info@viapunt.ch.

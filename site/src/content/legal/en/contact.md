@@ -19,6 +19,3 @@ Write to us at **[info@viapunt.ch](mailto:info@viapunt.ch)**. We usually answer 
 
 We give no legal advice and cannot assess your own application. For questions about your application, contact your commune or the [Gemeindeamt of the canton of Zurich](https://www.zh.ch/de/migration-integration/einbuergerung.html).
 
-## Postal address
-
-Swiss Science Tutors GmbH, Laurstrasse 15, 5200 Brugg, Switzerland
