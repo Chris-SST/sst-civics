@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 import { adminApi, freshEmail, learnerId, signUpAndVerify } from "./helpers";
 
-test("a pass that expired yesterday leaves the learner on the free tier without Explain this", async ({ page }) => {
+test("a pass that expired yesterday leaves the learner on the free tier with the free Explain this", async ({ page }) => {
   const email = freshEmail("expired");
   await signUpAndVerify(page, email);
 
@@ -23,10 +23,10 @@ test("a pass that expired yesterday leaves the learner on the free tier without 
   await expect(page.getByText(/Ended on/)).toBeVisible();
   expect((await page.request.get("/api/study/question/e2e-q60")).status()).toBe(403);
 
-  // Explain this is offered after an answer, but the server refuses it.
+  // Explain this on a sample question works within the free allowance, as for any free learner.
   await page.goto("/practise");
   await page.getByRole("radio").first().click();
   await page.getByRole("button", { name: "Check answer" }).click();
   await page.getByRole("button", { name: "Explain this" }).click();
-  await expect(page.getByRole("alert").filter({ hasText: "You do not have access for your canton right now." })).toBeVisible();
+  await expect(page.getByText("Free account: 3 messages a day on the sample questions.")).toBeVisible();
 });

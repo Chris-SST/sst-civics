@@ -104,7 +104,8 @@
     "invalid_answer": "Elija una de las cuatro opciones.",
     "mock_in_progress": "Explicar esto y el chat de ayuda no están disponibles mientras se realiza un simulacro.",
     "invalid_language": "Elija un idioma de la lista.",
-    "translation_required": "Introduzca una traducción."
+    "translation_required": "Introduzca una traducción.",
+    "readiness_used_today": "Ya ha hecho el balance gratuito de hoy. El siguiente estará disponible mañana."
   },
   "impersonation": {
     "banner": "Viendo como {{name}} ({{role}}). Ha iniciado sesión como administrador {{admin}}.",
@@ -226,7 +227,7 @@
     "noTopics": "Los temas de su cantón llegarán pronto.",
     "topicsTitle": "Temas del examen: {{canton}}",
     "notStarted": "Sin empezar",
-    "freeTierNotice": "Está usando la versión gratuita: {{count}} preguntas de ejemplo en todos los modos de estudio y un simulacro. Un Viapunt Pass para su cantón abre todas las preguntas, simulacros ilimitados y Explícame esto.",
+    "freeTierNotice": "Está usando la versión gratuita: {{count}} preguntas de ejemplo en todos los modos de estudio, Explicar esto en esas preguntas, un simulacro y un balance cada día. Un Viapunt Pass para su cantón abre todas las preguntas, simulacros ilimitados y Explicar esto en cada pregunta.",
     "readinessTitle": "Preparación para el test del cantón de {{canton}}",
     "knownOf": "{{known}} de {{total}} preguntas sabidas",
     "dueCount_one": "{{count}} pregunta para repasar",
@@ -659,7 +660,9 @@
     "placeholder": "Haga su pregunta… (Intro para enviar)",
     "remaining": "Quedan {{left}} de {{limit}} mensajes hoy",
     "limitReached": "Ha alcanzado el límite de mensajes de hoy. Mañana vuelve a estar disponible.",
-    "offline": "El asistente aún no está conectado en este entorno."
+    "offline": "El asistente aún no está conectado en este entorno.",
+    "free": "Cuenta gratuita: {{limit}} mensajes al día sobre las preguntas de ejemplo.",
+    "freeLimitReached": "Por hoy se ha terminado Explicar esto gratuito. Vuelve mañana, y con un Viapunt Pass tiene Explicar esto en cada pregunta."
   },
   "glossary": {
     "link": "Glosario de términos clave",
@@ -726,5 +729,46 @@
   "passBar": {
     "cta": "Comprar el pase · {{price}}",
     "text": "Todas las preguntas, simulacros ilimitados y Explicar esto durante {{months}} meses. Un solo pago, sin suscripción."
+  },
+  "readinessCheck": {
+    "cardTitle": "Compruebe en qué punto está",
+    "cardBody": "{{questions}} preguntas, unos {{minutes}} minutos. Vea en qué punto está en cada área temática.",
+    "cardCta": "Empezar el balance",
+    "cardLast": "Su último balance: {{percent}} % de respuestas correctas.",
+    "usedToday": "Ya ha hecho el balance gratuito de hoy. El siguiente estará disponible mañana.",
+    "continue": "Continuar el balance",
+    "seeLast": "Ver el último resultado",
+    "title": "Compruebe en qué punto está",
+    "intro": "{{questions}} preguntas de todo el banco de preguntas, en todas las áreas temáticas del examen.",
+    "ruleGerman": "En alemán, como en el examen real.",
+    "ruleNoTimer": "Sin límite de tiempo: puede cambiar sus respuestas tantas veces como quiera.",
+    "ruleEnd": "Sus respuestas se comprueban al final, con un resultado para cada área temática.",
+    "freeOne": "Cuenta gratuita: un balance al día. Con un Viapunt Pass, todos los que quiera.",
+    "notEnough": "Todavía no hay suficientes preguntas aprobadas para el balance.",
+    "start": "Empezar el balance",
+    "handIn": "Comprobar mis respuestas",
+    "handInNow": "Comprobar ahora",
+    "confirm": "¿Comprobar sus respuestas ahora? Después ya no podrá cambiarlas.",
+    "confirmUnanswered_one": "{{count}} pregunta sigue sin responder. ¿Comprobar de todos modos?",
+    "confirmUnanswered_other": "{{count}} preguntas siguen sin responder. ¿Comprobar de todos modos?",
+    "resultTitle": "En qué punto está",
+    "score": "{{score}} de {{total}} correctas ({{percent}} %)",
+    "expired": "El balance quedó abierto mucho tiempo; se comprobaron las respuestas guardadas.",
+    "areasTitle": "Por área temática",
+    "areaScore": "{{correct}} de {{total}} correctas",
+    "again": "Comprobar de nuevo",
+    "level": {
+      "ready": "Su preparación es sólida. Haga un simulacro para probar el examen completo en condiciones reales.",
+      "close": "Le falta poco. Trabaje las áreas de abajo que aún no domina.",
+      "halfway": "Ya sabe una buena parte. Con práctica regular en las áreas más débiles, lo conseguirá.",
+      "start": "Está al principio. Aprenda los temas uno a uno y después vuelva a comprobar en qué punto está."
+    },
+    "area": {
+      "history": "Historia",
+      "politics": "Estado y política",
+      "society": "Sociedad y vida cotidiana",
+      "geography": "Geografía",
+      "culture": "Cultura y tradiciones"
+    }
   }
 }

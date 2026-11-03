@@ -1,8 +1,10 @@
 """Explain this: a short chat bound to one question (task 1.10, D-057). Starting returns the
 learner's open conversation for the question or creates one; messages go through the tutoring
 message endpoint (`POST /api/tutor/conversations/{id}/messages`), which uses the question as
-context for the reply and the gatekeeper. A pass is needed; the free tier has no Explain this.
-Nothing here is reachable from the mock test."""
+context for the reply and the gatekeeper. With a pass every servable question may be explained;
+without one, the free sample questions only, within the free daily allowance
+(`AI_FREE_EXPLAIN_DAILY_LIMIT`, app.tutoring.limits). Nothing here is reachable from the mock
+test."""
 
 from __future__ import annotations
 
@@ -14,6 +16,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.billing.access import has_access
+from app.config import get_settings
 from app.db import get_db
 from app.deps import require_learner
 from app.llm.client import get_provider
@@ -48,6 +51,7 @@ class ExplainStart(BaseModel):
 
 class ExplainOut(ConversationDetail):
     tutor_enabled: bool
+    paid: bool
     usage: dict[str, Any]
 
 
@@ -59,11 +63,15 @@ async def start(
     db: AsyncSession = Depends(get_db),
 ) -> ExplainOut:
     """The learner's open conversation about this question, or a new one."""
-    if not has_access(user, user.canton):
+    paid = has_access(user, user.canton)
+    if not paid and get_settings().ai_free_explain_daily_limit <= 0:
         raise HTTPException(status.HTTP_403_FORBIDDEN, "no_access")
     q = await db.get(Question, body.question_id)
     if q is None or not selection.servable_for(q, user):
         raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
+    refusal = await context.explain_refusal(db, user, q)
+    if refusal is not None:
+        raise HTTPException(status.HTTP_403_FORBIDDEN, refusal)
     if await context.mock_running(db, user):
         raise HTTPException(status.HTTP_409_CONFLICT, "mock_in_progress")
     lang = body.lang or user.study_language
@@ -117,5 +125,6 @@ async def start(
             for m in messages
         ],
         tutor_enabled=get_provider().available,
-        usage=(await usage_for(db, user)).to_dict(),
+        paid=paid,
+        usage=(await usage_for(db, user, explain=True)).to_dict(),
     )

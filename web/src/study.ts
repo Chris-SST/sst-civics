@@ -89,6 +89,7 @@ export interface Readiness {
 
 export interface MockRunSummary {
   id: string;
+  kind: "mock" | "readiness";
   status: "in_progress" | "finished" | "expired";
   started_at: string;
   deadline_at: string;
@@ -135,6 +136,7 @@ export interface LearnOut {
   scope: TopicScope;
   mode: StudyMode;
   free_tier: boolean;
+  sample_size: number;
   cards: StudyQuestion[];
 }
 
@@ -204,6 +206,38 @@ export interface MockRunOut extends MockRunSummary {
   questions?: MockQuestion[];
   review?: StudyQuestion[];
 }
+
+/** Readiness check (app/study/readiness_check.py): topic areas and "where you stand" levels. */
+export type ReadinessArea = "history" | "politics" | "society" | "geography" | "culture";
+export type ReadinessLevel = "ready" | "close" | "halfway" | "start";
+
+export interface ReadinessAreaResult {
+  area: ReadinessArea;
+  correct: number;
+  total: number;
+  percent: number;
+}
+
+export interface ReadinessResult {
+  percent: number;
+  level: ReadinessLevel;
+  areas: ReadinessAreaResult[];
+}
+
+export interface ReadinessInfo {
+  questions: number;
+  /** An estimate for the entry card; there is no time limit. */
+  minutes: number;
+  enough_questions: boolean;
+  paid: boolean;
+  used_today: boolean;
+  can_start: boolean;
+  active_run_id: string | null;
+  last: (MockRunSummary & ReadinessResult) | null;
+}
+
+/** A readiness check run: like a mock run, plus the result once it is handed in. */
+export type ReadinessRunOut = MockRunOut & Partial<ReadinessResult>;
 
 /** A mock-test question as a German-only study question, for QuestionCard. */
 export function mockQuestion(q: MockQuestion, index: number): StudyQuestion {

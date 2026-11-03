@@ -32,7 +32,7 @@ These terms apply to the guide website and the learning app of Viapunt (working 
 
 4.1 The Viapunt Pass is a one-off purchase, not a subscription. It does not renew and we do not charge you again.
 
-4.2 One pass gives access to all questions and study modes for one canton, unlimited mock tests, the "Explain this" assistant and every available language, for 6 months from payment.
+4.2 One pass gives access to all questions and study modes for one canton, unlimited mock tests, the "Explain this" assistant and every available language, for 12 months from payment.
 
 4.3 An extension adds 3 months. It can be bought while your pass is active or shortly after it ended [period to be confirmed: currently 90 days].
 

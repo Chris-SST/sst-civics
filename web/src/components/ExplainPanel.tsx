@@ -1,18 +1,22 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { post } from "../api";
 import { ChatLog, streamMessage, type Msg, type Notice, type Usage } from "./ChatParts";
 import ErrorText from "./ErrorText";
 
 /** "Explain this": a short chat about one question, below the card. It opens the learner's
  * conversation for the question (or a new one), answers in the learner's language and shows how
- * many messages are left today. It is never mounted in the mock test. */
+ * many messages are left today. Free learners use it on the sample questions within a small
+ * daily allowance; when it is used up, the panel points to the Viapunt Pass. It is never mounted
+ * in the mock test. */
 
 interface Started {
   id: string;
   status: "active" | "ended";
   messages: Msg[];
   tutor_enabled: boolean;
+  paid: boolean;
   usage: Usage;
 }
 
@@ -125,7 +129,14 @@ export default function ExplainPanel({ questionId, lang, onClose }: { questionId
             bottomRef={bottomRef}
             className="chat-log explain-log"
           />
-          {limitReached && <p className="alert alert-warn small">{t("explain.limitReached")}</p>}
+          {limitReached &&
+            (conv.paid ? (
+              <p className="alert alert-warn small">{t("explain.limitReached")}</p>
+            ) : (
+              <p className="alert alert-warn small">
+                {t("explain.freeLimitReached")} <Link to="/learner#pricing">{t("help.freeCta")}</Link>
+              </p>
+            ))}
           {ended ? (
             <p className="alert alert-info small">{t("chat.ended")}</p>
           ) : (
@@ -150,6 +161,7 @@ export default function ExplainPanel({ questionId, lang, onClose }: { questionId
               </div>
             </form>
           )}
+          {!conv.paid && !limitReached && <p className="small muted">{t("explain.free", { limit: usage?.daily_limit ?? 0 })}</p>}
         </>
       )}
     </section>

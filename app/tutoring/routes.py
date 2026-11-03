@@ -261,17 +261,26 @@ async def send_message(
     if not get_provider().available:
         raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "tutor_unavailable")
     is_help = conv.topic_code == HELP_TOPIC
-    # The help chat is open to every learner within the daily allowance (free or paid).
-    if not is_help and not has_access(user, user.canton):
+    is_explain = conv.question_id is not None
+    # The help chat is open to every learner within the daily allowance (free or paid);
+    # Explain this to free learners on the sample questions; the topic chat needs a pass.
+    if is_explain:
+        q = await db.get(Question, conv.question_id)
+        if q is None:
+            raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
+        refusal = await question_context.explain_refusal(db, user, q)
+        if refusal is not None:
+            raise HTTPException(status.HTTP_403_FORBIDDEN, refusal)
+    elif not is_help and not has_access(user, user.canton):
         raise HTTPException(status.HTTP_403_FORBIDDEN, "no_access")
-    if (conv.question_id or is_help) and await question_context.mock_running(db, user):
+    if (is_explain or is_help) and await question_context.mock_running(db, user):
         raise HTTPException(status.HTTP_409_CONFLICT, "mock_in_progress")
     text = body.content.strip()
     if not text:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "empty_message")
     if len(text) > settings.max_student_message_chars:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "message_too_long")
-    usage = await usage_for(db, user)
+    usage = await usage_for(db, user, explain=is_explain)
     if usage.monthly_exhausted:
         raise HTTPException(status.HTTP_429_TOO_MANY_REQUESTS, "monthly_limit_reached")
     if usage.daily_exhausted:
@@ -425,7 +434,7 @@ async def _reply_stream(
             )
             if ended:
                 yield _sse("notice", {"kind": "ended"})
-            usage = await usage_for(db, learner)
+            usage = await usage_for(db, learner, explain=conv.question_id is not None)
             yield _sse("usage", usage.to_dict())
             yield _sse("done", {})
             return
@@ -538,7 +547,7 @@ async def _reply_stream(
         yield _sse(
             "message", {"id": str(assistant.id), "role": MESSAGE_ASSISTANT, "content": reply_text}
         )
-        usage: UsageInfo = await usage_for(db, learner)
+        usage: UsageInfo = await usage_for(db, learner, explain=conv.question_id is not None)
         yield _sse("usage", usage.to_dict())
         yield _sse("done", {})
 

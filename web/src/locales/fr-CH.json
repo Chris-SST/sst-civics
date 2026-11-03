@@ -104,7 +104,8 @@
     "invalid_answer": "Veuillez choisir l'une des quatre réponses.",
     "mock_in_progress": "« Expliquer ceci » et le chat d'aide ne sont pas disponibles pendant un examen blanc.",
     "invalid_language": "Veuillez choisir une langue dans la liste.",
-    "translation_required": "Veuillez saisir une traduction."
+    "translation_required": "Veuillez saisir une traduction.",
+    "readiness_used_today": "Vous avez fait le bilan gratuit d'aujourd'hui. Le prochain est possible demain."
   },
   "impersonation": {
     "banner": "Vue en tant que {{name}} ({{role}}). Vous êtes connecté comme admin {{admin}}.",
@@ -226,7 +227,7 @@
     "noTopics": "Les thèmes de votre canton arrivent bientôt.",
     "topicsTitle": "Thèmes du test : {{canton}}",
     "notStarted": "Pas encore commencé",
-    "freeTierNotice": "Vous utilisez la version gratuite : {{count}} questions d'exemple dans tous les modes d'étude et un examen blanc. Un Viapunt Pass pour votre canton donne accès à toutes les questions, à des examens blancs illimités et aux explications par l'IA.",
+    "freeTierNotice": "Vous utilisez la version gratuite : {{count}} questions d'exemple dans tous les modes d'étude, « Expliquer ceci » sur ces questions, un examen blanc et un bilan chaque jour. Un Viapunt Pass pour votre canton donne accès à toutes les questions, à des examens blancs illimités et à « Expliquer ceci » pour chaque question.",
     "readinessTitle": "Préparation au test du canton de {{canton}}",
     "knownOf": "{{known}} questions sues sur {{total}}",
     "dueCount_one": "{{count}} question à réviser",
@@ -659,7 +660,9 @@
     "placeholder": "Posez votre question… (Entrée pour envoyer)",
     "remaining": "{{left}} messages restants sur {{limit}} aujourd'hui",
     "limitReached": "Vous avez atteint la limite de messages d'aujourd'hui. Cela reprend demain.",
-    "offline": "L'assistant n'est pas encore connecté dans cet environnement."
+    "offline": "L'assistant n'est pas encore connecté dans cet environnement.",
+    "free": "Compte gratuit : {{limit}} messages par jour sur les questions d'exemple.",
+    "freeLimitReached": "C'était « Expliquer ceci » pour aujourd'hui. Cela reprend demain, et un Viapunt Pass vous donne « Expliquer ceci » pour chaque question."
   },
   "glossary": {
     "link": "Glossaire des termes clés",
@@ -726,5 +729,46 @@
   "passBar": {
     "cta": "Acheter le pass · {{price}}",
     "text": "Toutes les questions, examens blancs illimités et « Expliquer ceci » pendant {{months}} mois. Un seul paiement, sans abonnement."
+  },
+  "readinessCheck": {
+    "cardTitle": "Faites le point",
+    "cardBody": "{{questions}} questions, environ {{minutes}} minutes. Voyez où vous en êtes dans chaque domaine.",
+    "cardCta": "Commencer le bilan",
+    "cardLast": "Votre dernier bilan : {{percent}} % de bonnes réponses.",
+    "usedToday": "Vous avez fait le bilan gratuit d'aujourd'hui. Le prochain est possible demain.",
+    "continue": "Continuer le bilan",
+    "seeLast": "Voir votre dernier résultat",
+    "title": "Faites le point",
+    "intro": "{{questions}} questions tirées de l'ensemble des questions, dans tous les domaines du test.",
+    "ruleGerman": "En allemand, comme dans le vrai test.",
+    "ruleNoTimer": "Sans limite de temps : prenez votre temps et modifiez vos réponses autant que vous le souhaitez.",
+    "ruleEnd": "Vos réponses sont vérifiées à la fin, avec un résultat pour chaque domaine.",
+    "freeOne": "Compte gratuit : un bilan par jour. Avec un Viapunt Pass, autant que vous le souhaitez.",
+    "notEnough": "Il n'y a pas encore assez de questions validées pour le bilan.",
+    "start": "Commencer le bilan",
+    "handIn": "Vérifier mes réponses",
+    "handInNow": "Vérifier maintenant",
+    "confirm": "Vérifier vos réponses maintenant ? Vous ne pourrez plus les modifier ensuite.",
+    "confirmUnanswered_one": "{{count}} question est encore sans réponse. Vérifier quand même ?",
+    "confirmUnanswered_other": "{{count}} questions sont encore sans réponse. Vérifier quand même ?",
+    "resultTitle": "Où vous en êtes",
+    "score": "{{score}} sur {{total}} justes ({{percent}} %)",
+    "expired": "Le bilan est resté ouvert longtemps ; les réponses enregistrées ont été vérifiées.",
+    "areasTitle": "Par domaine",
+    "areaScore": "{{correct}} sur {{total}} justes",
+    "again": "Refaire le point",
+    "level": {
+      "ready": "Votre préparation est solide. Faites un examen blanc pour passer le test complet dans les conditions réelles.",
+      "close": "Vous y êtes presque. Travaillez les domaines ci-dessous qui ne sont pas encore acquis.",
+      "halfway": "Vous connaissez déjà une bonne partie. En vous exerçant régulièrement dans les domaines plus faibles, vous y arriverez.",
+      "start": "Vous êtes au début. Apprenez les thèmes un par un, puis refaites le point."
+    },
+    "area": {
+      "history": "Histoire",
+      "politics": "État et politique",
+      "society": "Société et vie quotidienne",
+      "geography": "Géographie",
+      "culture": "Culture et traditions"
+    }
   }
 }

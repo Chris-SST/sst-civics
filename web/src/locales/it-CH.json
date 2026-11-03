@@ -104,7 +104,8 @@
     "invalid_answer": "Scelga una delle quattro risposte.",
     "mock_in_progress": "La spiegazione e la chat di aiuto non sono disponibili durante una simulazione d'esame.",
     "invalid_language": "Scelga una lingua dall'elenco.",
-    "translation_required": "Inserisca una traduzione."
+    "translation_required": "Inserisca una traduzione.",
+    "readiness_used_today": "Ha già fatto il bilancio gratuito di oggi. Il prossimo è disponibile domani."
   },
   "impersonation": {
     "banner": "Visualizzazione come {{name}} ({{role}}). Ha effettuato l'accesso come amministratore {{admin}}.",
@@ -226,7 +227,7 @@
     "noTopics": "I temi per il Suo Cantone arriveranno a breve.",
     "topicsTitle": "Temi del test: {{canton}}",
     "notStarted": "Non ancora iniziato",
-    "freeTierNotice": "Sta usando la versione gratuita: {{count}} domande di esempio in tutte le modalità di studio e una simulazione d'esame. Un Viapunt Pass per il Suo cantone apre tutte le domande, simulazioni d'esame illimitate e Spiegami questo.",
+    "freeTierNotice": "Sta usando la versione gratuita: {{count}} domande di esempio in tutte le modalità di studio, Spiegami questo su queste domande, una simulazione d'esame e un bilancio ogni giorno. Un Viapunt Pass per il Suo cantone apre tutte le domande, simulazioni d'esame illimitate e Spiegami questo per ogni domanda.",
     "readinessTitle": "Preparazione al test del Canton {{canton}}",
     "knownOf": "{{known}} domande sapute su {{total}}",
     "dueCount_one": "{{count}} domanda da ripassare",
@@ -659,7 +660,9 @@
     "placeholder": "Ponga la Sua domanda… (Invio per inviare)",
     "remaining": "{{left}} messaggi rimasti su {{limit}} oggi",
     "limitReached": "Ha raggiunto il limite di messaggi di oggi. Si riprende domani.",
-    "offline": "L'assistente non è ancora collegato in questo ambiente."
+    "offline": "L'assistente non è ancora collegato in questo ambiente.",
+    "free": "Account gratuito: {{limit}} messaggi al giorno sulle domande di esempio.",
+    "freeLimitReached": "Per oggi le spiegazioni gratuite sono finite. Riprendono domani, e con un Viapunt Pass ha la spiegazione per ogni domanda."
   },
   "glossary": {
     "link": "Glossario dei termini chiave",
@@ -726,5 +729,46 @@
   "passBar": {
     "cta": "Acquistare il pass · {{price}}",
     "text": "Tutte le domande, simulazioni illimitate e spiegazioni per {{months}} mesi. Un solo pagamento, nessun abbonamento."
+  },
+  "readinessCheck": {
+    "cardTitle": "Verifichi a che punto è",
+    "cardBody": "{{questions}} domande, circa {{minutes}} minuti. Veda a che punto è in ogni area tematica.",
+    "cardCta": "Iniziare il bilancio",
+    "cardLast": "Il Suo ultimo bilancio: {{percent}}% di risposte giuste.",
+    "usedToday": "Ha già fatto il bilancio gratuito di oggi. Il prossimo è disponibile domani.",
+    "continue": "Continuare il bilancio",
+    "seeLast": "Vedere l'ultimo risultato",
+    "title": "Verifichi a che punto è",
+    "intro": "{{questions}} domande tratte da tutte le domande, in ogni area tematica del test.",
+    "ruleGerman": "In tedesco, come nel test vero.",
+    "ruleNoTimer": "Senza limite di tempo: si prenda il tempo necessario e cambi le risposte quante volte vuole.",
+    "ruleEnd": "Alla fine le risposte vengono verificate, con un risultato per ogni area tematica.",
+    "freeOne": "Account gratuito: un bilancio al giorno. Con un Viapunt Pass, quanti ne vuole.",
+    "notEnough": "Non ci sono ancora abbastanza domande approvate per il bilancio.",
+    "start": "Iniziare il bilancio",
+    "handIn": "Verificare le risposte",
+    "handInNow": "Verificare ora",
+    "confirm": "Verificare ora le risposte? Dopo non potrà più modificarle.",
+    "confirmUnanswered_one": "{{count}} domanda è ancora senza risposta. Verificare comunque?",
+    "confirmUnanswered_other": "{{count}} domande sono ancora senza risposta. Verificare comunque?",
+    "resultTitle": "A che punto è",
+    "score": "{{score}} su {{total}} giuste ({{percent}}%)",
+    "expired": "Il bilancio è rimasto aperto a lungo; sono state verificate le risposte salvate.",
+    "areasTitle": "Per area tematica",
+    "areaScore": "{{correct}} su {{total}} giuste",
+    "again": "Verificare di nuovo",
+    "level": {
+      "ready": "La Sua preparazione è solida. Faccia una simulazione d'esame per provare il test completo in condizioni reali.",
+      "close": "Manca poco. Lavori sulle aree qui sotto che non sono ancora sicure.",
+      "halfway": "Conosce già una buona parte. Con un esercizio regolare nelle aree più deboli ci arriverà.",
+      "start": "È all'inizio. Studi i temi uno alla volta, poi verifichi di nuovo a che punto è."
+    },
+    "area": {
+      "history": "Storia",
+      "politics": "Stato e politica",
+      "society": "Società e vita quotidiana",
+      "geography": "Geografia",
+      "culture": "Cultura e tradizioni"
+    }
   }
 }

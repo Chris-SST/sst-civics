@@ -19,6 +19,7 @@ const LearnerChat = lazy(() => import("./pages/LearnerChat"));
 const Learn = lazy(() => import("./pages/Learn"));
 const Practise = lazy(() => import("./pages/Practise"));
 const Mock = lazy(() => import("./pages/Mock"));
+const Readiness = lazy(() => import("./pages/Readiness"));
 const Glossary = lazy(() => import("./pages/Glossary"));
 const Help = lazy(() => import("./pages/Help"));
 const Try = lazy(() => import("./pages/Try"));
@@ -125,6 +126,22 @@ export default function App() {
           element={
             <RequireRole roles={LEARNER}>
               <Mock />
+            </RequireRole>
+          }
+        />
+        <Route
+          path="/readiness"
+          element={
+            <RequireRole roles={LEARNER}>
+              <Readiness />
+            </RequireRole>
+          }
+        />
+        <Route
+          path="/readiness/:id"
+          element={
+            <RequireRole roles={LEARNER}>
+              <Readiness />
             </RequireRole>
           }
         />

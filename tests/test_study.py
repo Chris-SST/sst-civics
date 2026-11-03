@@ -583,3 +583,111 @@ async def test_check_questions_after_a_chat_use_the_study_api(api):
     async with SessionLocal() as db:
         a = (await db.execute(select(Attempt))).scalar_one()
         assert a.mode == "check" and str(a.conversation_id) == conv_id
+
+
+# --- Readiness check ---------------------------------------------------------------------------
+
+
+async def test_readiness_check_draws_20_untimed_and_reports_per_area(api, mock_format, frozen):
+    await seed(MOCK_BANK)
+    await free(api)
+    info = (await api.get("/api/readiness-check")).json()
+    assert info["questions"] == 20 and info["can_start"] is True and info["last"] is None
+    r = await api.post("/api/readiness-check/start")
+    assert r.status_code == 201, r.text
+    run = r.json()
+    assert run["kind"] == "readiness" and run["total"] == 20 and run["pass_mark"] is None
+    ids = [q["id"] for q in run["questions"]]
+    assert len(set(ids)) == 20
+    assert set(run["questions"][0]) == {"id", "question", "options"}  # German only, no answer
+    # Drawn from the whole bank (beyond the free sample) in the test's scope proportions.
+    scopes = Counter(mock.scope_of(TOPIC_BY_SLUG[i.rsplit("-", 1)[0]]) for i in ids)
+    assert scopes == {"federal": 16, "canton": 3, "commune": 1}
+    # Starting again returns the open check; it is not a mock test.
+    assert (await api.post("/api/readiness-check/start")).json()["id"] == run["id"]
+    assert (await api.get(f"/api/mock/{run['id']}")).status_code == 404
+    mock_info = (await api.get("/api/mock")).json()
+    assert mock_info["active_run_id"] is None and mock_info["free_mock_used"] is False
+    # No visible time limit: answers are still taken hours later.
+    frozen.advance(hours=3)
+    society = [i for i in ids if i.startswith("leistungen-")]
+    for qid in ids:
+        key = await correct_of(qid)
+        given = ("b" if key == "a" else "a") if qid in society else key
+        r = await api.post(
+            f"/api/readiness-check/{run['id']}/answer", json={"question_id": qid, "answer": given}
+        )
+        assert r.status_code == 200, r.text
+    res = (await api.post(f"/api/readiness-check/{run['id']}/finish")).json()
+    assert res["status"] == "finished" and res["score"] == 19
+    assert res["percent"] == 95 and res["level"] == "ready"
+    assert res["areas"] == [
+        {"area": "politics", "correct": 19, "total": 19, "percent": 100},
+        {"area": "society", "correct": 0, "total": 1, "percent": 0},
+    ]
+    assert [item["id"] for item in res["review"]] == society
+    assert res["review"][0]["explanation"]["text"]
+    info = (await api.get("/api/readiness-check")).json()
+    assert info["last"]["id"] == run["id"] and info["last"]["percent"] == 95
+    async with SessionLocal() as db:
+        attempts = (await db.execute(select(Attempt))).scalars().all()
+        assert len(attempts) == 20 and {a.mode for a in attempts} == {"readiness"}
+        assert (await db.execute(select(QuestionProgress))).first() is None  # a measurement
+
+
+async def test_free_readiness_check_once_a_day_and_paid_any_time(api, api2, mock_format, frozen):
+    await seed(MOCK_BANK)
+    await free(api)
+    run = (await api.post("/api/readiness-check/start")).json()
+    await api.post(f"/api/readiness-check/{run['id']}/finish")
+    r = await api.post("/api/readiness-check/start")
+    assert r.status_code == 403 and r.json()["detail"] == "readiness_used_today"
+    info = (await api.get("/api/readiness-check")).json()
+    assert info["can_start"] is False and info["used_today"] is True and info["paid"] is False
+    assert info["last"]["level"] == "start"  # nothing answered
+    # The free mock test is still there.
+    assert (await api.get("/api/mock")).json()["can_start"] is True
+    frozen.advance(days=1)
+    assert (await api.post("/api/readiness-check/start")).status_code == 201
+
+    await learner_logged_in(api2, "pia@example.ch", access=True)
+    for _ in range(3):
+        r = await api2.post("/api/readiness-check/start")
+        assert r.status_code == 201 and r.json()["free"] is False
+        await api2.post(f"/api/readiness-check/{r.json()['id']}/finish")
+    # Someone else's check is not visible.
+    assert (await api.get(f"/api/readiness-check/{r.json()['id']}")).status_code == 404
+
+
+async def test_readiness_check_left_open_closes_itself_and_needs_20_questions(
+    api, api2, mock_format, frozen
+):
+    await seed({FED_A: 25})
+    await free(api)
+    run = (await api.post("/api/readiness-check/start")).json()
+    frozen.advance(hours=13)
+    res = (await api.get(f"/api/readiness-check/{run['id']}")).json()
+    assert res["status"] == "expired" and res["percent"] == 0
+
+    await learner_logged_in(api2, "pia@example.ch", access=True)
+    async with SessionLocal() as db:
+        for q in (await db.execute(select(Question))).scalars().all()[:10]:
+            q.status = "retired"
+        await db.commit()
+    assert (await api2.get("/api/readiness-check")).json()["enough_questions"] is False
+    r = await api2.post("/api/readiness-check/start")
+    assert r.status_code == 409 and r.json()["detail"] == "not_enough_questions"
+
+
+def test_readiness_areas_and_levels():
+    from app.study import readiness_check
+
+    assert readiness_check.area_of("bund.geschichte.gruendung") == "history"
+    assert readiness_check.area_of("kanton.demokratie.kantonsrat") == "politics"
+    assert readiness_check.area_of("bund.international") == "politics"
+    assert readiness_check.area_of("gemeinde.leistungen") == "society"
+    assert readiness_check.area_of("bund.geografie.sprachen") == "geography"
+    assert readiness_check.area_of("kanton.kultur.zuerich") == "culture"
+    assert readiness_check.area_of("unbekannt") == "society"
+    levels = [readiness_check.level_of(p) for p in (100, 80, 79, 60, 59, 40, 39, 0)]
+    assert levels == ["ready", "ready", "close", "close", "halfway", "halfway", "start", "start"]

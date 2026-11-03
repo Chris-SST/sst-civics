@@ -21,7 +21,7 @@ from app.questions.daily import router as daily_router
 from app.questions.routes_admin import router as review_router
 from app.questions.routes_student import questions_router
 from app.study.guest import router as guest_router
-from app.study.routes import mock_router
+from app.study.routes import mock_router, readiness_router
 from app.study.routes import router as study_router
 from app.tutoring.admin_routes import router as admin_tutor_router
 from app.tutoring.explain import router as explain_router
@@ -107,6 +107,7 @@ def create_app() -> FastAPI:
     app.include_router(admin_tutor_router)
     app.include_router(study_router)
     app.include_router(mock_router)
+    app.include_router(readiness_router)
     app.include_router(questions_router)
     app.include_router(content_router)
     app.include_router(review_router)

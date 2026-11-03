@@ -104,7 +104,8 @@
     "invalid_answer": "Ju lutemi zgjidhni një nga katër opsionet.",
     "mock_in_progress": "Shpjegimi dhe biseda e ndihmës nuk janë të disponueshme gjatë një testi provë.",
     "invalid_language": "Zgjidhni një gjuhë nga lista.",
-    "translation_required": "Shkruani një përkthim."
+    "translation_required": "Shkruani një përkthim.",
+    "readiness_used_today": "E keni bërë vlerësimin falas të sotëm. I radhës është i mundur nesër."
   },
   "impersonation": {
     "banner": "Po shihni si {{name}} ({{role}}). Keni hyrë si administratori {{admin}}.",
@@ -226,7 +227,7 @@
     "noTopics": "Temat për kantonin tuaj do të vijnë së shpejti.",
     "topicsTitle": "Temat e testit: {{canton}}",
     "notStarted": "Ende pa filluar",
-    "freeTierNotice": "Po përdorni versionin falas: {{count}} pyetje shembull në të gjitha mënyrat e studimit dhe një test provë. Një Viapunt Pass për kantonin tuaj hap të gjitha pyetjet, teste provë pa limit dhe Shpjegoje këtë.",
+    "freeTierNotice": "Po përdorni versionin falas: {{count}} pyetje shembull në të gjitha mënyrat e studimit, shpjegim për këto pyetje, një test provë dhe një vlerësim çdo ditë. Një Viapunt Pass për kantonin tuaj hap të gjitha pyetjet, teste provë pa limit dhe shpjegim për çdo pyetje.",
     "readinessTitle": "Gatishmëria për testin e kantonit {{canton}}",
     "knownOf": "{{known}} nga {{total}} pyetje të ditura",
     "dueCount_one": "{{count}} pyetje për përsëritje",
@@ -659,7 +660,9 @@
     "placeholder": "Bëni pyetjen tuaj… (Enter për të dërguar)",
     "remaining": "{{left}} nga {{limit}} mesazhe të mbetura sot",
     "limitReached": "Keni arritur kufirin e mesazheve për sot. Nesër funksionon sërish.",
-    "offline": "Asistenti ende nuk është i lidhur në këtë mjedis."
+    "offline": "Asistenti ende nuk është i lidhur në këtë mjedis.",
+    "free": "Llogari falas: {{limit}} mesazhe në ditë për pyetjet shembull.",
+    "freeLimitReached": "Shpjegimet falas për sot mbaruan. Nesër rifillojnë, dhe me një Viapunt Pass keni shpjegim për çdo pyetje."
   },
   "glossary": {
     "link": "Fjalori i termave kryesorë",
@@ -726,5 +729,46 @@
   "passBar": {
     "cta": "Blini pasin · {{price}}",
     "text": "Të gjitha pyetjet, teste provë pa kufi dhe shpjegime për {{months}} muaj. Një pagesë, pa abonim."
+  },
+  "readinessCheck": {
+    "cardTitle": "Shihni ku jeni",
+    "cardBody": "{{questions}} pyetje, rreth {{minutes}} minuta. Shihni sa të përgatitur jeni në çdo fushë tematike.",
+    "cardCta": "Filloni vlerësimin",
+    "cardLast": "Vlerësimi juaj i fundit: {{percent}}% të sakta.",
+    "usedToday": "E keni bërë vlerësimin falas të sotëm. I radhës është i mundur nesër.",
+    "continue": "Vazhdoni vlerësimin",
+    "seeLast": "Shihni rezultatin e fundit",
+    "title": "Shihni ku jeni",
+    "intro": "{{questions}} pyetje nga i gjithë grupi i pyetjeve, në të gjitha fushat tematike të testit.",
+    "ruleGerman": "Në gjermanisht, si në testin e vërtetë.",
+    "ruleNoTimer": "Pa kufi kohe: mund t'i ndryshoni përgjigjet sa herë të doni.",
+    "ruleEnd": "Përgjigjet kontrollohen në fund, me një rezultat për çdo fushë tematike.",
+    "freeOne": "Llogari falas: një vlerësim në ditë. Me një Viapunt Pass, sa të doni.",
+    "notEnough": "Ende nuk ka mjaft pyetje të miratuara për vlerësimin.",
+    "start": "Filloni vlerësimin",
+    "handIn": "Kontrolloni përgjigjet",
+    "handInNow": "Kontrolloni tani",
+    "confirm": "T'i kontrolloni përgjigjet tani? Më pas nuk mund t'i ndryshoni.",
+    "confirmUnanswered_one": "{{count}} pyetje është ende pa përgjigje. T'i kontrolloni gjithsesi?",
+    "confirmUnanswered_other": "{{count}} pyetje janë ende pa përgjigje. T'i kontrolloni gjithsesi?",
+    "resultTitle": "Ku jeni",
+    "score": "{{score}} nga {{total}} të sakta ({{percent}}%)",
+    "expired": "Vlerësimi mbeti i hapur për shumë kohë; u kontrolluan përgjigjet e ruajtura.",
+    "areasTitle": "Sipas fushës tematike",
+    "areaScore": "{{correct}} nga {{total}} të sakta",
+    "again": "Kontrolloni sërish",
+    "level": {
+      "ready": "Jeni përgatitur mirë. Bëni një test provë për ta provuar testin e plotë në kushte reale.",
+      "close": "Jeni afër. Punoni me fushat më poshtë që ende nuk janë të sigurta.",
+      "halfway": "E dini tashmë një pjesë të mirë. Me ushtrime të rregullta në fushat më të dobëta do t'ia dilni.",
+      "start": "Jeni në fillim. Mësoni temat një nga një, pastaj shihni sërish ku jeni."
+    },
+    "area": {
+      "history": "Historia",
+      "politics": "Shteti dhe politika",
+      "society": "Shoqëria dhe jeta e përditshme",
+      "geography": "Gjeografia",
+      "culture": "Kultura dhe traditat"
+    }
   }
 }

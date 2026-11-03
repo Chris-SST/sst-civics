@@ -6,7 +6,7 @@ import ErrorText from "../components/ErrorText";
 import Pricing from "../components/Pricing";
 import { BUY_AFTER_SIGNUP } from "../components/PassBar";
 import { MasteryBar } from "../components/QuestionCard";
-import { TOPIC_SCOPES, learnUrl, practiseUrl, type StudyOverview, type TopicOverview } from "../study";
+import { TOPIC_SCOPES, learnUrl, practiseUrl, type ReadinessInfo, type StudyOverview, type TopicOverview } from "../study";
 
 interface Usage {
   daily_used: number;
@@ -24,18 +24,22 @@ interface TutorOverview {
   usage: Usage;
 }
 
-/** Learner home: readiness estimate, the three study areas (Learn, Practise, Mock test), mastery
- * per topic, the free-tier notice, the help chat and the message count. The topic chat has no
+/** Learner home: readiness estimate, the three study areas (Learn, Practise, Mock test), the
+ * readiness check, mastery per topic, the free-tier notice, the help chat and the message count. The topic chat has no
  * entry here any more: Explain this, on every question in Learn and Practise, replaces it (task
  * 1.10); the help chat (D-066) takes general questions. */
 export default function LearnerHome() {
   const { t } = useTranslation();
   const [tutor, setTutor] = useState<TutorOverview | null>(null);
   const [study, setStudy] = useState<StudyOverview | null | undefined>(undefined);
+  const [check, setCheck] = useState<ReadinessInfo | null>(null);
   const [error, setError] = useState<unknown>(null);
 
   useEffect(() => {
     get<TutorOverview>("/api/tutor/overview").then(setTutor).catch(setError);
+    get<ReadinessInfo>("/api/readiness-check")
+      .then(setCheck)
+      .catch(() => setCheck(null));
     get<StudyOverview>("/api/study/overview")
       .then(setStudy)
       .catch(() => setStudy(null));
@@ -72,6 +76,7 @@ export default function LearnerHome() {
       {study === undefined && <p className="muted">…</p>}
       {study === null && <p className="muted">{t("learner.noTopics")}</p>}
       {study && <StudyAreas study={study} />}
+      {check && <ReadinessCheckCard info={check} />}
 
       <section className="card help-card">
         <div>
@@ -164,6 +169,37 @@ function StudyAreas({ study }: { study: StudyOverview }) {
         </section>
       </div>
     </>
+  );
+}
+
+/** Entry to the readiness check (app/study/readiness_check.py), for every learner. */
+function ReadinessCheckCard({ info }: { info: ReadinessInfo }) {
+  const { t } = useTranslation();
+  const usedUp = !info.can_start && !info.active_run_id;
+  return (
+    <section className="card help-card readiness-check-card">
+      <div>
+        <h2>{t("readinessCheck.cardTitle")}</h2>
+        <p>{t("readinessCheck.cardBody", { questions: info.questions, minutes: info.minutes })}</p>
+        {info.last && info.last.score !== null && (
+          <p className="small muted">{t("readinessCheck.cardLast", { percent: info.last.percent })}</p>
+        )}
+        {usedUp && <p className="small muted">{t("readinessCheck.usedToday")}</p>}
+      </div>
+      {info.active_run_id ? (
+        <Link to={`/readiness/${info.active_run_id}`} className="btn btn-primary">
+          {t("readinessCheck.continue")}
+        </Link>
+      ) : usedUp && info.last ? (
+        <Link to={`/readiness/${info.last.id}`} className="btn btn-secondary">
+          {t("readinessCheck.seeLast")}
+        </Link>
+      ) : (
+        <Link to="/readiness" className="btn btn-primary" aria-disabled={!info.enough_questions}>
+          {t("readinessCheck.cardCta")}
+        </Link>
+      )}
+    </section>
   );
 }
 

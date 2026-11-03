@@ -37,10 +37,12 @@ test("a free learner asks the help chat and starts a new conversation", async ({
   await expect(page.getByRole("log").getByText("And how many cantons are there?")).toHaveCount(0);
   await expect(page.getByText("3 of 5 messages left today")).toBeVisible();
 
-  // Explain this stays a paid feature.
-  const explain = await page.request.post("/api/explain/start", {
-    data: { question_id: "e2e-q01" },
-    headers: { "X-CSRF-Token": (await page.context().cookies()).find((c) => c.name === "viapunt_csrf")?.value ?? "" },
-  });
-  expect(explain.status()).toBe(403);
+  // Explain this: free on the sample questions, with its own allowance; refused beyond them.
+  const headers = { "X-CSRF-Token": (await page.context().cookies()).find((c) => c.name === "viapunt_csrf")?.value ?? "" };
+  const inside = await page.request.post("/api/explain/start", { data: { question_id: "e2e-q01" }, headers });
+  expect(inside.status()).toBe(201);
+  expect((await inside.json()).usage.daily_limit).toBe(3);
+  const beyond = await page.request.post("/api/explain/start", { data: { question_id: "e2e-q60" }, headers });
+  expect(beyond.status()).toBe(403);
+  expect((await beyond.json()).detail).toBe("sample_only");
 });

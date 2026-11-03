@@ -2,8 +2,8 @@
 Learn, Practise, answers, the check questions after a chat, and the mock test.
 
 Without a pass (free tier) Learn and Practise serve the canton's sample set only
-(app.study.selection) and one mock test may be taken; with a pass, everything servable and any
-number of mock tests."""
+(app.study.selection), one mock test may be taken and one readiness check a day; with a pass,
+everything servable and any number of both."""
 
 from __future__ import annotations
 
@@ -25,6 +25,8 @@ from app.models import (
     G_REVIEWED,
     MOCK_FINISHED,
     MODE_SIDE,
+    RUN_MOCK,
+    RUN_READINESS,
     Attempt,
     Conversation,
     GlossaryTerm,
@@ -35,10 +37,11 @@ from app.models import (
 )
 from app.questions import bank, checks
 from app.questions.mastery import READINESS_LABEL_KEY
-from app.study import clock, mock, modes, progress, selection
+from app.study import clock, mock, modes, progress, readiness_check, selection
 
 router = APIRouter(prefix="/api/study", tags=["study"])
 mock_router = APIRouter(prefix="/api/mock", tags=["mock"])
+readiness_router = APIRouter(prefix="/api/readiness-check", tags=["readiness"])
 
 StudyMode = Literal["own", "side", "help", "de"]
 MAX_ROUND = 20
@@ -140,7 +143,11 @@ async def _mock_info(db: AsyncSession, user: User) -> dict[str, Any]:
     last = (
         await db.execute(
             select(MockRun)
-            .where(MockRun.user_id == user.id, MockRun.status != "in_progress")
+            .where(
+                MockRun.user_id == user.id,
+                MockRun.kind == RUN_MOCK,
+                MockRun.status != "in_progress",
+            )
             .order_by(MockRun.started_at.desc())
             .limit(5)
         )
@@ -292,6 +299,7 @@ async def learn(
         "scope": topic.scope,
         "mode": mode,
         "free_tier": not selection.full_access(user),
+        "sample_size": selection.SAMPLE_SIZE,
         "cards": cards,
     }
 
@@ -428,9 +436,11 @@ async def check_questions(
 # --- Mock test -------------------------------------------------------------------------------
 
 
-async def _own_run(db: AsyncSession, user: User, run_id: uuid.UUID) -> MockRun:
+async def _own_run(
+    db: AsyncSession, user: User, run_id: uuid.UUID, kind: str = RUN_MOCK
+) -> MockRun:
     run = await db.get(MockRun, run_id)
-    if run is None or run.user_id != user.id:
+    if run is None or run.user_id != user.id or run.kind != kind:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "not_found")
     return run
 
@@ -461,6 +471,8 @@ async def _run_out(db: AsyncSession, user: User, run: MockRun) -> dict[str, Any]
         return out
     # Afterwards: every wrong or unanswered question in the learner's language with the
     # explanation (German when no translation is approved).
+    if run.kind == RUN_READINESS:
+        out.update(readiness_check.result(run, questions))
     wrong = [
         questions[qid]
         for qid in run.question_ids
@@ -530,7 +542,10 @@ async def answer_mock(
     db: AsyncSession = Depends(get_db),
 ) -> dict[str, Any]:
     """Save (or change) one answer. Refused once the deadline has passed or the test is in."""
-    run = await _own_run(db, user, run_id)
+    return await _save_answer(db, await _own_run(db, user, run_id), body)
+
+
+async def _save_answer(db: AsyncSession, run: MockRun, body: MockAnswerIn) -> dict[str, Any]:
     if run.status != "in_progress":
         raise HTTPException(status.HTTP_409_CONFLICT, "mock_finished")
     if not mock.is_open(run):
@@ -555,8 +570,107 @@ async def answer_mock(
 async def finish_mock(
     run_id: uuid.UUID, user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
 ) -> dict[str, Any]:
-    run = await _own_run(db, user, run_id)
+    return await _finish(db, user, await _own_run(db, user, run_id))
+
+
+async def _finish(db: AsyncSession, user: User, run: MockRun) -> dict[str, Any]:
     if not await mock.expire_if_due(db, run):
         await mock.finish(db, run, MOCK_FINISHED)
     await db.commit()
     return await _run_out(db, user, run)
+
+
+# --- Readiness check (app.study.readiness_check) ----------------------------------------------
+
+
+async def _readiness_info(db: AsyncSession, user: User) -> dict[str, Any]:
+    paid = selection.full_access(user)
+    run = await mock.active_run(db, user, RUN_READINESS)
+    if run is not None and await mock.expire_if_due(db, run):
+        await db.commit()
+        run = None
+    used_today = await readiness_check.runs_today(db, user.id)
+    last = (
+        await db.execute(
+            select(MockRun)
+            .where(
+                MockRun.user_id == user.id,
+                MockRun.kind == RUN_READINESS,
+                MockRun.status != "in_progress",
+            )
+            .order_by(MockRun.started_at.desc())
+            .limit(1)
+        )
+    ).scalar_one_or_none()
+    last_out = None
+    if last is not None:
+        last_out = mock.summary(last)
+        last_out.update(readiness_check.result(last, await mock.questions_of(db, last)))
+    available = len(await selection.servable_questions(db, user.canton))
+    return {
+        "questions": readiness_check.READINESS_QUESTIONS,
+        "minutes": readiness_check.READINESS_MINUTES_ESTIMATE,
+        "enough_questions": available >= readiness_check.READINESS_QUESTIONS,
+        "paid": paid,
+        "used_today": used_today > 0,
+        "can_start": run is not None or paid or used_today == 0,
+        "active_run_id": str(run.id) if run else None,
+        "last": last_out,
+    }
+
+
+@readiness_router.get("")
+async def readiness_info(
+    user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
+) -> dict[str, Any]:
+    return await _readiness_info(db, user)
+
+
+@readiness_router.post("/start", status_code=status.HTTP_201_CREATED)
+async def start_readiness(
+    user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
+) -> dict[str, Any]:
+    """Start a readiness check, or return the one still open. Free: one a day."""
+    run = await mock.active_run(db, user, RUN_READINESS)
+    if run is not None and await mock.expire_if_due(db, run):
+        await db.commit()
+        run = None
+    if run is not None:
+        return await _run_out(db, user, run)
+    paid = selection.full_access(user)
+    if not paid and await readiness_check.runs_today(db, user.id) > 0:
+        raise HTTPException(status.HTTP_403_FORBIDDEN, "readiness_used_today")
+    try:
+        run = await readiness_check.start(db, user, free=not paid)
+    except mock.NotEnoughQuestions as exc:
+        raise HTTPException(status.HTTP_409_CONFLICT, "not_enough_questions") from exc
+    await db.commit()
+    return await _run_out(db, user, run)
+
+
+@readiness_router.get("/{run_id}")
+async def get_readiness(
+    run_id: uuid.UUID, user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
+) -> dict[str, Any]:
+    run = await _own_run(db, user, run_id, RUN_READINESS)
+    if await mock.expire_if_due(db, run):
+        await db.commit()
+    return await _run_out(db, user, run)
+
+
+@readiness_router.post("/{run_id}/answer")
+async def answer_readiness(
+    run_id: uuid.UUID,
+    body: MockAnswerIn,
+    user: User = Depends(require_learner),
+    db: AsyncSession = Depends(get_db),
+) -> dict[str, Any]:
+    """Save (or change) one answer until the check is handed in."""
+    return await _save_answer(db, await _own_run(db, user, run_id, RUN_READINESS), body)
+
+
+@readiness_router.post("/{run_id}/finish")
+async def finish_readiness(
+    run_id: uuid.UUID, user: User = Depends(require_learner), db: AsyncSession = Depends(get_db)
+) -> dict[str, Any]:
+    return await _finish(db, user, await _own_run(db, user, run_id, RUN_READINESS))

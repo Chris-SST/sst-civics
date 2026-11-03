@@ -6,9 +6,11 @@ from __future__ import annotations
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.billing.access import has_access
+from app.config import get_settings
 from app.llm.service import QuestionContext
 from app.models import CONTENT_MASTER_LANGUAGE, OPTION_KEYS, Question, User
-from app.study import mock, modes
+from app.study import mock, modes, selection
 
 # Help chat conversations (app.tutoring.help) are not about one topic; this marks them in
 # `topic_code`. The name is shown to the gatekeeper as the session topic.
@@ -35,6 +37,19 @@ async def question_context(db: AsyncSession, q: Question, lang: str) -> Question
         sources=[str(s["url"]) for s in q.sources or [] if s.get("url")],
         translation=translation,
     )
+
+
+async def explain_refusal(db: AsyncSession, user: User, q: Question) -> str | None:
+    """Why this learner may not use Explain this on this question, or None. With a pass: any
+    servable question. Without one: the sample set only, while the free allowance is on
+    (`AI_FREE_EXPLAIN_DAILY_LIMIT` above 0); the daily count is checked when sending."""
+    if has_access(user, user.canton):
+        return None
+    if get_settings().ai_free_explain_daily_limit <= 0:
+        return "no_access"
+    if not await selection.can_study(db, user, q):
+        return "sample_only"
+    return None
 
 
 async def mock_running(db: AsyncSession, user: User) -> bool:

@@ -95,7 +95,7 @@
     "invalid_options": "Doğru cevap dahil dört farklı cevap gereklidir.",
     "invalid_transition": "Bu soru artık bu şekilde değiştirilemez.",
     "edits_need_approve": "Değişiklikler yalnızca bir onayla birlikte kaydedilebilir.",
-    "sample_only": "Bu soru Viapunt Pass kapsamındadır. Ücretsiz sürüm örnek soruları içerir.",
+    "sample_only": "Bu soru Viapunt Pass'e dahildir. Ücretsiz sürüm örnek soruları kapsar.",
     "free_mock_used": "Ücretsiz deneme sınavınızı kullandınız. Viapunt Pass ile deneme sınavları sınırsızdır.",
     "not_enough_questions": "Tam bir deneme sınavı için henüz yeterli onaylanmış soru yok.",
     "no_mock_test": "Kantonunuz için henüz deneme sınavı yok.",
@@ -104,7 +104,8 @@
     "invalid_answer": "Lütfen dört seçenekten birini seçin.",
     "mock_in_progress": "Deneme sınavı sürerken açıklama ve yardım sohbeti kullanılamaz.",
     "invalid_language": "Lütfen listeden bir dil seçin.",
-    "translation_required": "Lütfen bir çeviri girin."
+    "translation_required": "Lütfen bir çeviri girin.",
+    "readiness_used_today": "Bugünkü ücretsiz durum değerlendirmesini yaptınız. Bir sonraki yarın yapılabilir."
   },
   "impersonation": {
     "banner": "{{name}} ({{role}}) olarak görüntüleniyor. Yönetici {{admin}} olarak giriş yaptınız.",
@@ -226,7 +227,7 @@
     "noTopics": "Kantonunuzun konuları yakında eklenecek.",
     "topicsTitle": "Sınav konuları: {{canton}}",
     "notStarted": "Henüz başlanmadı",
-    "freeTierNotice": "Ücretsiz sürümü kullanıyorsunuz: tüm çalışma modlarında {{count}} örnek soru ve bir deneme sınavı. Kantonunuz için bir Viapunt Pass tüm soruları, sınırsız deneme sınavını ve Bunu açıkla özelliğini açar.",
+    "freeTierNotice": "Ücretsiz sürümü kullanıyorsunuz: tüm çalışma modlarında {{count}} örnek soru, bu sorularda açıklama, bir deneme sınavı ve her gün bir durum değerlendirmesi. Kantonunuz için bir Viapunt Pass tüm soruları, sınırsız deneme sınavını ve her soruda açıklamayı açar.",
     "readinessTitle": "{{canton}} kantonu sınavına hazırlık",
     "knownOf": "{{total}} sorudan {{known}} tanesi biliniyor",
     "dueCount_one": "Tekrar sırası gelen {{count}} soru",
@@ -659,7 +660,9 @@
     "placeholder": "Sorunuzu yazın… (Göndermek için Enter)",
     "remaining": "Bugün için {{limit}} mesajdan {{left}} tanesi kaldı",
     "limitReached": "Bugünkü mesaj sınırına ulaştınız. Yarın yeniden kullanabilirsiniz.",
-    "offline": "Asistan bu ortamda henüz bağlı değil."
+    "offline": "Asistan bu ortamda henüz bağlı değil.",
+    "free": "Ücretsiz hesap: örnek sorularda günde {{limit}} mesaj.",
+    "freeLimitReached": "Bugünkü ücretsiz açıklamalar bitti. Yarın yeniden kullanabilirsiniz; Viapunt Pass ile her soruda açıklama alırsınız."
   },
   "glossary": {
     "link": "Temel terimler sözlüğü",
@@ -726,5 +729,46 @@
   "passBar": {
     "cta": "Pass'i satın al · {{price}}",
     "text": "Tüm sorular, sınırsız deneme sınavı ve açıklamalar {{months}} ay boyunca. Tek ödeme, abonelik yok."
+  },
+  "readinessCheck": {
+    "cardTitle": "Nerede olduğunuzu görün",
+    "cardBody": "{{questions}} soru, yaklaşık {{minutes}} dakika. Her konu alanında ne kadar hazır olduğunuzu görün.",
+    "cardCta": "Değerlendirmeyi başlatın",
+    "cardLast": "Son değerlendirmeniz: %{{percent}} doğru.",
+    "usedToday": "Bugünkü ücretsiz değerlendirmeyi yaptınız. Bir sonraki yarın yapılabilir.",
+    "continue": "Değerlendirmeye devam edin",
+    "seeLast": "Son sonucu görün",
+    "title": "Nerede olduğunuzu görün",
+    "intro": "Tüm soru havuzundan, testin her konu alanından {{questions}} soru.",
+    "ruleGerman": "Gerçek sınavdaki gibi Almanca.",
+    "ruleNoTimer": "Süre sınırı yok: cevaplarınızı istediğiniz kadar değiştirebilirsiniz.",
+    "ruleEnd": "Cevaplarınız sonunda kontrol edilir ve her konu alanı için bir sonuç gösterilir.",
+    "freeOne": "Ücretsiz hesap: günde bir değerlendirme. Viapunt Pass ile istediğiniz kadar.",
+    "notEnough": "Değerlendirme için henüz yeterli onaylı soru yok.",
+    "start": "Değerlendirmeyi başlatın",
+    "handIn": "Cevaplarımı kontrol et",
+    "handInNow": "Şimdi kontrol et",
+    "confirm": "Cevaplarınız şimdi kontrol edilsin mi? Sonra değiştiremezsiniz.",
+    "confirmUnanswered_one": "{{count}} soru hâlâ cevapsız. Yine de kontrol edilsin mi?",
+    "confirmUnanswered_other": "{{count}} soru hâlâ cevapsız. Yine de kontrol edilsin mi?",
+    "resultTitle": "Durumunuz",
+    "score": "{{total}} sorudan {{score}} doğru (%{{percent}})",
+    "expired": "Değerlendirme uzun süre açık kaldı; kaydedilen cevaplar kontrol edildi.",
+    "areasTitle": "Konu alanına göre",
+    "areaScore": "{{total}} sorudan {{correct}} doğru",
+    "again": "Yeniden kontrol edin",
+    "level": {
+      "ready": "İyi hazırlanmışsınız. Tam sınavı gerçek koşullarda denemek için bir deneme sınavı yapın.",
+      "close": "Çok yaklaştınız. Aşağıdaki henüz oturmamış alanlar üzerinde çalışın.",
+      "halfway": "Önemli bir kısmını zaten biliyorsunuz. Zayıf alanlarda düzenli pratikle başaracaksınız.",
+      "start": "Başlangıçtasınız. Konuları tek tek öğrenin, sonra nerede olduğunuza yeniden bakın."
+    },
+    "area": {
+      "history": "Tarih",
+      "politics": "Devlet ve siyaset",
+      "society": "Toplum ve günlük yaşam",
+      "geography": "Coğrafya",
+      "culture": "Kültür ve gelenekler"
+    }
   }
 }

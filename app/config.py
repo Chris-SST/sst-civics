@@ -89,10 +89,12 @@ class Settings(BaseSettings):
     ai_monthly_budget_chf: float = 300
     ai_learner_alert_chf: float = 8
     max_student_message_chars: int = 2000
-    # AI messages a day (Explain this and the help chat together) for every learner with an
-    # active entitlement, and for learners without one (help chat only; 0 switches it off).
+    # AI messages a day. With an active entitlement: Explain this and the help chat together.
+    # Without one, two separate allowances: the help chat (0 switches it off) and Explain this
+    # on the free sample questions (0 switches it off).
     ai_daily_message_limit: int = 20
     ai_free_daily_message_limit: int = 5
+    ai_free_explain_daily_limit: int = 3
     # The public help chat on the guide site (D-067): messages per visitor address a day
     # (0 switches it off), all visitors together a day, and the longest message accepted.
     public_help_per_ip_daily: int = 5

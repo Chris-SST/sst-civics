@@ -95,7 +95,7 @@
     "invalid_options": "Es braucht vier verschiedene Antworten, darunter die richtige.",
     "invalid_transition": "Diese Frage kann so nicht mehr geändert werden.",
     "edits_need_approve": "Änderungen lassen sich nur zusammen mit einer Freigabe speichern.",
-    "sample_only": "Diese Frage gehört zum Viapunt Pass. Die kostenlose Version enthält die Beispielfragen.",
+    "sample_only": "Diese Frage gehört zum Viapunt Pass. Die kostenlose Version umfasst die Beispielfragen.",
     "free_mock_used": "Sie haben Ihren kostenlosen Probetest genutzt. Mit einem Viapunt Pass sind Probetests unbegrenzt.",
     "not_enough_questions": "Für einen vollständigen Probetest gibt es noch nicht genug freigegebene Fragen.",
     "no_mock_test": "Für Ihren Kanton gibt es noch keinen Probetest.",
@@ -104,7 +104,8 @@
     "invalid_answer": "Bitte wählen Sie eine der vier Antworten.",
     "mock_in_progress": "Während eines Probetests sind «Das erklären» und der Hilfe-Chat nicht verfügbar.",
     "invalid_language": "Bitte wählen Sie eine Sprache aus der Liste.",
-    "translation_required": "Bitte geben Sie eine Übersetzung ein."
+    "translation_required": "Bitte geben Sie eine Übersetzung ein.",
+    "readiness_used_today": "Sie haben die kostenlose Standortbestimmung für heute gemacht. Die nächste ist morgen möglich."
   },
   "impersonation": {
     "banner": "Ansicht als {{name}} ({{role}}). Sie sind als Admin {{admin}} angemeldet.",
@@ -226,7 +227,7 @@
     "noTopics": "Die Themen für Ihren Kanton folgen in Kürze.",
     "topicsTitle": "Themen des Tests: {{canton}}",
     "notStarted": "Noch nicht begonnen",
-    "freeTierNotice": "Sie nutzen die kostenlose Version: {{count}} Beispielfragen in allen Lernmodi und ein Probetest. Ein Viapunt Pass für Ihren Kanton schaltet alle Fragen, unbegrenzte Probetests und «Das erklären» frei.",
+    "freeTierNotice": "Sie nutzen die kostenlose Version: {{count}} Beispielfragen in allen Lernmodi, «Das erklären» zu diesen Fragen, ein Probetest und jeden Tag eine Standortbestimmung. Ein Viapunt Pass für Ihren Kanton schaltet alle Fragen, unbegrenzte Probetests und «Das erklären» bei jeder Frage frei.",
     "readinessTitle": "Bereitschaft für den Test im Kanton {{canton}}",
     "knownOf": "{{known}} von {{total}} Fragen gewusst",
     "dueCount_one": "{{count}} Frage zur Wiederholung fällig",
@@ -659,7 +660,9 @@
     "placeholder": "Fragen Sie zu dieser Frage … (Enter zum Senden)",
     "remaining": "Heute noch {{left}} von {{limit}} Nachrichten",
     "limitReached": "Sie haben das heutige Nachrichtenlimit erreicht. Morgen geht es weiter.",
-    "offline": "Der Assistent ist in dieser Umgebung noch nicht verbunden."
+    "offline": "Der Assistent ist in dieser Umgebung noch nicht verbunden.",
+    "free": "Kostenloses Konto: {{limit}} Nachrichten pro Tag zu den Beispielfragen.",
+    "freeLimitReached": "Das war «Das erklären» für heute. Morgen geht es weiter, und mit einem Viapunt Pass steht Ihnen «Das erklären» bei jeder Frage zur Verfügung."
   },
   "glossary": {
     "link": "Glossar der wichtigsten Begriffe",
@@ -726,5 +729,46 @@
   "passBar": {
     "cta": "Pass kaufen · {{price}}",
     "text": "Alle Fragen, unbegrenzt Probetests und «Das erklären» für {{months}} Monate. Einmal bezahlen, kein Abo."
+  },
+  "readinessCheck": {
+    "cardTitle": "Prüfen Sie, wo Sie stehen",
+    "cardBody": "{{questions}} Fragen, etwa {{minutes}} Minuten. Sie sehen, wie gut Sie in jedem Themenbereich vorbereitet sind.",
+    "cardCta": "Standortbestimmung starten",
+    "cardLast": "Ihre letzte Standortbestimmung: {{percent}} % richtig.",
+    "usedToday": "Sie haben die kostenlose Standortbestimmung für heute gemacht. Die nächste ist morgen möglich.",
+    "continue": "Standortbestimmung fortsetzen",
+    "seeLast": "Letztes Ergebnis ansehen",
+    "title": "Prüfen Sie, wo Sie stehen",
+    "intro": "{{questions}} Fragen aus dem gesamten Fragenbestand, verteilt auf alle Themenbereiche des Tests.",
+    "ruleGerman": "Auf Deutsch, wie im echten Test.",
+    "ruleNoTimer": "Ohne Zeitlimit: Nehmen Sie sich Zeit und ändern Sie Ihre Antworten, so oft Sie möchten.",
+    "ruleEnd": "Am Ende werden Ihre Antworten geprüft, mit einem Ergebnis für jeden Themenbereich.",
+    "freeOne": "Kostenloses Konto: eine Standortbestimmung pro Tag. Mit einem Viapunt Pass so oft Sie möchten.",
+    "notEnough": "Für die Standortbestimmung gibt es noch nicht genug freigegebene Fragen.",
+    "start": "Standortbestimmung starten",
+    "handIn": "Antworten prüfen",
+    "handInNow": "Jetzt prüfen",
+    "confirm": "Antworten jetzt prüfen? Danach können Sie sie nicht mehr ändern.",
+    "confirmUnanswered_one": "{{count}} Frage ist noch unbeantwortet. Trotzdem prüfen?",
+    "confirmUnanswered_other": "{{count}} Fragen sind noch unbeantwortet. Trotzdem prüfen?",
+    "resultTitle": "Wo Sie stehen",
+    "score": "{{score}} von {{total}} richtig ({{percent}} %)",
+    "expired": "Die Standortbestimmung war lange offen. Geprüft wurden die gespeicherten Antworten.",
+    "areasTitle": "Nach Themenbereich",
+    "areaScore": "{{correct}} von {{total}} richtig",
+    "again": "Erneut prüfen",
+    "level": {
+      "ready": "Sie sind gut vorbereitet. Machen Sie einen Probetest, um den ganzen Test unter echten Bedingungen zu üben.",
+      "close": "Sie sind nah dran. Arbeiten Sie an den Bereichen unten, die noch nicht sitzen, dann sind Sie bereit.",
+      "halfway": "Einen guten Teil wissen Sie schon. Mit regelmässigem Üben in den schwächeren Bereichen schaffen Sie es.",
+      "start": "Sie stehen am Anfang. Lernen Sie die Themen nacheinander und prüfen Sie dann erneut, wo Sie stehen."
+    },
+    "area": {
+      "history": "Geschichte",
+      "politics": "Staat und Politik",
+      "society": "Gesellschaft und Alltag",
+      "geography": "Geografie",
+      "culture": "Kultur und Traditionen"
+    }
   }
 }

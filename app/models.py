@@ -354,6 +354,7 @@ TRANSLATION_LANGUAGES = tuple(lang for lang in LANGUAGES if lang != CONTENT_MAST
 ATTEMPT_PRACTICE = "practice"
 ATTEMPT_MOCK = "mock"
 ATTEMPT_CHECK = "check"  # check questions at the end of a chat session
+ATTEMPT_READINESS = "readiness"  # the readiness check (a short run, like the mock test)
 
 # Study modes (PLAN.md, Languages), in the order a question moves through them as the
 # learner answers it correctly: own language, side by side, German with help, German only.
@@ -367,6 +368,10 @@ MOCK_IN_PROGRESS = "in_progress"
 MOCK_FINISHED = "finished"  # handed in by the learner
 MOCK_EXPIRED = "expired"  # the deadline passed first; scored on the answers saved in time
 MOCK_STATUSES = (MOCK_IN_PROGRESS, MOCK_FINISHED, MOCK_EXPIRED)
+# What a run in mock_runs is: the timed mock test, or the untimed 20-question readiness check.
+RUN_MOCK = "mock"
+RUN_READINESS = "readiness"
+RUN_KINDS = (RUN_MOCK, RUN_READINESS)
 
 
 class Topic(Base):
@@ -560,7 +565,8 @@ class QuestionProgress(Base):
 class MockRun(Base):
     """A mock test: German only, the canton's number of questions and time limit, a deadline
     set by the server at the start. Replaces the diagnostic runs (D-010). `answers` maps
-    question id to the option key given; `free` marks the one mock test of the free tier."""
+    question id to the option key given; `free` marks a run taken without a pass. `kind` is
+    `mock` for the mock test or `readiness` for the untimed readiness check (migration 0002)."""
 
     __tablename__ = "mock_runs"
 
@@ -569,6 +575,7 @@ class MockRun(Base):
         ForeignKey("users.id", ondelete="CASCADE"), index=True
     )
     canton: Mapped[str] = mapped_column(String(2))
+    kind: Mapped[str] = mapped_column(String(12), default=RUN_MOCK, server_default=RUN_MOCK)
     status: Mapped[str] = mapped_column(String(16), default=MOCK_IN_PROGRESS)
     question_ids: Mapped[list[str]] = mapped_column(JSON)
     answers: Mapped[dict[str, str]] = mapped_column(JSON, default=dict)

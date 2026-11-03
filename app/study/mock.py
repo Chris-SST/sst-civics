@@ -11,6 +11,11 @@ catalogue is. The final order is shuffled.
 Free tier: one mock test ever without a pass (the run is marked `free`); with a pass, any
 number. Answers are saved one at a time and refused after the deadline; a run whose deadline
 has passed is scored on the answers saved in time.
+
+The readiness check (app.study.readiness) is a run of the same machinery with `kind`
+`readiness`: fewer questions, no visible time limit. Everything here that counts or finds runs
+looks at one kind, so a readiness check never counts as the free mock test and never closes
+Explain this or the help chat.
 """
 
 from __future__ import annotations
@@ -31,9 +36,12 @@ from app.content.files import content_root
 from app.content.schema import TopicFile
 from app.models import (
     ATTEMPT_MOCK,
+    ATTEMPT_READINESS,
     MOCK_EXPIRED,
     MOCK_IN_PROGRESS,
     MODE_DE,
+    RUN_MOCK,
+    RUN_READINESS,
     SCOPE_CANTON,
     SCOPE_COMMUNE,
     SCOPE_FEDERAL,
@@ -180,22 +188,26 @@ async def draw(
 
 
 async def free_runs_used(db: AsyncSession, user_id: uuid.UUID) -> int:
+    """Free mock tests taken (readiness checks do not count)."""
     return int(
         (
             await db.execute(
-                select(func.count(MockRun.id)).where(MockRun.user_id == user_id, MockRun.free)
+                select(func.count(MockRun.id)).where(
+                    MockRun.user_id == user_id, MockRun.free, MockRun.kind == RUN_MOCK
+                )
             )
         ).scalar_one()
     )
 
 
-async def active_run(db: AsyncSession, user: User) -> MockRun | None:
+async def active_run(db: AsyncSession, user: User, kind: str = RUN_MOCK) -> MockRun | None:
     return (
         await db.execute(
             select(MockRun)
             .where(
                 MockRun.user_id == user.id,
                 MockRun.canton == user.canton,
+                MockRun.kind == kind,
                 MockRun.status == MOCK_IN_PROGRESS,
             )
             .order_by(MockRun.started_at.desc())
@@ -204,12 +216,23 @@ async def active_run(db: AsyncSession, user: User) -> MockRun | None:
     ).scalar_one_or_none()
 
 
-async def start(db: AsyncSession, user: User, fmt: MockFormat, *, free: bool) -> MockRun:
+async def start(
+    db: AsyncSession,
+    user: User,
+    fmt: MockFormat,
+    *,
+    free: bool,
+    kind: str = RUN_MOCK,
+    window: timedelta | None = None,
+) -> MockRun:
+    """Draw and store a run. The deadline is the format's minutes, or `window` for a run with
+    no visible time limit (it only closes a run left open)."""
     now = clock.now()
     ids = await draw(db, user.canton, fmt)
     run = MockRun(
         user_id=user.id,
         canton=user.canton,
+        kind=kind,
         status=MOCK_IN_PROGRESS,
         question_ids=ids,
         answers={},
@@ -217,7 +240,7 @@ async def start(db: AsyncSession, user: User, fmt: MockFormat, *, free: bool) ->
         pass_mark=fmt.pass_mark,
         free=free,
         started_at=now,
-        deadline_at=now + timedelta(minutes=fmt.minutes),
+        deadline_at=now + (window or timedelta(minutes=fmt.minutes)),
     )
     db.add(run)
     await db.flush()
@@ -259,7 +282,7 @@ async def finish(db: AsyncSession, run: MockRun, status: str) -> None:
                 user_id=run.user_id,
                 question_id=q.id,
                 topic_code=q.topic_code,
-                mode=ATTEMPT_MOCK,
+                mode=ATTEMPT_READINESS if run.kind == RUN_READINESS else ATTEMPT_MOCK,
                 study_mode=MODE_DE,
                 answer_text=given,
                 score=1.0 if given == q.correct else 0.0,
@@ -287,6 +310,7 @@ def passed(run: MockRun) -> bool | None:
 def summary(run: MockRun) -> dict[str, Any]:
     return {
         "id": str(run.id),
+        "kind": run.kind,
         "status": run.status,
         "started_at": run.started_at.isoformat(),
         "deadline_at": run.deadline_at.isoformat(),

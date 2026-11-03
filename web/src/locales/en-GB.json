@@ -95,7 +95,7 @@
     "invalid_options": "Four different options are needed, with the correct one among them.",
     "invalid_transition": "This question can no longer be changed in this way.",
     "edits_need_approve": "Edits can only be saved together with an approval.",
-    "sample_only": "This question is part of the Viapunt Pass. The free version includes the sample questions.",
+    "sample_only": "This question is part of the Viapunt Pass. The free version covers the sample questions.",
     "free_mock_used": "You have used your free mock test. A Viapunt Pass gives you unlimited mock tests.",
     "not_enough_questions": "There are not enough approved questions for a full mock test yet.",
     "no_mock_test": "There is no mock test for your canton yet.",
@@ -104,7 +104,8 @@
     "invalid_answer": "Please choose one of the four options.",
     "mock_in_progress": "Explain this and the help chat are not available while a mock test is running.",
     "invalid_language": "Please choose a language from the list.",
-    "translation_required": "Please enter a translation."
+    "translation_required": "Please enter a translation.",
+    "readiness_used_today": "You have done today's free readiness check. The next one is available tomorrow."
   },
   "impersonation": {
     "banner": "Viewing as {{name}} ({{role}}). You are signed in as admin {{admin}}.",
@@ -226,7 +227,7 @@
     "noTopics": "The topics for your canton are on their way.",
     "topicsTitle": "Test topics: {{canton}}",
     "notStarted": "Not started",
-    "freeTierNotice": "You are using the free version: {{count}} sample questions in every study mode and one mock test. A Viapunt Pass for your canton opens all questions, unlimited mock tests and Explain this.",
+    "freeTierNotice": "You are using the free version: {{count}} sample questions in every study mode, Explain this on those questions, one mock test and a readiness check every day. A Viapunt Pass for your canton opens all questions, unlimited mock tests and Explain this on every question.",
     "readinessTitle": "Readiness for the {{canton}} test",
     "knownOf": "{{known}} of {{total}} questions known",
     "dueCount_one": "{{count}} question due for review",
@@ -659,7 +660,9 @@
     "placeholder": "Ask about this question… (Enter to send)",
     "remaining": "{{left}} of {{limit}} messages left today",
     "limitReached": "You have reached today's message limit. Explain this is back tomorrow.",
-    "offline": "The assistant is not connected in this environment yet."
+    "offline": "The assistant is not connected in this environment yet.",
+    "free": "Free account: {{limit}} messages a day on the sample questions.",
+    "freeLimitReached": "That was today's free Explain this. It is back tomorrow, and a Viapunt Pass gives you Explain this on every question."
   },
   "glossary": {
     "link": "Glossary of key terms",
@@ -726,5 +729,46 @@
   "passBar": {
     "cta": "Get the pass · {{price}}",
     "text": "All questions, unlimited mock tests and Explain this for {{months}} months. One payment, no subscription."
+  },
+  "readinessCheck": {
+    "cardTitle": "Check where you stand",
+    "cardBody": "{{questions}} questions, about {{minutes}} minutes. See how ready you are in each topic area.",
+    "cardCta": "Start the check",
+    "cardLast": "Your last check: {{percent}}% right.",
+    "usedToday": "You have done today's free check. The next one is available tomorrow.",
+    "continue": "Continue the check",
+    "seeLast": "See your last result",
+    "title": "Check where you stand",
+    "intro": "{{questions}} questions from the whole question bank, across every topic area of the test.",
+    "ruleGerman": "In German, as in the real test.",
+    "ruleNoTimer": "No time limit: take your time and change your answers as often as you like.",
+    "ruleEnd": "Your answers are checked at the end, with a result for each topic area.",
+    "freeOne": "Free account: one check a day. With a Viapunt Pass, as many as you like.",
+    "notEnough": "There are not enough approved questions for the check yet.",
+    "start": "Start the check",
+    "handIn": "Check my answers",
+    "handInNow": "Check now",
+    "confirm": "Check your answers now? You cannot change them afterwards.",
+    "confirmUnanswered_one": "{{count}} question is still unanswered. Check your answers anyway?",
+    "confirmUnanswered_other": "{{count}} questions are still unanswered. Check your answers anyway?",
+    "resultTitle": "Where you stand",
+    "score": "{{score}} of {{total}} right ({{percent}}%)",
+    "expired": "The check was left open for a long time, so the answers you saved were checked.",
+    "areasTitle": "By topic area",
+    "areaScore": "{{correct}} of {{total}} right",
+    "again": "Check again",
+    "level": {
+      "ready": "You are well prepared. Take a mock test to try the full test under real conditions.",
+      "close": "You are close. Work on the areas below that are not yet solid and you will be ready.",
+      "halfway": "You already know a good part. Regular practice in the weaker areas will get you there.",
+      "start": "You are at the start. Learn the topics one by one, then check where you stand again."
+    },
+    "area": {
+      "history": "History",
+      "politics": "State and politics",
+      "society": "Society and everyday life",
+      "geography": "Geography",
+      "culture": "Culture and traditions"
+    }
   }
 }

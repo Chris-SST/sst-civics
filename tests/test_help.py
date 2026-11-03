@@ -60,9 +60,10 @@ async def test_free_learner_gets_the_small_allowance(api, fake, monkeypatch):
         assert (await send(api, body["id"])).status_code == 200
     r = await send(api, body["id"])
     assert r.status_code == 429 and r.json()["detail"] == "daily_limit_reached"
-    # Explain this stays a paid feature.
+    # Explain this on a sample question has its own free allowance.
     r = await api.post("/api/explain/start", json={"question_id": "hilfe-frage"})
-    assert r.status_code == 403
+    assert r.status_code == 201
+    assert r.json()["usage"]["daily_used"] == 0 and r.json()["usage"]["daily_limit"] == 3
 
 
 async def test_free_help_can_be_switched_off(api, fake, monkeypatch):
