@@ -85,9 +85,9 @@ http://viapunt.ch, http://staging.viapunt.ch, http://civics-staging.swissscience
 	}
 }
 
-# Umami dashboard (D-062). Log in here; see docs/runbooks/analytics.md. GO-LIVE: change the host
-# to stats.<brand domain> here and in infra/edge-snippet.Caddyfile.
-http://stats.civics-staging.swisssciencetutors.ch {
+# Umami dashboard (D-062). Log in here; see docs/runbooks/analytics.md. Production uses
+# stats.viapunt.ch (the edge sends it to the production stack).
+http://stats.viapunt.ch, http://stats.civics-staging.swisssciencetutors.ch {
 	encode zstd gzip
 
 	header {
@@ -122,6 +122,16 @@ http://stats.civics-staging.swisssciencetutors.ch {
 
 	handle /api/* {
 		reverse_proxy api:8000
+	}
+
+	# Statistics for the app too (D-062): the same two Umami paths as on the guide host.
+	handle_path /stats/script.js {
+		rewrite * /script.js
+		reverse_proxy umami:3000
+	}
+	handle_path /stats/api/send {
+		rewrite * /api/send
+		reverse_proxy umami:3000
 	}
 
 	handle {

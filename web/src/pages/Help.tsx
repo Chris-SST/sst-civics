@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { post } from "../api";
 import { ChatLog, streamMessage, type Msg, type Notice, type Usage } from "../components/ChatParts";
 import ErrorText from "../components/ErrorText";
+import { track } from "../analytics";
 
 /** The help chat (D-066): questions about the test, its topics and the naturalisation procedure,
  * answered from the Viapunt guide and the test checklist. One open conversation per learner;
@@ -65,6 +66,7 @@ export default function Help() {
     async (text: string) => {
       text = text.trim();
       if (!conv || !text || busy) return;
+      track("help-chat");
       setBusy(true);
       setError(null);
       setNotice(null);

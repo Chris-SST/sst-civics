@@ -75,6 +75,8 @@ This notice explains how personal data is handled when you use the guide website
 
 6.5 When you pay, you are taken to Stripe's payment page. Stripe sets its own cookies there, for example to prevent fraud; see Stripe's privacy notice. We do not load Stripe on our own pages.
 
+6.6 We count visits to viapunt.ch and to the app with Umami, which we host ourselves on our server in Switzerland. It sets no cookies, does not store your IP address and cannot identify you. It records the pages visited, the website you came from, the type of device and browser, the country, and a few steps such as starting the free practice or opening the checkout. If your browser sends "Do Not Track", nothing is counted.
+
 
 ## 7. How long we keep data
 

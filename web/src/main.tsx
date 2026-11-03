@@ -6,8 +6,10 @@ import "./i18n";
 import "./styles.css";
 import App from "./App";
 import { AuthProvider } from "./auth";
+import { startAnalytics } from "./analytics";
 
 registerSW({ immediate: true });
+startAnalytics();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

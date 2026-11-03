@@ -6,6 +6,7 @@ import { useAuth } from "../auth";
 import { formatChf, formatDate } from "../i18n";
 import ErrorText from "./ErrorText";
 import { guideUrl } from "../guide";
+import { track } from "../analytics";
 
 interface CantonStatus {
   /** Longest-running access of any kind (pass, admin grant or trial) active now. */
@@ -64,6 +65,7 @@ export default function Pricing() {
     setBusy(`${product}:${canton ?? ""}`);
     setError(null);
     try {
+      track("checkout", { product, from: "pricing" });
       const out = await post<{ url: string }>("/api/billing/checkout", { product, canton });
       window.location.assign(out.url);
     } catch (e) {

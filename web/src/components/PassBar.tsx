@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { get, post, type ProductOut } from "../api";
 import { useAuth } from "../auth";
 import { formatChf } from "../i18n";
+import { track } from "../analytics";
 
 /** The Viapunt Pass, one tap away while a visitor or a free learner practises (Chris, 2 November
  * 2026): a slim bar fixed to the bottom of the screen. A signed-in learner goes straight to
@@ -36,6 +37,7 @@ export default function PassBar({ canton = "zh" }: { canton?: string }) {
     if (!pass) return;
     setBusy(true);
     try {
+      track("checkout", { product: pass.key, from: "bar" });
       const out = await post<{ url: string }>("/api/billing/checkout", { product: pass.key });
       window.location.assign(out.url);
     } catch {

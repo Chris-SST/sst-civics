@@ -120,7 +120,17 @@ const t = ui(lang).chat;
       else launcher.focus();
     };
     launcher.hidden = false;
-    launcher.addEventListener("click", () => open(true));
+    const track = (name: string) => {
+      try {
+        (window as unknown as { umami?: { track: (n: string) => void } }).umami?.track(name);
+      } catch {
+        /* statistics never break the chat */
+      }
+    };
+    launcher.addEventListener("click", () => {
+      track("site-chat-open");
+      open(true);
+    });
     root.querySelector("[data-hc-close]")!.addEventListener("click", () => open(false));
     panel.addEventListener("keydown", (e) => {
       if (e.key === "Escape") open(false);
@@ -140,6 +150,7 @@ const t = ui(lang).chat;
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      track("site-chat-message");
       const text = input.value.trim();
       if (!text || send.disabled) return;
       input.value = "";

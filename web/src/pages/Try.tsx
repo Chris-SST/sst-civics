@@ -6,6 +6,7 @@ import ErrorText from "../components/ErrorText";
 import PassBar from "../components/PassBar";
 import QuestionCard from "../components/QuestionCard";
 import type { AnswerOut, StudyQuestion } from "../study";
+import { track } from "../analytics";
 
 /** Free practice without an account: the 30 sample questions of Zurich or of the rest of
  * Switzerland (`?canton=ch`; Zurich when the link names none), German and the visitor's language
@@ -153,6 +154,8 @@ export default function Try() {
             submit={async (given) => check(q, given)}
             onResult={(r) => {
               setAnswered(true);
+              if (state.index === 0) track("try-start", { canton });
+              if (state.index + 1 === total) track("try-finish", { canton, score: state.score + (r.correct ? 1 : 0) });
               if (r.correct) update({ ...state, score: state.score + 1 });
             }}
           >

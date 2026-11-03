@@ -21,7 +21,31 @@ const side = lang === "de" ? null : Q.en;
 const keys = Object.keys(Q.de.options) as (keyof typeof Q.de.options)[];
 const explanation = side ? side.explanation : Q.de.explanation;
 const tagTone = ["teal", "clay", "sun"];
+// Structured data for search engines: who runs the site and which languages it has.
+const site = (Astro.site ?? new URL("https://viapunt.ch")).toString().replace(/\/$/, "");
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${site}/#organization`,
+      name: "Viapunt",
+      url: `${site}/`,
+      email: "info@viapunt.ch",
+      areaServed: "CH",
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${site}/#website`,
+      name: "Viapunt",
+      url: `${site}/`,
+      publisher: { "@id": `${site}/#organization` },
+      inLanguage: ["en", "de", "fr", "it", "pt", "es", "sq", "tr"],
+    },
+  ],
+};
 ---
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, "\u003c")}></script>
 <div class="wrap">
   <section class="h-hero" aria-labelledby="h-title">
     <div class="h-hero__text">
@@ -29,7 +53,7 @@ const tagTone = ["teal", "clay", "sun"];
       <h1 id="h-title">{h.h1}</h1>
       <p class="h-lead">{h.lead}</p>
       <div class="h-actions">
-        <a class="cv-btn cv-btn--primary" href={tryHref}>{h.ctaFree}</a>
+        <a class="cv-btn cv-btn--primary" href={tryHref} data-umami-event="cta-try" data-umami-event-from="hero">{h.ctaFree}</a>
         <a class="cv-btn cv-btn--secondary" href={zurichHref}>{h.ctaGuide}</a>
       </div>
       <ul class="h-trust">{h.trust.map((x) => <li>{x}</li>)}</ul>
@@ -74,7 +98,7 @@ const tagTone = ["teal", "clay", "sun"];
             <p><strong>{Q.correct.toUpperCase()}</strong>: {explanation}</p>
           </details>
         </noscript>
-        <a class="h-q__more" href={tryHref}>{h.q.more} →</a>
+        <a class="h-q__more" href={tryHref} data-umami-event="cta-try" data-umami-event-from="question">{h.q.more} →</a>
       </div>
     </div>
   </section>
@@ -166,7 +190,7 @@ const tagTone = ["teal", "clay", "sun"];
       {h.pass.points.map((p) => (
         <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>{p}</span></li>
       ))}
-      <li class="h-pass__cta"><a class="cv-btn cv-btn--accent" href={appHref}>{h.pass.button}</a></li>
+      <li class="h-pass__cta"><a class="cv-btn cv-btn--accent" href={appHref} data-umami-event="cta-pass">{h.pass.button}</a></li>
     </ul>
   </div>
 </section>

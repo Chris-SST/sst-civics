@@ -12,6 +12,7 @@ import {
 } from "../api";
 import ErrorText from "../components/ErrorText";
 import { guideUrl } from "../guide";
+import { track } from "../analytics";
 import { BUY_AFTER_SIGNUP } from "../components/PassBar";
 import { switchInterface } from "../language";
 
@@ -61,6 +62,7 @@ export default function Signup() {
         age_confirmed: ageConfirmed,
         accept_terms: terms,
       });
+      track("signup", { canton });
       setDone(true);
     } catch (err) {
       setError(err);

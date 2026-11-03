@@ -5,6 +5,9 @@ WORKDIR /web
 COPY web/package.json web/package-lock.json ./
 RUN npm ci --no-audit --no-fund
 COPY web ./
+# Umami website id for the app's cookie-free statistics (D-062); empty = no tracker.
+ARG VITE_UMAMI_WEBSITE_ID=
+ENV VITE_UMAMI_WEBSITE_ID=$VITE_UMAMI_WEBSITE_ID
 RUN npm run build
 
 FROM caddy:2-alpine

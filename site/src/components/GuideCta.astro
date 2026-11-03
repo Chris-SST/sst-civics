@@ -15,5 +15,5 @@ const href = `${APP_URL.replace(/\/+$/, "")}/${page}?lang=${encodeURIComponent(l
     <h2 id="cta-h">{copy.heading}</h2>
     <p>{copy.text}</p>
   </div>
-  <a href={href} class="cv-btn cv-btn--primary">{copy.button}</a>
+  <a href={href} class="cv-btn cv-btn--primary" data-umami-event={`cta-${variant}`}>{copy.button}</a>
 </aside>
