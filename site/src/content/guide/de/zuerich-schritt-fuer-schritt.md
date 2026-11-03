@@ -4,7 +4,7 @@ description: "Wohnsitzfristen, Gesuch beim Gemeindeamt, Unterlagen, Tests, Gespr
 lang: de
 slug: zuerich-schritt-fuer-schritt
 lastChecked: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-03
 sources:
   - title: "Kantonale Bürgerrechtsverordnung (KBüV, LS 141.11)"
     url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
@@ -56,13 +56,13 @@ Für jede Person im Gesuch legen Sie zwei Dokumente bei: ein Dokument des Zivils
 Zwei Nachweise gehören zum Verfahren:
 
 - **Deutsch:** mündlich B1, schriftlich A2. Sie können das mit einem anerkannten Zertifikat oder mit dem Kantonalen Deutschtest belegen. Siehe [Sprachzertifikate](/de/sprachzertifikate/).
-- **Grundkenntnistest:** Wissen über die Schweiz, den Kanton Zürich und die Gemeinde. Siehe [Grundkenntnistest](/de/grundkenntnistest/).
+- **Grundkenntnistest:** 50 Fragen zur Schweiz, zum Kanton Zürich und zu den Gemeinden; mit 30 richtigen Antworten haben Sie bestanden. Siehe [Grundkenntnistest](/de/grundkenntnistest/).
 
 Sie können beide Tests vor oder nach der Einreichung des Gesuchs machen. Ihre Gemeinde sagt Ihnen, was bei ihr gilt.
 
 ## Gespräch mit der Gemeinde
 
-Die Gemeinden prüfen, wie gut Sie integriert sind, zum Beispiel Sprache, Grundkenntnisse und Kontakte zu Schweizerinnen und Schweizern. Viele Gemeinden führen dazu ein persönliches Gespräch oder eine Anhörung. Laut der Studie des Kantons von 2025 führten 51 Prozent der Gemeinden immer ein Gespräch, 2022 waren es 71 Prozent. Die Seite des Kantons zur ordentlichen Einbürgerung erwähnt kein Gespräch. Fragen Sie Ihre Gemeinde, ob und in welcher Form es stattfindet.
+Die Gemeinden prüfen, wie gut Sie integriert sind, zum Beispiel Sprache, Grundkenntnisse und Kontakte zu Schweizerinnen und Schweizern. Ob sie dazu ein Einbürgerungsgespräch führt, entscheidet laut kantonaler Verordnung jede Gemeinde selbst. Laut der Studie des Kantons von 2025 führten 51 Prozent der Gemeinden immer ein Gespräch, 2022 waren es 71 Prozent. Was im Gespräch vorkommt und wie Sie sich vorbereiten: [Das Einbürgerungsgespräch](/de/einbuergerungsgespraech/).
 
 ## Wie lange dauert es?
 

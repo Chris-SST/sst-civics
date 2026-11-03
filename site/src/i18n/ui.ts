@@ -153,7 +153,7 @@ const en: Ui = {
   home: {
     title: "Swiss naturalisation guide and citizenship test practice",
     description:
-      "Plain guides to becoming Swiss and practice for the citizenship test, with the canton of Zurich's own questions included. 30 free questions in German, with your language beside them.",
+      "Plain guides to becoming Swiss and practice for the citizenship test, for all of Switzerland and with questions on the canton of Zurich. 30 free questions in German, with your language beside them.",
     eyebrow: "Naturalisation in Switzerland",
     h1: "Understand it in your language. Pass it in German.",
     lead: "Plain guides to every step of becoming Swiss, from documents to the knowledge test, with the details for the canton of Zurich. Then practise the test questions with the German and your language side by side.",
@@ -184,7 +184,7 @@ const en: Ui = {
     soon: "Coming soon",
     tags: {
       overview: "Start here", zurich: "Zurich", documents: "Checklist", test: "Test", language: "German",
-      fees: "Costs", calculator: "Tool", free: "Free", faq: "Answers",
+      fees: "Costs", calculator: "Tool", free: "Free", faq: "Answers", interview: "Interview",
     },
     langs: {
       heading: "Your language beside the German",
@@ -192,7 +192,7 @@ const en: Ui = {
     },
     pass: {
       badge: "Viapunt Pass",
-      period: "6 months, paid once. No subscription.",
+      period: "12 months, paid once. No subscription.",
       pay: "Pay by card or TWINT. Extension: 3 more months for CHF 9.",
       points: [
         "Questions on every topic of the test, for Zurich or the rest of Switzerland",
@@ -207,7 +207,8 @@ const en: Ui = {
     overview: { title: "Overview", text: "Federal requirements, the order of steps and how long it takes." },
     zurich: { title: "Zurich, step by step", text: "Residence rules, documents, fees, timeline and where to apply." },
     documents: { title: "Documents", text: "What to provide, where to get it and how old it may be." },
-    test: { title: "The Zurich knowledge test", text: "Format, topics and how to prepare." },
+    test: { title: "The Zurich knowledge test", text: "50 questions, 30 to pass: format, topics and how to prepare." },
+    interview: { title: "The naturalisation interview", text: "What the commune asks, in which language, and how to prepare." },
     language: { title: "Language certificates", text: "Which ones count, which levels, prices and where to take them." },
     fees: { title: "Fees", text: "Federal, cantonal and communal fees in the canton of Zurich." },
     calculator: { title: "Residence-years calculator", text: "Count your years. It runs in your browser and sends nothing." },
@@ -337,7 +338,7 @@ const de: Ui = {
   home: {
     title: "Einbürgerung Schweiz: Ratgeber und Einbürgerungstest üben",
     description:
-      "Verständliche Ratgeber zur Einbürgerung in der Schweiz und Training für den Einbürgerungstest, mit den eigenen Fragen des Kantons Zürich. 30 Gratisfragen auf Deutsch, mit Übersetzung in Ihre Sprache.",
+      "Verständliche Ratgeber zur Einbürgerung in der Schweiz und Training für den Einbürgerungstest, für die ganze Schweiz und mit Fragen zum Kanton Zürich. 30 Gratisfragen auf Deutsch, mit Übersetzung in Ihre Sprache.",
     eyebrow: "Einbürgerung in der Schweiz",
     h1: "In Ihrer Sprache verstehen. Auf Deutsch bestehen.",
     lead: "Verständliche Ratgeber zu jedem Schritt der Einbürgerung, von den Unterlagen bis zum Wissenstest, mit den Details für den Kanton Zürich. Danach üben Sie die Testfragen, auf Deutsch und auf Wunsch mit Übersetzung daneben.",
@@ -368,7 +369,7 @@ const de: Ui = {
     soon: "Folgt in Kürze",
     tags: {
       overview: "Hier starten", zurich: "Zürich", documents: "Checkliste", test: "Test", language: "Deutsch",
-      fees: "Kosten", calculator: "Werkzeug", free: "Gratis", faq: "Antworten",
+      fees: "Kosten", calculator: "Werkzeug", free: "Gratis", faq: "Antworten", interview: "Gespräch",
     },
     langs: {
       heading: "Ihre Sprache neben dem Deutschen",
@@ -376,7 +377,7 @@ const de: Ui = {
     },
     pass: {
       badge: "Viapunt Pass",
-      period: "6 Monate, einmal bezahlt. Kein Abo.",
+      period: "12 Monate, einmal bezahlt. Kein Abo.",
       pay: "Bezahlen mit Karte oder TWINT. Verlängerung: 3 Monate für CHF 9.",
       points: [
         "Fragen zu allen Themen des Tests, für Zürich oder die übrige Schweiz",
@@ -391,7 +392,8 @@ const de: Ui = {
     overview: { title: "Überblick", text: "Bundesvoraussetzungen, Reihenfolge der Schritte und Dauer." },
     zurich: { title: "Zürich, Schritt für Schritt", text: "Aufenthalt, Unterlagen, Gebühren, Zeitplan und Anmeldung." },
     documents: { title: "Unterlagen", text: "Was Sie einreichen, wo Sie es bekommen und wie alt es sein darf." },
-    test: { title: "Der Zürcher Grundkenntnistest", text: "Aufbau, Themen und Vorbereitung." },
+    test: { title: "Der Zürcher Grundkenntnistest", text: "50 Fragen, 30 zum Bestehen: Aufbau, Themen und Vorbereitung." },
+    interview: { title: "Das Einbürgerungsgespräch", text: "Was die Gemeinde fragt, in welcher Sprache und wie Sie sich vorbereiten." },
     language: { title: "Sprachnachweise", text: "Welche zählen, welche Niveaus, Preise und Prüfungsorte." },
     fees: { title: "Gebühren", text: "Gebühren von Bund, Kanton Zürich und Gemeinde im Überblick." },
     calculator: { title: "Rechner für Aufenthaltsjahre", text: "Zählen Sie Ihre Jahre. Läuft im Browser und sendet nichts." },

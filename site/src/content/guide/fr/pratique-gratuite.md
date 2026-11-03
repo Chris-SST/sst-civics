@@ -4,7 +4,7 @@ description: "30 questions gratuites pour le test de naturalisation, pour le can
 lang: fr
 slug: pratique-gratuite
 lastChecked: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-03
 sources:
   - title: "Canton de Zurich : Test de connaissances (en allemand)"
     url: https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
@@ -14,7 +14,7 @@ cta: pass
 
 ## Ce que vous obtenez gratuitement
 
-Viapunt vaut pour toute la Suisse, avec les questions propres au canton de Zurich.
+Viapunt vaut pour toute la Suisse, avec des questions sur le canton de Zurich.
 
 - **30 questions d'exemple**, sans compte. Choisissez le canton de Zurich ou le reste de la Suisse. Chaque question comporte une courte explication. Vous la voyez en allemand et dans votre propre langue.
 - **Un examen blanc gratuit** après inscription avec votre adresse e-mail. Comme le vrai test, il est en allemand et limité dans le temps.
@@ -30,7 +30,7 @@ Vous apprenez d'abord la question dans votre langue, à côté du texte allemand
 
 ## Ce qu'apporte le Viapunt Pass
 
-Il existe un **Viapunt Pass** pour le canton de Zurich et un pour le reste de la Suisse. Chacun coûte **CHF 29** (un seul paiement, 6 mois d'accès) et comprend :
+Il existe un **Viapunt Pass** pour le canton de Zurich et un pour le reste de la Suisse. Chacun coûte **CHF 29** (un seul paiement, 12 mois d'accès, sans abonnement) et comprend :
 
 - toutes les questions, avec explications,
 - tous les modes d'étude : Apprendre, S'entraîner et Examen blanc,

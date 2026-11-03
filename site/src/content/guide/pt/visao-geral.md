@@ -33,7 +33,7 @@ A Secretaria de Estado da Migração (Staatssekretariat für Migration, SEM) ind
 - **Autorização de estabelecimento C.** É necessária uma autorização C válida.
 - **Dez anos de residência na Suíça.** Três deles devem estar nos últimos cinco anos antes do pedido. Os anos com autorização B ou C contam na íntegra, os anos com autorização F contam pela metade. Os anos com autorização N ou L não contam.
 - **Os anos entre os 8 e os 18 anos contam a dobrar.** Mesmo assim, tem de ter vivido pelo menos seis anos efetivos na Suíça. A nossa [calculadora](/pt/calculadora/) pode dar-lhe uma contagem aproximada.
-- **Língua.** Pelo menos o nível B1 na expressão oral e pelo menos o nível A2 na escrita numa língua nacional. Os cantões podem exigir mais. Veja [Certificados de língua](/en/language-certificates/) (em inglês).
+- **Língua.** Pelo menos o nível B1 na expressão oral e pelo menos o nível A2 na escrita numa língua nacional. Os cantões podem exigir mais. Veja [Certificados de língua](/pt/certificados-de-lingua/).
 - **Respeito pela segurança e pela ordem públicas** e pelos valores da Constituição Federal.
 - **Participação na vida económica ou aquisição de formação.**
 - **Nenhum apoio social nos três anos anteriores ao pedido**, a não ser que tenha sido totalmente reembolsado.
@@ -54,7 +54,7 @@ A ordem dos passos em resumo:
 4. O cantão toma a decisão final no prazo de um ano após essa autorização.
 5. Torna-se cidadão quando a decisão cantonal transita em julgado.
 
-O procedimento detalhado para Zurique está na página [Zurique, passo a passo](/en/zurich-step-by-step/) (em inglês).
+O procedimento detalhado para Zurique está na página [Zurique, passo a passo](/pt/zurique-passo-a-passo/).
 
 ## Quanto tempo demora?
 
@@ -77,4 +77,4 @@ As condições completas e as taxas estão nas páginas da SEM (em alemão): [c�
 
 ## Próximo passo
 
-Muitos cantões, entre eles Zurique, verificam os seus conhecimentos sobre a Suíça com um teste. As perguntas de treino do Viapunt servem para toda a Suíça, com as perguntas próprias do cantão de Zurique incluídas. Experimente as perguntas gratuitas e veja quão preparado já está.
+Muitos cantões, entre eles Zurique, verificam os seus conhecimentos sobre a Suíça com um teste. As perguntas de treino do Viapunt servem para toda a Suíça, com perguntas sobre o cantão de Zurique. Experimente as perguntas gratuitas e veja quão preparado já está.

@@ -4,7 +4,7 @@ description: "30 Gratisfragen für den Einbürgerungstest, für den Kanton Züri
 lang: de
 slug: kostenlos
 lastChecked: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-03
 sources:
   - title: "Kanton Zürich: Grundkenntnistest"
     url: https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
@@ -14,7 +14,7 @@ cta: pass
 
 ## Was Sie kostenlos bekommen
 
-Viapunt gibt es für die ganze Schweiz, mit den eigenen Fragen des Kantons Zürich.
+Viapunt gibt es für die ganze Schweiz, mit Fragen zum Kanton Zürich.
 
 - **30 Beispielfragen**, ohne Konto. Sie wählen den Kanton Zürich oder die übrige Schweiz. Jede Frage hat eine kurze Erklärung. Sie sehen sie auf Deutsch und in Ihrer Sprache.
 - **Einen Probetest** ohne Kosten, nachdem Sie sich mit Ihrer E-Mail-Adresse angemeldet haben. Er ist wie der echte Test auf Deutsch, mit Zeitlimit.
@@ -30,7 +30,7 @@ Zuerst lernen Sie die Frage in Ihrer eigenen Sprache, neben dem deutschen Text. 
 
 ## Was der Viapunt Pass zusätzlich bietet
 
-Es gibt einen **Viapunt Pass** für den Kanton Zürich und einen für die übrige Schweiz. Jeder kostet **CHF 29** (einmalige Zahlung, 6 Monate Zugang) und enthält:
+Es gibt einen **Viapunt Pass** für den Kanton Zürich und einen für die übrige Schweiz. Jeder kostet **CHF 29** (einmalige Zahlung, 12 Monate Zugang, kein Abo) und enthält:
 
 - alle Fragen, mit Erklärungen,
 - alle Lernmodi: Lernen, Üben und Probetest,

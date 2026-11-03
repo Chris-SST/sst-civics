@@ -33,7 +33,7 @@ La Secretaría de Estado de Migración (Staatssekretariat für Migration, SEM) i
 - **Permiso de establecimiento C.** Necesita un permiso C válido.
 - **Diez años de residencia en Suiza.** Tres de ellos deben estar en los últimos cinco años antes de la solicitud. Los años con permiso B o C cuentan por completo, los años con permiso F cuentan a la mitad. Los años con permiso N o L no cuentan.
 - **Los años entre los 8 y los 18 años cuentan doble.** Aun así, debe haber vivido al menos seis años efectivos en Suiza. Nuestra [calculadora](/es/calculadora/) puede darle un recuento aproximado.
-- **Idioma.** Al menos el nivel B1 oral y al menos el nivel A2 escrito en una lengua nacional. Los cantones pueden exigir más. Véase [Certificados de idioma](/en/language-certificates/) (en inglés).
+- **Idioma.** Al menos el nivel B1 oral y al menos el nivel A2 escrito en una lengua nacional. Los cantones pueden exigir más. Véase [Certificados de idioma](/es/certificados-de-idioma/).
 - **Respeto de la seguridad y el orden públicos** y de los valores de la Constitución Federal.
 - **Participación en la vida económica o adquisición de formación.**
 - **Ninguna ayuda social en los tres años anteriores a la solicitud**, salvo que la haya devuelto por completo.
@@ -54,7 +54,7 @@ El orden de los pasos, en breve:
 4. El cantón toma su decisión final en el plazo de un año desde esa autorización.
 5. Se convierte en ciudadano cuando la decisión cantonal adquiere firmeza.
 
-El procedimiento detallado para Zúrich está en la página [Zúrich, paso a paso](/en/zurich-step-by-step/) (en inglés).
+El procedimiento detallado para Zúrich está en la página [Zúrich, paso a paso](/es/zurich-paso-a-paso/).
 
 ## ¿Cuánto tiempo lleva?
 
@@ -77,4 +77,4 @@ Las condiciones completas y las tasas están en las páginas de la SEM (en alem�
 
 ## Siguiente paso
 
-Muchos cantones, entre ellos Zúrich, comprueban sus conocimientos sobre Suiza con una prueba. Las preguntas de práctica de Viapunt sirven para toda Suiza e incluyen las preguntas propias del cantón de Zúrich. Pruebe las preguntas gratuitas y vea cuánto ha avanzado ya.
+Muchos cantones, entre ellos Zúrich, comprueban sus conocimientos sobre Suiza con una prueba. Las preguntas de práctica de Viapunt sirven para toda Suiza, con preguntas sobre el cantón de Zúrich. Pruebe las preguntas gratuitas y vea cuánto ha avanzado ya.

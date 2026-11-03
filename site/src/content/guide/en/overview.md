@@ -77,4 +77,4 @@ The full conditions and fees are on the SEM pages (in German): [spouses](https:/
 
 ## Next step
 
-Many cantons, Zurich among them, check your knowledge of Switzerland with a test. Viapunt's practice questions are for all of Switzerland, with the canton of Zurich's own questions included. Try the free questions and see how well prepared you already are.
+Many cantons, Zurich among them, check your knowledge of Switzerland with a test. Viapunt's practice questions are for all of Switzerland, with questions on the canton of Zurich. Try the free questions and see how well prepared you already are.

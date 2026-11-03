@@ -4,7 +4,7 @@ description: "Residence periods, applying online to the canton, documents, tests
 lang: en
 slug: zurich-step-by-step
 lastChecked: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-03
 sources:
   - title: "Cantonal Citizenship Ordinance (KBüV, LS 141.11; German)"
     url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
@@ -56,13 +56,13 @@ Everyone in the application attaches two documents: a civil status document (at 
 Two proofs are part of the procedure:
 
 - **German:** B1 spoken, A2 written. You can show this with a recognised certificate or with the Cantonal German Test. See [Language certificates](/en/language-certificates/).
-- **Knowledge test:** knowledge of Switzerland, the canton of Zurich and the commune. See [Knowledge test](/en/knowledge-test/).
+- **Knowledge test:** 50 questions on Switzerland, the canton of Zurich and the communes; you pass with 30 correct answers. See [Knowledge test](/en/knowledge-test/).
 
 You can take both tests before or after you file the application. Your commune tells you what applies there.
 
 ## Interview with the commune
 
-Communes check how well you are integrated, for example language, basic knowledge and contact with Swiss people. Many communes hold a personal interview or hearing for this. According to the canton's 2025 study, 51 per cent of communes always held an interview, down from 71 per cent in 2022. The canton's page on ordinary naturalisation does not mention an interview. Ask your commune whether there is one and what form it takes.
+Communes check how well you are integrated, for example language, basic knowledge and contact with Swiss people. The cantonal ordinance lets each commune decide whether to hold a naturalisation interview. According to the canton's 2025 study, 51 per cent of communes always held one, down from 71 per cent in 2022. What it covers and how to prepare: [The naturalisation interview](/en/naturalisation-interview/).
 
 ## How long does it take?
 

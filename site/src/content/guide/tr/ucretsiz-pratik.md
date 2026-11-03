@@ -4,7 +4,7 @@ description: "Vatandaşlık testi için 30 ücretsiz soru, Zürih Kantonu ya da 
 lang: tr
 slug: ucretsiz-pratik
 lastChecked: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-03
 sources:
   - title: "Zürih Kantonu: Bilgi testi (Almanca)"
     url: https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
@@ -14,7 +14,7 @@ cta: pass
 
 ## Ücretsiz neler elde edersiniz
 
-Viapunt tüm İsviçre içindir; Zürih Kantonu'nun kendi soruları da dahildir.
+Viapunt tüm İsviçre içindir ve Zürih Kantonu hakkında sorular içerir.
 
 - **30 örnek soru**, hesap gerekmeden. Zürih Kantonu'nu ya da İsviçre'nin geri kalanını seçersiniz. Her sorunun kısa bir açıklaması var. Soruyu Almanca ve kendi dilinizde görürsünüz.
 - E-posta adresinizle kaydolduktan sonra **bir ücretsiz deneme sınavı**. Gerçek test gibi Almancadır ve süre sınırı vardır.
@@ -30,7 +30,7 @@ Tüm soruları, açıklamaları ve çevirileri kendimiz yazıyoruz. Kantonun tes
 
 ## Viapunt Pass neler ekler
 
-Zürih Kantonu için bir **Viapunt Pass** ve İsviçre'nin geri kalanı için bir tane daha vardır. Her biri **CHF 29** tutarındadır (tek ödeme, 6 ay erişim) ve şunları içerir:
+Zürih Kantonu için bir **Viapunt Pass** ve İsviçre'nin geri kalanı için bir tane daha vardır. Her biri **CHF 29** tutarındadır (tek ödeme, 12 ay erişim, abonelik yok) ve şunları içerir:
 
 - açıklamalarıyla birlikte tüm sorular,
 - tüm çalışma kipleri: Öğren, Alıştırma yap ve Deneme sınavı,

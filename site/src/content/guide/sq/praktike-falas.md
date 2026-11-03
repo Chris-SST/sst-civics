@@ -4,7 +4,7 @@ description: "30 pyetje falas për testin e natyralizimit, për kantonin e Cyrih
 lang: sq
 slug: praktike-falas
 lastChecked: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-03
 sources:
   - title: "Kantoni i Cyrihut: Testi i njohurive (në gjermanisht)"
     url: https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
@@ -14,7 +14,7 @@ cta: pass
 
 ## Çfarë merrni falas
 
-Viapunt është për gjithë Zvicrën, bashkë me pyetjet e vetë kantonit të Cyrihut.
+Viapunt është për gjithë Zvicrën, me pyetje për kantonin e Cyrihut.
 
 - **30 pyetje shembull**, pa llogari. Zgjidhni kantonin e Cyrihut ose pjesën tjetër të Zvicrës. Çdo pyetje ka një shpjegim të shkurtër. Ju e shihni në gjermanisht dhe në gjuhën tuaj.
 - **Një provim provë falas** pasi të regjistroheni me adresën tuaj të emailit. Si testi i vërtetë, ai është në gjermanisht dhe ka kufi kohe.
@@ -30,7 +30,7 @@ Fillimisht e mësoni pyetjen në gjuhën tuaj, pranë tekstit në gjermanisht. M
 
 ## Çfarë shton Viapunt Pass
 
-Ka një **Viapunt Pass** për kantonin e Cyrihut dhe një për pjesën tjetër të Zvicrës. Secili kushton **CHF 29** (një pagesë e vetme, 6 muaj qasje) dhe përfshin:
+Ka një **Viapunt Pass** për kantonin e Cyrihut dhe një për pjesën tjetër të Zvicrës. Secili kushton **CHF 29** (një pagesë e vetme, 12 muaj qasje, pa abonim) dhe përfshin:
 
 - të gjitha pyetjet, me shpjegime,
 - të gjitha mënyrat e studimit: Mëso, Praktiko dhe Provim provë,

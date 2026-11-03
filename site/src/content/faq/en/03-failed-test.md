@@ -4,4 +4,4 @@ question: "What happens if I fail the knowledge test?"
 order: 3
 ---
 
-The rules for retaking the test are set by the canton and the commune. The canton of Zurich's pages say nothing on this. Ask your commune whether and when you can retake the test and what it costs. How to prepare is on the page [Knowledge test](/en/knowledge-test/).
+You can retake it. The canton's handbook for communes sets no limit on the number of attempts and does not allow a waiting period. If you take the test during the procedure and fail repeatedly, the commune may reject the application, but it must let you retake the test at least once first. Ask your commune when the next date is and what a retake costs. How to prepare is on the page [Knowledge test](/en/knowledge-test/).

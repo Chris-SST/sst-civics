@@ -4,4 +4,4 @@ question: "¿Qué pasa si suspendo la prueba de conocimientos?"
 order: 3
 ---
 
-Las normas para repetir la prueba las fijan el cantón y el municipio. Las páginas del cantón de Zúrich no dicen nada al respecto. Pregunte a su municipio si puede repetir la prueba, cuándo y cuánto cuesta. Cómo prepararse está en la página [Prueba de conocimientos](/es/prueba-de-conocimientos/).
+Puede repetirla. El manual del cantón para los municipios no fija un límite de intentos y no permite un periodo de espera. Si hace la prueba durante el procedimiento y suspende varias veces, el municipio puede rechazar la solicitud, pero antes debe dejarle repetir la prueba al menos una vez. Pregunte a su municipio cuándo es la próxima fecha y cuánto cuesta repetirla. Cómo prepararse está en la página [Prueba de conocimientos](/es/prueba-de-conocimientos/).

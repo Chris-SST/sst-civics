@@ -1,6 +1,6 @@
 ---
 title: "Calculadora de anos de residência"
-description: "Conta os seus anos de residência para a naturalização (anos entre os 8 e os 18 anos contam a dobrar). Funciona no navegador e não guarda nada."
+description: "A calculadora conta os seus anos de residência para a naturalização, com os anos entre os 8 e os 18 anos a contar a dobrar. Funciona no seu navegador e não guarda nada."
 lang: pt
 slug: calculadora
 lastChecked: 2026-10-30

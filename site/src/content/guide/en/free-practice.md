@@ -4,7 +4,7 @@ description: "30 free questions for the citizenship test, for the canton of Zuri
 lang: en
 slug: free-practice
 lastChecked: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-03
 sources:
   - title: "Canton of Zurich: Knowledge test (German)"
     url: https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
@@ -14,7 +14,7 @@ cta: pass
 
 ## What you get for free
 
-Viapunt is for all of Switzerland, with the canton of Zurich's own questions included.
+Viapunt is for all of Switzerland, with questions on the canton of Zurich.
 
 - **30 sample questions**, with no account. Choose the canton of Zurich or the rest of Switzerland. Each question has a short explanation. You see it in German and in your own language.
 - **One free mock test** after you sign up with your email address. Like the real test, it is in German and has a time limit.
@@ -30,7 +30,7 @@ First you learn the question in your own language, beside the German text. Later
 
 ## What the Viapunt Pass adds
 
-There is a **Viapunt Pass** for the canton of Zurich and one for the rest of Switzerland. Each costs **CHF 29** (one payment, 6 months of access) and includes:
+There is a **Viapunt Pass** for the canton of Zurich and one for the rest of Switzerland. Each costs **CHF 29** (one payment, 12 months of access, no subscription) and includes:
 
 - all questions, with explanations,
 - all study modes: Learn, Practise and Mock test,

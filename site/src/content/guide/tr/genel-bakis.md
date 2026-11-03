@@ -33,7 +33,7 @@ Devlet Göç Sekreterliği (Staatssekretariat für Migration, SEM) olağan vatan
 - **C yerleşim izni.** Geçerli bir C iznine sahip olmanız gerekir.
 - **İsviçre'de on yıllık ikamet.** Bunun üç yılı, başvurudan önceki son beş yıl içinde olmalıdır. B veya C izniyle geçen yıllar tam sayılır, F izniyle geçen yıllar yarım sayılır. N veya L izniyle geçen yıllar sayılmaz.
 - **8. ile 18. doğum günleriniz arasındaki yıllar çift sayılır.** Yine de İsviçre'de fiilen en az altı yıl yaşamış olmanız gerekir. [Hesaplayıcımız](/tr/hesaplayici/) size yaklaşık bir sayım verebilir.
-- **Dil.** Bir ulusal dilde konuşmada en az B1, yazmada en az A2 düzeyi. Kantonlar daha fazlasını isteyebilir. Bkz. [Dil sertifikaları](/en/language-certificates/) (İngilizce).
+- **Dil.** Bir ulusal dilde konuşmada en az B1, yazmada en az A2 düzeyi. Kantonlar daha fazlasını isteyebilir. Bkz. [Dil sertifikaları](/tr/dil-sertifikalari/).
 - **Kamu güvenliğine ve düzenine** ve Federal Anayasa'nın değerlerine saygı.
 - **Ekonomik yaşama veya eğitime katılım.**
 - **Başvurudan önceki üç yılda sosyal yardım almamış olmak**, tamamen geri ödenmişse hariç.
@@ -54,7 +54,7 @@ Adımların sırası kısaca:
 4. Kanton, bu izinden sonra bir yıl içinde nihai kararını verir.
 5. Kanton kararı kesinleştiğinde vatandaş olursunuz.
 
-Zürih için ayrıntılı süreç [Zürih, adım adım](/en/zurich-step-by-step/) sayfasında (İngilizce) yer alır.
+Zürih için ayrıntılı süreç [Zürih, adım adım](/tr/adim-adim-zurih/) sayfasında yer alır.
 
 ## Ne kadar sürer?
 
@@ -77,4 +77,4 @@ Tüm koşullar ve harçlar SEM sayfalarında (Almanca) yer alır: [eşler](https
 
 ## Sonraki adım
 
-Zürih de dahil birçok kanton, İsviçre hakkındaki bilginizi bir testle ölçer. Viapunt'un alıştırma soruları tüm İsviçre içindir; Zürih Kantonu'nun kendi soruları da dahildir. Ücretsiz soruları deneyin ve ne kadar hazır olduğunuzu görün.
+Zürih de dahil birçok kanton, İsviçre hakkındaki bilginizi bir testle ölçer. Viapunt'un alıştırma soruları tüm İsviçre içindir ve Zürih Kantonu hakkında sorular içerir. Ücretsiz soruları deneyin ve ne kadar hazır olduğunuzu görün.

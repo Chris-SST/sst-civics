@@ -33,11 +33,11 @@ Le Secrétariat d'État aux migrations (SEM) indique les points suivants pour la
 - **Permis d'établissement C.** Vous devez être titulaire d'un permis C valable.
 - **Dix ans de séjour en Suisse.** Trois de ces années doivent se situer dans les cinq ans précédant le dépôt de la demande. Les années avec un permis B ou C comptent entièrement, celles avec un permis F comptent pour moitié. Les années avec un permis N ou L ne comptent pas.
 - **Les années entre le 8e et le 18e anniversaire comptent double.** Vous devez toutefois avoir vécu au moins six années effectives en Suisse. Notre [calculateur](/fr/calculateur/) peut vous donner un décompte approximatif.
-- **Langue.** Au moins le niveau B1 à l'oral et au moins le niveau A2 à l'écrit dans une langue nationale. Les cantons peuvent exiger davantage. Voir [Certificats de langue](/en/language-certificates/) (en anglais).
+- **Langue.** Au moins le niveau B1 à l'oral et au moins le niveau A2 à l'écrit dans une langue nationale. Les cantons peuvent exiger davantage. Voir [Certificats de langue](/fr/certificats-de-langue/).
 - **Respect de la sécurité et de l'ordre publics** ainsi que des valeurs de la Constitution fédérale.
 - **Participation à la vie économique ou acquisition d'une formation.**
 - **Pas d'aide sociale durant les trois ans précédant la demande**, sauf si elle a été entièrement remboursée.
-- **Familiarité avec les conditions de vie en Suisse.** De nombreux cantons le vérifient par un test. Dans le canton de Zurich, il s'agit du [test de connaissances](/fr/test-de-connaissances/) (Grundkenntnistest).
+- **Familiarité avec les conditions de vie en Suisse.** De nombreux cantons le vérifient par un test. Dans le canton de Zurich, il s'agit du [test de connaissances](/fr/test-de-connaissances/).
 - Vous favorisez l'intégration des membres de votre famille et ne mettez pas en danger la sécurité de la Suisse.
 
 Les cantons peuvent ajouter des conditions, par exemple une durée minimale de séjour dans le canton et la commune. Le SEM mentionne deux à cinq ans.
@@ -54,7 +54,7 @@ Les étapes dans l'ordre :
 4. Le canton rend sa décision finale dans l'année qui suit cette autorisation.
 5. Vous devenez citoyen dès que la décision cantonale est entrée en force.
 
-La procédure détaillée pour Zurich figure sur la page [Zurich, étape par étape](/en/zurich-step-by-step/) (en anglais).
+La procédure détaillée pour Zurich figure sur la page [Zurich, étape par étape](/fr/zurich-etape-par-etape/).
 
 ## Combien de temps cela prend-il ?
 
@@ -77,4 +77,4 @@ Les conditions complètes et les émoluments figurent sur les pages du SEM (en a
 
 ## Prochaine étape
 
-Beaucoup de cantons, dont Zurich, vérifient vos connaissances sur la Suisse par un test. Les questions d'entraînement de Viapunt valent pour toute la Suisse, avec les questions propres au canton de Zurich. Essayez les questions gratuites et voyez où vous en êtes.
+Beaucoup de cantons, dont Zurich, vérifient vos connaissances sur la Suisse par un test. Les questions d'entraînement de Viapunt valent pour toute la Suisse, avec des questions sur le canton de Zurich. Essayez les questions gratuites et voyez où vous en êtes.

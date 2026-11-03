@@ -33,7 +33,7 @@ Sekretariati Shtetëror për Migracionin (Staatssekretariat für Migration, SEM)
 - **Leja e vendosjes C.** Ju duhet një leje C e vlefshme.
 - **Dhjetë vjet qëndrim në Zvicër.** Tre prej tyre duhet të bien në pesë vjetët e fundit para kërkesës. Vitet me leje B ose C llogariten plotësisht, vitet me leje F llogariten përgjysmë. Vitet me leje N ose L nuk llogariten.
 - **Vitet midis ditëlindjes së 8-të dhe asaj të 18-të llogariten dyfish.** Megjithatë, duhet të keni jetuar të paktën gjashtë vjet efektive në Zvicër. [Llogaritësi](/sq/llogaritesi/) ynë mund t'ju japë një numërim të përafërt.
-- **Gjuha.** Të paktën niveli B1 në të folur dhe të paktën niveli A2 në të shkruar në një gjuhë kombëtare. Kantonet mund të kërkojnë më shumë. Shihni [Certifikatat e gjuhës](/en/language-certificates/) (në anglisht).
+- **Gjuha.** Të paktën niveli B1 në të folur dhe të paktën niveli A2 në të shkruar në një gjuhë kombëtare. Kantonet mund të kërkojnë më shumë. Shihni [Certifikatat e gjuhës](/sq/certifikatat-e-gjuhes/).
 - **Respektimi i sigurisë dhe i rendit publik** si dhe i vlerave të Kushtetutës Federale.
 - **Pjesëmarrja në jetën ekonomike ose marrja e një arsimimi.**
 - **Pa ndihmë sociale në tri vjetët para kërkesës**, përveç nëse e keni kthyer plotësisht.
@@ -54,7 +54,7 @@ Radha e hapave shkurtimisht:
 4. Kantoni merr vendimin përfundimtar brenda një viti nga kjo leje.
 5. Ju bëheni shtetas pasi vendimi kantonal të marrë formë të prerë.
 
-Procedura e detajuar për Cyrihun është në faqen [Cyrihu, hap pas hapi](/en/zurich-step-by-step/) (në anglisht).
+Procedura e detajuar për Cyrihun është në faqen [Cyrihu, hap pas hapi](/sq/cyrihu-hap-pas-hapi/).
 
 ## Sa zgjat?
 
@@ -77,4 +77,4 @@ Kushtet e plota dhe tarifat janë në faqet e SEM (në gjermanisht): [bashkësho
 
 ## Hapi tjetër
 
-Shumë kantone, përfshirë Cyrihun, i kontrollojnë njohuritë tuaja për Zvicrën me një test. Pyetjet e praktikës së Viapunt janë për gjithë Zvicrën, bashkë me pyetjet e vetë kantonit të Cyrihut. Provoni pyetjet falas dhe shihni sa të përgatitur jeni tashmë.
+Shumë kantone, përfshirë Cyrihun, i kontrollojnë njohuritë tuaja për Zvicrën me një test. Pyetjet e praktikës së Viapunt janë për gjithë Zvicrën, me pyetje për kantonin e Cyrihut. Provoni pyetjet falas dhe shihni sa të përgatitur jeni tashmë.

@@ -33,7 +33,7 @@ La Segreteria di Stato della migrazione (SEM) indica questi punti per la natural
 - **Permesso di domicilio C.** Occorre un permesso C valido.
 - **Dieci anni di soggiorno in Svizzera.** Tre di questi devono cadere negli ultimi cinque anni prima della domanda. Gli anni con un permesso B o C contano per intero, gli anni con un permesso F contano per metà. Gli anni con un permesso N o L non contano.
 - **Gli anni tra l'8° e il 18° compleanno contano il doppio.** Tuttavia deve aver vissuto in Svizzera per almeno sei anni effettivi. Il nostro [calcolatore](/it/calcolatore/) può darLe un conteggio approssimativo.
-- **Lingua.** Almeno il livello B1 orale e almeno il livello A2 scritto in una lingua nazionale. I Cantoni possono richiedere di più. Vedere [Certificati linguistici](/en/language-certificates/) (in inglese).
+- **Lingua.** Almeno il livello B1 orale e almeno il livello A2 scritto in una lingua nazionale. I Cantoni possono richiedere di più. Vedere [Certificati linguistici](/it/certificati-linguistici/).
 - **Rispetto della sicurezza e dell'ordine pubblici** e dei valori della Costituzione federale.
 - **Partecipazione alla vita economica o acquisizione di una formazione.**
 - **Nessun aiuto sociale nei tre anni precedenti la domanda**, a meno che non sia stato interamente rimborsato.
@@ -54,7 +54,7 @@ Le fasi in sintesi:
 4. Il Cantone prende la decisione finale entro un anno da tale autorizzazione.
 5. Diventa cittadino quando la decisione cantonale è passata in giudicato.
 
-La procedura dettagliata per Zurigo si trova nella pagina [Zurigo, passo dopo passo](/en/zurich-step-by-step/) (in inglese).
+La procedura dettagliata per Zurigo si trova nella pagina [Zurigo, passo dopo passo](/it/zurigo-passo-per-passo/).
 
 ## Quanto tempo ci vuole?
 
@@ -77,4 +77,4 @@ Le condizioni complete e le tasse si trovano nelle pagine della SEM (in tedesco)
 
 ## Prossimo passo
 
-Molti Cantoni, tra cui Zurigo, verificano con un test le Sue conoscenze sulla Svizzera. Le domande di esercizio di Viapunt valgono per tutta la Svizzera, con le domande proprie del Cantone di Zurigo. Provi le domande gratuite e veda quanto è già preparato.
+Molti Cantoni, tra cui Zurigo, verificano con un test le Sue conoscenze sulla Svizzera. Le domande di esercizio di Viapunt valgono per tutta la Svizzera, con domande sul Cantone di Zurigo. Provi le domande gratuite e veda quanto è già preparato.

@@ -65,7 +65,7 @@ The full conditions and fees are on the SEM pages (in German): [spouses](https:/
 
 ## Next step
 
-Many cantons, Zurich among them, check your knowledge of Switzerland with a test. Viapunt's practice questions are for all of Switzerland, with the canton of Zurich's own questions included. Try the free questions and see how well prepared you already are.
+Many cantons, Zurich among them, check your knowledge of Switzerland with a test. Viapunt's practice questions are for all of Switzerland, with questions on the canton of Zurich. Try the free questions and see how well prepared you already are.
 
 Official sources of this page:
 
@@ -114,13 +114,13 @@ Everyone in the application attaches two documents: a civil status document (at 
 Two proofs are part of the procedure:
 
 - **German:** B1 spoken, A2 written. You can show this with a recognised certificate or with the Cantonal German Test. See [Language certificates]({{GUIDE_URL}}/en/language-certificates/).
-- **Knowledge test:** knowledge of Switzerland, the canton of Zurich and the commune. See [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
+- **Knowledge test:** 50 questions on Switzerland, the canton of Zurich and the communes; you pass with 30 correct answers. See [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
 
 You can take both tests before or after you file the application. Your commune tells you what applies there.
 
 ## Interview with the commune
 
-Communes check how well you are integrated, for example language, basic knowledge and contact with Swiss people. Many communes hold a personal interview or hearing for this. According to the canton's 2025 study, 51 per cent of communes always held an interview, down from 71 per cent in 2022. The canton's page on ordinary naturalisation does not mention an interview. Ask your commune whether there is one and what form it takes.
+Communes check how well you are integrated, for example language, basic knowledge and contact with Swiss people. The cantonal ordinance lets each commune decide whether to hold a naturalisation interview. According to the canton's 2025 study, 51 per cent of communes always held one, down from 71 per cent in 2022. What it covers and how to prepare: [The naturalisation interview]({{GUIDE_URL}}/en/naturalisation-interview/).
 
 ## How long does it take?
 
@@ -267,76 +267,211 @@ Official sources of this page:
 - Otelfingen: Guide to ordinary naturalisation (PDF, German): https://www.otelfingen.ch/public/upload/assets/14088/Leitfaden%20ordentliche%20Einb%C3%BCrgerung%20Otelfingen.pdf?fp=2
 - SEM: FAQ on the list of recognised language certificates (PDF, German): https://www.sem.admin.ch/dam/sem/de/data/integration/themen/sprache/faq-anerkannte-sprachzertifikate.pdf.download.pdf/faq-anerkannte-sprachzertifikate-d.pdf
 
-## Page: Zurich Citizenship Test (Grundkenntnistest): Format and Topics
+## Page: Zurich Citizenship Test (Grundkenntnistest): Format, Topics and Preparation
 
 English: {{GUIDE_URL}}/en/knowledge-test/  
 German: {{GUIDE_URL}}/de/grundkenntnistest/  
-Last checked: 2026-10-30
+Last checked: 2026-11-03
 
 ## What the test is for
 
-If you apply for ordinary naturalisation in the canton of Zurich, you must show that you know Switzerland, the canton and how Zurich communes work. The knowledge test (Grundkenntnistest) checks this. According to the canton's 2025 study, all Zurich communes now use the cantonal test.
+If you apply for ordinary naturalisation in the canton of Zurich, you must show basic knowledge of the geography, politics, history and society of Switzerland, the canton of Zurich and the Zurich communes. The knowledge test (Grundkenntnistest, GKT) is how most applicants show it. The canton's Gemeindeamt provides the test to the communes free of charge, and according to the canton's 2025 study all Zurich communes now use it.
+
+## The format
+
+The canton's naturalisation handbook (section 4.6.2.1) sets the format:
+
+- The catalogue has **350 questions**. The canton publishes all of them.
+- Each test has **50 questions**, drawn at random from the catalogue every time.
+- The 50 questions are split by level of the state: **35 on the Confederation, 10 on the canton, 5 on the communes**.
+- You pass with **30 correct answers** (60 per cent).
+- The test is **digital**. You answer on a computer or tablet at the test centre.
+
+The handbook sets no time limit. The commune or the provider that runs the test sets the time; ask when you register.
+
+The questions are in German, and the cantonal ordinance requires formats whose answers are clearly right or wrong. The handbook says the test must be passable with written German at level A2, the level that naturalisation requires anyway.
 
 ## Who has to take it, and who does not
 
-The canton lists these exemptions. You do **not** have to take the test if you:
+You do **not** have to take the test if you:
 
-- are under 12,
-- are currently in compulsory school or in upper-secondary training in Switzerland (Gymnasium, apprenticeship),
-- have completed five years of compulsory school in Switzerland, at least three of them at lower-secondary level,
-- have an upper-secondary qualification from Switzerland.
+- have attended compulsory school in Switzerland for at least five years, at least three of them at lower-secondary level (for example Sek A, B or C),
+- have completed upper-secondary education in Switzerland (an apprenticeship or Gymnasium),
+- are attending compulsory school or upper-secondary education in Switzerland when you file the application.
 
-Your commune decides whether an exemption applies to you. The canton offers a self-check.
+A private school counts if it teaches in German. A private school that teaches mainly in another language does not exempt you.
 
-## What does the test look like?
+Children under 12 do not have to meet the integration requirements, so they take no test. Children from 12 to 16 may take it, but the commune may not reject a child's application only because the child failed. Many children of that age are exempt anyway because of their schooling.
 
-The canton's page gives **no number of questions, no duration and no pass mark**. It refers you to your commune.
+Your commune decides whether an exemption applies. The canton offers a short self-check on its test page.
 
-A 2022 press report mentioned 50 questions in 60 minutes, with 30 correct answers to pass. The canton has not confirmed these figures; your commune can tell you the format and pass mark.
+## When, where and how to register
 
-The canton publishes its question catalogue in German only, so expect the test in German.
+You register through your **commune**. It tells you when and where the test takes place. The commune can run the test itself or hand it to an outside educational institution.
 
-## The topics
+Each commune also decides **when** you take it: before you file the application or during the procedure. The canton's test page has a list showing what each commune expects. Passing the test is not a condition for filing: if your commune wants the test first and you have not passed yet, you can still apply and take it again during the procedure.
 
-The canton's question catalogue has four areas, with questions on the Confederation, the canton and the commune:
+In the city of Zurich, for example, you take the test after you have filed the application, at the Stadthaus. The city invites you.
 
-1. **Democracy and federalism**
-2. **Social state and civil society**
-3. **History** (Confederation and canton)
-4. **Geography** (Confederation and canton)
+## What it costs
+
+The fee depends on the commune and the test provider, and the canton names no single figure. Two examples: the city of Zurich charges nothing for the test; Winterthur's fee list from January 2026 shows CHF 150. Ask your commune what applies to you. The test fee comes on top of the naturalisation fees of the commune, canton and Confederation, see [Fees]({{GUIDE_URL}}/en/fees/).
+
+## The five topic areas
+
+The catalogue has five areas. Each area covers the Confederation and the canton; the first two also cover the communes.
+
+1. **Democracy and federalism**: the constitution, fundamental rights, Parliament, the Federal Council, the courts, popular rights, elections, and who does what among Confederation, cantons and communes. [Topic page]({{GUIDE_URL}}/en/knowledge-test-democracy/)
+2. **Social state and civil society**: social insurance, health insurance, taxes, school, work, renting, marriage and family, associations. [Topic page]({{GUIDE_URL}}/en/knowledge-test-welfare-state/)
+3. **History**: from the Romans and 1291 to the federal state of 1848, women's suffrage and immigration, and the history of Zurich. [Topic page]({{GUIDE_URL}}/en/knowledge-test-history/)
+4. **Geography**: landscapes, rivers, languages, neighbouring countries, and the geography of the canton of Zurich. [Topic page]({{GUIDE_URL}}/en/knowledge-test-geography/)
+5. **Culture and everyday culture**: customs and holidays, symbols, sport, writers and artists, international organisations, and events in Zurich. [Topic page]({{GUIDE_URL}}/en/knowledge-test-culture/)
+
+Because 15 of the 50 questions are about the canton and the communes, the cantonal and communal questions from all areas are also collected on one page: [Canton and communes of Zurich]({{GUIDE_URL}}/en/knowledge-test-canton-commune/).
+
+The catalogue is the same for the whole canton. The five communal questions are about how Zurich communes work in general, not about your own commune in particular.
 
 ## How to prepare
 
-On its page the canton provides, free of charge:
+The canton's test page offers three free aids:
 
-- a **practice test**,
-- the **brochure on naturalisation and the knowledge test** (PDF, 76 pages, German; printed copies from your commune),
+- a **practice test** online,
+- the **naturalisation brochure** (PDF, 76 pages, German; printed copies from your commune),
 - the [list of all questions](https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/grundkenntnistest_kanton_zuerich.pdf) (PDF, 78 pages, German).
 
-The Federal Chancellery's [The Confederation in brief](https://www.bk.admin.ch/bund-kurz-erklaert) is an easy introduction to the political system. The canton also suggests a few books as optional reading.
+The handbook requires that you can learn everything the test asks from these aids. The canton also lists further books and brochures, such as the Federal Chancellery's "The Confederation in brief", but says you do not need them for the test. The city of Zurich posts the brochure to you with the invitation to the test.
 
-We do not reproduce any question from the catalogue here. Read it on the canton's page.
+A plan that works for many people:
 
-## Registration and cost
+1. Read the brochure once, area by area, to understand the context.
+2. Learn the catalogue area by area. Start with democracy and federalism, the largest area.
+3. Take timed practice tests in German until you are well above 30 correct answers.
 
-You register through your **commune**. It tells you where and when. Depending on the commune, you can take the test before or after you file the application. The cost depends on the commune and the provider. The canton gives no figure. Ask your commune.
+We do not reproduce any question from the catalogue on this site. Read it on the canton's page.
 
-Questions about the test go to the Gemeindeamt, naturalisation section: grundkenntnistest@ji.zh.ch, telephone +41 43 259 83 81.
+## If you fail
+
+You can retake the test. The handbook sets no limit on the number of attempts and does not allow a waiting period before the next one. If you take the test during the procedure and fail repeatedly, the commune may reject the application, but it must let you retake the test at least once first. When someone fails several times, the commune must look at the reasons. Ask your commune what a retake costs.
+
+If you have a disability, a serious illness, a marked learning, reading or writing difficulty, or cannot read and write, the commune must take this into account. It can, for example, give you more time or a test on your own, or excuse you from the test. You must prove the circumstance, for example with a report from a specialist. See section 4.9 of the handbook.
+
+## Common mistakes
+
+- **Learning only the federal questions.** 15 of the 50 questions are about the canton and the communes.
+- **Learning only in your own language.** The test is in German. Practise the German wording until you recognise it.
+- **Assuming you are exempt.** The commune decides. Schooling at a private school that teaches mainly in another language does not count.
+- **Studying general books instead of the catalogue.** The canton's own aids cover everything the test asks.
+- **Leaving it late.** If your commune wants the test before the application, it sets the pace of your whole procedure.
+- **Not asking about the time limit.** The handbook sets none, so ask your commune or the provider how long you have.
+
+## Contact
+
+Questions about the test go to the Gemeindeamt, naturalisation section: grundkenntnistest@ji.zh.ch, telephone +41 43 259 83 81. Questions about dates, place and fees go to your commune.
 
 ## How our practice fits in
 
-Our practice questions are **original questions that we wrote**. They cover the same topics as the test but are not the canton's questions. You study first in your own language, then in German, the language of the test.
+Our practice questions are **original questions that we wrote**. They cover the same topics as the test, in the same split of federal, cantonal and communal questions, but they are not the canton's questions. You study first in your own language, then in German, the language of the test.
 
 ## Next step
 
-Try the [free questions]({{GUIDE_URL}}/en/free-practice/).
+Try the [free questions]({{GUIDE_URL}}/en/free-practice/). If your commune holds an interview as well, read [The naturalisation interview]({{GUIDE_URL}}/en/naturalisation-interview/).
 
 Official sources of this page:
 
 - Canton of Zurich: Knowledge test (practice test, brochure, question list; German): https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+- Gemeindeamt of the Canton of Zurich: Naturalisation handbook from 1 July 2023, sections 4.6 and 4.9 (PDF, German): https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
 - Canton of Zurich: List of all questions (PDF, German): https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/grundkenntnistest_kanton_zuerich.pdf
+- Cantonal Citizenship Ordinance (KBüV, LS 141.11), § 6; German: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
+- City of Zurich: Basic knowledge (test, exemptions, preparation; German): https://www.stadt-zuerich.ch/de/lebenslagen/einwohner-services/einbuergerung/grundkenntnisse.html
+- City of Winterthur: Naturalisation fees, January 2026 (PDF, German): https://stadt.winterthur.ch/download/media/21/Kosten%C3%BCbersicht%20Einb%C3%BCrgerungsgeb%C3%BChren_%20Stand%20Januar%202026%20%283%29.pdf
 - Canton of Zurich: New study on how Zurich communes naturalise (December 2025; German): https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/12/neue-studie-so-buergern-die-zuercher-gemeinden-ein.html
-- Federal Chancellery: The Confederation in brief (German): https://www.bk.admin.ch/bund-kurz-erklaert
+
+## Page: The Naturalisation Interview in the Canton of Zurich
+
+English: {{GUIDE_URL}}/en/naturalisation-interview/  
+German: {{GUIDE_URL}}/de/einbuergerungsgespraech/  
+Last checked: 2026-11-03
+
+## What the interview is
+
+After the canton's preliminary check, your commune of residence examines whether you are integrated. It can invite you to a naturalisation interview (Einbürgerungsgespräch) for this. The cantonal ordinance (KBüV § 13) leaves the choice to the commune: it **may** hold an interview, it does not have to.
+
+The interview is a conversation, usually with staff of the commune's naturalisation office or members of a citizenship committee. They prepare the case. The decision on communal citizenship is taken by the competent body of the commune, usually the communal council.
+
+## Will there be one?
+
+That depends on your commune. According to the canton's 2025 study, 51 per cent of Zurich communes always held an interview, down from 71 per cent in 2022. Others hold one only when something is unclear. Three examples:
+
+- **City of Zurich:** the city checks your German, basic knowledge, social integration and participation in working life or education. If questions remain open, it invites you to a personal interview with someone from its naturalisation department.
+- **Bülach:** in principle no interview; only in individual cases, for example when there are doubts about German or basic knowledge.
+- **Otelfingen:** in principle no interview; only when needed.
+
+The handbook says an interview is useful mainly when the commune cannot judge certain criteria from your documents. If the documents are enough, the commune can do without it. Ask your commune early whether it holds interviews and when.
+
+## What it covers
+
+The ordinance says the commune checks in particular these integration criteria, which the handbook lists:
+
+- **Taking part in social and cultural life**: for example going to public events and festivals, being a member of an association or doing voluntary work.
+- **Contact with Swiss people**: neighbours, colleagues, friends, parents at your children's school.
+- **Respect for the values of the Federal Constitution**: for example the rule of law, equal rights for women and men, freedom of religion and freedom of expression.
+- **Supporting your family's integration**: helping your spouse or children with language courses, school and social activities.
+
+The commune usually checks these from the self-declaration you sent with your application. The interview is where it can ask about anything that is unclear. If there are concrete doubts about respect for constitutional values, the handbook says the commune can raise them in the interview; statements made there or on social media can count.
+
+Some communes also use the interview to check German or basic knowledge when they have doubts, as Bülach describes. For ordinary naturalisation, though, basic knowledge is normally proven with the [knowledge test]({{GUIDE_URL}}/en/knowledge-test/) or with Swiss schooling, and German with a certificate or the cantonal German test.
+
+The requirements for naturalisation are set exhaustively by federal and cantonal law. Motivation is not one of them, and neither is membership of an association. The handbook stresses that people may choose not to join clubs, and that shift work, disability, care duties or limited money can limit how much someone takes part. The commune must take such circumstances into account.
+
+## Language, company and record
+
+- **Language:** you choose whether the interview is held in Standard German or in Swiss German dialect. Say so at the start; the handbook recommends that the commune asks you.
+- **Level:** the commune must adapt the interview to the German that naturalisation requires, B1 spoken and A2 written. You do not need better German than that.
+- **Company:** you may bring an adult person you trust.
+- **Record:** the commune keeps minutes of the interview or records it on audio.
+
+## Children
+
+The commune holds no interview with children under 12. In a family application they may be present and join in, but they are not interviewed. From 12, the commune may interview a child in a way that suits the child's age. Up to 16, an adult person of trust must be present.
+
+## How it differs from the written test
+
+| | Knowledge test | Interview |
+|---|---|---|
+| Who | Everyone who is not exempt | Only if the commune holds one |
+| Content | 50 questions from a published catalogue of 350 | Your own life and integration |
+| Result | Pass with 30 correct answers | No score; the commune assesses the criteria together with your documents |
+| Format | On a computer or tablet | A conversation, minuted or recorded |
+| Language | Written German | Standard German or dialect, your choice |
+
+If the commune intends to reject your application after its checks, it must first tell you in writing and give its reasons, and you can respond or withdraw the application. A rejection must state its reasons, as far as possible in simple German (A2), and explain how to appeal.
+
+## How to prepare
+
+1. **Ask your commune** whether it holds interviews, who leads them and how long they take.
+2. **Reread your self-declaration** and your application. The interview starts from what you wrote.
+3. **Think of concrete examples** of your life here: events you go to, an association, voluntary work, neighbours, colleagues, your children's school.
+4. **Practise speaking German** about everyday topics: your work, your family, your commune, your week. B1 means you can talk about familiar things clearly; it does not mean perfect grammar.
+5. **Know your commune**: what it is called, its main services, how it is governed. The communal part of the knowledge test covers this kind of knowledge too.
+6. **Bring someone** if it helps you feel at ease.
+7. **Answer honestly.** The commune compares what you say with your documents.
+
+In the city of Zurich, applicants receive access to a learning app for the knowledge test at the interview.
+
+## Next step
+
+If you also have to take the knowledge test, start with the [free questions]({{GUIDE_URL}}/en/free-practice/). The whole procedure is on the page [Zurich, step by step]({{GUIDE_URL}}/en/zurich-step-by-step/).
+
+Official sources of this page:
+
+- Cantonal Citizenship Ordinance (KBüV, LS 141.11), §§ 13 and 14; German: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
+- Gemeindeamt of the Canton of Zurich: Naturalisation handbook from 1 July 2023, sections 2, 4.2, 4.7, 6.1, 6.2 and 6.4 (PDF, German): https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
+- Canton of Zurich: Ordinary naturalisation (requirements; German): https://www.zh.ch/de/migration-integration/einbuergerung/ordentliche-einbuergerung.html
+- Canton of Zurich: New study on how Zurich communes naturalise (December 2025; German): https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/12/neue-studie-so-buergern-die-zuercher-gemeinden-ein.html
+- City of Zurich: Ordinary naturalisation (procedure; German): https://www.stadt-zuerich.ch/de/lebenslagen/einwohner-services/einbuergerung/ordentliche-einbuergerung.html
+- City of Zurich: Basic knowledge (German): https://www.stadt-zuerich.ch/de/lebenslagen/einwohner-services/einbuergerung/grundkenntnisse.html
+- City of Bülach: Guide to ordinary naturalisation (PDF, German): https://www.buelach.ch/_doc/7014151
+- Otelfingen: Guide to ordinary naturalisation (PDF, German): https://www.otelfingen.ch/public/upload/assets/14088/Leitfaden%20ordentliche%20Einb%C3%BCrgerung%20Otelfingen.pdf?fp=2
 
 ## Page: Language Certificates for Naturalisation: What Counts
 
@@ -504,7 +639,7 @@ Last checked: 2026-10-30
 
 ## What you get for free
 
-Viapunt is for all of Switzerland, with the canton of Zurich's own questions included.
+Viapunt is for all of Switzerland, with questions on the canton of Zurich.
 
 - **30 sample questions**, with no account. Choose the canton of Zurich or the rest of Switzerland. Each question has a short explanation. You see it in German and in your own language.
 - **One free mock test** after you sign up with your email address. Like the real test, it is in German and has a time limit.
@@ -520,7 +655,7 @@ First you learn the question in your own language, beside the German text. Later
 
 ## What the Viapunt Pass adds
 
-There is a **Viapunt Pass** for the canton of Zurich and one for the rest of Switzerland. Each costs **CHF 29** (one payment, 6 months of access) and includes:
+There is a **Viapunt Pass** for the canton of Zurich and one for the rest of Switzerland. Each costs **CHF 29** (one payment, 12 months of access, no subscription) and includes:
 
 - all questions, with explanations,
 - all study modes: Learn, Practise and Mock test,
@@ -538,6 +673,501 @@ Official sources of this page:
 
 - Canton of Zurich: Knowledge test (German): https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
 
+## Page: Zurich Citizenship Test: The Canton and Communes of Zurich
+
+English: {{GUIDE_URL}}/en/knowledge-test-canton-commune/  
+German: {{GUIDE_URL}}/de/grundkenntnistest-kanton-gemeinde/  
+Last checked: 2026-11-03
+
+## Why this page matters
+
+Each Zurich knowledge test has 35 questions on the Confederation, **10 on the canton and 5 on the communes**. That is 15 of 50 questions, and you need 30 correct answers to pass. In the catalogue these questions are spread over the five areas. This page brings them together.
+
+The communal questions are the same for everyone in the canton. They are about how Zurich communes work in general, not about your own commune.
+
+Below are the facts you should know, in our own words. We do not reproduce the canton's questions.
+
+## The canton: parliament and government
+
+- The canton has its own **constitution**. Cantons mainly run their own administration and pass cantonal laws.
+- The cantonal parliament is the **Kantonsrat**. Its **180 members** are elected by the people for **four years**. It decides on changes to the constitution and on laws.
+- The cantonal government is the **Regierungsrat**, with **seven members** elected directly by the people.
+- The cantonal administration has seven directorates and the State Chancellery. The building directorate (Baudirektion) is one of them; the naturalisation section belongs to the Gemeindeamt in the Directorate of Justice and Home Affairs.
+- Zurich has **two seats in the Council of States** and **36 of the 200 seats in the National Council**, more than any other canton.
+
+## Popular rights in the canton
+
+- **Cantonal popular initiative:** if **6,000** voters sign within six months, a popular vote must take place.
+- **Optional referendum:** **3,000** voters, 45 members of the Kantonsrat, or twelve communes (or the city of Zurich or Winterthur) can demand a vote on a decision of the Kantonsrat.
+- A single voter can bring a proposal to the Kantonsrat with an **individual initiative**; it needs the support of 60 members to go further.
+- People without the vote, including foreign nationals, can still take part, for example by sending a **petition** to the authorities.
+
+## Cantonal tasks you meet in daily life
+
+- The canton runs the **University of Zurich**.
+- The **road traffic office** (Strassenverkehrsamt) issues driving licences and registers vehicles.
+- The canton and the communes levy **income and wealth tax**.
+- Together with the communes, the canton organises and finances **compulsory school**, which in Zurich begins with kindergarten.
+
+## Facts about the canton
+
+- The canton's **coat of arms** is divided diagonally into white and blue.
+- It has **12 districts** and **160 political communes**. Its capital is the city of **Zurich**; the largest cities are Zurich, Winterthur and Uster.
+- History, geography and culture of the canton are on the area pages: [History]({{GUIDE_URL}}/en/knowledge-test-history/), [Geography]({{GUIDE_URL}}/en/knowledge-test-geography/), [Culture and everyday culture]({{GUIDE_URL}}/en/knowledge-test-culture/).
+
+## How a Zurich commune is organised
+
+- The commune is the lowest of the three levels of the state. In the commune, voters take part through elections and votes.
+- In an **assembly commune** (Versammlungsgemeinde), the **communal assembly** (Gemeindeversammlung) is the legislature. It decides, for example, on the budget.
+- In a **parliament commune** (Parlamentsgemeinde), an elected **communal parliament** takes the assembly's place. About half of the canton's population lives in parliament communes. The parliament of the city of Zurich is elected directly by the people.
+- The executive is the **communal council** (Gemeindevorstand). In assembly communes it is usually called Gemeinderat and led by a **Gemeindepräsident** or Gemeindepräsidentin; in parliament communes it is called **Stadtrat**. The Stadtrat of the city of Zurich leads the city administration and sets the city's goals.
+
+Watch out for the word Gemeinderat: in a small commune it is the executive, but in the city of Zurich it is the name of the parliament.
+
+## What the commune does
+
+- It keeps the **residents' register**. When you move, you register with the residents' office (Einwohnerkontrolle).
+- It runs the **primary schools**, led by the school management (Schulleitung).
+- It plans **local land use** and decides on **building permits**.
+- It pays **social assistance** to people whose income and assets do not cover their living costs. **Fiscal equalisation** supports communes that are financially weak or have high social costs.
+- The **electoral office** (Wahlbüro) counts the ballots in votes and elections.
+- Neighbourhood associations represent residents' concerns to the authorities. You find information about communal services in the local paper or on the commune's website.
+- The commune also grants **communal citizenship**, the first of the three citizenships you receive when you are naturalised.
+
+## How to study this area
+
+Learn the names in three columns, Confederation, canton and commune: Federal Assembly, Kantonsrat, communal assembly or parliament; Federal Council, Regierungsrat, Gemeinderat or Stadtrat. Then look at your own commune's website: is it an assembly or a parliament commune, and who leads it? That makes the general rules easier to remember, and it helps in the [naturalisation interview]({{GUIDE_URL}}/en/naturalisation-interview/) too.
+
+## Next step
+
+Practise these topics with the [free questions]({{GUIDE_URL}}/en/free-practice/). Format and registration: [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/). The other areas: [Democracy and federalism]({{GUIDE_URL}}/en/knowledge-test-democracy/), [Social state and civil society]({{GUIDE_URL}}/en/knowledge-test-welfare-state/).
+
+Official sources of this page:
+
+- Gemeindeamt of the Canton of Zurich: Naturalisation handbook from 1 July 2023, section 4.6.2.1 (PDF, German): https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
+- Canton of Zurich: List of all questions of the knowledge test (PDF, German): https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/grundkenntnistest_kanton_zuerich.pdf
+- Canton of Zurich: The canton (districts, communes, administration; German): https://www.zh.ch/de/politik-staat/kanton.html
+- Canton of Zurich: Cantonal Council and government elections (German): https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/kantons-regierungsratswahlen.html
+- Canton of Zurich: National Council and Council of States elections (German): https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/national-staenderatswahlen.html
+- Canton of Zurich: Initiatives, referendums and the right to make requests (German): https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/initiativen-referenden-anfragerecht.html
+- Canton of Zurich: Communes (German): https://www.zh.ch/de/politik-staat/gemeinden.html
+- Canton of Zurich: Residents' registration (German): https://www.zh.ch/de/politik-staat/gemeinden/einwohnerwesen.html
+- City of Zurich: City council (Stadtrat; German): https://www.stadt-zuerich.ch/de/politik-und-verwaltung/behoerden-und-organe/stadtrat.html
+
+## Page: Zurich Citizenship Test: Culture and Everyday Life
+
+English: {{GUIDE_URL}}/en/knowledge-test-culture/  
+German: {{GUIDE_URL}}/de/grundkenntnistest-kultur/  
+Last checked: 2026-11-03
+
+## What this area covers
+
+The fifth area of the Zurich catalogue is about culture and everyday culture: national symbols, holidays and customs, sport, literature and art, everyday knowledge such as transport and emergencies, Switzerland's place in the world, and culture in the canton of Zurich. Many of these questions are easier for people who already take part in local life, but all of them can be learned.
+
+Below are the facts you should know, in our own words. We do not reproduce the canton's questions.
+
+## Symbols and holidays
+
+- The Swiss flag shows a **free-standing white cross on a red square**.
+- The **national day is 1 August**, a public holiday throughout Switzerland. It recalls the alliance of 1291, which the **Rütli** meadow stands for.
+- The national anthem is the **Swiss Psalm** (Schweizerpsalm).
+- **Helvetia**, a female figure symbolising Switzerland, appears on the 2-franc coin.
+- Other names for Switzerland are the **Eidgenossenschaft** (Confederation) and **CH**, from the Latin Confoederatio Helvetica. **Bern** is the federal city and seat of government.
+
+## Customs and traditions
+
+- **Fasnacht** (carnival) has parades with masks. At the **Morgestraich** in Basel the street lights go out and the fife and drum music begins.
+- **Yodelling** is a traditional singing technique from rural farming life.
+- **Schwingen** (Swiss wrestling) is a traditional sport. **Jass** is the classic Swiss card game.
+- A **Chilbi** is a local fair with rides. **Circus Knie** is the largest circus in Switzerland.
+
+## Sport, literature and art
+
+- **Football** is the sport most people play in clubs, and **skiing** is a popular winter sport. **Roger Federer** is a famous Swiss tennis player.
+- **Johanna Spyri** wrote **Heidi**. **Max Frisch** and **Friedrich Dürrenmatt** are major Swiss writers, and **Gottfried Keller** was a renowned Zurich writer.
+- **Sophie Taeuber-Arp**, **Niki de Saint Phalle** and **Pipilotti Rist** are internationally known artists.
+- The **Swiss National Museum** in Zurich presents the history of Switzerland.
+
+## Everyday life
+
+- **SBB** stands for Swiss Federal Railways. BLS, SOB and SZU are other railway companies.
+- When the **sirens** sound in a real emergency, switch on the radio and follow the instructions.
+- Some newspapers appear only once a week, such as the Sunday papers. The editorial team decides what a newspaper publishes.
+- Regions are known for their industries: the **Jura** for watches, **Basel** for pharmaceutical companies.
+
+## Switzerland in the world
+
+- Switzerland joined the **United Nations in 2002**. The UN's human rights body sits in **Geneva**.
+- The **International Committee of the Red Cross** has its headquarters in Switzerland.
+- Within the **OSCE**, Switzerland works especially for peace in Eastern Europe and Central Asia.
+- The **World Economic Forum** meets regularly in **Davos**. World football's governing body **FIFA** is based in **Zurich**.
+- Relations with the **EU** rest on a series of bilateral agreements.
+
+## Culture in the canton of Zurich
+
+- At **Sechseläuten** the Zurich **guilds** parade and the **Böögg**, a snowman figure, is burned. Tradition says: the faster its head explodes, the finer the summer.
+- The **Street Parade** stands for love, peace, freedom, generosity and tolerance.
+- The **Zürcher Theater Spektakel** shows theatre, dance and music from around the world every August.
+- **Weltklasse Zürich** is a major athletics meeting.
+- The **Technorama** in Winterthur is a science centre where you touch the exhibits and try experiments yourself.
+- The **Masoala Hall** at Zurich Zoo recreates a rainforest from Madagascar.
+- The canton's **coat of arms** is divided diagonally into white and blue.
+
+## How to study this area
+
+Take part where you can: go to the 1 August celebration of your commune, visit Sechseläuten or the National Museum, watch a Schwingfest on television. Facts you have experienced are easier to remember. For the rest, learn names in pairs: Heidi and Spyri, FIFA and Zurich, WEF and Davos, Technorama and Winterthur.
+
+## Next step
+
+Practise this area with the [free questions]({{GUIDE_URL}}/en/free-practice/). The other areas: [Democracy and federalism]({{GUIDE_URL}}/en/knowledge-test-democracy/), [Social state and civil society]({{GUIDE_URL}}/en/knowledge-test-welfare-state/), [History]({{GUIDE_URL}}/en/knowledge-test-history/), [Geography]({{GUIDE_URL}}/en/knowledge-test-geography/). Cantonal and communal topics: [Canton and communes of Zurich]({{GUIDE_URL}}/en/knowledge-test-canton-commune/).
+
+Official sources of this page:
+
+- Canton of Zurich: List of all questions of the knowledge test (PDF, German): https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/grundkenntnistest_kanton_zuerich.pdf
+- FDFA, aboutswitzerland: Traditions (German): https://www.aboutswitzerland.eda.admin.ch/de/traditionen
+- FDFA, aboutswitzerland: National day and national anthem (German): https://www.aboutswitzerland.eda.admin.ch/de/nationalfeiertag-und-nationalhymne
+- FDFA, aboutswitzerland: Cultural creation in Switzerland (German): https://www.aboutswitzerland.eda.admin.ch/de/kulturschaffen-in-der-schweiz
+- FDFA, aboutswitzerland: Sport and leisure (German): https://www.aboutswitzerland.eda.admin.ch/de/sport-und-freizeit
+- FDFA: Switzerland and the UN (German): https://www.eda.admin.ch/de/uno
+- FDFA, aboutswitzerland: Sechseläuten, Zurich's spring festival (German): https://www.aboutswitzerland.eda.admin.ch/de/sechselaeuten-das-grosse-zuercher-fruehlingsfest
+- Federal Office of Culture: Basel Fasnacht (German): https://www.bak.admin.ch/de/basler-fasnacht
+
+## Page: Zurich Citizenship Test: Democracy and Federalism
+
+English: {{GUIDE_URL}}/en/knowledge-test-democracy/  
+German: {{GUIDE_URL}}/de/grundkenntnistest-demokratie/  
+Last checked: 2026-11-03
+
+## What this area covers
+
+Democracy and federalism is the largest of the five areas of the Zurich question catalogue. It asks how Switzerland is governed: the constitution and its principles, fundamental rights, the three powers at federal level, popular rights and elections, and how tasks are shared between the Confederation, the cantons and the communes. The cantonal and communal questions of this area are on the page [Canton and communes of Zurich]({{GUIDE_URL}}/en/knowledge-test-canton-commune/).
+
+Below are the facts you should know, in our own words. We do not reproduce the canton's questions.
+
+## The state and its principles
+
+- Switzerland's official name is the Swiss Confederation (Schweizerische Eidgenossenschaft). Its Latin name, Confoederatio Helvetica, gives the abbreviation CH.
+- Switzerland is a democracy. Its basic law is the **Federal Constitution** (Bundesverfassung).
+- **Rule of law** means that the state, too, is bound by the law. Nobody may be arrested without a legal reason, and nobody may take revenge privately: punishing offences is the state's job.
+- Only the state, for example the police and the army, may use force.
+- **Separation of powers:** the legislative (Parliament), the executive (government) and the judiciary (courts) share state power and check each other. The media are often called the fourth power.
+
+## Fundamental rights
+
+The Federal Constitution protects, among others:
+
+- equality before the law and the ban on discrimination, for example because of origin, sex or skin colour,
+- freedom of religion and conscience: everyone may choose a religion, practise it or have none,
+- freedom of opinion and information,
+- protection of private property and of privacy, including personal data,
+- the ban on torture and on the death penalty.
+
+Spreading false claims about other people, or publicly insulting people because of their origin or religion, is against the law.
+
+## Parliament
+
+- The federal parliament, the **Federal Assembly**, has two chambers: the **National Council** (Nationalrat, 200 members, representing the people) and the **Council of States** (Ständerat, representing the cantons).
+- Its main task is to debate and pass laws. It meets in the Federal Palace in Bern.
+- The voters elect Parliament every **four years**.
+- When both chambers sit together, they form the **United Federal Assembly**. It elects the Federal Council and the judges of the Federal Supreme Court.
+
+## Government and courts
+
+- The **Federal Council** is the Swiss government and holds executive power. It has **seven members**, elected by the United Federal Assembly. Each heads a department, for example the Federal Department of Justice and Police.
+- Under the **collegiality principle**, Federal Council members defend the council's decisions together in public, even if they argued against them inside.
+- The **Federal Chancellery** is the Federal Council's staff office.
+- The highest court is the **Federal Supreme Court**. Judges decide cases; the police investigate offences and may arrest suspects.
+- Important federal laws include the Civil Code (for example marriage and divorce), the Code of Obligations (for example rental and employment contracts) and the Criminal Code.
+
+## Popular rights
+
+- **Popular initiative:** with 100,000 signatures collected within 18 months, voters can propose a change to the Federal Constitution. It is accepted only with a majority of the people **and** a majority of the cantons (Ständemehr).
+- **Optional referendum:** with 50,000 signatures collected within 100 days, voters can demand a popular vote on a law that Parliament has passed, and so block it.
+- **Mandatory referendum:** every amendment to the Federal Constitution goes to a vote of the people and the cantons.
+- Federal votes usually take place **four times a year**, always on a Sunday. Most people vote by post.
+
+## Elections and parties
+
+- At federal level, Swiss citizens may vote and stand for election from their **18th birthday**. Foreign nationals have no vote at federal level.
+- Swiss citizens abroad can vote and elect from their country of residence.
+- **Active suffrage** is the right to vote and elect; anyone of age with Swiss citizenship can also be elected to federal office.
+- **Parties** bring together people with similar political goals and represent different interests of the population.
+
+## Federalism
+
+- Switzerland has three levels: the **Confederation** at the top, the **26 cantons** in the middle and the **communes** at the bottom. Six cantons, formerly called half-cantons, have one seat in the Council of States instead of two.
+- The catalogue gives about 2,200 political communes for 2021.
+- The Confederation is responsible for, among other things, foreign policy, the army, customs, money and currency, social insurance and protection of the environment.
+- The cantons have their own constitutions, laws, parliaments and governments.
+
+## How to study this area
+
+Learn the bodies in pairs: who makes laws, who governs, who judges, and who elects whom. Then learn the numbers that come up again and again: seven Federal Councillors, two chambers, four years, 100,000 signatures, four voting dates a year.
+
+## Next step
+
+Practise this area with the [free questions]({{GUIDE_URL}}/en/free-practice/). The other areas: [Social state and civil society]({{GUIDE_URL}}/en/knowledge-test-welfare-state/), [History]({{GUIDE_URL}}/en/knowledge-test-history/), [Geography]({{GUIDE_URL}}/en/knowledge-test-geography/), [Culture and everyday culture]({{GUIDE_URL}}/en/knowledge-test-culture/). Format and registration: [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
+
+Official sources of this page:
+
+- Canton of Zurich: List of all questions of the knowledge test (PDF, German): https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/grundkenntnistest_kanton_zuerich.pdf
+- Federal Constitution of the Swiss Confederation (SR 101; German): https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-html-10.html
+- The Federal Assembly: Portrait of Parliament (German): https://www.parlament.ch/de/%c3%bcber-das-parlament/parlamentsportraet
+- The Federal Council (German): https://www.admin.ch/gov/de/start/bundesrat.html
+- Federal Chancellery: Popular initiatives (German): https://www.bk.admin.ch/bk/de/home/politische-rechte/volksinitiativen.html
+- Federal Chancellery: Referendums (German): https://www.bk.admin.ch/bk/de/home/politische-rechte/referenden.html
+- Federal Chancellery: The Confederation in brief (German): https://www.bk.admin.ch/bund-kurz-erklaert
+
+## Page: Zurich Citizenship Test: Geography of Switzerland and Zurich
+
+English: {{GUIDE_URL}}/en/knowledge-test-geography/  
+German: {{GUIDE_URL}}/de/grundkenntnistest-geografie/  
+Last checked: 2026-11-03
+
+## What this area covers
+
+The geography area asks about Switzerland's landscapes, waters, borders and language regions, its population and economy, and the geography of the canton of Zurich. Some questions show a picture, for example of a well-known mountain, and ask you to name it.
+
+Below are the facts you should know, in our own words. We do not reproduce the canton's questions.
+
+## Landscapes and size
+
+- Switzerland has three large regions: the **Jura**, the **Mittelland** (Swiss Plateau) and the **Alps**. Most people live in the Mittelland.
+- Switzerland is **landlocked**. It measures about **220 km** from north to south and about **350 km** from east to west.
+- The highest peak is the **Dufourspitze**. The **Matterhorn**, with its pyramid shape, is the best-known mountain.
+- **Graubünden** is the largest canton by area. **Valais** is a typical mountain canton.
+- Simplon, Gotthard and Great St Bernard are Alpine **passes**. The **Gotthard Base Tunnel** is the longest railway tunnel in the world, and the Swiss rail network is one of the densest in the world.
+
+## Waters and climate
+
+- The **Rhine** flows into the North Sea, the **Rhone** into the Mediterranean.
+- Switzerland has a lot of water and produces much of its electricity in **hydropower plants**.
+- The **Föhn** is a warm, dry wind from the south.
+- Global warming makes the **glaciers** shrink, and foresters plant tree species that cope better with heat. Spatial planning protects landscapes from building.
+
+## Neighbours and languages
+
+- Switzerland borders **Germany** (north), **Austria** and **Liechtenstein** (east), **Italy** (south) and **France** (west).
+- There are four national languages: **German, French, Italian and Romansh**.
+- French is spoken in the **Romandie** (Welschland), Italian in **Ticino**, and Romansh in **Graubünden**. **Fribourg** is a bilingual canton (French and German).
+- The **Röstigraben** is the cultural divide between German-speaking and French-speaking Switzerland.
+
+## Population and economy
+
+- The catalogue uses figures from 2020: about **8.6 million** inhabitants, about a **quarter** of them without Swiss citizenship (about 2.1 million). Roughly two thirds of the foreign population come from EU countries. The population has grown since; the Federal Statistical Office publishes the current figures.
+- **Zurich** is the largest city and the most populous canton.
+- The **European Union** is Switzerland's most important trading partner.
+
+## The canton of Zurich
+
+- The canton lies in the **Mittelland** in the north of Switzerland and borders **Germany**.
+- It has **six neighbouring cantons**: Aargau, Schaffhausen, Thurgau, St. Gallen, Schwyz and Zug.
+- Its capital is the city of **Zurich**. The three largest cities are **Zurich, Winterthur and Uster**.
+- The canton has **12 districts** and **160 political communes**, and more than 1.5 million inhabitants.
+- The largest lake is **Lake Zurich**, followed by the **Greifensee**; the **Pfäffikersee** also lies in the canton.
+- The **Limmat** flows through the canton; the **Sihl** joins it in the city of Zurich. The **Töss** flows through Winterthur.
+- The hills along Lake Zurich are the **Uetliberg**, the **Albis** and the **Pfannenstiel**.
+- **Zurich Airport** is on the territory of Kloten. **Kyburg Castle** is in the canton.
+- About **41 per cent** of the canton's area is farmland.
+
+## How to study this area
+
+Use a map. Find the three regions, the big rivers and where they flow, the neighbouring countries and the language regions. For Zurich, draw the canton with its lakes, rivers, the three largest cities and the six neighbours. Picture questions are easier if you have seen photos of the best-known places.
+
+## Next step
+
+Practise this area with the [free questions]({{GUIDE_URL}}/en/free-practice/). The other areas: [Democracy and federalism]({{GUIDE_URL}}/en/knowledge-test-democracy/), [Social state and civil society]({{GUIDE_URL}}/en/knowledge-test-welfare-state/), [History]({{GUIDE_URL}}/en/knowledge-test-history/), [Culture and everyday culture]({{GUIDE_URL}}/en/knowledge-test-culture/). Cantonal and communal topics: [Canton and communes of Zurich]({{GUIDE_URL}}/en/knowledge-test-canton-commune/).
+
+Official sources of this page:
+
+- Canton of Zurich: List of all questions of the knowledge test (PDF, German): https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/grundkenntnistest_kanton_zuerich.pdf
+- FDFA, aboutswitzerland: Geography (German): https://www.aboutswitzerland.eda.admin.ch/de/geografie
+- FDFA, aboutswitzerland: Lakes and rivers (German): https://www.aboutswitzerland.eda.admin.ch/de/seen-und-fluesse
+- FDFA, aboutswitzerland: Languages (German): https://www.aboutswitzerland.eda.admin.ch/de/sprachen
+- FDFA, aboutswitzerland: Climate (German): https://www.aboutswitzerland.eda.admin.ch/de/klima
+- Federal Statistical Office: Population, size and development (German): https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/stand-entwicklung.html
+- Canton of Zurich: The canton (districts, communes; German): https://www.zh.ch/de/politik-staat/kanton.html
+- Canton of Zurich: Land use (German): https://www.zh.ch/de/planen-bauen/raumplanung/raumbeobachtung/bodennutzung.html
+
+## Page: Zurich Citizenship Test: History of Switzerland and Zurich
+
+English: {{GUIDE_URL}}/en/knowledge-test-history/  
+German: {{GUIDE_URL}}/de/grundkenntnistest-geschichte/  
+Last checked: 2026-11-03
+
+## What this area covers
+
+The history area asks about the main stages from Roman times to today, for Switzerland as a whole and for the canton of Zurich. You do not need to know every date in the catalogue by heart, but you should be able to place the big turning points in order and say what they changed.
+
+Below are the facts you should know, in our own words. We do not reproduce the canton's questions.
+
+## Early times and the Old Confederacy
+
+- In prehistoric times people lived in **pile dwellings** on the shores of lakes such as Lake Zurich.
+- In Roman times the **Helvetii** lived in the area of today's Switzerland. The Romans built towns such as Avenches, with its amphitheatre.
+- In **1291** Uri, Schwyz and Unterwalden formed an alliance. The **Rütli** meadow stands for it, and the legendary **William Tell** symbolises resistance against foreign rulers.
+- After their defeat at **Marignano in 1515**, the Confederates gave up expanding their territory.
+- The **Reformation** of the 16th century created Protestant Christianity and split Switzerland into Reformed and Catholic parts.
+
+## From 1798 to the federal state
+
+- In **1798** French troops occupied the Confederacy, and under Napoleon it briefly became a centralised state (the Helvetic Republic). This ended the old order.
+- In **1815** the great powers recognised Switzerland's permanent **neutrality**. Neutrality means that Switzerland takes no side in wars between other states.
+- In **1847** the Sonderbund War was fought between the liberal cantons and the Catholic conservative cantons.
+- In **1848** the modern **federal state** was founded, with a constitution that left the cantons a large degree of autonomy.
+- In **1863** the Red Cross (ICRC) was founded in Geneva; **Henry Dunant** was its founder.
+
+## Industry and the economy
+
+- In the 19th century Switzerland changed from a farming society to an industrial one. The **textile industry** was the most important early sector; steam engines drove the change.
+- **Watchmaking** made Switzerland a world leader, and chocolate makers such as Rodolphe Lindt and Philippe Suchard founded well-known companies.
+- **Alfred Escher** of Zurich helped found the ETH, built railways and founded the bank that became Credit Suisse.
+- Hardship and lack of work made many people **emigrate** in the 19th century.
+- The **Factory Act of 1877** banned child labour in factories so that children went to school.
+
+## The 20th century
+
+- After the **general strike of 1918**, the 48-hour working week was introduced.
+- In the **Second World War** Switzerland stayed neutral, but kept political and economic contacts with the warring powers.
+- The **AHV** state pension was introduced in **1948**. Living standards rose sharply in the 1960s.
+- In the 1950s most foreign workers came from **Italy**. In **1970** the Schwarzenbach initiative tried to limit the number of foreigners. In the 1990s many people fled the wars in former **Yugoslavia** to Switzerland.
+- Women gained the right to vote and stand for election at federal level in **1971**. Equal rights for women and men have been in the constitution since **1981**. **Elisabeth Kopp** was the first woman in the Federal Council.
+- The canton of **Jura** was founded in **1979**; it is the youngest canton.
+- In **2000** voters approved the **Bilateral Agreements I** with the EU, the basis of today's relations.
+
+## The history of Zurich
+
+- The Romans called Zurich **Turicum**, a port and customs post, and brought their bathing culture.
+- **Ulrich Zwingli** led the Reformation in Zurich from 1519.
+- In the early 17th century a **plague** epidemic killed almost half of Zurich's inhabitants.
+- The canton of Zurich in its present form dates from **1803**.
+- During the Second World War potatoes were grown on the **Sechseläutenplatz**.
+- **Emilie Lieberherr** of Zurich campaigned for women's right to vote.
+
+## Key dates at a glance
+
+| Year | Event |
+|---|---|
+| 1291 | Alliance of Uri, Schwyz and Unterwalden |
+| 1515 | Defeat at Marignano |
+| 1798 | French occupation, Helvetic Republic |
+| 1803 | Canton of Zurich in its present form |
+| 1815 | Neutrality recognised |
+| 1847 | Sonderbund War |
+| 1848 | Federal state |
+| 1863 | Red Cross founded |
+| 1948 | AHV |
+| 1971 | Women's suffrage at federal level |
+| 1979 | Canton of Jura |
+| 2002 | UN membership |
+
+## How to study this area
+
+Learn the dates as a story rather than a list: alliance, expansion and its end, religious split, French occupation, neutrality, civil war, federal state. Then hang the social history on it: industry, emigration, immigration, women's rights.
+
+## Next step
+
+Practise this area with the [free questions]({{GUIDE_URL}}/en/free-practice/). The other areas: [Democracy and federalism]({{GUIDE_URL}}/en/knowledge-test-democracy/), [Social state and civil society]({{GUIDE_URL}}/en/knowledge-test-welfare-state/), [Geography]({{GUIDE_URL}}/en/knowledge-test-geography/), [Culture and everyday culture]({{GUIDE_URL}}/en/knowledge-test-culture/). Format and registration: [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
+
+Official sources of this page:
+
+- Canton of Zurich: List of all questions of the knowledge test (PDF, German): https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/grundkenntnistest_kanton_zuerich.pdf
+- FDFA, aboutswitzerland: History of Switzerland (German): https://www.aboutswitzerland.eda.admin.ch/de/geschichte-der-schweiz
+- FDFA, aboutswitzerland: Neutrality (German): https://www.aboutswitzerland.eda.admin.ch/de/neutralitaet
+- FDFA, aboutswitzerland: Humanitarian tradition (German): https://www.aboutswitzerland.eda.admin.ch/de/humanitaere-tradition
+- Federal Commission for Women's Issues: Women's rights (German): https://www.ekf.admin.ch/de/frauenrechte
+- Swiss Federal Archives: Switzerland as a country of immigration (German): https://www.bar.admin.ch/de/einwandererland-schweiz
+- City of Zurich: The Reformation in Zurich (German): https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html
+- Canton of Zurich: Turicum, a Roman port and customs post (German): https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2021/02/turicum-eine-roemische-hafenstadt-und-zollstation.html
+
+## Page: Zurich Citizenship Test: Social State and Civil Society
+
+English: {{GUIDE_URL}}/en/knowledge-test-welfare-state/  
+German: {{GUIDE_URL}}/de/grundkenntnistest-sozialstaat/  
+Last checked: 2026-11-03
+
+## What this area covers
+
+The second area of the Zurich catalogue is about everyday life in the welfare state: social insurance, health, taxes and duties, school and training, work, housing, family law and civil society. It has questions on the Confederation, the canton and the communes. Many of them describe situations you know from your own life in Switzerland.
+
+Below are the facts you should know, in our own words. We do not reproduce the canton's questions.
+
+## Social insurance
+
+- Old-age provision rests on **three pillars**: the state **AHV** (old-age and survivors' insurance) is the first pillar, the **occupational pension fund** (Pensionskasse) the second, and **private savings** the third.
+- AHV and **IV** (disability insurance) are compulsory social insurances. The AHV was introduced in 1948.
+- **Supplementary benefits** (Ergänzungsleistungen) help people whose AHV or IV pension does not cover basic living costs.
+- **Unemployment insurance** pays when you lose your job. The employer deducts the contributions from your wage. Retired people no longer pay into it.
+- **Accident insurance** pays, for example, the hospital costs after a serious accident at work.
+- The reference retirement age is **65** for women and men.
+- Parents receive **family allowances** (child allowances), whether they are employed or self-employed.
+- Every employed woman has a legal right to **maternity leave**, and a pregnant employee may not be dismissed during pregnancy.
+
+## Health
+
+- **Basic health insurance is compulsory** for everyone living in Switzerland. You choose your insurer yourself. A newborn child must be insured within three months of birth.
+- Among the usual insurances, health insurance is the only one the law requires of every resident.
+- The federal authority for health is the **Federal Office of Public Health** (BAG).
+- Emergency numbers: **117** police, **144** ambulance, **118** fire brigade.
+
+## Taxes and duties
+
+- Everyone living in Switzerland must **pay taxes** and **register with the commune** where they live.
+- Cantons and communes levy mainly **income tax** and **wealth tax**. How much you pay depends on your taxable income and assets. Families can claim deductions.
+- In the **tax return** you declare your financial situation. If you disagree with the assessment, you can file a written objection with the tax office.
+- **VAT** (MWST) is a federal tax on goods and services. Public schools are paid for from taxes.
+- Swiss men must do **military service** or civil protection service up to a certain age; **civilian service** is possible instead of military service.
+- Dog owners pay a **dog tax**. Driving under the influence of alcohol or drugs can cost you your driving licence.
+
+## School and training
+
+- Compulsory school lasts **eleven years**. In the canton of Zurich it begins with **kindergarten**. Cantons and communes are responsible for it.
+- The school board or school management assigns children to their class.
+- Career information centres (BIZ) give advice on apprenticeships, careers and jobs.
+
+## Work
+
+- An **employment contract** sets out, among other things, the wage. A notice of termination should be sent by registered mail, or the other party confirms receipt in writing.
+- A **reference letter** (Arbeitszeugnis) from the employer assesses your work and conduct.
+- **Trade unions** represent employees; **economiesuisse** is the umbrella association of business.
+- For disputes, for example unjustified dismissal or unpaid wages, employees can go to the **labour court**, a lawyer or a union.
+- The **RAV** (regional employment centre) helps jobseekers.
+- Employees get time off to carry out a public office.
+
+## Housing, family and civil society
+
+- A **rental contract** sets out the rights and duties of landlord and tenant. Tenants must let the landlord in when there is a good reason. The tenants' association represents tenants.
+- To **marry**, you must be of age and capable of judgement, and you may not be closely related. The couple registers together at the **civil registry office**. Being married to more than one person at a time is prohibited.
+- Either spouse, or both together, can ask for a **divorce**. Spouses without a common surname decide together which surname their children will have.
+- Parents bear the main responsibility for bringing up their children.
+- Since 2002 a woman may decide herself on an abortion within the first twelve weeks of pregnancy.
+- Anyone may found an **association** (Verein). Organisations such as Amnesty International campaign for human rights.
+- Foreign nationals have no vote at federal level.
+
+## The commune's role
+
+Communes pay **social assistance** when income and assets do not cover living costs. After moving you register with the **residents' office** (Einwohnerkontrolle). Fiscal equalisation helps financially weak communes. Local news comes from the communal newspaper or website. More on this level: [Canton and communes of Zurich]({{GUIDE_URL}}/en/knowledge-test-canton-commune/).
+
+## How to study this area
+
+Link each fact to your own life: your payslip (AHV, unemployment insurance), your health insurance policy, your tax return, your rental contract. The abbreviations matter: AHV, IV, EL, RAV, MWST, BAG.
+
+## Next step
+
+Practise this area with the [free questions]({{GUIDE_URL}}/en/free-practice/). The other areas: [Democracy and federalism]({{GUIDE_URL}}/en/knowledge-test-democracy/), [History]({{GUIDE_URL}}/en/knowledge-test-history/), [Geography]({{GUIDE_URL}}/en/knowledge-test-geography/), [Culture and everyday culture]({{GUIDE_URL}}/en/knowledge-test-culture/). Format and registration: [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
+
+Official sources of this page:
+
+- Canton of Zurich: List of all questions of the knowledge test (PDF, German): https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/gkt/grundkenntnistest_kanton_zuerich.pdf
+- Federal Social Insurance Office: The three-pillar system (German): https://www.bsv.admin.ch/de/dreisaeulensystem
+- Federal Social Insurance Office: Family allowances (German): https://www.bsv.admin.ch/de/familienzulagen-leistungen-und-voraussetzungen
+- Federal Office of Public Health: Health insurance, compulsory insurance (German): https://www.bag.admin.ch/de/krankenversicherung-versicherungspflicht
+- Canton of Zurich: Taxes for private individuals (German): https://www.zh.ch/de/steuern-finanzen/steuern/steuern-natuerliche-personen.html
+- Canton of Zurich: Compulsory school (Volksschule; German): https://www.zh.ch/de/bildung/schulen/volksschule.html
+- Canton of Zurich: Regional employment centres (RAV; German): https://www.zh.ch/de/volkswirtschaftsdirektion/amt-fuer-arbeit/rav-im-kanton-zuerich.html
+- Canton of Zurich: Social assistance (German): https://www.zh.ch/de/soziales/sozialhilfe.html
+- Swiss Civil Code (SR 210; German): https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/html/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-html-2.html
+
 ## Page: Frequently asked questions
 
 English: {{GUIDE_URL}}/en/faq/  
@@ -553,7 +1183,7 @@ Minor children can be included in a parent's application. In the canton of Zuric
 
 ### What happens if I fail the knowledge test?
 
-The rules for retaking the test are set by the canton and the commune. The canton of Zurich's pages say nothing on this. Ask your commune whether and when you can retake the test and what it costs. How to prepare is on the page [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
+You can retake it. The canton's handbook for communes sets no limit on the number of attempts and does not allow a waiting period. If you take the test during the procedure and fail repeatedly, the commune may reject the application, but it must let you retake the test at least once first. Ask your commune when the next date is and what a retake costs. How to prepare is on the page [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
 
 ### Is the knowledge test in German only?
 

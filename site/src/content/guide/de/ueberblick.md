@@ -77,4 +77,4 @@ Alle Bedingungen und die Gebühren finden Sie beim SEM: [Ehegatten](https://www.
 
 ## Nächster Schritt
 
-Viele Kantone, darunter Zürich, prüfen Ihr Wissen über die Schweiz mit einem Test. Die Übungsfragen von Viapunt gibt es für die ganze Schweiz, mit den eigenen Fragen des Kantons Zürich. Probieren Sie die Gratisfragen aus und sehen Sie, wie gut Sie schon vorbereitet sind.
+Viele Kantone, darunter Zürich, prüfen Ihr Wissen über die Schweiz mit einem Test. Die Übungsfragen von Viapunt gibt es für die ganze Schweiz, mit Fragen zum Kanton Zürich. Probieren Sie die Gratisfragen aus und sehen Sie, wie gut Sie schon vorbereitet sind.

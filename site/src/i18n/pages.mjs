@@ -26,11 +26,19 @@ export const LOCALE_NAMES = {
  */
 export const SLUGS = {
   overview: { de: "ueberblick", fr: "apercu", it: "panoramica", pt: "visao-geral", es: "resumen", sq: "pergjithesim", tr: "genel-bakis", other: "overview" },
-  zurich: { de: "zuerich-schritt-fuer-schritt", other: "zurich-step-by-step" },
-  documents: { de: "unterlagen", other: "documents" },
+  zurich: { de: "zuerich-schritt-fuer-schritt", fr: "zurich-etape-par-etape", it: "zurigo-passo-per-passo", pt: "zurique-passo-a-passo", es: "zurich-paso-a-paso", sq: "cyrihu-hap-pas-hapi", tr: "adim-adim-zurih", other: "zurich-step-by-step" },
+  documents: { de: "unterlagen", it: "documenti", pt: "documentos", es: "documentos", sq: "dokumentet", tr: "belgeler", other: "documents" },
   test: { de: "grundkenntnistest", fr: "test-de-connaissances", it: "test-di-conoscenze", pt: "teste-de-conhecimentos", es: "prueba-de-conocimientos", sq: "testi-i-njohurive", tr: "bilgi-testi", other: "knowledge-test" },
-  language: { de: "sprachzertifikate", other: "language-certificates" },
-  fees: { de: "gebuehren", other: "fees" },
+  language: { de: "sprachzertifikate", fr: "certificats-de-langue", it: "certificati-linguistici", pt: "certificados-de-lingua", es: "certificados-de-idioma", sq: "certifikatat-e-gjuhes", tr: "dil-sertifikalari", other: "language-certificates" },
+  fees: { de: "gebuehren", fr: "emoluments", it: "tasse", pt: "taxas", es: "tasas", sq: "tarifat", tr: "ucretler", other: "fees" },
+  interview: { de: "einbuergerungsgespraech", fr: "entretien-de-naturalisation", it: "colloquio-di-naturalizzazione", pt: "entrevista-de-naturalizacao", es: "entrevista-de-naturalizacion", sq: "interviste-per-natyralizim", tr: "vatandaslik-mulakati", other: "naturalisation-interview" },
+  // One page per area of the Zurich question catalogue, linked from the knowledge-test page.
+  topicDemocracy: { de: "grundkenntnistest-demokratie", fr: "test-democratie-federalisme", it: "test-democrazia-federalismo", pt: "teste-democracia-federalismo", es: "prueba-democracia-federalismo", sq: "testi-demokracia-federalizmi", tr: "bilgi-testi-demokrasi", other: "knowledge-test-democracy" },
+  topicSocial: { de: "grundkenntnistest-sozialstaat", fr: "test-etat-social", it: "test-stato-sociale", pt: "teste-estado-social", es: "prueba-estado-social", sq: "testi-shteti-social", tr: "bilgi-testi-sosyal-devlet", other: "knowledge-test-welfare-state" },
+  topicHistory: { de: "grundkenntnistest-geschichte", fr: "test-histoire", it: "test-storia", pt: "teste-historia", es: "prueba-historia", sq: "testi-historia", tr: "bilgi-testi-tarih", other: "knowledge-test-history" },
+  topicGeography: { de: "grundkenntnistest-geografie", fr: "test-geographie", it: "test-geografia", pt: "teste-geografia", es: "prueba-geografia", sq: "testi-gjeografia", tr: "bilgi-testi-cografya", other: "knowledge-test-geography" },
+  topicCulture: { de: "grundkenntnistest-kultur", fr: "test-culture", it: "test-cultura", pt: "teste-cultura", es: "prueba-cultura", sq: "testi-kultura", tr: "bilgi-testi-kultur", other: "knowledge-test-culture" },
+  topicZurich: { de: "grundkenntnistest-kanton-gemeinde", fr: "test-canton-commune", it: "test-cantone-comune", pt: "teste-cantao-municipio", es: "prueba-canton-municipio", sq: "testi-kantoni-komuna", tr: "bilgi-testi-kanton-komun", other: "knowledge-test-canton-commune" },
   calculator: { de: "rechner", fr: "calculateur", it: "calcolatore", pt: "calculadora", es: "calculadora", sq: "llogaritesi", tr: "hesaplayici", other: "calculator" },
   free: { de: "kostenlos", fr: "pratique-gratuite", it: "pratica-gratuita", pt: "pratica-gratuita", es: "practica-gratuita", sq: "praktike-falas", tr: "ucretsiz-pratik", other: "free-practice" },
   faq: { de: "faq", other: "faq" },
@@ -45,12 +53,12 @@ export const SLUGS = {
 export const STATIC_KEYS = ["calculator", "faq", "free"];
 
 /** Every home-page card, in the order the help pack lists the pages (scripts/build_help_pack.py reads it). */
-export const HOME_KEYS = ["overview", "zurich", "documents", "test", "language", "fees", "calculator", "free", "faq"];
+export const HOME_KEYS = ["overview", "zurich", "documents", "test", "interview", "language", "fees", "calculator", "free", "faq"];
 
 /** The home-page card groups: pages for everyone in Switzerland, then one group per canton with pages of its own. */
 export const HOME_GROUPS = [
   { id: "swiss", keys: ["overview", "language", "calculator", "free", "faq"] },
-  { id: "zh", keys: ["zurich", "documents", "test", "fees"] },
+  { id: "zh", keys: ["zurich", "documents", "test", "interview", "fees"] },
 ];
 
 export function slugFor(key, lang) {

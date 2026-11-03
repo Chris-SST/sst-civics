@@ -4,7 +4,7 @@ description: "30 perguntas gratuitas para o teste de naturalização, para o can
 lang: pt
 slug: pratica-gratuita
 lastChecked: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-03
 sources:
   - title: "Cantão de Zurique: Teste de conhecimentos (em alemão)"
     url: https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
@@ -14,7 +14,7 @@ cta: pass
 
 ## O que recebe gratuitamente
 
-O Viapunt serve para toda a Suíça, com as perguntas próprias do cantão de Zurique incluídas.
+O Viapunt serve para toda a Suíça, com perguntas sobre o cantão de Zurique.
 
 - **30 perguntas de exemplo**, sem conta. Escolha o cantão de Zurique ou o resto da Suíça. Cada pergunta tem uma breve explicação. Vê-a em alemão e na sua própria língua.
 - **Um simulado gratuito** depois de se registar com o seu endereço de e-mail. Tal como o teste real, é em alemão e tem limite de tempo.
@@ -30,7 +30,7 @@ Primeiro aprende a pergunta na sua língua, ao lado do texto em alemão. Mais ta
 
 ## O que o Viapunt Pass acrescenta
 
-Há um **Viapunt Pass** para o cantão de Zurique e outro para o resto da Suíça. Cada um custa **CHF 29** (um só pagamento, 6 meses de acesso) e inclui:
+Há um **Viapunt Pass** para o cantão de Zurique e outro para o resto da Suíça. Cada um custa **CHF 29** (um só pagamento, 12 meses de acesso, sem assinatura) e inclui:
 
 - todas as perguntas, com explicações,
 - todos os modos de estudo: Aprender, Praticar e Simulado,

@@ -4,7 +4,7 @@ description: "30 domande gratuite per il test di naturalizzazione, per il Canton
 lang: it
 slug: pratica-gratuita
 lastChecked: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-03
 sources:
   - title: "Cantone di Zurigo: Test di conoscenze (in tedesco)"
     url: https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
@@ -14,7 +14,7 @@ cta: pass
 
 ## Che cosa ottiene gratuitamente
 
-Viapunt vale per tutta la Svizzera, con le domande proprie del Cantone di Zurigo.
+Viapunt vale per tutta la Svizzera, con domande sul Cantone di Zurigo.
 
 - **30 domande di esempio**, senza account. Sceglie il Cantone di Zurigo o il resto della Svizzera. Ogni domanda ha una breve spiegazione. La vede in tedesco e nella Sua lingua.
 - **Una simulazione d'esame gratuita** dopo la registrazione con il Suo indirizzo e-mail. Come il vero test, è in tedesco e a tempo limitato.
@@ -30,7 +30,7 @@ Prima Lei impara la domanda nella Sua lingua, accanto al testo tedesco. Più ava
 
 ## Che cosa aggiunge il Viapunt Pass
 
-C'è un **Viapunt Pass** per il Cantone di Zurigo e uno per il resto della Svizzera. Ognuno costa **CHF 29** (un solo pagamento, 6 mesi di accesso) e comprende:
+C'è un **Viapunt Pass** per il Cantone di Zurigo e uno per il resto della Svizzera. Ognuno costa **CHF 29** (un solo pagamento, 12 mesi di accesso, nessun abbonamento) e comprende:
 
 - tutte le domande, con spiegazioni,
 - tutte le modalità di studio: Imparare, Esercitarsi e Simulazione d'esame,
