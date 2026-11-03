@@ -4,6 +4,8 @@
 # Binds no host ports. The web service joins the external Docker network "edge", where the
 # shared edge Caddy (tutor stack) reaches it as civics-web:80 and terminates TLS.
 # Create the network once on the server: docker network create edge
+# Production runs a second copy in /opt/civics-prod with `-p civics-prod` (its own volumes,
+# database and .env, EDGE_ALIAS=civics-prod-web); see docs/runbooks/deploy-production.md.
 name: civics
 
 services:
@@ -22,7 +24,9 @@ services:
       default: {}
       edge:
         aliases:
-          - civics-web
+          # The edge Caddy reaches staging as civics-web and production (project civics-prod,
+          # EDGE_ALIAS=civics-prod-web in its .env) under its own name.
+          - ${EDGE_ALIAS:-civics-web}
     depends_on:
       - api
     deploy:
