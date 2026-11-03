@@ -24,7 +24,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.billing import products
-from app.billing.access import active_pass, extendable_pass
+from app.billing.access import active_pass, extendable_pass, has_access
 from app.db import utcnow
 from app.models import CANTONS, ENTITLEMENT_STRIPE, Entitlement, Payment, User
 
@@ -174,6 +174,12 @@ async def fulfil(
         if user is not None
         else None
     )
+    # A learner who paid for another canton's pass (Zurich vs Rest of Switzerland) studies what
+    # they paid for: switch their canton, unless they still have access to their own.
+    if user is not None and product.canton and user.canton != canton:
+        if not has_access(user, user.canton):
+            log.info("Checkout session %s: learner's canton set to %s", session_id, canton)
+            user.canton = canton
     payment = Payment(
         user_id=user.id if user is not None else None,
         entitlement_id=entitlement.id if entitlement is not None else None,

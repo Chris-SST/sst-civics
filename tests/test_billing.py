@@ -725,3 +725,25 @@ def test_add_months_clamps_to_the_end_of_the_month():
     assert add_months(start, 6) == start.replace(year=2027, month=2, day=28)
     assert add_months(start, 3) == start.replace(month=11, day=30)
     assert add_months(start.replace(month=11, day=30), -3) == start.replace(day=30)
+
+
+async def test_pass_for_the_other_option_switches_the_learners_canton(api):
+    """A Zurich learner who buys the Rest of Switzerland pass (or the other way round) gets
+    what they paid for straight away: their canton follows the purchase."""
+    me = await learner_logged_in(api)  # canton zh, no pass
+    uid = me["user"]["id"]
+    event = session_event("evt_ch", uid, product="civics_pass_ch", canton="ch")
+    assert (await webhook(api, event)).status_code == 200
+    me = (await api.get("/api/auth/me")).json()
+    assert me["user"]["canton"] == "ch"
+    assert me["access"]["access"] == "full" and me["access"]["free_tier"] is False
+
+
+async def test_canton_stays_when_the_learner_has_access_to_their_own(api):
+    me = await learner_logged_in(api)
+    uid = me["user"]["id"]
+    await webhook(api, session_event("evt_zh", uid))
+    await webhook(
+        api, session_event("evt_ch", uid, session_id="cs_2", product="civics_pass_ch", canton="ch")
+    )
+    assert (await api.get("/api/auth/me")).json()["user"]["canton"] == "zh"

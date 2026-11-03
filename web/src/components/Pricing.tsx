@@ -74,7 +74,11 @@ export default function Pricing() {
     }
   }
 
-  const passes = (products ?? []).filter((p) => p.kind === "pass");
+  // A signed-in learner sees the pass for their own canton (Zurich or Rest of Switzerland);
+  // visitors see every pass on sale. The canton can be changed on the Account page.
+  const passes = (products ?? []).filter(
+    (p) => p.kind === "pass" && (!learner || p.canton === learner.access.canton),
+  );
   const extension = (products ?? []).find((p) => p.kind === "extension" && p.available);
   const billingOn = config?.billing_enabled !== false;
 
