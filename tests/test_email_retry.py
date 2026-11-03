@@ -28,3 +28,11 @@ async def test_inline_jobs_raise_the_error(monkeypatch):
     monkeypatch.setattr(tasks.backend, "send", failing)
     with pytest.raises(smtplib.SMTPServerDisconnected):
         await tasks.send_email({}, "verify_email", "en", "a@example.ch", {"link": "https://x"})
+
+
+def test_message_id_and_date_use_the_sender_domain():
+    from app.email.backend import OutgoingEmail, _build
+
+    em = _build(OutgoingEmail(to="a@example.ch", subject="Hi", text="Hello"))
+    assert em["Message-ID"].endswith("@viapunt.ch>")
+    assert em["Date"]

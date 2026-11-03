@@ -8,6 +8,7 @@ import smtplib
 import ssl
 from dataclasses import dataclass, field
 from email.message import EmailMessage
+from email.utils import formatdate, make_msgid, parseaddr
 from pathlib import Path
 
 from app.config import get_settings
@@ -41,6 +42,10 @@ def _build(msg: OutgoingEmail) -> EmailMessage:
     em["From"] = settings.email_from
     em["To"] = msg.to
     em["Subject"] = msg.subject
+    # Our own Date and a Message-ID on the sender's domain: without them the mail server
+    # makes an ID from the container's internal address, which spam filters mark down.
+    em["Date"] = formatdate(localtime=False)
+    em["Message-ID"] = make_msgid(domain=parseaddr(settings.email_from)[1].split("@")[-1] or None)
     em.set_content(msg.text)
     if msg.html:
         em.add_alternative(msg.html, subtype="html")
