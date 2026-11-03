@@ -22,7 +22,7 @@ test("an admin grants a pass; the learner takes a 50-question mock test and revi
   await expect(page.getByText("Active until").first()).toBeVisible();
   await page.goto("/mock");
   await expect(page.getByText("50 questions, 60 minutes, four options each")).toBeVisible();
-  await expect(page.getByText("(not yet confirmed by the canton)")).toBeVisible();
+  await expect(page.getByText("(not yet confirmed by the canton)")).toHaveCount(0); // Zurich format confirmed
   await page.getByRole("button", { name: "Start the mock test" }).click();
   await expect(page.getByText("0 of 50 answered")).toBeVisible();
 
@@ -38,7 +38,7 @@ test("an admin grants a pass; the learner takes a 50-question mock test and revi
   await expect(page.getByRole("heading", { name: "Your result" })).toBeVisible();
   await expect(page.getByText(/^\d+ \/ 50$/)).toBeVisible();
   await expect(page.getByText("Pass mark: 30 of 50")).toBeVisible();
-  await expect(page.getByText("(not yet confirmed by the canton)")).toBeVisible();
+  await expect(page.getByText("(not yet confirmed by the canton)")).toHaveCount(0); // Zurich format confirmed
   await expect(page.getByRole("heading", { name: "Your wrong answers" })).toBeVisible();
   await expect(page.locator("article.question-card").first()).toBeVisible();
   await expect(page.getByRole("button", { name: "Explain this" })).toHaveCount(0);
