@@ -1,14 +1,14 @@
 ---
 title: "Über Viapunt"
-description: "Viapunt ist ein unabhängiger privater Dienst: allgemeine Informationen, keine Rechtsberatung."
+description: "Wer Viapunt betreibt, woher die Fragen stammen und wie Sie die Behörden erreichen."
 lang: de
 slug: ueber-viapunt
-updated: 2026-11-02
+updated: 2026-11-03
 ---
 
 ## Wer diesen Dienst betreibt
 
-Viapunt ist ein unabhängiger privater Dienst der Swiss Science Tutors GmbH, 5200 Brugg, Schweiz. Viapunt hat keine Verbindung zu einer Behörde des Bundes, eines Kantons oder einer Gemeinde und keinen amtlichen Status. Keine Behörde prüft, empfiehlt oder betreibt Viapunt.
+Viapunt ist ein unabhängiger privater Dienst ohne Verbindung zu Behörden von Bund, Kantonen oder Gemeinden. Wer Viapunt betreibt, steht im [Impressum](/de/impressum/).
 
 ## Unsere Fragen
 
@@ -16,7 +16,7 @@ Alle Übungsfragen, Erklärungen und Übersetzungen schreiben wir selbst. Sie si
 
 ## Allgemeine Informationen, keine Rechtsberatung
 
-Unsere Seiten geben allgemeine Informationen, damit Sie das Verfahren verstehen und sich vorbereiten können. Sie sind keine Rechtsberatung und ersetzen keine Beratung zu Ihrem eigenen Fall. Wir können Ihnen nicht sagen, ob Sie die Voraussetzungen erfüllen, wie eine Behörde entscheidet oder wie Sie mit einer Ablehnung oder Beschwerde umgehen. Fragen Sie dafür die Behörde oder eine Anwältin, einen Anwalt oder eine Beratungsstelle. Regeln, Gebühren und Abläufe unterscheiden sich zwischen Kantonen und Gemeinden und ändern sich; das letzte Wort hat die Behörde, die Ihr Gesuch bearbeitet.
+Unsere Seiten erklären das Verfahren und helfen bei der Vorbereitung. Sie sind keine Rechtsberatung: Ob Sie die Voraussetzungen erfüllen und wie eine Behörde entscheidet, können wir nicht sagen. Für Ihren Fall wenden Sie sich an die zuständige Behörde, eine Beratungsstelle oder eine Anwältin, einen Anwalt.
 
 ## So erreichen Sie die Behörden
 

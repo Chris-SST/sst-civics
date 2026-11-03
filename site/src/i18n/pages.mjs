@@ -4,7 +4,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 export const LOCALES = ["de", "en", "fr", "it", "pt", "es", "sq", "tr"];
-export const DEFAULT_LOCALE = "de";
+export const DEFAULT_LOCALE = "en"; // the bare host and x-default go to English (3 Nov 2026)
 /** Languages that have full page copy of their own. The rest fall back to English chrome. */
 export const COPY_LOCALES = ["de", "en"];
 
@@ -61,7 +61,7 @@ export function keyFor(lang, slug) {
   return slug;
 }
 
-/** "/de/" for German home, "/en/overview/" for a page. Every language has a prefix; "/" only redirects to /de/. */
+/** "/de/" for German home, "/en/overview/" for a page. Every language has a prefix; "/" only redirects to /en/. */
 export function pathFor(lang, key) {
   const prefix = `/${lang}/`;
   return key === "home" ? prefix : `${prefix}${slugFor(key, lang)}/`;

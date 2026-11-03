@@ -29,13 +29,9 @@ Para a naturalização ordinária são precisos dez anos de residência na Suí�
 
 Os cantões e os municípios fixam também os seus próprios períodos de residência. A calculadora não os verifica.
 
-## Os seus dados
+## O que a calculadora não faz
 
-A calculadora funciona **apenas no seu navegador**. Não envia nada a um servidor e **não guarda nada**. Quando fecha a página, as suas entradas desaparecem.
-
-## Aviso importante
-
-A calculadora dá uma **orientação aproximada, não aconselhamento jurídico**. Não lhe diz se pode ser naturalizado. Só a autoridade competente decide se os seus anos contam. Em caso de dúvida, pergunte ao seu município ou, no cantão de Zurique, ao Serviço dos Municípios (Gemeindeamt). O cantão oferece também a sua própria autoavaliação.
+A calculadora conta anos. Não decide se pode ser naturalizado nem que anos contam: isso cabe à autoridade que trata o seu pedido. O cantão oferece também a sua própria autoavaliação.
 
 ## Próximo passo
 

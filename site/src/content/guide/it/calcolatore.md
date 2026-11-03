@@ -29,13 +29,9 @@ Per la naturalizzazione ordinaria servono dieci anni di soggiorno in Svizzera. I
 
 Anche i Cantoni e i comuni fissano durate di soggiorno proprie. Il calcolatore non le verifica.
 
-## I Suoi dati
+## Che cosa non fa il calcolatore
 
-Il calcolatore funziona **solo nel Suo browser**. Non invia nulla a un server e **non memorizza nulla**. Quando chiude la pagina, i dati inseriti scompaiono.
-
-## Avviso importante
-
-Il calcolatore fornisce un'**indicazione approssimativa, non una consulenza legale**. Non Le dice se può essere naturalizzato. Solo l'autorità competente decide se i Suoi anni contano. In caso di dubbio, chieda al Suo comune o, nel Cantone di Zurigo, all'Ufficio dei comuni (Gemeindeamt). Il Cantone offre anche una propria autovalutazione.
+Il calcolatore conta gli anni. Non decide se può essere naturalizzato né quali anni contano: questo spetta all'autorità che tratta la Sua domanda. Il Cantone offre anche una propria autovalutazione.
 
 ## Prossimo passo
 

@@ -37,9 +37,9 @@ Komuna juaj vendos nëse zbatohet një përjashtim. Kantoni ofron një vetëvler
 
 Faqja e kantonit **nuk jep numër pyetjesh, kohëzgjatje as pikë kalimi**. Ajo ju drejton te komuna juaj.
 
-Një raportim i shtypit i vitit 2022 përmendte 50 pyetje në 60 minuta dhe 30 përgjigje të sakta për të kaluar. **Kantoni nuk e ka konfirmuar këtë.** Nuk e gjetëm në asnjë faqe të kantonit. Mos u mbështetni te ajo. Pyesni komunën tuaj për formatin, kohën dhe pikën e kalimit.
+Një raportim i shtypit i vitit 2022 përmendte 50 pyetje në 60 minuta, me 30 përgjigje të sakta për të kaluar. Kantoni nuk i ka konfirmuar këto shifra; komuna juaj mund t'ju tregojë formatin dhe pikën e kalimit.
 
-Kantoni e publikon katalogun e pyetjeve në gjermanisht. Faqja e tij nuk përmend gjuhë të tjera. Prisni që testi të jetë në gjermanisht dhe kontrollojeni me komunën tuaj.
+Kantoni e publikon katalogun e pyetjeve vetëm në gjermanisht, prandaj prisni që testi të jetë në gjermanisht.
 
 ## Temat
 
@@ -70,7 +70,7 @@ Pyetjet mbi testin i drejtohen Zyrës së Komunave (Gemeindeamt), seksioni i nat
 
 ## Si përshtatet praktika jonë
 
-Pyetjet tona të praktikës janë **pyetje origjinale që i kemi shkruar vetë**. Ato mbulojnë të njëjtat tema si testi, por nuk janë pyetjet e kantonit, dhe testi i vërtetë mund të jetë formuluar ndryshe. Fillimisht mësoni në gjuhën tuaj, pastaj praktikoni në gjermanisht. Përkthimet janë ndihmë për studim. Testi i vërtetë është në gjermanisht. Ky shërbim është i pavarur dhe nuk lidhet me kantonin.
+Pyetjet tona të praktikës janë **pyetje origjinale që i kemi shkruar vetë**. Ato mbulojnë të njëjtat tema si testi, por nuk janë pyetjet e kantonit. Fillimisht mësoni në gjuhën tuaj, pastaj në gjermanisht, gjuhën e testit.
 
 ## Hapi tjetër
 

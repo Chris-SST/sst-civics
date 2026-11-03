@@ -6,7 +6,7 @@
 > Service: Viapunt (working name; the brand is provisional)
 > Date of draft: 30 October 2026
 
-These terms apply to the guide website and the learning app of Viapunt (working name), run by Swiss Science Tutors GmbH, 5200 Brugg, Switzerland ("we", "us"). By creating an account or buying a Civics Pass you accept them.
+These terms apply to the guide website and the learning app of Viapunt (working name), run by Swiss Science Tutors GmbH, 5200 Brugg, Switzerland ("we", "us"). By creating an account or buying a Viapunt Pass you accept them.
 
 ## 1. Who we are and what the service is
 
@@ -28,9 +28,9 @@ These terms apply to the guide website and the learning app of Viapunt (working 
 
 3.3 You can delete your account yourself on the Account page. What is kept afterwards is described in the privacy notice.
 
-## 4. The Civics Pass
+## 4. The Viapunt Pass
 
-4.1 The Civics Pass is a one-off purchase, not a subscription. It does not renew and we do not charge you again.
+4.1 The Viapunt Pass is a one-off purchase, not a subscription. It does not renew and we do not charge you again.
 
 4.2 One pass gives access to all questions and study modes for one canton, unlimited mock tests, the "Explain this" assistant and every available language, for 6 months from payment.
 
@@ -40,7 +40,7 @@ These terms apply to the guide website and the learning app of Viapunt (working 
 
 ## 5. Prices and payment
 
-5.1 Prices are in Swiss francs (CHF). At the time of this draft: Civics Pass CHF 29; extension CHF 9. The price shown at checkout is the price you pay.
+5.1 Prices are in Swiss francs (CHF). At the time of this draft: Viapunt Pass CHF 29; extension CHF 9. The price shown at checkout is the price you pay.
 
 5.2 [Prices include VAT. / Prices do not include VAT. To be confirmed once it is decided whether Swiss Science Tutors GmbH is VAT-registered for this service.]
 

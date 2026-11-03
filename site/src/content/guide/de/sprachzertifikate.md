@@ -55,7 +55,7 @@ fide ist ein System, das im Auftrag des Bundes entwickelt wurde. Der fide-Test p
 - Der schriftliche Teil verlangt Schweizer Standarddeutsch, nicht Dialekt.
 - Wer schon B1 oder besser kann, hat ab 16 Jahren die Möglichkeit des **fide-Dossiers**: Sie reichen Unterlagen ein und führen ein Gespräch. Im Pass wird dann B1 eingetragen.
 
-Wie lange ein Sprachenpass gültig ist, steht nicht auf den Seiten, die wir gelesen haben. Fragen Sie Ihre Gemeinde, ob ein älterer Nachweis noch akzeptiert wird.
+fide nennt keine Gültigkeitsdauer für den Sprachenpass. Fragen Sie Ihre Gemeinde, ob ein älterer akzeptiert wird.
 
 ## Wo und wie Sie die Prüfung machen
 
@@ -63,7 +63,7 @@ Den fide-Test machen Sie bei einem anerkannten Prüfungsinstitut. Die Liste nach
 
 ## Typische Preise
 
-Bei fide kostet der ganze Test **CHF 250**, nur der mündliche Teil CHF 170, nur der schriftliche Teil CHF 120. Für andere Zertifikate und für den Kantonalen Deutschtest in Zürich nennen die Seiten keinen festen Preis. Diese hängen vom Anbieter und von der Gemeinde ab. Fragen Sie nach.
+Bei fide kostet der ganze Test **CHF 250**, nur der mündliche Teil CHF 170, nur der schriftliche Teil CHF 120. Für andere Zertifikate und für den Kantonalen Deutschtest in Zürich nennen die Seiten keinen festen Preis. Diese hängen vom Anbieter und von der Gemeinde ab.
 
 ## Ausnahmen im Kanton Zürich
 

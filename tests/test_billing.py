@@ -204,7 +204,7 @@ async def test_products_read_prices_from_stripe_and_are_cached(api, fake_stripe)
     r = await api.get("/api/billing/products")
     assert r.status_code == 200
     out = {p["key"]: p for p in r.json()}
-    assert set(out) == {"civics_pass_zh", "civics_extension"}  # Aargau not on sale yet
+    assert set(out) == {"civics_pass_zh", "civics_pass_ch", "civics_extension"}  # no Aargau yet
     assert out["civics_pass_zh"] == {
         "key": "civics_pass_zh",
         "kind": "pass",

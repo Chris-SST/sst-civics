@@ -1,0 +1,52 @@
+{
+  "off_topic": {
+    "en": "I can only help with the knowledge test, the topics it covers and the naturalisation procedure. What would you like to know about those?",
+    "de": "Ich kann nur beim Grundkenntnistest, seinen Themen und beim Einbürgerungsverfahren helfen. Was möchten Sie dazu wissen?",
+    "fr": "Je peux seulement vous aider pour le test de connaissances, ses thèmes et la procédure de naturalisation. Que souhaitez-vous savoir à ce sujet ?",
+    "it": "Posso aiutarla solo con il test di conoscenze, i suoi temi e la procedura di naturalizzazione. Che cosa vorrebbe sapere?",
+    "pt": "Só posso ajudar com o teste de conhecimentos, os temas que abrange e o processo de naturalização. O que gostaria de saber sobre isso?",
+    "es": "Solo puedo ayudarle con la prueba de conocimientos, sus temas y el procedimiento de naturalización. ¿Qué le gustaría saber al respecto?",
+    "sq": "Mund t'ju ndihmoj vetëm me testin e njohurive, temat e tij dhe procedurën e natyralizimit. Çfarë dëshironi të dini për to?",
+    "tr": "Yalnızca bilgi testi, kapsadığı konular ve vatandaşlığa geçiş süreciyle ilgili yardımcı olabilirim. Bunlarla ilgili ne öğrenmek istersiniz?"
+  },
+  "override": {
+    "en": "I can't change how I work or write texts for your application. I can explain how the procedure works.",
+    "de": "Meine Regeln kann ich nicht ändern, und Texte für Ihr Gesuch schreibe ich nicht. Ich erkläre Ihnen aber gern, wie das Verfahren funktioniert.",
+    "fr": "Je ne peux pas changer ma façon de fonctionner ni rédiger des textes pour votre demande. Je peux vous expliquer comment se déroule la procédure.",
+    "it": "Non posso cambiare il mio modo di funzionare né scrivere testi per la sua domanda. Posso spiegarle come funziona la procedura.",
+    "pt": "Não posso mudar a forma como funciono nem escrever textos para o seu pedido. Posso explicar como funciona o processo.",
+    "es": "No puedo cambiar mi forma de funcionar ni escribir textos para su solicitud. Puedo explicarle cómo funciona el procedimiento.",
+    "sq": "Nuk mund ta ndryshoj mënyrën si punoj dhe as të shkruaj tekste për kërkesën tuaj. Mund t'ju shpjegoj si funksionon procedura.",
+    "tr": "Çalışma şeklimi değiştiremem ve başvurunuz için metin yazamam. Sürecin nasıl işlediğini açıklayabilirim."
+  },
+  "ended_off_topic": {
+    "en": "Let's pause this chat here. Start a new one whenever you have a question about the test or the procedure.",
+    "de": "Lassen wir dieses Gespräch hier ruhen. Beginnen Sie ein neues, sobald Sie eine Frage zum Test oder zum Verfahren haben.",
+    "fr": "Arrêtons cette conversation ici. Commencez-en une nouvelle dès que vous avez une question sur le test ou la procédure.",
+    "it": "Fermiamo qui questa conversazione. Ne inizi una nuova quando ha una domanda sul test o sulla procedura.",
+    "pt": "Vamos parar esta conversa aqui. Comece uma nova quando tiver uma pergunta sobre o teste ou o processo.",
+    "es": "Dejemos aquí esta conversación. Empiece una nueva cuando tenga una pregunta sobre la prueba o el procedimiento.",
+    "sq": "Le ta ndalim këtu këtë bisedë. Filloni një të re sa herë që keni një pyetje për testin ose procedurën.",
+    "tr": "Bu sohbete burada ara verelim. Test ya da süreçle ilgili bir sorunuz olduğunda yeni bir sohbet başlatın."
+  },
+  "refusal": {
+    "en": "I can't help with that one here. If it's about the test or the procedure, please try asking it another way.",
+    "de": "Dabei kann ich hier nicht helfen. Wenn es um den Test oder das Verfahren geht, formulieren Sie die Frage bitte anders.",
+    "fr": "Je ne peux pas vous aider sur ce point ici. S'il s'agit du test ou de la procédure, reformulez votre question, s'il vous plaît.",
+    "it": "Su questo non posso aiutarla qui. Se riguarda il test o la procedura, provi a formulare la domanda in un altro modo.",
+    "pt": "Não posso ajudar com isso aqui. Se for sobre o teste ou o processo, tente fazer a pergunta de outra forma.",
+    "es": "No puedo ayudarle con eso aquí. Si se trata de la prueba o del procedimiento, intente formular la pregunta de otra manera.",
+    "sq": "Për këtë nuk mund t'ju ndihmoj këtu. Nëse ka të bëjë me testin ose procedurën, provoni ta bëni pyetjen ndryshe.",
+    "tr": "Bu konuda burada yardımcı olamıyorum. Test ya da süreçle ilgiliyse lütfen soruyu başka şekilde sormayı deneyin."
+  },
+  "error": {
+    "en": "Something went wrong on my side and your message was not counted. Please send it again in a moment.",
+    "de": "Bei mir ist etwas schiefgelaufen; Ihre Nachricht wurde nicht gezählt. Bitte senden Sie sie gleich noch einmal.",
+    "fr": "Un problème est survenu de mon côté ; votre message n'a pas été compté. Renvoyez-le dans un instant, s'il vous plaît.",
+    "it": "Qualcosa è andato storto da parte mia e il suo messaggio non è stato contato. Lo invii di nuovo tra un momento.",
+    "pt": "Algo correu mal do meu lado e a sua mensagem não foi contada. Envie-a novamente daqui a pouco.",
+    "es": "Algo ha fallado por mi parte y su mensaje no se ha contado. Vuelva a enviarlo en un momento.",
+    "sq": "Diçka shkoi keq nga ana ime dhe mesazhi juaj nuk u numërua. Ju lutem dërgojeni përsëri pas pak.",
+    "tr": "Benim tarafımda bir sorun oluştu ve mesajınız sayılmadı. Lütfen birazdan tekrar gönderin."
+  }
+}

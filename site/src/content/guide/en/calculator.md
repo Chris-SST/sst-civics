@@ -29,13 +29,9 @@ For ordinary naturalisation you need ten years of residence in Switzerland. The 
 
 Cantons and communes also set their own residence periods. The calculator does not check them.
 
-## Your data
+## What it does not do
 
-The calculator runs **only in your browser**. It sends nothing to a server and **stores nothing**. When you close the page, your entries are gone.
-
-## Important notice
-
-The calculator gives a **rough guide, not legal advice**. It does not tell you whether you can be naturalised. Only the responsible authority decides whether your years count. If in doubt, ask your commune or, in the canton of Zurich, the Gemeindeamt. The canton also offers its own self-check.
+The calculator counts years. It does not decide whether you can be naturalised or which years count: that is up to the authority handling your application. The canton also has its own self-check.
 
 ## Next step
 

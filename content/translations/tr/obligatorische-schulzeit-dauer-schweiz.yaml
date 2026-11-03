@@ -1,6 +1,6 @@
 id: obligatorische-schulzeit-dauer-schweiz
 lang: tr
-source_version: 2
+source_version: 3
 question: Zürich kantonunda anaokulu da sayıldığında zorunlu eğitim süresi kaç yıldır?
 options:
   a: On bir yıl
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 2
+    source_version: 3
     question_de: Wie viele Jahre dauert die Schulpflicht im Kanton Zürich, wenn der Kindergarten mitgezählt
       wird?
     options_de:

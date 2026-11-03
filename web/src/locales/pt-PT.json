@@ -30,7 +30,7 @@
     "terms": "Condições de utilização",
     "privacy": "Aviso de privacidade",
     "imprint": "Ficha técnica",
-    "independence": "Serviço independente, sem ligação a qualquer autoridade federal, cantonal ou municipal. Informação geral, não aconselhamento jurídico."
+    "independence": "O Viapunt é um serviço independente, sem ligação a qualquer autoridade federal, cantonal ou municipal."
   },
   "errors": {
     "unknown_error": "Algo correu mal. Tente novamente.",
@@ -56,8 +56,6 @@
     "billing_not_configured": "Os pagamentos ainda não estão ativados neste ambiente.",
     "unknown_plan": "Plano desconhecido.",
     "price_not_found": "Os preços não estão disponíveis neste momento. Tente novamente dentro de instantes.",
-    "already_subscribed": "Já tem uma subscrição. Altere-a em «Gerir faturação».",
-    "no_stripe_customer": "Ainda não existe uma conta de faturação. Comece primeiro um plano.",
     "csrf_failed": "A sua sessão expirou. Recarregue a página.",
     "cannot_deactivate_self": "Não pode desativar a sua própria conta.",
     "impersonation_disabled": "A visualização como outro utilizador está desativada em produção.",
@@ -66,16 +64,16 @@
     "no_access": "Neste momento não tem acesso para o seu cantão.",
     "invalid_topic": "Escolha um tema da lista.",
     "conversation_ended": "Esta sessão terminou. Inicie uma nova.",
-    "tutor_unavailable": "O tutor não está disponível neste momento. Tente novamente mais tarde.",
+    "tutor_unavailable": "O assistente não está disponível neste momento. Tente novamente mais tarde.",
     "message_too_long": "As mensagens podem ter até 2000 caracteres.",
     "empty_message": "Escreva uma mensagem.",
     "daily_limit_reached": "Atingiu o limite de mensagens de hoje.",
     "monthly_limit_reached": "Atingiu o limite de mensagens deste mês.",
-    "timeout": "O tutor demorou demasiado a responder. A sua mensagem não foi contabilizada; tente novamente.",
-    "connection": "Não foi possível contactar o tutor. A sua mensagem não foi contabilizada; tente novamente.",
-    "api": "O tutor teve um problema. A sua mensagem não foi contabilizada; tente novamente.",
+    "timeout": "O assistente demorou demasiado a responder. A sua mensagem não foi contabilizada; tente novamente.",
+    "connection": "Não foi possível contactar o assistente. A sua mensagem não foi contabilizada; tente novamente.",
+    "api": "O assistente teve um problema. A sua mensagem não foi contabilizada; tente novamente.",
     "no_questions": "Ainda não existem perguntas de exercício para este tema.",
-    "conversation_required": "Abra a verificação a partir de uma sessão com o tutor.",
+    "conversation_required": "Abra a verificação a partir de um chat.",
     "invalid_difficulty": "O nível de dificuldade tem de estar entre 1 e 5.",
     "age_confirmation_required": "Confirme que tem 16 anos ou mais.",
     "invalid_canton": "Escolha um cantão da lista.",
@@ -84,7 +82,7 @@
     "password_required_for_admins": "As contas de administrador têm de manter uma palavra-passe.",
     "reauth_required": "Confirme a sua identidade: introduza a palavra-passe ou abra uma nova ligação de início de sessão.",
     "not_while_impersonating": "Isto não é possível enquanto vê como outro utilizador.",
-    "not_for_sale": "Este Civics Pass ainda não está à venda.",
+    "not_for_sale": "Este Viapunt Pass ainda não está à venda.",
     "pass_active": "Já tem um passe ativo para este cantão. Pode prolongá-lo.",
     "no_pass_to_extend": "Uma prorrogação exige um passe para este cantão que esteja ativo ou tenha terminado há menos de 90 dias.",
     "already_refunded": "Este pagamento já foi reembolsado.",
@@ -97,8 +95,8 @@
     "invalid_options": "São necessárias quatro respostas diferentes, incluindo a correta.",
     "invalid_transition": "Esta pergunta já não pode ser alterada desta forma.",
     "edits_need_approve": "As alterações só podem ser guardadas juntamente com uma aprovação.",
-    "sample_only": "Esta pergunta faz parte do Civics Pass. A versão gratuita inclui as perguntas de exemplo.",
-    "free_mock_used": "Já usou o seu simulacro gratuito. Um Civics Pass dá-lhe simulacros ilimitados.",
+    "sample_only": "Esta pergunta faz parte do Viapunt Pass. A versão gratuita inclui as perguntas de exemplo.",
+    "free_mock_used": "Já usou o seu simulacro gratuito. Um Viapunt Pass dá-lhe simulacros ilimitados.",
     "not_enough_questions": "Ainda não há perguntas aprovadas suficientes para um simulacro completo.",
     "no_mock_test": "Ainda não há simulacro para o seu cantão.",
     "deadline_passed": "O tempo deste simulacro acabou. As respostas depois do fim do tempo não contam.",
@@ -116,17 +114,15 @@
     "title": "Compreenda o teste de naturalização na sua própria língua.",
     "lead": "Aprenda o que significa cada pergunta na língua que melhor conhece e pratique depois as mesmas perguntas em alemão, a língua do teste verdadeiro.",
     "cta": "Começar a praticar grátis",
-    "plansTitle": "Planos",
-    "trialNote": "Preços em CHF.",
     "howTitle": "Como funciona",
     "step1Title": "Compreender",
     "step1Body": "Leia cada pergunta lado a lado na sua língua e em alemão, com uma breve explicação quando for necessário.",
     "step2Title": "Praticar em alemão",
     "step2Body": "Passe gradualmente da sua língua para apenas alemão, com rondas curtas e testes simulados.",
     "step3Title": "Passar",
-    "step3Body": "Faça o teste em alemão com confiança. A estimativa de prática é uma orientação, não um resultado oficial.",
+    "step3Body": "Faça o teste real em alemão.",
     "freeTitle": "Experimente 30 perguntas gratuitas",
-    "freeBody": "Sem pagamento. Crie uma conta gratuita e veja como funciona antes de decidir o que quer que seja."
+    "freeBody": "Sem pagamento e sem conta."
   },
   "signup": {
     "title": "Crie a sua conta",
@@ -142,7 +138,8 @@
     "interfaceLanguageHint": "A língua dos menus e botões. Quando falta uma tradução, é mostrado inglês.",
     "withPassword": "Defina também uma palavra-passe (opcional)",
     "passwordOptionalHint": "Sem palavra-passe, inicia sessão com uma ligação que lhe enviamos por e-mail. Pode adicionar ou remover uma palavra-passe mais tarde, na sua conta.",
-    "checkEmailSignIn": "A ligação também inicia a sua sessão."
+    "checkEmailSignIn": "A ligação também inicia a sua sessão.",
+    "cantonRest": "O seu cantão não está na lista? Escolha «Resto da Suíça»: estuda as perguntas federais, que são a maior parte do teste em todos os cantões. As perguntas do seu cantão seguem quando o acrescentarmos."
   },
   "fields": {
     "email": "Endereço de e-mail",
@@ -211,10 +208,10 @@
     "waiting": "A aguardar que o Stripe confirme o seu método de pagamento. Normalmente demora alguns segundos…",
     "slow": "O Stripe ainda não confirmou. O seu acesso será atualizado automaticamente; pode sair desta página.",
     "toDashboard": "Ir para o seu painel",
-    "activeUntil": "Obrigado. O seu Civics Pass para {{canton}} está ativo até {{date}}."
+    "activeUntil": "Obrigado. O seu Viapunt Pass para {{canton}} está ativo até {{date}}."
   },
   "learner": {
-    "tutorOffline": "O tutor ainda não está ligado neste ambiente.",
+    "tutorOffline": "O assistente ainda não está ligado neste ambiente.",
     "recent": "Sessões recentes",
     "noRecent": "Ainda não há sessões. Escolha um tema para começar.",
     "endedTag": "terminada",
@@ -222,15 +219,14 @@
     "usageToday": "Hoje: {{used}} de {{limit}}",
     "usageMonth": "Este mês: {{used}} de {{limit}}",
     "nearLimit": "Está perto do limite de mensagens deste mês.",
-    "integrity": "O tutor explica e orienta; não presta aconselhamento jurídico.",
     "practise": "Pratique",
-    "askTutor": "Pergunte ao tutor",
+    "askTutor": "Pergunte ao assistente",
     "noQuestionsYet": "As perguntas de treino para o seu cantão estão a caminho.",
     "welcome": "Bem-vindo(a)",
     "noTopics": "Os temas do seu cantão estão a caminho.",
     "topicsTitle": "Temas do teste: {{canton}}",
     "notStarted": "Ainda não iniciado",
-    "freeTierNotice": "Está a usar a versão gratuita: {{count}} perguntas de exemplo em todos os modos de estudo e um simulacro. Um Civics Pass para o seu cantão abre todas as perguntas, simulacros ilimitados e Explicar isto.",
+    "freeTierNotice": "Está a usar a versão gratuita: {{count}} perguntas de exemplo em todos os modos de estudo e um simulacro. Um Viapunt Pass para o seu cantão abre todas as perguntas, simulacros ilimitados e Explicar isto.",
     "readinessTitle": "Preparação para o teste do cantão de {{canton}}",
     "knownOf": "{{known}} de {{total}} perguntas sabidas",
     "dueCount_one": "{{count}} pergunta para rever",
@@ -252,7 +248,7 @@
   "chat": {
     "back": "As suas sessões",
     "end": "Terminar sessão de estudo",
-    "intro": "Diga ao tutor no que está a trabalhar ou onde ficou bloqueado(a).",
+    "intro": "Diga ao assistente no que está a trabalhar ou onde ficou bloqueado(a).",
     "placeholder": "Escreva a sua pergunta… (Enter para enviar, Shift+Enter para nova linha)",
     "send": "Enviar",
     "ended": "Esta sessão terminou.",
@@ -260,7 +256,7 @@
     "helplineTitle": "Alguém com quem falar, agora mesmo",
     "helplineBody": "Dargebotene Hand (linha de apoio suíça): ligue 143, gratuito e confidencial, 24 horas por dia. Em caso de emergência ligue 144 (ambulância) ou 117 (polícia). Também ajuda falar com uma pessoa de confiança.",
     "nearLimit": "{{used}} de {{limit}} mensagens utilizadas este mês.",
-    "dailyLimit": "Atingiu o limite de mensagens de hoje. O tutor volta amanhã.",
+    "dailyLimit": "Atingiu o limite de mensagens de hoje. O assistente volta amanhã.",
     "monthlyLimit": "Atingiu o limite de mensagens deste mês.",
     "check": "Verifique o que aprendeu",
     "checkTitle": "Verifique o que aprendeu",
@@ -353,8 +349,8 @@
       "no_payment": "sem pagamento"
     },
     "product": {
-      "civics_pass_zh": "Civics Pass",
-      "civics_pass_ag": "Civics Pass",
+      "civics_pass_zh": "Viapunt Pass",
+      "civics_pass_ag": "Viapunt Pass",
       "civics_extension": "Prorrogação"
     }
   },
@@ -371,7 +367,7 @@
     "roundBodyPerfect": "Todas as perguntas certas. Da próxima vez, espere algo um pouco mais difícil.",
     "roundBodyGreat": "Quase tudo certo. Mais uma ronda e este tema fica dominado.",
     "roundBodyGood": "Metade ou mais certas. Reveja as soluções das que falhou e tente de novo.",
-    "roundBodyKeep": "Uma ronda difícil. É para isso mesmo que serve a prática; o tutor pode orientá-lo(a) nas perguntas mais complicadas.",
+    "roundBodyKeep": "Uma ronda difícil. Leia as soluções ou use «Explicar isto» nas perguntas que falhou.",
     "anotherRound": "Outra ronda",
     "title": "Prática",
     "mastery": "Domínio",
@@ -395,8 +391,7 @@
     "encourage": [
       "Desta vez não.",
       "Não exatamente. Veja a solução.",
-      "Quase, mas não.",
-      "Esta não. A próxima é um novo começo."
+      "Quase, mas não."
     ],
     "streak": "{{count}} seguidas!",
     "backOnTrack": "De volta ao bom caminho!",
@@ -514,6 +509,7 @@
   },
   "cantons": {
     "zh": "Zurique",
+    "ch": "Resto da Suíça",
     "ag": "Argóvia"
   },
   "languages": {
@@ -546,7 +542,7 @@
     "passwordSaved": "A sua palavra-passe foi guardada. Os outros dispositivos terminaram sessão.",
     "passwordRemoved": "A sua palavra-passe foi removida. A partir de agora, inicie sessão com uma ligação por e-mail.",
     "deleteTitle": "Eliminar conta",
-    "deleteIntro": "Isto elimina a sua conta, o seu progresso, as suas respostas, as conversas com o tutor e as comunicações de perguntas. Não pode ser anulado.",
+    "deleteIntro": "Isto elimina a sua conta, o seu progresso, as suas respostas, as conversas em «Explicar isto» e no chat de ajuda e as comunicações de perguntas. Não pode ser anulado.",
     "deleteKept": "Os registos de faturação dos pagamentos que efetuou são conservados durante o tempo exigido por lei, sem o seu endereço de e-mail. Enviamos-lhe um e-mail de confirmação.",
     "reauthFresh": "Iniciou sessão com uma ligação por e-mail há poucos minutos, por isso não é necessária a palavra-passe.",
     "reauthEither": "Introduza a palavra-passe ou confirme com uma nova ligação de início de sessão.",
@@ -558,9 +554,9 @@
     "deletedBody": "A sua conta e os seus dados de aprendizagem foram eliminados. Enviámos-lhe um e-mail de confirmação."
   },
   "pricing": {
-    "title": "Civics Pass",
-    "intro": "Comece com a prática gratuita. Um Civics Pass abre tudo para um cantão: todas as perguntas e modos de estudo, simulacros ilimitados e Explicar isto, em todas as línguas. Paga uma só vez; não há subscrição.",
-    "passName": "Civics Pass {{canton}}",
+    "title": "Viapunt Pass",
+    "intro": "Comece com a prática gratuita. Um Viapunt Pass abre tudo para um cantão: todas as perguntas e modos de estudo, simulacros ilimitados e Explicar isto, em todas as línguas. Paga uma só vez; não há subscrição.",
+    "passName": "Viapunt Pass · {{canton}}",
     "period": "por {{months}} meses",
     "passIncludes": "Todas as perguntas e modos de estudo para este cantão, simulacros ilimitados e Explicar isto.",
     "activeUntil": "Ativo até {{date}}",
@@ -569,10 +565,10 @@
     "buy": "Comprar",
     "signUpToBuy": "Registe-se gratuitamente",
     "extend": "Prolongar por {{months}} meses ({{price}})",
-    "extensionNote": "Precisa de mais tempo? Uma prorrogação acrescenta {{months}} meses por {{price}}, enquanto o seu passe estiver ativo ou até 90 dias depois de terminar.",
+    "extensionNote": "Uma prorrogação acrescenta {{months}} meses por {{price}}, enquanto o seu passe estiver ativo ou até 90 dias depois de terminar.",
     "priceNote": "Preços em CHF. Pagamento único, por cartão ou TWINT, através do Stripe.",
     "unavailable": "Os preços não estão disponíveis neste momento. Tente novamente dentro de instantes.",
-    "refundEligible": "Não é o que esperava? O seu último pagamento pode ser reembolsado até {{date}} se tiver estudado menos de {{max}} perguntas desde a compra (até agora: {{count}}).",
+    "refundEligible": "O seu último pagamento pode ser reembolsado até {{date}} se tiver estudado menos de {{max}} perguntas desde a compra (até agora: {{count}}).",
     "writeToSupport": "Escreva ao apoio para pedir um reembolso.",
     "refundTooLate": "O prazo de reembolso do seu último pagamento terminou em {{date}}.",
     "refundTooMany": "O seu último pagamento já não pode ser reembolsado: estudou {{count}} perguntas desde a compra e os reembolsos são possíveis abaixo de {{max}}.",
@@ -626,7 +622,7 @@
     "passMark": "Nota mínima: {{mark}} de {{total}}",
     "passMarkUnconfirmed": "ainda não confirmada pelo cantão",
     "freeOne": "A versão gratuita inclui um simulacro.",
-    "freeUsed": "Já usou o seu simulacro gratuito. Um Civics Pass dá-lhe simulacros ilimitados.",
+    "freeUsed": "Já usou o seu simulacro gratuito. Um Viapunt Pass dá-lhe simulacros ilimitados.",
     "notEnough": "Ainda não há perguntas aprovadas suficientes para um simulacro completo.",
     "start": "Começar o simulacro",
     "continue": "Continuar o simulacro",
@@ -659,6 +655,7 @@
   "explain": {
     "button": "Explicar isto",
     "title": "Explicar esta pergunta",
+    "note": "Respostas da IA.",
     "placeholder": "Faça a sua pergunta… (Enter para enviar)",
     "remaining": "Restam {{left}} de {{limit}} mensagens hoje",
     "limitReached": "Atingiu o limite de mensagens de hoje. Volta amanhã.",
@@ -696,8 +693,8 @@
   },
   "help": {
     "title": "Pergunte ao Viapunt",
-    "lead": "Tem perguntas sobre o teste de conhecimentos, os seus temas ou o processo de naturalização? Pergunte aqui, na sua língua. As respostas baseiam-se no guia Viapunt e na lista dos conteúdos do teste.",
-    "note": "O assistente de IA pode enganar-se e as suas respostas não são aconselhamento jurídico. Só a sua comuna e o cantão decidem sobre o seu pedido.",
+    "lead": "Pergunte sobre o teste de conhecimentos, os seus temas ou o processo de naturalização, na sua língua.",
+    "note": "Respostas da IA, com base no guia Viapunt.",
     "intro": "Por exemplo:",
     "s1": "Que documentos preciso para o pedido no cantão de Zurique?",
     "s2": "Qual é a diferença entre o Conselho Nacional e o Conselho dos Estados?",
@@ -705,9 +702,9 @@
     "placeholder": "A sua pergunta… (Enter para enviar)",
     "newChat": "Nova conversa",
     "limitReached": "Atingiu o limite de mensagens de hoje. O chat de ajuda volta amanhã.",
-    "free": "Conta gratuita: algumas perguntas por dia. Um Civics Pass dá-lhe mais, além de Explicar isto em todas as perguntas.",
-    "freeCta": "Ver o Civics Pass",
-    "cardTitle": "Dúvidas? Pergunte ao Viapunt",
+    "free": "Conta gratuita: algumas perguntas por dia. Um Viapunt Pass dá-lhe mais, além de Explicar isto em todas as perguntas.",
+    "freeCta": "Ver o Viapunt Pass",
+    "cardTitle": "Pergunte ao Viapunt",
     "cardBody": "Pergunte sobre o teste, os seus temas ou o processo de naturalização, na sua língua.",
     "cardCta": "Abrir o chat de ajuda"
   },
@@ -722,7 +719,7 @@
     "signup": "Criar uma conta gratuita",
     "doneTitle": "Muito bem, eram as 30",
     "doneScore": "Acertou {{score}} de {{total}}.",
-    "doneText": "Com uma conta gratuita guarda o progresso, faz um simulacro completo em alemão e pode usar o chat de ajuda. O Civics Pass abre todas as perguntas do cantão.",
+    "doneText": "Com uma conta gratuita guarda o progresso, faz um simulacro completo em alemão e pode usar o chat de ajuda. O Viapunt Pass abre todas as perguntas do cantão.",
     "again": "Recomeçar",
     "none": "As perguntas de prática para este cantão estão a caminho."
   },

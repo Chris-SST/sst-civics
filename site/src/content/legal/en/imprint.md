@@ -1,9 +1,9 @@
 ---
 title: "Imprint"
-description: "Who runs Viapunt: Swiss Science Tutors GmbH, Brugg."
+description: "Operator and contact details of Viapunt."
 lang: en
 slug: imprint
-updated: 2026-11-02
+updated: 2026-11-03
 ---
 
 Viapunt is a service of:
@@ -18,7 +18,7 @@ Registered in the commercial register of the canton of Aargau, UID CHE-151.758.8
 
 ## Independence
 
-Viapunt is an independent private service. It is not connected to any federal, cantonal or communal authority and gives general information, not legal advice. More in [About Viapunt](/en/about/).
+Viapunt is an independent private service and not an authority.
 
 ## Links to other websites
 

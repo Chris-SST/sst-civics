@@ -44,7 +44,7 @@ async def test_reply_from_the_fast_model_with_the_reference_and_nothing_stored(a
         rows = (await db.execute(select(LlmCall))).scalars().all()
     reply = next(c for c in rows if c.purpose == "public_help")
     assert reply.user_id is None and reply.conversation_id is None
-    assert reply.prompt_version.endswith("+help@v1")
+    assert reply.prompt_version.endswith("+help@v2")
 
 
 async def test_history_is_trimmed_and_alternates(api, fake):

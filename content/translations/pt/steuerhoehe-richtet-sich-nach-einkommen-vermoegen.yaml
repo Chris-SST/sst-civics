@@ -1,6 +1,6 @@
 id: steuerhoehe-richtet-sich-nach-einkommen-vermoegen
 lang: pt
-source_version: 1
+source_version: 2
 question: De que depende principalmente o valor do imposto sobre o rendimento e sobre o património que
   uma pessoa paga no cantão de Zurique?
 options:
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Wovon hängt hauptsächlich die Höhe der Einkommens- und Vermögenssteuer ab, die eine Person
       im Kanton Zürich bezahlt?
     options_de:

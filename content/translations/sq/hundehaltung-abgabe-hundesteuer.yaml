@@ -1,6 +1,6 @@
 id: hundehaltung-abgabe-hundesteuer
 lang: sq
-source_version: 2
+source_version: 3
 question: Çfarë vlen në kantonin Zürich për personat që mbajnë një qen?
 options:
   a: Ata duhet t'i paguajnë çdo vit komunës (Gemeinde) një taksë për qenin.
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 2
+    source_version: 3
     question_de: Was gilt im Kanton Zürich für Personen, die einen Hund halten?
     options_de:
       a: Sie müssen jedes Jahr der Gemeinde eine Hundesteuer bezahlen.

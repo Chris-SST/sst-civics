@@ -1,6 +1,6 @@
 id: hundehaltung-abgabe-hundesteuer
 lang: en
-source_version: 2
+source_version: 3
 question: What applies in the canton of Zürich to people who keep a dog?
 options:
   a: They must pay an annual dog levy to the commune (Gemeinde).
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 2
+    source_version: 3
     question_de: Was gilt im Kanton Zürich für Personen, die einen Hund halten?
     options_de:
       a: Sie müssen der Gemeinde jährlich eine Hundeabgabe bezahlen.

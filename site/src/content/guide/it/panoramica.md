@@ -22,9 +22,9 @@ draft: false
 cta: free-questions
 ---
 
-## In breve
+## Naturalizzazione ordinaria
 
-Se desidera diventare cittadino svizzero e non è sposato con una persona di cittadinanza svizzera, di regola dovrà seguire la **naturalizzazione ordinaria**. Si svolge su tre livelli: comune, Cantone e Confederazione. Spesso richiede diversi anni. Questa pagina offre una prima panoramica. Non sostituisce la consulenza del Suo comune.
+Se desidera diventare cittadino svizzero e non è sposato con una persona di cittadinanza svizzera, di regola dovrà seguire la **naturalizzazione ordinaria**. Si svolge su tre livelli: comune, Cantone e Confederazione. Spesso richiede diversi anni.
 
 ## Requisiti federali
 
@@ -73,7 +73,7 @@ Le condizioni complete e le tasse si trovano nelle pagine della SEM (in tedesco)
 
 - L'**ufficio di naturalizzazione del Suo comune**. Conosce le regole e le date locali.
 - Nel Cantone di Zurigo, l'**Ufficio dei comuni (Gemeindeamt), sezione Naturalizzazioni** (telefono +41 43 259 83 81).
-- Per domande sul Suo caso personale, un servizio di consulenza o un avvocato. Forniamo solo informazioni generali e non possiamo dirLe se soddisfa i requisiti.
+- Per domande sul Suo caso personale: un servizio di consulenza o un avvocato.
 
 ## Prossimo passo
 

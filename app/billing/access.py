@@ -22,7 +22,7 @@ from app.models import ENTITLEMENT_ADMIN, ENTITLEMENT_STRIPE, Entitlement, User
 FULL = "full"
 NONE = "none"
 
-# Entitlements that count as a Civics Pass: bought, or granted by an admin in place of a
+# Entitlements that count as a Viapunt Pass: bought, or granted by an admin in place of a
 # purchase. A trial does not, so it can be neither extended nor blocks buying a pass.
 PASS_SOURCES = (ENTITLEMENT_STRIPE, ENTITLEMENT_ADMIN)
 

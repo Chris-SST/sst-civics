@@ -88,7 +88,7 @@ def test_course_modules_are_gone_and_civics_context_is_loaded():
     root = prompts.prompts_root()
     assert not (root / "courses").exists()
     assert not hasattr(prompts, "course_info") and not hasattr(prompts, "available_courses")
-    assert service.prompt_version() == "base@v3+civics@v2"
+    assert service.prompt_version() == "base@v4+civics@v3"
     assert "three levels" in prompts.load("civics").text.lower()
 
 
@@ -136,7 +136,7 @@ async def test_streamed_reply_is_stored_counted_and_costed(api, api2, fake):
         assert purposes == ["gatekeeper", "tutor_reply"]
         reply = next(c for c in calls if c.purpose == "tutor_reply")
         assert reply.cost_usd > 0 and reply.cost_chf == pytest.approx(reply.cost_usd * 0.8)
-        assert reply.prompt_version == "base@v3+civics@v2"
+        assert reply.prompt_version == "base@v4+civics@v3"
         assert reply.cache_read_tokens == 1000
 
     r = await api2.get(f"/api/tutor/conversations/{conv_id}")

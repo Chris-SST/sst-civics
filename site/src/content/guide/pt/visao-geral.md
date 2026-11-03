@@ -22,9 +22,9 @@ draft: false
 cta: free-questions
 ---
 
-## Em resumo
+## Naturalização ordinária
 
-Se quer tornar-se cidadão suíço e não é casado com uma pessoa de nacionalidade suíça, normalmente seguirá a **naturalização ordinária** (ordentliche Einbürgerung). Decorre a três níveis: município, cantão e Confederação. Muitas vezes demora vários anos. Esta página dá uma primeira visão geral. Não substitui o aconselhamento do seu município.
+Se quer tornar-se cidadão suíço e não é casado com uma pessoa de nacionalidade suíça, normalmente seguirá a **naturalização ordinária** (ordentliche Einbürgerung). Decorre a três níveis: município, cantão e Confederação. Muitas vezes demora vários anos.
 
 ## Requisitos federais
 
@@ -73,7 +73,7 @@ As condições completas e as taxas estão nas páginas da SEM (em alemão): [c�
 
 - O **serviço de naturalização do seu município**. Conhece as regras e as datas locais.
 - No cantão de Zurique, o **Serviço dos Municípios (Gemeindeamt), secção de naturalização** (telefone +41 43 259 83 81).
-- Para perguntas sobre o seu próprio caso, um serviço de aconselhamento ou um advogado. Damos apenas informação geral e não podemos dizer-lhe se cumpre os requisitos.
+- Para perguntas sobre o seu próprio caso: um serviço de aconselhamento ou um advogado.
 
 ## Próximo passo
 

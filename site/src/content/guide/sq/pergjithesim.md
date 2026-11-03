@@ -22,9 +22,9 @@ draft: false
 cta: free-questions
 ---
 
-## Shkurt
+## Natyralizimi i zakonshëm
 
-Nëse dëshironi të merrni shtetësinë zvicerane dhe nuk jeni i martuar me një person zviceran, zakonisht do të ndiqni **natyralizimin e zakonshëm** (ordentliche Einbürgerung). Ai kalon në tri nivele: komuna, kantoni dhe Konfederata. Shpesh zgjat disa vjet. Kjo faqe jep një pasqyrë të parë. Ajo nuk zëvendëson këshillën e komunës suaj.
+Nëse dëshironi të merrni shtetësinë zvicerane dhe nuk jeni i martuar me një person zviceran, zakonisht do të ndiqni **natyralizimin e zakonshëm** (ordentliche Einbürgerung). Ai kalon në tri nivele: komuna, kantoni dhe Konfederata. Shpesh zgjat disa vjet.
 
 ## Kërkesat federale
 
@@ -73,7 +73,7 @@ Kushtet e plota dhe tarifat janë në faqet e SEM (në gjermanisht): [bashkësho
 
 - **Zyrës së natyralizimit të komunës suaj.** Ajo i njeh rregullat dhe afatet vendore.
 - Në kantonin e Cyrihut, **Zyrës së Komunave (Gemeindeamt), seksioni i natyralizimit** (telefon +41 43 259 83 81).
-- Për pyetje mbi çështjen tuaj, një shërbim këshillimi ose një avokat. Ne japim vetëm informacion të përgjithshëm dhe nuk mund t'ju themi nëse i plotësoni kushtet.
+- Për pyetje mbi çështjen tuaj: një shërbim këshillimi ose një avokat.
 
 ## Hapi tjetër
 

@@ -1,6 +1,6 @@
 id: steuerhoehe-richtet-sich-nach-einkommen-vermoegen
 lang: tr
-source_version: 1
+source_version: 2
 question: Zürich kantonunda bir kişinin ne kadar gelir ve servet vergisi ödeyeceği esas olarak neye bağlıdır?
 options:
   a: Vergiye tabi gelire ve servete
@@ -18,7 +18,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 1
+    source_version: 2
     question_de: Wovon hängt es im Kanton Zürich hauptsächlich ab, wie viel Einkommens- und Vermögenssteuer
       eine Person bezahlt?
     options_de:

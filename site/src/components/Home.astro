@@ -1,6 +1,6 @@
 ---
 // The home page: hero with a sample test question, the Zurich scene, how it works, guide cards,
-// the language strip and the Civics Pass band.
+// the language strip and the Viapunt Pass band.
 import { APP_URL } from "astro:env/server";
 import { HOME_KEYS, LOCALES, LOCALE_NAMES, resolveHref } from "../i18n/pages.mjs";
 import { ui } from "../i18n/ui";
@@ -120,7 +120,6 @@ const tagTone = ["teal", "clay", "sun"];
 <section class="wrap h-section" id="guides" aria-labelledby="guides-h" style="padding-bottom:24px">
   <div class="h-section__head">
     <h2 id="guides-h">{h.guidesHeading}</h2>
-    <p>{h.guidesNote}</p>
   </div>
   <ul class="h-guides">
     {HOME_KEYS.map((k, i) => {

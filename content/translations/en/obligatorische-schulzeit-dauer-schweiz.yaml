@@ -1,6 +1,6 @@
 id: obligatorische-schulzeit-dauer-schweiz
 lang: en
-source_version: 2
+source_version: 3
 question: How many years does compulsory schooling last in the canton of Zurich, if kindergarten is included?
 options:
   a: Eleven years
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 2
+    source_version: 3
     question_de: Wie viele Jahre dauert die obligatorische Schulzeit im Kanton Zürich, wenn der Kindergarten
       eingerechnet wird?
     options_de:

@@ -22,9 +22,9 @@ draft: false
 cta: free-questions
 ---
 
-## In short
+## Ordinary naturalisation
 
-If you want to become a Swiss citizen and you are not married to a Swiss person, you will usually use **ordinary naturalisation**. It runs through three levels: commune, canton and Confederation. It often takes several years. This page gives a first overview. It does not replace advice from your commune.
+If you want to become a Swiss citizen and you are not married to a Swiss person, you will usually use **ordinary naturalisation**. It runs through three levels: commune, canton and Confederation. It often takes several years.
 
 ## Federal requirements
 
@@ -73,7 +73,7 @@ The full conditions and fees are on the SEM pages (in German): [spouses](https:/
 
 - The **citizenship office of your commune**. It knows the local rules and dates.
 - In the canton of Zurich, the **Gemeindeamt, naturalisation section** (telephone +41 43 259 83 81).
-- For questions about your own case, an advice service or a lawyer. We give general information only and cannot tell you whether you qualify.
+- For questions about your own case: an advice service or a lawyer.
 
 ## Next step
 

@@ -1,4 +1,4 @@
-"""The Civics Pass products. Prices live in Stripe under these lookup keys and are never
+"""The Viapunt Pass products. Prices live in Stripe under these lookup keys and are never
 held here; this module knows only what each key buys and for how long (D-015)."""
 
 from __future__ import annotations
@@ -9,6 +9,7 @@ from datetime import datetime
 
 PASS_ZH = "civics_pass_zh"  # noqa: S105 (a lookup key, not a secret)
 PASS_AG = "civics_pass_ag"  # noqa: S105
+PASS_CH = "civics_pass_ch"  # noqa: S105 (Rest of Switzerland: federal questions only)
 EXTENSION = "civics_extension"
 
 KIND_PASS = "pass"  # noqa: S105
@@ -25,9 +26,10 @@ class Product:
 
 
 PRODUCTS: dict[str, Product] = {
-    PASS_ZH: Product(PASS_ZH, KIND_PASS, "zh", 6, "Civics Pass: canton of Zurich"),
-    PASS_AG: Product(PASS_AG, KIND_PASS, "ag", 6, "Civics Pass: canton of Aargau"),
-    EXTENSION: Product(EXTENSION, KIND_EXTENSION, None, 3, "Civics Pass: three-month extension"),
+    PASS_ZH: Product(PASS_ZH, KIND_PASS, "zh", 6, "Viapunt Pass: canton of Zurich"),
+    PASS_AG: Product(PASS_AG, KIND_PASS, "ag", 6, "Viapunt Pass: canton of Aargau"),
+    PASS_CH: Product(PASS_CH, KIND_PASS, "ch", 6, "Viapunt Pass: rest of Switzerland"),
+    EXTENSION: Product(EXTENSION, KIND_EXTENSION, None, 3, "Viapunt Pass: three-month extension"),
 }
 ALL_KEYS = tuple(PRODUCTS)
 PASS_FOR_CANTON = {p.canton: p.key for p in PRODUCTS.values() if p.kind == KIND_PASS}

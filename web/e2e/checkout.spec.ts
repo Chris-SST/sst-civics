@@ -6,7 +6,7 @@ test("checkout in test mode: not connected without a key; a signed webhook opens
   await signUpAndVerify(page, email);
 
   // No Stripe key in this environment: the pricing panel says so and offers no Buy button.
-  await expect(page.getByRole("heading", { name: "Civics Pass", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Viapunt Pass", exact: true })).toBeVisible();
   await expect(page.getByText("Payments are not switched on in this environment yet.")).toBeVisible();
   await expect(page.getByRole("button", { name: "Buy" })).toHaveCount(0);
   await expect(page.getByText("Free practice", { exact: true })).toBeVisible();

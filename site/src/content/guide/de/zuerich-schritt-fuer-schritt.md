@@ -26,14 +26,14 @@ cta: free-questions
 
 ## Bevor Sie anfangen
 
-Im Kanton Zürich reichen Sie das Gesuch online beim **Gemeindeamt** des Kantons ein, das das Verfahren führt. Ihre **Wohngemeinde** prüft danach Ihre Integration und erteilt das Gemeindebürgerrecht. Der Kanton bietet auf seiner Seite einen kostenlosen, unverbindlichen Selbsttest an, der anzeigt, ob Sie die Voraussetzungen voraussichtlich erfüllen. Das Ergebnis ist nicht verbindlich.
+Im Kanton Zürich reichen Sie das Gesuch online beim **Gemeindeamt** des Kantons ein, das das Verfahren führt. Ihre **Wohngemeinde** prüft danach Ihre Integration und erteilt das Gemeindebürgerrecht. Der Kanton bietet auf seiner Seite einen kostenlosen, unverbindlichen Selbsttest an, der anzeigt, ob Sie die Voraussetzungen voraussichtlich erfüllen.
 
 ## Wohnsitz in Gemeinde und Kanton
 
 Zusätzlich zu den Bundesregeln (C-Bewilligung, zehn Jahre Aufenthalt in der Schweiz, davon drei in den letzten fünf Jahren) gelten in Zürich diese Fristen:
 
 - **Gemeinde:** Sie müssen unmittelbar vor dem Gesuch seit mindestens **zwei Jahren in derselben Gemeinde** wohnen.
-- **Kanton:** Wer jünger als 25 ist, muss nur zwei Jahre im Kanton Zürich gelebt haben. Der Selbsttest des Kantons nennt zwei Jahre im Kanton als Beispiel für eine Bedingung. Wir konnten auf den Seiten des Kantons nicht eindeutig bestätigen, ob für Personen ab 25 eine längere Frist gilt. Fragen Sie das Gemeindeamt oder Ihre Gemeinde.
+- **Kanton:** Wer jünger als 25 ist, muss nur zwei Jahre im Kanton Zürich gelebt haben. Der Selbsttest des Kantons nennt zwei Jahre im Kanton als Beispiel für eine Bedingung. Ob ab 25 eine längere Frist gilt, geht aus den Seiten des Kantons nicht klar hervor; das Gemeindeamt gibt Auskunft.
 
 Ein Umzug in eine andere Zürcher Gemeinde während des Verfahrens kann möglich sein. Melden Sie ihn sofort Ihrer Gemeinde.
 

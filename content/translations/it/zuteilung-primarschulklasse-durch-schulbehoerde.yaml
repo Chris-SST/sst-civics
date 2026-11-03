@@ -1,6 +1,6 @@
 id: zuteilung-primarschulklasse-durch-schulbehoerde
 lang: it
-source_version: 2
+source_version: 3
 question: Chi decide, nel Cantone di Zurigo, a quale classe della scuola elementare viene assegnato un
   bambino?
 options:
@@ -20,7 +20,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 2
+    source_version: 3
     question_de: Wer entscheidet im Kanton Zürich, welcher Klasse der Primarschule ein Kind zugeteilt
       wird?
     options_de:

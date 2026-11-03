@@ -41,7 +41,7 @@ export default function LearnerHome() {
       .catch(() => setStudy(null));
   }, []);
 
-  // Signed up from the Civics Pass bar: bring the pass into view once.
+  // Signed up from the Viapunt Pass bar: bring the pass into view once.
   useEffect(() => {
     if (!tutor) return;
     try {
@@ -101,7 +101,6 @@ export default function LearnerHome() {
           )}
         </p>
         {tutor.usage.near_monthly_limit && <p className="alert alert-warn small">{t("learner.nearLimit")}</p>}
-        <p className="small muted">{t("learner.integrity")}</p>
       </section>
     </>
   );

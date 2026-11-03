@@ -200,7 +200,6 @@ One line per fact the official question catalogue asks about, in our own words, 
 - Alle Einwohnerinnen und Einwohner müssen eine Krankenversicherung abschliessen. / Health insurance is compulsory for all residents.
 - Die Pflicht zum Militär- oder Zivilschutzdienst trifft in der Schweiz Männer mit Schweizer Bürgerrecht. / The duty to serve in the military or civil protection applies in Switzerland to men holding Swiss citizenship.
 - Nur Männer sind verpflichtet, bis zu einem gewissen Alter Militärdienst oder Zivilschutz zu leisten. / Only men are obliged to perform military or civil protection service up to a certain age.
-- Wie viel Steuern eine Person zahlt, richtet sich nach ihrem steuerpflichtigen Einkommen und Vermögen. / The amount of tax a person pays depends on their taxable income and assets.
 - Mit der Steuererklärung legen Steuerpflichtige den Steuerbehörden ihre finanziellen Verhältnisse offen. / With the tax return, taxpayers disclose their financial circumstances to the tax authorities.
 - Der Zivildienst kann anstelle des Militärdienstes geleistet werden. / Civilian service can be performed instead of military service.
 - Wer eine Steuerveranlagung anfechten will, kann schriftlich Einsprache bei der Steuerbehörde erheben. / Anyone wishing to contest a tax assessment can file a written objection with the tax authority.
@@ -208,12 +207,9 @@ One line per fact the official question catalogue asks about, in our own words, 
 - Schulen werden aus Steuergeldern des Staates bezahlt. / Schools are paid for from the state's tax revenue.
 - Die Abkürzung MWST steht für die Mehrwertsteuer. / The abbreviation MWST stands for value added tax.
 - Wer alkoholisiert oder unter Drogeneinfluss fährt, riskiert den Entzug des Führerausweises. / Driving under the influence of alcohol or drugs can lead to withdrawal of the driving licence.
-- Wer einen Hund hält, muss dafür eine Abgabe an den Staat entrichten. / Dog owners must pay a tax on their dog.
 
 ## Education system (Bildungssystem)
 
-- Der gesetzlich vorgeschriebene Schulbesuch dauert in der Schweiz elf Jahre. / Legally required schooling in Switzerland lasts eleven years.
-- Schulpflege oder Schulleitung legen fest, welcher Primarschulklasse ein Kind zugeteilt wird. / The school board or school management decides which primary school class a child is assigned to.
 - Der Besuch der Primarschule gehört zur gesetzlichen Schulpflicht. / Attending primary school is part of legally required schooling.
 - Ein Berufsbildungszentrum bündelt verschiedene Angebote der beruflichen Aus- und Weiterbildung an einem Ort. / A vocational training centre brings together various vocational education offerings at one location.
 - Auskünfte zu Lehrstellen, Berufswahl und Arbeit erhält man im Berufsinformationszentrum. / Information about apprenticeships, careers and employment is available at the career information centre (Berufsinformationszentrum).
@@ -376,14 +372,18 @@ One line per fact the official question catalogue asks about, in our own words, 
 
 ## Cantonal services and taxes (Kantonale Leistungen und Steuern)
 
+- Wie viel Steuern eine Person zahlt, richtet sich nach ihrem steuerpflichtigen Einkommen und Vermögen. / The amount of tax a person pays depends on their taxable income and assets.
 - Fahrausweise für Personenwagen werden im Kanton Zürich vom Strassenverkehrsamt erteilt. / Driving licences for cars in the canton of Zurich are issued by the road traffic office.
 - Die Zulassung von Motorfahrzeugen zum Strassenverkehr erfolgt durch das kantonale Strassenverkehrsamt. / Approval of motor vehicles for road use is carried out by the cantonal road traffic office.
+- Wer einen Hund hält, muss dafür eine Abgabe an den Staat entrichten. / Dog owners must pay a tax on their dog.
 - Zu den bedeutenden Steuern von Kanton und Gemeinden zählt die Steuer auf das Vermögen. / Wealth tax is one of the main taxes levied by cantons and communes.
 - Kanton und Gemeinden erheben als wichtige Steuer jene auf das Einkommen. / Income tax is one of the main taxes levied by cantons and communes.
 
 ## Education and health in the canton of Zurich (Bildung und Gesundheit im Kanton Zürich)
 
 - Der Kanton Zürich ist für den Betrieb und die Trägerschaft der Universität zuständig. / The canton of Zurich is responsible for running and operating the university.
+- Der gesetzlich vorgeschriebene Schulbesuch dauert in der Schweiz elf Jahre. / Legally required schooling in Switzerland lasts eleven years.
+- Schulpflege oder Schulleitung legen fest, welcher Primarschulklasse ein Kind zugeteilt wird. / The school board or school management decides which primary school class a child is assigned to.
 - Für die öffentliche obligatorische Schule tragen hauptsächlich Kantone und Gemeinden die Verantwortung. / Cantons and communes bear primary responsibility for compulsory public schooling.
 - Im Kanton Zürich fängt die Schulpflicht mit dem Eintritt in den Kindergarten an. / In the canton of Zurich, compulsory schooling starts with kindergarten.
 

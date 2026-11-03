@@ -1,6 +1,6 @@
 id: obligatorische-schulzeit-dauer-schweiz
 lang: fr
-source_version: 2
+source_version: 3
 question: Combien d'années dure la scolarité obligatoire dans le canton de Zurich, si l'on compte l'école
   enfantine ?
 options:
@@ -21,7 +21,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 2
+    source_version: 3
     question_de: Wie viele Jahre dauert die obligatorische Schulzeit im Kanton Zürich, wenn man den Kindergarten
       mitzählt?
     options_de:

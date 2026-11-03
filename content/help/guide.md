@@ -10,9 +10,9 @@ English: {{GUIDE_URL}}/en/overview/
 German: {{GUIDE_URL}}/de/ueberblick/  
 Last checked: 2026-10-30
 
-## In short
+## Ordinary naturalisation
 
-If you want to become a Swiss citizen and you are not married to a Swiss person, you will usually use **ordinary naturalisation**. It runs through three levels: commune, canton and Confederation. It often takes several years. This page gives a first overview. It does not replace advice from your commune.
+If you want to become a Swiss citizen and you are not married to a Swiss person, you will usually use **ordinary naturalisation**. It runs through three levels: commune, canton and Confederation. It often takes several years.
 
 ## Federal requirements
 
@@ -61,7 +61,7 @@ The full conditions and fees are on the SEM pages (in German): [spouses](https:/
 
 - The **citizenship office of your commune**. It knows the local rules and dates.
 - In the canton of Zurich, the **Gemeindeamt, naturalisation section** (telephone +41 43 259 83 81).
-- For questions about your own case, an advice service or a lawyer. We give general information only and cannot tell you whether you qualify.
+- For questions about your own case: an advice service or a lawyer.
 
 ## Next step
 
@@ -84,14 +84,14 @@ Last checked: 2026-10-30
 
 ## Before you start
 
-In the canton of Zurich you file the application online with the canton's **Gemeindeamt** (office for communes), which runs the procedure. Your **commune of residence** then checks your integration and grants communal citizenship. The canton offers a free, non-binding self-check on its website that shows whether you are likely to meet the requirements. The result is not binding.
+In the canton of Zurich you file the application online with the canton's **Gemeindeamt** (office for communes), which runs the procedure. Your **commune of residence** then checks your integration and grants communal citizenship. The canton offers a free, non-binding self-check on its website that shows whether you are likely to meet the requirements.
 
 ## Residence in commune and canton
 
 On top of the federal rules (C permit, ten years in Switzerland, three of them in the last five years), Zurich has these periods:
 
 - **Commune:** immediately before you apply you must have lived in the **same commune for at least two years**.
-- **Canton:** if you are under 25, you only need two years in the canton of Zurich. The canton's self-check lists two years in the canton as an example of a condition. We could not clearly confirm on the canton's pages whether a longer period applies from age 25. Ask the Gemeindeamt or your commune.
+- **Canton:** if you are under 25, you only need two years in the canton of Zurich. The canton's self-check lists two years in the canton as an example of a condition. The canton's pages do not say clearly whether a longer period applies from age 25; the Gemeindeamt can tell you.
 
 Moving to another Zurich commune during the procedure may be possible. Tell your commune at once.
 
@@ -150,7 +150,7 @@ English: {{GUIDE_URL}}/en/documents/
 German: {{GUIDE_URL}}/de/unterlagen/  
 Last checked: 2026-10-30
 
-## The short answer
+## What you attach
 
 Since 1 July 2023 the canton of Zurich has had one set of rules for every commune. You file the application online with the canton's **Gemeindeamt** (office for communes), not with your commune. For every person in the application you attach **two documents** (KBüV § 7):
 
@@ -292,9 +292,9 @@ Your commune decides whether an exemption applies to you. The canton offers a se
 
 The canton's page gives **no number of questions, no duration and no pass mark**. It refers you to your commune.
 
-A 2022 press report mentioned 50 questions in 60 minutes and 30 correct answers to pass. **The canton has not confirmed this.** We did not find it on any page of the canton. Do not rely on it. Ask your commune about the format, the time and the pass mark.
+A 2022 press report mentioned 50 questions in 60 minutes, with 30 correct answers to pass. The canton has not confirmed these figures; your commune can tell you the format and pass mark.
 
-The canton publishes its question catalogue in German. Its page mentions no other languages. Expect the test to be in German and check this with your commune.
+The canton publishes its question catalogue in German only, so expect the test in German.
 
 ## The topics
 
@@ -325,7 +325,7 @@ Questions about the test go to the Gemeindeamt, naturalisation section: grundken
 
 ## How our practice fits in
 
-Our practice questions are **original questions that we wrote**. They cover the same topics as the test, but they are not the canton's questions, and the real test may be worded differently. You first study in your own language, then practise in German. Translations are study aids. The real test is in German. This service is independent and not connected to the canton.
+Our practice questions are **original questions that we wrote**. They cover the same topics as the test but are not the canton's questions. You study first in your own language, then in German, the language of the test.
 
 ## Next step
 
@@ -377,7 +377,7 @@ fide is a system developed on behalf of the Confederation. The fide test checks 
 - The written part requires Swiss standard German, not dialect.
 - If you already have B1 or better, you can use the **fide dossier** from age 16: you submit documents and have a meeting. The passport then records B1.
 
-The pages we read do not say how long a language passport stays valid. Ask your commune whether an older proof is still accepted.
+fide does not say how long a language passport stays valid. Ask your commune whether an older one is accepted.
 
 ## Where and how to take the exam
 
@@ -385,7 +385,7 @@ You take the fide test at an accredited exam institution. fide lists them by can
 
 ## Typical prices
 
-The whole fide test costs **CHF 250**, the oral part alone CHF 170, the written part alone CHF 120. For other certificates and for the Cantonal German Test in Zurich, the pages give no fixed price. It depends on the provider and the commune. Ask.
+The whole fide test costs **CHF 250**, the oral part alone CHF 170, the written part alone CHF 120. For other certificates and for the Cantonal German Test in Zurich, the pages give no fixed price. It depends on the provider and the commune.
 
 ## Exemptions in the canton of Zurich
 
@@ -425,7 +425,7 @@ For ordinary naturalisation in the canton of Zurich you pay the Confederation, t
 | Children included in a parent's application | free | free | free |
 | Application is rejected | 300 | 200 | the commune's fee |
 
-Source: the canton of Zurich's fee table. The SEM gives the federal fee as CHF 100 per adult, CHF 150 per couple, and CHF 50 for minors who apply on their own. Check the canton's current table before you apply.
+Source: the canton of Zurich's fee table. The SEM gives the federal fee as CHF 100 per adult, CHF 150 per couple, and CHF 50 for minors who apply on their own.
 
 ## Communal fees
 
@@ -436,7 +436,7 @@ Communes set the fee themselves. A 2025 study by the canton shows, for people ag
 The cost depends on the proof.
 
 - **fide test:** whole test CHF 250, oral part only CHF 170, written part only CHF 120. These are the prices on fide's page.
-- **Cantonal German Test and other certificates:** the canton says fees differ by commune and language school. We found no single price. Ask your commune.
+- **Cantonal German Test and other certificates:** the canton says fees differ by commune and language school; there is no single price.
 
 ## Knowledge test
 
@@ -444,7 +444,7 @@ The canton gives no amount. The cost depends on the commune and the provider. As
 
 ## Are fees refunded?
 
-We found no general refund rule on the pages of the Confederation or the canton. The canton's fee table shows that fees are charged even when an application is rejected. So expect that fees you have paid are not returned if the application fails, and ask your commune before you file.
+Neither the Confederation nor the canton publishes a refund rule, and the canton's table charges fees even when an application is rejected. Assume that fees you have paid are not refunded.
 
 ## Other procedures
 
@@ -482,13 +482,9 @@ For ordinary naturalisation you need ten years of residence in Switzerland. The 
 
 Cantons and communes also set their own residence periods. The calculator does not check them.
 
-## Your data
+## What it does not do
 
-The calculator runs **only in your browser**. It sends nothing to a server and **stores nothing**. When you close the page, your entries are gone.
-
-## Important notice
-
-The calculator gives a **rough guide, not legal advice**. It does not tell you whether you can be naturalised. Only the responsible authority decides whether your years count. If in doubt, ask your commune or, in the canton of Zurich, the Gemeindeamt. The canton also offers its own self-check.
+The calculator counts years. It does not decide whether you can be naturalised or which years count: that is up to the authority handling your application. The canton also has its own self-check.
 
 ## Next step
 
@@ -514,29 +510,27 @@ Last checked: 2026-10-30
 
 ## Where the questions come from
 
-All questions, explanations and translations are written by us. They are original. They cover the same topics as the canton's test, but they are not the canton's questions, and the real test may be worded differently. Each answer rests on pages of the Confederation, the canton or the communes.
+We write all questions, explanations and translations ourselves. They cover the same topics as the canton's test but are not the canton's questions. Each answer is based on pages of the Confederation, the canton or the communes.
 
 ## How to practise
 
-First you learn the question in your own language, beside the German text. Later you practise in German only, as in the test. Translations are study aids. The real test is in German.
+First you learn the question in your own language, beside the German text. Later you practise in German only, as in the test.
 
-## What the Civics Pass adds
+## What the Viapunt Pass adds
 
-The **Civics Pass for the canton of Zurich** costs **CHF 29** (one payment, 6 months of access) and includes:
+The **Viapunt Pass for the canton of Zurich** costs **CHF 29** (one payment, 6 months of access) and includes:
 
 - all questions, about 350, with explanations,
 - all study modes: Learn, Practise and Mock test,
-- unlimited mock tests in the format we assume for Zurich,
+- unlimited timed mock tests in German,
 - the "Explain this" button in your language,
 - every language.
 
-If you need more time, you can extend access by three months for CHF 9. Pay by card or TWINT. Prices may change; the price at the time of purchase applies.
-
-The Civics Pass does not promise any result in the real test. It helps you learn the topics.
+If you need more time, you can extend access by three months for CHF 9. Pay by card or TWINT.
 
 ## Next step
 
-Start with the free questions. If they help, you can buy the Civics Pass.
+Start with the free questions. If they help, you can buy the Viapunt Pass.
 
 Official sources of this page:
 
@@ -561,11 +555,11 @@ The canton of Zurich's pages do not say. Ask your commune whether and when you c
 
 ### Is the knowledge test in German only?
 
-The canton of Zurich publishes its question catalogue in German, and its page mentions no other language. Expect the test to be in German and ask your commune. More on the page [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
+The canton of Zurich publishes its question catalogue in German only, so expect the test in German. More on the page [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
 
 ### Is this website official?
 
-No. This service is independent and not connected to any authority. All practice questions are original and are not the canton's questions. We give general information, not legal advice. The [overview]({{GUIDE_URL}}/en/overview/) is a good place to start.
+No. This service is independent and not connected to any authority. All practice questions are original and are not the canton's questions. The [overview]({{GUIDE_URL}}/en/overview/) is a good place to start.
 
 ### Do translations help in the real test?
 

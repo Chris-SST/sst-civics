@@ -26,14 +26,14 @@ cta: free-questions
 
 ## Before you start
 
-In the canton of Zurich you file the application online with the canton's **Gemeindeamt** (office for communes), which runs the procedure. Your **commune of residence** then checks your integration and grants communal citizenship. The canton offers a free, non-binding self-check on its website that shows whether you are likely to meet the requirements. The result is not binding.
+In the canton of Zurich you file the application online with the canton's **Gemeindeamt** (office for communes), which runs the procedure. Your **commune of residence** then checks your integration and grants communal citizenship. The canton offers a free, non-binding self-check on its website that shows whether you are likely to meet the requirements.
 
 ## Residence in commune and canton
 
 On top of the federal rules (C permit, ten years in Switzerland, three of them in the last five years), Zurich has these periods:
 
 - **Commune:** immediately before you apply you must have lived in the **same commune for at least two years**.
-- **Canton:** if you are under 25, you only need two years in the canton of Zurich. The canton's self-check lists two years in the canton as an example of a condition. We could not clearly confirm on the canton's pages whether a longer period applies from age 25. Ask the Gemeindeamt or your commune.
+- **Canton:** if you are under 25, you only need two years in the canton of Zurich. The canton's self-check lists two years in the canton as an example of a condition. The canton's pages do not say clearly whether a longer period applies from age 25; the Gemeindeamt can tell you.
 
 Moving to another Zurich commune during the procedure may be possible. Tell your commune at once.
 

@@ -37,7 +37,7 @@ For ordinary naturalisation in the canton of Zurich you pay the Confederation, t
 | Children included in a parent's application | free | free | free |
 | Application is rejected | 300 | 200 | the commune's fee |
 
-Source: the canton of Zurich's fee table. The SEM gives the federal fee as CHF 100 per adult, CHF 150 per couple, and CHF 50 for minors who apply on their own. Check the canton's current table before you apply.
+Source: the canton of Zurich's fee table. The SEM gives the federal fee as CHF 100 per adult, CHF 150 per couple, and CHF 50 for minors who apply on their own.
 
 ## Communal fees
 
@@ -48,7 +48,7 @@ Communes set the fee themselves. A 2025 study by the canton shows, for people ag
 The cost depends on the proof.
 
 - **fide test:** whole test CHF 250, oral part only CHF 170, written part only CHF 120. These are the prices on fide's page.
-- **Cantonal German Test and other certificates:** the canton says fees differ by commune and language school. We found no single price. Ask your commune.
+- **Cantonal German Test and other certificates:** the canton says fees differ by commune and language school; there is no single price.
 
 ## Knowledge test
 
@@ -56,7 +56,7 @@ The canton gives no amount. The cost depends on the commune and the provider. As
 
 ## Are fees refunded?
 
-We found no general refund rule on the pages of the Confederation or the canton. The canton's fee table shows that fees are charged even when an application is rejected. So expect that fees you have paid are not returned if the application fails, and ask your commune before you file.
+Neither the Confederation nor the canton publishes a refund rule, and the canton's table charges fees even when an application is rejected. Assume that fees you have paid are not refunded.
 
 ## Other procedures
 

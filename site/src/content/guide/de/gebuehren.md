@@ -37,7 +37,7 @@ Bei der ordentlichen Einbürgerung im Kanton Zürich zahlen Sie an den Bund, an 
 | Kinder, die ins Gesuch der Eltern einbezogen sind | kostenlos | kostenlos | kostenlos |
 | Gesuch wird abgewiesen | 300 | 200 | Gebühr der Gemeinde |
 
-Quelle: Gebührentabelle des Kantons Zürich. Das SEM nennt für den Bund CHF 100 pro Erwachsenen, CHF 150 pro Ehepaar und CHF 50 für Minderjährige, die selbst ein Gesuch stellen. Prüfen Sie vor dem Gesuch die aktuelle Tabelle des Kantons.
+Quelle: Gebührentabelle des Kantons Zürich. Das SEM nennt für den Bund CHF 100 pro Erwachsenen, CHF 150 pro Ehepaar und CHF 50 für Minderjährige, die selbst ein Gesuch stellen.
 
 ## Gemeindegebühren
 
@@ -48,7 +48,7 @@ Die Gemeinden legen die Gebühr selbst fest. Eine Studie des Kantons von 2025 ze
 Die Kosten hängen vom Nachweis ab.
 
 - **fide-Test:** ganzer Test CHF 250, nur mündlich CHF 170, nur schriftlich CHF 120. Das ist der Preis auf der Seite von fide.
-- **Kantonaler Deutschtest und andere Zertifikate:** Der Kanton schreibt, die Gebühren seien je nach Gemeinde und Sprachschule verschieden. Wir haben keinen einheitlichen Preis gefunden. Fragen Sie Ihre Gemeinde.
+- **Kantonaler Deutschtest und andere Zertifikate:** Der Kanton schreibt, die Gebühren seien je nach Gemeinde und Sprachschule verschieden; einen einheitlichen Preis gibt es nicht.
 
 ## Grundkenntnistest
 
@@ -56,7 +56,7 @@ Der Kanton nennt keinen Betrag. Die Kosten hängen von der Gemeinde und vom Anbi
 
 ## Werden Gebühren zurückerstattet?
 
-Wir haben auf den Seiten von Bund und Kanton keine allgemeine Regel zur Rückerstattung gefunden. Die Gebührentabelle des Kantons zeigt, dass auch bei einer Abweisung Gebühren anfallen. Rechnen Sie deshalb damit, dass bezahlte Gebühren nicht zurückgegeben werden, wenn das Gesuch scheitert, und fragen Sie Ihre Gemeinde vor der Einreichung.
+Bund und Kanton nennen keine Regel zur Rückerstattung, und laut Gebührentabelle fallen auch bei einer Abweisung Gebühren an. Rechnen Sie damit, dass bezahlte Gebühren nicht zurückerstattet werden.
 
 ## Andere Verfahren
 

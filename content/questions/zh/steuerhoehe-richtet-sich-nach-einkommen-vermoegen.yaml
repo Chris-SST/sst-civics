@@ -1,8 +1,8 @@
 id: steuerhoehe-richtet-sich-nach-einkommen-vermoegen
-version: 1
-scope: federal
-canton: null
-topic: bund.sozial.pflichten
+version: 2
+scope: zh
+canton: zh
+topic: kanton.sozial.steuern_leistungen
 question_de: Wovon hängt es hauptsächlich ab, wie viel Einkommens- und Vermögenssteuer eine Person im
   Kanton Zürich zahlt?
 options_de:
@@ -34,7 +34,7 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 1
+    version: 2
     reasoning: Die Höhe der Einkommens- und Vermögenssteuer im Kanton Zürich richtet sich hauptsächlich
       nach dem steuerpflichtigen Einkommen und Vermögen (zusammen mit dem Steuerfuss der Gemeinde), nicht
       nach Beruf, Wohndauer oder Stimmrechtsausübung.
@@ -45,7 +45,7 @@ checks:
       bezahlen. Der Begriff «steuerpflichtig» fehlt dort, die Aussage stützt die Antwort aber inhaltlich.'
     at: *id001
     model: claude-sonnet-5-5
-    version: 1
+    version: 2
   panel:
     verdict: approve
     reviews:
@@ -78,7 +78,7 @@ checks:
         Steuer beeinflusst. Das ist aber nicht nötig, weil keine Antwort diesen Punkt nennt.'
     round: 1
     at: &id002 2026-11-02
-    version: 1
+    version: 2
 review:
   action: ai_panel
   note: Approved by the AI review panel

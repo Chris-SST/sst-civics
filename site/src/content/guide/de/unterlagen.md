@@ -40,7 +40,7 @@ draft: false
 cta: free-questions
 ---
 
-## Kurz gesagt
+## Was Sie beilegen
 
 Seit dem 1. Juli 2023 gelten im Kanton Zürich für alle Gemeinden dieselben Regeln. Sie reichen das Gesuch online beim **Gemeindeamt** des Kantons ein, nicht bei der Gemeinde. Für jede Person im Gesuch legen Sie **zwei Dokumente** bei (KBüV § 7):
 

@@ -29,13 +29,9 @@ Olağan vatandaşlığa alınma için İsviçre'de on yıllık ikamet gerekir. H
 
 Kantonlar ve komünler ayrıca kendi ikamet sürelerini belirler. Hesaplayıcı bunları denetlemez.
 
-## Verileriniz
+## Hesaplayıcının yapmadıkları
 
-Hesaplayıcı **yalnızca tarayıcınızda** çalışır. Bir sunucuya hiçbir şey göndermez ve **hiçbir şey saklamaz**. Sayfayı kapattığınızda girdileriniz silinir.
-
-## Önemli uyarı
-
-Hesaplayıcı **yaklaşık bir yol gösterici sunar, hukuki danışmanlık değildir**. Vatandaşlığa alınıp alınamayacağınızı söylemez. Yıllarınızın sayılıp sayılmayacağına yalnızca yetkili makam karar verir. Şüpheniz varsa komününüze veya Zürih Kantonu'nda Komünler Dairesi'ne (Gemeindeamt) sorun. Kanton ayrıca kendi kendine değerlendirme sunar.
+Hesaplayıcı yılları sayar. Vatandaşlığa alınıp alınamayacağınıza veya hangi yılların sayılacağına karar vermez: buna başvurunuzu işleyen makam karar verir. Kanton ayrıca kendi kendine değerlendirme sunar.
 
 ## Sonraki adım
 

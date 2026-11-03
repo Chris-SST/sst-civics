@@ -110,6 +110,7 @@ export default function ExplainPanel({ questionId, lang, onClose }: { questionId
           {t("common.close")}
         </button>
       </div>
+      <p className="small muted explain-note">{t("explain.note")}</p>
 
       {!conv && !error && <p className="muted">{t("common.working")}</p>}
       {error ? <ErrorText error={error} /> : null}

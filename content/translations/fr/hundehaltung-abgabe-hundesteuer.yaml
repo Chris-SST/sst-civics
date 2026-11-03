@@ -1,6 +1,6 @@
 id: hundehaltung-abgabe-hundesteuer
 lang: fr
-source_version: 2
+source_version: 3
 question: Que prévaut-il dans le canton de Zurich pour les personnes qui possèdent un chien ?
 options:
   a: Elles doivent payer chaque année une taxe sur les chiens à la commune (Gemeinde).
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 2
+    source_version: 3
     question_de: Was gilt im Kanton Zürich für Personen, die einen Hund besitzen?
     options_de:
       a: Sie müssen jedes Jahr eine Hundesteuer an die Gemeinde bezahlen.

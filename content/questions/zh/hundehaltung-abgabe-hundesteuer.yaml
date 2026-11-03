@@ -1,8 +1,8 @@
 id: hundehaltung-abgabe-hundesteuer
-version: 2
-scope: federal
-canton: null
-topic: bund.sozial.pflichten
+version: 3
+scope: zh
+canton: zh
+topic: kanton.sozial.steuern_leistungen
 question_de: Was gilt im Kanton Zürich für Personen, die einen Hund halten?
 options_de:
   a: Sie müssen jedes Jahr eine Hundeabgabe an die Gemeinde bezahlen.
@@ -30,7 +30,7 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 2
+    version: 3
     reasoning: Im Kanton Zürich erheben die Gemeinden jährlich eine Hundetaxe (Hundeabgabe) von den Hundehaltern,
       während es keine einmalige Bundesgebühr, keine jährliche kantonale Prüfung und keine Abgabepflicht
       nur bei Erwerbstätigkeit mit dem Hund gibt.
@@ -40,7 +40,7 @@ checks:
       eine Abgabe (Hundesteuer) bezahlen.» Das stützt Antwort a und die Erklärung (jährlich, an die Wohngemeinde).'
     at: *id001
     model: claude-sonnet-5-5
-    version: 2
+    version: 3
   panel:
     verdict: approve
     reviews:
@@ -68,7 +68,7 @@ checks:
         (Hundesteuer)», damit Lernende den Begriff aus dem Alltag wiedererkennen.'
     round: 2
     at: &id002 2026-11-02
-    version: 2
+    version: 3
 review:
   action: ai_panel
   note: Approved by the AI review panel

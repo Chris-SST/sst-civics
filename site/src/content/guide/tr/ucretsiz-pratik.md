@@ -1,6 +1,6 @@
 ---
 title: "Zürih bilgi testi için ücretsiz alıştırma"
-description: "Çevirili 30 ücretsiz örnek soru, kayıttan sonra bir ücretsiz deneme sınavı ve Civics Pass'in CHF 29 karşılığında sunduğu ek olanaklar."
+description: "Çevirili 30 ücretsiz örnek soru, kayıttan sonra bir ücretsiz deneme sınavı ve Viapunt Pass'in CHF 29 karşılığında sunduğu ek olanaklar."
 lang: tr
 slug: ucretsiz-pratik
 lastChecked: 2026-10-30
@@ -20,26 +20,24 @@ cta: pass
 
 ## Sorular nereden geliyor
 
-Tüm soruları, açıklamaları ve çevirileri biz yazıyoruz. Bunlar özgündür. Kantonun testiyle aynı konuları kapsarlar ancak kantonun soruları değildir ve gerçek test farklı ifade edilmiş olabilir. Her yanıt, Konfederasyonun, kantonun veya komünlerin sayfalarına dayanır.
+Tüm soruları, açıklamaları ve çevirileri kendimiz yazıyoruz. Kantonun testiyle aynı konuları kapsarlar ancak kantonun soruları değildir. Her yanıt, Konfederasyonun, kantonun veya komünlerin sayfalarına dayanır.
 
 ## Nasıl alıştırma yapılır
 
-Önce soruyu Almanca metnin yanında kendi dilinizde öğrenirsiniz. Daha sonra, testte olduğu gibi yalnızca Almanca alıştırma yaparsınız. Çeviriler çalışma yardımcılarıdır. Gerçek test Almancadır.
+Önce soruyu Almanca metnin yanında kendi dilinizde öğrenirsiniz. Daha sonra, testte olduğu gibi yalnızca Almanca alıştırma yaparsınız.
 
-## Civics Pass neler ekler
+## Viapunt Pass neler ekler
 
-**Zürih Kantonu için Civics Pass** **CHF 29** tutarındadır (tek ödeme, 6 ay erişim) ve şunları içerir:
+**Zürih Kantonu için Viapunt Pass** **CHF 29** tutarındadır (tek ödeme, 6 ay erişim) ve şunları içerir:
 
 - açıklamalarıyla birlikte tüm sorular, yaklaşık 350,
 - tüm çalışma kipleri: Öğren, Alıştırma yap ve Deneme sınavı,
-- Zürih için varsaydığımız biçimde sınırsız deneme sınavı,
+- Almanca, süreli ve sınırsız deneme sınavı,
 - kendi dilinizde «Bunu açıkla» düğmesi,
 - tüm diller.
 
-Daha fazla zamana ihtiyacınız olursa erişimi CHF 9 karşılığında üç ay uzatabilirsiniz. Ödeme kart veya TWINT ile yapılır. Fiyatlar değişebilir; satın alma anındaki fiyat geçerlidir.
-
-Civics Pass, gerçek testte herhangi bir sonuç vaat etmez. Konuları öğrenmenize yardımcı olur.
+Daha fazla zamana ihtiyacınız olursa erişimi CHF 9 karşılığında üç ay uzatabilirsiniz. Ödeme kart veya TWINT ile yapılır.
 
 ## Sonraki adım
 
-Ücretsiz sorularla başlayın. Size yardımcı olurlarsa Civics Pass'i satın alabilirsiniz.
+Ücretsiz sorularla başlayın. Size yardımcı olurlarsa Viapunt Pass'i satın alabilirsiniz.

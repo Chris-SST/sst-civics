@@ -120,7 +120,7 @@ async def test_reply_comes_from_the_fast_model_with_the_reference_material(api, 
             .one()
         )
     assert reply.model == "claude-haiku-5-5"
-    assert reply.prompt_version == "base@v3+civics@v2+help@v1"
+    assert reply.prompt_version == "base@v4+civics@v3+help@v2"
 
 
 async def test_guide_address_comes_from_the_settings(monkeypatch):

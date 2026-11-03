@@ -55,7 +55,7 @@ fide is a system developed on behalf of the Confederation. The fide test checks 
 - The written part requires Swiss standard German, not dialect.
 - If you already have B1 or better, you can use the **fide dossier** from age 16: you submit documents and have a meeting. The passport then records B1.
 
-The pages we read do not say how long a language passport stays valid. Ask your commune whether an older proof is still accepted.
+fide does not say how long a language passport stays valid. Ask your commune whether an older one is accepted.
 
 ## Where and how to take the exam
 
@@ -63,7 +63,7 @@ You take the fide test at an accredited exam institution. fide lists them by can
 
 ## Typical prices
 
-The whole fide test costs **CHF 250**, the oral part alone CHF 170, the written part alone CHF 120. For other certificates and for the Cantonal German Test in Zurich, the pages give no fixed price. It depends on the provider and the commune. Ask.
+The whole fide test costs **CHF 250**, the oral part alone CHF 170, the written part alone CHF 120. For other certificates and for the Cantonal German Test in Zurich, the pages give no fixed price. It depends on the provider and the commune.
 
 ## Exemptions in the canton of Zurich
 

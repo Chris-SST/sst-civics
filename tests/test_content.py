@@ -468,7 +468,7 @@ async def test_question_with_translation_status(api, api2, content):
     r = await api.get(f"/api/content/questions/{Q1}?lang=fr")
     assert r.json()["translation_status"] == "stale" and r.json()["translation"] is None
 
-    await learner_logged_in(api2, "olaf@example.ch")  # no Civics Pass
+    await learner_logged_in(api2, "olaf@example.ch")  # no Viapunt Pass
     assert (await api2.get(f"/api/content/questions/{Q1}")).status_code == 403
 
 

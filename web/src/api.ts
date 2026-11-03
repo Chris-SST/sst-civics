@@ -114,9 +114,9 @@ export interface Me {
   csrf_token: string;
 }
 
-export type ProductKey = "civics_pass_zh" | "civics_pass_ag" | "civics_extension";
+export type ProductKey = "civics_pass_zh" | "civics_pass_ch" | "civics_pass_ag" | "civics_extension";
 
-/** A Civics Pass or the extension, priced from Stripe by lookup key. */
+/** A Viapunt Pass or the extension, priced from Stripe by lookup key. */
 export interface ProductOut {
   key: ProductKey;
   kind: "pass" | "extension";
@@ -149,8 +149,10 @@ export interface PublicConfig {
   env: string;
 }
 
-/** Cantons a learner can choose at sign-up and an admin can grant access for. */
-export const CANTONS = ["zh", "ag"] as const;
+/** What a learner can choose at sign-up and an admin can grant access for: the cantons with a
+ * question set of their own, and "ch" (Rest of Switzerland: the federal questions only).
+ * Must match CANTONS_FOR_SALE on the server. Aargau is added when its questions are ready. */
+export const CANTONS = ["zh", "ch"] as const;
 /** Interface and study languages the API accepts (launch languages, D-014). */
 export const LANGUAGE_CODES = ["de", "en", "fr", "it", "pt", "es", "sq", "tr"] as const;
 export type LanguageCode = (typeof LANGUAGE_CODES)[number];

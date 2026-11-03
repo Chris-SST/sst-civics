@@ -37,9 +37,9 @@ Votre commune décide si une dispense s'applique à votre cas. Le canton propose
 
 La page du canton ne donne **ni nombre de questions, ni durée, ni seuil de réussite**. Elle vous renvoie à votre commune.
 
-Un article de presse de 2022 mentionnait 50 questions en 60 minutes et 30 réponses correctes pour réussir. **Le canton ne l'a pas confirmé.** Nous n'avons trouvé cette information sur aucune page du canton. Ne vous y fiez pas. Renseignez-vous auprès de votre commune sur le format, la durée et le seuil de réussite.
+Un article de presse de 2022 mentionnait 50 questions en 60 minutes, avec 30 réponses correctes pour réussir. Le canton n'a pas confirmé ces chiffres ; votre commune peut vous indiquer le format et le seuil de réussite.
 
-Le canton publie son catalogue de questions en allemand. Sa page ne mentionne aucune autre langue. Attendez-vous à ce que le test soit en allemand et vérifiez-le auprès de votre commune.
+Le canton publie son catalogue de questions uniquement en allemand ; attendez-vous donc à un test en allemand.
 
 ## Les thèmes
 
@@ -70,7 +70,7 @@ Les questions sur le test sont à adresser à l'Office des communes (Gemeindeamt
 
 ## Comment s'inscrit notre entraînement
 
-Nos questions d'entraînement sont des **questions originales que nous avons rédigées**. Elles couvrent les mêmes thèmes que le test, mais ce ne sont pas les questions du canton, et le vrai test peut être formulé autrement. Vous étudiez d'abord dans votre langue, puis vous vous entraînez en allemand. Les traductions sont des aides à l'étude. Le vrai test est en allemand. Ce service est indépendant et n'a aucun lien avec le canton.
+Nos questions d'entraînement sont des **questions originales que nous avons rédigées**. Elles couvrent les mêmes thèmes que le test, mais ce ne sont pas les questions du canton. Vous étudiez d'abord dans votre langue, puis en allemand, la langue du test.
 
 ## Prochaine étape
 

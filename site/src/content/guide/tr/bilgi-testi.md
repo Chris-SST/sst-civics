@@ -37,9 +37,9 @@ Muafiyetin sizin için geçerli olup olmadığına komününüz karar verir. Kan
 
 Kantonun sayfası **soru sayısı, süre veya geçme notu belirtmez**. Sizi komününüze yönlendirir.
 
-2022 tarihli bir basın haberi, 50 soruyu, 60 dakikayı ve geçmek için 30 doğru yanıtı anıyordu. **Kanton bunu doğrulamadı.** Bunu kantonun hiçbir sayfasında bulamadık. Buna güvenmeyin. Biçimi, süreyi ve geçme notunu komününüze sorun.
+2022 tarihli bir basın haberi, 60 dakikada 50 soru ve geçmek için 30 doğru yanıttan söz ediyordu. Kanton bu rakamları doğrulamadı; biçimi ve geçme notunu komününüz size söyleyebilir.
 
-Kanton soru kataloğunu Almanca yayımlar. Sayfasında başka bir dilden söz edilmez. Testin Almanca olmasını bekleyin ve komününüzle teyit edin.
+Kanton soru kataloğunu yalnızca Almanca yayımlar; bu nedenle testin Almanca olmasını bekleyin.
 
 ## Konular
 
@@ -70,7 +70,7 @@ Teste ilişkin sorular Komünler Dairesi'ne (Gemeindeamt), vatandaşlığa alın
 
 ## Alıştırmamız nereye oturuyor
 
-Alıştırma sorularımız **kendimizin yazdığı özgün sorulardır**. Testle aynı konuları kapsarlar ancak kantonun soruları değildir ve gerçek test farklı ifade edilmiş olabilir. Önce kendi dilinizde çalışır, sonra Almanca alıştırma yaparsınız. Çeviriler çalışma yardımcılarıdır. Gerçek test Almancadır. Bu hizmet bağımsızdır ve kantonla bağlantılı değildir.
+Alıştırma sorularımız **kendimizin yazdığı özgün sorulardır**. Testle aynı konuları kapsarlar ancak kantonun soruları değildir. Önce kendi dilinizde, sonra testin dili olan Almanca çalışırsınız.
 
 ## Sonraki adım
 

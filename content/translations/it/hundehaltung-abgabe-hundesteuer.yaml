@@ -1,6 +1,6 @@
 id: hundehaltung-abgabe-hundesteuer
 lang: it
-source_version: 2
+source_version: 3
 question: Che cosa vale nel Cantone di Zurigo per le persone che possiedono un cane?
 options:
   a: Devono pagare ogni anno una tassa sui cani al Comune (Gemeinde).
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 2
+    source_version: 3
     question_de: Was gilt im Kanton Zürich für Personen, die einen Hund besitzen?
     options_de:
       a: Sie müssen jedes Jahr eine Hundetaxe an die Gemeinde bezahlen.

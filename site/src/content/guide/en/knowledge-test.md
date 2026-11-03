@@ -37,9 +37,9 @@ Your commune decides whether an exemption applies to you. The canton offers a se
 
 The canton's page gives **no number of questions, no duration and no pass mark**. It refers you to your commune.
 
-A 2022 press report mentioned 50 questions in 60 minutes and 30 correct answers to pass. **The canton has not confirmed this.** We did not find it on any page of the canton. Do not rely on it. Ask your commune about the format, the time and the pass mark.
+A 2022 press report mentioned 50 questions in 60 minutes, with 30 correct answers to pass. The canton has not confirmed these figures; your commune can tell you the format and pass mark.
 
-The canton publishes its question catalogue in German. Its page mentions no other languages. Expect the test to be in German and check this with your commune.
+The canton publishes its question catalogue in German only, so expect the test in German.
 
 ## The topics
 
@@ -70,7 +70,7 @@ Questions about the test go to the Gemeindeamt, naturalisation section: grundken
 
 ## How our practice fits in
 
-Our practice questions are **original questions that we wrote**. They cover the same topics as the test, but they are not the canton's questions, and the real test may be worded differently. You first study in your own language, then practise in German. Translations are study aids. The real test is in German. This service is independent and not connected to the canton.
+Our practice questions are **original questions that we wrote**. They cover the same topics as the test but are not the canton's questions. You study first in your own language, then in German, the language of the test.
 
 ## Next step
 

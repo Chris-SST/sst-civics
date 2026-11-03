@@ -1,9 +1,9 @@
 ---
 title: "Impressum"
-description: "Wer Viapunt betreibt: Swiss Science Tutors GmbH, Brugg."
+description: "Betreiber und Kontakt von Viapunt."
 lang: de
 slug: impressum
-updated: 2026-11-02
+updated: 2026-11-03
 ---
 
 Viapunt ist ein Dienst der:
@@ -18,7 +18,7 @@ Eingetragen im Handelsregister des Kantons Aargau, UID CHE-151.758.869.
 
 ## Unabhängigkeit
 
-Viapunt ist ein unabhängiger privater Dienst. Er hat keine Verbindung zu einer Behörde des Bundes, eines Kantons oder einer Gemeinde und gibt allgemeine Informationen, keine Rechtsberatung. Mehr unter [Über Viapunt](/de/ueber-viapunt/).
+Viapunt ist ein unabhängiger privater Dienst und keine Behörde.
 
 ## Links auf andere Websites
 

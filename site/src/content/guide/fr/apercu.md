@@ -22,9 +22,9 @@ draft: false
 cta: free-questions
 ---
 
-## En bref
+## Naturalisation ordinaire
 
-Si vous souhaitez devenir citoyen suisse et que vous n'êtes pas marié à une personne de nationalité suisse, vous passerez en général par la **naturalisation ordinaire**. Elle se déroule à trois niveaux : la commune, le canton et la Confédération. Elle dure souvent plusieurs années. Cette page donne un premier aperçu. Elle ne remplace pas les conseils de votre commune.
+Si vous souhaitez devenir citoyen suisse et que vous n'êtes pas marié à une personne de nationalité suisse, vous passerez en général par la **naturalisation ordinaire**. Elle se déroule à trois niveaux : la commune, le canton et la Confédération. Elle dure souvent plusieurs années.
 
 ## Conditions fédérales
 
@@ -73,7 +73,7 @@ Les conditions complètes et les émoluments figurent sur les pages du SEM (en a
 
 - Le **service des naturalisations de votre commune**. Il connaît les règles et les dates locales.
 - Dans le canton de Zurich, l'**Office des communes (Gemeindeamt), section Naturalisations** (téléphone +41 43 259 83 81).
-- Pour les questions sur votre propre cas, un service de conseil ou un avocat. Nous donnons uniquement des informations générales et ne pouvons pas vous dire si vous remplissez les conditions.
+- Pour les questions sur votre propre cas : un service de conseil ou un avocat.
 
 ## Prochaine étape
 

@@ -135,8 +135,9 @@ async def test_system_prompt_has_the_question_and_translation_and_no_personal_da
     assert "Confederation, cantons and communes" in context
     assert "https://www.ch.ch/de/staat-und-politik/" in context
     assert "Reply language: English" in context
-    assert "never give legal advice" in context.lower() or "legal advice" in context.lower()
     assert "{{" not in context
+    # The own-case rule is stated once, in the base instructions (base/v4).
+    assert "the learner's own case" in call.system[0]["text"].lower()
     assert len(call.system) == 3  # base, civics (cached), session context
     joined = json.dumps(call.system) + json.dumps(call.messages)
     for private in (EMAIL, "mira", "keller", "example.ch"):
@@ -148,7 +149,7 @@ async def test_system_prompt_has_the_question_and_translation_and_no_personal_da
             .scalars()
             .one()
         )
-        assert reply.prompt_version == "base@v3+civics@v2+explain@v1"
+        assert reply.prompt_version == "base@v4+civics@v3+explain@v2"
         gate = (
             (await db.execute(select(LlmCall).where(LlmCall.purpose == "gatekeeper")))
             .scalars()

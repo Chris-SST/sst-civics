@@ -29,13 +29,9 @@ Para la naturalización ordinaria se necesitan diez años de residencia en Suiza
 
 Los cantones y los municipios fijan además sus propios periodos de residencia. La calculadora no los comprueba.
 
-## Sus datos
+## Lo que la calculadora no hace
 
-La calculadora funciona **solo en su navegador**. No envía nada a un servidor y **no guarda nada**. Al cerrar la página, sus datos desaparecen.
-
-## Aviso importante
-
-La calculadora ofrece una **orientación aproximada, no asesoramiento jurídico**. No le dice si puede naturalizarse. Solo la autoridad competente decide si sus años cuentan. En caso de duda, pregunte a su municipio o, en el cantón de Zúrich, a la Oficina de Municipios (Gemeindeamt). El cantón ofrece también su propia autoevaluación.
+La calculadora cuenta años. No decide si puede naturalizarse ni qué años cuentan: eso le corresponde a la autoridad que tramita su solicitud. El cantón ofrece también su propia autoevaluación.
 
 ## Siguiente paso
 

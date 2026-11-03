@@ -1,6 +1,6 @@
 ---
 title: "Práctica gratuita para la prueba de conocimientos de Zúrich"
-description: "30 preguntas de ejemplo gratuitas con traducciones, un simulacro gratuito tras registrarse y lo que añade el Civics Pass por CHF 29."
+description: "30 preguntas de ejemplo gratuitas con traducciones, un simulacro gratuito tras registrarse y lo que añade el Viapunt Pass por CHF 29."
 lang: es
 slug: practica-gratuita
 lastChecked: 2026-10-30
@@ -20,26 +20,24 @@ cta: pass
 
 ## De dónde vienen las preguntas
 
-Todas las preguntas, explicaciones y traducciones las escribimos nosotros. Son originales. Abarcan los mismos temas que la prueba del cantón, pero no son las preguntas del cantón, y la prueba real puede estar redactada de otro modo. Cada respuesta se apoya en páginas de la Confederación, del cantón o de los municipios.
+Todas las preguntas, explicaciones y traducciones las escribimos nosotros. Abarcan los mismos temas que la prueba del cantón, pero no son las preguntas del cantón. Cada respuesta se apoya en páginas de la Confederación, del cantón o de los municipios.
 
 ## Cómo practicar
 
-Primero aprende la pregunta en su idioma, junto al texto en alemán. Más adelante practica solo en alemán, como en la prueba. Las traducciones son ayudas de estudio. La prueba real es en alemán.
+Primero aprende la pregunta en su idioma, junto al texto en alemán. Más adelante practica solo en alemán, como en la prueba.
 
-## Qué añade el Civics Pass
+## Qué añade el Viapunt Pass
 
-El **Civics Pass para el cantón de Zúrich** cuesta **CHF 29** (un solo pago, 6 meses de acceso) e incluye:
+El **Viapunt Pass para el cantón de Zúrich** cuesta **CHF 29** (un solo pago, 6 meses de acceso) e incluye:
 
 - todas las preguntas, unas 350, con explicaciones,
 - todos los modos de estudio: Aprender, Practicar y Simulacro,
-- simulacros ilimitados en el formato que suponemos para Zúrich,
+- simulacros ilimitados en alemán, con límite de tiempo,
 - el botón «Explicar esto» en su idioma,
 - todos los idiomas.
 
-Si necesita más tiempo, puede ampliar el acceso tres meses por CHF 9. Pago con tarjeta o TWINT. Los precios pueden cambiar; se aplica el precio en el momento de la compra.
-
-El Civics Pass no promete ningún resultado en la prueba real. Le ayuda a aprender los temas.
+Si necesita más tiempo, puede ampliar el acceso tres meses por CHF 9. Pago con tarjeta o TWINT.
 
 ## Siguiente paso
 
-Empiece por las preguntas gratuitas. Si le ayudan, puede comprar el Civics Pass.
+Empiece por las preguntas gratuitas. Si le ayudan, puede comprar el Viapunt Pass.

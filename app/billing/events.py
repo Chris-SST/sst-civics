@@ -1,7 +1,7 @@
 """Apply Stripe webhook events to our records. Called from the background worker. Every
 handler is idempotent.
 
-One-off Civics Pass payments (D-015):
+One-off Viapunt Pass payments (D-015):
 
 - `checkout.session.completed` with `payment_status=paid`, or
   `checkout.session.async_payment_succeeded` for delayed methods: grant or extend the

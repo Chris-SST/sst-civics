@@ -37,9 +37,9 @@ Ob eine Ausnahme für Sie gilt, entscheidet Ihre Gemeinde. Der Kanton bietet daz
 
 Der Kanton nennt auf seiner Seite **keine Fragenzahl, keine Dauer und keine Bestehensgrenze**. Die Seite verweist dafür auf die Gemeinde.
 
-Ein Pressebericht von 2022 nannte 50 Fragen in 60 Minuten und 30 richtige Antworten zum Bestehen. **Der Kanton hat das nicht bestätigt.** Wir haben diese Angaben auf keiner Seite des Kantons gefunden. Verlassen Sie sich nicht darauf, sondern fragen Sie Ihre Gemeinde nach Ablauf, Dauer und Bestehensgrenze.
+Ein Pressebericht von 2022 nannte 50 Fragen in 60 Minuten und 30 richtige Antworten zum Bestehen. Der Kanton hat diese Zahlen nicht bestätigt; Format und Bestehensgrenze erfahren Sie bei Ihrer Gemeinde.
 
-Der Fragenkatalog des Kantons ist auf Deutsch veröffentlicht. Die Seite des Kantons erwähnt keine anderen Sprachen. Rechnen Sie damit, dass der Test auf Deutsch stattfindet, und klären Sie das mit Ihrer Gemeinde.
+Der Kanton veröffentlicht den Fragenkatalog nur auf Deutsch; rechnen Sie mit einem Test auf Deutsch.
 
 ## Die Themen
 
@@ -70,7 +70,7 @@ Fragen zum Test beantwortet das Gemeindeamt, Abteilung Einbürgerungen: grundken
 
 ## Wie unser Training dazu passt
 
-Unsere Übungsfragen sind **eigene, originale Fragen**. Sie behandeln dieselben Themen wie der Test, aber es sind nicht die Fragen des Kantons, und der echte Test kann anders formuliert sein. Zuerst lernen Sie in Ihrer eigenen Sprache, danach üben Sie auf Deutsch. Übersetzungen sind Lernhilfen. Der echte Test ist auf Deutsch. Dieser Dienst ist unabhängig und nicht mit dem Kanton verbunden.
+Unsere Übungsfragen sind **eigene, originale Fragen**. Sie behandeln dieselben Themen wie der Test, sind aber nicht die Fragen des Kantons. Sie lernen zuerst in Ihrer Sprache und üben danach auf Deutsch, der Sprache des Tests.
 
 ## Nächster Schritt
 

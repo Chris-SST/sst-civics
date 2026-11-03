@@ -1,8 +1,8 @@
 id: zuteilung-primarschulklasse-durch-schulbehoerde
-version: 2
-scope: federal
-canton: null
-topic: bund.sozial.bildung
+version: 3
+scope: zh
+canton: zh
+topic: kanton.sozial.bildung_gesundheit
 question_de: Wer entscheidet im Kanton Zürich, welcher Primarschulklasse ein Kind zugeteilt wird?
 options_de:
   a: Die Schulpflege oder die Schulleitung
@@ -33,7 +33,7 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 2
+    version: 3
     reasoning: Im Kanton Zürich teilen die kommunalen Schulbehörden (Schulpflege bzw. Schulleitung, je
       nach Gemeindeorganisation) die Kinder den Klassen zu, weder der Bund noch die Gemeindeversammlung
       noch die Eltern entscheiden darüber.
@@ -45,7 +45,7 @@ checks:
       Quelle 3 nennt Schulbehörde und Schulleitung bei der Klassenbildung.
     at: *id001
     model: claude-sonnet-5-5
-    version: 2
+    version: 3
   panel:
     verdict: approve
     reviews:
@@ -74,7 +74,7 @@ checks:
         Amt, zum Beispiel «Die Bildungsdirektion des Kantons Zürich».'
     round: 1
     at: &id002 2026-11-02
-    version: 2
+    version: 3
 review:
   action: ai_panel
   note: Approved by the AI review panel

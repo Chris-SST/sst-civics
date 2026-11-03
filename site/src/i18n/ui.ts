@@ -29,7 +29,6 @@ export interface CalcStrings {
   resNote: string;
   years: string;
   privacy: string;
-  disclaimer: string;
   ruleTitle: string;
   ruleText: string;
 }
@@ -83,7 +82,6 @@ export interface Ui {
     q: { heading: string; daily: string; topic: string; german: string; right: string; wrong: string; more: string; reveal: string };
     how: { heading: string; steps: { title: string; text: string }[] };
     guidesHeading: string;
-    guidesNote: string;
     read: string;
     soon: string;
     tags: Record<string, string>;
@@ -113,8 +111,8 @@ const en: Ui = {
   chat: {
     launcher: "Ask a question",
     title: "Ask Viapunt",
-    intro: "Ask about the knowledge test, its topics or the naturalisation procedure in Zurich, in your language. Answers come from this guide.",
-    note: "AI assistant: it can make mistakes, and it gives no legal advice.",
+    intro: "Ask about the knowledge test, its topics or the naturalisation procedure in Zurich, in your language.",
+    note: "Answered by AI, based on the Viapunt guide.",
     placeholder: "Your question",
     send: "Send",
     close: "Close",
@@ -136,18 +134,18 @@ const en: Ui = {
   sourcesHeading: "Sources and last checked",
   cta: {
     "free-questions": {
-      heading: "Ready to practise?",
+      heading: "Practise the test questions",
       text: "Try 30 sample questions in your own language, with the German beside them. No account needed.",
       button: "Try 30 free questions",
     },
     mock: {
-      heading: "Ready for a mock test?",
+      heading: "Take a free mock test",
       text: "Sign up with your email for one free mock test, then see how you do under test conditions.",
       button: "Take the free mock test",
     },
     pass: {
-      heading: "Want to prepare fully?",
-      text: "The Civics Pass opens every question and study mode for your canton. Start with the free questions.",
+      heading: "Prepare with the Viapunt Pass",
+      text: "The Viapunt Pass opens every question and study mode for your canton. Start with the free questions.",
       button: "Try 30 free questions",
     },
   },
@@ -176,11 +174,10 @@ const en: Ui = {
       steps: [
         { title: "Read the guide", text: "Residence rules, documents, fees and the tests, explained step by step for Zurich, with the sources linked." },
         { title: "Try 30 free questions", text: "See the kind of questions the test asks, in German with your language beside it. No account needed." },
-        { title: "Practise until you are ready", text: "Learn, practise your weak topics and take mock tests. Your readiness is a practice estimate, not an official result." },
+        { title: "Practise until you are ready", text: "Learn, practise your weak topics and take mock tests." },
       ],
     },
     guidesHeading: "Guides for Zurich",
-    guidesNote: "General information, not legal advice",
     read: "Read",
     soon: "Coming soon",
     tags: {
@@ -192,9 +189,9 @@ const en: Ui = {
       text: "The test is in German. Every question shows a translation as a study aid, so you understand first and then get used to the German.",
     },
     pass: {
-      badge: "Civics Pass · canton of Zurich",
+      badge: "Viapunt Pass · canton of Zurich",
       period: "6 months, paid once. No subscription.",
-      pay: "Pay by card or TWINT. Is your test later? Add 3 months for CHF 9.",
+      pay: "Pay by card or TWINT. Extension: 3 more months for CHF 9.",
       points: [
         "Questions on every topic of the Zurich knowledge test",
         "Mock tests to see where you stand",
@@ -247,7 +244,6 @@ const en: Ui = {
     resNote: "Also check the requirement of 3 years in the last 5 before you apply, and your canton's and commune's own conditions.",
     years: "years",
     privacy: "This runs in your browser only. Nothing you enter is sent, stored or logged.",
-    disclaimer: "General information, not legal advice. It is an estimate for planning, not a decision on your application.",
     ruleTitle: "How the count works",
     ruleText:
       "Time lived in Switzerland between your 8th and 18th birthdays counts twice. Overlapping periods are counted once. The doubled time cannot replace actual residence: at least six years must be real years lived here. Your commune and canton may add their own minimum periods; check their pages.",
@@ -274,7 +270,7 @@ const en: Ui = {
     howText:
       "The practice runs in the app, not on this website. Choose your language and start; you can switch the translation off whenever you like.",
     button: "Try 30 free questions",
-    mockNote: "This service is independent. The real knowledge test is set by your canton, in German.",
+    mockNote: "The real test is set by your canton and is in German.",
   },
   notFound: {
     title: "Page not found",
@@ -298,8 +294,8 @@ const de: Ui = {
   chat: {
     launcher: "Frage stellen",
     title: "Viapunt fragen",
-    intro: "Fragen Sie zum Grundkenntnistest, zu seinen Themen oder zum Einbürgerungsverfahren in Zürich, in Ihrer Sprache. Die Antworten stützen sich auf diesen Ratgeber.",
-    note: "KI-Assistent: Er kann sich irren und gibt keine Rechtsberatung.",
+    intro: "Fragen Sie zum Grundkenntnistest, zu seinen Themen oder zum Einbürgerungsverfahren in Zürich, in Ihrer Sprache.",
+    note: "Antwort von KI, gestützt auf den Viapunt-Ratgeber.",
     placeholder: "Ihre Frage",
     send: "Senden",
     close: "Schliessen",
@@ -321,18 +317,18 @@ const de: Ui = {
   sourcesHeading: "Quellen und letzte Prüfung",
   cta: {
     "free-questions": {
-      heading: "Bereit zum Üben?",
+      heading: "Testfragen üben",
       text: "Probieren Sie 30 Beispielfragen in Ihrer Sprache aus, mit dem deutschen Text daneben. Ohne Konto.",
       button: "30 Fragen gratis testen",
     },
     mock: {
-      heading: "Bereit für eine Probeprüfung?",
+      heading: "Gratis-Probeprüfung",
       text: "Melden Sie sich mit Ihrer E-Mail-Adresse an und machen Sie eine Probeprüfung gratis, unter Prüfungsbedingungen.",
       button: "Gratis-Probeprüfung starten",
     },
     pass: {
-      heading: "Gründlich vorbereiten?",
-      text: "Der Civics Pass schaltet alle Fragen und Lernmodi für Ihren Kanton frei. Beginnen Sie mit den Gratisfragen.",
+      heading: "Mit dem Viapunt Pass vorbereiten",
+      text: "Der Viapunt Pass schaltet alle Fragen und Lernmodi für Ihren Kanton frei. Beginnen Sie mit den Gratisfragen.",
       button: "30 Fragen gratis testen",
     },
   },
@@ -361,11 +357,10 @@ const de: Ui = {
       steps: [
         { title: "Ratgeber lesen", text: "Aufenthalt, Unterlagen, Gebühren und Tests, Schritt für Schritt für Zürich erklärt, mit verlinkten Quellen." },
         { title: "30 Fragen gratis testen", text: "Sehen Sie, wie die Testfragen aussehen, auf Deutsch und mit Ihrer Sprache daneben. Ohne Konto." },
-        { title: "Üben, bis Sie bereit sind", text: "Lernen, schwache Themen gezielt üben und Probeprüfungen machen. Ihr Bereitschaftswert ist eine Übungsschätzung, kein amtliches Ergebnis." },
+        { title: "Üben, bis Sie bereit sind", text: "Lernen, schwache Themen gezielt üben und Probeprüfungen machen." },
       ],
     },
     guidesHeading: "Ratgeber für Zürich",
-    guidesNote: "Allgemeine Informationen, keine Rechtsberatung",
     read: "Lesen",
     soon: "Folgt in Kürze",
     tags: {
@@ -377,9 +372,9 @@ const de: Ui = {
       text: "Der Test ist auf Deutsch. Jede Frage zeigt eine Übersetzung als Lernhilfe: Sie verstehen zuerst und gewöhnen sich dann an das Deutsch.",
     },
     pass: {
-      badge: "Civics Pass · Kanton Zürich",
+      badge: "Viapunt Pass · Kanton Zürich",
       period: "6 Monate, einmal bezahlt. Kein Abo.",
-      pay: "Bezahlen mit Karte oder TWINT. Ist Ihr Test später? 3 Monate mehr für CHF 9.",
+      pay: "Bezahlen mit Karte oder TWINT. Verlängerung: 3 Monate für CHF 9.",
       points: [
         "Fragen zu allen Themen des Zürcher Wissenstests",
         "Probeprüfungen, damit Sie Ihren Stand kennen",
@@ -432,7 +427,6 @@ const de: Ui = {
     resNote: "Prüfen Sie zusätzlich die Bedingung von 3 Jahren in den letzten 5 vor dem Gesuch sowie die Bedingungen Ihres Kantons und Ihrer Gemeinde.",
     years: "Jahre",
     privacy: "Die Berechnung läuft nur in Ihrem Browser. Nichts, was Sie eingeben, wird gesendet, gespeichert oder protokolliert.",
-    disclaimer: "Allgemeine Informationen, keine Rechtsberatung. Es ist eine Schätzung zur Planung, kein Entscheid über Ihr Gesuch.",
     ruleTitle: "So wird gezählt",
     ruleText:
       "Die Zeit in der Schweiz zwischen dem 8. und dem 18. Geburtstag zählt doppelt. Sich überschneidende Perioden werden nur einmal gezählt. Die doppelt gezählte Zeit kann den tatsächlichen Aufenthalt nicht ersetzen: Mindestens sechs Jahre müssen wirklich hier verbracht worden sein. Kanton und Gemeinde können eigene Mindestfristen verlangen; lesen Sie deren Seiten.",
@@ -459,7 +453,7 @@ const de: Ui = {
     howText:
       "Das Üben läuft in der App, nicht auf dieser Website. Wählen Sie Ihre Sprache und legen Sie los; die Übersetzung können Sie jederzeit ausblenden.",
     button: "30 Fragen gratis testen",
-    mockNote: "Dieser Dienst ist unabhängig. Den echten Wissenstest legt Ihr Kanton fest, auf Deutsch.",
+    mockNote: "Den echten Test legt Ihr Kanton fest; er ist auf Deutsch.",
   },
   notFound: {
     title: "Seite nicht gefunden",
@@ -480,12 +474,12 @@ export function usesFallback(lang: string): boolean {
 // Independence notice, copied from web/src/locales/*.json key footer.independence (do not import
 // the app's files). Update here when the app's strings change.
 export const INDEPENDENCE: Record<string, string> = {
-  de: "Unabhängiger Dienst ohne Verbindung zu Bundes-, Kantons- oder Gemeindebehörden. Allgemeine Informationen, keine Rechtsberatung.",
-  en: "Independent service, not connected to any federal, cantonal or communal authority. General information, not legal advice.",
-  fr: "Service indépendant, sans lien avec une autorité fédérale, cantonale ou communale. Informations générales, pas de conseil juridique.",
-  it: "Servizio indipendente, non collegato ad alcuna autorità federale, cantonale o comunale. Informazioni generali, non consulenza legale.",
-  pt: "Serviço independente, sem ligação a qualquer autoridade federal, cantonal ou municipal. Informação geral, não aconselhamento jurídico.",
-  es: "Servicio independiente, sin vinculación con ninguna autoridad federal, cantonal ni municipal. Información general, no asesoramiento jurídico.",
-  sq: "Shërbim i pavarur, pa lidhje me asnjë autoritet federal, kantonal apo komunal. Informacion i përgjithshëm, jo këshillim juridik.",
-  tr: "Federal, kantonal veya yerel hiçbir makamla bağlantısı olmayan bağımsız bir hizmettir. Genel bilgidir, hukuki danışmanlık değildir.",
+  de: "Viapunt ist ein unabhängiger Dienst ohne Verbindung zu Behörden von Bund, Kantonen oder Gemeinden.",
+  en: "Viapunt is an independent service, not connected to any federal, cantonal or communal authority.",
+  fr: "Viapunt est un service indépendant, sans lien avec une autorité fédérale, cantonale ou communale.",
+  it: "Viapunt è un servizio indipendente, non collegato ad alcuna autorità federale, cantonale o comunale.",
+  pt: "O Viapunt é um serviço independente, sem ligação a qualquer autoridade federal, cantonal ou municipal.",
+  es: "Viapunt es un servicio independiente, sin vinculación con ninguna autoridad federal, cantonal ni municipal.",
+  sq: "Viapunt është një shërbim i pavarur, pa lidhje me asnjë autoritet federal, kantonal apo komunal.",
+  tr: "Viapunt, federal, kantonal veya yerel hiçbir makamla bağlantısı olmayan bağımsız bir hizmettir.",
 };

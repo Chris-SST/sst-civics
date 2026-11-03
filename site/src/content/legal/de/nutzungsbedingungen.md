@@ -3,12 +3,12 @@ title: "Nutzungsbedingungen"
 description: "Die Nutzungsbedingungen von Viapunt (zurzeit auf Englisch)."
 lang: de
 slug: nutzungsbedingungen
-updated: 2026-11-02
+updated: 2026-11-03
 notice: "Diese Seite gibt es zurzeit nur auf Englisch. Eine deutsche Fassung folgt nach der rechtlichen Prüfung."
 contentLang: en
 ---
 
-These terms apply to the guide website and the learning app of Viapunt, run by Swiss Science Tutors GmbH, 5200 Brugg, Switzerland ("we", "us"). By creating an account or buying a Civics Pass you accept them.
+These terms apply to the guide website and the learning app of Viapunt, a service of Swiss Science Tutors GmbH, 5200 Brugg, Switzerland ("we", "us"). By creating an account or buying a Viapunt Pass you accept them.
 
 ## 1. Who we are and what the service is
 
@@ -30,9 +30,9 @@ These terms apply to the guide website and the learning app of Viapunt, run by S
 
 3.3 You can delete your account yourself on the Account page. What is kept afterwards is described in the [privacy notice](/en/privacy/).
 
-## 4. The Civics Pass
+## 4. The Viapunt Pass
 
-4.1 The Civics Pass is a one-off purchase, not a subscription. It does not renew and we do not charge you again.
+4.1 The Viapunt Pass is a one-off purchase, not a subscription. It does not renew and we do not charge you again.
 
 4.2 One pass gives access to all questions and study modes for one canton, unlimited mock tests, the "Explain this" assistant and every available language, for 6 months from payment.
 
@@ -42,7 +42,7 @@ These terms apply to the guide website and the learning app of Viapunt, run by S
 
 ## 5. Prices and payment
 
-5.1 Prices are in Swiss francs (CHF). At present: Civics Pass CHF 29; extension CHF 9. The price shown at checkout is the price you pay.
+5.1 Prices are in Swiss francs (CHF). At present: Viapunt Pass CHF 29; extension CHF 9. The price shown at checkout is the price you pay.
 
 5.2 Prices are final prices in Swiss francs.
 
@@ -78,7 +78,7 @@ These terms apply to the guide website and the learning app of Viapunt, run by S
 
 8.2 The knowledge test itself is in German. Translations into other languages are study aids only. The wording of the real test may differ.
 
-8.3 We check our content against published sources and review it regularly, but rules and tests change. Check the current requirements with the authorities before you rely on anything.
+8.3 We check our content against official sources and review it regularly. Rules and tests change; the authority handling your application has the final word.
 
 8.4 We keep the rights in our content. You get a personal, non-transferable right to use it for your own study.
 
@@ -92,7 +92,7 @@ These terms apply to the guide website and the learning app of Viapunt, run by S
 
 10.1 "Explain this" and the help chat use artificial intelligence. It can make mistakes, including wrong or out-of-date statements. Check important points against the question's explanation and official sources.
 
-10.2 It gives no legal advice. There is a daily message limit.
+10.2 There is a daily message limit.
 
 10.3 What is sent to the AI provider is explained in the [privacy notice](/en/privacy/).
 
@@ -122,4 +122,4 @@ These terms apply to the guide website and the learning app of Viapunt, run by S
 
 ## 15. Contact
 
-Swiss Science Tutors GmbH, 5200 Brugg, Switzerland. Email: [info@viapunt.ch](mailto:info@viapunt.ch).
+Email: [info@viapunt.ch](mailto:info@viapunt.ch). Postal address: see the [imprint](/en/imprint/).

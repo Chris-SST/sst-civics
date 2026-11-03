@@ -30,7 +30,7 @@
     "terms": "Terms of use",
     "privacy": "Privacy notice",
     "imprint": "Imprint",
-    "independence": "Independent service, not connected to any federal, cantonal or communal authority. General information, not legal advice."
+    "independence": "Viapunt is an independent service, not connected to any federal, cantonal or communal authority."
   },
   "errors": {
     "unknown_error": "Something went wrong. Please try again.",
@@ -56,8 +56,6 @@
     "billing_not_configured": "Payments are not switched on in this environment yet.",
     "unknown_plan": "Unknown plan.",
     "price_not_found": "Prices are not available right now. Please try again shortly.",
-    "already_subscribed": "You already have a subscription. Use Manage billing to change it.",
-    "no_stripe_customer": "There is no billing account yet. Start a plan first.",
     "csrf_failed": "Your session expired. Please reload the page.",
     "cannot_deactivate_self": "You cannot deactivate your own account.",
     "impersonation_disabled": "Viewing as another user is switched off in production.",
@@ -66,16 +64,16 @@
     "no_access": "You do not have access for your canton right now.",
     "invalid_topic": "Please choose a topic from the list.",
     "conversation_ended": "This session has ended. Start a new one.",
-    "tutor_unavailable": "The tutor is not available right now. Please try again later.",
+    "tutor_unavailable": "The assistant is not available right now. Please try again later.",
     "message_too_long": "Messages can be up to 2,000 characters.",
     "empty_message": "Please type a message.",
     "daily_limit_reached": "You have reached today's message limit.",
     "monthly_limit_reached": "You have reached this month's message limit.",
-    "timeout": "The tutor took too long to answer. Your message was not counted; please try again.",
-    "connection": "The tutor could not be reached. Your message was not counted; please try again.",
-    "api": "The tutor hit a problem. Your message was not counted; please try again.",
+    "timeout": "The assistant took too long to answer. Your message was not counted; please try again.",
+    "connection": "The assistant could not be reached. Your message was not counted; please try again.",
+    "api": "The assistant hit a problem. Your message was not counted; please try again.",
     "no_questions": "There are no practice questions for this topic yet.",
-    "conversation_required": "Open the check from a tutor session.",
+    "conversation_required": "Open the check from a chat.",
     "invalid_difficulty": "Difficulty must be between 1 and 5.",
     "age_confirmation_required": "Please confirm that you are 16 or older.",
     "invalid_canton": "Please choose a canton from the list.",
@@ -84,7 +82,7 @@
     "password_required_for_admins": "Admin accounts must keep a password.",
     "reauth_required": "Please confirm it is you: enter your password or open a fresh sign-in link.",
     "not_while_impersonating": "This is not possible while viewing as another user.",
-    "not_for_sale": "This Civics Pass is not on sale yet.",
+    "not_for_sale": "This Viapunt Pass is not on sale yet.",
     "pass_active": "You already have an active pass for this canton. You can extend it instead.",
     "no_pass_to_extend": "An extension needs a pass for this canton that is active or ended less than 90 days ago.",
     "already_refunded": "This payment has already been refunded.",
@@ -97,8 +95,8 @@
     "invalid_options": "Four different options are needed, with the correct one among them.",
     "invalid_transition": "This question can no longer be changed in this way.",
     "edits_need_approve": "Edits can only be saved together with an approval.",
-    "sample_only": "This question is part of the Civics Pass. The free version includes the sample questions.",
-    "free_mock_used": "You have used your free mock test. A Civics Pass gives you unlimited mock tests.",
+    "sample_only": "This question is part of the Viapunt Pass. The free version includes the sample questions.",
+    "free_mock_used": "You have used your free mock test. A Viapunt Pass gives you unlimited mock tests.",
     "not_enough_questions": "There are not enough approved questions for a full mock test yet.",
     "no_mock_test": "There is no mock test for your canton yet.",
     "deadline_passed": "The time for this mock test is up. Answers after the deadline are not counted.",
@@ -116,17 +114,15 @@
     "title": "Understand the naturalisation test in your own language.",
     "lead": "Learn what every question means in the language you know best, then practise the same questions in German, the language of the real test.",
     "cta": "Start free practice",
-    "plansTitle": "Plans",
-    "trialNote": "Prices in CHF.",
     "howTitle": "How it works",
     "step1Title": "Understand",
     "step1Body": "Read each question side by side in your own language and in German, with a short explanation when you need one.",
     "step2Title": "Practise in German",
     "step2Body": "Move step by step from your own language to German only, with short rounds and mock tests.",
     "step3Title": "Pass",
-    "step3Body": "Sit the test in German with confidence. Your practice estimate is a guide, not an official result.",
+    "step3Body": "Take the real test in German.",
     "freeTitle": "Try 30 free questions",
-    "freeBody": "No payment needed. Create a free account and see how it works before you decide on anything."
+    "freeBody": "No payment and no account needed."
   },
   "signup": {
     "title": "Create your account",
@@ -142,7 +138,8 @@
     "interfaceLanguageHint": "The language of menus and buttons. Where a translation is missing, English is shown.",
     "withPassword": "Also set a password (optional)",
     "passwordOptionalHint": "Without a password you sign in with a link we email you. You can add or remove a password later in your account.",
-    "checkEmailSignIn": "The link also signs you in."
+    "checkEmailSignIn": "The link also signs you in.",
+    "cantonRest": "Not listed? Choose \"Rest of Switzerland\": you study the federal questions, which make up most of every canton's test. Your canton's own questions follow when we add it."
   },
   "fields": {
     "email": "Email address",
@@ -207,14 +204,14 @@
   "billingReturn": {
     "title": "Payment",
     "cancelled": "Checkout was cancelled. Nothing has been charged.",
-    "active": "Thank you. Your Civics Pass is active.",
+    "active": "Thank you. Your Viapunt Pass is active.",
     "waiting": "Waiting for Stripe to confirm your payment. This usually takes a few seconds…",
     "slow": "Stripe has not confirmed your payment yet. Your access will appear automatically once it does; you can leave this page.",
     "toDashboard": "Go to your dashboard",
-    "activeUntil": "Thank you. Your Civics Pass for {{canton}} is active until {{date}}."
+    "activeUntil": "Thank you. Your Viapunt Pass for {{canton}} is active until {{date}}."
   },
   "learner": {
-    "tutorOffline": "The tutor is not connected in this environment yet.",
+    "tutorOffline": "The assistant is not connected in this environment yet.",
     "recent": "Recent sessions",
     "noRecent": "No sessions yet. Pick a topic to begin.",
     "endedTag": "ended",
@@ -222,15 +219,14 @@
     "usageToday": "Today: {{used}} of {{limit}}",
     "usageMonth": "This month: {{used}} of {{limit}}",
     "nearLimit": "You are close to this month's message limit.",
-    "integrity": "The tutor explains and coaches; it does not give legal advice.",
     "practise": "Practise",
-    "askTutor": "Ask the tutor",
+    "askTutor": "Ask the assistant",
     "noQuestionsYet": "Practice questions for your canton are on their way.",
     "welcome": "Welcome",
     "noTopics": "The topics for your canton are on their way.",
     "topicsTitle": "Test topics: {{canton}}",
     "notStarted": "Not started",
-    "freeTierNotice": "You are using the free version: {{count}} sample questions in every study mode and one mock test. A Civics Pass for your canton opens all questions, unlimited mock tests and Explain this.",
+    "freeTierNotice": "You are using the free version: {{count}} sample questions in every study mode and one mock test. A Viapunt Pass for your canton opens all questions, unlimited mock tests and Explain this.",
     "readinessTitle": "Readiness for the {{canton}} test",
     "knownOf": "{{known}} of {{total}} questions known",
     "dueCount_one": "{{count}} question due for review",
@@ -252,7 +248,7 @@
   "chat": {
     "back": "Your sessions",
     "end": "End session",
-    "intro": "Tell the tutor what you are working on, or where you are stuck.",
+    "intro": "Tell the assistant what you are working on, or where you are stuck.",
     "placeholder": "Type your question… (Enter to send, Shift+Enter for a new line)",
     "send": "Send",
     "ended": "This session has ended.",
@@ -260,7 +256,7 @@
     "helplineTitle": "Someone to talk to, right now",
     "helplineBody": "Die Dargebotene Hand (Swiss helpline): call 143, free and confidential, 24 hours a day. In an emergency call 144 (ambulance) or 117 (police). It also helps to talk to someone you trust.",
     "nearLimit": "{{used}} of {{limit}} messages used this month.",
-    "dailyLimit": "You have reached today's message limit. The tutor is back tomorrow.",
+    "dailyLimit": "You have reached today's message limit. The assistant is back tomorrow.",
     "monthlyLimit": "You have reached this month's message limit.",
     "check": "Check what you learnt",
     "checkTitle": "Check what you learnt",
@@ -353,8 +349,8 @@
       "no_payment": "no payment"
     },
     "product": {
-      "civics_pass_zh": "Civics Pass",
-      "civics_pass_ag": "Civics Pass",
+      "civics_pass_zh": "Viapunt Pass",
+      "civics_pass_ag": "Viapunt Pass",
       "civics_extension": "Extension"
     }
   },
@@ -371,7 +367,7 @@
     "roundBodyPerfect": "Every question right. Expect something a little harder next time.",
     "roundBodyGreat": "Nearly all right. One more round and this topic is yours.",
     "roundBodyGood": "Half or more right. Look through the solutions you missed and have another go.",
-    "roundBodyKeep": "A tough round. That is exactly what practice is for; the tutor can walk you through the tricky ones.",
+    "roundBodyKeep": "A tough round. Read the solutions, or use Explain this on the ones you missed.",
     "anotherRound": "Another round",
     "title": "Practise",
     "mastery": "Mastery",
@@ -395,8 +391,7 @@
     "encourage": [
       "Not this time.",
       "Not quite. Have a look at the solution.",
-      "Close, but not quite.",
-      "Not this one. The next one is a fresh start."
+      "Close, but not quite."
     ],
     "streak": "{{count}} in a row!",
     "backOnTrack": "Back on track!",
@@ -514,6 +509,7 @@
   },
   "cantons": {
     "zh": "Zurich",
+    "ch": "Rest of Switzerland",
     "ag": "Aargau"
   },
   "languages": {
@@ -546,7 +542,7 @@
     "passwordSaved": "Your password is saved. Other devices have been signed out.",
     "passwordRemoved": "Your password is removed. Sign in with an email link from now on.",
     "deleteTitle": "Delete account",
-    "deleteIntro": "This deletes your account, your progress, your answers, your tutor conversations and your question reports. It cannot be undone.",
+    "deleteIntro": "This deletes your account, your progress, your answers, your conversations in Explain this and the help chat, and your question reports. It cannot be undone.",
     "deleteKept": "Billing records of payments you made are kept for as long as the law requires, without your email address. We send you a confirmation email.",
     "reauthFresh": "You signed in with an email link a few minutes ago, so no password is needed.",
     "reauthEither": "Enter your password, or confirm with a fresh sign-in link.",
@@ -558,9 +554,9 @@
     "deletedBody": "Your account and learning data have been deleted. We have sent you a confirmation email."
   },
   "pricing": {
-    "title": "Civics Pass",
-    "intro": "Start with free practice. A Civics Pass opens everything for one canton: all questions and study modes, unlimited mock tests and Explain this, in every language. You pay once; there is no subscription.",
-    "passName": "Civics Pass {{canton}}",
+    "title": "Viapunt Pass",
+    "intro": "Start with free practice. A Viapunt Pass opens everything for one canton: all questions and study modes, unlimited mock tests and Explain this, in every language. You pay once; there is no subscription.",
+    "passName": "Viapunt Pass · {{canton}}",
     "period": "for {{months}} months",
     "passIncludes": "All questions and study modes for this canton, unlimited mock tests and Explain this.",
     "activeUntil": "Active until {{date}}",
@@ -569,10 +565,10 @@
     "buy": "Buy",
     "signUpToBuy": "Sign up free",
     "extend": "Extend by {{months}} months ({{price}})",
-    "extensionNote": "Need more time? An extension adds {{months}} months for {{price}}, while your pass is active or up to 90 days after it ends.",
+    "extensionNote": "An extension adds {{months}} months for {{price}}, while your pass is active or up to 90 days after it ends.",
     "priceNote": "Prices in CHF. Paid once, by card or TWINT, through Stripe.",
     "unavailable": "Prices are not available right now. Please try again shortly.",
-    "refundEligible": "Not what you hoped for? Your last payment can be refunded until {{date}} if you have studied fewer than {{max}} questions since buying (so far: {{count}}).",
+    "refundEligible": "You can get your last payment refunded until {{date}} if you have studied fewer than {{max}} questions since buying (so far: {{count}}).",
     "writeToSupport": "Write to support to ask for a refund.",
     "refundTooLate": "The refund period for your last payment ended on {{date}}.",
     "refundTooMany": "Your last payment can no longer be refunded: you have studied {{count}} questions since buying, and refunds are possible below {{max}}.",
@@ -626,7 +622,7 @@
     "passMark": "Pass mark: {{mark}} of {{total}}",
     "passMarkUnconfirmed": "not yet confirmed by the canton",
     "freeOne": "The free version includes one mock test.",
-    "freeUsed": "You have used your free mock test. A Civics Pass gives you unlimited mock tests.",
+    "freeUsed": "You have used your free mock test. A Viapunt Pass gives you unlimited mock tests.",
     "notEnough": "There are not enough approved questions for a full mock test yet.",
     "start": "Start the mock test",
     "continue": "Continue the mock test",
@@ -659,6 +655,7 @@
   "explain": {
     "button": "Explain this",
     "title": "Explain this question",
+    "note": "Answered by AI.",
     "placeholder": "Ask about this question… (Enter to send)",
     "remaining": "{{left}} of {{limit}} messages left today",
     "limitReached": "You have reached today's message limit. Explain this is back tomorrow.",
@@ -696,8 +693,8 @@
   },
   "help": {
     "title": "Ask Viapunt",
-    "lead": "Questions about the knowledge test, its topics or the naturalisation procedure? Ask here, in your language. The answers come from the Viapunt guide and the checklist of what the test covers.",
-    "note": "The AI assistant can make mistakes, and its answers are not legal advice. Only your commune and the canton can decide on your own application.",
+    "lead": "Ask about the knowledge test, its topics or the naturalisation procedure, in your language.",
+    "note": "Answered by AI, based on the Viapunt guide.",
     "intro": "For example:",
     "s1": "Which documents do I need to apply in Zurich?",
     "s2": "What is the difference between the Nationalrat and the Ständerat?",
@@ -705,9 +702,9 @@
     "placeholder": "Type your question… (Enter to send)",
     "newChat": "New conversation",
     "limitReached": "You have reached today's message limit. The help chat is back tomorrow.",
-    "free": "Free account: a few questions a day. A Civics Pass gives you more, plus Explain this on every question.",
-    "freeCta": "See the Civics Pass",
-    "cardTitle": "Questions? Ask Viapunt",
+    "free": "Free account: a few questions a day. A Viapunt Pass gives you more, plus Explain this on every question.",
+    "freeCta": "See the Viapunt Pass",
+    "cardTitle": "Ask Viapunt",
     "cardBody": "Ask about the test, its topics or the naturalisation procedure, in your language.",
     "cardCta": "Open the help chat"
   },
@@ -722,7 +719,7 @@
     "signup": "Create a free account",
     "doneTitle": "Well done, that was all 30",
     "doneScore": "You got {{score}} of {{total}} right.",
-    "doneText": "With a free account you keep your progress, take a full mock test in German and can ask the help chat. The Civics Pass opens all questions of the canton.",
+    "doneText": "With a free account you keep your progress, take a full mock test in German and can ask the help chat. The Viapunt Pass opens all questions of the canton.",
     "again": "Start again",
     "none": "The practice questions for this canton are on their way."
   },

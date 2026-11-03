@@ -3,7 +3,7 @@ title: "Privacy notice"
 description: "How Viapunt handles personal data under the Swiss Federal Act on Data Protection."
 lang: en
 slug: privacy
-updated: 2026-11-02
+updated: 2026-11-03
 ---
 
 This notice explains how personal data is handled when you use the guide website and the learning app of Viapunt, under the Swiss Federal Act on Data Protection as revised (revFADP).
@@ -97,7 +97,7 @@ This notice explains how personal data is handled when you use the guide website
 
 8.2 Administrator accounts need two-factor authentication, and its secrets are stored encrypted. Access is limited to what is needed. Nightly backups are kept.
 
-8.3 We limit sign-in attempts and link requests to resist abuse. No system is perfectly secure; if a breach is likely to harm you we will notify you and the authority as the law requires.
+8.3 We limit sign-in attempts and link requests to resist abuse. If a breach is likely to harm you, we notify you and the FDPIC as the law requires.
 
 ## 9. Your rights
 
@@ -113,4 +113,4 @@ This notice explains how personal data is handled when you use the guide website
 
 ## 11. Contact
 
-Swiss Science Tutors GmbH, 5200 Brugg, Switzerland. Email: [info@viapunt.ch](mailto:info@viapunt.ch).
+Email: [info@viapunt.ch](mailto:info@viapunt.ch). Postal address: see the [imprint](/en/imprint/).

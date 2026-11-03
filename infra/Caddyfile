@@ -66,6 +66,11 @@ http://staging.viapunt.ch, http://civics-staging.swisssciencetutors.ch {
 		reverse_proxy api:8000
 	}
 
+	# The bare host goes to the English home page (Chris, 3 November 2026; was German, D-060)
+	# with a real redirect; the meta refresh in the built /index.html stays as a fallback.
+	@root path /
+	redir @root /en/ 302
+
 	try_files {path} {path}/index.html
 	file_server
 

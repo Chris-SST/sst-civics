@@ -25,3 +25,17 @@ export function guideUrl(page: GuidePage, lang: string): string {
   const l = lang === "de" ? "de" : "en";
   return `${guideBase()}/${l}/${SLUGS[page][l]}/`;
 }
+
+/** True on the deployed app host (app.viapunt.ch, app.staging.viapunt.ch), where the guide site
+ * exists next to the app; false locally and in the end-to-end tests. */
+export function onAppHost(): boolean {
+  return window.location.hostname.startsWith("app.");
+}
+
+const LANG_PATH = /^\/(de|en|fr|it|pt|es|sq|tr)(\/.*)?$/;
+
+/** A guide-site address typed on the app host (/en/fees/ on app.viapunt.ch): the same path on
+ * the guide site, or null. */
+export function guidePathFor(pathname: string): string | null {
+  return LANG_PATH.test(pathname) ? `${guideBase()}${pathname}` : null;
+}

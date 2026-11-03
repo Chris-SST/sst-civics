@@ -29,13 +29,9 @@ Pour la naturalisation ordinaire, il faut dix ans de séjour en Suisse. Le calcu
 
 Les cantons et les communes fixent aussi leurs propres durées de séjour. Le calculateur ne les vérifie pas.
 
-## Vos données
+## Ce que le calculateur ne fait pas
 
-Le calculateur fonctionne **uniquement dans votre navigateur**. Il n'envoie rien à un serveur et **ne stocke rien**. Lorsque vous fermez la page, vos saisies disparaissent.
-
-## Avis important
-
-Le calculateur donne une **indication approximative, pas un conseil juridique**. Il ne vous dit pas si vous pouvez être naturalisé. Seule l'autorité compétente décide si vos années comptent. En cas de doute, demandez à votre commune ou, dans le canton de Zurich, à l'Office des communes (Gemeindeamt). Le canton propose aussi son propre auto-test.
+Le calculateur compte des années. Il ne décide pas si vous pouvez être naturalisé ni quelles années comptent : c'est l'autorité qui traite votre demande qui en décide. Le canton propose aussi son propre auto-test.
 
 ## Prochaine étape
 

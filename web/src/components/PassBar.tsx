@@ -5,7 +5,7 @@ import { get, post, type ProductOut } from "../api";
 import { useAuth } from "../auth";
 import { formatChf } from "../i18n";
 
-/** The Civics Pass, one tap away while a visitor or a free learner practises (Chris, 2 November
+/** The Viapunt Pass, one tap away while a visitor or a free learner practises (Chris, 2 November
  * 2026): a slim bar fixed to the bottom of the screen. A signed-in learner goes straight to
  * Stripe checkout; a visitor goes to sign-up, which remembers the wish and opens the pass on the
  * learner home afterwards. Hidden for learners who already have access. */

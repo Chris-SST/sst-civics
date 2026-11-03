@@ -22,9 +22,9 @@ draft: false
 cta: free-questions
 ---
 
-## En resumen
+## Naturalización ordinaria
 
-Si desea obtener la nacionalidad suiza y no está casado con una persona suiza, normalmente seguirá la **naturalización ordinaria** (ordentliche Einbürgerung). Se desarrolla en tres niveles: municipio, cantón y Confederación. A menudo lleva varios años. Esta página ofrece una primera visión general. No sustituye el asesoramiento de su municipio.
+Si desea obtener la nacionalidad suiza y no está casado con una persona suiza, normalmente seguirá la **naturalización ordinaria** (ordentliche Einbürgerung). Se desarrolla en tres niveles: municipio, cantón y Confederación. A menudo lleva varios años.
 
 ## Requisitos federales
 
@@ -73,7 +73,7 @@ Las condiciones completas y las tasas están en las páginas de la SEM (en alem�
 
 - La **oficina de naturalización de su municipio**. Conoce las normas y las fechas locales.
 - En el cantón de Zúrich, la **Oficina de Municipios (Gemeindeamt), sección de naturalización** (teléfono +41 43 259 83 81).
-- Para preguntas sobre su propio caso, un servicio de asesoramiento o un abogado. Solo ofrecemos información general y no podemos decirle si cumple los requisitos.
+- Para preguntas sobre su propio caso: un servicio de asesoramiento o un abogado.
 
 ## Siguiente paso
 

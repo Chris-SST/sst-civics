@@ -88,7 +88,7 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
             "progress, answers, conversations with the AI assistant and question reports.\n\n"
             "Billing records of payments you made are kept for as long as the law requires, "
             "without your email address.\n\n"
-            "If you did not ask for this, please reply to this email at once.",
+            "If you did not ask for this, write to info@viapunt.ch at once.",
         ),
         "de": (
             "Ihr Konto wird gelöscht",
@@ -96,8 +96,7 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
             "Fortschritt, Antworten, Gespräche mit dem KI-Assistenten und Fragemeldungen.\n\n"
             "Buchhaltungsbelege zu Ihren Zahlungen bewahren wir so lange auf, wie es das Gesetz "
             "verlangt, ohne Ihre E-Mail-Adresse.\n\n"
-            "Falls Sie dies nicht veranlasst haben, antworten Sie bitte umgehend auf diese "
-            "E-Mail.",
+            "Falls Sie das nicht veranlasst haben, schreiben Sie bitte sofort an info@viapunt.ch.",
         ),
         "fr": (
             "Votre compte est en cours de suppression",
@@ -106,8 +105,8 @@ TEXTS: dict[str, dict[str, tuple[str, str]]] = {
             "signalements de questions.\n\n"
             "Les pièces comptables de vos paiements sont conservées aussi longtemps que la loi "
             "l'exige, sans votre adresse e-mail.\n\n"
-            "Si vous n'êtes pas à l'origine de cette demande, répondez immédiatement à cet "
-            "e-mail.",
+            "Si vous n'êtes pas à l'origine de cette demande, écrivez immédiatement à "
+            "info@viapunt.ch.",
         ),
     },
     "cost_alert": {

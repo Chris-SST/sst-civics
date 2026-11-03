@@ -45,9 +45,9 @@ class Settings(BaseSettings):
     stripe_secret_key: str = ""
     stripe_webhook_secret: str = ""
     stripe_api_version: str = "2026-05-27.dahlia"
-    # Cantons whose Civics Pass is on sale, comma-separated lower-case codes. A canton is
+    # Cantons whose Viapunt Pass is on sale, comma-separated lower-case codes. A canton is
     # added once its question content exists.
-    cantons_for_sale: str = "zh"
+    cantons_for_sale: str = "zh,ch"  # "ch": Rest of Switzerland, federal questions only
     # Refund rule (plan, "Payments and pricing"): within this many days of purchase, if
     # fewer than this many questions have been studied since.
     refund_window_days: int = 14

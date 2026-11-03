@@ -29,13 +29,9 @@ Për natyralizimin e zakonshëm ju duhen dhjetë vjet qëndrim në Zvicër. Llog
 
 Edhe kantonet dhe komunat caktojnë periudha të veta qëndrimi. Llogaritësi nuk i kontrollon ato.
 
-## Të dhënat tuaja
+## Çfarë nuk bën llogaritësi
 
-Llogaritësi funksionon **vetëm në shfletuesin tuaj**. Ai nuk dërgon asgjë në një server dhe **nuk ruan asgjë**. Kur e mbyllni faqen, të dhënat që keni futur zhduken.
-
-## Njoftim i rëndësishëm
-
-Llogaritësi jep një **orientim të përafërt, jo këshillë juridike**. Ai nuk ju thotë nëse mund të natyralizoheni. Vetëm autoriteti kompetent vendos nëse vitet tuaja llogariten. Në rast dyshimi, pyesni komunën tuaj ose, në kantonin e Cyrihut, Zyrën e Komunave (Gemeindeamt). Kantoni ofron edhe vetëvlerësimin e vet.
+Llogaritësi numëron vitet. Ai nuk vendos nëse mund të natyralizoheni apo cilat vite llogariten: këtë e vendos autoriteti që trajton kërkesën tuaj. Kantoni ofron edhe vetëvlerësimin e vet.
 
 ## Hapi tjetër
 

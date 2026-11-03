@@ -1,14 +1,14 @@
 ---
 title: "About Viapunt"
-description: "Viapunt is an independent private service: general information, not legal advice."
+description: "Who runs Viapunt, where the questions come from and how to reach the authorities."
 lang: en
 slug: about
-updated: 2026-11-02
+updated: 2026-11-03
 ---
 
 ## Who runs this service
 
-Viapunt is an independent private service of Swiss Science Tutors GmbH, 5200 Brugg, Switzerland. It has no connection to any federal, cantonal or communal authority and has no official status. No authority approves, endorses or runs it.
+Viapunt is an independent private service. It is not connected to any federal, cantonal or communal authority. The operator is named in the [imprint](/en/imprint/).
 
 ## Our questions
 
@@ -16,7 +16,7 @@ All practice questions, explanations and translations are written by us. They ar
 
 ## General information, not legal advice
 
-Our pages give general information to help you understand the process and prepare. They are not legal advice and do not replace advice about your own case. We cannot tell you whether you qualify, how an authority will decide, or how to handle a refusal or appeal. For that, ask the authority or a qualified lawyer or advice service. Rules, fees and procedures differ between cantons and communes and change; the authority handling your application has the final word.
+Our pages explain the procedure and help you prepare. They are not legal advice: we cannot tell you whether you qualify or how an authority will decide. For your own case, ask the authority handling your application, an advice service or a lawyer.
 
 ## How to reach the authorities
 

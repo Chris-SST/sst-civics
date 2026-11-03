@@ -37,9 +37,9 @@ Su municipio decide si se aplica una exención. El cantón ofrece una autoevalua
 
 La página del cantón **no indica número de preguntas, duración ni nota mínima**. Remite a su municipio.
 
-Una noticia de prensa de 2022 mencionaba 50 preguntas en 60 minutos y 30 respuestas correctas para aprobar. **El cantón no lo ha confirmado.** No lo encontramos en ninguna página del cantón. No se fíe de ello. Pregunte a su municipio por el formato, el tiempo y la nota mínima.
+Una noticia de prensa de 2022 mencionaba 50 preguntas en 60 minutos, con 30 respuestas correctas para aprobar. El cantón no ha confirmado estas cifras; su municipio puede indicarle el formato y la nota mínima.
 
-El cantón publica su catálogo de preguntas en alemán. Su página no menciona otros idiomas. Cuente con que la prueba sea en alemán y compruébelo con su municipio.
+El cantón publica su catálogo de preguntas solo en alemán, así que cuente con una prueba en alemán.
 
 ## Los temas
 
@@ -70,7 +70,7 @@ Las preguntas sobre la prueba se dirigen a la Oficina de Municipios (Gemeindeamt
 
 ## Cómo encaja nuestra práctica
 
-Nuestras preguntas de práctica son **preguntas originales que hemos escrito nosotros**. Abarcan los mismos temas que la prueba, pero no son las preguntas del cantón, y la prueba real puede estar redactada de otro modo. Primero estudia en su idioma y después practica en alemán. Las traducciones son ayudas de estudio. La prueba real es en alemán. Este servicio es independiente y no está vinculado al cantón.
+Nuestras preguntas de práctica son **preguntas originales que hemos escrito nosotros**. Abarcan los mismos temas que la prueba, pero no son las preguntas del cantón. Primero estudia en su idioma y después en alemán, el idioma de la prueba.
 
 ## Siguiente paso
 

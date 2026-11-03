@@ -36,7 +36,9 @@ STUDY_LANGUAGES = LANGUAGES
 CANTONS = (
     "ag", "ai", "ar", "be", "bl", "bs", "fr", "ge", "gl", "gr", "ju", "lu", "ne",
     "nw", "ow", "sg", "sh", "so", "sz", "tg", "ti", "ur", "vd", "vs", "zg", "zh",
+    "ch",  # "Rest of Switzerland": federal questions only, until a canton has its own set
 )  # fmt: skip
+REST_OF_SWITZERLAND = "ch"
 DEFAULT_CANTON = "zh"
 
 TOKEN_VERIFY_EMAIL = "verify_email"  # noqa: S105
@@ -175,7 +177,7 @@ class StripeEvent(Base):
 
 
 class Payment(Base):
-    """One paid Civics Pass or extension, from a Stripe Checkout Session in payment mode."""
+    """One paid Viapunt Pass or extension, from a Stripe Checkout Session in payment mode."""
 
     __tablename__ = "payments"
 

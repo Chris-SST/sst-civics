@@ -29,13 +29,9 @@ Für die ordentliche Einbürgerung brauchen Sie zehn Jahre Aufenthalt in der Sch
 
 Zusätzlich verlangen die Kantone und Gemeinden eigene Wohnsitzfristen. Der Rechner prüft sie nicht.
 
-## Ihre Daten
+## Was der Rechner nicht kann
 
-Der Rechner läuft **nur in Ihrem Browser**. Er schickt nichts an einen Server und **speichert nichts**. Wenn Sie die Seite schliessen, sind Ihre Eingaben weg.
-
-## Wichtiger Hinweis
-
-Der Rechner liefert eine **Orientierung, keine Rechtsauskunft**. Er sagt nicht, ob Sie eingebürgert werden können. Ob Ihre Jahre zählen, entscheidet allein die zuständige Behörde. Fragen Sie im Zweifel Ihre Gemeinde oder, im Kanton Zürich, das Gemeindeamt. Der Kanton bietet ausserdem einen eigenen Selbsttest an.
+Der Rechner zählt Jahre. Ob Sie eingebürgert werden können und welche Jahre zählen, entscheidet die Behörde, die Ihr Gesuch bearbeitet. Der Kanton bietet zudem einen eigenen Selbsttest an.
 
 ## Nächster Schritt
 

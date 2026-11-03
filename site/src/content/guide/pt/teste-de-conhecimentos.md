@@ -37,9 +37,9 @@ O seu município decide se uma dispensa se aplica ao seu caso. O cantão oferece
 
 A página do cantão **não indica número de perguntas, duração nem nota mínima**. Remete para o seu município.
 
-Uma notícia de imprensa de 2022 mencionava 50 perguntas em 60 minutos e 30 respostas certas para passar. **O cantão não o confirmou.** Não o encontrámos em nenhuma página do cantão. Não confie nisso. Pergunte ao seu município o formato, o tempo e a nota mínima.
+Uma notícia de imprensa de 2022 mencionava 50 perguntas em 60 minutos, com 30 respostas certas para passar. O cantão não confirmou estes números; o seu município pode indicar-lhe o formato e a nota mínima.
 
-O cantão publica o seu catálogo de perguntas em alemão. A sua página não menciona outras línguas. Conte com um teste em alemão e confirme-o no seu município.
+O cantão publica o seu catálogo de perguntas apenas em alemão, por isso conte com um teste em alemão.
 
 ## Os temas
 
@@ -70,7 +70,7 @@ As perguntas sobre o teste vão para o Serviço dos Municípios (Gemeindeamt), s
 
 ## Como o nosso treino se encaixa
 
-As nossas perguntas de treino são **perguntas originais que escrevemos**. Cobrem os mesmos temas do teste, mas não são as perguntas do cantão, e o teste real pode estar redigido de forma diferente. Primeiro estuda na sua língua, depois treina em alemão. As traduções são auxiliares de estudo. O teste real é em alemão. Este serviço é independente e não tem ligação ao cantão.
+As nossas perguntas de treino são **perguntas originais que escrevemos**. Cobrem os mesmos temas do teste, mas não são as perguntas do cantão. Primeiro estuda na sua língua, depois em alemão, a língua do teste.
 
 ## Próximo passo
 

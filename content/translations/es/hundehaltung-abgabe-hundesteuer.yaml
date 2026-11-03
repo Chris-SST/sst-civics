@@ -1,6 +1,6 @@
 id: hundehaltung-abgabe-hundesteuer
 lang: es
-source_version: 2
+source_version: 3
 question: ¿Qué se aplica en el cantón de Zúrich a las personas que tienen un perro?
 options:
   a: Deben pagar cada año un impuesto por el perro al municipio (Gemeinde).
@@ -19,7 +19,7 @@ checks:
     reason: gleiche Bedeutung
     model: claude-sonnet-5-5
     at: *id001
-    source_version: 2
+    source_version: 3
     question_de: Was gilt im Kanton Zürich für Personen, die einen Hund haben?
     options_de:
       a: Sie müssen jedes Jahr eine Hundesteuer an die Gemeinde bezahlen.

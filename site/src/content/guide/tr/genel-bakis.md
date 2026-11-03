@@ -22,9 +22,9 @@ draft: false
 cta: free-questions
 ---
 
-## Kısaca
+## Olağan vatandaşlığa alınma
 
-İsviçre vatandaşı olmak istiyor ve bir İsviçreli ile evli değilseniz, genellikle **olağan vatandaşlığa alınma** (ordentliche Einbürgerung) yolunu izlersiniz. Süreç üç düzeyde ilerler: komün, kanton ve Konfederasyon. Çoğu zaman birkaç yıl sürer. Bu sayfa ilk bir genel bakış sunar. Komününüzün vereceği danışmanlığın yerini tutmaz.
+İsviçre vatandaşı olmak istiyor ve bir İsviçreli ile evli değilseniz, genellikle **olağan vatandaşlığa alınma** (ordentliche Einbürgerung) yolunu izlersiniz. Süreç üç düzeyde ilerler: komün, kanton ve Konfederasyon. Çoğu zaman birkaç yıl sürer.
 
 ## Federal koşullar
 
@@ -73,7 +73,7 @@ Tüm koşullar ve harçlar SEM sayfalarında (Almanca) yer alır: [eşler](https
 
 - **Komününüzün vatandaşlık dairesine.** Yerel kuralları ve tarihleri bilir.
 - Zürih Kantonu'nda **Komünler Dairesi (Gemeindeamt), vatandaşlığa alınma bölümü** (telefon +41 43 259 83 81).
-- Kendi durumunuza ilişkin sorular için bir danışma hizmetine veya bir avukata. Biz yalnızca genel bilgi veriyoruz ve koşulları karşılayıp karşılamadığınızı söyleyemeyiz.
+- Kendi durumunuza ilişkin sorular için: bir danışma hizmetine veya bir avukata.
 
 ## Sonraki adım
 

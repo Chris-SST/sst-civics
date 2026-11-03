@@ -1,16 +1,25 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, Navigate } from "react-router-dom";
 import { homeFor, useAuth } from "../auth";
 import Pricing from "../components/Pricing";
+import { guideBase, onAppHost } from "../guide";
 
 /** The information-first front door (D-042): what the service does, how it works in three steps,
  * the free sample questions, then the pricing panel. The footer with the independence notice
  * comes from the layout. */
 export default function Landing() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { me, loading } = useAuth();
+  // On the deployed app host a signed-out visitor goes to the guide site's home page in their
+  // language: the guide is the front door, the app starts at /try or sign-up.
+  const toGuide = !loading && !me && onAppHost();
+  useEffect(() => {
+    if (toGuide) window.location.replace(`${guideBase()}/${i18n.language.slice(0, 2)}/`);
+  }, [toGuide, i18n.language]);
 
   if (!loading && me) return <Navigate to={homeFor(me.user.role)} replace />;
+  if (toGuide) return <p className="muted">…</p>;
 
   const steps = [1, 2, 3] as const;
 

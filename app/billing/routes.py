@@ -1,4 +1,4 @@
-"""Civics Pass billing: products and prices from Stripe, one-off Checkout, payments, refund
+"""Viapunt Pass billing: products and prices from Stripe, one-off Checkout, payments, refund
 eligibility and the Stripe webhook."""
 
 from __future__ import annotations
@@ -40,7 +40,7 @@ class ProductOut(BaseModel):
 
 
 class CheckoutIn(BaseModel):
-    product: Literal["civics_pass_zh", "civics_pass_ag", "civics_extension"]
+    product: Literal["civics_pass_zh", "civics_pass_ch", "civics_pass_ag", "civics_extension"]
     # Which pass an extension is for; by default the learner's extendable pass or canton.
     canton: str | None = Field(default=None, min_length=2, max_length=2)
 

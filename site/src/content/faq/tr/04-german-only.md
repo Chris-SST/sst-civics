@@ -4,4 +4,4 @@ question: "Bilgi testi yalnızca Almanca mı?"
 order: 4
 ---
 
-Zürih Kantonu soru kataloğunu Almanca yayımlar ve sayfasında başka bir dilden söz etmez. Testin Almanca olmasını bekleyin ve komününüze sorun. Daha fazlası [Bilgi testi](/tr/bilgi-testi/) sayfasında.
+Zürih Kantonu soru kataloğunu yalnızca Almanca yayımlar; bu nedenle testin Almanca olmasını bekleyin. Daha fazlası [Bilgi testi](/tr/bilgi-testi/) sayfasında.

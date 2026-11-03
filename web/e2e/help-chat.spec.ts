@@ -7,9 +7,10 @@ test("a free learner asks the help chat and starts a new conversation", async ({
   const email = freshEmail("help");
   await signUpAndVerify(page, email);
 
-  await expect(page.getByRole("heading", { name: "Questions? Ask Viapunt" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Ask Viapunt" })).toBeVisible();
   await page.getByRole("link", { name: "Open the help chat" }).click();
   await expect(page.getByRole("heading", { name: "Ask Viapunt" })).toBeVisible();
+  await expect(page.getByText("Answered by AI, based on the Viapunt guide.")).toBeVisible();
   await expect(page.getByText(/Free account: a few questions a day/)).toBeVisible();
 
   // A suggested question goes out as the learner's message and gets a reply.

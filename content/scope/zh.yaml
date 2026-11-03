@@ -540,7 +540,7 @@ facts:
   fact_en: Swiss nationals are in principle not extradited, except to international courts for proceedings
     there.
 - id: zh-098
-  topic: bund.sozial.pflichten
+  topic: kanton.sozial.steuern_leistungen
   section: Demokratie und Föderalismus
   fact_de: Wie viel Steuern eine Person zahlt, richtet sich nach ihrem steuerpflichtigen Einkommen und
     Vermögen.
@@ -868,12 +868,12 @@ facts:
   fact_de: Innert 3 Monaten ab Geburt muss für ein Kind eine Krankenversicherung bestehen.
   fact_en: A child must have health insurance within 3 months of birth.
 - id: zh-159
-  topic: bund.sozial.bildung
+  topic: kanton.sozial.bildung_gesundheit
   section: Sozialstaat und Zivilgesellschaft
   fact_de: Der gesetzlich vorgeschriebene Schulbesuch dauert in der Schweiz elf Jahre.
   fact_en: Legally required schooling in Switzerland lasts eleven years.
 - id: zh-160
-  topic: bund.sozial.bildung
+  topic: kanton.sozial.bildung_gesundheit
   section: Sozialstaat und Zivilgesellschaft
   fact_de: Schulpflege oder Schulleitung legen fest, welcher Primarschulklasse ein Kind zugeteilt wird.
   fact_en: The school board or school management decides which primary school class a child is assigned
@@ -1033,7 +1033,7 @@ facts:
   fact_en: Spouses without a shared family name must decide together which surname their children will
     bear.
 - id: zh-190
-  topic: bund.sozial.pflichten
+  topic: kanton.sozial.steuern_leistungen
   section: Sozialstaat und Zivilgesellschaft
   fact_de: Wer einen Hund hält, muss dafür eine Abgabe an den Staat entrichten.
   fact_en: Dog owners must pay a tax on their dog.

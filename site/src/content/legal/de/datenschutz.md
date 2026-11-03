@@ -3,7 +3,7 @@ title: "Datenschutzerklärung"
 description: "Wie Viapunt mit Personendaten umgeht (zurzeit auf Englisch)."
 lang: de
 slug: datenschutz
-updated: 2026-11-02
+updated: 2026-11-03
 notice: "Diese Seite gibt es zurzeit nur auf Englisch. Eine deutsche Fassung folgt nach der rechtlichen Prüfung."
 contentLang: en
 ---
@@ -99,7 +99,7 @@ This notice explains how personal data is handled when you use the guide website
 
 8.2 Administrator accounts need two-factor authentication, and its secrets are stored encrypted. Access is limited to what is needed. Nightly backups are kept.
 
-8.3 We limit sign-in attempts and link requests to resist abuse. No system is perfectly secure; if a breach is likely to harm you we will notify you and the authority as the law requires.
+8.3 We limit sign-in attempts and link requests to resist abuse. If a breach is likely to harm you, we notify you and the FDPIC as the law requires.
 
 ## 9. Your rights
 
@@ -115,4 +115,4 @@ This notice explains how personal data is handled when you use the guide website
 
 ## 11. Contact
 
-Swiss Science Tutors GmbH, 5200 Brugg, Switzerland. Email: [info@viapunt.ch](mailto:info@viapunt.ch).
+Email: [info@viapunt.ch](mailto:info@viapunt.ch). Postal address: see the [imprint](/en/imprint/).

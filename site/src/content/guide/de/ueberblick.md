@@ -22,9 +22,9 @@ draft: false
 cta: free-questions
 ---
 
-## Kurz gesagt
+## Ordentliche Einbürgerung
 
-Wer in der Schweiz Bürgerin oder Bürger werden möchte und nicht mit einer Schweizer Person verheiratet ist, nutzt in der Regel die **ordentliche Einbürgerung**. Sie läuft über drei Ebenen: Gemeinde, Kanton und Bund. Sie dauert oft mehrere Jahre. Diese Seite gibt einen ersten Überblick. Sie ersetzt keine Auskunft Ihrer Gemeinde.
+Wer in der Schweiz Bürgerin oder Bürger werden möchte und nicht mit einer Schweizer Person verheiratet ist, nutzt in der Regel die **ordentliche Einbürgerung**. Sie läuft über drei Ebenen: Gemeinde, Kanton und Bund. Sie dauert oft mehrere Jahre.
 
 ## Die Voraussetzungen des Bundes
 
@@ -73,7 +73,7 @@ Alle Bedingungen und die Gebühren finden Sie beim SEM: [Ehegatten](https://www.
 
 - An die **Einbürgerungsstelle Ihrer Gemeinde**. Sie kennt die lokalen Regeln und Termine.
 - Im Kanton Zürich an das **Gemeindeamt, Abteilung Einbürgerungen** (Telefon +41 43 259 83 81).
-- Für Fragen zu Ihrem Einzelfall an eine Beratungsstelle oder eine Anwältin beziehungsweise einen Anwalt. Wir geben nur allgemeine Informationen und können nicht sagen, ob Sie die Voraussetzungen erfüllen.
+- Für Fragen zu Ihrem Einzelfall: eine Beratungsstelle oder eine Anwältin, ein Anwalt.
 
 ## Nächster Schritt
 

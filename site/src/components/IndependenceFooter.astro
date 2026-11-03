@@ -3,14 +3,13 @@
 // footer.independence) and links to the main guide pages.
 import { INDEPENDENCE, ui } from "../i18n/ui";
 import { pathFor } from "../i18n/pages.mjs";
-import { BRAND_NAME } from "../brand";
 interface Props { lang: string; links: { href: string; label: string }[]; legal?: { href: string; label: string }[] }
 const { lang, links, legal = [] } = Astro.props;
 const t = ui(lang);
 ---
 <footer class="site-footer">
   <div class="wrap site-footer__inner">
-    <p lang={lang}>{INDEPENDENCE[lang] ?? INDEPENDENCE.en} {BRAND_NAME}.</p>
+    <p lang={lang}>{INDEPENDENCE[lang] ?? INDEPENDENCE.en}</p>
     <nav aria-label={t.footerNav}>
       <a href={pathFor(lang, "home")}>{t.homeLabel}</a>
       {links.map((l) => <a href={l.href}>{l.label}</a>)}

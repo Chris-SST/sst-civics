@@ -40,7 +40,7 @@ draft: false
 cta: free-questions
 ---
 
-## The short answer
+## What you attach
 
 Since 1 July 2023 the canton of Zurich has had one set of rules for every commune. You file the application online with the canton's **Gemeindeamt** (office for communes), not with your commune. For every person in the application you attach **two documents** (KBüV § 7):
 

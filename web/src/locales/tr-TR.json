@@ -30,7 +30,7 @@
     "terms": "Kullanım koşulları",
     "privacy": "Gizlilik bildirimi",
     "imprint": "Künye",
-    "independence": "Federal, kantonal veya yerel hiçbir makamla bağlantısı olmayan bağımsız bir hizmettir. Genel bilgidir, hukuki danışmanlık değildir."
+    "independence": "Viapunt, federal, kantonal veya yerel hiçbir makamla bağlantısı olmayan bağımsız bir hizmettir."
   },
   "errors": {
     "unknown_error": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
@@ -56,8 +56,6 @@
     "billing_not_configured": "Ödemeler bu ortamda henüz açık değil.",
     "unknown_plan": "Bilinmeyen plan.",
     "price_not_found": "Fiyatlar şu anda kullanılamıyor. Lütfen birazdan tekrar deneyin.",
-    "already_subscribed": "Zaten bir aboneliğiniz var. Değiştirmek için «Faturalamayı yönet» seçeneğini kullanın.",
-    "no_stripe_customer": "Henüz bir faturalama hesabı yok. Önce bir plan başlatın.",
     "csrf_failed": "Oturumunuzun süresi doldu. Lütfen sayfayı yeniden yükleyin.",
     "cannot_deactivate_self": "Kendi hesabınızı devre dışı bırakamazsınız.",
     "impersonation_disabled": "Başka bir kullanıcı olarak görüntüleme üretimde kapalıdır.",
@@ -66,16 +64,16 @@
     "no_access": "Şu anda kantonunuz için erişiminiz yok.",
     "invalid_topic": "Lütfen listeden bir konu seçin.",
     "conversation_ended": "Bu oturum sona erdi. Yeni bir oturum başlatın.",
-    "tutor_unavailable": "Eğitmen şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.",
+    "tutor_unavailable": "Asistan şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.",
     "message_too_long": "Mesajlar en fazla 2000 karakter olabilir.",
     "empty_message": "Lütfen bir mesaj yazın.",
     "daily_limit_reached": "Bugünkü mesaj sınırınıza ulaştınız.",
     "monthly_limit_reached": "Bu ayki mesaj sınırınıza ulaştınız.",
-    "timeout": "Eğitmen yanıt vermekte çok gecikti. Mesajınız sayılmadı; lütfen tekrar deneyin.",
-    "connection": "Eğitmene ulaşılamadı. Mesajınız sayılmadı; lütfen tekrar deneyin.",
-    "api": "Eğitmen bir sorunla karşılaştı. Mesajınız sayılmadı; lütfen tekrar deneyin.",
+    "timeout": "Asistan yanıt vermekte çok gecikti. Mesajınız sayılmadı; lütfen tekrar deneyin.",
+    "connection": "Asistana ulaşılamadı. Mesajınız sayılmadı; lütfen tekrar deneyin.",
+    "api": "Asistan bir sorunla karşılaştı. Mesajınız sayılmadı; lütfen tekrar deneyin.",
     "no_questions": "Bu konu için henüz alıştırma sorusu yok.",
-    "conversation_required": "Değerlendirmeyi bir eğitmen oturumundan açın.",
+    "conversation_required": "Değerlendirmeyi bir sohbetten açın.",
     "invalid_difficulty": "Zorluk düzeyi 1 ile 5 arasında olmalıdır.",
     "age_confirmation_required": "Lütfen 16 yaşında veya daha büyük olduğunuzu onaylayın.",
     "invalid_canton": "Lütfen listeden bir kanton seçin.",
@@ -84,7 +82,7 @@
     "password_required_for_admins": "Yönetici hesapları bir parolayı korumalıdır.",
     "reauth_required": "Lütfen kimliğinizi doğrulayın: parolanızı girin veya yeni bir giriş bağlantısı açın.",
     "not_while_impersonating": "Başka bir kullanıcı olarak görüntülerken bu işlem yapılamaz.",
-    "not_for_sale": "Bu Civics Pass henüz satışta değil.",
+    "not_for_sale": "Bu Viapunt Pass henüz satışta değil.",
     "pass_active": "Bu kanton için zaten etkin bir geçişiniz var. Bunun yerine uzatabilirsiniz.",
     "no_pass_to_extend": "Uzatma için bu kantona ait, etkin olan veya 90 günden kısa süre önce sona ermiş bir geçiş gerekir.",
     "already_refunded": "Bu ödeme zaten iade edildi.",
@@ -97,8 +95,8 @@
     "invalid_options": "Doğru cevap dahil dört farklı cevap gereklidir.",
     "invalid_transition": "Bu soru artık bu şekilde değiştirilemez.",
     "edits_need_approve": "Değişiklikler yalnızca bir onayla birlikte kaydedilebilir.",
-    "sample_only": "Bu soru Civics Pass kapsamındadır. Ücretsiz sürüm örnek soruları içerir.",
-    "free_mock_used": "Ücretsiz deneme sınavınızı kullandınız. Civics Pass ile deneme sınavları sınırsızdır.",
+    "sample_only": "Bu soru Viapunt Pass kapsamındadır. Ücretsiz sürüm örnek soruları içerir.",
+    "free_mock_used": "Ücretsiz deneme sınavınızı kullandınız. Viapunt Pass ile deneme sınavları sınırsızdır.",
     "not_enough_questions": "Tam bir deneme sınavı için henüz yeterli onaylanmış soru yok.",
     "no_mock_test": "Kantonunuz için henüz deneme sınavı yok.",
     "deadline_passed": "Bu deneme sınavının süresi doldu. Süre bittikten sonraki cevaplar sayılmaz.",
@@ -116,17 +114,15 @@
     "title": "Vatandaşlığa geçiş sınavını kendi dilinizde anlayın.",
     "lead": "Her sorunun ne anlama geldiğini en iyi bildiğiniz dilde öğrenin, ardından aynı soruları gerçek sınavın dili olan Almancada çalışın.",
     "cta": "Ücretsiz çalışmaya başlayın",
-    "plansTitle": "Planlar",
-    "trialNote": "Fiyatlar CHF cinsindendir.",
     "howTitle": "Nasıl çalışır",
     "step1Title": "Anlayın",
     "step1Body": "Her soruyu kendi dilinizde ve Almanca olarak yan yana okuyun, gerektiğinde kısa bir açıklamayla.",
     "step2Title": "Almanca çalışın",
     "step2Body": "Kısa turlar ve deneme sınavlarıyla adım adım kendi dilinizden yalnızca Almancaya geçin.",
     "step3Title": "Geçin",
-    "step3Body": "Sınava Almanca olarak güvenle girin. Çalışma tahmininiz bir yol göstericidir, resmî bir sonuç değildir.",
+    "step3Body": "Asıl sınava Almanca girin.",
     "freeTitle": "30 soruyu ücretsiz deneyin",
-    "freeBody": "Ödeme gerekmez. Ücretsiz bir hesap oluşturun ve bir karar vermeden önce nasıl çalıştığını görün."
+    "freeBody": "Ödeme ve hesap gerekmez."
   },
   "signup": {
     "title": "Hesabınızı oluşturun",
@@ -142,7 +138,8 @@
     "interfaceLanguageHint": "Menülerin ve düğmelerin dili. Çevirisi olmayan yerlerde İngilizce gösterilir.",
     "withPassword": "Ayrıca bir parola belirleyin (isteğe bağlı)",
     "passwordOptionalHint": "Parola olmadan, size e-postayla gönderdiğimiz bir bağlantıyla giriş yaparsınız. Parolayı daha sonra hesabınızdan ekleyebilir veya kaldırabilirsiniz.",
-    "checkEmailSignIn": "Bağlantı aynı zamanda oturumunuzu da açar."
+    "checkEmailSignIn": "Bağlantı aynı zamanda oturumunuzu da açar.",
+    "cantonRest": "Kantonunuz listede yok mu? «İsviçre'nin geri kalanı»nı seçin: her kantonda testin büyük bölümünü oluşturan federal soruları çalışırsınız. Kantonunuzun soruları, onu eklediğimizde gelecek."
   },
   "fields": {
     "email": "E-posta adresi",
@@ -211,10 +208,10 @@
     "waiting": "Stripe'ın ödeme yönteminizi onaylaması bekleniyor. Bu genellikle birkaç saniye sürer…",
     "slow": "Stripe henüz onaylamadı. Erişiminiz otomatik olarak güncellenecek; bu sayfadan ayrılabilirsiniz.",
     "toDashboard": "Panonuza gidin",
-    "activeUntil": "Teşekkürler. {{canton}} için Civics Pass'iniz {{date}} tarihine kadar etkin."
+    "activeUntil": "Teşekkürler. {{canton}} için Viapunt Pass'iniz {{date}} tarihine kadar etkin."
   },
   "learner": {
-    "tutorOffline": "Eğitmen bu ortamda henüz bağlı değil.",
+    "tutorOffline": "Asistan bu ortamda henüz bağlı değil.",
     "recent": "Son oturumlar",
     "noRecent": "Henüz oturum yok. Başlamak için bir konu seçin.",
     "endedTag": "sona erdi",
@@ -222,15 +219,14 @@
     "usageToday": "Bugün: {{used}} / {{limit}}",
     "usageMonth": "Bu ay: {{used}} / {{limit}}",
     "nearLimit": "Bu ayki mesaj sınırınıza yaklaştınız.",
-    "integrity": "Eğitmen açıklar ve yol gösterir; hukuki danışmanlık vermez.",
     "practise": "Alıştırma yapın",
-    "askTutor": "Eğitmene sorun",
+    "askTutor": "Asistana sorun",
     "noQuestionsYet": "Kantonunuz için alıştırma soruları yolda.",
     "welcome": "Hoş geldiniz",
     "noTopics": "Kantonunuzun konuları yakında eklenecek.",
     "topicsTitle": "Sınav konuları: {{canton}}",
     "notStarted": "Henüz başlanmadı",
-    "freeTierNotice": "Ücretsiz sürümü kullanıyorsunuz: tüm çalışma modlarında {{count}} örnek soru ve bir deneme sınavı. Kantonunuz için bir Civics Pass tüm soruları, sınırsız deneme sınavını ve Bunu açıkla özelliğini açar.",
+    "freeTierNotice": "Ücretsiz sürümü kullanıyorsunuz: tüm çalışma modlarında {{count}} örnek soru ve bir deneme sınavı. Kantonunuz için bir Viapunt Pass tüm soruları, sınırsız deneme sınavını ve Bunu açıkla özelliğini açar.",
     "readinessTitle": "{{canton}} kantonu sınavına hazırlık",
     "knownOf": "{{total}} sorudan {{known}} tanesi biliniyor",
     "dueCount_one": "Tekrar sırası gelen {{count}} soru",
@@ -252,7 +248,7 @@
   "chat": {
     "back": "Oturumlarınız",
     "end": "Oturumu bitir",
-    "intro": "Eğitmene neyle uğraştığınızı veya nerede takıldığınızı söyleyin.",
+    "intro": "Asistana neyle uğraştığınızı veya nerede takıldığınızı söyleyin.",
     "placeholder": "Sorunuzu yazın… (Göndermek için Enter, yeni satır için Shift+Enter)",
     "send": "Gönder",
     "ended": "Bu oturum sona erdi.",
@@ -260,7 +256,7 @@
     "helplineTitle": "Konuşacak biri, hemen şimdi",
     "helplineBody": "Dargebotene Hand (İsviçre yardım hattı): 143'ü arayın; ücretsiz, gizli ve günün 24 saati hizmet verir. Acil durumda 144'ü (ambulans) veya 117'yi (polis) arayın. Güvendiğiniz biriyle konuşmak da yardımcı olur.",
     "nearLimit": "Bu ay {{limit}} mesajın {{used}} tanesi kullanıldı.",
-    "dailyLimit": "Bugünkü mesaj sınırınıza ulaştınız. Eğitmen yarın yeniden hizmetinizde.",
+    "dailyLimit": "Bugünkü mesaj sınırınıza ulaştınız. Asistan yarın yeniden hizmetinizde.",
     "monthlyLimit": "Bu ayki mesaj sınırınıza ulaştınız.",
     "check": "Öğrendiklerinizi kontrol edin",
     "checkTitle": "Öğrendiklerinizi kontrol edin",
@@ -353,8 +349,8 @@
       "no_payment": "ödeme yok"
     },
     "product": {
-      "civics_pass_zh": "Civics Pass",
-      "civics_pass_ag": "Civics Pass",
+      "civics_pass_zh": "Viapunt Pass",
+      "civics_pass_ag": "Viapunt Pass",
       "civics_extension": "Uzatma"
     }
   },
@@ -371,7 +367,7 @@
     "roundBodyPerfect": "Tüm sorular doğru. Bir dahaki sefere biraz daha zor sorular bekleyin.",
     "roundBodyGreat": "Neredeyse hepsi doğru. Bir tur daha ve bu konu sizin.",
     "roundBodyGood": "Yarısı veya daha fazlası doğru. Kaçırdığınız soruların çözümlerine göz atın ve yeniden deneyin.",
-    "roundBodyKeep": "Zor bir tur. Alıştırma tam da bunun için var; eğitmen zorlandığınız sorularda size yol gösterebilir.",
+    "roundBodyKeep": "Zor bir tur. Çözümleri okuyun ya da yanlış yaptığınız sorularda «Bunu açıklayın» seçeneğini kullanın.",
     "anotherRound": "Bir tur daha",
     "title": "Alıştırma",
     "mastery": "Hâkimiyet",
@@ -395,8 +391,7 @@
     "encourage": [
       "Bu sefer olmadı.",
       "Tam değil. Çözüme göz atın.",
-      "Yaklaştınız ama olmadı.",
-      "Bu olmadı. Sonraki yeni bir başlangıç."
+      "Yaklaştınız ama olmadı."
     ],
     "streak": "Üst üste {{count}}!",
     "backOnTrack": "Yeniden yoldasınız!",
@@ -514,6 +509,7 @@
   },
   "cantons": {
     "zh": "Zürih",
+    "ch": "İsviçre'nin geri kalanı",
     "ag": "Aargau"
   },
   "languages": {
@@ -546,7 +542,7 @@
     "passwordSaved": "Parolanız kaydedildi. Diğer cihazlardaki oturumlar kapatıldı.",
     "passwordRemoved": "Parolanız kaldırıldı. Bundan sonra e-posta bağlantısıyla giriş yapın.",
     "deleteTitle": "Hesabı sil",
-    "deleteIntro": "Bu işlem hesabınızı, ilerlemenizi, yanıtlarınızı, eğitmen konuşmalarınızı ve soru bildirimlerinizi siler. Geri alınamaz.",
+    "deleteIntro": "Bu işlem hesabınızı, ilerlemenizi, yanıtlarınızı, «Bunu açıklayın» ve yardım sohbetindeki konuşmalarınızı ve soru bildirimlerinizi siler. Geri alınamaz.",
     "deleteKept": "Yaptığınız ödemelerin faturalama kayıtları, e-posta adresiniz olmadan, yasanın gerektirdiği süre boyunca saklanır. Size bir onay e-postası göndeririz.",
     "reauthFresh": "Birkaç dakika önce bir e-posta bağlantısıyla giriş yaptınız; bu yüzden parola gerekmez.",
     "reauthEither": "Parolanızı girin veya yeni bir giriş bağlantısıyla onaylayın.",
@@ -558,9 +554,9 @@
     "deletedBody": "Hesabınız ve öğrenme verileriniz silindi. Size bir onay e-postası gönderdik."
   },
   "pricing": {
-    "title": "Civics Pass",
-    "intro": "Ücretsiz alıştırmayla başlayın. Civics Pass bir kanton için her şeyi açar: tüm sorular ve çalışma modları, sınırsız deneme sınavı ve Bunu açıkla, her dilde. Bir kez ödersiniz; abonelik yoktur.",
-    "passName": "Civics Pass {{canton}}",
+    "title": "Viapunt Pass",
+    "intro": "Ücretsiz alıştırmayla başlayın. Viapunt Pass bir kanton için her şeyi açar: tüm sorular ve çalışma modları, sınırsız deneme sınavı ve Bunu açıkla, her dilde. Bir kez ödersiniz; abonelik yoktur.",
+    "passName": "Viapunt Pass · {{canton}}",
     "period": "{{months}} ay için",
     "passIncludes": "Bu kanton için tüm sorular ve çalışma modları, sınırsız deneme sınavı ve Bunu açıkla.",
     "activeUntil": "{{date}} tarihine kadar etkin",
@@ -569,10 +565,10 @@
     "buy": "Satın al",
     "signUpToBuy": "Ücretsiz kaydolun",
     "extend": "{{months}} ay uzatın ({{price}})",
-    "extensionNote": "Daha fazla zamana mı ihtiyacınız var? Uzatma, geçişiniz etkinken veya sona ermesinden sonra 90 güne kadar {{price}} karşılığında {{months}} ay ekler.",
+    "extensionNote": "Uzatma, geçişiniz etkinken veya sona ermesinden sonra 90 güne kadar {{price}} karşılığında {{months}} ay ekler.",
     "priceNote": "Fiyatlar CHF cinsindendir. Stripe üzerinden kartla veya TWINT ile tek seferlik ödeme.",
     "unavailable": "Fiyatlar şu anda kullanılamıyor. Lütfen birazdan tekrar deneyin.",
-    "refundEligible": "Beklediğiniz gibi değil mi? Satın alımdan bu yana {{max}} sorudan az çalıştıysanız son ödemeniz {{date}} tarihine kadar iade edilebilir (şu ana dek: {{count}}).",
+    "refundEligible": "Satın alımdan bu yana {{max}} sorudan az çalıştıysanız son ödemeniz {{date}} tarihine kadar iade edilebilir (şu ana dek: {{count}}).",
     "writeToSupport": "İade istemek için destek ekibine yazın.",
     "refundTooLate": "Son ödemeniz için iade süresi {{date}} tarihinde sona erdi.",
     "refundTooMany": "Son ödemeniz artık iade edilemez: satın alımdan bu yana {{count}} soru çalıştınız ve iade {{max}} sorunun altında mümkündür.",
@@ -626,7 +622,7 @@
     "passMark": "Geçme notu: {{total}} üzerinden {{mark}}",
     "passMarkUnconfirmed": "kanton tarafından henüz doğrulanmadı",
     "freeOne": "Ücretsiz sürüm bir deneme sınavı içerir.",
-    "freeUsed": "Ücretsiz deneme sınavınızı kullandınız. Civics Pass ile deneme sınavları sınırsızdır.",
+    "freeUsed": "Ücretsiz deneme sınavınızı kullandınız. Viapunt Pass ile deneme sınavları sınırsızdır.",
     "notEnough": "Tam bir deneme sınavı için henüz yeterli onaylanmış soru yok.",
     "start": "Deneme sınavını başlatın",
     "continue": "Deneme sınavına devam edin",
@@ -659,6 +655,7 @@
   "explain": {
     "button": "Bunu açıklayın",
     "title": "Bu soruyu açıklayın",
+    "note": "Yanıtlar yapay zekâdan.",
     "placeholder": "Sorunuzu yazın… (Göndermek için Enter)",
     "remaining": "Bugün için {{limit}} mesajdan {{left}} tanesi kaldı",
     "limitReached": "Bugünkü mesaj sınırına ulaştınız. Yarın yeniden kullanabilirsiniz.",
@@ -696,8 +693,8 @@
   },
   "help": {
     "title": "Viapunt'a sorun",
-    "lead": "Bilgi testi, konuları ya da vatandaşlığa geçiş süreci hakkında sorularınız mı var? Burada, kendi dilinizde sorun. Yanıtlar Viapunt rehberine ve testin kapsadığı konuların listesine dayanır.",
-    "note": "Yapay zekâ asistanı hata yapabilir ve yanıtları hukuki danışmanlık değildir. Kendi başvurunuz hakkında yalnızca belediyeniz ve kanton karar verir.",
+    "lead": "Bilgi testi, konuları ya da vatandaşlığa geçiş süreci hakkında kendi dilinizde sorun.",
+    "note": "Yanıtlar yapay zekâdan, Viapunt rehberine dayanır.",
     "intro": "Örneğin:",
     "s1": "Zürih kantonunda başvuru için hangi belgelere ihtiyacım var?",
     "s2": "Nationalrat ile Ständerat arasındaki fark nedir?",
@@ -705,9 +702,9 @@
     "placeholder": "Sorunuz… (Göndermek için Enter)",
     "newChat": "Yeni sohbet",
     "limitReached": "Bugünkü mesaj sınırına ulaştınız. Yardım sohbeti yarın yeniden açılır.",
-    "free": "Ücretsiz hesap: günde birkaç soru. Civics Pass ile daha fazlasını ve her soruda açıklamayı alırsınız.",
-    "freeCta": "Civics Pass'e bakın",
-    "cardTitle": "Sorunuz mu var? Viapunt'a sorun",
+    "free": "Ücretsiz hesap: günde birkaç soru. Viapunt Pass ile daha fazlasını ve her soruda açıklamayı alırsınız.",
+    "freeCta": "Viapunt Pass'e bakın",
+    "cardTitle": "Viapunt'a sorun",
     "cardBody": "Test, konuları ya da vatandaşlığa geçiş süreci hakkında kendi dilinizde sorun.",
     "cardCta": "Yardım sohbetini açın"
   },
@@ -722,7 +719,7 @@
     "signup": "Ücretsiz hesap oluştur",
     "doneTitle": "Tebrikler, 30 sorunun hepsi buydu",
     "doneScore": "{{total}} sorudan {{score}} tanesini doğru yanıtladınız.",
-    "doneText": "Ücretsiz bir hesapla ilerlemenizi saklar, Almanca tam bir deneme sınavı yapar ve yardım sohbetine soru sorabilirsiniz. Civics Pass kantonun tüm sorularını açar.",
+    "doneText": "Ücretsiz bir hesapla ilerlemenizi saklar, Almanca tam bir deneme sınavı yapar ve yardım sohbetine soru sorabilirsiniz. Viapunt Pass kantonun tüm sorularını açar.",
     "again": "Baştan başla",
     "none": "Bu kanton için pratik soruları hazırlanıyor."
   },

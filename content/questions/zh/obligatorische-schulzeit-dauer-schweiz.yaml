@@ -1,8 +1,8 @@
 id: obligatorische-schulzeit-dauer-schweiz
-version: 2
-scope: federal
-canton: null
-topic: bund.sozial.bildung
+version: 3
+scope: zh
+canton: zh
+topic: kanton.sozial.bildung_gesundheit
 question_de: Wie viele Jahre dauert im Kanton Zürich die obligatorische Schulzeit, wenn man den Kindergarten
   mitzählt?
 options_de:
@@ -34,7 +34,7 @@ checks:
     agrees: true
     model: claude-sonnet-5-5
     at: 2026-11-02
-    version: 2
+    version: 3
     reasoning: Im Kanton Zürich dauert die obligatorische Schulzeit elf Jahre, nämlich zwei Jahre Kindergarten,
       sechs Jahre Primarstufe und drei Jahre Sekundarstufe.
   source:
@@ -44,7 +44,7 @@ checks:
       nicht im Text, Quelle 2 ist eine Fehlerseite ohne Inhalt.
     at: *id001
     model: claude-sonnet-5-5
-    version: 2
+    version: 3
   panel:
     verdict: approve
     reviews:
@@ -75,7 +75,7 @@ checks:
         oder auf «Die Dauer von elf Jahren gilt dank dem HarmoS-Konkordat in den meisten Kantonen» kürzen.'
     round: 2
     at: &id002 2026-11-02
-    version: 2
+    version: 3
 review:
   action: ai_panel
   note: Approved by the AI review panel

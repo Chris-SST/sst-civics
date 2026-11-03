@@ -37,9 +37,9 @@ Il Suo comune decide se si applica un'esenzione. Il Cantone offre un'autovalutaz
 
 La pagina del Cantone **non indica né il numero di domande, né la durata, né il punteggio minimo**. Rimanda al Suo comune.
 
-Un articolo di stampa del 2022 menzionava 50 domande in 60 minuti e 30 risposte corrette per superare il test. **Il Cantone non lo ha confermato.** Non l'abbiamo trovato in nessuna pagina del Cantone. Non faccia affidamento su questa informazione. Chieda al Suo comune il formato, il tempo e il punteggio minimo.
+Un articolo di stampa del 2022 menzionava 50 domande in 60 minuti, con 30 risposte corrette per superare il test. Il Cantone non ha confermato queste cifre; il Suo comune può indicarLe il formato e il punteggio minimo.
 
-Il Cantone pubblica il suo catalogo di domande in tedesco. La sua pagina non menziona altre lingue. Si aspetti che il test sia in tedesco e lo verifichi con il Suo comune.
+Il Cantone pubblica il suo catalogo di domande solo in tedesco, quindi si aspetti un test in tedesco.
 
 ## I temi
 
@@ -70,7 +70,7 @@ Le domande sul test vanno rivolte all'Ufficio dei comuni (Gemeindeamt), sezione 
 
 ## Come si inserisce il nostro esercizio
 
-Le nostre domande di esercizio sono **domande originali scritte da noi**. Trattano gli stessi temi del test, ma non sono le domande del Cantone e il vero test può essere formulato in modo diverso. Lei studia prima nella Sua lingua, poi si esercita in tedesco. Le traduzioni sono un aiuto allo studio. Il vero test è in tedesco. Questo servizio è indipendente e non è collegato al Cantone.
+Le nostre domande di esercizio sono **domande originali scritte da noi**. Trattano gli stessi temi del test, ma non sono le domande del Cantone. Lei studia prima nella Sua lingua, poi in tedesco, la lingua del test.
 
 ## Prossimo passo
 

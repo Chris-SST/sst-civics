@@ -34,7 +34,7 @@ const errors = [];
 let checked = 0;
 
 for (const [path, html] of byPath) {
-  if (path === "/") continue; // the redirect to /de/
+  if (path === "/") continue; // the redirect to /en/
   const alts = alternates(html);
   const fail = (msg) => errors.push(`${path}: ${msg}`);
   if (alts.length === 0) {

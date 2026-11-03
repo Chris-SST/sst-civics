@@ -1,4 +1,4 @@
-"""Create or update the Civics Pass products and prices in the Stripe account, test mode
+"""Create or update the Viapunt Pass products and prices in the Stripe account, test mode
 only, with the lookup keys the app expects (D-015). Safe to re-run.
 
 The app never reads an amount from code: it looks prices up in Stripe by lookup key. The
@@ -20,7 +20,12 @@ from app.billing.products import PRODUCTS
 from app.config import get_settings
 
 # Test-mode amounts in rappen, VAT included (D-015: pass CHF 29, extension CHF 9).
-DEFAULT_AMOUNTS = {"civics_pass_zh": 2900, "civics_pass_ag": 2900, "civics_extension": 900}
+DEFAULT_AMOUNTS = {
+    "civics_pass_zh": 2900,
+    "civics_pass_ch": 2900,
+    "civics_pass_ag": 2900,
+    "civics_extension": 900,
+}
 CURRENCY = "chf"
 
 
