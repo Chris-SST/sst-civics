@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import smtplib
 from datetime import timedelta
 from typing import Any
 
@@ -18,10 +19,31 @@ from app.models import Entitlement, StripeEvent
 log = logging.getLogger(__name__)
 
 
+# A failed send (mail server down, connection refused, rate limit) is tried again after
+# 10 s, 30 s, 1 min and 2 min, within the worker's max_tries (5). Every email goes through
+# send_email, sign-in links included, and those are waited for, so the first retries are
+# quick. Inline jobs (tests, dev) raise the error instead.
+SEND_RETRY_SECONDS = (10, 30, 60, 120)
+
+
+def retry_send(ctx: dict[str, Any], exc: Exception) -> None:
+    tries = ctx.get("job_try")
+    if not tries:
+        raise exc
+    from arq import Retry
+
+    log.warning("Email send failed (try %s): %s", tries, exc.__class__.__name__)
+    delay = SEND_RETRY_SECONDS[min(tries, len(SEND_RETRY_SECONDS)) - 1]
+    raise Retry(defer=delay) from exc
+
+
 async def send_email(
     ctx: dict[str, Any], kind: str, locale: str, to: str, params: dict[str, str]
 ) -> None:
-    backend.send(messages.build(kind, locale, to, **params))
+    try:
+        backend.send(messages.build(kind, locale, to, **params))
+    except (smtplib.SMTPException, OSError) as exc:
+        retry_send(ctx, exc)
 
 
 async def send_sign_in_link(
