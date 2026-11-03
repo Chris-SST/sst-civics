@@ -1,5 +1,5 @@
 ---
-title: "Le test de connaissances de Zurich : format, thèmes, préparation"
+title: "Test de naturalisation Zurich : format, thèmes, préparation"
 description: "Qui doit passer le test de connaissances de Zurich, ce qui est confirmé et ce qui ne l'est pas, les thèmes et la préparation avec le catalogue du canton."
 lang: fr
 slug: test-de-connaissances

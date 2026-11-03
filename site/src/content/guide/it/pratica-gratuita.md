@@ -1,6 +1,6 @@
 ---
-title: "Esercizio gratuito per il test di conoscenze di Zurigo"
-description: "30 domande di esempio gratuite con traduzioni, una simulazione d'esame gratuita dopo la registrazione e che cosa aggiunge il Viapunt Pass per CHF 29."
+title: "Test di naturalizzazione: 30 domande gratuite per esercitarsi"
+description: "30 domande gratuite per il test di naturalizzazione, per il Cantone di Zurigo o il resto della Svizzera, in tedesco con la Sua lingua accanto; una simulazione d'esame gratuita dopo la registrazione; che cosa aggiunge il Viapunt Pass per CHF 29."
 lang: it
 slug: pratica-gratuita
 lastChecked: 2026-10-30
@@ -14,7 +14,9 @@ cta: pass
 
 ## Che cosa ottiene gratuitamente
 
-- **30 domande di esempio** per il Cantone di Zurigo, senza account. Ogni domanda ha una breve spiegazione. La vede in tedesco e nella Sua lingua.
+Viapunt vale per tutta la Svizzera, con le domande proprie del Cantone di Zurigo.
+
+- **30 domande di esempio**, senza account. Sceglie il Cantone di Zurigo o il resto della Svizzera. Ogni domanda ha una breve spiegazione. La vede in tedesco e nella Sua lingua.
 - **Una simulazione d'esame gratuita** dopo la registrazione con il Suo indirizzo e-mail. Come il vero test, è in tedesco e a tempo limitato.
 - Tutte le pagine di questa guida.
 
@@ -28,9 +30,9 @@ Prima Lei impara la domanda nella Sua lingua, accanto al testo tedesco. Più ava
 
 ## Che cosa aggiunge il Viapunt Pass
 
-Il **Viapunt Pass per il Cantone di Zurigo** costa **CHF 29** (un solo pagamento, 6 mesi di accesso) e comprende:
+C'è un **Viapunt Pass** per il Cantone di Zurigo e uno per il resto della Svizzera. Ognuno costa **CHF 29** (un solo pagamento, 6 mesi di accesso) e comprende:
 
-- tutte le domande, circa 350, con spiegazioni,
+- tutte le domande, con spiegazioni,
 - tutte le modalità di studio: Imparare, Esercitarsi e Simulazione d'esame,
 - simulazioni d'esame illimitate in tedesco, con limite di tempo,
 - il pulsante «Spiega questo» nella Sua lingua,

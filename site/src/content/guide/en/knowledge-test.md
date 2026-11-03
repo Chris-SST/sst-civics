@@ -1,6 +1,6 @@
 ---
-title: "The Zurich Knowledge Test: Format, Topics, Preparation"
-description: "Who has to take the Zurich knowledge test, what is confirmed and what is not, the topics, and how to prepare with the canton's question catalogue."
+title: "Zurich Citizenship Test (Grundkenntnistest): Format and Topics"
+description: "Who has to take the citizenship test in the canton of Zurich, its format and topics, and how to prepare with the canton's question catalogue."
 lang: en
 slug: knowledge-test
 lastChecked: 2026-10-30

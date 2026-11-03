@@ -1,5 +1,5 @@
 ---
-title: "O teste de conhecimentos de Zurique: formato, temas, preparação"
+title: "Teste de naturalização em Zurique: formato, temas, preparação"
 description: "Quem tem de fazer o teste de conhecimentos de Zurique, o que está confirmado e o que não está, os temas e como preparar-se com o catálogo do cantão."
 lang: pt
 slug: teste-de-conhecimentos

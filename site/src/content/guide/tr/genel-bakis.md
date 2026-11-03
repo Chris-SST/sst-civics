@@ -72,9 +72,9 @@ Tüm koşullar ve harçlar SEM sayfalarında (Almanca) yer alır: [eşler](https
 ## Kime danışmalı
 
 - **Komününüzün vatandaşlık dairesine.** Yerel kuralları ve tarihleri bilir.
-- Zürih Kantonu'nda **Komünler Dairesi (Gemeindeamt), vatandaşlığa alınma bölümü** (telefon +41 43 259 83 81).
+- **Kantonunuzun vatandaşlık dairesine.** Zürih Kantonu'nda bu, Komünler Dairesi (Gemeindeamt), vatandaşlığa alınma bölümüdür (telefon +41 43 259 83 81).
 - Kendi durumunuza ilişkin sorular için: bir danışma hizmetine veya bir avukata.
 
 ## Sonraki adım
 
-Zürih Kantonu'nda bilgi testi sürecin bir parçasıdır. Ücretsiz alıştırma sorularımızı deneyin ve ne kadar hazır olduğunuzu görün.
+Zürih de dahil birçok kanton, İsviçre hakkındaki bilginizi bir testle ölçer. Viapunt'un alıştırma soruları tüm İsviçre içindir; Zürih Kantonu'nun kendi soruları da dahildir. Ücretsiz soruları deneyin ve ne kadar hazır olduğunuzu görün.

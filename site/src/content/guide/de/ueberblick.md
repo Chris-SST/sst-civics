@@ -72,9 +72,9 @@ Alle Bedingungen und die Gebühren finden Sie beim SEM: [Ehegatten](https://www.
 ## An wen Sie sich wenden können
 
 - An die **Einbürgerungsstelle Ihrer Gemeinde**. Sie kennt die lokalen Regeln und Termine.
-- Im Kanton Zürich an das **Gemeindeamt, Abteilung Einbürgerungen** (Telefon +41 43 259 83 81).
+- An die **Einbürgerungsstelle Ihres Kantons**. Im Kanton Zürich ist das das Gemeindeamt, Abteilung Einbürgerungen (Telefon +41 43 259 83 81).
 - Für Fragen zu Ihrem Einzelfall: eine Beratungsstelle oder eine Anwältin, ein Anwalt.
 
 ## Nächster Schritt
 
-Für den Kanton Zürich gehört ein Wissenstest zum Verfahren. Probieren Sie unsere kostenlosen Übungsfragen aus und sehen Sie, wie gut Sie schon vorbereitet sind.
+Viele Kantone, darunter Zürich, prüfen Ihr Wissen über die Schweiz mit einem Test. Die Übungsfragen von Viapunt gibt es für die ganze Schweiz, mit den eigenen Fragen des Kantons Zürich. Probieren Sie die Gratisfragen aus und sehen Sie, wie gut Sie schon vorbereitet sind.

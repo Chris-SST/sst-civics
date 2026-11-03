@@ -60,7 +60,7 @@ export default function PassBar({ canton = "zh" }: { canton?: string }) {
           ) : (
             <Link
               className="btn btn-primary btn-sm"
-              to={`/signup?lang=${encodeURIComponent(i18n.language.slice(0, 2))}&pass=1`}
+              to={`/signup?lang=${encodeURIComponent(i18n.language.slice(0, 2))}&canton=${myCanton}&pass=1`}
             >
               {label}
             </Link>

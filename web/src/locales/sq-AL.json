@@ -122,7 +122,7 @@
     "step3Title": "Kaloni",
     "step3Body": "Jepni testin e vërtetë në gjermanisht.",
     "freeTitle": "Provoni 30 pyetje falas",
-    "freeBody": "Pa pagesë dhe pa llogari."
+    "freeBody": "Pa pagesë dhe pa llogari. Për gjithë Zvicrën, bashkë me pyetjet e vetë kantonit të Cyrihut."
   },
   "signup": {
     "title": "Krijoni llogarinë tuaj",
@@ -139,7 +139,7 @@
     "withPassword": "Caktoni edhe një fjalëkalim (opsionale)",
     "passwordOptionalHint": "Pa fjalëkalim, hyni me një lidhje që ju dërgojmë me email. Mund ta shtoni ose ta hiqni fjalëkalimin më vonë te llogaria juaj.",
     "checkEmailSignIn": "Lidhja ju bën edhe hyrjen në llogari.",
-    "cantonRest": "Kantoni juaj nuk është në listë? Zgjidhni «Pjesa tjetër e Zvicrës»: mësoni pyetjet federale, që janë pjesa më e madhe e testit në çdo kanton. Pyetjet e kantonit tuaj vijnë kur ta shtojmë."
+    "cantonRest": "Nuk jetoni në kantonin e Cyrihut? Zgjidhni «Pjesa tjetër e Zvicrës»."
   },
   "fields": {
     "email": "Adresa e emailit",
@@ -709,7 +709,7 @@
     "cardCta": "Hapni bisedën e ndihmës"
   },
   "try": {
-    "title": "Praktikë falas: pyetje testi për {{canton}}",
+    "title": "Praktikë falas: pyetje testi",
     "intro": "Pa llogari. Çdo pyetje shfaqet në gjermanisht, si në test, me {{language}} pranë saj.",
     "progress": "Pyetja {{n}} nga {{total}} · deri tani {{score}} të sakta",
     "next": "Pyetja tjetër",
@@ -719,7 +719,7 @@
     "signup": "Krijoni një llogari falas",
     "doneTitle": "Shumë mirë, ishin të 30-at",
     "doneScore": "Iu përgjigjët saktë {{score}} nga {{total}}.",
-    "doneText": "Me një llogari falas ruani përparimin, bëni një test provë të plotë në gjermanisht dhe mund të pyesni bisedën e ndihmës. Viapunt Pass hap të gjitha pyetjet e kantonit.",
+    "doneText": "Me një llogari falas ruani përparimin, bëni një test provë të plotë në gjermanisht dhe mund të pyesni bisedën e ndihmës. Viapunt Pass hap të gjitha pyetjet.",
     "again": "Filloni nga e para",
     "none": "Pyetjet e praktikës për këtë kanton janë në përgatitje."
   },

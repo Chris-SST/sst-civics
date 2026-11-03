@@ -72,9 +72,9 @@ The full conditions and fees are on the SEM pages (in German): [spouses](https:/
 ## Who to ask
 
 - The **citizenship office of your commune**. It knows the local rules and dates.
-- In the canton of Zurich, the **Gemeindeamt, naturalisation section** (telephone +41 43 259 83 81).
+- Your **canton's naturalisation office**. In the canton of Zurich this is the Gemeindeamt, naturalisation section (telephone +41 43 259 83 81).
 - For questions about your own case: an advice service or a lawyer.
 
 ## Next step
 
-In the canton of Zurich a knowledge test is part of the procedure. Try our free practice questions and see how well prepared you already are.
+Many cantons, Zurich among them, check your knowledge of Switzerland with a test. Viapunt's practice questions are for all of Switzerland, with the canton of Zurich's own questions included. Try the free questions and see how well prepared you already are.

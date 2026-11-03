@@ -1,5 +1,5 @@
 ---
-title: "Il test di conoscenze di Zurigo: formato, temi, preparazione"
+title: "Test di naturalizzazione Zurigo: formato, temi, preparazione"
 description: "Chi deve sostenere il test di conoscenze di Zurigo, che cosa è confermato e che cosa no, i temi e come prepararsi con il catalogo del Cantone."
 lang: it
 slug: test-di-conoscenze

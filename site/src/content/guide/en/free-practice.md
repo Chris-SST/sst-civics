@@ -1,6 +1,6 @@
 ---
-title: "Free Practice for the Zurich Knowledge Test"
-description: "30 free sample questions with translations, one free mock test after sign-up, and what the Viapunt Pass adds for CHF 29."
+title: "Swiss Citizenship Test Practice: 30 Free Questions"
+description: "30 free questions for the citizenship test, for the canton of Zurich or the rest of Switzerland, in German with your language beside them; one free mock test after sign-up; what the Viapunt Pass adds for CHF 29."
 lang: en
 slug: free-practice
 lastChecked: 2026-10-30
@@ -14,7 +14,9 @@ cta: pass
 
 ## What you get for free
 
-- **30 sample questions** for the canton of Zurich, with no account. Each question has a short explanation. You see it in German and in your own language.
+Viapunt is for all of Switzerland, with the canton of Zurich's own questions included.
+
+- **30 sample questions**, with no account. Choose the canton of Zurich or the rest of Switzerland. Each question has a short explanation. You see it in German and in your own language.
 - **One free mock test** after you sign up with your email address. Like the real test, it is in German and has a time limit.
 - All pages of this guide.
 
@@ -28,9 +30,9 @@ First you learn the question in your own language, beside the German text. Later
 
 ## What the Viapunt Pass adds
 
-The **Viapunt Pass for the canton of Zurich** costs **CHF 29** (one payment, 6 months of access) and includes:
+There is a **Viapunt Pass** for the canton of Zurich and one for the rest of Switzerland. Each costs **CHF 29** (one payment, 6 months of access) and includes:
 
-- all questions, about 350, with explanations,
+- all questions, with explanations,
 - all study modes: Learn, Practise and Mock test,
 - unlimited timed mock tests in German,
 - the "Explain this" button in your language,

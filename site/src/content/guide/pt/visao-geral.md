@@ -72,9 +72,9 @@ As condições completas e as taxas estão nas páginas da SEM (em alemão): [c�
 ## A quem perguntar
 
 - O **serviço de naturalização do seu município**. Conhece as regras e as datas locais.
-- No cantão de Zurique, o **Serviço dos Municípios (Gemeindeamt), secção de naturalização** (telefone +41 43 259 83 81).
+- O **serviço de naturalização do seu cantão**. No cantão de Zurique é o Serviço dos Municípios (Gemeindeamt), secção de naturalização (telefone +41 43 259 83 81).
 - Para perguntas sobre o seu próprio caso: um serviço de aconselhamento ou um advogado.
 
 ## Próximo passo
 
-No cantão de Zurique, um teste de conhecimentos faz parte do procedimento. Experimente as nossas perguntas de treino gratuitas e veja quão preparado já está.
+Muitos cantões, entre eles Zurique, verificam os seus conhecimentos sobre a Suíça com um teste. As perguntas de treino do Viapunt servem para toda a Suíça, com as perguntas próprias do cantão de Zurique incluídas. Experimente as perguntas gratuitas e veja quão preparado já está.

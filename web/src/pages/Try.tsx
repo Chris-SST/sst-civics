@@ -1,14 +1,24 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { get } from "../api";
 import ErrorText from "../components/ErrorText";
+import PassBar from "../components/PassBar";
 import QuestionCard from "../components/QuestionCard";
 import type { AnswerOut, StudyQuestion } from "../study";
 
-/** Free practice without an account: the canton's 30 sample questions, German and the visitor's
- * language side by side, checked in the browser. The guide site's "Try 30 free questions" lands
- * here. Where the visitor is is kept in this browser only; a free account keeps real progress. */
+/** Free practice without an account: the 30 sample questions of Zurich or of the rest of
+ * Switzerland (`?canton=ch`; Zurich when the link names none), German and the visitor's language
+ * side by side, checked in the browser. The guide site's "Try 30 free questions" lands here.
+ * Where the visitor is is kept in this browser only; a free account keeps real progress. */
+
+/** The choices on this page: Zurich, and "ch" (Rest of Switzerland). */
+const TRY_CANTONS = ["zh", "ch"] as const;
+type TryCanton = (typeof TRY_CANTONS)[number];
+
+function asCanton(value: string | null): TryCanton {
+  return value === "ch" ? "ch" : "zh";
+}
 
 interface SampleOut {
   canton: string;
@@ -18,20 +28,21 @@ interface SampleOut {
 
 interface Saved {
   lang: string;
+  canton?: string;
   index: number;
   score: number;
 }
 
 const KEY = "viapunt.try";
 
-function load(lang: string): Saved {
+function load(lang: string, canton: TryCanton): Saved {
   try {
     const s = JSON.parse(localStorage.getItem(KEY) || "null") as Saved | null;
-    if (s && s.lang === lang) return s;
+    if (s && s.lang === lang && (s.canton ?? "zh") === canton) return s;
   } catch {
     /* storage unavailable */
   }
-  return { lang, index: 0, score: 0 };
+  return { lang, canton, index: 0, score: 0 };
 }
 
 function save(s: Saved) {
@@ -77,33 +88,53 @@ function check(q: StudyQuestion, given: string): AnswerOut {
 export default function Try() {
   const { t, i18n } = useTranslation();
   const lang = i18n.language.slice(0, 2);
+  const [params, setParams] = useSearchParams();
+  const canton = asCanton(params.get("canton"));
   const [data, setData] = useState<SampleOut | null>(null);
   const [error, setError] = useState<unknown>(null);
-  const [state, setState] = useState<Saved>(() => load(lang));
+  const [state, setState] = useState<Saved>(() => load(lang, canton));
   const [answered, setAnswered] = useState(false);
 
   useEffect(() => {
     setData(null);
-    setState(load(lang));
-    get<SampleOut>(`/api/public/sample-questions?canton=zh&lang=${encodeURIComponent(lang)}`)
-      .then(setData)
-      .catch(setError);
-  }, [lang]);
+    setError(null);
+    setAnswered(false);
+    setState(load(lang, canton));
+    let current = true; // a quick switch of canton must not show the earlier answer
+    get<SampleOut>(`/api/public/sample-questions?canton=${canton}&lang=${encodeURIComponent(lang)}`)
+      .then((d) => current && setData(d))
+      .catch((e) => current && setError(e));
+    return () => {
+      current = false;
+    };
+  }, [lang, canton]);
+
+  const choose = (c: TryCanton) => {
+    const next = new URLSearchParams(params);
+    next.set("canton", c);
+    setParams(next, { replace: true });
+  };
 
   const update = (s: Saved) => {
     setState(s);
     save(s);
   };
 
-  const signup = `/signup?lang=${encodeURIComponent(lang)}`;
-  const canton = t("cantons.zh");
+  const signup = `/signup?lang=${encodeURIComponent(lang)}&canton=${canton}`;
   const total = data?.questions.length ?? 0;
   const done = data !== null && state.index >= total;
   const q = data && !done ? data.questions[state.index] : null;
 
   return (
     <div className="try-page">
-      <h1>{t("try.title", { canton })}</h1>
+      <h1>{t("try.title")}</h1>
+      <div className="try-cantons" role="group" aria-label={t("fields.canton")}>
+        {TRY_CANTONS.map((c) => (
+          <button key={c} type="button" aria-pressed={c === canton} onClick={() => choose(c)}>
+            {t(`cantons.${c}`)}
+          </button>
+        ))}
+      </div>
       <p>{t("try.intro", { language: t(`languages.${lang}`) })}</p>
       {error ? <ErrorText error={error} /> : null}
       {!data && !error && <p className="muted">{t("common.working")}</p>}
@@ -154,12 +185,13 @@ export default function Try() {
             <Link to={signup} className="btn btn-primary">
               {t("try.signup")}
             </Link>
-            <button type="button" className="btn btn-secondary" onClick={() => update({ lang, index: 0, score: 0 })}>
+            <button type="button" className="btn btn-secondary" onClick={() => update({ lang, canton, index: 0, score: 0 })}>
               {t("try.again")}
             </button>
           </div>
         </section>
       )}
+      <PassBar canton={canton} />
     </div>
   );
 }

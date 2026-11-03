@@ -77,7 +77,8 @@ def build_guide() -> str:
     out = [HEADER.format(src="site/src/content (guide/en, faq/en)")]
     out.append("# Viapunt guide (English)\n")
     out.append(
-        "The pages of the Viapunt naturalisation guide for the canton of Zurich, as published. "
+        "The pages of the Viapunt naturalisation guide, as published. Pages about one canton "
+        "name it in their title; the canton-specific pages cover the canton of Zurich. "
         "Each page also exists in German and, as drafts, in six more languages.\n"
     )
     for _, slug, de, front, body in pages:

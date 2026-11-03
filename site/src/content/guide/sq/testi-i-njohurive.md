@@ -1,5 +1,5 @@
 ---
-title: "Testi i njohurive i Cyrihut: formati, temat, përgatitja"
+title: "Testi i natyralizimit në Cyrih: formati, temat, përgatitja"
 description: "Kush duhet ta japë testin e njohurive të Cyrihut, çfarë është konfirmuar e çfarë jo, temat dhe si të përgatiteni me katalogun e kantonit."
 lang: sq
 slug: testi-i-njohurive

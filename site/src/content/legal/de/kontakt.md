@@ -17,5 +17,5 @@ Schreiben Sie uns an **[info@viapunt.ch](mailto:info@viapunt.ch)**. Wir antworte
 
 ## Wobei wir nicht helfen
 
-Ihr eigenes Gesuch können wir nicht beurteilen. Dafür wenden Sie sich an Ihre Gemeinde oder an das [Gemeindeamt des Kantons Zürich](https://www.zh.ch/de/migration-integration/einbuergerung.html).
+Ihr eigenes Gesuch können wir nicht beurteilen. Dafür wenden Sie sich an Ihre Gemeinde oder an die Einbürgerungsstelle Ihres Kantons (im Kanton Zürich: das [Gemeindeamt](https://www.zh.ch/de/migration-integration/einbuergerung.html)).
 

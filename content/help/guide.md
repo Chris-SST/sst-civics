@@ -2,7 +2,7 @@
 
 # Viapunt guide (English)
 
-The pages of the Viapunt naturalisation guide for the canton of Zurich, as published. Each page also exists in German and, as drafts, in six more languages.
+The pages of the Viapunt naturalisation guide, as published. Pages about one canton name it in their title; the canton-specific pages cover the canton of Zurich. Each page also exists in German and, as drafts, in six more languages.
 
 ## Page: Becoming Swiss: How Naturalisation Works
 
@@ -60,12 +60,12 @@ The full conditions and fees are on the SEM pages (in German): [spouses](https:/
 ## Who to ask
 
 - The **citizenship office of your commune**. It knows the local rules and dates.
-- In the canton of Zurich, the **Gemeindeamt, naturalisation section** (telephone +41 43 259 83 81).
+- Your **canton's naturalisation office**. In the canton of Zurich this is the Gemeindeamt, naturalisation section (telephone +41 43 259 83 81).
 - For questions about your own case: an advice service or a lawyer.
 
 ## Next step
 
-In the canton of Zurich a knowledge test is part of the procedure. Try our free practice questions and see how well prepared you already are.
+Many cantons, Zurich among them, check your knowledge of Switzerland with a test. Viapunt's practice questions are for all of Switzerland, with the canton of Zurich's own questions included. Try the free questions and see how well prepared you already are.
 
 Official sources of this page:
 
@@ -267,7 +267,7 @@ Official sources of this page:
 - Otelfingen: Guide to ordinary naturalisation (PDF, German): https://www.otelfingen.ch/public/upload/assets/14088/Leitfaden%20ordentliche%20Einb%C3%BCrgerung%20Otelfingen.pdf?fp=2
 - SEM: FAQ on the list of recognised language certificates (PDF, German): https://www.sem.admin.ch/dam/sem/de/data/integration/themen/sprache/faq-anerkannte-sprachzertifikate.pdf.download.pdf/faq-anerkannte-sprachzertifikate-d.pdf
 
-## Page: The Zurich Knowledge Test: Format, Topics, Preparation
+## Page: Zurich Citizenship Test (Grundkenntnistest): Format and Topics
 
 English: {{GUIDE_URL}}/en/knowledge-test/  
 German: {{GUIDE_URL}}/de/grundkenntnistest/  
@@ -496,7 +496,7 @@ Official sources of this page:
 - SEM: Frequently asked questions on Swiss citizenship (German): https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/faq.html
 - Canton of Zurich: Naturalisation (self-check; German): https://www.zh.ch/de/migration-integration/einbuergerung.html
 
-## Page: Free Practice for the Zurich Knowledge Test
+## Page: Swiss Citizenship Test Practice: 30 Free Questions
 
 English: {{GUIDE_URL}}/en/free-practice/  
 German: {{GUIDE_URL}}/de/kostenlos/  
@@ -504,7 +504,9 @@ Last checked: 2026-10-30
 
 ## What you get for free
 
-- **30 sample questions** for the canton of Zurich, with no account. Each question has a short explanation. You see it in German and in your own language.
+Viapunt is for all of Switzerland, with the canton of Zurich's own questions included.
+
+- **30 sample questions**, with no account. Choose the canton of Zurich or the rest of Switzerland. Each question has a short explanation. You see it in German and in your own language.
 - **One free mock test** after you sign up with your email address. Like the real test, it is in German and has a time limit.
 - All pages of this guide.
 
@@ -518,9 +520,9 @@ First you learn the question in your own language, beside the German text. Later
 
 ## What the Viapunt Pass adds
 
-The **Viapunt Pass for the canton of Zurich** costs **CHF 29** (one payment, 6 months of access) and includes:
+There is a **Viapunt Pass** for the canton of Zurich and one for the rest of Switzerland. Each costs **CHF 29** (one payment, 6 months of access) and includes:
 
-- all questions, about 350, with explanations,
+- all questions, with explanations,
 - all study modes: Learn, Practise and Mock test,
 - unlimited timed mock tests in German,
 - the "Explain this" button in your language,
@@ -543,7 +545,7 @@ German: {{GUIDE_URL}}/de/faq/
 
 ### How long does naturalisation take?
 
-The canton of Zurich says the procedure takes about two years. Processing in the communes has recently become slower on average. You can find the steps on the page [Zurich, step by step]({{GUIDE_URL}}/en/zurich-step-by-step/).
+It depends on the canton and the commune, and it often takes several years. The canton of Zurich says its procedure takes about two years, and processing in the communes has recently become slower on average. You can find the steps on the page [Zurich, step by step]({{GUIDE_URL}}/en/zurich-step-by-step/).
 
 ### Are my children naturalised with me?
 
@@ -551,11 +553,11 @@ Minor children can be included in a parent's application. In the canton of Zuric
 
 ### What happens if I fail the knowledge test?
 
-The canton of Zurich's pages do not say. Ask your commune whether and when you can retake the test and what it costs. How to prepare is on the page [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
+The rules for retaking the test are set by the canton and the commune. The canton of Zurich's pages say nothing on this. Ask your commune whether and when you can retake the test and what it costs. How to prepare is on the page [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
 
 ### Is the knowledge test in German only?
 
-The canton of Zurich publishes its question catalogue in German only, so expect the test in German. More on the page [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
+Each canton sets its own test. The canton of Zurich publishes its question catalogue in German only, so expect the test there to be in German. More on the page [Knowledge test]({{GUIDE_URL}}/en/knowledge-test/).
 
 ### Is this website official?
 

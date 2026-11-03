@@ -1,5 +1,5 @@
 ---
-title: "La prueba de conocimientos de Zúrich: formato, temas, preparación"
+title: "Test de naturalización Zúrich: formato, temas, preparación"
 description: "Quién debe hacer la prueba de conocimientos de Zúrich, qué está confirmado y qué no, los temas y cómo prepararse con el catálogo del cantón."
 lang: es
 slug: prueba-de-conocimientos

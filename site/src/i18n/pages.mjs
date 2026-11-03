@@ -44,8 +44,14 @@ export const SLUGS = {
 /** Pages built from templates, present in every language (copy falls back to English). */
 export const STATIC_KEYS = ["calculator", "faq", "free"];
 
-/** Card order on the home page. */
+/** Every home-page card, in the order the help pack lists the pages (scripts/build_help_pack.py reads it). */
 export const HOME_KEYS = ["overview", "zurich", "documents", "test", "language", "fees", "calculator", "free", "faq"];
+
+/** The home-page card groups: pages for everyone in Switzerland, then one group per canton with pages of its own. */
+export const HOME_GROUPS = [
+  { id: "swiss", keys: ["overview", "language", "calculator", "free", "faq"] },
+  { id: "zh", keys: ["zurich", "documents", "test", "fees"] },
+];
 
 export function slugFor(key, lang) {
   const row = SLUGS[key];

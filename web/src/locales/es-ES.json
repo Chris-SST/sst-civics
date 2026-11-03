@@ -122,7 +122,7 @@
     "step3Title": "Aprobar",
     "step3Body": "Haga el examen real en alemán.",
     "freeTitle": "Pruebe 30 preguntas gratis",
-    "freeBody": "Sin pago y sin cuenta."
+    "freeBody": "Sin pago y sin cuenta. Para toda Suiza, con las preguntas propias del cantón de Zúrich incluidas."
   },
   "signup": {
     "title": "Cree su cuenta",
@@ -139,7 +139,7 @@
     "withPassword": "Establezca también una contraseña (opcional)",
     "passwordOptionalHint": "Sin contraseña, accede con un enlace que le enviamos por correo electrónico. Más adelante podrá añadir o quitar una contraseña en su cuenta.",
     "checkEmailSignIn": "El enlace también inicia su sesión.",
-    "cantonRest": "¿Su cantón no aparece? Elija «Resto de Suiza»: estudiará las preguntas federales, que son la mayor parte de la prueba en todos los cantones. Las preguntas de su cantón llegarán cuando lo añadamos."
+    "cantonRest": "¿No vive en el cantón de Zúrich? Elija «Resto de Suiza»."
   },
   "fields": {
     "email": "Correo electrónico",
@@ -709,7 +709,7 @@
     "cardCta": "Abrir el chat de ayuda"
   },
   "try": {
-    "title": "Práctica gratuita: preguntas del test para {{canton}}",
+    "title": "Práctica gratuita: preguntas del test",
     "intro": "Sin cuenta. Cada pregunta aparece en alemán, como en la prueba, con el {{language}} al lado.",
     "progress": "Pregunta {{n}} de {{total}} · {{score}} correctas hasta ahora",
     "next": "Siguiente pregunta",
@@ -719,7 +719,7 @@
     "signup": "Crear una cuenta gratuita",
     "doneTitle": "Muy bien, eran las 30",
     "doneScore": "Ha acertado {{score}} de {{total}}.",
-    "doneText": "Con una cuenta gratuita conserva su progreso, hace un simulacro completo en alemán y puede usar el chat de ayuda. El Viapunt Pass abre todas las preguntas del cantón.",
+    "doneText": "Con una cuenta gratuita conserva su progreso, hace un simulacro completo en alemán y puede usar el chat de ayuda. El Viapunt Pass abre todas las preguntas.",
     "again": "Empezar de nuevo",
     "none": "Las preguntas de práctica para este cantón están en preparación."
   },

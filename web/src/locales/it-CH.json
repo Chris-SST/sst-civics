@@ -122,7 +122,7 @@
     "step3Title": "Superare",
     "step3Body": "Sostenga il vero test in tedesco.",
     "freeTitle": "Provi 30 domande gratuite",
-    "freeBody": "Senza pagamento e senza account."
+    "freeBody": "Senza pagamento e senza account. Per tutta la Svizzera, con le domande proprie del Cantone di Zurigo."
   },
   "signup": {
     "title": "Crei il Suo account",
@@ -139,7 +139,7 @@
     "withPassword": "Imposti anche una password (facoltativo)",
     "passwordOptionalHint": "Senza password accede con un link che Le inviamo per e-mail. Potrà aggiungere o rimuovere una password in seguito nel Suo account.",
     "checkEmailSignIn": "Il link Le consente anche di accedere.",
-    "cantonRest": "Il suo cantone non c'è? Scelga «Resto della Svizzera»: studia le domande federali, che sono la parte più grande del test in ogni cantone. Le domande del suo cantone seguiranno quando lo aggiungeremo."
+    "cantonRest": "Non abita nel Cantone di Zurigo? Scelga «Resto della Svizzera»."
   },
   "fields": {
     "email": "Indirizzo e-mail",
@@ -709,7 +709,7 @@
     "cardCta": "Aprire la chat di aiuto"
   },
   "try": {
-    "title": "Pratica gratuita: domande del test per {{canton}}",
+    "title": "Pratica gratuita: domande del test",
     "intro": "Senza account. Ogni domanda è in tedesco, come nel test, con l'{{language}} accanto.",
     "progress": "Domanda {{n}} di {{total}} · finora {{score}} giuste",
     "next": "Domanda successiva",
@@ -719,7 +719,7 @@
     "signup": "Creare un account gratuito",
     "doneTitle": "Fatto, erano tutte e 30",
     "doneScore": "Ha risposto correttamente a {{score}} domande su {{total}}.",
-    "doneText": "Con un account gratuito conserva i progressi, fa una simulazione d'esame completa in tedesco e può usare la chat di aiuto. Il Viapunt Pass apre tutte le domande del Cantone.",
+    "doneText": "Con un account gratuito conserva i progressi, fa una simulazione d'esame completa in tedesco e può usare la chat di aiuto. Il Viapunt Pass apre tutte le domande.",
     "again": "Ricominciare",
     "none": "Le domande di pratica per questo Cantone sono in preparazione."
   },

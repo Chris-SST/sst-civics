@@ -1,5 +1,5 @@
 ---
-title: "Zürih bilgi testi: biçim, konular, hazırlık"
+title: "Zürih vatandaşlık testi: biçim, konular, hazırlık"
 description: "Zürih bilgi testini kimin alması gerektiği, nelerin doğrulandığı ve nelerin doğrulanmadığı, konular ve kantonun soru kataloğuyla hazırlık."
 lang: tr
 slug: bilgi-testi

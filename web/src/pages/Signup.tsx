@@ -28,7 +28,10 @@ export default function Signup() {
     }
   }, []);
   const [email, setEmail] = useState("");
-  const [canton, setCanton] = useState<string>("zh");
+  const [canton, setCanton] = useState<string>(() => {
+    const c = new URLSearchParams(window.location.search).get("canton");
+    return c && (CANTONS as readonly string[]).includes(c) ? c : "zh";
+  });
   const [locale, setLocale] = useState<LanguageCode>(apiLocale(i18n.language));
   const [studyLanguage, setStudyLanguage] = useState<string>(apiLocale(i18n.language));
   const [withPassword, setWithPassword] = useState(false);

@@ -17,5 +17,5 @@ Write to us at **[info@viapunt.ch](mailto:info@viapunt.ch)**. We usually answer 
 
 ## What we cannot help with
 
-We cannot assess your own application. For that, contact your commune or the [Gemeindeamt of the canton of Zurich](https://www.zh.ch/de/migration-integration/einbuergerung.html).
+We cannot assess your own application. For that, contact your commune or your canton's naturalisation office (in the canton of Zurich: the [Gemeindeamt](https://www.zh.ch/de/migration-integration/einbuergerung.html)).
 

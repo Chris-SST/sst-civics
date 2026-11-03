@@ -1,6 +1,6 @@
 ---
-title: "Kostenlos üben für den Zürcher Wissenstest"
-description: "30 kostenlose Beispielfragen mit Übersetzungen, ein kostenloser Probetest nach der Anmeldung und was der Viapunt Pass für CHF 29 zusätzlich bietet."
+title: "Einbürgerungstest gratis üben: 30 Fragen"
+description: "30 Gratisfragen für den Einbürgerungstest, für den Kanton Zürich oder die übrige Schweiz, auf Deutsch mit Übersetzung in Ihre Sprache. Dazu ein Probetest nach der Anmeldung und was der Viapunt Pass für CHF 29 bietet."
 lang: de
 slug: kostenlos
 lastChecked: 2026-10-30
@@ -14,7 +14,9 @@ cta: pass
 
 ## Was Sie kostenlos bekommen
 
-- **30 Beispielfragen** für den Kanton Zürich, ohne Konto. Jede Frage hat eine kurze Erklärung. Sie sehen sie auf Deutsch und in Ihrer Sprache.
+Viapunt gibt es für die ganze Schweiz, mit den eigenen Fragen des Kantons Zürich.
+
+- **30 Beispielfragen**, ohne Konto. Sie wählen den Kanton Zürich oder die übrige Schweiz. Jede Frage hat eine kurze Erklärung. Sie sehen sie auf Deutsch und in Ihrer Sprache.
 - **Einen Probetest** ohne Kosten, nachdem Sie sich mit Ihrer E-Mail-Adresse angemeldet haben. Er ist wie der echte Test auf Deutsch, mit Zeitlimit.
 - Alle Seiten dieses Leitfadens.
 
@@ -28,9 +30,9 @@ Zuerst lernen Sie die Frage in Ihrer eigenen Sprache, neben dem deutschen Text. 
 
 ## Was der Viapunt Pass zusätzlich bietet
 
-Der **Viapunt Pass für den Kanton Zürich** kostet **CHF 29** (einmalige Zahlung, 6 Monate Zugang) und enthält:
+Es gibt einen **Viapunt Pass** für den Kanton Zürich und einen für die übrige Schweiz. Jeder kostet **CHF 29** (einmalige Zahlung, 6 Monate Zugang) und enthält:
 
-- alle Fragen, etwa 350, mit Erklärungen,
+- alle Fragen, mit Erklärungen,
 - alle Lernmodi: Lernen, Üben und Probetest,
 - unbegrenzt viele Probetests auf Deutsch, mit Zeitlimit,
 - die Funktion «Erklär mir das» in Ihrer Sprache,

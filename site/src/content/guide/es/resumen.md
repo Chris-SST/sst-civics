@@ -72,9 +72,9 @@ Las condiciones completas y las tasas están en las páginas de la SEM (en alem�
 ## A quién preguntar
 
 - La **oficina de naturalización de su municipio**. Conoce las normas y las fechas locales.
-- En el cantón de Zúrich, la **Oficina de Municipios (Gemeindeamt), sección de naturalización** (teléfono +41 43 259 83 81).
+- La **oficina de naturalización de su cantón**. En el cantón de Zúrich es la Oficina de Municipios (Gemeindeamt), sección de naturalización (teléfono +41 43 259 83 81).
 - Para preguntas sobre su propio caso: un servicio de asesoramiento o un abogado.
 
 ## Siguiente paso
 
-En el cantón de Zúrich, una prueba de conocimientos forma parte del procedimiento. Pruebe nuestras preguntas de práctica gratuitas y vea cuánto ha avanzado ya.
+Muchos cantones, entre ellos Zúrich, comprueban sus conocimientos sobre Suiza con una prueba. Las preguntas de práctica de Viapunt sirven para toda Suiza e incluyen las preguntas propias del cantón de Zúrich. Pruebe las preguntas gratuitas y vea cuánto ha avanzado ya.

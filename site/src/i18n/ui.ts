@@ -82,6 +82,7 @@ export interface Ui {
     q: { heading: string; daily: string; topic: string; german: string; right: string; wrong: string; more: string; reveal: string };
     how: { heading: string; steps: { title: string; text: string }[] };
     guidesHeading: string;
+    groups: { swiss: string; zh: string };
     read: string;
     soon: string;
     tags: Record<string, string>;
@@ -111,7 +112,7 @@ const en: Ui = {
   chat: {
     launcher: "Ask a question",
     title: "Ask Viapunt",
-    intro: "Ask about the knowledge test, its topics or the naturalisation procedure in Zurich, in your language.",
+    intro: "Ask about the knowledge test, its topics or the naturalisation procedure, in your language.",
     note: "Answered by AI, based on the Viapunt guide.",
     placeholder: "Your question",
     send: "Send",
@@ -150,12 +151,12 @@ const en: Ui = {
     },
   },
   home: {
-    title: "Naturalisation in Zurich: guides and knowledge test practice",
+    title: "Swiss naturalisation guide and citizenship test practice",
     description:
-      "Plain guides to becoming Swiss in the canton of Zurich: residence, documents, fees, language certificates and the knowledge test, with free practice questions in your language.",
-    eyebrow: "Naturalisation in the canton of Zurich",
+      "Plain guides to becoming Swiss and practice for the citizenship test, with the canton of Zurich's own questions included. 30 free questions in German, with your language beside them.",
+    eyebrow: "Naturalisation in Switzerland",
     h1: "Understand it in your language. Pass it in German.",
-    lead: "Plain guides to every step of becoming Swiss in Zurich, from documents to the knowledge test. Then practise the test questions with the German and your language side by side.",
+    lead: "Plain guides to every step of becoming Swiss, from documents to the knowledge test, with the details for the canton of Zurich. Then practise the test questions with the German and your language side by side.",
     ctaFree: "Try 30 free questions",
     ctaGuide: "Read the Zurich guide",
     trust: ["No account needed to start", "8 languages", "Sources linked on every page"],
@@ -172,12 +173,13 @@ const en: Ui = {
     how: {
       heading: "How it works",
       steps: [
-        { title: "Read the guide", text: "Residence rules, documents, fees and the tests, explained step by step for Zurich, with the sources linked." },
+        { title: "Read the guide", text: "Residence rules, documents, fees and the tests, explained step by step, with the sources linked." },
         { title: "Try 30 free questions", text: "See the kind of questions the test asks, in German with your language beside it. No account needed." },
         { title: "Practise until you are ready", text: "Learn, practise your weak topics and take mock tests." },
       ],
     },
-    guidesHeading: "Guides for Zurich",
+    guidesHeading: "Guides to becoming Swiss",
+    groups: { swiss: "For everyone in Switzerland", zh: "Canton of Zurich" },
     read: "Read",
     soon: "Coming soon",
     tags: {
@@ -189,11 +191,11 @@ const en: Ui = {
       text: "The test is in German. Every question shows a translation as a study aid, so you understand first and then get used to the German.",
     },
     pass: {
-      badge: "Viapunt Pass · canton of Zurich",
+      badge: "Viapunt Pass",
       period: "6 months, paid once. No subscription.",
       pay: "Pay by card or TWINT. Extension: 3 more months for CHF 9.",
       points: [
-        "Questions on every topic of the Zurich knowledge test",
+        "Questions on every topic of the test, for Zurich or the rest of Switzerland",
         "Mock tests to see where you stand",
         "Explain this: ask about any question in your language",
         "Practice that focuses on your weak topics",
@@ -205,9 +207,9 @@ const en: Ui = {
     overview: { title: "Overview", text: "Federal requirements, the order of steps and how long it takes." },
     zurich: { title: "Zurich, step by step", text: "Residence rules, documents, fees, timeline and where to apply." },
     documents: { title: "Documents", text: "What to provide, where to get it and how old it may be." },
-    test: { title: "The knowledge test", text: "Format, topics and how to prepare." },
+    test: { title: "The Zurich knowledge test", text: "Format, topics and how to prepare." },
     language: { title: "Language certificates", text: "Which ones count, which levels, prices and where to take them." },
-    fees: { title: "Fees", text: "Federal, cantonal and typical communal fees." },
+    fees: { title: "Fees", text: "Federal, cantonal and communal fees in the canton of Zurich." },
     calculator: { title: "Residence-years calculator", text: "Count your years. It runs in your browser and sends nothing." },
     free: { title: "Free practice", text: "30 sample questions with translations. No account needed." },
     faq: { title: "Questions and answers", text: "Short answers that link to the guides." },
@@ -294,7 +296,7 @@ const de: Ui = {
   chat: {
     launcher: "Frage stellen",
     title: "Viapunt fragen",
-    intro: "Fragen Sie zum Grundkenntnistest, zu seinen Themen oder zum Einbürgerungsverfahren in Zürich, in Ihrer Sprache.",
+    intro: "Fragen Sie zum Grundkenntnistest, zu seinen Themen oder zum Einbürgerungsverfahren, in Ihrer Sprache.",
     note: "Antwort von KI, gestützt auf den Viapunt-Ratgeber.",
     placeholder: "Ihre Frage",
     send: "Senden",
@@ -333,12 +335,12 @@ const de: Ui = {
     },
   },
   home: {
-    title: "Einbürgerung in Zürich: Ratgeber und Wissenstest üben",
+    title: "Einbürgerung Schweiz: Ratgeber und Einbürgerungstest üben",
     description:
-      "Verständliche Ratgeber zur Einbürgerung im Kanton Zürich: Aufenthalt, Unterlagen, Gebühren, Sprachnachweise und Wissenstest, mit Gratis-Übungsfragen in Ihrer Sprache.",
-    eyebrow: "Einbürgerung im Kanton Zürich",
+      "Verständliche Ratgeber zur Einbürgerung in der Schweiz und Training für den Einbürgerungstest, mit den eigenen Fragen des Kantons Zürich. 30 Gratisfragen auf Deutsch, mit Übersetzung in Ihre Sprache.",
+    eyebrow: "Einbürgerung in der Schweiz",
     h1: "In Ihrer Sprache verstehen. Auf Deutsch bestehen.",
-    lead: "Verständliche Ratgeber zu jedem Schritt der Einbürgerung in Zürich, von den Unterlagen bis zum Wissenstest. Danach üben Sie die Testfragen, auf Deutsch und auf Wunsch mit Übersetzung daneben.",
+    lead: "Verständliche Ratgeber zu jedem Schritt der Einbürgerung, von den Unterlagen bis zum Wissenstest, mit den Details für den Kanton Zürich. Danach üben Sie die Testfragen, auf Deutsch und auf Wunsch mit Übersetzung daneben.",
     ctaFree: "30 Fragen gratis testen",
     ctaGuide: "Zum Zürich-Ratgeber",
     trust: ["Ohne Konto starten", "8 Sprachen", "Quellen auf jeder Seite verlinkt"],
@@ -355,12 +357,13 @@ const de: Ui = {
     how: {
       heading: "So funktioniert es",
       steps: [
-        { title: "Ratgeber lesen", text: "Aufenthalt, Unterlagen, Gebühren und Tests, Schritt für Schritt für Zürich erklärt, mit verlinkten Quellen." },
+        { title: "Ratgeber lesen", text: "Aufenthalt, Unterlagen, Gebühren und Tests, Schritt für Schritt erklärt, mit verlinkten Quellen." },
         { title: "30 Fragen gratis testen", text: "Sehen Sie, wie die Testfragen aussehen, auf Deutsch und mit Ihrer Sprache daneben. Ohne Konto." },
         { title: "Üben, bis Sie bereit sind", text: "Lernen, schwache Themen gezielt üben und Probeprüfungen machen." },
       ],
     },
-    guidesHeading: "Ratgeber für Zürich",
+    guidesHeading: "Ratgeber zur Einbürgerung",
+    groups: { swiss: "Für alle in der Schweiz", zh: "Kanton Zürich" },
     read: "Lesen",
     soon: "Folgt in Kürze",
     tags: {
@@ -372,11 +375,11 @@ const de: Ui = {
       text: "Der Test ist auf Deutsch. Jede Frage zeigt eine Übersetzung als Lernhilfe: Sie verstehen zuerst und gewöhnen sich dann an das Deutsch.",
     },
     pass: {
-      badge: "Viapunt Pass · Kanton Zürich",
+      badge: "Viapunt Pass",
       period: "6 Monate, einmal bezahlt. Kein Abo.",
       pay: "Bezahlen mit Karte oder TWINT. Verlängerung: 3 Monate für CHF 9.",
       points: [
-        "Fragen zu allen Themen des Zürcher Wissenstests",
+        "Fragen zu allen Themen des Tests, für Zürich oder die übrige Schweiz",
         "Probeprüfungen, damit Sie Ihren Stand kennen",
         "Erklärungen zu jeder Frage in Ihrer Sprache",
         "Üben, das sich auf Ihre schwachen Themen konzentriert",
@@ -388,9 +391,9 @@ const de: Ui = {
     overview: { title: "Überblick", text: "Bundesvoraussetzungen, Reihenfolge der Schritte und Dauer." },
     zurich: { title: "Zürich, Schritt für Schritt", text: "Aufenthalt, Unterlagen, Gebühren, Zeitplan und Anmeldung." },
     documents: { title: "Unterlagen", text: "Was Sie einreichen, wo Sie es bekommen und wie alt es sein darf." },
-    test: { title: "Der Wissenstest", text: "Aufbau, Themen und Vorbereitung." },
+    test: { title: "Der Zürcher Grundkenntnistest", text: "Aufbau, Themen und Vorbereitung." },
     language: { title: "Sprachnachweise", text: "Welche zählen, welche Niveaus, Preise und Prüfungsorte." },
-    fees: { title: "Gebühren", text: "Gebühren von Bund, Kanton und Gemeinde im Überblick." },
+    fees: { title: "Gebühren", text: "Gebühren von Bund, Kanton Zürich und Gemeinde im Überblick." },
     calculator: { title: "Rechner für Aufenthaltsjahre", text: "Zählen Sie Ihre Jahre. Läuft im Browser und sendet nichts." },
     free: { title: "Gratis üben", text: "30 Beispielfragen mit Übersetzung. Ohne Konto." },
     faq: { title: "Häufige Fragen", text: "Kurze Antworten mit Links zu den Ratgebern." },

@@ -122,7 +122,7 @@
     "step3Title": "Passar",
     "step3Body": "Faça o teste real em alemão.",
     "freeTitle": "Experimente 30 perguntas gratuitas",
-    "freeBody": "Sem pagamento e sem conta."
+    "freeBody": "Sem pagamento e sem conta. Para toda a Suíça, com as perguntas próprias do cantão de Zurique incluídas."
   },
   "signup": {
     "title": "Crie a sua conta",
@@ -139,7 +139,7 @@
     "withPassword": "Defina também uma palavra-passe (opcional)",
     "passwordOptionalHint": "Sem palavra-passe, inicia sessão com uma ligação que lhe enviamos por e-mail. Pode adicionar ou remover uma palavra-passe mais tarde, na sua conta.",
     "checkEmailSignIn": "A ligação também inicia a sua sessão.",
-    "cantonRest": "O seu cantão não está na lista? Escolha «Resto da Suíça»: estuda as perguntas federais, que são a maior parte do teste em todos os cantões. As perguntas do seu cantão seguem quando o acrescentarmos."
+    "cantonRest": "Não vive no cantão de Zurique? Escolha «Resto da Suíça»."
   },
   "fields": {
     "email": "Endereço de e-mail",
@@ -709,7 +709,7 @@
     "cardCta": "Abrir o chat de ajuda"
   },
   "try": {
-    "title": "Prática gratuita: perguntas do teste para {{canton}}",
+    "title": "Prática gratuita: perguntas do teste",
     "intro": "Sem conta. Cada pergunta aparece em alemão, como no teste, com o {{language}} ao lado.",
     "progress": "Pergunta {{n}} de {{total}} · {{score}} certas até agora",
     "next": "Pergunta seguinte",
@@ -719,7 +719,7 @@
     "signup": "Criar uma conta gratuita",
     "doneTitle": "Muito bem, eram as 30",
     "doneScore": "Acertou {{score}} de {{total}}.",
-    "doneText": "Com uma conta gratuita guarda o progresso, faz um simulacro completo em alemão e pode usar o chat de ajuda. O Viapunt Pass abre todas as perguntas do cantão.",
+    "doneText": "Com uma conta gratuita guarda o progresso, faz um simulacro completo em alemão e pode usar o chat de ajuda. O Viapunt Pass abre todas as perguntas.",
     "again": "Recomeçar",
     "none": "As perguntas de prática para este cantão estão a caminho."
   },

@@ -1,8 +1,9 @@
 ---
-// The home page: hero with a sample test question, the Zurich scene, how it works, guide cards,
-// the language strip and the Viapunt Pass band.
+// The home page: hero with a sample test question, the Zurich scene, how it works, guide cards
+// (pages for everyone in Switzerland, then the canton of Zurich's own pages), the language strip
+// and the Viapunt Pass band.
 import { APP_URL } from "astro:env/server";
-import { HOME_KEYS, LOCALES, LOCALE_NAMES, resolveHref } from "../i18n/pages.mjs";
+import { HOME_GROUPS, LOCALES, LOCALE_NAMES, resolveHref } from "../i18n/pages.mjs";
 import { ui } from "../i18n/ui";
 import { SAMPLE_QUESTION as Q } from "../data/sampleQuestion";
 
@@ -121,22 +122,27 @@ const tagTone = ["teal", "clay", "sun"];
   <div class="h-section__head">
     <h2 id="guides-h">{h.guidesHeading}</h2>
   </div>
-  <ul class="h-guides">
-    {HOME_KEYS.map((k, i) => {
-      const href = resolveHref(index, k, lang);
-      const c = t.cards[k];
-      const tag = <span class={`h-tag h-tag--${tagTone[i % 3]}`}>{h.tags[k]}</span>;
-      return (
-        <li>
-          {href ? (
-            <a class="h-guide" href={href}>{tag}<h3>{c.title}</h3><p>{c.text}</p><span class="h-guide__read" aria-hidden="true">{h.read} →</span></a>
-          ) : (
-            <div class="h-guide" aria-disabled="true">{tag}<h3>{c.title}</h3><p>{c.text}</p><span class="muted">{h.soon}</span></div>
-          )}
-        </li>
-      );
-    })}
-  </ul>
+  {HOME_GROUPS.map((g, gi) => (
+    <>
+      <h3 class="h-guides__group" id={`guides-${g.id}`}>{h.groups[g.id]}</h3>
+      <ul class="h-guides" aria-labelledby={`guides-${g.id}`}>
+        {g.keys.map((k, i) => {
+          const href = resolveHref(index, k, lang);
+          const c = t.cards[k];
+          const tag = <span class={`h-tag h-tag--${tagTone[(gi + i) % 3]}`}>{h.tags[k]}</span>;
+          return (
+            <li>
+              {href ? (
+                <a class="h-guide" href={href}>{tag}<h4>{c.title}</h4><p>{c.text}</p><span class="h-guide__read" aria-hidden="true">{h.read} →</span></a>
+              ) : (
+                <div class="h-guide" aria-disabled="true">{tag}<h4>{c.title}</h4><p>{c.text}</p><span class="muted">{h.soon}</span></div>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  ))}
 </section>
 
 <section class="wrap" style="padding-top:40px;padding-bottom:40px" aria-labelledby="langs-h">
@@ -193,7 +199,7 @@ const tagTone = ["teal", "clay", "sun"];
         }
       });
     }
-    fetch("/api/public/question-of-the-day")
+    fetch("/api/public/question-of-the-day?canton=ch") // Swiss-wide: federal questions
       .then((r) => (r.ok ? (r.json() as Promise<Daily>) : null))
       .then((q) => {
         if (!q || buttons.some((b) => b.disabled)) return; // keep the sample once answered

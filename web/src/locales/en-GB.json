@@ -122,7 +122,7 @@
     "step3Title": "Pass",
     "step3Body": "Take the real test in German.",
     "freeTitle": "Try 30 free questions",
-    "freeBody": "No payment and no account needed."
+    "freeBody": "No payment and no account needed. For all of Switzerland, with the canton of Zurich's own questions included."
   },
   "signup": {
     "title": "Create your account",
@@ -139,7 +139,7 @@
     "withPassword": "Also set a password (optional)",
     "passwordOptionalHint": "Without a password you sign in with a link we email you. You can add or remove a password later in your account.",
     "checkEmailSignIn": "The link also signs you in.",
-    "cantonRest": "Not listed? Choose \"Rest of Switzerland\": you study the federal questions, which make up most of every canton's test. Your canton's own questions follow when we add it."
+    "cantonRest": "Living outside Zurich? Choose \"Rest of Switzerland\"."
   },
   "fields": {
     "email": "Email address",
@@ -709,7 +709,7 @@
     "cardCta": "Open the help chat"
   },
   "try": {
-    "title": "Free practice: test questions for {{canton}}",
+    "title": "Free practice: test questions",
     "intro": "No account needed. Each question is shown in German, as in the test, with {{language}} beside it.",
     "progress": "Question {{n}} of {{total}} · {{score}} right so far",
     "next": "Next question",
@@ -719,7 +719,7 @@
     "signup": "Create a free account",
     "doneTitle": "Well done, that was all 30",
     "doneScore": "You got {{score}} of {{total}} right.",
-    "doneText": "With a free account you keep your progress, take a full mock test in German and can ask the help chat. The Viapunt Pass opens all questions of the canton.",
+    "doneText": "With a free account you keep your progress, take a full mock test in German and can ask the help chat. The Viapunt Pass opens all questions.",
     "again": "Start again",
     "none": "The practice questions for this canton are on their way."
   },

@@ -5,6 +5,7 @@ export const LOCALE_NAMES: Record<string, string>;
 export const SLUGS: Record<string, Record<string, string>>;
 export const STATIC_KEYS: string[];
 export const HOME_KEYS: string[];
+export const HOME_GROUPS: { id: "swiss" | "zh"; keys: string[] }[];
 export function slugFor(key: string, lang: string): string;
 export function keyFor(lang: string, slug: string): string;
 export function pathFor(lang: string, key: string): string;

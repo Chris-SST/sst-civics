@@ -1,6 +1,6 @@
 ---
-title: "Praktikë falas për testin e njohurive të Cyrihut"
-description: "30 pyetje shembull falas me përkthime, një provim provë falas pas regjistrimit dhe çfarë shton Viapunt Pass për CHF 29."
+title: "Testi i natyralizimit: 30 pyetje falas për praktikë"
+description: "30 pyetje falas për testin e natyralizimit, për kantonin e Cyrihut ose pjesën tjetër të Zvicrës, në gjermanisht me gjuhën tuaj pranë; një provim provë falas pas regjistrimit; çfarë shton Viapunt Pass për CHF 29."
 lang: sq
 slug: praktike-falas
 lastChecked: 2026-10-30
@@ -14,7 +14,9 @@ cta: pass
 
 ## Çfarë merrni falas
 
-- **30 pyetje shembull** për kantonin e Cyrihut, pa llogari. Çdo pyetje ka një shpjegim të shkurtër. Ju e shihni në gjermanisht dhe në gjuhën tuaj.
+Viapunt është për gjithë Zvicrën, bashkë me pyetjet e vetë kantonit të Cyrihut.
+
+- **30 pyetje shembull**, pa llogari. Zgjidhni kantonin e Cyrihut ose pjesën tjetër të Zvicrës. Çdo pyetje ka një shpjegim të shkurtër. Ju e shihni në gjermanisht dhe në gjuhën tuaj.
 - **Një provim provë falas** pasi të regjistroheni me adresën tuaj të emailit. Si testi i vërtetë, ai është në gjermanisht dhe ka kufi kohe.
 - Të gjitha faqet e këtij udhëzuesi.
 
@@ -28,9 +30,9 @@ Fillimisht e mësoni pyetjen në gjuhën tuaj, pranë tekstit në gjermanisht. M
 
 ## Çfarë shton Viapunt Pass
 
-**Viapunt Pass për kantonin e Cyrihut** kushton **CHF 29** (një pagesë e vetme, 6 muaj qasje) dhe përfshin:
+Ka një **Viapunt Pass** për kantonin e Cyrihut dhe një për pjesën tjetër të Zvicrës. Secili kushton **CHF 29** (një pagesë e vetme, 6 muaj qasje) dhe përfshin:
 
-- të gjitha pyetjet, rreth 350, me shpjegime,
+- të gjitha pyetjet, me shpjegime,
 - të gjitha mënyrat e studimit: Mëso, Praktiko dhe Provim provë,
 - provime prova pa kufi në gjermanisht, me kohë të kufizuar,
 - butonin «Shpjego këtë» në gjuhën tuaj,

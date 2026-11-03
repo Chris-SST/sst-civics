@@ -72,9 +72,9 @@ Les conditions complètes et les émoluments figurent sur les pages du SEM (en a
 ## À qui s'adresser
 
 - Le **service des naturalisations de votre commune**. Il connaît les règles et les dates locales.
-- Dans le canton de Zurich, l'**Office des communes (Gemeindeamt), section Naturalisations** (téléphone +41 43 259 83 81).
+- Le **service des naturalisations de votre canton**. Dans le canton de Zurich, c'est l'Office des communes (Gemeindeamt), section Naturalisations (téléphone +41 43 259 83 81).
 - Pour les questions sur votre propre cas : un service de conseil ou un avocat.
 
 ## Prochaine étape
 
-Dans le canton de Zurich, un test de connaissances fait partie de la procédure. Essayez nos questions d'entraînement gratuites et voyez où vous en êtes.
+Beaucoup de cantons, dont Zurich, vérifient vos connaissances sur la Suisse par un test. Les questions d'entraînement de Viapunt valent pour toute la Suisse, avec les questions propres au canton de Zurich. Essayez les questions gratuites et voyez où vous en êtes.

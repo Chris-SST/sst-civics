@@ -72,9 +72,9 @@ Kushtet e plota dhe tarifat janë në faqet e SEM (në gjermanisht): [bashkësho
 ## Kujt t'i drejtoheni
 
 - **Zyrës së natyralizimit të komunës suaj.** Ajo i njeh rregullat dhe afatet vendore.
-- Në kantonin e Cyrihut, **Zyrës së Komunave (Gemeindeamt), seksioni i natyralizimit** (telefon +41 43 259 83 81).
+- **Zyrës së natyralizimit të kantonit tuaj.** Në kantonin e Cyrihut kjo është Zyra e Komunave (Gemeindeamt), seksioni i natyralizimit (telefon +41 43 259 83 81).
 - Për pyetje mbi çështjen tuaj: një shërbim këshillimi ose një avokat.
 
 ## Hapi tjetër
 
-Në kantonin e Cyrihut, një test njohurish është pjesë e procedurës. Provoni pyetjet tona falas të praktikës dhe shihni sa të përgatitur jeni tashmë.
+Shumë kantone, përfshirë Cyrihun, i kontrollojnë njohuritë tuaja për Zvicrën me një test. Pyetjet e praktikës së Viapunt janë për gjithë Zvicrën, bashkë me pyetjet e vetë kantonit të Cyrihut. Provoni pyetjet falas dhe shihni sa të përgatitur jeni tashmë.

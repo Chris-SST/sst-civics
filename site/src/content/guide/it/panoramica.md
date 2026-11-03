@@ -72,9 +72,9 @@ Le condizioni complete e le tasse si trovano nelle pagine della SEM (in tedesco)
 ## A chi rivolgersi
 
 - L'**ufficio di naturalizzazione del Suo comune**. Conosce le regole e le date locali.
-- Nel Cantone di Zurigo, l'**Ufficio dei comuni (Gemeindeamt), sezione Naturalizzazioni** (telefono +41 43 259 83 81).
+- L'**ufficio di naturalizzazione del Suo Cantone**. Nel Cantone di Zurigo è l'Ufficio dei comuni (Gemeindeamt), sezione Naturalizzazioni (telefono +41 43 259 83 81).
 - Per domande sul Suo caso personale: un servizio di consulenza o un avvocato.
 
 ## Prossimo passo
 
-Nel Cantone di Zurigo un test di conoscenze fa parte della procedura. Provi le nostre domande di esercizio gratuite e veda quanto è già preparato.
+Molti Cantoni, tra cui Zurigo, verificano con un test le Sue conoscenze sulla Svizzera. Le domande di esercizio di Viapunt valgono per tutta la Svizzera, con le domande proprie del Cantone di Zurigo. Provi le domande gratuite e veda quanto è già preparato.

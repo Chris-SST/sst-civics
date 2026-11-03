@@ -36,12 +36,7 @@ export default function App() {
         <Route path="/signup" element={<Signup />} />
         <Route
           path="/try"
-          element={
-            <>
-              <Try />
-              <PassBar />
-            </>
-          }
+          element={<Try />}
         />
         <Route path="/verify-email" element={<VerifyEmail />} />
         <Route path="/login" element={<Login />} />

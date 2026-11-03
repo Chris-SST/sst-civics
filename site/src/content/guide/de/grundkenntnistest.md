@@ -1,6 +1,6 @@
 ---
-title: "Der Zürcher Grundkenntnistest: Ablauf, Themen, Vorbereitung"
-description: "Wer den Grundkenntnistest machen muss, was gesichert ist und was nicht, welche Themen vorkommen und wie Sie sich mit dem Katalog des Kantons vorbereiten."
+title: "Einbürgerungstest Zürich (Grundkenntnistest): Ablauf und Themen"
+description: "Wer den Einbürgerungstest im Kanton Zürich machen muss, wie er aufgebaut ist, welche Themen vorkommen und wie Sie sich mit dem Fragenkatalog des Kantons vorbereiten."
 lang: de
 slug: grundkenntnistest
 lastChecked: 2026-10-30

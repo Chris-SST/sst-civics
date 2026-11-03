@@ -1,6 +1,6 @@
 ---
-title: "Zürih bilgi testi için ücretsiz alıştırma"
-description: "Çevirili 30 ücretsiz örnek soru, kayıttan sonra bir ücretsiz deneme sınavı ve Viapunt Pass'in CHF 29 karşılığında sunduğu ek olanaklar."
+title: "Vatandaşlık testi: 30 ücretsiz alıştırma sorusu"
+description: "Vatandaşlık testi için 30 ücretsiz soru, Zürih Kantonu ya da İsviçre'nin geri kalanı için, Almanca ve yanında kendi dilinizle; kayıttan sonra bir ücretsiz deneme sınavı; Viapunt Pass'in CHF 29 karşılığında sundukları."
 lang: tr
 slug: ucretsiz-pratik
 lastChecked: 2026-10-30
@@ -14,7 +14,9 @@ cta: pass
 
 ## Ücretsiz neler elde edersiniz
 
-- Zürih Kantonu için **30 örnek soru**, hesap gerekmeden. Her sorunun kısa bir açıklaması var. Soruyu Almanca ve kendi dilinizde görürsünüz.
+Viapunt tüm İsviçre içindir; Zürih Kantonu'nun kendi soruları da dahildir.
+
+- **30 örnek soru**, hesap gerekmeden. Zürih Kantonu'nu ya da İsviçre'nin geri kalanını seçersiniz. Her sorunun kısa bir açıklaması var. Soruyu Almanca ve kendi dilinizde görürsünüz.
 - E-posta adresinizle kaydolduktan sonra **bir ücretsiz deneme sınavı**. Gerçek test gibi Almancadır ve süre sınırı vardır.
 - Bu rehberin tüm sayfaları.
 
@@ -28,9 +30,9 @@ Tüm soruları, açıklamaları ve çevirileri kendimiz yazıyoruz. Kantonun tes
 
 ## Viapunt Pass neler ekler
 
-**Zürih Kantonu için Viapunt Pass** **CHF 29** tutarındadır (tek ödeme, 6 ay erişim) ve şunları içerir:
+Zürih Kantonu için bir **Viapunt Pass** ve İsviçre'nin geri kalanı için bir tane daha vardır. Her biri **CHF 29** tutarındadır (tek ödeme, 6 ay erişim) ve şunları içerir:
 
-- açıklamalarıyla birlikte tüm sorular, yaklaşık 350,
+- açıklamalarıyla birlikte tüm sorular,
 - tüm çalışma kipleri: Öğren, Alıştırma yap ve Deneme sınavı,
 - Almanca, süreli ve sınırsız deneme sınavı,
 - kendi dilinizde «Bunu açıkla» düğmesi,

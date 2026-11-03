@@ -296,7 +296,8 @@ a:hover { color: var(--primary-hover); }
 .h-guides { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
 .h-guide { height: 100%; background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow-card); padding: 20px; text-decoration: none; color: var(--text); display: flex; flex-direction: column; gap: 10px; min-height: 176px; transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out); }
 a.h-guide:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); color: var(--text); }
-.h-guide h3 { margin: 0; font-size: 20px; line-height: 28px; }
+.h-guides__group { margin: 8px 0 -14px; font-size: 22px; line-height: 30px; }
+.h-guide h4 { margin: 0; font-size: 20px; line-height: 28px; }
 .h-guide p { margin: 0; color: var(--muted); flex: 1 1 auto; }
 .h-guide__read { color: var(--primary); font-weight: 800; }
 .h-guide[aria-disabled="true"] { box-shadow: none; border-style: dashed; border-color: var(--border-strong); }
