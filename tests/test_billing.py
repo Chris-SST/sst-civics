@@ -33,7 +33,7 @@ PRICES = [
         "unit_amount": 2900,
         "currency": "chf",
         "recurring": None,
-        "metadata": {"access_months": "6"},
+        "metadata": {"access_months": "12"},
     },
     {
         "id": "price_ag",
@@ -41,7 +41,7 @@ PRICES = [
         "unit_amount": 2900,
         "currency": "chf",
         "recurring": None,
-        "metadata": {"access_months": "6"},
+        "metadata": {"access_months": "12"},
     },
     {
         "id": "price_ext",
@@ -211,7 +211,7 @@ async def test_products_read_prices_from_stripe_and_are_cached(api, fake_stripe)
         "canton": "zh",
         "amount_cents": 2900,
         "currency": "CHF",
-        "months": 6,
+        "months": 12,
         "available": True,
     }
     assert out["civics_extension"]["amount_cents"] == 900
@@ -222,10 +222,10 @@ async def test_products_read_prices_from_stripe_and_are_cached(api, fake_stripe)
 
 async def test_products_show_period_and_price_as_stripe_has_them(api, monkeypatch):
     changed = [dict(p) for p in PRICES]
-    changed[0] = {**changed[0], "unit_amount": 3400, "metadata": {"access_months": "12"}}
+    changed[0] = {**changed[0], "unit_amount": 3400, "metadata": {"access_months": "18"}}
     monkeypatch.setattr(stripe_client, "list_prices_by_lookup_keys", lambda keys: changed)
     out = {p["key"]: p for p in (await api.get("/api/billing/products")).json()}
-    assert out["civics_pass_zh"]["amount_cents"] == 3400 and out["civics_pass_zh"]["months"] == 12
+    assert out["civics_pass_zh"]["amount_cents"] == 3400 and out["civics_pass_zh"]["months"] == 18
 
 
 async def test_cantons_for_sale_hides_and_shows_aargau(api, sale_cantons):
@@ -334,10 +334,10 @@ async def test_paid_checkout_grants_the_pass_once(api):
     assert ent.canton == "zh" and ent.source == "stripe"
     assert ent.stripe_checkout_session_id == "cs_1"
     assert close(ent.starts_at, utcnow())
-    assert close(ent.expires_at, add_months(ent.starts_at, 6))
+    assert close(ent.expires_at, add_months(ent.starts_at, 12))
     [payment] = await payments()
     assert payment.user_id is not None and payment.entitlement_id == ent.id
-    assert payment.product == "civics_pass_zh" and payment.canton == "zh" and payment.months == 6
+    assert payment.product == "civics_pass_zh" and payment.canton == "zh" and payment.months == 12
     assert payment.amount_cents == 2900 and payment.currency == "chf"
     assert payment.stripe_payment_intent_id == "pi_1"
 
@@ -432,10 +432,10 @@ async def test_refund_of_the_pass_keeps_paid_extension_months(api):
     )  # fmt: skip
     [ent] = await entitlements()
     full = ent.expires_at
-    assert close(full, add_months(utcnow(), 9), seconds=86400 * 3)
+    assert close(full, add_months(utcnow(), 15), seconds=86400 * 3)
     await webhook(api, refund_event("evt_r"))
     [after] = await entitlements()
-    assert close(after.expires_at, add_months(full, -6), seconds=5)
+    assert close(after.expires_at, add_months(full, -12), seconds=5)
     assert after.expires_at > utcnow()
     assert (await api.get("/api/auth/me")).json()["access"]["access"] == "full"
 
@@ -449,7 +449,7 @@ async def test_fulfil_dates_the_pass_from_the_event_time(api):
     [ent] = await entitlements()
     [payment] = await payments()
     assert close(ent.starts_at, created, seconds=5)
-    assert close(ent.expires_at, add_months(created, 6), seconds=5)
+    assert close(ent.expires_at, add_months(created, 12), seconds=5)
     assert close(payment.paid_at, created, seconds=5)
 
 

@@ -46,9 +46,11 @@ from app.questions import bank
 from app.study import clock
 from app.study.selection import servable_questions
 
-# Cantons whose pass mark has been confirmed by the authority. Zurich's 30 of 50 comes from a
-# press report (PLAN.md), so every result says the pass mark is unconfirmed until it is here.
-CONFIRMED_PASS_MARKS: frozenset[str] = frozenset()
+# Cantons whose test format and pass mark the authority has published. Zurich: 50 questions
+# (35 federal, 10 cantonal, 5 communal) from the pool of 350, pass with 30 correct, per the
+# canton's naturalisation handbook, section 4.6.2.1 (Gemeindeamt, from 1 July 2023). Rest of
+# Switzerland ("ch") borrows that format and stays labelled unconfirmed.
+CONFIRMED_PASS_MARKS: frozenset[str] = frozenset({"zh"})
 PASS_MARK_LABEL_KEY = "mock.passMarkUnconfirmed"  # noqa: S105 - an i18n key
 SCOPE_BY_PREFIX = (
     ("bund.", SCOPE_FEDERAL),

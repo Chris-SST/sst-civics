@@ -52,5 +52,5 @@ async def test_federal_questions_only(api):
 
 
 def test_a_pass_exists_and_ch_is_on_sale():
-    assert PASS_FOR_CANTON["ch"] == PASS_CH and PRODUCTS[PASS_CH].months == 6
+    assert PASS_FOR_CANTON["ch"] == PASS_CH and PRODUCTS[PASS_CH].months == 12
     assert "ch" in get_settings().cantons_on_sale and "zh" in get_settings().cantons_on_sale

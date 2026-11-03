@@ -446,7 +446,7 @@ async def test_mock_draws_counts_and_proportions_and_hides_help(api, mock_format
     await paid(api)
     info = (await api.get("/api/mock")).json()
     assert info["questions"] == 50 and info["minutes"] == 60 and info["pass_mark"] == 30
-    assert info["pass_mark_confirmed"] is False and info["enough_questions"] is True
+    assert info["pass_mark_confirmed"] is True and info["enough_questions"] is True
     r = await api.post("/api/mock/start")
     assert r.status_code == 201, r.text
     run = r.json()

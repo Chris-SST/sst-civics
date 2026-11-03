@@ -26,9 +26,9 @@ class Product:
 
 
 PRODUCTS: dict[str, Product] = {
-    PASS_ZH: Product(PASS_ZH, KIND_PASS, "zh", 6, "Viapunt Pass: canton of Zurich"),
-    PASS_AG: Product(PASS_AG, KIND_PASS, "ag", 6, "Viapunt Pass: canton of Aargau"),
-    PASS_CH: Product(PASS_CH, KIND_PASS, "ch", 6, "Viapunt Pass: rest of Switzerland"),
+    PASS_ZH: Product(PASS_ZH, KIND_PASS, "zh", 12, "Viapunt Pass: canton of Zurich"),
+    PASS_AG: Product(PASS_AG, KIND_PASS, "ag", 12, "Viapunt Pass: canton of Aargau"),
+    PASS_CH: Product(PASS_CH, KIND_PASS, "ch", 12, "Viapunt Pass: rest of Switzerland"),
     EXTENSION: Product(EXTENSION, KIND_EXTENSION, None, 3, "Viapunt Pass: three-month extension"),
 }
 ALL_KEYS = tuple(PRODUCTS)

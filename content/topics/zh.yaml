@@ -1,9 +1,9 @@
 canton: zh
 test:
   questions: 50
-  minutes: 60
-  pass_mark: 30          # unconfirmed: from a 2022 press report, see SOURCES-zh.md
-  proportions: {federal: 0.78, canton: 0.16, commune: 0.06}   # 274/56/20 = the official catalogue (content/scope/zh.yaml)
+  minutes: 60           # the handbook names no time limit; 60 minutes is our practice setting
+  pass_mark: 30         # confirmed: Gemeindeamt handbook (from 1 July 2023), section 4.6.2.1
+  proportions: {federal: 0.7, canton: 0.2, commune: 0.1}   # 35 / 10 / 5 per test, same source
 topics:
   - code: bund.geschichte.gruendung
     scope: federal
