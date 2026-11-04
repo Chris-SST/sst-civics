@@ -34,6 +34,7 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 - [x] Quality (1.14): Playwright end-to-end suite (free questions, email link, full mock, webhook fulfilment, expiry, deletion), axe accessibility on the main screens with fixes, Lighthouse 100/100/100/100 on three guide pages, hreflang check; CI jobs added. Weekly link check (1.15) exists in the worker.
 - [x] Help chat and Explain this on Haiku (2 November 2026, D-066): `/help` in the app, grounded in the guide pages and the Zurich fact checklist (`content/help/`, `scripts/build_help_pack.py`), 5 free messages a day without a pass; prompts cleaned of the school tutor wording.
 - [x] Guide site public help chat and question of the day (2 November 2026, D-067): corner chat on every guide page, 5 questions a day per visitor, 300 a day in total; the home page question changes daily once approved questions with English exist.
+- [x] Daily operations digest for the owner (4 November 2026, D-072): `app/ops/digest.py`, worker cron 06:00 UTC, `scripts/send_digest.py`; Umami queries still to be confirmed against the production database on first deploy.
 - [ ] Test panel of 15 to 20 people (1.16): Chris recruits once the first questions are approved.
 
 ## Next

@@ -78,8 +78,12 @@ services:
     environment:
       DATABASE_URL: postgresql+asyncpg://civics:${POSTGRES_PASSWORD}@postgres:5432/civics
       REDIS_URL: redis://redis:6379/0
+      # The daily digest (D-072) reads visit counts from Umami's database and checks the age
+      # of the newest backup. Without UMAMI_WEBSITE_ID the visits section is skipped.
+      UMAMI_DATABASE_URL: postgresql+asyncpg://umami:${UMAMI_DB_PASSWORD:-}@postgres:5432/umami
     volumes:
       - outbox:/srv/var/outbox
+      - backups:/backups:ro
     depends_on:
       postgres:
         condition: service_healthy

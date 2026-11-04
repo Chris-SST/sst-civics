@@ -102,6 +102,16 @@ class Settings(BaseSettings):
     public_help_max_chars: int = 600
     # The public guide site; the help chat links to its pages.
     guide_base_url: str = "https://viapunt.ch"
+    # Daily operations digest for the owner (D-072): yesterday's numbers, service checks and
+    # a short summary from the fast model, emailed each morning by the worker. Recipients are
+    # comma-separated; empty means every active admin.
+    digest_enabled: bool = True
+    digest_to: str = ""
+    # Read access to the Umami database for visit counts; empty skips the visits section.
+    umami_database_url: str = ""
+    umami_website_id: str = ""
+    umami_heartbeat_url: str = "http://umami:3000/api/heartbeat"
+    backup_dir: str = "/backups"  # the backup volume, mounted read-only into the worker
     serve_unreviewed_questions: bool = False  # staging/dev: also serve in_review questions
     practice_round_size: int = 5  # questions per Practise round
     conversation_window_turns: int = 20

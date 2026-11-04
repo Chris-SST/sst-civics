@@ -12,6 +12,7 @@ from worker.tasks import (
     log_expiring_entitlements,
     process_stripe_event,
     purge_sessions,
+    send_daily_digest,
     send_email,
     send_sign_in_link,
 )
@@ -29,11 +30,13 @@ class WorkerSettings:
         purge_sessions,
         log_expiring_entitlements,
         check_source_links,
+        send_daily_digest,
     ]
     cron_jobs = [
         cron(purge_sessions, minute=5),
         cron(log_expiring_entitlements, hour=3, minute=15),  # UTC
         cron(check_source_links, weekday=0, hour=4, minute=30),  # Mondays, UTC
+        cron(send_daily_digest, hour=6, minute=0),  # UTC: 07:00 Zurich in winter, 08:00 in summer
     ]
     on_startup = startup
     redis_settings = RedisSettings.from_dsn(get_settings().redis_url)

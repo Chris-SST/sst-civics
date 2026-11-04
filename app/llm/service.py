@@ -32,6 +32,7 @@ PURPOSE_REPLY = "tutor_reply"
 PURPOSE_GATE = "gatekeeper"
 PURPOSE_SUMMARY = "summary"
 PURPOSE_PUBLIC_HELP = "public_help"
+PURPOSE_OPS_DIGEST = "ops_digest"
 
 GATE_ON_TOPIC = "on_topic"
 GATE_BORDERLINE = "borderline"
@@ -541,3 +542,72 @@ async def summarise(
     )
     summary = str(data.get("summary", "")).strip()
     return summary[:4000] or None
+
+
+# --- Daily operations digest --------------------------------------------------------------
+
+DIGEST_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "properties": {
+        "headline": {"type": "string"},
+        "summary": {"type": "string"},
+        "actions": {"type": "array", "items": {"type": "string"}},
+    },
+    "required": ["headline", "summary", "actions"],
+    "additionalProperties": False,
+}
+
+
+async def write_ops_digest(db: AsyncSession, report: dict[str, Any]) -> dict[str, Any] | None:
+    """Headline, summary and actions for the owner's morning email, from the fast model.
+    `report` holds aggregate figures and check results only, never an identifier (built by
+    app/ops/digest.py). Returns None when the call fails; the email then goes out without it."""
+    import json
+
+    settings = get_settings()
+    spec = prompts.load("digest")
+    if not get_provider().available:
+        return None
+    started = time.monotonic()
+    try:
+        data, completion = await get_provider().structured(
+            model=settings.fast_model,
+            system=spec.text,
+            messages=[{"role": "user", "content": json.dumps(report, ensure_ascii=False)}],
+            schema=DIGEST_SCHEMA,
+            max_tokens=1000,
+            effort="low",
+            timeout=30,
+        )
+    except LLMError:
+        await record_call(
+            db,
+            user_id=None,
+            conversation_id=None,
+            purpose=PURPOSE_OPS_DIGEST,
+            model=settings.fast_model,
+            prompt_version=spec.label,
+            status="error",
+            usage=None,
+            latency_ms=int((time.monotonic() - started) * 1000),
+        )
+        return None
+    await record_call(
+        db,
+        user_id=None,
+        conversation_id=None,
+        purpose=PURPOSE_OPS_DIGEST,
+        model=completion.model,
+        prompt_version=spec.label,
+        status="ok",
+        usage=completion.usage,
+        latency_ms=int((time.monotonic() - started) * 1000),
+    )
+    actions = [str(a).strip() for a in data.get("actions") or [] if str(a).strip()]
+    if not str(data.get("summary", "")).strip():
+        return None
+    return {
+        "headline": str(data.get("headline", "")).strip()[:200],
+        "summary": str(data.get("summary", "")).strip()[:2000],
+        "actions": actions[:6],
+    }

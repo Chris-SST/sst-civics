@@ -112,3 +112,20 @@ async def log_expiring_entitlements(ctx: dict[str, Any]) -> int:
         )
     log.info("Entitlements expiring in the next 7 days: %d", n or 0)
     return int(n or 0)
+
+
+async def send_daily_digest(ctx: dict[str, Any]) -> int:
+    """Daily: the owner's operations digest (app/ops/digest.py, D-072). Returns the number
+    of emails sent; 0 when switched off with DIGEST_ENABLED=false."""
+    from app.config import get_settings
+    from app.ops.digest import run_digest
+
+    if not get_settings().digest_enabled:
+        return 0
+    try:
+        async with SessionLocal() as db:
+            _, emails = await run_digest(db)
+    except (smtplib.SMTPException, OSError) as exc:
+        retry_send(ctx, exc)
+        return 0
+    return len(emails)
