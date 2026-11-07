@@ -291,3 +291,15 @@ def pipeline(monkeypatch, tmp_path):
     from tests.articles_helpers import pipeline_env
 
     yield from pipeline_env(monkeypatch, tmp_path)
+
+
+# --- Politics in your canton (tests/test_politics_*.py) ----------------------------------------
+
+
+@pytest.fixture
+def politics(monkeypatch, pipeline):
+    """The article pipeline set-up plus scripted politics replies and no network
+    (tests/politics_helpers.py)."""
+    from tests.politics_helpers import politics_env
+
+    return politics_env(monkeypatch, pipeline)

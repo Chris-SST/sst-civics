@@ -132,6 +132,19 @@ class Settings(BaseSettings):
     articles_languages: str = "de,fr,it,pt,es,sq,tr"  # translations; English always exists
     articles_build_timeout_minutes: int = 20  # waiting for the site builder
     articles_indexnow: bool = True  # ping IndexNow after publishing (production only)
+    # Politics in your canton (D-074, docs/politics-contract.md): weekly round-ups, vote
+    # explainers and the who's who, found on the authorities' pages and published without a
+    # proposal email once the neutrality and fact reviews pass. Off unless enabled.
+    politics_enabled: bool = False
+    politics_cantons: str = "zh"  # cantons with a block in content/politics/sources.yaml
+    politics_cost_cap_chf: float = 4.0  # per production run of one page
+    politics_write_model: str = "claude-opus-5-5"  # writing and fixes
+    politics_review_model: str = "claude-opus-5-5"  # neutrality and fact reviews
+    politics_select_model: str = "claude-sonnet-5-5"  # picking the items of the week
+    politics_extract_model: str = "claude-haiku-5-5"  # links, proposals, results, rosters
+    politics_question_model: str = "claude-opus-5-5"  # the practice questions
+    politics_question_check_model: str = "claude-sonnet-5-5"  # their independent check
+    politics_vote_lead_days: int = 28  # vote explainers go out this long before the vote
     serve_unreviewed_questions: bool = False  # staging/dev: also serve in_review questions
     practice_round_size: int = 5  # questions per Practise round
     conversation_window_turns: int = 20
@@ -149,6 +162,12 @@ class Settings(BaseSettings):
         "articles_translation_review_model",
         "articles_effort",
         "articles_translate_effort",
+        "politics_write_model",
+        "politics_review_model",
+        "politics_select_model",
+        "politics_extract_model",
+        "politics_question_model",
+        "politics_question_check_model",
         mode="before",
     )
     @classmethod
@@ -172,6 +191,10 @@ class Settings(BaseSettings):
         known = ("de", "fr", "it", "pt", "es", "sq", "tr")
         out = [c.strip().lower() for c in self.articles_languages.split(",")]
         return tuple(dict.fromkeys(c for c in out if c in known))
+
+    @property
+    def politics_canton_codes(self) -> tuple[str, ...]:
+        return tuple(c.strip().lower() for c in self.politics_cantons.split(",") if c.strip())
 
     @property
     def cookies_secure(self) -> bool:

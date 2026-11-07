@@ -770,5 +770,21 @@
       "geography": "Coğrafya",
       "culture": "Kültür ve gelenekler"
     }
+  },
+  "currentAffairs": {
+    "title": "Güncel konular (Zürih kantonu)",
+    "body": "Kantondaki güncel siyaset hakkında, Viapunt'un haftalık özetlerinden ve oylama açıklamalarından isteğe bağlı sorular. Ücretsizdir; deneme sınavına ve hazırlık düzeyinize dahil değildir.",
+    "cta": "Güncel konuları çalış",
+    "count": "{{count}} soru",
+    "refersTo": "{{date}} tarihine ilişkin",
+    "readPage": "Sayfayı oku",
+    "check": "Cevabı kontrol et",
+    "correct": "Doğru.",
+    "wrong": "Tam değil. Doğru cevap {{answer}}.",
+    "next": "Sonraki soru",
+    "done": "Şimdilik bu kadar. Her haftalık özetle yeni sorular gelir.",
+    "none": "Şu anda güncel konu sorusu yok.",
+    "back": "Genel bakışa dön",
+    "progress": "Soru {{n}} / {{total}}"
   }
 }

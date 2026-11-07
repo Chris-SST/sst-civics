@@ -181,3 +181,70 @@ async def publish_article(ctx: dict[str, Any], key: str) -> str | None:
         if article is None:
             return None
         return await run_publication(db, article)
+
+
+# --- Politics in your canton (D-074, app/politics/) ------------------------------------------
+
+
+async def politics_tick(ctx: dict[str, Any]) -> int:
+    """Every 15 minutes: discovery, the Friday round-up, vote explainers and results, the
+    monthly who's who, publication without a proposal email and the practice questions
+    (app/politics/schedule.py). Returns the number of actions; 0 when POLITICS_ENABLED is
+    false."""
+    from app.config import get_settings
+    from app.politics.schedule import tick
+
+    if not get_settings().politics_enabled:
+        return 0
+    redis = ctx.get("redis")
+
+    async def run(job: str, key: str) -> None:
+        await redis.enqueue_job(job, key, _job_id=f"{job}:{key}")
+
+    async with SessionLocal() as db:
+        report = await tick(db, run=run if redis is not None else None)
+    return len(report.actions)
+
+
+async def produce_politics_page(ctx: dict[str, Any], key: str) -> str | None:
+    """Research, write, review (neutrality and facts) and translate one politics page."""
+    from app.articles.workflow import get_by_key, run_production
+    from app.config import get_settings
+
+    if not get_settings().politics_enabled:
+        return None
+    async with SessionLocal() as db:
+        page = await get_by_key(db, key)
+        if page is None:
+            return None
+        return await run_production(db, page)
+
+
+async def publish_politics_page(ctx: dict[str, Any], key: str) -> str | None:
+    """Write the files of an approved politics page, request the build and wait for it."""
+    from app.articles.workflow import get_by_key, run_publication
+    from app.config import get_settings
+
+    if not get_settings().politics_enabled:
+        return None
+    async with SessionLocal() as db:
+        page = await get_by_key(db, key)
+        if page is None:
+            return None
+        return await run_publication(db, page)
+
+
+async def politics_questions(ctx: dict[str, Any], key: str) -> str | None:
+    """Write, check and translate the current-affairs questions of a published page."""
+    from app.articles.workflow import get_by_key
+    from app.config import get_settings
+    from app.db import utcnow
+    from app.politics.schedule import run_questions
+
+    if not get_settings().politics_enabled:
+        return None
+    async with SessionLocal() as db:
+        page = await get_by_key(db, key)
+        if page is None:
+            return None
+        return await run_questions(db, page, utcnow())

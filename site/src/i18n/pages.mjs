@@ -48,6 +48,8 @@ export const SLUGS = {
   checklist: { de: "zuerich-checkliste", fr: "zurich-liste-de-controle", it: "zurigo-lista-di-controllo", pt: "zurique-lista-de-verificacao", es: "zurich-lista-de-comprobacion", sq: "cyrihu-lista-e-kontrollit", tr: "zurih-kontrol-listesi", other: "zurich-checklist" },
   articles: { de: "ratgeber", it: "articoli", pt: "artigos", es: "articulos", sq: "artikuj", tr: "makaleler", other: "articles" },
   cantons: { de: "kantone", it: "cantoni", pt: "cantoes", es: "cantones", sq: "kantonet", tr: "kantonlar", other: "cantons" },
+  // Politics in your canton (docs/politics-contract.md): overview page; per-canton index is <segment>/<canton>/.
+  politics: { de: "politik", fr: "politique", it: "politica", pt: "politica", es: "politica", sq: "politika", tr: "siyaset", other: "politics" },
   imprint: { de: "impressum", other: "imprint" },
   contact: { de: "kontakt", other: "contact" },
   about: { de: "ueber-viapunt", other: "about" },
@@ -56,7 +58,7 @@ export const SLUGS = {
 };
 
 /** Pages built from templates, present in every language (copy falls back to English). */
-export const STATIC_KEYS = ["calculator", "faq", "free", "glossary", "eligibility", "checklist", "articles", "cantons"];
+export const STATIC_KEYS = ["calculator", "faq", "free", "glossary", "eligibility", "checklist", "articles", "cantons", "politics"];
 
 /** Every home-page card, in the order the help pack lists the pages (scripts/build_help_pack.py reads it). */
 export const HOME_KEYS = ["overview", "zurich", "documents", "test", "interview", "language", "fees", "calculator", "free", "faq", "glossary", "eligibility", "checklist"];
@@ -95,10 +97,22 @@ export const ARTICLE_SEGMENTS = {
   article: { en: "articles", de: "ratgeber", fr: "articles", it: "articoli", pt: "artigos", es: "articulos", sq: "artikuj", tr: "makaleler" },
   canton: { en: "cantons", de: "kantone", fr: "cantons", it: "cantoni", pt: "cantoes", es: "cantones", sq: "kantonet", tr: "kantonlar" },
 };
+// The politics kinds (docs/politics-contract.md) share one URL segment: /<lang>/<segment>/<canton>/<slug>/.
+export const POLITICS_KINDS = ["roundup", "vote", "whoswho"];
+for (const kind of POLITICS_KINDS) {
+  ARTICLE_SEGMENTS[kind] = { en: "politics", de: "politik", fr: "politique", it: "politica", pt: "politica", es: "politica", sq: "politika", tr: "siyaset" };
+}
+export const isPoliticsKind = (kind) => POLITICS_KINDS.includes(kind);
 
-/** "/de/ratgeber/mein-slug/" for an article or canton guide. */
-export function articlePath(lang, kind, slug) {
+/** "/de/ratgeber/mein-slug/" for an article or canton guide; "/de/politik/zh/mein-slug/" for a politics page (needs `canton`). */
+export function articlePath(lang, kind, slug, canton) {
+  if (isPoliticsKind(kind)) return `/${lang}/${ARTICLE_SEGMENTS[kind][lang]}/${canton}/${slug}/`;
   return `/${lang}/${ARTICLE_SEGMENTS[kind][lang]}/${slug}/`;
+}
+
+/** "/en/politics/zh/": the politics index of one canton. */
+export function politicsPath(lang, canton) {
+  return `${pathFor(lang, "politics")}${canton}/`;
 }
 
 /** Split a URL path into { lang, key } or null (404 and unknown shapes). `index` lets article URLs resolve. */
@@ -108,8 +122,11 @@ export function parsePath(pathname, index) {
   const lang = parts.shift();
   if (parts.length === 0) return { lang, key: "home" };
   if (parts.length === 1) return { lang, key: keyFor(lang, parts[0]) };
-  if (parts.length === 2 && index?.articleByPath) {
-    const key = index.articleByPath.get(`/${lang}/${parts[0]}/${parts[1]}/`);
+  if (parts.length === 2 && parts[0] === slugFor("politics", lang) && index?.has(`politics:${parts[1]}`)) {
+    return { lang, key: `politics:${parts[1]}` };
+  }
+  if (parts.length >= 2 && index?.articleByPath) {
+    const key = index.articleByPath.get(`/${lang}/${parts.join("/")}/`);
     if (key) return { lang, key: `article:${key}` };
   }
   return null;
@@ -159,7 +176,7 @@ export function scanArticles(root) {
       const kind = frontScalar(m[1], "kind") || "article";
       const key = frontScalar(m[1], "key");
       if (!key || !ARTICLE_SEGMENTS[kind]) continue;
-      out.push({ lang, key, kind, slug: frontScalar(m[1], "slug") || file.replace(/\.md$/, "") });
+      out.push({ lang, key, kind, slug: frontScalar(m[1], "slug") || file.replace(/\.md$/, ""), canton: frontScalar(m[1], "canton") || undefined });
     }
   }
   return out;
@@ -184,10 +201,13 @@ export function buildIndex(guidePages, articles = []) {
   for (const { lang, slug } of guidePages) add(keyFor(lang, slug), lang);
   index.articles = new Map();
   index.articleByPath = new Map();
-  for (const { lang, key, kind, slug } of articles) {
+  for (const { lang, key, kind, slug, canton } of articles) {
+    if (isPoliticsKind(kind) && !canton) continue; // the content collection reports the missing canton
     add(`article:${key}`, lang);
-    index.articles.set(`${lang}/${key}`, { kind, slug });
-    index.articleByPath.set(articlePath(lang, kind, slug), key);
+    index.articles.set(`${lang}/${key}`, { kind, slug, canton });
+    index.articleByPath.set(articlePath(lang, kind, slug, canton), key);
+    // A canton's politics index exists in every language (English fallback), once it has a page.
+    if (isPoliticsKind(kind)) for (const l of LOCALES) add(`politics:${canton}`, l);
   }
   return index;
 }
@@ -196,8 +216,9 @@ export function buildIndex(guidePages, articles = []) {
 export function pathOf(index, lang, key) {
   if (key.startsWith("article:")) {
     const a = index.articles?.get(`${lang}/${key.slice(8)}`);
-    return a ? articlePath(lang, a.kind, a.slug) : null;
+    return a ? articlePath(lang, a.kind, a.slug, a.canton) : null;
   }
+  if (key.startsWith("politics:")) return politicsPath(lang, key.slice(9));
   return pathFor(lang, key);
 }
 

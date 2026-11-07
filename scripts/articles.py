@@ -28,6 +28,7 @@ from pathlib import Path
 from sqlalchemy import select
 
 from app.articles import dryrun, files, plan, workflow
+from app.articles.constants import KINDS
 from app.articles.validate import validate_article
 from app.db import SessionLocal, utcnow
 from app.models import ART_APPROVED, ART_HELD, ART_PUBLISHED, Article
@@ -55,7 +56,8 @@ async def _get(db, key: str) -> Article:
 
 
 async def cmd_list(db, args) -> int:
-    rows = (await db.execute(select(Article).order_by(Article.publish_at))).scalars()
+    query = select(Article).where(Article.kind.in_(KINDS)).order_by(Article.publish_at)
+    rows = (await db.execute(query)).scalars()  # politics pages: python -m scripts.politics list
     any_row = False
     for a in rows:
         any_row = True

@@ -12,9 +12,13 @@ from worker.tasks import (
     articles_tick,
     check_source_links,
     log_expiring_entitlements,
+    politics_questions,
+    politics_tick,
     process_stripe_event,
     produce_article,
+    produce_politics_page,
     publish_article,
+    publish_politics_page,
     purge_sessions,
     send_daily_digest,
     send_email,
@@ -42,6 +46,11 @@ class WorkerSettings:
         # same job id can be queued again as soon as a run ends.
         func(produce_article, timeout=3600, max_tries=1, keep_result=0),
         func(publish_article, timeout=1800, max_tries=1, keep_result=0),
+        # Politics in your canton (D-074): the same, plus the practice questions.
+        politics_tick,
+        func(produce_politics_page, timeout=3600, max_tries=1, keep_result=0),
+        func(publish_politics_page, timeout=1800, max_tries=1, keep_result=0),
+        func(politics_questions, timeout=900, max_tries=1, keep_result=0),
     ]
     cron_jobs = [
         cron(purge_sessions, minute=5),
@@ -50,6 +59,8 @@ class WorkerSettings:
         cron(send_daily_digest, hour=6, minute=0),  # UTC: 07:00 Zurich in winter, 08:00 in summer
         # Articles (D-073): only acts when ARTICLES_ENABLED is true.
         cron(articles_tick, minute={0, 15, 30, 45}, keep_result=0),
+        # Politics (D-074): only acts when POLITICS_ENABLED is true.
+        cron(politics_tick, minute={1, 16, 31, 46}, keep_result=0, timeout=1500),
     ]
     on_startup = startup
     redis_settings = RedisSettings.from_dsn(get_settings().redis_url)

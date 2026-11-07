@@ -1,5 +1,5 @@
 // RSS 2.0 feed per language: /<lang>/<articles segment>/rss.xml. It lists the articles and canton
-// guides that exist in that language, newest first (up to 50). An empty site gives a valid feed
+// guides (and the politics pages) that exist in that language, newest first (up to 50). An empty site gives a valid feed
 // with no items.
 import type { APIRoute } from "astro";
 import { LOCALES, articlePath, pathFor } from "../../../i18n/pages.mjs";
@@ -30,7 +30,7 @@ export const GET: APIRoute = async ({ params, site }) => {
     `<atom:link href="${esc(self)}" rel="self" type="application/rss+xml" />\n` +
     items
       .map((e) => {
-        const url = base + articlePath(lang, e.data.kind, e.data.slug);
+        const url = base + articlePath(lang, e.data.kind, e.data.slug, e.data.canton);
         return (
           `<item>\n<title>${esc(e.data.title)}</title>\n<link>${esc(url)}</link>\n<guid isPermaLink="true">${esc(url)}</guid>\n` +
           `<pubDate>${e.data.published.toUTCString()}</pubDate>\n<description>${esc(e.data.description)}</description>\n</item>\n`

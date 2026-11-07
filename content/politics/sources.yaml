@@ -1,0 +1,180 @@
+# Discovery sources for "Politics in your canton" (docs/politics-contract.md, D-074).
+#
+# One block per canton. Each source has:
+#   id      stable name (used in logs and in the politics_items table)
+#   type    listing | rss | vote_list | people   (what the source is for)
+#   format  how it is read (app/politics/discover.py):
+#             zhweb_news     the JSON behind zh.ch's news overview (title, date, link)
+#             rss            RSS 2.0 (title, link, pubDate)
+#             html_dated     an HTML page whose links carry a date in their text
+#                            ("05.11.2026 Bulletin ...", "Titel 6. November 2026 ...")
+#             lindas_votes   the Federal Chancellery's open vote data (SPARQL on LINDAS)
+#             parlament_votes  parlament.ch's list of the next federal votes
+#             page           a page read as a whole (people pages); `follow` adds the pages
+#                            it links to whose path matches the regular expression
+#   url     the address read (https only)
+#   cite    optional: the page readers see, when `url` is a data endpoint behind it
+#   level   canton | city | federal
+#   for     what it is used for, in plain words
+#
+# Every address was checked on 7 November 2026 with the pipeline's own fetcher (plain HTTP,
+# no JavaScript, user agent "civics-trainer-source-check/1.0"). Pages that need JavaScript
+# or refuse the fetcher are listed under `dropped` with the reason, so nobody adds them back
+# by mistake.
+#
+# item_hosts: hosts an item page may come from (fetched and cited). The contract's list,
+# plus parlzhcdws.cmicloud.ch, the Kantonsrat's document server: its "Bulletin" PDFs with the
+# decisions of each session are linked from kantonsrat.zh.ch and are the Kantonsrat's own text.
+
+zh:
+  name: Canton of Zurich
+  item_hosts:
+    - zh.ch
+    - kantonsrat.zh.ch
+    - stadt-zuerich.ch
+    - stadt.winterthur.ch
+    - admin.ch
+    - parlament.ch
+    - parlzhcdws.cmicloud.ch
+  sources:
+    # --- Canton: government and parliament ------------------------------------------------
+    - id: zh-regierungsrat
+      type: listing
+      format: zhweb_news
+      url: "https://www.zh.ch/de/news-uebersicht/_jcr_content.zhweb-news.zhweb-cache.json?organisation=organisationen%3Akanton-zuerich%2Fregierungsrat"
+      cite: "https://www.zh.ch/de/news-uebersicht.html"
+      pages: 2
+      level: canton
+      for: >
+        Press releases of the cantonal government (Regierungsrat): its decisions, bills sent
+        to the Kantonsrat, laws coming into force, vote dates and vote results. 15 items per
+        page, newest first.
+    - id: zh-politik-staat
+      type: listing
+      format: zhweb_news
+      url: "https://www.zh.ch/de/news-uebersicht/_jcr_content.zhweb-news.zhweb-cache.json?topic=themen%3Apolitik-staat"
+      cite: "https://www.zh.ch/de/news-uebersicht.html"
+      pages: 1
+      level: canton
+      for: >
+        zh.ch news on the topic "Politik & Staat": elections, new members of the Kantonsrat,
+        consultations, cantonal votes announced or cancelled.
+    - id: zh-kantonsrat
+      type: listing
+      format: html_dated
+      url: "https://www.kantonsrat.zh.ch/"
+      level: canton
+      include: "(?i)bulletin|beschl|sitzungsvorschau|medienmitteilung"
+      for: >
+        The Kantonsrat's home page: the weekly "Bulletin: Beschlüsse des Kantonsrates" (the
+        decisions of each Monday session, PDF), the session preview and the committees'
+        press releases, each with its date.
+    # --- Votes -------------------------------------------------------------------------------
+    - id: zh-cantonal-votes
+      type: vote_list
+      format: zhweb_news
+      url: "https://www.zh.ch/de/news-uebersicht/_jcr_content.zhweb-news.zhweb-cache.json?organisation=organisationen%3Akanton-zuerich%2Fregierungsrat"
+      cite: "https://www.zh.ch/de/news-uebersicht.html"
+      pages: 3
+      level: canton
+      title_match: "(?i)abstimmung"
+      for: >
+        Cantonal votes: the government announces each vote date and its proposals ("Eine
+        kantonale Abstimmungsvorlage am 28. Februar 2027", "Abstimmungsvorlagen vom ...")
+        and the outcome ("Ausgang Abstimmungen vom ..."). The announcement pages name the
+        proposals; a short model call lists them.
+    - id: ch-federal-votes
+      type: vote_list
+      format: lindas_votes
+      url: "https://cached.lindas.admin.ch/query"
+      cite: "https://www.bk.admin.ch/de/volksabstimmung?date={date}"
+      level: federal
+      for: >
+        Federal votes from the Federal Chancellery's open data (the same data its vote pages
+        show): every proposal with its date and, after the vote, yes share, turnout and
+        result. Read as data, cited as the Federal Chancellery's vote page.
+    - id: ch-parlament-votes
+      type: vote_list
+      format: parlament_votes
+      url: "https://www.parlament.ch/de/services/volksabstimmungen"
+      level: federal
+      for: >
+        The Federal Assembly's page on the next federal vote: each proposal with its business
+        number. The business text (Federal Council message, debates in both chambers) is read
+        from parlament.ch's data service and cited as its Curia Vista page.
+    # --- Cities ------------------------------------------------------------------------------
+    - id: zh-stadt-zuerich
+      type: rss
+      format: rss
+      url: "https://www.stadt-zuerich.ch/content/web/de/aktuell/medienmitteilungen/jcr:content/mainparsys/teaser.rss"
+      level: city
+      for: >
+        Press releases of the city of Zurich (Stadtrat decisions, budget, city votes). Only
+        the latest 10 items, so discovery runs every day and keeps what it saw.
+    - id: zh-winterthur
+      type: rss
+      format: rss
+      url: "https://stadt.winterthur.ch/rss/feed?type=press_release"
+      level: city
+      for: Press releases of the city of Winterthur (50 items per page).
+    - id: zh-winterthur-stadtrat
+      type: rss
+      format: rss
+      url: "https://stadt.winterthur.ch/rss/feed?type=resolution_meeting"
+      level: city
+      for: Decisions of the Winterthur Stadtrat (Stadtratsbeschlüsse).
+    # --- Who's who ---------------------------------------------------------------------------
+    - id: zh-regierungsrat-members
+      type: people
+      format: page
+      url: "https://www.zh.ch/de/regierungsrat.html"
+      level: canton
+      for: The seven members of the Regierungsrat, their directorates, the president.
+    - id: zh-kantonsrat-members
+      type: people
+      format: page
+      url: "https://www.kantonsrat.zh.ch/mitglieder/"
+      level: canton
+      seats: true
+      for: >
+        All 180 members of the Kantonsrat with their party; the seats per party are counted
+        from this list (app/politics/discover.py, party_seats), not by the model.
+    - id: zh-kantonsrat-fraktionen
+      type: people
+      format: page
+      url: "https://www.kantonsrat.zh.ch/organisation/fraktionen/"
+      level: canton
+      for: The parliamentary groups (Fraktionen) of the current term.
+    - id: zh-stadtrat-zuerich
+      type: people
+      format: page
+      url: "https://www.stadt-zuerich.ch/de/politik-und-verwaltung/behoerden-und-organe/stadtrat.html"
+      follow: "^/de/politik-und-verwaltung/behoerden-und-organe/stadtrat/(?!ehemalige|neubeurteilung|rechtskonsulent|stadtschreiber)[a-z-]+\\.html$"
+      level: city
+      for: >
+        The nine members of Zurich's Stadtrat. The overview lists them only as links, so the
+        member pages are read too; each states the department and the party.
+    - id: zh-stadtrat-winterthur
+      type: people
+      format: page
+      url: "https://stadt.winterthur.ch/organisation/politik/stadtrat"
+      level: city
+      for: The seven members of Winterthur's Stadtrat with their departments, the mayor.
+
+  dropped:
+    - url: "https://www.zh.ch/de/news-uebersicht.html"
+      reason: the list is filled by JavaScript; the JSON behind it is used instead
+    - url: "https://www.zh.ch/de/politik-staat/wahlen-abstimmungen/abstimmungen.html"
+      reason: JavaScript application (app.statistik.zh.ch); no readable text, cantonal results are only there
+    - url: "https://www.kantonsrat.zh.ch/aktuell/medienmitteilungen/"
+      reason: the list is filled by JavaScript; the home page lists the same items with dates
+    - url: "https://www.bk.admin.ch/de/chronologie-volksabstimmungen"
+      reason: JavaScript (embedded visualisation); the open data behind it is used instead
+    - url: "https://www.bk.admin.ch/de/volksabstimmung?date=2026-11-29"
+      reason: JavaScript; read through the open data, cited as the page
+    - url: "https://www.admin.ch/gov/de/start/dokumentation/abstimmungen.html"
+      reason: www.admin.ch answers 403 to the fetcher, so the federal voting booklet (Erläuterungen des Bundesrates) cannot be read there
+    - url: "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20240080"
+      reason: JavaScript; read through ws.parlament.ch, cited as the page
+    - url: "https://www.zh.ch/de/politik-staat/regierung/regierungsrat.html"
+      reason: 404; the Regierungsrat page is https://www.zh.ch/de/regierungsrat.html

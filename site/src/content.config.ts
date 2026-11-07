@@ -85,23 +85,65 @@ const articles = defineCollection({
   schema: z
     .object({
       key: z.string().regex(/^[a-z0-9-]+$/),
-      kind: z.enum(["article", "canton"]),
+      kind: z.enum(["article", "canton", "roundup", "vote", "whoswho"]),
       lang,
       slug: z.string().regex(/^[a-z0-9-]+$/).max(80),
       title: z.string().min(1).max(90),
       description: z.string().min(70).max(160),
-      category: z.enum(["eligibility", "cantons", "test", "process", "after"]), // keep in step with CATEGORIES in articles/source.mjs
+      category: z.enum(["eligibility", "cantons", "test", "process", "after", "politics"]), // keep in step with CATEGORIES in articles/source.mjs
       canton: z.string().regex(/^[a-z]{2}$/).optional(),
       published: z.coerce.date(),
       updated: z.coerce.date(),
       checked: z.coerce.date(),
-      summary: z.array(z.string().min(1)).min(3).max(5),
-      sources: z.array(z.object({ title: z.string().min(1), url: z.url() })).min(2).max(12),
-      faq: z.array(z.object({ q: z.string().min(1), a: z.string().min(1) })).min(3).max(5),
-      related: z.array(z.string().refine((k) => k in SLUGS || k === "home", "not a guide page key")).max(4).default([]),
+      summary: z.array(z.string().min(1)).min(3).max(6),
+      sources: z.array(z.object({ title: z.string().min(1), url: z.url() })).min(1).max(20),
+      faq: z.array(z.object({ q: z.string().min(1), a: z.string().min(1) })).max(5).default([]),
+      related: z.array(z.string().refine((k) => k in SLUGS || k === "home" || /^[a-z0-9-]+$/.test(k), "not a guide page or article key")).max(4).default([]),
       machine_translated: z.boolean().default(false),
+      // Politics pages (docs/politics-contract.md)
+      period_start: z.coerce.date().optional(),
+      period_end: z.coerce.date().optional(),
+      vote_date: z.coerce.date().optional(),
+      vote_level: z.enum(["cantonal", "federal"]).optional(),
+      result: z
+        .object({
+          yes_percent: z.number().min(0).max(100),
+          turnout_percent: z.number().min(0).max(100),
+          accepted: z.boolean(),
+        })
+        .optional(),
     })
-    .refine((d) => d.kind !== "canton" || !!d.canton, { message: "a canton guide needs the two-letter canton code", path: ["canton"] }),
+    .superRefine((d, ctx) => {
+      const bad = (path: string, message: string) => ctx.addIssue({ code: "custom", path: [path], message });
+      const politics = d.kind === "roundup" || d.kind === "vote" || d.kind === "whoswho";
+      if (!politics) {
+        // Articles and canton guides keep their original ranges.
+        if (d.category === "politics") bad("category", "category politics is only for the kinds roundup, vote and whoswho");
+        if (d.summary.length > 5) bad("summary", "an article summary has 3-5 items");
+        if (d.sources.length < 2 || d.sources.length > 12) bad("sources", "an article has 2-12 sources");
+        if (d.faq.length < 3) bad("faq", "an article has 3-5 questions");
+        for (const f of ["period_start", "period_end", "vote_date", "vote_level", "result"] as const) {
+          if (d[f] !== undefined) bad(f, `${f} is only for politics pages`);
+        }
+        if (d.kind === "canton" && !d.canton) bad("canton", "a canton guide needs the two-letter canton code");
+        if (d.kind === "article" && d.related.some((k) => !(k in SLUGS) && k !== "home")) bad("related", "not a guide page key");
+        return;
+      }
+      if (d.category !== "politics") bad("category", `a ${d.kind} page needs category: politics`);
+      if (!d.canton) bad("canton", "a politics page needs the canton code (ch for a federal vote)");
+      if (d.kind === "roundup") {
+        if (!d.period_start || !d.period_end) bad("period_start", "a roundup needs period_start and period_end");
+        else if (d.period_end < d.period_start) bad("period_end", "period_end is before period_start");
+      } else if (d.period_start || d.period_end) bad("period_start", "period_start and period_end are only for a roundup");
+      if (d.kind === "vote") {
+        if (!d.vote_date) bad("vote_date", "a vote needs vote_date");
+        if (!d.vote_level) bad("vote_level", "a vote needs vote_level (cantonal or federal)");
+        if (d.vote_level === "federal" && d.canton !== "ch") bad("canton", "a federal vote has canton: ch");
+        if (d.vote_level === "cantonal" && d.canton === "ch") bad("canton", "a cantonal vote needs the canton's own code, not ch");
+      } else {
+        for (const f of ["vote_date", "vote_level", "result"] as const) if (d[f] !== undefined) bad(f, `${f} is only for a vote`);
+      }
+    }),
 });
 
 export const collections = { guide, faq, legal, articles };

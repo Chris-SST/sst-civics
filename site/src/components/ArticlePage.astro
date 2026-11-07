@@ -3,11 +3,11 @@
 // questions and answers, related guide pages and articles, and the soft call to action.
 // Structured data: Article and BreadcrumbList.
 import { getCollection, render } from "astro:content";
-import { resolveHref, keyFor, pathFor, ARTICLE_SEGMENTS, type PageIndex } from "../i18n/pages.mjs";
+import { resolveHref, keyFor, pathFor, politicsPath, isPoliticsKind, ARTICLE_SEGMENTS, type PageIndex } from "../i18n/pages.mjs";
 import { ui } from "../i18n/ui";
-import { more } from "../i18n/more";
+import { more, fill } from "../i18n/more";
 import { isoDate, longDate } from "../i18n/fmt";
-import { allArticles, forLang, type ArticleEntry } from "../articles/lib";
+import { allArticles, forLang, withoutPolitics, politicsFor, latestRoundup, hrefOf, WEEKS_8, type ArticleEntry } from "../articles/lib";
 import Base from "../layouts/Base.astro";
 import ArticleLayout from "./ArticleLayout.astro";
 import ArticleList from "./ArticleList.astro";
@@ -24,15 +24,31 @@ const { entry, alternates, path, index } = Astro.props;
 const d = entry.data;
 const lang = d.lang;
 const m = more(lang).articles;
+const pm = more(lang).politics;
+const politics = isPoliticsKind(d.kind);
+const cantonName = d.canton ? (pm.cantons[d.canton] ?? d.canton.toUpperCase()) : "";
+const pct = (n: number) => new Intl.NumberFormat(lang === "de" ? "de-CH" : lang, { maximumFractionDigits: 1 }).format(n);
 const t = ui(lang);
 const { Content, headings } = await render(entry);
 const site = (Astro.site ?? new URL("https://viapunt.ch")).toString().replace(/\/$/, "");
 
 const all = await allArticles();
-const mine = forLang(all, lang).filter((e) => e.data.key !== d.key);
+const mine = forLang(withoutPolitics(all), lang).filter((e) => e.data.key !== d.key);
 const sameCategory = mine.filter((e) => e.data.category === d.category);
 const others = mine.filter((e) => e.data.category !== d.category);
-const relatedArticles = [...sameCategory, ...others].slice(0, 3);
+// A politics page lists the other pages of its canton; the other pages list articles.
+const cantonPages = politics ? politicsFor(all, lang, d.canton as string).filter((e) => e.data.key !== d.key) : [];
+const cantonPick = [...cantonPages.filter((e) => e.data.kind === "whoswho"), ...cantonPages.filter((e) => e.data.kind !== "whoswho")].slice(0, 3);
+const relatedArticles = politics ? cantonPick : [...sameCategory, ...others].slice(0, 3);
+// Article keys named in `related` (politics pages may do this) come first.
+const namedArticles = forLang(all, lang).filter((e) => e.data.key !== d.key && d.related.includes(e.data.key));
+const relatedList = [...namedArticles, ...relatedArticles.filter((e) => !namedArticles.includes(e))].slice(0, 4);
+
+// A round-up shows a note when a newer one exists and this one is more than 8 weeks old. The note
+// is also revealed in the browser, since the site is only rebuilt when something is published.
+const latest = d.kind === "roundup" ? latestRoundup(all, lang, d.canton as string) : undefined;
+const newerExists = !!latest && latest.data.key !== d.key;
+const staleNow = newerExists && Date.now() - d.published.getTime() > WEEKS_8;
 
 // Related guide pages: titles from the guide collection (this language, else English); tool pages from the card copy.
 const guide = await getCollection("guide", (e) => !e.data.draft);
@@ -49,7 +65,7 @@ for (const key of d.related) {
 
 const english = alternates.find((a) => a.lang === "en");
 const segment = ARTICLE_SEGMENTS[d.kind][lang];
-const indexPath = `/${lang}/${segment}/`;
+const indexPath = politics ? politicsPath(lang, d.canton as string) : `/${lang}/${segment}/`;
 const faqItems = d.faq.map((f: { q: string; a: string }) => ({ question: f.q, text: f.a }));
 
 const author = { "@id": `${site}/#organization` };
@@ -71,8 +87,9 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: m.breadcrumbHome, item: site + pathFor(lang, "home") },
-        { "@type": "ListItem", position: 2, name: d.kind === "canton" ? m.cantonsH1 : m.indexH1, item: site + indexPath },
-        { "@type": "ListItem", position: 3, name: d.title, item: site + path },
+        ...(politics ? [{ "@type": "ListItem", position: 2, name: pm.overviewH1, item: site + pathFor(lang, "politics") }] : []),
+        { "@type": "ListItem", position: politics ? 3 : 2, name: politics ? cantonName : d.kind === "canton" ? m.cantonsH1 : m.indexH1, item: site + indexPath },
+        { "@type": "ListItem", position: politics ? 4 : 3, name: d.title, item: site + path },
       ],
     },
   ],
@@ -81,6 +98,31 @@ const jsonLd = {
 <Base lang={lang} title={d.title} description={d.description} alternates={alternates} path={path}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, "<")}></script>
   <ArticleLayout lang={lang} title={d.title} headings={headings}>
+    {politics && (
+      <p class="pol-crumbs">
+        <a href={pathFor(lang, "politics")}>{pm.overviewH1}</a> › <a href={indexPath}>{cantonName}</a>
+      </p>
+    )}
+    {politics && (
+      <div class="pol-date">
+        <span class="pol-date__main">
+          {d.kind === "vote" && d.vote_date ? (
+            <time datetime={isoDate(d.vote_date)}>{fill(pm.voteOn, { date: longDate(d.vote_date, lang) })}</time>
+          ) : d.kind === "roundup" && d.period_start && d.period_end ? (
+            fill(pm.periodCovers, { start: longDate(d.period_start, lang), end: longDate(d.period_end, lang) })
+          ) : (
+            <>{m.updated}: <time datetime={isoDate(d.updated)}>{longDate(d.updated, lang)}</time></>
+          )}
+        </span>
+        {d.kind === "vote" && d.vote_level && <span class="pol-date__sub">{d.vote_level === "federal" ? pm.levelFederal : pm.levelCantonal}</span>}
+        <span class="pol-date__sub">{cantonName}</span>
+      </div>
+    )}
+    {newerExists && latest && d.kind === "roundup" && (
+      <p class="notice pol-stale" role="note" data-stale-from={isoDate(d.published)} hidden={!staleNow}>
+        {fill(pm.staleNote, { date: longDate(d.published, lang) })} <a href={hrefOf(latest)} hreflang={latest.data.lang !== lang ? latest.data.lang : undefined}>{pm.staleLink}</a>
+      </p>
+    )}
     <div class="art-meta">
       <p class="art-byline">{m.byline}</p>
       <p class="cv-meta">
@@ -97,11 +139,22 @@ const jsonLd = {
         {english && <> <a href={english.path} hreflang="en" lang="en">{m.readEnglish}</a></>}
       </p>
     )}
+    {d.kind === "vote" && d.result && (
+      <section class="pol-result" aria-labelledby="result-h">
+        <h2 id="result-h">{pm.resultHeading}{d.vote_date && <>: <time datetime={isoDate(d.vote_date)}>{longDate(d.vote_date, lang)}</time></>}</h2>
+        <p class="pol-result__verdict">{d.result.accepted ? pm.accepted : pm.rejected}</p>
+        <ul>
+          <li>{fill(pm.yes, { pct: pct(d.result.yes_percent) })}</li>
+          <li>{fill(pm.turnout, { pct: pct(d.result.turnout_percent) })}</li>
+        </ul>
+      </section>
+    )}
     <aside class="art-brief" aria-labelledby="brief-h">
       <h2 id="brief-h">{m.inBrief}</h2>
       <ul>{d.summary.map((s: string) => <li>{s}</li>)}</ul>
     </aside>
     <Content />
+    {politics && <p class="pol-neutral">{pm.neutral}</p>}
     <Fragment slot="after">
       <aside class="cv-sources" aria-labelledby="src-h">
         <h2 id="src-h">{m.sources}</h2>
@@ -112,10 +165,12 @@ const jsonLd = {
           {d.sources.map((s: { title: string; url: string }) => <li><a href={s.url} rel="noopener">{s.title}</a></li>)}
         </ul>
       </aside>
-      <section class="art-section" aria-labelledby="faq-h">
-        <h2 id="faq-h">{m.faq}</h2>
-        <FaqAccordion items={faqItems} lang={lang} />
-      </section>
+      {faqItems.length > 0 && (
+        <section class="art-section" aria-labelledby="faq-h">
+          <h2 id="faq-h">{m.faq}</h2>
+          <FaqAccordion items={faqItems} lang={lang} />
+        </section>
+      )}
       {relatedGuides.length > 0 && (
         <section class="art-section" aria-labelledby="rg-h">
           <h2 id="rg-h">{m.relatedGuides}</h2>
@@ -124,13 +179,21 @@ const jsonLd = {
           </ul>
         </section>
       )}
-      {relatedArticles.length > 0 && (
+      {relatedList.length > 0 && (
         <section class="art-section" aria-labelledby="ra-h">
-          <h2 id="ra-h">{m.moreArticles}</h2>
-          <ArticleList entries={relatedArticles} lang={lang} />
+          <h2 id="ra-h">{politics ? fill(pm.moreFrom, { canton: cantonName }) : m.moreArticles}</h2>
+          <ArticleList entries={relatedList} lang={lang} />
         </section>
       )}
       <GuideCta lang={lang} />
     </Fragment>
   </ArticleLayout>
 </Base>
+
+<script>
+  // Reveal the "this round-up is old" note when the page is more than 8 weeks old today.
+  for (const el of document.querySelectorAll<HTMLElement>("[data-stale-from]")) {
+    const from = Date.parse(el.dataset.staleFrom ?? "");
+    if (!Number.isNaN(from) && Date.now() - from > 8 * 7 * 24 * 3600 * 1000) el.hidden = false;
+  }
+</script>

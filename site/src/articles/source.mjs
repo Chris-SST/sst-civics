@@ -6,9 +6,11 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { basename, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import yaml from "yaml";
-import { LOCALES, SLUGS, buildIndex, resolveHref, scanGuide, articlePath, ARTICLE_SEGMENTS } from "../i18n/pages.mjs";
+import { LOCALES, SLUGS, buildIndex, resolveHref, scanGuide, articlePath, isPoliticsKind, ARTICLE_SEGMENTS } from "../i18n/pages.mjs";
 
 export const CATEGORIES = ["eligibility", "cantons", "test", "process", "after"];
+/** Politics pages (docs/politics-contract.md) all have this category; it is not one of the article-index groups. */
+export const POLITICS_CATEGORY = "politics";
 
 /** Directory of the article files: ARTICLES_DIR, else src/content/articles (git-ignored). */
 export function articlesDir() {
@@ -53,26 +55,36 @@ const KEY_RE = /^[a-z0-9-]+$/;
 
 /** Checks that need every file at once, and the per-file identity rules. Throws on the first problem. */
 function checkIdentity(files) {
-  const keyKind = new Map(); // key -> kind (one key space for articles and canton guides)
+  const keyKind = new Map(); // key -> kind (one key space for articles, canton guides and politics pages)
+  const keyCanton = new Map(); // key -> canton, for politics pages
   const seen = new Set();
   const slugs = new Set();
   for (const { lang, file, name, front } of files) {
     const where = (msg) => new Error(`${file}: ${msg}`);
     if (typeof front.key !== "string" || !KEY_RE.test(front.key)) throw where(`key must match [a-z0-9-]+ (got ${JSON.stringify(front.key)})`);
-    if (!ARTICLE_SEGMENTS[front.kind]) throw where(`kind must be "article" or "canton" (got ${JSON.stringify(front.kind)})`);
+    if (!ARTICLE_SEGMENTS[front.kind]) throw where(`kind must be "article", "canton", "roundup", "vote" or "whoswho" (got ${JSON.stringify(front.kind)})`);
+    if (isPoliticsKind(front.kind)) {
+      if (front.category !== POLITICS_CATEGORY) throw where(`a ${front.kind} page needs category: politics`);
+      if (typeof front.canton !== "string" || !/^[a-z]{2}$/.test(front.canton)) throw where("a politics page needs the two-letter canton code in canton (ch for a federal vote)");
+      if (keyCanton.has(front.key) && keyCanton.get(front.key) !== front.canton) throw where(`key "${front.key}" has a different canton in another language`);
+      keyCanton.set(front.key, front.canton);
+    } else if (front.category === POLITICS_CATEGORY) {
+      throw where("category politics is only for the kinds roundup, vote and whoswho");
+    }
     if (front.lang !== lang) throw where(`lang is ${JSON.stringify(front.lang)} but the file is in the ${lang}/ folder`);
     if (front.slug !== name) throw where(`slug ${JSON.stringify(front.slug)} must equal the file name "${name}"`);
     if (keyKind.has(front.key) && keyKind.get(front.key) !== front.kind) {
-      throw where(`key "${front.key}" is used for both an article and a canton guide`);
+      throw where(`key "${front.key}" is used for two different kinds (${keyKind.get(front.key)} and ${front.kind})`);
     }
     keyKind.set(front.key, front.kind);
     if (seen.has(`${lang}/${front.key}`)) throw where(`a second ${lang} file has the key "${front.key}"`);
     seen.add(`${lang}/${front.key}`);
-    const url = articlePath(lang, front.kind, front.slug);
+    const url = articlePath(lang, front.kind, front.slug, front.canton);
     if (slugs.has(url)) throw where(`another file already has the URL ${url}`);
     slugs.add(url);
     if (Array.isArray(front.related)) {
       for (const k of front.related) {
+        if (isPoliticsKind(front.kind) && typeof k === "string" && KEY_RE.test(k)) continue; // politics pages may also name article keys
         if (!(k in SLUGS) && k !== "home") throw where(`related: "${k}" is not a guide page key (see SLUGS in src/i18n/pages.mjs)`);
       }
     }
@@ -138,7 +150,7 @@ export function collectArticles({ root = articlesDir(), appUrl } = {}) {
   checkIdentity(files);
   const pages = guideIndex();
   const published = new Map();
-  for (const { lang, front } of files) published.set(`${lang}/${front.key}`, articlePath(lang, front.kind, front.slug));
+  for (const { lang, front } of files) published.set(`${lang}/${front.key}`, articlePath(lang, front.kind, front.slug, front.canton));
   const base = (appUrl || process.env.APP_URL || "https://app.staging.viapunt.ch").replace(/\/+$/, "");
   return files.map(({ lang, file, front, body }) => {
     checkBody(file, body);

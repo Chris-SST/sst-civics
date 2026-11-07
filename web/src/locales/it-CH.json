@@ -770,5 +770,21 @@
       "geography": "Geografia",
       "culture": "Cultura e tradizioni"
     }
+  },
+  "currentAffairs": {
+    "title": "Attualità (Cantone di Zurigo)",
+    "body": "Domande facoltative sulla politica recente del Cantone, tratte dalle rassegne settimanali e dalle spiegazioni delle votazioni di Viapunt. Gratuite e non incluse nel test di prova né nella sua preparazione.",
+    "cta": "Esercitarsi sull'attualità",
+    "count": "{{count}} domande",
+    "refersTo": "Si riferisce al {{date}}",
+    "readPage": "Leggi la pagina",
+    "check": "Verifica la risposta",
+    "correct": "Giusto.",
+    "wrong": "Non proprio. La risposta giusta è {{answer}}.",
+    "next": "Domanda successiva",
+    "done": "Per ora è tutto. Nuove domande arrivano con ogni rassegna settimanale.",
+    "none": "Al momento non ci sono domande di attualità.",
+    "back": "Torna alla panoramica",
+    "progress": "Domanda {{n}} di {{total}}"
   }
 }

@@ -178,7 +178,11 @@ async def import_plan(db: AsyncSession, path: Path | None = None) -> ImportRepor
     except yaml.YAMLError as exc:
         report.errors.append(f"not valid YAML: {exc.__class__.__name__}")
         return report
-    existing = {a.key: a for a in (await db.execute(select(Article))).scalars()}
+    # Only the planned kinds: the politics pages (D-074) are not in the plan file.
+    existing = {
+        a.key: a
+        for a in (await db.execute(select(Article).where(Article.kind.in_(KINDS)))).scalars()
+    }
     keys = set()
     for entry in entries:
         keys.add(entry.key)

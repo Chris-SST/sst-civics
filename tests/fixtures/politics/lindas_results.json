@@ -1,0 +1,144 @@
+{
+  "head" : {
+    "vars" : [
+      "date",
+      "id",
+      "title",
+      "yesPercentage",
+      "voterTurnout",
+      "voteResult"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2025-09-28"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6780"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Bundesbeschluss vom 20.12.2024 über die kantonalen Liegenschaftssteuern auf Zweitliegenschaften\r\n"
+        },
+        "yesPercentage" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "57.73"
+        },
+        "voterTurnout" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "49.53"
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Die Vorlage wurde angenommen"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2025-09-28"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6790"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Bundesgesetz vom 20.12.2024 über den elektronischen Identitätsnachweis und andere elektronische Nachweise (E-ID-Gesetz, BGEID)\r\n"
+        },
+        "yesPercentage" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "50.39"
+        },
+        "voterTurnout" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "49.58"
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Die Vorlage wurde angenommen"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2025-11-30"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6800"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Volksinitiative vom 26.10.2023 «Für eine engagierte Schweiz (Service-citoyen-Initiative)»"
+        },
+        "yesPercentage" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "15.85"
+        },
+        "voterTurnout" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "42.94"
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Die Vorlage wurde abgelehnt"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2025-11-30"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6810"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Volksinitiative vom 08.02.2024 «Für eine soziale Klimapolitik - steuerlich gerecht finanziert (Initiative für eine Zukunft)»"
+        },
+        "yesPercentage" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "21.72"
+        },
+        "voterTurnout" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#decimal",
+          "type" : "literal",
+          "value" : "42.95"
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Die Vorlage wurde abgelehnt"
+        }
+      }
+    ]
+  }
+}

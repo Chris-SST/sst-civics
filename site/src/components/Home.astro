@@ -6,7 +6,7 @@ import { APP_URL } from "astro:env/server";
 import { HOME_GROUPS, LOCALES, LOCALE_NAMES, pathFor, resolveHref } from "../i18n/pages.mjs";
 import { ui } from "../i18n/ui";
 import { more } from "../i18n/more";
-import { allArticles, forLang } from "../articles/lib";
+import { allArticles, forLang, withoutPolitics, politicsFor } from "../articles/lib";
 import ArticleList from "./ArticleList.astro";
 import { SAMPLE_QUESTION as Q } from "../data/sampleQuestion";
 
@@ -15,7 +15,10 @@ const { lang, index } = Astro.props;
 const t = ui(lang);
 const h = t.home;
 const mo = more(lang);
-const latest = forLang(await allArticles(), lang).slice(0, 3);
+const allEntries = await allArticles();
+const latest = forLang(withoutPolitics(allEntries), lang).slice(0, 3);
+const hasZhPolitics = politicsFor(allEntries, lang, "zh").length > 0;
+const zhPoliticsHref = `${pathFor(lang, "politics")}zh/`;
 const appHref = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
 // "Try 30 free questions" goes straight to the questions, no account needed.
 const tryHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(lang)}`;
@@ -183,6 +186,10 @@ const jsonLd = {
     </div>
     <ArticleList entries={latest} lang={lang} />
   </section>
+)}
+
+{hasZhPolitics && (
+  <p class="wrap art-politics-link" style="padding-bottom:8px"><a href={zhPoliticsHref}>{mo.politics.latestZh} →</a></p>
 )}
 
 <section class="wrap" style="padding-top:40px;padding-bottom:40px" aria-labelledby="langs-h">

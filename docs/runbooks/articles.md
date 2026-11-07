@@ -4,6 +4,9 @@ The worker writes, fact-checks, translates and publishes the articles and canton
 in `content/articles/plan.yaml` (D-073). Chris gets each proposed article by email 24 hours
 before publication; if he does nothing it goes out. The interface with the site and the site
 builder is [docs/articles-contract.md](../articles-contract.md); this page is about running it.
+The politics pages (round-ups, vote explainers, who's who; D-074) share the files, build
+requests and review page but have their own tick and no proposal email: see
+[politics.md](politics.md). The article tick and `scripts.articles list` leave them alone.
 
 ## How it works
 

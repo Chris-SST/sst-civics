@@ -663,3 +663,63 @@ class Article(Base):
     live_files: Mapped[dict[str, str]] = mapped_column(JSON, default=dict)  # lang -> path
     created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, onupdate=utcnow)
+
+
+# --- Politics in your canton (D-074, docs/politics-contract.md) ---------------------------
+# The pages themselves are rows of `articles` (kinds roundup, vote, whoswho).
+
+
+class PoliticsItem(Base):
+    """One item found by discovery (content/politics/sources.yaml): a press release, a
+    session bulletin, a vote announcement or a federal proposal. Kept so that feeds showing
+    only the latest few items still cover a whole week. Public pages only, no personal data."""
+
+    __tablename__ = "politics_items"
+    __table_args__ = (UniqueConstraint("canton", "url", name="uq_politics_item_url"),)
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    canton: Mapped[str] = mapped_column(String(2), index=True)
+    source_id: Mapped[str] = mapped_column(String(60))
+    source_type: Mapped[str] = mapped_column(String(12))  # listing | rss | vote_list | people
+    level: Mapped[str] = mapped_column(String(10))  # canton | city | federal
+    url: Mapped[str] = mapped_column(String(600))
+    title: Mapped[str] = mapped_column(String(400))
+    item_date: Mapped[date | None] = mapped_column(Date, index=True)
+    data: Mapped[dict[str, Any]] = mapped_column(JSON, default=dict)
+    processed_at: Mapped[datetime | None] = mapped_column(TZDateTime)  # vote announcements
+    discovered_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+
+
+CA_SET = "current_affairs"
+CA_OK = "ok"  # passed the independent check; served until expires_at
+CA_RETIRED = "retired"  # replaced by a newer set for the same page
+
+
+class CurrentAffairsQuestion(Base):
+    """A current-affairs practice question made from a published round-up or vote explainer
+    (contract "Practice questions in the app"). A separate table on purpose: these never
+    enter the question bank, the catalogue topics, the free sample set, the mock test,
+    attempts, progress or readiness. German is the test language; `translations` maps
+    en fr it pt es sq tr to {question, options, explanation}. `page_paths` maps a language to
+    the guide page's path; `refers_to` is the date the question is about."""
+
+    __tablename__ = "current_affairs_questions"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    set_name: Mapped[str] = mapped_column(String(30), default=CA_SET)
+    canton: Mapped[str] = mapped_column(String(2), index=True)
+    page_key: Mapped[str] = mapped_column(String(80), index=True)
+    page_kind: Mapped[str] = mapped_column(String(10))
+    page_revision: Mapped[int] = mapped_column(Integer, default=1)
+    page_paths: Mapped[dict[str, str]] = mapped_column(JSON, default=dict)
+    refers_to: Mapped[date] = mapped_column(Date)
+    expires_at: Mapped[datetime] = mapped_column(TZDateTime, index=True)
+    position: Mapped[int] = mapped_column(Integer, default=0)
+    question_de: Mapped[str] = mapped_column(Text)
+    options_de: Mapped[dict[str, str]] = mapped_column(JSON)
+    correct: Mapped[str] = mapped_column(String(1))
+    explanation_de: Mapped[str] = mapped_column(Text)
+    translations: Mapped[dict[str, Any]] = mapped_column(JSON, default=dict)
+    status: Mapped[str] = mapped_column(String(10), default=CA_OK, index=True)
+    check: Mapped[dict[str, Any]] = mapped_column(JSON, default=dict)
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)

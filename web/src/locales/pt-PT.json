@@ -770,5 +770,21 @@
       "geography": "Geografia",
       "culture": "Cultura e tradições"
     }
+  },
+  "currentAffairs": {
+    "title": "Atualidade (cantão de Zurique)",
+    "body": "Perguntas opcionais sobre a política recente do cantão, a partir das sínteses semanais e das explicações de votações da Viapunt. Gratuitas e fora do teste simulado e da sua preparação.",
+    "cta": "Praticar atualidade",
+    "count": "{{count}} perguntas",
+    "refersTo": "Refere-se a {{date}}",
+    "readPage": "Ler a página",
+    "check": "Verificar resposta",
+    "correct": "Certo.",
+    "wrong": "Não exatamente. A resposta certa é {{answer}}.",
+    "next": "Pergunta seguinte",
+    "done": "Por agora é tudo. Chegam novas perguntas com cada síntese semanal.",
+    "none": "De momento não há perguntas de atualidade.",
+    "back": "Voltar à visão geral",
+    "progress": "Pergunta {{n}} de {{total}}"
   }
 }

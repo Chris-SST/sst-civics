@@ -10,6 +10,7 @@ from typing import Any
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.articles.constants import KINDS
 from app.models import (
     ART_HELD,
     ART_NEEDS_ATTENTION,
@@ -34,7 +35,8 @@ async def article_figures(
 ) -> dict[str, Any]:
     from app.articles.workflow import planned_publication
 
-    rows = (await db.execute(select(Article).order_by(Article.publish_at))).scalars().all()
+    query = select(Article).where(Article.kind.in_(KINDS)).order_by(Article.publish_at)
+    rows = (await db.execute(query)).scalars().all()  # politics: app/politics/report.py
     if not rows:
         return {"status": "none"}
     published = [

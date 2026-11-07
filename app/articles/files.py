@@ -15,7 +15,7 @@ from typing import Any
 
 import yaml
 
-from app.articles.constants import SEGMENTS
+from app.articles.constants import POLITICS_KINDS, SEGMENTS
 from app.config import get_settings
 
 BUILD_REQUEST = ".build-request"
@@ -36,8 +36,11 @@ def frontmatter(
     published: date,
     updated: date,
     checked: date,
+    extra: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """The frontmatter in the contract's field order."""
+    """The frontmatter in the contract's field order. `extra`: the politics fields
+    (period_start and period_end, or vote_date, vote_level and result), placed after
+    `canton` (docs/politics-contract.md)."""
     fm: dict[str, Any] = {
         "key": key,
         "kind": kind,
@@ -47,8 +50,11 @@ def frontmatter(
         "description": content["description"].strip(),
         "category": category,
     }
-    if kind == "canton":
+    if kind != "article":
         fm["canton"] = canton
+    for name, value in (extra or {}).items():
+        if value is not None:
+            fm[name] = value
     fm.update(
         {
             "published": published,
@@ -88,7 +94,10 @@ def relative_path(lang: str, slug: str) -> str:
     return f"{lang}/{slug}.md"
 
 
-def page_path(kind: str, lang: str, slug: str) -> str:
+def page_path(kind: str, lang: str, slug: str, canton: str | None = None) -> str:
+    """/<lang>/<segment>/<slug>/, and /<lang>/<segment>/<canton>/<slug>/ for politics."""
+    if kind in POLITICS_KINDS:
+        return f"/{lang}/{SEGMENTS[kind][lang]}/{canton}/{slug}/"
     return f"/{lang}/{SEGMENTS[kind][lang]}/{slug}/"
 
 

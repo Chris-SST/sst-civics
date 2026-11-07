@@ -770,5 +770,21 @@
       "geography": "Gjeografia",
       "culture": "Kultura dhe traditat"
     }
+  },
+  "currentAffairs": {
+    "title": "Aktualitete (kantoni i Cyrihut)",
+    "body": "Pyetje opsionale për politikën e fundit në kanton, nga përmbledhjet javore dhe shpjegimet e votimeve të Viapunt. Falas dhe jo pjesë e testit provë ose e gatishmërisë suaj.",
+    "cta": "Ushtrohu me aktualitetet",
+    "count": "{{count}} pyetje",
+    "refersTo": "I referohet datës {{date}}",
+    "readPage": "Lexo faqen",
+    "check": "Kontrollo përgjigjen",
+    "correct": "E saktë.",
+    "wrong": "Jo plotësisht. Përgjigja e saktë është {{answer}}.",
+    "next": "Pyetja tjetër",
+    "done": "Kaq për momentin. Pyetje të reja vijnë me çdo përmbledhje javore.",
+    "none": "Për momentin nuk ka pyetje për aktualitetet.",
+    "back": "Kthehu te përmbledhja",
+    "progress": "Pyetja {{n}} nga {{total}}"
   }
 }

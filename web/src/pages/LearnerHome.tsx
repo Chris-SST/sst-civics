@@ -6,6 +6,7 @@ import ErrorText from "../components/ErrorText";
 import Pricing from "../components/Pricing";
 import { BUY_AFTER_SIGNUP } from "../components/PassBar";
 import { MasteryBar } from "../components/QuestionCard";
+import type { CurrentAffairsOut } from "./CurrentAffairs";
 import { TOPIC_SCOPES, learnUrl, practiseUrl, type ReadinessInfo, type StudyOverview, type TopicOverview } from "../study";
 
 interface Usage {
@@ -168,7 +169,30 @@ function StudyAreas({ study }: { study: StudyOverview }) {
           </Link>
         </section>
       </div>
+      <CurrentAffairsCard />
     </>
+  );
+}
+
+/** The optional "Current affairs" topic (D-074): shown only when there are questions. */
+function CurrentAffairsCard() {
+  const { t } = useTranslation();
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    get<CurrentAffairsOut>("/api/study/current-affairs")
+      .then((r) => setCount(r.count))
+      .catch(() => setCount(0));
+  }, []);
+  if (count === 0) return null;
+  return (
+    <section className="card area-card">
+      <h2>{t("currentAffairs.title")}</h2>
+      <p>{t("currentAffairs.body")}</p>
+      <p className="small muted">{t("currentAffairs.count", { count })}</p>
+      <Link to="/practise/current-affairs" className="btn btn-secondary">
+        {t("currentAffairs.cta")}
+      </Link>
+    </section>
   );
 }
 

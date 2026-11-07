@@ -1,21 +1,32 @@
 ---
 // A list of article cards (home row, indexes, related articles). Entries come from forLang(), so
 // an entry may be in English for a reader of another language: its title is then marked lang="en".
-import { more } from "../i18n/more";
+import { more, fill } from "../i18n/more";
 import { isoDate, longDate } from "../i18n/fmt";
-import { hrefOf, type ArticleEntry } from "../articles/lib";
+import { hrefOf, isPolitics, type ArticleEntry } from "../articles/lib";
 interface Props { entries: ArticleEntry[]; lang: string; showCategory?: boolean }
 const { entries, lang, showCategory = true } = Astro.props;
 const m = more(lang).articles;
+const pm = more(lang).politics;
+const label = (e: ArticleEntry) =>
+  isPolitics(e)
+    ? `${pm.kinds[e.data.kind as "roundup" | "vote" | "whoswho"]} · ${pm.cantons[e.data.canton as string] ?? (e.data.canton as string).toUpperCase()}`
+    : e.data.kind === "canton" && e.data.canton
+      ? `${m.cantonLabel} ${e.data.canton.toUpperCase()}`
+      : m.categories[e.data.category as keyof typeof m.categories];
 ---
 <ul class="art-list">
   {entries.map((e) => (
     <li>
       <a class="art-card" href={hrefOf(e)} hreflang={e.data.lang !== lang ? e.data.lang : undefined}>
-        {showCategory && <span class="art-card__cat">{e.data.kind === "canton" && e.data.canton ? `${m.cantonLabel} ${e.data.canton.toUpperCase()}` : m.categories[e.data.category]}</span>}
+        {showCategory && <span class="art-card__cat">{label(e)}</span>}
         <h3 lang={e.data.lang !== lang ? e.data.lang : undefined}>{e.data.title}</h3>
         <p lang={e.data.lang !== lang ? e.data.lang : undefined}>{e.data.description}</p>
-        <time datetime={isoDate(e.data.published)}>{longDate(e.data.published, lang)}</time>
+        {e.data.kind === "vote" && e.data.vote_date ? (
+          <time class="art-card__vote" datetime={isoDate(e.data.vote_date)}>{fill(pm.voteOn, { date: longDate(e.data.vote_date, lang) })}</time>
+        ) : (
+          <time datetime={isoDate(e.data.published)}>{longDate(e.data.published, lang)}</time>
+        )}
       </a>
     </li>
   ))}

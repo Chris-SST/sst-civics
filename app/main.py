@@ -17,6 +17,7 @@ from app.auth.routes import router as auth_router
 from app.billing.routes import router as billing_router
 from app.config import get_settings
 from app.content.routes import router as content_router
+from app.politics.routes import router as current_affairs_router
 from app.portal import router as portal_router
 from app.questions.daily import router as daily_router
 from app.questions.routes_admin import router as review_router
@@ -117,6 +118,7 @@ def create_app() -> FastAPI:
     app.include_router(content_router)
     app.include_router(review_router)
     app.include_router(articles_review_router)
+    app.include_router(current_affairs_router)
 
     @app.get("/api/health", include_in_schema=False)
     async def health() -> dict[str, str]:

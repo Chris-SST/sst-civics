@@ -2,7 +2,7 @@
 import { defineConfig, envField } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { fileURLToPath } from "node:url";
-import { LOCALES, DEFAULT_LOCALE, scanGuide, scanArticles, buildIndex, parsePath, alternatesFor, pathFor } from "./src/i18n/pages.mjs";
+import { LOCALES, DEFAULT_LOCALE, scanGuide, scanArticles, buildIndex, parsePath, alternatesFor, pathFor, POLITICS_KINDS } from "./src/i18n/pages.mjs";
 import { articlesDir } from "./src/articles/source.mjs";
 
 // Public host of the guide site. Staging default; set SITE_URL at build time for production
@@ -24,6 +24,7 @@ const index = buildIndex(
 const emptyIndexes = new Set([
   ...(articles.some((a) => a.kind === "article") ? [] : LOCALES.map((l) => pathFor(l, "articles"))),
   ...(articles.some((a) => a.kind === "canton") ? [] : LOCALES.map((l) => pathFor(l, "cantons"))),
+  ...(articles.some((a) => POLITICS_KINDS.includes(a.kind)) ? [] : LOCALES.map((l) => pathFor(l, "politics"))),
 ]);
 
 export default defineConfig({

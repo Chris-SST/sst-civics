@@ -507,6 +507,22 @@ a.art-card:hover { box-shadow: var(--shadow-lift); color: var(--text); }
 .art-group { margin-top: 32px; }
 .art-group h2 { margin-bottom: 12px; }
 .art-index-link { margin: 0; font-weight: 700; }
+.art-politics-link { margin: 16px 0 0; font-weight: 700; }
+/* Politics pages: neutral, no party colours. */
+.pol-date { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; margin: 0 0 16px; padding: 12px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); }
+.pol-date__main { font-family: var(--font-display); font-size: 22px; line-height: 30px; font-weight: 800; }
+.pol-date__sub { color: var(--muted); font-size: var(--fs-caption); font-weight: 700; }
+.pol-result { margin: 0 0 24px; padding: 16px 20px; background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius-lg); }
+.pol-result h2 { margin: 0 0 8px; font-family: var(--font-display); font-size: 20px; line-height: 28px; }
+.pol-result__verdict { margin: 0 0 4px; font-size: 24px; line-height: 32px; font-weight: 800; }
+.pol-result ul { margin: 0; padding-inline-start: 20px; font-weight: 700; }
+.pol-stale[hidden] { display: none; }
+.pol-neutral { color: var(--muted); font-size: var(--fs-caption); margin: 24px 0 0; }
+.pol-stale { margin: 0 0 16px; }
+.pol-archive h3 { margin: 16px 0 6px; font-size: 18px; }
+.pol-archive ul { margin: 0; padding-inline-start: 20px; }
+.pol-crumbs { margin: 0 0 8px; font-size: var(--fs-caption); }
+
 .gl-list { margin: 0; display: flex; flex-direction: column; gap: 12px; }
 .gl-item { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 14px 18px; scroll-margin-top: 80px; }
 .gl-item dt { font-weight: 800; font-size: 19px; }

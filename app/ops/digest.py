@@ -40,6 +40,7 @@ from app.models import (
     StripeEvent,
     User,
 )
+from app.politics import report as politics_report
 from app.study.clock import ZURICH
 
 log = logging.getLogger(__name__)
@@ -429,6 +430,19 @@ async def articles_section(
         return {"status": "unavailable"}
 
 
+async def politics_section(
+    db: AsyncSession, start: datetime, end: datetime, now: datetime
+) -> dict[str, Any]:
+    """Politics in your canton (D-074): published yesterday, skipped, next, needs action."""
+    from app.politics.report import politics_figures
+
+    try:
+        return await politics_figures(db, start, end, now)
+    except Exception as exc:  # the digest must go out even if this section fails
+        log.warning("Digest: politics section failed: %s", exc.__class__.__name__)
+        return {"status": "unavailable"}
+
+
 # --- Report, email -------------------------------------------------------------------------------
 
 
@@ -451,6 +465,7 @@ async def build_report(db: AsyncSession, now: datetime | None = None) -> dict[st
         "visits": await visit_figures(start, end, week_start),
         "checks": await service_checks(db, now),
         "articles": await articles_section(db, start, end, now),
+        "politics": await politics_section(db, start, end, now),
     }
     t = report["totals"]
     if t["ai_monthly_budget_chf"]:
@@ -538,6 +553,7 @@ def render_email(report: dict[str, Any], summary: dict[str, Any] | None, to: str
     lines += ["", "Service checks:"]
     lines += [f"- {_status_mark(c['ok']):4} {c['name']}: {c['detail']}" for c in report["checks"]]
     lines += article_report.text_lines(report.get("articles") or {})
+    lines += politics_report.text_lines(report.get("politics") or {})
     if v.get("status") == "ok":
         if v["top_pages"]:
             lines += ["", "Top pages:"]
@@ -582,6 +598,7 @@ def render_email(report: dict[str, Any], summary: dict[str, Any] | None, to: str
     )
     parts.append(f"<p><strong>Service checks</strong></p><ul>{checks}</ul>")
     parts.append(article_report.html_block(report.get("articles") or {}))
+    parts.append(politics_report.html_block(report.get("politics") or {}))
     if v.get("status") == "ok" and v["top_pages"]:
         pages = "".join(
             f"<li>{p['views']} &middot; {e(p['host'] + p['path'])}</li>" for p in v["top_pages"]
@@ -617,6 +634,9 @@ async def run_digest(
     report = await build_report(db)
     summary = await write_ops_digest(db, report)
     await db.commit()  # the AI call log
+    extra = politics_report.actions(report.get("politics") or {})
+    if summary is not None and extra:  # politics failures are always on the to-do list
+        summary = {**summary, "actions": [*summary.get("actions", []), *extra]}
     emails = [render_email(report, summary, addr) for addr in (to or await recipients(db))]
     if send:
         for em in emails:

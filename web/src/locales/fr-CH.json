@@ -770,5 +770,21 @@
       "geography": "Géographie",
       "culture": "Culture et traditions"
     }
+  },
+  "currentAffairs": {
+    "title": "Actualité (canton de Zurich)",
+    "body": "Questions facultatives sur la politique récente du canton, tirées des revues hebdomadaires et des explications de votations de Viapunt. Gratuites, et sans effet sur le test blanc ni sur votre niveau de préparation.",
+    "cta": "S'exercer sur l'actualité",
+    "count": "{{count}} questions",
+    "refersTo": "Se rapporte au {{date}}",
+    "readPage": "Lire la page",
+    "check": "Vérifier la réponse",
+    "correct": "Exact.",
+    "wrong": "Pas tout à fait. La bonne réponse est {{answer}}.",
+    "next": "Question suivante",
+    "done": "C'est tout pour le moment. De nouvelles questions arrivent avec chaque revue de la semaine.",
+    "none": "Il n'y a pas de questions d'actualité pour le moment.",
+    "back": "Retour à votre aperçu",
+    "progress": "Question {{n}} sur {{total}}"
   }
 }

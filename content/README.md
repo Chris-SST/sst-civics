@@ -209,3 +209,9 @@ change is still waiting.
 
 The example questions used by the tests (`beispiel-*`) are in `tests/fixtures/content/`, not
 here, so they never reach the question bank.
+
+## Politics sources: `politics/sources.yaml`
+
+The listings, feeds, vote lists and people pages that "Politics in your canton" reads (D-074),
+one block per canton, each with its type and what it is for, and the pages that were tried
+and dropped. See [docs/runbooks/politics.md](../docs/runbooks/politics.md).

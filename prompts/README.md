@@ -23,6 +23,14 @@ active, and the version string is written to every row of the AI call log.
 | `articles/fix/vN.md` | Revision after review findings or Chris's suggested changes. |
 | `articles/translate/vN.md` | Translation into one site language with the glossary, placeholders untouched. |
 | `articles/translation_review/vN.md` | Independent review of one translation against the English. |
+| `politics/write_roundup/vN.md`, `write_vote`, `write_whoswho` | Politics in your canton (D-074, `app/politics/produce.py`): writing a weekly round-up, a vote explainer, the who's who from the authorities' pages. |
+| `politics/neutrality_review/vN.md` | Independent neutrality review; a blocker stops publication. |
+| `politics/fact_review/vN.md` | Independent fact review of a politics page against the same pages. |
+| `politics/fix/vN.md` | Revision after a format check, the neutrality or the fact review. |
+| `politics/select/vN.md` | Picks the political items of the week from the item pages fetched. |
+| `politics/links/vN.md`, `proposals`, `results`, `roster` | Cheap extraction calls: links of a listing that did not parse, the proposals of a vote announcement, result figures stated on a page, the who's-who facts. |
+| `politics/questions/vN.md`, `question_check`, `question_translate` | Current-affairs practice questions: writing in German, the independent check without the key, the translations. |
+Politics pages are translated with `articles/translate` and `articles/translation_review`.
 
 The tutor's prompt version is logged as `base@vN+civics@vN`, with `+explain@vN` in "Explain this" and `+help@vN` in the help chat. The school course modules
 (`courses/<module>/`) and the course-based question prompts (`questions/generate`,

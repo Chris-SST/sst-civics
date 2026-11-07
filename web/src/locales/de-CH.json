@@ -770,5 +770,21 @@
       "geography": "Geografie",
       "culture": "Kultur und Traditionen"
     }
+  },
+  "currentAffairs": {
+    "title": "Aktuelles (Kanton Zürich)",
+    "body": "Freiwillige Fragen zur aktuellen Politik im Kanton, aus den Wochenrückblicken und Abstimmungserklärungen von Viapunt. Kostenlos und nicht Teil des Probetests oder Ihrer Bereitschaft.",
+    "cta": "Aktuelles üben",
+    "count": "{{count}} Fragen",
+    "refersTo": "Bezieht sich auf {{date}}",
+    "readPage": "Zur Seite",
+    "check": "Antwort prüfen",
+    "correct": "Richtig.",
+    "wrong": "Nicht ganz. Richtig ist {{answer}}.",
+    "next": "Nächste Frage",
+    "done": "Das war alles. Neue Fragen kommen mit jedem Wochenrückblick.",
+    "none": "Zurzeit gibt es keine Fragen zum Aktuellen.",
+    "back": "Zurück zur Übersicht",
+    "progress": "Frage {{n}} von {{total}}"
   }
 }

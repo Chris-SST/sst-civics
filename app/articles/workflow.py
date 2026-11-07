@@ -28,10 +28,14 @@ from sqlalchemy import select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.articles import emails, files
-from app.articles.constants import INDEXNOW_ENDPOINT, INDEXNOW_KEY
+from app.articles.constants import INDEXNOW_ENDPOINT, INDEXNOW_KEY, KINDS, POLITICS_KINDS
 from app.articles.plan import import_plan
 from app.articles.produce import pending_feedback
-from app.articles.validate import validate_article, validate_translation
+from app.articles.validate import (
+    validate_article,
+    validate_politics_frontmatter,
+    validate_translation,
+)
 from app.config import get_settings
 from app.db import utcnow
 from app.models import (
@@ -207,6 +211,10 @@ async def run_production(
     now = now or utcnow()
     if not await start_production(db, a, now, force=force):
         return None
+    if a.kind in POLITICS_KINDS:
+        from app.politics.produce import produce as produce_politics
+
+        return await produce_politics(db, a, now)
     return await produce(db, a, now)
 
 
@@ -277,6 +285,30 @@ def _checked_date(content: dict[str, Any], fallback: date) -> date:
         return fallback
 
 
+def has_result(a: Article) -> bool:
+    """A vote explainer written after the vote (its text has the Result section)."""
+    return a.kind == "vote" and bool((a.english or {}).get("result"))
+
+
+def politics_extra(a: Article) -> dict[str, Any] | None:
+    """The extra frontmatter fields of a politics page (docs/politics-contract.md)."""
+    if a.kind not in POLITICS_KINDS:
+        return None
+    plan = a.plan or {}
+    if a.kind == "roundup":
+        return {
+            "period_start": date.fromisoformat(plan["period_start"]),
+            "period_end": date.fromisoformat(plan["period_end"]),
+        }
+    if a.kind == "vote":
+        return {
+            "vote_date": date.fromisoformat(plan["vote_date"]),
+            "vote_level": plan["vote_level"],
+            "result": (a.english or {}).get("result") or None,
+        }
+    return {}
+
+
 def build_files(a: Article, now: datetime) -> tuple[dict[str, str], dict[str, str]]:
     """{relative path: file text} and {lang: page path} for every language that passed."""
     today = now.astimezone(ZURICH).date()
@@ -299,27 +331,35 @@ def build_files(a: Article, now: datetime) -> tuple[dict[str, str], dict[str, st
             published=published,
             updated=today,
             checked=checked,
+            extra=politics_extra(a),
         )
         out[files.relative_path(lang, content["slug"])] = files.render_file(fm, content["body"])
-        pages[lang] = files.page_path(a.kind, lang, content["slug"])
+        pages[lang] = files.page_path(a.kind, lang, content["slug"], a.canton)
     return out, pages
 
 
 async def check_publishable(db: AsyncSession, a: Article) -> list[str]:
     keys = {k for (k,) in (await db.execute(select(Article.key))).all()}
+    result = has_result(a)
     problems = validate_article(
         a.english or {},
         kind=a.kind,
         lang="en",
         plan_keys=keys,
         read_urls={s["url"] for s in (a.english or {}).get("sources", [])},
+        has_result=result,
     )
     for lang, t in (a.translations or {}).items():
         if t.get("status") == "ok" and t.get("content"):
             for p in validate_translation(
-                t["content"], a.english, kind=a.kind, lang=lang, plan_keys=keys
+                t["content"], a.english, kind=a.kind, lang=lang, plan_keys=keys, has_result=result
             ):
                 problems.append(f"{lang}: {p}")
+    if a.kind in POLITICS_KINDS and a.english:
+        texts, _ = build_files(a, utcnow())
+        for rel, text in texts.items():
+            fm, _ = files.parse_file(text)
+            problems += [f"{rel}: {p}" for p in validate_politics_frontmatter(fm)]
     return problems
 
 
@@ -440,7 +480,8 @@ async def finish_publication(db: AsyncSession, a: Article, now: datetime) -> str
         return a.status
     pinged = await indexnow(list(urls.values()))
     log.info("Article %s published (%d languages, IndexNow %s)", a.key, len(urls), pinged)
-    await emails.send_published(db, a, now, update=update_of_live, indexnow=pinged)
+    if a.kind not in POLITICS_KINDS:  # politics pages appear in the digest instead (D-074)
+        await emails.send_published(db, a, now, update=update_of_live, indexnow=pinged)
     return a.status
 
 
@@ -527,7 +568,15 @@ async def tick(
     report = TickReport()
     if not dry_run:
         report.plan = (await import_plan(db)).summary()
-    rows = (await db.execute(select(Article).order_by(Article.publish_at))).scalars().all()
+    rows = (
+        (
+            await db.execute(
+                select(Article).where(Article.kind.in_(KINDS)).order_by(Article.publish_at)
+            )
+        )
+        .scalars()
+        .all()
+    )  # the politics pages have their own tick (app/politics/schedule.py)
     for a in rows:
         action = due_action(a, now)
         if action is None:

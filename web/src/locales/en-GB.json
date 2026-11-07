@@ -770,5 +770,21 @@
       "geography": "Geography",
       "culture": "Culture and traditions"
     }
+  },
+  "currentAffairs": {
+    "title": "Current affairs (canton of Zurich)",
+    "body": "Optional questions on recent politics in the canton, from Viapunt's weekly round-ups and vote explainers. Free, and not part of the mock test or your readiness.",
+    "cta": "Practise current affairs",
+    "count": "{{count}} questions",
+    "refersTo": "Refers to {{date}}",
+    "readPage": "Read the page",
+    "check": "Check answer",
+    "correct": "Correct.",
+    "wrong": "Not quite. The right answer is {{answer}}.",
+    "next": "Next question",
+    "done": "That is all for now. New questions come with each week's round-up.",
+    "none": "There are no current-affairs questions at the moment.",
+    "back": "Back to your overview",
+    "progress": "Question {{n}} of {{total}}"
   }
 }

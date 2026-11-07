@@ -1,0 +1,432 @@
+{
+  "head" : {
+    "vars" : [
+      "date",
+      "id",
+      "title",
+      "yesPercentage",
+      "voterTurnout",
+      "voteResult"
+    ]
+  },
+  "results" : {
+    "bindings" : [
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2026-06-14"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6860"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Volksinitiative vom 03.04.2024 «Keine 10-Millionen-Schweiz! (Nachhaltigkeitsinitiative)»"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Erwahrung in Vorbereitung"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2026-06-14"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6870"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Änderung vom 26.09.2025 des Bundesgesetzes über den zivilen Ersatzdienst (Zivildienstgesetz, ZDG)\r\n"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Erwahrung in Vorbereitung"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2026-09-27"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6880"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Volksinitiative vom 11.04.2024 «Wahrung der schweizerischen Neutralität (Neutralitätsinitiative)»"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Erwahrung in Vorbereitung"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2026-09-27"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6890"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Volksinitiative vom 16.08.2024 «Für eine sichere Ernährung – durch Stärkung einer nachhaltigen inländischen Produktion, mehr pflanzliche Lebensmittel und sauberes Trinkwasser (Ernährungsinitiative)»"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Erwahrung in Vorbereitung"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2026-11-29"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6900"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Bundesbeschluss vom 19.06.2026 über die Zusatzfinanzierung der AHV durch eine Erhöhung der Mehrwertsteuer"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Der Abstimmungstermin wurde festgelegt"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2026-11-29"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6910"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Volksinitiative vom 03.11.2023 «Für eine Einschränkung von Feuerwerk»\r\n"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Der Abstimmungstermin wurde festgelegt"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2026-11-29"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6920"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Volksinitiative vom 27.03.2024 «Ja zu fairen Bundessteuern auch für Ehepaare – Diskriminierung der Ehe endlich abschaffen!»"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Der Abstimmungstermin wurde festgelegt"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2026-11-29"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6930"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Änderung vom 19.12.2025 des Bundesgesetzes über das Kriegsmaterial (Kriegsmaterialgesetz, KMG)"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Der Abstimmungstermin wurde festgelegt"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2027-02-28"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6940"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Volksinitiative vom 28.12.2023 «Ja zum Importverbot für Stopfleber (Stopfleber-Initiative)»\r\n"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Der Abstimmungstermin wurde festgelegt"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2027-02-28"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6950"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Volksinitiative vom 03.11.2023 «Für ein modernes Bürgerrecht (Demokratie-Initiative)»"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Der Abstimmungstermin wurde festgelegt"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2027-02-28"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6960"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Bundesbeschluss vom 19.06.2026 über die Genehmigung des Wirtschaftspartnerschaftsabkommens zwischen den EFTA-Staaten und Malaysia"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Der Abstimmungstermin wurde festgelegt"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2027-02-28"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6970"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Änderung vom 19.06.2026 des Kernenergiegesetzes (KEG)"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Der Abstimmungstermin wurde festgelegt"
+        }
+      },
+      {
+        "date" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#date",
+          "type" : "literal",
+          "value" : "2027-02-28"
+        },
+        "id" : {
+          "datatype" : "http://www.w3.org/2001/XMLSchema#integer",
+          "type" : "literal",
+          "value" : "6980"
+        },
+        "title" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Änderung vom 19.06.2026 des Bundesgesetzes über die Allgemeinverbindlicherklärung von Gesamtarbeitsverträgen (Allgemeinverbindlicherklärung von Mindestlöhnen, die unter kantonalen Mindestlöhnen liegen)"
+        },
+        "yesPercentage" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voterTurnout" : {
+          "datatype" : "https://cube.link/Undefined",
+          "type" : "literal",
+          "value" : ""
+        },
+        "voteResult" : {
+          "xml:lang" : "de",
+          "type" : "literal",
+          "value" : "Der Abstimmungstermin wurde festgelegt"
+        }
+      }
+    ]
+  }
+}

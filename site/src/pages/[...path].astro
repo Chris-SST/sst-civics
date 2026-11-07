@@ -8,14 +8,14 @@
 import { getCollection, render } from "astro:content";
 import { APP_URL } from "astro:env/server";
 import {
-  LOCALES, STATIC_KEYS, buildIndex, alternatesFor, resolveHref, keyFor, slugFor, pathFor, articlePath,
+  LOCALES, STATIC_KEYS, buildIndex, alternatesFor, resolveHref, keyFor, slugFor, pathFor, articlePath, politicsPath,
 } from "../i18n/pages.mjs";
 import { ui } from "../i18n/ui";
-import { more } from "../i18n/more";
-import { plainText } from "../i18n/fmt";
+import { more, fill } from "../i18n/more";
+import { plainText, isoDate, longDate } from "../i18n/fmt";
 import { glossaryFor } from "../glossary.mjs";
 import { CATEGORIES } from "../articles/source.mjs";
-import { allArticles, forLang } from "../articles/lib";
+import { allArticles, forLang, politicsFor, politicsCantons, hrefOf } from "../articles/lib";
 import Base from "../layouts/Base.astro";
 import Guide from "../layouts/Guide.astro";
 import GuideCta from "../components/GuideCta.astro";
@@ -54,14 +54,24 @@ export async function getStaticPaths() {
   for (const entry of await allArticles()) {
     const { lang, kind, key, slug } = entry.data;
     paths.push({
-      params: { path: articlePath(lang, kind, slug).replace(/^\/|\/$/g, "") },
+      params: { path: articlePath(lang, kind, slug, entry.data.canton).replace(/^\/|\/$/g, "") },
       props: { kind: "article-page", lang, key: `article:${key}`, id: entry.id },
     });
+  }
+  // One politics index per canton that has pages, in every language (English fallback).
+  const cantons = politicsCantons(await allArticles());
+  for (const lang of LOCALES) {
+    for (const canton of cantons) {
+      paths.push({
+        params: { path: politicsPath(lang, canton).replace(/^\/|\/$/g, "") },
+        props: { kind: "politics-canton", lang, key: `politics:${canton}`, canton },
+      });
+    }
   }
   return paths;
 }
 
-const { kind, lang, key, id } = Astro.props as { kind: string; lang: string; key: string; id?: string };
+const { kind, lang, key, id, canton } = Astro.props as { kind: string; lang: string; key: string; id?: string; canton?: string };
 const t = ui(lang);
 const mo = more(lang);
 
@@ -70,17 +80,17 @@ const legalAll = await getCollection("legal");
 const articlesAll = await allArticles();
 const index = buildIndex(
   [...guideAll, ...legalAll].map((e) => ({ lang: e.data.lang, slug: e.data.slug })),
-  articlesAll.map((e) => ({ lang: e.data.lang, key: e.data.key, kind: e.data.kind, slug: e.data.slug })),
+  articlesAll.map((e) => ({ lang: e.data.lang, key: e.data.key, kind: e.data.kind, slug: e.data.slug, canton: e.data.canton })),
 );
 const alternates = alternatesFor(index, key);
-const path = pathFor(lang, key.startsWith("article:") ? "home" : key);
+const path = key.startsWith("politics:") ? politicsPath(lang, key.slice(9)) : pathFor(lang, key.startsWith("article:") ? "home" : key);
 
 const entry = id && kind === "guide" ? guideAll.find((e) => e.id === id) : undefined;
 const rendered = entry ? await render(entry) : undefined;
 const legalEntry = id && kind === "legal" ? legalAll.find((e) => e.id === id) : undefined;
 const legalRendered = legalEntry ? await render(legalEntry) : undefined;
 const articleEntry = id && kind === "article-page" ? articlesAll.find((e) => e.id === id) : undefined;
-const articlePagePath = articleEntry ? articlePath(lang, articleEntry.data.kind, articleEntry.data.slug) : path;
+const articlePagePath = articleEntry ? articlePath(lang, articleEntry.data.kind, articleEntry.data.slug, articleEntry.data.canton) : path;
 
 // Articles that name this guide page in `related`, for the "Related articles" block.
 const guideRelatedArticles = kind === "guide" ? forLang(articlesAll, lang).filter((e) => e.data.related.includes(key)) : [];
@@ -132,6 +142,33 @@ const cantonList =
     : [];
 const hasCantons = forLang(articlesAll, lang).some((e) => e.data.kind === "canton");
 const hasArticles = forLang(articlesAll, lang).some((e) => e.data.kind === "article");
+
+// Politics: overview of the cantons covered, and one index per canton (docs/politics-contract.md).
+const pm = mo.politics;
+const hasPolitics = articlesAll.some((e) => e.data.category === "politics");
+const coveredCantons = politicsCantons(articlesAll);
+const cantonLabel = (c: string) => pm.cantons[c] ?? c.toUpperCase();
+const cantonPages = kind === "politics-canton" && canton ? politicsFor(articlesAll, lang, canton) : [];
+const todayIso = new Date().toISOString().slice(0, 10);
+const whoswhoPages = cantonPages.filter((e) => e.data.kind === "whoswho");
+const votePages = cantonPages.filter((e) => e.data.kind === "vote");
+const comingVotes = votePages.filter((e) => e.data.vote_date && isoDate(e.data.vote_date) >= todayIso).sort((a, b) => a.data.vote_date!.getTime() - b.data.vote_date!.getTime());
+const pastVotes = votePages.filter((e) => !comingVotes.includes(e)).sort((a, b) => (b.data.vote_date?.getTime() ?? 0) - (a.data.vote_date?.getTime() ?? 0));
+const roundupPages = cantonPages.filter((e) => e.data.kind === "roundup");
+const RECENT_ROUNDUPS = 4;
+const recentRoundups = roundupPages.slice(0, RECENT_ROUNDUPS);
+const archiveMonths: { label: string; rows: typeof roundupPages }[] = [];
+for (const e of roundupPages.slice(RECENT_ROUNDUPS)) {
+  const label = new Intl.DateTimeFormat(lang === "de" ? "de-CH" : lang, { month: "long", year: "numeric", timeZone: "UTC" }).format(e.data.published);
+  const last = archiveMonths[archiveMonths.length - 1];
+  if (last && last.label === label) last.rows.push(e);
+  else archiveMonths.push({ label, rows: [e] });
+}
+// The naturalisation-interview page links to the Zurich politics index when it has pages.
+const politicsLink =
+  kind === "guide" && key === "interview" && politicsFor(articlesAll, lang, "zh").length > 0
+    ? { href: politicsPath(lang, "zh"), label: pm.latestZh }
+    : undefined;
 const eligHrefs = Object.fromEntries(
   ["overview", "zurich", "calculator", "language", "test", "fees"].map((k) => [k, resolveHref(index, k, lang)]),
 );
@@ -154,6 +191,7 @@ const eligHrefs = Object.fromEntries(
     sources={entry.data.sources}
     cta={entry.data.cta}
     relatedArticles={guideRelatedArticles}
+    politicsLink={politicsLink}
   >
     <rendered.Content />
     {key === "calculator" && <div style="margin-top:32px"><ResidenceCalculator lang={lang} /></div>}
@@ -282,6 +320,79 @@ const eligHrefs = Object.fromEntries(
       {cantonList.length === 0 && <p>{mo.articles.cantonsSoon}</p>}
       {cantonList.length > 0 && <ArticleList entries={cantonList} lang={lang} />}
       <p class="art-index-link"><a href={pathFor(lang, "articles")}>{mo.articles.toArticles} →</a></p>
+      <GuideCta lang={lang} />
+    </div>
+  </Base>
+)}
+
+{kind === "politics" && (
+  <Base lang={lang} title={pm.overviewTitle} description={pm.overviewDescription} alternates={alternates} path={path} noindex={!hasPolitics}>
+    <div class="page page--wide stack">
+      <h1>{pm.overviewH1}</h1>
+      <p>{pm.overviewLead}</p>
+      {!hasPolitics && (
+        <p>{pm.soon} <a href={resolveHref(index, "overview", lang) ?? pathFor(lang, "home")}>{t.cards.overview.title}</a></p>
+      )}
+      {hasPolitics && (
+        <ul class="art-links">
+          {coveredCantons.map((c) => <li><a href={politicsPath(lang, c)}>{cantonLabel(c)}</a></li>)}
+        </ul>
+      )}
+      <p class="pol-neutral">{pm.neutral}</p>
+      <p class="muted"><a href={`${pathFor(lang, "articles")}rss.xml`} type="application/rss+xml">{mo.articles.rss}</a></p>
+      <GuideCta lang={lang} />
+    </div>
+  </Base>
+)}
+
+{kind === "politics-canton" && canton && (
+  <Base lang={lang} title={fill(pm.cantonTitle, { canton: cantonLabel(canton) })} description={fill(pm.cantonDescription, { canton: cantonLabel(canton) })} alternates={alternates} path={path}>
+    <div class="page page--wide stack">
+      <p class="pol-crumbs"><a href={pathFor(lang, "politics")}>{pm.overviewH1}</a></p>
+      <h1>{fill(pm.cantonH1, { canton: cantonLabel(canton) })}</h1>
+      <p>{pm.cantonLead}</p>
+      {cantonPages.length === 0 && <p>{pm.emptyCanton}</p>}
+      {whoswhoPages.length > 0 && (
+        <section class="art-group" aria-labelledby="pol-who">
+          <h2 id="pol-who">{pm.whoswho}</h2>
+          <ArticleList entries={whoswhoPages} lang={lang} showCategory={false} />
+        </section>
+      )}
+      {comingVotes.length > 0 && (
+        <section class="art-group" aria-labelledby="pol-votes">
+          <h2 id="pol-votes">{pm.votesComing}</h2>
+          <ArticleList entries={comingVotes} lang={lang} />
+        </section>
+      )}
+      {recentRoundups.length > 0 && (
+        <section class="art-group" aria-labelledby="pol-rounds">
+          <h2 id="pol-rounds">{pm.roundups}</h2>
+          <ArticleList entries={recentRoundups} lang={lang} showCategory={false} />
+        </section>
+      )}
+      {pastVotes.length > 0 && (
+        <section class="art-group" aria-labelledby="pol-past">
+          <h2 id="pol-past">{pm.votesPast}</h2>
+          <ArticleList entries={pastVotes} lang={lang} />
+        </section>
+      )}
+      {archiveMonths.length > 0 && (
+        <section class="art-group pol-archive" aria-labelledby="pol-archive">
+          <h2 id="pol-archive">{pm.archive}</h2>
+          {archiveMonths.map((month) => (
+            <>
+              <h3>{month.label}</h3>
+              <ul>
+                {month.rows.map((e) => (
+                  <li><a href={hrefOf(e)} hreflang={e.data.lang !== lang ? e.data.lang : undefined}>{e.data.title}</a> <time datetime={isoDate(e.data.published)}>({longDate(e.data.published, lang)})</time></li>
+                ))}
+              </ul>
+            </>
+          ))}
+        </section>
+      )}
+      <p class="pol-neutral">{pm.neutral}</p>
+      <p class="muted"><a href={`${pathFor(lang, "articles")}rss.xml`} type="application/rss+xml">{mo.articles.rss}</a></p>
       <GuideCta lang={lang} />
     </div>
   </Base>

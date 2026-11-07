@@ -770,5 +770,21 @@
       "geography": "Geografía",
       "culture": "Cultura y tradiciones"
     }
+  },
+  "currentAffairs": {
+    "title": "Actualidad (cantón de Zúrich)",
+    "body": "Preguntas opcionales sobre la política reciente del cantón, a partir de los resúmenes semanales y las explicaciones de votaciones de Viapunt. Gratuitas y fuera del examen de prueba y de su preparación.",
+    "cta": "Practicar actualidad",
+    "count": "{{count}} preguntas",
+    "refersTo": "Se refiere al {{date}}",
+    "readPage": "Leer la página",
+    "check": "Comprobar respuesta",
+    "correct": "Correcto.",
+    "wrong": "No del todo. La respuesta correcta es {{answer}}.",
+    "next": "Siguiente pregunta",
+    "done": "Eso es todo por ahora. Llegan nuevas preguntas con cada resumen semanal.",
+    "none": "Por ahora no hay preguntas de actualidad.",
+    "back": "Volver al resumen",
+    "progress": "Pregunta {{n}} de {{total}}"
   }
 }

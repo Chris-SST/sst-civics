@@ -6,8 +6,13 @@ import re
 
 LANGS = ("de", "en", "fr", "it", "pt", "es", "sq", "tr")
 TRANSLATION_LANGS = tuple(lang for lang in LANGS if lang != "en")
-KINDS = ("article", "canton")
+KINDS = ("article", "canton")  # the planned articles of content/articles/plan.yaml
 CATEGORIES = ("eligibility", "cantons", "test", "process", "after")
+# "Politics in your canton" (docs/politics-contract.md, D-074): pages the worker finds and
+# writes itself, published without a proposal email. Same table, files and builder.
+POLITICS_KINDS = ("roundup", "vote", "whoswho")
+POLITICS_CATEGORY = "politics"
+ALL_KINDS = KINDS + POLITICS_KINDS
 
 # URL segment per kind and language: /<lang>/<segment>/<slug>/
 SEGMENTS: dict[str, dict[str, str]] = {
@@ -33,6 +38,19 @@ SEGMENTS: dict[str, dict[str, str]] = {
     },
 }
 
+_POLITICS_SEGMENT = {
+    "en": "politics",
+    "de": "politik",
+    "fr": "politique",
+    "it": "politica",
+    "pt": "politica",
+    "es": "politica",
+    "sq": "politika",
+    "tr": "siyaset",
+}
+for _kind in POLITICS_KINDS:  # /<lang>/<segment>/<canton>/<slug>/
+    SEGMENTS[_kind] = _POLITICS_SEGMENT
+
 # The keys of SLUGS in site/src/i18n/pages.mjs (the worker image has no site/ folder, so the
 # list is kept here; tests/test_articles_validate.py fails when the two differ).
 GUIDE_KEYS = (
@@ -57,6 +75,7 @@ GUIDE_KEYS = (
     "checklist",
     "articles",
     "cantons",
+    "politics",
     "imprint",
     "contact",
     "about",
@@ -82,6 +101,34 @@ RELATED_MAX = 4
 # Word counts of the English body. The contract says "about 900-1,300" (articles) and
 # "1,200-1,800" (canton guides); the check allows some slack on both sides.
 WORDS = {"article": (800, 1450), "canton": (1100, 2000)}
+# Politics (contract: roundup 500-1,100, vote 600-1,200, whoswho 300-1,000), with slack.
+WORDS.update({"roundup": (450, 1200), "vote": (550, 1300), "whoswho": (280, 1100)})
+# Lengths that differ for the politics kinds (contract "Files").
+POLITICS_SUMMARY = (3, 6)
+POLITICS_FAQ = (0, 5)
+POLITICS_SOURCES = (1, 20)
+# Hosts a politics page may cite (contract "Sources"); a subdomain counts. The Kantonsrat's
+# document server is added because its session bulletins are linked from kantonsrat.zh.ch
+# (content/politics/sources.yaml).
+POLITICS_SOURCE_HOSTS = (
+    "zh.ch",
+    "stadt-zuerich.ch",
+    "stadt.winterthur.ch",
+    "admin.ch",
+    "parlament.ch",
+    "parlzhcdws.cmicloud.ch",
+)
+VOTE_LEVELS = ("cantonal", "federal")
+# Sections of a vote explainer, in this order; "Result" only after the vote.
+VOTE_SECTIONS = (
+    "What it is about",
+    "What would change",
+    "Arguments in favour",
+    "Arguments against",
+    "Who recommends what",
+)
+VOTE_RESULT_SECTION = "Result"
+ROUNDUP_ITEMS = (4, 6)  # contract: 4-6 items; a week with fewer is skipped (D-074)
 
 # IndexNow (contract section 4): key file /<key>.txt on the guide site.
 INDEXNOW_KEY = "db4ff15a4e2f78e09e2d5d2021e47cd3"
@@ -124,4 +171,5 @@ GUIDE_PAGE_TOPICS = {
     "checklist": "Printable Zurich document checklist",
     "articles": "Index of all articles",
     "cantons": "Index of the canton guides",
+    "politics": "Politics in your canton: weekly round-ups, votes explained, who's who",
 }

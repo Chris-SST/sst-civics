@@ -1,4 +1,5 @@
 export const CATEGORIES: string[];
+export const POLITICS_CATEGORY: string;
 export function articlesDir(): string;
 export function collectArticles(opts?: { root?: string; appUrl?: string }): {
   id: string;

@@ -97,6 +97,7 @@ const tryHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(la
           <nav class="topnav" aria-label={t.mainNav}>
             <a href={`${pathFor(lang, "home")}#guides`}>{t.navGuides}</a>
             <a href={pathFor(lang, "articles")}>{mo.navArticles}</a>
+            <a href={pathFor(lang, "politics")}>{mo.politics.nav}</a>
             <a href={pathFor(lang, "free")}>{t.navFree}</a>
             <a href={pathFor(lang, "faq")}>{t.navFaq}</a>
           </nav>
