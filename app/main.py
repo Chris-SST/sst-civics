@@ -11,6 +11,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 
 from app import observability
 from app.admin.routes import router as admin_router
+from app.articles.routes import router as articles_review_router
 from app.auth.account import router as account_router
 from app.auth.routes import router as auth_router
 from app.billing.routes import router as billing_router
@@ -31,6 +32,9 @@ from app.tutoring.routes import router as tutor_router
 
 UNSAFE_METHODS = {"POST", "PUT", "PATCH", "DELETE"}
 CSRF_EXEMPT_PATHS = {"/api/billing/webhook"}
+# Chris's article review page (D-073): the signed token in the path is the credential, and
+# the page checks the revision and the Origin itself (app/articles/routes.py).
+CSRF_EXEMPT_PREFIXES = ("/api/articles/review/",)
 
 CSP = (
     "default-src 'self'; "
@@ -71,6 +75,7 @@ class CsrfMiddleware(BaseHTTPMiddleware):
             request.method in UNSAFE_METHODS
             and request.url.path.startswith("/api/")
             and request.url.path not in CSRF_EXEMPT_PATHS
+            and not request.url.path.startswith(CSRF_EXEMPT_PREFIXES)
             and request.cookies.get(settings.session_cookie_name)
         ):
             cookie = request.cookies.get(settings.csrf_cookie_name)
@@ -111,6 +116,7 @@ def create_app() -> FastAPI:
     app.include_router(questions_router)
     app.include_router(content_router)
     app.include_router(review_router)
+    app.include_router(articles_review_router)
 
     @app.get("/api/health", include_in_schema=False)
     async def health() -> dict[str, str]:

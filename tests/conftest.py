@@ -279,3 +279,15 @@ def make_question(qid: str | None = None, **overrides) -> Question:
     }
     fields.update(overrides)
     return Question(**fields)
+
+
+# --- Article pipeline (tests/test_articles_*.py) ---------------------------------------------
+
+
+@pytest.fixture
+def pipeline(monkeypatch, tmp_path):
+    """Pipeline settings, the fixture plan, a scripted provider and no network
+    (tests/articles_helpers.py)."""
+    from tests.articles_helpers import pipeline_env
+
+    yield from pipeline_env(monkeypatch, tmp_path)

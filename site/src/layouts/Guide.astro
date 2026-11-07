@@ -4,6 +4,9 @@ import Base from "./Base.astro";
 import ArticleLayout from "../components/ArticleLayout.astro";
 import SourcesBlock from "../components/SourcesBlock.astro";
 import GuideCta from "../components/GuideCta.astro";
+import ArticleList from "../components/ArticleList.astro";
+import { more } from "../i18n/more";
+import type { ArticleEntry } from "../articles/lib";
 
 interface Props {
   lang: string;
@@ -15,14 +18,22 @@ interface Props {
   lastChecked: Date;
   sources: { title: string; url: string }[];
   cta?: "free-questions" | "mock" | "pass";
+  /** Articles whose `related` names this page (hidden when empty). */
+  relatedArticles?: ArticleEntry[];
 }
-const { lang, title, description, alternates, path, headings, lastChecked, sources, cta } = Astro.props;
+const { lang, title, description, alternates, path, headings, lastChecked, sources, cta, relatedArticles = [] } = Astro.props;
 ---
 <Base lang={lang} title={title} description={description} alternates={alternates} path={path}>
   <ArticleLayout lang={lang} title={title} headings={headings} lastChecked={lastChecked}>
     <slot />
     <Fragment slot="after">
       <SourcesBlock lang={lang} sources={sources} lastChecked={lastChecked} />
+      {relatedArticles.length > 0 && (
+        <section class="art-section" aria-labelledby="ra-h">
+          <h2 id="ra-h">{more(lang).articles.guideRelated}</h2>
+          <ArticleList entries={relatedArticles} lang={lang} />
+        </section>
+      )}
       <GuideCta lang={lang} variant={cta} />
     </Fragment>
   </ArticleLayout>

@@ -1,0 +1,292 @@
+---
+// Eligibility check: a browser-only island. Vanilla script, no network call, no storage, nothing
+// is sent. A few questions lead to the routes that may fit, with what is still missing.
+//
+// The rules used (all from the English guide pages and the SEM pages they cite, re-read on
+// 7 November 2026; federal Citizenship Act StBG, SR 141.0):
+//  - Ordinary: C permit; 10 years of residence, 3 of them in the last 5; years between the 8th and
+//    18th birthday count double but at least 6 years must be real; Zurich: 2 years in the same
+//    commune immediately before applying (2 years in the canton if applying before the 25th
+//    birthday, KBüG § 5; the result text says so). Other cantons add their own minimum (SEM: 2 to 5 years).
+//  - Spouses of Swiss citizens (living in Switzerland): 5 years in Switzerland in total, the last
+//    year before applying in Switzerland, 3 years living in marital union.
+//  - Third generation: born in Switzerland, C permit, at least 5 years of compulsory school here,
+//    apply before the 25th birthday, plus conditions on a parent (C permit, 10 years, 5 years of
+//    school) and a grandparent (born in Switzerland or right of residence).
+// The result is soft: the page always says it is a guide, not a decision.
+import { ui } from "../i18n/ui";
+import { more } from "../i18n/more";
+
+interface Props { lang: string; hrefs: Record<string, string | null> }
+const { lang, hrefs } = Astro.props;
+const e = more(lang).eligibility;
+const cards = ui(lang).cards;
+const label = (k: string) => cards[k]?.title ?? ui("en").cards[k]?.title ?? k;
+const linkSets: Record<string, { key: string; zh?: boolean }[]> = {
+  ordinary: [{ key: "overview" }, { key: "calculator" }, { key: "language" }, { key: "zurich", zh: true }, { key: "test", zh: true }, { key: "fees" }],
+  spouse: [{ key: "overview" }, { key: "fees" }],
+  third: [{ key: "overview" }],
+};
+const sem = {
+  spouse: { href: "https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/verheiratet.html", text: e.semSpouses },
+  third: { href: "https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/3-generation.html", text: e.semThird },
+} as Record<string, { href: string; text: string }>;
+const strings = JSON.stringify({ ...e, lang });
+---
+<form class="cv-calc cv-elig" aria-labelledby="elig-h" novalidate data-strings={strings}>
+  <h2 id="elig-h">{e.h1}</h2>
+  <p>{e.lead}</p>
+
+  <label class="cv-field">{e.qCanton}
+    <select name="canton">
+      <option value="zh">{e.optZurich}</option>
+      <option value="other">{e.optOther}</option>
+    </select>
+  </label>
+
+  <label class="cv-field">{e.qMarried}
+    <select name="married">
+      <option value="no">{e.no}</option>
+      <option value="yes">{e.yes}</option>
+    </select>
+  </label>
+  <div class="cv-elig__group" data-show-if="married=yes" hidden>
+    <label class="cv-field">{e.qMarriageYears}
+      <input type="number" name="marriageYears" min="0" max="80" step="1" inputmode="numeric" autocomplete="off" />
+    </label>
+    <label class="cv-field">{e.qTogether}
+      <select name="together">
+        <option value="yes">{e.yes}</option>
+        <option value="no">{e.no}</option>
+      </select>
+    </label>
+  </div>
+
+  <label class="cv-field">{e.qPermit}
+    <select name="permit">
+      <option value="yes">{e.yes}</option>
+      <option value="no">{e.no}</option>
+    </select>
+  </label>
+  <label class="cv-field">{e.qYears}
+    <input type="number" name="years" min="0" max="80" step="1" inputmode="numeric" autocomplete="off" />
+    <small>{e.numberHint}</small>
+  </label>
+  <label class="cv-field">{e.qYoung}
+    <input type="number" name="young" min="0" max="10" step="1" inputmode="numeric" autocomplete="off" />
+  </label>
+  <label class="cv-field">{e.qLast5}
+    <input type="number" name="last5" min="0" max="5" step="1" inputmode="numeric" autocomplete="off" />
+  </label>
+  <label class="cv-field" data-show-if="canton=zh">{e.qCommune}
+    <input type="number" name="commune" min="0" max="80" step="1" inputmode="numeric" autocomplete="off" />
+  </label>
+
+  <label class="cv-field">{e.qBorn}
+    <select name="born">
+      <option value="no">{e.no}</option>
+      <option value="yes">{e.yes}</option>
+    </select>
+  </label>
+  <div class="cv-elig__group" data-show-if="born=yes" hidden>
+    <label class="cv-field">{e.qSchool}
+      <input type="number" name="school" min="0" max="20" step="1" inputmode="numeric" autocomplete="off" />
+    </label>
+    <label class="cv-field">{e.qUnder25}
+      <select name="under25">
+        <option value="yes">{e.yes}</option>
+        <option value="no">{e.no}</option>
+      </select>
+    </label>
+    <label class="cv-field">{e.qFamily}
+      <select name="family">
+        <option value="notsure">{e.notSure}</option>
+        <option value="yes">{e.yes}</option>
+        <option value="no">{e.no}</option>
+      </select>
+    </label>
+  </div>
+
+  <div><button type="submit" class="cv-btn cv-btn--secondary">{e.submit}</button></div>
+
+  <div class="cv-calc__out" role="status" aria-live="polite" data-out>{e.idle}</div>
+
+  <p class="cv-privacy">{e.privacy}</p>
+  <p class="cv-privacy"><strong>{e.disclaimer}</strong></p>
+
+  <div hidden>
+    {Object.entries(linkSets).map(([route, items]) => (
+      <ul data-links={route}>
+        {items.map((i) => hrefs[i.key] && <li data-zh={i.zh ? "" : undefined}><a href={hrefs[i.key]!}>{label(i.key)}</a></li>)}
+        {sem[route] && <li><a href={sem[route].href} rel="noopener" lang="de">{sem[route].text}</a></li>}
+      </ul>
+    ))}
+  </div>
+</form>
+
+<script>
+  type Strings = Record<string, any>;
+  const form = document.querySelector<HTMLFormElement>("form.cv-elig");
+  if (form) {
+    const s: Strings = JSON.parse(form.dataset.strings || "{}");
+    const out = form.querySelector<HTMLElement>("[data-out]")!;
+    const val = (name: string) => (form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement).value;
+    const fill = (tpl: string, n: number) => tpl.replace("{n}", String(n));
+
+    // Show the groups that depend on an answer.
+    const sync = () => {
+      for (const el of form.querySelectorAll<HTMLElement>("[data-show-if]")) {
+        const [name, want] = (el.dataset.showIf || "").split("=");
+        el.hidden = val(name) !== want;
+      }
+    };
+    form.addEventListener("change", sync);
+    sync();
+
+    const fail = (el?: HTMLElement) => {
+      out.setAttribute("data-error", "");
+      out.textContent = s.errNumber;
+      if (el) {
+        el.setAttribute("aria-invalid", "true");
+        el.focus();
+      }
+    };
+    const whole = (name: string): number => {
+      const v = val(name).trim();
+      return /^\d{1,3}$/.test(v) ? parseInt(v, 10) : NaN;
+    };
+
+    type Route = { id: "ordinary" | "spouse" | "third"; status: "fits" | "check" | "notYet"; missing: string[] };
+
+    form.addEventListener("submit", (ev) => {
+      ev.preventDefault();
+      out.removeAttribute("data-error");
+      form.querySelectorAll("[aria-invalid]").forEach((el) => el.removeAttribute("aria-invalid"));
+
+      const zh = val("canton") === "zh";
+      const married = val("married") === "yes";
+      const born = val("born") === "yes";
+      const needed = ["years", "young", "last5"];
+      if (married) needed.push("marriageYears");
+      if (zh) needed.push("commune");
+      if (born) needed.push("school");
+      const n: Record<string, number> = {};
+      for (const name of needed) {
+        n[name] = whole(name);
+        if (Number.isNaN(n[name])) return fail(form.elements.namedItem(name) as HTMLElement);
+      }
+      const actual = n.years;
+      const young = Math.min(n.young, 10, actual);
+      const counted = actual + young;
+      const permit = val("permit") === "yes";
+      const m = s.m as Record<string, string>;
+
+      const routes: Route[] = [];
+
+      if (married) {
+        const missing: string[] = [];
+        if (val("together") !== "yes") missing.push(m.together);
+        if (n.marriageYears < 3) missing.push(fill(m.spouseMarried, n.marriageYears));
+        if (actual < 5) missing.push(fill(m.spouseYears, actual));
+        if (n.last5 < 1) missing.push(m.spouseLast);
+        routes.push({ id: "spouse", status: missing.length ? "notYet" : "fits", missing });
+      }
+
+      if (born) {
+        const missing: string[] = [];
+        const family = val("family");
+        if (!permit) missing.push(m.permitThird);
+        if (n.school < 5) missing.push(fill(m.school, n.school));
+        if (val("under25") !== "yes") missing.push(m.age);
+        if (family === "no") missing.push(m.family);
+        let status: Route["status"] = missing.length ? "notYet" : "fits";
+        if (!missing.length && family === "notsure") {
+          status = "check";
+          missing.push(m.family);
+        }
+        routes.push({ id: "third", status, missing });
+      }
+
+      {
+        const missing: string[] = [];
+        if (!permit) missing.push(m.permit);
+        if (counted < 10) missing.push(fill(m.counted, counted));
+        if (actual < 6) missing.push(fill(m.actual, actual));
+        if (n.last5 < 3) missing.push(fill(m.last5, n.last5));
+        if (zh && n.commune < 2) missing.push(fill(m.commune, n.commune));
+        // Outside Zurich the cantonal minimum is unknown here, so even a complete answer says "check".
+        const status: Route["status"] = missing.length ? "notYet" : zh ? "fits" : "check";
+        routes.push({ id: "ordinary", status, missing });
+      }
+
+      const rank = { fits: 0, check: 1, notYet: 2 };
+      routes.sort((a, b) => rank[a.status] - rank[b.status]);
+
+      out.innerHTML = "";
+      const h = document.createElement("h3");
+      h.textContent = s.heading;
+      out.appendChild(h);
+      const best = routes[0];
+      const lead = document.createElement("p");
+      lead.textContent =
+        best.status === "notYet" ? s.none : (s.likely as string).replace("{route}", (s.routes as Record<string, string>)[best.id]);
+      out.appendChild(lead);
+
+      for (const r of routes) {
+        const box = document.createElement("section");
+        box.className = "elig-route";
+        box.dataset.status = r.status;
+        const title = document.createElement("h4");
+        title.textContent = (s.routes as Record<string, string>)[r.id];
+        const badge = document.createElement("span");
+        badge.className = "elig-badge";
+        badge.textContent = (s.status as Record<string, string>)[r.status];
+        title.append(" ", badge);
+        box.appendChild(title);
+
+        const mh = document.createElement("p");
+        mh.innerHTML = "";
+        const strong = document.createElement("strong");
+        strong.textContent = s.missingHeading;
+        mh.appendChild(strong);
+        box.appendChild(mh);
+        if (r.missing.length) {
+          const ul = document.createElement("ul");
+          for (const text of r.missing) {
+            const li = document.createElement("li");
+            li.textContent = text;
+            ul.appendChild(li);
+          }
+          box.appendChild(ul);
+        } else {
+          const p = document.createElement("p");
+          p.textContent = s.nothingMissing;
+          box.appendChild(p);
+        }
+        if (r.id === "ordinary") {
+          const p = document.createElement("p");
+          p.textContent = s.extraOrdinary;
+          box.appendChild(p);
+          if (!zh) {
+            const q = document.createElement("p");
+            q.textContent = s.otherCanton;
+            box.appendChild(q);
+          }
+        }
+        const links = form.querySelector<HTMLElement>(`[data-links="${r.id}"]`);
+        if (links && links.children.length) {
+          const rn = document.createElement("p");
+          const b = document.createElement("strong");
+          b.textContent = s.readNext;
+          rn.appendChild(b);
+          box.appendChild(rn);
+          const copy = links.cloneNode(true) as HTMLElement;
+          copy.removeAttribute("data-links");
+          if (!zh) copy.querySelectorAll("[data-zh]").forEach((x) => x.remove());
+          box.appendChild(copy);
+        }
+        out.appendChild(box);
+      }
+    });
+  }
+</script>

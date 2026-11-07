@@ -81,9 +81,16 @@ services:
       # The daily digest (D-072) reads visit counts from Umami's database and checks the age
       # of the newest backup. Without UMAMI_WEBSITE_ID the visits section is skipped.
       UMAMI_DATABASE_URL: postgresql+asyncpg://umami:${UMAMI_DB_PASSWORD:-}@postgres:5432/umami
+      # Article pipeline (D-073): published article files go to ../articles (host directory,
+      # owned by uid 10001, the image's app user); the site builder's result is read from
+      # site-releases/build-status.json. See docs/articles-contract.md.
+      ARTICLES_DIR: /srv/articles
+      SITEBUILD_STATUS_FILE: /srv/site-releases/build-status.json
     volumes:
       - outbox:/srv/var/outbox
       - backups:/backups:ro
+      - ../articles:/srv/articles
+      - ../site-releases:/srv/site-releases:ro
     depends_on:
       postgres:
         condition: service_healthy
@@ -93,6 +100,29 @@ services:
       resources:
         limits:
           memory: 512m
+
+  # Guide-site builder (D-073): rebuilds the Astro site whenever the article pipeline asks
+  # (articles/.build-request) or the image carries site code that is not live yet, then swaps
+  # site-releases/current. Rebuild this service after any change under site/ or content/glossary.
+  sitebuilder:
+    build:
+      context: ..
+      dockerfile: infra/sitebuilder/Dockerfile
+    restart: unless-stopped
+    user: "1000:1000"  # the owner of site-releases on the host (ubuntu), = node in the image
+    environment:
+      SITE_URL: ${GUIDE_BASE_URL:-https://staging.viapunt.ch}
+      APP_URL: ${APP_BASE_URL:-https://app.staging.viapunt.ch}
+      PUBLIC_UMAMI_WEBSITE_ID: ${UMAMI_WEBSITE_ID:-}
+      ARTICLES_DIR: /srv/articles
+      RELEASES_DIR: /srv/site-releases
+    volumes:
+      - ../articles:/srv/articles:ro
+      - ../site-releases:/srv/site-releases
+    deploy:
+      resources:
+        limits:
+          memory: 1g
 
   migrate:
     build:

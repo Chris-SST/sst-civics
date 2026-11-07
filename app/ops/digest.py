@@ -23,6 +23,7 @@ import httpx
 from sqlalchemy import distinct, func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 
+from app.articles import report as article_report
 from app.config import get_settings
 from app.db import utcnow
 from app.email.backend import OutgoingEmail
@@ -415,6 +416,19 @@ async def service_checks(db: AsyncSession, now: datetime) -> list[dict[str, Any]
     return checks
 
 
+async def articles_section(
+    db: AsyncSession, start: datetime, end: datetime, now: datetime
+) -> dict[str, Any]:
+    """The article pipeline (D-073): published yesterday, next, waiting, needs action."""
+    from app.articles.report import article_figures
+
+    try:
+        return await article_figures(db, start, end, now)
+    except Exception as exc:  # the digest must go out even if this section fails
+        log.warning("Digest: articles section failed: %s", exc.__class__.__name__)
+        return {"status": "unavailable"}
+
+
 # --- Report, email -------------------------------------------------------------------------------
 
 
@@ -436,6 +450,7 @@ async def build_report(db: AsyncSession, now: datetime | None = None) -> dict[st
         "totals": await totals(db, now),
         "visits": await visit_figures(start, end, week_start),
         "checks": await service_checks(db, now),
+        "articles": await articles_section(db, start, end, now),
     }
     t = report["totals"]
     if t["ai_monthly_budget_chf"]:
@@ -522,6 +537,7 @@ def render_email(report: dict[str, Any], summary: dict[str, Any] | None, to: str
     lines += [f"{label:28} {val:>10} {avg:>10}" for label, val, avg in _rows(report)]
     lines += ["", "Service checks:"]
     lines += [f"- {_status_mark(c['ok']):4} {c['name']}: {c['detail']}" for c in report["checks"]]
+    lines += article_report.text_lines(report.get("articles") or {})
     if v.get("status") == "ok":
         if v["top_pages"]:
             lines += ["", "Top pages:"]
@@ -565,6 +581,7 @@ def render_email(report: dict[str, Any], summary: dict[str, Any] | None, to: str
         for c in report["checks"]
     )
     parts.append(f"<p><strong>Service checks</strong></p><ul>{checks}</ul>")
+    parts.append(article_report.html_block(report.get("articles") or {}))
     if v.get("status") == "ok" and v["top_pages"]:
         pages = "".join(
             f"<li>{p['views']} &middot; {e(p['host'] + p['path'])}</li>" for p in v["top_pages"]

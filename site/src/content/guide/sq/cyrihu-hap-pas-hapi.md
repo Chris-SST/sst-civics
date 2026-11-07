@@ -4,7 +4,7 @@ description: "Periudhat e qëndrimit, kërkesa online te kantoni, dokumentet, te
 lang: sq
 slug: cyrihu-hap-pas-hapi
 lastChecked: 2026-10-30
-updated: 2026-11-03
+updated: 2026-11-07
 sources:
   - title: "Rregullorja kantonale për shtetësinë (KBüV, LS 141.11; gjermanisht)"
     url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
@@ -20,6 +20,8 @@ sources:
     url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/12/neue-studie-so-buergern-die-zuercher-gemeinden-ein.html
   - title: "SEM: Natyralizimi i zakonshëm (gjermanisht)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: "Kantoni i Cyrihut: manual për natyralizimin, seksionet 3.4.1 dhe 3.4.2 (PDF; gjermanisht)"
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
 draft: false
 cta: free-questions
 ---
@@ -33,9 +35,9 @@ Në kantonin e Cyrihut kërkesën e paraqitni online te **Zyra e Komunave (Gemei
 Përveç rregullave federale (leja C, dhjetë vjet në Zvicër, tre prej tyre në pesë vjetët e fundit), Cyrihu ka këto periudha:
 
 - **Komuna:** menjëherë para kërkesës duhet të keni jetuar **në të njëjtën komunë për të paktën dy vjet**.
-- **Kantoni:** nëse jeni nën 25 vjeç, ju duhen vetëm dy vjet në kantonin e Cyrihut. Vetëvlerësimi i kantonit përmend dy vjet në kanton si shembull kushti. Faqet e kantonit nuk thonë qartë nëse nga mosha 25 vjeç vlen një periudhë më e gjatë; Zyra e Komunave mund t'jua thotë.
+- **Kantoni:** nëse e paraqitni kërkesën para ditëlindjes së 25-të, mjaftojnë dy vjet kudo në kantonin e Cyrihut, jo domosdoshmërisht në të njëjtën komunë.
 
-Shpërngulja në një komunë tjetër të Cyrihut gjatë procedurës mund të jetë e mundur. Njoftoni menjëherë komunën tuaj.
+Nëse jeni 25 vjeç ose më shumë dhe shpërnguleni në një komunë tjetër para se komuna juaj të ketë përfunduar verifikimet, kompetente bëhet komuna e re dhe aty duhet të plotësoni fillimisht dy vjet. Pasi të kenë përfunduar verifikimet, mund të shpërnguleni kudo në Zvicër dhe komuna e mëparshme mbetet kompetente. Nën 25 vjeç mund të shpërnguleni brenda kantonit pa e rrezikuar procedurën. Njoftoni komunën tuaj para shpërnguljes.
 
 ## Hapat
 

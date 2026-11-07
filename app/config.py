@@ -112,6 +112,26 @@ class Settings(BaseSettings):
     umami_website_id: str = ""
     umami_heartbeat_url: str = "http://umami:3000/api/heartbeat"
     backup_dir: str = "/backups"  # the backup volume, mounted read-only into the worker
+    # Article pipeline (D-073, docs/articles-contract.md): the worker writes, fact-checks,
+    # translates and publishes the articles of content/articles/plan.yaml. Off unless enabled.
+    # The proposal email goes to ARTICLES_REVIEW_TO (comma-separated), else to the digest
+    # recipients. The worker needs ARTICLES_DIR read-write and the builder's status file.
+    articles_enabled: bool = False
+    articles_dir: str = "/srv/articles"
+    sitebuild_status_file: str = "/srv/site-releases/build-status.json"
+    articles_review_to: str = ""
+    articles_write_model: str = "claude-opus-5-5"  # writing and the fix rounds
+    articles_review_model: str = "claude-opus-5-5"  # the independent fact review
+    articles_translate_model: str = "claude-sonnet-5-5"
+    articles_translation_review_model: str = "claude-opus-5-5"
+    articles_effort: Literal["low", "medium", "high", "xhigh", "max"] = "high"
+    articles_translate_effort: Literal["low", "medium", "high", "xhigh", "max"] = "medium"
+    articles_cost_cap_chf: float = 6.0  # per production run (first version or one revision)
+    articles_lead_days: int = 4  # production starts this long before publish_at
+    articles_proposal_hours: int = 24  # the proposal goes out this long before publication
+    articles_languages: str = "de,fr,it,pt,es,sq,tr"  # translations; English always exists
+    articles_build_timeout_minutes: int = 20  # waiting for the site builder
+    articles_indexnow: bool = True  # ping IndexNow after publishing (production only)
     serve_unreviewed_questions: bool = False  # staging/dev: also serve in_review questions
     practice_round_size: int = 5  # questions per Practise round
     conversation_window_turns: int = 20
@@ -123,6 +143,12 @@ class Settings(BaseSettings):
         "help_model",
         "tutor_effort",
         "chat_effort",
+        "articles_write_model",
+        "articles_review_model",
+        "articles_translate_model",
+        "articles_translation_review_model",
+        "articles_effort",
+        "articles_translate_effort",
         mode="before",
     )
     @classmethod
@@ -139,6 +165,13 @@ class Settings(BaseSettings):
     @property
     def cantons_on_sale(self) -> tuple[str, ...]:
         return tuple(c.strip().lower() for c in self.cantons_for_sale.split(",") if c.strip())
+
+    @property
+    def article_languages(self) -> tuple[str, ...]:
+        """Translation languages, in the order given, without English or unknown codes."""
+        known = ("de", "fr", "it", "pt", "es", "sq", "tr")
+        out = [c.strip().lower() for c in self.articles_languages.split(",")]
+        return tuple(dict.fromkeys(c for c in out if c in known))
 
     @property
     def cookies_secure(self) -> bool:

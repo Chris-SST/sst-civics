@@ -9,7 +9,7 @@ sources:
   - title: "SEM: Language (list of recognised language certificates; German)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/mein-beitrag/zugewandert/sprache.html
   - title: "SEM: List of recognised language certificates (PDF, German)"
-    url: https://www.ejpd.admin.ch/dam/sem/de/data/integration/themen/sprache/anerkannte-sprachzertifikate.pdf.download.pdf/anerkannte-sprachzertifikate-d.pdf
+    url: https://www.sem.admin.ch/dam/sem/de/data/integration/themen/sprache/anerkannte-sprachzertifikate.pdf.download.pdf/anerkannte-sprachzertifikate-d.pdf
   - title: "SEM: Frequently asked questions on Swiss citizenship (German)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/faq.html
   - title: "fide: The fide test (German)"

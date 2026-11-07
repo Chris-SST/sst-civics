@@ -9,7 +9,7 @@ sources:
   - title: "SEM: Dil (tanınmış dil sertifikaları listesi; Almanca)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/mein-beitrag/zugewandert/sprache.html
   - title: "SEM: Tanınmış dil sertifikaları listesi (PDF, Almanca)"
-    url: https://www.ejpd.admin.ch/dam/sem/de/data/integration/themen/sprache/anerkannte-sprachzertifikate.pdf.download.pdf/anerkannte-sprachzertifikate-d.pdf
+    url: https://www.sem.admin.ch/dam/sem/de/data/integration/themen/sprache/anerkannte-sprachzertifikate.pdf.download.pdf/anerkannte-sprachzertifikate-d.pdf
   - title: "SEM: İsviçre vatandaşlığı hakkında sık sorulan sorular (Almanca)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/faq.html
   - title: "fide: fide testi (Almanca)"

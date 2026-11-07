@@ -9,7 +9,7 @@ sources:
   - title: "SEM: Gjuha (lista e certifikatave të njohura të gjuhës; gjermanisht)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/mein-beitrag/zugewandert/sprache.html
   - title: "SEM: Lista e certifikatave të njohura të gjuhës (PDF, gjermanisht)"
-    url: https://www.ejpd.admin.ch/dam/sem/de/data/integration/themen/sprache/anerkannte-sprachzertifikate.pdf.download.pdf/anerkannte-sprachzertifikate-d.pdf
+    url: https://www.sem.admin.ch/dam/sem/de/data/integration/themen/sprache/anerkannte-sprachzertifikate.pdf.download.pdf/anerkannte-sprachzertifikate-d.pdf
   - title: "SEM: Pyetje të shpeshta mbi shtetësinë zvicerane (gjermanisht)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/faq.html
   - title: "fide: Testi fide (gjermanisht)"

@@ -129,3 +129,55 @@ async def send_daily_digest(ctx: dict[str, Any]) -> int:
         retry_send(ctx, exc)
         return 0
     return len(emails)
+
+
+# --- Article pipeline (D-073, app/articles/) -----------------------------------------------
+
+
+async def articles_tick(ctx: dict[str, Any]) -> int:
+    """Every 15 minutes: import the plan, start due productions, send due proposals and
+    start due publications (app/articles/workflow.py). Production and publication run as
+    their own jobs. Returns the number of actions; 0 when ARTICLES_ENABLED is false."""
+    from app.articles.workflow import tick
+    from app.config import get_settings
+
+    if not get_settings().articles_enabled:
+        return 0
+    redis = ctx.get("redis")
+
+    async def run(job: str, key: str) -> None:
+        # One queued or running job per article and step (arq refuses a second job id).
+        await redis.enqueue_job(job, key, _job_id=f"{job}:{key}")
+
+    async with SessionLocal() as db:
+        report = await tick(db, run=run if redis is not None else None)
+    return len(report.actions)
+
+
+async def produce_article(ctx: dict[str, Any], key: str) -> str | None:
+    """Write, fact-check and translate one article (long job, no automatic retry: the
+    claim in the database keeps a second run of the same article from starting)."""
+    from app.articles.workflow import get_by_key, run_production
+    from app.config import get_settings
+
+    if not get_settings().articles_enabled:
+        return None
+    async with SessionLocal() as db:
+        article = await get_by_key(db, key)
+        if article is None:
+            return None
+        return await run_production(db, article)
+
+
+async def publish_article(ctx: dict[str, Any], key: str) -> str | None:
+    """Write the files of an approved article, request the build and wait for it."""
+    from app.articles.workflow import get_by_key, run_publication
+    from app.config import get_settings
+
+    if not get_settings().articles_enabled:
+        return None
+    async with SessionLocal() as db:
+        article = await get_by_key(db, key)
+        if article is None:
+            return None
+        return await run_publication(db, article)

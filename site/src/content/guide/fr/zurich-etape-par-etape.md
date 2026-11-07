@@ -4,7 +4,7 @@ description: "Durées de séjour, demande en ligne auprès du canton, documents,
 lang: fr
 slug: zurich-etape-par-etape
 lastChecked: 2026-10-30
-updated: 2026-11-03
+updated: 2026-11-07
 sources:
   - title: "Ordonnance cantonale sur le droit de cité (KBüV, LS 141.11 ; en allemand)"
     url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
@@ -20,6 +20,8 @@ sources:
     url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/12/neue-studie-so-buergern-die-zuercher-gemeinden-ein.html
   - title: "SEM : Naturalisation ordinaire (en allemand)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: "Canton de Zurich : manuel sur la naturalisation, sections 3.4.1 et 3.4.2 (PDF ; en allemand)"
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
 draft: false
 cta: free-questions
 ---
@@ -33,9 +35,9 @@ Dans le canton de Zurich, vous déposez la demande en ligne auprès de l'**Offic
 En plus des règles fédérales (permis C, dix ans en Suisse, dont trois dans les cinq ans précédant la demande), Zurich fixe ces durées :
 
 - **Commune :** immédiatement avant la demande, vous devez avoir vécu **au moins deux ans dans la même commune**.
-- **Canton :** si vous avez moins de 25 ans, deux ans dans le canton de Zurich suffisent. L'auto-test du canton cite deux ans dans le canton comme exemple de condition. Les pages du canton n'indiquent pas clairement si une durée plus longue s'applique à partir de 25 ans ; l'Office des communes peut vous renseigner.
+- **Canton :** si vous déposez la demande avant votre 25e anniversaire, deux ans n'importe où dans le canton de Zurich suffisent ; ils ne doivent pas forcément être dans la même commune.
 
-Un déménagement dans une autre commune zurichoise pendant la procédure peut être possible. Informez immédiatement votre commune.
+Si vous avez 25 ans ou plus et déménagez dans une autre commune avant que votre commune ait terminé ses vérifications, la nouvelle commune devient compétente et vous devez d'abord y accomplir deux ans. Une fois les vérifications terminées, vous pouvez déménager partout en Suisse et l'ancienne commune reste compétente. Avant 25 ans, vous pouvez déménager dans le canton sans compromettre la procédure. Informez votre commune avant de déménager.
 
 ## Les étapes
 

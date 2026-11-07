@@ -4,7 +4,7 @@ description: "Residence periods, applying online to the canton, documents, tests
 lang: en
 slug: zurich-step-by-step
 lastChecked: 2026-10-30
-updated: 2026-11-03
+updated: 2026-11-07
 sources:
   - title: "Cantonal Citizenship Ordinance (KBüV, LS 141.11; German)"
     url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
@@ -20,6 +20,8 @@ sources:
     url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/12/neue-studie-so-buergern-die-zuercher-gemeinden-ein.html
   - title: "SEM: Ordinary naturalisation (German)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: "Canton of Zurich: Handbook on naturalisation, sections 3.4.1 and 3.4.2 (PDF; German)"
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
 draft: false
 cta: free-questions
 ---
@@ -33,9 +35,9 @@ In the canton of Zurich you file the application online with the canton's **Geme
 On top of the federal rules (C permit, ten years in Switzerland, three of them in the last five years), Zurich has these periods:
 
 - **Commune:** immediately before you apply you must have lived in the **same commune for at least two years**.
-- **Canton:** if you are under 25, you only need two years in the canton of Zurich. The canton's self-check lists two years in the canton as an example of a condition. The canton's pages do not say clearly whether a longer period applies from age 25; the Gemeindeamt can tell you.
+- **Canton:** if you apply before your 25th birthday, two years anywhere in the canton of Zurich are enough instead; they need not be in the same commune.
 
-Moving to another Zurich commune during the procedure may be possible. Tell your commune at once.
+If you are 25 or over and move to another commune before your commune has finished its checks, the new commune takes over and you must first complete two years there. Once the checks are finished you may move anywhere in Switzerland and the old commune stays responsible. Applicants under 25 can move within the canton without losing their place. Tell your commune before you move.
 
 ## The steps
 

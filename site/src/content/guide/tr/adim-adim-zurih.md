@@ -4,7 +4,7 @@ description: "Zürih'te ikamet süreleri, kantona çevrimiçi başvuru, belgeler
 lang: tr
 slug: adim-adim-zurih
 lastChecked: 2026-10-30
-updated: 2026-11-03
+updated: 2026-11-07
 sources:
   - title: "Kanton Vatandaşlık Yönetmeliği (KBüV, LS 141.11; Almanca)"
     url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
@@ -20,6 +20,8 @@ sources:
     url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/12/neue-studie-so-buergern-die-zuercher-gemeinden-ein.html
   - title: "SEM: Olağan vatandaşlığa alınma (Almanca)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: "Zürih Kantonu: Vatandaşlığa alma el kitabı, bölüm 3.4.1 ve 3.4.2 (PDF; Almanca)"
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
 draft: false
 cta: free-questions
 ---
@@ -33,9 +35,9 @@ Zürih Kantonu'nda başvurunuzu süreci yürüten kantonun **Komünler Dairesi'n
 Federal kurallara (C izni, İsviçre'de on yıl, bunların üçü son beş yıl içinde) ek olarak Zürih'te şu süreler geçerlidir:
 
 - **Komün:** başvurudan hemen önce **en az iki yıl aynı komünde** yaşamış olmanız gerekir.
-- **Kanton:** 25 yaşından küçükseniz Zürih Kantonu'nda yalnızca iki yıla ihtiyacınız vardır. Kantonun kendi kendine değerlendirmesi, kantonda iki yılı bir koşul örneği olarak sıralar. Kantonun sayfaları 25 yaşından itibaren daha uzun bir sürenin geçerli olup olmadığını açıkça söylemez; Komünler Dairesi size söyleyebilir.
+- **Kanton:** Başvurunuzu 25. yaş gününüzden önce yaparsanız, aynı komünde olması gerekmeksizin Zürih Kantonu'nun herhangi bir yerinde iki yıl yeterlidir.
 
-Süreç sırasında başka bir Zürih komününe taşınmak mümkün olabilir. Komününüze hemen bildirin.
+25 yaşında veya daha büyükseniz ve komününüz incelemelerini bitirmeden başka bir komüne taşınırsanız, yeni komün yetkili olur ve önce orada iki yılı doldurmanız gerekir. İncelemeler bittikten sonra İsviçre'nin her yerine taşınabilirsiniz ve eski komün yetkili kalır. 25 yaşın altındakiler süreci tehlikeye atmadan kanton içinde taşınabilir. Taşınmadan önce komününüze bildirin.
 
 ## Adımlar
 

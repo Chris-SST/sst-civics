@@ -1,0 +1,9 @@
+**/node_modules
+site/dist
+site/.astro
+site/src/content/articles/*
+!site/src/content/articles/README.md
+.git
+.venv
+var
+web

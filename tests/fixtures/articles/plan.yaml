@@ -1,0 +1,46 @@
+# Test fixture for the article pipeline (tests/test_articles_*.py). Invented entries in the
+# format of docs/articles-contract.md section 5; the real queue is content/articles/plan.yaml.
+- key: spouse-facilitated
+  kind: article
+  category: eligibility
+  publish_at: 2026-11-16T07:00:00+01:00
+  title: "Married to a Swiss citizen? Facilitated naturalisation explained"
+  brief: >
+    For people married to a Swiss citizen: who qualifies for facilitated naturalisation,
+    how the years are counted, and how it differs from ordinary naturalisation.
+  outline: ["Who it is for", "The conditions", "How to apply"]
+  must_cover: ["Five years of residence in total", "Three years of marriage"]
+  sources:
+    - title: "SEM: Facilitated naturalisation for spouses"
+      url: "https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/verheiratet.html"
+    - title: "Federal Act on Swiss Citizenship"
+      url: "https://www.fedlex.admin.ch/eli/cc/2016/404/de"
+  related: [overview, calculator]
+  links_to: [dual-citizenship]
+- key: dual-citizenship
+  kind: article
+  category: after
+  publish_at: 2026-11-23T07:00:00+01:00
+  title: "Can I keep my passport? Dual citizenship explained"
+  brief: >
+    Whether Switzerland allows dual citizenship and where to check the rules of the other
+    country.
+  sources:
+    - title: "SEM: Becoming Swiss"
+      url: "https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden.html"
+    - title: "ch.ch: Swiss citizenship"
+      url: "https://www.ch.ch/en/safety-and-justice/swiss-citizenship/"
+  related: [overview]
+- key: canton-ag
+  kind: canton
+  canton: ag
+  category: cantons
+  publish_at: 2026-11-30T07:00:00+01:00
+  title: "Naturalisation in the canton of Aargau"
+  brief: "Residence rules, the test, fees and steps in Aargau."
+  sources:
+    - title: "Canton of Aargau: Naturalisation"
+      url: "https://www.ag.ch/de/verwaltung/dvi/einbuergerung"
+    - title: "SEM: Ordinary naturalisation"
+      url: "https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html"
+  related: []

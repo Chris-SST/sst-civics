@@ -9,7 +9,7 @@ sources:
   - title: "SEM: Idioma (lista de certificados de idioma reconocidos; en alemán)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/mein-beitrag/zugewandert/sprache.html
   - title: "SEM: Lista de certificados de idioma reconocidos (PDF, en alemán)"
-    url: https://www.ejpd.admin.ch/dam/sem/de/data/integration/themen/sprache/anerkannte-sprachzertifikate.pdf.download.pdf/anerkannte-sprachzertifikate-d.pdf
+    url: https://www.sem.admin.ch/dam/sem/de/data/integration/themen/sprache/anerkannte-sprachzertifikate.pdf.download.pdf/anerkannte-sprachzertifikate-d.pdf
   - title: "SEM: Preguntas frecuentes sobre la nacionalidad suiza (en alemán)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/faq.html
   - title: "fide: La prueba fide (en alemán)"

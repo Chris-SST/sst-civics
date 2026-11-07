@@ -1,0 +1,136 @@
+---
+// One article or canton guide: title, byline and dates, the "In brief" box, the body, sources,
+// questions and answers, related guide pages and articles, and the soft call to action.
+// Structured data: Article and BreadcrumbList.
+import { getCollection, render } from "astro:content";
+import { resolveHref, keyFor, pathFor, ARTICLE_SEGMENTS, type PageIndex } from "../i18n/pages.mjs";
+import { ui } from "../i18n/ui";
+import { more } from "../i18n/more";
+import { isoDate, longDate } from "../i18n/fmt";
+import { allArticles, forLang, type ArticleEntry } from "../articles/lib";
+import Base from "../layouts/Base.astro";
+import ArticleLayout from "./ArticleLayout.astro";
+import ArticleList from "./ArticleList.astro";
+import FaqAccordion from "./FaqAccordion.astro";
+import GuideCta from "./GuideCta.astro";
+
+interface Props {
+  entry: ArticleEntry;
+  alternates: { lang: string; path: string }[];
+  path: string;
+  index: PageIndex;
+}
+const { entry, alternates, path, index } = Astro.props;
+const d = entry.data;
+const lang = d.lang;
+const m = more(lang).articles;
+const t = ui(lang);
+const { Content, headings } = await render(entry);
+const site = (Astro.site ?? new URL("https://viapunt.ch")).toString().replace(/\/$/, "");
+
+const all = await allArticles();
+const mine = forLang(all, lang).filter((e) => e.data.key !== d.key);
+const sameCategory = mine.filter((e) => e.data.category === d.category);
+const others = mine.filter((e) => e.data.category !== d.category);
+const relatedArticles = [...sameCategory, ...others].slice(0, 3);
+
+// Related guide pages: titles from the guide collection (this language, else English); tool pages from the card copy.
+const guide = await getCollection("guide", (e) => !e.data.draft);
+const relatedGuides: { href: string; title: string; lang: string }[] = [];
+for (const key of d.related) {
+  const href = resolveHref(index, key, lang);
+  if (!href) continue;
+  const pick = (l: string) => guide.find((g) => g.data.lang === l && keyFor(l, g.data.slug) === key);
+  const g = pick(lang) ?? pick("en");
+  const card = (t.cards as Record<string, { title: string }>)[key] ?? (more(lang).cards as Record<string, { title: string }>)[key];
+  const title = g?.data.title ?? card?.title;
+  if (title) relatedGuides.push({ href, title, lang: g ? g.data.lang : lang });
+}
+
+const english = alternates.find((a) => a.lang === "en");
+const segment = ARTICLE_SEGMENTS[d.kind][lang];
+const indexPath = `/${lang}/${segment}/`;
+const faqItems = d.faq.map((f: { q: string; a: string }) => ({ question: f.q, text: f.a }));
+
+const author = { "@id": `${site}/#organization` };
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: d.title,
+      description: d.description,
+      datePublished: isoDate(d.published),
+      dateModified: isoDate(d.updated),
+      inLanguage: lang,
+      author,
+      publisher: author,
+      mainEntityOfPage: { "@type": "WebPage", "@id": site + path },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: m.breadcrumbHome, item: site + pathFor(lang, "home") },
+        { "@type": "ListItem", position: 2, name: d.kind === "canton" ? m.cantonsH1 : m.indexH1, item: site + indexPath },
+        { "@type": "ListItem", position: 3, name: d.title, item: site + path },
+      ],
+    },
+  ],
+};
+---
+<Base lang={lang} title={d.title} description={d.description} alternates={alternates} path={path}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, "<")}></script>
+  <ArticleLayout lang={lang} title={d.title} headings={headings}>
+    <div class="art-meta">
+      <p class="art-byline">{m.byline}</p>
+      <p class="cv-meta">
+        {m.published}: <time datetime={isoDate(d.published)}>{longDate(d.published, lang)}</time>
+        {" · "}{m.updated}: <time datetime={isoDate(d.updated)}>{longDate(d.updated, lang)}</time>
+        <br />
+        {m.checked.split("{date}")[0]}<time datetime={isoDate(d.checked)}>{longDate(d.checked, lang)}</time>{m.checked.split("{date}")[1]}
+        {d.kind === "canton" && d.canton && <> {" · "}{m.cantonLabel}: {d.canton.toUpperCase()}</>}
+      </p>
+    </div>
+    {d.machine_translated && lang !== "en" && (
+      <p class="notice" role="note">
+        {m.machine}
+        {english && <> <a href={english.path} hreflang="en" lang="en">{m.readEnglish}</a></>}
+      </p>
+    )}
+    <aside class="art-brief" aria-labelledby="brief-h">
+      <h2 id="brief-h">{m.inBrief}</h2>
+      <ul>{d.summary.map((s: string) => <li>{s}</li>)}</ul>
+    </aside>
+    <Content />
+    <Fragment slot="after">
+      <aside class="cv-sources" aria-labelledby="src-h">
+        <h2 id="src-h">{m.sources}</h2>
+        <p class="cv-checked">
+          {m.checked.split("{date}")[0]}<time datetime={isoDate(d.checked)}>{longDate(d.checked, lang)}</time>{m.checked.split("{date}")[1]}
+        </p>
+        <ul>
+          {d.sources.map((s: { title: string; url: string }) => <li><a href={s.url} rel="noopener">{s.title}</a></li>)}
+        </ul>
+      </aside>
+      <section class="art-section" aria-labelledby="faq-h">
+        <h2 id="faq-h">{m.faq}</h2>
+        <FaqAccordion items={faqItems} lang={lang} />
+      </section>
+      {relatedGuides.length > 0 && (
+        <section class="art-section" aria-labelledby="rg-h">
+          <h2 id="rg-h">{m.relatedGuides}</h2>
+          <ul class="art-links">
+            {relatedGuides.map((g) => <li><a href={g.href} lang={g.lang !== lang ? g.lang : undefined}>{g.title}</a></li>)}
+          </ul>
+        </section>
+      )}
+      {relatedArticles.length > 0 && (
+        <section class="art-section" aria-labelledby="ra-h">
+          <h2 id="ra-h">{m.moreArticles}</h2>
+          <ArticleList entries={relatedArticles} lang={lang} />
+        </section>
+      )}
+      <GuideCta lang={lang} />
+    </Fragment>
+  </ArticleLayout>
+</Base>

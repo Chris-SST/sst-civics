@@ -4,7 +4,7 @@ description: "Periodos de residencia, solicitud en línea al cantón, documentos
 lang: es
 slug: zurich-paso-a-paso
 lastChecked: 2026-10-30
-updated: 2026-11-03
+updated: 2026-11-07
 sources:
   - title: "Ordenanza cantonal sobre la nacionalidad (KBüV, LS 141.11; en alemán)"
     url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
@@ -20,6 +20,8 @@ sources:
     url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/12/neue-studie-so-buergern-die-zuercher-gemeinden-ein.html
   - title: "SEM: Naturalización ordinaria (en alemán)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: "Cantón de Zúrich: manual sobre la naturalización, secciones 3.4.1 y 3.4.2 (PDF; en alemán)"
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
 draft: false
 cta: free-questions
 ---
@@ -33,9 +35,9 @@ En el cantón de Zúrich, la solicitud se presenta en línea ante la **Oficina d
 Además de las reglas federales (permiso C, diez años en Suiza, tres de ellos en los últimos cinco años), Zúrich fija estos periodos:
 
 - **Municipio:** justo antes de la solicitud debe haber vivido **al menos dos años en el mismo municipio**.
-- **Cantón:** si tiene menos de 25 años, solo necesita dos años en el cantón de Zúrich. La autoevaluación del cantón menciona dos años en el cantón como ejemplo de condición. Las páginas del cantón no dicen con claridad si a partir de los 25 años se aplica un periodo más largo; la Oficina de Municipios puede indicárselo.
+- **Cantón:** si presenta la solicitud antes de cumplir 25 años, bastan dos años en cualquier lugar del cantón de Zúrich, no necesariamente en el mismo municipio.
 
-Puede ser posible mudarse a otro municipio zuriqués durante el procedimiento. Avise de inmediato a su municipio.
+Si tiene 25 años o más y se muda a otro municipio antes de que su municipio haya terminado sus comprobaciones, pasa a ser competente el nuevo municipio y primero debe cumplir allí dos años. Una vez terminadas las comprobaciones, puede mudarse a cualquier lugar de Suiza y el municipio anterior sigue siendo competente. Antes de los 25 años puede mudarse dentro del cantón sin poner en riesgo el procedimiento. Avise a su municipio antes de mudarse.
 
 ## Los pasos
 

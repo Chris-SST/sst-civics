@@ -1,6 +1,7 @@
 // Checks the built guide site (dist/): every page's hreflang alternates point at pages that
 // exist, include the page itself and x-default, and are reciprocal (the target lists this page
-// back). Run after `npm run build`: npm run check:hreflang
+// back). Article and canton pages are covered like any other page (they sit two levels down:
+// /<lang>/<segment>/<slug>/), and the RSS feeds must exist for every language. Run after `npm run build`: npm run check:hreflang
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -64,6 +65,17 @@ for (const [path, html] of byPath) {
     const back = byPath.get(target) && alternates(byPath.get(target)).some((a) => a.href && new URL(a.href).pathname === path);
     if (byPath.has(target) && !back) fail(`${lang}: ${target} does not list this page back`);
   }
+}
+
+// Every language has a feed at /<lang>/<articles segment>/rss.xml that is well-formed enough to start with <rss.
+for (const lang of ["de", "en", "fr", "it", "pt", "es", "sq", "tr"]) {
+  const index = [...byPath.keys()].find((p) => p.startsWith(`/${lang}/`) && p.split("/").length === 4 && byPath.has(p) && existsSync(join(dist, p, "rss.xml")));
+  if (!index) {
+    errors.push(`/${lang}/: no <articles segment>/rss.xml feed found`);
+    continue;
+  }
+  const xml = readFileSync(join(dist, index, "rss.xml"), "utf8");
+  if (!/<rss[ >]/.test(xml) || !xml.includes("</channel>")) errors.push(`${index}rss.xml: not an RSS feed`);
 }
 
 if (errors.length) {

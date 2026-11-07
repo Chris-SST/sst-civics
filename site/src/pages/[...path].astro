@@ -1,15 +1,21 @@
 ---
 // One route file for every page: home, guide pages from the content collection, legal and
-// contact pages (German and English), and template pages (calculator, FAQ, free practice) for
-// languages that have no guide file for them.
-// URLs are /<lang>/ and /<lang>/<slug>/ for all eight languages.
+// contact pages (German and English), articles and canton guides (docs/articles-contract.md),
+// and template pages (calculator, FAQ, free practice, glossary, eligibility check, Zurich
+// checklist, article and canton indexes) for languages that have no guide file for them.
+// URLs are /<lang>/ and /<lang>/<slug>/ for all eight languages; articles are
+// /<lang>/<segment>/<slug>/.
 import { getCollection, render } from "astro:content";
 import { APP_URL } from "astro:env/server";
 import {
-  LOCALES, STATIC_KEYS, buildIndex, alternatesFor, resolveHref, keyFor, slugFor, pathFor,
+  LOCALES, STATIC_KEYS, buildIndex, alternatesFor, resolveHref, keyFor, slugFor, pathFor, articlePath,
 } from "../i18n/pages.mjs";
 import { ui } from "../i18n/ui";
+import { more } from "../i18n/more";
 import { plainText } from "../i18n/fmt";
+import { glossaryFor } from "../glossary.mjs";
+import { CATEGORIES } from "../articles/source.mjs";
+import { allArticles, forLang } from "../articles/lib";
 import Base from "../layouts/Base.astro";
 import Guide from "../layouts/Guide.astro";
 import GuideCta from "../components/GuideCta.astro";
@@ -17,6 +23,10 @@ import ResidenceCalculator from "../components/ResidenceCalculator.astro";
 import FaqAccordion from "../components/FaqAccordion.astro";
 import Home from "../components/Home.astro";
 import ArticleLayout from "../components/ArticleLayout.astro";
+import ArticlePage from "../components/ArticlePage.astro";
+import ArticleList from "../components/ArticleList.astro";
+import EligibilityCheck from "../components/EligibilityCheck.astro";
+import ZurichChecklist from "../components/ZurichChecklist.astro";
 
 export async function getStaticPaths() {
   const guide = await getCollection("guide", (e) => !e.data.draft);
@@ -41,22 +51,39 @@ export async function getStaticPaths() {
       paths.push({ params: { path: `${lang}/${slugFor(key, lang)}` }, props: { kind: key, lang, key } });
     }
   }
+  for (const entry of await allArticles()) {
+    const { lang, kind, key, slug } = entry.data;
+    paths.push({
+      params: { path: articlePath(lang, kind, slug).replace(/^\/|\/$/g, "") },
+      props: { kind: "article-page", lang, key: `article:${key}`, id: entry.id },
+    });
+  }
   return paths;
 }
 
 const { kind, lang, key, id } = Astro.props as { kind: string; lang: string; key: string; id?: string };
 const t = ui(lang);
+const mo = more(lang);
 
 const guideAll = await getCollection("guide", (e) => !e.data.draft);
 const legalAll = await getCollection("legal");
-const index = buildIndex([...guideAll, ...legalAll].map((e) => ({ lang: e.data.lang, slug: e.data.slug })));
+const articlesAll = await allArticles();
+const index = buildIndex(
+  [...guideAll, ...legalAll].map((e) => ({ lang: e.data.lang, slug: e.data.slug })),
+  articlesAll.map((e) => ({ lang: e.data.lang, key: e.data.key, kind: e.data.kind, slug: e.data.slug })),
+);
 const alternates = alternatesFor(index, key);
-const path = pathFor(lang, key);
+const path = pathFor(lang, key.startsWith("article:") ? "home" : key);
 
 const entry = id && kind === "guide" ? guideAll.find((e) => e.id === id) : undefined;
 const rendered = entry ? await render(entry) : undefined;
 const legalEntry = id && kind === "legal" ? legalAll.find((e) => e.id === id) : undefined;
 const legalRendered = legalEntry ? await render(legalEntry) : undefined;
+const articleEntry = id && kind === "article-page" ? articlesAll.find((e) => e.id === id) : undefined;
+const articlePagePath = articleEntry ? articlePath(lang, articleEntry.data.kind, articleEntry.data.slug) : path;
+
+// Articles that name this guide page in `related`, for the "Related articles" block.
+const guideRelatedArticles = kind === "guide" ? forLang(articlesAll, lang).filter((e) => e.data.related.includes(key)) : [];
 
 // FAQ items: this language, else English, else German.
 let faqItems: { question: string; text: string; Content: any }[] = [];
@@ -74,6 +101,40 @@ if (kind === "faq") {
 }
 // The free-practice page's button opens the no-account practice page in the app.
 const appHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(lang)}`;
+
+// Template pages: glossary, article and canton indexes.
+const site = (Astro.site ?? new URL("https://viapunt.ch")).toString().replace(/\/$/, "");
+const glossary = kind === "glossary" ? glossaryFor(lang) : [];
+const glossaryLd =
+  kind === "glossary"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "DefinedTermSet",
+        name: mo.glossary.setName,
+        inLanguage: lang,
+        url: site + path,
+        hasDefinedTerm: glossary.map((g) => ({
+          "@type": "DefinedTerm",
+          name: g.term,
+          termCode: g.id,
+          url: `${site}${path}#${g.id}`,
+          description: [g.translation, g.note].filter(Boolean).join(": "),
+          inLanguage: "de",
+        })),
+      }
+    : null;
+const articleList = kind === "articles" ? forLang(articlesAll, lang).filter((e) => e.data.kind === "article") : [];
+const cantonList =
+  kind === "cantons"
+    ? forLang(articlesAll, lang)
+        .filter((e) => e.data.kind === "canton")
+        .sort((a, b) => (a.data.canton ?? "").localeCompare(b.data.canton ?? "") || a.data.title.localeCompare(b.data.title))
+    : [];
+const hasCantons = forLang(articlesAll, lang).some((e) => e.data.kind === "canton");
+const hasArticles = forLang(articlesAll, lang).some((e) => e.data.kind === "article");
+const eligHrefs = Object.fromEntries(
+  ["overview", "zurich", "calculator", "language", "test", "fees"].map((k) => [k, resolveHref(index, k, lang)]),
+);
 ---
 {kind === "home" && (
   <Base lang={lang} title={t.home.title} description={t.home.description} alternates={alternates} path={path} wide>
@@ -92,10 +153,15 @@ const appHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(la
     lastChecked={entry.data.lastChecked}
     sources={entry.data.sources}
     cta={entry.data.cta}
+    relatedArticles={guideRelatedArticles}
   >
     <rendered.Content />
     {key === "calculator" && <div style="margin-top:32px"><ResidenceCalculator lang={lang} /></div>}
   </Guide>
+)}
+
+{kind === "article-page" && articleEntry && (
+  <ArticlePage entry={articleEntry} alternates={alternates} path={articlePagePath} index={index} />
 )}
 
 {kind === "legal" && legalEntry && legalRendered && (
@@ -137,6 +203,85 @@ const appHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(la
       <ul>{t.free.points.map((p) => <li>{p}</li>)}</ul>
       <section><h2>{t.free.how}</h2><p>{t.free.howText}</p><p><a class="cv-btn cv-btn--primary" href={appHref}>{t.free.button}</a></p></section>
       <p class="muted">{t.free.mockNote}</p>
+      <GuideCta lang={lang} />
+    </div>
+  </Base>
+)}
+
+{kind === "glossary" && glossaryLd && (
+  <Base lang={lang} title={mo.glossary.title} description={mo.glossary.description} alternates={alternates} path={path}>
+    <script type="application/ld+json" set:html={JSON.stringify(glossaryLd).replace(/</g, "<")}></script>
+    <div class="page stack">
+      <h1>{mo.glossary.h1}</h1>
+      <p>{mo.glossary.lead}</p>
+      {lang === "de" && mo.glossary.noteDe && <p class="notice" role="note">{mo.glossary.noteDe}</p>}
+      <dl class="gl-list">
+        {glossary.map((g) => (
+          <div class="gl-item" id={g.id}>
+            <dt><a href={`#${g.id}`} lang="de">{g.term}</a></dt>
+            <dd lang={g.fallback ? "en" : lang}>{g.translation}{g.fallback && lang !== "de" && <span class="muted"> ({mo.glossary.inEnglish})</span>}</dd>
+            {g.note && <dd lang={g.noteFallback ? "en" : lang}>{g.note}</dd>}
+          </div>
+        ))}
+      </dl>
+      <GuideCta lang={lang} />
+    </div>
+  </Base>
+)}
+
+{kind === "eligibility" && (
+  <Base lang={lang} title={mo.eligibility.title} description={mo.eligibility.description} alternates={alternates} path={path}>
+    <div class="page stack">
+      <h1>{mo.eligibility.h1}</h1>
+      <EligibilityCheck lang={lang} hrefs={eligHrefs} />
+      <GuideCta lang={lang} />
+    </div>
+  </Base>
+)}
+
+{kind === "checklist" && (
+  <Base lang={lang} title={mo.checklist.title} description={mo.checklist.description} alternates={alternates} path={path}>
+    <div class="page stack">
+      <h1>{mo.checklist.h1}</h1>
+      <p>{mo.checklist.lead}</p>
+      <ZurichChecklist lang={lang} documentsHref={resolveHref(index, "documents", lang)} />
+      <GuideCta lang={lang} />
+    </div>
+  </Base>
+)}
+
+{kind === "articles" && (
+  <Base lang={lang} title={mo.articles.indexTitle} description={mo.articles.indexDescription} alternates={alternates} path={path} noindex={!hasArticles}>
+    <div class="page page--wide stack">
+      <h1>{mo.articles.indexH1}</h1>
+      <p>{mo.articles.indexLead}</p>
+      {!hasArticles && (
+        <p>{mo.articles.soon} <a href={resolveHref(index, "overview", lang) ?? pathFor(lang, "home")}>{t.cards.overview.title}</a></p>
+      )}
+      {CATEGORIES.map((c) => {
+        const rows = articleList.filter((e) => e.data.category === c);
+        return rows.length > 0 && (
+          <section class="art-group" aria-labelledby={`cat-${c}`}>
+            <h2 id={`cat-${c}`}>{mo.articles.categories[c as keyof typeof mo.articles.categories]}</h2>
+            <ArticleList entries={rows} lang={lang} showCategory={false} />
+          </section>
+        );
+      })}
+      {hasCantons && <p class="art-index-link"><a href={pathFor(lang, "cantons")}>{mo.articles.toCantons} →</a></p>}
+      <p class="muted"><a href={`${pathFor(lang, "articles")}rss.xml`} type="application/rss+xml">{mo.articles.rss}</a></p>
+      <GuideCta lang={lang} />
+    </div>
+  </Base>
+)}
+
+{kind === "cantons" && (
+  <Base lang={lang} title={mo.articles.cantonsTitle} description={mo.articles.cantonsDescription} alternates={alternates} path={path} noindex={!hasCantons}>
+    <div class="page page--wide stack">
+      <h1>{mo.articles.cantonsH1}</h1>
+      <p>{mo.articles.cantonsLead}</p>
+      {cantonList.length === 0 && <p>{mo.articles.cantonsSoon}</p>}
+      {cantonList.length > 0 && <ArticleList entries={cantonList} lang={lang} />}
+      <p class="art-index-link"><a href={pathFor(lang, "articles")}>{mo.articles.toArticles} →</a></p>
       <GuideCta lang={lang} />
     </div>
   </Base>

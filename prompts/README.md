@@ -18,6 +18,11 @@ active, and the version string is written to every row of the AI call log.
 | `content/translate/vN.md` | Translation of approved questions with the glossary (`scripts/content/translate`). |
 | `content/back_translate/vN.md` | Independent translation back into German (`scripts/content/back_translate`). |
 | `content/compare/vN.md` | Original against back-translation: same or different (`scripts/content/back_translate`). |
+| `articles/write/vN.md` | Article pipeline (D-073): writes one article or canton guide from the plan and the sources read (`app/articles/produce.py`). |
+| `articles/review/vN.md` | Independent fact review of the English article against the same sources. |
+| `articles/fix/vN.md` | Revision after review findings or Chris's suggested changes. |
+| `articles/translate/vN.md` | Translation into one site language with the glossary, placeholders untouched. |
+| `articles/translation_review/vN.md` | Independent review of one translation against the English. |
 
 The tutor's prompt version is logged as `base@vN+civics@vN`, with `+explain@vN` in "Explain this" and `+help@vN` in the help chat. The school course modules
 (`courses/<module>/`) and the course-based question prompts (`questions/generate`,

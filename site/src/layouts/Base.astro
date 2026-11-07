@@ -7,6 +7,7 @@ import { getCollection } from "astro:content";
 import { APP_URL } from "astro:env/server";
 import { pathFor, buildIndex, resolveHref } from "../i18n/pages.mjs";
 import { ui, usesFallback } from "../i18n/ui";
+import { more } from "../i18n/more";
 import { BRAND_NAME } from "../brand";
 import Wordmark from "../components/Wordmark.astro";
 import LanguageSwitcher from "../components/LanguageSwitcher.astro";
@@ -27,6 +28,7 @@ interface Props {
 }
 const { lang, title, description, alternates, path, noindex: pageNoindex = false, wide = false } = Astro.props;
 const t = ui(lang);
+const mo = more(lang);
 const site = (Astro.site ?? new URL("https://staging.viapunt.ch")).toString().replace(/\/$/, "");
 // A build for a staging host must never be indexed.
 const noindex = pageNoindex || new URL(site).hostname.includes("staging");
@@ -56,9 +58,11 @@ const tryHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(la
     <meta name="description" content={description} />
     <meta name="theme-color" content="#fbf6ee" />
     {noindex && <meta name="robots" content="noindex" />}
+    {/* A page that exists in one language only still lists itself, with x-default, so the check is uniform. */}
     <link rel="canonical" href={abs(path)} />
-    {alternates.length > 1 && alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={abs(a.path)} />)}
-    {alternates.length > 1 && xdefault && <link rel="alternate" hreflang="x-default" href={abs(xdefault.path)} />}
+    <link rel="alternate" type="application/rss+xml" title={mo.articles.rss} href={abs(`${pathFor(lang, "articles")}rss.xml`)} />
+    {alternates.length > 0 && alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={abs(a.path)} />)}
+    {alternates.length > 0 && xdefault && <link rel="alternate" hreflang="x-default" href={abs(xdefault.path)} />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={BRAND_NAME} />
     <meta property="og:title" content={fullTitle} />
@@ -92,6 +96,7 @@ const tryHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(la
           <a class="topbar-home" href={pathFor(lang, "home")} aria-label={`${BRAND_NAME}: ${t.homeLabel}`}><Wordmark /></a>
           <nav class="topnav" aria-label={t.mainNav}>
             <a href={`${pathFor(lang, "home")}#guides`}>{t.navGuides}</a>
+            <a href={pathFor(lang, "articles")}>{mo.navArticles}</a>
             <a href={pathFor(lang, "free")}>{t.navFree}</a>
             <a href={pathFor(lang, "faq")}>{t.navFaq}</a>
           </nav>

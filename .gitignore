@@ -40,3 +40,11 @@ site/dist/
 web/test-results/
 web/playwright-report/
 site/.lighthouseci/
+
+# Article files published by the pipeline on the server (D-073)
+/articles/
+
+# Guide site: article files come from ARTICLES_DIR; locally they are git-ignored except the README
+site/src/content/articles/*
+!site/src/content/articles/README.md
+site/dist-fixtures/

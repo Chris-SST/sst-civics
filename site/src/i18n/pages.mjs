@@ -1,6 +1,6 @@
 // Language and URL logic shared by astro.config.mjs (sitemap) and the pages.
 // Plain JavaScript on purpose: the config file imports it before Astro starts.
-import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 export const LOCALES = ["de", "en", "fr", "it", "pt", "es", "sq", "tr"];
@@ -42,6 +42,12 @@ export const SLUGS = {
   calculator: { de: "rechner", fr: "calculateur", it: "calcolatore", pt: "calculadora", es: "calculadora", sq: "llogaritesi", tr: "hesaplayici", other: "calculator" },
   free: { de: "kostenlos", fr: "pratique-gratuite", it: "pratica-gratuita", pt: "pratica-gratuita", es: "practica-gratuita", sq: "praktike-falas", tr: "ucretsiz-pratik", other: "free-practice" },
   faq: { de: "faq", other: "faq" },
+  // Tool pages and article indexes (template pages, present in every language).
+  glossary: { de: "glossar", fr: "glossaire", it: "glossario", pt: "glossario", es: "glosario", sq: "fjalori", tr: "sozluk", other: "glossary" },
+  eligibility: { de: "einbuergerung-check", fr: "verifier-eligibilite", it: "verifica-requisiti", pt: "verificar-requisitos", es: "comprobar-requisitos", sq: "kontrolli-i-kushteve", tr: "uygunluk-kontrolu", other: "eligibility-check" },
+  checklist: { de: "zuerich-checkliste", fr: "zurich-liste-de-controle", it: "zurigo-lista-di-controllo", pt: "zurique-lista-de-verificacao", es: "zurich-lista-de-comprobacion", sq: "cyrihu-lista-e-kontrollit", tr: "zurih-kontrol-listesi", other: "zurich-checklist" },
+  articles: { de: "ratgeber", it: "articoli", pt: "artigos", es: "articulos", sq: "artikuj", tr: "makaleler", other: "articles" },
+  cantons: { de: "kantone", it: "cantoni", pt: "cantoes", es: "cantones", sq: "kantonet", tr: "kantonlar", other: "cantons" },
   imprint: { de: "impressum", other: "imprint" },
   contact: { de: "kontakt", other: "contact" },
   about: { de: "ueber-viapunt", other: "about" },
@@ -50,15 +56,15 @@ export const SLUGS = {
 };
 
 /** Pages built from templates, present in every language (copy falls back to English). */
-export const STATIC_KEYS = ["calculator", "faq", "free"];
+export const STATIC_KEYS = ["calculator", "faq", "free", "glossary", "eligibility", "checklist", "articles", "cantons"];
 
 /** Every home-page card, in the order the help pack lists the pages (scripts/build_help_pack.py reads it). */
-export const HOME_KEYS = ["overview", "zurich", "documents", "test", "interview", "language", "fees", "calculator", "free", "faq"];
+export const HOME_KEYS = ["overview", "zurich", "documents", "test", "interview", "language", "fees", "calculator", "free", "faq", "glossary", "eligibility", "checklist"];
 
 /** The home-page card groups: pages for everyone in Switzerland, then one group per canton with pages of its own. */
 export const HOME_GROUPS = [
-  { id: "swiss", keys: ["overview", "language", "calculator", "free", "faq"] },
-  { id: "zh", keys: ["zurich", "documents", "test", "interview", "fees"] },
+  { id: "swiss", keys: ["overview", "language", "calculator", "eligibility", "glossary", "free", "faq"] },
+  { id: "zh", keys: ["zurich", "documents", "checklist", "test", "interview", "fees"] },
 ];
 
 export function slugFor(key, lang) {
@@ -81,13 +87,31 @@ export function pathFor(lang, key) {
   return key === "home" ? prefix : `${prefix}${slugFor(key, lang)}/`;
 }
 
-/** Split a URL path into { lang, key } or null (404 and unknown shapes). */
-export function parsePath(pathname) {
+/**
+ * Article and canton-guide URL segments per language (docs/articles-contract.md section 2).
+ * Index keys of articles are "article:<key>" (kind article and canton share one key space).
+ */
+export const ARTICLE_SEGMENTS = {
+  article: { en: "articles", de: "ratgeber", fr: "articles", it: "articoli", pt: "artigos", es: "articulos", sq: "artikuj", tr: "makaleler" },
+  canton: { en: "cantons", de: "kantone", fr: "cantons", it: "cantoni", pt: "cantoes", es: "cantones", sq: "kantonet", tr: "kantonlar" },
+};
+
+/** "/de/ratgeber/mein-slug/" for an article or canton guide. */
+export function articlePath(lang, kind, slug) {
+  return `/${lang}/${ARTICLE_SEGMENTS[kind][lang]}/${slug}/`;
+}
+
+/** Split a URL path into { lang, key } or null (404 and unknown shapes). `index` lets article URLs resolve. */
+export function parsePath(pathname, index) {
   const parts = pathname.split("/").filter(Boolean);
   if (!parts.length || !LOCALES.includes(parts[0])) return null;
   const lang = parts.shift();
   if (parts.length === 0) return { lang, key: "home" };
   if (parts.length === 1) return { lang, key: keyFor(lang, parts[0]) };
+  if (parts.length === 2 && index?.articleByPath) {
+    const key = index.articleByPath.get(`/${lang}/${parts[0]}/${parts[1]}/`);
+    if (key) return { lang, key: `article:${key}` };
+  }
   return null;
 }
 
@@ -110,8 +134,43 @@ export function scanGuide(root) {
   return out;
 }
 
-/** Map of page key to the set of languages it exists in, including template pages and home. */
-export function buildIndex(guidePages) {
+/** The value of a top-level scalar in a YAML front matter block, unquoted ("" if absent). */
+function frontScalar(front, name) {
+  const m = new RegExp(`^${name}:[ \t]*(.*?)[ \t]*$`, "m").exec(front);
+  return m ? m[1].replace(/^["']|["']$/g, "") : "";
+}
+
+/**
+ * List { lang, key, kind, slug } of the article files in `root` (<root>/<lang>/<slug>.md).
+ * Reads only the front matter, with plain regexes (this runs in astro.config before Astro starts);
+ * the content collection does the full validation.
+ */
+export function scanArticles(root) {
+  const out = [];
+  if (!existsSync(root)) return out;
+  for (const lang of readdirSync(root)) {
+    const dir = join(root, lang);
+    if (!LOCALES.includes(lang) || !statSync(dir).isDirectory()) continue;
+    for (const file of readdirSync(dir)) {
+      if (!file.endsWith(".md")) continue;
+      const text = readFileSync(join(dir, file), "utf8").replace(/^﻿/, "").replace(/\r\n/g, "\n");
+      const m = /^---\n([\s\S]*?)\n---/.exec(text);
+      if (!m) continue;
+      const kind = frontScalar(m[1], "kind") || "article";
+      const key = frontScalar(m[1], "key");
+      if (!key || !ARTICLE_SEGMENTS[kind]) continue;
+      out.push({ lang, key, kind, slug: frontScalar(m[1], "slug") || file.replace(/\.md$/, "") });
+    }
+  }
+  return out;
+}
+
+/**
+ * Map of page key to the set of languages it exists in, including template pages and home.
+ * Articles are keyed "article:<key>"; `index.articles` maps "<lang>/<key>" to { kind, slug } and
+ * `index.articleByPath` maps a URL path back to the key.
+ */
+export function buildIndex(guidePages, articles = []) {
   /** @type {Map<string, Set<string>>} */
   const index = new Map();
   const add = (key, lang) => {
@@ -123,14 +182,30 @@ export function buildIndex(guidePages) {
     for (const key of STATIC_KEYS) add(key, lang);
   }
   for (const { lang, slug } of guidePages) add(keyFor(lang, slug), lang);
+  index.articles = new Map();
+  index.articleByPath = new Map();
+  for (const { lang, key, kind, slug } of articles) {
+    add(`article:${key}`, lang);
+    index.articles.set(`${lang}/${key}`, { kind, slug });
+    index.articleByPath.set(articlePath(lang, kind, slug), key);
+  }
   return index;
+}
+
+/** The URL path of page `key` in `lang` (guide pages, tools, home and "article:<key>" keys). */
+export function pathOf(index, lang, key) {
+  if (key.startsWith("article:")) {
+    const a = index.articles?.get(`${lang}/${key.slice(8)}`);
+    return a ? articlePath(lang, a.kind, a.slug) : null;
+  }
+  return pathFor(lang, key);
 }
 
 /** [{ lang, path }] for every language the page exists in, in locale order. */
 export function alternatesFor(index, key) {
   const langs = index.get(key);
   if (!langs) return [];
-  return LOCALES.filter((l) => langs.has(l)).map((lang) => ({ lang, path: pathFor(lang, key) }));
+  return LOCALES.filter((l) => langs.has(l)).map((lang) => ({ lang, path: pathOf(index, lang, key) }));
 }
 
 /**
@@ -140,6 +215,6 @@ export function alternatesFor(index, key) {
 export function resolveHref(index, key, lang) {
   const langs = index.get(key);
   if (!langs) return null;
-  for (const l of [lang, "en", "de"]) if (langs.has(l)) return pathFor(l, key);
+  for (const l of [lang, "en", "de"]) if (langs.has(l)) return pathOf(index, l, key);
   return null;
 }

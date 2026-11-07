@@ -39,6 +39,8 @@ Done and next, per phase checklist in PLAN.md. Updated 30 October 2026.
 
 ## Next
 
+**7 November 2026:** articles pipeline, canton guides, glossary, eligibility check, Zurich checklist and server-side site builder built (D-073). First proposal email due Sunday 15 November, first article Monday 16 November. Outreach list and drafts in `docs/outreach.md` (nothing sent).
+
 Tasks 0.2 to 0.7 and 0.9 are done (30 October 2026). Next: 0.8 locales; the five new locale files also lack the 0.7 billing strings (`pricing.*`, `billingReturn.activeUntil`, new `errors.*` and `admin.refund*` keys). The five new locale files lack the strings added in 0.5 (they fall back to English; `npm run check:locales` lists them). Known leftovers: German learner screens use "du", old SST copy on the Landing page, main JS chunk over 500 kB.
 
 ## Waiting on Chris

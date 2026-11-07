@@ -1,0 +1,43 @@
+---
+// Printable document checklist for ordinary naturalisation in the canton of Zurich. Facts come from
+// the documents guide (site/src/content/guide/en/documents.md and de/unterlagen.md, checked
+// 30 October 2026). Tick boxes are plain checkboxes (nothing stored); the Print button is a tiny
+// script (no inline script, the CSP allows 'self' only). The print stylesheet in global.css
+// (.cl-print) hides the site chrome and fits the list on one A4 page.
+import { more } from "../i18n/more";
+import { ui } from "../i18n/ui";
+interface Props { lang: string; documentsHref: string | null }
+const { lang, documentsHref } = Astro.props;
+const c = more(lang).checklist;
+const docTitle = ui(lang).cards.documents.title;
+---
+<div class="cl-print">
+  <div class="cl-actions">
+    <button type="button" class="cv-btn cv-btn--primary" data-print>{c.print}</button>
+    <span class="muted">{c.printHint}</span>
+  </div>
+  <div class="cl-sheet">
+    <p class="cl-title" aria-hidden="true">{c.h1} · Viapunt</p>
+    {c.groups.map((g) => (
+      <section class="cl-group" aria-labelledby={`cl-${g.id}`}>
+        <h2 id={`cl-${g.id}`}>{g.title}</h2>
+        <ul class="cl-items">
+          {g.items.map((item) => (
+            <li><label><input type="checkbox" /><span>{item}</span></label></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+    <p class="cl-note">{c.notCollect}</p>
+    <p class="cl-note">
+      {c.moreDetails} {documentsHref && <a href={documentsHref}>{docTitle}</a>}
+    </p>
+    <p class="cl-note cl-disclaimer">{c.disclaimer}</p>
+  </div>
+</div>
+
+<script>
+  for (const b of document.querySelectorAll<HTMLButtonElement>("[data-print]")) {
+    b.addEventListener("click", () => window.print());
+  }
+</script>

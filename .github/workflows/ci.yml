@@ -87,6 +87,13 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL || 'https://staging.viapunt.ch' }}
           APP_URL: ${{ vars.APP_URL || 'https://app.staging.viapunt.ch' }}
         run: npm run build
+      - name: Build with the article fixtures
+        env:
+          SITE_URL: https://viapunt.ch
+          APP_URL: https://app.viapunt.ch
+          ARTICLES_DIR: test-fixtures/articles
+        run: npx astro build --outDir dist-fixtures
+      - run: node scripts/check-hreflang.mjs dist-fixtures
       - uses: actions/upload-artifact@v4
         with:
           name: guide-site-dist

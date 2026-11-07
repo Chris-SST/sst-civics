@@ -4,7 +4,7 @@ description: "Durate di residenza, domanda online al Cantone, documenti, test, c
 lang: it
 slug: zurigo-passo-per-passo
 lastChecked: 2026-10-30
-updated: 2026-11-03
+updated: 2026-11-07
 sources:
   - title: "Ordinanza cantonale sulla cittadinanza (KBüV, LS 141.11; in tedesco)"
     url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
@@ -20,6 +20,8 @@ sources:
     url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/12/neue-studie-so-buergern-die-zuercher-gemeinden-ein.html
   - title: "SEM: Naturalizzazione ordinaria (in tedesco)"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: "Cantone di Zurigo: manuale sulla naturalizzazione, sezioni 3.4.1 e 3.4.2 (PDF; in tedesco)"
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
 draft: false
 cta: free-questions
 ---
@@ -33,9 +35,9 @@ Nel Cantone di Zurigo la domanda si presenta online all'**Ufficio dei comuni (Ge
 Oltre alle regole federali (permesso C, dieci anni in Svizzera, tre dei quali negli ultimi cinque anni), Zurigo prevede queste durate:
 
 - **Comune:** immediatamente prima della domanda deve aver vissuto **nello stesso comune per almeno due anni**.
-- **Cantone:** se ha meno di 25 anni, bastano due anni nel Cantone di Zurigo. L'autovalutazione del Cantone cita due anni nel Cantone come esempio di condizione. Le pagine del Cantone non dicono chiaramente se dai 25 anni vale una durata più lunga; l'Ufficio dei comuni può dirGlielo.
+- **Cantone:** se presenta la domanda prima del 25° compleanno, bastano invece due anni in qualsiasi luogo del Cantone di Zurigo, non necessariamente nello stesso comune.
 
-Trasferirsi in un altro comune zurighese durante la procedura può essere possibile. Lo comunichi subito al Suo comune.
+Se ha 25 anni o più e si trasferisce in un altro comune prima che il Suo comune abbia concluso gli accertamenti, diventa competente il nuovo comune e lì deve prima maturare due anni. Una volta conclusi gli accertamenti può trasferirsi ovunque in Svizzera e il comune precedente resta competente. Sotto i 25 anni può trasferirsi all'interno del Cantone senza compromettere la procedura. Informi il Suo comune prima del trasloco.
 
 ## Le fasi
 

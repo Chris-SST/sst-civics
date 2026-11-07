@@ -3,14 +3,19 @@
 // (pages for everyone in Switzerland, then the canton of Zurich's own pages), the language strip
 // and the Viapunt Pass band.
 import { APP_URL } from "astro:env/server";
-import { HOME_GROUPS, LOCALES, LOCALE_NAMES, resolveHref } from "../i18n/pages.mjs";
+import { HOME_GROUPS, LOCALES, LOCALE_NAMES, pathFor, resolveHref } from "../i18n/pages.mjs";
 import { ui } from "../i18n/ui";
+import { more } from "../i18n/more";
+import { allArticles, forLang } from "../articles/lib";
+import ArticleList from "./ArticleList.astro";
 import { SAMPLE_QUESTION as Q } from "../data/sampleQuestion";
 
 interface Props { lang: string; index: Map<string, Set<string>> }
 const { lang, index } = Astro.props;
 const t = ui(lang);
 const h = t.home;
+const mo = more(lang);
+const latest = forLang(await allArticles(), lang).slice(0, 3);
 const appHref = `${APP_URL.replace(/\/+$/, "")}/signup?lang=${encodeURIComponent(lang)}`;
 // "Try 30 free questions" goes straight to the questions, no account needed.
 const tryHref = `${APP_URL.replace(/\/+$/, "")}/try?lang=${encodeURIComponent(lang)}`;
@@ -32,6 +37,7 @@ const jsonLd = {
       name: "Viapunt",
       url: `${site}/`,
       email: "info@viapunt.ch",
+      logo: { "@type": "ImageObject", url: `${site}/icons/icon-512.png`, width: 512, height: 512 },
       areaServed: "CH",
     },
     {
@@ -152,8 +158,8 @@ const jsonLd = {
       <ul class="h-guides" aria-labelledby={`guides-${g.id}`}>
         {g.keys.map((k, i) => {
           const href = resolveHref(index, k, lang);
-          const c = t.cards[k];
-          const tag = <span class={`h-tag h-tag--${tagTone[(gi + i) % 3]}`}>{h.tags[k]}</span>;
+          const c = t.cards[k] ?? mo.cards[k as keyof typeof mo.cards];
+          const tag = <span class={`h-tag h-tag--${tagTone[(gi + i) % 3]}`}>{h.tags[k] ?? mo.tags[k as keyof typeof mo.tags]}</span>;
           return (
             <li>
               {href ? (
@@ -168,6 +174,16 @@ const jsonLd = {
     </>
   ))}
 </section>
+
+{latest.length > 0 && (
+  <section class="wrap h-section" id="articles" aria-labelledby="latest-h" style="padding-top:0;padding-bottom:24px">
+    <div class="h-section__head">
+      <h2 id="latest-h">{mo.articles.latest}</h2>
+      <p><a href={pathFor(lang, "articles")}>{mo.articles.all} →</a></p>
+    </div>
+    <ArticleList entries={latest} lang={lang} />
+  </section>
+)}
 
 <section class="wrap" style="padding-top:40px;padding-bottom:40px" aria-labelledby="langs-h">
   <div class="h-langs">

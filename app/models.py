@@ -586,3 +586,80 @@ class MockRun(Base):
     deadline_at: Mapped[datetime] = mapped_column(TZDateTime)
     finished_at: Mapped[datetime | None] = mapped_column(TZDateTime)
     score: Mapped[int | None] = mapped_column(Integer)
+
+
+# --- Articles and canton guides (D-073, docs/articles-contract.md) ------------------------
+
+ART_PLANNED = "planned"
+ART_RESEARCHING = "researching"
+ART_DRAFTING = "drafting"
+ART_REVIEWING = "reviewing"
+ART_TRANSLATING = "translating"
+ART_READY = "ready"
+ART_PROPOSED = "proposed"
+ART_CHANGES_REQUESTED = "changes_requested"
+ART_APPROVED = "approved"
+ART_PUBLISHING = "publishing"
+ART_PUBLISHED = "published"
+ART_HELD = "held"
+ART_NEEDS_ATTENTION = "needs_attention"
+ART_PUBLISH_FAILED = "publish_failed"
+ART_PRODUCING = (ART_RESEARCHING, ART_DRAFTING, ART_REVIEWING, ART_TRANSLATING)
+ARTICLE_STATES = (
+    ART_PLANNED,
+    *ART_PRODUCING,
+    ART_READY,
+    ART_PROPOSED,
+    ART_CHANGES_REQUESTED,
+    ART_APPROVED,
+    ART_PUBLISHING,
+    ART_PUBLISHED,
+    ART_HELD,
+    ART_NEEDS_ATTENTION,
+    ART_PUBLISH_FAILED,
+)
+
+
+class Article(Base):
+    """One article or canton guide of the automated pipeline (app/articles/). Created from
+    content/articles/plan.yaml; the published Markdown files live in ARTICLES_DIR, never in
+    the database's only copy. Holds no personal data: Chris's suggestions are about the text.
+
+    `english` is the English version as {frontmatter fields..., "body"}; `translations` maps a
+    language to {"status": "ok" | "failed", "content": {...} | None, "notes": [...]}.
+    `reviews` and `feedback` are append-only histories; `sources_read` lists every seed page
+    fetched ({url, title, fetched_at, ok, error, text}). `revision` counts finished versions;
+    `review_nonce` is part of the signed review link (a new nonce revokes old links)."""
+
+    __tablename__ = "articles"
+
+    id: Mapped[uuid.UUID] = mapped_column(Uuid, primary_key=True, default=new_id)
+    key: Mapped[str] = mapped_column(String(80), unique=True, index=True)
+    kind: Mapped[str] = mapped_column(String(10))  # article | canton
+    category: Mapped[str] = mapped_column(String(16))
+    canton: Mapped[str | None] = mapped_column(String(2))
+    publish_at: Mapped[datetime] = mapped_column(TZDateTime)
+    status: Mapped[str] = mapped_column(String(20), index=True, default=ART_PLANNED)
+    plan: Mapped[dict[str, Any]] = mapped_column(JSON)
+    english: Mapped[dict[str, Any] | None] = mapped_column(JSON)
+    translations: Mapped[dict[str, Any]] = mapped_column(JSON, default=dict)
+    reviews: Mapped[list[dict[str, Any]]] = mapped_column(JSON, default=list)
+    feedback: Mapped[list[dict[str, Any]]] = mapped_column(JSON, default=list)
+    sources_read: Mapped[list[dict[str, Any]]] = mapped_column(JSON, default=list)
+    revision: Mapped[int] = mapped_column(Integer, default=0)
+    review_nonce: Mapped[str] = mapped_column(String(32))
+    cost_chf: Mapped[float] = mapped_column(Float, default=0.0)
+    attempts: Mapped[int] = mapped_column(Integer, default=0)
+    last_error: Mapped[str | None] = mapped_column(Text)
+    production_started_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    proposal_sent_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    proposal_revision: Mapped[int | None] = mapped_column(Integer)
+    approved_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    build_requested_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    published_at: Mapped[datetime | None] = mapped_column(TZDateTime)  # first publication
+    last_published_at: Mapped[datetime | None] = mapped_column(TZDateTime)
+    published_revision: Mapped[int | None] = mapped_column(Integer)
+    live_urls: Mapped[dict[str, str]] = mapped_column(JSON, default=dict)
+    live_files: Mapped[dict[str, str]] = mapped_column(JSON, default=dict)  # lang -> path
+    created_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(TZDateTime, default=utcnow, onupdate=utcnow)

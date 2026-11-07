@@ -4,7 +4,7 @@ description: "Wohnsitzfristen, Gesuch beim Gemeindeamt, Unterlagen, Tests, Gespr
 lang: de
 slug: zuerich-schritt-fuer-schritt
 lastChecked: 2026-10-30
-updated: 2026-11-03
+updated: 2026-11-07
 sources:
   - title: "Kantonale Bürgerrechtsverordnung (KBüV, LS 141.11)"
     url: https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-141_11-2023_03_29-2023_07_01-121.html
@@ -20,6 +20,8 @@ sources:
     url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/12/neue-studie-so-buergern-die-zuercher-gemeinden-ein.html
   - title: "SEM: Ordentliche Einbürgerung"
     url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: "Kanton Zürich: Handbuch Einbürgerungen, Abschnitte 3.4.1 und 3.4.2 (PDF)"
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
 draft: false
 cta: free-questions
 ---
@@ -33,9 +35,9 @@ Im Kanton Zürich reichen Sie das Gesuch online beim **Gemeindeamt** des Kantons
 Zusätzlich zu den Bundesregeln (C-Bewilligung, zehn Jahre Aufenthalt in der Schweiz, davon drei in den letzten fünf Jahren) gelten in Zürich diese Fristen:
 
 - **Gemeinde:** Sie müssen unmittelbar vor dem Gesuch seit mindestens **zwei Jahren in derselben Gemeinde** wohnen.
-- **Kanton:** Wer jünger als 25 ist, muss nur zwei Jahre im Kanton Zürich gelebt haben. Der Selbsttest des Kantons nennt zwei Jahre im Kanton als Beispiel für eine Bedingung. Ob ab 25 eine längere Frist gilt, geht aus den Seiten des Kantons nicht klar hervor; das Gemeindeamt gibt Auskunft.
+- **Kanton:** Wer das Gesuch vor dem 25. Geburtstag einreicht, braucht stattdessen nur zwei Jahre irgendwo im Kanton Zürich, nicht in derselben Gemeinde.
 
-Ein Umzug in eine andere Zürcher Gemeinde während des Verfahrens kann möglich sein. Melden Sie ihn sofort Ihrer Gemeinde.
+Wer 25 oder älter ist und in eine andere Gemeinde zieht, bevor die Gemeinde ihre Abklärungen abgeschlossen hat, wechselt die Zuständigkeit zur neuen Gemeinde, und dort müssen zuerst zwei Jahre erfüllt sein. Sind die Abklärungen abgeschlossen, dürfen Sie in die ganze Schweiz umziehen, und die bisherige Gemeinde bleibt zuständig. Wer jünger als 25 ist, kann innerhalb des Kantons umziehen, ohne das Verfahren zu gefährden. Melden Sie einen Umzug vorher Ihrer Gemeinde.
 
 ## Die Schritte
 

@@ -1,0 +1,1351 @@
+# Topic queue for the automated article pipeline. Format: docs/articles-contract.md section 5.
+# Facts in must_cover are tied to sources in [brackets]; sources were fetched as plain text on 7 November 2026.
+- key: spouse-facilitated
+  kind: article
+  category: eligibility
+  publish_at: 2026-11-16T07:00:00+01:00
+  title: Married to a Swiss citizen? Facilitated naturalisation explained
+  brief: 'For foreign spouses of Swiss citizens who live in Switzerland (a short section covers spouses living abroad)
+    and are deciding between the facilitated and the ordinary route. Question answered: can I apply under the quicker
+    route, what exactly must I show, who decides and what does it cost. Angle: this is a federal route handled by
+    the SEM, so it works the same in every canton; there is no commune or cantonal vote and no minimum time in the
+    commune. Explain the two time conditions (3 years in marital union, 5 years in Switzerland including the last
+    year before filing) with a worked example, the cases where the route is excluded, and how registered partners
+    differ (ordinary route with shorter residence, or conversion to marriage). Do NOT repeat what the overview guide
+    page already says about the three levels of ordinary naturalisation or the general B1/A2 level; link to the
+    overview and language-certificates pages instead. Do not state a typical total duration: the only sourced figures
+    are the Ordinance''s targets of about 12 months for the cantonal report and about 12 months for the SEM afterwards,
+    so give them as targets and note that the SEM FAQ says a move within Switzerland or abroad usually brings extra
+    enquiries that can lengthen the procedure. Do not give a knowledge-test requirement for this route: Art. 20
+    BüG does not list the ''familiar with Swiss living conditions'' criterion. Say: check the SEM leaflet and form
+    for the current document list.'
+  outline:
+  - Who can use the facilitated route (and who cannot)
+  - The two time conditions, with a worked example
+  - What 'marital union' means in practice
+  - Integration criteria that still apply (record, debts, language, welfare)
+  - 'How to apply: form, documents, who decides, targets for timing'
+  - Cost
+  - Registered partners and spouses living abroad
+  - Next steps and what to check with the SEM
+  must_cover:
+  - Foreign spouses of a Swiss citizen may apply for facilitated naturalisation if they have lived in marital union
+    with the Swiss spouse for 3 years and have lived in Switzerland for 5 years in total, including the year immediately
+    before filing [BüG art. 21 para. 1; SEM married-to-a-Swiss page]
+  - The SEM decides on facilitated naturalisation (it hears the canton first); the application goes to the SEM,
+    not to the commune [BüG art. 25 para. 1; SEM married-to-a-Swiss page]
+  - The route is excluded if both spouses were foreign when they married and the Swiss spouse later became Swiss
+    by ordinary naturalisation, or if the Swiss spouse has died by the time of filing [SEM married-to-a-Swiss page]
+  - A marital union means a formal marriage plus a real, stable life together; living apart is accepted only for
+    important reasons; the union must exist at filing and at the time of naturalisation [BüV art. 10]
+  - 'The integration criteria of Art. 12 BüG apply: respect for public safety and order (the SEM names tax arrears,
+    debt collections, loss certificates and criminal-record entries), respect for constitutional values, ability
+    to communicate in a national language, participation in economic life or education, supporting family members''
+    integration; plus no threat to Switzerland''s security [BüG art. 20 para. 1-2; SEM married-to-a-Swiss page]'
+  - No social assistance in the last 3 years before filing, unless fully repaid [SEM married-to-a-Swiss page; BüV
+    art. 7 para. 3]
+  - 'Language proof at filing: at least A2 written and B1 oral in a national language [SEM married-to-a-Swiss page;
+    BüV art. 6]'
+  - Art. 20 BüG names the integration criteria of Art. 12 and the security condition for the facilitated route;
+    it does not repeat the ordinary-route criterion of being familiar with Swiss living conditions (Art. 11 let.
+    b) [BüG art. 11 and art. 20]
+  - While living in Switzerland, the applicant requests the form by email from the SEM (ch@sem.admin.ch) and returns
+    it completed by post; spouses abroad use the Swiss representation [SEM married-to-a-Swiss page; BüV art. 14-15]
+  - 'Federal fee for a decision on naturalisation as a spouse: CHF 500, plus up to CHF 400 for the canton''s enquiry
+    report; the SEM can raise fees up to double or reduce them by half in unusual cases [BüV art. 25 para. 1 let.
+    b, para. 3 let. a, art. 28]'
+  - 'Targets: the canton normally sends its report within 12 months and the SEM normally decides within 12 months
+    after receiving it [BüV art. 22 and art. 23 para. 2]'
+  - Registered partners of a Swiss citizen cannot use Art. 21; the ordinary route applies with 5 years' total residence
+    (one of them immediately before filing) and 3 years in the partnership; since 1 July 2022 partners can convert
+    the partnership into a marriage, and the partnership's duration then counts towards the marriage [BüG art. 10;
+    Canton of Bern residence page]
+  sources:
+  - title: 'SEM: Married to a Swiss citizen - facilitated naturalisation (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/verheiratet.html
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), consolidated version of 1 September 2023 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/de/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-de-html-1.html
+  - title: 'Fedlex: Citizenship Ordinance (BüV, SR 141.01), consolidated version of 1 August 2026 (PDF, German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/405/20260801/de/pdf-a/fedlex-data-admin-ch-eli-cc-2016-405-20260801-de-pdf-a.pdf
+  - title: 'SEM: Handbuch Bürgerrecht, chapter 4 - Facilitated naturalisation, residence in Switzerland (PDF, German)'
+    url: https://www.sem.admin.ch/dam/sem/de/data/rechtsgrundlagen/weisungen/buergerrecht/hb-bueg20-kap4.pdf.download.pdf/hb-bueg20-kap4.pdf
+  - title: 'SEM: Frequently asked questions on Swiss citizenship (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/faq.html
+  - title: 'Canton of Bern: Residence requirements (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/aufenthalt.html
+  related:
+  - overview
+  - language
+  - calculator
+  links_to:
+  - years-counted
+  - integration-debts-welfare
+  - language-b1-a2
+  - dual-citizenship
+- key: canton-ag
+  kind: canton
+  category: cantons
+  publish_at: 2026-11-19T07:00:00+01:00
+  title: 'Naturalisation in the canton of Aargau: requirements, test and costs'
+  brief: 'For foreign residents of Aargau with a C permit who want to know what is different in Aargau. Angle: Aargau
+    has a cantonal civics test with a published format and an official practice site, and the commune (not the canton)
+    is the main gatekeeper, often via a vote in the communal assembly. Cover the residence rules (5 years in the
+    canton, at least 3 years uninterrupted in the commune), the test (format, price, retakes), language, the commune
+    and canton stages, fees and timing. Do NOT list or paraphrase test questions, and do not link to the practice
+    site''s question list; say only that the canton publishes practice material and the commune tells you where
+    and when. Do NOT explain federal rules in detail (10 years, C permit, years 8-18): link to the overview and
+    calculator pages. Date every cost: the leaflet is dated 17 December 2024 and fees may have changed. The leaflet
+    gives about 12 months for the cantonal stage; the canton page says about 10 months for canton and Confederation
+    together on top of the commune: state both and say that the figures differ. Communes publish their own forms:
+    say ''ask your commune'' for form, date of the test and the commune''s own steps.'
+  outline:
+  - 'How it works in Aargau: commune, canton, Confederation'
+  - 'Residence: Confederation, canton and commune'
+  - Language requirement and proof
+  - 'The Aargau civics test: format, price, retakes'
+  - 'The commune stage: publication, interview, assembly'
+  - The canton stage and the final decision
+  - Fees and timing
+  - Practical tips and where to ask
+  must_cover:
+  - Someone becomes Swiss only if all three citizenships (federal, cantonal, communal) are granted; the three authorities
+    decide independently, and if one rejects, the procedure ends [Canton of Aargau, ordinary naturalisation page]
+  - Aargau requires 5 years' residence in the canton and at least 3 years of uninterrupted residence in the commune
+    before filing; the federal rule of C permit plus 10 years' residence (3 in the last 5) also applies [Canton
+    of Aargau page; Aargau leaflet section 1.1]
+  - 'Language: German at B1 oral and A2 written [Aargau leaflet section 1.3]'
+  - The civics test is run by the communes, costs CHF 50, must be passed before the application is filed, applies
+    from age 16, can be repeated without limit with a 2-month wait between attempts [Aargau leaflet section 1.3]
+  - The test has 45 questions on federal and cantonal level, 40 minutes, and counts as passed with three quarters
+    correct, i.e. 34 questions; the certificate must not be older than 6 months; communes may not run their own
+    tests [Aargau handbook sections 3.3 and 4.1]
+  - The commune publishes the application in its official organ; the Gemeinderat checks the requirements and holds
+    an interview; the decision on communal citizenship is taken by the communal assembly, the Einwohnerrat or the
+    Gemeinderat depending on the commune [Aargau leaflet section 3]
+  - At a communal assembly the vote is normally open; a quarter of those present can demand a secret ballot; a rejection
+    needs a stated reason [Aargau handbook sections 12.4; BüG art. 16]
+  - After the commune, the canton obtains the federal permit; the naturalisation commission of the Grand Council
+    decides finally unless the Grand Council itself decides [Aargau leaflet section 3]
+  - 'Fees according to the leaflet of 17 December 2024: commune CHF 1,500 for an individual, canton CHF 750, federal
+    CHF 100 per individual or CHF 150 per couple; children included from age 10 pay half the commune and canton
+    fees, under 10 pay none [Aargau leaflet section 4]'
+  - 'Timing: the canton''s page says about 10 months for canton and Confederation together on top of the commune''s
+    processing time; the leaflet gives about 12 months for the cantonal stage; communes differ [Canton of Aargau
+    page; Aargau leaflet section 3]'
+  - 'Documents: the civil-status extract must not be older than 6 months at filing; applicants must report changes
+    such as criminal proceedings, social assistance, marriage, divorce or births at once; false information can
+    lead to annulment [Aargau leaflet sections 2; BüG art. 36]'
+  - Applications are submitted to the home commune (Gemeindekanzlei), which supplies the forms; contact for the
+    canton is einbuergerungen@ag.ch [Canton of Aargau page]
+  sources:
+  - title: 'Canton of Aargau: Ordinary naturalisation (German)'
+    url: https://www.ag.ch/de/themen/migration-integration/einbuergerung/ordentliche-einbuergerung
+  - title: 'Canton of Aargau: Leaflet on the ordinary naturalisation procedure, version 17 December 2024 (PDF, German)'
+    url: https://www.ag.ch/media/kanton-aargau/dvi/dokumente/arp/buergerrecht-und-personenstand/einbuergerungen/merkblatt.pdf
+  - title: 'Canton of Aargau: Handbook for ordinary naturalisation procedures (PDF, German)'
+    url: https://www.ag.ch/media/kanton-aargau/dvi/dokumente/arp/buergerrecht-und-personenstand/einbuergerungen/handbuch-ordentliche-einbuergerungen/handbuch.pdf
+  - title: 'SEM: Ordinary naturalisation (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), consolidated version of 1 September 2023 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/de/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-de-html-1.html
+  related:
+  - overview
+  - calculator
+  - language
+  - test
+  links_to:
+  - years-counted
+  - moving-canton-commune
+  - language-b1-a2
+  canton: ag
+- key: dual-citizenship
+  kind: article
+  category: after
+  publish_at: 2026-11-23T07:00:00+01:00
+  title: Can I keep my passport? Dual citizenship for the main nationalities in Switzerland
+  brief: 'For applicants who worry about losing their current nationality. Question answered: does Switzerland make
+    me give up my passport, and does my country take my nationality away when I become Swiss? Angle: one short section
+    per country, stating ONLY what that country''s own government source says, with the source named in the text
+    and the date of the source. Switzerland does not require you to give up your nationality; whether your home
+    country removes it is for that country''s law, and Swiss authorities cannot tell you. Countries covered (those
+    with a readable official source): Germany, Austria, France, Italy, Spain, Portugal, Turkey, Serbia, Kosovo.
+    NOT covered: North Macedonia (no official page found that could be read), so say ''ask the embassy in Bern''.
+    The article MUST say at the top that rules change, give the ''checked on'' date, and tell readers to confirm
+    with their embassy or consulate before applying; never write ''you will keep your passport'', write ''the source
+    says''. Do not give legal advice on military service beyond the one SEM sentence. Do not repeat the overview
+    page. Note on sources: the Kosovo text is the 2013 law as enacted (a copy hosted on GLOBALCIT); a new draft
+    law was before the Kosovo government in 2026, so flag it as possibly outdated. The Portuguese text is the consolidated
+    Lei 37/81 (amended most recently by Lei Organica 1/2026) hosted by a Portuguese public-prosecution law database.'
+  outline:
+  - What Switzerland says (and what it cannot tell you)
+  - 'How to read this article: rules change, always check'
+  - Germany and Austria
+  - France, Italy, Spain and Portugal
+  - Turkey, Serbia and Kosovo
+  - 'Other nationalities: how to ask your embassy or consulate'
+  - Practical steps before you file
+  must_cover:
+  - Dual citizenship has been allowed in Switzerland without restriction since 1 January 1992; people naturalised
+    in Switzerland do not have to give up their previous nationality; but the law of the country of origin may remove
+    its nationality automatically on voluntary acquisition of another; Swiss authorities cannot give information
+    on this and refer to the embassy or consulate [SEM dual citizens page]
+  - Military service of dual citizens is generally performed in the state where the person lives at the time of
+    conscription; someone who has served abroad is no longer called up in Switzerland [SEM dual citizens page]
+  - 'Germany: since 27 June 2024 (Act on the Modernisation of Nationality Law) acquiring another nationality on
+    application no longer causes loss of German nationality, for all nationalities worldwide; the retention-permit
+    procedure no longer exists [German Federal Office of Administration, ''Modernisierung ... in Kraft getreten''
+    and ''Beibehaltungsverfahren'' pages]'
+  - 'Austria: Austrian citizenship is lost by law when a person acquires a foreign nationality on their own application,
+    declaration or express consent, unless retention of Austrian citizenship was applied for and approved before
+    the foreign nationality was acquired [oesterreich.gv.at, loss page]'
+  - 'France: holding another nationality has in principle no effect on French nationality; France ended chapter
+    I of the 1963 Council of Europe convention with effect from 5 March 2009, so voluntary acquisition of a nationality
+    of a party state no longer causes automatic loss; an adult living abroad may choose to declare the loss of French
+    nationality, at the latest within one year after acquiring the foreign nationality [French foreign ministry
+    ''double nationalite'' page; Service-Public ''Perte volontaire'' page]'
+  - 'Italy: since 16 August 1992 acquiring a foreign citizenship does not cause loss of Italian citizenship unless
+    the person formally renounces it (Art. 11 of Law 91/1992), subject to international agreements [Italian foreign
+    ministry citizenship page]'
+  - 'Spain: Spaniards who are of age (emancipated), live abroad and voluntarily acquire another nationality lose
+    Spanish nationality unless they declare within 3 years that they wish to keep it; acquiring the nationality
+    of Ibero-American countries, Andorra, the Philippines, Equatorial Guinea or Portugal does not cause this loss
+    (Switzerland is not among the listed countries) [Spanish Ministry of Justice, ''Como se pierde la nacionalidad''
+    page]'
+  - 'Portugal: the loss-of-nationality provision of the Nationality Act is Art. 8, which says persons who hold another
+    nationality lose Portuguese nationality if they declare they do not want to be Portuguese; the consolidated
+    text lists no loss of nationality on acquiring another nationality [Lei 37/81, art. 8, consolidated text]'
+  - 'Turkey: the Citizenship Law lists loss of Turkish citizenship by renunciation, revocation or cancellation (art.
+    24); art. 44 says that people who acquire another State''s citizenship may submit documents so that a note about
+    multiple citizenship is added to their family registry [Turkish Citizenship Law No. 5901, art. 24 and 44]'
+  - 'Serbia: no release from foreign citizenship is required for admission to Serbian citizenship, so dual citizenship
+    is possible; the ministry''s page lists release (on application) and renunciation (adults born and living abroad,
+    before age 25) as the ways Serbian citizenship ends [Serbian Ministry of Foreign Affairs citizenship page]'
+  - 'Kosovo: Art. 3 of Law 04/L-215 says a Kosovo citizen may also hold the citizenship of one or more other states,
+    and acquiring or holding another citizenship does not cause loss of Kosovo citizenship (text as enacted in 2013;
+    check for newer law) [Law 04/L-215, art. 3]'
+  sources:
+  - title: 'SEM: Dual citizens (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/doppelbuerger.html
+  - title: 'Germany, Federal Office of Administration: Modernisation of nationality law in force (German)'
+    url: https://www.bva.bund.de/DE/Services/Buerger/Ausweis-Dokumente-Recht/Staatsangehoerigkeit/_documents/Meldung/Meldung_Gesetzesaenderung_2024.html
+  - title: 'Germany, Federal Office of Administration: Retention procedure abolished (German)'
+    url: https://www.bva.bund.de/DE/Services/Buerger/Ausweis-Dokumente-Recht/Staatsangehoerigkeit/Beibehaltung/Beibehaltung_node.html
+  - title: 'Austria, oesterreich.gv.at: Loss, withdrawal and renunciation of citizenship (German)'
+    url: https://www.oesterreich.gv.at/de/themen/menschen_aus_anderen_staaten/staatsbuergerschaft/Verlust_Entziehung_Verzicht_Staatsbuergerschaft
+  - title: 'France, Ministry for Europe and Foreign Affairs: More about dual nationality (French)'
+    url: https://www.diplomatie.gouv.fr/fr/services-aux-francaises-et-aux-francais/preparer-son-expatriation/vie-administrative-et-elections/nationalite-francaise/en-savoir-plus-sur-la-double-nationalite
+  - title: 'France, Service-Public: Voluntary loss of French nationality (French)'
+    url: https://www.service-public.gouv.fr/particuliers/vosdroits/F35506/5?idFicheParent=F3073
+  - title: 'Italy, Ministry of Foreign Affairs: Italian citizenship (Italian)'
+    url: https://www.esteri.it/it/servizi-opportunita/italiani-all-estero/cittadinanza/
+  - title: 'Spain, Ministry of Justice: How Spanish nationality is lost (Spanish)'
+    url: https://www.mjusticia.gob.es/gl/ciudadania/nacionalidad/que-es-nacionalidad/como-pierde-nacionalidad
+  - title: 'Portugal, Procuradoria-Geral Distrital de Lisboa: Nationality Act, Lei 37/81 as amended (Portuguese)'
+    url: https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=614&tabela=leis
+  - title: 'Turkey, General Directorate of Civil Registration (NVI): Turkish Citizenship Law No. 5901 (English PDF)'
+    url: https://www.nvi.gov.tr/kurumlar/nvi.gov.tr/mevzuat/nufusmevzuat/ingilizce/TURKISH_CITIZENSHIP_LAW_5901.pdf
+  - title: 'Serbia, Ministry of Foreign Affairs: Citizenship of the Republic of Serbia (English)'
+    url: https://www.mfa.gov.rs/en/citizens/services/citizenship
+  - title: 'Kosovo: Law No. 04/L-215 on Citizenship of Kosovo, as enacted (English PDF, copy on GLOBALCIT)'
+    url: https://data.globalcit.eu/NationalDB/docs/KOS%20Law%2004_L_215_as%20enacted_ENGLISH.pdf
+  related:
+  - overview
+  - faq
+  links_to:
+  - c-permit-vs-swiss-passport
+  - spouse-facilitated
+  - children-naturalisation
+- key: years-counted
+  kind: article
+  category: eligibility
+  publish_at: 2026-11-30T07:00:00+01:00
+  title: 'How your years in Switzerland are counted: permits, ages 8 to 18 and time abroad'
+  brief: 'For C-permit holders who are close to the residence requirement and are unsure which years count. Question
+    answered: which permits count in full, half or not at all, how the years between 8 and 18 are doubled, and what
+    a stay abroad does to the count. Angle: precise rules from the SEM handbook plus a table comparing the extra
+    commune/canton periods of the five canton guides and Zurich. Do NOT repeat the calculator page or its rules
+    list; link to it and add the cases it does not cover (time abroad, who has to be continuous, why the cantonal
+    periods are counted differently). Explain clearly that federal doubling and the time-abroad rules apply only
+    to the federal period, not to cantonal or communal periods. Cantonal and communal periods vary and change: cite
+    each canton''s page, say ''checked on'' and tell readers to confirm with their commune. Say: check with your
+    commune for the exact day you can file.'
+  outline:
+  - The federal rule in one paragraph
+  - 'Which permits count: B, C, F, Ci and diplomatic cards; L, G, N, S and visas do not'
+  - 'Ages 8 to 18: how doubling works and the six-year floor'
+  - Continuous or not? The 10 years versus the 3-of-5 rule
+  - 'Time abroad: six months, one year for work or study, deregistration'
+  - Canton and commune periods side by side
+  - 'Special cases: registered partners and spouses'
+  - How to check your own count
+  must_cover:
+  - Ordinary naturalisation requires a C permit at filing and 10 years' residence in total, 3 of them within the
+    last 5 years before filing [BüG art. 9 para. 1]
+  - Time lived in Switzerland between the 8th and 18th birthdays counts double, but actual residence must be at
+    least 6 years [BüG art. 9 para. 2]
+  - Residence counts with a B or C permit in full and with a temporary admission permit (F) at half; a diplomatic
+    legitimation card or comparable title (for example Ci) counts too [BüG art. 33 para. 1; SEM Handbuch chapter
+    3, 311/1]
+  - Stays with an L, G, N or S permit, with a tourist (Schengen) visa, or under a false identity are not counted
+    [SEM Handbuch chapter 3, 311/1]
+  - The SEM counts back from the filing date; the 10 years may contain gaps, but the 3 years within the last 5 must
+    be spent in Switzerland without interruption [SEM Handbuch chapter 3, 311/2]
+  - Short stays abroad with the intention to return do not interrupt residence; residence is deemed given up if
+    the person deregisters with the authority or actually lives abroad for more than 6 months [BüG art. 33 para.
+    2-3]
+  - A stay abroad of at most one year on the employer's behalf or for education or further training counts as a
+    short-term absence; a longer stay abroad is not counted towards the federal period [BüV art. 16; SEM Handbuch
+    chapter 3, 311/3]
+  - Cantons must set a minimum cantonal/communal residence of between 2 and 5 years [BüG art. 18 para. 1]
+  - In Zurich, applicants must have lived in the same commune for the 2 years immediately before filing; applicants
+    under 25 need only 2 years in the canton; the doubling and the time-abroad rules apply only to the federal period,
+    not to the cantonal or communal ones [Zurich naturalisation handbook, section 3.4.1]
+  - 'Aargau: 5 years in the canton and at least 3 years uninterrupted in the commune; Bern: 2 years uninterrupted
+    in the canton and in the commune; St Gallen: the last 5 years uninterrupted in the canton and the commune, without
+    double counting [Aargau leaflet; Canton of Bern residence page; St Gallen leaflet]'
+  - A registered partner of a Swiss citizen needs 5 years' total residence, one of them immediately before filing,
+    and 3 years in the partnership [BüG art. 10]
+  - A C permit must be held at filing and throughout the procedure until the cantonal decision [SEM Handbuch chapter
+    3, 311]
+  sources:
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), consolidated version of 1 September 2023 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/de/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-de-html-1.html
+  - title: 'Fedlex: Citizenship Ordinance (BüV, SR 141.01), consolidated version of 1 August 2026 (PDF, German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/405/20260801/de/pdf-a/fedlex-data-admin-ch-eli-cc-2016-405-20260801-de-pdf-a.pdf
+  - title: 'SEM: Handbuch Bürgerrecht, chapter 3 - Ordinary naturalisation (PDF, German)'
+    url: https://www.sem.admin.ch/dam/sem/de/data/rechtsgrundlagen/weisungen/buergerrecht/hb-bueg20-kap3.pdf.download.pdf/hb-bueg20-kap3.pdf
+  - title: 'SEM: Ordinary naturalisation (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: 'Canton of Zurich: Naturalisation handbook from 1 July 2023 (PDF, German)'
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
+  - title: 'Canton of Aargau: Leaflet on the ordinary naturalisation procedure, version 17 December 2024 (PDF, German)'
+    url: https://www.ag.ch/media/kanton-aargau/dvi/dokumente/arp/buergerrecht-und-personenstand/einbuergerungen/merkblatt.pdf
+  - title: 'Canton of Bern: Residence requirements (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/aufenthalt.html
+  - title: 'Canton of St Gallen: Leaflet on ordinary naturalisation, 6 November 2023 (PDF, German)'
+    url: https://www.sg.ch/recht/buergerrecht-zivilstand/einbuergerung/_jcr_content/Par/sgch_accordion_list/AccordionListPar/sgch_accordion/AccordionPar/sgch_downloadlist/DownloadListPar/sgch_download.ocFile/Merkblatt%20ord.%20Einbuergerung%20AfGB%2020231106.pdf
+  related:
+  - calculator
+  - overview
+  - zurich
+  links_to:
+  - moving-canton-commune
+  - spouse-facilitated
+  - seven-mistakes
+  - canton-ag
+  - canton-be
+- key: canton-be
+  kind: canton
+  category: cantons
+  publish_at: 2026-12-03T07:00:00+01:00
+  title: 'Naturalisation in the canton of Bern: requirements, test and costs'
+  brief: 'For foreign residents of the canton of Bern with a C permit. Angle: Bern is bilingual, so the language
+    of proof is the language of your administrative district (German or French), the canton runs a written 90-minute
+    test with a published overview, and the canton fee is listed per household type. Cover residence (2 years uninterrupted
+    in the canton and in the commune), language, test, steps, fees. The canton portal does not state commune fees:
+    say ''ask your commune'' and, as an example only, note that communes can add requirements (the municipality
+    of Konolfingen''s June 2026 leaflet adds for instance a ten-year social-assistance look-back; present it as
+    one commune''s rule, not canton law). Do NOT list or reproduce test questions; the portal links to practice
+    tests, so mention that they exist. Do NOT repeat the federal rules in detail: link to the overview and calculator
+    pages. Jura bernois and the French-speaking district: state only that the language of the administrative district
+    applies; say ''ask your commune'' for which language proof is accepted.'
+  outline:
+  - 'How naturalisation works in Bern: commune, canton, Confederation'
+  - Residence in Switzerland, canton and commune
+  - Language of the administrative district and how to prove it
+  - 'The written naturalisation test: content, length, who is exempt'
+  - 'From application to decision: the steps'
+  - 'Fees: canton, commune, Confederation'
+  - Couples, children and dual citizenship
+  - What communes may add
+  must_cover:
+  - The procedure has three levels (commune, canton, Confederation); each examines the application separately and
+    grants its own approval [Canton of Bern, how-to-apply page]
+  - Applicants must have lived in the canton of Bern for at least 2 years without interruption and in the commune
+    for at least 2 years without interruption at filing; the federal rules (C permit, 10 years, 3 in the last 5)
+    apply too [Canton of Bern residence page]
+  - Both spouses must meet the residence requirements independently of each other [Canton of Bern residence page]
+  - 'Language: A2 written and B1 oral in the language of the administrative district where the applicant lives;
+    no certificate is needed for a mother tongue of that language, 5 years of compulsory school in it, or a vocational,
+    Gymnasium or university qualification in it [Canton of Bern language page]'
+  - Bern's integration page names German or French as the languages in which applicants must be able to communicate
+    in writing and orally, and says communes may set further requirements [Canton of Bern integration page]
+  - A written naturalisation test covers geography, history, democracy, the health system, work, and rights and
+    duties of citizens in Switzerland and takes 90 minutes [Canton of Bern test page]
+  - 'Exempt from the test: children under 16, people who attended compulsory school for at least 5 years under the
+    Swiss curriculum, and people who completed upper-secondary or tertiary education in Switzerland; applicants
+    pay for any course and for the test themselves, and keep the confirmation for the application [Canton of Bern
+    test page]'
+  - 'Steps: contact the home commune for forms; file the application with the commune; the commune checks it and
+    invites the applicant to a personal interview; after the commune grants communal citizenship and the commune
+    and canton fees are paid, the file goes to the canton and the Confederation [Canton of Bern, how-to-apply page]'
+  - 'Canton fees: CHF 1,150 for an individual with or without minor children, CHF 1,725 for married couples or registered
+    partners, CHF 575 for a minor naturalised without parents; the fee is also charged if the application is rejected;
+    commune fees are set by the commune [Canton of Bern fees page]'
+  - 'Federal fees: CHF 100 for an adult, CHF 150 for spouses applying together, CHF 50 for a minor; minor children
+    included in a parent''s application pay no federal fee and the canton states that their inclusion is free of
+    charge [Canton of Bern fees page; how-to-apply page]'
+  - Switzerland allows dual citizenship; the embassy of the country of origin can say whether the former nationality
+    is lost [Canton of Bern, how-to-apply page]
+  - After a positive decision the commune informs the applicant and the person can apply for a Swiss passport and
+    ID card [Canton of Bern, how-to-apply page]
+  sources:
+  - title: 'Canton of Bern: Ordinary naturalisation - how to apply (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/gesuch-stellen.html
+  - title: 'Canton of Bern: Residence requirements (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/aufenthalt.html
+  - title: 'Canton of Bern: Integration (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/integration.html
+  - title: 'Canton of Bern: Language skills and proof (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/sprachnachweis.html
+  - title: 'Canton of Bern: Naturalisation test (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/einbuergerungstest.html
+  - title: 'Canton of Bern: Fees (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/gebuehren.html
+  - title: 'Municipality of Konolfingen (BE): Information on ordinary naturalisation, June 2026 (PDF, German)'
+    url: https://www.konolfingen.ch/files/Verwaltung/ES/Info-ordentliche-Einbuergerung-Version-Juni-2026.pdf
+  - title: 'SEM: Ordinary naturalisation (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  related:
+  - overview
+  - calculator
+  - language
+  - test
+  links_to:
+  - canton-ag
+  - years-counted
+  - moving-canton-commune
+  - language-b1-a2
+  canton: be
+- key: zurich-test-four-weeks
+  kind: article
+  category: test
+  publish_at: 2026-12-07T07:00:00+01:00
+  title: 'Preparing for the Zurich knowledge test in four weeks: a study plan'
+  brief: 'For Zurich applicants who have an invitation or expect one soon and want a realistic plan. Question answered:
+    how do I prepare in four weeks, using the official material, and what do I do on the day. Angle: a week-by-week
+    plan built on the structure of the test (50 questions drawn from 350, 70% federal, 20% cantonal, 10% communal),
+    with how to use the free official brochure, the practice test and the six topic pages of this site. The plan
+    itself is advice and may be written freely; every fact about the test must come from the sources. Do NOT repeat
+    the knowledge-test guide page (format, registration, cost): link to it and to the topic pages instead. Do NOT
+    quote or reproduce any question from the canton''s list; describe topics in general terms only. Cost of the
+    test: say ''ask your commune'', the canton gives no amount. Say: your commune tells you where and when you take
+    the test.'
+  outline:
+  - What the test looks like (and what it does not test)
+  - 'Where the 350 questions come from: federal 70%, cantonal 20%, communal 10%'
+  - 'Week 1: read the official brochure and map the five topic areas'
+  - 'Week 2: federal level - democracy, history, geography'
+  - 'Week 3: canton and communes of Zurich'
+  - 'Week 4: practice test, weak spots, day-before checklist'
+  - 'If you do not pass: retakes'
+  - Who does not need to take it
+  must_cover:
+  - 'The Zurich knowledge test (GKT) draws 50 random questions from a catalogue of 350: 35 on the Confederation,
+    10 on the canton, 5 on the communes; it is digital, done at a computer or tablet on site; 30 of 50 correct (60%)
+    pass [Zurich naturalisation handbook, section 4.6.2.1]'
+  - The canton makes the test available to the communes free of charge; a commune can run it itself or have an external
+    institution run it [Zurich naturalisation handbook, section 4.6.2.1]
+  - 'To prepare, the canton offers three options: a practice test, a brochure for naturalisation (76 pages, PDF)
+    and the list of all questions; other books and apps are listed as extra help that does not need to be learned
+    for the test [Canton of Zurich knowledge test page]'
+  - The test must be passable at written A2 German, and the commune must point applicants to suitable preparation
+    aids from which they can take the exam material [Zurich naturalisation handbook, section 4.6.2; BüV art. 2 para.
+    2]
+  - In the City of Zurich the test takes place at the Stadthaus, is free, and is taken after filing the application;
+    invited applicants receive the learning brochure by post and get access to a learning app at the interview [City
+    of Zurich basic knowledge page]
+  - Communes may require the test before or during the procedure; passing is not a condition for filing; a failed
+    test does not by itself replace a rejection decision [Zurich naturalisation handbook, section 4.6.2.2]
+  - The test can in principle be repeated as often as needed with no waiting period; if first taken during the procedure,
+    the commune may provisionally reject the application after repeated failure, but must allow at least one retake
+    [Zurich naturalisation handbook, section 4.6.2.3]
+  - No test is needed for people who attended compulsory school in Switzerland for at least 5 years including 3
+    years of lower secondary, who completed upper-secondary education in Switzerland, or who are currently attending
+    compulsory school or upper-secondary school in Switzerland [City of Zurich basic knowledge page]
+  - All Zurich communes now use the cantonal test; in 2022, 45% still ran their own tests [Canton of Zurich study
+    of 5 December 2025]
+  - The federal Ordinance requires a canton that uses a test to make sure applicants can prepare with suitable aids
+    or courses and can pass with the oral and written language skills required for naturalisation [BüV art. 2 para.
+    2]
+  sources:
+  - title: 'Canton of Zurich: Knowledge test (German)'
+    url: https://www.zh.ch/de/migration-integration/einbuergerung/grundkenntnistest.html
+  - title: 'Canton of Zurich: Naturalisation handbook from 1 July 2023 (PDF, German)'
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
+  - title: 'City of Zurich: Basic knowledge test (German)'
+    url: https://www.stadt-zuerich.ch/de/lebenslagen/einwohner-services/einbuergerung/grundkenntnisse.html
+  - title: 'Canton of Zurich: New study on how Zurich communes naturalise, 5 December 2025 (German)'
+    url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/12/neue-studie-so-buergern-die-zuercher-gemeinden-ein.html
+  - title: 'Fedlex: Citizenship Ordinance (BüV, SR 141.01), consolidated version of 1 August 2026 (PDF, German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/405/20260801/de/pdf-a/fedlex-data-admin-ch-eli-cc-2016-405-20260801-de-pdf-a.pdf
+  related:
+  - test
+  - free
+  - topicDemocracy
+  - topicZurich
+  links_to:
+  - naturalisation-interview
+  - language-b1-a2
+  - canton-ag
+- key: integration-debts-welfare
+  kind: article
+  category: eligibility
+  publish_at: 2026-12-14T07:00:00+01:00
+  title: 'What ''successful integration'' means: debts, welfare and criminal record'
+  brief: 'For applicants worried that a debt, a past welfare payment or a fine will block them. Question answered:
+    which items in the file are real obstacles under federal rules, how far back they are checked, and what hardship
+    rules exist. Angle: translate the Ordinance articles into plain examples (what a debt-collection entry or a
+    sentence does to the file), clearly separated into federal rules (BüV) and what cantons add. Be precise about
+    the look-back periods: social assistance 3 years; debt-collection register extract 5 years (SEM handbook); criminal-record
+    thresholds as in the Ordinance. Do NOT give a list of ''what is allowed'' that is not in the sources, and do
+    not promise outcomes: the authority decides each case. Cantons and communes differ: Basel says no tax arrears
+    in 5 years; Aargau asks for social-assistance confirmation for the last 10 years. Present those as canton rules
+    with their sources. Say: ask your commune whether a specific entry matters.'
+  outline:
+  - The five federal integration criteria in plain words
+  - 'Debts and tax arrears: what is looked at and for how long'
+  - 'Welfare: the 3-year rule and who is exempt'
+  - 'Criminal record: what counts, probation periods, pending cases'
+  - Respect for constitutional values
+  - 'Hardship rules: illness, disability, working poverty, care duties'
+  - What cantons add on top
+  - What to do before you file
+  must_cover:
+  - 'Integration shows in: respect for public safety and order, respect for the values of the Federal Constitution,
+    ability to communicate in a national language, participation in economic life or education, and supporting the
+    integration of spouse and minor children; cantons may add criteria [BüG art. 12 para. 1 and 3]'
+  - Someone who receives social assistance in the 3 years directly before filing or during the procedure does not
+    meet the economic-participation criterion unless the assistance is fully repaid [BüV art. 7 para. 3]
+  - Economic participation means covering living costs and maintenance obligations at filing and at naturalisation
+    through income, assets or benefits to which one has a legal claim; being in education or training at filing
+    or naturalisation also counts [BüV art. 7 para. 1-2]
+  - The SEM may refuse the federal permit if tax arrears, debt collections or loss certificates appear in the debt-collection
+    register extract of the last 5 years before filing; examples of failures include arrears on taxes, health insurance
+    or fines, rent arrears, unpaid maintenance or accumulating debts [SEM Handbuch chapter 3, financial reputation
+    section]
+  - Public safety and order are not respected if a person wilfully fails to meet important public-law or private-law
+    obligations, or repeatedly or substantially disregards laws and official orders [BüV art. 4 para. 1]
+  - 'The criminal-record rule: entries such as an unconditional sentence, a conditional fine of more than 90 daily
+    units, or a conditional prison sentence of more than 3 months mean the person is not considered integrated;
+    a running probation period or unexecuted sanction also blocks integration; pending criminal proceedings suspend
+    the procedure [BüV art. 4 para. 2, 3 and 5]'
+  - Respect for constitutional values includes equality of men and women, freedom of belief and opinion, the rule
+    of law and the duty of military or civilian service and of school attendance [BüV art. 5]
+  - 'Hardship: authorities must take personal circumstances into account and may deviate from the language and economic-participation
+    criteria for disability, serious or long illness, pronounced learning, reading or writing difficulty, working
+    poverty, care duties, or welfare dependence caused by a first formal education in Switzerland [BüV art. 9; BüG
+    art. 12 para. 2]'
+  - 'Basel-Stadt: no tax arrears in the last 5 years; instalment payments of taxes are treated as arrears and open
+    tax bills must be paid before filing; no unpaid debt collections or loss certificates; supplementary benefits
+    (EL) and premium reductions do not count as social assistance [Canton of Basel-Stadt step-by-step page]'
+  - 'Aargau: the confirmation of non-receipt or repayment of social assistance must cover the last 10 years [Aargau
+    handbook, section 3.3.4]'
+  - Applicants must report promptly any later change that could prevent naturalisation and must give complete and
+    correct information [BüV art. 21]
+  sources:
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), consolidated version of 1 September 2023 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/de/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-de-html-1.html
+  - title: 'Fedlex: Citizenship Ordinance (BüV, SR 141.01), consolidated version of 1 August 2026 (PDF, German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/405/20260801/de/pdf-a/fedlex-data-admin-ch-eli-cc-2016-405-20260801-de-pdf-a.pdf
+  - title: 'SEM: Handbuch Bürgerrecht, chapter 3 - Ordinary naturalisation (PDF, German)'
+    url: https://www.sem.admin.ch/dam/sem/de/data/rechtsgrundlagen/weisungen/buergerrecht/hb-bueg20-kap3.pdf.download.pdf/hb-bueg20-kap3.pdf
+  - title: 'SEM: Frequently asked questions on Swiss citizenship (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/faq.html
+  - title: 'Canton of Basel-Stadt: Step by step - the way to ordinary naturalisation (German)'
+    url: https://www.bs.ch/themen/persoenliches-und-wohnen/einbuergerungen/schritt-fuer-schritt-der-weg-zur-ordentlichen-einbuergerung-0
+  - title: 'Canton of Aargau: Handbook for ordinary naturalisation procedures (PDF, German)'
+    url: https://www.ag.ch/media/kanton-aargau/dvi/dokumente/arp/buergerrecht-und-personenstand/einbuergerungen/handbuch-ordentliche-einbuergerungen/handbuch.pdf
+  - title: 'SEM: Ordinary naturalisation (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  related:
+  - overview
+  - fees
+  - documents
+  links_to:
+  - seven-mistakes
+  - moving-canton-commune
+  - language-b1-a2
+  - spouse-facilitated
+- key: canton-bs
+  kind: canton
+  category: cantons
+  publish_at: 2026-12-17T07:00:00+01:00
+  title: 'Naturalisation in Basel-Stadt: requirements, interview and costs'
+  brief: 'For foreign residents of Basel, Riehen or Bettingen. Angle: Basel-Stadt is a city-canton where the cantonal
+    Migration Office does the checks and the Bürgergemeinde (citizens'' community) invites the applicant to an interview
+    that the Basel Bürgergemeinde itself describes as having ''test character''; the cantonal fee was abolished
+    for applications filed from 1 July 2026. Cover the requirements list, language proof (accepted providers; course
+    confirmations are not accepted), the digital application, the steps, and the fees per commune (Basel city CHF
+    800/950, Riehen CHF 1,700, Bettingen CHF 1,400, plus federal). No written canton-wide knowledge test is described
+    on the canton''s pages: say that familiarity is checked in the interviews and that the Bürgergemeinde offers
+    courses; do not invent a test. Do NOT list interview questions. Do not repeat federal rules in detail: link
+    to the overview. Fee table is dated: say ''checked on''.'
+  outline:
+  - 'Who handles what: Migration Office, Bürgergemeinde, Government Council'
+  - Requirements in one list
+  - 'Language proof: what is accepted and what is not'
+  - 'Applying: digital via eKonto or by post'
+  - The Bürgergemeinde interview
+  - Fees from 1 July 2026 and who is exempt
+  - How long it takes
+  - Dual citizenship and hardship cases
+  must_cover:
+  - 'Requirements: C permit; 10 years of actual residence in Switzerland with 3 of the last 5 years before filing;
+    2 years in the commune within Basel-Stadt immediately before registration [Canton of Basel-Stadt step-by-step
+    page]'
+  - 'Further requirements listed by the canton: no tax arrears in the last 5 years, no criminal-register entries
+    or pending proceedings, no unpaid debt collections or loss certificates, no social assistance in the last 3
+    years unless fully repaid, sufficient German, participation in economic life or education, respect for constitutional
+    values, familiarity with institutions in commune, canton and Confederation, social and cultural participation
+    and contacts with Swiss people [Canton of Basel-Stadt step-by-step page]'
+  - 'Language: German at B1 oral and A2 written; accepted providers are telc, Goethe-Institut, ÖSD or fide; a course
+    confirmation is not a certificate and continuing-education diplomas (CAS/DAS/MAS) are not accepted; proof without
+    a certificate is accepted for 5 years of compulsory school, a secondary-level (vocational or Matura) or a tertiary
+    qualification obtained in German in the German-speaking area [Canton of Basel-Stadt step-by-step page]'
+  - Applications can be filed digitally via the eKonto since 2026, or by post; the canton estimates about one hour
+    for the online form [Canton of Basel-Stadt step-by-step page]
+  - The Migration Office examines the requirements, holds interviews with applicants and family members and writes
+    the report; afterwards the responsible Bürgergemeinde invites the applicant to an interview; naturalisation
+    takes effect with the Government Council's decision once the federal permit exists [Canton of Basel-Stadt step-by-step
+    page]
+  - The Bürgergemeinde's interview with its naturalisation commission has 'test character' and is recorded; the
+    commission then asks the Bürgerrat to admit, reject or postpone; the Bürgergemeinde runs an information evening
+    and offers a compact naturalisation course and a course called 'Fit für Basel' [Bürgergemeinde Basel page]
+  - From 1 July 2026 the canton no longer charges a fee; Basel city commune fees are CHF 800 for individuals aged
+    25 and over and CHF 950 for couples or individuals with children; Riehen CHF 1,700; Bettingen CHF 1,400; federal
+    fees CHF 50 for under 18, CHF 100 for adults and CHF 150 for couples [Canton of Basel-Stadt step-by-step page;
+    Bürgergemeinde Basel page]
+  - No commune fee for people up to 25 or for people receiving supplementary benefits (EL) or premium reductions
+    (IPV); those with social assistance may be exempt if their personal circumstances were recognised [Canton of
+    Basel-Stadt step-by-step page]
+  - The usual duration of the ordinary procedure is one and a half to two years [Canton of Basel-Stadt step-by-step
+    page]
+  - Switzerland allows dual citizenship; the embassy of the country of origin says whether the former nationality
+    is lost [Canton of Basel-Stadt step-by-step page]
+  - Years with a F permit count half; L, N, G and S years are not counted; years from age 8 to adulthood count double
+    with at least 6 actual years [Canton of Basel-Stadt step-by-step page]
+  - People who cannot meet the language or economic-participation requirement because of personal circumstances
+    (for example a pronounced learning, reading or writing difficulty, unavoidable welfare dependence) should contact
+    the Migration Office's naturalisation department directly [Canton of Basel-Stadt step-by-step page; BüV art.
+    9]
+  sources:
+  - title: 'Canton of Basel-Stadt: Step by step - the way to ordinary naturalisation (German)'
+    url: https://www.bs.ch/themen/persoenliches-und-wohnen/einbuergerungen/schritt-fuer-schritt-der-weg-zur-ordentlichen-einbuergerung-0
+  - title: 'Bürgergemeinde der Stadt Basel: Naturalisation for foreign nationals (German)'
+    url: https://bgbasel.ch/de/einbuergerungen/auslaenderinnen-auslaender.html
+  - title: 'Bürgergemeinde Riehen: Naturalisation in Riehen (German)'
+    url: https://www.buergergemeinde-riehen.ch/einbuergerung.html
+  - title: 'SEM: Ordinary naturalisation (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: 'Fedlex: Citizenship Ordinance (BüV, SR 141.01), consolidated version of 1 August 2026 (PDF, German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/405/20260801/de/pdf-a/fedlex-data-admin-ch-eli-cc-2016-405-20260801-de-pdf-a.pdf
+  related:
+  - overview
+  - calculator
+  - language
+  - interview
+  links_to:
+  - canton-be
+  - naturalisation-interview
+  - moving-canton-commune
+  canton: bs
+- key: moving-canton-commune
+  kind: article
+  category: process
+  publish_at: 2026-12-21T07:00:00+01:00
+  title: Moving canton or commune during your naturalisation application
+  brief: 'For applicants who may have to move (new job, rent increase) while their application is pending, or who
+    are about to file and are thinking of moving first. Question answered: what happens to my application if I move,
+    and how long must I live in the new commune or canton? Angle: the federal rule (the authorities stay responsible
+    once the examination is finished) against what Zurich, St Gallen and Lucerne say in practice, plus the different
+    residence periods that restart the clock (Aargau, Bern, Zurich, St Gallen). Link to the canton guides already
+    published (Aargau, Bern, Basel-Stadt). Be clear that ''the examination is finished'' is the decisive moment
+    and is decided by the authority, so applicants must ask their commune before moving and tell it at once. Federal
+    doubling and time-abroad rules do not apply to cantonal/communal periods (Zurich handbook). Do NOT claim every
+    canton works like Zurich; cite the canton named. Moving abroad: the C permit lapses after 6 months abroad without
+    deregistration (4 years can be requested), and deregistering ends residence; keep this to two sentences. Say:
+    ask your commune before you move.'
+  outline:
+  - 'The federal rule: who stays responsible if you move'
+  - Why the date of the move decides everything
+  - 'Zurich: moving before and after the commune''s checks'
+  - 'St Gallen and Lucerne: what their authorities say'
+  - 'How long you must live in the new place: periods by canton'
+  - Moving abroad or deregistering
+  - Spouses applying under the facilitated route
+  - Checklist before you move
+  must_cover:
+  - Cantons must require minimum residence of 2 to 5 years [BüG art. 18 para. 1]
+  - If the applicant moves to another commune or canton, the canton and commune where the application was filed
+    stay responsible if they have conclusively examined the integration criteria and familiarity requirements (the
+    examination needed for the commune's assurance) [BüG art. 18 para. 2; BüV art. 12]
+  - 'Zurich: after the commune has completed its checks the applicant can move anywhere in Switzerland and the old
+    commune stays responsible; if the move comes before the checks are completed, the new commune becomes responsible,
+    the applicant does not yet meet the residence period there, and naturalisation is in principle impossible until
+    the periods are met [Zurich naturalisation handbook, section 3.4.2]'
+  - Zurich requires 2 years in the same commune immediately before filing; applicants under 25 need only 2 years
+    in the canton of Zurich and can still be naturalised if they move within the canton before the checks end [Zurich
+    naturalisation handbook, sections 3.4.1 and 3.4.2]
+  - Federal doubling for ages 8 to 18 and the time-abroad rules apply only to the federal period, not to cantonal
+    or communal ones [Zurich naturalisation handbook, section 3.4.1]
+  - 'St Gallen: the council with the pending application stays responsible after a move into another commune or
+    canton if it has already published the naturalisation in the commune''s official publication organ; otherwise
+    it declares the application moot [St Gallen leaflet, section 2]'
+  - 'Lucerne: a change of residence during the procedure is possible only to a limited extent: the canton and commune
+    stay responsible if the examination required for the assurance is already complete [Canton of Lucerne, questions
+    page]'
+  - 'Residence periods that restart in a new place: Aargau 5 years in the canton and 3 years uninterrupted in the
+    commune; Bern 2 years uninterrupted in canton and commune; Basel-Stadt 2 years in the commune; Zurich 2 years
+    in the commune (2 in the canton if under 25); St Gallen the last 5 years uninterrupted in canton and commune
+    [Aargau leaflet; Canton of Bern residence page; Canton of Basel-Stadt page; Zurich handbook; St Gallen leaflet]'
+  - Residence in Switzerland is deemed given up on deregistration or after actually living abroad for more than
+    6 months [BüG art. 33 para. 3]
+  - A residence permit lapses on deregistration abroad; a C permit lapses after 6 months abroad without deregistration,
+    but on request it can be kept for 4 years [AIG art. 61]
+  - Applicants must promptly report later changes that could prevent naturalisation [BüV art. 21]
+  - For spouses applying under the facilitated route, a move within Switzerland is allowed but usually needs extra
+    enquiries that can lengthen the procedure [SEM FAQ]
+  sources:
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), consolidated version of 1 September 2023 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/de/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-de-html-1.html
+  - title: 'Fedlex: Citizenship Ordinance (BüV, SR 141.01), consolidated version of 1 August 2026 (PDF, German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/405/20260801/de/pdf-a/fedlex-data-admin-ch-eli-cc-2016-405-20260801-de-pdf-a.pdf
+  - title: 'Canton of Zurich: Naturalisation handbook from 1 July 2023 (PDF, German)'
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
+  - title: 'Canton of St Gallen: Leaflet on ordinary naturalisation, 6 November 2023 (PDF, German)'
+    url: https://www.sg.ch/recht/buergerrecht-zivilstand/einbuergerung/_jcr_content/Par/sgch_accordion_list/AccordionListPar/sgch_accordion/AccordionPar/sgch_downloadlist/DownloadListPar/sgch_download.ocFile/Merkblatt%20ord.%20Einbuergerung%20AfGB%2020231106.pdf
+  - title: 'Canton of Lucerne: Questions about citizenship (German)'
+    url: https://gemeinden.lu.ch/Fragen_und_Antworten/Fragen_zum_Buergerrecht
+  - title: 'Canton of Bern: Residence requirements (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/aufenthalt.html
+  - title: 'Canton of Aargau: Leaflet on the ordinary naturalisation procedure, version 17 December 2024 (PDF, German)'
+    url: https://www.ag.ch/media/kanton-aargau/dvi/dokumente/arp/buergerrecht-und-personenstand/einbuergerungen/merkblatt.pdf
+  - title: 'Fedlex: Foreign Nationals and Integration Act (AIG, SR 142.20), version of 1 November 2026 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/758/20261101/de/html/fedlex-data-admin-ch-eli-cc-2007-758-20261101-de-html-1.html
+  related:
+  - overview
+  - zurich
+  - calculator
+  links_to:
+  - canton-ag
+  - canton-be
+  - canton-bs
+  - years-counted
+  - seven-mistakes
+- key: children-naturalisation
+  kind: article
+  category: eligibility
+  publish_at: 2026-12-28T07:00:00+01:00
+  title: 'Children and naturalisation: including them, and when they are assessed on their own'
+  brief: 'For parents who want to naturalise and ask what happens to their children, and for teenagers or families
+    whose children might apply separately. Question answered: are minor children included, from what age are they
+    examined on their own, and what do they cost? Angle: the rule in Art. 30 BüG with the SEM''s practical details
+    (custody, age 2, two years of residence, age 12). Cover fees using sourced examples (federal, Bern, Aargau).
+    Link to the third-generation article for the route for grandchildren and to the Zurich interview rule (no interview
+    with children under 12). Do NOT repeat the Zurich step-by-step guide. Cantonal rules on children vary (fees,
+    whether a commune examines children aged 12 to 16): present Zurich, Aargau and Bern as examples. Say: ask your
+    commune about the child''s part.'
+  outline:
+  - 'The basic rule: minor children are normally included'
+  - When a child can be included (custody, living together, age and residence)
+  - 'From age 12: the child''s own integration check; from 16: written declaration'
+  - Children who apply alone
+  - 'Children not included in the parent''s application: the 22nd-birthday rule'
+  - 'Fees for children: federal and examples from cantons'
+  - 'Stateless children and third generation: where to read more'
+  must_cover:
+  - Minor children are in principle included in the naturalisation of the applicant if they live with the applicant;
+    for children from age 12 the integration and familiarity criteria are examined individually and in an age-appropriate
+    way [BüG art. 30]
+  - Inclusion is possible if the applicant has at least 50% of the childcare, regardless of the child's legal domicile;
+    it is not possible if the child lives with and is mainly cared for by the other parent; infants up to age 2
+    are included without further checks, older children if they have lived in Switzerland for at least 2 years [SEM
+    Handbuch chapter 3, 311/41]
+  - If the child has a different residence permit from the parent, extra checks are made [SEM Handbuch chapter 3,
+    311/41]
+  - Minor children can file only through their legal representative; from age 16 a child must also declare in writing
+    that they want to become Swiss [BüG art. 31]
+  - 'Zurich: children under 12 need not meet the material criteria and may not be given an interview; from age 12
+    the commune may hold an interview, and up to age 16 an adult reference person must be present [Zurich naturalisation
+    handbook, sections 1.1.3 and 6.2.2]'
+  - A foreign child who was a minor at the time of a parent's application and was not included may apply for facilitated
+    naturalisation before the 22nd birthday with 5 years' total residence, 3 of them immediately before filing [BüG
+    art. 24]
+  - A minor stateless child may apply for facilitated naturalisation with 5 years' total residence, one of them
+    immediately before filing [BüG art. 23]
+  - 'Federal fees: CHF 50 for a minor applying alone and no federal fee for minor children included in a parent''s
+    application [BüV art. 25 para. 1 let. a and para. 2]'
+  - 'Bern: including minor children living with the parent is free of charge; the canton fee for a minor naturalised
+    without parents is CHF 575 [Canton of Bern how-to-apply and fees pages]'
+  - 'Aargau: for included children, commune and canton charge nothing until age 10 and half the fee from age 10
+    (leaflet of 17 December 2024) [Aargau leaflet, section 4]'
+  - The federal permit can later be amended with regard to including children [BüG art. 13 para. 4]
+  sources:
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), consolidated version of 1 September 2023 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/de/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-de-html-1.html
+  - title: 'Fedlex: Citizenship Ordinance (BüV, SR 141.01), consolidated version of 1 August 2026 (PDF, German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/405/20260801/de/pdf-a/fedlex-data-admin-ch-eli-cc-2016-405-20260801-de-pdf-a.pdf
+  - title: 'SEM: Handbuch Bürgerrecht, chapter 3 - Ordinary naturalisation (PDF, German)'
+    url: https://www.sem.admin.ch/dam/sem/de/data/rechtsgrundlagen/weisungen/buergerrecht/hb-bueg20-kap3.pdf.download.pdf/hb-bueg20-kap3.pdf
+  - title: 'Canton of Zurich: Naturalisation handbook from 1 July 2023 (PDF, German)'
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
+  - title: 'Canton of Aargau: Leaflet on the ordinary naturalisation procedure, version 17 December 2024 (PDF, German)'
+    url: https://www.ag.ch/media/kanton-aargau/dvi/dokumente/arp/buergerrecht-und-personenstand/einbuergerungen/merkblatt.pdf
+  - title: 'Canton of Bern: Ordinary naturalisation - how to apply (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/gesuch-stellen.html
+  - title: 'SEM: Ordinary naturalisation (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  related:
+  - overview
+  - fees
+  - calculator
+  links_to:
+  - third-generation
+  - years-counted
+  - naturalisation-interview
+  - spouse-facilitated
+- key: language-b1-a2
+  kind: article
+  category: process
+  publish_at: 2027-01-04T07:00:00+01:00
+  title: 'B1 spoken, A2 written: what the language requirement really asks'
+  brief: 'For applicants asking what the language level means in practice and which proof is accepted. Question
+    answered: how are oral and written levels determined, what if my certificate shows different levels for reading
+    and writing, and what does a canton add? Angle: the SEM''s own FAQ rules on how oral and written levels are
+    read from a certificate, plus planning facts from the fide page (booking and result times) and the cantons that
+    go beyond the federal minimum (St Gallen: B1 in speaking and writing). The existing language-certificates page
+    already lists the exemptions, the SEM list and the fide passport: do NOT repeat them; link to it and focus on
+    the practical reading of the rules, the cantonal differences and planning your timeline. Do not recommend a
+    particular provider. The SEM list is updated every three months (next on 1 January 2027): tell readers to check
+    the current edition and say which edition was consulted. Say: ask your commune which certificate it accepts
+    if you are unsure.'
+  outline:
+  - 'What the federal rule says: B1 oral, A2 written'
+  - Four ways to prove it
+  - 'How the levels are read from a certificate: oral part, reading and writing, the lower level'
+  - 'What does not count: course confirmations and placement tests'
+  - Cantons that ask for more or set a language of their own
+  - 'Planning: when to book, how long results take'
+  - Hardship rules and where to ask
+  must_cover:
+  - 'Federal rule: at least B1 oral and at least A2 written in a national language [BüV art. 6 para. 1]'
+  - The proof is considered given if the applicant has a national language as mother tongue (speaks and writes it),
+    has attended compulsory school for at least 5 years in a national language, has completed upper-secondary or
+    tertiary education in a national language, or has a language certificate based on a test that meets recognised
+    quality standards [BüV art. 6 para. 2]
+  - A confirmation of attending a language course is not enough, even if the course was attended regularly; a placement
+    assessment is not enough either [SEM FAQ on the list of recognised language certificates, question 5]
+  - For a certificate, the oral level is the level reached in the oral or 'speaking' part; the written level is
+    the level in the written part or in 'reading' and 'writing'; if reading and writing differ, the lower level
+    applies [SEM FAQ on the list, questions 9 and 10]
+  - The SEM list of recognised certificates (edition 1 October 2026) is updated every three months, next on 1 January
+    2027; a certificate counts as recognised if it was on the list when the application was filed [SEM list of recognised
+    language certificates]
+  - Authorities may recognise certificates not on the list if they meet the quality standards of the Ordinance,
+    but are recommended to follow the SEM list; an authority can ask for a new assessment, especially when a certificate
+    is old [SEM FAQ on the list, questions 3 and 4]
+  - A fide language passport is issued only after a fide test, fide test edu, fide dossier procedure or an Examen
+    da rumantsch; other recognised certificates cannot be converted into one [SEM FAQ on the list, question 13]
+  - 'fide test: tasks at levels A1 to B1 from everyday situations in Switzerland, oral part 40 minutes and written
+    part 60 minutes; whole test CHF 250, oral only CHF 170, written only CHF 120; registration at least 15 days
+    before the exam; results and passport about 4 weeks after the test (6 weeks for exams between mid-December and
+    mid-January) [fide test page]'
+  - St Gallen asks for good German at B1 in both speaking and writing, which is above the federal A2 for writing
+    [St Gallen leaflet, section 1.1; hallo.sg.ch information sheet]
+  - Bern uses the language of the administrative district and asks A2 written and B1 oral; people with a mother
+    tongue, 5 years of compulsory school or a Swiss qualification in that language need no certificate [Canton of
+    Bern language page]
+  - Zurich has its own Cantonal German Test (KDE) for naturalisation, at B1 oral and A2 written; telc, Goethe, ÖSD
+    and fide certificates at that level also count [Canton of Zurich cantonal German test page]
+  - Authorities must take personal circumstances into account (for example disability, serious illness, a pronounced
+    learning, reading or writing difficulty) when assessing language and economic-participation criteria [BüV art.
+    9]
+  sources:
+  - title: 'Fedlex: Citizenship Ordinance (BüV, SR 141.01), consolidated version of 1 August 2026 (PDF, German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/405/20260801/de/pdf-a/fedlex-data-admin-ch-eli-cc-2016-405-20260801-de-pdf-a.pdf
+  - title: 'SEM: List of recognised language certificates, edition 1 October 2026 (PDF, German)'
+    url: https://www.sem.admin.ch/dam/sem/de/data/integration/themen/sprache/anerkannte-sprachzertifikate.pdf.download.pdf/anerkannte-sprachzertifikate-d.pdf
+  - title: 'SEM: FAQ on the list of recognised language certificates (PDF, German)'
+    url: https://www.sem.admin.ch/dam/sem/de/data/integration/themen/sprache/faq-anerkannte-sprachzertifikate.pdf.download.pdf/faq-anerkannte-sprachzertifikate-d.pdf
+  - title: 'SEM: Language requirements (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/mein-beitrag/zugewandert/sprache.html
+  - title: 'fide: The fide test (German)'
+    url: https://fide-service.ch/de/sprachnachweise/fide-test
+  - title: 'Canton of Zurich: Cantonal German test for naturalisation (German)'
+    url: https://www.zh.ch/de/migration-integration/einbuergerung/kantonaler-deutschtest.html
+  - title: 'Canton of St Gallen: Leaflet on ordinary naturalisation, 6 November 2023 (PDF, German)'
+    url: https://www.sg.ch/recht/buergerrecht-zivilstand/einbuergerung/_jcr_content/Par/sgch_accordion_list/AccordionListPar/sgch_accordion/AccordionPar/sgch_downloadlist/DownloadListPar/sgch_download.ocFile/Merkblatt%20ord.%20Einbuergerung%20AfGB%2020231106.pdf
+  - title: 'Canton of Bern: Language skills and proof (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/sprachnachweis.html
+  related:
+  - language
+  - overview
+  - free
+  links_to:
+  - years-counted
+  - seven-mistakes
+  - canton-be
+  - children-naturalisation
+- key: canton-lu
+  kind: canton
+  category: cantons
+  publish_at: 2027-01-07T07:00:00+01:00
+  title: 'Naturalisation in the canton of Lucerne: requirements, steps and costs'
+  brief: 'For foreign residents of Lucerne with a C permit. Angle: in Lucerne almost everything is organised by
+    the commune; the canton''s ''Abteilung Gemeinden'' only reviews the file after the commune has promised communal
+    citizenship, and the canton and federal stages together take about four to six months. Cover the steps, the
+    commune residence rule as worded by the canton, German-language requirements from the cantonal act, familiarity
+    with local conditions, and fees (using the City of Lucerne''s leaflet as an example of a commune: CHF 500 flat
+    for people over 25). Gaps to state honestly: the canton''s pages do not state a minimum cantonal residence period,
+    a fixed cantonal test format or the fees of all communes; say ''ask your commune'' for each. The cantonal act
+    used as a source is the version of 1 January 2018 and may have been amended since; say ''as of the version consulted''.
+    The City of Lucerne leaflet is dated November 2026 and mentions an ''Einbürgerungskurs (Staatspolitik und Geografie)''
+    as a possible extra cost; describe it as an example, not a rule for the whole canton. Do NOT repeat federal
+    rules in detail; link to the overview and calculator pages.'
+  outline:
+  - 'How it works in Lucerne: commune first, then canton and Confederation'
+  - 'Residence: federal rule and the commune period'
+  - Language and familiarity with local conditions
+  - Steps and the canton's review
+  - 'Fees: the City of Lucerne as an example'
+  - How long it takes
+  - Moving during the procedure
+  - 'After the decision: passport and ID'
+  must_cover:
+  - Ordinary naturalisation is the most common case in Lucerne; central requirements are 10 years of residence in
+    Switzerland (with exceptions), a C permit, successful integration and familiarity with local living conditions
+    [Canton of Lucerne, ordinary naturalisation page]
+  - 'Steps: the applicant files with the commune; the commune examines the application and, if positive, assures
+    communal citizenship; the Confederation grants the federal permit; the canton grants cantonal citizenship; only
+    when all three agree does the applicant become Swiss [Canton of Lucerne, ordinary naturalisation page]'
+  - After the commune's assurance the file goes to the cantonal Abteilung Gemeinden for review; shortly before naturalisation
+    the applicant receives the form 'Beachten der Rechtsordnung'; the canton and federal stages together normally
+    take about four to six months [Canton of Lucerne, ordinary naturalisation page and questions page]
+  - 'Commune residence as worded by the canton: 3 years in the commune within the last 5 years before filing, and
+    at least one year of uninterrupted residence in the commune immediately before naturalisation [Canton of Lucerne,
+    questions page]'
+  - 'Language: the cantonal act requires German at B1 oral and A2 written, shown by mother tongue, 5 years of compulsory
+    school in German, upper-secondary or tertiary education in German, or a recognised test certificate (Goethe,
+    telc, fide named by the City of Lucerne) [Cantonal Citizenship Act, para. 22; City of Lucerne leaflet]'
+  - Familiarity with local conditions means basic knowledge of geographical, historical, political and social conditions
+    in Confederation, canton and commune, taking part in local social and cultural life and contact with Swiss people
+    [Cantonal Citizenship Act, para. 25]
+  - 'The City of Lucerne leaflet lists as requirements: no entry in the federal criminal register, no debt collections,
+    loss certificates or tax arrears, and no social assistance in the 3 years before filing or during the procedure
+    [City of Lucerne leaflet]'
+  - 'City of Lucerne fees: flat CHF 500 for people over 25, whether an individual, a couple or registered partners;
+    none for minors or for young adults under 25 at filing; federal and cantonal fees add CHF 250 to 600; extra
+    costs may arise for documents, the language proof and the ''Einbürgerungskurs (Staatspolitik und Geografie)'';
+    the procedure takes about one and a half years [City of Lucerne leaflet]'
+  - Other Lucerne communes charge their own fees; the canton tells applicants to ask their commune about cost and
+    duration [Canton of Lucerne, questions page]
+  - 'Moving during the procedure is possible only to a limited extent: canton and commune stay responsible if the
+    examination needed for the assurance is complete [Canton of Lucerne, questions page; BüG art. 18 para. 2]'
+  - For the passport or ID card after naturalisation, applicants contact the cantonal passport office [Canton of
+    Lucerne, questions page]
+  - Facilitated naturalisation (for example as the spouse of a Swiss citizen) is handled by the SEM, not by the
+    commune [Canton of Lucerne, questions page]
+  sources:
+  - title: 'Canton of Lucerne: Ordinary naturalisation (German)'
+    url: https://gemeinden.lu.ch/Einbuergerungen/einbuergerung_ausland/ordentliche_einbuergerung
+  - title: 'Canton of Lucerne: Questions about citizenship (German)'
+    url: https://gemeinden.lu.ch/Fragen_und_Antworten/Fragen_zum_Buergerrecht
+  - title: 'Canton of Lucerne: Cantonal Citizenship Act (KBüG, SRL 2), version of 1 January 2018 (PDF, German)'
+    url: https://srl.lu.ch/api/de/versions/3140/pdf_file
+  - title: 'City of Lucerne: Leaflet on acquiring Swiss citizenship, November 2026 (PDF, German)'
+    url: https://www.stadtluzern.ch/_docn/7323733/Schweizer_B%C3%BCrgerrecht_Merkblatt.pdf
+  - title: 'SEM: Ordinary naturalisation (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), consolidated version of 1 September 2023 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/de/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-de-html-1.html
+  related:
+  - overview
+  - calculator
+  - language
+  links_to:
+  - canton-bs
+  - moving-canton-commune
+  - language-b1-a2
+  - years-counted
+  canton: lu
+- key: naturalisation-interview
+  kind: article
+  category: test
+  publish_at: 2027-01-11T07:00:00+01:00
+  title: 'The naturalisation interview: what you are asked and how to prepare'
+  brief: 'For applicants invited to (or wondering about) the commune interview. Question answered: will there be
+    one, what is it for, what are the rules protecting me (language, companion, record), and how should I prepare?
+    Angle: builds on the existing Zurich interview guide page with additional sourced detail and a comparison with
+    Aargau, Bern and Basel-Stadt, where the interview has a different role (in Basel the Bürgergemeinde''s interview
+    has ''test character''). The existing page already covers the Zurich basics: do NOT repeat the page, add: the
+    commune''s discretion, how many Zurich communes hold one (51% always in 2025 versus 71% in 2022) and the rise
+    of motivation letters (41% versus 7%), the topics the handbook names, and practical preparation. Do NOT list
+    or reproduce question lists or sample questions from any canton''s materials; describe topic areas only. Preparation
+    advice (for example practising answers aloud) is advice, not fact. Say: ask your commune whether it holds an
+    interview and what you should bring.'
+  outline:
+  - Do all communes hold an interview? The Zurich figures
+  - 'What the interview is for: the four topics'
+  - 'Your rights: language level, dialect or standard German, a companion, a record'
+  - 'Examples from other cantons: Aargau, Bern, Basel-Stadt'
+  - Motivation letters and other ways communes check integration
+  - How to prepare
+  - 'After the interview: what happens next'
+  must_cover:
+  - In the canton of Zurich the commune decides whether to hold an interview; it is most useful where participation
+    in social and cultural life, contacts with Swiss people, respect for constitutional values or promoting family
+    members' integration need closer checking; a commune may skip it if the documents suffice [Zurich naturalisation
+    handbook, section 6.2.1]
+  - If a Zurich commune holds an interview it must take the language requirements (A2 written, B1 oral) into account,
+    applicants may choose standard German or dialect, any adult may bring a reference person, and the commune must
+    keep a record [Zurich naturalisation handbook, section 6.2.1]
+  - Zurich communes may not interview children under 12; applicants up to 16 must have an adult reference person
+    present [Zurich naturalisation handbook, section 6.2.2]
+  - According to the canton's 2025 study, 51% of Zurich communes always hold an interview (down from 71% in 2022);
+    41% now ask for motivation letters (7% in 2022); only about 10% ask for references [Canton of Zurich study of
+    5 December 2025]
+  - Bülach normally holds no interview and does so only in individual cases, for instance with doubts about German
+    or basic knowledge, or about social and cultural participation, contacts with Swiss people, constitutional values
+    or family integration [City of Bülach guide]
+  - Otelfingen holds an interview in principle only where needed (doubts about knowledge or integration) and the
+    decision lies with the residents' registry [Otelfingen guide]
+  - Familiarity with Swiss living conditions includes basic knowledge of geography, history, politics and society,
+    taking part in social and cultural life, and contacts with Swiss people [BüV art. 2 para. 1]
+  - 'Aargau: civic knowledge is tested before filing and, at commune level, again in the interview; the Gemeinderat
+    holds the interview; applicants sign a declaration on respect for the values of the constitution [Aargau handbook,
+    sections 8.2 and 8.3; Aargau leaflet, section 3]'
+  - 'Bern: after checking the application is complete, the commune invites the applicant to a personal interview
+    [Canton of Bern how-to-apply page]'
+  - 'Basel-Stadt: the Bürgergemeinde''s interview with the naturalisation commission ''has test character'', is
+    recorded, and ends with a recommendation to admit, reject or postpone [Bürgergemeinde Basel page]'
+  sources:
+  - title: 'Canton of Zurich: Naturalisation handbook from 1 July 2023 (PDF, German)'
+    url: https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/migration-integration/einbuergerung/eo_handbuch_einbuergerungen_ab_01.07.2023.pdf
+  - title: 'Canton of Zurich: New study on how Zurich communes naturalise, 5 December 2025 (German)'
+    url: https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2025/12/neue-studie-so-buergern-die-zuercher-gemeinden-ein.html
+  - title: 'City of Bülach: Guide to ordinary naturalisation (PDF, German)'
+    url: https://www.buelach.ch/_doc/7014151
+  - title: 'Otelfingen: Guide to ordinary naturalisation (PDF, German)'
+    url: https://www.otelfingen.ch/public/upload/assets/14088/Leitfaden%20ordentliche%20Einb%C3%BCrgerung%20Otelfingen.pdf?fp=2
+  - title: 'Canton of Aargau: Handbook for ordinary naturalisation procedures (PDF, German)'
+    url: https://www.ag.ch/media/kanton-aargau/dvi/dokumente/arp/buergerrecht-und-personenstand/einbuergerungen/handbuch-ordentliche-einbuergerungen/handbuch.pdf
+  - title: 'Canton of Bern: Ordinary naturalisation - how to apply (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/gesuch-stellen.html
+  - title: 'Bürgergemeinde der Stadt Basel: Naturalisation for foreign nationals (German)'
+    url: https://bgbasel.ch/de/einbuergerungen/auslaenderinnen-auslaender.html
+  - title: 'Fedlex: Citizenship Ordinance (BüV, SR 141.01), consolidated version of 1 August 2026 (PDF, German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/405/20260801/de/pdf-a/fedlex-data-admin-ch-eli-cc-2016-405-20260801-de-pdf-a.pdf
+  related:
+  - interview
+  - test
+  - zurich
+  links_to:
+  - zurich-test-four-weeks
+  - language-b1-a2
+  - canton-bs
+  - canton-ag
+  - canton-be
+- key: c-permit-vs-swiss-passport
+  kind: article
+  category: after
+  publish_at: 2027-01-18T07:00:00+01:00
+  title: 'C permit or Swiss passport: what changes when you naturalise'
+  brief: 'For C-permit holders still deciding whether to apply. Question answered: what do I gain, what do I take
+    on, and what can I lose with each status? Angle: a sober comparison grounded in the Constitution and the Foreign
+    Nationals and Integration Act: the C permit is permanent but can lapse or be revoked; Swiss citizenship brings
+    political rights, protection from expulsion and the right to enter, and (for men) the duty of military or civilian
+    service. Include the safeguards (annulment within a time limit for false information, withdrawal only after
+    a final conviction). Do NOT promise benefits that are not in the sources (consular protection, local voting
+    rights for foreigners, tax or insurance effects): say ''these differ by canton or case; ask the authority''.
+    Do not cover how to apply (see overview). Mention only that some cantons, for example St Gallen, give foreign
+    residents no vote at all (source: canton information sheet). Tone: neutral, helps the reader decide; no pressure.'
+  outline:
+  - What a C permit gives you and what can end it
+  - 'What Swiss citizenship adds: political rights'
+  - 'Rights that depend on citizenship: staying, leaving, entering, no expulsion'
+  - 'Duties: military or civilian service for men'
+  - Dual citizenship and your other passport
+  - 'Safeguards: annulment, withdrawal, release'
+  - 'How to decide: a checklist of questions'
+  must_cover:
+  - The C permit is granted for an unlimited period and without conditions [AIG art. 34 para. 1]
+  - A C permit can be revoked in listed cases, among them a serious breach of public safety and order, long-term
+    and considerable dependence on social assistance, or fraudulently trying to obtain Swiss citizenship; it can
+    also be revoked and replaced by a B permit if the integration criteria are not met [AIG art. 63 para. 1-2]
+  - A permit lapses on deregistration abroad; a C permit lapses after 6 months abroad without deregistration, but
+    on request it can be kept for 4 years [AIG art. 61]
+  - Swiss citizens cannot be expelled from Switzerland and can be extradited only with their consent; they have
+    the right to leave or enter Switzerland and to settle anywhere in the country [Federal Constitution art. 24-25]
+  - 'All Swiss citizens over 18 have political rights in federal matters: they can vote in elections to the National
+    Council and federal votes and launch or sign initiatives and referendum requests [Federal Constitution art.
+    136]'
+  - In the canton of St Gallen foreign residents may not vote or stand in elections; they may petition the authorities
+    and take part in commissions and working groups of their commune [hallo.sg.ch information sheet]
+  - Every Swiss man must do military service (civilian service as an alternative); a Swiss man who does neither
+    pays a tax; service is voluntary for women [Federal Constitution art. 59]
+  - Dual citizens usually serve in the state where they live at the time of conscription; someone who served abroad
+    is no longer called up in Switzerland [SEM dual citizens page]
+  - Switzerland has allowed dual citizenship without restriction since 1 January 1992; whether the other country
+    removes its nationality depends on that country's law [SEM dual citizens page]
+  - A person who is a citizen of a commune and of its canton is Swiss; Swiss citizenship is acquired when the cantonal
+    naturalisation decision becomes final, and a passport and ID card can then be requested [Federal Constitution
+    art. 37; BüG art. 14 para. 3; Canton of Bern how-to-apply page]
+  - Naturalisation obtained through false information or concealed facts can be declared void within 2 years of
+    the SEM learning the facts and at the latest within 8 years of acquisition [BüG art. 36 para. 1-2]
+  - A Swiss citizen can be released from Swiss citizenship only if living abroad and holding, or being assured of,
+    another nationality [BüG art. 37 para. 1]
+  sources:
+  - title: 'Fedlex: Federal Constitution (SR 101), English version of 3 March 2024'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/en/html/fedlex-data-admin-ch-eli-cc-1999-404-20240303-en-html-1.html
+  - title: 'Fedlex: Foreign Nationals and Integration Act (AIG, SR 142.20), version of 1 November 2026 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/758/20261101/de/html/fedlex-data-admin-ch-eli-cc-2007-758-20261101-de-html-1.html
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), consolidated version of 1 September 2023 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/de/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-de-html-1.html
+  - title: 'SEM: Dual citizens (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/doppelbuerger.html
+  - title: 'Canton of St Gallen (hallo.sg.ch): Participating and naturalisation, 16 December 2024 (PDF, German)'
+    url: https://www.hallo.sg.ch/de/zusammenleben/leben-in-st-gallen/mitbestimmen-einbuergerung/_jcr_content/pdfonthefly.ocFile/mitbestimmen-einbuergerung-de.pdf
+  - title: 'Canton of Bern: Ordinary naturalisation - how to apply (German)'
+    url: https://www.einbuergerung.sid.be.ch/de/start/einbuergerung/ordentliche-einbuergerung/gesuch-stellen.html
+  related:
+  - overview
+  - faq
+  links_to:
+  - dual-citizenship
+  - years-counted
+  - seven-mistakes
+- key: canton-sg
+  kind: canton
+  category: cantons
+  publish_at: 2027-01-21T07:00:00+01:00
+  title: 'Naturalisation in the canton of St Gallen: requirements, steps and costs'
+  brief: 'For foreign residents of St Gallen. Angle: St Gallen uses the maximum cantonal residence period allowed
+    by federal law (5 years uninterrupted in the canton AND in the political commune, with no double counting) and
+    asks for B1 German in both speaking and writing, above the federal A2 for writing; the commune''s naturalisation
+    council (Einbürgerungsrat) is the first authority. Cover requirements, language, the special ''besondere Einbürgerung''
+    for young people, the steps, what the canton says about tests, moving during the procedure, and cost. Honest
+    gaps: there is no cantonal test described; the canton''s information sheet says only that some naturalisation
+    authorities use a written or oral test on knowledge of Switzerland, so tell readers to ask their commune. Commune
+    fees vary and the canton gives only ranges; say ''ask your commune''. The leaflet is dated 6 November 2023 and
+    the information sheet 16 December 2024: say so and say ''checked on''. Do NOT repeat federal rules in detail:
+    link to the overview and calculator pages.'
+  outline:
+  - 'Who handles what: Einbürgerungsrat, canton, Confederation'
+  - 'Residence: 10 years in Switzerland and 5 years in canton and commune'
+  - 'Language: B1 in speaking and writing'
+  - 'Other requirements: finances, integration, local knowledge'
+  - Steps from application to cantonal decision
+  - 'The test: what the canton says and what it leaves to communes'
+  - Moving during the procedure and the special route for young people
+  - Fees and where to ask
+  must_cover:
+  - The canton distinguishes ordinary naturalisation in general ('Einbürgerung im Allgemeinen') and special naturalisation
+    ('besondere Einbürgerung') [Canton of St Gallen naturalisation page]
+  - 'Requirements: C permit; 10 years in Switzerland (ages 8 to 18 count double, minimum 6 actual years); and the
+    last 5 years uninterrupted in the canton of St Gallen and in the political commune; the cantonal law does not
+    allow counting the same years twice for canton and commune [St Gallen leaflet, section 1.1]'
+  - 'Language: at least B1 in both speaking and writing, i.e. higher than the federal A2 for writing [St Gallen
+    leaflet, section 1.1; hallo.sg.ch information sheet]'
+  - 'Other criteria: respect for public safety and for the values of the Federal Constitution, with an express commitment;
+    orderly financial circumstances; participation in economic life or education; promoting the integration of spouse
+    and minor children; familiarity with Swiss and local conditions, including interest in public affairs and basic
+    knowledge of the state structure and of geography, history, politics and society [St Gallen leaflet, section
+    1.1]'
+  - 'Special naturalisation: foreign and stateless young people can apply before their 20th birthday if they have
+    lived at least 10 years in Switzerland, of which at least 5 in the political commune; federal double counting
+    is not possible here [St Gallen leaflet, section 1.2]'
+  - The home commune's naturalisation council (Einbürgerungsrat) gives the first advice and takes the application;
+    only the residence commune can be the naturalisation commune; the council decides on communal citizenship, and
+    for general naturalisation runs the public notice procedure [St Gallen leaflet, sections 2 and 3.1]
+  - After communal citizenship is granted, the file goes to the cantonal Amt für Gemeinden und Bürgerrecht; once
+    the SEM has issued the federal permit, the cantonal government decides on cantonal citizenship, which completes
+    the procedure [St Gallen leaflet, section 3.2]
+  - 'Moving to another commune or canton during the procedure: the council with the pending application stays responsible
+    if it has published the naturalisation in the commune''s official publication organ; otherwise the application
+    is declared moot [St Gallen leaflet, section 2]'
+  - Changes of civil status (marriage, divorce, widowhood) or the birth of a child after communal citizenship was
+    granted must be reported at once to the cantonal Amt für Gemeinden und Bürgerrecht [St Gallen leaflet, section
+    7]
+  - 'Fees: the canton can charge up to CHF 2,000 for cantonal citizenship; the Confederation charges CHF 50 to 150;
+    fees follow the cost-coverage principle and communes also charge; the canton''s information sheet gives averages
+    of CHF 500 to 1,000 per person for the commune [St Gallen leaflet, section 4; hallo.sg.ch information sheet]'
+  - Some naturalisation authorities hold a written or oral test on knowledge of Switzerland; how long a procedure
+    takes differs between communes [hallo.sg.ch information sheet]
+  - Switzerland allows dual citizenship, but the former nationality may be lost automatically under the origin country's
+    law; only the embassy or consulate can say [St Gallen leaflet, section 6]
+  sources:
+  - title: 'Canton of St Gallen: Naturalisation (German)'
+    url: https://www.sg.ch/recht/buergerrecht-zivilstand/einbuergerung.html
+  - title: 'Canton of St Gallen: Leaflet on ordinary naturalisation, 6 November 2023 (PDF, German)'
+    url: https://www.sg.ch/recht/buergerrecht-zivilstand/einbuergerung/_jcr_content/Par/sgch_accordion_list/AccordionListPar/sgch_accordion/AccordionPar/sgch_downloadlist/DownloadListPar/sgch_download.ocFile/Merkblatt%20ord.%20Einbuergerung%20AfGB%2020231106.pdf
+  - title: 'Canton of St Gallen (hallo.sg.ch): Participating and naturalisation, 16 December 2024 (PDF, German)'
+    url: https://www.hallo.sg.ch/de/zusammenleben/leben-in-st-gallen/mitbestimmen-einbuergerung/_jcr_content/pdfonthefly.ocFile/mitbestimmen-einbuergerung-de.pdf
+  - title: 'SEM: Ordinary naturalisation (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/ordentlich.html
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), consolidated version of 1 September 2023 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/de/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-de-html-1.html
+  related:
+  - overview
+  - calculator
+  - language
+  links_to:
+  - canton-lu
+  - moving-canton-commune
+  - language-b1-a2
+  - years-counted
+  canton: sg
+- key: third-generation
+  kind: article
+  category: eligibility
+  publish_at: 2027-01-25T07:00:00+01:00
+  title: 'Third generation: the simplified route for grandchildren of immigrants'
+  brief: 'For young people (and their parents) whose grandparents came to Switzerland and who were born here. Question
+    answered: can I be naturalised by the facilitated third-generation route, what must the grandparent, the parent
+    and I show, how do I prove it, and what is the deadline? Angle: the three-person test (grandparent, parent,
+    applicant), the 25th-birthday deadline, what counts as proof, and what it costs. Facilitated naturalisation
+    is decided by the SEM, not by the commune, so the cantonal residence periods and knowledge tests do not apply
+    (the integration criteria of Art. 12 do). The overview page has one paragraph on the route: do NOT repeat it,
+    add the three-level detail and the document types. Do NOT promise eligibility; for older applicants say ''a
+    transitional rule once applied to people aged 26 to 35; check the SEM''. Say: check the SEM handbook and the
+    form for the current document list.'
+  outline:
+  - Who the route is for
+  - The grandparent condition
+  - The parent condition
+  - 'The applicant: born in Switzerland, C permit, five years of school'
+  - 'The deadline: before your 25th birthday'
+  - 'Proving grandparents'' residence: which documents work'
+  - Integration criteria and who decides
+  - Cost and how to apply
+  must_cover:
+  - 'The child of foreign parents can be naturalised on request if: at least one grandparent was born in Switzerland
+    or it is made credible that the grandparent acquired a right of residence; at least one parent acquired a settlement
+    permit, lived in Switzerland for at least 10 years and attended compulsory school in Switzerland for at least
+    5 years; the applicant was born in Switzerland, holds a settlement permit and attended compulsory school in
+    Switzerland for at least 5 years [BüG art. 24a para. 1; SEM third-generation page]'
+  - The application must be filed before the 25th birthday; the SEM handbook says at the latest on the 25th birthday
+    [BüG art. 24a para. 2; SEM Handbuch chapter 6, section 641]
+  - Years of compulsory school in the SEM handbook include kindergarten [SEM Handbuch chapter 6, section 641]
+  - 'The applicant must be successfully integrated: respect for public safety and order (for example no tax arrears,
+    debt collections, loss certificates or criminal-record entries), respect for constitutional values, ability
+    to communicate in a national language, participation in economic life or education (no social assistance in
+    the last 3 years before filing unless fully repaid), supporting family integration; and no threat to Switzerland''s
+    security [SEM third-generation page; BüG art. 20]'
+  - 'Residence rights of the grandparent can be shown with: extracts from commune or canton residents'' registers,
+    extracts from the SEM''s ZEMIS and its predecessor systems, extracts from migration systems of communes and
+    cantons, extracts from the foreign ministry''s Ordipro, civil-status register extracts, and files of migration,
+    school or tax authorities; as residence rights count residence or settlement permits, provisional admission,
+    or an EDA legitimation card or a residence permit with gainful activity [BüV art. 15a and 15b; SEM Handbuch
+    chapter 6, section 641/2]'
+  - The SEM decides (after hearing the canton) and the canton prepares an enquiry report; the SEM normally decides
+    within 12 months after receiving the cantonal report [BüG art. 25 para. 1; BüV art. 18 and art. 23 para. 2]
+  - While living in Switzerland, the form is requested by email from the SEM (ch@sem.admin.ch) and returned by post
+    with the documents on the SEM's list of required documents; the SEM provides forms for the commune (grandparents'
+    residence), juvenile authority, social assistance, school and tax authorities and employer confirmation [SEM
+    third-generation page]
+  - 'Federal fee for facilitated naturalisation other than the spouse route: CHF 500 for adults and CHF 250 for
+    minors at filing, plus up to CHF 400 for the cantonal enquiry [BüV art. 25 para. 1 let. c and para. 3 let. a]'
+  - The naturalised person acquires the citizenship of the commune and canton of residence at the time of acquisition
+    [BüG art. 24a para. 3]
+  - Third-generation applicants over 25 cannot use this route; the ordinary route (C permit, 10 years, canton and
+    commune periods) remains [BüG art. 9, art. 24a para. 2]
+  sources:
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), consolidated version of 1 September 2023 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/de/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-de-html-1.html
+  - title: 'Fedlex: Citizenship Ordinance (BüV, SR 141.01), consolidated version of 1 August 2026 (PDF, German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/405/20260801/de/pdf-a/fedlex-data-admin-ch-eli-cc-2016-405-20260801-de-pdf-a.pdf
+  - title: 'SEM: Third generation of foreign nationals (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/3-generation.html
+  - title: 'SEM: Handbuch Bürgerrecht, chapter 6 - Other facilitated naturalisations incl. third generation (PDF,
+      German)'
+    url: https://www.sem.admin.ch/dam/sem/de/data/rechtsgrundlagen/weisungen/buergerrecht/hb-bueg20-kap6.pdf.download.pdf/hb-bueg20-kap6.pdf
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), English version of 1 September 2023'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/en/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-en-html-1.html
+  related:
+  - overview
+  - calculator
+  links_to:
+  - children-naturalisation
+  - years-counted
+  - spouse-facilitated
+  - integration-debts-welfare
+- key: seven-mistakes
+  kind: article
+  category: process
+  publish_at: 2027-02-01T07:00:00+01:00
+  title: Seven mistakes that delay a Swiss citizenship application
+  brief: 'Evergreen checklist for people about to file. Angle: every ''mistake'' is a rule in the federal law, the
+    Ordinance or an official cantonal source; the article is a rule-based checklist, NOT a list of statistics, and
+    must not claim how often a mistake happens or by how many months it delays (no sources for that). For each mistake:
+    the rule, why it matters, what to do instead, and the link to the deeper article. The seven: (1) filing before
+    every condition is met; (2) letting residence lapse by deregistering or staying abroad; (3) leaving debts, tax
+    arrears or collections open; (4) social assistance in the last three years; (5) criminal-record entries or pending
+    proceedings; (6) a language proof that is not recognised; (7) not reporting changes or giving incomplete or
+    false information (plus outdated documents). Do NOT repeat details already given in the deeper articles; keep
+    each mistake to one short section. Say: ask your commune for the exact document list and dates.'
+  outline:
+  - 1. Filing too early
+  - 2. Letting residence lapse
+  - 3. Open debts and tax arrears
+  - 4. Social assistance in the last three years
+  - 5. Criminal-record entries and pending proceedings
+  - 6. An unrecognised language proof
+  - 7. Not reporting changes, incomplete information and outdated documents
+  - A final pre-filing checklist
+  must_cover:
+  - The formal requirements must be met at the time of filing; an application cannot be filed before the 10 years
+    of residence are complete [SEM FAQ, ordinary naturalisation section]
+  - A C permit must be held at filing, throughout the procedure and until the cantonal decision [SEM Handbuch chapter
+    3, 311]
+  - Residence is deemed given up if the person deregisters or actually lives abroad for more than 6 months; a stay
+    abroad of up to one year for the employer or education counts as a short absence [BüG art. 33 para. 3; BüV art.
+    16]
+  - A C permit lapses after 6 months abroad without deregistration (it can be kept for 4 years on request) [AIG
+    art. 61 para. 2]
+  - Tax arrears, debt collections and loss certificates in the last 5 years' register extract can lead the SEM to
+    refuse the permit [SEM Handbuch chapter 3, financial reputation section]
+  - Basel-Stadt treats instalment payments of taxes as arrears and wants open tax bills settled before filing [Canton
+    of Basel-Stadt step-by-step page]
+  - Social assistance in the 3 years before filing or during the procedure blocks the economic-participation criterion
+    unless fully repaid [BüV art. 7 para. 3]
+  - Pending criminal proceedings suspend the procedure; an unserved sanction or running probation period means integration
+    cannot be assumed [BüV art. 4 para. 3 and 5]
+  - A language-course confirmation or placement assessment is not accepted as proof; a continuing-education diploma
+    (CAS/DAS/MAS) is not accepted in Basel-Stadt [SEM FAQ on the list of recognised language certificates, question
+    5; Canton of Basel-Stadt step-by-step page]
+  - Applicants must give complete and correct information and promptly report later changes (for example proceedings,
+    social assistance, marriage, divorce, births); naturalisation obtained by false information or concealment can
+    be declared void [BüV art. 21; Aargau leaflet, section 2; BüG art. 36]
+  - 'Document age limits: in Aargau the civil-status extract may not be older than 6 months at filing and other
+    documents not older than 3 months; in Basel-Stadt the civil-register extract may not be older than 3 months
+    [Aargau leaflet, section 2; Canton of Basel-Stadt step-by-step page]'
+  - The SEM may raise federal fees up to double for cases needing much more work [BüV art. 28 para. 1]
+  sources:
+  - title: 'Fedlex: Citizenship Act (BüG, SR 141.0), consolidated version of 1 September 2023 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/404/20230901/de/html/fedlex-data-admin-ch-eli-cc-2016-404-20230901-de-html-1.html
+  - title: 'Fedlex: Citizenship Ordinance (BüV, SR 141.01), consolidated version of 1 August 2026 (PDF, German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/405/20260801/de/pdf-a/fedlex-data-admin-ch-eli-cc-2016-405-20260801-de-pdf-a.pdf
+  - title: 'SEM: Handbuch Bürgerrecht, chapter 3 - Ordinary naturalisation (PDF, German)'
+    url: https://www.sem.admin.ch/dam/sem/de/data/rechtsgrundlagen/weisungen/buergerrecht/hb-bueg20-kap3.pdf.download.pdf/hb-bueg20-kap3.pdf
+  - title: 'SEM: Frequently asked questions on Swiss citizenship (German)'
+    url: https://www.sem.admin.ch/sem/de/home/integration-einbuergerung/schweizer-werden/faq.html
+  - title: 'SEM: FAQ on the list of recognised language certificates (PDF, German)'
+    url: https://www.sem.admin.ch/dam/sem/de/data/integration/themen/sprache/faq-anerkannte-sprachzertifikate.pdf.download.pdf/faq-anerkannte-sprachzertifikate-d.pdf
+  - title: 'Canton of Aargau: Leaflet on the ordinary naturalisation procedure, version 17 December 2024 (PDF, German)'
+    url: https://www.ag.ch/media/kanton-aargau/dvi/dokumente/arp/buergerrecht-und-personenstand/einbuergerungen/merkblatt.pdf
+  - title: 'Canton of Basel-Stadt: Step by step - the way to ordinary naturalisation (German)'
+    url: https://www.bs.ch/themen/persoenliches-und-wohnen/einbuergerungen/schritt-fuer-schritt-der-weg-zur-ordentlichen-einbuergerung-0
+  - title: 'Fedlex: Foreign Nationals and Integration Act (AIG, SR 142.20), version of 1 November 2026 (German)'
+    url: https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/758/20261101/de/html/fedlex-data-admin-ch-eli-cc-2007-758-20261101-de-html-1.html
+  related:
+  - overview
+  - documents
+  - calculator
+  - language
+  links_to:
+  - years-counted
+  - integration-debts-welfare
+  - language-b1-a2
+  - moving-canton-commune
+  - spouse-facilitated

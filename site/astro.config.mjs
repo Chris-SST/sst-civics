@@ -2,7 +2,8 @@
 import { defineConfig, envField } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { fileURLToPath } from "node:url";
-import { LOCALES, DEFAULT_LOCALE, scanGuide, buildIndex, parsePath, alternatesFor } from "./src/i18n/pages.mjs";
+import { LOCALES, DEFAULT_LOCALE, scanGuide, scanArticles, buildIndex, parsePath, alternatesFor, pathFor } from "./src/i18n/pages.mjs";
+import { articlesDir } from "./src/articles/source.mjs";
 
 // Public host of the guide site. Staging default; set SITE_URL at build time for production
 // (the brand domain, see docs/runbooks/deploy-guide-site.md).
@@ -11,9 +12,18 @@ const site = (process.env.SITE_URL || "https://staging.viapunt.ch").replace(/\/+
 // Which language versions exist, read from the content folder, so each sitemap entry can list
 // its translations (slugs differ per language, so the sitemap integration's own i18n matching
 // by path would miss them).
-const index = buildIndex([
-  ...scanGuide(fileURLToPath(new URL("./src/content/guide", import.meta.url))),
-  ...scanGuide(fileURLToPath(new URL("./src/content/legal", import.meta.url))),
+const articles = scanArticles(articlesDir());
+const index = buildIndex(
+  [
+    ...scanGuide(fileURLToPath(new URL("./src/content/guide", import.meta.url))),
+    ...scanGuide(fileURLToPath(new URL("./src/content/legal", import.meta.url))),
+  ],
+  articles,
+);
+// The article and canton indexes are noindex while empty, so they stay out of the sitemap too.
+const emptyIndexes = new Set([
+  ...(articles.some((a) => a.kind === "article") ? [] : LOCALES.map((l) => pathFor(l, "articles"))),
+  ...(articles.some((a) => a.kind === "canton") ? [] : LOCALES.map((l) => pathFor(l, "cantons"))),
 ]);
 
 export default defineConfig({
@@ -39,9 +49,9 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.endsWith("/404/") && new URL(page).pathname !== "/",
+      filter: (page) => !page.endsWith("/404/") && new URL(page).pathname !== "/" && !emptyIndexes.has(new URL(page).pathname),
       serialize(item) {
-        const parsed = parsePath(new URL(item.url).pathname);
+        const parsed = parsePath(new URL(item.url).pathname, index);
         if (!parsed) return item;
         const alts = alternatesFor(index, parsed.key);
         if (alts.length < 2) return item;
