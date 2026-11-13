@@ -68,8 +68,10 @@ http://viapunt.ch, http://staging.viapunt.ch, http://civics-staging.swissscience
 
 	# The bare host goes to the English home page (Chris, 3 November 2026; was German, D-060)
 	# with a real redirect; the meta refresh in the built /index.html stays as a fallback.
+	# Permanent (301) so search engines treat /en/ as the home page and read its favicon from
+	# there; a 302 kept the bodyless "/" as the home page (Chris, 13 November 2026).
 	@root path /
-	redir @root /en/ 302
+	redir @root /en/ 301
 
 	try_files {path} {path}/index.html
 	file_server

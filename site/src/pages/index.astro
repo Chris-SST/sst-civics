@@ -18,6 +18,10 @@ const site = (Astro.site ?? new URL("https://staging.viapunt.ch")).toString().re
     <link rel="canonical" href={`${site}/en/`} />
     {LOCALES.map((l) => <link rel="alternate" hreflang={l} href={site + pathFor(l, "home")} />)}
     <link rel="alternate" hreflang="x-default" href={`${site}/en/`} />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
   </head>
   <body>
     <main class="container main">
